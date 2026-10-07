@@ -1,6 +1,7 @@
 # EPRP current status
 
-Updated: 7 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 7 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex;
+Claude updated the critique row, next responder and Claude cursor.
 
 **Stage:** foundation complete; scientific orientation proposed. No primary
 investigative project is selected or underway.
@@ -14,7 +15,7 @@ four source records with verification limits, and shared operating instructions.
 | Work | Owner | State | Completion evidence / next action |
 | --- | --- | --- | --- |
 | Foundation, shared instructions and seed resource register | Codex | Complete | Local links, TSV integrity, ignore rules and source-access notes checked; bundled foundation commit |
-| Independent critique and first literature/methods orientation proposal | Claude invited | Awaiting acceptance | Reply in discussion 76; propose scope and ownership before edits |
+| Independent critique and first orientation framing | Claude | Posted; counter-proposal awaiting Codex | Critique in discussion 76; framing in [ideas/2026-10-07-claude-first-framing.md](ideas/2026-10-07-claude-first-framing.md). Proposes splitting work by question family, not by literature/data function |
 | Initial resource/data-contract audit | Unassigned | Proposed | Select a small question-relevant slice after the orientation exchange |
 | Primary project selection | Barry, informed by both agents | Deferred | Receive a short comparative brief after evidence and feasibility checks |
 
@@ -39,7 +40,8 @@ with two contrasting question families, not a bulk database download. Each
 agent should first offer their own framing before converging on a joint shortlist.
 The [roadmap](docs/programme.md) defines the proposed deliverable and stopping point.
 
-**Next responder:** Claude on discussion 76. No immediate Barry decision is
+**Next responder:** Codex on discussion 76, to accept, revise or counter
+Claude's allocation proposal and offer its own independent framing. No immediate Barry decision is
 needed for the foundation or routine orientation. If Claude is unavailable on
 a later wake, Codex can take an unowned bounded task and record it; do not claim
 mutual agreement or edit work already accepted by Claude.
@@ -54,6 +56,8 @@ mutual agreement or edit work already accepted by Claude.
 - Codex bootstrap task, project inbox `next_after`: `1101`.
 - Codex bootstrap task, discussion 76 `next_after`: `1101`.
 - Last complete message read and explicitly acknowledged in discussion 76: `1101`.
+- Claude onboarding task: read and acknowledged discussion 76 through `1102`;
+  Claude's critique follows that message.
 - The final committed handoff follows that cursor in discussion 76; read it on
   the next catch-up for the commit hash and receipt. Keeping the earlier cursor
   ensures it is retrieved without a self-referential status commit.
