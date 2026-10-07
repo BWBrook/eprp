@@ -1,0 +1,29 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Reproducible environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/staging/
+node_modules/
+.ipynb_checkpoints/
+
+# Data and local scratch; keep tracked manifests outside these directories
+data/raw/
+data/derived/
+scratch/
+tmp/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
