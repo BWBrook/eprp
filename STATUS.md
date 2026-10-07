@@ -1,68 +1,63 @@
 # EPRP current status
 
-Updated: 7 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex;
-Claude updated the critique row, next responder and Claude cursor.
+Updated: 7 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Stage:** foundation complete; scientific orientation proposed. No primary
-investigative project is selected or underway.
+**Stage:** research and ideation. Foundation complete; no primary investigation
+selected. Barry has explicitly favoured substantial preparation over a quick
+shortlist, with particular interest in deep time.
 
-**Current objective:** obtain Claude's independent critique and agree the first
-bounded orientation tasks. The foundation has 14 files, checked local navigation,
-four source records with verification limits, and shared operating instructions.
+**Current objective:** map consequential scientific questions, nearest prior
+work and usable evidence together. Develop competing explanations and discover
+what existing data and modern inference/simulation can genuinely distinguish.
+Do not organise the programme around Barry's previous specialisms.
 
 ## Work and ownership
 
-| Work | Owner | State | Completion evidence / next action |
-| --- | --- | --- | --- |
-| Foundation, shared instructions and seed resource register | Codex | Complete | Local links, TSV integrity, ignore rules and source-access notes checked; bundled foundation commit |
-| Independent critique and first orientation framing | Claude | Posted; counter-proposal awaiting Codex | Critique in discussion 76; framing in [ideas/2026-10-07-claude-first-framing.md](ideas/2026-10-07-claude-first-framing.md). Proposes splitting work by question family, not by literature/data function |
-| Initial resource/data-contract audit | Unassigned | Proposed | Select a small question-relevant slice after the orientation exchange |
-| Primary project selection | Barry, informed by both agents | Deferred | Receive a short comparative brief after evidence and feasibility checks |
+| Work | Owner | State / next action |
+| --- | --- | --- |
+| Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
+| First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
+| Environmental disruption, susceptibility and cross-scale inference | Claude proposed | Existing rates/thresholds note ownership accepted in principle; broader remit awaits Claude's agreement; planned file `literature/2026-10-rates-thresholds.md` |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | Initial source reconnaissance in [response note](ideas/2026-10-07-codex-deep-time-response.md); expand literature and data/model capability mapping; coordinate boundaries with Claude |
+| Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
-## Current findings and limits
+Each scientific area includes literature, data and methods end to end. These
+are starting areas for exploration, not an exclusive two-topic agenda. The
+previous proposed Codex Late Quaternary assignment is superseded by the current
+counter-proposal; no joint agreement on the revised division is claimed.
 
-- Four seed resources cover fossil occurrences, palaeoecological records,
-  geological context and preparation software. See [the catalogue](resources/README.md).
-- PBDB documentation, the Neotoma API specification and the Macrostrat API
-  root returned HTTP 200 from WSL. This is documentation/metadata access, not
-  a tested extraction or evidence of adequate scientific coverage.
-- No literature synthesis, novelty assessment or representative data audit
-  has been completed. No datasets or third-party papers have been imported.
-- An independent Codex reviewer challenged the structure; those suggestions
-  informed the promotion boundary, evidence labels and limits on active work.
-  Claude has not yet reviewed or accepted the proposed division of work.
+## Evidence and unresolved points
 
-## Next useful tranche
+- Four infrastructure seeds remain in the [catalogue](resources/README.md).
+  Their checks establish documentation/metadata access, not data suitability.
+- Claude's initial literature leads were checked at metadata/abstract depth.
+  Codex has now inspected selected primary-text sections for several leads
+  and competing deep-time models; precise access depth is in the response note.
+- Song et al. explicitly acknowledge temporal-resolution limits, so a proposed
+  contribution cannot rest on claiming they overlooked them. Their joint
+  magnitude/rate argument needs a more careful critique than rate exceedance alone.
+- Contrasting accounts of long-term marine diversity offer a possible route
+  into substantial science; it is not yet established that their concepts,
+  predictions and calibration targets are directly comparable.
+- No candidate's novelty is established. No primary analysis or scientific
+  dataset extraction has started. Source/model deposits remain unaudited.
 
-Recommendation: pair a small biological-question literature map with an audit
-of the observations needed to discriminate its competing explanations. Begin
-with two contrasting question families, not a bulk database download. Each
-agent should first offer their own framing before converging on a joint shortlist.
-The [roadmap](docs/programme.md) defines the proposed deliverable and stopping point.
+## Next exchange
 
-**Next responder:** Codex on discussion 76, to accept, revise or counter
-Claude's allocation proposal and offer its own independent framing. No immediate Barry decision is
-needed for the foundation or routine orientation. If Claude is unavailable on
-a later wake, Codex can take an unowned bounded task and record it; do not claim
-mutual agreement or edit work already accepted by Claude.
+**Next responder: Claude**, to answer Codex's source-level critique and accept
+or revise the exploration division. Both agents should continue coherent
+in-scope reconnaissance without returning routine choices to Barry. The next
+synthesis should explain what changed our understanding and what evidence is
+missing; it need not choose a project.
 
-## Repository and correspondence state
+## Shared checkout and decisions
 
-- Verified checkout: `/home/bwbrook/git/eprp`; no remote configured at launch.
-- Correspondence project: `eprp` (active); foundation discussion: `76`.
-- Source of authority: Barry's launch message in Codex chat, 7 October 2026.
-- Additional instruction: future Codex subagents use GPT-6.1 Sol with effort
-  matched to the task; recorded in `AGENTS.md`.
-- Codex bootstrap task, project inbox `next_after`: `1101`.
-- Codex bootstrap task, discussion 76 `next_after`: `1101`.
-- Last complete message read and explicitly acknowledged in discussion 76: `1101`.
-- Claude onboarding task: read and acknowledged discussion 76 through `1102`;
-  Claude's critique follows that message.
-- The final committed handoff follows that cursor in discussion 76; read it on
-  the next catch-up for the commit hash and receipt. Keeping the earlier cursor
-  ensures it is retrieved without a self-referential status commit.
-- Other agents must keep their own task cursors and recover the substantive
-  context even when the configured participant's shared read marker is newer.
-
-Detailed activity and consequential rationale belong in
-[the launch log](logs/2026-10-07-foundation.md), not repeated status prose.
+- Checkout: `/home/bwbrook/git/eprp`.
+- Private remote: [BWBrook/eprp](https://github.com/BWBrook/eprp).
+- Correspondence: active project `eprp`, discussion `76`.
+- Authority: Barry's launch and follow-up decisions in Codex chat, 7 October
+  2026; the hosting/deep-time steer is relayed in message 1104.
+- Codex subagents: GPT-6.1 Sol, effort commensurate with the task.
+- Stage owned paths only and inspect the whole Git index before committing.
+- Routine process-document expansion is frozen. Operational read cursors stay
+  in task-local state; recover substantive context before acknowledging messages.

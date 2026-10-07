@@ -3,8 +3,8 @@
 These instructions apply to Codex and Claude Code. Machine-wide instructions
 still apply. Read [README.md](README.md), [STATUS.md](STATUS.md), and the relevant
 work record before acting. Check Git status and preserve other contributors'
-work. The current verified checkout is `/home/bwbrook/git/eprp`; do not assume
-another checkout or remote exists.
+work. The current verified checkout is `/home/bwbrook/git/eprp`; the private
+remote is `https://github.com/BWBrook/eprp.git`. Verify any additional checkout.
 
 ## Remit and authority
 
@@ -18,6 +18,9 @@ another checkout or remote exists.
   work and bundled commits and pushes. Routine reversible implementation,
   searches, source checks, small feasibility probes, criticism and planning
   can proceed within that remit without repeated confirmation.
+- Barry's subsequent steer gives deep time priority and calls for substantial
+  research, ideation and dataset preparation before project selection. Do not
+  narrow around his own specialism or rush a shortlist of incremental studies.
 - Bring consequential programme priorities, unresolved scientific framing,
   substantial resource commitments, and promotion into a primary investigation
   to Barry as a compact recommendation with evidence and alternatives. Do not
@@ -59,8 +62,8 @@ Use the configured participant identity: `Codex` or `Claude`. Astra/Sol and
 Fable/Opus identify model families, not identities to impersonate. Record a
 specific model only when it is known from the current session.
 
-1. Read the task state and scoped cursors in `STATUS.md`; inspect project `eprp`
-   with `inbox(project_id="eprp", after=<saved cursor>)`.
+1. Read `STATUS.md`; inspect project `eprp` with scoped `inbox`. Use a saved
+   task-local cursor when available, otherwise start from `after=0`.
 2. Read full relevant messages with `read_updates(thread_id=..., after=...)`.
    Keep `through` fixed while paging; continue until `has_more` is false.
    Use `after=0` for a new agent/session without sufficient local context,
@@ -69,7 +72,8 @@ specific model only when it is known from the current session.
    the last actual message ID in that discussion. Retrieval `next_after` and
    `through` are global checkpoints, not acknowledgement IDs. Excerpts/search
    hits alone do not justify acknowledging gaps.
-4. Preserve task-specific `next_after` values in the status record. Post
+4. Preserve task-specific `next_after` values in local session state or ignored
+   `scratch/correspondence/` files, rather than committing them to `STATUS.md`. Post
    consequential findings, objections, proposals and decisions with stable
    unique `request_id` values. Correct an error by replying to its message.
 5. Carry out accepted in-scope work, or propose a bounded useful next task when
@@ -100,9 +104,13 @@ dependencies and tests when a concrete task earns them. Test consequential
 data transformations and computational behaviour; documentation-only changes
 need link, content and consistency checks, not a software test framework.
 
-Check the relevant diff before bundled commits. Push to a verified configured
-remote within existing authorization; never force-push, discard another
-contributor's work, or create public hosting by assumption.
+In this shared working tree, stage explicit owned paths, never `git add .` or
+`git add -A`. Check both working-tree and staged changes before committing;
+explicit paths alone do not exclude another agent's already-staged changes.
+Coordinate if a staged change or file has another active owner, and do not
+unstage or sweep their work into your commit. Push bundled commits to the
+verified private remote within Barry's authorization; never force-push or
+discard another contributor's work.
 
 Every closing chat response must end with the actual local date and time in
 `Australia/Hobart`, including AEST/AEDT as applicable. Interim updates do not

@@ -17,6 +17,14 @@ Claude contribute ideation, criticism, source work, implementation and review.
 Rotate proposer and critic roles. An unresolved disagreement should have a
 stated consequence and a discriminating check, rather than repeated advocacy.
 
+Barry's 7 October follow-up gives **deep time** particular priority and asks
+for substantial research, ideation and dataset preparation before selecting a
+project. His wording used “area B” for deep time; the explicit subject takes
+precedence over the A/B labels in Claude's initial framing. There is no reason
+to concentrate on Barry's previous study systems. The aim is a consequential
+scientific question newly tractable with available evidence and methods, not
+an incremental application chosen because the data or software are convenient.
+
 ## Scope
 
 Within the current remit:
@@ -47,18 +55,19 @@ downstream project owns the study-specific design, analyses and claims.
 
 ## Initial route
 
-1. **Foundation (current tranche).** Shared operating instructions, a source
+1. **Foundation (complete).** Shared operating instructions, a source
    register with verification labels, a compact idea format, a status/ownership
    record and a concrete first correspondence exchange. Completion means these
    are inspectable and consistent, with no implied scientific findings.
-2. **Orientation (proposed next tranche).** Couple a biological-question map
-   with an observation/identifiability audit. Aim for two contrasting question
-   families and roughly 6–10 carefully read primary or methodological papers
-   in total, using reviews to locate them. Record search limits and contrary
-   evidence. Audit only the few resources needed to judge feasibility; include
-   theoretical work that does not depend on a major database. These are working
-   bounds, not quotas or a claim to comprehensive coverage.
-3. **Critical shortlist.** Produce up to three short idea briefs, each with
+2. **Research and ideation (current phase).** Explore multiple deep-time
+   questions through repeated rounds of literature, data capability mapping
+   and theoretical criticism. Let questions guide detailed data audits while
+   source discoveries reveal questions we had not considered. Use simulations
+   when they are the cheapest informative test and can be grounded in plausible
+   observation processes. Record search limits and contrary evidence. Retire
+   the initial 6–10-paper bound and do not require an early shortlist; reporting
+   checkpoints should expose new understanding and gaps, not force selection.
+3. **Critical shortlist (when earned).** Prepare a small set of idea briefs with
    closest prior work, the unresolved contribution, feasible evidence, a rival
    explanation, a discriminating test and a reason to abandon it. Both agents
    critique the candidates. If disagreement survives useful checks, preserve
@@ -68,10 +77,13 @@ downstream project owns the study-specific design, analyses and claims.
    and execution into an appropriate project and retain the reusable resources
    and programme-level reasoning here.
 
-The next tranche stops at an evidence-backed orientation memo that can support
-a shortlist: what is promising, what existing data cannot identify, what has
-already been done, and which small check would change the ranking. Catalogue
-size, number of papers summarised and agent agreement are not success measures.
+Report coherent rounds of orientation while keeping this phase open: what
+major explanations compete, what observations could discriminate them, what
+prior work has already settled, and what datasets or methods change feasibility.
+A shortlist is warranted when its leading questions survive those challenges,
+not when a paper-count target is reached. Catalogue size and agent agreement
+are not success measures. Process documentation is otherwise frozen during
+this phase; correct consequential inaccuracies without adding more scaffolding.
 
 ## Conditions for a downstream project
 
@@ -91,7 +103,7 @@ scientific judgment; filling every template field does not by itself establish i
 
 ## Open programme questions
 
-Claude is invited to challenge the balance between biological questions and
-measurement/identifiability work, the major evidence gaps in the initial
-catalogue, and whether this structure is enough to begin. These are open agent
-discussion items, not questions Barry must answer before routine work can move.
+The [Codex response](../ideas/2026-10-07-codex-deep-time-response.md) proposes
+revised exploration responsibilities and challenges parts of Claude's first
+framing. The division remains subject to mutual agreement; it does not limit
+the programme to the first two areas examined.
