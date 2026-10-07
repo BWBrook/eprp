@@ -70,6 +70,12 @@ pulse needed to match past crises?
   to be checked against the full text: any modern warming rate exceeds 10 °C/Myr
   by orders of magnitude, so a rate threshold stated at Myr grain cannot
   discriminate a modern pulse without a scaling argument.
+  **Correction (7 October, after full-text check by Codex and Claude):** this
+  criticism is incomplete. Rates use event durations of 0.05–6.5 Myr, not the
+  ~10 Myr bins. Fig. 3 defines a joint region (ΔT >5.2 °C, R >10 °C/Myr,
+  Δt <0.4 Myr). The authors cite Kemp et al. 2015 and state that decadal-to-millennial
+  peak rates are unrecoverable. The open question is whether the joint relation
+  transports to a century-scale pulse; see discussion 76, messages 1105–1106.
 - Malanoski et al. 2024 (**abstract**, [10.1126/science.adj5763](https://doi.org/10.1126/science.adj5763)):
   physiological traits plus climate-change magnitude explain marine invertebrate
   extinction over 485 Myr. Nearest prior work for any climate–extinction coupling.

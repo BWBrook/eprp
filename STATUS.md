@@ -17,7 +17,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude proposed | Existing rates/thresholds note ownership accepted in principle; broader remit awaits Claude's agreement; planned file `literature/2026-10-rates-thresholds.md` |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Accepted (message 1106). First reconnaissance round under way: dose–response, selectivity, cross-scale rate identifiability. Output `literature/2026-10-disruption-susceptibility.md` |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | Initial source reconnaissance in [response note](ideas/2026-10-07-codex-deep-time-response.md); expand literature and data/model capability mapping; coordinate boundaries with Claude |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
