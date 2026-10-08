@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 7 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 8 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** research and ideation. Foundation complete; no primary investigation
 selected. Barry has explicitly favoured substantial preparation over a quick
@@ -17,14 +17,16 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Accepted (message 1106). First reconnaissance round under way: dose–response, selectivity, cross-scale rate identifiability. Output `literature/2026-10-disruption-susceptibility.md` |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | Initial source reconnaissance in [response note](ideas/2026-10-07-codex-deep-time-response.md); expand literature and data/model capability mapping; coordinate boundaries with Claude |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Accepted (message 1106). [Round 1](literature/2026-10-disruption-susceptibility.md) complete; [Codex critique](literature/2026-10-08-codex-review-disruption.md) ready. Claude next: respond and refine the interval-overlap / event-input capability probe |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | Accepted division. [First orientation](literature/2026-10-recovery-contingency.md) complete; Codex next: inspect INDITEK/SNCI-v2 input-output contracts and shared evidence; Claude critique invited |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
 Each scientific area includes literature, data and methods end to end. These
 are starting areas for exploration, not an exclusive two-topic agenda. The
-previous proposed Codex Late Quaternary assignment is superseded by the current
-counter-proposal; no joint agreement on the revised division is claimed.
+previous proposed Codex Late Quaternary assignment is superseded. The revised
+division was accepted in messages 1106 and 1127: selectivity and rate-estimator
+methods sit with Claude; consequences, recovery and diversity regulation with
+Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Evidence and unresolved points
 
@@ -36,28 +38,43 @@ counter-proposal; no joint agreement on the revised division is claimed.
 - Song et al. explicitly acknowledge temporal-resolution limits, so a proposed
   contribution cannot rest on claiming they overlooked them. Their joint
   magnitude/rate argument needs a more careful critique than rate exceedance alone.
-- Contrasting accounts of long-term marine diversity offer a possible route
-  into substantial science; it is not yet established that their concepts,
-  predictions and calibration targets are directly comparable.
-- No candidate's novelty is established. No primary analysis or scientific
-  dataset extraction has started. Source/model deposits remain unaudited.
+- The two focal diversity models use different capacity concepts. Shared fossil
+  and palaeogeographic inputs limit empirical independence; comparable withheld
+  observables are needed before treating their fit as a decisive contest.
+- The physiology-transfer candidate needs a thermal-exposure comparator and
+  frozen calibration choices. Magnitude is not automatically portable across
+  observation windows. A failed simulation fit is not proof of structural
+  nonidentifiability.
+- Source-native intervals and explicit overlaps should precede an analytical
+  stage table. Selected deposit metadata and a PhanDA CSV header/sample were
+  inspected; code interiors, joint uncertainty and suitability remain unchecked.
+- No candidate's novelty is established. No primary analysis, simulation or full
+  scientific-data extraction has started.
 
 ## Next exchange
 
-**Next responder: Claude**, to answer Codex's source-level critique and accept
-or revise the exploration division. Both agents should continue coherent
-in-scope reconnaissance without returning routine choices to Barry. The next
-synthesis should explain what changed our understanding and what evidence is
-missing; it need not choose a project.
+**Next scientific responder: Claude**, to answer the [disruption critique](literature/2026-10-08-codex-review-disruption.md)
+and challenge the [recovery orientation](literature/2026-10-recovery-contingency.md).
+Claude owns any accepted interval-overlap / transfer-input probe; Codex owns the
+bounded recovery-model contract inspection. These are capability checks, not
+primary-study selection. Both agents may continue coherent in-scope reconnaissance
+without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 
 - Checkout: `/home/bwbrook/git/eprp`.
 - Private remote: [BWBrook/eprp](https://github.com/BWBrook/eprp).
-- Correspondence: active project `eprp`, discussion `76`.
+- Correspondence: active project `eprp`; foundation/division in `76`, disruption
+  review in `77`, with the recovery orientation handed off in a separate discussion.
 - Authority: Barry's launch and follow-up decisions in Codex chat, 7 October
   2026; the hosting/deep-time steer is relayed in message 1104.
 - Codex subagents: GPT-6.1 Sol, effort commensurate with the task.
 - Stage owned paths only and inspect the whole Git index before committing.
+- Operational exception, 8 October: Codex's local command runtime could not start.
+  This documentation tranche was prepared through the GitHub connector against
+  the verified private remote, without touching the local worktree/index. Before
+  local editing resumes, inspect local status and reconcile with remote main by
+  a safe fast-forward where possible; do not discard local work. Local cleanliness
+  and synchronisation were not verified in this wake.
 - Routine process-document expansion is frozen. Operational read cursors stay
   in task-local state; recover substantive context before acknowledging messages.
