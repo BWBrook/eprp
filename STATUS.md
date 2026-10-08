@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 8 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 9 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** research and ideation. Foundation complete; no primary investigation
 selected. Barry has explicitly favoured substantial preparation over a quick
@@ -17,8 +17,8 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) revised; [crosswalk](data/interval-crosswalk/README.md) qualified per Codex. [PhanDA ΔGMST dependence sensitivity](data/phanda-stage-differences/README.md) done: coupling decides sign for most stage transitions. [Transfer inputs](literature/2026-10-08-transfer-inputs.md): Penn & Deutsch frozen model is deposited, event forcing is not. Claude next: B nearest-prior close reads and an errors-in-variables estimand |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Contract audit and response](literature/2026-10-08-recovery-contracts-and-response.md) complete, with [observation-error counterexample](data/recovery-memory-probe/README.md). Codex retains the common-observable / observation-contract specification; Claude next to challenge the distinctions and evidence |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [PhanDA sensitivity](data/phanda-stage-differences/README.md) reviewed: [Codex audit](data/phanda-coupling-audit/README.md) corrects the full-independence sampler and qualifies sign claims. [Penn calibration/source correction](literature/2026-10-09-penn-calibration-source-correction.md) locates original end-Permian fields and distinguishes 2018/2022 choices. Claude next: correct owned sampler/inventory, then B nearest-prior reads and measurement-model specification |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Observation contract](literature/2026-10-09-recovery-observation-contract.md) and [three deterministic checks](data/recovery-observation-contract/README.md) complete. Proposed regional series are not fixed-region histories; scalar richness does not supply estimator inputs. Codex retains regional-support/observation preparation; Claude next to challenge the target and source contract |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
 Each scientific area includes literature, data and methods end to end. These
@@ -55,19 +55,31 @@ Codex. Shared dependencies are coordinated through Correspondence.
   confirms pooled fits, filtering and resampling. Matching member positions do
   not certify temporal trajectories; independence is a sensitivity assumption,
   not a general uncertainty bound. The interval crosswalk remains descriptive.
+- Claude's original full-independence sampler selected older scenarios by block,
+  producing incorrect marginal weights. The independent corrected diagnostic
+  gives 10 sign-resolved pairs rather than 9; the other three chosen couplings
+  stand. Four signs have separate >95% lower bounds under every coupling of the
+  deposited empirical marginals. This does not identify a temporal posterior.
+- The original end-Permian temperature/O2 deposit was located through Penn
+  2018's data statement. The earlier missing-source inference is withdrawn.
+  Units, physical depths, geometry and distinct 2018/2022 calibration assumptions
+  still need a reproduction contract; other-event forcing remains unresolved.
+- Alroy 2010 does not report the proposed regional holdout test. Close 2020's
+  standardised spatial samples are not continuous fixed-region trajectories.
+  This narrows the next feasibility check without establishing novelty.
 - No candidate's novelty is established. No primary empirical analysis, climate
   simulation or full occurrence-data extraction has started. Only bounded source
   inspections and small synthetic/deterministic probes have been run.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 77 (ΔGMST dependence results,
-B estimand, Penn & Deutsch deposit), 82 (Claude's target choice: total legacy
-given the environmental path, with minimal class-representative models) and 76
-(architecture adjustment accepted). Claude retains B and the forcing analyses;
-Codex retains the recovery observation specification. The joint candidate
-remains reconnaissance. Both agents may continue coherent in-scope work without
-returning routine choices to Barry.
+**Next scientific responder: Claude**, on discussion 77 (sampler correction and
+Penn source/calibration update) and 82 (biotic legacy under specified forcing,
+regional support and estimator inputs). The architecture adjustment in 76 is
+accepted by both agents. Claude retains B and forcing analyses; Codex retains
+regional-support and observation preparation. The joint candidate remains
+reconnaissance. Both agents may continue coherent in-scope work without returning
+routine choices to Barry.
 
 ## Shared checkout and decisions
 
