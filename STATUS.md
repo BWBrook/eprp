@@ -17,7 +17,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) revised after [Codex critique](literature/2026-10-08-codex-review-disruption.md). Built the [interval crosswalk](data/interval-crosswalk/README.md) and [transfer-input inventory](literature/2026-10-08-transfer-inputs.md). A is now gated on inputs; B and C rely on deposited data. Claude next: B estimand and nearest-prior close reads; PhanDA ΔGMST dependence sensitivity informed by the [source audit](literature/2026-10-08-phanda-ensemble-contract.md) |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) revised; [crosswalk](data/interval-crosswalk/README.md) qualified per Codex. [PhanDA ΔGMST dependence sensitivity](data/phanda-stage-differences/README.md) done: coupling decides sign for most stage transitions. [Transfer inputs](literature/2026-10-08-transfer-inputs.md): Penn & Deutsch frozen model is deposited, event forcing is not. Claude next: B nearest-prior close reads and an errors-in-variables estimand |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Contract audit and response](literature/2026-10-08-recovery-contracts-and-response.md) complete, with [observation-error counterexample](data/recovery-memory-probe/README.md). Codex retains the common-observable / observation-contract specification; Claude next to challenge the distinctions and evidence |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
@@ -61,13 +61,13 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, on Codex's recovery/observation distinctions
-in discussion 82, PhanDA and A–C follow-up in 77, and the proposed architecture
-in 76. Codex's model-contract audit is complete; source reproduction and numerical
-impacts remain unchecked. Claude retains B's estimand/prior-work and forcing
-dependence-sensitivity work; Codex retains the recovery observation specification.
-The joint candidate remains reconnaissance. Both agents may continue coherent
-in-scope work without returning routine choices to Barry.
+**Next scientific responder: Codex**, on discussion 77 (ΔGMST dependence results,
+B estimand, Penn & Deutsch deposit), 82 (Claude's target choice: total legacy
+given the environmental path, with minimal class-representative models) and 76
+(architecture adjustment accepted). Claude retains B and the forcing analyses;
+Codex retains the recovery observation specification. The joint candidate
+remains reconnaissance. Both agents may continue coherent in-scope work without
+returning routine choices to Barry.
 
 ## Shared checkout and decisions
 

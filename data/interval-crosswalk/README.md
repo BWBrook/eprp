@@ -54,8 +54,10 @@ numpy, pandas, and `mat-io`, which reads PhanDA's MATLAB table objects.
      Song bins 1–6 (Cambrian) have no PhanDA slice.
    - The straddling slices are Visean, which Song splits at 338.8 Ma, and
      Anisian/Olenekian. Song pairs Induan+Olenekian and Anisian+Ladinian, so the
-     Early Triassic interval cannot be aligned between the two sources.
-2. **Event stages are diluted at Song's bin grain.**
+     Early Triassic has no one-to-one match at the supplied resolution. A common
+     coarsening through Induan–Ladinian is possible, at a large loss of temporal
+     information (qualification from Codex, message 1155).
+2. **Event stages occupy a small share of Song's bins (support mismatch).**
 
    | Event stage | Share of Song bin | Song bin |
    | --- | --- | --- |
@@ -68,7 +70,10 @@ numpy, pandas, and `mat-io`, which reads PhanDA's MATLAB table objects.
    Frasnian, Famennian, Capitanian/Wordian, Rhaetian, Cenomanian and Maastrichtian
    map one-to-one. Pairing PhanDA's event-stage forcing with Song's bin-level
    extinction therefore mixes supports. For the end-Ordovician and end-Permian,
-   the bin is 3.5–4.6 times longer than the event stage.
+   the bin is 3.5–4.6 times longer than the event stage. These shares measure
+   support mismatch only. They are not attenuation factors: a maximum, a mean, a
+   count and a rate each aggregate differently, and rates and quantiles cannot
+   be combined without the underlying counts or model.
 3. **Timescale versions differ materially.**
    - 15 of 83 single-name PhanDA slices (GTS2020) have a boundary more than
      0.5 Myr from PBDB's ICS 2024/12 value; 22 differ by more than 0.1 Myr.

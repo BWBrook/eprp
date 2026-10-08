@@ -45,12 +45,54 @@ fields for a pre-event and a peak state.
 | --- | --- | --- |
 | Deutsch, Penn & Seibel 2020, 10.1038/s41586-020-2721-y | GitHub cadeutsch/Metabolic-Index-Traits (`Par.mat`, `Tol.mat` and others) | No licence; contents inferred from file names only (mf) |
 | Penn & Deutsch 2024, 10.1098/rstb.2022.0487 | Zenodo 10.5281/zenodo.10403766 (MI_traits_obis, 32.8 MB, CC-BY-4.0) | lp |
-| Penn & Deutsch 2022 code | Zenodo 10.5281/zenodo.5899743 (378 kB) | Not inspected |
+| Penn & Deutsch 2022 code | Zenodo 10.5281/zenodo.5899743 (378 kB, "other-open"), GitHub jlpenn/Metabolic-Index-Extinction v1.0.0 | **Archive listed and README and key scripts read by Claude, 9 October.** See the update below |
 | Marquez et al. 2026 class-level traits | No deposit found. The PNAS data statement was unreadable (403) | Unknown, not absent |
+
+## Update, 9 October: the frozen model is deposited; the forcing is not
+
+Claude listed the Penn & Deutsch 2022 code archive and read its README,
+`SixExtinct_spatial.m`, `getPDF.m` and parts of `get6extinct_func.m`.
+
+- **Frozen choices are hard-coded:**
+  - `upar.Vcrit = 50`, a 50% critical loss of global habitat volume;
+  - `upar.zhab = 14`, a 500 m maximum habitat depth (z-level 14).
+- **Trait distributions are parametric and in the code:**
+  - log(A₀) ~ N(2.994, 0.4795) on 5–55 atm⁻¹;
+  - E₀ ~ N(0.3988, 0.2692) on −0.1 to 1.1 eV;
+  - log(φcrit) ~ N(1.1285, 0.4234) on 1.5–7.
+  These are binned and weighted, and come from cadeutsch/Metabolic-Index-Traits.
+- **Species cold limits** (`getTmin2.m`) come from modern OBIS occurrences with at
+  least 100 records. A deep-time application needs a substitute.
+- **The forcing is modern:** CMIP5 and CMIP6 temperature and O₂ anomalies
+  regridded onto WOA. `6me_output.mat` (337 kB) holds plotting output. There are
+  no end-Permian or other palaeo fields.
+
+That 50% and 500 m are the end-Permian-calibrated combination from Penn et al.
+2018 (Fig. 4 explored 40–95% and 500–4,000 m) is **inferred** from the 2022
+paper's calibration claim and Al Aswad 2025's use of 50%. It has not been
+checked against the 2018 text.
+
+The Liu, Penn & Deutsch deposit (Zenodo 18217914, 12 January 2026, CC-BY-4.0)
+holds six MATLAB *figure-panel* files for "Climate Drivers of Ocean
+Productivity and Oxygenation Across the Phanerozoic". These are not 3D fields.
+A Crossref title search found no matching publication (two Goldschmidt 2024
+abstracts on related topics only).
+
+**Consequence.** For candidate A, only the *event forcing fields* are missing.
+The ecophysiological model, its thresholds and its trait distributions can be
+frozen exactly as deposited, apart from the OBIS cold-limit term. Route (b) then
+becomes:
+1. Generate event temperature and O₂ fields in cGENIE.
+2. Check that the deposited frozen model reproduces end-Permian magnitude and
+   selectivity on cGENIE's end-Permian fields (calibration consistency).
+3. Only then transfer to held-out events.
+
+The model contract changes only in its ESM, not its ecophysiology.
 
 ## Implications for candidate A
 
-[Inference; to be challenged in Correspondence 77.]
+[Inference; to be challenged in Correspondence 77. Point 1 is updated by the
+section above: route (b) now keeps the deposited ecophysiology frozen.]
 
 1. **The frozen calibration cannot be reproduced from the original runs.** Two
    routes would make A feasible, and both are beyond routine EPRP work:
@@ -78,9 +120,9 @@ fields for a pre-event and a peak state.
 
 ## Unresolved leads
 
-- Liu, Penn & Deutsch: Zenodo 10.5281/zenodo.18217914 (7.6 MB of MATLAB figure
-  data). It may relate to Phanerozoic CESM O₂ runs; the companion paper is not
-  verified.
+- Liu, Penn & Deutsch: resolved on 9 October. The deposit holds figure-panel
+  data only, and no companion paper was found in Crossref. Phanerozoic CESM O₂
+  fields from that group remain unlocated and, if they exist, unpublished.
 - Joo et al. 2020 (10.1016/j.earscirev.2020.103123) and Monteiro et al. 2012
   (10.1029/2012PA002351), both on OAE2: model identities and deposits unchecked.
 - Endress et al. 2024 (10.1371/journal.pbio.3002443), on thermal optima in
