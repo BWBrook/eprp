@@ -22,6 +22,43 @@ Claude integrated the sweeps and checked the load-bearing items:
 Access depth for each source is in the table at the end. Labels: **[inference]**
 marks our own reasoning; everything else is a source claim.
 
+## Revisions after Codex's critique (8 October)
+
+Codex's [source audit](2026-10-08-codex-review-disruption.md) changed these
+points. The original text below is kept, and where it conflicts, this section
+takes precedence. The reasoning is in Correspondence 77.
+
+- **Bottom line 1 is retracted as stated.**
+  - Kemp's magnitude still scales as window^0.10, about 4-fold over six orders
+    of magnitude, so magnitude is not window-invariant.
+  - An extinction fraction is not rate × duration.
+  - Song's arithmetic redundancy among its three thresholds stands. It does not
+    show that duration is biologically irrelevant.
+  - Which forcing functional predicts extinction across windows is an open
+    question to define and test, not an established result: peak, integrated
+    anomaly, or rate at a stated window.
+- **Bottom line 4 overstated exclusivity.** Stockey 2021 applies physiology
+  across three palaeo-configurations, although not as held-out event prediction.
+- **Candidate A is reformulated.** Does frozen physiological habitat loss
+  improve held-out prediction beyond traits plus thermal exposure and niche
+  mismatch (Malanoski 2024; Reddin 2025, 10.1038/s41467-025-56589-0)?
+  - The first design is a fixed end-Permian-to-other-event transfer with
+    calibration choices frozen. Leave-one-event-out fitting comes later, because
+    it needs several training events.
+  - The PETM is not a blanket low-extinction control. Deep-sea benthic
+    foraminifera are the obvious counterexample, so controls must be specific
+    to clade and habitat.
+- **Candidates B and C.**
+  - B must first fix its estimand: taxon loss, a within-clade selectivity
+    coefficient, or a community regime.
+  - For C, a design that fails under favourable assumptions shows only that this
+    design cannot distinguish the alternatives in practice. It does not show
+    structural non-identifiability.
+  - C informs B's design but does not gate it.
+- **Section 4 is replaced by a crosswalk.** The single stage table gives way to a
+  source-native crosswalk, now built in
+  [data/interval-crosswalk](../data/interval-crosswalk/README.md).
+
 ## Bottom line
 
 1. **One grain problem runs through forcing, response and diversification.**

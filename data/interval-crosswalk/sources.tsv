@@ -1,0 +1,5 @@
+retrieved	file	url	bytes	sha256
+2026-10-08	data/raw/phanda/PhanDA_GMSTandCO2_percentiles.csv	https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/5_Outputs/PhanDA_GMSTandCO2_percentiles.csv	18513	22cad7964bac3b679ad83bf8a9c83eb66e995898a01eb9e93142087b2d4f6e1f
+2026-10-08	data/raw/phanda/PhanDA_GMST_ensemble.mat	https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/5_Outputs/PhanDA_GMST_ensemble.mat	20332268	6213e8164af32b7e67daee1acb603f6e8a186286041b54b0897c934fa51246ce
+2026-10-08	data/raw/song2021/R_code_extinction_rate.R	https://zenodo.org/records/5027293/files/R%20code%20for%20extinction%20rate.R?download=1	7886	47585e1266d9be9448ac8e00941902c0e7ac14afbded377173135fc6e6c4750b
+2026-10-08	data/raw/pbdb/intervals_scale1.json	https://paleobiodb.org/data1.2/intervals/list.json?scale=1&show=class	23893	ee2f3c145de2ef6b747b08dd47606b7226fffe7083a5b2600279e6dbfeba6f90

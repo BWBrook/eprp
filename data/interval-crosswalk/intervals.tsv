@@ -1,0 +1,244 @@
+source	interval	components	native_older_ma	native_younger_ma	ref_older_ma	ref_younger_ma	flags
+pbdb	Meghalayan	Meghalayan	0.0042	0.0000	0.0042	0.0000	
+pbdb	Northgrippian	Northgrippian	0.0082	0.0042	0.0082	0.0042	
+pbdb	Greenlandian	Greenlandian	0.0117	0.0082	0.0117	0.0082	
+pbdb	Late Pleistocene	Late Pleistocene	0.1290	0.0117	0.1290	0.0117	
+pbdb	Chibanian	Chibanian	0.7740	0.1290	0.7740	0.1290	
+pbdb	Calabrian	Calabrian	1.8000	0.7740	1.8000	0.7740	
+pbdb	Gelasian	Gelasian	2.5800	1.8000	2.5800	1.8000	
+pbdb	Piacenzian	Piacenzian	3.6000	2.5800	3.6000	2.5800	
+pbdb	Zanclean	Zanclean	5.3330	3.6000	5.3330	3.6000	
+pbdb	Messinian	Messinian	7.2460	5.3330	7.2460	5.3330	
+pbdb	Tortonian	Tortonian	11.6300	7.2460	11.6300	7.2460	
+pbdb	Serravallian	Serravallian	13.8200	11.6300	13.8200	11.6300	
+pbdb	Langhian	Langhian	15.9800	13.8200	15.9800	13.8200	
+pbdb	Burdigalian	Burdigalian	20.4500	15.9800	20.4500	15.9800	
+pbdb	Aquitanian	Aquitanian	23.0400	20.4500	23.0400	20.4500	
+pbdb	Chattian	Chattian	27.3000	23.0400	27.3000	23.0400	
+pbdb	Rupelian	Rupelian	33.9000	27.3000	33.9000	27.3000	
+pbdb	Priabonian	Priabonian	37.7100	33.9000	37.7100	33.9000	
+pbdb	Bartonian	Bartonian	41.0300	37.7100	41.0300	37.7100	
+pbdb	Lutetian	Lutetian	48.0700	41.0300	48.0700	41.0300	
+pbdb	Ypresian	Ypresian	56.0000	48.0700	56.0000	48.0700	
+pbdb	Thanetian	Thanetian	59.2400	56.0000	59.2400	56.0000	
+pbdb	Selandian	Selandian	61.6600	59.2400	61.6600	59.2400	
+pbdb	Danian	Danian	66.0000	61.6600	66.0000	61.6600	
+pbdb	Maastrichtian	Maastrichtian	72.2000	66.0000	72.2000	66.0000	
+pbdb	Campanian	Campanian	83.6000	72.2000	83.6000	72.2000	
+pbdb	Santonian	Santonian	85.7000	83.6000	85.7000	83.6000	
+pbdb	Coniacian	Coniacian	89.8000	85.7000	89.8000	85.7000	
+pbdb	Turonian	Turonian	93.9000	89.8000	93.9000	89.8000	
+pbdb	Cenomanian	Cenomanian	100.5000	93.9000	100.5000	93.9000	
+pbdb	Albian	Albian	113.2000	100.5000	113.2000	100.5000	
+pbdb	Aptian	Aptian	121.4000	113.2000	121.4000	113.2000	
+pbdb	Barremian	Barremian	125.7700	121.4000	125.7700	121.4000	
+pbdb	Hauterivian	Hauterivian	132.6000	125.7700	132.6000	125.7700	
+pbdb	Valanginian	Valanginian	137.0500	132.6000	137.0500	132.6000	
+pbdb	Berriasian	Berriasian	143.1000	137.0500	143.1000	137.0500	
+pbdb	Tithonian	Tithonian	149.2000	143.1000	149.2000	143.1000	
+pbdb	Kimmeridgian	Kimmeridgian	154.8000	149.2000	154.8000	149.2000	
+pbdb	Oxfordian	Oxfordian	161.5000	154.8000	161.5000	154.8000	
+pbdb	Callovian	Callovian	165.3000	161.5000	165.3000	161.5000	
+pbdb	Bathonian	Bathonian	168.2000	165.3000	168.2000	165.3000	
+pbdb	Bajocian	Bajocian	170.9000	168.2000	170.9000	168.2000	
+pbdb	Aalenian	Aalenian	174.7000	170.9000	174.7000	170.9000	
+pbdb	Toarcian	Toarcian	184.2000	174.7000	184.2000	174.7000	
+pbdb	Pliensbachian	Pliensbachian	192.9000	184.2000	192.9000	184.2000	
+pbdb	Sinemurian	Sinemurian	199.5000	192.9000	199.5000	192.9000	
+pbdb	Hettangian	Hettangian	201.4000	199.5000	201.4000	199.5000	
+pbdb	Rhaetian	Rhaetian	205.7000	201.4000	205.7000	201.4000	
+pbdb	Norian	Norian	227.3000	205.7000	227.3000	205.7000	
+pbdb	Carnian	Carnian	237.0000	227.3000	237.0000	227.3000	
+pbdb	Ladinian	Ladinian	241.4640	237.0000	241.4640	237.0000	
+pbdb	Anisian	Anisian	247.0000	241.4640	247.0000	241.4640	
+pbdb	Olenekian	Olenekian	250.8000	247.0000	250.8000	247.0000	
+pbdb	Induan	Induan	251.9020	250.8000	251.9020	250.8000	
+pbdb	Changhsingian	Changhsingian	254.1400	251.9020	254.1400	251.9020	
+pbdb	Wuchiapingian	Wuchiapingian	259.8570	254.1400	259.8570	254.1400	
+pbdb	Capitanian	Capitanian	264.2800	259.8570	264.2800	259.8570	
+pbdb	Wordian	Wordian	266.9000	264.2800	266.9000	264.2800	
+pbdb	Roadian	Roadian	274.4000	266.9000	274.4000	266.9000	
+pbdb	Kungurian	Kungurian	283.3000	274.4000	283.3000	274.4000	
+pbdb	Artinskian	Artinskian	290.1000	283.3000	290.1000	283.3000	
+pbdb	Sakmarian	Sakmarian	293.5200	290.1000	293.5200	290.1000	
+pbdb	Asselian	Asselian	298.9000	293.5200	298.9000	293.5200	
+pbdb	Gzhelian	Gzhelian	303.7000	298.9000	303.7000	298.9000	
+pbdb	Kasimovian	Kasimovian	307.0000	303.7000	307.0000	303.7000	
+pbdb	Moscovian	Moscovian	315.2000	307.0000	315.2000	307.0000	
+pbdb	Bashkirian	Bashkirian	323.4000	315.2000	323.4000	315.2000	
+pbdb	Serpukhovian	Serpukhovian	330.3000	323.4000	330.3000	323.4000	
+pbdb	Visean	Visean	346.7000	330.3000	346.7000	330.3000	
+pbdb	Tournaisian	Tournaisian	358.8600	346.7000	358.8600	346.7000	
+pbdb	Famennian	Famennian	372.1500	358.8600	372.1500	358.8600	
+pbdb	Frasnian	Frasnian	382.3100	372.1500	382.3100	372.1500	
+pbdb	Givetian	Givetian	387.9500	382.3100	387.9500	382.3100	
+pbdb	Eifelian	Eifelian	393.4700	387.9500	393.4700	387.9500	
+pbdb	Emsian	Emsian	410.6200	393.4700	410.6200	393.4700	
+pbdb	Pragian	Pragian	413.0200	410.6200	413.0200	410.6200	
+pbdb	Lochkovian	Lochkovian	419.6200	413.0200	419.6200	413.0200	
+pbdb	Pridoli	Pridoli	422.7000	419.6200	422.7000	419.6200	
+pbdb	Ludfordian	Ludfordian	425.0000	422.7000	425.0000	422.7000	
+pbdb	Gorstian	Gorstian	426.7000	425.0000	426.7000	425.0000	
+pbdb	Homerian	Homerian	430.6000	426.7000	430.6000	426.7000	
+pbdb	Sheinwoodian	Sheinwoodian	432.9000	430.6000	432.9000	430.6000	
+pbdb	Telychian	Telychian	438.6000	432.9000	438.6000	432.9000	
+pbdb	Aeronian	Aeronian	440.5000	438.6000	440.5000	438.6000	
+pbdb	Rhuddanian	Rhuddanian	443.1000	440.5000	443.1000	440.5000	
+pbdb	Hirnantian	Hirnantian	445.2000	443.1000	445.2000	443.1000	
+pbdb	Katian	Katian	452.8000	445.2000	452.8000	445.2000	
+pbdb	Sandbian	Sandbian	458.2000	452.8000	458.2000	452.8000	
+pbdb	Darriwilian	Darriwilian	469.4000	458.2000	469.4000	458.2000	
+pbdb	Dapingian	Dapingian	471.3000	469.4000	471.3000	469.4000	
+pbdb	Floian	Floian	477.1000	471.3000	477.1000	471.3000	
+pbdb	Tremadocian	Tremadocian	486.8500	477.1000	486.8500	477.1000	
+pbdb	Stage 10	Stage 10	491.0000	486.8500	491.0000	486.8500	
+pbdb	Jiangshanian	Jiangshanian	494.2000	491.0000	494.2000	491.0000	
+pbdb	Paibian	Paibian	497.0000	494.2000	497.0000	494.2000	
+pbdb	Guzhangian	Guzhangian	500.5000	497.0000	500.5000	497.0000	
+pbdb	Drumian	Drumian	504.5000	500.5000	504.5000	500.5000	
+pbdb	Wuliuan	Wuliuan	506.5000	504.5000	506.5000	504.5000	
+pbdb	Stage 4	Stage 4	514.5000	506.5000	514.5000	506.5000	
+pbdb	Stage 3	Stage 3	521.0000	514.5000	521.0000	514.5000	
+pbdb	Stage 2	Stage 2	529.0000	521.0000	529.0000	521.0000	
+pbdb	Fortunian	Fortunian	538.8000	529.0000	538.8000	529.0000	
+phanda	Holocene	Greenlandian+Northgrippian+Meghalayan	0.0117	0.0000	0.0117	0.0000	
+phanda	Upper Pleistocene	Late Pleistocene	0.1290	0.0117	0.1290	0.0117	
+phanda	Chibanian	Chibanian	0.7740	0.1290	0.7740	0.1290	
+phanda	Calabrian	Calabrian	1.8000	0.7740	1.8000	0.7740	
+phanda	Gelasian	Gelasian	2.5800	1.8000	2.5800	1.8000	
+phanda	Piacenzian	Piacenzian	3.6000	2.5800	3.6000	2.5800	
+phanda	Zanclean	Zanclean	5.3300	3.6000	5.3330	3.6000	
+phanda	Messinian	Messinian	7.2500	5.3300	7.2460	5.3330	
+phanda	Tortonian	Tortonian	11.6300	7.2500	11.6300	7.2460	
+phanda	Serravallian	Serravallian	13.8200	11.6300	13.8200	11.6300	
+phanda	Langhian	Langhian	15.9900	13.8200	15.9800	13.8200	
+phanda	Burdigalian	Burdigalian	20.4500	15.9900	20.4500	15.9800	
+phanda	Aquitanian	Aquitanian	23.0400	20.4500	23.0400	20.4500	
+phanda	Chattian	Chattian	27.2900	23.0400	27.3000	23.0400	
+phanda	Rupelian	Rupelian	33.9000	27.2900	33.9000	27.3000	
+phanda	Priabonian	Priabonian	37.7100	33.9000	37.7100	33.9000	
+phanda	Bartonian	Bartonian	41.0300	37.7100	41.0300	37.7100	
+phanda	Lutetian	Lutetian	48.0700	41.0300	48.0700	41.0300	
+phanda	Ypresian	Ypresian	55.7000	48.0700	55.7000	48.0700	PhanDA Ypresian excludes its PETM slice
+phanda	PETM	PETM	56.0000	55.7000	56.0000	55.7000	sub-stage slice in lowermost Ypresian; native GTS2020 ages used in reference frame
+phanda	Thanetian	Thanetian	59.2400	56.0000	59.2400	56.0000	
+phanda	Selandian/Danian	Selandian+Danian	66.0000	59.2400	66.0000	59.2400	
+phanda	Maastrichtian	Maastrichtian	72.1700	66.0000	72.2000	66.0000	
+phanda	Campanian	Campanian	83.6500	72.1700	83.6000	72.2000	
+phanda	Santonian	Santonian	85.7000	83.6500	85.7000	83.6000	
+phanda	Coniacian	Coniacian	89.3900	85.7000	89.8000	85.7000	
+phanda	Turonian	Turonian	93.9000	89.3900	93.9000	89.8000	
+phanda	Cenomanian	Cenomanian	100.5000	93.9000	100.5000	93.9000	
+phanda	Albian	Albian	113.2000	100.5000	113.2000	100.5000	
+phanda	Aptian	Aptian	121.4000	113.2000	121.4000	113.2000	
+phanda	Barremian	Barremian	126.5000	121.4000	125.7700	121.4000	
+phanda	Hauterivian	Hauterivian	132.6000	126.5000	132.6000	125.7700	
+phanda	Valanginian	Valanginian	137.7000	132.6000	137.0500	132.6000	
+phanda	Berriasian	Berriasian	143.1000	137.7000	143.1000	137.0500	
+phanda	Tithonian	Tithonian	149.2400	143.1000	149.2000	143.1000	
+phanda	Kimmeridgian	Kimmeridgian	154.7800	149.2400	154.8000	149.2000	
+phanda	Oxfordian	Oxfordian	161.5300	154.7800	161.5000	154.8000	
+phanda	Callovian	Callovian	165.2900	161.5300	165.3000	161.5000	
+phanda	Bathonian	Bathonian	168.1700	165.2900	168.2000	165.3000	
+phanda	Bajocian	Bajocian	170.9000	168.1700	170.9000	168.2000	
+phanda	Aalenian	Aalenian	174.7000	170.9000	174.7000	170.9000	
+phanda	Toarcian	Toarcian	184.2000	174.7000	184.2000	174.7000	
+phanda	Pliensbachian	Pliensbachian	192.9000	184.2000	192.9000	184.2000	
+phanda	Sinemurian/Hettangian	Sinemurian+Hettangian	201.3600	192.9000	201.4000	192.9000	
+phanda	Rhaetian	Rhaetian	205.7400	201.3600	205.7000	201.4000	
+phanda	Norian	Norian	227.3000	205.7400	227.3000	205.7000	
+phanda	Carnian	Carnian	237.0000	227.3000	237.0000	227.3000	
+phanda	Ladinian	Ladinian	241.4600	237.0000	241.4640	237.0000	
+phanda	Anisian/Olenekian	Anisian+Olenekian	249.8800	241.4600	250.8000	241.4640	
+phanda	Induan	Induan	251.9000	249.8800	251.9020	250.8000	
+phanda	Changhsingian	Changhsingian	254.2400	251.9000	254.1400	251.9020	
+phanda	Wuchiapingian	Wuchiapingian	259.5500	254.2400	259.8570	254.1400	
+phanda	Capitanian/Wordian	Capitanian+Wordian	269.2100	259.5500	266.9000	259.8570	
+phanda	Roadian	Roadian	274.3700	269.2100	274.4000	266.9000	
+phanda	Kungurian	Kungurian	283.3000	274.3700	283.3000	274.4000	
+phanda	Artinskian	Artinskian	290.5100	283.3000	290.1000	283.3000	
+phanda	Sakmarian	Sakmarian	293.5200	290.5100	293.5200	290.1000	
+phanda	Asselian	Asselian	298.8900	293.5200	298.9000	293.5200	
+phanda	Gzhelian	Gzhelian	303.6800	298.8900	303.7000	298.9000	
+phanda	Kasimovian	Kasimovian	307.0200	303.6800	307.0000	303.7000	
+phanda	Moscovian	Moscovian	315.1500	307.0200	315.2000	307.0000	
+phanda	Bashkirian	Bashkirian	323.4000	315.1500	323.4000	315.2000	
+phanda	Serpukhovian	Serpukhovian	330.3400	323.4000	330.3000	323.4000	
+phanda	Visean	Visean	346.7300	330.3400	346.7000	330.3000	
+phanda	Tournaisian	Tournaisian	359.3000	346.7300	358.8600	346.7000	
+phanda	Famennian	Famennian	371.1000	359.3000	372.1500	358.8600	
+phanda	Frasnian	Frasnian	378.9000	371.1000	382.3100	372.1500	
+phanda	Givetian	Givetian	385.3000	378.9000	387.9500	382.3100	
+phanda	Eifelian	Eifelian	394.3000	385.3000	393.4700	387.9500	
+phanda	Emsian	Emsian	410.5000	394.3000	410.6200	393.4700	
+phanda	Pragian/Lochkovian	Pragian+Lochkovian	419.0000	410.5000	419.6200	410.6200	
+phanda	Pridoli	Pridoli	422.7300	419.0000	422.7000	419.6200	
+phanda	Ludfordian	Ludfordian	425.0100	422.7300	425.0000	422.7000	
+phanda	Gorstian	Gorstian	426.7400	425.0100	426.7000	425.0000	
+phanda	Homerian	Homerian	430.6200	426.7400	430.6000	426.7000	
+phanda	Sheinwoodian	Sheinwoodian	432.9300	430.6200	432.9000	430.6000	
+phanda	Telychian	Telychian	438.5900	432.9300	438.6000	432.9000	
+phanda	Aeronian/Rhuddanian	Aeronian+Rhuddanian	443.0700	438.5900	443.1000	438.6000	
+phanda	Hirnantian	Hirnantian	445.2100	443.0700	445.2000	443.1000	
+phanda	Katian	Katian	452.7500	445.2100	452.8000	445.2000	
+phanda	Sandbian	Sandbian	458.1800	452.7500	458.2000	452.8000	
+phanda	Darriwilian	Darriwilian	469.4200	458.1800	469.4000	458.2000	
+phanda	Dapingian	Dapingian	471.2600	469.4200	471.3000	469.4000	
+phanda	Floian	Floian	477.0800	471.2600	477.1000	471.3000	
+phanda	Tremadocian	Tremadocian	486.8500	477.0800	486.8500	477.1000	
+song2021	bin01	Fortunian			538.8000	529.0000	bin ages not deposited (bindata2.txt)
+song2021	bin02	Stage 2			529.0000	521.0000	bin ages not deposited (bindata2.txt)
+song2021	bin03	Stage 3			521.0000	514.5000	bin ages not deposited (bindata2.txt)
+song2021	bin04	Stage 4			514.5000	506.5000	duplicate stage listed: Stage 4; bin ages not deposited (bindata2.txt)
+song2021	bin05	Drumian+Guzhangian+Paibian			504.5000	494.2000	bin ages not deposited (bindata2.txt)
+song2021	bin06	Jiangshanian+Stage 10			494.2000	486.8500	bin ages not deposited (bindata2.txt)
+song2021	bin07	Tremadocian			486.8500	477.1000	bin ages not deposited (bindata2.txt)
+song2021	bin08	Floian+Dapingian			477.1000	469.4000	bin ages not deposited (bindata2.txt)
+song2021	bin09	Darriwilian+Sandbian			469.4000	452.8000	bin ages not deposited (bindata2.txt)
+song2021	bin10	Katian+Hirnantian			452.8000	443.1000	bin ages not deposited (bindata2.txt)
+song2021	bin11	Rhuddanian+Aeronian+Telychian			443.1000	432.9000	bin ages not deposited (bindata2.txt)
+song2021	bin12	Sheinwoodian+Homerian			432.9000	426.7000	bin ages not deposited (bindata2.txt)
+song2021	bin13	Pridoli+Gorstian+Ludfordian			426.7000	419.6200	bin ages not deposited (bindata2.txt)
+song2021	bin14	Lochkovian+Pragian			419.6200	410.6200	bin ages not deposited (bindata2.txt)
+song2021	bin15	Emsian			410.6200	393.4700	bin ages not deposited (bindata2.txt)
+song2021	bin16	Eifelian+Givetian			393.4700	382.3100	bin ages not deposited (bindata2.txt)
+song2021	bin17	Frasnian			382.3100	372.1500	bin ages not deposited (bindata2.txt)
+song2021	bin18	Famennian			372.1500	358.8600	bin ages not deposited (bindata2.txt)
+song2021	bin19	Tournaisian			358.8600	346.7000	bin ages not deposited (bindata2.txt)
+song2021	bin20	Visean			346.7000	338.8000	Visean split at 338.8 Ma via vector && (errors in R>=4.3; first-element semantics earlier); bin ages not deposited (bindata2.txt)
+song2021	bin21	Visean+Serpukhovian			338.8000	323.4000	Visean split at 338.8 Ma via vector && (errors in R>=4.3; first-element semantics earlier); bin ages not deposited (bindata2.txt)
+song2021	bin22	Bashkirian			323.4000	315.2000	bin ages not deposited (bindata2.txt)
+song2021	bin23	Moscovian+Kasimovian			315.2000	303.7000	bin ages not deposited (bindata2.txt)
+song2021	bin24	Gzhelian			303.7000	298.9000	bin ages not deposited (bindata2.txt)
+song2021	bin25	Asselian+Sakmarian			298.9000	290.1000	bin ages not deposited (bindata2.txt)
+song2021	bin26	Artinskian			290.1000	283.3000	bin ages not deposited (bindata2.txt)
+song2021	bin27	Kungurian+Roadian			283.3000	266.9000	bin ages not deposited (bindata2.txt)
+song2021	bin28	Wordian+Capitanian			266.9000	259.8570	bin ages not deposited (bindata2.txt)
+song2021	bin29	Wuchiapingian+Changhsingian			259.8570	251.9020	bin ages not deposited (bindata2.txt)
+song2021	bin30	Induan+Olenekian			251.9020	247.0000	bin ages not deposited (bindata2.txt)
+song2021	bin31	Anisian+Ladinian			247.0000	237.0000	bin ages not deposited (bindata2.txt)
+song2021	bin32	Carnian			237.0000	227.3000	bin ages not deposited (bindata2.txt)
+song2021	bin33	Norian			227.3000	205.7000	bin ages not deposited (bindata2.txt)
+song2021	bin34	Rhaetian			205.7000	201.4000	bin ages not deposited (bindata2.txt)
+song2021	bin35	Hettangian+Sinemurian			201.4000	192.9000	bin ages not deposited (bindata2.txt)
+song2021	bin36	Pliensbachian			192.9000	184.2000	bin ages not deposited (bindata2.txt)
+song2021	bin37	Toarcian+Aalenian			184.2000	170.9000	bin ages not deposited (bindata2.txt)
+song2021	bin38	Bajocian+Bathonian+Callovian			170.9000	161.5000	bin ages not deposited (bindata2.txt)
+song2021	bin39	Oxfordian			161.5000	154.8000	bin ages not deposited (bindata2.txt)
+song2021	bin40	Kimmeridgian+Tithonian			154.8000	143.1000	bin ages not deposited (bindata2.txt)
+song2021	bin41	Berriasian+Valanginian			143.1000	132.6000	bin ages not deposited (bindata2.txt)
+song2021	bin42	Hauterivian+Barremian			132.6000	121.4000	bin ages not deposited (bindata2.txt)
+song2021	bin43	Aptian			121.4000	113.2000	bin ages not deposited (bindata2.txt)
+song2021	bin44	Albian			113.2000	100.5000	bin ages not deposited (bindata2.txt)
+song2021	bin45	Cenomanian			100.5000	93.9000	bin ages not deposited (bindata2.txt)
+song2021	bin46	Turonian+Coniacian+Santonian			93.9000	83.6000	bin ages not deposited (bindata2.txt)
+song2021	bin47	Campanian			83.6000	72.2000	bin ages not deposited (bindata2.txt)
+song2021	bin48	Maastrichtian			72.2000	66.0000	bin ages not deposited (bindata2.txt)
+song2021	bin49	Danian+Selandian+Thanetian			66.0000	56.0000	bin ages not deposited (bindata2.txt)
+song2021	bin50	Ypresian			56.0000	48.0700	bin ages not deposited (bindata2.txt)
+song2021	bin51	Lutetian			48.0700	41.0300	bin ages not deposited (bindata2.txt)
+song2021	bin52	Bartonian+Priabonian			41.0300	33.9000	bin ages not deposited (bindata2.txt)
+song2021	bin53	Rupelian+Chattian			33.9000	23.0400	bin ages not deposited (bindata2.txt)
+song2021	bin54	Aquitanian+Burdigalian			23.0400	15.9800	bin ages not deposited (bindata2.txt)
+song2021	bin55	Langhian+Serravallian+Tortonian+Messinian			15.9800	5.3330	bin ages not deposited (bindata2.txt)
+song2021	bin56	Zanclean+Piacenzian			5.3330	2.5800	bin ages not deposited (bindata2.txt)

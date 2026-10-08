@@ -1,0 +1,1009 @@
+scenario	younger	older	equal_count	member_r
+Scenario01	Holocene	Upper Pleistocene	True	0.6615
+Scenario01	Upper Pleistocene	Chibanian	True	0.8230
+Scenario01	Chibanian	Calabrian	True	0.9226
+Scenario01	Calabrian	Gelasian	True	0.5705
+Scenario01	Gelasian	Piacenzian	True	0.8465
+Scenario01	Piacenzian	Zanclean	True	0.9063
+Scenario01	Zanclean	Messinian	True	0.7439
+Scenario01	Messinian	Tortonian	True	0.3174
+Scenario01	Tortonian	Serravallian	True	0.7130
+Scenario01	Serravallian	Langhian	True	0.9786
+Scenario01	Langhian	Burdigalian	False	
+Scenario01	Burdigalian	Aquitanian	False	
+Scenario01	Aquitanian	Chattian	True	0.5012
+Scenario01	Chattian	Rupelian	False	
+Scenario01	Rupelian	Priabonian	False	
+Scenario01	Priabonian	Bartonian	True	0.6087
+Scenario01	Bartonian	Lutetian	False	
+Scenario01	Lutetian	Ypresian	False	
+Scenario01	Ypresian	PETM	False	
+Scenario01	PETM	Thanetian	False	
+Scenario01	Thanetian	Selandian/Danian	False	
+Scenario01	Selandian/Danian	Maastrichtian	False	
+Scenario01	Maastrichtian	Campanian	False	
+Scenario01	Campanian	Santonian	True	0.4353
+Scenario01	Santonian	Coniacian	False	
+Scenario01	Coniacian	Turonian	False	
+Scenario01	Turonian	Cenomanian	False	
+Scenario01	Cenomanian	Albian	False	
+Scenario01	Albian	Aptian	False	
+Scenario01	Aptian	Barremian	False	
+Scenario01	Barremian	Hauterivian	False	
+Scenario01	Hauterivian	Valanginian	False	
+Scenario01	Valanginian	Berriasian	False	
+Scenario01	Berriasian	Tithonian	True	0.7119
+Scenario01	Tithonian	Kimmeridgian	False	
+Scenario01	Kimmeridgian	Oxfordian	False	
+Scenario01	Oxfordian	Callovian	False	
+Scenario01	Callovian	Bathonian	True	-0.3693
+Scenario01	Bathonian	Bajocian	True	0.5718
+Scenario01	Bajocian	Aalenian	False	
+Scenario01	Aalenian	Toarcian	False	
+Scenario01	Toarcian	Pliensbachian	False	
+Scenario01	Pliensbachian	Sinemurian/Hettangian	False	
+Scenario01	Sinemurian/Hettangian	Rhaetian	False	
+Scenario01	Rhaetian	Norian	False	
+Scenario01	Norian	Carnian	False	
+Scenario01	Carnian	Ladinian	False	
+Scenario01	Ladinian	Anisian/Olenekian	False	
+Scenario01	Anisian/Olenekian	Induan	False	
+Scenario01	Induan	Changhsingian	False	
+Scenario01	Changhsingian	Wuchiapingian	False	
+Scenario01	Wuchiapingian	Capitanian/Wordian	False	
+Scenario01	Capitanian/Wordian	Roadian	False	
+Scenario01	Roadian	Kungurian	True	0.3771
+Scenario01	Kungurian	Artinskian	False	
+Scenario01	Artinskian	Sakmarian	False	
+Scenario01	Sakmarian	Asselian	False	
+Scenario01	Asselian	Gzhelian	False	
+Scenario01	Gzhelian	Kasimovian	False	
+Scenario01	Kasimovian	Moscovian	False	
+Scenario01	Moscovian	Bashkirian	True	0.7579
+Scenario01	Bashkirian	Serpukhovian	True	0.3866
+Scenario01	Serpukhovian	Visean	True	0.7884
+Scenario01	Visean	Tournaisian	True	0.3520
+Scenario01	Tournaisian	Famennian	False	
+Scenario01	Famennian	Frasnian	False	
+Scenario01	Frasnian	Givetian	False	
+Scenario01	Givetian	Eifelian	False	
+Scenario01	Eifelian	Emsian	False	
+Scenario01	Emsian	Pragian/Lochkovian	False	
+Scenario01	Pragian/Lochkovian	Pridoli	False	
+Scenario01	Pridoli	Ludfordian	False	
+Scenario01	Ludfordian	Gorstian	True	0.0832
+Scenario01	Gorstian	Homerian	True	0.8664
+Scenario01	Homerian	Sheinwoodian	False	
+Scenario01	Sheinwoodian	Telychian	False	
+Scenario01	Telychian	Aeronian/Rhuddanian	False	
+Scenario01	Aeronian/Rhuddanian	Hirnantian	False	
+Scenario01	Hirnantian	Katian	True	0.4470
+Scenario01	Katian	Sandbian	False	
+Scenario01	Sandbian	Darriwilian	False	
+Scenario01	Darriwilian	Dapingian	False	
+Scenario01	Dapingian	Floian	False	
+Scenario01	Floian	Tremadocian	False	
+Scenario02	Holocene	Upper Pleistocene	True	0.8272
+Scenario02	Upper Pleistocene	Chibanian	True	0.9366
+Scenario02	Chibanian	Calabrian	True	0.9593
+Scenario02	Calabrian	Gelasian	True	0.6071
+Scenario02	Gelasian	Piacenzian	True	0.9227
+Scenario02	Piacenzian	Zanclean	True	0.9613
+Scenario02	Zanclean	Messinian	True	0.7219
+Scenario02	Messinian	Tortonian	True	0.6647
+Scenario02	Tortonian	Serravallian	True	0.6624
+Scenario02	Serravallian	Langhian	True	0.9780
+Scenario02	Langhian	Burdigalian	True	0.6750
+Scenario02	Burdigalian	Aquitanian	True	0.6830
+Scenario02	Aquitanian	Chattian	True	0.8890
+Scenario02	Chattian	Rupelian	True	0.4380
+Scenario02	Rupelian	Priabonian	True	0.4532
+Scenario02	Priabonian	Bartonian	True	0.6898
+Scenario02	Bartonian	Lutetian	True	0.5171
+Scenario02	Lutetian	Ypresian	False	
+Scenario02	Ypresian	PETM	True	0.9853
+Scenario02	PETM	Thanetian	False	
+Scenario02	Thanetian	Selandian/Danian	False	
+Scenario02	Selandian/Danian	Maastrichtian	True	0.3469
+Scenario02	Maastrichtian	Campanian	True	0.4326
+Scenario02	Campanian	Santonian	True	0.7881
+Scenario02	Santonian	Coniacian	False	
+Scenario02	Coniacian	Turonian	False	
+Scenario02	Turonian	Cenomanian	False	
+Scenario02	Cenomanian	Albian	False	
+Scenario02	Albian	Aptian	False	
+Scenario02	Aptian	Barremian	False	
+Scenario02	Barremian	Hauterivian	False	
+Scenario02	Hauterivian	Valanginian	False	
+Scenario02	Valanginian	Berriasian	True	0.9517
+Scenario02	Berriasian	Tithonian	True	0.8652
+Scenario02	Tithonian	Kimmeridgian	True	0.8454
+Scenario02	Kimmeridgian	Oxfordian	True	0.6716
+Scenario02	Oxfordian	Callovian	True	0.4004
+Scenario02	Callovian	Bathonian	True	0.7146
+Scenario02	Bathonian	Bajocian	True	0.5716
+Scenario02	Bajocian	Aalenian	True	-0.1206
+Scenario02	Aalenian	Toarcian	True	0.0856
+Scenario02	Toarcian	Pliensbachian	True	0.7421
+Scenario02	Pliensbachian	Sinemurian/Hettangian	True	0.8485
+Scenario02	Sinemurian/Hettangian	Rhaetian	True	0.6941
+Scenario02	Rhaetian	Norian	True	0.7839
+Scenario02	Norian	Carnian	False	
+Scenario02	Carnian	Ladinian	False	
+Scenario02	Ladinian	Anisian/Olenekian	False	
+Scenario02	Anisian/Olenekian	Induan	False	
+Scenario02	Induan	Changhsingian	False	
+Scenario02	Changhsingian	Wuchiapingian	True	0.5990
+Scenario02	Wuchiapingian	Capitanian/Wordian	True	0.3830
+Scenario02	Capitanian/Wordian	Roadian	True	0.6820
+Scenario02	Roadian	Kungurian	True	0.7621
+Scenario02	Kungurian	Artinskian	True	0.6152
+Scenario02	Artinskian	Sakmarian	False	
+Scenario02	Sakmarian	Asselian	False	
+Scenario02	Asselian	Gzhelian	True	0.7806
+Scenario02	Gzhelian	Kasimovian	True	0.5577
+Scenario02	Kasimovian	Moscovian	True	0.7051
+Scenario02	Moscovian	Bashkirian	True	0.7776
+Scenario02	Bashkirian	Serpukhovian	True	0.5276
+Scenario02	Serpukhovian	Visean	True	0.9360
+Scenario02	Visean	Tournaisian	True	0.4687
+Scenario02	Tournaisian	Famennian	True	0.8638
+Scenario02	Famennian	Frasnian	True	0.6297
+Scenario02	Frasnian	Givetian	True	0.9338
+Scenario02	Givetian	Eifelian	True	0.9023
+Scenario02	Eifelian	Emsian	True	0.9267
+Scenario02	Emsian	Pragian/Lochkovian	False	
+Scenario02	Pragian/Lochkovian	Pridoli	False	
+Scenario02	Pridoli	Ludfordian	True	0.9608
+Scenario02	Ludfordian	Gorstian	True	0.5873
+Scenario02	Gorstian	Homerian	True	0.8541
+Scenario02	Homerian	Sheinwoodian	True	0.9936
+Scenario02	Sheinwoodian	Telychian	True	0.7266
+Scenario02	Telychian	Aeronian/Rhuddanian	True	0.7176
+Scenario02	Aeronian/Rhuddanian	Hirnantian	True	0.8897
+Scenario02	Hirnantian	Katian	True	0.7118
+Scenario02	Katian	Sandbian	True	0.9462
+Scenario02	Sandbian	Darriwilian	False	
+Scenario02	Darriwilian	Dapingian	False	
+Scenario02	Dapingian	Floian	False	
+Scenario02	Floian	Tremadocian	False	
+Scenario03	Holocene	Upper Pleistocene	True	0.8946
+Scenario03	Upper Pleistocene	Chibanian	True	0.9433
+Scenario03	Chibanian	Calabrian	True	0.9209
+Scenario03	Calabrian	Gelasian	True	0.7260
+Scenario03	Gelasian	Piacenzian	True	0.9865
+Scenario03	Piacenzian	Zanclean	True	0.9350
+Scenario03	Zanclean	Messinian	True	0.7981
+Scenario03	Messinian	Tortonian	True	0.8565
+Scenario03	Tortonian	Serravallian	True	0.8551
+Scenario03	Serravallian	Langhian	True	0.9822
+Scenario03	Langhian	Burdigalian	True	0.7160
+Scenario03	Burdigalian	Aquitanian	True	0.8405
+Scenario03	Aquitanian	Chattian	True	0.9665
+Scenario03	Chattian	Rupelian	True	0.6997
+Scenario03	Rupelian	Priabonian	True	0.7325
+Scenario03	Priabonian	Bartonian	True	0.8140
+Scenario03	Bartonian	Lutetian	True	0.7964
+Scenario03	Lutetian	Ypresian	False	
+Scenario03	Ypresian	PETM	False	
+Scenario03	PETM	Thanetian	False	
+Scenario03	Thanetian	Selandian/Danian	True	0.8480
+Scenario03	Selandian/Danian	Maastrichtian	True	0.4883
+Scenario03	Maastrichtian	Campanian	True	0.6809
+Scenario03	Campanian	Santonian	True	0.8980
+Scenario03	Santonian	Coniacian	False	
+Scenario03	Coniacian	Turonian	False	
+Scenario03	Turonian	Cenomanian	False	
+Scenario03	Cenomanian	Albian	True	0.6188
+Scenario03	Albian	Aptian	True	0.5314
+Scenario03	Aptian	Barremian	True	0.8023
+Scenario03	Barremian	Hauterivian	True	0.7917
+Scenario03	Hauterivian	Valanginian	True	0.9192
+Scenario03	Valanginian	Berriasian	True	0.8203
+Scenario03	Berriasian	Tithonian	True	0.7669
+Scenario03	Tithonian	Kimmeridgian	True	0.8340
+Scenario03	Kimmeridgian	Oxfordian	True	0.6978
+Scenario03	Oxfordian	Callovian	True	0.2790
+Scenario03	Callovian	Bathonian	True	0.9666
+Scenario03	Bathonian	Bajocian	True	0.6808
+Scenario03	Bajocian	Aalenian	True	0.2861
+Scenario03	Aalenian	Toarcian	True	0.2983
+Scenario03	Toarcian	Pliensbachian	True	0.7726
+Scenario03	Pliensbachian	Sinemurian/Hettangian	True	0.7966
+Scenario03	Sinemurian/Hettangian	Rhaetian	True	0.9098
+Scenario03	Rhaetian	Norian	True	0.8933
+Scenario03	Norian	Carnian	False	
+Scenario03	Carnian	Ladinian	False	
+Scenario03	Ladinian	Anisian/Olenekian	False	
+Scenario03	Anisian/Olenekian	Induan	False	
+Scenario03	Induan	Changhsingian	False	
+Scenario03	Changhsingian	Wuchiapingian	True	0.7089
+Scenario03	Wuchiapingian	Capitanian/Wordian	True	0.4750
+Scenario03	Capitanian/Wordian	Roadian	True	0.7043
+Scenario03	Roadian	Kungurian	True	0.8152
+Scenario03	Kungurian	Artinskian	True	0.6946
+Scenario03	Artinskian	Sakmarian	False	
+Scenario03	Sakmarian	Asselian	False	
+Scenario03	Asselian	Gzhelian	True	0.8362
+Scenario03	Gzhelian	Kasimovian	True	0.7370
+Scenario03	Kasimovian	Moscovian	True	0.7420
+Scenario03	Moscovian	Bashkirian	True	0.8500
+Scenario03	Bashkirian	Serpukhovian	True	0.6050
+Scenario03	Serpukhovian	Visean	True	0.9539
+Scenario03	Visean	Tournaisian	True	0.5009
+Scenario03	Tournaisian	Famennian	True	0.9018
+Scenario03	Famennian	Frasnian	True	0.7290
+Scenario03	Frasnian	Givetian	True	0.9359
+Scenario03	Givetian	Eifelian	True	0.9060
+Scenario03	Eifelian	Emsian	True	0.9224
+Scenario03	Emsian	Pragian/Lochkovian	True	0.8118
+Scenario03	Pragian/Lochkovian	Pridoli	True	0.8224
+Scenario03	Pridoli	Ludfordian	True	0.9686
+Scenario03	Ludfordian	Gorstian	True	0.6510
+Scenario03	Gorstian	Homerian	True	0.9037
+Scenario03	Homerian	Sheinwoodian	True	0.9954
+Scenario03	Sheinwoodian	Telychian	True	0.8182
+Scenario03	Telychian	Aeronian/Rhuddanian	True	0.8290
+Scenario03	Aeronian/Rhuddanian	Hirnantian	True	0.9267
+Scenario03	Hirnantian	Katian	True	0.7722
+Scenario03	Katian	Sandbian	True	0.9642
+Scenario03	Sandbian	Darriwilian	False	
+Scenario03	Darriwilian	Dapingian	False	
+Scenario03	Dapingian	Floian	False	
+Scenario03	Floian	Tremadocian	False	
+Scenario04	Holocene	Upper Pleistocene	True	0.6615
+Scenario04	Upper Pleistocene	Chibanian	True	0.8230
+Scenario04	Chibanian	Calabrian	True	0.9226
+Scenario04	Calabrian	Gelasian	True	0.5705
+Scenario04	Gelasian	Piacenzian	True	0.8464
+Scenario04	Piacenzian	Zanclean	True	0.9062
+Scenario04	Zanclean	Messinian	True	0.7440
+Scenario04	Messinian	Tortonian	True	0.3174
+Scenario04	Tortonian	Serravallian	True	0.7134
+Scenario04	Serravallian	Langhian	True	0.9786
+Scenario04	Langhian	Burdigalian	False	
+Scenario04	Burdigalian	Aquitanian	False	
+Scenario04	Aquitanian	Chattian	True	0.5045
+Scenario04	Chattian	Rupelian	False	
+Scenario04	Rupelian	Priabonian	False	
+Scenario04	Priabonian	Bartonian	True	0.6136
+Scenario04	Bartonian	Lutetian	False	
+Scenario04	Lutetian	Ypresian	False	
+Scenario04	Ypresian	PETM	False	
+Scenario04	PETM	Thanetian	False	
+Scenario04	Thanetian	Selandian/Danian	False	
+Scenario04	Selandian/Danian	Maastrichtian	False	
+Scenario04	Maastrichtian	Campanian	False	
+Scenario04	Campanian	Santonian	True	0.4413
+Scenario04	Santonian	Coniacian	False	
+Scenario04	Coniacian	Turonian	False	
+Scenario04	Turonian	Cenomanian	False	
+Scenario04	Cenomanian	Albian	False	
+Scenario04	Albian	Aptian	False	
+Scenario04	Aptian	Barremian	False	
+Scenario04	Barremian	Hauterivian	False	
+Scenario04	Hauterivian	Valanginian	False	
+Scenario04	Valanginian	Berriasian	False	
+Scenario04	Berriasian	Tithonian	True	0.7365
+Scenario04	Tithonian	Kimmeridgian	False	
+Scenario04	Kimmeridgian	Oxfordian	False	
+Scenario04	Oxfordian	Callovian	False	
+Scenario04	Callovian	Bathonian	True	-0.3603
+Scenario04	Bathonian	Bajocian	True	0.5322
+Scenario04	Bajocian	Aalenian	False	
+Scenario04	Aalenian	Toarcian	False	
+Scenario04	Toarcian	Pliensbachian	False	
+Scenario04	Pliensbachian	Sinemurian/Hettangian	False	
+Scenario04	Sinemurian/Hettangian	Rhaetian	True	-0.1303
+Scenario04	Rhaetian	Norian	False	
+Scenario04	Norian	Carnian	False	
+Scenario04	Carnian	Ladinian	False	
+Scenario04	Ladinian	Anisian/Olenekian	False	
+Scenario04	Anisian/Olenekian	Induan	False	
+Scenario04	Induan	Changhsingian	False	
+Scenario04	Changhsingian	Wuchiapingian	False	
+Scenario04	Wuchiapingian	Capitanian/Wordian	False	
+Scenario04	Capitanian/Wordian	Roadian	False	
+Scenario04	Roadian	Kungurian	True	0.4378
+Scenario04	Kungurian	Artinskian	False	
+Scenario04	Artinskian	Sakmarian	False	
+Scenario04	Sakmarian	Asselian	False	
+Scenario04	Asselian	Gzhelian	False	
+Scenario04	Gzhelian	Kasimovian	False	
+Scenario04	Kasimovian	Moscovian	True	0.6036
+Scenario04	Moscovian	Bashkirian	True	0.7033
+Scenario04	Bashkirian	Serpukhovian	True	0.3142
+Scenario04	Serpukhovian	Visean	True	0.7077
+Scenario04	Visean	Tournaisian	True	0.3142
+Scenario04	Tournaisian	Famennian	False	
+Scenario04	Famennian	Frasnian	False	
+Scenario04	Frasnian	Givetian	False	
+Scenario04	Givetian	Eifelian	False	
+Scenario04	Eifelian	Emsian	False	
+Scenario04	Emsian	Pragian/Lochkovian	False	
+Scenario04	Pragian/Lochkovian	Pridoli	False	
+Scenario04	Pridoli	Ludfordian	False	
+Scenario04	Ludfordian	Gorstian	True	0.3691
+Scenario04	Gorstian	Homerian	False	
+Scenario04	Homerian	Sheinwoodian	False	
+Scenario04	Sheinwoodian	Telychian	False	
+Scenario04	Telychian	Aeronian/Rhuddanian	True	0.3560
+Scenario04	Aeronian/Rhuddanian	Hirnantian	False	
+Scenario04	Hirnantian	Katian	False	
+Scenario04	Katian	Sandbian	False	
+Scenario04	Sandbian	Darriwilian	False	
+Scenario04	Darriwilian	Dapingian	True	0.9813
+Scenario04	Dapingian	Floian	True	0.9543
+Scenario04	Floian	Tremadocian	True	0.8511
+Scenario05	Holocene	Upper Pleistocene	True	0.8272
+Scenario05	Upper Pleistocene	Chibanian	True	0.9366
+Scenario05	Chibanian	Calabrian	True	0.9593
+Scenario05	Calabrian	Gelasian	True	0.6071
+Scenario05	Gelasian	Piacenzian	True	0.9226
+Scenario05	Piacenzian	Zanclean	True	0.9614
+Scenario05	Zanclean	Messinian	True	0.7218
+Scenario05	Messinian	Tortonian	True	0.6653
+Scenario05	Tortonian	Serravallian	True	0.6624
+Scenario05	Serravallian	Langhian	True	0.9779
+Scenario05	Langhian	Burdigalian	True	0.6750
+Scenario05	Burdigalian	Aquitanian	True	0.6849
+Scenario05	Aquitanian	Chattian	True	0.8891
+Scenario05	Chattian	Rupelian	True	0.4474
+Scenario05	Rupelian	Priabonian	True	0.4530
+Scenario05	Priabonian	Bartonian	True	0.6931
+Scenario05	Bartonian	Lutetian	True	0.5217
+Scenario05	Lutetian	Ypresian	False	
+Scenario05	Ypresian	PETM	True	0.9854
+Scenario05	PETM	Thanetian	False	
+Scenario05	Thanetian	Selandian/Danian	False	
+Scenario05	Selandian/Danian	Maastrichtian	True	0.3522
+Scenario05	Maastrichtian	Campanian	True	0.4350
+Scenario05	Campanian	Santonian	True	0.7900
+Scenario05	Santonian	Coniacian	False	
+Scenario05	Coniacian	Turonian	False	
+Scenario05	Turonian	Cenomanian	False	
+Scenario05	Cenomanian	Albian	False	
+Scenario05	Albian	Aptian	False	
+Scenario05	Aptian	Barremian	False	
+Scenario05	Barremian	Hauterivian	False	
+Scenario05	Hauterivian	Valanginian	False	
+Scenario05	Valanginian	Berriasian	True	0.9516
+Scenario05	Berriasian	Tithonian	True	0.8698
+Scenario05	Tithonian	Kimmeridgian	True	0.8582
+Scenario05	Kimmeridgian	Oxfordian	True	0.7037
+Scenario05	Oxfordian	Callovian	True	0.4428
+Scenario05	Callovian	Bathonian	True	0.7074
+Scenario05	Bathonian	Bajocian	True	0.5553
+Scenario05	Bajocian	Aalenian	True	-0.1053
+Scenario05	Aalenian	Toarcian	True	0.0807
+Scenario05	Toarcian	Pliensbachian	True	0.7271
+Scenario05	Pliensbachian	Sinemurian/Hettangian	True	0.8483
+Scenario05	Sinemurian/Hettangian	Rhaetian	True	0.7114
+Scenario05	Rhaetian	Norian	True	0.7826
+Scenario05	Norian	Carnian	False	
+Scenario05	Carnian	Ladinian	False	
+Scenario05	Ladinian	Anisian/Olenekian	False	
+Scenario05	Anisian/Olenekian	Induan	False	
+Scenario05	Induan	Changhsingian	False	
+Scenario05	Changhsingian	Wuchiapingian	True	0.5561
+Scenario05	Wuchiapingian	Capitanian/Wordian	True	0.3620
+Scenario05	Capitanian/Wordian	Roadian	True	0.6857
+Scenario05	Roadian	Kungurian	True	0.7616
+Scenario05	Kungurian	Artinskian	True	0.6014
+Scenario05	Artinskian	Sakmarian	False	
+Scenario05	Sakmarian	Asselian	False	
+Scenario05	Asselian	Gzhelian	True	0.6968
+Scenario05	Gzhelian	Kasimovian	True	0.5974
+Scenario05	Kasimovian	Moscovian	True	0.7349
+Scenario05	Moscovian	Bashkirian	True	0.8245
+Scenario05	Bashkirian	Serpukhovian	True	0.5573
+Scenario05	Serpukhovian	Visean	True	0.9377
+Scenario05	Visean	Tournaisian	True	0.4746
+Scenario05	Tournaisian	Famennian	True	0.8313
+Scenario05	Famennian	Frasnian	False	
+Scenario05	Frasnian	Givetian	False	
+Scenario05	Givetian	Eifelian	False	
+Scenario05	Eifelian	Emsian	True	0.9106
+Scenario05	Emsian	Pragian/Lochkovian	False	
+Scenario05	Pragian/Lochkovian	Pridoli	False	
+Scenario05	Pridoli	Ludfordian	False	
+Scenario05	Ludfordian	Gorstian	True	0.7567
+Scenario05	Gorstian	Homerian	True	0.8499
+Scenario05	Homerian	Sheinwoodian	True	0.9923
+Scenario05	Sheinwoodian	Telychian	True	0.6683
+Scenario05	Telychian	Aeronian/Rhuddanian	True	0.6641
+Scenario05	Aeronian/Rhuddanian	Hirnantian	False	
+Scenario05	Hirnantian	Katian	False	
+Scenario05	Katian	Sandbian	False	
+Scenario05	Sandbian	Darriwilian	False	
+Scenario05	Darriwilian	Dapingian	True	0.9884
+Scenario05	Dapingian	Floian	True	0.9688
+Scenario05	Floian	Tremadocian	False	
+Scenario06	Holocene	Upper Pleistocene	True	0.8946
+Scenario06	Upper Pleistocene	Chibanian	True	0.9433
+Scenario06	Chibanian	Calabrian	True	0.9209
+Scenario06	Calabrian	Gelasian	True	0.7260
+Scenario06	Gelasian	Piacenzian	True	0.9865
+Scenario06	Piacenzian	Zanclean	True	0.9351
+Scenario06	Zanclean	Messinian	True	0.7980
+Scenario06	Messinian	Tortonian	True	0.8567
+Scenario06	Tortonian	Serravallian	True	0.8553
+Scenario06	Serravallian	Langhian	True	0.9824
+Scenario06	Langhian	Burdigalian	True	0.7165
+Scenario06	Burdigalian	Aquitanian	True	0.8405
+Scenario06	Aquitanian	Chattian	True	0.9667
+Scenario06	Chattian	Rupelian	True	0.7011
+Scenario06	Rupelian	Priabonian	True	0.7334
+Scenario06	Priabonian	Bartonian	True	0.8149
+Scenario06	Bartonian	Lutetian	True	0.7978
+Scenario06	Lutetian	Ypresian	False	
+Scenario06	Ypresian	PETM	False	
+Scenario06	PETM	Thanetian	False	
+Scenario06	Thanetian	Selandian/Danian	True	0.8486
+Scenario06	Selandian/Danian	Maastrichtian	True	0.4893
+Scenario06	Maastrichtian	Campanian	True	0.6812
+Scenario06	Campanian	Santonian	True	0.8995
+Scenario06	Santonian	Coniacian	False	
+Scenario06	Coniacian	Turonian	False	
+Scenario06	Turonian	Cenomanian	False	
+Scenario06	Cenomanian	Albian	True	0.6410
+Scenario06	Albian	Aptian	True	0.5494
+Scenario06	Aptian	Barremian	True	0.8093
+Scenario06	Barremian	Hauterivian	True	0.8029
+Scenario06	Hauterivian	Valanginian	True	0.9144
+Scenario06	Valanginian	Berriasian	True	0.8154
+Scenario06	Berriasian	Tithonian	True	0.7679
+Scenario06	Tithonian	Kimmeridgian	True	0.8519
+Scenario06	Kimmeridgian	Oxfordian	True	0.7249
+Scenario06	Oxfordian	Callovian	True	0.2843
+Scenario06	Callovian	Bathonian	True	0.9692
+Scenario06	Bathonian	Bajocian	True	0.6711
+Scenario06	Bajocian	Aalenian	True	0.2812
+Scenario06	Aalenian	Toarcian	True	0.2931
+Scenario06	Toarcian	Pliensbachian	True	0.7628
+Scenario06	Pliensbachian	Sinemurian/Hettangian	True	0.7955
+Scenario06	Sinemurian/Hettangian	Rhaetian	True	0.9097
+Scenario06	Rhaetian	Norian	True	0.8933
+Scenario06	Norian	Carnian	False	
+Scenario06	Carnian	Ladinian	False	
+Scenario06	Ladinian	Anisian/Olenekian	False	
+Scenario06	Anisian/Olenekian	Induan	False	
+Scenario06	Induan	Changhsingian	False	
+Scenario06	Changhsingian	Wuchiapingian	True	0.6796
+Scenario06	Wuchiapingian	Capitanian/Wordian	True	0.4819
+Scenario06	Capitanian/Wordian	Roadian	True	0.7026
+Scenario06	Roadian	Kungurian	True	0.8115
+Scenario06	Kungurian	Artinskian	True	0.6993
+Scenario06	Artinskian	Sakmarian	False	
+Scenario06	Sakmarian	Asselian	False	
+Scenario06	Asselian	Gzhelian	True	0.7938
+Scenario06	Gzhelian	Kasimovian	True	0.7839
+Scenario06	Kasimovian	Moscovian	True	0.7687
+Scenario06	Moscovian	Bashkirian	True	0.8785
+Scenario06	Bashkirian	Serpukhovian	True	0.6245
+Scenario06	Serpukhovian	Visean	True	0.9586
+Scenario06	Visean	Tournaisian	True	0.5080
+Scenario06	Tournaisian	Famennian	True	0.8717
+Scenario06	Famennian	Frasnian	True	0.6991
+Scenario06	Frasnian	Givetian	True	0.9379
+Scenario06	Givetian	Eifelian	True	0.8668
+Scenario06	Eifelian	Emsian	True	0.9154
+Scenario06	Emsian	Pragian/Lochkovian	False	
+Scenario06	Pragian/Lochkovian	Pridoli	False	
+Scenario06	Pridoli	Ludfordian	True	0.9654
+Scenario06	Ludfordian	Gorstian	True	0.7687
+Scenario06	Gorstian	Homerian	True	0.9068
+Scenario06	Homerian	Sheinwoodian	True	0.9954
+Scenario06	Sheinwoodian	Telychian	True	0.7934
+Scenario06	Telychian	Aeronian/Rhuddanian	True	0.7736
+Scenario06	Aeronian/Rhuddanian	Hirnantian	False	
+Scenario06	Hirnantian	Katian	False	
+Scenario06	Katian	Sandbian	False	
+Scenario06	Sandbian	Darriwilian	False	
+Scenario06	Darriwilian	Dapingian	False	
+Scenario06	Dapingian	Floian	False	
+Scenario06	Floian	Tremadocian	False	
+Scenario07	Holocene	Upper Pleistocene	True	0.7481
+Scenario07	Upper Pleistocene	Chibanian	True	0.9232
+Scenario07	Chibanian	Calabrian	True	0.8755
+Scenario07	Calabrian	Gelasian	True	0.6167
+Scenario07	Gelasian	Piacenzian	True	0.8002
+Scenario07	Piacenzian	Zanclean	True	0.8156
+Scenario07	Zanclean	Messinian	True	0.5985
+Scenario07	Messinian	Tortonian	True	0.5679
+Scenario07	Tortonian	Serravallian	True	0.6162
+Scenario07	Serravallian	Langhian	True	0.9642
+Scenario07	Langhian	Burdigalian	False	
+Scenario07	Burdigalian	Aquitanian	False	
+Scenario07	Aquitanian	Chattian	True	0.1136
+Scenario07	Chattian	Rupelian	False	
+Scenario07	Rupelian	Priabonian	False	
+Scenario07	Priabonian	Bartonian	False	
+Scenario07	Bartonian	Lutetian	False	
+Scenario07	Lutetian	Ypresian	False	
+Scenario07	Ypresian	PETM	False	
+Scenario07	PETM	Thanetian	False	
+Scenario07	Thanetian	Selandian/Danian	False	
+Scenario07	Selandian/Danian	Maastrichtian	False	
+Scenario07	Maastrichtian	Campanian	False	
+Scenario07	Campanian	Santonian	True	0.3277
+Scenario07	Santonian	Coniacian	False	
+Scenario07	Coniacian	Turonian	False	
+Scenario07	Turonian	Cenomanian	False	
+Scenario07	Cenomanian	Albian	False	
+Scenario07	Albian	Aptian	False	
+Scenario07	Aptian	Barremian	False	
+Scenario07	Barremian	Hauterivian	True	0.6378
+Scenario07	Hauterivian	Valanginian	False	
+Scenario07	Valanginian	Berriasian	False	
+Scenario07	Berriasian	Tithonian	True	0.6200
+Scenario07	Tithonian	Kimmeridgian	True	0.5705
+Scenario07	Kimmeridgian	Oxfordian	True	-0.0749
+Scenario07	Oxfordian	Callovian	True	0.6207
+Scenario07	Callovian	Bathonian	True	0.5388
+Scenario07	Bathonian	Bajocian	True	0.1528
+Scenario07	Bajocian	Aalenian	False	
+Scenario07	Aalenian	Toarcian	False	
+Scenario07	Toarcian	Pliensbachian	True	0.3787
+Scenario07	Pliensbachian	Sinemurian/Hettangian	True	0.5847
+Scenario07	Sinemurian/Hettangian	Rhaetian	True	0.0607
+Scenario07	Rhaetian	Norian	False	
+Scenario07	Norian	Carnian	False	
+Scenario07	Carnian	Ladinian	False	
+Scenario07	Ladinian	Anisian/Olenekian	False	
+Scenario07	Anisian/Olenekian	Induan	False	
+Scenario07	Induan	Changhsingian	False	
+Scenario07	Changhsingian	Wuchiapingian	True	0.6162
+Scenario07	Wuchiapingian	Capitanian/Wordian	False	
+Scenario07	Capitanian/Wordian	Roadian	False	
+Scenario07	Roadian	Kungurian	False	
+Scenario07	Kungurian	Artinskian	False	
+Scenario07	Artinskian	Sakmarian	False	
+Scenario07	Sakmarian	Asselian	False	
+Scenario07	Asselian	Gzhelian	False	
+Scenario07	Gzhelian	Kasimovian	False	
+Scenario07	Kasimovian	Moscovian	False	
+Scenario07	Moscovian	Bashkirian	True	0.4303
+Scenario07	Bashkirian	Serpukhovian	True	0.4880
+Scenario07	Serpukhovian	Visean	True	0.5344
+Scenario07	Visean	Tournaisian	True	0.5883
+Scenario07	Tournaisian	Famennian	True	0.4737
+Scenario07	Famennian	Frasnian	False	
+Scenario07	Frasnian	Givetian	True	0.5988
+Scenario07	Givetian	Eifelian	False	
+Scenario07	Eifelian	Emsian	False	
+Scenario07	Emsian	Pragian/Lochkovian	False	
+Scenario07	Pragian/Lochkovian	Pridoli	True	0.6760
+Scenario07	Pridoli	Ludfordian	False	
+Scenario07	Ludfordian	Gorstian	False	
+Scenario07	Gorstian	Homerian	True	0.7052
+Scenario07	Homerian	Sheinwoodian	True	0.9889
+Scenario07	Sheinwoodian	Telychian	True	0.8145
+Scenario07	Telychian	Aeronian/Rhuddanian	True	0.3877
+Scenario07	Aeronian/Rhuddanian	Hirnantian	True	0.5255
+Scenario07	Hirnantian	Katian	False	
+Scenario07	Katian	Sandbian	False	
+Scenario07	Sandbian	Darriwilian	False	
+Scenario07	Darriwilian	Dapingian	True	0.8801
+Scenario07	Dapingian	Floian	False	
+Scenario07	Floian	Tremadocian	False	
+Scenario08	Holocene	Upper Pleistocene	True	0.7509
+Scenario08	Upper Pleistocene	Chibanian	True	0.9725
+Scenario08	Chibanian	Calabrian	True	0.9616
+Scenario08	Calabrian	Gelasian	True	0.6608
+Scenario08	Gelasian	Piacenzian	True	0.9707
+Scenario08	Piacenzian	Zanclean	True	0.8899
+Scenario08	Zanclean	Messinian	True	0.6370
+Scenario08	Messinian	Tortonian	True	0.5595
+Scenario08	Tortonian	Serravallian	True	0.7775
+Scenario08	Serravallian	Langhian	True	0.9750
+Scenario08	Langhian	Burdigalian	False	
+Scenario08	Burdigalian	Aquitanian	False	
+Scenario08	Aquitanian	Chattian	True	0.6413
+Scenario08	Chattian	Rupelian	True	0.0543
+Scenario08	Rupelian	Priabonian	True	0.6031
+Scenario08	Priabonian	Bartonian	True	0.5406
+Scenario08	Bartonian	Lutetian	False	
+Scenario08	Lutetian	Ypresian	False	
+Scenario08	Ypresian	PETM	False	
+Scenario08	PETM	Thanetian	False	
+Scenario08	Thanetian	Selandian/Danian	False	
+Scenario08	Selandian/Danian	Maastrichtian	True	0.5688
+Scenario08	Maastrichtian	Campanian	True	0.6398
+Scenario08	Campanian	Santonian	True	0.6857
+Scenario08	Santonian	Coniacian	True	0.5298
+Scenario08	Coniacian	Turonian	False	
+Scenario08	Turonian	Cenomanian	False	
+Scenario08	Cenomanian	Albian	False	
+Scenario08	Albian	Aptian	False	
+Scenario08	Aptian	Barremian	False	
+Scenario08	Barremian	Hauterivian	True	0.8717
+Scenario08	Hauterivian	Valanginian	True	0.9149
+Scenario08	Valanginian	Berriasian	True	0.9566
+Scenario08	Berriasian	Tithonian	True	0.8306
+Scenario08	Tithonian	Kimmeridgian	True	0.8643
+Scenario08	Kimmeridgian	Oxfordian	True	0.4821
+Scenario08	Oxfordian	Callovian	True	0.4679
+Scenario08	Callovian	Bathonian	True	0.9256
+Scenario08	Bathonian	Bajocian	True	0.5372
+Scenario08	Bajocian	Aalenian	True	0.2310
+Scenario08	Aalenian	Toarcian	True	0.1269
+Scenario08	Toarcian	Pliensbachian	True	0.6329
+Scenario08	Pliensbachian	Sinemurian/Hettangian	True	0.8328
+Scenario08	Sinemurian/Hettangian	Rhaetian	True	0.7209
+Scenario08	Rhaetian	Norian	True	0.7949
+Scenario08	Norian	Carnian	False	
+Scenario08	Carnian	Ladinian	False	
+Scenario08	Ladinian	Anisian/Olenekian	False	
+Scenario08	Anisian/Olenekian	Induan	False	
+Scenario08	Induan	Changhsingian	False	
+Scenario08	Changhsingian	Wuchiapingian	True	0.6664
+Scenario08	Wuchiapingian	Capitanian/Wordian	True	0.3097
+Scenario08	Capitanian/Wordian	Roadian	True	0.6127
+Scenario08	Roadian	Kungurian	True	0.8701
+Scenario08	Kungurian	Artinskian	True	0.4430
+Scenario08	Artinskian	Sakmarian	False	
+Scenario08	Sakmarian	Asselian	False	
+Scenario08	Asselian	Gzhelian	True	0.7175
+Scenario08	Gzhelian	Kasimovian	True	0.7120
+Scenario08	Kasimovian	Moscovian	True	0.7939
+Scenario08	Moscovian	Bashkirian	True	0.7438
+Scenario08	Bashkirian	Serpukhovian	True	0.6561
+Scenario08	Serpukhovian	Visean	True	0.8118
+Scenario08	Visean	Tournaisian	True	0.6295
+Scenario08	Tournaisian	Famennian	True	0.8872
+Scenario08	Famennian	Frasnian	False	
+Scenario08	Frasnian	Givetian	False	
+Scenario08	Givetian	Eifelian	True	0.9145
+Scenario08	Eifelian	Emsian	True	0.9482
+Scenario08	Emsian	Pragian/Lochkovian	True	0.8141
+Scenario08	Pragian/Lochkovian	Pridoli	False	
+Scenario08	Pridoli	Ludfordian	False	
+Scenario08	Ludfordian	Gorstian	False	
+Scenario08	Gorstian	Homerian	True	0.7636
+Scenario08	Homerian	Sheinwoodian	True	0.9942
+Scenario08	Sheinwoodian	Telychian	True	0.8434
+Scenario08	Telychian	Aeronian/Rhuddanian	True	0.6971
+Scenario08	Aeronian/Rhuddanian	Hirnantian	True	0.8423
+Scenario08	Hirnantian	Katian	True	0.5916
+Scenario08	Katian	Sandbian	True	0.8866
+Scenario08	Sandbian	Darriwilian	False	
+Scenario08	Darriwilian	Dapingian	True	0.9224
+Scenario08	Dapingian	Floian	False	
+Scenario08	Floian	Tremadocian	False	
+Scenario09	Holocene	Upper Pleistocene	True	0.7876
+Scenario09	Upper Pleistocene	Chibanian	True	0.9819
+Scenario09	Chibanian	Calabrian	True	0.9786
+Scenario09	Calabrian	Gelasian	True	0.8296
+Scenario09	Gelasian	Piacenzian	True	0.9860
+Scenario09	Piacenzian	Zanclean	True	0.9486
+Scenario09	Zanclean	Messinian	True	0.7878
+Scenario09	Messinian	Tortonian	True	0.8087
+Scenario09	Tortonian	Serravallian	True	0.8232
+Scenario09	Serravallian	Langhian	True	0.9746
+Scenario09	Langhian	Burdigalian	True	0.5624
+Scenario09	Burdigalian	Aquitanian	True	0.7102
+Scenario09	Aquitanian	Chattian	True	0.9486
+Scenario09	Chattian	Rupelian	True	0.6231
+Scenario09	Rupelian	Priabonian	True	0.7026
+Scenario09	Priabonian	Bartonian	True	0.7217
+Scenario09	Bartonian	Lutetian	True	0.7709
+Scenario09	Lutetian	Ypresian	True	0.5722
+Scenario09	Ypresian	PETM	True	0.9598
+Scenario09	PETM	Thanetian	True	0.6241
+Scenario09	Thanetian	Selandian/Danian	True	0.8245
+Scenario09	Selandian/Danian	Maastrichtian	True	0.4952
+Scenario09	Maastrichtian	Campanian	True	0.7299
+Scenario09	Campanian	Santonian	True	0.8685
+Scenario09	Santonian	Coniacian	True	0.8873
+Scenario09	Coniacian	Turonian	False	
+Scenario09	Turonian	Cenomanian	False	
+Scenario09	Cenomanian	Albian	True	0.5765
+Scenario09	Albian	Aptian	True	0.5109
+Scenario09	Aptian	Barremian	True	0.6229
+Scenario09	Barremian	Hauterivian	True	0.7806
+Scenario09	Hauterivian	Valanginian	True	0.7890
+Scenario09	Valanginian	Berriasian	True	0.9152
+Scenario09	Berriasian	Tithonian	True	0.8577
+Scenario09	Tithonian	Kimmeridgian	True	0.8472
+Scenario09	Kimmeridgian	Oxfordian	True	0.6912
+Scenario09	Oxfordian	Callovian	True	0.5152
+Scenario09	Callovian	Bathonian	True	0.9705
+Scenario09	Bathonian	Bajocian	True	0.6789
+Scenario09	Bajocian	Aalenian	True	0.4190
+Scenario09	Aalenian	Toarcian	True	0.3231
+Scenario09	Toarcian	Pliensbachian	True	0.7208
+Scenario09	Pliensbachian	Sinemurian/Hettangian	True	0.8480
+Scenario09	Sinemurian/Hettangian	Rhaetian	True	0.8831
+Scenario09	Rhaetian	Norian	True	0.8621
+Scenario09	Norian	Carnian	False	
+Scenario09	Carnian	Ladinian	False	
+Scenario09	Ladinian	Anisian/Olenekian	False	
+Scenario09	Anisian/Olenekian	Induan	False	
+Scenario09	Induan	Changhsingian	False	
+Scenario09	Changhsingian	Wuchiapingian	True	0.7599
+Scenario09	Wuchiapingian	Capitanian/Wordian	True	0.4543
+Scenario09	Capitanian/Wordian	Roadian	True	0.6507
+Scenario09	Roadian	Kungurian	True	0.8362
+Scenario09	Kungurian	Artinskian	True	0.5769
+Scenario09	Artinskian	Sakmarian	False	
+Scenario09	Sakmarian	Asselian	False	
+Scenario09	Asselian	Gzhelian	True	0.7893
+Scenario09	Gzhelian	Kasimovian	True	0.8245
+Scenario09	Kasimovian	Moscovian	True	0.8376
+Scenario09	Moscovian	Bashkirian	True	0.8086
+Scenario09	Bashkirian	Serpukhovian	True	0.6691
+Scenario09	Serpukhovian	Visean	True	0.8824
+Scenario09	Visean	Tournaisian	True	0.6017
+Scenario09	Tournaisian	Famennian	True	0.9254
+Scenario09	Famennian	Frasnian	False	
+Scenario09	Frasnian	Givetian	False	
+Scenario09	Givetian	Eifelian	True	0.8966
+Scenario09	Eifelian	Emsian	True	0.9452
+Scenario09	Emsian	Pragian/Lochkovian	True	0.8228
+Scenario09	Pragian/Lochkovian	Pridoli	True	0.8640
+Scenario09	Pridoli	Ludfordian	False	
+Scenario09	Ludfordian	Gorstian	False	
+Scenario09	Gorstian	Homerian	True	0.8206
+Scenario09	Homerian	Sheinwoodian	True	0.9953
+Scenario09	Sheinwoodian	Telychian	True	0.8646
+Scenario09	Telychian	Aeronian/Rhuddanian	True	0.7806
+Scenario09	Aeronian/Rhuddanian	Hirnantian	True	0.9005
+Scenario09	Hirnantian	Katian	True	0.6818
+Scenario09	Katian	Sandbian	True	0.9418
+Scenario09	Sandbian	Darriwilian	False	
+Scenario09	Darriwilian	Dapingian	False	
+Scenario09	Dapingian	Floian	False	
+Scenario09	Floian	Tremadocian	False	
+Scenario10	Holocene	Upper Pleistocene	True	0.7481
+Scenario10	Upper Pleistocene	Chibanian	True	0.9232
+Scenario10	Chibanian	Calabrian	True	0.8755
+Scenario10	Calabrian	Gelasian	True	0.6167
+Scenario10	Gelasian	Piacenzian	True	0.8003
+Scenario10	Piacenzian	Zanclean	True	0.8158
+Scenario10	Zanclean	Messinian	True	0.5976
+Scenario10	Messinian	Tortonian	True	0.5673
+Scenario10	Tortonian	Serravallian	True	0.6164
+Scenario10	Serravallian	Langhian	True	0.9643
+Scenario10	Langhian	Burdigalian	False	
+Scenario10	Burdigalian	Aquitanian	False	
+Scenario10	Aquitanian	Chattian	True	0.1214
+Scenario10	Chattian	Rupelian	False	
+Scenario10	Rupelian	Priabonian	False	
+Scenario10	Priabonian	Bartonian	False	
+Scenario10	Bartonian	Lutetian	False	
+Scenario10	Lutetian	Ypresian	False	
+Scenario10	Ypresian	PETM	False	
+Scenario10	PETM	Thanetian	False	
+Scenario10	Thanetian	Selandian/Danian	False	
+Scenario10	Selandian/Danian	Maastrichtian	False	
+Scenario10	Maastrichtian	Campanian	False	
+Scenario10	Campanian	Santonian	True	0.3344
+Scenario10	Santonian	Coniacian	False	
+Scenario10	Coniacian	Turonian	False	
+Scenario10	Turonian	Cenomanian	False	
+Scenario10	Cenomanian	Albian	False	
+Scenario10	Albian	Aptian	False	
+Scenario10	Aptian	Barremian	False	
+Scenario10	Barremian	Hauterivian	True	0.6353
+Scenario10	Hauterivian	Valanginian	False	
+Scenario10	Valanginian	Berriasian	False	
+Scenario10	Berriasian	Tithonian	True	0.6390
+Scenario10	Tithonian	Kimmeridgian	False	
+Scenario10	Kimmeridgian	Oxfordian	False	
+Scenario10	Oxfordian	Callovian	True	0.6253
+Scenario10	Callovian	Bathonian	True	0.5175
+Scenario10	Bathonian	Bajocian	True	0.1187
+Scenario10	Bajocian	Aalenian	False	
+Scenario10	Aalenian	Toarcian	False	
+Scenario10	Toarcian	Pliensbachian	True	0.4260
+Scenario10	Pliensbachian	Sinemurian/Hettangian	True	0.6219
+Scenario10	Sinemurian/Hettangian	Rhaetian	True	0.0494
+Scenario10	Rhaetian	Norian	False	
+Scenario10	Norian	Carnian	False	
+Scenario10	Carnian	Ladinian	False	
+Scenario10	Ladinian	Anisian/Olenekian	False	
+Scenario10	Anisian/Olenekian	Induan	False	
+Scenario10	Induan	Changhsingian	False	
+Scenario10	Changhsingian	Wuchiapingian	False	
+Scenario10	Wuchiapingian	Capitanian/Wordian	False	
+Scenario10	Capitanian/Wordian	Roadian	False	
+Scenario10	Roadian	Kungurian	False	
+Scenario10	Kungurian	Artinskian	False	
+Scenario10	Artinskian	Sakmarian	False	
+Scenario10	Sakmarian	Asselian	False	
+Scenario10	Asselian	Gzhelian	False	
+Scenario10	Gzhelian	Kasimovian	False	
+Scenario10	Kasimovian	Moscovian	False	
+Scenario10	Moscovian	Bashkirian	True	0.4360
+Scenario10	Bashkirian	Serpukhovian	True	0.4688
+Scenario10	Serpukhovian	Visean	True	0.5671
+Scenario10	Visean	Tournaisian	True	0.5983
+Scenario10	Tournaisian	Famennian	True	0.6165
+Scenario10	Famennian	Frasnian	False	
+Scenario10	Frasnian	Givetian	True	0.7608
+Scenario10	Givetian	Eifelian	False	
+Scenario10	Eifelian	Emsian	False	
+Scenario10	Emsian	Pragian/Lochkovian	False	
+Scenario10	Pragian/Lochkovian	Pridoli	True	0.8435
+Scenario10	Pridoli	Ludfordian	False	
+Scenario10	Ludfordian	Gorstian	False	
+Scenario10	Gorstian	Homerian	False	
+Scenario10	Homerian	Sheinwoodian	False	
+Scenario10	Sheinwoodian	Telychian	False	
+Scenario10	Telychian	Aeronian/Rhuddanian	True	0.4298
+Scenario10	Aeronian/Rhuddanian	Hirnantian	False	
+Scenario10	Hirnantian	Katian	False	
+Scenario10	Katian	Sandbian	True	0.9472
+Scenario10	Sandbian	Darriwilian	False	
+Scenario10	Darriwilian	Dapingian	True	0.9956
+Scenario10	Dapingian	Floian	True	0.9832
+Scenario10	Floian	Tremadocian	True	0.8444
+Scenario11	Holocene	Upper Pleistocene	True	0.7509
+Scenario11	Upper Pleistocene	Chibanian	True	0.9725
+Scenario11	Chibanian	Calabrian	True	0.9616
+Scenario11	Calabrian	Gelasian	True	0.6607
+Scenario11	Gelasian	Piacenzian	True	0.9707
+Scenario11	Piacenzian	Zanclean	True	0.8899
+Scenario11	Zanclean	Messinian	True	0.6356
+Scenario11	Messinian	Tortonian	True	0.5585
+Scenario11	Tortonian	Serravallian	True	0.7776
+Scenario11	Serravallian	Langhian	True	0.9752
+Scenario11	Langhian	Burdigalian	False	
+Scenario11	Burdigalian	Aquitanian	False	
+Scenario11	Aquitanian	Chattian	True	0.6474
+Scenario11	Chattian	Rupelian	True	0.0657
+Scenario11	Rupelian	Priabonian	True	0.6026
+Scenario11	Priabonian	Bartonian	True	0.5434
+Scenario11	Bartonian	Lutetian	False	
+Scenario11	Lutetian	Ypresian	False	
+Scenario11	Ypresian	PETM	False	
+Scenario11	PETM	Thanetian	False	
+Scenario11	Thanetian	Selandian/Danian	False	
+Scenario11	Selandian/Danian	Maastrichtian	True	0.5705
+Scenario11	Maastrichtian	Campanian	True	0.6388
+Scenario11	Campanian	Santonian	True	0.6905
+Scenario11	Santonian	Coniacian	True	0.5284
+Scenario11	Coniacian	Turonian	False	
+Scenario11	Turonian	Cenomanian	False	
+Scenario11	Cenomanian	Albian	False	
+Scenario11	Albian	Aptian	False	
+Scenario11	Aptian	Barremian	False	
+Scenario11	Barremian	Hauterivian	True	0.8752
+Scenario11	Hauterivian	Valanginian	True	0.9149
+Scenario11	Valanginian	Berriasian	True	0.9585
+Scenario11	Berriasian	Tithonian	True	0.8412
+Scenario11	Tithonian	Kimmeridgian	True	0.8737
+Scenario11	Kimmeridgian	Oxfordian	True	0.5254
+Scenario11	Oxfordian	Callovian	True	0.4876
+Scenario11	Callovian	Bathonian	True	0.9171
+Scenario11	Bathonian	Bajocian	True	0.5285
+Scenario11	Bajocian	Aalenian	True	0.2948
+Scenario11	Aalenian	Toarcian	True	0.1528
+Scenario11	Toarcian	Pliensbachian	True	0.6496
+Scenario11	Pliensbachian	Sinemurian/Hettangian	True	0.8390
+Scenario11	Sinemurian/Hettangian	Rhaetian	True	0.7298
+Scenario11	Rhaetian	Norian	True	0.7912
+Scenario11	Norian	Carnian	False	
+Scenario11	Carnian	Ladinian	False	
+Scenario11	Ladinian	Anisian/Olenekian	False	
+Scenario11	Anisian/Olenekian	Induan	False	
+Scenario11	Induan	Changhsingian	False	
+Scenario11	Changhsingian	Wuchiapingian	True	0.6479
+Scenario11	Wuchiapingian	Capitanian/Wordian	True	0.2807
+Scenario11	Capitanian/Wordian	Roadian	True	0.5958
+Scenario11	Roadian	Kungurian	True	0.8576
+Scenario11	Kungurian	Artinskian	False	
+Scenario11	Artinskian	Sakmarian	False	
+Scenario11	Sakmarian	Asselian	False	
+Scenario11	Asselian	Gzhelian	False	
+Scenario11	Gzhelian	Kasimovian	False	
+Scenario11	Kasimovian	Moscovian	True	0.8024
+Scenario11	Moscovian	Bashkirian	True	0.7680
+Scenario11	Bashkirian	Serpukhovian	True	0.6376
+Scenario11	Serpukhovian	Visean	True	0.8043
+Scenario11	Visean	Tournaisian	True	0.6701
+Scenario11	Tournaisian	Famennian	True	0.8726
+Scenario11	Famennian	Frasnian	False	
+Scenario11	Frasnian	Givetian	False	
+Scenario11	Givetian	Eifelian	False	
+Scenario11	Eifelian	Emsian	True	0.9442
+Scenario11	Emsian	Pragian/Lochkovian	False	
+Scenario11	Pragian/Lochkovian	Pridoli	False	
+Scenario11	Pridoli	Ludfordian	True	0.9494
+Scenario11	Ludfordian	Gorstian	False	
+Scenario11	Gorstian	Homerian	True	0.8301
+Scenario11	Homerian	Sheinwoodian	True	0.9960
+Scenario11	Sheinwoodian	Telychian	True	0.8755
+Scenario11	Telychian	Aeronian/Rhuddanian	True	0.7095
+Scenario11	Aeronian/Rhuddanian	Hirnantian	False	
+Scenario11	Hirnantian	Katian	False	
+Scenario11	Katian	Sandbian	False	
+Scenario11	Sandbian	Darriwilian	False	
+Scenario11	Darriwilian	Dapingian	True	0.9928
+Scenario11	Dapingian	Floian	True	0.9779
+Scenario11	Floian	Tremadocian	False	
+Scenario12	Holocene	Upper Pleistocene	True	0.7876
+Scenario12	Upper Pleistocene	Chibanian	True	0.9819
+Scenario12	Chibanian	Calabrian	True	0.9786
+Scenario12	Calabrian	Gelasian	True	0.8296
+Scenario12	Gelasian	Piacenzian	True	0.9860
+Scenario12	Piacenzian	Zanclean	True	0.9486
+Scenario12	Zanclean	Messinian	True	0.7873
+Scenario12	Messinian	Tortonian	True	0.8086
+Scenario12	Tortonian	Serravallian	True	0.8235
+Scenario12	Serravallian	Langhian	True	0.9749
+Scenario12	Langhian	Burdigalian	True	0.5636
+Scenario12	Burdigalian	Aquitanian	True	0.7097
+Scenario12	Aquitanian	Chattian	True	0.9495
+Scenario12	Chattian	Rupelian	True	0.6254
+Scenario12	Rupelian	Priabonian	True	0.7034
+Scenario12	Priabonian	Bartonian	True	0.7236
+Scenario12	Bartonian	Lutetian	True	0.7732
+Scenario12	Lutetian	Ypresian	True	0.5727
+Scenario12	Ypresian	PETM	True	0.9602
+Scenario12	PETM	Thanetian	True	0.6261
+Scenario12	Thanetian	Selandian/Danian	True	0.8258
+Scenario12	Selandian/Danian	Maastrichtian	True	0.4983
+Scenario12	Maastrichtian	Campanian	True	0.7296
+Scenario12	Campanian	Santonian	True	0.8676
+Scenario12	Santonian	Coniacian	True	0.8864
+Scenario12	Coniacian	Turonian	False	
+Scenario12	Turonian	Cenomanian	False	
+Scenario12	Cenomanian	Albian	True	0.5976
+Scenario12	Albian	Aptian	True	0.5267
+Scenario12	Aptian	Barremian	True	0.6384
+Scenario12	Barremian	Hauterivian	True	0.7875
+Scenario12	Hauterivian	Valanginian	True	0.7949
+Scenario12	Valanginian	Berriasian	True	0.9179
+Scenario12	Berriasian	Tithonian	True	0.8634
+Scenario12	Tithonian	Kimmeridgian	True	0.8658
+Scenario12	Kimmeridgian	Oxfordian	True	0.7141
+Scenario12	Oxfordian	Callovian	True	0.5140
+Scenario12	Callovian	Bathonian	True	0.9674
+Scenario12	Bathonian	Bajocian	True	0.6711
+Scenario12	Bajocian	Aalenian	True	0.4624
+Scenario12	Aalenian	Toarcian	True	0.3482
+Scenario12	Toarcian	Pliensbachian	True	0.7329
+Scenario12	Pliensbachian	Sinemurian/Hettangian	True	0.8522
+Scenario12	Sinemurian/Hettangian	Rhaetian	True	0.8837
+Scenario12	Rhaetian	Norian	True	0.8614
+Scenario12	Norian	Carnian	False	
+Scenario12	Carnian	Ladinian	False	
+Scenario12	Ladinian	Anisian/Olenekian	False	
+Scenario12	Anisian/Olenekian	Induan	False	
+Scenario12	Induan	Changhsingian	False	
+Scenario12	Changhsingian	Wuchiapingian	True	0.7433
+Scenario12	Wuchiapingian	Capitanian/Wordian	True	0.4485
+Scenario12	Capitanian/Wordian	Roadian	True	0.6473
+Scenario12	Roadian	Kungurian	True	0.8287
+Scenario12	Kungurian	Artinskian	True	0.5443
+Scenario12	Artinskian	Sakmarian	False	
+Scenario12	Sakmarian	Asselian	False	
+Scenario12	Asselian	Gzhelian	True	0.7430
+Scenario12	Gzhelian	Kasimovian	True	0.8071
+Scenario12	Kasimovian	Moscovian	True	0.8465
+Scenario12	Moscovian	Bashkirian	True	0.8272
+Scenario12	Bashkirian	Serpukhovian	True	0.6509
+Scenario12	Serpukhovian	Visean	True	0.8749
+Scenario12	Visean	Tournaisian	True	0.6261
+Scenario12	Tournaisian	Famennian	True	0.9046
+Scenario12	Famennian	Frasnian	False	
+Scenario12	Frasnian	Givetian	False	
+Scenario12	Givetian	Eifelian	True	0.9034
+Scenario12	Eifelian	Emsian	True	0.9499
+Scenario12	Emsian	Pragian/Lochkovian	False	
+Scenario12	Pragian/Lochkovian	Pridoli	False	
+Scenario12	Pridoli	Ludfordian	False	
+Scenario12	Ludfordian	Gorstian	False	
+Scenario12	Gorstian	Homerian	True	0.8651
+Scenario12	Homerian	Sheinwoodian	True	0.9967
+Scenario12	Sheinwoodian	Telychian	True	0.8891
+Scenario12	Telychian	Aeronian/Rhuddanian	True	0.7687
+Scenario12	Aeronian/Rhuddanian	Hirnantian	True	0.8769
+Scenario12	Hirnantian	Katian	False	
+Scenario12	Katian	Sandbian	False	
+Scenario12	Sandbian	Darriwilian	False	
+Scenario12	Darriwilian	Dapingian	True	0.9917
+Scenario12	Dapingian	Floian	True	0.9787
+Scenario12	Floian	Tremadocian	False	

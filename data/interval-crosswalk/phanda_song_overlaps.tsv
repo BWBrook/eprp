@@ -1,0 +1,88 @@
+phanda_slice	song_bin	shared_myr	frac_of_slice	frac_of_bin	relation	event
+Holocene		0.0000	0.0000	0.0000	no Song bin	
+Upper Pleistocene		0.0000	0.0000	0.0000	no Song bin	
+Chibanian		0.0000	0.0000	0.0000	no Song bin	
+Calabrian		0.0000	0.0000	0.0000	no Song bin	
+Gelasian		0.0000	0.0000	0.0000	no Song bin	
+Piacenzian	bin56	1.0200	1.0000	0.3705	slice within bin	
+Zanclean	bin56	1.7330	1.0000	0.6295	slice within bin	
+Messinian	bin55	1.9130	1.0000	0.1797	slice within bin	
+Tortonian	bin55	4.3840	1.0000	0.4118	slice within bin	
+Serravallian	bin55	2.1900	1.0000	0.2057	slice within bin	
+Langhian	bin55	2.1600	1.0000	0.2029	slice within bin	
+Burdigalian	bin54	4.4700	1.0000	0.6331	slice within bin	
+Aquitanian	bin54	2.5900	1.0000	0.3669	slice within bin	
+Chattian	bin53	4.2600	1.0000	0.3923	slice within bin	
+Rupelian	bin53	6.6000	1.0000	0.6077	slice within bin	
+Priabonian	bin52	3.8100	1.0000	0.5344	slice within bin	
+Bartonian	bin52	3.3200	1.0000	0.4656	slice within bin	
+Lutetian	bin51	7.0400	1.0000	1.0000	one-to-one	
+Ypresian	bin50	7.6300	1.0000	0.9622	slice within bin	
+PETM	bin50	0.3000	1.0000	0.0378	slice within bin	PETM
+Thanetian	bin49	3.2400	1.0000	0.3240	slice within bin	
+Selandian/Danian	bin49	6.7600	1.0000	0.6760	slice within bin	
+Maastrichtian	bin48	6.2000	1.0000	1.0000	one-to-one	end-Cretaceous
+Campanian	bin47	11.4000	1.0000	1.0000	one-to-one	
+Santonian	bin46	2.1000	1.0000	0.2039	slice within bin	
+Coniacian	bin46	4.1000	1.0000	0.3981	slice within bin	
+Turonian	bin46	4.1000	1.0000	0.3981	slice within bin	OAE2
+Cenomanian	bin45	6.6000	1.0000	1.0000	one-to-one	OAE2
+Albian	bin44	12.7000	1.0000	1.0000	one-to-one	
+Aptian	bin43	8.2000	1.0000	1.0000	one-to-one	
+Barremian	bin42	4.3700	1.0000	0.3902	slice within bin	
+Hauterivian	bin42	6.8300	1.0000	0.6098	slice within bin	
+Valanginian	bin41	4.4500	1.0000	0.4238	slice within bin	
+Berriasian	bin41	6.0500	1.0000	0.5762	slice within bin	
+Tithonian	bin40	6.1000	1.0000	0.5214	slice within bin	
+Kimmeridgian	bin40	5.6000	1.0000	0.4786	slice within bin	
+Oxfordian	bin39	6.7000	1.0000	1.0000	one-to-one	
+Callovian	bin38	3.8000	1.0000	0.4043	slice within bin	
+Bathonian	bin38	2.9000	1.0000	0.3085	slice within bin	
+Bajocian	bin38	2.7000	1.0000	0.2872	slice within bin	
+Aalenian	bin37	3.8000	1.0000	0.2857	slice within bin	
+Toarcian	bin37	9.5000	1.0000	0.7143	slice within bin	Toarcian OAE
+Pliensbachian	bin36	8.7000	1.0000	1.0000	one-to-one	
+Sinemurian/Hettangian	bin35	8.5000	1.0000	1.0000	one-to-one	
+Rhaetian	bin34	4.3000	1.0000	1.0000	one-to-one	end-Triassic
+Norian	bin33	21.6000	1.0000	1.0000	one-to-one	
+Carnian	bin32	9.7000	1.0000	1.0000	one-to-one	
+Ladinian	bin31	4.4640	1.0000	0.4464	slice within bin	
+Anisian/Olenekian	bin30	3.8000	0.4070	0.7752	partial	
+Anisian/Olenekian	bin31	5.5360	0.5930	0.5536	partial	
+Induan	bin30	1.1020	1.0000	0.2248	slice within bin	
+Changhsingian	bin29	2.2380	1.0000	0.2813	slice within bin	end-Permian
+Wuchiapingian	bin29	5.7170	1.0000	0.7187	slice within bin	
+Capitanian/Wordian	bin28	7.0430	1.0000	1.0000	one-to-one	Capitanian
+Roadian	bin27	7.5000	1.0000	0.4573	slice within bin	
+Kungurian	bin27	8.9000	1.0000	0.5427	slice within bin	
+Artinskian	bin26	6.8000	1.0000	1.0000	one-to-one	
+Sakmarian	bin25	3.4200	1.0000	0.3886	slice within bin	
+Asselian	bin25	5.3800	1.0000	0.6114	slice within bin	
+Gzhelian	bin24	4.8000	1.0000	1.0000	one-to-one	
+Kasimovian	bin23	3.3000	1.0000	0.2870	slice within bin	
+Moscovian	bin23	8.2000	1.0000	0.7130	slice within bin	
+Bashkirian	bin22	8.2000	1.0000	1.0000	one-to-one	
+Serpukhovian	bin21	6.9000	1.0000	0.4481	slice within bin	
+Visean	bin20	7.9000	0.4817	1.0000	bin within slice	
+Visean	bin21	8.5000	0.5183	0.5519	partial	
+Tournaisian	bin19	12.1600	1.0000	1.0000	one-to-one	
+Famennian	bin18	13.2900	1.0000	1.0000	one-to-one	Late Devonian
+Frasnian	bin17	10.1600	1.0000	1.0000	one-to-one	Late Devonian
+Givetian	bin16	5.6400	1.0000	0.5054	slice within bin	
+Eifelian	bin16	5.5200	1.0000	0.4946	slice within bin	
+Emsian	bin15	17.1500	1.0000	1.0000	one-to-one	
+Pragian/Lochkovian	bin14	9.0000	1.0000	1.0000	one-to-one	
+Pridoli	bin13	3.0800	1.0000	0.4350	slice within bin	
+Ludfordian	bin13	2.3000	1.0000	0.3249	slice within bin	
+Gorstian	bin13	1.7000	1.0000	0.2401	slice within bin	
+Homerian	bin12	3.9000	1.0000	0.6290	slice within bin	
+Sheinwoodian	bin12	2.3000	1.0000	0.3710	slice within bin	
+Telychian	bin11	5.7000	1.0000	0.5588	slice within bin	
+Aeronian/Rhuddanian	bin11	4.5000	1.0000	0.4412	slice within bin	
+Hirnantian	bin10	2.1000	1.0000	0.2165	slice within bin	end-Ordovician
+Katian	bin10	7.6000	1.0000	0.7835	slice within bin	
+Sandbian	bin09	5.4000	1.0000	0.3253	slice within bin	
+Darriwilian	bin09	11.2000	1.0000	0.6747	slice within bin	
+Dapingian	bin08	1.9000	1.0000	0.2468	slice within bin	
+Floian	bin08	5.8000	1.0000	0.7532	slice within bin	
+Tremadocian	bin07	9.7500	1.0000	1.0000	one-to-one	

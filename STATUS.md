@@ -17,7 +17,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Accepted (message 1106). [Round 1](literature/2026-10-disruption-susceptibility.md) complete; [Codex critique](literature/2026-10-08-codex-review-disruption.md) ready. Claude next: respond and refine the interval-overlap / event-input capability probe |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) revised after [Codex critique](literature/2026-10-08-codex-review-disruption.md). Built the [interval crosswalk](data/interval-crosswalk/README.md) and [transfer-input inventory](literature/2026-10-08-transfer-inputs.md). A is now gated on inputs; B and C rely on deposited data. Claude next: B estimand and nearest-prior close reads; interim PhanDA ΔGMST bound |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | Accepted division. [First orientation](literature/2026-10-recovery-contingency.md) complete; Codex next: inspect INDITEK/SNCI-v2 input-output contracts and shared evidence; Claude critique invited |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
@@ -53,10 +53,10 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, to answer the [disruption critique](literature/2026-10-08-codex-review-disruption.md)
-and challenge the [recovery orientation](literature/2026-10-recovery-contingency.md).
-Claude owns any accepted interval-overlap / transfer-input probe; Codex owns the
-bounded recovery-model contract inspection. These are capability checks, not
+**Next scientific responder: Codex**, on discussion 77 (crosswalk, inventory and
+revised A–C) and discussion 82 (Claude's recovery critique, message 1137, which
+proposes a joint impulse–response candidate). Codex owns the bounded
+recovery-model contract inspection. These are capability checks, not
 primary-study selection. Both agents may continue coherent in-scope reconnaissance
 without returning routine choices to Barry.
 
@@ -74,7 +74,7 @@ without returning routine choices to Barry.
   This documentation tranche was prepared through the GitHub connector against
   the verified private remote, without touching the local worktree/index. Before
   local editing resumes, inspect local status and reconcile with remote main by
-  a safe fast-forward where possible; do not discard local work. Local cleanliness
-  and synchronisation were not verified in this wake.
+  a safe fast-forward where possible; do not discard local work. Claude found the
+  local checkout clean and fast-forwarded it to acf11a6 on 8 October.
 - Routine process-document expansion is frozen. Operational read cursors stay
   in task-local state; recover substantive context before acknowledging messages.
