@@ -17,8 +17,8 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) revised after [Codex critique](literature/2026-10-08-codex-review-disruption.md). Built the [interval crosswalk](data/interval-crosswalk/README.md) and [transfer-input inventory](literature/2026-10-08-transfer-inputs.md). A is now gated on inputs; B and C rely on deposited data. Claude next: B estimand and nearest-prior close reads; interim PhanDA ΔGMST bound |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | Accepted division. [First orientation](literature/2026-10-recovery-contingency.md) complete; Codex next: inspect INDITEK/SNCI-v2 input-output contracts and shared evidence; Claude critique invited |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) revised after [Codex critique](literature/2026-10-08-codex-review-disruption.md). Built the [interval crosswalk](data/interval-crosswalk/README.md) and [transfer-input inventory](literature/2026-10-08-transfer-inputs.md). A is now gated on inputs; B and C rely on deposited data. Claude next: B estimand and nearest-prior close reads; PhanDA ΔGMST dependence sensitivity informed by the [source audit](literature/2026-10-08-phanda-ensemble-contract.md) |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Contract audit and response](literature/2026-10-08-recovery-contracts-and-response.md) complete, with [observation-error counterexample](data/recovery-memory-probe/README.md). Codex retains the common-observable / observation-contract specification; Claude next to challenge the distinctions and evidence |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
 Each scientific area includes literature, data and methods end to end. These
@@ -38,27 +38,36 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - Song et al. explicitly acknowledge temporal-resolution limits, so a proposed
   contribution cannot rest on claiming they overlooked them. Their joint
   magnitude/rate argument needs a more careful critique than rate exceedance alone.
-- The two focal diversity models use different capacity concepts. Shared fossil
-  and palaeogeographic inputs limit empirical independence; comparable withheld
-  observables are needed before treating their fit as a decisive contest.
+- INDITEK carries richness on geological particles; SNCI redraws niches in each
+  environmental snapshot. Neither carries identifiable fossil lineages. Source
+  inspection found calibration-driver and connectivity issues requiring checks
+  before reuse; effects on published results remain untested. Shared source
+  families do not establish identical calibration targets.
+- Instantaneous environmental tracking, finite-rate state dynamics and additional
+  history dependence are distinct hypotheses. A small synthetic probe shows
+  that shared observation errors and smoothing can create apparent delayed
+  rebound even with constant true richness; it is not an empirical bias estimate.
 - The physiology-transfer candidate needs a thermal-exposure comparator and
   frozen calibration choices. Magnitude is not automatically portable across
   observation windows. A failed simulation fit is not proof of structural
   nonidentifiability.
-- Source-native intervals and explicit overlaps should precede an analytical
-  stage table. Selected deposit metadata and a PhanDA CSV header/sample were
-  inspected; code interiors, joint uncertainty and suitability remain unchecked.
-- No candidate's novelty is established. No primary analysis, simulation or full
-  scientific-data extraction has started.
+- The [PhanDA source audit](literature/2026-10-08-phanda-ensemble-contract.md)
+  confirms pooled fits, filtering and resampling. Matching member positions do
+  not certify temporal trajectories; independence is a sensitivity assumption,
+  not a general uncertainty bound. The interval crosswalk remains descriptive.
+- No candidate's novelty is established. No primary empirical analysis, climate
+  simulation or full occurrence-data extraction has started. Only bounded source
+  inspections and small synthetic/deterministic probes have been run.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 77 (crosswalk, inventory and
-revised A–C) and discussion 82 (Claude's recovery critique, message 1137, which
-proposes a joint impulse–response candidate). Codex owns the bounded
-recovery-model contract inspection. These are capability checks, not
-primary-study selection. Both agents may continue coherent in-scope reconnaissance
-without returning routine choices to Barry.
+**Next scientific responder: Claude**, on Codex's recovery/observation distinctions
+in discussion 82, PhanDA and A–C follow-up in 77, and the proposed architecture
+in 76. Codex's model-contract audit is complete; source reproduction and numerical
+impacts remain unchecked. Claude retains B's estimand/prior-work and forcing
+dependence-sensitivity work; Codex retains the recovery observation specification.
+The joint candidate remains reconnaissance. Both agents may continue coherent
+in-scope work without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 
@@ -73,11 +82,8 @@ without returning routine choices to Barry.
   a 48-node × 28-CPU PBS job. Barry must open the TPAC authorisation jumpbox
   before agents probe it. Operational rules: `~/work/nectar/docs/machines/kunanyi.md`.
 - Stage owned paths only and inspect the whole Git index before committing.
-- Operational exception, 8 October: Codex's local command runtime could not start.
-  This documentation tranche was prepared through the GitHub connector against
-  the verified private remote, without touching the local worktree/index. Before
-  local editing resumes, inspect local status and reconcile with remote main by
-  a safe fast-forward where possible; do not discard local work. Claude found the
-  local checkout clean and fast-forwarded it to acf11a6 on 8 October.
+- Runtime restored on 8 October after Barry changed permissions. Codex verified
+  both shell probes and a clean local checkout matching remote bfda1c7 at 16:46
+  AEDT. Claude had already safely incorporated the earlier GitHub-written notes.
 - Routine process-document expansion is frozen. Operational read cursors stay
   in task-local state; recover substantive context before acknowledging messages.

@@ -1,0 +1,238 @@
+{
+  "inspected": "2026-10-08",
+  "purpose": "Selected evidence for model contracts; not a full reproduction manifest",
+  "source_metadata": {
+    "INDITEK": "https://zenodo.org/records/6535496",
+    "SNCI-v2": "https://api.figshare.com/v2/articles/27201498/versions/2"
+  },
+  "files": [
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/README.md",
+      "bytes": 5019,
+      "sha256": "93f53b7c152b713731c195c3308c2a05431ff2e5647a39f53550286551b11288"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "inditek_main.m",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/inditek_main.m",
+      "bytes": 2220,
+      "sha256": "d236bfde5d58951aa231198845a593529a2526f7ee06d37a17441f22ad0d3646"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "inditek_rhonet.m",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/inditek_rhonet.m",
+      "bytes": 4482,
+      "sha256": "c46a54f8f743c55960c5858e630bab79b4f02e202acae76294e0a912cee41a7d"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "inditek_alphadiv.m",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/inditek_alphadiv.m",
+      "bytes": 16487,
+      "sha256": "cb9d37d3f31f28811193c98bddc171ceee9589dff5e7b24843bf8823c63a2696"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "inditek_LoopKminKmax.m",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/inditek_LoopKminKmax.m",
+      "bytes": 3066,
+      "sha256": "1211f0612878b1f56817357bda75d2cebd1e40464c638ac4aa420afd06b76fa8"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "inditek_Model_Fossil_CCC.m",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/inditek_Model_Fossil_CCC.m",
+      "bytes": 1470,
+      "sha256": "63541bd8ed1ec4f85dbb12b3be4b288addd96a0418483a2a832686d703a99a2c"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "inditek_gammadiversity.m",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/inditek_gammadiversity.m",
+      "bytes": 2762,
+      "sha256": "1b07e3cbd8c24c142b46b365bba122c2a48f9cf19f3e661a1372ea065a8a8d38"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "data/Point_ages_xyz.mat",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/data/Point_ages_xyz.mat",
+      "bytes": 89026148,
+      "sha256": "ce7bbfa315d29bda8ab2ce1e00d5fe2085e2c35e92d6ae1c0eea4c1ed103ccfb"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "data/Point_foodtemp.mat",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/data/Point_foodtemp.mat",
+      "bytes": 37783164,
+      "sha256": "4bd91acd85849d4c8833269a36d29394003f7a082c69ec9270f7caf05534cc2f"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "data/landShelfOceanMask.mat",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/data/landShelfOceanMask.mat",
+      "bytes": 460910,
+      "sha256": "bf37734c0adeef6cc6bf129995350eba9ce727980acea6d3de6c18a0c5466b69"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "data/rhoExt.xlsx",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/data/rhoExt.xlsx",
+      "bytes": 26547,
+      "sha256": "c6ea8fe89389279c3bcb72cc475e5f2cbbb5465e0903730d7db8b1630282e39c"
+    },
+    {
+      "project": "INDITEK",
+      "version": "196cfd2614bf17607b4b08febca5032421d6955a",
+      "path": "data/FossilTimeSeries.xlsx",
+      "url": "https://raw.githubusercontent.com/CarmenGarciaComas/INDITEK/196cfd2614bf17607b4b08febca5032421d6955a/data/FossilTimeSeries.xlsx",
+      "bytes": 14436,
+      "sha256": "c8e21a878a5b4c45159272367eddcce53d2f70113281aa1d5e9d9c53d6e9db01"
+    },
+    {
+      "project": "SNCI-v2",
+      "version": "figshare:27201498.v2",
+      "path": "0Ma_monthly_SST.nc",
+      "url": "https://ndownloader.figshare.com/files/53396018",
+      "bytes": 367556,
+      "sha256": "6566de4101315cba9e89d5fc54d590abd5b2a4d7a3fdc00940e4cc334da136de",
+      "provider_md5": "38ed3c875f04cfb8bbec7764897949f6",
+      "provider_md5_verified": true
+    },
+    {
+      "project": "SNCI-v2",
+      "version": "figshare:27201498.v2",
+      "path": "Courbes_Fossiles.m",
+      "url": "https://ndownloader.figshare.com/files/53396639",
+      "bytes": 2367,
+      "sha256": "1980292b24c96c047973304f65283c20796ad2a6b09cda2c9359858235d87b34",
+      "provider_md5": "3edd40d096e77d49391db9d550a397f0",
+      "provider_md5_verified": true
+    },
+    {
+      "project": "SNCI-v2",
+      "version": "figshare:27201498.v2",
+      "path": "Donnees_Fossiles.mat",
+      "url": "https://ndownloader.figshare.com/files/53396645",
+      "bytes": 3288,
+      "sha256": "c30f2f74bd3487f55fb284889e99c239408126a331ba7c9e7f2da03212d474fb",
+      "provider_md5": "70078810edad2fc4c9d1c89279aeb368",
+      "provider_md5_verified": true
+    },
+    {
+      "project": "SNCI-v2",
+      "version": "figshare:27201498.v2",
+      "path": "Prgm_Publication1.m",
+      "url": "https://ndownloader.figshare.com/files/53396735",
+      "bytes": 5671,
+      "sha256": "505145d246127feabe70d3cfc89b86c544caba92501a890fa3f3984059e00933",
+      "provider_md5": "e92b7fb6acb5d69d7ad237dba9f63035",
+      "provider_md5_verified": true
+    },
+    {
+      "project": "SNCI-v2",
+      "version": "figshare:27201498.v2",
+      "path": "READ ME.pdf",
+      "url": "https://ndownloader.figshare.com/files/53396738",
+      "bytes": 83206,
+      "sha256": "61a6f186e71aa75bab9abd85d013e090bfa707216294b060a7585308f227fcfa",
+      "provider_md5": "ba6f09af7937b5023b24cd2fbf9d0855",
+      "provider_md5_verified": true
+    },
+    {
+      "project": "SNCI-v2",
+      "version": "figshare:27201498.v2",
+      "path": "Simulation.m",
+      "url": "https://ndownloader.figshare.com/files/53396741",
+      "bytes": 8157,
+      "sha256": "ee720dee927796c1dc18af40dbf14783e5072d23d2455b1352fe199c1f8748e7",
+      "provider_md5": "6a245d8acd1fa1a59d7757e2221b8229",
+      "provider_md5_verified": true
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "1_Scripts/DataAssimilation/Step4_RunDA.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/1_Scripts/DataAssimilation/Step4_RunDA.m",
+      "bytes": 6091,
+      "sha256": "e13c7ea140c1f2f5cc9d857075789b726554cdbc0d0bd803f7d4bff703ebb85d"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "1_Scripts/Figures/MainText/Fig2_PhanerozoicGMST.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/1_Scripts/Figures/MainText/Fig2_PhanerozoicGMST.m",
+      "bytes": 5750,
+      "sha256": "d7a3705e71717f5f27b8560b8cef169b7da6818d5f5738e6ae147b4699bc7b4b"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "2_GlobalFunctions/DataAssimilation/indexensemble.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/2_GlobalFunctions/DataAssimilation/indexensemble.m",
+      "bytes": 4316,
+      "sha256": "f7de6949c7a8ef377b5aa2584e680f4dd8b8c508733dbb616185f7badf6e8f9e"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "2_GlobalFunctions/DataAssimilation/runkf.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/2_GlobalFunctions/DataAssimilation/runkf.m",
+      "bytes": 1446,
+      "sha256": "8a96ecde88e7c1e6c9eea9f1ef96ee7c3f5a008f48588f7e9cd2dd834488f4e7"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "2_GlobalFunctions/DataAssimilation/rmvthreshold.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/2_GlobalFunctions/DataAssimilation/rmvthreshold.m",
+      "bytes": 284,
+      "sha256": "7014d0d7c61d584b59127341fab15b1e18b1973324801a50a550366c62d8c67e"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "2_GlobalFunctions/DataAssimilation/combineruns.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/2_GlobalFunctions/DataAssimilation/combineruns.m",
+      "bytes": 1154,
+      "sha256": "d27cc38f14cd183f8168dadcabb59ad18a28070881eac325e6c1044eaa29837e"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "2_GlobalFunctions/DataAssimilation/combinestages.m",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/2_GlobalFunctions/DataAssimilation/combinestages.m",
+      "bytes": 1570,
+      "sha256": "90fc3d9d18d3256894440b68aaf80aacd04e7c7951a2d87a959ba078caeec038"
+    },
+    {
+      "project": "PhanDA",
+      "version": "9f06c0d9764f3da77cb0819e0ac87c01182ba341",
+      "path": "5_Outputs/PhanDA_GMST_ensemble.mat",
+      "url": "https://raw.githubusercontent.com/EJJudd/PhanDA/9f06c0d9764f3da77cb0819e0ac87c01182ba341/5_Outputs/PhanDA_GMST_ensemble.mat",
+      "bytes": 20332268,
+      "sha256": "6213e8164af32b7e67daee1acb603f6e8a186286041b54b0897c934fa51246ce"
+    },
+    {
+      "project": "DASH",
+      "version": "3bd640a1937dbd4e4e7b04fd756e260dc6c3b9e3",
+      "path": "+dash/+kalman/updateDeviations.m",
+      "url": "https://raw.githubusercontent.com/JonKing93/DASH/3bd640a1937dbd4e4e7b04fd756e260dc6c3b9e3/%2Bdash/%2Bkalman/updateDeviations.m",
+      "bytes": 772,
+      "sha256": "276f802d26e46885f9ef823e35e8a3c9f7197a30ab0d91d2c7c1f9f843ae7642"
+    }
+  ]
+}
