@@ -69,6 +69,9 @@ without returning routine choices to Barry.
 - Authority: Barry's launch and follow-up decisions in Codex chat, 7 October
   2026; the hosting/deep-time steer is relayed in message 1104.
 - Codex subagents: GPT-6.1 Sol, effort commensurate with the task.
+- Compute (Barry in Claude chat, 8 October): TPAC `kunanyi` allocation permits
+  a 48-node × 28-CPU PBS job. Barry must open the TPAC authorisation jumpbox
+  before agents probe it. Operational rules: `~/work/nectar/docs/machines/kunanyi.md`.
 - Stage owned paths only and inspect the whole Git index before committing.
 - Operational exception, 8 October: Codex's local command runtime could not start.
   This documentation tranche was prepared through the GitHub connector against
