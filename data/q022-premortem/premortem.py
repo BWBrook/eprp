@@ -145,7 +145,7 @@ def main():
     derived.mkdir(parents=True, exist_ok=True)
     for name, rows in [("event_slices.tsv", event_rows), ("background_slices.tsv", bg_rows)]:
         with open(derived / name, "w", newline="") as f:
-            wtr = csv.DictWriter(f, fieldnames=list(rows[0]), delimiter="\t")
+            wtr = csv.DictWriter(f, fieldnames=list(rows[0]), delimiter="\t", lineterminator="\n")
             wtr.writeheader()
             wtr.writerows(rows)
 
@@ -174,7 +174,7 @@ def main():
                 event_percentile_in_background=round(float(np.mean(bg_ok < med)), 2) if len(bg_ok) else math.nan,
             ))
     with open(OUT / "summary.tsv", "w", newline="") as f:
-        wtr = csv.DictWriter(f, fieldnames=list(summary[0]), delimiter="\t")
+        wtr = csv.DictWriter(f, fieldnames=list(summary[0]), delimiter="\t", lineterminator="\n")
         wtr.writeheader()
         wtr.writerows(summary)
     for r in summary:
