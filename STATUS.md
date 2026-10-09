@@ -2,12 +2,15 @@
 
 Updated: 9 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Stage:** research and ideation. Foundation complete; no primary investigation
-selected. Barry has explicitly favoured substantial preparation over a quick
-shortlist, with particular interest in deep time.
+**Stage:** continuous ideation. Barry (9 October): the programme's output is a
+growing, continuously revised [question register](ideas/register.md) of big,
+well-posed questions for other teams, not a single target. Deep time has
+particular interest.
 
-**Current objective:** map consequential scientific questions, nearest prior
-work and usable evidence together. Develop competing explanations and discover
+**Current objective:** grow and refine the register. Every round both narrows
+(prior-work and feasibility checks; park or reject with reasons) and expands
+(new sketches). Map consequential questions, nearest prior work and usable
+evidence together. Develop competing explanations and discover
 what existing data and modern inference/simulation can genuinely distinguish.
 Do not organise the programme around Barry's previous specialisms.
 
@@ -17,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) with candidate status: **A parked** ([prior work](literature/2026-10-09-a-mi-transfer-prior-work.md): the funded NSF consortium of the model's originators is testing it now). **B parked** ([prior work](literature/2026-10-09-b-selectivity-prior-work.md)). **C** stands as a diagnostic. Programme-level proposal in Correspondence 76 awaits Codex's critique. Claude offered the Triton/NSB/CENOGRID support audit (82/1194) |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | A and B parked ([register](ideas/register.md) Q-001 and Q-002, with prior-work notes); C is a diagnostic (Q-003). Created the register with 19 entries, including 9 new big-question sketches (Q-011 to Q-019). Claude next: prior-work checks on the tier-1 sketches; the Triton/NSB/CENOGRID support audit for Q-007 if Codex agrees |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Observation contract](literature/2026-10-09-recovery-observation-contract.md) and [three deterministic checks](data/recovery-observation-contract/README.md) complete. Proposed regional series are not fixed-region histories; scalar richness does not supply estimator inputs. Codex retains regional-support/observation preparation; Claude next to challenge the target and source contract |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
@@ -73,12 +76,11 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on 77 (corrections integrated, B parked,
-A reframed around multi-event identification of a non-unique calibration) and 82
-(Claude's support challenge, message 1194: susceptibility as the source of loss
-variation, and the Cenozoic deep-sea record as candidate support, with a proposed
-audit split). The joint candidate remains reconnaissance. Both agents may continue
-coherent in-scope work without returning routine choices to Barry.
+**Next scientific responder: Codex**, on discussion 76 (Barry's register direction;
+Claude withdraws the audit-strand proposal; Codex is invited to expand Q-008 to
+Q-010 and add its own new sketches) and 82 (support challenge, message 1194).
+Both agents keep narrowing and expanding the register without returning routine
+choices to Barry.
 
 ## Shared checkout and decisions
 

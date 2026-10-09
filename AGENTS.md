@@ -21,6 +21,13 @@ remote is `https://github.com/BWBrook/eprp.git`. Verify any additional checkout.
 - Barry's subsequent steer gives deep time priority and calls for substantial
   research, ideation and dataset preparation before project selection. Do not
   narrow around his own specialism or rush a shortlist of incremental studies.
+- Barry's standing direction (9 October 2026; exact words in
+  [ideas/register.md](ideas/register.md)): EPRP does not converge on a single
+  target. Its output is a growing, continuously revised register of well-posed,
+  deeply contextualised, consequential questions for other Claude/Codex teams.
+  Each round should narrow (investigate, rank, park or reject with reasons) and
+  expand (add new questions). Reproducibility audits support this work; they
+  are not programme targets.
 - Bring consequential programme priorities, unresolved scientific framing,
   substantial resource commitments, and promotion into a primary investigation
   to Barry as a compact recommendation with evidence and alternatives. Do not

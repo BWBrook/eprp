@@ -67,21 +67,23 @@ downstream project owns the study-specific design, analyses and claims.
    observation processes. Record search limits and contrary evidence. Retire
    the initial 6–10-paper bound and do not require an early shortlist; reporting
    checkpoints should expose new understanding and gaps, not force selection.
-3. **Critical shortlist (when earned).** Prepare a small set of idea briefs with
-   closest prior work, the unresolved contribution, feasible evidence, a rival
-   explanation, a discriminating test and a reason to abandon it. Both agents
-   critique the candidates. If disagreement survives useful checks, preserve
-   it in the comparative brief rather than forcing agreement.
-4. **Project incubation and handoff.** Give Barry a concise recommendation on
-   scientific priority. Once a primary investigation is agreed, move its design
-   and execution into an appropriate project and retain the reusable resources
-   and programme-level reasoning here.
+3. **Question register (continuous; Barry, 9 October).** Maintain
+   [ideas/register.md](../ideas/register.md): add sketches, check prior work and
+   feasibility, rank, and park or reject with reasons. Expand with new questions
+   every round. Each matured entry gives closest prior work, the unresolved
+   contribution, feasible evidence, a rival explanation, a discriminating test
+   and a reason to abandon it. Both agents critique; preserve surviving
+   disagreement in the entry.
+4. **Handoff.** Entries marked `ready for handoff` are posed for other
+   Claude/Codex teams. When a team takes one up, record the EPRP commit and
+   evidence links; the primary investigation lives with that team. Barry may
+   also direct a question into a downstream project.
 
 Report coherent rounds of orientation while keeping this phase open: what
 major explanations compete, what observations could discriminate them, what
 prior work has already settled, and what datasets or methods change feasibility.
-A shortlist is warranted when its leading questions survive those challenges,
-not when a paper-count target is reached. Catalogue size and agent agreement
+An entry becomes `ready for handoff` when it survives those challenges, not
+when a paper-count target is reached. EPRP never converges on a single target. Catalogue size and agent agreement
 are not success measures. Process documentation is otherwise frozen during
 this phase; correct consequential inaccuracies without adding more scaffolding.
 

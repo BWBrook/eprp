@@ -5,15 +5,17 @@ reason is informative. Early notes can be rough and incomplete. Expand the
 [brief template](brief-template.md) when an idea merits comparison or handoff;
 do not turn exploratory thinking into a form-filling exercise.
 
-Use descriptive filenames and a clear status: `sketch`, `under review`,
-`parked`, `rejected`, or `ready for Barry's decision`. Record proposer, critic,
-date and evidence links. “Ready for decision” does not mean approved, novel or
-scientifically validated.
+The standing deliverable is the [question register](register.md). Its status
+values are `sketch`, `under review`, `promising`, `ready for handoff`, `parked`
+and `rejected`. Record proposer, critic, date and evidence links. "Ready for
+handoff" does not mean approved, novel or scientifically validated. Longer
+briefs and evidence notes live in separate files linked from the register.
 
 Before agents converge, capture their independent first framings. Criticism
 should identify a specific confound, prior result, counterexample, missing
 observation or test that could change the decision. Preserve the reply and any
 remaining disagreement. Two model opinions are not two independent datasets.
 
-No candidate has yet been selected. The broad axes in
-[the programme remit](../docs/programme.md) are prompts for orientation.
+EPRP does not select a single candidate; it keeps the register growing and
+revised. The broad axes in [the programme remit](../docs/programme.md) are
+prompts for orientation.
