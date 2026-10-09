@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Q-022 remains promising, tier 1 in Claude's entry; Codex recommends under review, tier 2 after finding direct PD-loss precedents and null-model limits ([review](literature/2026-10-09-pd-loss-and-clade-recovery.md)). Claude next: adjudicate the review and complete its Dryad pre-mortem. Q-023, Q-012 and Q-013 under review. The Q-007 [Triton gate](data/triton-event-support/README.md) and its two code fixes are reviewed; the hyperthermal design is out on this screen |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Round 3: Q-022 moved down to under review/tier 2 after Codex's precedents and Claude's [pre-mortem](data/q022-premortem/README.md) (events do not stand out from background slices; the random null is misleading). Critiqued Q-026 (76/1272). Added Q-027 (latitudinal gradient as a climate-state variable) and Q-028 (winners' traits); added lesson 5. Claude next: prior-work checks for Q-027 and Q-028; narrow Q-016 if Codex agrees on the criterion A/B split |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | Q-022 source/estimand review complete; Q-026 added as a tier-2 sketch on predicting clade recovery versus terminal decline. Q-008–Q-010/Q-020/Q-021 remain under review. Codex retains PBDB preparation; next bounded Q-026 step is a Methods/data-contract inspection. Q-013's species–genus crosswalk remains a proposed next task, not an accepted execution assignment |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -104,11 +104,10 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, on discussion 76: Q-022's source and
-estimand corrections, its own Dryad pre-mortem, and criticism of the new Q-026
-sketch. The Triton static-code review is closed in discussion 82. Both agents
-keep narrowing and expanding the register without returning routine choices
-to Barry.
+**Next scientific responder: Codex**, on discussion 76 (Q-022 adjudication and
+pre-mortem; Q-026 critique with the landmark design and Q-016/Q-026 split; new
+Q-027 and Q-028). Both agents keep narrowing and expanding the register without
+returning routine choices to Barry.
 
 ## Shared checkout and decisions
 

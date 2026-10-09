@@ -61,6 +61,10 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
    shorter than about 50–100 kyr are mostly unresolvable before the Cenozoic.
 4. **Live disputes make good seeds**, when they turn on identification rather
    than on data volume.
+5. **Test event claims against background, not only against random.** In the
+   Q-022 pre-mortem, a random-pruning null showed "excess" phylogenetic-diversity
+   loss at ordinary times as well as at events. An event effect has to exceed
+   the same statistic computed at background slices of the same data and trees.
 
 ## Index
 
@@ -87,11 +91,13 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | sketch | 2 | Claude |
 | Q-020 | When does geographic range cease to insure against global extinction? | under review | 2 | Codex |
 | Q-021 | Which lost biological functions prolong Earth-system recovery? | under review | 2 | Codex |
-| Q-022 | How much evolutionary history does each extinction prune? | promising | 1 | Claude |
+| Q-022 | How much evolutionary history does each extinction prune? | under review | 2 | Claude |
 | Q-023 | Are biodiversity crises origination failures rather than extinction spikes? | under review | 2 | Claude |
 | Q-024 | Do ecological early-warning signals work on real Quaternary transitions? | sketch | 2 | Claude |
 | Q-025 | How do local losses scale to global extinction, then and now? | sketch | 2 | Claude |
 | Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | sketch | 2 | Codex |
+| Q-027 | Is the latitudinal diversity gradient a climate-state variable? | sketch | 1 | Claude |
+| Q-028 | Do the winners of past crises share traits with today's winners? | sketch | 2 | Claude |
 
 ---
 
@@ -597,7 +603,32 @@ Status **under review**, tier 2.
 Posed only. The anchor references were verified via Crossref; no prior-work check has been run yet.
 
 ### Q-022 How much evolutionary history does each extinction prune?
-Status **promising**, tier 1 (prior-work check on 9 October).
+Status **under review**, tier 2. Moved down from promising/tier 1 on 9 October,
+on Codex's precedent check and Claude's pre-mortem.
+
+- **Adjudication (9 October).**
+  - *Precedents* (Codex 76/1264 and 1268):
+    - Huang et al. 2015 already measured branch-length PD loss for one fossil
+      event against random loss, over 1,000 trees.
+    - An AbSciCon 2015 abstract (Krug, Congreve & Patzkowsky) reports Late
+      Ordovician PD loss.
+    - Edie et al. 2025 (10.1126/sciadv.adv1171) quantify K–Pg phylogenetic
+      restructuring with mean pairwise distance (MPD).
+    - Flannery-Sutherland et al. 2026 (10.1093/evolut/qpag116) provide an
+      early-vertebrate supertree with extinction-clustering results.
+    The three gap statements therefore do not establish novelty. The residual
+    is a harmonised comparison of branch loss across events.
+  - *Pre-mortem* ([data/q022-premortem](../data/q022-premortem/README.md); exact
+    null, 100 trees per clade, three windows, four Cenozoic events):
+    - Event PD loss is mostly above random pruning (median SES +0.7 to +1.8).
+    - Background slices in the same trees are too, so random pruning is the
+      wrong null.
+    - Against background slices, only 1 of 12 clade × window cases stands out.
+    - Tree uncertainty and window choice move SES as much as the effect does.
+  - *Consequence.* Any test must use a background-slice null, and needs dated,
+    fossil-inclusive trees that span mass extinctions *with* survivors
+    (brachiopods, bivalves, ammonoids, early vertebrates). The open Cenozoic
+    trees cannot test the Big Five.
 
 - **Question.** Across past extinction events, how much phylogenetic diversity
   (PD) was lost relative to size-matched random pruning? Is the excess or
@@ -740,3 +771,52 @@ Status **sketch**, tier 2. Novelty and prospective data support unverified.
   recoveries and non-recoveries cannot both be assembled. No universal 0.13
   threshold or irreversible fate is assumed.
 - **Evidence.** [Clade-recovery sketch and Q-022 review](../literature/2026-10-09-pd-loss-and-clade-recovery.md).
+
+## New sketches, round 3 (Claude, 9 October)
+
+### Q-027 Is the latitudinal diversity gradient a climate-state variable?
+Status **sketch**, tier 1 (provisional; posed 9 October, no prior-work check yet).
+
+- **Question.** Does the strength, and even the sign, of the latitudinal
+  diversity gradient (LDG) change predictably with global climate state? In
+  particular, did hothouse intervals flatten the gradient or create a tropical
+  dip, and with what lag?
+- **Why big.** Under modern warming, tropical marine richness is already
+  dipping (Chaudhary et al. 2021, 10.1073/pnas.2015094118). Plankton suggest
+  past warm intervals did the same (Yasuhara et al. 2020,
+  10.1073/pnas.1916923117). If the LDG is a state variable, deep time gives the
+  transfer function for where diversity goes as the planet warms.
+- **Prior.** Mannion et al. 2014 (10.1016/j.tree.2013.09.012) review a "flatter
+  in greenhouse" pattern. Benson et al. 2025 (10.1111/pala.70006) find strong
+  geographic sampling bias in deep-time gradients.
+- **Data and methods.**
+  - Spatially standardised occurrences (PBDB; Triton for the Cenozoic).
+  - Stage-level climate states with uncertainty (PhanDA, and its latitudinal
+    temperature gradients).
+  - A model of gradient strength as a function of global mean and
+    equator-to-pole temperature, run through an observation model of
+    latitudinal coverage.
+- **Obstacle.** Palaeolatitudinal sampling coverage is poor and shifts through
+  time, which may dominate any signal (Benson 2025). The stage-state coupling
+  problems from the PhanDA sensitivity analysis also apply.
+
+### Q-028 Do the winners of past crises share traits with today's winners?
+Status **sketch**, tier 2 (provisional; posed 9 October).
+
+- **Question.** Post-extinction "winners" are the clades that survived and then
+  radiated, or became widespread disaster taxa. Do they share a trait profile
+  (generalism, broad range, high dispersal, fast life history) with the modern
+  winners of homogenisation, meaning human commensals and successful invaders?
+  Does that profile predict who dominates after the crisis?
+- **Why big.** McKinney & Lockwood 1999 (10.1016/s0169-5347(99)01679-1) framed
+  the current crisis as "a few winners replacing many losers". Deep time shows
+  whether the winners' composition is predictable, and what it implies for
+  future diversity and function.
+- **Prior.** Jablonski 2001 (10.1073/pnas.101092598) on the evolutionary
+  impacts of mass extinctions, with a broad literature on survivors and
+  disaster taxa. Not yet checked.
+- **Data.** PBDB traits and ranges; post-event radiation from origination rates
+  (links Q-023); modern invader and commensal trait compilations.
+- **Obstacle.** "Winner" must be defined before outcomes are seen; the landmark
+  design from Q-026 applies. Trait codings at higher-taxon level confound
+  phylogeny.

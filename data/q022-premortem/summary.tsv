@@ -1,0 +1,13 @@
+dataset	clade	event	onset_ma	window_myr	trees_defined	trees_total	median_n	median_m	event_ses_median	event_ses_q05	event_ses_q95	share_trees_ses_gt0	background_slices	background_ses_q05	background_ses_q95	event_percentile_in_background
+S4	planktonic foraminifera	EOT	33.9	0.5	1	1	44	20	0.6	0.6	0.6	1.0	50	-1.11	3.25	0.66
+S4	planktonic foraminifera	EOT	33.9	1.0	1	1	44	21	0.2	0.2	0.2	1.0	55	-1.39	2.9	0.51
+S4	planktonic foraminifera	EOT	33.9	2.0	1	1	42	25	-0.82	-0.82	-0.82	0.0	50	-1.55	2.7	0.24
+S1	Ruminantia	EOT	33.9	0.5	100	100	29	4	1.19	-0.67	2.24	0.87	3602	-1.28	3.31	0.64
+S1	Ruminantia	EOT	33.9	1.0	100	100	31	9	1.76	0.87	2.55	1.0	3455	-0.98	4.13	0.68
+S1	Ruminantia	EOT	33.9	2.0	100	100	33	15	1.04	0.1	1.89	0.96	2954	-0.96	5.4	0.39
+S5	Equinae	Miocene-Pliocene	5.33	0.5	100	100	23	12	1.26	0.63	1.75	1.0	1271	-1.21	2.14	0.78
+S5	Equinae	Miocene-Pliocene	5.33	1.0	100	100	24	15	0.68	0.26	2.01	1.0	940	-1.61	1.76	0.62
+S5	Equinae	Miocene-Pliocene	5.33	2.0	100	100	29	23	0.69	-0.08	1.86	0.88	488	-2.18	1.77	0.55
+S9	Mysticeti	Pliocene marine turnover	3.0	0.5	100	100	15	5	1.0	0.34	1.72	1.0	1116	-1.29	1.83	0.81
+S9	Mysticeti	Pliocene marine turnover	3.0	1.0	100	100	16	6	0.78	0.23	1.67	1.0	1049	-1.47	1.59	0.78
+S9	Mysticeti	Pliocene marine turnover	3.0	2.0	100	100	18	10	0.96	0.2	1.67	0.99	755	-1.43	0.92	0.95
