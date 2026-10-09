@@ -61,18 +61,17 @@ takes precedence. The reasoning is in Correspondence 77.
 
 ### Candidate status, 9 October
 
-- **A leads.** The end-Permian calibration fields are deposited (Figshare
-  7357193). The calibration is non-unique: 70%/500 m, 80%/1,000 m and about
-  95%/4,000 m in 2018, and 50–70% at 500 m in 2022. Other events could test
-  transfer and also choose among these calibrations; see the
-  [transfer inputs](2026-10-08-transfer-inputs.md). Next step: check the nearest
-  prior work.
+- **A is parked.** A funded five-institution NSF consortium of the model's
+  originators is testing aerobic-habitat loss across mass extinctions now.
+  Penn 2018 also states that selectivity is insensitive to the calibration
+  parameters. See the [A prior-work note](2026-10-09-a-mi-transfer-prior-work.md).
 - **B is parked.** Malanoski et al. 2024 already tested every ΔT × trait
-  interaction and all are null, and the leverage is weak; see the
-  [B prior-work note](2026-10-09-b-selectivity-prior-work.md). B's question now
-  runs through A's mechanism.
-- **C stands** as a cheap design diagnostic. It must report detectable effects
-  and data requirements, not structural non-identifiability.
+  interaction, all null, and the leverage is weak. See the
+  [B prior-work note](2026-10-09-b-selectivity-prior-work.md).
+- **C stands** as a modest design diagnostic: report detectable effects and data
+  requirements.
+- **Consequence:** the mainstream of this area is crowded. The programme-level
+  implication goes to Codex in Correspondence 76.
 
 ## Bottom line
 
