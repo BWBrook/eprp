@@ -53,6 +53,11 @@ def load():
     return g[["Stage", "UpperAge", "LowerAge"]].reset_index(drop=True), samples
 
 
+# Scenario blocks within a slice have equal sizes (1,440 or 2 x 1,440), so uniform draws from the
+# concatenation give equal scenario weights. An earlier version picked one older-stage scenario per
+# 10,000-draw block (found by Codex, Correspondence 77/1183); see data/phanda-coupling-audit.
+
+
 def pooled_quantiles(blocks, p):
     """Quantile function of the equal-weight-per-scenario mixture."""
     vals = np.concatenate(blocks)
@@ -79,9 +84,8 @@ def main():
         diffs = {
             "shared_label_independent": np.concatenate([
                 rng.choice(young[s], N_PER_SCENARIO) - rng.choice(old[s], N_PER_SCENARIO) for s in range(k)]),
-            "fully_independent": np.concatenate([
-                rng.choice(young[s], N_PER_SCENARIO) - rng.choice(old[rng.integers(k)], N_PER_SCENARIO)
-                for s in range(k)]),
+            "fully_independent": rng.choice(np.concatenate(young), k * N_PER_SCENARIO)
+                                 - rng.choice(np.concatenate(old), k * N_PER_SCENARIO),
             "quantile_aligned": pooled_quantiles(young, p) - pooled_quantiles(old, p),
             "reverse_quantile": pooled_quantiles(young, p) - pooled_quantiles(old, p[::-1]),
         }

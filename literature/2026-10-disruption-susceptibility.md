@@ -59,6 +59,21 @@ takes precedence. The reasoning is in Correspondence 77.
   source-native crosswalk, now built in
   [data/interval-crosswalk](../data/interval-crosswalk/README.md).
 
+### Candidate status, 9 October
+
+- **A leads.** The end-Permian calibration fields are deposited (Figshare
+  7357193). The calibration is non-unique: 70%/500 m, 80%/1,000 m and about
+  95%/4,000 m in 2018, and 50–70% at 500 m in 2022. Other events could test
+  transfer and also choose among these calibrations; see the
+  [transfer inputs](2026-10-08-transfer-inputs.md). Next step: check the nearest
+  prior work.
+- **B is parked.** Malanoski et al. 2024 already tested every ΔT × trait
+  interaction and all are null, and the leverage is weak; see the
+  [B prior-work note](2026-10-09-b-selectivity-prior-work.md). B's question now
+  runs through A's mechanism.
+- **C stands** as a cheap design diagnostic. It must report detectable effects
+  and data requirements, not structural non-identifiability.
+
 ## Bottom line
 
 1. **One grain problem runs through forcing, response and diversification.**

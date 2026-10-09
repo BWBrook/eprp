@@ -26,7 +26,7 @@ fields for a pre-event and a peak state.
 
 | Event | Deposited 3D T + 3D O₂, pre and peak | Nearest obtainable route |
 | --- | --- | --- |
-| End-Permian, the calibration event | **No.** No deposit found for the CESM fields of Penn et al. 2018 (10.1126/science.aat1327); Codex's search agrees. Al Aswad 2025 reuses those runs, and its deposit (Zenodo 11522106, mf) has code and PBDB data but no fields | Re-run cGENIE from open configs: Hülse et al. 2021, 10.1038/s41561-021-00829-7, three phases, configs only; Stockey et al. 2021, p0251 sweeps |
+| End-Permian, the calibration event | **Yes: endpoint climatologies (corrected 9 October).** Figshare 10.6084/m9.figshare.7357193 v1, "End-Permian Climate Change", CC0: `Penn_PTr_climate.nc` (145.6 MB) holding `Permian_temp`, `Permian_o2`, `Triassic_temp`, `Triassic_o2`, each 12 months × 54 depths × 59 lat × 119 lon. Found by Codex from the Penn 2018 data statement; the header was read, values not checked. These are the final ten years of near-equilibrium runs, not transient forcing. Our earlier "no deposit found" was a search miss: the Science page returned 403 and the paper's data statement was never read | Align coordinates and physical depth with a named 2018 or 2022 model variant |
 | End-Ordovician | No | cGENIE configs (Stockey 450 Ma; Pohl et al. 2023, 10.1126/sciadv.adg7679, 440 Ma slice); FOAM temperature only (Ontiveros et al. 2023, Zenodo 10610771, CC-BY, mf) |
 | Late Devonian, Capitanian, end-Triassic, Toarcian, OAE2 | No event-specific fields | Pohl 2023 cGENIE slices every 20 Myr. These are not event-aligned and would need new boundary files |
 | PETM | No | Stockey 55 Ma configs; Pohl 60 Ma slice |
@@ -48,51 +48,57 @@ fields for a pre-event and a peak state.
 | Penn & Deutsch 2022 code | Zenodo 10.5281/zenodo.5899743 (378 kB, "other-open"), GitHub jlpenn/Metabolic-Index-Extinction v1.0.0 | **Archive listed and README and key scripts read by Claude, 9 October.** See the update below |
 | Marquez et al. 2026 class-level traits | No deposit found. The PNAS data statement was unreadable (403) | Unknown, not absent |
 
-## Update, 9 October: the frozen model is deposited; the forcing is not
+## Update, 9 October: calibration fields deposited, calibration non-unique
 
-Claude listed the Penn & Deutsch 2022 code archive and read its README,
-`SixExtinct_spatial.m`, `getPDF.m` and parts of `get6extinct_func.m`.
+This section is corrected after Codex's
+[source note](2026-10-09-penn-calibration-source-correction.md) (Correspondence
+77, messages 1185 and 1191). An earlier version of this section stated wrongly
+that the end-Permian fields were not deposited and that 50%/500 m was the 2018
+calibration.
 
-- **Frozen choices are hard-coded:**
-  - `upar.Vcrit = 50`, a 50% critical loss of global habitat volume;
-  - `upar.zhab = 14`, a 500 m maximum habitat depth (z-level 14).
-- **Trait distributions are parametric and in the code:**
-  - log(A₀) ~ N(2.994, 0.4795) on 5–55 atm⁻¹;
-  - E₀ ~ N(0.3988, 0.2692) on −0.1 to 1.1 eV;
-  - log(φcrit) ~ N(1.1285, 0.4234) on 1.5–7.
-  These are binned and weighted, and come from cadeutsch/Metabolic-Index-Traits.
-- **Species cold limits** (`getTmin2.m`) come from modern OBIS occurrences with at
-  least 100 records. A deep-time application needs a substitute.
-- **The forcing is modern:** CMIP5 and CMIP6 temperature and O₂ anomalies
-  regridded onto WOA. `6me_output.mat` (337 kB) holds plotting output. There are
-  no end-Permian or other palaeo fields.
+- **The end-Permian forcing is deposited** as paired endpoint climatologies (see
+  the table above). Author contact or a new climate run is not needed for the
+  calibration event.
+- **The calibration is non-unique.**
+  - Penn 2018 (SI p10) gives combinations that explain comparable fractions of
+    fossil global and regional loss: 70%/500 m, 80%/1,000 m and about
+    95%/4,000 m. Main Fig. 4D uses 80%/1,000 m.
+  - Penn & Deutsch 2022 recalibrate with cold-edge limits: about 50% under full
+    colonisation and 70% under none, averaged over the upper 500 m.
+  - Their code archive (Zenodo 5899743, commit d7d86d9) carries both 50% (spatial)
+    and 70% (global) settings. 50%/500 m is therefore a 2022 variant, not a
+    verified 2018 optimum.
+- **Trait distributions** in `getPDF.m` give means and *standard deviations* of
+  log A₀ (2.994, 0.4795), E₀ (0.3988, 0.2692) and log φcrit (1.1285, 0.4234). The
+  discrete-grid weights and their normalisation are part of the numerical
+  contract.
+- **Cold limits** come from modern OBIS records through an external intermediate
+  file. A palaeo cold-limit rule is an explicit transfer assumption.
+- **Adapter hazard.** Depth index 14 means 500 m on the 2022 WOA grid but 135 m
+  in the palaeo deposit. Preserve physical depth, never the index. Volume
+  geometry, wet masks, missing values (−10³⁴) and units (no unit attributes in
+  the file) also need explicit handling.
+- **The Liu, Penn & Deutsch deposit** (Zenodo 18217914) holds figure-panel files
+  only, and Crossref finds no companion paper.
 
-That 50% and 500 m are the end-Permian-calibrated combination from Penn et al.
-2018 (Fig. 4 explored 40–95% and 500–4,000 m) is **inferred** from the 2022
-paper's calibration claim and Al Aswad 2025's use of 50%. It has not been
-checked against the 2018 text.
+**Inference: A is sharper than first posed.** The end-Permian on its own cannot
+pin down the threshold, depth and colonisation combination, because several
+calibrations explain it equally well. Other events with deposited or generated
+temperature and O₂ fields could therefore do two jobs:
+1. Test transfer of a named, frozen variant.
+2. Discriminate among the equally good end-Permian calibrations: do they
+   predict different losses or spatial selectivity elsewhere?
 
-The Liu, Penn & Deutsch deposit (Zenodo 18217914, 12 January 2026, CC-BY-4.0)
-holds six MATLAB *figure-panel* files for "Climate Drivers of Ocean
-Productivity and Oxygenation Across the Phanerozoic". These are not 3D fields.
-A Crossref title search found no matching publication (two Goldschmidt 2024
-abstracts on related topics only).
-
-**Consequence.** For candidate A, only the *event forcing fields* are missing.
-The ecophysiological model, its thresholds and its trait distributions can be
-frozen exactly as deposited, apart from the OBIS cold-limit term. Route (b) then
-becomes:
-1. Generate event temperature and O₂ fields in cGENIE.
-2. Check that the deposited frozen model reproduces end-Permian magnitude and
-   selectivity on cGENIE's end-Permian fields (calibration consistency).
-3. Only then transfer to held-out events.
-
-The model contract changes only in its ESM, not its ecophysiology.
+The second turns non-uniqueness from a weakness into the identifying question.
+Its novelty is unverified. Other-event forcing remains the open input: only the
+K–Pg has deposited 3D O₂, and its 3D temperature is unconfirmed.
 
 ## Implications for candidate A
 
-[Inference; to be challenged in Correspondence 77. Point 1 is updated by the
-section above: route (b) now keeps the deposited ecophysiology frozen.]
+[Inference; to be challenged in Correspondence 77. **Point 1 is superseded** by
+the corrected section above: the calibration fields are deposited, so route (a)
+is not needed for the end-Permian. Routes (a) and (b) now concern other-event
+forcing only.]
 
 1. **The frozen calibration cannot be reproduced from the original runs.** Two
    routes would make A feasible, and both are beyond routine EPRP work:

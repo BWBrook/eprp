@@ -48,7 +48,15 @@ Each scenario is weighted equally, as in PhanDA's own pooling.
 The two quantile couplings bound only the *variance* of the difference for fixed
 marginals. They are not bounds on every interval or tail probability.
 
-## Results (9 October 2026)
+## Results (9 October 2026; corrected the same day)
+
+**Correction.** The first version drew the older stage's scenario once per
+10,000-draw block, not once per draw. Codex found the error (Correspondence
+77, message 1183) and preserved the faulty run and the corrected diagnostic in
+[data/phanda-coupling-audit](../phanda-coupling-audit/README.md). The
+`fully_independent` coupling now draws each value from each stage's pooled
+marginal; the table below reflects that. The other three couplings were
+unaffected.
 
 **Direct output**
 
@@ -56,7 +64,7 @@ marginals. They are not bounds on every interval or tail probability.
 | --- | --- | --- |
 | quantile_aligned | 0.64 °C | 64 |
 | shared_label_independent | 2.93 °C | 17 |
-| fully_independent | 3.56 °C | 9 |
+| fully_independent | 3.68 °C | 10 |
 | reverse_quantile | 5.09 °C | 5 |
 
 The ratio of reverse to aligned SD has median 7.8, with a range of 2.5–42.5
@@ -70,9 +78,9 @@ under the shared-label coupling.
 | --- | --- | --- |
 | Changhsingian → Induan | +10.6 [+5.5, +15.6] | Yes |
 | Thanetian → PETM | +7.7 [+4.3, +13.4] | Yes |
-| Albian → Cenomanian | +7.8 [+3.0, +13.2] | No: not under reverse or full independence |
+| Albian → Cenomanian | +7.8 [+3.0, +13.2] | No: not under reverse |
 | Katian → Hirnantian | −6.8 [−11.8, −2.4] | No: shared-label and aligned only |
-| Wuchiapingian → Changhsingian | −4.0 [−8.7, −0.2] | No: shared-label (just) and aligned only |
+| Wuchiapingian → Changhsingian | −4.0 [−8.7, −0.2] | No: not under reverse |
 | Maastrichtian → Selandian/Danian | +4.4 [+1.6, +7.8] | No: not under reverse |
 | Frasnian → Famennian | −4.3 [−8.5, +0.5] | No |
 | Pliensbachian → Toarcian | +1.9 [−4.5, +6.7] | No |
@@ -88,20 +96,27 @@ under the shared-label coupling.
      and Changhsingian → Induan (+10.6);
    - two young transitions with narrow marginals: Tortonian → Messinian and
      Upper Pleistocene → Holocene.
-2. **The defensible coupling lies between shared-label and quantile-aligned.**
-   Separately fitted stages still share a prior model family (HadCM3L) and
-   proxy-system parameters, which plausibly induces positive dependence beyond
-   the scenario labels. That dependence is unquantified.
-3. **Consequence for candidate B.** A stage-state ΔGMST dose axis is
-   informative for the high-dose tail but weak for the background bulk. A
-   continuous dose–selectivity regression would therefore need an explicit
-   errors-in-variables model, and its low-dose slope will be weakly constrained.
-   Whether a richer dose functional, such as within-stage proxy maxima,
-   resolves the bulk is open.
-4. **Some event transitions do not show the expected warming at stage grain.**
-   The end-Triassic and Toarcian are examples. Their events are sub-stage pulses
-   that stage means dilute, consistent with the crosswalk's support-mismatch
-   finding.
+   Agreement across these four couplings is not a guarantee for every coupling.
+   Codex's certificate, P(Y > O) ≥ F_O(t) − F_Y(t), shows that four signs exceed
+   95% under *every* coupling of the deposited marginals: Tortonian → Messinian,
+   Thanetian → PETM, Changhsingian → Induan and Tournaisian → Visean.
+   Pleistocene → Holocene reaches exactly 95%. See the coupling audit.
+2. **Dependence beyond the scenario labels is plausible but unestablished.**
+   Separately fitted stages share a prior model family (HadCM3L) and
+   proxy-system parameters. That does not establish that the covariance lies
+   between the shared-label and quantile-aligned couplings (Codex, message
+   1191). It remains unquantified.
+3. **Consequence for candidate B.** A stage-state ΔGMST dose needs an explicit
+   errors-in-variables model. Unresolved signs at individual transitions do not
+   by themselves mean that an aggregate dose–selectivity slope is weakly
+   identified. That depends on the measurement and outcome model, the support
+   and the dependence. Whether a richer dose functional, such as within-window
+   proxy maxima, would help is open.
+4. **Some event transitions show no resolved change at stage grain.** Two
+   examples: Pliensbachian → Toarcian is unresolved under every coupling, and
+   Norian → Rhaetian is resolved only under quantile alignment. This is
+   *compatible with* stage means diluting sub-stage pulses, but does not
+   demonstrate it.
 
 ## Limits
 

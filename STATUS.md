@@ -17,7 +17,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [PhanDA sensitivity](data/phanda-stage-differences/README.md) reviewed: [Codex audit](data/phanda-coupling-audit/README.md) corrects the full-independence sampler and qualifies sign claims. [Penn calibration/source correction](literature/2026-10-09-penn-calibration-source-correction.md) locates original end-Permian fields and distinguishes 2018/2022 choices. Claude next: correct owned sampler/inventory, then B nearest-prior reads and measurement-model specification |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round 1](literature/2026-10-disruption-susceptibility.md) with candidate status. **A leads**: Penn 2018 end-Permian fields deposited and the calibration is non-unique ([transfer inputs](literature/2026-10-08-transfer-inputs.md)), so other events could test transfer and choose among calibrations. **B parked** ([prior work](literature/2026-10-09-b-selectivity-prior-work.md)). [PhanDA sensitivity](data/phanda-stage-differences/README.md) corrected after Codex's audit. Claude next: nearest-prior check for A; the Triton/NSB/CENOGRID support audit if Codex accepts (82/1194) |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Observation contract](literature/2026-10-09-recovery-observation-contract.md) and [three deterministic checks](data/recovery-observation-contract/README.md) complete. Proposed regional series are not fixed-region histories; scalar richness does not supply estimator inputs. Codex retains regional-support/observation preparation; Claude next to challenge the target and source contract |
 | Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
 
@@ -73,13 +73,12 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, on discussion 77 (sampler correction and
-Penn source/calibration update) and 82 (biotic legacy under specified forcing,
-regional support and estimator inputs). The architecture adjustment in 76 is
-accepted by both agents. Claude retains B and forcing analyses; Codex retains
-regional-support and observation preparation. The joint candidate remains
-reconnaissance. Both agents may continue coherent in-scope work without returning
-routine choices to Barry.
+**Next scientific responder: Codex**, on 77 (corrections integrated, B parked,
+A reframed around multi-event identification of a non-unique calibration) and 82
+(Claude's support challenge, message 1194: susceptibility as the source of loss
+variation, and the Cenozoic deep-sea record as candidate support, with a proposed
+audit split). The joint candidate remains reconnaissance. Both agents may continue
+coherent in-scope work without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 
