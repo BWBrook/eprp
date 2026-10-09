@@ -21,7 +21,7 @@ Do not organise the programme around Barry's previous specialisms.
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
 | Environmental disruption, susceptibility and cross-scale inference | Claude | Register round 1 done ([checks](literature/2026-10-09-register-checks-round1.md)). Q-011 and Q-015 under review at tier 2; Q-012 (reframed) and Q-013 promising at tier 2; Q-014 at tier 3. Q-007 Cenozoic support is inadequate across events; an Eocene–Oligocene pilot only, gated on the full Triton site table. Added Q-022 to Q-025. Claude next: the Triton gate on deep-server; prior-work checks for Q-022 and Q-023 |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | Expanded Q-008–Q-010 and added Q-020–Q-021: [source synthesis](literature/2026-10-09-register-expansion.md). All five under review, tier 2; generic versions substantially occupied. Retains PBDB regional-support preparation, with a concrete support check next; Claude to challenge formulations and Q-007/Q-015 objections |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Feedback on Claude's round](literature/2026-10-09-feedback-on-register-round1.md) complete. Q-007 tier 2 agreed; Q-008–Q-010/Q-020/Q-021 refined, all still under review. Added closer geometry priors, qualified staggered arrival and prepared a mechanism–proxy map. Claude next to adjudicate Q-012/Q-013 corrections and support-design qualifications. Codex retains PBDB preparation |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
@@ -70,10 +70,10 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - Alroy 2010 does not report the proposed regional holdout test. Close 2020's
   standardised spatial samples are not continuous fixed-region trajectories.
   This narrows the next feasibility check without establishing novelty.
-- No candidate's novelty is established. No primary empirical analysis, climate
-  simulation or full occurrence-data extraction has started. Only bounded source
-  inspections and small synthetic/deterministic probes have been run.
-- The register now has 21 entries. New Codex directions concern failure of
+- No candidate's novelty is established. No primary empirical analysis or climate
+  simulation has started. Work comprises source/data-support inspections,
+  analytical counterexamples and small synthetic/deterministic probes.
+- The register now has 25 entries. New Codex directions concern failure of
   geographic insurance and biological control of Earth-system recovery. Close
   precedents are recorded; discriminating predictions, not broad themes, need
   further evaluation.
@@ -83,13 +83,21 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - CENOGRID's composite proxy path does not alone establish local environmental
   exposure or continuous fossil support. Susceptibility traits may affect both
   loss and recovery. These are constraints for Claude's accepted support check.
+- Q-007's tier change is agreed; a site-count threshold alone does not establish
+  discrimination. Loop area and loss–lag scaling also depend on forcing speed,
+  amplitude and the chosen recovery endpoint.
+- Codex recommends holding Q-012 under review until an observable distinguishes
+  intrinsic ageing from frailty. Q-013's description of Payne 2016 needs correction:
+  both genus-risk rules were examined, and the main text and Table S1 disagree
+  about the threat cutoff for 24–40%. Claude's entries await its adjudication.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 76 (Claude's critique of Q-008 to
-Q-010, Q-020 and Q-021; register round 1) and 82 (Cenozoic audit result: support
-inadequate across events). Both agents keep narrowing and expanding the register
-without returning routine choices to Barry.
+**Next scientific responder: Claude**, on discussion 76 (closer priors,
+Q-010 design assumptions and Q-012/Q-013 corrections) and 82 (interpretation of
+the Triton support gate). Claude retains its active data jobs and Q-022/Q-023
+checks. Both agents keep narrowing and expanding the register without returning
+routine choices to Barry.
 
 ## Shared checkout and decisions
 

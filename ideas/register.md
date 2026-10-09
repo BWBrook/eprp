@@ -71,7 +71,7 @@ when posing new entries.
 | Q-004 | A pseudoextinction-corrected background rate for modern comparisons | sketch | 2 | Claude |
 | Q-005 | Are there detectable precursors before extinction events? | sketch | 2 | Claude |
 | Q-006 | What can fossils identify about diversification that extant trees provably cannot? | sketch | 2 | Claude |
-| Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 1→2? (Claude proposes 2 pending the Triton gate; Codex to confirm) | Joint |
+| Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 2 | Joint |
 | Q-008 | Does geographic differentiation help determine subsequent recovery? | under review | 2 | Codex |
 | Q-009 | Does ecological organisation retain predictive memory after richness recovers? | under review | 2 | Codex |
 | Q-010 | Can biological innovation change how much diversity an environment supports? | under review | 2 | Codex |
@@ -174,7 +174,7 @@ Status **sketch**, tier 2.
 ## Joint and Codex-owned
 
 ### Q-007 Biotic legacy under a specified environmental path
-Status **under review**, tier 1, joint.
+Status **under review**, tier 2, joint (agreed 9 October; support gate pending).
 
 - **Question.** After a loss episode, how long does the observable biota carry
   its imprint, given the forcing path? Equivalently, is diversity tracking the
@@ -234,6 +234,12 @@ Status **under review**, tier 2 (9 October).
   from richness-driven nestedness. Park the predictive
   route if this support fails or differentiation adds no information beyond
   environment, richness and geographic coverage.
+- **Shared mechanism with Q-020.** Use a common habitat-network representation
+  with time-varying suitability and taxon-specific dispersal, not necessarily
+  one scalar connectivity measure for both extinction and rebuilding. Compare
+  predicted directional recolonisation from surviving source regions; first
+  detections alone cannot establish source or arrival time. Standardise sampling
+  coverage and preserve uncertainty in latent occupancy and immigration.
 - **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
 
 ### Q-009 Ecological memory beyond recovered richness
@@ -266,6 +272,10 @@ Status **under review**, tier 2 (9 October).
   outcome and a usable later interval; prevent outcome information entering
   guild definitions. Park if the result reduces to familiar recovery ordering,
   or if the apparent memory disappears under observation-aware comparisons.
+- **Boundary with Q-007.** Q-009 asks which biological variables must be carried
+  forward; Q-007 asks about response times and residual history dependence given
+  that state. Claude's Cenozoic support check serves both. An incomplete or
+  imprecisely measured state can itself create apparent additional memory.
 - **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
 
 ### Q-010 Biological construction of diversity capacity
@@ -297,6 +307,13 @@ Status **under review**, tier 2 (9 October); original either/or framing retired.
   innovation with independent functional and environmental evidence. Park if
   capacity must be inferred solely from the diversity curve it explains, or
   if the proposal reproduces the existing engineer-presence association.
+- **Concrete proposed design.** Claude suggests comparing basins receiving the
+  same innovation at different times. Retain this staggered-arrival comparison
+  at tier 2 until dates, pre-arrival trends and comparable basins are established.
+  Arrival follows habitat change and dispersal, so timing alone does not identify
+  an effect. Check preservation changes and inter-basin spillovers; distinguish
+  pre-existing conditions from habitat changes caused by the engineers. See the
+  [design critique](../literature/2026-10-09-feedback-on-register-round1.md).
 - **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
 
 ## New sketches (Claude, 9 October): the big stuff
@@ -484,18 +501,27 @@ Status **under review**, tier 2.
   model correlated habitat destruction. Liao et al. 2015
   ([10.1038/srep15455](https://doi.org/10.1038/srep15455), sect: Methods/Results)
   already vary disturbance extent and clustering with contrasting dispersal.
-- **Discriminator and route.** Derive predictions for persistent loss of refuge
-  access on palaeogeographic habitat networks, holding aggregate habitat loss
-  through time and local stress distributions comparable. A useful extension
-  must predict more than the existing clustering effect. Candidate empirical
-  inputs are PBDB ranges or Triton site occurrences plus independently dated
-  regional environmental records. No joint exposure coverage is yet established.
+  Malanoski et al. 2026 ([10.1126/science.adv2627](https://doi.org/10.1126/science.adv2627),
+  sect: main/SI Methods) already adds coastal distance-to-track beyond range.
+  Pohl et al. 2023 ([10.1126/sciadv.adg7679](https://doi.org/10.1126/sciadv.adg7679),
+  sect: Results/Methods) already models geographic variation in viable niches
+  and warming susceptibility. Both identify dispersal-related extensions.
+- **Discriminator and route.** Test the time ordering of viable routes and
+  refugia at comparable static coastal distance, initial ranges, local stress
+  and habitat-area trajectories. Does a corridor close before, or after, a
+  population can reach surviving habitat? Malanoski assumes habitable coastal
+  paths; Pohl fills viable niches with unlimited dispersal. A dynamic-access
+  comparison is absent from those implementations, but its novelty is unverified.
+  Share the geographic representation with Q-008, with separate survival and
+  recolonisation predictions. Candidate empirical inputs are PBDB or Triton
+  occurrences and dated regional environments; joint support is unestablished.
 - **Obstacle / next step.** Shared age errors can manufacture synchrony; spatial
   similarity alone does not establish simultaneous stress. First determine
   whether the proposed topology yields a prediction beyond the cited models.
   Park the empirical route if chronologies cannot resolve the relevant timescale;
   park the whole entry if all predictions reduce to established results.
 - **Evidence.** [Source checks and observation limits](../literature/2026-10-09-register-expansion.md).
+  [Closer priors and response to Claude](../literature/2026-10-09-feedback-on-register-round1.md).
 
 ### Q-021 Biological control of Earth-system recovery
 Status **under review**, tier 2.
@@ -527,6 +553,11 @@ Status **under review**, tier 2.
   differ and which observations constrain them without circular calibration.
   Park if proxy and forcing uncertainty make the alternatives indistinguishable,
   or a fuller prior-work check already covers that joint comparison.
+- **Next deliverable.** The [initial mechanism–proxy map](../literature/2026-10-09-feedback-on-register-round1.md)
+  identifies potentially useful nonthermal evidence and its main ambiguities.
+  Convert it into distinguishable joint predictions before choosing a model or
+  claiming attribution. Deep-time feedbacks motivate modern comparisons, but
+  modern flux magnitudes and timescales require their own evidence.
 - **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
 
 ## New sketches, round 2 (Claude, 9 October)
