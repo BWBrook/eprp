@@ -20,8 +20,8 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Register round 2 ([checks](literature/2026-10-09-register-checks-round2.md)). **Q-022 promising, tier 1** (phylogenetic-diversity loss across events; gap stated by three authors; open CC0 trees). Q-023 under review, tier 2. Q-012 and Q-013 back to under review after Codex's corrections. Q-007 [Triton gate](data/triton-event-support/README.md): only the EOT passes (6 sites), so the hyperthermal design is out. Claude next: the Q-022 pre-mortem on the Dryad trees; more sketches |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Feedback on Claude's round](literature/2026-10-09-feedback-on-register-round1.md) complete. Q-007 tier 2 agreed; Q-008–Q-010/Q-020/Q-021 refined, all still under review. Added closer geometry priors, qualified staggered arrival and prepared a mechanism–proxy map. Claude next to adjudicate Q-012/Q-013 corrections and support-design qualifications. Codex retains PBDB preparation |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Q-022 remains promising, tier 1 in Claude's entry; Codex recommends under review, tier 2 after finding direct PD-loss precedents and null-model limits ([review](literature/2026-10-09-pd-loss-and-clade-recovery.md)). Claude next: adjudicate the review and complete its Dryad pre-mortem. Q-023, Q-012 and Q-013 under review. The Q-007 [Triton gate](data/triton-event-support/README.md) and its two code fixes are reviewed; the hyperthermal design is out on this screen |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | Q-022 source/estimand review complete; Q-026 added as a tier-2 sketch on predicting clade recovery versus terminal decline. Q-008–Q-010/Q-020/Q-021 remain under review. Codex retains PBDB preparation; next bounded Q-026 step is a Methods/data-contract inspection. Q-013's species–genus crosswalk remains a proposed next task, not an accepted execution assignment |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
@@ -73,7 +73,7 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - No candidate's novelty is established. No primary empirical analysis or climate
   simulation has started. Work comprises source/data-support inspections,
   analytical counterexamples and small synthetic/deterministic probes.
-- The register now has 25 entries. New Codex directions concern failure of
+- The register now has 26 entries. New Codex directions concern failure of
   geographic insurance and biological control of Earth-system recovery. Close
   precedents are recorded; discriminating predictions, not broad themes, need
   further evaluation.
@@ -86,16 +86,29 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - Q-007's tier change is agreed; a site-count threshold alone does not establish
   discrimination. Loop area and loss–lag scaling also depend on forcing speed,
   amplitude and the chosen recovery endpoint.
-- Codex recommends holding Q-012 under review until an observable distinguishes
-  intrinsic ageing from frailty. Q-013's description of Payne 2016 needs correction:
-  both genus-risk rules were examined, and the main text and Table S1 disagree
-  about the threat cutoff for 24–40%. Claude's entries await its adjudication.
+- Claude accepted the Q-012 frailty/age objection and corrected Q-013's
+  description of Payne 2016; both are under review. The main text/Table S1
+  threat-cutoff discrepancy remains a source limitation.
+- Huang et al. 2015 directly computes fossil-event branch-length PD loss versus
+  a random null; it is not merely a stratigraphic-diversity analogue. A 2015
+  Ordovician conference abstract also reports branch-sum loss. Q-022 may retain
+  a comparative opportunity, but its blanket novelty claim needs withdrawal.
+- Codex's exact toy-tree check confirms that richness-matched PD nulls can have
+  zero variance, including complete clade loss and one survivor on a rooted
+  ultrametric tree. These cases have undefined standardised effect sizes. The
+  empirical event support remains Claude's pending pre-mortem.
+- Q-026 asks whether declining clades' recovery can be predicted without
+  conditioning on their eventual fate. Song et al. 2026 is a close new prior;
+  full Methods and comparator support remain unchecked. Proportional richness
+  alone does not establish absolute decline or ecological dominance.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 76 (round-2 adjudication of its
-feedback; Q-022 promoted) and 82 (Triton gate result). Both agents keep narrowing
-and expanding the register without returning routine choices to Barry.
+**Next scientific responder: Claude**, on discussion 76: Q-022's source and
+estimand corrections, its own Dryad pre-mortem, and criticism of the new Q-026
+sketch. The Triton static-code review is closed in discussion 82. Both agents
+keep narrowing and expanding the register without returning routine choices
+to Barry.
 
 ## Shared checkout and decisions
 

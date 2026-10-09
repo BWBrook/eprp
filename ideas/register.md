@@ -91,6 +91,7 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-023 | Are biodiversity crises origination failures rather than extinction spikes? | under review | 2 | Claude |
 | Q-024 | Do ecological early-warning signals work on real Quaternary transitions? | sketch | 2 | Claude |
 | Q-025 | How do local losses scale to global extinction, then and now? | sketch | 2 | Claude |
+| Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | sketch | 2 | Codex |
 
 ---
 
@@ -175,7 +176,7 @@ Status **sketch**, tier 2.
 ## Joint and Codex-owned
 
 ### Q-007 Biotic legacy under a specified environmental path
-Status **under review**, tier 2, joint (agreed 9 October; support gate pending).
+Status **under review**, tier 2, joint (agreed 9 October; support limits below).
 
 - **Question.** After a loss episode, how long does the observable biota carry
   its imprint, given the forcing path? Equivalently, is diversity tracking the
@@ -698,3 +699,44 @@ Tier 2 (provisional).
   - Scale-explicit comparison with matched observation filters.
 - **Obstacle.** Regional "extirpation" in fossils mixes range shift, sampling
   gaps and true loss. No prior-work check yet.
+
+## New sketch (Codex, 9 October): clade recovery versus terminal decline
+
+### Q-026 Can we distinguish reversible clade decline from terminal decline before knowing the outcome?
+Status **sketch**, tier 2. Novelty and prospective data support unverified.
+
+- **Question.** Among clades already declining at a specified time, does low
+  proportional diversity predict failure to recover beyond absolute richness,
+  environmental exposure and sampling? Can we distinguish a reversible
+  bottleneck from persistent loss of evolutionary opportunity?
+- **Why big.** Survival through a crisis does not guarantee a future radiation.
+  Knowing which declines can reverse would connect immediate losses to the
+  longer-term replacement of major branches of life. This concerns clade fate;
+  Q-009 concerns ecosystem state, and Q-012 inherited lineage susceptibility.
+- **Nearest prior.** Jablonski 2002
+  ([10.1073/pnas.102163299](https://doi.org/10.1073/pnas.102163299), abs/opening
+  results) establishes survival without recovery. Barnes et al. 2021
+  ([10.1073/pnas.2019208118](https://doi.org/10.1073/pnas.2019208118), abs/design)
+  documents widespread, persistent decline among marine orders. Song et al.
+  2026 ([10.1038/s41559-026-03134-x](https://doi.org/10.1038/s41559-026-03134-x),
+  abs/data statement) proposes declining proportional diversity followed by
+  environmentally triggered extinction in 12 extinct marine clades. The broad
+  mechanism is occupied; the residual prospective test needs a full prior check.
+- **Data and discriminator.** Song's public
+  [data/code repository](https://github.com/haijunsong/Clade-extinction)
+  contains SQS/PyRate materials (README/listing inspected; no workflow run).
+  Establish all eligible declining clades at each initial time, including later
+  recoveries, persistent small clades and censored histories. Test held-out
+  recovery/failure over comparable horizons, against neutral diversification
+  and common forcing passed through the observation process. Separate changes
+  in focal richness from growth of the comparison group; genus-richness share
+  is not itself ecological dominance.
+- **Obstacle / next step.** Selecting histories by their eventual extinction
+  or final downturn can leak the outcome into the predictor. A lower share can
+  also arise with no loss of focal genera. First inspect the main Methods/SI,
+  cohort rules and denominator definitions; these were not accessible in this
+  round, so these are design concerns, not demonstrated faults in Song's study.
+  Park if the prospective comparison is already occupied or adequately observed
+  recoveries and non-recoveries cannot both be assembled. No universal 0.13
+  threshold or irreversible fate is assumed.
+- **Evidence.** [Clade-recovery sketch and Q-022 review](../literature/2026-10-09-pd-loss-and-clade-recovery.md).
