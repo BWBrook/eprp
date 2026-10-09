@@ -42,6 +42,25 @@ applications do not belong here.
 - **Access depth labels:** meta = existence via Crossref; abs = abstract;
   sect = named sections; full = full text.
 
+## Lessons from prior-work checks
+
+These are inferences from the
+[round-1 checks](../literature/2026-10-09-register-checks-round1.md). They apply
+when posing new entries.
+
+1. **Cross-event questions hit a ceiling of roughly 6–30 events.** Few events
+   are well dated, forcing metrics share no common scale, and attributing an
+   event to its driver is often circular. A question that needs many events is
+   weak by default.
+2. **Stronger designs use replication within events, or continuous records.**
+   That means spatial and taxonomic contrasts within one event, all stage
+   transitions treated as a continuum, species-level microfossil series, and
+   lineage-resolved phylogenies.
+3. **Resolution sets what can be identified.** Lags, precursors and pulses
+   shorter than about 50–100 kyr are mostly unresolvable before the Cenozoic.
+4. **Live disputes make good seeds**, when they turn on identification rather
+   than on data volume.
+
 ## Index
 
 | ID | Question | Status | Tier | Owner |
@@ -52,21 +71,25 @@ applications do not belong here.
 | Q-004 | A pseudoextinction-corrected background rate for modern comparisons | sketch | 2 | Claude |
 | Q-005 | Are there detectable precursors before extinction events? | sketch | 2 | Claude |
 | Q-006 | What can fossils identify about diversification that extant trees provably cannot? | sketch | 2 | Claude |
-| Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 1 | Joint |
+| Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 1→2? (Claude proposes 2 pending the Triton gate; Codex to confirm) | Joint |
 | Q-008 | Does geographic differentiation help determine subsequent recovery? | under review | 2 | Codex |
 | Q-009 | Does ecological organisation retain predictive memory after richness recovers? | under review | 2 | Codex |
 | Q-010 | Can biological innovation change how much diversity an environment supports? | under review | 2 | Codex |
-| Q-011 | What sets the size distribution of extinction events: forcing or biotic amplification? | sketch | 1 | Claude |
-| Q-012 | Is extinction risk age-dependent? | sketch | 1 | Claude |
-| Q-013 | Would the current extinction register as a mass extinction in the rock record? | sketch | 1 | Claude |
-| Q-014 | How long is the extinction debt after a deep-time perturbation? | sketch | 1 | Claude |
-| Q-015 | Could past lineages evolve thermal niches as fast as climate changed? | sketch | 1 | Claude |
+| Q-011 | What sets the size distribution of extinction events: forcing or biotic amplification? | under review | 2 | Claude |
+| Q-012 | Is declining extinction risk with age intrinsic, or selection on fixed heterogeneity? | promising | 2 | Claude |
+| Q-013 | Would the current extinction register as a mass extinction in the rock record? | promising | 2 | Claude |
+| Q-014 | How long is the extinction debt after a deep-time perturbation? | sketch | 3 | Claude |
+| Q-015 | Could past lineages evolve thermal niches as fast as climate changed? | under review | 2 | Claude |
 | Q-016 | Do Red List-style risk criteria predict extinction over geological time? | sketch | 2 | Claude |
 | Q-017 | Dark extinction across scales: one detection framework for unseen losses | sketch | 2 | Claude |
 | Q-018 | Do plants and terrestrial biotas have mass extinctions in the same sense? | sketch | 2 | Claude |
 | Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | sketch | 2 | Claude |
 | Q-020 | When does geographic range cease to insure against global extinction? | under review | 2 | Codex |
 | Q-021 | Which lost biological functions prolong Earth-system recovery? | under review | 2 | Codex |
+| Q-022 | How much evolutionary history does each extinction prune? | sketch | 1 | Claude |
+| Q-023 | Are biodiversity crises origination failures rather than extinction spikes? | sketch | 1 | Claude |
+| Q-024 | Do ecological early-warning signals work on real Quaternary transitions? | sketch | 2 | Claude |
+| Q-025 | How do local losses scale to global extinction, then and now? | sketch | 2 | Claude |
 
 ---
 
@@ -114,7 +137,8 @@ Status **under review**, tier 3.
 - **Assets.** The [interval crosswalk](../data/interval-crosswalk/README.md) and
   the [PhanDA dependence sensitivity](../data/phanda-stage-differences/README.md).
 - **Obstacle.** A modest result: it reports detectability, not biology. Keep it
-  as a diagnostic.
+  as a diagnostic. It also serves as the detectability component of Q-011's
+  reduced dose–response test.
 
 ### Q-004 Pseudoextinction-corrected background rate
 Status **sketch**, tier 2.
@@ -164,8 +188,20 @@ Status **under review**, tier 1, joint.
   - Claude proposes the Cenozoic deep-sea record: CENOGRID forcing
     (10.1126/science.aba6853), fixed DSDP/ODP sites, Triton/NSB species, and
     losses of graded size (K–Pg, PETM, Eocene–Oligocene).
-  - Pre-event susceptibility composition could supply variation in loss under
-    matched forcing.
+  - Susceptibility composition enters as an effect modifier, not an instrument
+    (agreed in 82/1220).
+  - **Audit result (9 October, Claude).** The Cenozoic support is *not adequate*
+    across events. Sites with both species-level biota and site-level
+    temperature number 0 at the K–Pg, 0–2 at the PETM and 4–5 at the
+    Eocene–Oligocene transition (clustered at 57–65°S). Abundance is largely
+    categorical, and ages are mostly interpolated from biozones.
+  - Only a within-event Eocene–Oligocene pilot is feasible. Claude's
+    hyperthermal-loop design (82/1224) fails the gate as currently known.
+  - **Gate:** rebuild the site table from the full Triton release (307 MB) and
+    require at least 5 sites per event with age models not based solely on
+    biozones. See [round-1 checks](../literature/2026-10-09-register-checks-round1.md).
+- **Linked:** Q-009 (state variables beyond richness), which uses the same
+  dense-series support.
 - **Evidence.** [Codex recovery notes](../literature/2026-10-09-recovery-observation-contract.md);
   Correspondence 82.
 
@@ -269,99 +305,113 @@ These are posed for a prior-work check, nothing more. Prior work is listed at
 metadata depth unless stated, and none of it has been read for this register yet.
 
 ### Q-011 What sets the size distribution of extinction events?
-Tier 1.
+Status **under review**, tier 2 (prior-work check on 9 October).
 
-- **Question.** Extinction magnitudes form a continuum (Wang 2003; Marshall
-  2023; Crampton 2026). Is that distribution the image of the perturbation-size
-  distribution through a stable transfer function? Or does it carry a heavy tail
-  that needs biotic amplification (cascades, thresholds, state dependence)?
-- **Why big.** It is the macro-scale version of "how much does the biosphere
-  amplify a shock?", which bears directly on modern risk.
-- **Prior.**
-  - Raup 1991 kill curve (10.1017/s0094837300010332).
-  - Newman & Palmer 2003, *Modeling Extinction* (OUP), on self-organised
-    criticality versus forcing models.
-  - Rothman 2017 (10.1126/sciadv.1700906, full): 31 carbon-cycle perturbations
-    with critical rate and size.
-  - Song et al. 2021.
-- **Data and methods.**
-  - A perturbation catalogue (Rothman's, plus PhanDA and dated δ¹³C excursions)
-    and sampling-corrected extinction magnitudes.
-  - Fit forcing → extinction transfer models with an observation model.
-  - Test whether the residual tail needs amplification.
-- **Obstacle.** Perturbation catalogues are biased towards the events that
-  caused extinctions (circular selection).
+- **Question.** Given a perturbation catalogue chosen independently of
+  extinction, what is the form of the forcing → extinction dose–response
+  (linear, threshold, state-dependent)? Does the fitted map reproduce the
+  observed extinction-size tail, or is biotic amplification needed?
+- **Established.**
+  - Magnitudes form a continuum.
+  - The tail exponent cannot discriminate mechanisms: Newman 1997
+    (10.1006/jtbi.1997.0508) gets an exponent of about 2 for almost any stress
+    distribution.
+  - Forcing and extinction relate positively but coarsely: Song 2021;
+    Kaiho 2022; Green et al. 2022 (10.1073/pnas.2120441119, flood basalts).
+  - Across 73 stages, extinction is uncorrelated with LIP or crater size alone
+    (Arens & West 2008, 10.1666/07034.1).
+  - Rothman 2019 (10.1073/pnas.1905164116) places disruption size in the carbon
+    cycle's intrinsic dynamics.
+- **Open.** A fitted transfer function with an amplification test was not found.
+- **Obstacle.** Only about 10–30 well-dated events; forcing metrics with no
+  common scale; stage averaging that hides pulses. The full tail comparison is
+  probably underpowered, and the reduced form test is incremental.
+  Linked: Q-003.
+- **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
-### Q-012 Is extinction risk age-dependent?
-Tier 1.
+### Q-012 Is declining extinction risk with age intrinsic, or selection on fixed heterogeneity?
+Status **promising**, tier 2 (reframed 9 October).
 
-- **Question.** Van Valen's "law of constant extinction" is 50 years old and
-  still unresolved. Recent results conflict:
-  - Quintero et al. 2025 (10.1038/s41559-025-02873-7): lineages lose
-    macroevolutionary fitness and decline.
-  - Tikhonov et al. 2026 (openRxiv 10.64898/2026.07.21.739780): survivorship
-    bias explains age-dependent extinction in fossil genera.
-  - Finnegan et al. 2008 (10.1666/07008.1) is the earlier PBDB test.
-- **Why big.** It is a foundational evolutionary law. Modern risk assessment
-  implicitly assumes no age effect.
-- **Data and methods.**
-  - Species-level foraminifera (Triton, near-complete sampling) and PBDB genera.
-  - Age-dependent birth–death and survival models, with a simulated
-    survivorship-bias null run through the same estimator.
-- **Obstacle.** Separating age effects from sampling-induced range truncation.
+- **Question.** Declining hazard with age is widely replicated in fossil
+  survivorship: Silvestro et al. 2019 (10.1111/ele.13441), >90% of clades;
+  Hagen et al. 2018. Is it intrinsic, or produced by selection on fixed
+  heterogeneity (frailty)?
+- **Why big.** It decides whether Van Valen's "law of constant extinction"
+  fails mechanistically or only statistically. Modern risk assessment assumes no
+  age effect.
+- **Live dispute.**
+  - Quintero et al. 2025 (10.1038/s41559-025-02873-7): heritable rates drift
+    upward. This is a secular trend, not hazard by species age [scout inference].
+  - Tikhonov et al. 2026 (openRxiv 10.64898/2026.07.21.739780): fixed
+    "toughness" plus event "luck" fits, with no age term.
+  - Saulsbury et al. 2023 (10.1073/pnas.2307629121): a neutral model with
+    sampling fits graptoloids. The Johnson comment argues curve-fitting cannot
+    discriminate.
+- **Design.**
+  - Triton species-level foraminifera with a pseudoextinction-free lineage
+    phylogeny (Aze et al. 2011).
+  - A Weibull hazard with preservation modelled in each bin.
+  - One simulation null generating constant-hazard, frailty and neutral data
+    through the same sampling.
+- **Obstacle.** Frailty may be unidentifiable from survivorship alone;
+  foraminiferal taxonomic artefacts; an active field (Quental, Silvestro, Liow,
+  Saulsbury).
+- **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
 ### Q-013 Would the current extinction register as a mass extinction in the rock record?
-Tier 1.
+Status **promising**, tier 2 (9 October).
 
-- **Question.** Pass present-day marine diversity and threat (IUCN, OBIS
-  ranges) through a preservation filter, genus aggregation and stage grain.
-  Where would committed modern losses fall in the Phanerozoic magnitude
-  distribution, and with what detection probability?
-- **Why big.** This is "degrade, don't upgrade" done properly, and the most
-  direct deep-time ↔ modern comparison.
-- **Prior.**
-  - Plotnick et al. 2016 (10.1111/ele.12589, abs): mammals; under 9% of
-    threatened species have a fossil record.
-  - Spalding & Hull 2021 (10.1098/rspb.2020.2332, quoted).
-  - Strona & Bradshaw 2026 (openRxiv 10.64898/2026.04.07.716927, sum): about
-    49% non-detection in simulation.
-- **Data.** IUCN (API token needed), OBIS, PBDB preservation by clade,
-  BioDeepTime.
-- **Obstacle.** Strona & Bradshaw may already cover the core. Read in full first.
+- **Question.** Take committed and realised modern losses. Aggregate correctly to
+  genera, so that a genus counts as lost only when all its species are.
+  Filter by clade-specific preservation and compress to stage grain with
+  Signor–Lipps smearing. Where does the result fall in the Phanerozoic magnitude
+  spectrum, and what counts as "registering"?
+- **Nearest work.**
+  - Payne et al. 2016 (10.1126/science.aaf2416): 24–40% of marine vertebrate
+    and mollusc genera would be lost under the pessimistic IUCN scenario. Their
+    genus rule probably overstates committed loss.
+  - Krone et al. 2024 (10.1017/pab.2023.34): tetrapod geographic gaps.
+  - Plotnick et al. 2016 (mammals); Spalding & Hull 2021 (rates); Shaw et al.
+    2021 (38% of marine assemblage taxa are in PBDB).
+  - Strona & Bradshaw 2026 concerns *undescribed* extinctions, not the rock
+    record. This corrects the earlier sketch.
+- **Obstacle.** Marine invertebrates are barely assessed, so committed loss
+  would be largely imputed. The IUCN API needs a token and its terms must be
+  checked. "Registers" needs an operational criterion (Marshall 2023).
+- **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
 ### Q-014 How long is the extinction debt after a deep-time perturbation?
-Tier 1.
+Status **sketch**, tier 3 as posed (9 October).
 
-- **Question.** Is there a measurable lag between environmental perturbation and
-  extinction, and does it scale with perturbation size or rate?
-- **Why big.** It is the deep-time counterpart of committed (debt) extinctions
-  under current warming.
-- **Prior.**
-  - Zhang et al. 2025 (10.1126/sciadv.adv6788, partial): Late Ordovician
-    extinction tempo tracks the rate of warming, U–Pb dated.
-  - Spalding & Hull 2021.
-  - Kemp et al. 2015.
-- **Data.** U–Pb- and astronomically dated sections, graptoloid composites
-  (Crampton 2026), high-resolution microfossil cores.
-- **Obstacle.** Dating resolution relative to the lag, and Signor–Lipps
-  smearing.
+- **Finding.** Timings are known for single events: end-Permian lavas about
+  300 kyr before extinction onset, with sill onset coincident; K–Pg within
+  32 kyr; PETM about 0–10 kyr; Panama closure 1–2 Myr. No cross-event regression
+  of lag on perturbation size or rate was found.
+- **Obstacle.** Lag depends on which forcing onset is used, and it is at or
+  below dating resolution for most mass extinctions.
+- **Reframe for tier 2.** "Extinction debt under slow, regional perturbations",
+  using dense Cenozoic cases such as the Panama closure, with an explicit power
+  analysis.
+- **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
 ### Q-015 Could past lineages evolve thermal niches as fast as climate changed?
-Tier 1.
+Status **under review**, tier 2 (9 October; Codex's objection accepted).
 
-- **Question.** Across past warming events, how fast did realised thermal niches
-  shift by evolution rather than by migration? Did lineages that tracked faster
-  survive?
-- **Why big.** It is the deep-time test of whether adaptation can keep pace with
-  modern warming.
-- **Prior.**
-  - Quintero & Wiens 2013 (10.1111/ele.12144): phylogenetic niche-evolution
-    rates are far below projected change.
-  - Reddin et al. 2022 and 2025 on thermal niches in hyperthermals.
-  - Saupe et al. 2019 (10.1038/s41561-019-0504-6).
-- **Data.** Triton forams with proxy SSTs; PBDB with HadCM3/BRIDGE temperatures.
-- **Obstacle.** Occurrence-based niche estimates are confounded with sampling
-  and habitat availability.
+- **Established.** Occupancy-defined niches are mostly static (Antell et al.
+  2021, 10.1073/pnas.2017105118; Saupe et al. 2014). Ying et al. 2024
+  (10.1038/s41586-024-08029-0) infer a foraminiferal optimum shift
+  (acclimatisation), so the verdict depends on how the niche is defined.
+  Saupe et al. 2019 GEB (10.1111/geb.12904) is a required no-evolution null.
+- **Open.** No fossil niche-evolution *rate* separated from tracking was found,
+  and no test of whether faster adapters survived.
+- **Sharpest version.** Same-shell calcification temperature against ambient
+  temperature across hyperthermals (Boscolo-Galazzo et al. 2025,
+  10.5194/bg-22-1095-2025), with a fixed-niche null run through the same climate
+  model and sampling.
+- **Obstacle.** Plasticity, tracking and evolution are not separable except by
+  timescale arguments. First check the Antell & Saupe GSA 2021 abstract
+  (10.1130/abs/2021am-369023), whose title suggests a direct overlap.
+- **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
 ### Q-016 Do Red List-style risk criteria predict extinction over geological time?
 Tier 2.
@@ -478,3 +528,84 @@ Status **under review**, tier 2.
   Park if proxy and forcing uncertainty make the alternatives indistinguishable,
   or a fuller prior-work check already covers that joint comparison.
 - **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
+
+## New sketches, round 2 (Claude, 9 October)
+
+Posed only. The anchor references were verified via Crossref; no prior-work check has been run yet.
+
+### Q-022 How much evolutionary history does each extinction prune?
+Tier 1 (provisional).
+
+- **Question.** Theory predicts that most phylogenetic diversity (PD) survives
+  even severe random species loss (Nee & May 1997, 10.1126/science.278.5338.692).
+  Real extinctions are phylogenetically clustered. Across events, how much
+  evolutionary history was actually lost per unit of taxonomic loss? Is the
+  PD-loss ratio predictable from selectivity and event size?
+- **Why big.** Conservation prioritises evolutionary distinctiveness (EDGE-type
+  metrics) on theoretical grounds that have never been tested against
+  geological-scale extinctions. The answer sets how much "tree" the current
+  crisis may cost.
+- **Data and methods.**
+  - Time-calibrated phylogenies with dense fossil tips: mammals (PHYLACINE,
+    10.1002/ecy.2443), planktonic foraminifera, and possibly ammonoids or
+    crinoids.
+  - Fossilised birth–death or tip-dated trees.
+  - Compare realised PD loss with null pruning models at matched species loss.
+- **Obstacle.** Few clades have fossil-inclusive trees spanning events;
+  uncertainty in tree topology and tip ages. No prior-work check yet.
+
+### Q-023 Are biodiversity crises origination failures rather than extinction spikes?
+Tier 1 (provisional).
+
+- **Question.** Some "mass depletions" were driven mainly by collapsed
+  origination, not elevated extinction (Bambach, Knoll & Wang 2004,
+  10.1666/0094-8373(2004)030<0522:OEAMDO>2.0.CO;2). In the Late Devonian,
+  invasions have been linked to speciation suppression (Stigall 2010,
+  10.1371/journal.pone.0015584). How general is origination failure, what
+  causes it (homogenisation, invasion, habitat fragmentation or loss), and
+  can it be detected while it is happening?
+- **Why big.** The modern crisis may cut speciation as well as raise extinction
+  (Rosenzweig 2001, 10.1073/pnas.101092798). Its long-term cost is set by lost
+  origination, which no current metric tracks.
+- **Data and methods.**
+  - Sampling-corrected origination and extinction rates (PBDB; PyRate).
+  - Biogeographic homogenisation metrics (links Q-008).
+  - Invasion or immigration events from first appearances.
+  - Test whether origination drops follow homogenisation.
+- **Obstacle.** Origination estimates are sensitive to sampling and to
+  pseudo-origination from taxonomic practice. No prior-work check yet.
+
+### Q-024 Do ecological early-warning signals work on real Quaternary transitions?
+Tier 2 (provisional).
+
+- **Question.** Theory proposes that rising variance and autocorrelation precede
+  critical transitions. Tested against dense, well-dated Quaternary records of
+  known ecosystem transitions, with explicit surrogates for sampling and
+  age-model error, do the indicators give usable lead times and acceptable
+  false-positive rates?
+- **Why big.** Early warning is a central promise of modern resilience
+  monitoring. The palaeo-record is the only large archive of real transitions
+  with known outcomes. It complements Q-005, the deep-time version.
+- **Prior.** Spanbauer et al. 2014 (10.1371/journal.pone.0108936), prolonged
+  instability before a diatom regime shift; a larger literature exists and has
+  not yet been checked.
+- **Data.** Neotoma pollen and diatom series; BioDeepTime (10.1111/geb.13735).
+- **Obstacle.** Age-model interpolation creates spurious autocorrelation, so
+  surrogate nulls are essential.
+
+### Q-025 How do local losses scale to global extinction, then and now?
+Tier 2 (provisional).
+
+- **Question.** Extinction rates depend nonlinearly on spatial scale (Keil et al.
+  2017/2018, 10.1111/geb.12669). Is the ratio of local or regional extirpation
+  to global extinction during past crises similar to the ratio in today's
+  local-decline data? What does the deep-time scaling imply about how many
+  current local losses become global?
+- **Why big.** Modern monitoring sees mostly local change. Deep time can show
+  how local losses scale up to global loss across many crises.
+- **Data and methods.**
+  - PBDB regional versus global last occurrences, spatially standardised.
+  - Modern assemblage time series (for example BioTIME).
+  - Scale-explicit comparison with matched observation filters.
+- **Obstacle.** Regional "extirpation" in fossils mixes range shift, sampling
+  gaps and true loss. No prior-work check yet.

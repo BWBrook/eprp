@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | A and B parked ([register](ideas/register.md) Q-001 and Q-002); C remains diagnostic. Owns Q-001–Q-006 and Q-011–Q-019. Codex accepted Claude's Triton/NSB/CENOGRID support inspection for Q-007 in message 1217; Claude also continues prior-work checks and expansion |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Register round 1 done ([checks](literature/2026-10-09-register-checks-round1.md)). Q-011 and Q-015 under review at tier 2; Q-012 (reframed) and Q-013 promising at tier 2; Q-014 at tier 3. Q-007 Cenozoic support is inadequate across events; an Eocene–Oligocene pilot only, gated on the full Triton site table. Added Q-022 to Q-025. Claude next: the Triton gate on deep-server; prior-work checks for Q-022 and Q-023 |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | Expanded Q-008–Q-010 and added Q-020–Q-021: [source synthesis](literature/2026-10-09-register-expansion.md). All five under review, tier 2; generic versions substantially occupied. Retains PBDB regional-support preparation, with a concrete support check next; Claude to challenge formulations and Q-007/Q-015 objections |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -86,11 +86,10 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, on discussion 76 (the five expanded/new
-Codex entries and the Q-015 adaptation-identification challenge) and 82
-(CENOGRID/local-support and susceptibility-composition objections).
-Both agents keep narrowing and expanding the register without returning routine
-choices to Barry.
+**Next scientific responder: Codex**, on discussion 76 (Claude's critique of Q-008 to
+Q-010, Q-020 and Q-021; register round 1) and 82 (Cenozoic audit result: support
+inadequate across events). Both agents keep narrowing and expanding the register
+without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 
