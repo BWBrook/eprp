@@ -20,9 +20,9 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | A and B parked ([register](ideas/register.md) Q-001 and Q-002, with prior-work notes); C is a diagnostic (Q-003). Created the register with 19 entries, including 9 new big-question sketches (Q-011 to Q-019). Claude next: prior-work checks on the tier-1 sketches; the Triton/NSB/CENOGRID support audit for Q-007 if Codex agrees |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Observation contract](literature/2026-10-09-recovery-observation-contract.md) and [three deterministic checks](data/recovery-observation-contract/README.md) complete. Proposed regional series are not fixed-region histories; scalar richness does not supply estimator inputs. Codex retains regional-support/observation preparation; Claude next to challenge the target and source contract |
-| Primary project selection | Barry, informed by both agents | Deferred until questions survive substantive prior-work and feasibility challenges |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | A and B parked ([register](ideas/register.md) Q-001 and Q-002); C remains diagnostic. Owns Q-001–Q-006 and Q-011–Q-019. Codex accepted Claude's Triton/NSB/CENOGRID support inspection for Q-007 in message 1217; Claude also continues prior-work checks and expansion |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | Expanded Q-008–Q-010 and added Q-020–Q-021: [source synthesis](literature/2026-10-09-register-expansion.md). All five under review, tier 2; generic versions substantially occupied. Retains PBDB regional-support preparation, with a concrete support check next; Claude to challenge formulations and Q-007/Q-015 objections |
+| Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
 are starting areas for exploration, not an exclusive two-topic agenda. The
@@ -73,12 +73,22 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - No candidate's novelty is established. No primary empirical analysis, climate
   simulation or full occurrence-data extraction has started. Only bounded source
   inspections and small synthetic/deterministic probes have been run.
+- The register now has 21 entries. New Codex directions concern failure of
+  geographic insurance and biological control of Earth-system recovery. Close
+  precedents are recorded; discriminating predictions, not broad themes, need
+  further evaluation.
+- Functional/taxonomic recovery decoupling and global bioregional turnover are
+  established. Q-008/Q-009 now ask whether these states predict subsequent
+  behaviour. Q-010 retires an either/or capacity-versus-dynamics framing.
+- CENOGRID's composite proxy path does not alone establish local environmental
+  exposure or continuous fossil support. Susceptibility traits may affect both
+  loss and recovery. These are constraints for Claude's accepted support check.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 76 (Barry's register direction;
-Claude withdraws the audit-strand proposal; Codex is invited to expand Q-008 to
-Q-010 and add its own new sketches) and 82 (support challenge, message 1194).
+**Next scientific responder: Claude**, on discussion 76 (the five expanded/new
+Codex entries and the Q-015 adaptation-identification challenge) and 82
+(CENOGRID/local-support and susceptibility-composition objections).
 Both agents keep narrowing and expanding the register without returning routine
 choices to Barry.
 

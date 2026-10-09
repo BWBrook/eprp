@@ -53,9 +53,9 @@ applications do not belong here.
 | Q-005 | Are there detectable precursors before extinction events? | sketch | 2 | Claude |
 | Q-006 | What can fossils identify about diversification that extant trees provably cannot? | sketch | 2 | Claude |
 | Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 1 | Joint |
-| Q-008 | Does geographic differentiation rebuild before or after richness, and does it matter? | sketch | 2 | Codex |
-| Q-009 | Can richness recover while ecological organisation keeps a different history? | sketch | 2 | Codex |
-| Q-010 | What limits long-term marine diversity: environmental capacity or realised dynamics? | under review | 2 | Codex |
+| Q-008 | Does geographic differentiation help determine subsequent recovery? | under review | 2 | Codex |
+| Q-009 | Does ecological organisation retain predictive memory after richness recovers? | under review | 2 | Codex |
+| Q-010 | Can biological innovation change how much diversity an environment supports? | under review | 2 | Codex |
 | Q-011 | What sets the size distribution of extinction events: forcing or biotic amplification? | sketch | 1 | Claude |
 | Q-012 | Is extinction risk age-dependent? | sketch | 1 | Claude |
 | Q-013 | Would the current extinction register as a mass extinction in the rock record? | sketch | 1 | Claude |
@@ -65,6 +65,8 @@ applications do not belong here.
 | Q-017 | Dark extinction across scales: one detection framework for unseen losses | sketch | 2 | Claude |
 | Q-018 | Do plants and terrestrial biotas have mass extinctions in the same sense? | sketch | 2 | Claude |
 | Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | sketch | 2 | Claude |
+| Q-020 | When does geographic range cease to insure against global extinction? | under review | 2 | Codex |
+| Q-021 | Which lost biological functions prolong Earth-system recovery? | under review | 2 | Codex |
 
 ---
 
@@ -167,12 +169,99 @@ Status **under review**, tier 1, joint.
 - **Evidence.** [Codex recovery notes](../literature/2026-10-09-recovery-observation-contract.md);
   Correspondence 82.
 
-### Q-008, Q-009, Q-010 (Codex)
-Provinciality rebuilding, organisation versus richness memory, and the
-commensurability of capacity models. See the
-[recovery orientation](../literature/2026-10-recovery-contingency.md) and
-[contracts note](../literature/2026-10-08-recovery-contracts-and-response.md).
-Codex to expand these entries.
+### Q-008 Geographic differentiation as a determinant of recovery
+Status **under review**, tier 2 (9 October).
+
+- **Question.** At comparable richness and environmental conditions, does the
+  distribution of distinct biotas among regions predict subsequent recovery?
+  Does differentiation preserve sources for recolonisation, or impede recovery
+  through isolation? The order in which provinciality and richness return is
+  an intermediate observation, not the principal contribution.
+- **Why big.** Global richness can conceal the loss of regional biological
+  options. This asks whether geographic organisation changes the biosphere's
+  ability to rebuild, beyond simply counting its survivors.
+- **Nearest prior.** Kocsis, Reddin & Kiessling 2018
+  ([10.1098/rspb.2018.0232](https://doi.org/10.1098/rspb.2018.0232), sect:
+  Methods/Results) already track Phanerozoic bioregions and their turnover.
+  Al Aswad et al. 2025 ([10.1126/sciadv.adr4199](https://doi.org/10.1126/sciadv.adr4199),
+  sect: survivor/similarity analyses) link end-Permian homogenisation with physiology.
+  Another provinciality curve would occupy established ground.
+- **Data and discriminator.** Use deposited bioregion/occurrence data to ask
+  whether pre-existing differentiation improves predictions of later regional
+  recolonisation or diversification in withheld regions or intervals. Compare
+  environmental sorting, dispersal limitation and sampling alone. Separate
+  immigration from origination; predictive success would still not establish
+  a causal effect of differentiation.
+- **Obstacle / next step.** The published bioregions use all time slices in one
+  network, potentially leaking future information into forecasts. First establish
+  comparable regional histories and training-only partitions; separate turnover
+  from richness-driven nestedness. Park the predictive
+  route if this support fails or differentiation adds no information beyond
+  environment, richness and geographic coverage.
+- **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
+
+### Q-009 Ecological memory beyond recovered richness
+Status **under review**, tier 2 (9 October).
+
+- **Question.** Once richness has recovered, do functional composition and
+  incumbent ecological groups still predict diversification, stability or
+  response to the next disturbance? Which biological state variables are
+  necessary to describe recovery?
+- **Why big.** A restored species count may conceal a different ecosystem with
+  different future behaviour. The target is the consequence of reorganisation,
+  rather than another demonstration that taxonomy and function recover separately.
+- **Nearest prior.** Dunhill et al. 2024
+  ([10.1038/s41467-024-53000-2](https://doi.org/10.1038/s41467-024-53000-2), sect)
+  reconstruct Toarcian food webs. Alvarez et al. 2019
+  ([10.1038/s41586-019-1590-8](https://doi.org/10.1038/s41586-019-1590-8), sect:
+  Results/Methods) report nannoplankton function and stability returning before
+  richness after K–Pg. Edie et al. 2025
+  ([10.1126/sciadv.adv1171](https://doi.org/10.1126/sciadv.adv1171), sect:
+  Results/Methods) already examine bivalve incumbency and functional reshuffling.
+- **Data and discriminator.** Candidate inputs include nannoplankton abundance
+  series, Toarcian guild tables and bivalve traits/stratigraphic bounds; only the
+  first offers a dense trajectory. Compare a richness-plus-environment model
+  with one carrying functional composition, evaluated on subsequent held-out
+  observations. Look for comparable richness with contrasting organisation and
+  divergent subsequent outcomes; allow environmental persistence and immigration
+  to explain those differences.
+- **Obstacle / next step.** Guilds and inferred feeding links are imperfect
+  proxies for ecosystem processes. First identify an independently measured
+  outcome and a usable later interval; prevent outcome information entering
+  guild definitions. Park if the result reduces to familiar recovery ordering,
+  or if the apparent memory disappears under observation-aware comparisons.
+- **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
+
+### Q-010 Biological construction of diversity capacity
+Status **under review**, tier 2 (9 October); original either/or framing retired.
+
+- **Question.** Can biological innovations and ecosystem engineering change
+  the diversity supported under comparable physical conditions, or can the
+  apparent expansion be explained by habitat area, environmental heterogeneity,
+  geographic differentiation and finite-rate diversification?
+- **Why big.** Is biological opportunity mostly imposed by the planet, or can
+  life substantially construct it? This concerns long-term diversification as
+  well as recovery from extinction.
+- **Nearest prior.** The inspected INDITEK and SNCI models define capacity
+  differently; an environmental limit and finite-rate dynamics can coexist
+  ([source comparison](../literature/2026-10-08-recovery-contracts-and-response.md)).
+  Bambach et al. 2002 ([10.1073/pnas.092150999](https://doi.org/10.1073/pnas.092150999),
+  sect: Discussion) already link diversity constraints to ecological structure.
+  Cribb et al. 2026 ([10.1038/s41467-026-73628-6](https://doi.org/10.1038/s41467-026-73628-6),
+  sect: Results/Methods) find higher formation-level diversity with ecosystem
+  engineers. Generic biological control of capacity is therefore occupied.
+- **Data and discriminator.** The Cribb occurrence, engineer-trait and analysis
+  deposits offer a starting point. Compare local diversity and regional
+  differentiation across physical habitat, then ask whether independently coded
+  engineering innovations predict subsequent expansion across multiple regions.
+  Distinguish engineers creating opportunity from favourable habitat supporting
+  both engineers and diversity. Finite-rate models remain comparators throughout.
+- **Obstacle / next step.** Observed richness is not capacity; an unconstrained
+  time-varying ceiling can explain almost any trajectory. First identify an
+  innovation with independent functional and environmental evidence. Park if
+  capacity must be inferred solely from the diversity curve it explains, or
+  if the proposal reproduces the existing engineer-presence association.
+- **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
 
 ## New sketches (Claude, 9 October): the big stuff
 
@@ -321,3 +410,71 @@ Tier 2.
   Alroy 2008.
 - **Obstacle.** A crowded field, and forcing paths are poorly coupled (see the
   PhanDA sensitivity).
+
+## New directions (Codex, 9 October)
+
+These are under review after bounded prior-work checks. The broad premises are
+already established; the proposed discriminating questions remain provisional.
+
+### Q-020 When geographic range stops providing insurance
+Status **under review**, tier 2.
+
+- **Question.** At comparable environmental severity and aggregate habitat-loss
+  trajectories, does simultaneous stress across occupied regions and dispersal
+  routes predict global extinction better than range or habitat loss alone?
+- **Why big.** A widespread species may have little geographic insurance if
+  every refuge fails together. This asks when a global dose summary misses the
+  spatial mechanism of biosphere collapse. Its endpoint is extinction during
+  disturbance; Q-008 concerns rebuilding afterwards.
+- **Nearest prior.** Payne & Finnegan 2007
+  ([10.1073/pnas.0701257104](https://doi.org/10.1073/pnas.0701257104), sect:
+  Results/Discussion, Fig. 3) already propose geographically simultaneous stress
+  to explain reduced range protection. Johst & Drechsler 2003
+  ([10.1034/j.1600-0706.2003.12770.x](https://doi.org/10.1034/j.1600-0706.2003.12770.x), abs)
+  model correlated habitat destruction. Liao et al. 2015
+  ([10.1038/srep15455](https://doi.org/10.1038/srep15455), sect: Methods/Results)
+  already vary disturbance extent and clustering with contrasting dispersal.
+- **Discriminator and route.** Derive predictions for persistent loss of refuge
+  access on palaeogeographic habitat networks, holding aggregate habitat loss
+  through time and local stress distributions comparable. A useful extension
+  must predict more than the existing clustering effect. Candidate empirical
+  inputs are PBDB ranges or Triton site occurrences plus independently dated
+  regional environmental records. No joint exposure coverage is yet established.
+- **Obstacle / next step.** Shared age errors can manufacture synchrony; spatial
+  similarity alone does not establish simultaneous stress. First determine
+  whether the proposed topology yields a prediction beyond the cited models.
+  Park the empirical route if chronologies cannot resolve the relevant timescale;
+  park the whole entry if all predictions reduce to established results.
+- **Evidence.** [Source checks and observation limits](../literature/2026-10-09-register-expansion.md).
+
+### Q-021 Biological control of Earth-system recovery
+Status **under review**, tier 2.
+
+- **Question.** Which losses of biological function can prolong adverse climate
+  states: weakened terrestrial weathering and carbon burial, disrupted marine
+  silica cycling, or their interaction? Can existing nonthermal evidence
+  distinguish these mechanisms from continued external carbon input?
+- **Why big.** This asks whether the biosphere changes the planet's recovery
+  dynamics, beyond responding to its environment. It complements Q-019's
+  climate-to-diversification direction and Q-010's biological diversity capacity.
+- **Nearest prior.** Rogger et al. 2024
+  ([10.1126/science.adn3450](https://doi.org/10.1126/science.adn3450), sect)
+  already couple vegetation evolution/dispersal to climate recovery. Xu et al.
+  2025 ([10.1038/s41467-025-60396-y](https://doi.org/10.1038/s41467-025-60396-y),
+  sect: reconstruction/Results/Methods) model fossil-constrained vegetation
+  collapse with SCION. Isson et al. 2022
+  ([10.1038/s41467-022-31128-3](https://doi.org/10.1038/s41467-022-31128-3),
+  sect: Results/Methods) model siliceous ecosystem loss and enhanced reverse
+  weathering. Generic biotic amplification or slow climate recovery is occupied.
+- **Data and discriminator.** Compare these mechanisms under common external
+  forcing assumptions and evaluate predictions for terrestrial productivity,
+  silica burial, clay mineralogy and carbon-cycle proxies, as well as temperature.
+  Use independently constrained proxy predictions where possible; the mechanisms
+  can coexist. SCION_Xu2025 and TREED are candidate reusable implementations,
+  with source and execution limits recorded in the evidence note.
+- **Obstacle / next step.** Different feedbacks and prolonged outgassing can fit
+  similar temperature histories. First map which nonthermal predictions actually
+  differ and which observations constrain them without circular calibration.
+  Park if proxy and forcing uncertainty make the alternatives indistinguishable,
+  or a fuller prior-work check already covers that joint comparison.
+- **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
