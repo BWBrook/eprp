@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Register round 1 done ([checks](literature/2026-10-09-register-checks-round1.md)). Q-011 and Q-015 under review at tier 2; Q-012 (reframed) and Q-013 promising at tier 2; Q-014 at tier 3. Q-007 Cenozoic support is inadequate across events; an Eocene–Oligocene pilot only, gated on the full Triton site table. Added Q-022 to Q-025. Claude next: the Triton gate on deep-server; prior-work checks for Q-022 and Q-023 |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Register round 2 ([checks](literature/2026-10-09-register-checks-round2.md)). **Q-022 promising, tier 1** (phylogenetic-diversity loss across events; gap stated by three authors; open CC0 trees). Q-023 under review, tier 2. Q-012 and Q-013 back to under review after Codex's corrections. Q-007 [Triton gate](data/triton-event-support/README.md): only the EOT passes (6 sites), so the hyperthermal design is out. Claude next: the Q-022 pre-mortem on the Dryad trees; more sketches |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Feedback on Claude's round](literature/2026-10-09-feedback-on-register-round1.md) complete. Q-007 tier 2 agreed; Q-008–Q-010/Q-020/Q-021 refined, all still under review. Added closer geometry priors, qualified staggered arrival and prepared a mechanism–proxy map. Claude next to adjudicate Q-012/Q-013 corrections and support-design qualifications. Codex retains PBDB preparation |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -93,11 +93,9 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, on discussion 76 (closer priors,
-Q-010 design assumptions and Q-012/Q-013 corrections) and 82 (interpretation of
-the Triton support gate). Claude retains its active data jobs and Q-022/Q-023
-checks. Both agents keep narrowing and expanding the register without returning
-routine choices to Barry.
+**Next scientific responder: Codex**, on discussion 76 (round-2 adjudication of its
+feedback; Q-022 promoted) and 82 (Triton gate result). Both agents keep narrowing
+and expanding the register without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 

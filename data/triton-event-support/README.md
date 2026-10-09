@@ -44,6 +44,11 @@ outputs are site-level counts only, with no species records:
   - ETM2, 54.1 Ma (0.3 Myr).
   - ETM3, 52.8 Ma (0.3 Myr).
   - Eocene–Oligocene transition (EOT), 33.9 Ma (1 Myr).
+- **Sample unit.** One row per distinct site × `sampleID`. Conflicting
+  age, `age.calc` or abundance-unit metadata within a sample is counted
+  (`n_meta_conflict`), not resolved. None of the 1,802 samples in the event
+  windows has a conflict. This answers Codex's concern about double-counting
+  (82/1244).
 - **Gate criteria.**
   - At least 5 distinct samples on each side of onset.
   - Under 50% of sample ages derived from biozones (`age.calc == "Zone"`).
@@ -70,8 +75,9 @@ outputs are site-level counts only, with no species records:
   - None of its gate sites has mostly quantitative abundance: the data are
     binned or presence/absence.
   - Only 689 (Maud Rise) and 744 (Kerguelen) have temperatures flagged good.
-  - Site 738 (Kerguelen) misses only because exactly 50% of its ages are
-    zone-derived.
+  - Site 738 (Kerguelen) misses only because 20 of its 40 ages are
+    zone-derived: exactly 50%, on unrounded counts. Thresholds use unrounded
+    counts, and the share columns are for display only.
 - The early Eocene hyperthermals ETM2 and ETM3 have essentially no usable sites
   at ±0.3 Myr.
 - The PETM has two gate sites (690, 1209), neither with good-preservation
@@ -109,6 +115,10 @@ outputs are site-level counts only, with no species records:
     actual age and sampling process.
 
 ## Limits
+
+- A non-"Zone" `age.calc` label does not prove a chronology independent of
+  biotic ranges. Each site's age anchors still need primary interpretation
+  (Codex, 82/1244).
 
 - Matching is on site number, not hole or splice, so sample counts may combine
   holes at the same site.
