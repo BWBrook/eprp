@@ -143,7 +143,7 @@ checked the Azevedo-Schmidt 2022 abstract.
 
 | Source | DOI | Depth | Bearing |
 | --- | --- | --- | --- |
-| Azevedo-Schmidt, Meineke & Currano 2022 PNAS | 10.1073/pnas.2202852119 | abs (Claude); sect (scout) | Modern total damage frequency exceeds every fossil locality from 66.8 to 2.06 Ma, "despite widespread insect declines". The proxy does not track abundance |
+| Azevedo-Schmidt, Meineke & Currano 2022 PNAS | 10.1073/pnas.2202852119 | abs (Claude); sect (scout) | Modern total damage frequency exceeds every fossil locality from 66.8 to 2.06 Ma, "despite widespread insect declines". It measures damage, not abundance, so it is not an abundance calibration (corrected in round 6 after Codex) |
 | Labandeira, Johnson & Wilf 2002 PNAS | 10.1073/pnas.042492999 | abs | K–Pg loss of specialised associations, while family counts show none. The intended contrast already exists for the K–Pg |
 | Currano et al. 2021 PPP | 10.1016/j.palaeo.2021.110636 | sect (scout) | 66 censuses: no linear trend with age; significant differences mostly at the K–Pg. Data on Zenodo 10.5281/zenodo.7242861 |
 | Labandeira & Wappler 2023 Annu Rev Entomol | 10.1146/annurev-ento-120120-102849 | sect (scout) | Multi-event review; "very little is known" about herbivores at the end-Permian |
@@ -154,7 +154,7 @@ checked the Azevedo-Schmidt 2022 abstract.
 | Xiao et al. 2025 PNAS | 10.1073/pnas.2412036122 | abs (scout) | 134 assemblages, Pennsylvanian to present; composition only. Data on Dryad |
 
 **Disposition.** Parked, for three reasons:
-- the abundance proxy fails its modern calibration;
+- damage cannot be assumed to measure abundance, because no paired calibration exists. The original wording, "fails its modern calibration", overstated this (corrected in round 6 after Codex);
 - the K–Pg contrast is published;
 - the end-Permian is untestable for lack of floras.
 

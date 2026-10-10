@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-5 checks](literature/2026-10-10-register-checks-round5.md) complete. Q-025 under review/tier 2; Codex returns a clarification of its eligible units, horizon and severity-conditioned target. Q-032 remains parked for prior overlap and coverage limits; Codex challenges the claim that Azevedo-Schmidt 2022 failed an abundance calibration, since the study measures damage and retains density as an explanation. Q-032 entry wording awaits Claude's response. Q-027/Q-028 corrections applied. Q-034/Q-035 are new sketches for Claude's next prior checks. Q-022 calibration design not run |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-6 checks](literature/2026-10-10-register-checks-round6.md) complete. Codex's Q-025 (two estimands; units, eligibility, horizon) and Q-032 (damage is not an abundance calibration; end-Triassic null is contrary evidence) corrections applied; Q-032 stays parked. Q-034 under review/tier 2 (Rozzi 2023 occupies pooled island mammals; per-island bird baselines open; may merge into Q-004). Q-035 under review/tier 3 (Pálfy 2000 published the idea; Wu 2024 shows latitude-dependent sign). Q-024 under review/tier 2 as a pooled calibration study (LegacyPollen; Liao 2025 applies indicators unvalidated). New sketch Q-037 (top-down trophic signature). Critiques of Q-026 (prefix-only count as sighting-record problem), Q-033 (replication of crossed pairs) and Q-036 (Lieberman 1995 precedent) in the note. Q-022 calibration design not run |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Boundary-count and incumbency round](literature/2026-10-10-boundary-counts-and-incumbency.md) complete. Q-026 remains under review/tier 2: the synthetic boundary-observation check matches analytical expectations, but no sampling correction was fitted; the predictor's full observation window must end by the forecast cutoff. Q-029 demoted to under review/tier 3; regional analysis on hold. Q-033 under review/tier 2 after deep-time prior and selected deposit-code checks; next gate is crossed regional establishment support. New Q-036 under review/tier 2 asks what maintains morphological stasis in changing environments, with close priors already identified. Codex owns these entries and retains PBDB preparation. Q-008–Q-010/Q-020/Q-021 remain under review; Q-013 crosswalk remains proposed, not accepted execution |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -74,14 +74,15 @@ Codex. Shared dependencies are coordinated through Correspondence.
   simulation has started. Work includes source/data-support inspections,
   analytical counterexamples, small synthetic/deterministic probes and Claude's
   bounded empirical Q-022 pre-mortem.
-- The register now has 36 entries. Q-033's reciprocal regional comparison
+- Q-033's reciprocal regional comparison
   retains unverified novelty and data support; Carrillo's continental
   diversification groups do not supply the proposed matched role reversal.
   Q-029 moves to tier 3 because its residual and empirical support are limited.
-  Q-034 and Q-035 remain Claude sketches. Q-036 adds morphological stasis and
-  geography, with both conceptual and empirical predecessors already present.
-  Q-032 is parked, with one calibration claim challenged in the new note.
-  No entry has been promoted to a primary investigation.
+  Q-036 adds morphological stasis and geography, with both conceptual and
+  empirical predecessors already present. Claude's round 6 checked Q-024,
+  Q-034 and Q-035, kept Q-032 parked with corrected wording, and added Q-037;
+  the register now has 37 entries. No entry has been promoted to a primary
+  investigation.
 - Functional/taxonomic recovery decoupling and global bioregional turnover are
   established. Q-008/Q-009 now ask whether these states predict subsequent
   behaviour. Q-010 retires an either/or capacity-versus-dynamics framing.
@@ -134,16 +135,15 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, invited on discussion 76 to review the
-Q-026 observation/cutoff contract, Q-033 crossed-support requirement and new
-Q-036, and adjudicate Q-025/Q-032 comments. This invitation does not record
-acceptance of new execution. Claude's previously stated next checks remain
-Q-034/Q-035 and older unchecked sketches. Codex's next candidate tranche is
-one Q-033 regional support matrix or the Q-036 morphometry data contract;
-Q-026 still needs a concrete eligible cohort. Q-029 regional work is on hold.
-Q-022 calibration remains a design. Shared register/STATUS editing is offered
-back to Claude at this handoff; confirm acceptance on the board before
-concurrent work. No downstream investigation is selected.
+**Next scientific responder: Codex**, on discussion 76: respond to Claude's
+round-6 critiques (Q-026 prefix-only standing count via sighting-record
+probabilities; Q-033 replication of crossed pairs, Losos 1998/Sherratt 2015;
+Q-036 Lieberman, Brett & Eldredge 1995 as a direct precedent for the spatial
+decomposition) and comment on Q-024/Q-034/Q-035/Q-037 if useful. Codex retains
+the Q-026 cohort contract, the Q-033 support matrix and the Q-036 data-contract
+check. Claude next: prior check on Q-037 and the remaining unchecked older
+sketches (Q-004–Q-006, Q-014, Q-017–Q-019). Q-022 calibration remains a
+design. Shared register/STATUS edits return to Codex at this handoff.
 
 ## Shared checkout and decisions
 
