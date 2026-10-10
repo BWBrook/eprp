@@ -77,9 +77,9 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-001 | Does an end-Permian-calibrated physiological habitat-loss model transfer to other events? | parked | — | Claude |
 | Q-002 | Is mass-extinction selectivity a switch or a continuous function of dose? | parked | — | Claude |
 | Q-003 | Can stage-level data tell a warming–extinction threshold from a smooth response? | under review | 3 | Claude |
-| Q-004 | A pseudoextinction-corrected background rate for modern comparisons | sketch | 2 | Claude |
-| Q-005 | Are there detectable precursors before extinction events? | sketch | 2 | Claude |
-| Q-006 | What can fossils identify about diversification that extant trees provably cannot? | sketch | 2 | Claude |
+| Q-004 | A pseudoextinction-corrected background rate for modern comparisons | under review | 2 | Claude |
+| Q-005 | Are there detectable precursors before extinction events? | under review | 2 | Claude |
+| Q-006 | What can fossils identify about diversification that extant trees provably cannot? | under review | 3 | Claude |
 | Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 2 | Joint |
 | Q-008 | Does geographic differentiation help determine subsequent recovery? | under review | 2 | Codex |
 | Q-009 | Does ecological organisation retain predictive memory after richness recovers? | under review | 2 | Codex |
@@ -90,9 +90,9 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-014 | How long is the extinction debt after a deep-time perturbation? | sketch | 3 | Claude |
 | Q-015 | Could past lineages evolve thermal niches as fast as climate changed? | under review | 2 | Claude |
 | Q-016 | Do range-based risk criteria predict extinction over geological time? | under review | 3 | Claude |
-| Q-017 | Dark extinction across scales: one detection framework for unseen losses | sketch | 2 | Claude |
-| Q-018 | Do plants and terrestrial biotas have mass extinctions in the same sense? | sketch | 2 | Claude |
-| Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | sketch | 2 | Claude |
+| Q-017 | Dark extinction across scales: one detection framework for unseen losses | under review | 2 | Claude |
+| Q-018 | Do plants and terrestrial biotas have mass extinctions in the same sense? | under review | 2 | Claude |
+| Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | under review | 3 | Claude |
 | Q-020 | When does geographic range cease to insure against global extinction? | under review | 2 | Codex |
 | Q-021 | Which lost biological functions prolong Earth-system recovery? | under review | 2 | Codex |
 | Q-022 | How much evolutionary history does each extinction prune? | under review | 2 | Claude |
@@ -110,7 +110,12 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-034 | What was the extinction rate of island endemics before people arrived? | under review | 2 | Claude |
 | Q-035 | Do land ecosystems collapse before marine ones, and what sets the lag? | under review | 3 | Claude |
 | Q-036 | What maintains morphological stasis as environments change? | under review | 2 | Codex |
-| Q-037 | Is the present crisis's top-down trophic signature unprecedented? | sketch | 2 | Claude |
+| Q-037 | Is the present crisis's top-down trophic signature unprecedented? | under review | 3 | Claude |
+| Q-038 | Bad genes or bad luck: how much of extinction is selective, and when? | sketch | 1 | Claude |
+| Q-039 | Did Sepkoski's evolutionary faunas interact, beyond sharing limits and shocks? | sketch | 2 | Claude |
+| Q-040 | Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand? | sketch | 2 | Claude |
+| Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | sketch | 2 | Claude |
+| Q-042 | How many species died in the great mass extinctions? | sketch | 2 | Claude |
 
 ---
 
@@ -162,35 +167,115 @@ Status **under review**, tier 3.
   reduced dose–response test.
 
 ### Q-004 Pseudoextinction-corrected background rate
-Status **sketch**, tier 2.
+Status **under review**, tier 2. Prior-work check on 10 October: the algebra
+and some pseudoextinction fractions are published, but the correction has not
+been applied to the background rates used for modern comparisons. This entry
+is the umbrella for "what background rate should modern extinction be compared
+with?"; Q-034 is its island-specific branch.
 
-- **Question.** Fossil μ\* includes pseudoextinction, whereas modern counts are
-  terminal losses. How much does correcting μ = μ\* − (λ\* − λ) change modern
-  versus background ratios?
-- **Prior.** Silvestro et al. 2018 (10.1038/s41467-018-07622-y, full);
-  Louca & Pennell 2020 (10.1038/s41586-020-2176-1, abs).
-- **Obstacle.** Extant-tree μ depends on congruence, so the intervals may be
-  unbounded.
+- **Question.** The common baselines of 1.8–2 E/MSY are fossil species-level
+  rates μ\*: Barnosky et al. 2011 (10.1038/nature09678) and Ceballos et al.
+  2015 (10.1126/sciadv.1400253). They include pseudoextinction. The about
+  0.1 E/MSY baseline (De Vos et al. 2015, 10.1111/cobi.12380) comes from
+  molecular phylogenies. It excludes pseudoextinction, but trees are limited by
+  congruence classes (Louca & Pennell 2020, 10.1038/s41586-020-2176-1).
+  - What happens to the fossil background, and to modern-to-background ratios,
+    if the correction μ = μ\* − (λ\* − λ) is applied?
+  - The correction lowers the background and raises the ratios. It works
+    against Barnosky's point that phylogenetic species concepts inflate modern
+    counts. Nobody has netted the two effects.
+- **Prior.**
+  - Silvestro et al. 2018 (10.1038/s41467-018-07622-y, full): λ\* − λ = μ\* − μ,
+    with "3- to 18-fold rate differences" in Feliformia. No correction of
+    background rates is proposed.
+  - Archibald 1993 (10.1017/s0094837300012288, abstract checked by Claude):
+    depending on the speciation model, "true extinction can be overestimated
+    by as much as" several-fold in Paleocene mammals.
+  - Strotz & Allen 2013 (10.1073/pnas.1208302110): anagenesis below 19% of
+    Cenozoic foraminiferal speciation events.
+  - Hagen et al. 2018 (10.1093/sysbio/syx082): mean longevity of Carnivora
+    species is 2.0 Myr from fossils against 9.8 Myr from phylogenies.
+  - In the rate-comparison papers checked, pseudoextinction is not mentioned:
+    Barnosky 2011, Ceballos 2015, De Vos 2015, Spalding & Hull 2021 and Lamkin
+    & Miller 2016.
+- **Design.** For clades with both fossil and tree data (mammal clades,
+  foraminifera), estimate λ\* − λ with the BDC model. Recompute background μ,
+  and modern-to-background ratios, under both corrections at once.
+- **Kill criterion.**
+  - Park if a paper already applies the BDC correction to a background rate
+    and reports the changed ratio.
+  - Demote to a note if λ\* − λ is small against the existing twenty-fold
+    spread of baselines in every clade with both data types.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-005 Precursors before extinction events
-Status **sketch**, tier 2.
+Status **under review**, tier 2. Prior-work check on 10 October: case studies
+of biotic precursors exist, but no test of the generic indicators against a
+sampling null was found.
 
-- **Question.** Do variance, autocorrelation or range-contraction indicators rise
-  before extinction pulses beyond what sampling surrogates produce?
-- **Prior.** Sudakow et al. 2026 (10.1038/s41467-026-75655-9, sect: abiotic
-  only); Crampton et al. 2026 (10.1017/pab.2026.10107, sect: graptoloid pulses).
-- **Data.** Graptoloid composites; NSB/Triton microfossils.
-- **Obstacle.** Signor–Lipps truncation and ordering artefacts.
+- **Question (narrowed).** In high-resolution deep-time biotic series, do
+  variance and autocorrelation of richness or occupancy rise before extinction
+  pulses? The comparison must be against a surrogate that simulates
+  instantaneous extinction under the observed sampling, and against a null of
+  memoryless extinction rates. (Q-024 covers Quaternary ecological records.)
+- **Prior.**
+  - Swain et al. 2024 (10.1038/s41586-024-07337-9, full text by scout): in
+    Triton planktonic foraminifera, a specialisation index rises about 2 Myr
+    before the richness loss at the Eocene–Oligocene transition. The test uses
+    logistic fits, not variance or autocorrelation. The authors call for
+    research on "ancient community tipping points that precede extinction".
+  - Single-section precursors:
+    - Piazza et al. 2019 (10.1017/pab.2019.11): Toarcian shell size falls
+      before richness.
+    - Kießling et al. 2018 (10.1130/g39866.1): end-Permian ammonoid turnover
+      and size decline.
+    - Wang et al. 2014 (10.1666/13022): end-Permian deterioration about 1.2 Myr
+      before the main loss; multi-phase claims attributed to Signor–Lipps and
+      facies effects.
+    - Huang et al. 2023 (10.1016/j.cub.2023.02.007): richness falls before
+      food-web stability collapses.
+  - Indicators on abiotic series only: Sudakow et al. 2026
+    (10.1038/s41467-026-75655-9) apply AR(1) to isotopes.
+  - Crampton et al. 2026 (10.1017/pab.2026.10107) is a rate-spectrum paper,
+    not a precursor test. It supplies a graptoloid CONOP composite at
+    0.125-Myr steps and a memoryless null.
+- **Data.** The graptoloid CONOP composite; Triton.
+- **Kill criterion.**
+  - Park if a pilot shows the sampling surrogate alone reproduces the rise
+    before an event.
+  - Park if fewer than about three events have enough bins.
+  - Merge if a published test of these indicators on biotic fossil series
+    with a sampling null appears.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-006 Fossils versus trees: identifiability of diversification
-Status **sketch**, tier 2.
+Status **under review**, tier 3. Prior-work check on 10 October: the main
+theoretical result is published.
 
-- **Question.** What diversification features are provably unidentifiable from
-  extant trees but recoverable from occurrences, and at what sampling level?
-- **Prior.** Louca & Pennell 2020; Truman et al. 2025 (10.1093/sysbio/syae058,
-  sum); Morlon et al. 2022 (10.1016/j.tree.2022.02.004, abs).
-- **Obstacle.** A methods frontier with active groups. Needs a sharp,
-  application-facing angle.
+- **Occupied.** Truman et al. 2025 (10.1093/sysbio/syae058, abstract checked by
+  Claude): "widely used time-dependent fossilized birth–death (FBD) models are
+  identifiable", for arbitrary rate functions, when the fossil sampling rate is
+  strictly positive and sampled lineages stay in the process. Earlier results
+  bound the problem:
+  - Gavryushkina et al. 2014 (10.1371/journal.pcbi.1003919): sampling with
+    removal is not identifiable.
+  - Louca & Pennell 2020 (10.1038/s41586-020-2176-1): extant-only congruence.
+  - Morlon et al. 2022 (10.1016/j.tree.2022.02.004) and Andréoletti & Morlon
+    2023 (10.1111/2041-210X.14240) had listed the time-varying case as open.
+- **Residual (narrow).**
+  1. A power criterion. How large must fossil sampling be, relative to λ and
+     μ, before the collapse of the congruence class gives usefully narrow
+     intervals with finite data? Truman et al. note that no fixed finite
+     quantity of data guarantees a given precision.
+  2. Identifiability from occurrences alone, without a tree: PyRate-style
+     range data. No theorem either way was found.
+- **Practical relevance.** Beaulieu & O'Meara 2022 (10.1093/sysbio/syac049)
+  find that fossils rarely beat extant-only analyses in practice. Upham et al.
+  2021 (10.1016/j.cub.2021.07.012) fix fossil genus-level μ, which brings back
+  the μ\* versus μ mismatch of Q-004.
+- **Kill criterion.** Park if a minimum-sampling or power criterion, or an
+  occurrence-only identifiability result, is found.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ## Joint and Codex-owned
 
@@ -374,6 +459,16 @@ Status **under review**, tier 2 (prior-work check on 9 October).
     (Arens & West 2008, 10.1666/07034.1).
   - Rothman 2019 (10.1073/pnas.1905164116) places disruption size in the carbon
     cycle's intrinsic dynamics.
+  - The Big Five are not statistically distinct from background (Marshall
+    2023, 10.1017/ext.2022.4, abstract checked by Claude). Graptoloid
+    extinction-rate magnitudes form "a continuous, unimodal distribution"
+    (Crampton et al. 2026, 10.1017/pab.2026.10107).
+  - Raup's kill curve (1991, 10.1017/s0094837300010332) and its impact form
+    (Raup 1992, 10.1017/s0094837300012227) attributed most pulsed extinction to
+    impacts. Coincidence tests find no impact link beyond the K–Pg (Green et
+    al. 2022). The strong form, a completeness-corrected impact flux run
+    through the kill curve, is untested. It is a narrow sub-question here
+    (round-7 legacy map).
 - **Open.** A fitted transfer function with an amplification test was not found.
 - **Obstacle.** Only about 10–30 well-dated events; forcing metrics with no
   common scale; stage averaging that hides pulses. The full tail comparison is
@@ -559,37 +654,125 @@ predictors. Prior-work check the same day: partly occupied.
 - **Evidence.** [Round-3 note](../literature/2026-10-10-register-checks-round3.md).
 
 ### Q-017 Dark extinction across scales
-Tier 2.
+Status **under review**, tier 2. Prior-work check on 10 October: each domain is
+mature, and the bridge between them appears open.
 
-- **Question.** One detection-theoretic framework for unseen losses: how many
-  modern extinctions are undescribed (Boehm & Cronk 2021, 10.1098/rsbl.2021.0007),
-  and how many fossil species went extinct unrecorded? Can calibration in one
-  domain inform the other?
-- **Obstacle.** Ground truth is scarce in both domains.
+- **Question (reframed).** Are the modern estimator of undetected extinctions
+  and the fossil completeness estimator the same statistical object?
+  - Modern: Chisholm et al. 2016 (10.1111/cobi.12640, abstract checked by
+    Claude). It uses only "the first and last date at which each species ...
+    was recorded", and assumes that extinction rate is independent of
+    detection.
+  - Fossil: Foote & Raup 1996 (10.1017/s0094837300016134, abstract checked by
+    Claude). It estimates durations, preservation probability and completeness
+    "given only the observed ranges".
+  If they are equivalent, can a system with both records calibrate one against
+  the other?
+- **Why it matters.** Counts of unseen modern extinctions and of unrecorded
+  fossil species enter every comparison between modern and fossil extinction
+  (Q-004, Q-013, Q-034). The estimate of a lineage still alive at a landmark,
+  from its sighting record, is the same machinery (Q-026, round-6 note).
+- **Prior.**
+  - **Modern.**
+    - Tedesco et al. 2014: undiscovered share of extinctions 0.15–0.59.
+    - Boehm & Cronk 2021 (10.1098/rsbl.2021.0007).
+    - Cooke et al. 2023 (10.1038/s41467-023-43445-2): completeness is proxied
+      by research effort.
+    - Duncan et al. 2013 (10.1073/pnas.1216511110): mark–recapture on island
+      fossils.
+  - **Fossil.**
+    - Valentine et al. 2006 (10.1073/pnas.0601264103): 308 of 1,292 living
+      bivalve genera have no fossils.
+    - Foote et al. 2019 (10.1144/jgs2019-061).
+  - **Partial bridges.**
+    - Krone et al. 2024 (10.1017/pab.2023.34) treat modern tetrapods as a
+      future fossil record.
+    - Alroy 2014 (10.1666/13074) and Alroy 2015 (10.1073/pnas.1508681112)
+      transfer sighting methods.
+  - In the full texts the scout read, the modern and fossil estimator
+    literatures do not cite each other.
+- **Design.**
+  1. Establish equivalence, or the conditions for it, analytically.
+  2. Run both estimators on one species set with independent ground truth:
+     island birds with fossil and historical records, or Cenozoic molluscs
+     with a living census.
+- **Kill criterion.** Merge if a paper already proves equivalence or applies
+  one estimator to both domains. Demote to a methods note if no system has
+  both records with independent ground truth.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-018 Do plants and terrestrial biotas have mass extinctions in the same sense?
-Tier 2.
+Status **under review**, tier 2. Prior-work check on 10 October: the asymmetry
+is well documented, a near-occupant has appeared, and tests of biological
+mechanisms are scarce.
 
-- **Question.** Plants may record only two great extinctions (Cascales-Miñana &
-  Cleal 2013, 10.1111/ter.12086; McElwain & Punyasena 2007,
-  10.1016/j.tree.2007.09.003). Is this marine–terrestrial asymmetry biological
-  (different modes of failure, such as dormancy, clonality and dispersal) or
-  observational?
-- **Why big.** Nearly all quantitative extinction theory is marine-animal.
-  Modern plant extinction is under-assessed.
-- **Data.** PBDB plants; Neotoma for the Quaternary.
-- **Obstacle.** Plant taxonomic units (organ taxa) and terrestrial preservation.
+- **Question (narrowed).** Is the marine–terrestrial asymmetry in mass
+  extinction biological buffering (dormancy, seed banks, clonality,
+  resprouting), or does it come from rank and sampling? Test it by projecting
+  species-level losses to genus and family in both realms under the same
+  preservation models. Does higher-rank survivorship alone reproduce the
+  asymmetry?
+- **Prior.**
+  - **Near-occupant.** McElwain et al. 2026 (Research Square preprint,
+    10.21203/rs.3.rs-9282628/v1, abstract checked by Claude) critically
+    evaluate metrics for plant mass extinction. They apply concepts from the
+    IUCN Red List of Ecosystems to fossil floras, and find "strong evidence for
+    ecosystem collapse" at five events. This also bears on Q-016's use of IUCN
+    criteria in deep time.
+  - **Sampling explains part of it.** Nowak et al. 2019
+    (10.1038/s41467-018-07945-w, abstract checked by Claude): evidence for an
+    end-Permian plant mass extinction "is not robust", because Early Triassic
+    gymnosperm macrofossils are undersampled.
+  - **Rank explains part of it.** Wilf et al. 2023 (10.1017/ext.2023.13): K–Pg
+    regional species losses generally above 50%, with no loss at family level.
+    Thompson & Ramírez-Barahona 2023 (10.1098/rsbl.2023.0314): no phylogenetic
+    signal of a K–Pg angiosperm mass extinction.
+  - **The one explicit mechanism test.** Berry 2020 (10.35535/acpa-2020-0016):
+    recalcitrant versus orthodox seeds at the K–Pg. It covers one event, with
+    seed traits inferred from phylogeny.
+  - **Framing.** Cascales-Miñana & Cleal 2013 (10.1111/ter.12086); McElwain &
+    Punyasena 2007 (10.1016/j.tree.2007.09.003); Lucas 2021 (10.2517/2021pr004);
+    Silvestro et al. 2015 (10.1111/nph.13247).
+- **Kill criterion.**
+  - Merge or demote if McElwain et al. is published with rank-standardised,
+    sampling-corrected comparisons of plant and marine magnitudes.
+  - Park if only the end-Permian and the K–Pg have plant species occurrences
+    adequate for sampling-corrected rates.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-019 How much macroevolutionary turnover is climate-driven versus biotic?
-Tier 2.
+Status **under review**, tier 3. Prior-work check on 10 October: the headline
+answer is largely occupied.
 
-- **Question.** Partition the variance in origination and extinction between
-  forcing (PhanDA path) and diversity-dependent or biotic terms across the
-  Phanerozoic, with explicit observation models.
-- **Prior.** Ezard et al. 2011 (10.1126/science.1203060), on foraminifera;
-  Alroy 2008.
-- **Obstacle.** A crowded field, and forcing paths are poorly coupled (see the
-  PhanDA sensitivity).
+- **Occupied.** Rineau et al. 2022 (10.1126/sciadv.add9620, abstract checked by
+  Claude) analysed causal dependence in nine marine taxa across the
+  Phanerozoic. "While the effect of environmental factors on origination and
+  extinction rates is variable and taxon specific, the diversity dependence of
+  the rates is almost universal".
+  - Sampling was handled by pre-processing (SQS, gap-filler rates), not by an
+    observation model.
+  - No variance shares were reported.
+- **Clade-level partitions.**
+  - Ezard et al. 2011 (10.1126/science.1203060): in foraminifera, speciation is
+    more diversity-dependent and extinction more climate-driven.
+  - The PyRate multivariate birth–death model with joint preservation
+    (Lehtonen et al. 2017, 10.1038/s41598-017-05263-7) has been applied to
+    conifers and dinosaurs (Condamine et al. 2020, 10.1073/pnas.2005571117;
+    2021, 10.1038/s41467-021-23754-0).
+  - It has also been applied to Permian–Jurassic brachiopods and bivalves (Guo
+    et al. 2023, 10.1038/s41467-023-41358-8), using a pre-PhanDA temperature
+    curve.
+  - Foote et al. 2018 (10.1098/rspb.2018.0122): diversity dependence explains
+    "up to 12% of the variance" in graptoloids, with a warning about
+    regression to the mean.
+- **Residual.** A hierarchical birth–death model across clades and the whole
+  Phanerozoic, with a shared PhanDA covariate, lagged own-clade diversity and a
+  preservation model. Report explained shares for origination and extinction
+  separately, and test Ezard's pattern across clades.
+- **Kill criterion.** Park if simulation under PBDB-like sampling shows the
+  shares cannot be identified, because of collinearity, autocorrelation and
+  regression to the mean. The PhanDA stage-coupling limits also apply.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ## New directions (Codex, 9 October)
 
@@ -1679,41 +1862,254 @@ finds close precedents; novelty and joint data support remain unverified.
 ## New sketch, round 6 (Claude, 10 October)
 
 ### Q-037 Is the present crisis's top-down trophic signature unprecedented?
-Status **sketch**, tier 2 (provisional; posed 10 October; no prior-work check
-yet).
+Status **under review**, tier 3. Posed and checked on 10 October. The modern
+half of the premise did not hold up.
 
-- **Question.** In past crises, did losses begin at low trophic levels or in
-  infaunal guilds and cascade upwards? The present crisis began by removing
-  large apex consumers. Does that order differ systematically between the past
-  and the present? Does the order set how ecosystems are rebuilt?
-- **Why big.** Recovery templates from deep time could assume a bottom-up
-  rebuild. A biosphere stripped from the top down may recover differently.
-  If every well-resolved past event cascaded upwards, the present has no deep-
-  time analogue in this respect. It would then be a second dimension of
-  novelty, alongside the size selectivity that Payne et al. 2016 report
-  (10.1126/science.aaf2416).
+- **Question (revised).** Once body size is controlled, does trophic position
+  predict whether and when a taxon is lost? Does the sign of that effect differ
+  between past events and the Late Quaternary or Holocene?
+- **Premise correction.** The modern signature found in the sources is body
+  size, not trophic level.
+  - Payne et al. 2016 (10.1126/science.aaf2416, full text by scout): "Habitat
+    zone and feeding mode are not correlated with threat".
+  - Smith et al. 2018 (10.1126/science.aao5987, abstract checked by Claude):
+    the large-bodied bias follows hominin dispersal; the scout reports it
+    operates "within all trophic modes".
+  - Late Quaternary losses included 81% of megaherbivores (Svenning et al.
+    2024, 10.1017/ext.2024.4).
+  - The view that the present crisis is top-down first, from Estes et al. 2011
+    (10.1126/science.1205106), therefore reduces largely to size selectivity.
+- **Past events, order within events.**
+  - Toarcian (Dunhill et al. 2024, 10.1038/s41467-024-53000-2): infaunal
+    primary losses cascading upwards fit best. There was no explicit
+    trophic-level scenario, and the early recovery was "top-heavy".
+  - Meishan, end-Permian (Karapunar et al. 2026, bioRxiv
+    10.64898/2026.06.22.733099, abstract checked by Claude; not peer reviewed):
+    losses "propagating upwards from benthic herbivores to higher-level
+    consumers". An earlier decline of apex predators may be a Signor–Lipps
+    artefact.
+  - Late Triassic and Toarcian also selected against pelagic predators (Dunhill
+    et al. 2018, 10.1098/rspb.2018.0404).
+  - So past events are not uniformly bottom-up.
+- **Residual.**
+  - Tier 1 analysis: extend Payne's logistic framework with a graded
+    trophic-level term for five or more events and for modern and Late
+    Quaternary data, and test the event × trophic interaction.
+  - Tier 2 analysis: rank correlation, stratified by size, between trophic
+    level and last-appearance bed at Meishan and in the Cleveland Basin
+    (Dunhill's data). Test it against a Signor–Lipps null matched for
+    abundance.
+- **Kill criterion.** Park if the trophic term is about zero once size is
+  controlled, in both past and present. The question then reduces to the size
+  result of Payne and Smith. Order within an event is unresolvable if the
+  Signor–Lipps null reproduces it.
+- **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
+
+## New sketches, round 7 (Claude, 10 October): the Raup–Sepkoski legacy revisited
+
+Prompted by Barry's question in chat on 10 October: is foundational Raup and
+Sepkoski work worth revisiting with modern data and methods? See the legacy
+map in the [round-7 note](../literature/2026-10-10-register-checks-round7.md),
+which says where each classic idea now sits in this register. These entries
+had a bounded prior-work scan before posing, recorded in that note. Their
+novelty is still unverified.
+
+### Q-038 Bad genes or bad luck: how much of extinction is selective, and when?
+Status **sketch**, tier 1 (provisional; scanned 10 October).
+
+- **Question.** In each stage, how should variance in genus-extinction
+  log-odds be split? Four parts:
+  - a shared event shock;
+  - a clade-structured (phylogenetic) component;
+  - a component from measured traits (range, body size, habitat, physiology);
+  - an unexplained residual.
+  Do the clade and trait shares differ between background stages and mass
+  extinctions, and do they change through the Phanerozoic? This is Raup's
+  question, "Extinction: Bad Genes or Bad Luck?", posed as an estimand.
+- **Why big.** It decides how far extinction risk is predictable from biology
+  at all, in deep time and therefore today. Raup argued that taxonomic
+  selectivity "is present but minor" (Raup 1994, 10.1073/pnas.91.15.6758; text
+  checked by scout). The modern risk-assessment enterprise assumes the
+  opposite.
+- **Prior (ingredients exist; no variance partition found in two search
+  rounds).**
+  - Jablonski 1986 (10.1126/science.231.4734.129): selectivity regimes
+    alternate between background and mass extinction.
+  - Payne & Finnegan 2007 (10.1073/pnas.0701257104); Monarrez, Heim & Payne
+    2023 (10.1098/rsos.230795, abstract checked by Claude). Capture–mark–
+    recapture on benthic genera: range selectivity is "reduced in every class
+    and fully eliminated in some" during mass extinctions. No
+    variance-explained statistic is reported.
+  - Foster et al. 2023 (10.1098/rsos.221507): selectivity does not transfer
+    between events.
+  - Roy, Hunt & Jablonski 2009 (10.1126/science.1173073): phylogenetic
+    clustering of extinction varies over time.
+  - Tikhonov et al. 2026 (bioRxiv 10.64898/2026.07.21.739780, abstract checked
+    by Claude). A one-parameter survivorship-bias model of fixed genus
+    "toughness" plus event "luck" reproduces age-dependent extinction in the
+    Sepkoski compendium. The scout reports that about 57% of extinctions are
+    attributed to luck, a model-dependent upper bound.
+- **Design.**
+  1. A hierarchical capture–mark–recapture model on PBDB benthic genera, with
+     a variance partition on the latent scale.
+  2. Hold out one event at a time, and score prediction across events.
+  3. Two generative nulls: random loss (Raup's field of bullets) and
+     frailty-plus-luck (Tikhonov).
+- **Kill criterion.** Park if simulations with a known partition are not
+  recovered at the observed sample size; there are only five mass-extinction
+  stages. Park also if clade and trait components cannot be separated. In
+  either case "bad luck" is only unexplained variance, not an estimand.
+- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
+- **Links.** Q-012 (heritable susceptibility and ageing), Q-022 (phylogenetic
+  clustering of loss), Q-028 (dominance after crises), Q-030 (secular change
+  in sensitivity).
+
+### Q-039 Did Sepkoski's evolutionary faunas interact, beyond sharing limits and shocks?
+Status **sketch**, tier 2 (provisional; scanned 10 October).
+
+- **Question.** Sepkoski's coupled-logistic model (1984,
+  10.1017/s0094837300008186) let the Cambrian, Palaeozoic and Modern faunas
+  interact. With sampling-standardised data, is there coupling between faunas
+  or classes beyond a shared dependence on total diversity and shared
+  extinction shocks?
 - **Prior.**
-  - Estes et al. 2011 (10.1126/science.1205106, abs): the loss of large apex
-    consumers "may be humankind's most pervasive influence on nature", with
-    trophic cascades across ecosystems.
-  - Dunhill et al. 2024 (10.1038/s41467-024-53000-2, abs): at the Early
-    Toarcian event, "primary extinctions targeted towards infaunal guilds,
-    which caused secondary extinction cascades to higher trophic levels"
-    reproduce the post-extinction community best. Full recovery took about
-    7 Myr.
-  - Not yet checked for other events or for an existing cross-event
-    comparison.
-- **Data and methods.**
-  - PBDB ecological codings (tiering, motility, feeding), with body size.
-  - Network reconstruction with secondary-extinction modelling, following
-    Dunhill et al. 2024, applied event by event.
-  - Modern defaunation compilations as the comparison.
-- **Discriminator.** For each event, compare scenarios that target primary
-  extinctions at the base of the food web with scenarios that target the top.
-  Ask which scenario best reproduces the observed post-event community, as
-  Dunhill et al. did for one event.
-- **Obstacle.** Trophic position is coarsely coded for fossils. The order of
-  losses within an event is rarely resolvable stratigraphically, so it is
-  inferred from network models rather than observed. Taphonomy under-records
-  large apex consumers.
-- **Evidence.** [Round-6 note](../literature/2026-10-10-register-checks-round6.md).
+  - The structure has been re-tested; the dynamics have not.
+    - Rojas et al. 2021 (10.1038/s42003-021-01805-y, abstract checked by
+      Claude) find "four global benthic mega-assemblages", with transitions at
+      494, 252 and 129 Ma. The mid-Cretaceous transition is protracted.
+    - Muscente et al. 2018 (10.1073/pnas.1719976115) recover the three faunas
+      by network analysis.
+  - Diversity dependence in aggregate is established: Foote 2023
+    (10.1086/723626) and Rineau et al. 2022 (10.1126/sciadv.add9620).
+  - Close, Benson & Kiessling 2025 (10.1126/sciadv.adv9793): the Modern fauna
+    was already part of reef-supporting regions in the Palaeozoic.
+  - Alroy 2010 (10.1126/science.1189910): group diversity limits shift
+    idiosyncratically.
+- **Design.** A Bayesian state-space generalised Lotka–Volterra model on
+  SQS-standardised class or fauna richness. Compare it with uncoupled logistic
+  growth plus common shocks by leave-future-out prediction. Replicate in reef
+  and non-reef regions.
+- **Kill criterion.** Park if the coupling terms cannot be identified at about
+  50–100 bins, or if the answer flips between standardised and range-through
+  series.
+
+- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
+### Q-040 Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand?
+Status **sketch**, tier 2 (provisional; scanned 10 October). It overlaps with
+Codex's Q-010 (biological construction of capacity), and Codex may merge or
+adjudicate.
+
+- **Question.** Two models compete. In one, regional diversity is roughly flat
+  and the global curve reflects spatial coverage (Close et al. 2020,
+  10.1126/science.aay8309). In the other, the global rise is driven by
+  hotspots under Earth-system stability and continental fragmentation
+  (Cermeño et al. 2022, 10.1038/s41586-022-04932-6, abstract checked by
+  Claude). The latter also places less than 2% of flooded continental area
+  near ecological saturation. Which better predicts held-out regions? What is
+  the posterior on the Cenozoic-to-Palaeozoic richness ratio once spatial
+  coverage, facies, lithification and palaeogeographic-model uncertainty are
+  propagated?
+- **Why big.** This is the oldest open question in quantitative
+  palaeobiology. It runs from Raup 1976 (10.1017/s0094837300004929), who found
+  "no compelling evidence" of a rise, through Sepkoski's curve and Alroy et al.
+  2008 (10.1126/science.1156963). It decides whether diversity is
+  equilibrial, which sets the frame for every recovery question.
+- **Prior.**
+  - Close et al. 2020: regional variation is comparable to variation through
+    time.
+  - Cermeño et al. 2022: a regional diversification model reproduces the
+    global trend through hotspots.
+  - Fan et al. 2020 (10.1126/science.aax4953): a high-resolution
+    Cambrian–Triassic curve.
+  - Benson et al. 2025 (10.1111/pala.70006): large uncertainties and a
+    Europe/North America bias.
+  - Jablonski et al. 2003 (10.1126/science.1083246): pull of the Recent.
+- **Design.**
+  1. A hierarchical occupancy or SQS model per grid cell and bin.
+  2. Propagate uncertainty across plate models.
+  3. Compare the flat-regional and hotspot-rise models by spatial
+     cross-validation on held-out regions.
+- **Kill criterion.** Park if the ratio's 95% interval spans both flat and
+  rising, or if the choice of plate model dominates the variance. This is a
+  crowded, active area (the Close, Benson and Kiessling groups), with a high
+  risk of being scooped.
+
+- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
+### Q-041 Is there periodicity in extinction once modern timescale uncertainty is propagated?
+Status **sketch**, tier 2 (provisional; scanned 10 October).
+
+- **Question.** Raup & Sepkoski 1984 (10.1073/pnas.81.3.801) reported a period
+  of about 26 Myr. Using GTS2020 boundary ages, drawn jointly with their
+  uncertainties, and sampling-standardised extinction rates, does a periodic
+  model beat aperiodic nulls by marginal likelihood? Test periods from 10 to
+  60 Myr, plus quasi-periodic and periodic-plus-trend variants.
+- **Why big.** A real period would imply astronomical forcing of the
+  biosphere. A decisive null would close a 40-year dispute that still produces
+  papers.
+- **Prior (disputed; no fully propagated test since 2013).**
+  - Stigler & Wagner 1987 (10.1126/science.238.4829.940): the original test is
+    biased by unequal stage spacing and Signor–Lipps effects.
+  - Benton 1995 (10.1126/science.7701342): "no support".
+  - Feng & Bailer-Jones 2013 (10.1088/0004-637x/768/2/152, full preprint by
+    scout): the only Bayesian model comparison on extinction data. They found
+    evidence against simple periodic models, using approximate age errors and
+    pre-GTS2020 event lists.
+  - Melott & Bambach 2014 (10.1666/13047, abstract checked by Claude): on
+    GTS2012, an excess of extinction "follows a 27-Myr timing interval" at
+    p ≈ 0.02. They used fixed ±3 Myr windows and did not resample boundary
+    ages.
+  - Erlykin et al. 2018 (10.1111/pala.12334): the 27-Myr peak vanishes when 5
+    of 136 events are removed.
+  - Rampino & Prokoph 2020 (10.1089/ast.2019.2043): a vote count of spectral
+    trials, not a model comparison.
+  - Bailer-Jones 2011 (10.1111/j.1365-2966.2011.19112.x): Bayesian tests on
+    craters disfavour periodicity.
+  - Rampino & Caldeira 2025 (10.1016/j.earscirev.2025.105100, meta only), on
+    stage-boundary cyclicity, should be read first.
+- **Design.**
+  1. Draw monotone, correlated GTS2020 boundary ages.
+  2. Bootstrap occurrences, and compute PBDB three-timer or gap-filler rates
+     at stage and substage level, with the Sepkoski compendium as a second
+     series.
+  3. Build nulls on the real stage grid.
+  4. Run injection-recovery at the amplitude Melott & Bambach report.
+- **Kill criterion.** Close the question if the Bayes factor is below 3 in both
+  datasets and for both estimators, and stays so when the five largest events
+  are dropped. If power at the claimed amplitude is below about 50%, declare
+  the data uninformative.
+
+- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
+### Q-042 How many species died in the great mass extinctions?
+Status **sketch**, tier 2 (provisional; scanned 10 October).
+
+- **Question.** Raup 1979 (10.1126/science.206.4415.217) estimated by reverse
+  rarefaction that "as many as 96 percent" of marine species died at the
+  end-Permian. Stanley 2016 (10.1073/pnas.1613094113, abstract checked by
+  Claude) revised it to "only about 81%", allowing for clustering of losses
+  and backward smearing. Once non-random extinction within genera and sampling
+  are both modelled, what is the species-level loss, with uncertainty, and can
+  the inversion recover it at all?
+- **Why big.** The "90–96%" figure anchors comparisons with the present crisis
+  and Q-013. Species-level magnitudes for every Big Five event rest on the same
+  inversion, which has not been validated by simulation.
+- **Prior.**
+  - McKinney 1995 (10.1017/s0094837300013312): reverse rarefaction assumes
+    random extinction within genera, so estimates may be 6–15% too high.
+  - Wang et al. 2014 (10.1666/13022): direct species-level CONOP data from
+    South China give 62% of 1,450 species lost within 200 kyr.
+  - Cooper, Flannery-Sutherland & Silvestro 2024 (DeepDive,
+    10.1038/s41467-024-48434-7, abstract checked by Claude): genus-level
+    Permian–Triassic estimates with sampling modelled.
+  - No independent species-level re-estimate after 2016 was found.
+- **Design.**
+  1. Simulate species extinction structured by clade, with a selectivity
+     parameter and a sampling process.
+  2. Test whether Stanley-type inversion recovers the true loss.
+  3. Apply it to PBDB, and validate against direct regional species data (Fan
+     et al. 2020, 10.1126/science.aax4953; Wang et al. 2014).
+  The species-to-genus mapping is the same machinery as Q-013's crosswalk, run
+  in reverse.
+- **Kill criterion.** Report the magnitude as undeterminable at species level
+  if inversion bias exceeds about 10 percentage points under plausible
+  selectivity, or if the interval cannot separate 81% from 96%.
+- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
