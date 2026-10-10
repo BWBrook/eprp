@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
+Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,8 +20,8 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-3 checks](literature/2026-10-10-register-checks-round3.md) complete (10 October). Q-022 corrections accepted; a [matched-background follow-up](data/q022-premortem/README.md) finds a weak, consistently positive, underpowered event-specific excess; next gate is power calibration on mass-extinction trees. Q-016 narrowed to range predictors, partly occupied (Smits & Finnegan 2019), tier 3. Q-027 partly occupied (Benson 2025, Boag 2021), tier 1→2. Q-028: dominance given survival appears open, tier 2. New sketches Q-030–Q-032. Critiques of Q-026/Q-029 in the round-3 note |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | [10 October round](literature/2026-10-10-clade-futures-and-geographic-cycles.md) complete: Q-026 now under review/tier 2 after close-prior and deposited-contract inspection; next gate is outcome-blind cohort support and remaining predictive priors. New Q-029 sketch asks about geographic-cycle ordering and durable diversity; next check is exact prior overlap and one replicated regional evidence lead. Q-008–Q-010/Q-020/Q-021 remain under review. Codex retains PBDB preparation. Q-013's species–genus crosswalk remains proposed, not an accepted execution assignment |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-4 checks](literature/2026-10-10-register-checks-round4.md) complete. Q-030 under review/tier 2: forcing-versus-response question stated and disputed; independent forcing support remains the gate. Q-031 under review/tier 3: broad warming–dwarfing result occupied. Q-032 remains sketch/tier 2. Q-022 matched contrasts are descriptive, not an established event-specific effect; Codex's power-calibration corrections accepted in 76/1346 and applied in `6d79a36`, design not run. Q-016 tier 3, Q-027/Q-028 tier 2 remain under review |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | [Prediction-units and priority round](literature/2026-10-10-prediction-units-and-priority.md) complete. Q-026 retains tier 2: apparent turnover need not identify lineage-count dynamics; observation and recovery endpoint must match the comparator. Q-029 moves to under review/tier 2; timing-model overlap is closer and Pontocaspian implementation awaits independent chronology/support. New Q-033 sketch/tier 2 tests arrival-order priority against intrinsic superiority and environmental sorting. Codex owns Q-026/Q-029/Q-033 and retains PBDB preparation. Q-008–Q-010/Q-020/Q-021 remain under review; Q-013 crosswalk remains proposed, not accepted execution |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
@@ -74,11 +74,11 @@ Codex. Shared dependencies are coordinated through Correspondence.
   simulation has started. Work includes source/data-support inspections,
   analytical counterexamples, small synthetic/deterministic probes and Claude's
   bounded empirical Q-022 pre-mortem.
-- The register now has 32 entries. Q-029 adds geographic-cycle ordering and
-  durable diversity (Codex); Q-030–Q-032 add biosphere sensitivity through time,
-  body-size change per °C and insect ecological crises (Claude). Close
-  precedents occupy the broad mechanisms. Discriminating predictions and joint
-  data support need further evaluation.
+- The register now has 33 entries. Q-033 adds an arrival-order question with
+  explicit model and fossil precedents. Its proposed reciprocal regional
+  comparison has unverified novelty and data support. Q-029's generic timing
+  mechanisms are occupied; independent connection histories and cohort records
+  remain unassembled. No entry has been promoted to a primary investigation.
 - Functional/taxonomic recovery decoupling and global bioregional turnover are
   established. Q-008/Q-009 now ask whether these states predict subsequent
   behaviour. Q-010 retires an either/or capacity-versus-dynamics framing.
@@ -102,8 +102,10 @@ Codex. Shared dependencies are coordinated through Correspondence.
   empirical pre-mortem is complete. Its pooled background percentiles are
   descriptive. Matched on lineage count and loss fraction, all eight testable
   cases sit above the matched median (+0.1 to +1.7 SES), with three at the
-  matched 95th percentile; most shifts are below single-event detection power
-  (1.5–2.7 SES). Ages are not matched; cases are correlated.
+  matched 95th percentile. The 1.5–2.7 SES detectable-shift calculation is an
+  illustrative Gaussian approximation, not validated power. Ages are not
+  matched; cases are correlated. Revised calibration separates exchangeable-tip
+  loss from an incremental change beyond ordinary clustered loss; not run.
 - Q-026 asks whether declining clades' recovery can be predicted without
   conditioning on their eventual fate. Quental & Marshall 2013 already analyse
   rate contributions to rebounds within decline. Song 2026's reporting summary,
@@ -113,17 +115,24 @@ Codex. Shared dependencies are coordinated through Correspondence.
   birth–death calculation shows higher turnover at equal net decline can raise
   both first-rebound and first-extinction probabilities over the same horizon.
   Proportional richness alone establishes neither absolute decline nor dominance.
+- Q-026's new analytical check adds one-for-one replacement: fossil appearance
+  and termination rates increase while lineage-count first-passage probabilities
+  remain unchanged. This is a constructed example, not an empirical correction.
+  Richness increments only bypass that coding problem for appropriate standing
+  counts; sampled-in-bin richness can contain successive names for one lineage.
+  Confirmed persistence and first threshold crossing require different models.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 76: respond to Claude's
-Q-026 critique (birth–death first-passage baseline, competing-risk endpoints,
-paraphyly) and Q-029 critique (end-of-record bias, effective isolation relative
-to completion and fusion times, Pontocaspian lead). Comment on Q-027/Q-028
-dispositions and the new Q-030–Q-032 if useful. Claude next: prior-work checks
-on Q-030 and Q-031, and the Q-022 power calibration design. These are bounded
-next checks, not a selected downstream project. Both agents keep narrowing and
-expanding without returning routine choices to Barry.
+**Next scientific responder: Claude**, on discussion 76: challenge Q-026's
+standing-count versus bin-richness observation contract, Q-029's proposed
+timing-state sufficiency test and regional evidence gate, and Q-033's distinctness
+and reciprocal-arrival design. Claude retains Q-022 calibration and his own
+register checks. Codex's next bounded tasks are one Q-026 observation/cohort
+support check and two independently dated Q-029 connection episodes; these
+remain preparation, not a selected downstream investigation. Q-033 is a sketch,
+not a newly launched simulation workload. Shared register/STATUS ownership for
+this round was explicitly handed to Codex in 76/1345 and returns at handoff.
 
 ## Shared checkout and decisions
 

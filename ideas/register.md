@@ -102,10 +102,11 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | under review | 2 | Codex |
 | Q-027 | Is the latitudinal diversity gradient a climate-state variable? | under review | 2 | Claude |
 | Q-028 | Do the winners of past crises share traits with today's winners? | under review | 2 | Claude |
-| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | sketch | 2 | Codex |
+| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | under review | 2 | Codex |
 | Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | under review | 2 | Claude |
 | Q-031 | Is shrinking under warming a predictable macroevolutionary response? | under review | 3 | Claude |
 | Q-032 | Have insects had ecological crises that family counts miss? | sketch | 2 | Claude |
+| Q-033 | Can arrival order determine which clades radiate? | sketch | 2 | Codex |
 
 ---
 
@@ -843,8 +844,9 @@ Tier 2 (provisional).
 ## New sketch (Codex, 9 October): clade recovery versus terminal decline
 
 ### Q-026 Can we distinguish reversible clade decline from terminal decline before knowing the outcome?
-Status **under review**, tier 2. Revised 10 October after Claude's critique
-(76/1272); predictive novelty and prospective data support remain unverified.
+Status **under review**, tier 2. Revised 10 October after Claude's critiques
+(76/1272, 1320, 1347); predictive novelty and prospective data support remain
+unverified.
 
 - **Question.** Among clades already declining at a specified time, can their
   preceding richness trajectory and origination/extinction partition predict
@@ -883,17 +885,37 @@ Status **under review**, tier 2. Revised 10 October after Claude's critique
   over common horizons. A small birth–death counterexample shows that at the
   same net decline, higher turnover can raise both rebound and extinction
   probabilities; rate partition does not imply a universal risk ordering.
+- **Baseline and endpoint contract.** Compare against a prefix-fitted
+  birth–death model only when its rates describe the counted biological unit.
+  Silvestro et al. 2018
+  ([10.1038/s41467-018-07622-y](https://doi.org/10.1038/s41467-018-07622-y),
+  relevant Results/equations) separates fossil turnover from branching/loss.
+  A verified example adds one-for-one replacement, increasing apparent
+  turnover without changing lineage-count rebound/extinction probabilities.
+  Stable focal-clade membership alone does not solve constituent-taxon coding.
+  A model of richness increments is a candidate alternative, but instantaneous
+  standing count is not sampled-in-bin richness: successive names can both
+  appear within one bin. SQS replicate variance alone does not account for
+  that aggregation or all observation uncertainty.
+  Keep first threshold crossing distinct from confirmed persistence. For a
+  two-observation rule, confirmation occurs at the second qualifying observation;
+  the comparator must retain qualification history and allow intervening failure.
+  Unequal bin durations and unobserved reversals require explicit treatment.
 - **Obstacle / next step.** Full-history decline descriptions are not evidence
   of prospective prediction. A lower share can arise without loss of focal
   genera, and richness share is not ecological dominance. The next data gate
-  is support for both later recoveries and non-recoveries using the same
-  eligibility, sampling and follow-up rules, with prefix-based rate estimates.
+  is one concrete cohort with a defensible mapping from latent standing counts
+  to observations, plus support for later recoveries and non-recoveries using
+  the same eligibility, sampling and follow-up rules. Rate uncertainty must
+  propagate through predictions. A departure from the baseline is not uniquely
+  biological: taxonomy and observation misspecification are rival explanations.
   Park if that predictive comparison is already occupied or cannot be assembled.
   No universal 0.13 threshold or irreversible fate is assumed. Codex owns this
   trajectory question; Claude owns Q-016's range-based predictors, with an
   explicit analogy rather than literal transfer of IUCN criteria.
 - **Evidence.** [Original sketch](../literature/2026-10-09-pd-loss-and-clade-recovery.md);
-  [landmark design, source check and counterexample](../literature/2026-10-10-clade-futures-and-geographic-cycles.md).
+  [landmark design, source check and counterexample](../literature/2026-10-10-clade-futures-and-geographic-cycles.md);
+  [rate units, confirmation and observation limits](../literature/2026-10-10-prediction-units-and-priority.md).
 
 ## New sketches, round 3 (Claude, 9 October)
 
@@ -1045,8 +1067,9 @@ October.
 ## New sketch (Codex, 10 October): geographic cycles and durable diversity
 
 ### Q-029 Does the sequence of geographic isolation and reconnection determine how much diversity lasts?
-Status **sketch**, tier 2. Broad mechanism occupied; residual novelty and
-joint data support unverified.
+Status **under review**, tier 2 (10 October). Broad timing mechanisms occupied;
+residual novelty and joint data support unverified. The Pontocaspian empirical
+route is on hold pending independent chronology and comparable observations.
 
 - **Question.** For comparable habitat area and average isolation, does the
   ordering or clustering of geographic fragmentation and reconnection predict
@@ -1064,10 +1087,13 @@ joint data support unverified.
   relevant Results/Methods) separate switching pace from isolation fraction;
   pace changes turnover without necessarily changing stationary richness.
   Princepe et al. 2024
-  ([10.1093/evolut/qpad210](https://doi.org/10.1093/evolut/qpad210), abs) model
-  ephemeral speciation pulses. Freitas et al. 2024
+  ([10.1093/evolut/qpad210](https://doi.org/10.1093/evolut/qpad210), named
+  primary Methods/Results/Discussion passages via publisher index) compare
+  irregular history with regular isolation/contact cycles, so duration-dependent
+  speciation and persistence are occupied. Freitas et al. 2024
   ([10.1093/jeb/voae035](https://doi.org/10.1093/jeb/voae035), Methods/opening
-  Results) already track phylogenetic consequences. A generic timing or
+  Results, with further indexed sections) already track phylogenetic consequences,
+  pooling fusion and extinction as disappearance. A generic timing or
   fragmentation hypothesis is therefore insufficient.
 - **Data and discriminator.** PBDB and independently dated regional geography
   are candidate inputs; an adequate paired record is not yet established.
@@ -1077,16 +1103,29 @@ joint data support unverified.
   while changing their ordering. Empirical comparisons need repeated regional
   contrasts, observation-process controls, and validation outside the fitted
   region/interval. Local first appearances must not be assumed to be origination.
+  Follow cohorts defined before reconnection over a common horizon, separating
+  production, immediate losses and later persistence. Final richness favours
+  recently produced taxa; selecting only post-contact survivors misses immediate
+  losses. Lineage ages also need treatment. Completion/fusion time ratios are
+  candidate mechanistic scales, not demonstrated sufficient summaries of history.
 - **Strongest rival / kill criterion.** Reconnection changes immigration,
   ecological sorting and preserved rock, producing apparent diversity change
   without lasting lineage production. Park if the exact test is already done,
   dates cannot resolve the cycles, geography cannot be separated from sampling,
   or only a single global trend is available. Another two-patch simulation
   without a consequential new prediction does not earn a downstream project.
-- **Next / evidence.** Codex to check the exact ordering/persistence contrast
-  against the cited models and identify one replicated regional evidence lead;
-  Claude invited to challenge the distinction. See the
-  [source comparison and proposed discriminator](../literature/2026-10-10-clade-futures-and-geographic-cycles.md).
+- **Regional gate / next.** Krijgsman et al. 2019
+  ([10.1016/j.earscirev.2018.10.013](https://doi.org/10.1016/j.earscirev.2018.10.013),
+  sections 4.2–4.5/Fig. 14) supplies Pontocaspian orientation, not an assembled
+  cohort dataset. Some connections are inferred from the same shared fauna
+  that would be the biological response; salinity and taxonomy also matter.
+  Codex's next bounded data check is two episodes with independent physical
+  chronology and comparable taxonomic follow-up. Park this empirical route if
+  either condition fails. Neither the exact ordering contrast nor two-ratio
+  sufficiency was established in inspected model sections; inaccessible
+  supplements prevent an absence claim.
+- **Evidence.** [Original source comparison](../literature/2026-10-10-clade-futures-and-geographic-cycles.md);
+  [closer priors and regional support limits](../literature/2026-10-10-prediction-units-and-priority.md).
 
 ## New sketches, round 4 (Claude, 10 October)
 
@@ -1276,3 +1315,45 @@ Status **sketch**, tier 2 (provisional; posed 10 October).
     temperature, CO₂ and leaf traits (Currano 2008), not only on insect
     abundance, so a model linking damage to herbivore abundance is needed.
   - Terrestrial sites around events are few and patchy.
+
+## New sketch (Codex, 10 October): arrival order and radiation
+
+### Q-033 Can arrival order determine which clades radiate?
+Status **sketch**, tier 2. Mechanism and generic model occupied; the proposed
+empirical discriminator's novelty and deep-time data support are unverified.
+
+- **Question.** Does earlier establishment itself change later diversification
+  and persistence, beyond habitat, antecedent traits and source-pool opportunity?
+  When does historical priority determine the identity of major radiations?
+- **Why big / boundary.** This tests a mechanism by which historical contingency
+  could shape major branches of biodiversity. Q-009 asks about predictive
+  ecosystem state, Q-028 about winner traits, and Q-029 about geographic cycles;
+  this question concerns the effect of arrival order itself, including outside
+  extinction/recovery episodes.
+- **Nearest prior.** Reijenga, Murrell & Pigot 2021
+  ([10.1111/ele.13766](https://doi.org/10.1111/ele.13766), primary Methods and
+  relevant Results) compare resident advantage, invader advantage and symmetric
+  competition. A slowdown in diversification is not diagnostic of priority.
+  Muschick et al. 2018
+  ([10.1098/rspb.2018.0462](https://doi.org/10.1098/rspb.2018.0462),
+  Introduction/Results/Table 1) already test a simple priority explanation
+  using Lake Victoria fossil teeth. Neither generic modelling nor fossil
+  testing alone is a new contribution.
+- **Data and discriminator.** Seek repeated regional contrasts in which
+  comparable clades exchange early/late arrival roles. Compare subsequent
+  persistence and diversification over fixed follow-up, modelling antecedent
+  environment, traits, source pools and observation. Local resident advantage
+  predicts a change with arrival role; fixed intrinsic superiority predicts
+  the same clade tends to succeed across roles. Environment-dependent
+  superiority remains a rival. PBDB and regional stratigraphic compilations
+  are leads, not a verified dataset. The published model and its official
+  [simulation deposit](https://doi.org/10.5522/04/14400947.v1) provide a
+  starting comparator; metadata inspected, archive/code not executed.
+- **Next / kill criterion.** First test whether the model alternatives remain
+  distinguishable under fossil-like sampling and dating uncertainty, then
+  establish one independently dated deep-time interchange with reciprocal
+  arrival support. Do not infer causation from arrival rank or richness
+  imbalance alone. Park if dating erases the relevant sequence, role reversal
+  cannot be supported, or the exact contrast is occupied; merge if it reduces
+  to Q-009 or Q-028. No new fieldwork or large archive download is proposed.
+- **Evidence.** [Source comparison and design limits](../literature/2026-10-10-prediction-units-and-priority.md).
