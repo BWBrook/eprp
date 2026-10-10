@@ -102,13 +102,14 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | under review | 2 | Codex |
 | Q-027 | Is the latitudinal diversity gradient a climate-state variable? | under review | 2 | Claude |
 | Q-028 | Do the winners of past crises share traits with today's winners? | under review | 2 | Claude |
-| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | under review | 2 | Codex |
+| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | under review | 3 | Codex |
 | Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | under review | 2 | Claude |
 | Q-031 | Is shrinking under warming a predictable macroevolutionary response? | under review | 3 | Claude |
 | Q-032 | Have insects had ecological crises that family counts miss? | parked | — | Claude |
-| Q-033 | Can arrival order determine which clades radiate? | sketch | 2 | Codex |
+| Q-033 | Can arrival order determine which clades radiate? | under review | 2 | Codex |
 | Q-034 | What was the extinction rate of island endemics before people arrived? | sketch | 2 | Claude |
 | Q-035 | Do land ecosystems collapse before marine ones, and what sets the lag? | sketch | 2 | Claude |
+| Q-036 | What maintains morphological stasis as environments change? | under review | 2 | Codex |
 
 ---
 
@@ -890,7 +891,7 @@ apparently open.
 
 ### Q-026 Can we distinguish reversible clade decline from terminal decline before knowing the outcome?
 Status **under review**, tier 2. Revised 10 October after Claude's critiques
-(76/1272, 1320, 1347); predictive novelty and prospective data support remain
+(76/1272, 1320, 1347, 1362); predictive novelty and prospective data support remain
 unverified.
 
 - **Question.** Among clades already declining at a specified time, can their
@@ -942,6 +943,15 @@ unverified.
   standing count is not sampled-in-bin richness: successive names can both
   appear within one bin. SQS replicate variance alone does not account for
   that aggregation or all observation uncertainty.
+  True boundary counts solve the ideal aggregation example. Observed
+  boundary crossers reconstructed from fossil ranges remain sensitive to
+  detection and replacement; the new synthetic check confirms this even at
+  constant true richness. Such counts also require later fossils, so they
+  cannot be used at their own boundary as prefix-only predictors. Either fit
+  a latent-state/observation model to the prefix, or use older boundaries
+  whose full detection window ends before the actual forecast cutoff.
+  Three-timer and capture–recapture corrections were not evaluated in the
+  check; their failure is not established.
   Keep first threshold crossing distinct from confirmed persistence. For a
   two-observation rule, confirmation occurs at the second qualifying observation;
   the comparator must retain qualification history and allow intervening failure.
@@ -960,7 +970,8 @@ unverified.
   explicit analogy rather than literal transfer of IUCN criteria.
 - **Evidence.** [Original sketch](../literature/2026-10-09-pd-loss-and-clade-recovery.md);
   [landmark design, source check and counterexample](../literature/2026-10-10-clade-futures-and-geographic-cycles.md);
-  [rate units, confirmation and observation limits](../literature/2026-10-10-prediction-units-and-priority.md).
+  [rate units, confirmation and observation limits](../literature/2026-10-10-prediction-units-and-priority.md);
+  [boundary-count observation and cutoff check](../literature/2026-10-10-boundary-counts-and-incumbency.md).
 
 ## New sketches, round 3 (Claude, 9 October)
 
@@ -1126,9 +1137,12 @@ October.
 ## New sketch (Codex, 10 October): geographic cycles and durable diversity
 
 ### Q-029 Does the sequence of geographic isolation and reconnection determine how much diversity lasts?
-Status **under review**, tier 2 (10 October). Broad timing mechanisms occupied;
+Status **under review**, tier 3 (10 October, after Claude's 76/1362 critique).
+Broad timing mechanisms occupied;
 residual novelty and joint data support unverified. The Pontocaspian empirical
 route is on hold pending independent chronology and comparable observations.
+The remaining ordering/sufficiency refinement does not yet justify a larger
+investigation. A new application must earn its own prior-work and data check.
 
 - **Question.** For comparable habitat area and average isolation, does the
   ordering or clustering of geographic fragmentation and reconnection predict
@@ -1178,13 +1192,15 @@ route is on hold pending independent chronology and comparable observations.
   sections 4.2–4.5/Fig. 14) supplies Pontocaspian orientation, not an assembled
   cohort dataset. Some connections are inferred from the same shared fauna
   that would be the biological response; salinity and taxonomy also matter.
-  Codex's next bounded data check is two episodes with independent physical
-  chronology and comparable taxonomic follow-up. Park this empirical route if
+  If a consequential application earns further work, the bounded data check
+  is two episodes with independent physical chronology and comparable
+  taxonomic follow-up. Park this empirical route if
   either condition fails. Neither the exact ordering contrast nor two-ratio
   sufficiency was established in inspected model sections; inaccessible
   supplements prevent an absence claim.
 - **Evidence.** [Original source comparison](../literature/2026-10-10-clade-futures-and-geographic-cycles.md);
-  [closer priors and regional support limits](../literature/2026-10-10-prediction-units-and-priority.md).
+  [closer priors and regional support limits](../literature/2026-10-10-prediction-units-and-priority.md);
+  [tier adjudication](../literature/2026-10-10-boundary-counts-and-incumbency.md).
 
 ## New sketches, round 4 (Claude, 10 October)
 
@@ -1379,8 +1395,9 @@ check.
 ## New sketch (Codex, 10 October): arrival order and radiation
 
 ### Q-033 Can arrival order determine which clades radiate?
-Status **sketch**, tier 2. Mechanism and generic model occupied; the proposed
-empirical discriminator's novelty and deep-time data support are unverified.
+Status **under review**, tier 2 (10 October). Mechanism, generic model and
+repeated deep-time replacement occupied; the proposed establishment-order
+discriminator's novelty and data support are unverified.
 
 - **Question.** Does earlier establishment itself change later diversification
   and persistence, beyond habitat, antecedent traits and source-pool opportunity?
@@ -1399,6 +1416,18 @@ empirical discriminator's novelty and deep-time data support are unverified.
   Introduction/Results/Table 1) already test a simple priority explanation
   using Lake Victoria fossil teeth. Neither generic modelling nor fossil
   testing alone is a new contribution.
+  Rosenzweig & McCord 1991
+  ([10.1017/S0094837300010563](https://doi.org/10.1017/S0094837300010563),
+  official abstract only) describe repeated provincial turtle replacement
+  limited by incumbent extinction; full methods remain inaccessible.
+  Brusatte et al. 2008
+  ([10.1126/science.1161833](https://doi.org/10.1126/science.1161833), main
+  author manuscript) already challenge general dinosaur superiority.
+  Carrillo et al. 2020
+  ([10.1073/pnas.2009397117](https://doi.org/10.1073/pnas.2009397117), full main
+  text and selected deposited code) attribute interchange asymmetry mainly
+  to South American native extinction. Two-way dispersal is not a matched
+  test of reversed establishment order.
 - **Data and discriminator.** Seek repeated regional contrasts in which
   comparable clades exchange early/late arrival roles. Compare subsequent
   persistence and diversification over fixed follow-up, modelling antecedent
@@ -1409,14 +1438,21 @@ empirical discriminator's novelty and deep-time data support are unverified.
   are leads, not a verified dataset. The published model and its official
   [simulation deposit](https://doi.org/10.5522/04/14400947.v1) provide a
   starting comparator; metadata inspected, archive/code not executed.
-- **Next / kill criterion.** First test whether the model alternatives remain
-  distinguishable under fossil-like sampling and dating uncertainty, then
-  establish one independently dated deep-time interchange with reciprocal
-  arrival support. Do not infer causation from arrival rank or richness
+  Carrillo's [versioned deposit](https://doi.org/10.5281/zenodo.3770348) is a
+  regional-support lead. Its diversification input excludes immigrant genera
+  also recorded on their source continent; it does not compare the same genera
+  in both roles. The occurrence table retains locality and age-bound fields,
+  but continental origin labels do not date local establishment.
+- **Next / kill criterion.** First build a bounded support matrix for one
+  guild, two competing clades and two recipient regions: A-before-B and
+  B-before-A, overlapping antecedent environments, source-pool support and
+  comparable follow-up. Only then test model discrimination under fossil-like
+  sampling and dating uncertainty. Do not infer causation from arrival rank or richness
   imbalance alone. Park if dating erases the relevant sequence, role reversal
   cannot be supported, or the exact contrast is occupied; merge if it reduces
   to Q-009 or Q-028. No new fieldwork or large archive download is proposed.
-- **Evidence.** [Source comparison and design limits](../literature/2026-10-10-prediction-units-and-priority.md).
+- **Evidence.** [Source comparison and design limits](../literature/2026-10-10-prediction-units-and-priority.md);
+  [deep-time precedents and deposited-code check](../literature/2026-10-10-boundary-counts-and-incumbency.md).
 
 ## New sketches, round 5 (Claude, 10 October)
 
@@ -1500,3 +1536,56 @@ Status **sketch**, tier 2 (provisional; posed 10 October).
   records are discontinuous. Few events have dating precision finer than the
   expected lag.
 - **Evidence.** [Round-5 note](../literature/2026-10-10-register-checks-round5.md).
+
+## New direction (Codex, 10 October): morphological stasis and geography
+
+### Q-036 What maintains morphological stasis as environments change?
+Status **under review**, tier 2. Initial primary-source orientation already
+finds close precedents; novelty and joint data support remain unverified.
+
+- **Question.** How much long-term morphological stability persists after
+  accounting for geographic redistribution and change within comparable local
+  units? Can spatially resolved fossils distinguish those contributions well
+  enough to explain when stasis is maintained or breaks down?
+- **Why big / boundary.** Long-lived forms persist through major environmental
+  changes despite the possibility of rapid evolution. Explaining that stability
+  connects population processes with macroevolutionary patterns. Stabilizing
+  selection, habitat tracking and population replacement can coexist; they are
+  not mutually exclusive alternatives. Q-015 addresses thermal-niche evolution,
+  Q-031 warming-associated size changes; this concerns multi-trait stasis and
+  its spatial maintenance beyond crisis intervals.
+- **Nearest prior.** Hunt 2007
+  ([10.1073/pnas.0704088104](https://doi.org/10.1073/pnas.0704088104), Methods
+  and relevant Discussion) distinguishes patterns of stasis from mechanisms.
+  Hopkins & Lidgard 2012
+  ([10.1073/pnas.1209901109](https://doi.org/10.1073/pnas.1209901109), relevant
+  Results/Discussion/Methods) demonstrates differing modes among traits and
+  discusses geographic sampling, migration and replicate-section comparisons.
+  Raia et al. 2012
+  ([10.1098/rsbl.2011.0613](https://doi.org/10.1098/rsbl.2011.0613), main text)
+  already associates mammal movement with longevity and clade-level disparity.
+  Hunt et al. 2015
+  ([10.1073/pnas.1403662111](https://doi.org/10.1073/pnas.1403662111), relevant
+  Results/Discussion/Methods) already obtains broad fossil mode frequencies
+  from climate-tracking simulations. Neither finding stasis nor proposing
+  geographic/environmental tracking alone is new.
+- **Data and discriminator.** The
+  [Dryad trait-series compilation](https://doi.org/10.5061/dryad.m010p)
+  is a locator and comparator, not yet a spatial dataset (landing page and
+  usage notes only). Seek crossed locality × time morphometry, independent
+  facies/environmental information, several traits and sample distributions.
+  Separate within-unit change from changes in the weights of sampled units;
+  test predictions for spatial covariance and held-out local trajectories.
+  An unchanged pooled mean alone cannot identify the process. Repeated samples
+  at one locality do not prove continuity of the biological population.
+- **Next / kill criterion.** Check Kim, Sheets & Mitchell 2009's *Triarthrus
+  beckii* data contract
+  ([10.1111/j.1502-3931.2008.00144.x](https://doi.org/10.1111/j.1502-3931.2008.00144.x);
+  DOI/indexed information only; direct article unavailable) and the closest
+  geographic morphometry precedents. Park if time and geography lack overlapping
+  support, only pooled means survive, the exact discriminator is occupied,
+  or alternative mechanisms remain observationally equivalent. Species
+  delimitation must not impose constancy of the tested traits. Without
+  independent continuity evidence, report geographic decomposition, not proof
+  of stabilizing selection or population replacement.
+- **Evidence.** [Initial stasis orientation and limits](../literature/2026-10-10-boundary-counts-and-incumbency.md).
