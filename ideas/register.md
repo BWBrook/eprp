@@ -98,15 +98,17 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-022 | How much evolutionary history does each extinction prune? | under review | 2 | Claude |
 | Q-023 | Are biodiversity crises origination failures rather than extinction spikes? | under review | 2 | Claude |
 | Q-024 | Do ecological early-warning signals work on real Quaternary transitions? | sketch | 2 | Claude |
-| Q-025 | How do local losses scale to global extinction, then and now? | sketch | 2 | Claude |
+| Q-025 | How do local losses scale to global extinction, then and now? | under review | 2 | Claude |
 | Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | under review | 2 | Codex |
 | Q-027 | Is the latitudinal diversity gradient a climate-state variable? | under review | 2 | Claude |
 | Q-028 | Do the winners of past crises share traits with today's winners? | under review | 2 | Claude |
 | Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | under review | 2 | Codex |
 | Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | under review | 2 | Claude |
 | Q-031 | Is shrinking under warming a predictable macroevolutionary response? | under review | 3 | Claude |
-| Q-032 | Have insects had ecological crises that family counts miss? | sketch | 2 | Claude |
+| Q-032 | Have insects had ecological crises that family counts miss? | parked | — | Claude |
 | Q-033 | Can arrival order determine which clades radiate? | sketch | 2 | Codex |
+| Q-034 | What was the extinction rate of island endemics before people arrived? | sketch | 2 | Claude |
+| Q-035 | Do land ecosystems collapse before marine ones, and what sets the lag? | sketch | 2 | Claude |
 
 ---
 
@@ -825,21 +827,64 @@ Tier 2 (provisional).
   surrogate nulls are essential.
 
 ### Q-025 How do local losses scale to global extinction, then and now?
-Tier 2 (provisional).
+Status **under review**, tier 2. Posed 9 October; prior-work check on 10
+October found it partly occupied, with the cross-scale conversion itself
+apparently open.
 
-- **Question.** Extinction rates depend nonlinearly on spatial scale (Keil et al.
-  2017/2018, 10.1111/geb.12669). Is the ratio of local or regional extirpation
-  to global extinction during past crises similar to the ratio in today's
-  local-decline data? What does the deep-time scaling imply about how many
-  current local losses become global?
-- **Why big.** Modern monitoring sees mostly local change. Deep time can show
-  how local losses scale up to global loss across many crises.
-- **Data and methods.**
-  - PBDB regional versus global last occurrences, spatially standardised.
-  - Modern assemblage time series (for example BioTIME).
-  - Scale-explicit comparison with matched observation filters.
-- **Obstacle.** Regional "extirpation" in fossils mixes range shift, sampling
-  gaps and true loss. No prior-work check yet.
+- **Question.** What is the conversion probability C(A) = P(global extinction
+  | loss at grain A), together with per-species loss against area? Does it
+  differ between crisis and background intervals? Does today's local-decline
+  data fall inside the crisis envelope or the background envelope?
+- **Why it matters.** Modern monitoring mostly sees local change. Deep time is
+  the only place where many local and regional losses have known global
+  outcomes.
+- **Prior.**
+  - **Modern theory and data, no fossils.** Keil et al. 2018
+    (10.1111/geb.12669; preprint sections by scout): per-species loss falls
+    with area, and "simple interpolation between scales should be done with
+    caution, if at all". Chase et al. 2019 (10.1111/oik.05968) and Yan et al.
+    2022 (10.1111/ecog.05828) add to this.
+  - **Local trends against global threat.** Antão et al. 2026
+    (10.1038/s41467-026-74132-7, abstract checked by Claude): over 60,000
+    populations of 2,362 species. Fewer than 10% of populations show
+    consistent trends. Higher IUCN risk goes with more frequent local decline.
+    The link is correlational, with no conversion across scales.
+  - **Fossil, regional rates.**
+    - Allen et al. 2023 (10.1017/pab.2023.1, abstract checked by Claude):
+      Permian–Triassic extinction rates "generally uniform across latitudes",
+      with a caution about sampling bias.
+    - Flannery-Sutherland et al. 2022 (10.1038/s41467-022-30507-0): regional
+      rates are heterogeneous, and global trends are biased by the regional
+      fossil record.
+    - Raup & Jablonski 1993 (10.1126/science.11537491): K–Pg bivalve
+      intensities "uniformly global".
+  - **Fossil, local against global.** Wilf et al. 2023 (10.1017/ext.2023.13,
+    abstract checked by Claude): K–Pg plant losses "primarily occurred among
+    species observed in regional studies but left no global trace at the
+    family or major-clade level". Regional losses were generally above 50%.
+    This is the conversion question for one event and one group.
+  - **Range trend predicting extinction:** Kiessling & Kocsis 2016
+    (10.1098/rsbl.2015.0813); Straube et al. 2026 (10.1111/geb.70226). See
+    Q-016.
+  - **Same-region modern versus fossil rates:** Neubauer et al. 2021
+    (10.1038/s43247-021-00167-x), for European freshwater gastropods.
+- **Residual.** Estimate C(A) and per-species loss against area at four or
+  more nested grains:
+  - through and outside crises;
+  - with spatial standardisation (Close et al. 2020, 10.1126/science.aay8309;
+    Antell et al. 2020, 10.1016/j.cub.2019.10.065);
+  - with regional estimators tested in simulation (Allen 2023);
+  - comparing crisis and background stages at matched global severity.
+  Then place modern local-loss data (Keil 2018's datasets, BioTIME, IUCN as in
+  Antão 2026) on the same observation filter.
+- **Kill criterion.** Before estimating anything, run a sampling null:
+  stationary global ranges on the real occurrence geometry. Park if that null
+  reproduces the observed fractions of regional loss, because the record then
+  cannot separate range shift, sampling gaps and true loss.
+  - Second obstacle: the time grain differs by orders of magnitude between the
+    fossil and modern records.
+  - Few modern global extinctions exist, so C(A) for today will be imprecise.
+- **Evidence.** [Round-5 note](../literature/2026-10-10-register-checks-round5.md).
 
 ## New sketch (Codex, 9 October): clade recovery versus terminal decline
 
@@ -974,10 +1019,20 @@ on 10 October after a prior-work check: partly occupied.
     reports a gentler gradient at the onset of glaciation.
 - **Residual.**
   1. Replace binary regimes with continuous local SST and PhanDA global mean
-     temperature, with region random effects and lagged terms.
+     temperature, with region random effects.
   2. Test whether Boag's hump survives Benson-grade regional control.
   3. Use Triton foraminifera, from ocean drilling, as an independent Cenozoic
      replicate whose coverage is less biased towards Europe.
+  4. **Lags.** PhanDA's stages are assimilated independently, so it has no
+     joint temporal posterior. A lagged coefficient fitted on PhanDA inherits
+     that limit; adding the term alone does not resolve it (Codex, 10 October).
+     - Test lags first in the Cenozoic: Triton foraminiferal gradients against
+       the continuous, astronomically dated CENOGRID benthic record (Westerhold
+       et al. 2020, 10.1126/science.aba6853), at sub-stage resolution.
+     - For the Phanerozoic, report lags only under the explicit stage-coupling
+       scenarios of
+       [data/phanda-stage-differences](../data/phanda-stage-differences/README.md),
+       as a sensitivity analysis.
 - **Data.**
   - Benson et al.'s Dryad data (10.5061/dryad.6djh9w1bx) and Zenodo code
     (10.5281/zenodo.15269136), both DataCite-verified by the scout.
@@ -1041,13 +1096,17 @@ October.
     (10.1126/sciadv.adv1171) call the K–Pg outcome "contingent".
 - **Design.**
   1. Fit a pre-registered two-stage hurdle model: survival, then dominance
-     given survival.
+     given survival. Fix the dominance outcome, its time window, the
+     eligibility rules and the predictors before evaluation.
   2. Train on one event and hold out the others.
   3. Compare against a range-only baseline.
   4. Code living genera the same way. Define winners in advance from BioTIME
      and invasion status, with covariates for human transport.
-  Use the landmark logic from Q-026, so that "winner" is never defined from the
-  outcome.
+  "Winner" is the future outcome being predicted. Define it in advance, and
+  freeze predictors and eligibility at the landmark (Codex, 10 October).
+  - A survivor-conditional trait forecast is a valid predictive target.
+  - It is not, by itself, a causal effect of the trait.
+  - It need not transfer between events with different survival filters.
 - **Data.**
   - PBDB.
   - Modern: BioTIME (10.1111/geb.12729), GRIIS (10.1038/sdata.2017.202),
@@ -1281,40 +1340,41 @@ day found the headline occupied.
 - **Evidence.** [Round-4 note](../literature/2026-10-10-register-checks-round4.md).
 
 ### Q-032 Have insects had ecological crises that family counts miss?
-Status **sketch**, tier 2 (provisional; posed 10 October).
+Status **parked**. Posed 10 October; parked the same day after a prior-work
+check.
 
-- **Question.** The two records measure different things.
-  - The modern insect crisis is measured in abundance and biomass (Hallmann et
-    al. 2017, 10.1371/journal.pone.0185809, meta; van Klink et al. 2020,
-    10.1126/science.aax9931, meta).
-  - The insect fossil record is read as family counts, which show turnover
-    rather than mass extinction (Schachat & Labandeira 2021,
-    10.1093/aesa/saaa042, abs). That abstract says abundance and biomass "are
-    essentially impossible to measure in the fossil record".
-  Can plant–insect damage records serve as a proxy for the intensity of insect
-  interactions? Do they show crises at events where family counts show none?
-- **Why big.** Whether the current insect decline is unprecedented depends on
-  comparing like with like. If damage records show past interaction crises, the
-  framing of the present as insects' first mass extinction needs revising. If
-  they do not, the framing is strengthened.
-- **Prior.**
-  - Labandeira, Johnson & Wilf 2002 (10.1073/pnas.042492999, abs): 13,441
-    fossil plant specimens from North Dakota. The most specialised plant–insect
-    associations almost disappeared at the K–Pg and failed to recover, while
-    generalised ones regained their Cretaceous abundance.
-  - Wilf et al. 2006 (10.1126/science.1129569, abs): food webs remained
-    unbalanced 1–2 Myr after the K–Pg.
-  - Donovan et al. 2016 (10.1038/s41559-016-0012, meta): recovery was faster in
-    Patagonia.
-  - Currano et al. 2008 (10.1073/pnas.0708646105, abs): the amount and diversity
-    of damage peaked during the PETM, tracking temperature.
-- **Data.** Published site-level damage-type censuses of fossil leaf
-  assemblages. A public compiled database has not yet been identified.
-- **Obstacle.**
-  - Damage frequency measures herbivory pressure. That also depends on
-    temperature, CO₂ and leaf traits (Currano 2008), not only on insect
-    abundance, so a model linking damage to herbivore abundance is needed.
-  - Terrestrial sites around events are few and patchy.
+- **Question (as posed).** Can plant–insect damage records serve as a proxy for
+  insect abundance or interaction intensity? Do they show crises at events
+  where insect family counts show only turnover (Schachat & Labandeira 2021,
+  10.1093/aesa/saaa042)?
+- **Why parked.**
+  1. **The proxy fails its modern check.** Azevedo-Schmidt, Meineke & Currano
+     2022 (10.1073/pnas.2202852119, abstract checked by Claude) find that total
+     damage frequency in modern forests "is greater than any fossil locality"
+     from 66.8 to 2.06 Ma. They describe "unprecedented levels of insect damage,
+     despite widespread insect declines". Damage frequency therefore does not
+     track insect abundance. Carvalho et al. 2014
+     (10.1371/journal.pone.0094950) calibrate damage against herbivore
+     richness, not abundance.
+  2. **The clearest case is already done.** At the K–Pg, specialised
+     associations almost disappeared while family counts show no loss
+     (Labandeira, Johnson & Wilf 2002, 10.1073/pnas.042492999). Currano et al.
+     2021 (10.1016/j.palaeo.2021.110636; 66 censuses) and Labandeira & Wappler
+     2023 (10.1146/annurev-ento-120120-102849) restate it.
+  3. **Other events cannot test it now.** The end-Permian has no usable floras
+     with damage data for about 5 Myr of the Early Triassic (Labandeira et al.
+     2016, 10.1371/journal.pone.0165205). The end-Triassic shows almost no
+     change in damage (Xu et al. 2024, 10.3389/fevo.2023.1338865).
+- **What remains, small.** Schachat et al. 2022
+  (10.1016/j.revpalbo.2021.104564) propose, but do not run, a test of whether
+  change after an event exceeds expected change without it. It could be run on
+  open census data: Currano 2021 on Zenodo (10.5281/zenodo.7242861), and Xiao
+  et al. 2025 (10.1073/pnas.2412036122) on Dryad.
+- **Revisit if** either of these appears:
+  - a modern calibration showing that damage frequency tracks herbivore
+    abundance at the same hosts and sites;
+  - Early Triassic floras with damage censuses.
+- **Evidence.** [Round-5 note](../literature/2026-10-10-register-checks-round5.md).
 
 ## New sketch (Codex, 10 October): arrival order and radiation
 
@@ -1357,3 +1417,86 @@ empirical discriminator's novelty and deep-time data support are unverified.
   cannot be supported, or the exact contrast is occupied; merge if it reduces
   to Q-009 or Q-028. No new fieldwork or large archive download is proposed.
 - **Evidence.** [Source comparison and design limits](../literature/2026-10-10-prediction-units-and-priority.md).
+
+## New sketches, round 5 (Claude, 10 October)
+
+Posed only. Anchor DOIs were verified in Crossref; access depth is given per
+source. No prior-work check has been run yet.
+
+### Q-034 What was the extinction rate of island endemics before people arrived?
+Status **sketch**, tier 2 (provisional; posed 10 October).
+
+- **Question.** Islands concentrate both modern and Holocene extinctions. What
+  was the natural extinction rate of island endemics before human arrival,
+  measured on each island's own fossil record and with the same detection
+  model used after arrival? How much of it was driven by sea-level and climate
+  change?
+- **Why it matters.** Statements such as "N times background" for island
+  extinctions usually borrow a generic background rate. One example: Cooke et
+  al. 2023 (10.1038/s41467-023-43445-2, abs) estimate that about 1,300–1,500
+  bird species have gone extinct since the Late Pleistocene. They report a peak
+  rate "80 (60–95) times the background extinction rate". An island-specific
+  pre-human baseline would test the size of such multipliers, and would show
+  how much of the island signal is human impact.
+- **Prior.**
+  - Steadman 1995 (10.1126/science.267.5201.1123, meta): prehistoric extinction
+    of Pacific island birds.
+  - Louys et al. 2021 (10.1073/pnas.2023005118, abs): island records "do not
+    support a significant and detrimental impact on island biotas following
+    island colonization prior to the Holocene", that is, by pre-sapiens
+    hominins. Some islands therefore have long pre-human or pre-sapiens records
+    usable as baselines.
+  - Matthews et al. 2024 (10.1126/science.adk7898): extinct birds' losses of
+    phylogenetic and functional diversity.
+  - Not yet checked for an existing island-specific baseline.
+- **Data.**
+  - Quaternary island fossil compilations from cave, sinkhole and dune
+    deposits.
+  - Human-arrival chronologies for each island.
+  - Sea-level and island-area histories.
+- **Design.**
+  1. Fit occurrence-based extinction models per island, before and after human
+     arrival, with a shared detection model.
+  2. Include island area loss from sea-level rise as a covariate, so climate
+     and human effects are separated.
+- **Obstacle.** Few islands have long, dated, pre-human sequences. Undescribed
+  extinctions (Cooke 2023) bias both periods, though not necessarily equally.
+- **Evidence.** [Round-5 note](../literature/2026-10-10-register-checks-round5.md).
+
+### Q-035 Do land ecosystems collapse before marine ones, and what sets the lag?
+Status **sketch**, tier 2 (provisional; posed 10 October).
+
+- **Question.** At volcanic-driven crises, does terrestrial disturbance
+  precede marine extinction? Is the lag a general consequence of the forcing
+  pathway: the atmosphere responds first, the ocean later through warming,
+  acidification and deoxygenation? Could it then discriminate between causes,
+  with no lag expected for an impact?
+- **Why it matters.** If land collapse leads ocean collapse by a predictable
+  time, set by ocean time constants and the rate of carbon release, the lag
+  helps identify the cause of each crisis. It is also a deep-time test of
+  whether terrestrial change is an early indicator for the slower marine
+  response to emissions.
+- **Prior (end-Permian, the best-dated case).**
+  - Fielding et al. 2019 (10.1038/s41467-018-07934-z, abs): in the Sydney
+    Basin, the Glossopteris flora collapsed before 252.3 Ma, about 370 kyr
+    before the main marine extinction.
+  - Chu et al. 2020 (10.1130/g46631.1, abs): tropical peatland disturbance in
+    South China "prior to the main marine mass extinction", correlated by
+    mercury spikes.
+  - Gastaldo et al. 2020 (10.1038/s41467-020-15243-7, abs): the Karoo
+    Lystrosaurus Assemblage Zone base predates the marine event by over 300 kyr,
+    "refuting" it as a marker of terrestrial extinction. Even the end-Permian
+    terrestrial record is disputed (lesson 4).
+  - End-Triassic: Lindström et al. 2017 (10.1016/j.palaeo.2016.12.025, meta)
+    on terrestrial–marine correlation.
+  - Not yet checked across events.
+- **Data.**
+  - U–Pb (CA-ID-TIMS) dated, paired terrestrial and marine sections for the
+    end-Permian, end-Triassic and other LIP-associated events.
+  - Mercury and carbon-isotope correlation tools.
+  - The K–Pg as an impact control.
+- **Obstacle.** Correlation by carbon-isotope or mercury stratigraphy can be
+  circular when the same signal both dates and defines the event. Terrestrial
+  records are discontinuous. Few events have dating precision finer than the
+  expected lag.
+- **Evidence.** [Round-5 note](../literature/2026-10-10-register-checks-round5.md).
