@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Q-022 under review/tier 2 after the precedent check and [pre-mortem](data/q022-premortem/README.md). Codex's response 76/1306 distinguishes random-pruning from event-background estimands and requests corrections to Claude-owned entry/README/lesson 5. Q-027/Q-028 prior checks remain Claude's. Q-016 range-predictor split accepted by Codex in 76/1300; Claude to narrow the entry, retaining an explicit risk-criterion analogy |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-3 checks](literature/2026-10-10-register-checks-round3.md) complete (10 October). Q-022 corrections accepted; a [matched-background follow-up](data/q022-premortem/README.md) finds a weak, consistently positive, underpowered event-specific excess; next gate is power calibration on mass-extinction trees. Q-016 narrowed to range predictors, partly occupied (Smits & Finnegan 2019), tier 3. Q-027 partly occupied (Benson 2025, Boag 2021), tier 1→2. Q-028: dominance given survival appears open, tier 2. New sketches Q-030–Q-032. Critiques of Q-026/Q-029 in the round-3 note |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [10 October round](literature/2026-10-10-clade-futures-and-geographic-cycles.md) complete: Q-026 now under review/tier 2 after close-prior and deposited-contract inspection; next gate is outcome-blind cohort support and remaining predictive priors. New Q-029 sketch asks about geographic-cycle ordering and durable diversity; next check is exact prior overlap and one replicated regional evidence lead. Q-008–Q-010/Q-020/Q-021 remain under review. Codex retains PBDB preparation. Q-013's species–genus crosswalk remains proposed, not an accepted execution assignment |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -74,8 +74,9 @@ Codex. Shared dependencies are coordinated through Correspondence.
   simulation has started. Work includes source/data-support inspections,
   analytical counterexamples, small synthetic/deterministic probes and Claude's
   bounded empirical Q-022 pre-mortem.
-- The register now has 29 entries. Q-029 adds geographic-cycle ordering and
-  durable diversity; Q-027/Q-028 remain Claude's new directions. Close
+- The register now has 32 entries. Q-029 adds geographic-cycle ordering and
+  durable diversity (Codex); Q-030–Q-032 add biosphere sensitivity through time,
+  body-size change per °C and insect ecological crises (Claude). Close
   precedents occupy the broad mechanisms. Discriminating predictions and joint
   data support need further evaluation.
 - Functional/taxonomic recovery decoupling and global bioregional turnover are
@@ -94,13 +95,15 @@ Codex. Shared dependencies are coordinated through Correspondence.
   a random null; it is not merely a stratigraphic-diversity analogue. A 2015
   Ordovician conference abstract also reports branch-sum loss. Q-022 may retain
   a comparative opportunity. Claude's adjudication withdrew its blanket novelty
-  claim, but stale paragraphs below it still need reconciliation by Claude.
+  claim; Claude reconciled the stale paragraphs and provenance on 10 October.
 - Codex's exact toy-tree check confirms that richness-matched PD nulls can have
   zero variance, including complete clade loss and one survivor on a rooted
   ultrametric tree. These cases have undefined standardised effect sizes. The
   empirical pre-mortem is complete. Its pooled background percentiles are
-  descriptive; differences in richness, loss fraction, age and tree geometry
-  need matching or a process model before treating them as an event test.
+  descriptive. Matched on lineage count and loss fraction, all eight testable
+  cases sit above the matched median (+0.1 to +1.7 SES), with three at the
+  matched 95th percentile; most shifts are below single-event detection power
+  (1.5–2.7 SES). Ages are not matched; cases are correlated.
 - Q-026 asks whether declining clades' recovery can be predicted without
   conditioning on their eventual fate. Quental & Marshall 2013 already analyse
   rate contributions to rebounds within decline. Song 2026's reporting summary,
@@ -113,12 +116,14 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, on discussion 76: adjudicate the Q-022
-comparator/text corrections, the revised Q-026 endpoints and prior boundary,
-and Q-029's distinction from existing models. Claude retains the Q-027/Q-028
-checks and Q-016 revision. Codex retains Q-026/Q-029 and shared PBDB preparation.
-These are bounded next checks, not a selected downstream project. Both agents
-keep narrowing and expanding without returning routine choices to Barry.
+**Next scientific responder: Codex**, on discussion 76: respond to Claude's
+Q-026 critique (birth–death first-passage baseline, competing-risk endpoints,
+paraphyly) and Q-029 critique (end-of-record bias, effective isolation relative
+to completion and fusion times, Pontocaspian lead). Comment on Q-027/Q-028
+dispositions and the new Q-030–Q-032 if useful. Claude next: prior-work checks
+on Q-030 and Q-031, and the Q-022 power calibration design. These are bounded
+next checks, not a selected downstream project. Both agents keep narrowing and
+expanding without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 

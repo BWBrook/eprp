@@ -61,10 +61,14 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
    shorter than about 50–100 kyr are mostly unresolvable before the Cenozoic.
 4. **Live disputes make good seeds**, when they turn on identification rather
    than on data volume.
-5. **Test event claims against background, not only against random.** In the
-   Q-022 pre-mortem, a random-pruning null showed "excess" phylogenetic-diversity
-   loss at ordinary times as well as at events. An event effect has to exceed
-   the same statistic computed at background slices of the same data and trees.
+5. **Separate "non-random" from "event-specific".** In the Q-022 pre-mortem,
+   phylogenetic-diversity loss exceeded size-matched random pruning at ordinary
+   times as well as at events.
+   - Random pruning tests loss beyond exchangeable tips.
+   - Whether an event differs from ordinary times needs background slices
+     matched on size and loss fraction, or a process model, plus a power check
+     (Codex, 10 October).
+   - Pooled background percentiles are descriptive only.
 
 ## Index
 
@@ -85,7 +89,7 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-013 | Would the current extinction register as a mass extinction in the rock record? | under review | 2 | Claude |
 | Q-014 | How long is the extinction debt after a deep-time perturbation? | sketch | 3 | Claude |
 | Q-015 | Could past lineages evolve thermal niches as fast as climate changed? | under review | 2 | Claude |
-| Q-016 | Do Red List-style risk criteria predict extinction over geological time? | sketch | 2 | Claude |
+| Q-016 | Do range-based risk criteria predict extinction over geological time? | under review | 3 | Claude |
 | Q-017 | Dark extinction across scales: one detection framework for unseen losses | sketch | 2 | Claude |
 | Q-018 | Do plants and terrestrial biotas have mass extinctions in the same sense? | sketch | 2 | Claude |
 | Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | sketch | 2 | Claude |
@@ -96,9 +100,12 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-024 | Do ecological early-warning signals work on real Quaternary transitions? | sketch | 2 | Claude |
 | Q-025 | How do local losses scale to global extinction, then and now? | sketch | 2 | Claude |
 | Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | under review | 2 | Codex |
-| Q-027 | Is the latitudinal diversity gradient a climate-state variable? | sketch | 1 | Claude |
-| Q-028 | Do the winners of past crises share traits with today's winners? | sketch | 2 | Claude |
+| Q-027 | Is the latitudinal diversity gradient a climate-state variable? | under review | 2 | Claude |
+| Q-028 | Do the winners of past crises share traits with today's winners? | under review | 2 | Claude |
 | Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | sketch | 2 | Codex |
+| Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | sketch | 2 | Claude |
+| Q-031 | Is shrinking under warming a predictable macroevolutionary response? | sketch | 2 | Claude |
+| Q-032 | Have insects had ecological crises that family counts miss? | sketch | 2 | Claude |
 
 ---
 
@@ -469,20 +476,82 @@ Status **under review**, tier 2 (9 October; Codex's objection accepted).
   (10.1130/abs/2021am-369023), whose title suggests a direct overlap.
 - **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
-### Q-016 Do Red List-style risk criteria predict extinction over geological time?
-Tier 2.
+### Q-016 Do range-based risk criteria predict extinction over geological time?
+Status **under review**, tier 3. Narrowed on 10 October to range predictors,
+by agreement with Codex (76/1300); Q-026 owns trajectory and rate-partition
+predictors. Prior-work check the same day: partly occupied.
 
-- **Question.** Apply range-size and range-trend criteria (like criterion B) to
-  fossil lineages with known fates. Do they rank extinction risk over 10⁴–10⁶ yr,
-  and where do they fail?
-- **Prior.**
-  - Harnik et al. 2012 (10.1098/rspb.2012.1902).
-  - Finnegan et al. 2015 (10.1126/science.aaa6635).
-  - Smits & Finnegan 2019 (10.1098/rstb.2019.0392).
-  - Keuth et al. 2025 (bioRxiv 10.1101/2025.08.20.671260): Red List
-    underestimates the climate risk of range-shifting species.
-- **Obstacle.** Ranges are estimated from detection, and range is entangled with
-  outcrop (Dean et al. 2025, 10.1016/j.cub.2025.03.025).
+- **Question.** Take predeclared landmark times and use only data older than
+  each landmark. Does range *trend* (contraction) add out-of-sample
+  discrimination and calibration over absolute range size, taxon age and
+  sampling effort, for extinction within 1, 2 and 5 Myr? Does fragmentation
+  add more?
+  - This is an analogy to IUCN criterion B (extent of occurrence, area of
+    occupancy, fragmentation, continuing decline). It does not test literal
+    IUCN thresholds: a decline in genus range is not a population reduction.
+  - Where does range-based prediction fail? Break the results down by clade,
+    interval, sampling completeness and proximity to mass extinctions.
+- **Prior (partly occupied).**
+  - **Smits & Finnegan 2019** (10.1098/rstb.2019.0392; abstract checked by
+    Claude, sections by scout):
+    - Data and model: Cenozoic plankton from Neptune, 1-Myr bins, Bayesian
+      discrete-time survival.
+    - Predictors include current range and range change. Range change is
+      bundled with other history terms and never isolated.
+    - Validation: expanding-window time-series cross-validation, with an
+      out-of-sample pairwise rank accuracy of 70–80%. No calibration is
+      reported.
+    - Abstract: models with historical covariates or with time-varying effects
+      "yield equivalent forecasts, but a model including both is overfit and
+      yields biased forecasts".
+  - **Straube et al. 2026** (10.1111/geb.70226, full by scout): Neogene–Holocene
+    PBDB marine genera. For a given absolute range, the effect of range loss on
+    extinction risk "largely disappears". Validation is leave-one-out only, with
+    no temporal holdout.
+  - **Casey, Saupe & Lieberman 2021** (10.1017/pab.2020.52, abs checked by
+    Claude): late Palaeozoic brachiopods declined in abundance before extinction
+    but showed no range contraction.
+  - **Smith, Kocsis & Kiessling 2025** (10.5194/bg-22-3503-2025, full by scout):
+    plankton occupancy and occupancy change, in-sample only. Predictive ability
+    rises as temporal resolution coarsens.
+  - **Earlier in-sample work:** Kiessling & Kocsis 2016 (10.1098/rsbl.2015.0813);
+    Harnik et al. 2012 (10.1098/rspb.2012.1902).
+  - **Peak range as a landmark** for extinction timing: Tietje & Kiessling 2013
+    (10.1111/jbi.12030).
+  - **Descriptive rise-and-fall occupancy:** Foote et al. 2007
+    (10.1126/science.1146303); Liow & Stenseth 2007 (10.1098/rspb.2007.1006).
+  - Finnegan et al. 2015 (10.1126/science.aaa6635) was not accessed beyond its
+    abstract.
+  - No fossil study was found that scores IUCN-style criteria against known
+    outcomes, or that tests fragmentation as a predictor.
+- **Residual.** Three things remain open:
+  - an isolated, calibrated, landmark-frozen test of range trend and
+    fragmentation;
+  - criterion-analogue hit and false-alarm rates;
+  - a map of where the criteria fail.
+  This is a methodological and conservation-validation project, not a new
+  mechanism. Hence tier 3.
+- **Data.**
+  - Neptune Sandbox Berlin (open; Renaudie et al. 2020) for foraminifera and
+    nannofossils.
+  - PBDB Neogene molluscs as a second system.
+  - NOW for mammals; access terms not checked.
+- **Design.**
+  1. Forward-chain landmarks, for example every 5 Myr from 60 Ma.
+  2. Fit nested models: effort and age; then add size; then trend; then
+     fragmentation.
+  3. Score Brier skill, calibration slope and intercept, and AUC.
+  4. Use the Q-026 competing-risk machinery where useful.
+- **Obstacle and kill criterion.**
+  - A last occurrence is not extinction. Range is entangled with outcrop and
+    detection: Dean et al. 2025 (10.1016/j.cub.2025.03.025) find that apparent
+    occupancy decline tracks detection.
+  - Macrofossil stages of about 5 Myr cannot resolve a 1–5 Myr horizon, so use
+    microfossils first.
+  - Kill the trend framing if trend adds no Brier or AUC gain over size, age
+  and effort under standardised sampling. That would still be a useful negative
+  result for criterion B.
+- **Evidence.** [Round-3 note](../literature/2026-10-10-register-checks-round3.md).
 
 ### Q-017 Dark extinction across scales
 Tier 2.
@@ -605,70 +674,104 @@ Posed only. The anchor references were verified via Crossref; no prior-work chec
 
 ### Q-022 How much evolutionary history does each extinction prune?
 Status **under review**, tier 2. Moved down from promising/tier 1 on 9 October,
-on Codex's precedent check and Claude's pre-mortem.
+on Codex's precedent check and Claude's pre-mortem. Revised 10 October after
+Codex's corrections (76/1306) and a matched-background follow-up.
 
-- **Adjudication (9 October).**
-  - *Precedents* (Codex 76/1264 and 1268):
-    - Huang et al. 2015 already measured branch-length PD loss for one fossil
-      event against random loss, over 1,000 trees.
-    - An AbSciCon 2015 abstract (Krug, Congreve & Patzkowsky) reports Late
-      Ordovician PD loss.
-    - Edie et al. 2025 (10.1126/sciadv.adv1171) quantify K–Pg phylogenetic
-      restructuring with mean pairwise distance (MPD).
-    - Flannery-Sutherland et al. 2026 (10.1093/evolut/qpag116) provide an
-      early-vertebrate supertree with extinction-clustering results.
-    The three gap statements therefore do not establish novelty. The residual
-    is a harmonised comparison of branch loss across events.
-  - *Pre-mortem* ([data/q022-premortem](../data/q022-premortem/README.md); exact
-    null, 100 trees per clade, three windows, four Cenozoic events):
-    - Event PD loss is mostly above random pruning (median SES +0.7 to +1.8).
-    - Background slices in the same trees are too, so random pruning is the
-      wrong null.
-    - Against background slices, only 1 of 12 clade × window cases stands out.
-    - Tree uncertainty and window choice move SES as much as the effect does.
-  - *Consequence.* Any test must use a background-slice null, and needs dated,
-    fossil-inclusive trees that span mass extinctions *with* survivors
-    (brachiopods, bivalves, ammonoids, early vertebrates). The open Cenozoic
-    trees cannot test the Big Five.
-
-- **Question.** Across past extinction events, how much phylogenetic diversity
-  (PD) was lost relative to size-matched random pruning? Is the excess or
-  deficit predictable from phylogenetic selectivity and event size?
-- **Why big.** Conservation prioritises evolutionary distinctiveness (EDGE) on
-  theory, Nee & May 1997 (10.1126/science.278.5338.692), that has never been
-  checked against geological extinctions. Modern results already diverge:
+- **Question.** In past extinction events, how much phylogenetic diversity
+  (PD, the summed branch length) was lost? Two comparisons answer different
+  questions, and both are needed:
+  - against size-matched random pruning: was the loss beyond what
+    exchangeable tips would give?
+  - against ordinary times of similar size in the same trees: was the loss
+    event-specific? An event-specific effect can be a deficit as well as an
+    excess.
+  Then: is the event-specific shift predictable from phylogenetic selectivity
+  and event size?
+- **Why it matters.** Conservation prioritises evolutionary distinctiveness
+  (EDGE), partly on the theory that random extinction prunes little PD (Nee &
+  May 1997, 10.1126/science.278.5338.692). Modern results diverge:
   - Late Quaternary mammals lost more PD than null (Davis, Faurby & Svenning
     2018, 10.1073/pnas.1804906115).
   - Extinct birds lost no more PD than null (Matthews et al. 2024,
     10.1126/science.adk7898).
-- **Stated gap.** Three authors independently say this has not been done:
-  - Erwin 2008 (10.1073/pnas.0801913105): "No studies have explicitly addressed
-    the impact of mass extinctions on phylogenetic diversity to my knowledge"
-    (quote checked by Claude, PMC).
-  - Huang, Goldberg & Roy 2015 (10.1073/pnas.1409886112): an analogue of PD and a
-    single scallop case.
-  - Jablonski & Edie 2025 (10.1017/pab.2024.13).
-- **Related.** Extinction clustering has been documented without PD: Roy, Hunt &
-  Jablonski 2009 (10.1126/science.1173073); Krug & Patzkowsky 2015. Simulation
-  shows clustering raises PD loss only modestly except under extreme conditions
-  (Parhar & Mooers 2011, 10.1371/journal.pone.0023528).
-- **Data and method.**
-  - Cantalapiedra et al. 2019 (10.1098/rspb.2018.2896): ten dated species-level
-    palaeo-trees on Dryad 10.5061/dryad.gd8038s (CC0, 4 MB; verified): foraminifera,
-    dinosaurs, pterosaurs, Avetheropoda, Neopterygii, ruminants, Equinae, canids,
-    mysticetes, penguins.
-  - PHYLACINE (10.1002/ecy.2443) for mammals.
-  - Cut each tree at an event and compare victims' unique branch length with
-    1,000 size-matched random draws, giving a standardised effect size. Relate
-    it to selectivity, such as Fritz–Purvis D or age selectivity. Use Huang's
-    stratigraphic diversity as a robustness check.
-- **Obstacle.** Only about 5–10 clade × event cases have adequate trees, so the
-  regression on event size and selectivity may lack power. Ghost lineages,
-  pseudoextinction and ancestor–descendant handling may drive the numbers.
-  Cheapest pre-mortem: does the PD-loss signal on the Dryad trees exceed the
-  variation between tree-construction choices?
-- **Evidence.** Scout check on 9 October; sources in the
-  [round-2 note](../literature/2026-10-09-register-checks-round2.md).
+  Deep time could show whether large events prune more history than their size
+  implies, and whether that differs from ordinary times.
+- **Prior work.** Novelty is withdrawn; the residual is a harmonised,
+  power-calibrated comparison of event-specific branch-sum PD loss across mass
+  extinctions.
+  - **Huang, Goldberg & Roy 2015** (10.1073/pnas.1409886112) already measured
+    branch-length PD loss for one fossil event against random loss: Californian
+    scallops in the Plio–Pleistocene, with 25 of 50 species lost over 1,000
+    time-calibrated trees. Loss was below the random expectation (Codex,
+    author's PDF).
+    - They also define stratigraphic diversity (SD), a separate quantity built
+      from stratigraphic ranges. Their simulations show SD and PD can move in
+      opposite directions.
+    - SD and mean pairwise distance (MPD) are therefore complementary
+      quantities, not robustness checks for PD.
+  - **Krug, Congreve & Patzkowsky 2015** (AbSciCon abstract 7737): Late
+    Ordovician PD loss on a preliminary strophomenid brachiopod tree.
+  - **Edie et al. 2025** (10.1126/sciadv.adv1171): K–Pg phylogenetic
+    restructuring, measured with MPD rather than branch-sum PD.
+  - **Flannery-Sutherland et al. 2026** (10.1093/evolut/qpag116): an
+    early-vertebrate supertree with extinction-clustering results.
+  - **Gap statements.** Erwin 2008 (10.1073/pnas.0801913105; quote checked by
+    Claude) and Jablonski & Edie 2025 (10.1017/pab.2024.13) describe the field
+    as thin. Given the precedents above, they do not establish novelty.
+  - **Clustering without PD:** Roy, Hunt & Jablonski 2009
+    (10.1126/science.1173073); Krug & Patzkowsky 2015
+    (10.1371/journal.pone.0144354).
+  - **Simulation:** clustering raises PD loss only modestly, except under
+    extreme conditions (Parhar & Mooers 2011, 10.1371/journal.pone.0023528).
+- **Pre-mortem** ([data/q022-premortem](../data/q022-premortem/README.md)).
+  - *Data.* Four Cenozoic events on the open dated trees of Cantalapiedra et al.
+    2019 (10.1098/rspb.2018.2896). The trees were retrieved from the Royal
+    Society's Figshare mirror (CC BY 4.0), because the Dryad deposit
+    (10.5061/dryad.gd8038s, CC0) refuses unauthenticated download.
+  - *Method.* Exact random-pruning null, 100 posterior trees per clade, three
+    windows.
+  - *Against random pruning.* Event loss mostly exceeds it (median SES +0.7 to
+    +1.8). So does loss at ordinary times: clustered loss is common in these
+    trees.
+  - *Against background matched on lineage count and loss fraction:*
+    - All eight testable clade × window cases sit above the matched median, by
+      +0.1 to +1.7 SES.
+    - Three reach the matched 95th percentile at the median tree.
+    - Most shifts are below the 1.5–2.7 SES needed for 80% power in a
+      single-event test.
+    - The first comparison, against pooled background, was too negative
+      (Codex 76/1306).
+  - *Noise.* Tree uncertainty and window choice move SES by as much as the
+    effects.
+  - *Scope.* The Big Five cannot be tested on these trees: in the dinosaur tree
+    every lineage is lost, and the other Mesozoic trees lack an absolute anchor.
+- **Data for a real study.**
+  - Fossil-inclusive dated trees that span mass extinctions *with* survivors:
+    brachiopods (Krug & Patzkowsky), bivalves (Edie et al. 2025), ammonoids,
+    and early vertebrates (Flannery-Sutherland et al. 2026).
+  - PHYLACINE (10.1002/ecy.2443) for the Late Quaternary comparison.
+- **Method.**
+  1. Cut each tree at the event and compute lost branch-sum PD.
+  2. Use the exact random null (closed-form mean and variance) for loss beyond
+     exchangeable tips.
+  3. Test event specificity against matched-background slices or a process
+     model.
+  4. Before testing any event, calibrate power by simulating clustered loss of
+     known strength on the same trees.
+  5. Relate the event-specific shift to selectivity (Fritz–Purvis D, age
+     selectivity) and event size. Report MPD and SD alongside PD, not as
+     substitutes for it.
+- **Obstacle and kill criterion.** Only about 5–10 clade × event cases are
+  available. Ghost lineages, pseudoextinction, sampled ancestors and tip-dating
+  artefacts can produce clustered loss at all times. Park if either holds:
+  - power calibration on the available mass-extinction trees cannot detect
+    shifts of the size seen here (about 1–2 SES);
+  - those trees lack survivors across the events.
+- **Evidence.**
+  - [Round-2 note](../literature/2026-10-09-register-checks-round2.md)
+  - Codex's [precedent note](../literature/2026-10-09-pd-loss-and-clade-recovery.md)
+  - Codex's [10 October review](../literature/2026-10-10-clade-futures-and-geographic-cycles.md)
+  - [Pre-mortem README](../data/q022-premortem/README.md)
 
 ### Q-023 Are biodiversity crises origination failures rather than extinction spikes?
 Status **under review**, tier 2 (prior-work check on 9 October).
@@ -790,51 +893,149 @@ Status **under review**, tier 2. Revised 10 October after Claude's critique
 ## New sketches, round 3 (Claude, 9 October)
 
 ### Q-027 Is the latitudinal diversity gradient a climate-state variable?
-Status **sketch**, tier 1 (provisional; posed 9 October, no prior-work check yet).
+Status **under review**, tier 2. Posed 9 October as a tier-1 sketch. Moved down
+on 10 October after a prior-work check: partly occupied.
 
-- **Question.** Does the strength, and even the sign, of the latitudinal
-  diversity gradient (LDG) change predictably with global climate state? In
-  particular, did hothouse intervals flatten the gradient or create a tropical
-  dip, and with what lag?
-- **Why big.** Under modern warming, tropical marine richness is already
-  dipping (Chaudhary et al. 2021, 10.1073/pnas.2015094118). Plankton suggest
-  past warm intervals did the same (Yasuhara et al. 2020,
-  10.1073/pnas.1916923117). If the LDG is a state variable, deep time gives the
-  transfer function for where diversity goes as the planet warms.
-- **Prior.** Mannion et al. 2014 (10.1016/j.tree.2013.09.012) review a "flatter
-  in greenhouse" pattern. Benson et al. 2025 (10.1111/pala.70006) find strong
-  geographic sampling bias in deep-time gradients.
-- **Data and methods.**
-  - Spatially standardised occurrences (PBDB; Triton for the Cenozoic).
-  - Stage-level climate states with uncertainty (PhanDA, and its latitudinal
-    temperature gradients).
-  - A model of gradient strength as a function of global mean and
-    equator-to-pole temperature, run through an observation model of
-    latitudinal coverage.
-- **Obstacle.** Palaeolatitudinal sampling coverage is poor and shifts through
-  time, which may dominate any signal (Benson 2025). The stage-state coupling
-  problems from the PhanDA sensitivity analysis also apply.
+- **Question.** Does the shape of the latitudinal diversity gradient (LDG)
+  follow continuous global climate state, and with what lag, once regional
+  sampling bias is controlled? The sharpest form is a live identification
+  dispute: is the warm-interval mid-latitude peak (a tropical dip) real?
+  - Boag et al. 2021 explain it with a metabolic hump.
+  - Benson et al. 2025 attribute it to intense sampling in Europe and North
+    America.
+- **Why it matters.** Modern tropical marine richness is dipping under warming
+  (Chaudhary et al. 2021, 10.1073/pnas.2015094118). Planktonic foraminifera
+  show that the modern tropical dip began with post-glacial warming about
+  15,000 years ago (Yasuhara et al. 2020, 10.1073/pnas.1916923117; abstract
+  checked by Claude).
+  - *Correction (10 October):* the sketch said Yasuhara et al. showed the same
+    in past warm intervals. They did not; their record runs from the last
+    glacial maximum to the present.
+  - Deep time is the only place to see whether hothouses hollow out the
+    tropics.
+- **Prior (partly occupied).**
+  - **Benson et al. 2025** (10.1111/pala.70006; abstract checked by Claude,
+    sections by scout): a direct Phanerozoic test.
+    - Design: PBDB marine genera, spatial and coverage standardisation, local
+      model SST, hothouse versus icehouse classes.
+    - The LDG "was shallower on average when Earth's climate was hotter,
+      although this signal is weak".
+    - Only 36 of 99 stages were usable.
+    - Strong Europe/North America sampling bias "may have led previous studies
+      to incorrectly infer a mid-latitude diversity peak during warm
+      intervals".
+    - No lag was tested.
+  - **Boag, Gearty & Stockey 2021** (10.1016/j.cub.2021.04.021; abstract checked
+    by Claude, full text by scout): molluscs over 145 Myr. Diversity is a
+    non-monotonic function of temperature, matching a model that combines
+    metabolic kinetics with the Metabolic Index. Spatial sampling bias was not
+    modelled.
+  - **Marcot et al. 2016** (10.1073/pnas.1524750113): for Cenozoic North
+    American mammals, LDG strength varies with global temperature and is
+    weakest in warm periods.
+  - **Fenton et al. 2023** (10.1038/s41586-023-05712-6) and **Fenton et al.
+    2016** (10.1098/rstb.2015.0224): planktonic foraminifera, 40–0 Ma.
+    - The modern-style gradient emerged 15–10 Ma, about 20 Myr after cooling
+      began.
+    - The model of the modern diversity–environment relationship transfers to
+      the mid and late Eocene but not to the early Eocene.
+  - **Model-only:** Balembois et al. 2025 (10.1038/s41467-025-63428-9) and
+    Ontiveros et al. 2023 (10.1038/s41467-023-41685-w).
+  - **Power warning:** Jones et al. 2021 (10.1098/rspb.2020.2762) show that
+    sampling windows obscure gradient type, worst at 200–20 Ma.
+  - **Opposite-sign case:** Powell 2007 (10.1111/j.1466-8238.2007.00300.x)
+    reports a gentler gradient at the onset of glaciation.
+- **Residual.**
+  1. Replace binary regimes with continuous local SST and PhanDA global mean
+     temperature, with region random effects and lagged terms.
+  2. Test whether Boag's hump survives Benson-grade regional control.
+  3. Use Triton foraminifera, from ocean drilling, as an independent Cenozoic
+     replicate whose coverage is less biased towards Europe.
+- **Data.**
+  - Benson et al.'s Dryad data (10.5061/dryad.6djh9w1bx) and Zenodo code
+    (10.5281/zenodo.15269136), both DataCite-verified by the scout.
+  - PBDB, and Triton (10.1038/s41597-021-00942-7).
+  - Climate: PhanDA (10.1126/science.adk3705) and Valdes et al. 2021 HadCM3
+    stage simulations (10.5194/cp-17-1483-2021).
+- **Kill criterion.** Before any empirical fit, run a power simulation on the
+  real sampling windows (in the style of Jones et al. 2021). Park if the
+  climate–slope coefficient cannot be recovered.
+  - Confound: continental configuration and shelf area are collinear with
+    climate state.
+  - Fallback: well-sampled windows (Cenozoic foraminifera, Permian–Triassic,
+    Late Triassic).
+- **Evidence.** [Round-3 note](../literature/2026-10-10-register-checks-round3.md).
 
 ### Q-028 Do the winners of past crises share traits with today's winners?
-Status **sketch**, tier 2 (provisional; posed 9 October).
+Status **under review**, tier 2. Posed 9 October; prior-work check on 10
+October.
 
-- **Question.** Post-extinction "winners" are the clades that survived and then
-  radiated, or became widespread disaster taxa. Do they share a trait profile
-  (generalism, broad range, high dispersal, fast life history) with the modern
-  winners of homogenisation, meaning human commensals and successful invaders?
-  Does that profile predict who dominates after the crisis?
-- **Why big.** McKinney & Lockwood 1999 (10.1016/s0169-5347(99)01679-1) framed
-  the current crisis as "a few winners replacing many losers". Deep time shows
-  whether the winners' composition is predictable, and what it implies for
-  future diversity and function.
-- **Prior.** Jablonski 2001 (10.1073/pnas.101092598) on the evolutionary
-  impacts of mass extinctions, with a broad literature on survivors and
-  disaster taxa. Not yet checked.
-- **Data.** PBDB traits and ranges; post-event radiation from origination rates
-  (links Q-023); modern invader and commensal trait compilations.
-- **Obstacle.** "Winner" must be defined before outcomes are seen; the landmark
-  design from Q-026 applies. Trait codings at higher-taxon level confound
-  phylogeny.
+- **Question.** Three questions, which the literature tends to blur.
+  - (i) Which traits predict *survival*? This is occupied.
+  - (ii) Among survivors, do traits coded only from the stage before a crisis
+    predict post-crisis *dominance*? Dominance means sampling-standardised
+    occupancy or abundance in the first post-event bins. Radiation (descendant
+    richness) is a separate outcome.
+  - (iii) Does a model trained on past events discriminate modern winners
+    (species increasing in assemblage time series, successful invaders) beyond
+    a range-only baseline?
+  Questions (ii) and (iii) are the residual.
+- **Why it matters.** McKinney & Lockwood 1999 (10.1016/s0169-5347(99)01679-1)
+  framed the current crisis as a few winners replacing many losers. If
+  post-crisis dominance is predictable from pre-crisis traits, deep time shows
+  what the winners of the present crisis will be like and how long they will
+  dominate.
+- **Prior.**
+  - **Dominance described, not predicted.** Aftermath faunas are "dominated by
+    widespread, eurytopic species" (Erwin 1998, 10.1016/s0169-5347(98)01436-0,
+    abs). Further descriptions:
+    - disaster taxa (Rodland & Bottjer 2001,
+      10.1669/0883-1351(2001)016<0095:brftep>2.0.co;2);
+    - Early Triassic dominance (Petsios & Bottjer 2016, 10.1017/pab.2015.47);
+    - survival without recovery (Jablonski 2002, 10.1073/pnas.102163299).
+  - **Named as open.** Jablonski & Edie 2025 (10.1017/pab.2024.13, full by
+    scout) list it among open questions: "Why do some clades rebound from
+    taxonomic and morphologic bottlenecks, while others remain in the collapsed
+    state?"
+  - **Transfer is poor.** Foster et al. 2023 (10.1098/rsos.221507; abstract
+    checked by Claude) trained trait models on one of the end-Permian,
+    end-Triassic and end-Cretaceous events and tested on the others. They found
+    selectivity "inconsistent", with poor prediction, and attribute this to the
+    Mesozoic Marine Revolution. That is survival, not dominance, and a critique
+    exists (Reddin et al. 2023, 10.1098/rsos.230400; title only).
+  - **Modern selectivity differs.** Modern ocean threat tracks large body size
+    (Payne et al. 2016, 10.1126/science.aaf2416).
+  - **No pervasive modern winner profile:** Terry 2021
+    (10.1038/s41559-021-01624-8); Santini 2019 (10.1111/ele.13199).
+  - **Range is the only trait tested:** Newbold et al. 2018
+    (10.1371/journal.pbio.2006841) find that land use favours widespread
+    species.
+  - **Outcome is contingent:** Edie, Collins & Jablonski 2025
+    (10.1126/sciadv.adv1171) call the K–Pg outcome "contingent".
+- **Design.**
+  1. Fit a pre-registered two-stage hurdle model: survival, then dominance
+     given survival.
+  2. Train on one event and hold out the others.
+  3. Compare against a range-only baseline.
+  4. Code living genera the same way. Define winners in advance from BioTIME
+     and invasion status, with covariates for human transport.
+  Use the landmark logic from Q-026, so that "winner" is never defined from the
+  outcome.
+- **Data.**
+  - PBDB.
+  - Modern: BioTIME (10.1111/geb.12729), GRIIS (10.1038/sdata.2017.202),
+    Seebens first records (10.1038/ncomms14435).
+  - Physiology: metabolic-index models (10.1126/science.aat1327).
+- **Kill criterion.** Park if, on held-out events, dominance given survival is
+  predicted no better than by range alone. Park also if past-event models fail
+  to discriminate modern winners once human transport is included.
+  - Related obstacle: dominance and radiation can decouple, because traits that
+    make clades widespread can lower diversification (Faurby & Antonelli 2018,
+    10.1111/jbi.13411).
+- **Not accessed.** The full text of McKinney & Lockwood 1999 (403). If it
+  already asserts a post-extinction winner profile, the profile is an old
+  conceptual claim, and only the test is open.
+- **Evidence.** [Round-3 note](../literature/2026-10-10-register-checks-round3.md).
 
 ## New sketch (Codex, 10 October): geographic cycles and durable diversity
 
@@ -881,3 +1082,152 @@ joint data support unverified.
   against the cited models and identify one replicated regional evidence lead;
   Claude invited to challenge the distinction. See the
   [source comparison and proposed discriminator](../literature/2026-10-10-clade-futures-and-geographic-cycles.md).
+
+## New sketches, round 4 (Claude, 10 October)
+
+Posed only. Anchor DOIs were verified in Crossref; access depth is given per
+source. No prior-work check has been run yet.
+
+### Q-030 Is the biosphere becoming less sensitive to environmental perturbation?
+Status **sketch**, tier 2 (provisional; posed 10 October).
+
+- **Question.** For a perturbation of a given size (a carbon-cycle excursion,
+  or a temperature change), did extinction intensity decline through the
+  Phanerozoic? If so, where does the decline lie?
+  - In the forcing: a better-buffered Earth system, for example after pelagic
+    calcifiers moved carbonate burial into the deep sea.
+  - In the response: biotas sorted towards low-turnover, robust clades.
+  Within the response, how much is change inside clades, and how much is a
+  change in which clades make up the biota?
+- **Why big.** Deep-time dose–response estimates, such as temperature
+  thresholds for mass extinction, are Phanerozoic averages. Two things could
+  bias them for the present:
+  - today's sorted biota could be less sensitive than Palaeozoic biotas;
+  - the modern carbon cycle could be better buffered.
+  The direction of that bias matters for every transfer question in this
+  register (Q-001, Q-003, Q-013).
+- **Prior.**
+  - **Background-rate decline.** Background extinction intensity declined
+    through the Phanerozoic (Raup & Sepkoski 1982,
+    10.1126/science.215.4539.1501, meta).
+    - Gilinsky 1994 (10.1017/s0094837300012926, abs) attributes this to sorting
+      of higher taxa: high-turnover orders went extinct without replacement.
+    - Boyajian 1986 (10.1130/0091-7613(1986)14<955:ptibec>2.0.co;2, meta)
+      proposed an ageing fauna.
+    - These concern background rates, not sensitivity to a perturbation.
+  - **Buffering.** Ridgwell 2005 (10.1016/j.margeo.2004.10.036, meta) proposes a
+    Mid-Mesozoic Revolution in how ocean carbonate chemistry is regulated.
+  - **Carbon-cycle thresholds.**
+    - Rothman 2017 (10.1126/sciadv.1700906, abs) finds carbon-cycle thresholds
+      beyond which mass extinction occurs.
+    - Rothman 2019 (10.1073/pnas.1905164116, abs) argues that the size of many
+      disruptions is set by the carbon cycle's own dynamics, not by the size of
+      the external carbon input. Excursion size is therefore not a direct
+      measure of forcing.
+  - **Changing selectivity.** Foster et al. 2023 (10.1098/rsos.221507, abs)
+    find that trait selectivity does not transfer between the end-Permian,
+    end-Triassic and end-Cretaceous events. They attribute this to the Mesozoic
+    Marine Revolution, which suggests the biotic response has changed.
+- **Design.**
+  1. Treat all stage transitions as a continuum (lesson 2).
+  2. Model extinction intensity as a function of perturbation measures:
+     PhanDA temperature change, and carbon-isotope excursion size and rate.
+  3. Let the sensitivity coefficient vary through time, and test for a trend or
+     a Mid-Mesozoic breakpoint.
+  4. Split any decline in aggregate sensitivity with a Price-equation partition
+     into change within clades and change in clade composition. Rego et al.
+     2012 used this kind of partition for body size; see Q-031.
+- **Obstacle and kill criterion.**
+  - Large perturbations are few (lesson 1).
+  - Perturbation size is uncertain and partly endogenous (Rothman 2019).
+  - The stage–state coupling problem from the PhanDA sensitivity analysis
+    applies.
+  - Declining extinction rates are partly sampling and taxonomic artefacts.
+  Park if sensitivity cannot be estimated with useful precision even in
+  era-scale bins.
+
+### Q-031 Is shrinking under warming a predictable macroevolutionary response?
+Status **sketch**, tier 2 (provisional; posed 10 October).
+
+- **Question.** Across warming events of different sizes:
+  - How much does body size change per °C?
+  - Is the change within lineages (plastic or adaptive), or produced by
+    selective extinction and origination?
+  - Does it match the experimental temperature–size rule, and does it reverse
+    when climate cools?
+- **Why big.**
+  - Shrinking has been proposed as a third universal response to warming
+    (Gardner et al. 2011, 10.1016/j.tree.2011.03.005, meta; Daufresne et al.
+    2009, 10.1073/pnas.0902080106, meta).
+  - Experiments give the temperature–size rule. For animals of about 100 mg dry
+    mass, mass falls about 5% per °C in aquatic species and 0.5% per °C in
+    terrestrial ones (Forster et al. 2012, 10.1073/pnas.1210460109, abs).
+  - Deep time can test whether long-term responses match that rate, exceed it
+    (selection, oxygen limitation) or fall below it (compensating evolution).
+    That bears on whether modern shrinking is reversible.
+- **Discriminator.**
+  - Within-lineage change per °C close to the experimental rule points to
+    plastic physiology.
+  - A much larger change, or one dominated by the among-lineage component,
+    points to selection and sorting.
+- **Prior.**
+  - Rego et al. 2012 (10.1666/11040.1, abs): in Permian–Triassic foraminifera,
+    size reduction after the extinction came more from reduction within
+    surviving lineages than from selective extinction of larger taxa. The
+    paper decomposes size change into within- and among-genus components.
+  - Schaal et al. 2015 (10.1017/pab.2015.36, abs): Permian–Triassic size trends
+    in eight marine clades. The boundary shows more size reduction than any
+    other interval.
+  - Secord et al. 2012 (10.1126/science.1213859, meta): early horses dwarfed
+    during the PETM.
+  - Schmidt et al. 2004 (10.1126/science.1090592, abs): Cenozoic planktic
+    foraminiferal test size tracks surface-water stratification, not
+    temperature alone.
+  - Not yet checked for an existing synthesis across events.
+- **Data.**
+  - Specimen- or species-level size compilations: the Permian–Triassic
+    databases above, and marine-animal compilations such as Heim et al. 2015
+    (10.1126/science.1260065, meta).
+  - Hyperthermal series of mammals, foraminifera and ostracods.
+  - Temperature change from PhanSST, PhanDA or local proxies.
+- **Obstacle.**
+  - Most compilations record the maximum size per species from monographs, not
+    population means. Within-lineage change needs specimen-level series.
+  - Temperature covaries with oxygen, productivity and stratification (Schmidt
+    2004), so "per °C" may really be per unit of a combined forcing.
+
+### Q-032 Have insects had ecological crises that family counts miss?
+Status **sketch**, tier 2 (provisional; posed 10 October).
+
+- **Question.** The two records measure different things.
+  - The modern insect crisis is measured in abundance and biomass (Hallmann et
+    al. 2017, 10.1371/journal.pone.0185809, meta; van Klink et al. 2020,
+    10.1126/science.aax9931, meta).
+  - The insect fossil record is read as family counts, which show turnover
+    rather than mass extinction (Schachat & Labandeira 2021,
+    10.1093/aesa/saaa042, abs). That abstract says abundance and biomass "are
+    essentially impossible to measure in the fossil record".
+  Can plant–insect damage records serve as a proxy for the intensity of insect
+  interactions? Do they show crises at events where family counts show none?
+- **Why big.** Whether the current insect decline is unprecedented depends on
+  comparing like with like. If damage records show past interaction crises, the
+  framing of the present as insects' first mass extinction needs revising. If
+  they do not, the framing is strengthened.
+- **Prior.**
+  - Labandeira, Johnson & Wilf 2002 (10.1073/pnas.042492999, abs): 13,441
+    fossil plant specimens from North Dakota. The most specialised plant–insect
+    associations almost disappeared at the K–Pg and failed to recover, while
+    generalised ones regained their Cretaceous abundance.
+  - Wilf et al. 2006 (10.1126/science.1129569, abs): food webs remained
+    unbalanced 1–2 Myr after the K–Pg.
+  - Donovan et al. 2016 (10.1038/s41559-016-0012, meta): recovery was faster in
+    Patagonia.
+  - Currano et al. 2008 (10.1073/pnas.0708646105, abs): the amount and diversity
+    of damage peaked during the PETM, tracking temperature.
+- **Data.** Published site-level damage-type censuses of fossil leaf
+  assemblages. A public compiled database has not yet been identified.
+- **Obstacle.**
+  - Damage frequency measures herbivory pressure. That also depends on
+    temperature, CO₂ and leaf traits (Currano 2008), not only on insect
+    abundance, so a model linking damage to herbivore abundance is needed.
+  - Terrestrial sites around events are few and patchy.
