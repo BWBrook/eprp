@@ -95,9 +95,10 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-023 | Are biodiversity crises origination failures rather than extinction spikes? | under review | 2 | Claude |
 | Q-024 | Do ecological early-warning signals work on real Quaternary transitions? | sketch | 2 | Claude |
 | Q-025 | How do local losses scale to global extinction, then and now? | sketch | 2 | Claude |
-| Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | sketch | 2 | Codex |
+| Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | under review | 2 | Codex |
 | Q-027 | Is the latitudinal diversity gradient a climate-state variable? | sketch | 1 | Claude |
 | Q-028 | Do the winners of past crises share traits with today's winners? | sketch | 2 | Claude |
+| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | sketch | 2 | Codex |
 
 ---
 
@@ -734,12 +735,14 @@ Tier 2 (provisional).
 ## New sketch (Codex, 9 October): clade recovery versus terminal decline
 
 ### Q-026 Can we distinguish reversible clade decline from terminal decline before knowing the outcome?
-Status **sketch**, tier 2. Novelty and prospective data support unverified.
+Status **under review**, tier 2. Revised 10 October after Claude's critique
+(76/1272); predictive novelty and prospective data support remain unverified.
 
-- **Question.** Among clades already declining at a specified time, does low
-  proportional diversity predict failure to recover beyond absolute richness,
-  environmental exposure and sampling? Can we distinguish a reversible
-  bottleneck from persistent loss of evolutionary opportunity?
+- **Question.** Among clades already declining at a specified time, can their
+  preceding richness trajectory and origination/extinction partition predict
+  rebound, continued low diversity or extinction? Does proportional diversity
+  add predictive value beyond absolute richness, net decline, environmental
+  information and sampling?
 - **Why big.** Survival through a crisis does not guarantee a future radiation.
   Knowing which declines can reverse would connect immediate losses to the
   longer-term replacement of major branches of life. This concerns clade fate;
@@ -750,27 +753,39 @@ Status **sketch**, tier 2. Novelty and prospective data support unverified.
   ([10.1073/pnas.2019208118](https://doi.org/10.1073/pnas.2019208118), abs/design)
   documents widespread, persistent decline among marine orders. Song et al.
   2026 ([10.1038/s41559-026-03134-x](https://doi.org/10.1038/s41559-026-03134-x),
-  abs/data statement) proposes declining proportional diversity followed by
-  environmentally triggered extinction in 12 extinct marine clades. The broad
-  mechanism is occupied; the residual prospective test needs a full prior check.
+  abs, reporting summary, supplementary tables, author responses and selected
+  code; final main Methods gated) proposes declining proportional diversity
+  followed by environmentally triggered extinction in 12 extinct marine clades.
+  Quental & Marshall 2013
+  ([10.1126/science.1239431](https://doi.org/10.1126/science.1239431), full main
+  article) already partition contributions to temporary increases within clade
+  decline. Neither inspected analysis establishes the proposed held-out
+  prediction. The broad mechanism is occupied; predictive novelty is unverified.
 - **Data and discriminator.** Song's public
   [data/code repository](https://github.com/haijunsong/Clade-extinction)
-  contains SQS/PyRate materials (README/listing inspected; no workflow run).
-  Establish all eligible declining clades at each initial time, including later
-  recoveries, persistent small clades and censored histories. Test held-out
-  recovery/failure over comparable horizons, against neutral diversification
-  and common forcing passed through the observation process. Separate changes
-  in focal richness from growth of the comparison group; genus-richness share
-  is not itself ecological dominance.
-- **Obstacle / next step.** Selecting histories by their eventual extinction
-  or final downturn can leak the outcome into the predictor. A lower share can
-  also arise with no loss of focal genera. First inspect the main Methods/SI,
-  cohort rules and denominator definitions; these were not accessible in this
-  round, so these are design concerns, not demonstrated faults in Song's study.
-  Park if the prospective comparison is already occupied or adequately observed
-  recoveries and non-recoveries cannot both be assembled. No universal 0.13
-  threshold or irreversible fate is assumed.
-- **Evidence.** [Clade-recovery sketch and Q-022 review](../literature/2026-10-09-pd-loss-and-clade-recovery.md).
+  contains SQS/PyRate materials (selected files inspected at `80f6258`; no
+  workflow run). Its surviving comparator groups are denominator pools, not
+  an assembled cohort of declining clades that later recover. Establish all
+  eligible declining clades at predeclared landmark times, including later
+  recoveries, persistent small
+  clades and censored histories. Fit predictor histories only to data ending
+  at each landmark; whole-history smoothing can leak the outcome. Hold out
+  clades/events rather than randomly splitting correlated time slices. Separate
+  a first rebound from sustained recovery and from extinction before rebound,
+  over common horizons. A small birth–death counterexample shows that at the
+  same net decline, higher turnover can raise both rebound and extinction
+  probabilities; rate partition does not imply a universal risk ordering.
+- **Obstacle / next step.** Full-history decline descriptions are not evidence
+  of prospective prediction. A lower share can arise without loss of focal
+  genera, and richness share is not ecological dominance. The next data gate
+  is support for both later recoveries and non-recoveries using the same
+  eligibility, sampling and follow-up rules, with prefix-based rate estimates.
+  Park if that predictive comparison is already occupied or cannot be assembled.
+  No universal 0.13 threshold or irreversible fate is assumed. Codex owns this
+  trajectory question; Claude owns Q-016's range-based predictors, with an
+  explicit analogy rather than literal transfer of IUCN criteria.
+- **Evidence.** [Original sketch](../literature/2026-10-09-pd-loss-and-clade-recovery.md);
+  [landmark design, source check and counterexample](../literature/2026-10-10-clade-futures-and-geographic-cycles.md).
 
 ## New sketches, round 3 (Claude, 9 October)
 
@@ -820,3 +835,49 @@ Status **sketch**, tier 2 (provisional; posed 9 October).
 - **Obstacle.** "Winner" must be defined before outcomes are seen; the landmark
   design from Q-026 applies. Trait codings at higher-taxon level confound
   phylogeny.
+
+## New sketch (Codex, 10 October): geographic cycles and durable diversity
+
+### Q-029 Does the sequence of geographic isolation and reconnection determine how much diversity lasts?
+Status **sketch**, tier 2. Broad mechanism occupied; residual novelty and
+joint data support unverified.
+
+- **Question.** For comparable habitat area and average isolation, does the
+  ordering or clustering of geographic fragmentation and reconnection predict
+  lasting lineage accumulation? When do speciation pulses leave diversity that
+  survives reconnection, rather than transient richness?
+- **Why big.** This concerns how changing planetary geography creates and
+  retains diversity. It distinguishes production of taxa from durable diversity,
+  and could explain why comparable geographic states have different histories.
+  Q-008 concerns recovery after biotic loss; Q-020 concerns extinction insurance.
+- **Nearest prior.** Zaffos et al. 2017
+  ([10.1073/pnas.1702297114](https://doi.org/10.1073/pnas.1702297114), abs/opening
+  Results) already associate continental fragmentation and marine richness.
+  Aguilée et al. 2018
+  ([10.1038/s41467-018-05419-7](https://doi.org/10.1038/s41467-018-05419-7),
+  relevant Results/Methods) separate switching pace from isolation fraction;
+  pace changes turnover without necessarily changing stationary richness.
+  Princepe et al. 2024
+  ([10.1093/evolut/qpad210](https://doi.org/10.1093/evolut/qpad210), abs) model
+  ephemeral speciation pulses. Freitas et al. 2024
+  ([10.1093/jeb/voae035](https://doi.org/10.1093/jeb/voae035), Methods/opening
+  Results) already track phylogenetic consequences. A generic timing or
+  fragmentation hypothesis is therefore insufficient.
+- **Data and discriminator.** PBDB and independently dated regional geography
+  are candidate inputs; an adequate paired record is not yet established.
+  Compare models in which geographic timing affects only turnover with models
+  predicting persistence of newly generated lineages. A theory contrast can
+  hold area, mean isolation, switching counts and duration distributions fixed
+  while changing their ordering. Empirical comparisons need repeated regional
+  contrasts, observation-process controls, and validation outside the fitted
+  region/interval. Local first appearances must not be assumed to be origination.
+- **Strongest rival / kill criterion.** Reconnection changes immigration,
+  ecological sorting and preserved rock, producing apparent diversity change
+  without lasting lineage production. Park if the exact test is already done,
+  dates cannot resolve the cycles, geography cannot be separated from sampling,
+  or only a single global trend is available. Another two-patch simulation
+  without a consequential new prediction does not earn a downstream project.
+- **Next / evidence.** Codex to check the exact ordering/persistence contrast
+  against the cited models and identify one replicated regional evidence lead;
+  Claude invited to challenge the distinction. See the
+  [source comparison and proposed discriminator](../literature/2026-10-10-clade-futures-and-geographic-cycles.md).

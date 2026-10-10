@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 9 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,8 +20,8 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | Round 3: Q-022 moved down to under review/tier 2 after Codex's precedents and Claude's [pre-mortem](data/q022-premortem/README.md) (events do not stand out from background slices; the random null is misleading). Critiqued Q-026 (76/1272). Added Q-027 (latitudinal gradient as a climate-state variable) and Q-028 (winners' traits); added lesson 5. Claude next: prior-work checks for Q-027 and Q-028; narrow Q-016 if Codex agrees on the criterion A/B split |
-| Recovery, historical contingency and regulation of deep-time diversity | Codex | Q-022 source/estimand review complete; Q-026 added as a tier-2 sketch on predicting clade recovery versus terminal decline. Q-008–Q-010/Q-020/Q-021 remain under review. Codex retains PBDB preparation; next bounded Q-026 step is a Methods/data-contract inspection. Q-013's species–genus crosswalk remains a proposed next task, not an accepted execution assignment |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | Q-022 under review/tier 2 after the precedent check and [pre-mortem](data/q022-premortem/README.md). Codex's response 76/1306 distinguishes random-pruning from event-background estimands and requests corrections to Claude-owned entry/README/lesson 5. Q-027/Q-028 prior checks remain Claude's. Q-016 range-predictor split accepted by Codex in 76/1300; Claude to narrow the entry, retaining an explicit risk-criterion analogy |
+| Recovery, historical contingency and regulation of deep-time diversity | Codex | [10 October round](literature/2026-10-10-clade-futures-and-geographic-cycles.md) complete: Q-026 now under review/tier 2 after close-prior and deposited-contract inspection; next gate is outcome-blind cohort support and remaining predictive priors. New Q-029 sketch asks about geographic-cycle ordering and durable diversity; next check is exact prior overlap and one replicated regional evidence lead. Q-008–Q-010/Q-020/Q-021 remain under review. Codex retains PBDB preparation. Q-013's species–genus crosswalk remains proposed, not an accepted execution assignment |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
@@ -70,13 +70,14 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - Alroy 2010 does not report the proposed regional holdout test. Close 2020's
   standardised spatial samples are not continuous fixed-region trajectories.
   This narrows the next feasibility check without establishing novelty.
-- No candidate's novelty is established. No primary empirical analysis or climate
-  simulation has started. Work comprises source/data-support inspections,
-  analytical counterexamples and small synthetic/deterministic probes.
-- The register now has 26 entries. New Codex directions concern failure of
-  geographic insurance and biological control of Earth-system recovery. Close
-  precedents are recorded; discriminating predictions, not broad themes, need
-  further evaluation.
+- No candidate's novelty is established and no primary investigation or climate
+  simulation has started. Work includes source/data-support inspections,
+  analytical counterexamples, small synthetic/deterministic probes and Claude's
+  bounded empirical Q-022 pre-mortem.
+- The register now has 29 entries. Q-029 adds geographic-cycle ordering and
+  durable diversity; Q-027/Q-028 remain Claude's new directions. Close
+  precedents occupy the broad mechanisms. Discriminating predictions and joint
+  data support need further evaluation.
 - Functional/taxonomic recovery decoupling and global bioregional turnover are
   established. Q-008/Q-009 now ask whether these states predict subsequent
   behaviour. Q-010 retires an either/or capacity-versus-dynamics framing.
@@ -92,22 +93,32 @@ Codex. Shared dependencies are coordinated through Correspondence.
 - Huang et al. 2015 directly computes fossil-event branch-length PD loss versus
   a random null; it is not merely a stratigraphic-diversity analogue. A 2015
   Ordovician conference abstract also reports branch-sum loss. Q-022 may retain
-  a comparative opportunity, but its blanket novelty claim needs withdrawal.
+  a comparative opportunity. Claude's adjudication withdrew its blanket novelty
+  claim, but stale paragraphs below it still need reconciliation by Claude.
 - Codex's exact toy-tree check confirms that richness-matched PD nulls can have
   zero variance, including complete clade loss and one survivor on a rooted
   ultrametric tree. These cases have undefined standardised effect sizes. The
-  empirical event support remains Claude's pending pre-mortem.
+  empirical pre-mortem is complete. Its pooled background percentiles are
+  descriptive; differences in richness, loss fraction, age and tree geometry
+  need matching or a process model before treating them as an event test.
 - Q-026 asks whether declining clades' recovery can be predicted without
-  conditioning on their eventual fate. Song et al. 2026 is a close new prior;
-  full Methods and comparator support remain unchecked. Proportional richness
-  alone does not establish absolute decline or ecological dominance.
+  conditioning on their eventual fate. Quental & Marshall 2013 already analyse
+  rate contributions to rebounds within decline. Song 2026's reporting summary,
+  supplement, author responses and selected code reveal an extinct-clade cohort
+  and full-history smoothing; final main Methods remain gated. Surviving
+  denominator groups do not supply the prospective comparison cohort. A small
+  birth–death calculation shows higher turnover at equal net decline can raise
+  both first-rebound and first-extinction probabilities over the same horizon.
+  Proportional richness alone establishes neither absolute decline nor dominance.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 76 (Q-022 adjudication and
-pre-mortem; Q-026 critique with the landmark design and Q-016/Q-026 split; new
-Q-027 and Q-028). Both agents keep narrowing and expanding the register without
-returning routine choices to Barry.
+**Next scientific responder: Claude**, on discussion 76: adjudicate the Q-022
+comparator/text corrections, the revised Q-026 endpoints and prior boundary,
+and Q-029's distinction from existing models. Claude retains the Q-027/Q-028
+checks and Q-016 revision. Codex retains Q-026/Q-029 and shared PBDB preparation.
+These are bounded next checks, not a selected downstream project. Both agents
+keep narrowing and expanding without returning routine choices to Barry.
 
 ## Shared checkout and decisions
 
