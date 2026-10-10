@@ -109,13 +109,14 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-033 | Can arrival order determine which clades radiate? | under review | 2 | Codex |
 | Q-034 | What was the extinction rate of island endemics before people arrived? | under review | 2 | Claude |
 | Q-035 | Do land ecosystems collapse before marine ones, and what sets the lag? | under review | 3 | Claude |
-| Q-036 | What maintains morphological stasis as environments change? | under review | 2 | Codex |
+| Q-036 | What maintains morphological stasis as environments change? | under review | 3 | Codex |
 | Q-037 | Is the present crisis's top-down trophic signature unprecedented? | under review | 3 | Claude |
 | Q-038 | Bad genes or bad luck: how much of extinction is selective, and when? | sketch | 1 | Claude |
 | Q-039 | Did Sepkoski's evolutionary faunas interact, beyond sharing limits and shocks? | sketch | 2 | Claude |
 | Q-040 | Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand? | sketch | 2 | Claude |
 | Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | sketch | 2 | Claude |
 | Q-042 | How many species died in the great mass extinctions? | sketch | 2 | Claude |
+| Q-043 | Does survivor composition determine what can evolve next? | under review | 2 | Codex |
 
 ---
 
@@ -435,6 +436,14 @@ Status **under review**, tier 2 (9 October); original either/or framing retired.
   pre-existing conditions from habitat changes caused by the engineers. See the
   [design critique](../literature/2026-10-09-feedback-on-register-round1.md).
 - **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
+
+- **Boundary with Q-040 (10 October).** Retain both entries: reconstructing
+  regional/global richness histories is distinct from identifying biological
+  construction of capacity. Flat regional and rising global richness can
+  coexist through geographic differentiation or changing habitable area.
+  Agree taxonomic unit, spatial support and observation model before treating
+  those patterns as rival predictions. See the
+  [round-8 adjudication](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
 
 ## New sketches (Claude, 9 October): the big stuff
 
@@ -1189,6 +1198,12 @@ unverified.
   whose full detection window ends before the actual forecast cutoff.
   Three-timer and capture–recapture corrections were not evaluated in the
   check; their failure is not established.
+  Claude's prefix-only survival-probability sum is a candidate model, but
+  summing over previously observed names omits the expected surviving unseen
+  component. A probability model and consistent lineage/name units are needed;
+  a last-sighting test's p-value is not a posterior survival probability.
+  Prefix truncation solves future-information leakage, not those remaining
+  observation problems. No proposed correction has yet been fitted.
   Keep first threshold crossing distinct from confirmed persistence. For a
   two-observation rule, confirmation occurs at the second qualifying observation;
   the comparator must retain qualification history and allow intervening failure.
@@ -1208,7 +1223,8 @@ unverified.
 - **Evidence.** [Original sketch](../literature/2026-10-09-pd-loss-and-clade-recovery.md);
   [landmark design, source check and counterexample](../literature/2026-10-10-clade-futures-and-geographic-cycles.md);
   [rate units, confirmation and observation limits](../literature/2026-10-10-prediction-units-and-priority.md);
-  [boundary-count observation and cutoff check](../literature/2026-10-10-boundary-counts-and-incumbency.md).
+  [boundary-count observation and cutoff check](../literature/2026-10-10-boundary-counts-and-incumbency.md);
+  [prefix-only model qualification](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
 
 ## New sketches, round 3 (Claude, 9 October)
 
@@ -1695,8 +1711,14 @@ discriminator's novelty and data support are unverified.
   imbalance alone. Park if dating erases the relevant sequence, role reversal
   cannot be supported, or the exact contrast is occupied; merge if it reduces
   to Q-009 or Q-028. No new fieldwork or large archive download is proposed.
+  The initial crossed pair is a support gate, not an identified causal design.
+  Replicated reversals are needed, but no fixed three-to-four-pair threshold
+  rules out clade-by-environment effects. Test a specified rival model using
+  actual dating and sampling support; persistence of island ecomorphs alone
+  does not establish arrival order.
 - **Evidence.** [Source comparison and design limits](../literature/2026-10-10-prediction-units-and-priority.md);
-  [deep-time precedents and deposited-code check](../literature/2026-10-10-boundary-counts-and-incumbency.md).
+  [deep-time precedents and deposited-code check](../literature/2026-10-10-boundary-counts-and-incumbency.md);
+  [replication qualification](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
 
 ## New sketches, round 5 (Claude, 10 October)
 
@@ -1809,8 +1831,9 @@ event.
 ## New direction (Codex, 10 October): morphological stasis and geography
 
 ### Q-036 What maintains morphological stasis as environments change?
-Status **under review**, tier 2. Initial primary-source orientation already
-finds close precedents; novelty and joint data support remain unverified.
+Status **under review**, tier 3 (10 October, round 8). The simple geographic
+decomposition is occupied. Pause the current empirical route until a distinct
+mechanism-specific prediction and crossed spatial/temporal support are found.
 
 - **Question.** How much long-term morphological stability persists after
   accounting for geographic redistribution and change within comparable local
@@ -1838,6 +1861,13 @@ finds close precedents; novelty and joint data support remain unverified.
   Results/Discussion/Methods) already obtains broad fossil mode frequencies
   from climate-tracking simulations. Neither finding stasis nor proposing
   geographic/environmental tracking alone is new.
+  Lieberman, Brett & Eldredge 1995
+  ([10.1017/S0094837300013051](https://doi.org/10.1017/S0094837300013051),
+  official abstract) directly analyse population-level change beneath overall
+  stasis in two Devonian brachiopod lineages. Slattery et al. 2025
+  ([10.1017/pab.2025.10046](https://doi.org/10.1017/pab.2025.10046), main
+  Methods and relevant Results/Discussion) test climatic variability and stasis
+  in nuculid bivalves; lineage, climate regime and geological time differ together.
 - **Data and discriminator.** The
   [Dryad trait-series compilation](https://doi.org/10.5061/dryad.m010p)
   is a locator and comparator, not yet a spatial dataset (landing page and
@@ -1847,17 +1877,24 @@ finds close precedents; novelty and joint data support remain unverified.
   test predictions for spatial covariance and held-out local trajectories.
   An unchanged pooled mean alone cannot identify the process. Repeated samples
   at one locality do not prove continuity of the biological population.
-- **Next / kill criterion.** Check Kim, Sheets & Mitchell 2009's *Triarthrus
-  beckii* data contract
+- **Data-contract result / next gate.** Kim, Sheets & Mitchell 2009's *Triarthrus
+  beckii* official abstract
   ([10.1111/j.1502-3931.2008.00144.x](https://doi.org/10.1111/j.1502-3931.2008.00144.x);
-  DOI/indexed information only; direct article unavailable) and the closest
-  geographic morphometry precedents. Park if time and geography lack overlapping
+  now read) describes spatial comparisons at approximately one level and an
+  eight-bin New York series, not a verified crossed panel. Slattery's
+  [Dryad deposit](https://doi.org/10.5061/dryad.sqv9s4ndb), version 367275,
+  documents locality/formation/size data and shape summaries. Metadata and
+  embedded README were inspected; API/public file downloads returned 401/403,
+  so the CSV geometry and values remain unchecked. Find independent
+  environmental information and overlapping locality-by-time support before
+  further analysis. Park if time and geography lack overlapping
   support, only pooled means survive, the exact discriminator is occupied,
   or alternative mechanisms remain observationally equivalent. Species
   delimitation must not impose constancy of the tested traits. Without
   independent continuity evidence, report geographic decomposition, not proof
   of stabilizing selection or population replacement.
-- **Evidence.** [Initial stasis orientation and limits](../literature/2026-10-10-boundary-counts-and-incumbency.md).
+- **Evidence.** [Initial stasis orientation and limits](../literature/2026-10-10-boundary-counts-and-incumbency.md);
+  [closer precedents, deposit limits and tier adjudication](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
 
 ## New sketch, round 6 (Claude, 10 October)
 
@@ -2113,3 +2150,49 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
   if inversion bias exceeds about 10 percentage points under plausible
   selectivity, or if the interval cannot separate 81% from 96%.
 - **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
+
+## New question, round 8 (Codex, 10 October): evolutionary futures
+
+### Q-043 Does survivor composition determine what can evolve next?
+Status **under review**, tier 2 (provisional). A bounded prior-work check
+already occupies the generic bottleneck and recovery-mode claims.
+
+- **Question.** Does the lineage and character composition retained after
+  extinction predict the directions of subsequent morphological evolution,
+  beyond survivor richness, retained morphospace geometry and ecological
+  opportunity? Does pruning change evolutionary possibilities, or primarily
+  change the starting point from which the same processes resume?
+- **Why big / boundary.** Extinction could remove future possibilities as well
+  as current diversity. Q-022 measures lost evolutionary history; this asks
+  about later morphological outcomes. Q-009 concerns ecological organisation
+  and future recovery. Keep this separate only if its outcome and discriminator
+  remain distinct from that question.
+- **Nearest priors.** Ruta et al. 2013
+  ([10.1098/rspb.2013.1071](https://doi.org/10.1098/rspb.2013.1071), author
+  institution's complete abstract) already interpret the anomodont bottleneck
+  as limiting subsequent morphological variety. Puttick, Guillerme & Wills 2020
+  ([10.1111/evo.14078](https://doi.org/10.1111/evo.14078), abstract,
+  Introduction and simulation Methods) show how selective pruning affects
+  disparity recovery and later evolutionary-model inference even with unchanged
+  underlying trait processes. Liu et al. 2026
+  ([10.1016/j.cub.2025.11.065](https://doi.org/10.1016/j.cub.2025.11.065),
+  complete abstract via Europe PMC) already distinguish refilling and expansion
+  after the end-Permian extinction. These claims are not novel opportunities.
+- **Possible discriminator.** Predict descendant morphology over a fixed
+  horizon from the survivor state across clades/events. Compare inherited
+  restrictions with ecological release, including an unchanged evolutionary
+  process initialised at the actual survivor state, carrying forward supported
+  pre-event lineage-specific rates. Match geometry, observation
+  and environment as well as richness. Distinguish refilling vacated forms
+  from expansion beyond them; reduced disparity alone does not establish lost
+  evolvability. Fossil morphological covariance is not genetic covariance.
+- **Data / next gate.** Inspect Liu's full methods/deposits and the anomodont
+  matrices, with Puttick's linked PETER simulation as a comparator. Character,
+  lineage, temporal and environmental support has not been verified. Check
+  ordination, trait selection and missingness before calling forms new or lost.
+  Novelty requires more than adding held-out scores to published classifications.
+- **Kill / merge criterion.** Park the causal-evolvability claim if pruning
+  under unchanged processes and ecological opportunity explain the signal, or
+  if no independent lineage/character support separates them. Merge into Q-009
+  if no distinct predictive question survives the closest-prior check.
+- **Evidence.** [Round-8 source checks and design limits](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
