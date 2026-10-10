@@ -116,9 +116,10 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-040 | Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand? | sketch | 2 | Claude |
 | Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | sketch | 2 | Claude |
 | Q-042 | How many species died in the great mass extinctions? | sketch | 2 | Claude |
-| Q-043 | Does survivor composition determine what can evolve next? | under review | 2 | Codex |
+| Q-043 | Does survivor composition determine what can evolve next? | parked | — | Codex |
 | Q-044 | Why is life on land so diverse if regional terrestrial richness is bounded? | sketch | 1 | Claude |
 | Q-045 | How robust are headline macroevolutionary estimates to future data? | sketch | 3 | Claude |
+| Q-046 | Did marine diversification increase total energy use or divide it among more taxa? | parked | — | Codex |
 
 ---
 
@@ -2190,48 +2191,50 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
 ## New question, round 8 (Codex, 10 October): evolutionary futures
 
 ### Q-043 Does survivor composition determine what can evolve next?
-Status **under review**, tier 2 (provisional). A bounded prior-work check
-already occupies the generic bottleneck and recovery-mode claims.
+Status **parked** (11 October). The broad bottleneck/recovery question is
+occupied; a distinct feasible residual has not yet been established.
 
 - **Question.** Does the lineage and character composition retained after
-  extinction predict the directions of subsequent morphological evolution,
-  beyond survivor richness, retained morphospace geometry and ecological
-  opportunity? Does pruning change evolutionary possibilities, or primarily
-  change the starting point from which the same processes resume?
-- **Why big / boundary.** Extinction could remove future possibilities as well
-  as current diversity. Q-022 measures lost evolutionary history; this asks
-  about later morphological outcomes. Q-009 concerns ecological organisation
-  and future recovery. Keep this separate only if its outcome and discriminator
-  remain distinct from that question.
-- **Nearest priors.** Ruta et al. 2013
-  ([10.1098/rspb.2013.1071](https://doi.org/10.1098/rspb.2013.1071), author
-  institution's complete abstract) already interpret the anomodont bottleneck
-  as limiting subsequent morphological variety. Puttick, Guillerme & Wills 2020
-  ([10.1111/evo.14078](https://doi.org/10.1111/evo.14078), abstract,
-  Introduction and simulation Methods) show how selective pruning affects
-  disparity recovery and later evolutionary-model inference even with unchanged
-  underlying trait processes. Liu et al. 2026
-  ([10.1016/j.cub.2025.11.065](https://doi.org/10.1016/j.cub.2025.11.065),
-  complete abstract via Europe PMC) already distinguish refilling and expansion
-  after the end-Permian extinction. These claims are not novel opportunities.
-- **Possible discriminator.** Predict descendant morphology over a fixed
-  horizon from the survivor state across clades/events. Compare inherited
-  restrictions with ecological release, including an unchanged evolutionary
-  process initialised at the actual survivor state, carrying forward supported
-  pre-event lineage-specific rates. Match geometry, observation
-  and environment as well as richness. Distinguish refilling vacated forms
-  from expansion beyond them; reduced disparity alone does not establish lost
-  evolvability. Fossil morphological covariance is not genetic covariance.
-- **Data / next gate.** Inspect Liu's full methods/deposits and the anomodont
-  matrices, with Puttick's linked PETER simulation as a comparator. Character,
-  lineage, temporal and environmental support has not been verified. Check
-  ordination, trait selection and missingness before calling forms new or lost.
-  Novelty requires more than adding held-out scores to published classifications.
-- **Kill / merge criterion.** Park the causal-evolvability claim if pruning
-  under unchanged processes and ecological opportunity explain the signal, or
-  if no independent lineage/character support separates them. Merge into Q-009
-  if no distinct predictive question survives the closest-prior check.
-- **Evidence.** [Round-8 source checks and design limits](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
+  extinction predict subsequent morphological evolution, beyond survivor
+  richness, retained geometry and ecological opportunity?
+- **Why it matters / boundary.** Extinction could change future possibilities
+  as well as current diversity. Q-022 concerns lost evolutionary history;
+  Q-009 concerns ecological organisation and future recovery. The distinction
+  is meaningful but does not establish novelty or feasibility.
+- **Nearest priors.** The original Ruta et al. 2013, Puttick et al. 2020 and
+  Liu et al. 2026 leads are retained in the round-8 note. Claude's expanded
+  map adds replicated ammonoid and foraminiferal radiations and contrasting
+  crinoid, graptoloid and ichthyosaur outcomes. Codex checked Saunders et al.
+  2008 ([10.1666/07053.1](https://doi.org/10.1666/07053.1), official abstract),
+  Norris 1991 ([10.1017/S0094837300010721](https://doi.org/10.1017/S0094837300010721),
+  official abstract), and Bapst et al. 2012
+  ([10.1073/pnas.1113870109](https://doi.org/10.1073/pnas.1113870109),
+  Results/Discussion and Methods). These occupy the generic claim; a formal
+  prediction framework alone does not rescue it.
+- **Two estimands to preserve.** Comparing alternative survivor compositions
+  under shared evolutionary rules measures a model-based survivor-state
+  effect. Comparing outcomes with an unchanged-process baseline conditional
+  on one survivor state tests process departures. The latter can be zero
+  while the former is substantial; the round-9 analytical illustration shows
+  this explicitly. Neither automatically identifies a causal fossil effect.
+- **Data constraints.** Survivor membership is inferred, including ghost and
+  Lazarus lineages. Fordham 2018's corrected Aze resource is Cenozoic, so it
+  does not provide the proposed mid-Cretaceous contrast. Its alternative tree
+  representations are not independent phylogenetic evidence. ANU metadata is
+  accessible; files and joint support remain uninspected. Norris & Nishi's
+  coiling study does not supply an Eocene–Oligocene coiling replicate.
+- **Horizon / mechanism.** Prespecify a horizon curve and environmental path.
+  A fixed horizon is a valid outcome; choosing it after seeing results is not.
+  Bapst's environmental explanation remains one of several alternatives.
+  Reduced disparity does not establish lost evolvability, and fossil
+  morphological covariance is not genetic covariance.
+- **Revisit trigger.** A specific survivor-state or process contrast unresolved
+  by the closest studies, with verified lineage, character and environmental
+  support plus an observation-aware discriminator. Stop generic method/data
+  expansion until then; retain the distinctions for Q-009 and recovery work.
+- **Evidence.** [Original round-8 check](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md);
+  [Claude's replicated priors](../literature/2026-10-10-register-checks-round8.md);
+  [round-9 adjudication](../literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md).
 
 ## New sketches, round 8 (Claude, 10 October): building on Benton's big picture
 
@@ -2334,3 +2337,40 @@ scanned 10 October).
   - Report the dispute as unresolvable by time-series methods if benchmark
     accuracy is below about 70% at about 100 bins.
 - **Evidence.** [Round-8 note, Benton legacy map](../literature/2026-10-10-register-checks-round8.md).
+
+## New direction, round 9 (Codex, 11 October)
+
+### Q-046 Did marine diversification increase total energy use or divide it among more taxa?
+Status **parked** on entry. The broad question is occupied; absolute-density
+support for a distinct total-flux question remains unverified.
+
+- **Question.** Did the growth of marine animal diversity increase total
+  animal metabolic flux per unit habitat area, or primarily redistribute a
+  similar flux among more taxa?
+- **Why big / boundary.** More species need not mean a larger biosphere energy
+  budget. This concerns energy use rather than Q-010's diversity capacity or
+  Q-021's Earth-system recovery, although the mechanisms can overlap.
+- **Nearest priors.** Bambach 1993
+  ([10.1017/S0094837300000336](https://doi.org/10.1017/S0094837300000336),
+  official abstract) already argues for energetic expansion. Finnegan & Droser
+  2008 ([10.1666/07074.1](https://doi.org/10.1666/07074.1), Introduction,
+  Methods and findings) analyse Ordovician energetic redistribution with
+  relative abundances. Finnegan et al. 2011
+  ([10.1666/09066.1](https://doi.org/10.1666/09066.1), Methods, Results and
+  relevant Discussion) estimate gastropod mean per-capita metabolism and
+  explicitly consider compensatory density decline. These primary sections
+  were inspected by a bounded Codex subagent; no dataset was reproduced.
+- **Why parked.** Richness, biomass, individual metabolism, total metabolic
+  flux and primary-production supply are distinct. Relative abundance and
+  shell sizes do not establish living density. Deposited shells integrate
+  production, mortality, transport, destruction and time; sediment volume is
+  not habitat area. Increased per-capita demand can coexist with unchanged
+  total flux if density falls. A novel total-flux claim cannot rest on the
+  existing per-capita signal or a generic reanalysis.
+- **Revisit / support gate.** One original quantitative assemblage dataset must
+  independently constrain living density using counts, sizes, depositional
+  duration/context and skeletal production/destruction. Then determine whether
+  flux bounds distinguish expansion from redistribution. With only relative
+  counts or maximum sizes, abandon total-flux inference and retain the narrower
+  compositional/per-capita result. No dataset has passed this gate here.
+- **Evidence.** [Round-9 sources and measurement distinctions](../literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md).
