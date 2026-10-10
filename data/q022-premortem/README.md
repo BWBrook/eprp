@@ -115,9 +115,10 @@ and does not recompute any trees (about 8 s):
   rarely has 10 matches.
 - Each tree's event is then placed within its matched pool, provided the pool
   has at least 10 slices.
-- The detectable shift is 2.49 × the matched-background SD: the excess a
-  single event needs over its background for 80% power at one-sided α = 0.05,
-  treating the background as normal.
+- The "detectable shift" is 2.49 × the matched-background SD. It is an
+  illustrative one-sided Gaussian location-shift calculation (80% power at
+  α = 0.05), not validated power for these skewed, correlated mixtures of
+  posterior trees and background slices (Codex 76/1340).
 
 Output: [matched_summary.tsv](matched_summary.tsv).
 
@@ -141,8 +142,9 @@ Output: [matched_summary.tsv](matched_summary.tsv).
 2. Three cases reach the matched 95th percentile at the median tree: ruminants
    at w = 1 and 2 Myr, and Mysticeti at w = 2 Myr. Even there, only about half
    to 70% of the posterior trees exceed it.
-3. The shifts are mostly smaller than the detectable shift of 1.5–2.7 SES units.
-   As single-event tests, these cases are underpowered.
+3. The shifts are mostly smaller than the illustrative detectable shift of
+   1.5–2.7 SES units. Under that approximation, single-event tests would be
+   underpowered.
 4. Matching removes the foraminifera, and Equinae at w = 2. Their event loss
    fractions lie outside the background range, which is itself a taxonomic
    signal.
@@ -160,9 +162,9 @@ Output: [matched_summary.tsv](matched_summary.tsv).
     ordinary times of similar size?". An event-specific effect could be a
     deficit as well as an excess.
 - The pooled comparison in the first round was too negative. Matched on size
-  and loss fraction, these Cenozoic events show a weak, consistently positive
-  event-specific excess of PD loss, mostly below single-event detection power.
-  This is neither absence of an effect nor evidence of one.
+  and loss fraction, all eight contrasts are positive, but they are descriptive
+  and correlated. They do not establish an event-specific effect, and they do
+  not show its absence (Codex 76/1340).
 - These are minor events for these clades. The test says nothing directly about
   the Big Five, which cannot be assessed on these trees: dinosaurs are lost
   completely, and the other Mesozoic trees lack an absolute anchor.
@@ -173,6 +175,42 @@ Output: [matched_summary.tsv](matched_summary.tsv).
   - a matched-background or process-model null;
   - a power calibration, simulating clustered loss of known strength on the
     same trees before any event is tested.
+
+## Next gate: power calibration (design, not run)
+
+The aim is to know, before any mass-extinction event is tested, how large an
+*incremental* event effect must be before the matched-background contrast
+detects it. The design was revised after Codex 76/1340.
+
+1. **Loss model.**
+   - Evolve a latent trait by Brownian motion on the crossing lineages at the
+     slice S.
+   - Make the m victims the m lineages with the highest values of
+     λ·z(trait) + (1 − λ)·ε, where z is the standardised trait and ε is
+     independent standard-normal noise. Size m is fixed to the slice's.
+   - λ is only a simulation knob. It is not a biological effect scale.
+2. **Two calibrations, for the two questions.**
+   - *Loss beyond exchangeable tips* (the original random-pruning question):
+     λ = 0 is the null, and the exact random null already applies.
+   - *Event specificity:* ordinary-time loss is already clustered, so λ = 0 is
+     the wrong null here.
+     - Fit a background level λ_bg per clade, by matching the simulated
+       background-slice SES distribution to the observed one.
+     - Estimate false positives by simulating "events" at λ_bg.
+     - Estimate power for incremental effects λ_bg + Δ.
+3. **What to report.** For each λ, report the distributions of induced
+   clustering (Fritz–Purvis D on the victims) and PD loss, not λ alone.
+   - Ranking by a Brownian-motion trait at λ = 1 does not guarantee maximal PD
+     loss.
+   - Clustering need not map monotonically onto branch-length loss.
+   - Treat posterior trees as draws of uncertainty, not as independent events.
+4. **Translation to the real study.** Apply the same procedure to
+   mass-extinction-spanning trees. Proceed only if the empirical false-positive
+   rate at λ_bg is near nominal, and the incremental effect needed for adequate
+   power is plausible in terms of induced clustering and PD loss.
+
+The simulated selectivity is not the true extinction process. The calibration
+only maps a stated loss model to detectability on a given tree set.
 
 ## Limits
 

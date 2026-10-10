@@ -103,8 +103,8 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-027 | Is the latitudinal diversity gradient a climate-state variable? | under review | 2 | Claude |
 | Q-028 | Do the winners of past crises share traits with today's winners? | under review | 2 | Claude |
 | Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | sketch | 2 | Codex |
-| Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | sketch | 2 | Claude |
-| Q-031 | Is shrinking under warming a predictable macroevolutionary response? | sketch | 2 | Claude |
+| Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | under review | 2 | Claude |
+| Q-031 | Is shrinking under warming a predictable macroevolutionary response? | under review | 3 | Claude |
 | Q-032 | Have insects had ecological crises that family counts miss? | sketch | 2 | Claude |
 
 ---
@@ -737,8 +737,10 @@ Codex's corrections (76/1306) and a matched-background follow-up.
     - All eight testable clade × window cases sit above the matched median, by
       +0.1 to +1.7 SES.
     - Three reach the matched 95th percentile at the median tree.
-    - Most shifts are below the 1.5–2.7 SES needed for 80% power in a
-      single-event test.
+    - Most shifts are below an illustrative Gaussian detectable shift of
+      1.5–2.7 SES. These eight positive contrasts are descriptive and
+      correlated; they do not establish an event-specific effect (Codex
+      76/1340).
     - The first comparison, against pooled background, was too negative
       (Codex 76/1306).
   - *Noise.* Tree uncertainty and window choice move SES by as much as the
@@ -756,8 +758,11 @@ Codex's corrections (76/1306) and a matched-background follow-up.
      exchangeable tips.
   3. Test event specificity against matched-background slices or a process
      model.
-  4. Before testing any event, calibrate power by simulating clustered loss of
-     known strength on the same trees.
+  4. Before testing any event, calibrate on the same trees. Measure false
+     positives against ordinary-time clustered loss fitted to the background,
+     and power for incremental event effects above it. Report the induced
+     clustering and PD-loss distributions
+     ([design](../data/q022-premortem/README.md#next-gate-power-calibration-design-not-run)).
   5. Relate the event-specific shift to selectivity (Fritz–Purvis D, age
      selectivity) and event size. Report MPD and SD alongside PD, not as
      substitutes for it.
@@ -1085,116 +1090,156 @@ joint data support unverified.
 
 ## New sketches, round 4 (Claude, 10 October)
 
-Posed only. Anchor DOIs were verified in Crossref; access depth is given per
-source. No prior-work check has been run yet.
+Anchor DOIs were verified in Crossref; access depth is given per source. Q-030
+and Q-031 were checked against prior work on 10 October
+([round-4 note](../literature/2026-10-10-register-checks-round4.md)); Q-032 has
+not been checked yet.
 
 ### Q-030 Is the biosphere becoming less sensitive to environmental perturbation?
-Status **sketch**, tier 2 (provisional; posed 10 October).
+Status **under review**, tier 2. Posed 10 October; a prior-work check the same
+day found it partly occupied. The idea has been argued in words, and disputed,
+but not quantified.
 
-- **Question.** For a perturbation of a given size (a carbon-cycle excursion,
-  or a temperature change), did extinction intensity decline through the
-  Phanerozoic? If so, where does the decline lie?
-  - In the forcing: a better-buffered Earth system, for example after pelagic
-    calcifiers moved carbonate burial into the deep sea.
-  - In the response: biotas sorted towards low-turnover, robust clades.
-  Within the response, how much is change inside clades, and how much is a
-  change in which clades make up the biota?
+- **Question.** For a perturbation of independently estimated size, did the
+  extinction response decline through the Phanerozoic, for example across the
+  mid-Mesozoic? Three explanations compete for any decline:
+  - **Forcing:** carbonate buffering improved after pelagic calcifiers.
+  - **Response:** biotas were sorted towards robust, low-turnover clades.
+  - **Geography:** palaeogeography and climate state changed.
+  How much of the change in response lies between clades (composition), and
+  how much within them (slope)?
 - **Why big.** Deep-time dose–response estimates, such as temperature
-  thresholds for mass extinction, are Phanerozoic averages. Two things could
-  bias them for the present:
-  - today's sorted biota could be less sensitive than Palaeozoic biotas;
-  - the modern carbon cycle could be better buffered.
-  The direction of that bias matters for every transfer question in this
-  register (Q-001, Q-003, Q-013).
+  thresholds for mass extinction, pool the whole Phanerozoic. If sensitivity
+  has fallen, those estimates overstate the risk for today's biota. If the
+  decline is in forcing rather than response, they do not. The answer affects
+  every transfer question here (Q-001, Q-003, Q-013).
 - **Prior.**
-  - **Background-rate decline.** Background extinction intensity declined
-    through the Phanerozoic (Raup & Sepkoski 1982,
-    10.1126/science.215.4539.1501, meta).
-    - Gilinsky 1994 (10.1017/s0094837300012926, abs) attributes this to sorting
-      of higher taxa: high-turnover orders went extinct without replacement.
-    - Boyajian 1986 (10.1130/0091-7613(1986)14<955:ptibec>2.0.co;2, meta)
-      proposed an ageing fauna.
-    - These concern background rates, not sensitivity to a perturbation.
-  - **Buffering.** Ridgwell 2005 (10.1016/j.margeo.2004.10.036, meta) proposes a
-    Mid-Mesozoic Revolution in how ocean carbonate chemistry is regulated.
-  - **Carbon-cycle thresholds.**
-    - Rothman 2017 (10.1126/sciadv.1700906, abs) finds carbon-cycle thresholds
-      beyond which mass extinction occurs.
-    - Rothman 2019 (10.1073/pnas.1905164116, abs) argues that the size of many
-      disruptions is set by the carbon cycle's own dynamics, not by the size of
-      the external carbon input. Excursion size is therefore not a direct
-      measure of forcing.
-  - **Changing selectivity.** Foster et al. 2023 (10.1098/rsos.221507, abs)
-    find that trait selectivity does not transfer between the end-Permian,
-    end-Triassic and end-Cretaceous events. They attribute this to the Mesozoic
-    Marine Revolution, which suggests the biotic response has changed.
-- **Design.**
-  1. Treat all stage transitions as a continuum (lesson 2).
-  2. Model extinction intensity as a function of perturbation measures:
-     PhanDA temperature change, and carbon-isotope excursion size and rate.
-  3. Let the sensitivity coefficient vary through time, and test for a trend or
-     a Mid-Mesozoic breakpoint.
-  4. Split any decline in aggregate sensitivity with a Price-equation partition
-     into change within clades and change in clade composition. Rego et al.
-     2012 used this kind of partition for body size; see Q-031.
-- **Obstacle and kill criterion.**
-  - Large perturbations are few (lesson 1).
-  - Perturbation size is uncertain and partly endogenous (Rothman 2019).
-  - The stage–state coupling problem from the PhanDA sensitivity analysis
-    applies.
-  - Declining extinction rates are partly sampling and taxonomic artefacts.
-  Park if sensitivity cannot be estimated with useful precision even in
-  era-scale bins.
+  - **Stated in words.** Clapham & Renne 2019
+    (10.1146/annurev-earth-053018-060136; abstract checked by Claude, full text
+    by scout) explain the varied outcomes of flood basalts by "the rate of
+    volatile release modulated by longer trends in ocean carbon cycle buffering
+    and the composition of marine ecosystems". They note (p. 293) that "the
+    only post-Jurassic hyperthermal to trigger even moderate extinction was
+    Cenomanian OAE2". Payne et al. 2020 (10.1098/rsfs.2019.0106) list the same
+    candidate causes. Neither paper estimates or tests them.
+  - **Disputed.**
+    - Green, Renne & Keller 2022 (10.1073/pnas.2120441119): extinction
+      magnitude scales with LIP eruptive rate across all ages. They describe
+      the pattern as explicable "without invoking a state change in ecosystem
+      stability" (scout).
+    - Henehan & Witts 2023 (10.1073/pnas.2303700120) reply with the title
+      "Continental flood basalts do not drive later Phanerozoic extinctions".
+    - No time term was fitted on either side.
+  - **The composition side, partly done.** Wang & Bush 2008 (10.1666/07060.1,
+    abstract checked by Claude) estimate a class-level taxonomic susceptibility
+    that "has generally declined through the Phanerozoic", and adjust extinction
+    rates for it. They use no independent forcing. Gilinsky 1994
+    (10.1017/s0094837300012926) and Foote 2000 attribute declining rates to the
+    loss of high-turnover taxa.
+  - **The geography side, in models.** Pohl et al. 2023 (10.1126/sciadv.adg7679,
+    abstract checked by Claude) find early Palaeozoic extinction susceptibility
+    an order of magnitude higher, from climate and continental configuration.
+    The result holds at present-day pO₂. Stockey et al. 2021
+    (10.1073/pnas.2101900118) instead emphasise pO₂.
+  - **Forcing proxies.**
+    - Rothman 2017 and 2019 (10.1126/sciadv.1700906; 10.1073/pnas.1905164116):
+      the size of a carbon-isotope excursion partly reflects the carbon cycle's
+      own dynamics.
+    - Bachan et al. 2017 (10.2475/06.2017.01): excursion amplitude declines
+      through the Phanerozoic, independently of extinction.
+    - Li et al. 2021 (10.7185/geochemlet.2137): extinction against a δ13C
+      turbulence index for 41 events, with Cambrian–Silurian outliers.
+    - Song et al. 2021 (10.1038/s41467-021-25019-2): ΔT pooled over 45 bins of
+      about 10 Myr.
+  - **Selectivity changes:** Foster et al. 2023 (10.1098/rsos.221507).
+  - **The forcing-side model test may already exist.** Ridgwell & Zeebe-era
+    carbonate-cycle modelling has not been read.
+- **Residual (not found in a bounded search).**
+  1. Estimate extinction per unit of independently estimated forcing, using
+     ΔT, LIP eruptive rate or carbon mass as separate proxies.
+  2. Let that sensitivity vary through time, with a mid-Mesozoic break and a
+     free breakpoint.
+  3. Partition the change in mean sensitivity between clades and within them.
+     The between-clade term is Σ Δw_c β_c(pre); the within-clade term is
+     Σ w_c(post) Δβ_c.
+  The forcing side can be tested in an Earth-system model: carbon pulses of
+  equal size in time slices with and without a pelagic carbonate sink. This
+  would suit the kunanyi allocation once the jumpbox is open.
+- **Data.**
+  - PBDB, via divDyn.
+  - PhanDA (10.1126/science.adk3705).
+  - LIP eruptive rates and CO₂ estimates from the Green 2022 supplement.
+  - Carbon-isotope event tables (Rothman 2017).
+- **Gate and kill criterion.**
+  - First count the post-Jurassic events that have forcing estimated
+    independently of extinction. Park the empirical route if there are fewer
+    than about 8–10.
+  - Park it also if the era interaction changes sign with the extinction metric
+    or the binning.
+  - Then only the model test of forcing and a composition-only partition remain.
+- **Evidence.** [Round-4 note](../literature/2026-10-10-register-checks-round4.md).
 
 ### Q-031 Is shrinking under warming a predictable macroevolutionary response?
-Status **sketch**, tier 2 (provisional; posed 10 October).
+Status **under review**, tier 3. Posed 10 October; a prior-work check the same
+day found the headline occupied.
 
-- **Question.** Across warming events of different sizes:
-  - How much does body size change per °C?
-  - Is the change within lineages (plastic or adaptive), or produced by
-    selective extinction and origination?
-  - Does it match the experimental temperature–size rule, and does it reverse
-    when climate cools?
-- **Why big.**
-  - Shrinking has been proposed as a third universal response to warming
-    (Gardner et al. 2011, 10.1016/j.tree.2011.03.005, meta; Daufresne et al.
-    2009, 10.1073/pnas.0902080106, meta).
-  - Experiments give the temperature–size rule. For animals of about 100 mg dry
-    mass, mass falls about 5% per °C in aquatic species and 0.5% per °C in
-    terrestrial ones (Forster et al. 2012, 10.1073/pnas.1210460109, abs).
-  - Deep time can test whether long-term responses match that rate, exceed it
-    (selection, oxygen limitation) or fall below it (compensating evolution).
-    That bears on whether modern shrinking is reversible.
-- **Discriminator.**
-  - Within-lineage change per °C close to the experimental rule points to
-    plastic physiology.
-  - A much larger change, or one dominated by the among-lineage component,
-    points to selection and sorting.
-- **Prior.**
-  - Rego et al. 2012 (10.1666/11040.1, abs): in Permian–Triassic foraminifera,
-    size reduction after the extinction came more from reduction within
-    surviving lineages than from selective extinction of larger taxa. The
-    paper decomposes size change into within- and among-genus components.
-  - Schaal et al. 2015 (10.1017/pab.2015.36, abs): Permian–Triassic size trends
-    in eight marine clades. The boundary shows more size reduction than any
-    other interval.
-  - Secord et al. 2012 (10.1126/science.1213859, meta): early horses dwarfed
-    during the PETM.
-  - Schmidt et al. 2004 (10.1126/science.1090592, abs): Cenozoic planktic
-    foraminiferal test size tracks surface-water stratification, not
-    temperature alone.
-  - Not yet checked for an existing synthesis across events.
-- **Data.**
-  - Specimen- or species-level size compilations: the Permian–Triassic
-    databases above, and marine-animal compilations such as Heim et al. 2015
-    (10.1126/science.1260065, meta).
-  - Hyperthermal series of mammals, foraminifera and ostracods.
-  - Temperature change from PhanSST, PhanDA or local proxies.
-- **Obstacle.**
-  - Most compilations record the maximum size per species from monographs, not
-    population means. Within-lineage change needs specimen-level series.
-  - Temperature covaries with oxygen, productivity and stratification (Schmidt
-    2004), so "per °C" may really be per unit of a combined forcing.
+- **Question (residual).** Across warming events with lineage-resolved data,
+  does the *within-lineage* size change per °C match the experimental
+  temperature–size rule for that size class and habitat? Does the share of
+  change produced by turnover (extinction, origination, immigration) rise with
+  the size or duration of warming? Does the response reverse on cooling?
+- **Headline occupied.** Nätscher, De Baets & Kiessling 2026
+  (10.1073/pnas.2505564123; abstract checked by Claude, preprint full text by
+  scout) compiled about 9,000 body-size changes in marine ectotherms.
+  - Dwarfing is general in crises, and larger in hyperthermals than in other
+    events.
+  - Greater warming brought greater dwarfing. The slope is shallow: −0.018
+    lnRR per °C, R² 0.018 (preprint Fig. 3).
+  - ΔT is one value per event, and there is no within- versus among-lineage
+    partition.
+  - The scout found no comparison with the temperature–size rule.
+  - Their open data are on Zenodo (10.5281/zenodo.15096088, CC BY 4.0).
+- **Event-level partitions disagree, even within one event.**
+  - Within-lineage shrinkage dominates in:
+    - Permian–Triassic foraminifera (Rego et al. 2012, 10.1666/11040.1);
+    - Toarcian belemnites (Rita et al. 2019, 10.1098/rsos.190494);
+    - PETM and ETM2 equids (Secord et al. 2012, 10.1126/science.1213859;
+      D'Ambrosia et al. 2017, 10.1126/sciadv.1601430; ETM2 −14% mass at about
+      3 °C).
+  - Turnover dominates in:
+    - Permian–Triassic bivalves of the Dolomites (Foster et al. 2026,
+      10.5194/bg-23-1181-2026, abstract checked by Claude). They do "not find a
+      species-level body size reduction to be a forecastable response", and
+      surviving species did not shrink.
+    - Permian–Triassic ostracods (Nätscher et al. 2023, 10.1111/pala.12667).
+    - Toarcian bivalves (Piazza et al. 2020, 10.1038/s41598-020-61393-5).
+  - Both act in PETM mammals: an extended Price equation shows shrinking by
+    within-lineage change and immigration, while species selection favoured
+    *larger* species (Rankin et al. 2015, 10.1098/rspb.2015.1097, abstract
+    checked by Claude).
+- **Experimental reference.** Forster et al. 2012 (10.1073/pnas.1210460109):
+  about −5% mass per °C in aquatic and −0.5% per °C in terrestrial animals of
+  about 100 mg dry mass. Oxygen-limitation theory predicts size dependence
+  (Deutsch et al. 2022, 10.1073/pnas.2201345119). Verberk et al. 2021
+  (10.1111/brv.12653) argue the temperature–size rule is itself evolved, so
+  "plastic versus adaptive" cannot be separated. The discriminator is therefore
+  within- versus among-lineage change, plus consistency with the rule.
+- **Design.**
+  1. Apply one decomposition to at least 8 event × taxon series: disappearance,
+     within-lineage change, and appearance or immigration (Rego/Price style).
+  2. Use local ΔT with uncertainty.
+  3. Fit a hierarchical regression of within-lineage Δln mass on ΔT, converting
+     length to mass explicitly.
+  4. Compare with the size-class expectation from the temperature–size rule.
+- **Kill criteria.**
+  - Park if fewer than 8 events have both lineage-resolved data and
+    event-specific ΔT.
+  - Park also if the published PNAS supplement already contains the partition,
+    or the comparison with the temperature–size rule. It was not accessed
+    (403).
+  - The terrestrial and mammal arm is outside Nätscher's compilation and may be
+    the larger gap.
+- **Evidence.** [Round-4 note](../literature/2026-10-10-register-checks-round4.md).
 
 ### Q-032 Have insects had ecological crises that family counts miss?
 Status **sketch**, tier 2 (provisional; posed 10 October).
