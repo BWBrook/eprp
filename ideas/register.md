@@ -111,12 +111,14 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-035 | Do land ecosystems collapse before marine ones, and what sets the lag? | under review | 3 | Claude |
 | Q-036 | What maintains morphological stasis as environments change? | under review | 3 | Codex |
 | Q-037 | Is the present crisis's top-down trophic signature unprecedented? | under review | 3 | Claude |
-| Q-038 | Bad genes or bad luck: how much of extinction is selective, and when? | sketch | 1 | Claude |
+| Q-038 | Bad genes or bad luck: how predictable is which genera die, and does it change in mass extinctions? | under review | 2 | Claude |
 | Q-039 | Did Sepkoski's evolutionary faunas interact, beyond sharing limits and shocks? | sketch | 2 | Claude |
 | Q-040 | Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand? | sketch | 2 | Claude |
 | Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | sketch | 2 | Claude |
 | Q-042 | How many species died in the great mass extinctions? | sketch | 2 | Claude |
 | Q-043 | Does survivor composition determine what can evolve next? | under review | 2 | Codex |
+| Q-044 | Why is life on land so diverse if regional terrestrial richness is bounded? | sketch | 1 | Claude |
+| Q-045 | How robust are headline macroevolutionary estimates to future data? | sketch | 3 | Claude |
 
 ---
 
@@ -774,6 +776,12 @@ answer is largely occupied.
   - Foote et al. 2018 (10.1098/rspb.2018.0122): diversity dependence explains
     "up to 12% of the variance" in graptoloids, with a warning about
     regression to the mean.
+  - **Scale dependence.** Spiridonov & Lovejoy 2022 (10.1038/s41586-022-04867-y,
+    meta; title "Life rather than climate influences diversity at scales
+    greater than 40 million years"). Benton's 2009 framing
+    (10.1126/science.1157719) has biotic factors local and short, and abiotic
+    factors regional and long. Any partition should report its answer as a
+    function of timescale.
 - **Residual.** A hierarchical birth–death model across clades and the whole
   Phanerozoic, with a shared PhanDA covariate, lagged own-clade diversity and a
   preservation model. Report explained shares for origination and extinction
@@ -1951,55 +1959,69 @@ which says where each classic idea now sits in this register. These entries
 had a bounded prior-work scan before posing, recorded in that note. Their
 novelty is still unverified.
 
-### Q-038 Bad genes or bad luck: how much of extinction is selective, and when?
-Status **sketch**, tier 1 (provisional; scanned 10 October).
+### Q-038 Bad genes or bad luck: how predictable is which genera die, and does it change in mass extinctions?
+Status **under review**, tier 2. Posed 10 October as a tier-1 variance
+partition; reformulated the same day after Codex's identification critique
+(76/1380).
 
-- **Question.** In each stage, how should variance in genus-extinction
-  log-odds be split? Four parts:
-  - a shared event shock;
-  - a clade-structured (phylogenetic) component;
-  - a component from measured traits (range, body size, habitat, physiology);
-  - an unexplained residual.
-  Do the clade and trait shares differ between background stages and mass
-  extinctions, and do they change through the Phanerozoic? This is Raup's
-  question, "Extinction: Bad Genes or Bad Luck?", posed as an estimand.
-- **Why big.** It decides how far extinction risk is predictable from biology
-  at all, in deep time and therefore today. Raup argued that taxonomic
-  selectivity "is present but minor" (Raup 1994, 10.1073/pnas.91.15.6758; text
-  checked by scout). The modern risk-assessment enterprise assumes the
-  opposite.
-- **Prior (ingredients exist; no variance partition found in two search
-  rounds).**
-  - Jablonski 1986 (10.1126/science.231.4734.129): selectivity regimes
-    alternate between background and mass extinction.
-  - Payne & Finnegan 2007 (10.1073/pnas.0701257104); Monarrez, Heim & Payne
-    2023 (10.1098/rsos.230795, abstract checked by Claude). Capture–mark–
-    recapture on benthic genera: range selectivity is "reduced in every class
-    and fully eliminated in some" during mass extinctions. No
-    variance-explained statistic is reported.
-  - Foster et al. 2023 (10.1098/rsos.221507): selectivity does not transfer
-    between events.
-  - Roy, Hunt & Jablonski 2009 (10.1126/science.1173073): phylogenetic
-    clustering of extinction varies over time.
-  - Tikhonov et al. 2026 (bioRxiv 10.64898/2026.07.21.739780, abstract checked
-    by Claude). A one-parameter survivorship-bias model of fixed genus
-    "toughness" plus event "luck" reproduces age-dependent extinction in the
-    Sepkoski compendium. The scout reports that about 57% of extinctions are
-    attributed to luck, a model-dependent upper bound.
+- **Why the partition was dropped** (Codex, accepted). A partition into event,
+  clade, trait and residual is not a unique biological decomposition:
+  - within a stage, the shared event intercept has no variance across genera;
+  - trait and clade effects can carry the same information;
+  - one binary fate per genus-stage cannot identify an individual residual;
+  - the logistic latent residual is a convention of the link function, not a
+    measured amount of chance.
+  "Bad luck" is therefore not an estimand. What is left after a model is fitted
+  also contains missing traits, exposure, taxonomy, observation error and
+  misspecification.
+- **Question (reformulated).** Given the incoming cohort and the number of
+  extinctions in a stage, how much do traits and clade or survival history,
+  known before the event, improve held-out prediction of *which* genera
+  disappear? Raup's field of bullets (uniform loss) is the baseline.
+  - Does the gain differ between background and mass-extinction stages?
+  - Does it transfer between events?
+  Conditioning on the number lost removes the event intercept. Forecasting the
+  size of an event is a separate problem.
+- **Why it matters.** It measures how far the biology of extinction is
+  predictable, which underlies any use of deep time for modern risk assessment.
+  Raup 1994 (10.1073/pnas.91.15.6758) judged taxonomic selectivity "present but
+  minor".
+- **Prior.**
+  - Jablonski 1986 (10.1126/science.231.4734.129): selectivity regimes.
+  - Payne & Finnegan 2007 (10.1073/pnas.0701257104).
+  - Monarrez, Heim & Payne 2023 (10.1098/rsos.230795, abstract checked by
+    Claude): traits combined with capture–mark–recapture survival models.
+    Range selectivity is reduced or eliminated in mass extinctions.
+  - Smits & Finnegan 2019 (10.1098/rstb.2019.0392): forward-validated
+    survival prediction in deep time.
+  - Foster et al. 2023 (10.1098/rsos.221507): poor transfer between events.
+  - Roy, Hunt & Jablonski 2009 (10.1126/science.1173073).
+  - Tikhonov et al. 2026 (bioRxiv 10.64898/2026.07.21.739780): a
+    survivorship-bias model with fixed toughness plus event luck already
+    quantifies how predictable survival is, conditioned on age.
+    - *Correction (10 October):* their 57.3% is the share of *simulated deaths*
+      among genera whose modelled toughness exceeds the fitted event threshold,
+      across 20 simulations.
+    - It is not a variance share, and not an empirical fraction caused by
+      chance (Codex, from the main text).
 - **Design.**
-  1. A hierarchical capture–mark–recapture model on PBDB benthic genera, with
-     a variance partition on the latent scale.
-  2. Hold out one event at a time, and score prediction across events.
-  3. Two generative nulls: random loss (Raup's field of bullets) and
-     frailty-plus-luck (Tikhonov).
-- **Kill criterion.** Park if simulations with a known partition are not
-  recovered at the observed sample size; there are only five mass-extinction
-  stages. Park also if clade and trait components cannot be separated. In
-  either case "bad luck" is only unexplained variance, not an estimand.
-- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
-- **Links.** Q-012 (heritable susceptibility and ageing), Q-022 (phylogenetic
-  clustering of loss), Q-028 (dominance after crises), Q-030 (secular change
-  in sensitivity).
+  1. Compare uniform loss, persistent frailty, traits, clade or history, and
+     joint models by held-out predictive score. Integrate uncertainty about
+     cohort membership and loss counts from the fossil record.
+  2. Report the joint gain, and each component's conditional gain, leaving
+     shared information unallocated.
+  3. Fix the date each predictor is known: lifetime maximum size or range
+     within the focal stage are not pre-event inputs.
+  4. Treat prediction for new clades and for known clades as separate targets.
+- **Gate and kill criterion.**
+  - First gate: one Monarrez class's support for pre-event predictors,
+    encounter histories and clade contrasts. Then a discrimination simulation
+    calibrated to that design.
+  - Park if joint observation modelling, persistent susceptibility and transfer
+    between events add nothing beyond Monarrez, Smits & Finnegan and Tikhonov.
+- **Evidence.** [Round-7 legacy map](../literature/2026-10-10-register-checks-round7.md);
+  [Codex round-8 note](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
+- **Links.** Q-012, Q-022, Q-028, Q-030, Q-016.
 
 ### Q-039 Did Sepkoski's evolutionary faunas interact, beyond sharing limits and shocks?
 Status **sketch**, tier 2 (provisional; scanned 10 October).
@@ -2026,52 +2048,55 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
   SQS-standardised class or fauna richness. Compare it with uncoupled logistic
   growth plus common shocks by leave-future-out prediction. Replicate in reef
   and non-reef regions.
+- **Caution (Codex, 10 October).** Coupling in fitted trajectories can absorb
+  shared forcing that was not measured. A predictive interaction is not
+  automatically competition. Define the response before fitting: standing
+  richness, standardised richness, or proportional composition. Each has
+  different observation constraints.
 - **Kill criterion.** Park if the coupling terms cannot be identified at about
   50–100 bins, or if the answer flips between standardised and range-through
   series.
 
 - **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
 ### Q-040 Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand?
-Status **sketch**, tier 2 (provisional; scanned 10 October). It overlaps with
-Codex's Q-010 (biological construction of capacity), and Codex may merge or
-adjudicate.
+Status **sketch**, tier 2 (provisional; scanned 10 October). Kept separate from
+Q-010 (Codex, 76/1380). Q-040 asks what regional and global histories the
+observations support; Q-010 asks whether biological innovation changes the
+diversity that comparable physical conditions support.
 
-- **Question.** Two models compete. In one, regional diversity is roughly flat
-  and the global curve reflects spatial coverage (Close et al. 2020,
-  10.1126/science.aay8309). In the other, the global rise is driven by
-  hotspots under Earth-system stability and continental fragmentation
-  (Cermeño et al. 2022, 10.1038/s41586-022-04932-6, abstract checked by
-  Claude). The latter also places less than 2% of flooded continental area
-  near ecological saturation. Which better predicts held-out regions? What is
-  the posterior on the Cenozoic-to-Palaeozoic richness ratio once spatial
-  coverage, facies, lithification and palaeogeographic-model uncertainty are
-  propagated?
-- **Why big.** This is the oldest open question in quantitative
-  palaeobiology. It runs from Raup 1976 (10.1017/s0094837300004929), who found
-  "no compelling evidence" of a rise, through Sepkoski's curve and Alroy et al.
-  2008 (10.1126/science.1156963). It decides whether diversity is
-  equilibrial, which sets the frame for every recovery question.
-- **Prior.**
-  - Close et al. 2020: regional variation is comparable to variation through
-    time.
-  - Cermeño et al. 2022: a regional diversification model reproduces the
-    global trend through hotspots.
-  - Fan et al. 2020 (10.1126/science.aax4953): a high-resolution
-    Cambrian–Triassic curve.
-  - Benson et al. 2025 (10.1111/pala.70006): large uncertainties and a
-    Europe/North America bias.
-  - Jablonski et al. 2003 (10.1126/science.1083246): pull of the Recent.
+- **Question.** On a common support (one taxonomic unit, spatial grain and
+  domain, time window and observation process), how did global marine richness
+  change? How much came from each of three components?
+  - Richness within regions (alpha).
+  - Differentiation between regions (beta, provinciality).
+  - Habitable area and hotspot extent.
+  Close et al. 2020 (10.1126/science.aay8309) report regional variation as
+  large as variation through time. Cermeño et al. 2022
+  (10.1038/s41586-022-04932-6, abstract checked by Claude) model a global rise
+  driven by hotspots. These are not necessarily rival results: flat regional
+  richness can coexist with rising global richness through differentiation or
+  area (Codex).
+- **Why big.** This question runs from Raup 1976
+  (10.1017/s0094837300004929; "no compelling evidence" of a rise) through
+  Sepkoski's curve and Alroy et al. 2008 (10.1126/science.1156963). The
+  decomposition says whether any rise came from within-region packing, from
+  geography, or from area. Those answers bear on diversity limits differently.
+- **Prior.** Close et al. 2020; Cermeño et al. 2022, whose under-2% saturation
+  fraction is a model-derived quantity, not a census of filled niches; Fan et
+  al. 2020 (10.1126/science.aax4953); Benson et al. 2025 (10.1111/pala.70006);
+  Jablonski et al. 2003 (10.1126/science.1083246).
 - **Design.**
   1. A hierarchical occupancy or SQS model per grid cell and bin.
-  2. Propagate uncertainty across plate models.
-  3. Compare the flat-regional and hotspot-rise models by spatial
-     cross-validation on held-out regions.
-- **Kill criterion.** Park if the ratio's 95% interval spans both flat and
-  rising, or if the choice of plate model dominates the variance. This is a
-  crowded, active area (the Close, Benson and Kiessling groups), with a high
-  risk of being scooped.
+  2. An alpha–beta–area decomposition of global change on the common support.
+  3. Propagate uncertainty across plate models.
+  4. Score predictions on held-out regions.
+  Neither a flat nor a rising curve alone identifies a ceiling.
+- **Kill criterion.** Park if the intervals on the components overlap zero
+  throughout, or if the choice of plate model dominates. This is a crowded
+  area (the Close, Benson and Kiessling groups), with a high risk of being
+  scooped.
+- **Evidence.** [Round-7 legacy map](../literature/2026-10-10-register-checks-round7.md).
 
-- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
 ### Q-041 Is there periodicity in extinction once modern timescale uncertainty is propagated?
 Status **sketch**, tier 2 (provisional; scanned 10 October).
 
@@ -2110,10 +2135,17 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
      series.
   3. Build nulls on the real stage grid.
   4. Run injection-recovery at the amplitude Melott & Bambach report.
-- **Kill criterion.** Close the question if the Bayes factor is below 3 in both
-  datasets and for both estimators, and stays so when the five largest events
-  are dropped. If power at the claimed amplitude is below about 50%, declare
-  the data uninformative.
+- **Decision rule (revised after Codex, 10 October).**
+  - Specify the joint age model that produces correlated, monotone boundary
+    draws. Marginal age errors alone do not define it.
+  - Use Bayes factors in a stated direction. A periodic-versus-null Bayes
+    factor below 3 is inconclusive, not a rejection of periodicity.
+  - Count the null as supported only if the null-versus-periodic Bayes factor
+    is at least 10 in both datasets, for both estimators, and with the five
+    largest events dropped.
+  - Otherwise report the largest periodic amplitude that injection-recovery
+    rules out.
+  - Periodicity alone would not identify an impact cause.
 
 - **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
 ### Q-042 How many species died in the great mass extinctions?
@@ -2146,9 +2178,13 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
      et al. 2020, 10.1126/science.aax4953; Wang et al. 2014).
   The species-to-genus mapping is the same machinery as Q-013's crosswalk, run
   in reverse.
-- **Kill criterion.** Report the magnitude as undeterminable at species level
-  if inversion bias exceeds about 10 percentage points under plausible
-  selectivity, or if the interval cannot separate 81% from 96%.
+- **Kill criterion (revised after Codex, 10 October).**
+  - Align geography, rank and time window before comparing. Regional South
+    China species losses are not ground truth for a global estimand.
+  - If inversion bias exceeds about 10 percentage points under plausible
+    selectivity, report bounds rather than a point estimate. Failing to
+    separate 81% from 96% can still leave useful bounds; it is not complete
+    non-identification.
 - **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
 
 ## New question, round 8 (Codex, 10 October): evolutionary futures
@@ -2196,3 +2232,105 @@ already occupies the generic bottleneck and recovery-mode claims.
   if no independent lineage/character support separates them. Merge into Q-009
   if no distinct predictive question survives the closest-prior check.
 - **Evidence.** [Round-8 source checks and design limits](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
+
+## New sketches, round 8 (Claude, 10 October): building on Benton's big picture
+
+Prompted by Barry's question in chat on 10 October about building on Michael
+Benton's big-picture work. See the Benton legacy map in the
+[round-8 note](../literature/2026-10-10-register-checks-round8.md). Both
+entries had a bounded prior-work scan before posing; novelty is unverified.
+
+### Q-044 Why is life on land so diverse if regional terrestrial richness is bounded?
+Status **sketch**, tier 1 (provisional; scanned 10 October).
+
+- **Question.** About 85% of species live on land (Benton, Wilf & Sauquet
+  2021, 10.1111/nph.17822, abstract checked by Claude), and the two accounts
+  of how that happened conflict.
+  - That paper describes "an explosive boost to terrestrial diversity" between
+    about 100 and 50 Ma, as angiosperms raised productivity and capacity.
+  - Close et al. 2020 (10.1098/rspb.2020.0372, abstract checked by Claude)
+    find the apparent exponential radiation of land vertebrates to be "an
+    artefact of spatial sampling biases". Regional diversity "was constrained
+    over timespans of tens to hundreds of millions of years", apart from a
+    two- to three-fold step at the K–Pg.
+
+  If regional richness is bounded, where does the excess on land come from?
+  Is it differentiation between regions (endemism, provinciality), clades that
+  are rarely preserved (insects), or a step change at the K–Pg or during the
+  angiosperm revolution? When did land overtake the sea?
+- **Why big.** It is the origin of most of today's species. It tests whether
+  the angiosperm revolution raised terrestrial capacity, and it is the
+  terrestrial twin of Q-040.
+- **Prior.**
+  - Benton 2001 (10.1002/gj.877, abstract checked by Claude): life on land "as
+    much as 25 times as diverse" as in the sea, with an exponential continental
+    record. Benton 1995 (10.1126/science.7701342) and Benton & Emerson 2007
+    (10.1111/j.1475-4983.2006.00612.x) give the same view.
+  - Close et al. 2019 (10.1038/s41559-019-0811-8): local richness rose at most
+    three-fold over 300 Myr.
+  - Benson et al. 2016 (10.1371/journal.pbio.1002359): Mesozoic tetrapods.
+  - Clapham et al. 2016 (10.1098/rspb.2015.2476): insect species richness peaks
+    around 125 Ma.
+  - Vermeij & Grosberg 2010 (10.1093/icb/icq078) argue land dominance from
+    about 110 Ma; this is an argument, not a measurement.
+  - Wiens 2015 (10.1111/ele.12503): faster diversification on land.
+  - Foote, Edie & Jablonski 2024 (10.1098/rsbl.2023.0475): diversity
+    dependence can persist under near-exponential rise. Curve shape alone does
+    not identify bounds.
+  - Close et al. 2020 call trends in beta diversity "as-yet-unquantified".
+  - Benton et al. 2021 list the shape of the terrestrial curve since the
+    revolution as an open question.
+- **Design.**
+  1. Compute coverage-standardised alpha richness within equal-area regions,
+     and the ratio of global to mean regional richness (beta).
+  2. Do this for tetrapods, insects, plants and marine PBDB, from the Late
+     Cretaceous to the Neogene, on a common support.
+  3. Test whether beta, not alpha, carries the rise on land, and date when land
+     richness overtook marine richness.
+  4. Use Sahney & Benton 2008's metrics of alpha and cosmopolitanism as a
+     precedent (10.1098/rspb.2007.1370).
+- **Kill criterion.**
+  - If the ratio of global to regional richness rises by less than about 1.25
+    times, within 95% intervals, in every terrestrial group, provinciality
+    cannot supply the excess. The remaining explanations are unpreserved
+    clades or modern sampling.
+  - Results depend on how regions are defined (Brocklehurst & Fröbisch 2018,
+    10.3389/feart.2018.00200). Insect and plant species-level fossil data may
+    be too thin.
+- **Evidence.** [Round-8 note, Benton legacy map](../literature/2026-10-10-register-checks-round8.md).
+
+### Q-045 How robust are headline macroevolutionary estimates to future data?
+Status **sketch**, tier 3 (methodological, but it bears on every entry;
+scanned 10 October).
+
+- **Question.** Re-estimate headline results on historical snapshots of the
+  Paleobiology Database (PBDB), using the API's `occs_created_before`
+  parameter and publication years. Examples include the K–Pg step in regional
+  diversity, regional marine richness trends and selectivity estimates. Do
+  their sign and magnitude converge as data accumulate? Separately, can any
+  method distinguish "common cause" from "sampling bias" in simulated records?
+- **Why it matters.** It tells future teams which of this register's empirical
+  premises are stable and which are artefacts of the current data.
+- **Prior.**
+  - Benton & Storrs 1994 (10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2)
+    and Benton, Wills & Hitchin 2000 (10.1038/35000558): fossil-record quality
+    does not decline with age.
+  - Sepkoski 1993 (10.1017/s0094837300012306): half the compendium changed in
+    a decade, yet the curves fit 99%.
+  - Tennant et al. 2018 (10.7717/peerj.4417, abstract checked by Claude):
+    dinosaurs only, 1991–2015; estimates "highly volatile" in some periods and
+    regions.
+  - Nicholson et al. 2015 (10.1371/journal.pone.0128554): insect families.
+  - Dunhill, Hannisdal & Benton 2014 (10.1038/ncomms5818) and Dunhill et al.
+    2018 (10.1111/pala.12331): residual modelling is "ill founded".
+- **Design.**
+  1. Vintage analysis with pre-registered criteria for passing: for example,
+     sign and magnitude within 25% in at least 90% of recent vintages.
+  2. A simulation benchmark of raw, SQS, spatial, residual and causal-inference
+     methods, run under bias-only, common-cause and redundancy scenarios.
+- **Kill criterion.**
+  - Park the vintage arm if database entry programmes confound vintage beyond
+    correction.
+  - Report the dispute as unresolvable by time-series methods if benchmark
+    accuracy is below about 70% at about 100 bins.
+- **Evidence.** [Round-8 note, Benton legacy map](../literature/2026-10-10-register-checks-round8.md).

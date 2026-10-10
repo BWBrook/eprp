@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 10 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-7 checks](literature/2026-10-10-register-checks-round7.md) complete (Barry's request, 10 October). All of Claude's older sketches are now checked: Q-004 (umbrella for background rates; pseudoextinction correction not applied to modern baselines), Q-005 (narrowed to indicators against a sampling null), Q-017 (estimator equivalence, Chisholm vs Foote–Raup) and Q-018 under review/tier 2; Q-006, Q-019 and Q-037 tier 3. Raup–Sepkoski legacy map in the note, with new Q-038 (bad genes or bad luck, tier 1 provisional), Q-039 (fauna coupling), Q-040 (diversity curve estimand; overlaps Q-010), Q-041 (periodicity with GTS2020 uncertainty) and Q-042 (species-level magnitudes). Q-022 calibration design not run |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-8 checks](literature/2026-10-10-register-checks-round8.md) complete. Codex's Q-038 critique accepted: the variance partition is withdrawn and Q-038 reformulated as held-out predictability against the field-of-bullets baseline (tier 2). Q-040 is reframed on a common support as an alpha–beta–area decomposition and kept separate from Q-010. Q-041/Q-042 decision rules are revised. Q-043 critique: replicated ammonoid, crinoid, graptoloid, ichthyosaur and foraminifera precedents, plus three design problems. Benton legacy map (Barry's prompt) with new Q-044 (why land is so diverse if regional richness is bounded; tier 1 provisional) and Q-045 (data-vintage robustness; tier 3) |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-8 source checks and response](literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md) complete. Q-036 demoted to under review/tier 3: geographic decomposition has close empirical precedents and crossed locality/time support is unverified; current empirical route paused. Q-026's prefix-only model must include unseen standing richness and consistent lineage/name units. Q-033's initial crossed pair is a support gate, with replicated reversals and explicit environmental rivals still needed. Q-040 should remain separate from Q-010 after estimand alignment. New Q-043 asks whether survivor composition predicts subsequent morphological evolution; close bottleneck/recovery precedents are recorded. Codex owns these entries and retains PBDB preparation. Q-029 remains tier 3; Q-008–Q-010/Q-020/Q-021 remain under review; Q-013 crosswalk remains proposed, not accepted execution |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -82,7 +82,8 @@ Codex. Shared dependencies are coordinated through Correspondence.
   empirical predecessors already present. Claude's round 6 checked Q-024,
   Q-034 and Q-035, kept Q-032 parked with corrected wording, and added Q-037;
   Claude's round 7 added Q-038–Q-042. Codex's round 8 demotes Q-036 and adds
-  Q-043, bringing the register to 43 entries. No entry has been promoted to a
+  Q-043. Claude's round 8 adds Q-044 and Q-045, bringing the register to 45
+  entries. No entry has been promoted to a
   primary investigation.
 - Q-038's tier-1 variance-partition proposal is challenged in the round-8
   note, pending Claude's adjudication. Tikhonov's reported luck fraction is a
@@ -148,14 +149,17 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, invited on discussion 76 to adjudicate
-the Q-038 reformulation and tier recommendation, align Q-040's estimands, review
-Q-041/Q-042's evidence thresholds, and challenge Q-043's distinctness. These are
-recommendations, not accepted new ownership. Claude's previously stated deeper
-Q-038/Q-041/Q-042 checks remain with Claude; Codex has completed its bounded
-response and offers the shared register/STATUS handoff. Codex retains the
-Q-026 cohort/observation contract, Q-033 support gate and paused Q-036 data
-search. Q-022 calibration remains a design. No primary investigation selected.
+**Next scientific responder: Codex**, on discussion 76:
+- respond to Claude's Q-043 critique (missing replicated precedents; whether
+  survivors are observed; a baseline that already contains the survivor
+  effect; horizon confounding);
+- challenge new Q-044 (land diversity and bounded regional richness) and
+  Q-045 (data vintage);
+- check the reformulated Q-038/Q-040.
+
+Codex retains Q-026, Q-033 and the paused Q-036. Claude next: deeper checks on
+Q-044 and Q-041/Q-042, and the Q-038 gate (one Monarrez class's support).
+Shared register/STATUS edits return to Codex at this handoff.
 
 ## Shared checkout and decisions
 
