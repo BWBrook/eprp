@@ -1,0 +1,56 @@
+class	event	type	interval_start	slope	se	present	last_occurrences
+Bivalvia	end-Ordovician	extinction_interval	7	-1.02	0.56	32	10
+Bivalvia	end-Ordovician	flagged_interval	8	NA	NA	8	1
+Bivalvia	Late Devonian	extinction_interval	21	-0.42	0.45	40	6
+Bivalvia	Late Devonian	flagged_interval	22	-0.1	0.45	40	6
+Bivalvia	end-Permian	extinction_interval	38	-0.24	0.21	95	45
+Bivalvia	end-Permian	flagged_interval	39	-0.5	0.4	47	8
+Bivalvia	end-Triassic	extinction_interval	45	0.01	0.19	146	37
+Bivalvia	end-Triassic	flagged_interval	46	NA	NA	82	3
+Bivalvia	end-Cretaceous	extinction_interval	68	-0.24	0.11	328	116
+Bivalvia	end-Cretaceous	flagged_interval	69	-0.63	0.22	222	35
+Bivalvia	background	background_median	NA	-0.72	NA	NA	44
+Gastropoda	end-Ordovician	extinction_interval	7	0.06	0.45	24	7
+Gastropoda	end-Ordovician	flagged_interval	8	NA	NA	25	0
+Gastropoda	Late Devonian	extinction_interval	21	-0.83	0.39	40	13
+Gastropoda	Late Devonian	flagged_interval	22	-0.86	0.49	44	8
+Gastropoda	end-Permian	extinction_interval	38	-0.29	0.24	72	40
+Gastropoda	end-Permian	flagged_interval	39	-0.34	0.42	30	9
+Gastropoda	end-Triassic	extinction_interval	45	-0.36	0.26	64	31
+Gastropoda	end-Triassic	flagged_interval	46	NA	NA	18	3
+Gastropoda	end-Cretaceous	extinction_interval	68	0.19	0.19	213	38
+Gastropoda	end-Cretaceous	flagged_interval	69	-0.56	0.25	346	29
+Gastropoda	background	background_median	NA	-0.83	NA	NA	49
+Rhynchonellata	end-Ordovician	extinction_interval	7	-0.22	0.24	77	26
+Rhynchonellata	end-Ordovician	flagged_interval	8	-0.99	0.32	75	18
+Rhynchonellata	Late Devonian	extinction_interval	21	-0.84	0.21	123	78
+Rhynchonellata	Late Devonian	flagged_interval	22	-0.48	0.2	107	51
+Rhynchonellata	end-Permian	extinction_interval	38	-0.8	0.34	119	99
+Rhynchonellata	end-Permian	flagged_interval	39	0.02	0.45	23	15
+Rhynchonellata	end-Triassic	extinction_interval	45	-0.18	0.29	58	40
+Rhynchonellata	end-Triassic	flagged_interval	46	NA	NA	27	2
+Rhynchonellata	end-Cretaceous	extinction_interval	68	-0.26	0.3	47	26
+Rhynchonellata	end-Cretaceous	flagged_interval	69	-0.32	0.59	20	8
+Rhynchonellata	background	background_median	NA	-0.72	NA	NA	52
+Strophomenata	end-Ordovician	extinction_interval	7	-0.92	0.34	45	23
+Strophomenata	end-Ordovician	flagged_interval	8	NA	NA	30	3
+Strophomenata	Late Devonian	extinction_interval	21	-0.02	0.32	41	23
+Strophomenata	Late Devonian	flagged_interval	22	-0.58	0.39	41	9
+Strophomenata	end-Permian	extinction_interval	38	-1.57	0.54	139	120
+Strophomenata	end-Permian	flagged_interval	39	NA	NA	20	19
+Strophomenata	end-Triassic	extinction_interval	45	NA	NA	0	0
+Strophomenata	end-Triassic	flagged_interval	46	NA	NA	0	0
+Strophomenata	end-Cretaceous	extinction_interval	68	NA	NA	0	0
+Strophomenata	end-Cretaceous	flagged_interval	69	NA	NA	0	0
+Strophomenata	background	background_median	NA	-0.71	NA	NA	25
+Trilobita	end-Ordovician	extinction_interval	7	-0.01	0.31	46	21
+Trilobita	end-Ordovician	flagged_interval	8	NA	NA	27	3
+Trilobita	Late Devonian	extinction_interval	21	NA	NA	12	9
+Trilobita	Late Devonian	flagged_interval	22	NA	NA	14	9
+Trilobita	end-Permian	extinction_interval	38	NA	NA	1	1
+Trilobita	end-Permian	flagged_interval	39	NA	NA	0	0
+Trilobita	end-Triassic	extinction_interval	45	NA	NA	0	0
+Trilobita	end-Triassic	flagged_interval	46	NA	NA	0	0
+Trilobita	end-Cretaceous	extinction_interval	68	NA	NA	0	0
+Trilobita	end-Cretaceous	flagged_interval	69	NA	NA	0	0
+Trilobita	background	background_median	NA	-0.7	NA	NA	14
