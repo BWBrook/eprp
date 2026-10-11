@@ -931,15 +931,18 @@ Status **under review**, tier 2.
   distinguish specified land-function and marine-recycling contributions to
   prolonged recovery, conditional on external forcing. Unit: a dated proxy
   sample within a section, with shared age and archive uncertainty. Comparison:
-  complete rival flux histories through one explicit Li/archive mapping,
-  initially the Cao Shangsi carbonate record. Permitted interpretation:
+  complete rival flux histories through one explicit Li/archive mapping.
+  The initial Cao Shangsi candidate has only one Induan Li sample and cannot
+  alone supply the recovery sequence. Permitted interpretation:
   conditional predictive discrimination, not a causal partition. Open:
-  native trajectories, dimensional conversions, nuisance constraints, common
-  time support and evidence reuse. Next decision: can one record and one pair
-  support a calibrated joint test? The
+  native trajectories, dimensional conversions, nuisance constraints, joint
+  age support and evidence reuse. Next decision: do the already identified
+  Shanggang/siliciclastic records supply a viable recovery comparison? The
   [algebraic contract](../literature/2026-10-11-q021-lithium-observation-contract.md)
-  is specified; empirical support is unresolved. Marginal error-band overlap
-  is not a stopping rule.
+  is specified; the [Shangsi sample/design check](../data/q021-shangsi-support/README.md)
+  preserves source values and rejects its use alone as a recovery sequence.
+  Empirical discrimination is unresolved. Marginal error-band overlap and
+  sample count alone are not stopping rules.
 - **Question.** Which losses of biological function can prolong adverse climate
   states: weakened terrestrial weathering and carbon burial, disrupted marine
   silica cycling, or their interaction? Can existing nonthermal evidence
@@ -993,6 +996,7 @@ Status **under review**, tier 2.
   [Contrasting predictions and calibration roles](../literature/2026-10-11-q021-predictions-and-calibration.md).
   [Li evidence and native model capabilities](../literature/2026-10-11-q021-lithium-and-model-capability.md).
   [Units and observation contract](../literature/2026-10-11-q021-lithium-observation-contract.md).
+  [Original Shangsi sample support and conditional design check](../data/q021-shangsi-support/README.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 

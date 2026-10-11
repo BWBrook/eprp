@@ -9,6 +9,11 @@ obtained. This supersedes the marginal-overlap stopping rule in
 [Claude's reply 3](../ideas/2026-10-11-phase2-claude-reply-3.md), and develops
 the [earlier capability check](2026-10-11-q021-lithium-and-model-capability.md).
 
+**Later support check, 11 October:** the
+[original Shangsi table](../data/q021-shangsi-support/README.md) is now obtained.
+It contains only one Induan Li sample. Shangsi alone is retired as a recovery
+sequence; its possible contribution to a joint comparison remains open.
+
 ## One bounded comparison
 
 Compare a terrestrial-function-loss scenario based on Xu/SCION with a
@@ -19,13 +24,13 @@ including an explicit reference treatment for the component it holds fixed.
 One river-input history versus one burial-output history is not a complete
 pair of lithium predictions.
 
-Use Cao's **Shangsi carbonate record** as the first archive-contract candidate.
-Its Methods reports six Li samples and multiple chronological constraints;
-that does not establish a resolved recovery trajectory. Retain measured
-carbonate isotope values, sample identities and screening information before
-any seawater reconstruction. The sample/age table and overlap with both
-model histories remain unverified. This is a bounded record choice, not a
-judgment that it outperforms the siliciclastic records.
+The initial archive candidate was Cao's **Shangsi carbonate record**.
+The source-table check found five Permian and one Induan Li sample, spanning
+259.3818–251.4093 Ma. This rejects Shangsi alone as a sequence through Early
+Triassic recovery. Measured values, both age columns and screening flags are
+now preserved; age covariance and overlap with complete model histories
+remain unverified. Next inspect the already identified Shanggang and
+siliciclastic recovery records before selecting a replacement or joint record.
 
 Published implementations also differ in forcing, reservoirs and calibration.
 Comparing their unmodified predictions would compare those complete packages.
@@ -41,7 +46,7 @@ forcing and an explicit account of the remaining structural differences.
 | Dissolved river Li | Neither inspected native output is this quantity | Map each lithological weathering component to mol Li/yr, including source composition, dissolution and secondary retention; jointly specify river isotope composition |
 | Marine Li burial | A silica flux is insufficient | Convert mol Si/yr to mol Li/yr with mineral- and process-dependent uptake; allow associated fractionation to covary with uptake |
 | Other fluxes and inventory | Required by Li balance | Supply hydrothermal input, other sinks, initial Li inventory and isotope composition for each scenario. Do not make an omitted term zero by default |
-| Carbonate measurement | Cao supplies an archive interpretation and screening procedure | Predict the measured carbonate quantity with an explicitly signed carbonate–seawater offset, contamination/diagenesis terms and analytical uncertainty. Do not inherit a corrected seawater series as error-free data |
+| Carbonate measurement | Cao supplies an archive interpretation and screening procedure; six Shangsi source rows are now extracted | Predict measured carbonate with an explicitly signed offset, contamination/diagenesis and analytical uncertainty. Source averaging, screening and offset-sign flags remain unresolved; no silent repairs |
 | Time and evidence use | Published records and model forcings use different constraints | Freeze the numerical interval only after the sample/age and trajectory crosswalk. Preserve shared chronology; identify every datum used for forcing, priors, selection or evaluation |
 
 For example, after checking the native weathering convention, a proposed
@@ -116,11 +121,14 @@ Record three possible outcomes:
    precision prevent the test. Stop this route before coupling codebases;
    Q-021 remains scientifically open.
 
-**Present outcome: 3.** Next obtain one sample/age/evidence-role table and
-one complete pair of unit-checked flux histories, with proposed conversion
-constraints. A completed source contract, a numerically runnable adapter and
-demonstrated discrimination are separate checkpoints. No adapter, source-model
-execution or primary analysis has started.
+**Present outcome: 3.** Shangsi's table is obtained but does not supply the
+proposed recovery sequence. A conditional one-post-onset design check shows
+an amplitude/onset ambiguity in a simple response family; it is not an
+empirical power estimate. Next identify a viable recovery record, then obtain
+one complete pair of unit-checked flux histories with constrained conversions.
+A completed source contract, a numerically runnable adapter and demonstrated
+discrimination are separate checkpoints. No adapter, source-model execution
+or primary analysis has started.
 
 ## Source and access record
 
@@ -128,8 +136,10 @@ Targeted reinspection on 11 October; no broad novelty search. Cao's main-text
 Methods and equations (1–2), available in the
 [institutional PDF](https://earthsciences.osu.edu/sites/default/files/2022-11/s41561-022-01009-x.pdf),
 support the two-input/two-sink Li balance and archive requirements; their
-steady-state model is not the transient construction above. No supplement
-or new numerical calibration was verified.
+steady-state model is not the transient construction above. At this note's
+initial checkpoint no supplement was verified; the later linked sample check
+retrieved and inspected the official workbook/SI. No new numerical calibration
+was fitted.
 
 Xu source: commit `54fdfbe92692a63cf42e948d78fa7476ad33dbfb`,
 [equations](https://github.com/ZhenXuJane/SCION_Xu2025/blob/54fdfbe92692a63cf42e948d78fa7476ad33dbfb/SCION_equations.m)

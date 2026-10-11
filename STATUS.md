@@ -45,8 +45,9 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
 | Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Initial allocation accepted (76/1514). Codex's [Q-021 prediction/calibration table](literature/2026-10-11-q021-predictions-and-calibration.md) and [Q-027 support audit](data/q027-support-audit/README.md) complete. Claude's Q-027 screen reproduced but its power-design inference challenged; Claude accepted (reply 2), fixed the era, unknown-country and Namibia bugs (k10 now 26/95), and withdrew the warm-stage inference. Claude's reply 2 challenges Q-021 timing and proposes Li cross-prediction; Codex's [response](ideas/2026-10-11-phase2-review-preparation-codex.md) accepts Li as a candidate constraint but requires common proxy mappings and matched assumptions. No status/tier changes or integrated engine |
 | Q-038 data access and flag audit | Claude contract; Codex independent check | Barry supplied Dryad data and lifted deferral. [Design audit](data/q038-flag-audit/README.md) confirms shifted flags under historical RMark without fitting. Claude's [contract](data/q038-monarrez-contract/README.md) and register entry reconciled (reply 2): published-coefficient provenance unresolved; subgenera are nested units, not duplicate observations; zero range is ambiguous. Next gate: a prospective predictor contract. Claude has not sent it [Detail withheld pending disclosure to the data custodian.] |
-| Q-044 joint-support contract | Claude | [Support screen](data/q044-joint-support/README.md) and Codex's [ceiling audit](data/q044-support-audit/README.md) reconciled (Claude reply 3). Biological saturation is not shown, and the kill criterion is reachable. Codex's [distance-screen audit](ideas/2026-10-11-external-review-response-codex.md#q-044-the-new-distance-screen-does-not-settle-the-detection-objection) reproduces the pooled means but finds zero medians in both groups; two Neogene pairs supply all within-continent species sharing. A general distance response and rejection of observation-driven turnover remain disputed. Next: endpoint identity/age/extent support and an explicit observation null; unallocated |
+| Q-044 joint-support contract | Claude | Ceiling audit and distance-screen correction accepted in reply 4. Biological saturation and a general distance response are not shown. Two Neogene pairs supply all within-continent species sharing; both group medians are zero. Next: endpoint identity/age/extent support and an explicit observation null; unallocated |
 | External-review response and next contracts | Codex / Claude | [Codex adjudication](ideas/2026-10-11-external-review-response-codex.md) accepts F-01–F-05 at their stated scope, repairs Q-008/Q-009 gates, and adds a Q-006 practical precedent. [Q-021 contract](literature/2026-10-11-q021-lithium-observation-contract.md) complete at the algebra/source stage; trajectories, conversions and empirical discrimination unresolved. Claude's proposed Q-042 cohort/window crosswalk accepted in 76/1528. Next responder Claude; Q-006 information table follows these two tasks |
+| Q-021 sample support and Q-042 bound audit | Codex | [Reply 5](ideas/2026-10-11-phase2-codex-reply-5.md) complete. Original [Shangsi Li table](data/q021-shangsi-support/README.md) retrieved: five Permian samples, one Induan; the record alone is retired as a recovery sequence. Conditional design check passed; no empirical power claim. Q-042 outputs reproduce, but Codex challenges biological bounds: stage union, recorded absence and unsampled survivors do not establish a baseline-cohort species-loss interval. Claude owns adjudication/correction; Q-006 remains its next accepted task |
 | Q-050 initial covariance-data support | Codex | Complete: two 75-sample numerical series inspected; ZIP checksum and internal consistency verified. Stored `tt` is elapsed time, correcting the earlier increment description. Original-sample/environment/age crosswalk remains open; no model fit |
 | Later project selection and downstream handoffs | Barry, after agent development | Selection comes later; Barry is not asked to rank at this checkpoint. No primary investigation selected; no entry yet ready for handoff |
 
@@ -320,18 +321,36 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
 - **Q-042 crosswalk complete** ([data/q042-crosswalk](data/q042-crosswalk/README.md)),
   with a current-contract block in the entry.
   - 56%, 62% and 79% measure different targets.
-  - On one matched PBDB Changhsingian cohort, sampled species loss is
-    bounded at 56–89%.
-  - 96% needs a true mean of species per genus 2–4 times the sampled 2.57.
+  - Reports conditional 56–89% arithmetic from PBDB Changhsingian names.
+    Codex's subsequent audit below challenges its biological interpretation
+    and the claimed exclusion of 96% sampled-species loss.
+  - Mean-size thresholds depend on matching total-loss targets and retention;
+    their empirical applicability remains disputed.
 - **Q-044:** Codex's correction is accepted; "distance decay" is withdrawn.
 - **Q-021:** two challenges to the contract. Li residence time favours
   magnitude over timing contrasts, and a design analysis of six samples
   should come first.
 
-**Next scientific responder: Codex**, when Barry prompts: respond to the Q-021
-challenges and to the Q-042 crosswalk if it wishes. Claude takes up Q-006's
-information table next, including Petrucci et al. 2025. No automatic parking
-or promotion.
+**Codex reply 5** ([response](ideas/2026-10-11-phase2-codex-reply-5.md)):
+- Original Cao supplementary sources obtained; six Shangsi measurements span
+  about 7.97 Myr with only one Induan value. Source strings/formulas and
+  discrepancies are retained. Joint age uncertainty is still missing.
+- Shangsi alone does not supply an Early Triassic recovery sequence. A small
+  conditional check demonstrates amplitude/onset ambiguity on this grid;
+  no measured data were fitted. Modern Li residence time does not establish
+  a universal magnitude-over-timing ranking or a Triassic time constant.
+- Q-042 tables reproduce exactly, but all 11,031 occurrences have stage-wide
+  age bounds. Genus persistence need not retain a sampled baseline species,
+  and last appearance is not established extinction. The 56–89% output is
+  conditional arithmetic, not a verified biological interval. Accepted-ID
+  duplicates and the use of event-excess genus loss also require adjudication.
+
+**Next scientific responder: Claude**, when Barry prompts: adjudicate the
+Q-042 bound interpretation and the proposed next Q-021 record-support check.
+Q-006's information table remains Claude's accepted task, including Petrucci
+et al. 2025. Codex proposes the already identified Shanggang/siliciclastic
+record crosswalk next; no new model coupling or primary analysis. No automatic
+parking or promotion.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two

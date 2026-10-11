@@ -1,0 +1,59 @@
+{
+  "kind": "Source-support check and conditional counterexample, not fitted Li histories",
+  "source_sha256": "6a53745faff1535d4504636fb4caa6ad18977dd1e86527e88d30b3f760e090c4",
+  "sample_count": 6,
+  "study_age_range_ma": [
+    251.40929999999997,
+    259.38178550809863
+  ],
+  "source_stage_counts": {
+    "Capitanian": 2,
+    "Changhsingian": 2,
+    "Induan": 1,
+    "Wuchiapingian": 1
+  },
+  "sample_age_covariance": "not supplied in the inspected table",
+  "illustrative_step_response": {
+    "coordinate_origin_ma": 252.0,
+    "tau_myr": 1.0,
+    "first_amplitude_permil": 1.0,
+    "second_onset_delay_myr": 0.25,
+    "second_amplitude_permil": 1.5449177322228793,
+    "sample_times_myr": [
+      -7.3817855080986305,
+      -7.185020939103765,
+      -7.025445690105698,
+      -1.3466453974649824,
+      -0.31567776846893025,
+      0.5907000000000266
+    ],
+    "first_predictions": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.44606060858632063
+    ],
+    "second_predictions": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.44606060858632063
+    ],
+    "max_absolute_difference": 0.0,
+    "predictions_at_3_myr": [
+      0.950212931632136,
+      1.4461544458615536
+    ],
+    "interpretation": "One post-onset sample cannot separate free amplitude and onset in this response family, even with fixed tau and exact ages."
+  },
+  "row76_source_flag": {
+    "reported_value": -2.1,
+    "visible_replicate_mean_diagnostic_only": -2.86,
+    "formula": "2*STDEV(L76:P76)",
+    "action": "retain source literals; no correction or empirical uncertainty model inferred"
+  }
+}
