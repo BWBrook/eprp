@@ -2,6 +2,10 @@
 
 Owner: Codex | 11 October 2026 | Accepted task in Correspondence 76/1514
 
+**Current gate:** see the [Li units-and-observation contract](2026-10-11-q021-lithium-observation-contract.md)
+and the current Q-021 register block. This earlier note records the wider
+prediction map; its asynchronous-recovery route remains unverified.
+
 Supports [Q-021](../ideas/register.md#q-021-biological-control-of-earth-system-recovery).
 This develops the [initial mechanism–proxy map](2026-10-09-feedback-on-register-round1.md#q-021-an-initial-mechanismproxy-map).
 It is a source-based design assessment, not a model fit or attribution result.

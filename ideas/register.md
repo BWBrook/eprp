@@ -44,10 +44,23 @@ entry statuses or tiers below.
   - `parked`: blocked or occupied, with the reason and a revisit trigger.
   - `rejected`: with the reason.
   Parked and rejected entries stay in the register.
-- **Tier.** A provisional judgement of size × tractability × openness: 1 is
-  big, plausibly tractable and apparently open; 2 is valuable but crowded,
-  harder or narrower; 3 is modest or methodological. Tiers are agents' opinions,
-  not validation.
+- **Tier.** A provisional judgement of expected scientific consequence: 1 is
+  potentially field-changing; 2 is substantial within a specified scientific
+  setting; 3 is narrower in consequence. Methodological, supporting or
+  diagnostic work is not lower-tier solely because of its role. Assess
+  tractability, prior-work occupancy and next-work cost separately. Existing
+  labels were assigned under an earlier mixed rubric and remain provisional
+  pending individual review; this wording change does not rerank them.
+- **Decision rules.** Distinguish informative evidence in either direction
+  from inadequate discrimination, using a consequential effect or precision
+  target specified before the test. A precise negative answer can close a
+  question successfully; missing support or an occupied contribution can park
+  a route. Neither a wide interval nor failed significance establishes a null.
+- **Current contract.** Pilot a short block for Q-021, Q-042 and Q-006:
+  target, observation unit, comparison, permitted interpretation, unresolved
+  assumptions and next decision. The entry carries the current contract;
+  linked dated notes retain its rationale and disagreements. Other owners
+  update their entries when next worked on, without a new parallel catalogue.
 - **Novelty is unverified** unless an entry says a prior-work check was done.
   "Not found" means not found in a bounded search.
 - **Both agents add, revise, demote and remove entries.** Edit only the entries
@@ -423,9 +436,11 @@ Status **under review**, tier 2 (9 October).
 - **Obstacle / next step.** The published bioregions use all time slices in one
   network, potentially leaking future information into forecasts. First establish
   comparable regional histories and training-only partitions; separate turnover
-  from richness-driven nestedness. Park the predictive
-  route if this support fails or differentiation adds no information beyond
-  environment, richness and geographic coverage.
+  from richness-driven nestedness. Park the predictive route if support fails
+  or attainable precision cannot distinguish negligible from consequential
+  added predictive value beyond environment, richness and geographic coverage,
+  using a threshold specified in advance. Precise negligible added value is
+  an informative negative answer; consequential improvement is a positive one.
 - **Shared mechanism with Q-020.** Use a common habitat-network representation
   with time-varying suitability and taxon-specific dispersal, not necessarily
   one scalar connectivity measure for both extinction and rebuilding. Compare
@@ -463,8 +478,11 @@ Status **under review**, tier 2 (9 October).
 - **Obstacle / next step.** Guilds and inferred feeding links are imperfect
   proxies for ecosystem processes. First identify an independently measured
   outcome and a usable later interval; prevent outcome information entering
-  guild definitions. Park if the result reduces to familiar recovery ordering,
-  or if the apparent memory disappears under observation-aware comparisons.
+  guild definitions. Park this route if its available contribution only repeats
+  established recovery ordering or cannot distinguish negligible from
+  consequential added predictive value under observation-aware comparisons,
+  against a threshold specified in advance. A precise absence of added value
+  is an informative negative answer; a wide interval is inadequate discrimination.
 - **Boundary with Q-007.** Q-009 asks which biological variables must be carried
   forward; Q-007 asks about response times and residual history dependence given
   that state. Claude's Cenozoic support check serves both. An incomplete or
@@ -909,6 +927,19 @@ Status **under review**, tier 2.
 ### Q-021 Biological control of Earth-system recovery
 Status **under review**, tier 2.
 
+- **Current contract (11 October, after external review F-04).** Target:
+  distinguish specified land-function and marine-recycling contributions to
+  prolonged recovery, conditional on external forcing. Unit: a dated proxy
+  sample within a section, with shared age and archive uncertainty. Comparison:
+  complete rival flux histories through one explicit Li/archive mapping,
+  initially the Cao Shangsi carbonate record. Permitted interpretation:
+  conditional predictive discrimination, not a causal partition. Open:
+  native trajectories, dimensional conversions, nuisance constraints, common
+  time support and evidence reuse. Next decision: can one record and one pair
+  support a calibrated joint test? The
+  [algebraic contract](../literature/2026-10-11-q021-lithium-observation-contract.md)
+  is specified; empirical support is unresolved. Marginal error-band overlap
+  is not a stopping rule.
 - **Question.** Which losses of biological function can prolong adverse climate
   states: weakened terrestrial weathering and carbon burial, disrupted marine
   silica cycling, or their interaction? Can existing nonthermal evidence
@@ -940,10 +971,11 @@ Status **under review**, tier 2.
   similar temperature histories. The prediction/calibration map is complete:
   Xu prescribes vegetation recovery, Isson selects simulations on temperature,
   and Rogger 2025 prescribes climate recovery. These uses must be separated from
-  evaluation evidence. Next check whether independently age-constrained land
-  function and marine mineralogical records overlap through recovery.
-  Park if proxy and forcing uncertainty make the alternatives indistinguishable,
-  or a fuller prior-work check already covers that joint comparison.
+  evaluation evidence. First complete the unit/age/evidence-role crosswalk
+  in the current contract. Stop this empirical route if essential mappings
+  lack support or a calibrated joint test cannot resolve a consequential
+  contrast; record an informative limit separately from inadequate precision.
+  A matched prior may occupy the contribution without answering other routes.
 - **Proposed discriminator.** Relative recovery of vegetation function and
   marine authigenic-clay formation, compared with cooling under a common,
   independently constrained carbon-forcing envelope. Asynchronous recovery could
@@ -951,14 +983,16 @@ Status **under review**, tier 2.
   spatial sampling and shared age errors may erase the contrast. Joint support
   is unverified; inspected stage-scale inputs do not establish this contrast.
   Li cross-prediction is an additional candidate, not a demonstrated stronger
-  discriminator. Native models lack some required Li/vegetation outputs, so
-  the next contract must map common observables and comparable nuisance
-  assumptions, including reverse climate-to-vegetation effects. A record/age/
-  evidence-role crosswalk precedes model harmonisation; non-use of a proxy in
-  earlier fits alone establishes neither identification nor novelty.
+  discriminator. Each scenario needs both input and removal fluxes, Li
+  conversion/fractionation and an archive equation, with justified
+  mechanism-specific dependencies retained. Assess the joint predictive
+  distribution with nuisance uncertainty, not pointwise band overlap. A
+  record/age/evidence-role crosswalk precedes model harmonisation; non-use of
+  a proxy in earlier fits alone establishes neither identification nor novelty.
 - **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
   [Contrasting predictions and calibration roles](../literature/2026-10-11-q021-predictions-and-calibration.md).
   [Li evidence and native model capabilities](../literature/2026-10-11-q021-lithium-and-model-capability.md).
+  [Units and observation contract](../literature/2026-10-11-q021-lithium-observation-contract.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 
