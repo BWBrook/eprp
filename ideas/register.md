@@ -880,6 +880,11 @@ Status **under review**, tier 2.
   ([10.1038/s41467-022-31128-3](https://doi.org/10.1038/s41467-022-31128-3),
   sect: Results/Methods) model siliceous ecosystem loss and enhanced reverse
   weathering. Generic biotic amplification or slow climate recovery is occupied.
+  Cao et al. 2022 ([10.1038/s41561-022-01009-x](https://doi.org/10.1038/s41561-022-01009-x),
+  sect: main text/Methods) and Rauzi et al. 2024
+  ([10.1073/pnas.2318860121](https://doi.org/10.1073/pnas.2318860121),
+  sect: Results/Methods) supply Li-based reverse-weathering precedents with
+  differing archive interpretations. These were missing from the initial map.
 - **Data and discriminator.** Compare these mechanisms under common external
   forcing assumptions and evaluate predictions for terrestrial productivity,
   silica burial, clay mineralogy and carbon-cycle proxies, as well as temperature.
@@ -899,9 +904,16 @@ Status **under review**, tier 2.
   independently constrained carbon-forcing envelope. Asynchronous recovery could
   distinguish restricted mechanisms, but physical lag, proxy-to-flux conversion,
   spatial sampling and shared age errors may erase the contrast. Joint support
-  is unverified; a record/age/evidence-role crosswalk precedes model harmonisation.
+  is unverified; inspected stage-scale inputs do not establish this contrast.
+  Li cross-prediction is an additional candidate, not a demonstrated stronger
+  discriminator. Native models lack some required Li/vegetation outputs, so
+  the next contract must map common observables and comparable nuisance
+  assumptions, including reverse climate-to-vegetation effects. A record/age/
+  evidence-role crosswalk precedes model harmonisation; non-use of a proxy in
+  earlier fits alone establishes neither identification nor novelty.
 - **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
   [Contrasting predictions and calibration roles](../literature/2026-10-11-q021-predictions-and-calibration.md).
+  [Li evidence and native model capabilities](../literature/2026-10-11-q021-lithium-and-model-capability.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 
@@ -2456,6 +2468,14 @@ Benton's big-picture work. See the Benton legacy map in the
 entries had a bounded prior-work scan before posing; novelty is unverified.
 
 ### Q-044 Why is life on land so diverse if regional terrestrial richness is bounded?
+
+**11 October audit update:** the [independent check](../data/q044-support-audit/README.md)
+confirms near-maximal turnover of recorded species names in the screen, but
+challenges the biological-saturation inference and the claim that the kill
+criterion is unreachable. Missing identities, detection, weights and common
+spatial support remain unresolved. Claude owns reconciliation of the entry
+and original contract below; no estimand replacement is yet agreed.
+
 Status **under review**, tier 2. Posed 10 October as tier 1 (provisional).
 Moved down on 11 October after Codex's estimand critique (76/1404). A deeper
 check the same day sharpened it.

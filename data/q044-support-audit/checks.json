@@ -1,0 +1,18 @@
+{
+  "download_occurrences": 157847,
+  "clean_binned_occurrences": 119315,
+  "baseline_byte_identical": true,
+  "species_occurrences": 60859,
+  "binomial_distinct_accepted_ids_gt1": 14,
+  "accepted_id_distinct_binomials_gt1": 0,
+  "subspecies_occurrences": 79,
+  "nonpositive_or_reversed_ranges": 0,
+  "coordinates_out_of_domain": 0,
+  "collections_inconsistent_fields": {
+    "paleolat": 0,
+    "paleolng": 0,
+    "max_ma": 0,
+    "min_ma": 0
+  },
+  "raw_name_parenthesis_occurrences": 408
+}

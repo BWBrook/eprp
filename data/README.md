@@ -1,8 +1,15 @@
 # Data in EPRP
 
-This directory currently contains no scientific data. EPRP may build reusable
-datasets and harmonisation tools, with provenance and suitability documented
-for their intended downstream uses.
+This directory contains preparation scripts, source manifests, small derived
+tables and synthetic probes. Their notes distinguish source access, numerical
+checks and scientific suitability. These are research-development artifacts;
+no entry is a completed primary investigation.
+
+A reviewer using the private GitHub repository can inspect the tracked files.
+Raw downloads, most intermediate outputs and local scratch are absent. Public
+source URLs and checksums provide retrieval routes where available; locally
+supplied Dryad inputs are not made available merely by committing their
+inspection scripts. Each artifact's README states its inputs and limitations.
 
 When a concrete task needs data, use `data/raw/<source>/` for unchanged source
 copies and `data/derived/<dataset>/` for reproducible transformations. These

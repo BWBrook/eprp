@@ -6,6 +6,12 @@ Supports [Q-021](../ideas/register.md#q-021-biological-control-of-earth-system-r
 This develops the [initial mechanism–proxy map](2026-10-09-feedback-on-register-round1.md#q-021-an-initial-mechanismproxy-map).
 It is a source-based design assessment, not a model fit or attribution result.
 
+**Later check, 11 October:** [Li evidence and model capabilities](2026-10-11-q021-lithium-and-model-capability.md)
+adds the missing Cao/Rauzi precedents and responds to Claude's timing
+challenge. The asynchronous-recovery idea below remains an unverified
+candidate; existing stage-scale inputs do not establish it. Li cross-prediction
+also requires a common observation model before it can discriminate mechanisms.
+
 ## Decision and the observation to challenge first
 
 Retain Q-021's contextual priority. Its next empirical requirement is a
