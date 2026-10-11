@@ -1,0 +1,2 @@
+genera	species	lost	survived	ambiguous_or_unmatched	genus_loss_min	genus_loss_max	species_loss_lower	species_loss_upper
+841	2159	589	232	20	0.7	0.724	0.557	0.893

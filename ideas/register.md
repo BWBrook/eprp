@@ -2445,6 +2445,28 @@ Status **under review**, tier 2. Tractability is unresolved (Codex, 76/1420).
 ### Q-042 How many species died in the great mass extinctions?
 Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
 
+- **Current contract (11 October, after external review F-01).**
+  - **Target:** the fraction of marine skeletal animal species alive at t0
+    that are globally extinct by t1, for the end-Permian first. Declare
+    whether it is *total* loss in the window or *event excess* over
+    background (Stanley's is excess).
+  - **Unit:** a start-time species cohort nested in genera.
+  - **Comparison:** sharp bounds conditional on stated information, then
+    which extra observations or selectivity assumptions narrow them.
+  - **Permitted interpretation:** assumption-labelled bounds and scenarios,
+    not a preferred global percentage.
+  - **Open:** true species per genus in the start cohort (unsampled
+    species); retention of the baseline cohort over long windows; transport
+    from regional to global.
+  - **Next decision:** can direct species data (Wang; Fan) or an explicit
+    model of unsampled species constrain species per genus enough to
+    exclude 90–96%?
+  - [Crosswalk and bounds](../data/q042-crosswalk/README.md): 56%, 62% and
+    79% measure different targets. On one matched PBDB Changhsingian cohort
+    (raw genus loss 70–72%), sampled species loss is bounded at 56–89%.
+    Reaching 96% needs a true mean of species per genus 2–4 times the
+    sampled 2.57.
+
 - **Question.** Raup 1979 (10.1126/science.206.4415.217) estimated by reverse
   rarefaction that "as many as 96 percent" of marine species died at the
   end-Permian. Stanley 2016 (10.1073/pnas.1613094113, abstract checked by
@@ -2484,10 +2506,26 @@ Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
   - Direct regional species data: Wang et al. 2014 (10.1666/13022), 62% of
     1,450 species within 200 kyr. Fan et al. 2020 (10.1126/science.aax4953)
     give about 11,000 species, Cambrian to Early Triassic only.
-  - Genus-level inputs differ widely: 56% (Barnosky; Bambach), 62% (Stanley),
-    79% for the Changhsingian in PBDB (Payne & Clapham 2012,
-    10.1146/annurev-earth-042711-105329; a different metric), and DeepDive's
-    model-based estimates (10.1038/s41467-024-48434-7).
+  - Genus-level inputs measure different targets (crosswalk, 11 October):
+    - 62%: Stanley; standing cohort at the start of the event, background
+      subtracted, Signor–Lipps restored.
+    - 56%: Stanley's uncorrected e/D for the Changhsingian alone, which he
+      calls "erroneously low". Barnosky's identical 56% cites no source;
+      Bambach 2006's figure was not obtained.
+    - 79%: Payne & Clapham 2012
+      (10.1146/annurev-earth-042711-105329); PBDB, subsampled, per-genus
+      extinction for the whole stage.
+    - DeepDive (10.1038/s41467-024-48434-7): "up to 58%", mean 24%. This is
+      a modelled *net* decline, not a proportional extinction.
+  - Species figures: Stanley & Yang 1994 (10.1126/science.266.5189.1340,
+    abstract) give "about 80 percent". Raup's and Sepkoski's 94–96% pool
+    the Middle and Late Permian events, so "81–96%" spans two targets.
+  - Regional species data:
+    - Song et al. 2013 (10.1038/ngeo1649, abstract): 57%, then 71% of the
+      remainder over 450 kyr in China.
+    - Jin et al. 2000 (10.1126/science.289.5478.432): Meishan, one section.
+    - Wang et al.'s denominator ("62% of 1,450 species") is not stated in
+      its abstract.
   - No simulation validating the inversion under clade-structured selectivity
     and incomplete sampling was found.
 - **A partial bound** (scout's derivation, checked by Claude; checked again
@@ -2715,11 +2753,14 @@ check the same day sharpened it.
     - 31% of collections have no species identity.
     - The ceiling of K holds only for equal weights.
     - Claude's "cannot rise" and "unreachable kill criterion" are withdrawn.
-  - **Overlap decays with distance at high coverage** (u ≥ 0.7). Species
-    Sørensen is 0.002 between continents, against 0.055 within a continent,
-    and 0.11 for the four pairs under 3,000 km.
-    - This is evidence against uniform detection failure.
-    - It does not separate regional naming from biology.
+  - **High-coverage pairs** (u ≥ 0.7; corrected after Codex's check).
+    - Species sharing within continents is non-zero only in two Neogene
+      pairs (Ng2 and Ng3); the median is 0 both within and between
+      continents.
+    - Genus sharing is higher within continents (mean 0.19 against 0.04),
+      but nine pairs over five bins is not a test of distance.
+    - Claude's "overlap decays with distance" is withdrawn.
+    - Observation-driven near-saturation is not rejected.
   - **Next.** A contract for observation-aware support:
     - fixed K and weights;
     - identity eligibility;

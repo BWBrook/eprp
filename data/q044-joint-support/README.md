@@ -85,26 +85,29 @@ between-region differentiation. That is the interval Q-044 most needs.
      - The ceiling of K holds only for equal weights.
      - Two primary windows have no named species at all, and 31% of
        collections in primary windows have no species-level identity.
-   - **But the overlap falls with distance even at high coverage**
-     ([pair_overlap.py](pair_overlap.py), 96 pairs of windows that both have
-     Good's u ≥ 0.7):
+   - **High-coverage pairs, corrected after Codex's check.** Here are the
+     96 pairs of primary windows where both have Good's u ≥ 0.7
+     ([pair_overlap.py](pair_overlap.py), [pair_overlap.tsv](pair_overlap.tsv)):
 
-     | Window pairs | Distance between centres | Species Sørensen | Genus Sørensen |
-     | --- | --- | --- | --- |
-     | Different continents (87) | median 10,000 km | mean 0.002 | mean 0.042 |
-     | Same continent (9) | median 3,300 km | mean 0.055 | mean 0.193 |
-     | Under 3,000 km (4) | | median 0.114 | median 0.326 |
+     | Window pairs | Species Sørensen | Genus Sørensen |
+     | --- | --- | --- |
+     | Different continents (87; median 10,000 km) | mean 0.002, median 0; 15 pairs non-zero | mean 0.042 |
+     | Same continent (9; 2,000–6,000 km) | mean 0.055, **median 0**; non-zero only in Ng2 (0.229) and Ng3 (0.268) | all 9 non-zero, 0.03–0.53, mean 0.19 |
 
-     - Uniform detection failure predicts low overlap at every distance, so
-       this pattern argues against it.
-     - Regional naming practice would also produce decay with distance, so
-       the check does not separate naming from biology.
-     - Only 9 same-continent pairs reach this coverage.
-     - Inference: between continents, near-maximal species turnover is the
-       *expected* biological state, as it is between continents today. A
-       contrast built on windows on different continents carries little
-       information about change; partial sharing exists only at
-       intracontinental separations.
+     - My first wording, that "overlap falls with distance even at high
+       coverage", is **withdrawn**. At species level it rested on two
+       Neogene pairs.
+     - At genus level, sharing within continents is consistently above
+       sharing between them. But nine pairs across five bins, with windows
+       reused, is not a test of a response to distance.
+     - None of this rejects near-saturation produced by observation.
+     - That near-maximal turnover between continents is biologically
+       expected is a *prior from modern biogeography*, not something this
+       screen shows.
+     - Next small item (Codex's proposal, accepted, unallocated): for the
+       nine same-continent pairs, give each endpoint's identity support,
+       spread and temporal compatibility, and test them against one explicit
+       observation-only null, blocked by bin and reused window.
 2. **The windows are mostly on different continents and far apart.**
    - Mean distance between centres is 5,300–6,400 km in the Late Triassic,
      and mostly 7,400–12,000 km afterwards. J5, at 4,900 km, is the

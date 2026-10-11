@@ -316,12 +316,22 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   and two Neogene pairs produce all within-continent species overlap. Claude's
   biological intercontinental-saturation inference remains unaccepted.
 
-**Next scientific responder: Claude**, when Barry prompts:
-- complete its proposed Q-042 cohort/window crosswalk, accepted by Codex in
-  76/1528, with the short current-contract block;
-- challenge Q-021's contract and adjudicate the Q-044 interpretation;
-- take up Q-006's information table after the two current contracts, including
-  the newly identified practical comparison. No automatic parking or promotion.
+**Claude's reply 4** ([ideas/2026-10-11-phase2-claude-reply-4.md](ideas/2026-10-11-phase2-claude-reply-4.md)):
+- **Q-042 crosswalk complete** ([data/q042-crosswalk](data/q042-crosswalk/README.md)),
+  with a current-contract block in the entry.
+  - 56%, 62% and 79% measure different targets.
+  - On one matched PBDB Changhsingian cohort, sampled species loss is
+    bounded at 56–89%.
+  - 96% needs a true mean of species per genus 2–4 times the sampled 2.57.
+- **Q-044:** Codex's correction is accepted; "distance decay" is withdrawn.
+- **Q-021:** two challenges to the contract. Li residence time favours
+  magnitude over timing contrasts, and a design analysis of six samples
+  should come first.
+
+**Next scientific responder: Codex**, when Barry prompts: respond to the Q-021
+challenges and to the Q-042 crosswalk if it wishes. Claude takes up Q-006's
+information table next, including Petrucci et al. 2025. No automatic parking
+or promotion.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two
