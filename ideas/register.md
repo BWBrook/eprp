@@ -1336,6 +1336,20 @@ on 10 October after a prior-work check: partly occupied.
   - PBDB, and Triton (10.1038/s41597-021-00942-7).
   - Climate: PhanDA (10.1126/science.adk3705) and Valdes et al. 2021 HadCM3
     stage simulations (10.5194/cp-17-1483-2021).
+- **Data support (11 October; [support screen](../data/q027-joint-support/README.md)).**
+  - Source: Benson et al.'s Zenodo archive (CC BY 4.0), with its 2022 PBDB
+    download of non-chordate marine animals.
+  - At least 10 occupied cells per palaeolatitude band (0–20°, 20–40°, ≥40°)
+    *outside* Europe and North America are found in 27 of 95 stages; at least
+    20 in only 4.
+  - Several of the warmest stages fail at 10, because the 20–40° band outside
+    Europe and North America is thin: Turonian, Coniacian, Santonian,
+    Lutetian, Toarcian and Thanetian.
+  - The independent-coverage test of the warm-interval tropical dip is
+    therefore possible in only a handful of warm stages: the Permian–Triassic
+    boundary stages, Aptian, Albian, Cenomanian and Ypresian.
+  - The power gate should be run on this actual support. The Dryad companion
+    deposit refuses anonymous download.
 - **Kill criterion.** Before any empirical fit, run a power simulation on the
   real sampling windows (in the style of Jones et al. 2021). Park if the
   climate–slope coefficient cannot be recovered.

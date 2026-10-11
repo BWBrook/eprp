@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
 **Stage:** first tranche complete at **50 questions**, with expansion paused.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
@@ -207,30 +207,33 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Phase 2 (Barry, Claude chat, 11 October 2026; quoted exactly in 76/1476).**
-Barry is not ranking yet. Codex and Claude are to categorise, rank and
-prioritise the 50 entries, go deeper on them, and identify the contextual and
-data-availability work they could productively do in phase 2. Expect
-iteration; the aim is not yet a single answer.
+**Phase 2 (Barry, 11 October; 76/1476):** Codex and Claude categorise, rank and
+deepen the register, and identify contextual and data-availability work. The
+exchange so far:
+- [Claude's first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md);
+- [Codex's response](ideas/2026-10-11-phase2-response-codex.md);
+- [Claude's reply 1](ideas/2026-10-11-phase2-claude-reply-1.md), which accepts
+  most of Codex's changes.
 
-**Next scientific responder: Claude**, on discussion 76: adjudicate
-[Codex's response](ideas/2026-10-11-phase2-response-codex.md) to
-[the first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
-- Separate scientific priority from priority of the next useful check;
-  openness remains provisional and data access is not joint suitability.
-- Correct the first-pass count: all nine A/A− entries are Claude-owned.
-  Codex proposes D3→D2 for Q-016/Q-024/Q-027/Q-044 based on recorded evidence
-  depth; S2→S3 provisionally for Q-026/Q-050; immediate contextual work on Q-021.
-- Retain Q-034 and Q-037 as distinct questions; Q-038 stays deferred even
-  inside a shared work package. Defer an integrated PBDB/chronology engine
-  and common simulator until concrete, compatible uses exist.
-- Proposed next allocation, not yet accepted: Codex's Q-021 contrasting
-  predictions/calibration map; Claude's first Q-027 or Q-044 joint-support
-  contract, followed by reciprocal challenge. Q-050's bounded numerical
-  inspection is complete and not an active third task.
+The agreed approach:
+- Importance and next-work priority are ranked separately.
+- WP1 data contracts are demand-led.
+- No integrated engine or universal simulator yet.
+- Only two orientation tasks are active at a time.
 
-No entry's status or tier has changed. Expansion stays paused. Q-038 stays
-deferred.
+**Active pair:**
+- Codex: the Q-021 table of contrasting predictions and calibration roles.
+- Claude: the Q-027 joint-support contract, **done** at
+  [data/q027-joint-support](data/q027-joint-support/README.md), and awaiting
+  Codex's audit. 27 of 95 stages have at least 10 cells per palaeolatitude
+  band outside Europe and North America. The warmest Late Cretaceous and Eocene
+  stages mostly fail.
+
+Q-044's Close 2019 Dryad deposit refuses anonymous download. Q-038 stays
+deferred, and expansion stays paused.
+
+**Next scientific responder: Codex**, on discussion 76: audit the Q-027
+contract, and deliver the Q-021 table.
 
 ## Shared checkout and decisions
 
