@@ -1,16 +1,16 @@
-"""Q-042: sharp bounds on end-Permian species loss, conditional on stated information.
+"""Q-042: conditional algebra for end-Permian species loss, and a PBDB stage-union diagnostic.
 
-Information sets (see README):
-  I0  genus-loss fraction g and mean species per genus m only.
-      Lower bound g/m (each lost genus has at least one species; survivors lose none).
-      Upper bound 1 - (1 - g)/m (each surviving genus keeps at least one start-cohort species).
-  I1  I0 plus the full genus-size distribution: the lower bound becomes the species share of the
-      smallest g*G genera; the upper bound is unchanged.
-  I2  the sampled cohort itself: which genera were lost (PBDB last appearance) and their sampled
-      species counts. Lower bound: species in lost genera / S. Upper: 1 - surviving genera / S.
-      Genera whose last appearance straddles the boundary are assigned both ways.
-The sampled distribution here is PBDB's Changhsingian marine animal species-level record. It is a
-labelled information set, not the true species pool: unsampled species raise the true m.
+Conditional algebra (valid only under its stated conditions; see README):
+  I0  g = TOTAL genus loss of the start-time cohort (not event excess), m = TRUE mean species per
+      genus of that cohort, and every surviving genus keeps >= 1 start-cohort species (sampled or
+      not). Then species loss lies in [g/m, 1 - (1 - g)/m].
+  I1  as I0, with a full genus-size distribution in place of m: the lower bound becomes the species
+      share of the smallest g*G genera. The sampled distribution is used only as an illustration of
+      what such a distribution does, as if it were the true one.
+Diagnostic (NOT bounds):
+  I2  PBDB stage union: genera with species-level occurrences anywhere in the Changhsingian, keyed
+      by PBDB's accepted genus, and whether PBDB records them after the stage. A stage union is not a
+      start-time cohort, and no later record is not extinction.
 
 Run from the repository root:  python3 -I data/q042-crosswalk/bounds.py
 Standard library only. Fetches the PBDB extract once into data/raw/pbdb/q042/ (git-ignored).
@@ -47,7 +47,7 @@ def sampled_cohort():
         for r in csv.DictReader(f):
             if r["accepted_rank"] in ("species", "subspecies") and r["genus"]:
                 name = re.sub(r" \(.*?\)", "", r["accepted_name"]).split()  # drop subgenus brackets
-                genus = name[0]
+                genus = re.sub(r" \(.*?\)", "", r["genus"])  # PBDB's accepted genus, not the name's first word
                 species[genus].add(" ".join(name[:2]))
                 phylum[genus] = r["phylum"]
     return species, phylum
@@ -119,15 +119,16 @@ def main():
     sp = {k: sum(len(species[gn]) for gn in species if fate[gn] == k) for k in n}
     lost, surv, amb = n["lost"], n["survived"], n["ambiguous"] + n["unmatched"]
     s_lost = sp.get("lost", 0)
-    i2 = dict(genera=G, species=S, lost=lost, survived=surv, ambiguous_or_unmatched=amb,
-              genus_loss_min=round(lost / G, 3), genus_loss_max=round((lost + amb) / G, 3),
-              species_loss_lower=round(s_lost / S, 3),
-              species_loss_upper=round(1 - surv / S, 3))
-    with open(OUT / "matched_cohort.tsv", "w", newline="") as f:
+    i2 = dict(genera=G, species=S, no_later_record=lost, later_record=surv, ambiguous_or_unmatched=amb,
+              share_genera_no_later_record_min=round(lost / G, 3),
+              share_genera_no_later_record_max=round((lost + amb) / G, 3),
+              share_species_in_genera_no_later_record=round(s_lost / S, 3),
+              share_species_if_each_later_recorded_genus_kept_one_sampled_species=round(1 - surv / S, 3))
+    with open(OUT / "stage_union_diagnostic.tsv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(i2), delimiter="\t", lineterminator="\n")
         w.writeheader()
         w.writerow(i2)
-    print("I2 matched sampled cohort:", i2, dict(n))
+    print("I2 stage-union diagnostic:", i2, dict(n))
 
 
 if __name__ == "__main__":

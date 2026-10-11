@@ -290,6 +290,30 @@ after the external review (F-02). The practical precedent was narrower than
 this entry claimed, and the remaining question is reframed below as one of
 information design.
 
+- **Current contract (11 October; [information table](../literature/2026-10-11-q006-information-table.md)).**
+  - **Target (proposed):** the contrast in integrated extinction between a
+    focal interval and its neighbours.
+  - **Unit:** lineage occurrence times with no tree, and preservation
+    piecewise constant by bin.
+  - **Comparison:**
+    - structural identifiability of the contrast when preservation varies
+      by bin;
+    - its information content at realistic sampling;
+    - what a partial tree or an independent preservation proxy adds.
+  - **Permitted interpretation:** identification and information, not new
+    rate estimates.
+  - **Open:** no identifiability result for occurrences alone was found (in a
+    bounded search); proofs in the cited rows are unchecked.
+  - **Next decision:** can a change in preservation at a bin boundary mimic
+    an extinction contrast?
+  - The table also places these sources:
+    - Legried & Terhorst 2022 (10.1073/pnas.2119513119): piecewise-constant
+      rates are identifiable from extant trees;
+    - Kopperud et al. 2023 (10.1073/pnas.2208851120): strong trends are
+      shared across congruence classes;
+    - Petrucci, May & Heath 2025 (10.1098/rstb.2023.0313): fossils improve
+      extinction accuracy, but false trait associations persist.
+
 - **Occupied.** Truman et al. 2025 (10.1093/sysbio/syae058, abstract checked by
   Claude): "widely used time-dependent fossilized birth–death (FBD) models are
   identifiable", for arbitrary rate functions, when the fossil sampling rate is
@@ -2459,17 +2483,27 @@ Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
     which extra observations or selectivity assumptions narrow them.
   - **Permitted interpretation:** assumption-labelled bounds and scenarios,
     not a preferred global percentage.
-  - **Open:** true species per genus in the start cohort (unsampled
-    species); retention of the baseline cohort over long windows; transport
-    from regional to global.
-  - **Next decision:** can direct species data (Wang; Fan) or an explicit
-    model of unsampled species constrain species per genus enough to
-    exclude 90–96%?
-  - [Crosswalk and bounds](../data/q042-crosswalk/README.md): 56%, 62% and
-    79% measure different targets. On one matched PBDB Changhsingian cohort
-    (raw genus loss 70–72%), sampled species loss is bounded at 56–89%.
-    Reaching 96% needs a true mean of species per genus 2–4 times the
-    sampled 2.57.
+  - **Open:**
+    - the *total* genus loss g of a defined start cohort (no published
+      figure examined yet supplies it);
+    - that cohort's true species-per-genus distribution (unsampled species
+      *and* unsampled genera, which can move the mean either way);
+    - retention of baseline species over long windows;
+    - transport from regional to global.
+
+    Event-excess species loss needs its own counterfactual across ranks.
+  - **Next decision:** can direct species data with start-cohort
+    definitions (Wang; Fan), or an explicit model of unsampled taxa,
+    constrain g and the size distribution enough to exclude any part of
+    80–96%?
+  - [Crosswalk and conditional algebra](../data/q042-crosswalk/README.md):
+    56%, 62% and 79% measure different targets.
+    - A total loss E requires m ≥ (1 − g)/(1 − E), with g the total loss of
+      the start cohort.
+    - The PBDB stage-union figures (56% and 89%) are descriptive
+      diagnostics, not bounds.
+    - The first version's "56–89% interval" and "96% excluded" are
+      withdrawn after Codex's challenge (76/1538).
 
 - **Question.** Raup 1979 (10.1126/science.206.4415.217) estimated by reverse
   rarefaction that "as many as 96 percent" of marine species died at the

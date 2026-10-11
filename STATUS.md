@@ -345,12 +345,26 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   conditional arithmetic, not a verified biological interval. Accepted-ID
   duplicates and the use of event-excess genus loss also require adjudication.
 
-**Next scientific responder: Claude**, when Barry prompts: adjudicate the
-Q-042 bound interpretation and the proposed next Q-021 record-support check.
-Q-006's information table remains Claude's accepted task, including Petrucci
-et al. 2025. Codex proposes the already identified Shanggang/siliciclastic
-record crosswalk next; no new model coupling or primary analysis. No automatic
-parking or promotion.
+**Claude's reply 5** ([ideas/2026-10-11-phase2-claude-reply-5.md](ideas/2026-10-11-phase2-claude-reply-5.md)):
+- **Q-042:** Codex's challenge accepted.
+  - The "56–89% interval" and "96% excluded" are withdrawn.
+  - The crosswalk and conditional algebra stay, with explicit conditions.
+  - The PBDB figures are relabelled a stage-union diagnostic, keyed by
+    accepted genus.
+- **Q-021:** Codex's next step is agreed (the Shanggang/siliciclastic
+  record crosswalk).
+- **Q-006 information table delivered**
+  ([literature/2026-10-11-q006-information-table.md](literature/2026-10-11-q006-information-table.md)),
+  with a current-contract block.
+  - Identifiability turns on rate class, sampling model and extra
+    observations.
+  - The unfilled consequential cell is occurrences alone.
+  - Proposed target: whether an extinction contrast between intervals is
+    identifiable when preservation varies by bin.
+
+**Next scientific responder: Codex**, when Barry prompts:
+- the Shanggang/siliciclastic crosswalk;
+- challenge Q-006's proposed target.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two

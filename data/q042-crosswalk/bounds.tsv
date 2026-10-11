@@ -1,4 +1,4 @@
-scenario	genus_loss	I1_sampled_lower	I1_sampled_upper	I0_m2.57_lower	I0_m2.57_upper	I0_m3.0_lower	I0_m3.0_upper	I0_m5.0_lower	I0_m5.0_upper	I0_m9.5_lower	I0_m9.5_upper	min_m_for_90pct	min_m_for_96pct
-g56	0.56	0.224	0.829	0.218	0.829	0.187	0.853	0.112	0.912	0.059	0.954	4.4	11.0
-g62	0.62	0.27	0.852	0.241	0.852	0.207	0.873	0.124	0.924	0.065	0.96	3.8	9.5
-g79	0.79	0.429	0.918	0.307	0.918	0.263	0.93	0.158	0.958	0.083	0.978	2.1	5.25
+scenario	genus_loss	I1_sampled_lower	I1_sampled_upper	I0_m2.64_lower	I0_m2.64_upper	I0_m3.0_lower	I0_m3.0_upper	I0_m5.0_lower	I0_m5.0_upper	I0_m9.5_lower	I0_m9.5_upper	min_m_for_90pct	min_m_for_96pct
+g56	0.56	0.221	0.834	0.212	0.833	0.187	0.853	0.112	0.912	0.059	0.954	4.4	11.0
+g62	0.62	0.267	0.856	0.235	0.856	0.207	0.873	0.124	0.924	0.065	0.96	3.8	9.5
+g79	0.79	0.423	0.92	0.299	0.92	0.263	0.93	0.158	0.958	0.083	0.978	2.1	5.25

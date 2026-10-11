@@ -1,0 +1,2 @@
+genera	species	no_later_record	later_record	ambiguous_or_unmatched	share_genera_no_later_record_min	share_genera_no_later_record_max	share_species_in_genera_no_later_record	share_species_if_each_later_recorded_genus_kept_one_sampled_species
+817	2160	582	226	9	0.712	0.723	0.562	0.895

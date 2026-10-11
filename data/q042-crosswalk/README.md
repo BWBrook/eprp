@@ -2,13 +2,12 @@
 
 Owner: Claude | 11 October 2026 | Responds to external review F-01 ([review](../../docs/review/2026-10-11-gpt6pro-review/review.md))
 
-Status: **reconciliation and bounds, not a new estimate of species loss.**
+Status: **source reconciliation and conditional algebra, not a new estimate of species loss.**
 
 The review found that Q-042 treated the 56%, 62% and 79% figures for
 end-Permian genus loss as one uncertainty interval. This note establishes,
-source by source, what each published figure measures. It then computes sharp
-bounds on species loss, conditional on information that belongs to one
-cohort.
+source by source, what each published figure measures. It then states the conditional algebra that links genus loss to species
+loss, with a PBDB diagnostic.
 
 ## Rebuild
 
@@ -26,9 +25,9 @@ The script uses the standard library only.
   - species occurrences: sha256
     `d9081350fdad36a86e0ba6da7bcc9fe13b6eeb918155e3ab9d7b5922d79ff267`;
   - genus appearances: sha256
-    `9b016632050d35baed0bb5d6a888257fa2e8640e06257fee888729f6bd6ba464`.
+    `5ac13db4b9740b96aa5cd93283ca0f980557b91ca1d9d52a5cce8c34d98b8c40`.
 - **Outputs (tracked):** [bounds.tsv](bounds.tsv),
-  [matched_cohort.tsv](matched_cohort.tsv) and
+  [stage_union_diagnostic.tsv](stage_union_diagnostic.tsv) and
   [sampled_genus_sizes.tsv](sampled_genus_sizes.tsv).
 
 ## What each source measures
@@ -97,72 +96,98 @@ at t0 globally extinct by t1") is a *total-loss* quantity. Stanley's is an
 *event-excess* quantity. For a short pulse the two converge; over a whole
 stage they need not.
 
-## Sharp bounds, conditional on stated information
+## Conditional algebra, and a stage-union diagnostic
 
-Each surviving genus is assumed to retain at least one species *of the
-start-time cohort*. That is what makes the upper bound valid (F-01).
+*Revised the same day after Codex's challenge (76/1538; accepted).* The first
+version reported an "empirical interval" of 56–89% and said 96% was
+"excluded for the sampled pool". **Both claims are withdrawn**, for three
+reasons:
 
-**I2: one matched sampled cohort.** The cohort is PBDB marine animal genera
-with species-level occurrences contained in the Changhsingian:
-- 841 genera and 2,159 species (mean 2.57 species per genus; 55% monotypic);
-- subgenera folded into their genera.
+1. A surviving genus can persist through *unsampled* species while every
+   sampled species dies. Retaining one baseline species does not bound loss
+   among the sampled species; that would need a *sampled* baseline species
+   to survive in each genus.
+2. Every extracted occurrence has stage-wide ages (254.14–251.902 Ma). This
+   is a stage union, not a start-time cohort. And no later record is not
+   extinction, so 56% is not a hard lower bound either.
+3. Stanley's 62% is an *event-excess* genus loss, not the number of genera
+   that actually survived.
+   - Codex's example: 100 genera and 500 species. 80 genera actually die,
+     against 18 expected from background, so the excess is 62%.
+   - The 20 surviving genera can then keep one species each, allowing 96%
+     *total* species loss.
+   - Plugging 0.62 into the total-loss formula gives 92.4%.
+   - Species-excess bounds need their own counterfactual across ranks.
 
-Each genus's fate comes from its PBDB last appearance (boundary 251.902 Ma):
-589 lost, 232 survived, 8 ambiguous across the boundary, and 12 unmatched.
+A fourth point also holds: missing genera can *lower* the true mean species
+per genus, so unsampled taxa do not necessarily raise it. My first version
+said they would.
 
-| Matched cohort | Genus loss | Species-loss bounds |
-| --- | --- | --- |
-| PBDB Changhsingian, sampled | 70.0–72.4% (raw: no background or Signor–Lipps treatment; Lazarus genera inflate it) | **55.7–89.3%** |
+**Conditional algebra (I0/I1), retained.** Suppose:
+- g is the *total* genus loss of the start-time cohort;
+- m is that cohort's *true* mean number of species per genus;
+- every surviving genus keeps at least one start-cohort species, sampled or
+  not.
 
-- On this sampled pool, 96% is excluded: at most 89% of the sampled species
-  can have died.
-- The bound does not cover *unsampled* species. Adding them raises the true
-  number of species per genus, and with it the upper bound.
+Then species loss lies in [g/m, 1 − (1 − g)/m]. A full size distribution
+raises the lower bound to the species share of the smallest gG genera.
+[bounds.tsv](bounds.tsv) tabulates hypothetical values of g and m. A total
+loss E is reachable only if m ≥ (1 − g)/(1 − E):
 
-**I0/I1: one genus-loss input g with a species-per-genus mean m.** These are
-scenarios, because g and m come from different cohorts.
-[bounds.tsv](bounds.tsv) gives the full table. The key column is the mean m
-needed before the upper bound can reach a given loss:
-
-| Genus loss g | m needed for 90% | m needed for 96% |
+| Total genus loss g of the start cohort | m needed for 90% | m needed for 96% |
 | --- | --- | --- |
 | 0.56 | 4.4 | 11.0 |
-| 0.62 (Stanley) | 3.8 | 9.5 |
-| 0.79 (Payne & Clapham) | 2.1 | 5.25 |
+| 0.62 | 3.8 | 9.5 |
+| 0.79 | 2.1 | 5.25 |
 
-The sampled Changhsingian mean is 2.57.
-- A 96% loss needs a true mean species-per-genus 2–4 times the sampled mean,
-  depending on which genus target is used.
-- That is possible, because many species were never sampled. But it is a
-  checkable claim, not a default.
-- The size distribution (I1) barely moves the lower bound, because most
-  sampled genera are monotypic. Narrowing must come from direct species data
-  or from selectivity models.
+These are conditional statements. None of the published genus figures is
+yet established as g in this sense:
+- Stanley's 62% is event excess.
+- Payne & Clapham's 79% is a subsampled figure for a stage union.
+
+**Stage-union diagnostic (I2), not a bound.** The data are PBDB genera with
+species-level occurrences anywhere in the Changhsingian, keyed by PBDB's
+accepted genus (the first version split 57 accepted genera by name), with
+subgenera folded in. That gives 817 genera and 2,160 species, a mean of 2.64
+per genus. Of these genera:
+- 582 have no PBDB record after 251.902 Ma;
+- 226 do;
+- 9 are ambiguous or unmatched.
+
+Two descriptive shares, in [stage_union_diagnostic.tsv](stage_union_diagnostic.tsv):
+- 56% of the sampled species belong to genera with no later record;
+- 89% of the sampled species would have to die if each genus with a later
+  record kept exactly one *sampled* species.
+
+Neither is a bound on biological loss.
 
 ## Consequences for Q-042
 
-1. **Use one target.** Declare total loss or event excess, and the window.
-   Then the comparable genus inputs are Stanley's 62% (event excess,
-   standing cohort) and a matched-cohort raw value such as I2. Payne &
-   Clapham's 79% and DeepDive's 24–58% are labelled scenarios. The 56% is
-   the uncorrected metric.
-2. **The decisive unknown is true species richness per genus in the start
-   cohort.** It sets whether 90–96% is reachable. Two routes, each with its
-   own transport problem:
-   - species-level regional data (Wang; Fan, whose supplement could not be
-     obtained);
-   - an explicit model of unsampled species.
+1. **Use one target.** Declare total loss or event excess, the window, and
+   the start-time cohort.
+   - Every published genus figure examined here is on a different target.
+   - None yet supplies g as the total loss of a start cohort.
+   - Event-excess species loss needs a counterfactual across ranks, not the
+     total-loss formula.
+2. **Two decisive unknowns:**
+   - the start-cohort genus loss g (total);
+   - the true species-per-genus distribution of that cohort.
+
+   Unsampled taxa can move the mean either way. Narrowing needs direct
+   species data with start-cohort definitions, or an explicit model of
+   unsampled species *and* unsampled genera.
 3. **Do not combine regional and global without a transport argument.**
    Wang's and Song's figures bound the regional cohort's global loss from
    above. They are not global calibration values.
 
 ## Limits
 
-- The I2 cohort includes only genera with species-level identifications.
-  "Lost" means no later PBDB record, so Lazarus taxa and missing data count
-  as losses.
-- Changhsingian background is not removed.
-- The species counts are the sampled species, not the true pool.
+- The I2 diagnostic includes only genera with species-level
+  identifications.
+  - It is a stage union, not a start-time cohort.
+  - "No later record" includes Lazarus taxa and missing data.
+  - Changhsingian background is not removed.
+  - The species counts are the sampled species, not the true pool.
 - Not obtained:
   - Payne & Clapham's Supplemental Sidebar 1 (their cohort);
   - Fan et al.'s supplement (any percentage);
