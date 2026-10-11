@@ -43,7 +43,7 @@ existing agent assessments, not a fresh portfolio ranking.
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
 | Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Initial allocation accepted (76/1514). Codex's [Q-021 prediction/calibration table](literature/2026-10-11-q021-predictions-and-calibration.md) and [Q-027 support audit](data/q027-support-audit/README.md) complete. Claude's Q-027 screen reproduced but its power-design inference challenged; Claude accepted (reply 2), fixed the era, unknown-country and Namibia bugs (k10 now 26/95), and withdrew the warm-stage inference. Claude's reply 2 challenges Q-021 timing and proposes Li cross-prediction; Codex's [response](ideas/2026-10-11-phase2-review-preparation-codex.md) accepts Li as a candidate constraint but requires common proxy mappings and matched assumptions. No status/tier changes or integrated engine |
 | Q-038 data access and flag audit | Claude contract; Codex independent check | Barry supplied Dryad data and lifted deferral. [Design audit](data/q038-flag-audit/README.md) confirms shifted flags under historical RMark without fitting. Claude's [contract](data/q038-monarrez-contract/README.md) and register entry reconciled (reply 2): published-coefficient provenance unresolved; subgenera are nested units, not duplicate observations; zero range is ambiguous. Next gate: a prospective predictor contract. Claude has not sent it [Detail withheld pending disclosure to the data custodian.] |
-| Q-044 joint-support contract | Claude | [Support screen](data/q044-joint-support/README.md) complete (reply 2). 19/26 Late Triassic–Neogene bins have ≥4 disjoint 1,000 km windows with ≥10 collections, but windows share almost no species, so β_between sits near its ceiling. Codex's [audit](data/q044-support-audit/README.md) reproduces the screen and confirms recorded beta/K near 1, but biological saturation remains unverified and the kill criterion is reachable. Missing identities/common support require a revised contract before any estimand replacement; Claude next |
+| Q-044 joint-support contract | Claude | [Support screen](data/q044-joint-support/README.md) and Codex's [ceiling audit](data/q044-support-audit/README.md) reconciled (Claude reply 3). Recorded species β/K is near 1 in the Mesozoic and Palaeogene; biological saturation is not shown, and the kill criterion is reachable. At high coverage, overlap decays with distance (Sørensen 0.002 between continents against 0.055 within), evidence against uniform detection failure but not against regional naming. Next: an observation-aware support contract, then a choice of target; unallocated |
 | Q-050 initial covariance-data support | Codex | Complete: two 75-sample numerical series inspected; ZIP checksum and internal consistency verified. Stored `tt` is elapsed time, correcting the earlier increment description. Original-sample/environment/age crosswalk remains open; no model fit |
 | Later project selection and downstream handoffs | Barry, after agent development | Selection comes later; Barry is not asked to rank at this checkpoint. No primary investigation selected; no entry yet ready for handoff |
 
@@ -267,17 +267,26 @@ and removes forced verdict/promotion quotas. The
 [response note](ideas/2026-10-11-phase2-review-preparation-codex.md) explains
 these changes. Barry controls dispatch; no review has been sent by Codex.
 
-**Next scientific responder: Claude**, discussion 76:
-- adjudicate the review-prompt candidate before Barry dispatches;
-- reconcile Q-044's recorded-saturation finding with Codex's observation and
-  kill-criterion corrections;
-- challenge the revised Q-021 Li/age/observation-model gate.
+**Claude's reply 3** ([ideas/2026-10-11-phase2-claude-reply-3.md](ideas/2026-10-11-phase2-claude-reply-3.md)):
+- adopts Codex's prompt candidate as the base, with additions;
+- accepts Codex's Q-044 corrections and adds a distance-decay test of the
+  detection counterexample;
+- accepts the revised Q-021 gate, and proposes a shared Li box model driven
+  by each model's flux outputs as the common observation mapping.
 
-Codex's accepted response and bounded checks are complete. Original Claude
-contracts and the original prompt remain unchanged; minimal notices in the
-register point to unresolved adjudications. The Q-027/Q-038 corrections from
-Claude's reply 2 are received; the new Q-038 name-join check was not independently
-rerun in this tranche.
+**External review.**
+- The commit containing reply 3 is the review snapshot.
+- The final prompt is committed *after* it, in
+  `docs/review/2026-10-11-external-review-prompt.md`, replacing Claude's first
+  draft (which stays in Git history).
+- Barry's instruction: the reviewer is told to ignore `docs/review/` and the
+  notes on review preparation.
+- Barry controls dispatch.
+
+**Next scientific responder: Codex**, when Barry prompts: Q-044's distance
+test and the inference about windows on different continents; the Q-021
+flux-mapping proposal. The new Q-038 checks on name joins and nested units
+were not independently rerun.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two

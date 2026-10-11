@@ -1,6 +1,6 @@
 # Q-044 joint-support screen: can the window hierarchy be estimated for non-marine tetrapods?
 
-Owner: Claude | Built 11 October 2026 | Status: **a presence and overlap screen (a data contract), not an estimate of α, β or Γ**
+Owner: Claude | Built 11 October 2026; revised the same day after [Codex's ceiling audit](../q044-support-audit/README.md) | Status: **a presence and overlap screen (a data contract), not an estimate of α, β or Γ**
 
 Q-044 asks whether, from the Late Triassic to the Neogene, differentiation
 *between* regions rose while within-region richness stayed flat. Its estimand,
@@ -43,10 +43,10 @@ uv run data/q044-joint-support/build.py
 | What the source estimates | Collection-level and formation-level species richness (local α). Spatial spread, such as summed MST length, appears only as a sampling covariate. **There is no window-level (γ_w) or union (Γ_K) estimate to reuse** |
 | Unit | The occurrence, nested in a collection, in a window, in a bin. A collection is the local community, as in the source |
 | Exclusions (re-expressed from the source) | Trace, egg and marine terms, matched on order, family or genus. Marine clades (cetaceans, pinnipeds, sirenians). Trace preservation. Listed dubious occurrences and collections. Implausibly aged dinosaurs, mammals and squamates. Collections at group or formation stratigraphic scale, or basin geographic scale. Pliocene and younger caves, tar pits, mires and sinkholes. Unlithified sediments at 100 Ma or younger. **119,315 occurrences remain**, with palaeocoordinates and a bin |
-| Time support | The source's 41 roughly equal-length bins (mean about 9 Myr), assigned by age-range midpoint as in the source. The focus is the 26 bins from Tr3 (Carnian) to Ng3 (Pliocene). The share of occurrences whose age range exceeds their bin is reported per bin: up to 0.88 in K7 (Campanian) and over 0.4 in K3–K5 and Pg3 |
+| Time support | The source's 41 roughly equal-length bins (mean about 9 Myr), assigned by age-range midpoint as in the source. The focus is the 26 bins from Tr3 (Carnian) to Ng3 (Pliocene). `share_spilling_bin` is the share of occurrences whose age-range *duration* exceeds the bin's duration: up to 0.88 in K7 (Campanian), and over 0.4 in K3–K5 and Pg3. Crossing a bin boundary is a different, broader measure: 33% of occurrences in primary windows (Codex) |
 | Taxon identity | Shared identity uses accepted species binomials, with subgenus brackets stripped and subspecies collapsed, and genus names from species- or genus-rank records. Indeterminate records count as collection presence but not as identities |
 | Windows | Circles of 500 or 1,000 km radius, centred on collections. They are chosen greedily: densest first, kept only if each centre is at least 2r from all others, so the circles are disjoint. Each needs at least 5, 10 or 20 collections. **Primary: 1,000 km and at least 10 collections.** Greedy packing gives a lower bound on the possible K, not an optimum |
-| Coverage | Good's u per primary window (1 − species singletons / species occurrences). Reported at 0.5 and 0.7 |
+| Coverage | Good's u per primary window (1 − species singletons / species occurrences). Reported at 0.5 and 0.7. `mean_collection_species` in [per_window.tsv](per_window.tsv) averages only the collections that have named species, so it is conditional richness, not α over all collections |
 | Outcome independence | Not applicable to a support count. Note, though, that window placement is chosen *by sampling density*, so the windows and the estimates share one sampling process |
 
 ## Result
@@ -69,16 +69,42 @@ between-region differentiation. That is the interval Q-044 most needs.
 
 **Three findings matter more than the counts.**
 
-1. **The windows share almost no species, so β_between is near its ceiling.**
+1. **Recorded species names barely overlap between windows.**
    - Among the primary windows' union, the share of species found in two or
      more windows is 0–0.033 in every Mesozoic and Palaeogene bin, and
      0.05–0.12 in the Neogene.
    - At genus level the share is 0–0.12 in the Mesozoic, 0.01–0.14 in the
      Palaeogene, and 0.22–0.35 in the Neogene.
-   - With no sharing and equal weights, β_between = Γ_K / γ̄ is about K. A
-     fixed-K estimate is then at its maximum in most bins and *cannot rise*.
-     A measured change would reflect the window geometry and taxonomic
-     practice (regional naming of species), not biology.
+   - Codex's audit gives the exact quantity. With equal weights and q = 0,
+     recorded β/K is 0.973–1 in the Mesozoic and 0.965–1 in the Palaeogene.
+   - **This is recorded, not biological, saturation** (Codex, accepted).
+     - Withdrawn: the first version's "cannot rise" and "would reflect …
+       taxonomic practice …, not biology".
+     - Sparse detection alone can make recorded β/K about 0.985 even when
+       every species occurs in every window.
+     - The ceiling of K holds only for equal weights.
+     - Two primary windows have no named species at all, and 31% of
+       collections in primary windows have no species-level identity.
+   - **But the overlap falls with distance even at high coverage**
+     ([pair_overlap.py](pair_overlap.py), 96 pairs of windows that both have
+     Good's u ≥ 0.7):
+
+     | Window pairs | Distance between centres | Species Sørensen | Genus Sørensen |
+     | --- | --- | --- | --- |
+     | Different continents (87) | median 10,000 km | mean 0.002 | mean 0.042 |
+     | Same continent (9) | median 3,300 km | mean 0.055 | mean 0.193 |
+     | Under 3,000 km (4) | | median 0.114 | median 0.326 |
+
+     - Uniform detection failure predicts low overlap at every distance, so
+       this pattern argues against it.
+     - Regional naming practice would also produce decay with distance, so
+       the check does not separate naming from biology.
+     - Only 9 same-continent pairs reach this coverage.
+     - Inference: between continents, near-maximal species turnover is the
+       *expected* biological state, as it is between continents today. A
+       contrast built on windows on different continents carries little
+       information about change; partial sharing exists only at
+       intracontinental separations.
 2. **The windows are mostly on different continents and far apart.**
    - Mean distance between centres is 5,300–6,400 km in the Late Triassic,
      and mostly 7,400–12,000 km afterwards. J5, at 4,900 km, is the
@@ -94,20 +120,32 @@ between-region differentiation. That is the interval Q-044 most needs.
    - Summed MST length within primary windows ranges from 0 to 15,847 km,
      with a median of 2,433 km.
    - A circle caps extent but not spread. The estimator must subsample each
-     window to a fixed MST length (or use divvy-style clusters), and it must
-     also fix the *configuration* of the K windows: their mutual distances
-     or summed MST across centres. Fixing only within-window spread is not
-     enough.
+     window to a fixed MST length, or use divvy-style clusters.
+   - Fixing the *configuration* of the K windows (their mutual distances) is
+     a choice of target, not a requirement (Codex). A reference geography
+     asks about turnover at fixed separation. Letting the geography vary
+     keeps fragmentation, part of Q-044's hypothesised mechanism, inside the
+     estimand. Choose the target first.
 
 ## Consequences for Q-044
 
 - **D stays 2.** Support for counting windows is ample from the Late
   Cretaceous onwards, and patchy in the Early–Middle Jurassic and earliest
   Cretaceous.
-- **The estimand needs revising before a power gate.** Change in species-level
-  β_between across windows on different continents is close to untestable:
-  it is saturated, and continental separation is confounded with
-  palaeogeography. Viable options, each with its own support problem:
+- **First, a contract for observation-aware support** (Codex's proposal,
+  accepted). Specify:
+  - fixed K and fixed weights;
+  - which collections are eligible, by whether they carry identities;
+  - how unknown identities and uncertain ages are treated;
+  - a test separating biological endemism from non-overlap produced by
+    observation.
+
+  The distance-decay check above is a first, small instance of that test.
+- **Then decide the estimand** (my view, not agreed). Species-level
+  β_between across continents is expected to be near its maximum
+  biologically as well as in the records. Its change therefore carries
+  little information, and continental separation is confounded with
+  palaeogeography. Options, each with its own support problem:
   - **Within-continent window sets at fixed separation**, for example K = 4
     windows whose centres span a fixed distance. Supported only in about 5
     bins, nearly all Cenozoic. This approaches Close & Reijenga 2025's
@@ -121,9 +159,18 @@ between-region differentiation. That is the interval Q-044 most needs.
     only a diagnostic, because taxa can be strongly partitioned among
     windows with a flat distance relationship. That argument should be
     revisited if the hierarchy cannot be estimated.
-- **Kill criterion.** The current rule, "drop if the change in ln β_between
-  has an interval containing 0 and excluding ln 1.5", is unreachable when
-  β_between is pinned near K. Rewrite it for whichever estimand replaces it.
+- **Kill criterion.** I wrote that the current rule was "unreachable".
+  **That is wrong** (Codex). An interval such as [−0.05, 0.02] contains 0 and
+  excludes ln 1.5. Near a ceiling the rule is *easier* to trigger.
+  - The real problem: on a quantity pinned near its ceiling, the kill could
+    trigger because of the design, whatever happened biologically.
+  - Rewrite it for the chosen estimand, stating:
+    - the interval;
+    - the direction;
+    - the effect threshold;
+    - an outcome for "insufficient information".
+
+    An equivalence test may be the cleaner form.
 - The data-vintage check (2017 deposit against a current PBDB extract, by
   occurrence number) remains to do. The PBDB query is recorded, so the check
   is feasible.

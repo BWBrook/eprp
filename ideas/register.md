@@ -2469,13 +2469,6 @@ entries had a bounded prior-work scan before posing; novelty is unverified.
 
 ### Q-044 Why is life on land so diverse if regional terrestrial richness is bounded?
 
-**11 October audit update:** the [independent check](../data/q044-support-audit/README.md)
-confirms near-maximal turnover of recorded species names in the screen, but
-challenges the biological-saturation inference and the claim that the kill
-criterion is unreachable. Missing identities, detection, weights and common
-spatial support remain unresolved. Claude owns reconciliation of the entry
-and original contract below; no estimand replacement is yet agreed.
-
 Status **under review**, tier 2. Posed 10 October as tier 1 (provisional).
 Moved down on 11 October after Codex's estimand critique (76/1404). A deeper
 check the same day sharpened it.
@@ -2580,25 +2573,32 @@ check the same day sharpened it.
     - 16 still pass with Good's u ≥ 0.5.
     - Only 5 pass with u ≥ 0.7, all Cenozoic.
     - The Jurassic gaps (J2–J4) fall where break-up should matter most.
-  - **The decisive finding is saturation.** Primary windows share almost no
-    species.
-    - The share of union species found in two or more windows is at most
-      0.033 in every Mesozoic and Palaeogene bin; at genus level, at most
-      0.14.
-    - So β_between is close to K, its ceiling, and as specified it cannot
-      rise.
-  - *Geometry.* The windows mostly sit on different continents, with centres
-    5,000–12,000 km apart. Only 5 bins have at least four windows on one
-    continent.
-  - *Consequence.* The estimand and the kill criterion need revising before
-    a power gate. Candidates:
-    - within-continent windows at a fixed separation (a Cenozoic-only
-      design, close to Close & Reijenga 2025);
-    - a less saturated level or measure;
-    - distance-conditioned sharing.
+  - **Recorded overlap is near zero; biological saturation is not shown.**
+    - Recorded species β/K, with equal weights, is 0.97–1 in every Mesozoic
+      and Palaeogene bin.
+    - But Codex's [ceiling audit](../data/q044-support-audit/README.md)
+      shows that sparse detection alone can produce this.
+    - 31% of collections have no species identity.
+    - The ceiling of K holds only for equal weights.
+    - Claude's "cannot rise" and "unreachable kill criterion" are withdrawn.
+  - **Overlap decays with distance at high coverage** (u ≥ 0.7). Species
+    Sørensen is 0.002 between continents, against 0.055 within a continent,
+    and 0.11 for the four pairs under 3,000 km.
+    - This is evidence against uniform detection failure.
+    - It does not separate regional naming from biology.
+  - **Next.** A contract for observation-aware support:
+    - fixed K and weights;
+    - identity eligibility;
+    - unknown identities and ages;
+    - a test of endemism against non-overlap produced by observation.
 
-    Within-window spread must be fixed by subsampling to a fixed MST, and
-    the configuration of the windows must be fixed as well. D stays 2.
+    Then choose the target: turnover at a reference geography, or total
+    change that includes fragmentation. Fixing distances would remove part
+    of the fragmentation pathway.
+  - The kill criterion is reachable, but on a quantity near its ceiling it
+    can trigger for design reasons. Rewrite it with an explicit interval,
+    direction, threshold and an "insufficient information" outcome.
+  - D stays 2.
 - **Robustness.** The bounded data-vintage check from Q-045 belongs here:
   compare the Close et al. 2019 deposited extract with a current extract by
   stable identifiers.
