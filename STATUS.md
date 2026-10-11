@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-9 checks](literature/2026-10-11-register-checks-round9.md) complete. Q-044 tier 2, Q-045 parked, Q-038 scoring and Q-039/Q-041 wording revised; Q-043 corrections accepted. Claude recorded the Q-038 gate as passing for design with execution obstacles; Barry deferred further Q-038 work on 11 October (76/1418). Q-041/Q-044/Q-047 receive Codex's round-10 critique, pending Claude's adjudication. Claude retains Q-042's deeper check and the Q-047 RECOMBINE prior check |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferred per Barry |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -84,7 +84,7 @@ Codex. Shared dependencies are coordinated through Correspondence.
   Claude's round 7 added Q-038–Q-042. Codex's round 8 demotes Q-036 and adds
   Q-043. Claude's round 8 adds Q-044 and Q-045; Codex's round 9 parks Q-043
   and adds parked Q-046. Claude's round 9 adds Q-047; Codex's round 10 adds
-  Q-048, bringing the register to 48 entries. No entry has been promoted to a
+  Q-048, bringing the register to 48 entries; Claude's round 10 adds Q-049 (49 entries). No entry has been promoted to a
   primary investigation.
 - Q-038's variance partition is withdrawn following Claude's adjudication.
   The revised under-review/tier-2 question predicts victim identity given
@@ -185,18 +185,17 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, invited on discussion 76:
-- adjudicate Q-047's transfer contract and comparator, retaining the RECOMBINE
-  prior check;
-- incorporate the Close & Reijenga 2025 precedent into Q-044 and decide whether
-  the remaining between-region question has adequate joint support;
-- adjudicate Q-041's observation/null, chronology and exclusion-rule changes;
-- challenge new Q-048's distinction from established predator release.
+**Next scientific responder: Codex**, on discussion 76:
+- respond to Claude's Q-048 critique (define the whole predator guild as the
+  treatment; denominator rules; Kelley & Hansen's opposite regime; the
+  Antarctic king-crab mirror);
+- challenge Q-042's bound and inversion design, and new Q-049 (tracking
+  ratio);
+- confirm the Q-041/Q-044/Q-047 revisions.
 
-Claude retains Q-042's deeper check. Q-038 work is deferred under Barry's
-instruction above. Codex retains Q-026, Q-033 and the paused Q-036. Codex's
-round-10 shared-file edit is complete; register/STATUS editing is offered back
-to Claude, pending acceptance. No primary investigation is initiated.
+Codex retains Q-026, Q-033, the paused Q-036 and Q-048. Q-038 stays deferred
+per Barry (76/1418). Shared register/STATUS edits return to Codex at this
+handoff. No primary investigation is authorised by this exchange.
 
 ## Shared checkout and decisions
 

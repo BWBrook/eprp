@@ -114,14 +114,15 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-038 | Bad genes or bad luck: how predictable is which genera die, and does it change in mass extinctions? | under review | 2 | Claude |
 | Q-039 | Did Sepkoski's evolutionary faunas interact, beyond sharing limits and shocks? | sketch | 2 | Claude |
 | Q-040 | Did marine diversity really rise since the Palaeozoic, and is a global curve the right estimand? | sketch | 2 | Claude |
-| Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | sketch | 2 | Claude |
-| Q-042 | How many species died in the great mass extinctions? | sketch | 2 | Claude |
+| Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | under review | 2 | Claude |
+| Q-042 | How many species died in the great mass extinctions? | under review | 2 | Claude |
 | Q-043 | Does survivor composition determine what can evolve next? | parked | — | Codex |
 | Q-044 | Why is life on land so diverse if regional terrestrial richness is bounded? | under review | 2 | Claude |
 | Q-045 | How robust are headline macroevolutionary estimates to future data? | parked | — | Claude |
 | Q-046 | Did marine diversification increase total energy use or divide it among more taxa? | parked | — | Codex |
-| Q-047 | When biotas meet: do past interchanges forecast today's biotic mixing? | sketch | 2 | Claude |
+| Q-047 | When biotas meet: do past interchanges forecast today's biotic mixing? | under review | 2 | Claude |
 | Q-048 | Can climate-driven predator decline reduce extinction risk for their prey? | under review | 2 | Codex |
+| Q-049 | Did failure to track shifting isotherms predict extinction at past hyperthermals? | sketch | 2 | Claude |
 
 ---
 
@@ -2138,13 +2139,20 @@ diversity that comparable physical conditions support.
 - **Evidence.** [Round-7 legacy map](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-041 Is there periodicity in extinction once modern timescale uncertainty is propagated?
-Status **sketch**, tier 2 (provisional; scanned 10 October).
+Status **under review**, tier 2. Tractability is unresolved (Codex, 76/1420).
 
 - **Question.** Raup & Sepkoski 1984 (10.1073/pnas.81.3.801) reported a period
   of about 26 Myr. Using GTS2020 boundary ages, drawn jointly with their
   uncertainties, and sampling-standardised extinction rates, does a periodic
-  model beat aperiodic nulls by marginal likelihood? Test periods from 10 to
-  60 Myr, plus quasi-periodic and periodic-plus-trend variants.
+  model beat aperiodic nulls by marginal likelihood? Use a log-uniform period
+  prior over 10–100 Myr, with sensitivity checked on 10–60 Myr. Include
+  quasi-periodic and periodic-plus-trend variants.
+  - The target is periodic structure in extinction *severity, conditional on
+    the inherited stage grid*. Some boundaries are defined by biotic turnover:
+    the Famennian base sits just above the Kellwasser extinction horizon.
+    Conditioning cannot remove that dependence.
+  - Timing against independently dated sections, or bins fixed independently
+    of the grid, is a different, complementary target.
 - **Why big.** A real period would point to a periodic forcing, which could be
   astronomical or internal to the Earth (for example mantle or sea-level
   cycles); periodicity alone would not identify the cause (Codex, 76/1404). A
@@ -2194,12 +2202,26 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
     - Chronostratigraphic artefact (Stigler & Wagner 1987).
 - **Design (revised).**
   1. **Age model.** Use GTS2020 spline Monte Carlo replicates with shared
-     boundaries, forced monotone. GTS2020 notes that treating errors as
-     independent underestimates interpolated uncertainty, so add correlated
-     external error. Add a GTS2004/2012/2020 ensemble, and treat event
-     placement within a stage as a nuisance parameter.
-  2. **Null conditioned on the lattice.** Permute or rotate extinction metrics
-     among the real intervals, not event dates.
+     boundaries, forced monotone, and recompute interval exposures on every
+     draw.
+     - GTS2020 (chapter 14A) notes that treating errors as independent
+       underestimates interpolated uncertainty, so add correlated external
+       error.
+     - No ready-made global joint ensemble has been verified. Obtain the
+       inputs, the internal/external error partition and the sampler
+       provenance.
+     - GTS2004, 2012 and 2020 are alternative reconstructions, not equally
+       probable uncertainty draws.
+     - Treat event placement within a stage as a nuisance parameter.
+  2. **Generative null (revised after Codex, 76/1420).** Fit an aperiodic null
+     integrated over the actual intervals, including the fossil observation
+     and estimation process. Raw permutation among intervals is not
+     exchangeable:
+     - durations, sampling, cohort size, trend and serial dependence differ;
+     - under a constant hazard of 0.1 per Myr, expected loss is 0.095 in a
+       1-Myr bin and 0.632 in a 10-Myr bin;
+     - rotating the grid changes physical-time separations.
+     Restricted randomisation is a diagnostic only where it can be justified.
   3. **Models.** Uniform, trend, red noise or Gaussian process, narrow-pulse
      periodic, periodic plus background, and quasi-periodic. Put log-uniform
      priors on the period over 10–100 Myr and test sensitivity to the prior.
@@ -2216,51 +2238,99 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
   - Use Bayes factors in a stated direction. A periodic-versus-null Bayes
     factor below 3 is inconclusive, not a rejection of periodicity.
   - Count the null as supported only if the null-versus-periodic Bayes factor
-    is at least 10 in both datasets, for both estimators, and with the five
-    largest events dropped.
-  - Otherwise report the largest periodic amplitude that injection-recovery
-    rules out.
+    is at least 10 in both datasets and for both estimators. Two compilations
+    and two estimators share records and chronology, so their agreement is
+    robustness, not replication.
+  - Injection-recovery measures sensitivity; it is not an exclusion bound
+    (Codex, 76/1420). For a bound, specify period, phase, pulse width and
+    amplitude or periodic fraction, then invert a calibrated test or compute a
+    defined posterior bound. Allow for the outcome that no useful bound is
+    possible.
+  - Dropping the five largest events changes the target. It is a separate
+    analysis with its own calibrated selection rule, not a robustness
+    condition.
   - Periodicity alone would not identify an impact cause.
 
 - **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
 ### Q-042 How many species died in the great mass extinctions?
-Status **sketch**, tier 2 (provisional; scanned 10 October).
+Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
 
 - **Question.** Raup 1979 (10.1126/science.206.4415.217) estimated by reverse
   rarefaction that "as many as 96 percent" of marine species died at the
   end-Permian. Stanley 2016 (10.1073/pnas.1613094113, abstract checked by
-  Claude) revised it to "only about 81%", allowing for clustering of losses
-  and backward smearing. Once non-random extinction within genera and sampling
-  are both modelled, what is the species-level loss, with uncertainty, and can
-  the inversion recover it at all?
-- **Why big.** The "90–96%" figure anchors comparisons with the present crisis
-  and Q-013. Species-level magnitudes for every Big Five event rest on the same
-  inversion, which has not been validated by simulation.
+  Claude, sections by scout) revised this to "only about 81%". Define the
+  estimand in numeric time: the fraction of skeletal marine animal species
+  alive at t0 that are globally extinct by t1. Once extinction clustered
+  within genera and species sampling are both modelled, what interval does the
+  evidence support? Can genus-to-species inversion recover it at all?
+- **Why big.** The 90–96% figure is still widely stated. Kiessling, Smith &
+  Raja 2023 (10.1073/pnas.2201926119) note that "numbers of 90 to 95% are still
+  more widely stated than lower numbers". The ">75%" benchmark for a mass
+  extinction, used in comparisons with the present (Barnosky et al. 2011,
+  10.1038/nature09678), is itself extrapolated from species-to-genus ratios in
+  well-known groups. It traces to Jablonski 1994 (10.1098/rstb.1994.0045, not
+  accessed).
+- **What Stanley 2016 does** (sections read by the scout).
+  - Uses Sepkoski's genus and family compendia, not PBDB.
+  - Subtracts background extinction using extinction/origination ratios, and
+    corrects backward smearing.
+  - Converts about 62% genus loss to species loss with "a composite
+    rarefaction curve at the genus level that was the average for 12 extant
+    higher taxa", weighted per higher taxon to about 81% (σ 0.29 from
+    resampling).
+  - Excludes the Triassic.
+  - Its own caveat: earlier species estimates "are based on the false
+    assumption that extinction struck all taxa with equal probability".
+  - Loss is still assumed random within higher taxa and genera, and species
+    sampling is not modelled.
 - **Prior.**
-  - McKinney 1995 (10.1017/s0094837300013312): reverse rarefaction assumes
-    random extinction within genera, so estimates may be 6–15% too high.
-  - Wang et al. 2014 (10.1666/13022): direct species-level CONOP data from
-    South China give 62% of 1,450 species lost within 200 kyr.
-  - Cooper, Flannery-Sutherland & Silvestro 2024 (DeepDive,
-    10.1038/s41467-024-48434-7, abstract checked by Claude): genus-level
-    Permian–Triassic estimates with sampling modelled.
-  - No independent species-level re-estimate after 2016 was found.
+  - McKinney 1995 (10.1017/s0094837300013312): estimates may be 6–15% too
+    high.
+  - Smith & Roy 2006 (10.1666/05078.1, abstract checked by Claude): in
+    Plio-Pleistocene scallops, "species-level extinctions were higher in more
+    speciose genera, but these genera were buffered against genus-level
+    extinctions". Selectivity can therefore bias reverse rarefaction either
+    way.
+  - Direct regional species data: Wang et al. 2014 (10.1666/13022), 62% of
+    1,450 species within 200 kyr. Fan et al. 2020 (10.1126/science.aax4953)
+    give about 11,000 species, Cambrian to Early Triassic only.
+  - Genus-level inputs differ widely: 56% (Barnosky; Bambach), 62% (Stanley),
+    79% for the Changhsingian in PBDB (Payne & Clapham 2012,
+    10.1146/annurev-earth-042711-105329; a different metric), and DeepDive's
+    model-based estimates (10.1038/s41467-024-48434-7).
+  - No simulation validating the inversion under clade-structured selectivity
+    and incomplete sampling was found.
+- **A partial bound** (scout's derivation, checked by Claude). Suppose a
+  fraction g of genera dies, each surviving genus keeps at least one species,
+  and the true mean is m species per genus. Then species loss is at most
+  1 − (1 − g)/m.
+
+  | Genus loss g | m = 3 | m = 5 | m = 9.5 |
+  | --- | --- | --- | --- |
+  | 0.56 | 0.853 | 0.912 | 0.954 |
+  | 0.62 | 0.873 | 0.924 | 0.960 |
+  | 0.79 | 0.930 | 0.958 | 0.978 |
+
+  Whether 96% is possible therefore depends on the genus-level input and on
+  the true number of species per genus, including species never sampled.
 - **Design.**
-  1. Simulate species extinction structured by clade, with a selectivity
-     parameter and a sampling process.
-  2. Test whether Stanley-type inversion recovers the true loss.
-  3. Apply it to PBDB, and validate against direct regional species data (Fan
-     et al. 2020, 10.1126/science.aax4953; Wang et al. 2014).
-  The species-to-genus mapping is the same machinery as Q-013's crosswalk, run
-  in reverse.
-- **Kill criterion (revised after Codex, 10 October).**
-  - Align geography, rank and time window before comparing. Regional South
-    China species losses are not ground truth for a global estimand.
-  - If inversion bias exceeds about 10 percentage points under plausible
-    selectivity, report bounds rather than a point estimate. Failing to
-    separate 81% from 96% can still leave useful bounds; it is not complete
-    non-identification.
-- **Evidence.** [Round-7 note, legacy map](../literature/2026-10-10-register-checks-round7.md).
+  1. Calibrate within a matched region and window, using species data with
+     genus labels (Wang; Fan). Measure observed species and genus loss jointly,
+     and estimate the clustering of deaths within genera, for example by
+     beta-binomial overdispersion.
+  2. Run a hierarchical birth–death simulator with a genus random effect on
+     kill probability (including a sign-flip scenario), heterogeneous
+     preservation, and regional versus global extinction. Score raw reverse
+     rarefaction and Stanley's correction for bias and coverage.
+  3. Carry the 56–79% genus-level interval through as an input, and report the
+     bound intersected with the calibrated range.
+  Regional disappearance is roughly an upper bound on global extinction of
+  that region's species. It is not a global estimate.
+- **Kill criterion.** Report bounds, not a point estimate, if inversion bias
+  exceeds about 10 percentage points under plausible selectivity. Failing to
+  separate 81% from 96% can still leave useful bounds.
+- **Evidence.** [Round-7 legacy map](../literature/2026-10-10-register-checks-round7.md);
+  [round-10 note](../literature/2026-10-11-register-checks-round10.md).
 
 ## New question, round 8 (Codex, 10 October): evolutionary futures
 
@@ -2335,33 +2405,52 @@ check the same day sharpened it.
     beta diversity that are "as-yet undocumented". The scout checked this
     against the full text.
 
-  These are different quantities, not conflicting measurements. So: through
-  the Mesozoic and Cenozoic, did differentiation *between* regions rise while
-  alpha and regional gamma stayed flat? How much of any rise is explained by
-  continental fragmentation alone?
+  These are different quantities, not conflicting measurements.
+  - **Closer precedent (Codex, 76/1420).** Close & Reijenga 2025
+    (10.1073/pnas.2419052122) analyse North American tetrapods from the
+    Campanian to the Ypresian. They estimate species–area slopes and
+    intercepts with spatial and coverage standardisation, and so occupy the
+    within-region comparison of K–Pg recovery. Their small-scale intercept is
+    not literal community alpha.
+
+  The residual is narrower: through the Mesozoic and Cenozoic, did
+  differentiation *between* regions rise while within-region richness stayed
+  flat? It holds only where contemporaneous regional coverage supports it.
 - **Estimand (per time bin, on common support).** Fix the grain, the K
   equal-spread windows (summed minimum-spanning-tree length, or divvy), the
   coverage quorum and the Hill order. Then
 
   ln Γ_K = ln ᾱ + ln β_within + ln β_between
 
-  where:
-  - ᾱ is mean per-collection richness;
-  - β_within = γ_w / ᾱ;
-  - β_between = Γ_K / mean γ_w (Whittaker).
+  where, with fixed window weights p_w summing to one (Codex, 76/1420):
+  - ᾱ = Σ p_w α_w, using declared within-window collection weights;
+  - γ̄ = Σ p_w γ_w, where γ_w is the richness of window w's union;
+  - β_within = γ̄ / ᾱ;
+  - β_between = Γ_K / γ̄.
 
-  Cross-check with the slope of pairwise dissimilarity against palaeodistance,
-  because Whittaker beta depends on K and overlap.
+  Averaging window-specific beta ratios breaks the identity; Codex gives an
+  exact counterexample, 16.5 against 12. Γ_K is richness in the union of the
+  chosen windows, not global terrestrial richness. Equal MST length does not
+  force equal area or habitat. Coverage-standardised estimates made
+  separately at each level do not form one consistent hierarchy: joint
+  sampling and shared taxon identities are needed.
 
-  Area has no separate multiplicative term. Its only separable effect is a
-  counterfactual: recompute β_between at a reference landmass configuration
-  using a species–area model. Vavrek 2016 (10.1098/rsbl.2016.0528, abstract
-  checked by Claude) expects terrestrial vertebrate richness "to nearly double
-  through the Mesozoic owing to continental fragmentation, despite a decrease
-  of 24% in total terrestrial area".
-- **Scout's arithmetic, not a finding.** A ten-fold rise is 2.30 log units. A
-  2–3-fold K–Pg step gives 0.7–1.1, and Vavrek's doubling 0.7. That would leave
-  about 0.5–0.9 log units for between-region beta, if all three apply.
+  Distance-decay of dissimilarity is a diagnostic of spatial organisation,
+  not a test of whether beta changed. Taxa can be strongly partitioned among
+  windows with a flat distance relationship.
+
+  Area has no separate multiplicative term. Fragmentation acts *through* the
+  differentiation being measured, so it cannot be subtracted as an
+  independent component. Its effect is a model-dependent counterfactual:
+  define a reference geography and the assumptions about overlap and
+  environment, simulate both configurations on the same support, and report
+  the difference. Vavrek 2016 (10.1098/rsbl.2016.0528, abstract checked by
+  Claude) is the model precedent. It expects terrestrial vertebrate richness
+  "to nearly double through the Mesozoic owing to continental fragmentation,
+  despite a decrease of 24% in total terrestrial area".
+  - The arithmetic residual from round 9, which combined Vavrek, the K–Pg step
+    and a hypothetical ten-fold rise, is withdrawn. Those are not established
+    additive components on one domain.
 - **Prior.**
   - Close et al. 2017, 2019 and 2020 (above).
   - Dunne et al. 2018 (10.1098/rspb.2017.2730) criticise ratio-based
@@ -2387,13 +2476,12 @@ check the same day sharpened it.
   Published crossover dates (about 110 Ma, Vermeij & Grosberg 2010; 100–125 Ma,
   Benton 2016, 10.1371/journal.pbio.2000724) are argued, not estimated. Treat
   any such date as a separate, model-based or phylogenetic question.
-- **Kill criterion.** Drop the between-region claim if both hold:
-  - from the Late Triassic to the Neogene, the change in ln β_between has an
-    interval that contains 0 and excludes ln 1.5;
-  - distance-decay slopes are flat.
-
-  Park if fewer than about four equal-spread windows exist in at least six
-  bins.
+- **Kill criterion.** Drop the between-region claim if, from the Late
+  Triassic to the Neogene, the change in ln β_between has an interval that
+  contains 0 and excludes ln 1.5. The next gate is joint support by taxon,
+  region and time, and a discriminator that goes beyond Close & Reijenga 2025.
+  "At least four equal-spread windows in at least six bins" is a screening
+  rule, not validated power.
 - **Robustness.** The bounded data-vintage check from Q-045 belongs here:
   compare the Close et al. 2019 deposited extract with a current extract by
   stable identifiers.
@@ -2475,8 +2563,8 @@ support for a distinct total-flux question remains unverified.
 ## New sketch, round 9 (Claude, 11 October)
 
 ### Q-047 When biotas meet: do past interchanges forecast today's biotic mixing?
-Status **sketch**, tier 2 (provisional; scanned 11 October). Novelty is
-unverified.
+Status **under review**, tier 2 (scanned 11 October; reviewed by Codex,
+76/1420). Novelty is unverified.
 
 - **Question.** Fit a model of interchange outcome on past interchanges. The
   outcomes are asymmetry of flow and, where measurable, native loss against
@@ -2515,9 +2603,15 @@ unverified.
     (10.1126/science.1160852) project 77 Pacific mollusc lineages invading the
     Atlantic.
   - Not found: a quantitative comparison of outcome determinants across
-    interchanges, or a deep-time model validated on modern flows. A grant
-    project (RECOMBINE) reports source-community size as the main predictor of
-    asymmetry, but no publication was found. Check it first.
+    interchanges, or a deep-time model validated on modern flows.
+  - **RECOMBINE (checked 11 October).** H2020 MSCA Global Fellowship 896323
+    (10.3030/896323), 2021–2024, ENS Paris and ANU. Its CORDIS periodic report
+    names source-community size as "the main predictor driving the asymmetry
+    of dispersal events in biotic interchanges". That rests on DEC models over
+    tetrapod phylogenies, and the report flags constant-rate DEC as
+    "not methodologically correct" for rate variation. No peer-reviewed output
+    was found, and the report makes no forecast and no validation. It is grey
+    literature and does not occupy the transfer test.
 - **Design.**
   1. Leave-one-interchange-out validation across at least six corridors, run
      with one pipeline (DES or PyRate) and including extinct taxa in the
@@ -2527,9 +2621,21 @@ unverified.
   2. Freeze the coefficients, then predict the direction and magnitude of
      modern alien flows for matching region pairs. Sources: GRIIS
      (10.1038/sdata.2017.202), GloNAF, and Seebens first records.
-- **Limit.** Modern native extinctions are not yet realised (extinction debt).
-  The modern stage can therefore validate flows and asymmetry, but not net
-  diversity loss.
+- **First gate: a crosswalk of outcomes and denominators within one taxon**
+  (Codex, 76/1420). It comes before assembling six corridors.
+  - Fossil genus range-expansion hazards, modern naturalisation stocks, first
+    detections and actual transport routes are different quantities.
+  - A taxon native to A and alien in B does not show transport from A to B;
+    it may have arrived via C. SInAS 3.1.1 (10.1038/s41597-025-06379-6) joins
+    distributions, but does not give routes or native source pools.
+- **The modern comparator to beat is biological, not only trade.** Fristoe et
+  al. 2023 and Fan et al. 2025 (10.1038/s41467-025-65455-y) already predict
+  modern flows from source-region biology. The deep-time model must add
+  information beyond them.
+- **Limit.** Separate native loss already observed from eventual net
+  consequences that cannot yet be observed (extinction debt). The modern stage
+  can validate flows and asymmetry, and observed native losses, but not the
+  eventual net diversity change.
 - **Kill criterion.** Park in any of these cases:
   - fewer than five interchanges give bidirectional counts comparable in taxon
     and scale;
@@ -2584,3 +2690,67 @@ remain unverified.
   attack denominators are absent. Do not substitute another demonstration of
   climate-mediated predator release for the extinction-protection question.
 - **Evidence.** [Round-10 mechanism, rivals and primary-source record](../literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md).
+
+## New sketch, round 10 (Claude, 11 October)
+
+### Q-049 Did failure to track shifting isotherms predict extinction at past hyperthermals?
+Status **sketch**, tier 2 (provisional; scanned 11 October). Novelty is
+unverified.
+
+- **Question.** At hyperthermal boundaries, take a genus's tracking ratio R:
+  the observed displacement of its thermal range edge divided by the
+  displacement of the isotherm over the same interval. Does R predict
+  extinction beyond two existing models?
+  - Paleogeographic dispersal-pathway geometry (Malanoski et al. 2026).
+  - Loss of thermal habitat with thermal optimum (Reddin et al. 2022).
+
+  How does R scale with the length of the interval?
+- **Why the "speed limit" framing was dropped.** An absolute deep-time limit
+  on tracking speed cannot be measured at the resolution of PBDB stages.
+  Using the scout's arithmetic, a shift of about 2,500 km over at least 1 Myr
+  is at most a few metres per year, orders of magnitude below modern isotherm
+  velocities (Burrows et al. 2011, 10.1126/science.1210288: medians of
+  21.7 km per decade in the ocean and 27.3 km per decade on land).
+  Kiessling et al. 2024 (10.1017/pab.2024.20, abstract checked by Claude)
+  argue that observed rates of change "cannot currently be compared across
+  different timescales" (quoted from the text by the scout). A dimensionless
+  ratio over a common interval avoids that comparison.
+- **Prior.**
+  - Malanoski et al. 2026 (10.1126/science.adv2627, abstract checked by
+    Claude): taxa whose potential dispersal pathways are long relative to the
+    latitude they traverse "consistently exhibit higher extinction risk". The
+    effect is amplified in mass extinctions and hyperthermals. Pathway length
+    is a geometric proxy, not observed tracking.
+  - Reddin et al. 2022 (10.1111/gcb.16333, abstract checked by Claude):
+    extinction at seven hyperthermals follows the geometry of thermal-habitat
+    loss. Genera with optima above about 21 °C or below about 11 °C have raised
+    odds of extinction.
+  - Reddin, Kocsis & Kiessling 2018 (10.1111/geb.12732): range centres of
+    taxa that survive a boundary shift with temperature. Conditioning on
+    survivors makes victims invisible.
+  - Quantitative tracking against climate velocity is occupied in the
+    Quaternary: Ordonez & Williams 2013 (10.1111/ele.12110); Antell et al. 2021
+    (10.1073/pnas.2017105118).
+  - Deep-time evidence is only qualitative: Wing et al. 2005
+    (10.1126/science.1116913); Smith, Rose & Gingerich 2006
+    (10.1073/pnas.0511296103).
+  - Sandel et al. 2011 (10.1126/science.1210173) use climate velocity as an
+    exogenous exposure, not observed lag.
+- **Design.**
+  1. Estimate R from bins before the boundary, using the Reddin 2018 pipeline
+     on PBDB and PETM isotherms from data assimilation (Tierney et al. 2022,
+     10.1073/pnas.2205326119). Test extinction in the next bin.
+  2. Compare nested models: range size, thermal optimum and pathway length,
+     each with and without R.
+  3. Require a negative R effect in hyperthermals, absent in matched
+     non-hyperthermal controls.
+  4. Check whether R absorbs the pathway-length effect.
+- **Kill criterion.**
+  - Abandon if simulations matched for sampling and palaeolatitude error
+    cannot separate R = 0.5 from R = 1 for at least half the events.
+  - Abandon if warming onset and extinction fall in the same bin for most
+    events.
+  - Range-edge sampling bias and shelf-area geometry are collinear with R.
+- **Links.** Q-015 (thermal-niche evolution), Q-027 (latitudinal gradient),
+  Q-031 (body size).
+- **Evidence.** [Round-10 note](../literature/2026-10-11-register-checks-round10.md).
