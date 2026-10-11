@@ -1,0 +1,51 @@
+id	short_title	coverage	disposition	scope_note
+Q-001	Physiological habitat-loss transfer	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-002	Dose and extinction selectivity	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-003	Threshold versus smooth response	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-004	Pseudoextinction and background rates	substantively reviewed	Keep; clarify contract	Rate identity defended; matched background/lineage estimands required.
+Q-005	Deep-time precursors	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-006	Diversification identifiability	substantively reviewed	Revise; develop	F-02: source scope and information-specific residual; no automatic park.
+Q-007	Biotic legacy under an environmental path	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-008	Geographic differentiation and recovery	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-009	Predictive ecological memory	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-010	Biological innovation and diversity capacity	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-011	Extinction-event size distribution	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-012	Heritable susceptibility versus ageing	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-013	Modern extinction through the fossil filter	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-014	Deep-time extinction debt	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-015	Thermal-niche evolution	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-016	Range-based extinction prediction	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-017	Unseen extinction and detection frameworks	skimmed	No disposition	Potential cross-cutting value recognised; likelihood-equivalence literature not substantively audited.
+Q-018	Plant and terrestrial mass extinctions	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-019	Climate versus biotic turnover drivers	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-020	When range stops providing insurance	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-021	Biological functions and Earth-system recovery	substantively reviewed	Keep; revise gate	F-04: high importance; common observable mapping and joint discrimination not yet established.
+Q-022	Evolutionary-history loss	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-023	Origination failure versus extinction spikes	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-024	Quaternary early warnings	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-025	Local-to-global loss scaling	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-026	Prospective reversible versus terminal decline	substantively reviewed	Keep	Self-contained probe exactly reproduced; no general impossibility conclusion.
+Q-027	Climate and the latitudinal diversity gradient	skimmed	No disposition	Current support-count corrections noted; raw screen and power design not independently verified.
+Q-028	Winners of past and present crises	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-029	Ordering isolation and reconnection	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-030	Changing biosphere sensitivity	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-031	Warming and body-size change	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-032	Insect ecological crises	substantively reviewed	Park empirical route; revise trigger	F-05: interaction endpoint distinct; added host-associated prior; no automatic promotion.
+Q-033	Arrival order and radiation	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-034	Pre-human island extinction baselines	skimmed	Do not merge into Q-004	Different target quantity; no independent verdict on full empirical readiness.
+Q-035	Land–sea collapse lags	skimmed	Revise rule only	F-03: nonzero lag cannot be a condition of scientific value; empirical age support not audited.
+Q-036	Morphological stasis and geography	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-037	Trophic selectivity	skimmed	Do not merge into Q-038	Trophic effects differ from conditional victim prediction; otherwise no disposition.
+Q-038	Conditional victim prediction	substantively reviewed	Keep revised target	Design code inspected, not rerun; do not attribute deposit behaviour to published coefficients.
+Q-039	Coupling of evolutionary faunas	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-040	Marine diversity and spatial support	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-041	Extinction periodicity	skimmed	Keep corrected rule only	Used as a good inferential-decision precedent; periodicity literature and data not deeply audited.
+Q-042	Species magnitude of mass extinctions	substantively reviewed	Keep; revise design	F-01: common cohort/window before scenario propagation; conditional bound verified.
+Q-043	Survivor composition and future evolution	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-044	Terrestrial diversity and regional richness	skimmed	No disposition	Recorded-versus-biological saturation correction supported at text level; no raw rerun.
+Q-045	Data-vintage robustness	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-046	Total animal energy use	skimmed	No disposition	Density limitation noted; nearest energetic literature not deeply checked.
+Q-047	Past interchange and modern prediction	skimmed	Revise rule only	F-03: skill interval crossing zero is not an information-based stopping rule.
+Q-048	Predator release and prey persistence	skimmed	No disposition	Register surveyed; supporting dossier not substantively audited.
+Q-049	Pre-outcome isotherm tracking	skimmed	Revise rule only	F-03: predicted sign is a hypothesis; no independent route or novelty verdict.
+Q-050	Changing capacity to evolve	substantively reviewed	Keep; retain empirical hold	Primary conceptual context and support audit assessed; archive not independently retrieved.

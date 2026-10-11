@@ -1,0 +1,13 @@
+{
+  "commit": "bbe5ce7fc205b3b1f9529757b64e25fd997243cb",
+  "executive_words": 254,
+  "report_words": 8074,
+  "ranked_findings": 5,
+  "register_entries": 50,
+  "substantive_entries": 8,
+  "all_repository_links_pinned": true,
+  "math_display_delimiters_balanced": true,
+  "q026_source_and_output_git_blobs_verified": true,
+  "all_four_independent_fixtures_passed": true,
+  "limits": "No complete recursive-tree audit; no other repository raw-data/model reruns."
+}

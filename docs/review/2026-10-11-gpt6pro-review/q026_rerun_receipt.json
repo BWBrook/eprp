@@ -1,0 +1,9 @@
+{
+  "source_blob_sha1": "0409b0a48ce8c02c8594c3972cf549438c34633e",
+  "source_bytes": 6079,
+  "output_blob_sha1": "e903f5070abe271405c5118f12acffff15030c65",
+  "matches_tracked_output": true,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "command": "python3 probe.py",
+  "stdout": "Same-prefix fixture changes retrospective count from 1 to 0.\nAnalytical boundary/two-timer expectations checked against simulation.\nAll true standing counts are 20; true count increments are zero.\n[working-copy]/q026/summary.tsv\n"
+}

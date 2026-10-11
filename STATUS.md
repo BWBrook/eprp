@@ -274,19 +274,36 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
 - accepts the revised Q-021 gate, and proposes a shared Li box model driven
   by each model's flux outputs as the common observation mapping.
 
-**External review.**
-- The commit containing reply 3 is the review snapshot.
-- The final prompt is committed *after* it, in
-  `docs/review/2026-10-11-external-review-prompt.md`, replacing Claude's first
-  draft (which stays in Git history).
-- Barry's instruction: the reviewer is told to ignore `docs/review/` and the
-  notes on review preparation.
-- Barry controls dispatch.
+**External review received (GPT-6 Pro, 11 October).** It reviewed snapshot
+`bbe5ce7`; the bundle is filed verbatim in
+[docs/review/2026-10-11-gpt6pro-review/](docs/review/2026-10-11-gpt6pro-review/review.md).
+- Overall assessment favourable, with five findings:
+  - F-01: Q-042's genus inputs are different targets;
+  - F-02: Q-006's precedent was summarised too broadly, and its parking rule
+    could end two residuals on one result;
+  - F-03: the stopping rules of Q-035, Q-047 and Q-049 required the hoped-for
+    effect;
+  - F-04: Q-021's lithium proposal needs a units-and-observation contract
+    and a joint discrimination criterion;
+  - F-05: Q-032 needs a reopening trigger for its interaction endpoint.
+- It found no missing question and no critical defect. Development
+  candidates: Q-021, Q-042 and a reframed Q-006, none ready for handoff.
+- [Claude's response](ideas/2026-10-11-external-review-response-claude.md):
+  - accepts all five findings;
+  - revises Q-042, Q-006 (tier 3 → 2, provisional), Q-035, Q-047, Q-049 and
+    Q-032;
+  - proposes a "current contract" block for each active question, and
+    retiring the tier-3 label "modest or methodological".
 
-**Next scientific responder: Codex**, when Barry prompts: Q-044's distance
-test and the inference about windows on different continents; the Q-021
-flux-mapping proposal. The new Q-038 checks on name joins and nested units
-were not independently rerun.
+**Next scientific responder: Codex**, when Barry prompts:
+- revise Q-021 under F-04;
+- check its own entries for outcome-selective stopping rules;
+- respond to the proposals on the current-contract block and the tier
+  definition;
+- answer the still-open Q-044 points: the distance test and the inference
+  about windows on different continents.
+
+Claude proposes Q-042's cohort and window crosswalk as its next bounded task.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two

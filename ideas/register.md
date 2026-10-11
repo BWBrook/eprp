@@ -93,7 +93,7 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-003 | Can stage-level data tell a warming–extinction threshold from a smooth response? | under review | 3 | Claude |
 | Q-004 | A pseudoextinction-corrected background rate for modern comparisons | under review | 2 | Claude |
 | Q-005 | Are there detectable precursors before extinction events? | under review | 2 | Claude |
-| Q-006 | What can fossils identify about diversification that extant trees provably cannot? | under review | 3 | Claude |
+| Q-006 | What can fossils identify about diversification that extant trees provably cannot? | under review | 2 | Claude |
 | Q-007 | How long does a biotic loss leave a legacy, given the environmental path? | under review | 2 | Joint |
 | Q-008 | Does geographic differentiation help determine subsequent recovery? | under review | 2 | Codex |
 | Q-009 | Does ecological organisation retain predictive memory after richness recovers? | under review | 2 | Codex |
@@ -271,8 +271,11 @@ sampling null was found.
 - **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-006 Fossils versus trees: identifiability of diversification
-Status **under review**, tier 3. Prior-work check on 10 October: the main
-theoretical result is published.
+Status **under review**, tier 2 (provisional). Prior-work check on 10 October:
+the main theoretical result is published. Moved from tier 3 on 11 October
+after the external review (F-02). The practical precedent was narrower than
+this entry claimed, and the remaining question is reframed below as one of
+information design.
 
 - **Occupied.** Truman et al. 2025 (10.1093/sysbio/syae058, abstract checked by
   Claude): "widely used time-dependent fossilized birth–death (FBD) models are
@@ -284,19 +287,61 @@ theoretical result is published.
   - Louca & Pennell 2020 (10.1038/s41586-020-2176-1): extant-only congruence.
   - Morlon et al. 2022 (10.1016/j.tree.2022.02.004) and Andréoletti & Morlon
     2023 (10.1111/2041-210X.14240) had listed the time-varying case as open.
-- **Residual (narrow).**
-  1. A power criterion. How large must fossil sampling be, relative to λ and
-     μ, before the collapse of the congruence class gives usefully narrow
-     intervals with finite data? Truman et al. note that no fixed finite
-     quantity of data guarantees a given precision.
-  2. Identifiability from occurrences alone, without a tree: PyRate-style
-     range data. No theorem either way was found.
-- **Practical relevance.** Beaulieu & O'Meara 2022 (10.1093/sysbio/syac049)
-  find that fossils rarely beat extant-only analyses in practice. Upham et al.
-  2021 (10.1016/j.cub.2021.07.012) fix fossil genus-level μ, which brings back
-  the μ\* versus μ mismatch of Q-004.
-- **Kill criterion.** Park if a minimum-sampling or power criterion, or an
-  occurrence-only identifiability result, is found.
+- **Residual, reframed by information (11 October).** Three different
+  questions were being compressed:
+  - structural identification;
+  - usefulness with finite data;
+  - which observations enter the likelihood.
+
+  A practical criterion is not well posed until the target, observations and
+  model are fixed. Organise the work as an information table, with one
+  dimension per row:
+  - observed topology, or none;
+  - occurrence times or stratigraphic ranges;
+  - taxonomic or speciation-mode convention;
+  - sampling model;
+  - class of rate function (regularity, temporal resolution);
+  - target quantity and loss function.
+
+  Place the nearest theorems and estimators in its cells. Then choose one
+  consequential target and one observation setting, for example an
+  integrated extinction contrast over a stated interval. Ask how much
+  particular fossil information narrows it under realistic misspecification.
+  - Two earlier residuals sit inside this table:
+    - how much fossil sampling is needed before the congruence class
+      collapses usefully with finite data (Truman et al. note that no fixed
+      finite quantity of data guarantees a given precision);
+    - identifiability from occurrences or ranges alone, without a tree.
+  - Stadler et al. 2018 (10.1016/j.jtbi.2018.03.005, title checked by
+    Claude; sections read by the external reviewer) give a likelihood for
+    stratigraphic ranges under different speciation modes. It integrates over
+    unobserved topologies. It is the nearest foundation for the range route,
+    but not an identifiability theorem for occurrences alone.
+  - Lead: Dieselhorst & Stadler 2026 (arXiv:2604.17926, abstract checked by
+    Claude, preprint). Information on hidden birth events restores
+    identifiability for time-dependent birth–death rates. That shows which
+    *extra observations* break equivalence; it is not a palaeobiological
+    method.
+- **Practical relevance.**
+  - Beaulieu & O'Meara 2022 (10.1093/sysbio/syac049): "Fossils do not
+    substantially improve, and may even harm, estimates of diversification
+    rate heterogeneity". That concerns rate heterogeneity on largely modern
+    trees under their models.
+  - *Correction (11 October, external review F-02).* This entry previously
+    summarised that study as "fossils rarely beat extant-only analyses in
+    practice". That is broader than the study.
+  - Upham et al. 2021 (10.1016/j.cub.2021.07.012) fix fossil genus-level μ,
+    which brings back the μ\* versus μ mismatch of Q-004.
+- **Decision rule.** Three outcomes, for the chosen target only:
+  - **Close that residual** if an existing result matches it in
+    observations, rate class, target and operating conditions.
+  - **Close it as answered** if the added information would not change a
+    scientific inference or a sampling decision. That is a negative answer,
+    not a failure.
+  - **Develop it** if the information table shows a consequential, unfilled
+    cell.
+
+  Finding a result for a different cell does not park the entry.
 - **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ## Joint and Codex-owned
@@ -1722,10 +1767,27 @@ check.
   change after an event exceeds expected change without it. It could be run on
   open census data: Currano 2021 on Zenodo (10.5281/zenodo.7242861), and Xiao
   et al. 2025 (10.1073/pnas.2412036122) on Dryad.
-- **Revisit if** either of these appears:
+- **Host-continuity precedent** (added 11 October, external review F-05).
+  Donovan et al. 2020 (10.1038/s42003-020-01428-9, title checked by Claude;
+  results read by the reviewer) trace persistent damage associations on
+  *Agathis* from Cretaceous Patagonia to modern Malesia, including a likely
+  K–Pg-crossing leaf-mine association. They distinguish persistent guilds
+  from proven continuity of insect lineages. Donovan et al. 2023
+  (10.3897/phytokeys.226.99316, title checked) extend the host-associated
+  record.
+  - So tracking interactions through host continuity is already in use.
+  - A formal multi-event test of disruption against expected change is not
+    shown by these studies.
+- **Revisit if** any of these appears:
   - a modern calibration showing that damage frequency tracks herbivore
     abundance at the same hosts and sites;
-  - Early Triassic floras with damage censuses.
+  - Early Triassic floras with damage censuses;
+  - **for the interaction endpoint alone, without any abundance
+    calibration:** an existing host-resolved dataset with an independently
+    defined event/control comparison that separates loss or persistence of
+    interactions from host turnover, sampling and ordinary temporal change.
+    First compare that contrast with the closest primary studies, including
+    Donovan et al. and Schachat et al. 2022 (external review F-05).
 - **Evidence.** [Round-5 note](../literature/2026-10-10-register-checks-round5.md).
 
 ## New sketch (Codex, 10 October): arrival order and radiation
@@ -1899,9 +1961,23 @@ event.
   3. Fit Δ against palaeolatitude, LIP phase and event, propagating dating
      error.
   First tranche: recompute the end-Triassic lag with current ages.
-- **Kill criterion.** Park if Δ cannot be distinguished from zero in at least
-  two of three LIP events with paired high-precision records. Dating errors
-  (±60–100 kyr) are already comparable to the lags.
+- **Decision rule** (revised 11 October after the external review, F-03).
+  The old rule parked whenever Δ could not be distinguished from zero. That
+  treated a precise null and an uninformative interval alike. Before looking
+  at the results, fix Δ\*, the smallest lag of scientific consequence (for
+  example 100 kyr). Then, across the LIP events with paired high-precision
+  records:
+  - **Informative lag:** intervals exclude |Δ| < Δ\* in a consistent
+    direction.
+  - **Informative negative:** intervals lie within ±Δ\* for at least two of
+    three events. Lags are then negligible at these events, which is an
+    answer.
+  - **Inadequate discrimination:** intervals span both −Δ\* and +Δ\*. Park
+    as unresolvable with current dating, and say what precision would
+    resolve it.
+
+  Dating errors (±60–100 kyr) are already comparable to the lags, so the
+  third outcome is the likely one.
 - **Evidence.** [Round-6 note](../literature/2026-10-10-register-checks-round6.md).
 
 ## New direction (Codex, 10 October): morphological stasis and geography
@@ -2380,10 +2456,16 @@ Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
     model-based estimates (10.1038/s41467-024-48434-7).
   - No simulation validating the inversion under clade-structured selectivity
     and incomplete sampling was found.
-- **A partial bound** (scout's derivation, checked by Claude). Suppose a
-  fraction g of genera dies, each surviving genus keeps at least one species,
-  and the true mean is m species per genus. Then species loss is at most
-  1 − (1 − g)/m.
+- **A partial bound** (scout's derivation, checked by Claude; checked again
+  by the external reviewer).
+  - Suppose a fraction g of genera dies, and each surviving genus keeps at
+    least one species *of the start-time cohort* (not a newly originated
+    species).
+  - With a true mean of m species per genus, species loss is at most
+    1 − (1 − g)/m.
+  - No random extinction within genera is assumed.
+  - For a long stage or a combined event, retention of the baseline cohort
+    needs its own justification.
 
   | Genus loss g | m = 3 | m = 5 | m = 9.5 |
   | --- | --- | --- | --- |
@@ -2393,6 +2475,12 @@ Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
 
   Whether 96% is possible therefore depends on the genus-level input and on
   the true number of species per genus, including species never sampled.
+  - The distribution matters as well as the mean (reviewer's fixture): 100
+    genera, 500 species, 62 genera lost.
+  - Given only those totals and baseline retention, the sharp range of
+    species loss is 12.4–92.4%.
+  - With exactly five species in every genus, the lower bound rises to
+    62%.
 - **Design.**
   1. Calibrate within a matched region and window, using species data with
      genus labels (Wang; Fan). Measure observed species and genus loss jointly,
@@ -2402,8 +2490,20 @@ Status **under review**, tier 2. Scanned 10 October; deeper check 11 October.
      kill probability (including a sign-flip scenario), heterogeneous
      preservation, and regional versus global extinction. Score raw reverse
      rarefaction and Stanley's correction for bias and coverage.
-  3. Carry the 56–79% genus-level interval through as an input, and report the
-     bound intersected with the calibrated range.
+  3. **First reconcile the genus-level inputs** (external review F-01).
+     56%, 62% and 79% are not one uncertainty interval: they differ in
+     event window, background treatment and metric. For the end-Permian,
+     write a one-page crosswalk giving each source's:
+     - baseline cohort and numeric window;
+     - taxonomic scope;
+     - global or regional loss;
+     - treatment of origination and background;
+     - the genus-size information it supplies.
+
+     Carry comparable inputs as one target, and the rest as labelled
+     scenarios. Compute sharp bounds conditional on that information. Do not
+     intersect a regional calibration with a global bound without an
+     explicit argument for transport.
   Regional disappearance is roughly an upper bound on global extinction of
   that region's species. It is not a global estimate.
 - **Kill criterion.** Report bounds, not a point estimate, if inversion bias
@@ -2753,11 +2853,18 @@ Status **under review**, tier 2 (scanned 11 October; reviewed by Codex,
   consequences that cannot yet be observed (extinction debt). The modern stage
   can validate flows and asymmetry, and observed native losses, but not the
   eventual net diversity change.
-- **Kill criterion.** Park in any of these cases:
-  - fewer than five interchanges give bidirectional counts comparable in taxon
-    and scale;
-  - the cross-validated skill interval includes zero;
-  - the transfer test is already published.
+- **Decision rule** (revised 11 October after the external review, F-03).
+  - **Feasibility screens.** Park if fewer than five interchanges give
+    bidirectional counts comparable in taxon and scale, or if the transfer
+    test is already published.
+  - **Otherwise,** fix s\*, the smallest gain in predictive skill that would
+    matter for modern forecasting, before scoring. Three outcomes:
+    - the cross-validated skill interval lies above s\*: deep-time
+      information helps;
+    - it lies below s\*: a precise negative answer, worth reporting as one;
+    - it spans both zero and s\*: inadequate discrimination, a limit of the
+      design rather than an answer.
+  - Replaces "park if the cross-validated skill interval includes zero".
 - **Links.** Q-023 (speciation collapse during invasion), Q-028 (winners),
   Q-033 (arrival order).
 - **Evidence.** [Round-9 note](../literature/2026-10-11-register-checks-round9.md).
@@ -2859,8 +2966,13 @@ unverified.
      10.1073/pnas.2205326119). Test extinction in the next bin.
   2. Compare nested models: range size, thermal optimum and pathway length,
      each with and without R.
-  3. Require a negative R effect in hyperthermals, absent in matched
-     non-hyperthermal controls.
+  3. Test for a negative R effect in hyperthermals, compared with matched
+     non-hyperthermal controls. This is the hypothesis, not a condition for
+     accepting the analysis (external review, F-03).
+     - Fix the smallest consequential effect beforehand.
+     - An interval that excludes it is an informative negative answer.
+     - An interval spanning zero and that effect is inadequate
+       discrimination.
   4. Check whether R absorbs the pathway-length effect.
 - **Kill criterion.**
   - Abandon if simulations matched for sampling and palaeolatitude error
