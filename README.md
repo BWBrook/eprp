@@ -30,8 +30,11 @@ when they establish whether a resource or idea is usable.
 
 The first tranche contains [50 questions](ideas/register.md), supported by
 literature checks, source audits and bounded feasibility probes. Expansion is
-paused for Barry's portfolio review (11 October 2026). No primary investigation
-has been selected; question rankings and feasibility remain provisional.
+paused while Codex and Claude categorise, prioritise and deepen the portfolio
+(phase 2, 11 October 2026). See [Claude's first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md)
+and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-codex.md).
+No primary investigation has been selected; question rankings and feasibility
+remain provisional. Barry's selection comes later.
 
 ## Collaboration
 

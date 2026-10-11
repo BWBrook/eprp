@@ -23,8 +23,12 @@ Barry's instruction in Codex chat, quoted exactly:
 
 Q-050 completes this tranche. The pause supersedes the expand-each-round
 cadence below until Barry resumes it. Existing statuses and tiers remain
-provisional; no entry is promoted by reaching 50. The next action is Barry's
-review of the portfolio, with agent support as requested.
+provisional; no entry is promoted by reaching 50. The agents now lead phase-2
+categorisation, prioritisation and deeper contextual/data work (Barry's
+clarification on 11 October, 76/1476). His project selection comes later.
+See [Claude's first pass](2026-10-11-phase2-portfolio-first-pass-claude.md) and
+[Codex's response](2026-10-11-phase2-response-codex.md); neither changes the
+entry statuses or tiers below.
 
 ## How to use and maintain it
 
@@ -2803,12 +2807,16 @@ mechanism test remain unverified.
   differing initial covariance. Test predictions of direction, magnitude and
   relaxation time under one observation model. Temporal precedence alone
   cannot establish causation; another alignment regression is insufficient.
-- **Data lead.** The inspected README and ZIP listing for Tsuboi's versioned
-  [archive](https://doi.org/10.5281/zenodo.13294509) document per-sample means,
-  covariance matrices, specimen counts and time increments. Brombacher's
+- **Data lead.** The [phase-2 numerical inspection](../data/q050-covariance-support/README.md)
+  of Tsuboi's versioned [archive](https://doi.org/10.5281/zenodo.13294509)
+  confirms means, covariance matrices and specimen counts for two Brombacher
+  series, each with 75 samples on an identical stored 474.57-kyr grid.
+  `tt` stores elapsed coordinates, not successive increments; this corrects
+  our earlier README-based description. Brombacher's
   [Dryad deposit](https://doi.org/10.5061/dryad.8jf2k) lists specimen-level
-  measurements and sample ages. Raw numerical objects were not analysed;
-  independent environmental support and sufficient replication remain open.
+  measurements and sample ages. The archive objects passed internal numerical
+  checks; the original sample/absolute-age/environmental crosswalk, age
+  uncertainty and sufficient replication remain unverified. No model was fitted.
 - **Main obstacle / kill criterion.** Phenotypic covariance is not genetic
   covariance, and environmental proxies do not identify selection gradients.
   Plasticity, persistent common selection, immigration and temporal mixing
@@ -2816,7 +2824,8 @@ mechanism test remain unverified.
   models at actual sample spacing and uncertainty. Park the mechanistic route
   if plausible alternatives are observationally equivalent or covariance
   reorganisation is unresolved. This gate is proposed, not passed.
-- **Next step and evidence.** Hold for the first-tranche review. If selected,
-  inspect one series' joint support before a bounded simulation. Source
+- **Next step and evidence.** Phase 2 has verified two numerical objects;
+  establish their original-sample, environmental and age support before a
+  bounded simulation. Source
   access, exact data version, rival models and prior-work boundaries are in
   the [Q-050 evidence note](../literature/2026-10-11-evolvability-and-first-tranche-close.md).

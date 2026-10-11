@@ -1,0 +1,3 @@
+taxon	archive_member	samples	traits	specimen_sum	n_min	n_median	n_max	samples_n_lt_20	elapsed_span_kyr	spacing_min_kyr	spacing_median_kyr	spacing_max_kyr	identical_stored_grid	finite_values_and_covariance_checks
+Globoconella_puncticulata	NiklasHohmann-paradox_of_predictability-9a47ba6/data/Brombacher.et.al_2017_Globoconella_puncticulata.Rdata	75	2	6575	3	86	182	2	474.57	4.71999999999984	6.18000000000007	10.0700000000002	TRUE	TRUE
+Truncorotalia_crassaformis	NiklasHohmann-paradox_of_predictability-9a47ba6/data/Brombacher.et.al_2017_Truncorotalia_crassaformis.Rdata	75	2	6058	17	79	139	2	474.57	4.71999999999984	6.18000000000007	10.0700000000002	TRUE	TRUE

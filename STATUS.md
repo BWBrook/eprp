@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** first tranche complete at **50 questions**, with expansion paused.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
@@ -20,6 +20,11 @@ expand-each-round cadence until Barry resumes it. Existing statuses and tiers
 remain provisional. Barry has since clarified that the agents, not he, do the
 first categorisation and ranking (76/1476). Claude's first pass is in
 [ideas/2026-10-11-phase2-portfolio-first-pass-claude.md](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
+Codex's [response](ideas/2026-10-11-phase2-response-codex.md) separates scientific
+importance from next-work priority, challenges specific scores and mergers,
+and proposes two bounded tasks for Claude to adjudicate. The
+[Q-050 archive check](data/q050-covariance-support/README.md) is complete;
+scientific discrimination and joint environmental/age support remain unverified.
 
 The index records **40 under review, 4 sketches and 6 parked entries**.
 Among the 44 unparked entries, 34 are tier 2 and 10 are tier 3. These are
@@ -34,7 +39,9 @@ existing agent assessments, not a fresh portfolio ranking.
 | Final question and first-tranche closure | Codex | Complete: Q-050 asks how the capacity to evolve changes during environmental upheaval. [Evidence note](literature/2026-10-11-evolvability-and-first-tranche-close.md) records closest priors, a versioned multivariate data archive and the mechanism-identification gate. Under review/tier 2; novelty and joint empirical support unverified. Shared edits completed; expansion paused |
 | Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferred per Barry |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
-| First-tranche review and downstream handoffs | Barry, supported by both agents as requested | Review the 50-question portfolio next. No single programme target selected; no entry yet ready for handoff |
+| Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Claude's first pass and Codex's response complete. No status/tier changes. Codex proposes Q-021's contrasting-prediction/calibration map and Claude one Q-027 or Q-044 joint-support contract; allocation awaits Claude's acceptance. No integrated PBDB/chronology engine commissioned |
+| Q-050 initial covariance-data support | Codex | Complete: two 75-sample numerical series inspected; ZIP checksum and internal consistency verified. Stored `tt` is elapsed time, correcting the earlier increment description. Original-sample/environment/age crosswalk remains open; no model fit |
+| Later project selection and downstream handoffs | Barry, after agent development | Selection comes later; Barry is not asked to rank at this checkpoint. No primary investigation selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
 are starting areas for exploration, not an exclusive two-topic agenda. The
@@ -98,8 +105,8 @@ Codex. Shared dependencies are coordinated through Correspondence.
   and adds parked Q-046. Claude's round 9 adds Q-047; Codex's round 10 adds
   Q-048, bringing the register to 48 entries; Claude's round 10 adds Q-049.
   Codex's final addition Q-050 brings the first tranche to 50 and pauses
-  expansion for Barry's review. No entry has been promoted to a primary
-  investigation.
+  expansion for portfolio review, now led initially by the agents. No entry
+  has been promoted to a primary investigation.
 - Q-038's variance partition is withdrawn following Claude's adjudication.
   The revised under-review/tier-2 question predicts victim identity given
   incoming cohort and loss count. Tikhonov's reported luck fraction is a
@@ -206,16 +213,21 @@ prioritise the 50 entries, go deeper on them, and identify the contextual and
 data-availability work they could productively do in phase 2. Expect
 iteration; the aim is not yet a single answer.
 
-**Next scientific responder: Codex**, on discussion 76: challenge Claude's first
-pass in [ideas/2026-10-11-phase2-portfolio-first-pass-claude.md](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
-That pass offers:
-- themes;
-- separate scores for significance, openness, data readiness and gate cost;
-- bands A, B and C;
-- six proposed work packages: a data-contract registry, a shared PBDB and
-  chronology engine, identifiability and power gates, deep prior-work
-  reviews, theory notes, and consolidation;
-- a proposed division of labour.
+**Next scientific responder: Claude**, on discussion 76: adjudicate
+[Codex's response](ideas/2026-10-11-phase2-response-codex.md) to
+[the first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
+- Separate scientific priority from priority of the next useful check;
+  openness remains provisional and data access is not joint suitability.
+- Correct the first-pass count: all nine A/A− entries are Claude-owned.
+  Codex proposes D3→D2 for Q-016/Q-024/Q-027/Q-044 based on recorded evidence
+  depth; S2→S3 provisionally for Q-026/Q-050; immediate contextual work on Q-021.
+- Retain Q-034 and Q-037 as distinct questions; Q-038 stays deferred even
+  inside a shared work package. Defer an integrated PBDB/chronology engine
+  and common simulator until concrete, compatible uses exist.
+- Proposed next allocation, not yet accepted: Codex's Q-021 contrasting
+  predictions/calibration map; Claude's first Q-027 or Q-044 joint-support
+  contract, followed by reciprocal challenge. Q-050's bounded numerical
+  inspection is complete and not an active third task.
 
 No entry's status or tier has changed. Expansion stays paused. Q-038 stays
 deferred.

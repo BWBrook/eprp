@@ -9,6 +9,14 @@ Barry's instruction in Codex chat, 11 October 2026, quoted exactly:
 This note adds one question and closes expansion for that review. It does not
 promote a primary investigation or complete a review of all 50 questions.
 
+**Later phase-2 update (11 October):** the agents now lead categorisation and
+deeper checks, following Barry's clarification in 76/1476. A
+[numerical archive inspection](../data/q050-covariance-support/README.md)
+has since verified the two Brombacher objects and the ZIP checksum. It
+corrects the time-field interpretation below: their `tt` values are elapsed
+coordinates, not adjacent increments. The access limits below describe this
+note's first-tranche checks; the linked audit records the subsequent depth.
+
 ## Question and scientific stakes
 
 **How does the capacity to evolve change during environmental upheaval?**
@@ -61,8 +69,11 @@ predictions, not presented as a simple contradiction.
   The 242,575-byte ZIP was retrieved into memory and its listing and README
   inspected. It includes Brombacher, Poseidonamicus, stickleback, bryozoan and
   other series. The README documents per-step means `M`, covariance matrices
-  `S`, sample sizes `nn`, time increments `tt`, traits and references in RData
-  objects. Numerical objects and analyses were not executed. The source
+  `S`, sample sizes `nn`, a time field `tt`, traits and references in RData
+  objects. Our original description of `tt` as increments came from the README;
+  the later phase-2 audit corrects it for the inspected Brombacher objects.
+  Numerical objects were not inspected and analyses were not run at this
+  first-tranche check. The source
   advertises MD5 `ab026931157f5734790be0ed732dc94b`; it was not independently
   checked. Zenodo metadata says CC BY 4.0; the repository README names Apache
   2.0. Original dataset terms would need resolving before redistribution.
