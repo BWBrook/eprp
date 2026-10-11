@@ -1,4 +1,4 @@
 threshold_cells_per_band	stages_total	stages_passing	Palaeozoic_passing	Mesozoic_passing	Cenozoic_passing
-3	95	74	29/44	27/29	18/22
-10	95	27	13/44	9/29	5/22
-20	95	4	3/44	1/29	0/22
+3	95	74	28/43	28/30	18/22
+10	95	26	12/43	10/30	4/22
+20	95	4	3/43	1/30	0/22

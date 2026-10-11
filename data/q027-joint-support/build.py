@@ -109,6 +109,8 @@ def stages():
 def main():
     fetch()
     occ = pd.read_csv(RAW / "occurrences.csv", usecols=COLUMNS, low_memory=False)
+    # read country codes as literal strings: Namibia is "NA", and an empty code means unknown
+    occ["cc"] = pd.read_csv(RAW / "occurrences.csv", usecols=["cc"], dtype=str, keep_default_na=False).cc
     n0 = len(occ)
     occ = occ[occ.accepted_rank.isin(["genus", "subgenus", "species"]) & occ.genus.notna()]
     occ = occ[occ.lithification1.fillna("") != "unlithified"]
@@ -122,6 +124,7 @@ def main():
     occ["stage"] = st.interval_name.values[idx[ok]]
     occ["stage_base_ma"] = st.max_ma.values[idx[ok]]
     occ["eu_na"] = occ.cc.isin(europe_north_america_codes())
+    occ["outside"] = ~occ.eu_na & (occ.cc != "")  # unknown country counts as neither
     lat_i = np.floor((occ.paleolat.values + 90) / CELL_DEG).astype(int)
     lat_mid = -90 + (lat_i + 0.5) * CELL_DEG
     n_lon = np.maximum(1, np.round(360 / CELL_DEG * np.cos(np.radians(lat_mid)))).astype(int)
@@ -129,17 +132,18 @@ def main():
     occ["cell"] = lat_i * 1000 + lon_i
     occ["abslat"] = occ.paleolat.abs()
     print(f"occurrences: {n0} downloaded, {len(occ)} kept (genus-level, lithified/unknown, "
-          f"palaeocoordinates, resolved to one stage)")
+          f"palaeocoordinates, resolved to one stage); {int((occ.cc == '').sum())} with unknown country")
 
     rows = []
     for (stage, base), g in occ.groupby(["stage", "stage_base_ma"], sort=False):
         row = dict(stage=stage, base_ma=base, occurrences=len(g), collections=g.collection_no.nunique(),
                    genera=g.genus.nunique(), cells=g.cell.nunique(),
-                   cells_eu_na_share=round(g[g.eu_na].cell.nunique() / max(g.cell.nunique(), 1), 2))
+                   cells_with_eu_na_share=round(g[g.eu_na].cell.nunique() / max(g.cell.nunique(), 1), 2),
+                   cells_mixed=len(set(g[g.eu_na].cell) & set(g[g.outside].cell)))
         for lo, hi in BANDS:
             band = g[(g.abslat >= lo) & (g.abslat < hi)]
             row[f"cells_{lo}_{hi}"] = band.cell.nunique()
-            row[f"cells_{lo}_{hi}_outside"] = band[~band.eu_na].cell.nunique()
+            row[f"cells_{lo}_{hi}_outside"] = band[band.outside].cell.nunique()
         out = [row[f"cells_{lo}_{hi}_outside"] for lo, hi in BANDS]
         for k in THRESHOLDS:
             row[f"three_bands_outside_ge{k}"] = out[0] >= k and out[1] >= k and (out[2] + out[3]) >= k
@@ -147,7 +151,8 @@ def main():
     tab = pd.DataFrame(rows).sort_values("base_ma", ascending=False)
     tab.to_csv(OUT / "per_stage.tsv", sep="\t", index=False, lineterminator="\n")
     n = len(tab)
-    eras = [("Palaeozoic", 541, 251.902), ("Mesozoic", 251.902, 66.0), ("Cenozoic", 66.0, 0)]
+    base = st.set_index("interval_name").max_ma  # era boundaries from the archived PBDB table
+    eras = [("Palaeozoic", 541, base["Induan"]), ("Mesozoic", base["Induan"], base["Danian"]), ("Cenozoic", base["Danian"], 0)]
     summary = []
     for k in THRESHOLDS:
         col = f"three_bands_outside_ge{k}"
@@ -158,7 +163,7 @@ def main():
         summary.append(rec)
     pd.DataFrame(summary).to_csv(OUT / "summary.tsv", sep="\t", index=False, lineterminator="\n")
     print(pd.DataFrame(summary).to_string(index=False))
-    print("median share of occupied cells in Europe + North America:", tab.cells_eu_na_share.median())
+    print("median share of occupied cells with any Europe + North America occurrence:", tab.cells_with_eu_na_share.median())
 
 
 if __name__ == "__main__":

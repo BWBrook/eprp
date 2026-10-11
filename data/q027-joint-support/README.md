@@ -1,6 +1,6 @@
 # Q-027 joint-support screen: where can the latitudinal gradient be estimated outside Europe and North America?
 
-Owner: Claude | Built 11 October 2026 | Status: **a support screen (a data contract), not an analysis of the gradient**
+Owner: Claude | Built 11 October 2026; corrected the same day after [Codex's audit](../q027-support-audit/README.md) | Status: **a conservative presence screen, not an analysis of the gradient and not a power design**
 
 Q-027 asks whether the latitudinal diversity gradient follows global climate
 state. Its sharpest form is a dispute:
@@ -61,6 +61,16 @@ screen does not run that pipeline.
 3. **Region.** "Europe + North America" uses Close's region table, joined on
    country names to ISO codes. Russia is in Asia, following that table; PBDB's
    `UK` is included.
+   - Country codes are read as literal strings, so Namibia's `NA` is kept as
+     a code.
+   - The 822 retained records with an empty code are **unknown**: neither
+     inside nor outside.
+   - An occurrence counts as outside only when its country is known and not
+     in Europe or North America.
+   - The source study excludes whole cells by the modal region of their
+     collections. This screen excludes occurrence rows instead, so 60
+     stage × cell combinations hold both inside and outside occurrences
+     (`cells_mixed`).
 4. **Bands.** Absolute palaeolatitude bands of 0–20°, 20–40°, 40–60° and
    60–90°.
 5. **Criterion.** A stage passes at threshold k if, outside Europe and North
@@ -73,12 +83,18 @@ screen does not run that pipeline.
 
 | Cells per band outside Europe + North America | Stages passing (of 95) | Palaeozoic | Mesozoic | Cenozoic |
 | --- | --- | --- | --- | --- |
-| ≥ 3 | 74 | 29/44 | 27/29 | 18/22 |
-| ≥ 10 | 27 | 13/44 | 9/29 | 5/22 |
-| ≥ 20 | 4 | 3/44 | 1/29 | 0/22 |
+| ≥ 3 | 74 | 28/43 | 28/30 | 18/22 |
+| ≥ 10 | 26 | 12/43 | 10/30 | 4/22 |
+| ≥ 20 | 4 | 3/43 | 1/30 | 0/22 |
 
-- The median share of occupied cells in Europe and North America per stage is
-  0.42.
+- **Corrections since first build.**
+  - Era boundaries now come from the archived PBDB table, which puts the
+    Induan (base 252.17 Ma) in the Mesozoic.
+  - Unknown countries are no longer counted as outside. This cost one stage
+    at k ≥ 10: the Ypresian, which goes from 30/10/12 to 28/9/12 cells.
+- In the median stage, 42% of occupied cells contain any occurrence from
+  Europe or North America. The cells overlap, so this is not a partition of
+  coverage.
 - **Warm intervals.** Several of the warmest intervals fail at 10 cells,
   because the mid-latitude band outside Europe and North America is thin:
 
@@ -87,24 +103,51 @@ screen does not run that pipeline.
   | Turonian | 15 / 8 |
   | Coniacian | 10 / 7 |
   | Santonian | 6 / 6 |
-  | Lutetian | 24 / 7 |
+  | Lutetian | 22 / 6 |
+  | Ypresian | 28 / 9 |
   | Toarcian | 7 / 12 |
   | Thanetian | 14 / 5 |
 
   Warm or transitional stages that pass at 10 are the Changhsingian and
-  Induan, Aptian, Albian, Cenomanian, Ypresian and Burdigalian.
+  Induan, Aptian, Albian, Cenomanian and Burdigalian.
 - **High latitudes.** The 60–90° band outside Europe and North America has 5
   or fewer cells in most Cenozoic stages.
 
-**Inference.**
-- The independent-coverage test of the warm-interval tropical dip is possible
-  in only a handful of warm stages, with about 10–30 cells per band. The
-  hottest Late Cretaceous stages are largely outside that set.
-- The number of stages passing at 10 cells (27) is of the same order as
-  Benson et al.'s own 36 usable stages under stricter criteria.
-- Q-027's next gate, a power simulation in the style of Jones et al., should
-  be run on this support: these stages, these cell counts per band. It should
-  not assume Phanerozoic-wide coverage.
+**Inference (revised after Codex's audit).**
+
+The first version said the test was possible "in only a handful of warm
+stages". **That is withdrawn.** The count of 26 (27 before the fixes) is the
+output of one conservative screen. It is neither a ceiling nor a count of
+usable observations. Two of the screen's choices move it in opposite
+directions (Codex's sensitivities, other choices held fixed):
+
+- **Age rule raises it.** Full containment is stricter than the source's
+  rule, which assigns an occurrence to the stage holding more than 50% of its
+  age range. Under that rule:
+  - 46 stages pass at k10;
+  - the Turonian goes to 31/18/18 cells and the Lutetian to 31/13/14.
+
+  The rule admits records with up to half their range in a neighbouring stage.
+  That dilutes contrasts between adjacent stages with different climates, so
+  it trades temporal precision for support. The estimator contract should
+  record how much of each stage's support comes from such records.
+- **Sample depth lowers it.** Requiring at least 2, 5 or 10 outside
+  collections per cell leaves 14, 4 or 1 stages passing at k10. Occupancy
+  says nothing about whether a cell can yield a coverage-standardised
+  richness.
+
+The combined effect of the two is unknown. Pooling hemispheres also matters:
+at k10, only 3 stages pass using the north alone and 4 using the south alone.
+
+**Next gate.** A support contract specific to the estimator comes before any
+power simulation. It should use the source's:
+- age rule and midpoint palaeocoordinates;
+- dggridR cells;
+- modal-region cell exclusion;
+- coverage-quorum eligibility;
+- region identity, so that latitude can be separated from region.
+
+This screen cannot fix a power design.
 
 ## Limits
 

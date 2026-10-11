@@ -1268,12 +1268,6 @@ unverified.
 
 ### Q-027 Is the latitudinal diversity gradient a climate-state variable?
 
-**11 October audit update:** the [independent support audit](../data/q027-support-audit/README.md)
-reproduces the initial 27/95 count but supersedes the inference below that it
-fixes usable warm stages or the power design. The source age rule gives 46/99
-under otherwise similar screen choices; estimator eligibility remains unverified.
-Claude owns reconciliation of the full entry and original contract.
-
 Status **under review**, tier 2. Posed 9 October as a tier-1 sketch. Moved down
 on 10 October after a prior-work check: partly occupied.
 
@@ -1348,20 +1342,31 @@ on 10 October after a prior-work check: partly occupied.
   - PBDB, and Triton (10.1038/s41597-021-00942-7).
   - Climate: PhanDA (10.1126/science.adk3705) and Valdes et al. 2021 HadCM3
     stage simulations (10.5194/cp-17-1483-2021).
-- **Data support (11 October; [support screen](../data/q027-joint-support/README.md)).**
+- **Data support (11 October; [support screen](../data/q027-joint-support/README.md), [Codex audit](../data/q027-support-audit/README.md)).**
   - Source: Benson et al.'s Zenodo archive (CC BY 4.0), with its 2022 PBDB
-    download of non-chordate marine animals.
-  - At least 10 occupied cells per palaeolatitude band (0–20°, 20–40°, ≥40°)
-    *outside* Europe and North America are found in 27 of 95 stages; at least
-    20 in only 4.
-  - Several of the warmest stages fail at 10, because the 20–40° band outside
-    Europe and North America is thin: Turonian, Coniacian, Santonian,
-    Lutetian, Toarcian and Thanetian.
-  - The independent-coverage test of the warm-interval tropical dip is
-    therefore possible in only a handful of warm stages: the Permian–Triassic
-    boundary stages, Aptian, Albian, Cenomanian and Ypresian.
-  - The power gate should be run on this actual support. The Dryad companion
-    deposit refuses anonymous download.
+    download of non-chordate marine animals. Barry has since supplied the
+    Dryad companion files. They hold only PBDB CSV downloads and a README, nothing
+    beyond the Zenodo archive.
+  - **Screen result.** Requiring at least 10 occupied cells per palaeolatitude
+    band (0–20°, 20–40°, ≥40°) *outside* Europe and North America, 26 of 95
+    stages pass, under full stage containment. That is 27 before Codex's
+    fixes: unknown countries no longer count as outside, and the era
+    boundaries were corrected.
+  - **What the count means (revised after Codex's audit).** It is the output
+    of one conservative presence screen, not a ceiling or a power design. The
+    first version's "possible in only a handful of warm stages" is withdrawn.
+    - The source's age rule (more than 50% of an occurrence's age range in
+      one stage) gives 46 passing stages, including the Turonian and
+      Lutetian. It does so by admitting records that spill into neighbouring
+      stages.
+    - Requiring at least 2 outside collections per cell drops the count
+      to 14.
+    - The two effects run in opposite directions; their joint effect is
+      unknown.
+  - **Next gate.** A support contract specific to the estimator (age rule,
+    midpoint palaeocoordinates, dggridR cells, modal-region exclusion,
+    coverage eligibility, region identity), before any power simulation.
+    Proposed as next work, not yet allocated.
 - **Kill criterion.** Before any empirical fit, run a power simulation on the
   real sampling windows (in the style of Jones et al. 2021). Park if the
   climate–slope coefficient cannot be recovered.
@@ -2012,13 +2017,6 @@ novelty is still unverified.
 
 ### Q-038 Bad genes or bad luck: how predictable is which genera die, and does it change in mass extinctions?
 
-**11 October access/audit update:** Barry lifted the deferral (76/1515) and
-supplied the Dryad files. The [new contract](../data/q038-monarrez-contract/README.md)
-and [independent design audit](../data/q038-flag-audit/README.md) supersede the
-earlier access and alignment gate below. The deposited-design flag displacement
-is confirmed; published-coefficient provenance, prospective predictors and
-taxonomic units remain unresolved. Claude owns reconciliation of this entry.
-
 Status **under review**, tier 2. Posed 10 October as a tier-1 variance
 partition; reformulated the same day after Codex's identification critique
 (76/1380).
@@ -2078,27 +2076,48 @@ partition; reformulated the same day after Codex's identification critique
      information about victim identity. Use a per-lineage scale or a
      calibration matched for severity; neither removes all dependence. A low
      gain is not evidence that traits lack mechanisms.
-- **Gate result (11 October; data contract in the round-9 note).**
-  - *Classes.* Rhynchonellata (1,827 genera) or Bivalvia (1,600) can support
-    the design. Both span all five events across 86 intervals.
-  - *Access.* Not directly from open files. The Dryad encounter histories and
-    PBDB extract (10.5061/dryad.931zcrjqw, CC0) refuse anonymous download.
-  - *Spreadsheet.* In the Zenodo supplement (10.5281/zenodo.8341743),
-    capture histories are stored as floating-point numbers. Leading zeros are
-    lost, and 5,291 of 6,562 render in scientific notation; Claude verified
-    this directly.
-  - *Not pre-event.* The deposited range predictor is measured in the focal
-    stage, and body size is one value per genus.
-  - *Clade fields.* Order and family are absent from the supplement.
-  - *Duplicates.* Subgenus rows duplicate their base genera (about 20% of
-    mollusc rows).
-  - *Alignment.* The mass-extinction flags sit on the first post-event stage,
-    while last occurrences peak in the stage before. Check the interval
-    alignment against the model's convention.
-
-  A rebuild therefore needs the Dryad files (downloaded by Barry), or a fresh
-  PBDB query with range at stage k − 1 recomputed from palaeocoordinates.
-  Code is on Zenodo (10.5281/zenodo.7816408, MIT; R and RMark).
+- **Data contract (11 October; [contract](../data/q038-monarrez-contract/README.md), [Codex design audit](../data/q038-flag-audit/README.md)).**
+  Barry, in chat on 11 October 2026: "Lift the deferral on Q-038 now, it's
+  live again now that we have the dataset." He downloaded the Dryad files
+  (10.5061/dryad.931zcrjqw, CC0).
+  - *Access and histories.*
+    - Access is resolved.
+    - The capture histories in the Rdata are intact: 6,562 genera,
+      86 occasions.
+    - The float corruption is only in the Zenodo spreadsheet copy.
+  - *Classes.*
+    - Rhynchonellata (1,827) and Bivalvia (1,600) span all five events.
+      Strophomenata spans the first three and Trilobita the first two.
+    - The deposited occurrence CSV has no Strophomenata or Trilobita, so
+      their ranges cannot be rebuilt from it.
+  - *Event flags.* The deposited design puts `mass.ext` on survival *out of*
+    the first post-extinction stage. Codex confirmed this by building the
+    design with RMark 3.0.0.
+    - Which code produced the published coefficients is unresolved: the
+      class indices and file names in the deposited scripts disagree.
+    - [Detail withheld pending disclosure to the data custodian.]
+    - For Q-038, define the event intervals independently, ending at each
+      boundary.
+  - *Predictors.*
+    - The deposited range is measured in the focal stage, and range at
+      k − 1 is in the same columns.
+    - But zero is ambiguous: it marks every absent cell and 812 of 29,486
+      present cells.
+    - Standardisation and ascertainment need a prospective audit.
+    - Body size is one value per genus.
+  - *Clade fields.* Order and family come from the genus table, missing for
+    8.1% and 5.5% of rows.
+  - *Taxonomic unit.* The paper elevates subgenera to genera.
+    - No occurrence is assigned to both a genus and its own subgenus, so
+      these are nested units, not duplicates. The earlier "about 20%
+      duplicates" is withdrawn.
+    - Choose the unit in advance and report the other as a sensitivity.
+    - Key genera by PBDB number: 18 homonym names fan out in the deposited
+      join.
+  - *Next gate.* A prospective predictor contract for Rhynchonellata and
+    Bivalvia: zero-coding, standardisation window, timing of body-size
+    measurement, and the unit.
+  - Code is on Zenodo (10.5281/zenodo.7816408, MIT; R and RMark).
 - **Kill criterion.**
   - Park if joint observation modelling, persistent susceptibility and transfer
     between events add nothing beyond Monarrez, Smits & Finnegan and Tikhonov.
@@ -2531,6 +2550,35 @@ check the same day sharpened it.
   region and time, and a discriminator that goes beyond Close & Reijenga 2025.
   "At least four equal-spread windows in at least six bins" is a screening
   rule, not validated power.
+- **Data support (11 October; [support screen](../data/q044-joint-support/README.md)).**
+  The Close et al. 2019 deposit (Barry's download) holds raw PBDB downloads
+  from 2017 and local-richness code. It has no window-level outputs and
+  cannot be run as deposited.
+  - *Window counts.* Of 26 bins from the Late Triassic to the Neogene, 19
+    have at least four disjoint 1,000 km windows with at least 10
+    collections each.
+    - 16 still pass with Good's u ≥ 0.5.
+    - Only 5 pass with u ≥ 0.7, all Cenozoic.
+    - The Jurassic gaps (J2–J4) fall where break-up should matter most.
+  - **The decisive finding is saturation.** Primary windows share almost no
+    species.
+    - The share of union species found in two or more windows is at most
+      0.033 in every Mesozoic and Palaeogene bin; at genus level, at most
+      0.14.
+    - So β_between is close to K, its ceiling, and as specified it cannot
+      rise.
+  - *Geometry.* The windows mostly sit on different continents, with centres
+    5,000–12,000 km apart. Only 5 bins have at least four windows on one
+    continent.
+  - *Consequence.* The estimand and the kill criterion need revising before
+    a power gate. Candidates:
+    - within-continent windows at a fixed separation (a Cenozoic-only
+      design, close to Close & Reijenga 2025);
+    - a less saturated level or measure;
+    - distance-conditioned sharing.
+
+    Within-window spread must be fixed by subsampling to a fixed MST, and
+    the configuration of the windows must be fixed as well. D stays 2.
 - **Robustness.** The bounded data-vintage check from Q-045 belongs here:
   compare the Close et al. 2019 deposited extract with a current extract by
   stable identifiers.

@@ -60,6 +60,20 @@ cat("has paleolat/paleolng:", all(c("paleolat", "paleolng") %in% names(occ)),
 cat("paleomodel values:", paste(head(names(sort(table(occ$paleomodel), decreasing = TRUE)), 3), collapse = ", "), "\n")
 one_interval <- occ$late_interval == "" | is.na(occ$late_interval) | occ$late_interval == occ$early_interval
 cat("occurrences with a single named interval:", round(mean(one_interval), 3), "\n")
+print(table(occ$class)[c("Bivalvia", "Gastropoda", "Rhynchonellata", "Strophomenata", "Trilobita")])
+
+o3 <- occ[occ$class %in% c("Bivalvia", "Gastropoda", "Rhynchonellata"), ]
+dup <- duplicated(o3$occurrence_no)
+dup_names <- tapply(o3$genus, o3$occurrence_no, function(v) length(unique(v)))
+cat("duplicated occurrence rows (B/G/R):", sum(dup), " genus names involved:", length(unique(o3$genus[dup])),
+    " occurrences carrying two different names:", sum(dup_names > 1), "\n")
+cat("duplicated genus names in Rdata:", sum(duplicated(eh$genus)), "\n")
+sg <- grepl("\\(", o3$genus)
+key_sub <- unique(paste(o3$collection_no[sg], sub(" \\(.*$", "", o3$genus[sg])))
+key_base <- unique(paste(o3$collection_no[!sg], o3$genus[!sg]))
+cat("collection x base-genus pairs with a subgenus record:", length(key_sub),
+    " also recording the base genus itself:", sum(key_sub %in% key_base), "\n")
+cat("present capture cells with range exactly 0:", sum(rng[, 1:n_occ] == 0 & bits == 1), "of", sum(bits == 1), "\n")
 
 summary <- data.frame(
   item = c("genera", "occasions", "intervals_flagged", "ch_intact_in_rdata", "range_columns",

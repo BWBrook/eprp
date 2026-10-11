@@ -46,12 +46,13 @@ Rscript --vanilla data/q038-monarrez-contract/flag_diagnostic.R
 | Unit | One row per genus (object `ds`, 6,562 rows × 272 columns). Fields: `genus`, `class`, `ch`, `logvol`, `mass.ext1–86`, `rec.mass1–86`, `range1–87` |
 | Capture histories | **Intact in the Rdata**: character strings, all 86 occasions long, 0/1 only. The float corruption is confined to the Zenodo spreadsheet copy (ESM Dataset S1) |
 | Occasions | 86 stages, Tremadocian (485.4 Ma) to 1 Ma, ordered oldest first. The occasion index maps to stage bases in the cleaned PBDB file: index 38 is the Changhsingian, 39 the Induan |
-| Classes | Bivalvia 1,600; Gastropoda 1,762; Rhynchonellata 1,827; Strophomenata 823 (to occasion 43); Trilobita 550 (to occasion 38) |
-| Subgenus duplication | 811 of the 6,562 rows are subgenus-style names, 769 of which also have a base-genus row. Mostly Bivalvia (330) and Gastropoda (394). Effective independent genera are fewer |
-| Range covariate | Maximum great-circle distance of palaeocoordinates within the stage, log10, standardised by class and stage. **Aligned with occasions**: non-zero exactly when the genus is present (mean absolute value 0.89 present against 0 absent; misaligned by one occasion it would be 0.51 against 0.02). Range at stage k − 1, a strictly prior predictor, is available directly from these columns |
+| Classes | Bivalvia 1,600; Gastropoda 1,762; Rhynchonellata 1,827; Strophomenata 823 (to occasion 43); Trilobita 550 (to occasion 38). All five are in the Rdata; the occurrence CSV has only the first three (below) |
+| Subgenera | The paper elevates subgenera to genera (Methods). 811 of the 6,562 rows are subgenus-style names, 769 of which also have a base-genus row; mostly Bivalvia (330) and Gastropoda (394). **No occurrence is assigned to both a base genus and its own subgenus**, so these are nested taxonomic units, not duplicate observations (Codex's challenge, confirmed). They are not independent either: in 1,860 of 16,575 collection × base-genus pairs with a subgenus record, the same collection also records the base genus itself |
+| Homonyms | Joining occurrences to the genus table on name alone fans out 18 duplicated genus names (for example *Bakevellia* with two stratigraphic ranges), duplicating 1,521 Bivalvia, Gastropoda and Rhynchonellata occurrence rows. The Rdata has 8 duplicated genus names. Small, but genus name is not a unique key |
+| Range covariate | Maximum great-circle distance of palaeocoordinates within the stage, transformed as log10(distance + 1), standardised within class and stage, then missing values set to 0 (script 04:80–85). **Aligned with occasions** (mean absolute value 0.89 present against 0 absent; misaligned by one occasion it would be 0.51 against 0.02). But zero is ambiguous: every absent cell is 0, and so are 812 of 29,486 present cells (Codex), where the value was undefined or missing. Range at k − 1 is temporally prior, but lagging a column is not by itself a prospective predictor contract: zero-coding, standardisation and taxonomic ascertainment need their own audit |
 | Body size | One value per genus (`logvol`); possible use of information from after the event not assessed |
 | Order and family | In `genus.sizes.ranges.cleaned.classes.csv`, missing for 8.1% and 5.5% of rows |
-| Occurrences | `pbdb.cleaned.classes.csv`: 253,747 rows read, against 284,309 stated in the deposit README (unresolved). Palaeocoordinates come from the `gp_mid` model and are missing for 5.9% |
+| Occurrences | `pbdb.cleaned.classes.csv`: 253,747 rows read, against 284,309 stated in the deposit README. It contains **no Strophomenata or Trilobita** (Codex). Its Bivalvia (88,856), Gastropoda (53,673) and Rhynchonellata (57,297) match the paper; the paper's five-class total of 242,871 also counts 33,935 Strophomenata and 9,110 Trilobita. So ranges for those two classes cannot be rebuilt from the deposit. Palaeocoordinates come from the `gp_mid` model and are missing for 5.9% |
 
 ## Flag alignment: an apparent offset of one interval
 
@@ -63,7 +64,7 @@ Rscript --vanilla data/q038-monarrez-contract/flag_diagnostic.R
 - Script 05a fits RMark `Pradsen` models with `Phi ~ time + range * mass.ext`
   (and variants), using `process.data` defaults.
 
-**How RMark matches the flag** (current CRAN source, 3.1.0).
+**How RMark matches the flag** (current CRAN source, 3.1.0; Codex confirmed it by building the design under RMark 3.0.0, [audit](../q038-flag-audit/README.md)).
 - In `inst/parameters.txt`, `Pradsen Phi` has `begin = 0`, an
   interval-type parameter.
 - `compute.design.data.R` labels such parameters from the starting occasion
@@ -102,28 +103,51 @@ in the stage *before* each flag:
   −0.80 (0.34).
 
 **Status of this finding.**
-- On the deposited code and RMark's documented convention, the published
-  "mass extinction" Phi coefficients appear to describe survival *out of* the
-  first post-extinction stage. The extinction intervals themselves appear to
-  be pooled with background.
-- This has not been confirmed by refitting the CMR models, which need the
-  external MARK program and, per the authors' code, about 96 hours per class.
-  Whether the paper's conclusion of reduced range selectivity changes is
-  therefore unknown.
-- The recovery flags (`rec.mass` at occasions 9, 23, 40, 47 and 70, on Gamma
-  with the same labelling) may have a similar issue. Not assessed.
-- Any contact with the authors needs Barry's authorisation (AGENTS.md).
+- **Deposited design: confirmed.** With the deposited inputs and model
+  specification, all five flags enter Phi for survival *out of* the flagged
+  (first post-extinction) stage. The extinction intervals are pooled with
+  background. Codex reproduced this by constructing the design with
+  unmodified RMark 3.0.0, without running MARK.
+- **Published coefficients: provenance unresolved.** Do not call these the
+  published coefficients.
+  - Scripts 05c, 05d and 05e select class indices 4, 5 and 6 (Strophomenata,
+    Trilobita and none).
+  - The 05 scripts save `class6` files, while 06 loads `class5`.
+  - The authors' RMark version is unknown.
+
+  The fitted results may therefore come from code that differs from the
+  deposit. Nothing has been refitted: MARK is external, and the authors
+  estimate about 96 hours per class. Whether the paper's conclusion changes
+  is unknown.
+- **Event windows.** Frasnian→Famennian is the authors' Late Devonian
+  boundary; the Hangenberg event is a separate question.
+- **Gamma.** `rec.mass` (occasions 9, 23, 40, 47 and 70) uses the same suffix
+  matching on Gamma. What recovery means under the reverse-time seniority
+  parameter is not adjudicated.
+- **Descriptive only.** The last-occurrence counts above are observed last
+  appearances, not known biological deaths.
+- [Detail withheld pending disclosure to the data custodian.]
 
 ## Consequences for Q-038
 
-- **Data access is resolved.** The capture histories are intact, the range
-  covariate is aligned, and range at k − 1 is available from the deposited
-  columns.
-- **Event intervals must be redefined.** Define each event as the interval
-  ending at the boundary (start occasions 7, 21, 38, 45 and 68). Do not reuse
-  the deposited `mass.ext` flags.
-- **Collapse subgenus duplicates** to base genera, or treat them explicitly.
+- **Data access is resolved; predictive readiness is not.** The capture
+  histories are intact and the range columns are aligned. A prospective
+  predictor contract still needs:
+  - the meaning of zero range;
+  - whether standardisation uses only the prior cohort;
+  - when body size was measured (`logvol` is one value per genus).
+- **Define event intervals independently.** Use the interval ending at each
+  boundary (start occasions 7, 21, 38, 45 and 68). Do not reuse the deposited
+  `mass.ext` flags.
+- **Fix the taxonomic unit before fitting.** The candidates are:
+  - the authors' convention (subgenera as genera, with the base genus as the
+    residual);
+  - collapse to genus.
+
+  The two give different extinction events: a subgenus can disappear while
+  its genus persists. Choose one in advance and report the other as a
+  sensitivity. Key genera by PBDB number, not name.
 - Rhynchonellata and Bivalvia remain the candidates spanning all five events.
-  Strophomenata spans the first three and Trilobita the first two.
-- The cleaned file's row count disagrees with the README. Audit it before
-  using the file for anything beyond palaeocoordinates.
+  Strophomenata spans the first three and Trilobita the first two. Their
+  ranges cannot be rebuilt from the deposited CSV, so a rebuild needs a fresh
+  PBDB extract.
