@@ -16,6 +16,16 @@ He also wants "the big stuff". Questions should be consequential, and tractable
 with modern statistics, simulation and current databases. Incremental
 applications do not belong here.
 
+**First tranche: 50 questions; expansion paused for review (11 October 2026).**
+Barry's instruction in Codex chat, quoted exactly:
+
+> "Back to you. Let's get one more good question, to take the current list to 50, and then we'll pause and review the whole first tranche."
+
+Q-050 completes this tranche. The pause supersedes the expand-each-round
+cadence below until Barry resumes it. Existing statuses and tiers remain
+provisional; no entry is promoted by reaching 50. The next action is Barry's
+review of the portfolio, with agent support as requested.
+
 ## How to use and maintain it
 
 - **Who reads it.** A future team should be able to pick up any entry and start.
@@ -123,6 +133,7 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-047 | When biotas meet: do past interchanges forecast today's biotic mixing? | under review | 2 | Claude |
 | Q-048 | Can climate-driven predator decline reduce extinction risk for their prey? | under review | 2 | Codex |
 | Q-049 | Did failure to track shifting isotherms predict extinction at past hyperthermals? | sketch | 2 | Claude |
+| Q-050 | How does the capacity to evolve change during environmental upheaval? | under review | 2 | Codex |
 
 ---
 
@@ -2754,3 +2765,58 @@ unverified.
 - **Links.** Q-015 (thermal-niche evolution), Q-027 (latitudinal gradient),
   Q-031 (body size).
 - **Evidence.** [Round-10 note](../literature/2026-10-11-register-checks-round10.md).
+
+## Final addition to the first tranche (Codex, 11 October)
+
+### Q-050 How does the capacity to evolve change during environmental upheaval?
+Status **under review**, tier 2 (provisional). The conceptual question and
+several component tests are established; novelty and feasibility of the joint
+mechanism test remain unverified.
+
+- **Question.** Does the pattern of variation already present within a
+  population channel its initial evolutionary response to environmental
+  change, and how quickly does that pattern itself reorganise? Can fossil
+  sequences distinguish inherited constraints, selection reshaping variation,
+  and feedback between them?
+- **Why big / boundary.** This asks how the capacity to evolve links variation
+  among individuals to long-term evolutionary trajectories. Q-036 concerns
+  geographic explanations for stasis; this concerns multivariate variation and
+  change, including substantial evolution. Extinction is not a required frame.
+- **Nearest work.** Hunt 2007
+  ([10.1111/j.1558-5646.2007.00129.x](https://doi.org/10.1111/j.1558-5646.2007.00129.x),
+  abs) already tests directional alignment in fossil ostracods. Brombacher et
+  al. 2017 ([10.1086/692570](https://doi.org/10.1086/692570), sect) already
+  predicts next-sample change from covariance and tests climatic-regime
+  breakdown. Their 2023 spatial comparison
+  ([10.3389/fevo.2023.1165174](https://doi.org/10.3389/fevo.2023.1165174), sect)
+  warns against transfer among populations. Holstad et al. 2024
+  ([10.1126/science.adi8722](https://doi.org/10.1126/science.adi8722), main-text
+  sections) already evaluates mechanisms and advances fluctuating-optimum
+  tracking. Tsuboi et al. 2024
+  ([10.1093/jeb/voae103](https://doi.org/10.1093/jeb/voae103), sect) explicitly
+  proposes environmental shifts to distinguish constraint from selection
+  shaping variation. Neither the correlation nor the broad proposal is new.
+- **Residual / discriminator.** Compare explicit models for the joint sequence
+  of initial covariance, mean displacement and subsequent covariance
+  reorganisation, allowing feedback. Use independently dated environmental
+  transitions and, where possible, replicated populations or lineages with
+  differing initial covariance. Test predictions of direction, magnitude and
+  relaxation time under one observation model. Temporal precedence alone
+  cannot establish causation; another alignment regression is insufficient.
+- **Data lead.** The inspected README and ZIP listing for Tsuboi's versioned
+  [archive](https://doi.org/10.5281/zenodo.13294509) document per-sample means,
+  covariance matrices, specimen counts and time increments. Brombacher's
+  [Dryad deposit](https://doi.org/10.5061/dryad.8jf2k) lists specimen-level
+  measurements and sample ages. Raw numerical objects were not analysed;
+  independent environmental support and sufficient replication remain open.
+- **Main obstacle / kill criterion.** Phenotypic covariance is not genetic
+  covariance, and environmental proxies do not identify selection gradients.
+  Plasticity, persistent common selection, immigration and temporal mixing
+  can mimic the proposed ordering. First test recovery of constrained rival
+  models at actual sample spacing and uncertainty. Park the mechanistic route
+  if plausible alternatives are observationally equivalent or covariance
+  reorganisation is unresolved. This gate is proposed, not passed.
+- **Next step and evidence.** Hold for the first-tranche review. If selected,
+  inspect one series' joint support before a bounded simulation. Source
+  access, exact data version, rival models and prior-work boundaries are in
+  the [Q-050 evidence note](../literature/2026-10-11-evolvability-and-first-tranche-close.md).

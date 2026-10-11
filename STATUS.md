@@ -1,18 +1,25 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Stage:** continuous ideation. Barry (9 October): the programme's output is a
-growing, continuously revised [question register](ideas/register.md) of big,
-well-posed questions for other teams, not a single target. Deep time has
-particular interest.
+**Stage:** first tranche complete at **50 questions; expansion paused for
+Barry's review**. The programme remains a portfolio of questions for other
+teams, with particular interest in deep time. No primary investigation has
+been selected.
 
-**Current objective:** grow and refine the register. Every round both narrows
-(prior-work and feasibility checks; park or reject with reasons) and expands
-(new sketches). Map consequential questions, nearest prior work and usable
-evidence together. Develop competing explanations and discover
-what existing data and modern inference/simulation can genuinely distinguish.
-Do not organise the programme around Barry's previous specialisms.
+**Current objective:** hold the [question register](ideas/register.md) for
+review of the whole first tranche. Barry's instruction in Codex chat,
+11 October 2026, quoted exactly:
+
+> "Back to you. Let's get one more good question, to take the current list to 50, and then we'll pause and review the whole first tranche."
+
+Q-050 completes that instruction. The pause supersedes the previous
+expand-each-round cadence until Barry resumes it. Existing statuses and tiers
+remain provisional. The review itself has not yet been performed.
+
+The index records **40 under review, 4 sketches and 6 parked entries**.
+Among the 44 unparked entries, 34 are tier 2 and 10 are tier 3. These are
+existing agent assessments, not a fresh portfolio ranking.
 
 ## Work and ownership
 
@@ -20,9 +27,10 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
+| Final question and first-tranche closure | Codex | Complete: Q-050 asks how the capacity to evolve changes during environmental upheaval. [Evidence note](literature/2026-10-11-evolvability-and-first-tranche-close.md) records closest priors, a versioned multivariate data archive and the mechanism-identification gate. Under review/tier 2; novelty and joint empirical support unverified. Shared edits completed; expansion paused |
 | Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferred per Barry |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
-| Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
+| First-tranche review and downstream handoffs | Barry, supported by both agents as requested | Review the 50-question portfolio next. No single programme target selected; no entry yet ready for handoff |
 
 Each scientific area includes literature, data and methods end to end. These
 are starting areas for exploration, not an exclusive two-topic agenda. The
@@ -84,8 +92,10 @@ Codex. Shared dependencies are coordinated through Correspondence.
   Claude's round 7 added Q-038–Q-042. Codex's round 8 demotes Q-036 and adds
   Q-043. Claude's round 8 adds Q-044 and Q-045; Codex's round 9 parks Q-043
   and adds parked Q-046. Claude's round 9 adds Q-047; Codex's round 10 adds
-  Q-048, bringing the register to 48 entries; Claude's round 10 adds Q-049 (49 entries). No entry has been promoted to a
-  primary investigation.
+  Q-048, bringing the register to 48 entries; Claude's round 10 adds Q-049.
+  Codex's final addition Q-050 brings the first tranche to 50 and pauses
+  expansion for Barry's review. No entry has been promoted to a primary
+  investigation.
 - Q-038's variance partition is withdrawn following Claude's adjudication.
   The revised under-review/tier-2 question predicts victim identity given
   incoming cohort and loss count. Tikhonov's reported luck fraction is a
@@ -111,7 +121,8 @@ Codex. Shared dependencies are coordinated through Correspondence.
   accepted tier 2 for Q-044. Close & Reijenga 2025 already estimates tetrapod
   species–area changes across K–Pg recovery; Q-044's residual is between-region
   history, and Q-008 must retain its subsequent-recovery prediction target.
-  Q-044's hierarchical beta weights and cross-paper arithmetic need revision.
+  Claude's round 10 revised the hierarchical beta weights and withdrew the
+  cross-paper arithmetic; Codex has received those corrections.
 - Q-045's PBDB creation-date filter retains current records modified after
   the cutoff; it is not a historical snapshot. Archived-extract robustness,
   publication-cohort sensitivity and entry-cohort sensitivity differ. Codex
@@ -185,17 +196,21 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Codex**, on discussion 76:
-- respond to Claude's Q-048 critique (define the whole predator guild as the
-  treatment; denominator rules; Kelley & Hansen's opposite regime; the
-  Antarctic king-crab mirror);
-- challenge Q-042's bound and inversion design, and new Q-049 (tracking
-  ratio);
-- confirm the Q-041/Q-044/Q-047 revisions.
+**Next owner: Barry**, for review of the whole first tranche, with Codex and
+Claude supporting as requested. Neither agent has an active expansion task.
+The existing index is the review entry point; reaching 50 is not evidence
+that the entries have equal merit or are ready for primary investigation.
 
-Codex retains Q-026, Q-033, the paused Q-036 and Q-048. Q-038 stays deferred
-per Barry (76/1418). Shared register/STATUS edits return to Codex at this
-handoff. No primary investigation is authorised by this exchange.
+Claude's round-10 Q-041/Q-044/Q-047 revisions are received. Its remaining
+handoff is retained as review context: Q-042's species-loss bound and inversion
+design; Q-048's whole-predator-guild treatment, denominator, opposite regime
+and Antarctic comparison; and Q-049's tracking ratio. These are not silently
+adjudicated by closing the tranche. Q-050 awaits Claude's independent critique
+if Barry includes that in the review; a Codex subagent challenge is complete.
+
+Scientific ownership is unchanged; Codex owns Q-050. Q-038 stays deferred per
+Barry (76/1418). Shared register/STATUS editing is idle after Codex's closure.
+No primary investigation is authorised by this exchange.
 
 ## Shared checkout and decisions
 

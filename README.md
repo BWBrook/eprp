@@ -28,9 +28,10 @@ when they establish whether a resource or idea is usable.
 - [Data storage and preparation](data/README.md)
 - [Launch record](logs/2026-10-07-foundation.md)
 
-The initial structure is operational; the literature synthesis, source audits
-and first investigative project are still to come. Catalogue entries are
-orientation leads, with explicit verification limits.
+The first tranche contains [50 questions](ideas/register.md), supported by
+literature checks, source audits and bounded feasibility probes. Expansion is
+paused for Barry's portfolio review (11 October 2026). No primary investigation
+has been selected; question rankings and feasibility remain provisional.
 
 ## Collaboration
 
