@@ -887,16 +887,21 @@ Status **under review**, tier 2.
   can coexist. SCION_Xu2025 and TREED are candidate reusable implementations,
   with source and execution limits recorded in the evidence note.
 - **Obstacle / next step.** Different feedbacks and prolonged outgassing can fit
-  similar temperature histories. First map which nonthermal predictions actually
-  differ and which observations constrain them without circular calibration.
+  similar temperature histories. The prediction/calibration map is complete:
+  Xu prescribes vegetation recovery, Isson selects simulations on temperature,
+  and Rogger 2025 prescribes climate recovery. These uses must be separated from
+  evaluation evidence. Next check whether independently age-constrained land
+  function and marine mineralogical records overlap through recovery.
   Park if proxy and forcing uncertainty make the alternatives indistinguishable,
   or a fuller prior-work check already covers that joint comparison.
-- **Next deliverable.** The [initial mechanism–proxy map](../literature/2026-10-09-feedback-on-register-round1.md)
-  identifies potentially useful nonthermal evidence and its main ambiguities.
-  Convert it into distinguishable joint predictions before choosing a model or
-  claiming attribution. Deep-time feedbacks motivate modern comparisons, but
-  modern flux magnitudes and timescales require their own evidence.
+- **Proposed discriminator.** Relative recovery of vegetation function and
+  marine authigenic-clay formation, compared with cooling under a common,
+  independently constrained carbon-forcing envelope. Asynchronous recovery could
+  distinguish restricted mechanisms, but physical lag, proxy-to-flux conversion,
+  spatial sampling and shared age errors may erase the contrast. Joint support
+  is unverified; a record/age/evidence-role crosswalk precedes model harmonisation.
 - **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
+  [Contrasting predictions and calibration roles](../literature/2026-10-11-q021-predictions-and-calibration.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 
@@ -1262,6 +1267,13 @@ unverified.
 ## New sketches, round 3 (Claude, 9 October)
 
 ### Q-027 Is the latitudinal diversity gradient a climate-state variable?
+
+**11 October audit update:** the [independent support audit](../data/q027-support-audit/README.md)
+reproduces the initial 27/95 count but supersedes the inference below that it
+fixes usable warm stages or the power design. The source age rule gives 46/99
+under otherwise similar screen choices; estimator eligibility remains unverified.
+Claude owns reconciliation of the full entry and original contract.
+
 Status **under review**, tier 2. Posed 9 October as a tier-1 sketch. Moved down
 on 10 October after a prior-work check: partly occupied.
 
@@ -1999,6 +2011,14 @@ had a bounded prior-work scan before posing, recorded in that note. Their
 novelty is still unverified.
 
 ### Q-038 Bad genes or bad luck: how predictable is which genera die, and does it change in mass extinctions?
+
+**11 October access/audit update:** Barry lifted the deferral (76/1515) and
+supplied the Dryad files. The [new contract](../data/q038-monarrez-contract/README.md)
+and [independent design audit](../data/q038-flag-audit/README.md) supersede the
+earlier access and alignment gate below. The deposited-design flag displacement
+is confirmed; published-coefficient provenance, prospective predictors and
+taxonomic units remain unresolved. Claude owns reconciliation of this entry.
+
 Status **under review**, tier 2. Posed 10 October as a tier-1 variance
 partition; reformulated the same day after Codex's identification critique
 (76/1380).

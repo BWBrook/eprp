@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** first tranche complete at **50 questions**, with expansion paused.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
@@ -22,7 +22,9 @@ first categorisation and ranking (76/1476). Claude's first pass is in
 [ideas/2026-10-11-phase2-portfolio-first-pass-claude.md](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
 Codex's [response](ideas/2026-10-11-phase2-response-codex.md) separates scientific
 importance from next-work priority, challenges specific scores and mergers,
-and proposes two bounded tasks for Claude to adjudicate. The
+and proposed two bounded tasks, accepted by Claude in 76/1514. Both are now
+complete at the prediction-table/support-screen level, with independent
+checks and further feasibility gates below. The
 [Q-050 archive check](data/q050-covariance-support/README.md) is complete;
 scientific discrimination and joint environmental/age support remain unverified.
 
@@ -37,9 +39,11 @@ existing agent assessments, not a fresh portfolio ranking.
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
 | Final question and first-tranche closure | Codex | Complete: Q-050 asks how the capacity to evolve changes during environmental upheaval. [Evidence note](literature/2026-10-11-evolvability-and-first-tranche-close.md) records closest priors, a versioned multivariate data archive and the mechanism-identification gate. Under review/tier 2; novelty and joint empirical support unverified. Shared edits completed; expansion paused |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferred per Barry |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferral lifted by Barry (76/1515); deposited-design audit below |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
-| Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Claude's first pass and Codex's response complete. No status/tier changes. Codex proposes Q-021's contrasting-prediction/calibration map and Claude one Q-027 or Q-044 joint-support contract; allocation awaits Claude's acceptance. No integrated PBDB/chronology engine commissioned |
+| Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Initial allocation accepted (76/1514). Codex's [Q-021 prediction/calibration table](literature/2026-10-11-q021-predictions-and-calibration.md) and [Q-027 support audit](data/q027-support-audit/README.md) complete. Claude's Q-027 screen reproduced but its power-design inference challenged; Claude next adjudicates. No status/tier changes or integrated engine |
+| Q-038 data access and flag audit | Claude contract; Codex independent check | Barry supplied Dryad data and lifted deferral. [Design audit](data/q038-flag-audit/README.md) confirms shifted flags under historical RMark without fitting. Published-coefficient provenance and prospective/taxonomic contracts remain unresolved; Claude to reconcile his contract and entry |
+| Q-044 joint-support contract | Claude | Accepted next contract in 76/1516. Close 2019 Dryad ZIP now supplied by Barry; support assessment remains Claude-owned |
 | Q-050 initial covariance-data support | Codex | Complete: two 75-sample numerical series inspected; ZIP checksum and internal consistency verified. Stored `tt` is elapsed time, correcting the earlier increment description. Original-sample/environment/age crosswalk remains open; no model fit |
 | Later project selection and downstream handoffs | Barry, after agent development | Selection comes later; Barry is not asked to rank at this checkpoint. No primary investigation selected; no entry yet ready for handoff |
 
@@ -114,10 +118,15 @@ Codex. Shared dependencies are coordinated through Correspondence.
   attribution. Codex accepts the new target; cross-event score comparisons
   still depend on cohort size and severity. Claude recorded the Monarrez gate
   as passed for design, with unresolved execution and data-contract issues.
-  Barry's instruction in Claude chat on 11 October, quoted in 76/1418:
-  "Leave the Q-038 work for now: I'll deal with those issues if/when we pursue
-  that project." Further retrieval, rebuilding and author contact are deferred;
-  Codex did not re-audit the data in round 10.
+  The earlier deferral (76/1418) was superseded by Barry's instruction in
+  Claude chat on 11 October, quoted exactly in 76/1515: "Lift the deferral on
+  Q-038 now, it's live again now that we have the dataset."
+  The [independent audit](data/q038-flag-audit/README.md) confirms the
+  deposited-script Phi flag displacement under historical RMark 3.0.0.
+  Actual published-coefficient provenance remains unresolved. The cleaned
+  occurrence CSV lacks two modelled classes; intentional subgenus elevation
+  does not by itself establish duplicates. No full CMR fit or author contact
+  occurred.
 - Q-036's Slattery Dryad metadata and embedded README are accessible; file
   downloads returned 401/403. No raw CSV values, checksums or joint sampling
   geometry were verified. This access limit is not a finding of data absence.
@@ -221,19 +230,32 @@ The agreed approach:
 - No integrated engine or universal simulator yet.
 - Only two orientation tasks are active at a time.
 
-**Active pair:**
-- Codex: the Q-021 table of contrasting predictions and calibration roles.
-- Claude: the Q-027 joint-support contract, **done** at
-  [data/q027-joint-support](data/q027-joint-support/README.md), and awaiting
-  Codex's audit. 27 of 95 stages have at least 10 cells per palaeolatitude
-  band outside Europe and North America. The warmest Late Cretaceous and Eocene
-  stages mostly fail.
+**Completed accepted pair:**
+- Codex: [Q-021 contrasting predictions and calibration roles](literature/2026-10-11-q021-predictions-and-calibration.md).
+  The proposed contrast is asynchronous recovery of terrestrial function and
+  marine authigenic-clay formation under common carbon forcing. Joint records,
+  chronology and proxy-to-flux discrimination remain unverified. A bounded
+  record/age/role crosswalk would precede model harmonisation.
+- Claude: [Q-027 initial support screen](data/q027-joint-support/README.md);
+  Codex's [independent audit](data/q027-support-audit/README.md) is complete.
+  The 27/95 presence count reproduces. Source-style >50% age overlap gives
+  46/99 under other screen choices, including Turonian and Lutetian; this is
+  a sensitivity, not a source replication. The era split also needs correction.
+  Unknown countries, mixed-region cells and richness eligibility prevent these
+  occupancy counts from defining a power design.
 
-Q-044's Close 2019 Dryad deposit refuses anonymous download. Q-038 stays
-deferred, and expansion stays paused.
+**Additional bounded check:** Q-038 is live again. Its deposited flag mapping
+is verified without MARK execution; interpretation of published results is
+unresolved. The audit identifies further data/unit/prospective-predictor
+limits for Claude's contract. It does not commission a full refit.
 
-**Next scientific responder: Codex**, on discussion 76: audit the Q-027
-contract, and deliver the Q-021 table.
+**Next scientific responder: Claude**, discussion 76: challenge Q-021's
+proposed discriminator, adjudicate Q-027/Q-038 corrections and reconcile his
+contracts/entries, then deliver his accepted Q-044 support contract. Barry has
+supplied the Close 2019 and Benson 2025 Dryad ZIPs locally, removing the earlier
+access gate. An estimator-faithful Q-027 support contract is a proposed next
+step, not an already accepted third task. Keep two orientation tasks at most;
+expansion stays paused and no primary investigation is selected.
 
 ## Shared checkout and decisions
 

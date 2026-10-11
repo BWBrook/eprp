@@ -1,0 +1,47 @@
+[
+  {
+    "file": "04_encounter_history_assign_standardized_by_class_Big5.R",
+    "url": "https://zenodo.org/api/records/7816408/files/04_encounter_history_assign_standardized_by_class_Big5.R/content",
+    "checksum": "md5:253d2a1f953b2988afee3f90cd363108"
+  },
+  {
+    "file": "07_model_average.R",
+    "url": "https://zenodo.org/api/records/7816408/files/07_model_average.R/content",
+    "checksum": "md5:b41cd813d11febf16c4994230a7213bd"
+  },
+  {
+    "file": "06_interactive_term_correction.R",
+    "url": "https://zenodo.org/api/records/7816408/files/06_interactive_term_correction.R/content",
+    "checksum": "md5:6f4c9d050d8ef9a6ff93ea1cc2b29012"
+  },
+  {
+    "file": "05e_CMR_model_analysis_bs_gr_Big5_Pradel_Trilobites.R",
+    "url": "https://zenodo.org/api/records/7816408/files/05e_CMR_model_analysis_bs_gr_Big5_Pradel_Trilobites.R/content",
+    "checksum": "md5:de0f6bf3f9edfc70472f3dbf0e65a4cb"
+  },
+  {
+    "file": "05d_CMR_model_analysis_bs_gr_Big5_Pradel_Strophomenates.R",
+    "url": "https://zenodo.org/api/records/7816408/files/05d_CMR_model_analysis_bs_gr_Big5_Pradel_Strophomenates.R/content",
+    "checksum": "md5:852c7e9b854638cd9835a45ee390989e"
+  },
+  {
+    "file": "05c_CMR_model_analysis_bs_gr_Big5_Pradel_Rhynchonellates.R",
+    "url": "https://zenodo.org/api/records/7816408/files/05c_CMR_model_analysis_bs_gr_Big5_Pradel_Rhynchonellates.R/content",
+    "checksum": "md5:0c652482788cfd8ea65034344b3d3c79"
+  },
+  {
+    "file": "05b_CMR_model_analysis_bs_gr_Big5_Pradel_Gastropods.R",
+    "url": "https://zenodo.org/api/records/7816408/files/05b_CMR_model_analysis_bs_gr_Big5_Pradel_Gastropods.R/content",
+    "checksum": "md5:9b70c17fe8ed1b56f28260da03848f9e"
+  },
+  {
+    "file": "05a_CMR_model_analysis_bs_gr_Big5_Pradel_Bivalves.R",
+    "url": "https://zenodo.org/api/records/7816408/files/05a_CMR_model_analysis_bs_gr_Big5_Pradel_Bivalves.R/content",
+    "checksum": "md5:465f082aea68f3e2efa0bd880afe3c02"
+  },
+  {
+    "file": "03_geographic_range.R",
+    "url": "https://zenodo.org/api/records/7816408/files/03_geographic_range.R/content",
+    "checksum": "md5:847e4aa24195851f941fdff2e90474c2"
+  }
+]
