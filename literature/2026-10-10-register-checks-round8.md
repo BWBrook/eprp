@@ -72,7 +72,8 @@ Saunders 2008, Norris & Nishi 2001 and Bapst 2012 abstracts.
 | Foote 1999 Paleobiology Memoir | 10.1666/0094-8373(1999)25[1:mditer]2.0.co;2 | sect (scout) | Post-Palaeozoic crinoids after a probable single-lineage bottleneck: "not in essence a subset of the Paleozoic spectrum". Constraint interpretation |
 | Bapst et al. 2012 PNAS | 10.1073/pnas.1113870109 | abs (Claude) | Hirnantian graptoloid bottleneck: morphological selectivity alone is improbable; disparity and richness decoupled; innovation delayed, not lost |
 | Cole & Hopkins 2021 Sci Adv | 10.1126/sciadv.abf4072 | sect (scout) | Diplobathrid crinoids: refilled formerly occupied space after the Late Ordovician; declined to extinction after the Late Devonian |
-| Norris 1991 Paleobiology; Norris & Nishi 2001 Paleobiology | 10.1017/S0094837300010721; 10.1666/0094-8373(2001)027<0327:eticot>2.0.co;2 | abs | Planktonic foraminifera: survivors of the K–Pg and EOT were small, unkeeled and proportionately coiled. Keeled and biased-coiling forms re-evolved in each radiation. Founder state set the subsequent trend |
+| Norris 1991 Paleobiology | 10.1017/S0094837300010721 | abs | Planktonic foraminifera: K–Pg and EOT survivors were small and unkeeled; keeled forms re-evolved in each radiation |
+| Norris & Nishi 2001 Paleobiology | 10.1666/0094-8373(2001)027<0327:eticot>2.0.co;2 | abs (Claude) | Biased coiling was lost at the K–Pg and in the late early Eocene (not at the EOT), with proportionately coiled founders; it re-appeared in the Palaeocene and middle Eocene. *Corrected 11 October after Codex 76/1404:* keep the coiling and keel claims separate by event |
 | Lowery & Fraass 2019 Nat Ecol Evol; D'Hondt & Zachos 1998 Paleobiology | 10.1038/s41559-019-0835-0; 10.1017/S0094837300020133 | sect (preprint); abs (scout) | After the K–Pg, foraminifera refilled first, then expanded. Photosymbiosis re-evolved after being lost |
 | Thorne, Ruta & Benton 2011 PNAS; Moon & Stubbs 2020 Commun Biol | 10.1073/pnas.1018959108; 10.1038/s42003-020-0779-6 | sect (scout) | Ichthyosaurs at the Triassic–Jurassic boundary: disparity never recovered; competitors took over the roles |
 | Ciampaglio 2004 Evol Dev | 10.1111/j.1525-142x.2004.04031.x | abs (scout) | End-Permian brachiopods: disparity rebounded; developmental constraint not favoured |
@@ -95,25 +96,37 @@ Saunders 2008, Norris & Nishi 2001 and Bapst 2012 abstracts.
    condition, and so the verdict, depends on inference of ghost lineages.
 3. **A baseline that starts at the survivors and keeps the process unchanged
    already contains the survivor effect.** Survival selects founders near a
-   morphological boundary: small, unkeeled, proportionately coiled. An
+   morphological boundary: small and unkeeled (Norris 1991), or
+   proportionately coiled (Norris & Nishi 2001, at different events). An
    unchanged process started there already predicts movement away from that
-   boundary (Norris; Norris & Nishi). The test can then detect only a change of
-   process, which is narrower than the entry's hypothesis.
-4. **A fixed horizon confounds constraint with environmental recovery.** In
-   graptoloids the same survivors shifted from low to high innovation as
-   conditions recovered (Bapst 2012). The chosen horizon can flip the verdict.
-   Use innovation rates resolved by horizon.
+   boundary. The test can then detect only a change of process, which is
+   narrower than the entry's hypothesis. Codex adds a refinement: the total
+   effect of different survivor compositions is a separate, model-based
+   counterfactual estimand.
+4. **The horizon must be fixed in advance.** In graptoloids, innovation was
+   low early in the recovery and higher later (Bapst 2012). The chosen horizon
+   can flip the verdict, so declare a horizon curve before analysis.
+   - *Corrected 11 October after Codex 76/1404:* a fixed horizon is a defined
+     outcome, not a confounder in itself.
+   - Bapst et al. propose physical, ecological and developmental explanations.
+     They do not establish environmental recovery as the cause, as I had
+     written.
 
 **Best natural experiment.** Replicated foraminiferal radiations from
 different survivor stocks:
 - the Aze et al. 2011 lineage phylogeny (10.1111/j.1469-185x.2011.00178.x),
-  updated by Fordham et al. 2018 (10.1371/journal.pone.0204625), with
-  morphogroup and ecogroup coding;
+  with Fordham et al. 2018 (10.1371/journal.pone.0204625) as a corrected
+  implementation. It is not a new revision, and it covers the Cenozoic only.
+  Morphogroup and ecogroup coding are included;
 - the Lowery & Fraass complexity metric.
 
 The K–Pg and EOT founders were similar (small, unkeeled), so they are not
 independent samples of survivor composition. Mid-Cretaceous radiations would
-add founders that differ.
+add founders that differ, but they need a resource beyond Aze/Fordham.
+
+*Outcome (Codex, 76/1404):* Q-043 is parked. Codex keeps the estimand
+distinctions (process departure versus survivor-state effect; horizon curves)
+as resources for Q-009.
 
 The fallback is ammonoid bottlenecks (the Saunders 2008 data).
 

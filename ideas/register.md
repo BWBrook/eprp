@@ -117,9 +117,10 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-041 | Is there periodicity in extinction once modern timescale uncertainty is propagated? | sketch | 2 | Claude |
 | Q-042 | How many species died in the great mass extinctions? | sketch | 2 | Claude |
 | Q-043 | Does survivor composition determine what can evolve next? | parked | — | Codex |
-| Q-044 | Why is life on land so diverse if regional terrestrial richness is bounded? | sketch | 1 | Claude |
-| Q-045 | How robust are headline macroevolutionary estimates to future data? | sketch | 3 | Claude |
+| Q-044 | Why is life on land so diverse if regional terrestrial richness is bounded? | under review | 2 | Claude |
+| Q-045 | How robust are headline macroevolutionary estimates to future data? | parked | — | Claude |
 | Q-046 | Did marine diversification increase total energy use or divide it among more taxa? | parked | — | Codex |
+| Q-047 | When biotas meet: do past interchanges forecast today's biotic mixing? | sketch | 2 | Claude |
 
 ---
 
@@ -2014,10 +2015,34 @@ partition; reformulated the same day after Codex's identification critique
   3. Fix the date each predictor is known: lifetime maximum size or range
      within the focal stage are not pre-event inputs.
   4. Treat prediction for new clades and for known clades as separate targets.
-- **Gate and kill criterion.**
-  - First gate: one Monarrez class's support for pre-event predictors,
-    encounter histories and clade contrasts. Then a discrimination simulation
-    calibrated to that design.
+  5. Declare the scoring scale (Codex, 76/1404). For N incoming genera and D
+     losses, uniform loss has log loss log C(N, D). Raw gains therefore change
+     with cohort size and severity. Stages with D = 0 or D = N carry no
+     information about victim identity. Use a per-lineage scale or a
+     calibration matched for severity; neither removes all dependence. A low
+     gain is not evidence that traits lack mechanisms.
+- **Gate result (11 October; data contract in the round-9 note).**
+  - *Classes.* Rhynchonellata (1,827 genera) or Bivalvia (1,600) can support
+    the design. Both span all five events across 86 intervals.
+  - *Access.* Not directly from open files. The Dryad encounter histories and
+    PBDB extract (10.5061/dryad.931zcrjqw, CC0) refuse anonymous download.
+  - *Spreadsheet.* In the Zenodo supplement (10.5281/zenodo.8341743),
+    capture histories are stored as floating-point numbers. Leading zeros are
+    lost, and 5,291 of 6,562 render in scientific notation; Claude verified
+    this directly.
+  - *Not pre-event.* The deposited range predictor is measured in the focal
+    stage, and body size is one value per genus.
+  - *Clade fields.* Order and family are absent from the supplement.
+  - *Duplicates.* Subgenus rows duplicate their base genera (about 20% of
+    mollusc rows).
+  - *Alignment.* The mass-extinction flags sit on the first post-event stage,
+    while last occurrences peak in the stage before. Check the interval
+    alignment against the model's convention.
+
+  A rebuild therefore needs the Dryad files (downloaded by Barry), or a fresh
+  PBDB query with range at stage k − 1 recomputed from palaeocoordinates.
+  Code is on Zenodo (10.5281/zenodo.7816408, MIT; R and RMark).
+- **Kill criterion.**
   - Park if joint observation modelling, persistent susceptibility and transfer
     between events add nothing beyond Monarrez, Smits & Finnegan and Tikhonov.
 - **Evidence.** [Round-7 legacy map](../literature/2026-10-10-register-checks-round7.md);
@@ -2033,7 +2058,8 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
   or classes beyond a shared dependence on total diversity and shared
   extinction shocks?
 - **Prior.**
-  - The structure has been re-tested; the dynamics have not.
+  - The structure has been re-tested. No sampling-standardised re-test of the
+    coupled dynamics was found in a bounded search.
     - Rojas et al. 2021 (10.1038/s42003-021-01805-y, abstract checked by
       Claude) find "four global benthic mega-assemblages", with transitions at
       494, 252 and 129 Ma. The mid-Cretaceous transition is protracted.
@@ -2067,10 +2093,14 @@ diversity that comparable physical conditions support.
 
 - **Question.** On a common support (one taxonomic unit, spatial grain and
   domain, time window and observation process), how did global marine richness
-  change? How much came from each of three components?
-  - Richness within regions (alpha).
-  - Differentiation between regions (beta, provinciality).
-  - Habitable area and hotspot extent.
+  change? How much came from richness within regions (mean alpha), and how much from
+  differentiation between regions (Whittaker beta, β_W = gamma / mean alpha)?
+  - Beta already contains the effects of extent and overlap. A separate
+    contribution from area needs a defined counterfactual: fixed grain,
+    changing extent, cell weights and a rule for allocating interactions.
+    Otherwise area is counted twice (Codex, 76/1404).
+  - Equal per-cell richness does not identify overlap. Estimating beta needs
+    joint occupancy or an explicit estimator of turnover.
   Close et al. 2020 (10.1126/science.aay8309) report regional variation as
   large as variation through time. Cermeño et al. 2022
   (10.1038/s41586-022-04932-6, abstract checked by Claude) model a global rise
@@ -2088,7 +2118,9 @@ diversity that comparable physical conditions support.
   Jablonski et al. 2003 (10.1126/science.1083246).
 - **Design.**
   1. A hierarchical occupancy or SQS model per grid cell and bin.
-  2. An alpha–beta–area decomposition of global change on the common support.
+  2. A decomposition of global change into mean alpha and Whittaker beta on
+     the common support, using joint occupancy. Add an area counterfactual
+     only if it is explicitly defined.
   3. Propagate uncertainty across plate models.
   4. Score predictions on held-out regions.
   Neither a flat nor a rising curve alone identifies a ceiling.
@@ -2106,9 +2138,11 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
   uncertainties, and sampling-standardised extinction rates, does a periodic
   model beat aperiodic nulls by marginal likelihood? Test periods from 10 to
   60 Myr, plus quasi-periodic and periodic-plus-trend variants.
-- **Why big.** A real period would imply astronomical forcing of the
-  biosphere. A decisive null would close a 40-year dispute that still produces
-  papers.
+- **Why big.** A real period would point to a periodic forcing, which could be
+  astronomical or internal to the Earth (for example mantle or sea-level
+  cycles); periodicity alone would not identify the cause (Codex, 76/1404). A
+  decisive null, or a bound on amplitude, would settle a 40-year dispute that
+  still produces papers.
 - **Prior (disputed; no fully propagated test since 2013).**
   - Stigler & Wagner 1987 (10.1126/science.238.4829.940): the original test is
     biased by unequal stage spacing and Signor–Lipps effects.
@@ -2129,13 +2163,46 @@ Status **sketch**, tier 2 (provisional; scanned 10 October).
     craters disfavour periodicity.
   - Rampino & Caldeira 2025 (10.1016/j.earscirev.2025.105100, meta only), on
     stage-boundary cyclicity, should be read first.
-- **Design.**
-  1. Draw monotone, correlated GTS2020 boundary ages.
-  2. Bootstrap occurrences, and compute PBDB three-timer or gap-filler rates
-     at stage and substage level, with the Sepkoski compendium as a second
-     series.
-  3. Build nulls on the real stage grid.
-  4. Run injection-recovery at the amplitude Melott & Bambach report.
+- **Deeper check (11 October; round-9 note).**
+  - No published test was found that combines GTS2020, correlated monotone
+    age uncertainty and model comparison on extinction timing.
+  - Feng & Bailer-Jones 2013 used independent Gaussian errors, pre-GTS2012
+    ages and a smooth cosine model. Narrow-pulse periodic models were never
+    tested.
+  - **The stage lattice itself may be periodic.**
+    - Boulila et al. 2023 (10.1073/pnas.2221149120, abstract checked by
+      Claude) find a 36 ± 1 Myr cycle in marine genus diversity and in
+      tectonic, sea-level and macrostratigraphic data; the scout reports 28-
+      and 36-Myr components in stage durations.
+    - Rampino et al. 2021 (10.1016/j.gsf.2021.101245) report about 27.5 Myr in
+      GTS2020 stage-boundary ages.
+    - Extinction periodicity tested on stage-binned data is therefore
+      confounded unless the null preserves the actual stage grid.
+  - **Earth-internal alternatives to astronomical forcing.**
+    - Mantle–slab tectono-eustasy (Boulila et al. 2023).
+    - A 26-Myr oceanic crustal carbon cycle (Müller & Dutkiewicz 2018,
+      10.1126/sciadv.aaq0500).
+    - Sea-level hiatuses at stage boundaries (Rampino & Caldeira 2025, closed
+      access; only relayed content seen).
+    - Chronostratigraphic artefact (Stigler & Wagner 1987).
+- **Design (revised).**
+  1. **Age model.** Use GTS2020 spline Monte Carlo replicates with shared
+     boundaries, forced monotone. GTS2020 notes that treating errors as
+     independent underestimates interpolated uncertainty, so add correlated
+     external error. Add a GTS2004/2012/2020 ensemble, and treat event
+     placement within a stage as a nuisance parameter.
+  2. **Null conditioned on the lattice.** Permute or rotate extinction metrics
+     among the real intervals, not event dates.
+  3. **Models.** Uniform, trend, red noise or Gaussian process, narrow-pulse
+     periodic, periodic plus background, and quasi-periodic. Put log-uniform
+     priors on the period over 10–100 Myr and test sensitivity to the prior.
+  4. **Evidence.** Marginalise age error within the evidence. Judge whole
+     models, not periodogram peaks: Bailer-Jones 2011 reports that peak-only
+     claims give about 20% false positives.
+  5. **Injection-recovery** on the real GTS2020 lattice, varying pulse width
+     and the periodic fraction.
+  6. Data: PBDB three-timer or gap-filler rates at stage and substage level,
+     with the Sepkoski compendium as a second series.
 - **Decision rule (revised after Codex, 10 October).**
   - Specify the joint age model that produces correlated, monotone boundary
     draws. Marginal age errors alone do not define it.
@@ -2244,99 +2311,122 @@ Benton's big-picture work. See the Benton legacy map in the
 entries had a bounded prior-work scan before posing; novelty is unverified.
 
 ### Q-044 Why is life on land so diverse if regional terrestrial richness is bounded?
-Status **sketch**, tier 1 (provisional; scanned 10 October).
+Status **under review**, tier 2. Posed 10 October as tier 1 (provisional).
+Moved down on 11 October after Codex's estimand critique (76/1404). A deeper
+check the same day sharpened it.
 
-- **Question.** About 85% of species live on land (Benton, Wilf & Sauquet
-  2021, 10.1111/nph.17822, abstract checked by Claude), and the two accounts
-  of how that happened conflict.
-  - That paper describes "an explosive boost to terrestrial diversity" between
-    about 100 and 50 Ma, as angiosperms raised productivity and capacity.
-  - Close et al. 2020 (10.1098/rspb.2020.0372, abstract checked by Claude)
-    find the apparent exponential radiation of land vertebrates to be "an
-    artefact of spatial sampling biases". Regional diversity "was constrained
-    over timespans of tens to hundreds of millions of years", apart from a
-    two- to three-fold step at the K–Pg.
+- **Question.** About 85% of living species are terrestrial (Benton, Wilf &
+  Sauquet 2021, 10.1111/nph.17822). Codex reports that the authors call their
+  diversity curves largely conjectural. Equal-area studies give a different
+  picture for non-marine tetrapods:
+  - Close et al. 2017 (10.1038/ncomms15381, abstract checked by Claude):
+    "no significant increase in species richness between the Late Triassic and
+    the K/Pg boundary", then "an abrupt tripling of richness in the earliest
+    Palaeogene".
+  - Close et al. 2019 (10.1038/s41559-019-0811-8) and 2020
+    (10.1098/rspb.2020.0372): a ten-fold global rise would need increases in
+    beta diversity that are "as-yet undocumented". The scout checked this
+    against the full text.
 
-  If regional richness is bounded, where does the excess on land come from?
-  Is it differentiation between regions (endemism, provinciality), clades that
-  are rarely preserved (insects), or a step change at the K–Pg or during the
-  angiosperm revolution? When did land overtake the sea?
-- **Why big.** It is the origin of most of today's species. It tests whether
-  the angiosperm revolution raised terrestrial capacity, and it is the
-  terrestrial twin of Q-040.
+  These are different quantities, not conflicting measurements. So: through
+  the Mesozoic and Cenozoic, did differentiation *between* regions rise while
+  alpha and regional gamma stayed flat? How much of any rise is explained by
+  continental fragmentation alone?
+- **Estimand (per time bin, on common support).** Fix the grain, the K
+  equal-spread windows (summed minimum-spanning-tree length, or divvy), the
+  coverage quorum and the Hill order. Then
+
+  ln Γ_K = ln ᾱ + ln β_within + ln β_between
+
+  where:
+  - ᾱ is mean per-collection richness;
+  - β_within = γ_w / ᾱ;
+  - β_between = Γ_K / mean γ_w (Whittaker).
+
+  Cross-check with the slope of pairwise dissimilarity against palaeodistance,
+  because Whittaker beta depends on K and overlap.
+
+  Area has no separate multiplicative term. Its only separable effect is a
+  counterfactual: recompute β_between at a reference landmass configuration
+  using a species–area model. Vavrek 2016 (10.1098/rsbl.2016.0528, abstract
+  checked by Claude) expects terrestrial vertebrate richness "to nearly double
+  through the Mesozoic owing to continental fragmentation, despite a decrease
+  of 24% in total terrestrial area".
+- **Scout's arithmetic, not a finding.** A ten-fold rise is 2.30 log units. A
+  2–3-fold K–Pg step gives 0.7–1.1, and Vavrek's doubling 0.7. That would leave
+  about 0.5–0.9 log units for between-region beta, if all three apply.
 - **Prior.**
-  - Benton 2001 (10.1002/gj.877, abstract checked by Claude): life on land "as
-    much as 25 times as diverse" as in the sea, with an exponential continental
-    record. Benton 1995 (10.1126/science.7701342) and Benton & Emerson 2007
-    (10.1111/j.1475-4983.2006.00612.x) give the same view.
-  - Close et al. 2019 (10.1038/s41559-019-0811-8): local richness rose at most
-    three-fold over 300 Myr.
-  - Benson et al. 2016 (10.1371/journal.pbio.1002359): Mesozoic tetrapods.
-  - Clapham et al. 2016 (10.1098/rspb.2015.2476): insect species richness peaks
-    around 125 Ma.
-  - Vermeij & Grosberg 2010 (10.1093/icb/icq078) argue land dominance from
-    about 110 Ma; this is an argument, not a measurement.
-  - Wiens 2015 (10.1111/ele.12503): faster diversification on land.
-  - Foote, Edie & Jablonski 2024 (10.1098/rsbl.2023.0475): diversity
-    dependence can persist under near-exponential rise. Curve shape alone does
-    not identify bounds.
-  - Close et al. 2020 call trends in beta diversity "as-yet-unquantified".
-  - Benton et al. 2021 list the shape of the terrestrial curve since the
-    revolution as an open question.
-- **Design.**
-  1. Compute coverage-standardised alpha richness within equal-area regions,
-     and the ratio of global to mean regional richness (beta).
-  2. Do this for tetrapods, insects, plants and marine PBDB, from the Late
-     Cretaceous to the Neogene, on a common support.
-  3. Test whether beta, not alpha, carries the rise on land, and date when land
-     richness overtook marine richness.
-  4. Use Sahney & Benton 2008's metrics of alpha and cosmopolitanism as a
-     precedent (10.1098/rspb.2007.1370).
-- **Kill criterion.**
-  - If the ratio of global to regional richness rises by less than about 1.25
-    times, within 95% intervals, in every terrestrial group, provinciality
-    cannot supply the excess. The remaining explanations are unpreserved
-    clades or modern sampling.
-  - Results depend on how regions are defined (Brocklehurst & Fröbisch 2018,
-    10.3389/feart.2018.00200). Insect and plant species-level fossil data may
-    be too thin.
-- **Evidence.** [Round-8 note, Benton legacy map](../literature/2026-10-10-register-checks-round8.md).
+  - Close et al. 2017, 2019 and 2020 (above).
+  - Dunne et al. 2018 (10.1098/rspb.2017.2730) criticise ratio-based
+    "endemism".
+  - Button et al. 2017 (10.1038/s41467-017-00827-7): connectedness and
+    provinciality from the Permian to the Early Jurassic, not linked to
+    richness.
+  - Brocklehurst & Fröbisch 2018 (10.3389/feart.2018.00200): beta depends on
+    region scale.
+  - Alpha–beta–gamma precedents exist for North American Palaeogene ungulates
+    (Darroch et al. 2014, 10.1111/geb.12156) and for marine biotas (Sepkoski
+    1988; Holland 2010; Penny & Kröger 2019).
+  - Close et al. 2020 find no effect of the early angiosperm expansion on
+    regional tetrapod diversity.
+  - Alroy 2018 (10.1111/ele.13152): trees break the bounded pattern.
+  - Insects (Clapham et al. 2016; Schachat et al. 2019,
+    10.1098/rspb.2019.2054) are not spatially standardised.
+- **Data.** PBDB non-marine tetrapods, using the Close et al. 2019 code and
+  data (Dryad). Repeat with marine animals as the contrast. Plants and insects
+  need their own datasets and are separate comparisons.
+- **Out of scope.** The date of the land–sea crossover cannot be recovered from
+  tetrapod fossils, because tetrapods are a small fraction of land species.
+  Published crossover dates (about 110 Ma, Vermeij & Grosberg 2010; 100–125 Ma,
+  Benton 2016, 10.1371/journal.pbio.2000724) are argued, not estimated. Treat
+  any such date as a separate, model-based or phylogenetic question.
+- **Kill criterion.** Drop the between-region claim if both hold:
+  - from the Late Triassic to the Neogene, the change in ln β_between has an
+    interval that contains 0 and excludes ln 1.5;
+  - distance-decay slopes are flat.
+
+  Park if fewer than about four equal-spread windows exist in at least six
+  bins.
+- **Robustness.** The bounded data-vintage check from Q-045 belongs here:
+  compare the Close et al. 2019 deposited extract with a current extract by
+  stable identifiers.
+- **Evidence.** [Round-8 note, Benton legacy map](../literature/2026-10-10-register-checks-round8.md);
+  [round-9 note](../literature/2026-10-11-register-checks-round9.md).
 
 ### Q-045 How robust are headline macroevolutionary estimates to future data?
-Status **sketch**, tier 3 (methodological, but it bears on every entry;
-scanned 10 October).
+Status **parked** as a standalone audit (11 October). A bounded robustness
+check is kept inside Q-044 and other biological questions.
 
-- **Question.** Re-estimate headline results on historical snapshots of the
-  Paleobiology Database (PBDB), using the API's `occs_created_before`
-  parameter and publication years. Examples include the K–Pg step in regional
-  diversity, regional marine richness trends and selectivity estimates. Do
-  their sign and magnitude converge as data accumulate? Separately, can any
-  method distinguish "common cause" from "sampling bias" in simulated records?
-- **Why it matters.** It tells future teams which of this register's empirical
-  premises are stable and which are artefacts of the current data.
-- **Prior.**
-  - Benton & Storrs 1994 (10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2)
-    and Benton, Wills & Hitchin 2000 (10.1038/35000558): fossil-record quality
-    does not decline with age.
-  - Sepkoski 1993 (10.1017/s0094837300012306): half the compendium changed in
-    a decade, yet the curves fit 99%.
-  - Tennant et al. 2018 (10.7717/peerj.4417, abstract checked by Claude):
-    dinosaurs only, 1991–2015; estimates "highly volatile" in some periods and
-    regions.
-  - Nicholson et al. 2015 (10.1371/journal.pone.0128554): insect families.
-  - Dunhill, Hannisdal & Benton 2014 (10.1038/ncomms5818) and Dunhill et al.
-    2018 (10.1111/pala.12331): residual modelling is "ill founded".
-- **Design.**
-  1. Vintage analysis with pre-registered criteria for passing: for example,
-     sign and magnitude within 25% in at least 90% of recent vintages.
-  2. A simulation benchmark of raw, SQS, spatial, residual and causal-inference
-     methods, run under bias-only, common-cause and redundancy scenarios.
-- **Kill criterion.**
-  - Park the vintage arm if database entry programmes confound vintage beyond
-    correction.
-  - Report the dispute as unresolvable by time-series methods if benchmark
-    accuracy is below about 70% at about 100 bins.
-- **Evidence.** [Round-8 note, Benton legacy map](../literature/2026-10-10-register-checks-round8.md).
+- **Why parked** (Codex, 76/1404, with a direct API diagnostic).
+  - The PBDB parameters `occs_created_before` and `occs_modified_*` filter
+    *current* records, with current taxonomy and linked information. They do
+    not restore historical versions.
+  - An old creation cutoff admits records modified since then; a modification
+    cutoff drops rows rather than restoring them.
+  - "Data vintage" therefore has three different meanings:
+    1. robustness on archived extracts, using the taxonomy and processing
+       then in use;
+    2. sensitivity by publication cohort. Tennant et al. 2018
+       (10.7717/peerj.4417) did this, filtering a 2017 extract by publication
+       year with taxonomy as of 2015;
+    3. sensitivity by entry cohort.
+
+    Only the first is a true historical replay, and no usable historical
+    backup has been verified.
+- **The common-cause benchmark is also reframed.** Accuracy below about 70% for
+  selected methods at about 100 bins is a performance result for those methods
+  and scenarios. It is not proof that time-series inference is impossible.
+- **Retained prior.**
+  - Benton & Storrs 1994 (10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2).
+  - Benton, Wills & Hitchin 2000 (10.1038/35000558).
+  - Sepkoski 1993 (10.1017/s0094837300012306).
+  - Dunhill, Hannisdal & Benton 2014 (10.1038/ncomms5818).
+  - Dunhill et al. 2018 (10.1111/pala.12331).
+- **Revisit if** a preserved historical PBDB extract with its then-current
+  taxonomy becomes available, or a specific biological claim needs a declared
+  type of vintage check.
+- **Evidence.** [Round-8 note](../literature/2026-10-10-register-checks-round8.md);
+  [Codex round-9 note](../literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md).
 
 ## New direction, round 9 (Codex, 11 October)
 
@@ -2374,3 +2464,70 @@ support for a distinct total-flux question remains unverified.
   counts or maximum sizes, abandon total-flux inference and retain the narrower
   compositional/per-capita result. No dataset has passed this gate here.
 - **Evidence.** [Round-9 sources and measurement distinctions](../literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md).
+
+## New sketch, round 9 (Claude, 11 October)
+
+### Q-047 When biotas meet: do past interchanges forecast today's biotic mixing?
+Status **sketch**, tier 2 (provisional; scanned 11 October). Novelty is
+unverified.
+
+- **Question.** Fit a model of interchange outcome on past interchanges. The
+  outcomes are asymmetry of flow and, where measurable, native loss against
+  immigrant gain. The predictors are the source-to-recipient richness ratio,
+  phylogenetic distance, environmental match and timing. Does that model
+  predict modern human-mediated flows out of sample, better than a null built
+  only from trade and propagule pressure?
+- **Why big.** Human transport is mixing biotas at a scale no single past
+  interchange matched. Deep time holds the only completed experiments, where
+  the long-term outcomes are known.
+- **Prior.**
+  - **Qualitative synthesis.** Vermeij 1991 (10.1126/science.253.5024.1099,
+    abstract checked by Claude): "large-scale extinction of species before the
+    onset of interchange renders biotas especially prone to invasion".
+  - Brock & Bernard 2025 (BioScience, 10.1093/biosci/biaf152, abstract checked
+    by Claude) review prehistoric exchanges. They find that the number of
+    species exchanged and the spatial extent of mixing "correlate with
+    long-term consequences". The scout reports this rests on comparing cases,
+    not on statistics.
+  - **Single interchanges, quantified.**
+    - The Great American Biotic Interchange (Carrillo et al. 2020,
+      10.1073/pnas.2009397117): no dispersal asymmetry; higher extinction of
+      South American natives.
+    - Faurby & Svenning 2016 (10.1111/geb.12504).
+    - Wallace's Line (Skeels et al. 2023, 10.1126/science.adf7122).
+    - Late Devonian speciation collapse (Stigall 2010,
+      10.1371/journal.pone.0015584).
+    - The invasion hierarchy (Stigall 2019,
+      10.1146/annurev-ecolsys-110617-062638).
+  - **Modern theory without deep time.** Fridley & Sax 2014
+    (10.1111/geb.12221, abstract checked by Claude) propose an evolutionary
+    imbalance hypothesis, predicting invasion patterns from source-region
+    phylogenetic diversity. Further tests: Fristoe et al. 2023
+    (10.1038/s41559-023-02172-z).
+  - **Forecasts never tested.** Vermeij & Roopnarine 2008
+    (10.1126/science.1160852) project 77 Pacific mollusc lineages invading the
+    Atlantic.
+  - Not found: a quantitative comparison of outcome determinants across
+    interchanges, or a deep-time model validated on modern flows. A grant
+    project (RECOMBINE) reports source-community size as the main predictor of
+    asymmetry, but no publication was found. Check it first.
+- **Design.**
+  1. Leave-one-interchange-out validation across at least six corridors, run
+     with one pipeline (DES or PyRate) and including extinct taxa in the
+     source pools. Candidate corridors: the Great American Biotic Interchange,
+     the Gomphotherium bridge, Bering, India–Asia, Sunda–Sahul, and the
+     trans-Arctic molluscs.
+  2. Freeze the coefficients, then predict the direction and magnitude of
+     modern alien flows for matching region pairs. Sources: GRIIS
+     (10.1038/sdata.2017.202), GloNAF, and Seebens first records.
+- **Limit.** Modern native extinctions are not yet realised (extinction debt).
+  The modern stage can therefore validate flows and asymmetry, but not net
+  diversity loss.
+- **Kill criterion.** Park in any of these cases:
+  - fewer than five interchanges give bidirectional counts comparable in taxon
+    and scale;
+  - the cross-validated skill interval includes zero;
+  - the transfer test is already published.
+- **Links.** Q-023 (speciation collapse during invasion), Q-028 (winners),
+  Q-033 (arrival order).
+- **Evidence.** [Round-9 note](../literature/2026-10-11-register-checks-round9.md).

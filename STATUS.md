@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
 **Stage:** continuous ideation. Barry (9 October): the programme's output is a
 growing, continuously revised [question register](ideas/register.md) of big,
@@ -20,7 +20,7 @@ Do not organise the programme around Barry's previous specialisms.
 | --- | --- | --- |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
-| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-8 checks](literature/2026-10-10-register-checks-round8.md) complete. Codex's Q-038 critique accepted: the variance partition is withdrawn and Q-038 reformulated as held-out predictability against the field-of-bullets baseline (tier 2). Q-040 is reframed on a common support as an alpha–beta–area decomposition and kept separate from Q-010. Q-041/Q-042 decision rules are revised. Q-043 critique: replicated ammonoid, crinoid, graptoloid, ichthyosaur and foraminifera precedents, plus three design problems. Benton legacy map (Barry's prompt) with new Q-044 (why land is so diverse if regional richness is bounded; tier 1 provisional) and Q-045 (data-vintage robustness; tier 3) |
+| Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-9 checks](literature/2026-10-11-register-checks-round9.md) complete. Codex's round-9 corrections accepted: Q-044 tier 2 with a log decomposition (alpha, within-window beta, between-window beta) plus Vavrek's area counterfactual; Q-045 parked as a standalone audit (PBDB cutoffs filter current records); Q-038 score scale declared; Q-039/Q-041 wording fixed; round-8 Q-043 critique corrected in place. The Q-038 Monarrez gate passes for design but not open execution (Dryad blocked; Zenodo capture histories float-corrupted; range not pre-event). Q-041 deeper check: residual open; the null must preserve the stage lattice; Earth-internal pacemakers listed. New Q-047 (past interchanges as forecasts of modern mixing) |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-9 adjudication](literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md) complete. Q-043 parked after replicated prior-work checks; survivor-state effects and process departures remain distinct estimands. Q-044 tier 2 and Q-045 parking are recommendations for Claude to adjudicate. A two-record PBDB execution confirms creation-date filters do not recreate historical snapshots. Q-046 adds marine energetic expansion, parked on close priors and unverified living-density support. Q-038/Q-040 revisions accepted with score-comparability and spatial-accounting qualifications. Codex retains Q-026/Q-033, paused Q-036 and PBDB preparation; Q-013 crosswalk remains proposed, not accepted execution |
 | Downstream investigation handoffs | Barry and future project teams, informed by both agents | The hub continuously develops a portfolio. No single programme target selected; no entry yet ready for handoff |
 
@@ -83,7 +83,7 @@ Codex. Shared dependencies are coordinated through Correspondence.
   Q-034 and Q-035, kept Q-032 parked with corrected wording, and added Q-037;
   Claude's round 7 added Q-038–Q-042. Codex's round 8 demotes Q-036 and adds
   Q-043. Claude's round 8 adds Q-044 and Q-045; Codex's round 9 parks Q-043
-  and adds parked Q-046, bringing the register to 46 entries. No entry has
+  and adds parked Q-046. Claude's round 9 adds Q-047, bringing the register to 47 entries. No entry has
   been promoted to a primary investigation.
 - Q-038's variance partition is withdrawn following Claude's adjudication.
   The revised under-review/tier-2 question predicts victim identity given
@@ -161,19 +161,18 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next scientific responder: Claude**, invited on discussion 76:
-- adjudicate Q-044's scope, proposed tier-2 status and spatial accounting;
-- adjudicate Q-045's proposed parking, preserving a precisely defined
-  robustness check under a substantive biological question;
-- respond to Q-043's parked disposition and the new parked Q-046;
-- apply Q-038's score-comparability qualification and correct residual
-  Q-039/Q-041 overstatements identified in the round-9 note.
+**Next scientific responder: Codex**, on discussion 76:
+- challenge the sharpened Q-044 estimand (three-part log decomposition; area
+  counterfactual; crossover out of scope) and the Q-041 lattice-conditioned
+  design;
+- challenge new Q-047 (interchanges as forecasts);
+- comment on the Q-038 gate outcome. Contacting Monarrez et al. about the
+  float-stored supplement needs Barry's authorisation.
 
-Claude retains the previously identified deeper Q-044 and Q-041/Q-042 checks
-and Q-038's Monarrez support gate. Codex retains Q-026, Q-033 and the paused
-Q-036. Codex's round-9 shared-file edit is complete; shared register/STATUS
-editing is offered to Claude at this handoff, pending acceptance. No new
-primary investigation is authorized by this exchange.
+Codex retains Q-026, Q-033 and the paused Q-036. Claude next: Q-042's deeper
+check, and the RECOMBINE prior check for Q-047. If Barry provides the Dryad
+files, the Q-038 rebuild could start. Shared register/STATUS edits return to
+Codex at this handoff. No primary investigation is authorised by this exchange.
 
 ## Shared checkout and decisions
 
