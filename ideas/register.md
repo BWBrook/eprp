@@ -121,6 +121,7 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-045 | How robust are headline macroevolutionary estimates to future data? | parked | — | Claude |
 | Q-046 | Did marine diversification increase total energy use or divide it among more taxa? | parked | — | Codex |
 | Q-047 | When biotas meet: do past interchanges forecast today's biotic mixing? | sketch | 2 | Claude |
+| Q-048 | Can climate-driven predator decline reduce extinction risk for their prey? | under review | 2 | Codex |
 
 ---
 
@@ -346,7 +347,12 @@ Status **under review**, tier 2 (9 October).
   Methods/Results) already track Phanerozoic bioregions and their turnover.
   Al Aswad et al. 2025 ([10.1126/sciadv.adr4199](https://doi.org/10.1126/sciadv.adr4199),
   sect: survivor/similarity analyses) link end-Permian homogenisation with physiology.
-  Another provinciality curve would occupy established ground.
+  Close & Reijenga 2025
+  ([10.1073/pnas.2419052122](https://doi.org/10.1073/pnas.2419052122), Results,
+  Discussion and Methods §§3.1–3.7 checked 11 October) already estimates
+  species–area slopes and intercepts across North American K–Pg recovery.
+  Another provinciality/recovery curve would occupy established ground;
+  whether differentiation predicts subsequent recovery remains the target.
 - **Data and discriminator.** Use deposited bioregion/occurrence data to ask
   whether pre-existing differentiation improves predictions of later regional
   recolonisation or diversification in withheld regions or intervals. Compare
@@ -365,7 +371,8 @@ Status **under review**, tier 2 (9 October).
   predicted directional recolonisation from surviving source regions; first
   detections alone cannot establish source or arrival time. Standardise sampling
   coverage and preserve uncertainty in latent occupancy and immigration.
-- **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md).
+- **Evidence.** [Register expansion and source checks](../literature/2026-10-09-register-expansion.md);
+  [round-10 closest-prior check](../literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md).
 
 ### Q-009 Ecological memory beyond recovered richness
 Status **under review**, tier 2 (9 October).
@@ -2531,3 +2538,49 @@ unverified.
 - **Links.** Q-023 (speciation collapse during invasion), Q-028 (winners),
   Q-033 (arrival order).
 - **Evidence.** [Round-9 note](../literature/2026-10-11-register-checks-round9.md).
+
+## New question, round 10 (Codex, 11 October): opposing environmental and trophic effects
+
+### Q-048 Can climate-driven predator decline reduce extinction risk for their prey?
+Status **under review**, tier 2 (provisional). Climate-mediated predator
+release is established; novelty and support for the persistence contrast
+remain unverified.
+
+- **Question.** At comparable physical exposure, does suppression of predators
+  by climatic change reduce local extinction risk for their previously
+  resident prey? Can reduced predation offset direct environmental harm?
+- **Why big / boundary.** Environmental vulnerability may depend on how enemies
+  respond, as well as on the prey's own physiology. Q-037 asks about trophic
+  extinction signatures; this asks whether a documented interaction changes
+  prey persistence. Q-019 provides the broader biotic/abiotic context.
+- **Nearest priors.** Aronson, Blake & Oji 1997 (institutional abstract) and
+  Aronson et al. 2009
+  ([10.1371/journal.pone.0004385](https://doi.org/10.1371/journal.pone.0004385),
+  Methods/Results/relevant Discussion) already connect Antarctic cooling,
+  reduced shell-breaking predation and differential prey responses. Chiba &
+  Sato 2016 ([10.1017/pab.2015.38](https://doi.org/10.1017/pab.2015.38),
+  official abstract) already studies climate-mediated drilling interactions.
+  Harper, Crame & Sogot 2018
+  ([10.1016/j.palaeo.2018.03.009](https://doi.org/10.1016/j.palaeo.2018.03.009),
+  accepted-manuscript Methods/selected Results and Discussion) finds changing
+  prey choice across the Antarctic K–Pg without a significant change in attack
+  failure. The broad mechanism and community response are not new claims.
+- **Discriminator.** Compare resident prey populations with similar physical
+  exposure but different predator suppression. Predict improved persistence
+  specifically among prey previously exposed to those predators. Distinguish
+  reduced enemy pressure from direct physiological benefit, habitat change,
+  immigration and selective preservation. Such a contrast supports a test;
+  matching alone does not establish causality.
+- **Data gate.** Existing La Meseta assemblage tables, shell counts and climatic
+  history in Aronson 2009, plus Harper's documented specimen collections, are
+  leads. Require repeated horizons/localities, the same resident prey,
+  attacked/unattacked denominators, independent environmental/age evidence and
+  prey persistence or abundance trajectories. Joint reusable support is not
+  verified. Harper did not count undrilled molluscs; its drillhole measurements
+  cannot alone supply attack frequency. Injuries and holes do not directly
+  measure per-time predation hazards.
+- **Kill / merge.** Park or merge into Q-019 if predator decline is inseparable
+  from physical change, only replacement communities are observed, or necessary
+  attack denominators are absent. Do not substitute another demonstration of
+  climate-mediated predator release for the extinction-protection question.
+- **Evidence.** [Round-10 mechanism, rivals and primary-source record](../literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md).
