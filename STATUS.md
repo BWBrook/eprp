@@ -1,11 +1,13 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Claude.
 
-**Stage:** first tranche complete at **50 questions; expansion paused for
-Barry's review**. The programme remains a portfolio of questions for other
-teams, with particular interest in deep time. No primary investigation has
-been selected.
+**Stage:** first tranche complete at **50 questions**, with expansion paused.
+**Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
+the list, and identifying the contextual and data-availability work for phase 2
+(Barry, 11 October; see Next exchange). The programme remains a portfolio of
+questions for other teams, with particular interest in deep time. No primary
+investigation has been selected.
 
 **Current objective:** hold the [question register](ideas/register.md) for
 review of the whole first tranche. Barry's instruction in Codex chat,
@@ -15,7 +17,9 @@ review of the whole first tranche. Barry's instruction in Codex chat,
 
 Q-050 completes that instruction. The pause supersedes the previous
 expand-each-round cadence until Barry resumes it. Existing statuses and tiers
-remain provisional. The review itself has not yet been performed.
+remain provisional. Barry has since clarified that the agents, not he, do the
+first categorisation and ranking (76/1476). Claude's first pass is in
+[ideas/2026-10-11-phase2-portfolio-first-pass-claude.md](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
 
 The index records **40 under review, 4 sketches and 6 parked entries**.
 Among the 44 unparked entries, 34 are tier 2 and 10 are tier 3. These are
@@ -196,21 +200,25 @@ Codex. Shared dependencies are coordinated through Correspondence.
 
 ## Next exchange
 
-**Next owner: Barry**, for review of the whole first tranche, with Codex and
-Claude supporting as requested. Neither agent has an active expansion task.
-The existing index is the review entry point; reaching 50 is not evidence
-that the entries have equal merit or are ready for primary investigation.
+**Phase 2 (Barry, Claude chat, 11 October 2026; quoted exactly in 76/1476).**
+Barry is not ranking yet. Codex and Claude are to categorise, rank and
+prioritise the 50 entries, go deeper on them, and identify the contextual and
+data-availability work they could productively do in phase 2. Expect
+iteration; the aim is not yet a single answer.
 
-Claude's round-10 Q-041/Q-044/Q-047 revisions are received. Its remaining
-handoff is retained as review context: Q-042's species-loss bound and inversion
-design; Q-048's whole-predator-guild treatment, denominator, opposite regime
-and Antarctic comparison; and Q-049's tracking ratio. These are not silently
-adjudicated by closing the tranche. Q-050 awaits Claude's independent critique
-if Barry includes that in the review; a Codex subagent challenge is complete.
+**Next scientific responder: Codex**, on discussion 76: challenge Claude's first
+pass in [ideas/2026-10-11-phase2-portfolio-first-pass-claude.md](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md).
+That pass offers:
+- themes;
+- separate scores for significance, openness, data readiness and gate cost;
+- bands A, B and C;
+- six proposed work packages: a data-contract registry, a shared PBDB and
+  chronology engine, identifiability and power gates, deep prior-work
+  reviews, theory notes, and consolidation;
+- a proposed division of labour.
 
-Scientific ownership is unchanged; Codex owns Q-050. Q-038 stays deferred per
-Barry (76/1418). Shared register/STATUS editing is idle after Codex's closure.
-No primary investigation is authorised by this exchange.
+No entry's status or tier has changed. Expansion stays paused. Q-038 stays
+deferred.
 
 ## Shared checkout and decisions
 
