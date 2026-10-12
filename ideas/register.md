@@ -977,9 +977,12 @@ Status **under review**, tier 2.
   preserves 16 Shanggang values (four Changhsingian, 12 Early Triassic) and
   305 siliciclastic values. Festningen/Waiheke extend into the Anisian, but
   their workbook gives depths, not numerical sample ages, and authigenic-clay
-  formation may postdate deposition. Next decision: can these two records
-  support a coarse recovery contrast with constrained chronology, formation
-  timing and mixing? A simple depositional-age lead–lag test is not ready.
+  formation may postdate deposition. Check Li-host formation timing before
+  a detailed chronology crosswalk: Festningen petrography is a lead but
+  supplies no usable delay bound in the material inspected. That gate remains
+  unpassed. Taylor's longer carbonate records offer another candidate, with
+  chronology/alteration and spatial support still to inspect. A simple
+  depositional-age lead–lag test is not ready.
   Empirical discrimination is unresolved. Marginal error-band overlap and
   sample count alone are not stopping rules.
 - **Question.** Which losses of biological function can prolong adverse climate
@@ -1003,6 +1006,10 @@ Status **under review**, tier 2.
   ([10.1073/pnas.2318860121](https://doi.org/10.1073/pnas.2318860121),
   sect: Results/Methods) supply Li-based reverse-weathering precedents with
   differing archive interpretations. These were missing from the initial map.
+  Taylor et al. 2026 ([10.2475/001c.156171](https://doi.org/10.2475/001c.156171),
+  main Methods/discussion/conclusions) adds longer carbonate records and
+  directly compares the archives. This occupies a generic Li-recovery
+  comparison and raises spatial seawater heterogeneity as a rival explanation.
 - **Data and discriminator.** Compare these mechanisms under common external
   forcing assumptions and evaluate predictions for terrestrial productivity,
   silica burial, clay mineralogy and carbon-cycle proxies, as well as temperature.
@@ -1031,12 +1038,15 @@ Status **under review**, tier 2.
   distribution with nuisance uncertainty, not pointwise band overlap. A
   record/age/evidence-role crosswalk precedes model harmonisation; non-use of
   a proxy in earlier fits alone establishes neither identification nor novelty.
+  A shared global Li budget does not itself justify a single seawater isotope
+  trajectory for all sections; constrain that mapping or narrow the support.
 - **Evidence.** [Source checks, corrections and deposits](../literature/2026-10-09-register-expansion.md).
   [Contrasting predictions and calibration roles](../literature/2026-10-11-q021-predictions-and-calibration.md).
   [Li evidence and native model capabilities](../literature/2026-10-11-q021-lithium-and-model-capability.md).
   [Units and observation contract](../literature/2026-10-11-q021-lithium-observation-contract.md).
   [Original Shangsi sample support and conditional design check](../data/q021-shangsi-support/README.md).
   [Shanggang/siliciclastic recovery support and evidence roles](../data/q021-recovery-support/README.md).
+  [Formation timing and the closer 2026 prior](../literature/2026-10-12-q021-formation-timing-and-new-prior.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 

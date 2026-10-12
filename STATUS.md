@@ -47,6 +47,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Q-038 data access and flag audit | Claude contract; Codex independent check | Barry supplied Dryad data and lifted deferral. [Design audit](data/q038-flag-audit/README.md) confirms shifted flags under historical RMark without fitting. Claude's [contract](data/q038-monarrez-contract/README.md) and register entry reconciled (reply 2): published-coefficient provenance unresolved; subgenera are nested units, not duplicate observations; zero range is ambiguous. Next gate: a prospective predictor contract. Claude has not sent it [Detail withheld pending disclosure to the data custodian.] |
 | Q-044 joint-support contract | Claude | Ceiling audit and distance-screen correction accepted in reply 4. Biological saturation and a general distance response are not shown. Two Neogene pairs supply all within-continent species sharing; both group medians are zero. Next: endpoint identity/age/extent support and an explicit observation null; unallocated |
 | External-review response and next contracts | Codex / Claude | [Codex adjudication](ideas/2026-10-11-external-review-response-codex.md) accepts F-01–F-05 at their stated scope, repairs Q-008/Q-009 gates, and adds a Q-006 practical precedent. [Q-021 contract](literature/2026-10-11-q021-lithium-observation-contract.md) complete at the algebra/source stage; trajectories, conversions and empirical discrimination unresolved. Claude's proposed Q-042 cohort/window crosswalk accepted in 76/1528. Next responder Claude; Q-006 information table follows these two tasks |
+| Reply 7: E1 conjecture and Li formation timing | Codex | Complete: [reply 7](ideas/2026-10-12-phase2-codex-reply-7.md). Observable first/same-species pair moments identify all rates under E1, including edge bins; Claude to challenge and reconcile owned Q-006 files. Q-021 formation-first order accepted, gate unpassed; Taylor 2026 adds a closer prior, carbonate candidates and a spatial-heterogeneity rival. No fit or adapter |
 | Reply 6: recovery-record support and Q-006 target | Codex | Complete: [recovery support](data/q021-recovery-support/README.md) preserves 16 Shanggang and 305 Rauzi Li rows. Festningen/Waiheke extend into the Anisian but numerical sample ages and authigenesis timing are unresolved. [Q-006 challenge](literature/2026-10-12-q006-target-challenge-codex.md) corrects removal, rate-class and congruence claims, adds no-tree precedents and requests a matched likelihood/contrast contract. Next responder Claude; no adapter, Fisher study or primary analysis |
 | Q-021 sample support and Q-042 bound audit | Codex | [Reply 5](ideas/2026-10-11-phase2-codex-reply-5.md) complete. Original [Shangsi Li table](data/q021-shangsi-support/README.md) retrieved: five Permian samples, one Induan; the record alone is retired as a recovery sequence. Conditional design check passed; no empirical power claim. Q-042 outputs reproduce, but Codex challenges biological bounds: stage union, recorded absence and unsampled survivors do not establish a baseline-cohort species-loss interval. Claude accepted the challenge and corrected/relabelled the diagnostic in reply 5; the biological-bound disagreement is resolved. Its Q-006 table is now challenged below |
 | Q-050 initial covariance-data support | Codex | Complete: two 75-sample numerical series inspected; ZIP checksum and internal consistency verified. Stored `tt` is elapsed time, correcting the earlier increment description. Original-sample/environment/age crosswalk remains open; no model fit |
@@ -395,12 +396,25 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   authigenic component formed. Without one, retire the timing comparison
   without building the chronology table.
 
-**Next scientific responder: Codex**, when Barry prompts:
-- challenge the Q-006 conjecture and contract;
-- decide the Q-021 gate order.
+**Codex's reply 7** ([ideas/2026-10-12-phase2-codex-reply-7.md](ideas/2026-10-12-phase2-codex-reply-7.md)):
+- Q-006: a constructive observable-moment argument identifies every rate in
+  E1, hence C. Edge bins are structurally identified too. Finite-sample
+  precision, realistic observation variants and novelty remain unresolved.
+- Q-021: formation-time support comes first. Inspected petrography supplies
+  a lead but not a quantitative Li-host delay bound; the timing gate remains
+  unpassed. Taylor 2026 provides a closer cross-archive recovery precedent
+  and a new carbonate candidate. A spatially uniform seawater mapping now
+  requires explicit justification; it does not follow from a global Li budget.
 
-Neither follow-up (a Q-006 proof or likelihood; the Q-021 formation-time
-check) is yet allocated.
+**Next scientific responder: Claude**, when Barry prompts:
+- challenge the Q-006 proof and scope; if it stands, reconcile the owned
+  contract, information table and register entry, then identify the residual
+  scientific target;
+- challenge the Q-021 inference and proposed Taylor sample/age/alteration
+  audit. That next audit is proposed, not allocated; Codex retains Q-021.
+
+Both accepted bounded checks are complete. No piecewise likelihood, empirical
+fit or model adapter was commissioned.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two

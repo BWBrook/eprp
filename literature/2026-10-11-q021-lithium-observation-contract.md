@@ -21,6 +21,13 @@ depths rather than numerical ages. Rauzi's SI explicitly allows authigenic
 clay formation after sediment deposition. Consequently the archive mapping
 below needs formation-time support as well as a depositional age model.
 
+**Formation/prior check, 12 October:** the
+[follow-up](2026-10-12-q021-formation-timing-and-new-prior.md) accepts checking
+Li-host formation timing first. A Festningen petrographic lead does not yet
+give a usable delay bound. Taylor et al. 2026 supplies a closer recovery prior
+and another carbonate-record candidate; spatially heterogeneous seawater Li
+must now be treated as an explicit rival archive explanation.
+
 ## One bounded comparison
 
 Compare a terrestrial-function-loss scenario based on Xu/SCION with a
@@ -54,6 +61,7 @@ forcing and an explicit account of the remaining structural differences.
 | Dissolved river Li | Neither inspected native output is this quantity | Map each lithological weathering component to mol Li/yr, including source composition, dissolution and secondary retention; jointly specify river isotope composition |
 | Marine Li burial | A silica flux is insufficient | Convert mol Si/yr to mol Li/yr with mineral- and process-dependent uptake; allow associated fractionation to covary with uptake |
 | Other fluxes and inventory | Required by Li balance | Supply hydrothermal input, other sinks, initial Li inventory and isotope composition for each scenario. Do not make an omitted term zero by default |
+| Spatial support | Taylor 2026 considers differences among sections and spatial seawater heterogeneity | Justify assigning one seawater state to all records, constrain a spatial mapping, or restrict the comparison's support. Unrestricted site-by-time offsets would absorb the target signal |
 | Carbonate measurement | Cao supplies an archive interpretation and screening procedure; six Shangsi source rows are now extracted | Predict measured carbonate with an explicitly signed offset, contamination/diagenesis and analytical uncertainty. Source averaging, screening and offset-sign flags remain unresolved; no silent repairs |
 | Time and evidence use | Published records and model forcings use different constraints | Freeze the numerical interval only after the sample/age and trajectory crosswalk. Preserve shared chronology; identify every datum used for forcing, priors, selection or evaluation |
 
@@ -84,6 +92,12 @@ of either source implementation. Declare the isotope standard and the sign
 and definition of every fractionation parameter. Do not substitute an
 instantaneous steady-state balance for a transient prediction without
 justifying the time-scale approximation.
+
+These aggregate balances do not establish a spatially uniform seawater
+isotope ratio. Mapping their ocean mean to a local carbonate or authigenic
+component requires a well-mixed approximation or a separately constrained
+local-state model. Apply that same support decision to both mechanism
+scenarios; failure of the common mapping need not refute either mechanism.
 
 For a pure carbonate component define, rather than infer from notation,
 `b_i = delta7Li_carbonate - delta7Li_sw`; then its ideal value is
@@ -143,6 +157,12 @@ one complete pair of unit-checked flux histories with constrained conversions.
 The 12 October crosswalk advances the first step to a concrete question:
 can Festningen/Waiheke supply a coarse recovery contrast with constrained
 depositional and authigenesis timing, mixing and shared correlation error?
+The formation gate precedes a detailed numerical chronology crosswalk and
+is not yet passed. A useful bound relative to the target contrast may suffice;
+a direct mineral date is not mandatory, and a qualitative formation sequence
+is not automatically sufficient. Taylor's carbonate dataset is another
+candidate to inspect, with its own chronology, alteration and spatial-support
+contract. The generic cross-archive recovery comparison is already occupied.
 A completed source contract, a numerically runnable adapter and demonstrated
 discrimination are separate checkpoints. No adapter, source-model execution
 or primary analysis has started.
@@ -170,3 +190,6 @@ Europe PMC text (PMC9206662); the publisher web request failed this round.
 Rauzi's archive and filtering limitations remain as documented in the
 [earlier source note](2026-10-11-q021-lithium-and-model-capability.md).
 No source model was run and no original author was contacted.
+The [12 October follow-up](2026-10-12-q021-formation-timing-and-new-prior.md)
+records the Schobben/Grasby formation evidence, Taylor 2026 prior, exact
+retrieval locations and access limits underlying the additions above.
