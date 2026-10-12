@@ -290,30 +290,38 @@ after the external review (F-02). The practical precedent was narrower than
 this entry claimed, and the remaining question is reframed below as one of
 information design.
 
-- **Current contract (11 October; [information table](../literature/2026-10-11-q006-information-table.md)).**
-  - **Target (proposed):** the contrast in integrated extinction between a
-    focal interval and its neighbours.
-  - **Unit:** lineage occurrence times with no tree, and preservation
-    piecewise constant by bin.
-  - **Comparison:**
-    - structural identifiability of the contrast when preservation varies
-      by bin;
-    - its information content at realistic sampling;
-    - what a partial tree or an independent preservation proxy adds.
-  - **Permitted interpretation:** identification and information, not new
-    rate estimates.
-  - **Open:** no identifiability result for occurrences alone was found (in a
-    bounded search); proofs in the cited rows are unchecked.
-  - **Next decision:** can a change in preservation at a bin boundary mimic
-    an extinction contrast?
-  - The table also places these sources:
-    - Legried & Terhorst 2022 (10.1073/pnas.2119513119): piecewise-constant
-      rates are identifiable from extant trees;
-    - Kopperud et al. 2023 (10.1073/pnas.2208851120): strong trends are
-      shared across congruence classes;
-    - Petrucci, May & Heath 2025 (10.1098/rstb.2023.0313): fossils improve
-      extinction accuracy, but false trait associations persist.
-
+- **Current contract (12 October; [information table](../literature/2026-10-11-q006-information-table.md), corrected after [Codex's challenge](../literature/2026-10-12-q006-target-challenge-codex.md); [likelihood contract](../literature/2026-10-12-q006-likelihood-contract.md)).**
+  - **Target:** the duration-scaled *descriptive* extinction contrast
+    C = H_E − Δ_E·[w·H_before/Δ_before + (1 − w)·H_after/Δ_after], with the
+    intervals and w fixed in advance. Causal excess needs four further
+    stated assumptions.
+  - **Unit (experiment E1):**
+    - species occurrence histories, exact times and counts retained, no
+      tree;
+    - budding birth–death from a known origin, with λ, μ and q piecewise
+      constant on fixed bins, positive, no removal;
+    - unsampled species represented, conditioned only on at least one
+      occurrence.
+  - **Formulation:** FBD-range marginalisation. A piecewise extension is
+    required and was not located.
+  - **Permitted interpretation:** identification and information, not rate
+    estimates.
+  - **Open:** no matched theorem.
+    - Claude conjectures that C is identifiable: interior occurrences
+      between a species' first and last records identify q, and μ follows.
+    - Codex has not yet challenged this.
+  - **Next decision (an allocation, not automatic):** a proof or
+    counterexample attempt, or the piecewise FBD-range likelihood. Fisher
+    information only after that.
+  - *Corrections, 12 October:*
+    - unknown removal breaks identifiability, but fixed known removal below
+      1 does not (Truman, Corollary 8);
+    - Legried & Terhorst need a fixed sampling fraction and bounded
+      breakpoints;
+    - Kopperud et al.'s shared trends face an adverse follow-up
+      (Andréoletti & Morlon 2023, 10.1111/2041-210X.14240);
+    - Warnock, Heath & Stadler 2020 (10.1017/pab.2020.12) added as the
+      practical no-tree precedent.
 - **Occupied.** Truman et al. 2025 (10.1093/sysbio/syae058, abstract checked by
   Claude): "widely used time-dependent fossilized birth–death (FBD) models are
   identifiable", for arbitrary rate functions, when the fossil sampling rate is

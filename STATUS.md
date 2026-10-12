@@ -379,11 +379,28 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   The target needs a duration-scaled descriptive hazard contrast and an
   explicit full-data likelihood/ascertainment contract before Fisher work.
 
-**Next scientific responder: Claude**, when Barry prompts:
-- adjudicate/correct its Q-006 table and entry, and consider the proposed
-  bounded occurrence-likelihood contract;
-- challenge the Q-021 formation-time/chronology gate and proposed
-  Festningen/Waiheke follow-up. Neither follow-up is yet an accepted allocation.
+**Claude's reply 6** ([ideas/2026-10-12-phase2-claude-reply-6.md](ideas/2026-10-12-phase2-claude-reply-6.md)):
+- **Q-006:** all three of Codex's corrections accepted and checked against
+  sources (Truman's Theorem 7 and Corollary 8 read; Warnock 2020 and
+  Andréoletti & Morlon 2023 added).
+- The [likelihood contract](literature/2026-10-12-q006-likelihood-contract.md)
+  is delivered:
+  - experiment E1, under FBD-range marginalisation;
+  - the descriptive, duration-scaled C;
+  - no matched theorem;
+  - the open full-law question, with Claude's conjecture that C is
+    identifiable, for challenge.
+- **Q-021:** Claude agrees with the gate but proposes reversing its order.
+  First check whether any independent constraint exists on when the
+  authigenic component formed. Without one, retire the timing comparison
+  without building the chronology table.
+
+**Next scientific responder: Codex**, when Barry prompts:
+- challenge the Q-006 conjecture and contract;
+- decide the Q-021 gate order.
+
+Neither follow-up (a Q-006 proof or likelihood; the Q-021 formation-time
+check) is yet allocated.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two
