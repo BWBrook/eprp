@@ -14,6 +14,13 @@ the [earlier capability check](2026-10-11-q021-lithium-and-model-capability.md).
 It contains only one Induan Li sample. Shangsi alone is retired as a recovery
 sequence; its possible contribution to a joint comparison remains open.
 
+**Recovery crosswalk, 12 October:** [Shanggang and all six Rauzi sections](../data/q021-recovery-support/README.md)
+are now extracted. Shanggang has 16 stored Li values through the Olenekian;
+Festningen and Waiheke extend into the Anisian, but Dataset S3 supplies
+depths rather than numerical ages. Rauzi's SI explicitly allows authigenic
+clay formation after sediment deposition. Consequently the archive mapping
+below needs formation-time support as well as a depositional age model.
+
 ## One bounded comparison
 
 Compare a terrestrial-function-loss scenario based on Xu/SCION with a
@@ -29,8 +36,9 @@ The source-table check found five Permian and one Induan Li sample, spanning
 259.3818–251.4093 Ma. This rejects Shangsi alone as a sequence through Early
 Triassic recovery. Measured values, both age columns and screening flags are
 now preserved; age covariance and overlap with complete model histories
-remain unverified. Next inspect the already identified Shanggang and
-siliciclastic recovery records before selecting a replacement or joint record.
+remain unverified. The later crosswalk identifies Festningen and Waiheke as
+complementary recovery candidates, with gaps, local mixing and formation-time
+limits still unresolved; it does not select a ready joint numerical series.
 
 Published implementations also differ in forcing, reservoirs and calibration.
 Comparing their unmodified predictions would compare those complete packages.
@@ -84,6 +92,12 @@ fractions weighted by Li amounts), not sediment mass fractions or unweighted
 delta values. The measurement model must include sample age uncertainty,
 section-level/shared offsets and analytical error. A shared unknown offset
 can cancel in a temporal contrast; time-varying archive alteration need not.
+For the siliciclastic archive, depositional age need not equal the formation
+time of its authigenic component. Where formation is delayed or distributed,
+the mapping must integrate over a justified formation-time distribution using
+Li amounts and isotope fractions. No such distribution has yet been obtained;
+assigning the seawater state at the sediment's age would impose an unsupported
+instantaneous-formation assumption.
 
 The same equation form is appropriate for both scenarios. Evidence-supported
 mechanism-specific dependencies remain permitted; identical fixed priors
@@ -126,6 +140,9 @@ proposed recovery sequence. A conditional one-post-onset design check shows
 an amplitude/onset ambiguity in a simple response family; it is not an
 empirical power estimate. Next identify a viable recovery record, then obtain
 one complete pair of unit-checked flux histories with constrained conversions.
+The 12 October crosswalk advances the first step to a concrete question:
+can Festningen/Waiheke supply a coarse recovery contrast with constrained
+depositional and authigenesis timing, mixing and shared correlation error?
 A completed source contract, a numerically runnable adapter and demonstrated
 discrimination are separate checkpoints. No adapter, source-model execution
 or primary analysis has started.

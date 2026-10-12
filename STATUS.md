@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 11 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 12 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** first tranche complete at **50 questions**, with expansion paused.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
@@ -47,7 +47,8 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Q-038 data access and flag audit | Claude contract; Codex independent check | Barry supplied Dryad data and lifted deferral. [Design audit](data/q038-flag-audit/README.md) confirms shifted flags under historical RMark without fitting. Claude's [contract](data/q038-monarrez-contract/README.md) and register entry reconciled (reply 2): published-coefficient provenance unresolved; subgenera are nested units, not duplicate observations; zero range is ambiguous. Next gate: a prospective predictor contract. Claude has not sent it [Detail withheld pending disclosure to the data custodian.] |
 | Q-044 joint-support contract | Claude | Ceiling audit and distance-screen correction accepted in reply 4. Biological saturation and a general distance response are not shown. Two Neogene pairs supply all within-continent species sharing; both group medians are zero. Next: endpoint identity/age/extent support and an explicit observation null; unallocated |
 | External-review response and next contracts | Codex / Claude | [Codex adjudication](ideas/2026-10-11-external-review-response-codex.md) accepts F-01–F-05 at their stated scope, repairs Q-008/Q-009 gates, and adds a Q-006 practical precedent. [Q-021 contract](literature/2026-10-11-q021-lithium-observation-contract.md) complete at the algebra/source stage; trajectories, conversions and empirical discrimination unresolved. Claude's proposed Q-042 cohort/window crosswalk accepted in 76/1528. Next responder Claude; Q-006 information table follows these two tasks |
-| Q-021 sample support and Q-042 bound audit | Codex | [Reply 5](ideas/2026-10-11-phase2-codex-reply-5.md) complete. Original [Shangsi Li table](data/q021-shangsi-support/README.md) retrieved: five Permian samples, one Induan; the record alone is retired as a recovery sequence. Conditional design check passed; no empirical power claim. Q-042 outputs reproduce, but Codex challenges biological bounds: stage union, recorded absence and unsampled survivors do not establish a baseline-cohort species-loss interval. Claude owns adjudication/correction; Q-006 remains its next accepted task |
+| Reply 6: recovery-record support and Q-006 target | Codex | Complete: [recovery support](data/q021-recovery-support/README.md) preserves 16 Shanggang and 305 Rauzi Li rows. Festningen/Waiheke extend into the Anisian but numerical sample ages and authigenesis timing are unresolved. [Q-006 challenge](literature/2026-10-12-q006-target-challenge-codex.md) corrects removal, rate-class and congruence claims, adds no-tree precedents and requests a matched likelihood/contrast contract. Next responder Claude; no adapter, Fisher study or primary analysis |
+| Q-021 sample support and Q-042 bound audit | Codex | [Reply 5](ideas/2026-10-11-phase2-codex-reply-5.md) complete. Original [Shangsi Li table](data/q021-shangsi-support/README.md) retrieved: five Permian samples, one Induan; the record alone is retired as a recovery sequence. Conditional design check passed; no empirical power claim. Q-042 outputs reproduce, but Codex challenges biological bounds: stage union, recorded absence and unsampled survivors do not establish a baseline-cohort species-loss interval. Claude accepted the challenge and corrected/relabelled the diagnostic in reply 5; the biological-bound disagreement is resolved. Its Q-006 table is now challenged below |
 | Q-050 initial covariance-data support | Codex | Complete: two 75-sample numerical series inspected; ZIP checksum and internal consistency verified. Stored `tt` is elapsed time, correcting the earlier increment description. Original-sample/environment/age crosswalk remains open; no model fit |
 | Later project selection and downstream handoffs | Barry, after agent development | Selection comes later; Barry is not asked to rank at this checkpoint. No primary investigation selected; no entry yet ready for handoff |
 
@@ -362,9 +363,27 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   - Proposed target: whether an extinction contrast between intervals is
     identifiable when preservation varies by bin.
 
-**Next scientific responder: Codex**, when Barry prompts:
-- the Shanggang/siliciclastic crosswalk;
-- challenge Q-006's proposed target.
+**Codex reply 6** ([response](ideas/2026-10-12-phase2-codex-reply-6.md)):
+- Q-042's correction is accepted; the earlier biological-bound disagreement
+  is resolved without claiming an empirical species-loss interval.
+- Q-021's accepted crosswalk is complete. The original Rauzi supplement is
+  now accessible through Europe PMC. Its 305 rows give depths, not numerical
+  ages; 16 Shanggang Li rows contrast with 15 reported in Methods. All source
+  values/flags are retained. Festningen and Waiheke reach the Anisian, but
+  the timing of authigenic-clay formation can differ from sediment deposition.
+  A common numerical recovery sequence remains unready.
+- Q-006's source challenge finds a known-removal exception to the blanket
+  removal claim, explicit side conditions on piecewise-rate identification,
+  and adverse evidence to universal congruence-class trend robustness.
+  No-tree FBD range and PyRate precedents constrain the remaining question.
+  The target needs a duration-scaled descriptive hazard contrast and an
+  explicit full-data likelihood/ascertainment contract before Fisher work.
+
+**Next scientific responder: Claude**, when Barry prompts:
+- adjudicate/correct its Q-006 table and entry, and consider the proposed
+  bounded occurrence-likelihood contract;
+- challenge the Q-021 formation-time/chronology gate and proposed
+  Festningen/Waiheke follow-up. Neither follow-up is yet an accepted allocation.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract,
 Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two

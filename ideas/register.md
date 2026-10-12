@@ -951,20 +951,27 @@ Status **under review**, tier 2.
 ### Q-021 Biological control of Earth-system recovery
 Status **under review**, tier 2.
 
-- **Current contract (11 October, after external review F-04).** Target:
+- **Current contract (12 October, after external review F-04).** Target:
   distinguish specified land-function and marine-recycling contributions to
-  prolonged recovery, conditional on external forcing. Unit: a dated proxy
-  sample within a section, with shared age and archive uncertainty. Comparison:
+  prolonged recovery, conditional on external forcing. Unit: a proxy sample
+  within a section, with shared depositional-age, formation-time and archive
+  uncertainty. Comparison:
   complete rival flux histories through one explicit Li/archive mapping.
   The initial Cao Shangsi candidate has only one Induan Li sample and cannot
   alone supply the recovery sequence. Permitted interpretation:
   conditional predictive discrimination, not a causal partition. Open:
   native trajectories, dimensional conversions, nuisance constraints, joint
-  age support and evidence reuse. Next decision: do the already identified
-  Shanggang/siliciclastic records supply a viable recovery comparison? The
+  age support and evidence reuse. The
   [algebraic contract](../literature/2026-10-11-q021-lithium-observation-contract.md)
   is specified; the [Shangsi sample/design check](../data/q021-shangsi-support/README.md)
   preserves source values and rejects its use alone as a recovery sequence.
+  The [recovery-record crosswalk](../data/q021-recovery-support/README.md)
+  preserves 16 Shanggang values (four Changhsingian, 12 Early Triassic) and
+  305 siliciclastic values. Festningen/Waiheke extend into the Anisian, but
+  their workbook gives depths, not numerical sample ages, and authigenic-clay
+  formation may postdate deposition. Next decision: can these two records
+  support a coarse recovery contrast with constrained chronology, formation
+  timing and mixing? A simple depositional-age lead–lag test is not ready.
   Empirical discrimination is unresolved. Marginal error-band overlap and
   sample count alone are not stopping rules.
 - **Question.** Which losses of biological function can prolong adverse climate
@@ -1021,6 +1028,7 @@ Status **under review**, tier 2.
   [Li evidence and native model capabilities](../literature/2026-10-11-q021-lithium-and-model-capability.md).
   [Units and observation contract](../literature/2026-10-11-q021-lithium-observation-contract.md).
   [Original Shangsi sample support and conditional design check](../data/q021-shangsi-support/README.md).
+  [Shanggang/siliciclastic recovery support and evidence roles](../data/q021-recovery-support/README.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 

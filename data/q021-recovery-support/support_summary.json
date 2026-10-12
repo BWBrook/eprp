@@ -1,0 +1,159 @@
+{
+  "source_sha256": {
+    "cao": "6a53745faff1535d4504636fb4caa6ad18977dd1e86527e88d30b3f760e090c4",
+    "rauzi_dataset_s3": "3f92702b0f60a9a7b1b9ecebca8508cdd1fb8dc8fc1e816addb04b33a88edd38"
+  },
+  "shanggang": {
+    "li_rows": 16,
+    "main_methods_reported_n": 15,
+    "stage_counts_as_stored": {
+      "Olenekian": 5,
+      "Induan": 7,
+      "Changhsingian": 4
+    },
+    "study_age_range_ma": [
+      248.76666666666668,
+      252.4325
+    ],
+    "mn_sr_at_least_3_rows": [
+      "37",
+      "42",
+      "43",
+      "44",
+      "46",
+      "51",
+      "58"
+    ],
+    "mn_sr_at_least_4_rows": [
+      "42",
+      "58"
+    ],
+    "q_vs_final_mismatch_rows": [
+      "62"
+    ]
+  },
+  "rauzi": {
+    "li_rows": 305,
+    "sections": {
+      "Akkamori, Japan": {
+        "rows": 51,
+        "unique_sample_ids": 51,
+        "depth_header": [
+          "Depth (cm)"
+        ],
+        "depth_range_as_stored": [
+          -90.0,
+          860.45
+        ],
+        "delta7li_range_permil": [
+          3.9043204158477587,
+          6.140198688706075
+        ],
+        "rock_type_counts_as_stored": {
+          "chert ": 6,
+          "claystone": 12,
+          "claystone ": 15,
+          "shale ": 18
+        }
+      },
+      "Festningen, Svalbard": {
+        "rows": 51,
+        "unique_sample_ids": 51,
+        "depth_header": [
+          "Depth (m)"
+        ],
+        "depth_range_as_stored": [
+          -55.0,
+          553.0
+        ],
+        "delta7li_range_permil": [
+          -3.76679823067769,
+          5.009490801341079
+        ],
+        "rock_type_counts_as_stored": {
+          "shale - siltstone": 51
+        }
+      },
+      "Lusitaniadalen, Svalbard": {
+        "rows": 19,
+        "unique_sample_ids": 19,
+        "depth_header": [
+          "Depth (m)"
+        ],
+        "depth_range_as_stored": [
+          0.0,
+          10.9
+        ],
+        "delta7li_range_permil": [
+          -6.277754270286033,
+          17.40659203193259
+        ],
+        "rock_type_counts_as_stored": {
+          "siltstone": 19
+        }
+      },
+      "Momotaro, Japan ": {
+        "rows": 48,
+        "unique_sample_ids": 48,
+        "depth_header": [
+          "Depth (cm)"
+        ],
+        "depth_range_as_stored": [
+          0.0,
+          907.05
+        ],
+        "delta7li_range_permil": [
+          -1.7985412773286495,
+          12.906566065068205
+        ],
+        "rock_type_counts_as_stored": {
+          "chert": 11,
+          "chert ": 4,
+          "claystone": 24,
+          "claystone ": 9
+        }
+      },
+      "Ubara, Japan ": {
+        "rows": 24,
+        "unique_sample_ids": 24,
+        "depth_header": [
+          "Depth (cm)"
+        ],
+        "depth_range_as_stored": [
+          -130.0,
+          30.0
+        ],
+        "delta7li_range_permil": [
+          0.6545578224071953,
+          10.349255986082603
+        ],
+        "rock_type_counts_as_stored": {
+          "chert": 5,
+          "shale": 19
+        }
+      },
+      "Waiheke Island, Aotearoa New Zealand": {
+        "rows": 112,
+        "unique_sample_ids": 112,
+        "depth_header": [
+          "Depth (m)"
+        ],
+        "depth_range_as_stored": [
+          0.05,
+          15.6925
+        ],
+        "delta7li_range_permil": [
+          -0.5180314062615234,
+          27.581100164152026
+        ],
+        "rock_type_counts_as_stored": {
+          "chert": 96,
+          "clay-rich chert": 16
+        }
+      }
+    },
+    "numerical_sample_ages_in_workbook": false,
+    "note": "Depths are not numerical ages. Split sections and faults require explicit crosswalks; authigenesis may postdate deposition."
+  },
+  "interpretation": "Support inventory only; counts are not independent temporal constraints. Source discrepancies retained, no exclusions or repairs."
+}
