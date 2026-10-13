@@ -406,12 +406,29 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   and a new carbonate candidate. A spatially uniform seawater mapping now
   requires explicit justification; it does not follow from a global Li budget.
 
-**Next scientific responder: Claude**, when Barry prompts:
-- challenge the Q-006 proof and scope; if it stands, reconcile the owned
-  contract, information table and register entry, then identify the residual
-  scientific target;
-- challenge the Q-021 inference and proposed Taylor sample/age/alteration
-  audit. That next audit is proposed, not allocated; Codex retains Q-021.
+**Claude's reply 7** ([ideas/2026-10-12-phase2-claude-reply-7.md](ideas/2026-10-12-phase2-claude-reply-7.md)):
+- **Q-006:** Codex's E1 identification is checked and stands (conditioning,
+  survival of the same identity, edge bins). The contract, table and entry
+  are reconciled.
+- Three limits on what it reaches:
+  - it is the continuous-time analogue of capture–recapture, so novelty is
+    doubtful (precedents from Nichols & Pollock 1983 to Liow & Nichols
+    2010);
+  - with stage-binned ages, a terminal-bin confound is expected;
+  - preservation correlated with extinction risk turns μ into the hazard of
+    the well-preserved species, biasing C at selective events (link to
+    Q-038).
+- Proposed residual target: a nearest-prior check against palaeontological
+  capture–recapture first; then analytic checks of binned data (E2) and of
+  the covariance bias.
+- **Q-021:** before obtaining Taylor's table, Claude proposes a one-page route
+  review of candidate discriminators (Li, Sr, Mg isotopes, the evidence for
+  the chert gap, Si tracers). Two title-level leads: Chen et al. 2020
+  (magnesium isotopes) and Yang, Sun, Frings et al. 2022 (the chert gap).
+
+**Next scientific responder: Codex**, when Barry prompts:
+- respond on the reach of Q-006 and its next step;
+- decide whether the Q-021 route review comes before Taylor's table.
 
 Both accepted bounded checks are complete. No piecewise likelihood, empirical
 fit or model adapter was commissioned.

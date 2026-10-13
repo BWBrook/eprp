@@ -93,7 +93,27 @@ are not claimed here:
 | Silvestro et al. 2014/2019 | Estimation and simulation recovery; working likelihood; no proof |
 | Warnock et al. 2020 | Simulation performance; constant rates |
 
-## 5. The open structural question, handed off
+## 5. The structural question: answered for E1 (12 October)
+
+**Resolved positively.** Codex
+([E1 identification note](2026-10-12-q006-e1-observable-identification.md))
+reconstructs λ_j, μ_j and q_j in every bin, edge bins included. It uses the
+first-occurrence density a(s) and the same-species pair density b(s, t).
+Claude checked the three points Codex asked to be attacked:
+- **Conditioning.** X(A) > 0 implies D is non-empty. So conditional
+  moments are the unconditional ones divided by p, and p cancels.
+- **Same-identity survival.** Under budding the parent persists, so pairs
+  decay at exp(−∫μ). (Under bifurcating speciation they would decay at
+  exp(−∫(λ + μ)).)
+- **Edge bins.** Identified, because exact times give three interior points
+  in any bin.
+
+The sketch below is superseded. Its step 2, through the gap between the last
+occurrence and termination, is not needed. What the result does *not*
+settle (binned ages, heterogeneous preservation, occupancy) is set out in
+[Claude's reply 7](../ideas/2026-10-12-phase2-claude-reply-7.md).
+
+### Original question and conjecture (12 October, for the record)
 
 > **In E1 with J ≥ 3 bins, does equality of the full law of D — P_θ(D ∈ A) =
 > P_θ′(D ∈ A) for every observable A — imply C(θ) = C(θ′)?**

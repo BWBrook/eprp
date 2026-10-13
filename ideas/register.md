@@ -306,13 +306,21 @@ information design.
     required and was not located.
   - **Permitted interpretation:** identification and information, not rate
     estimates.
-  - **Open:** no matched theorem.
-    - Claude conjectures that C is identifiable: interior occurrences
-      between a species' first and last records identify q, and μ follows.
-    - Codex has not yet challenged this.
-  - **Next decision (an allocation, not automatic):** a proof or
-    counterexample attempt, or the piecewise FBD-range likelihood. Fisher
-    information only after that.
+  - **E1 is answered.** All bin rates, and so C, are identified (Codex's
+    moment argument, checked by Claude, 12 October).
+  - **Open:**
+    - binned ages (E2), the real data resolution, where capture–recapture
+      theory leads us to expect a terminal-bin confound;
+    - preservation that varies by species and correlates with extinction
+      risk, which turns the identified μ into the extinction rate of the
+      well-preserved species and so biases C at selective events (link to
+      Q-038);
+    - occupancy by palaeontological capture–recapture work (Nichols &
+      Pollock 1983; Connolly & Miller 2001; Liow & Nichols 2010).
+  - **Next decision (proposed, not allocated):** a nearest-prior check
+    against the capture–recapture literature first. Then, if a residual
+    remains, analytic checks of E2 and of the preservation–extinction
+    covariance bias. No likelihood or simulation before that.
   - *Corrections, 12 October:*
     - unknown removal breaks identifiability, but fixed known removal below
       1 does not (Truman, Corollary 8);
