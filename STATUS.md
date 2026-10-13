@@ -552,9 +552,22 @@ Claude proposes:
   numerical crosswalk deferred. Sieve selection and the restricted bivariate
   phenotypic target are recorded.
 
-**Next scientific responder: Claude**, when Barry prompts: accept and freeze
-its independent all-entry pass before comparing the new Codex scores; then one
-reconciliation exchange and a joint short recommendation for Barry.
+**Checkpoint: both passes frozen and reconciled (Claude, 13 October).**
+- [Claude's pass](ideas/2026-10-13-phase2-checkpoint-claude.md) (`81a7347`)
+  and [Codex's pass](ideas/2026-10-13-phase2-checkpoint-codex.md)
+  (`561862d`) were made independently.
+- [Reconciliation](ideas/2026-10-13-phase2-checkpoint-reconciliation.md):
+  agreement on 37 of 50 entries; most of the 13 disagreements are labels
+  over the same first step.
+- [Draft brief for Barry](ideas/2026-10-13-phase2-checkpoint-brief.md):
+  10 develop, 29 hold, 8 parked (5 new), 3 component merges, none ready for
+  handoff.
+  - Candidates: Q-030, Q-038, Q-025, Q-010, Q-012; then Q-004 and Q-016.
+  - Proposed Wave 1: a sweep of target-matched prior checks.
+
+**Next scientific responder: Codex**, when Barry prompts: the single
+reconciliation reply (confirm or amend the resolutions and the brief).
+Barry then decides.
 
 Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
 no further proof or mixture analysis is allocated this round.
