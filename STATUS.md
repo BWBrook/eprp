@@ -25,8 +25,12 @@ importance from next-work priority, challenges specific scores and mergers,
 and proposed two bounded tasks, accepted by Claude in 76/1514. Both are now
 complete at the prediction-table/support-screen level, with independent
 checks and further feasibility gates below. The
-[Q-050 archive check](data/q050-covariance-support/README.md) is complete;
-scientific discrimination and joint environmental/age support remain unverified.
+[Q-050 archive check](data/q050-covariance-support/README.md) and
+[source/support audit](data/q050-sample-crosswalk/README.md) are complete.
+Original-workbook access blocks the numerical sample crosswalk; scientific
+discrimination and joint environmental/age support remain unverified.
+Further Q-021 empirical source work is paused by agent agreement, with its
+question status and tier unchanged.
 
 The index records **40 under review, 4 sketches and 6 parked entries**.
 Among the 44 unparked entries, 35 are tier 2 and 9 are tier 3, following
@@ -38,7 +42,8 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Q-021 Taylor carbonate archive audit | Codex | Complete: [reply 9](ideas/2026-10-13-phase2-codex-reply-9.md), [sample/archive audit](data/q021-taylor-support/README.md). Preserved 83 rows (60 Taylor base IDs plus labelled repeats and 19 reused Cao rows). Descriptive carbonate recovery supported; temporal archive/local-water mapping unresolved. Stop Taylor alone as the next mechanism test; Claude to adjudicate. No fit or adapter |
+| Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Numerical specimen crosswalk incomplete because original workbook downloads return 401/403. Claude next challenges contract; workbook retrieval precedes any join or recovery task |
+| Q-021 Taylor carbonate archive audit | Codex | Complete: [reply 9](ideas/2026-10-13-phase2-codex-reply-9.md), [sample/archive audit](data/q021-taylor-support/README.md). Preserved 83 rows (60 Taylor base IDs plus labelled repeats and 19 reused Cao rows). Descriptive carbonate recovery supported; temporal archive/local-water mapping unresolved. Taylor-alone stop accepted by Claude; further empirical source work paused. Reply 10 refines reopening conditions to the chosen contrast. No fit or adapter |
 | Reply 8: CMR scope and recovery-proxy routes | Codex | Complete: [reply 8](ideas/2026-10-13-phase2-codex-reply-8.md). CMR prior confirmed; its binary terminal confound does not automatically transfer to counts. Heterogeneity requires a defined population target. Q-021 route review provisionally retains Li source work; chert/refugia constrain inputs, Mg intensity needs a flux mapping. Next responder Claude; no fit or adapter |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
@@ -484,9 +489,21 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   end at "unresolved feasibility". Keep the theoretical question and the
   reopening triggers, and move orientation effort to other entries.
 
-**Next scientific responder: Codex**, when Barry prompts:
-- respond on the Q-021 pause;
-- choose its next bounded task.
+**Codex's reply 10** ([ideas/2026-10-13-phase2-codex-reply-10.md](ideas/2026-10-13-phase2-codex-reply-10.md)):
+- Accept Q-021's empirical source-work pause, without a status/tier change.
+  Reopening requires constraints and resolution appropriate to the joint
+  target; paired pH and fine transition sampling are not universal requirements.
+  Constant site offsets cancel within-site; time-varying effects remain rivals.
+- Q-050's source/support audit is complete. Five local environmental exports
+  are inventoried; two phenotype series share one splice and LR04 chronology.
+  Primary/adjusted depth scales, partial coverage, repeated keys and unresolved
+  time averaging prevent a shortcut to an environmental join.
+- Original Dryad workbook access remains blocked (401/403); its listed checksum
+  is not locally verified. Numerical specimen crosswalk and model-recovery
+  gate remain unpassed. No join, simulation or fit was performed.
+
+**Next scientific responder: Claude**, when Barry prompts: challenge the
+Q-050 support contract and target-dependent Q-021 reopening terms.
 
 Claude's proposed next task is matching Q-006's E2 to capture–recapture and
 mixture models.

@@ -57,6 +57,12 @@ replicated populations, independent climatic perturbations or independent
 dating errors. The two species are not two independent environmental
 experiments merely because they occupy separate R objects.
 
+**13 October follow-up:** the [source/support audit](../q050-sample-crosswalk/README.md)
+retrieved five local environmental tables and identified shared LR04 chronology,
+depth-scale and time-averaging dependencies. The original specimen workbook
+remains inaccessible through attempted download routes, so the numerical
+crosswalk is still open.
+
 **Next decision:** establish a one-to-one crosswalk to original samples and
 absolute ages, environmental observations, and chronology/time-averaging
 provenance. Preserve shared age errors. Then specify constrained competing

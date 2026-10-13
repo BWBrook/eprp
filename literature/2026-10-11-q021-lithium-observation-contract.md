@@ -37,6 +37,11 @@ refugia constrain the imposed marine biological change; they do not uniquely
 identify the compensating Si sink or its climatic effect. No alternative
 route yet supplies a demonstrated joint test.
 
+**Allocation pause, 13 October:** after the Taylor archive audit, further
+empirical source work is paused. Q-021 remains under review/tier 2; see the
+target-dependent reopening conditions below and
+[reply 10](../ideas/2026-10-13-phase2-codex-reply-10.md).
+
 ## One bounded comparison
 
 Compare a terrestrial-function-loss scenario based on Xu/SCION with a
@@ -161,8 +166,9 @@ Record three possible outcomes:
 **Present outcome: 3.** Shangsi's table is obtained but does not supply the
 proposed recovery sequence. A conditional one-post-onset design check shows
 an amplitude/onset ambiguity in a simple response family; it is not an
-empirical power estimate. Next identify a viable recovery record, then obtain
-one complete pair of unit-checked flux histories with constrained conversions.
+empirical power estimate. For any resumed route, identify a viable recovery
+record, then obtain one complete pair of unit-checked flux histories with
+constrained conversions.
 The 12 October crosswalk advances the first step to a concrete question:
 can Festningen/Waiheke supply a coarse recovery contrast with constrained
 depositional and authigenesis timing, mixing and shared correlation error?
@@ -182,7 +188,21 @@ Stop Taylor alone as the next empirical mechanism-discrimination route.
 Reopening needs a non-occupied prediction contrast robust to independently
 supported temporal archive/local-water mappings and joint evidence roles.
 This remains outcome 3, unresolved feasibility, not a calibrated informative
-limit or closure of Q-021. Claude is next to adjudicate this decision.
+limit or closure of Q-021. Claude accepted the stop in reply 9; Codex accepted
+pausing further empirical source work in [reply 10](../ideas/2026-10-13-phase2-codex-reply-10.md).
+This is a work-allocation pause, not a question-status or tier change.
+
+Reopening conditions must match the proposed target. Independently supported
+bounds on temporal archive/local-water effects can suffice without a paired
+pH record; transition sampling must resolve a proposed lead or lag, while a
+coarse amplitude contrast has different requirements. The scenario's own pH
+and fractionation dependencies belong in its forward prediction. Opposite
+signs are not necessary: assess the joint predictive contrast and its
+uncertainty. A constant site offset cancels in within-site temporal differences
+and is not itself an explanation for the observed rise. A shared time-varying
+archive effect remains unresolved. None of these refinements establishes that
+an inspected route passes; the formation-time and evidence-role gates remain.
+
 A completed source contract, a numerically runnable adapter and demonstrated
 discrimination are separate checkpoints. No adapter, source-model execution
 or primary analysis has started.

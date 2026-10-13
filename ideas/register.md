@@ -1015,7 +1015,14 @@ Status **under review**, tier 2.
   and source error/grouping conflicts also need adjudication before reuse.
   Reopening requires a non-occupied prediction contrast robust to independently
   supported temporal archive/local-water mappings and joint evidence roles.
-  Claude is next to adjudicate this stop decision; Q-021 and other routes remain open.
+  Claude accepted the stop in reply 9. Further empirical source work is now
+  paused as an allocation decision, with Q-021 under review/tier 2. Reopening
+  needs archive/local-water constraints and temporal resolution sufficient
+  for the chosen joint contrast: paired pH measurements and fine transition
+  sampling are possible routes, not universal requirements. A constant site
+  offset cancels in within-site differences; time-varying offsets remain a
+  rival. No inspected route has passed the gate. See
+  [reply 10](2026-10-13-phase2-codex-reply-10.md).
 - **Question.** Which losses of biological function can prolong adverse climate
   states: weakened terrestrial weathering and carbon burial, disrupted marine
   silica cycling, or their interaction? Can existing nonthermal evidence
@@ -1051,10 +1058,10 @@ Status **under review**, tier 2.
   similar temperature histories. The prediction/calibration map is complete:
   Xu prescribes vegetation recovery, Isson selects simulations on temperature,
   and Rogger 2025 prescribes climate recovery. These uses must be separated from
-  evaluation evidence. First complete the unit/age/evidence-role crosswalk
-  in the current contract. Stop this empirical route if essential mappings
-  lack support or a calibrated joint test cannot resolve a consequential
-  contrast; record an informative limit separately from inadequate precision.
+  evaluation evidence. Source work is paused; any resumed route must complete
+  the unit/age/evidence-role crosswalk in the current contract. Stop that route
+  if essential mappings lack support or a calibrated joint test cannot resolve
+  a consequential contrast; record an informative limit separately from inadequate precision.
   A matched prior may occupy the contribution without answering other routes.
 - **Proposed discriminator.** Relative recovery of vegetation function and
   marine authigenic-clay formation, compared with cooling under a common,
@@ -3200,8 +3207,16 @@ mechanism test remain unverified.
   our earlier README-based description. Brombacher's
   [Dryad deposit](https://doi.org/10.5061/dryad.8jf2k) lists specimen-level
   measurements and sample ages. The archive objects passed internal numerical
-  checks; the original sample/absolute-age/environmental crosswalk, age
-  uncertainty and sufficient replication remain unverified. No model was fitted.
+  checks. The [13 October support audit](../data/q050-sample-crosswalk/README.md)
+  retrieves five same-site environmental exports, including thermocline
+  temperatures, but original-workbook downloads returned 401/403. The numerical
+  sample/absolute-age crosswalk remains incomplete. Both species share one
+  splice and LR04-tuned chronology; they are response contrasts within one
+  environmental history. LR04 also supplies the original environmental
+  regression predictor. Shared age uncertainty, primary versus adjusted depth
+  scales, partial proxy coverage, repeated keys and time averaging need explicit
+  treatment. The drilling report's 2–3 cm burrow size does not establish a
+  mixing kernel. No model was fitted.
 - **Main obstacle / kill criterion.** Phenotypic covariance is not genetic
   covariance, and environmental proxies do not identify selection gradients.
   Plasticity, persistent common selection, immigration and temporal mixing
@@ -3209,8 +3224,10 @@ mechanism test remain unverified.
   models at actual sample spacing and uncertainty. Park the mechanistic route
   if plausible alternatives are observationally equivalent or covariance
   reorganisation is unresolved. This gate is proposed, not passed.
-- **Next step and evidence.** Phase 2 has verified two numerical objects;
-  establish their original-sample, environmental and age support before a
-  bounded simulation. Source
+- **Next step and evidence.** Recover the original specimen workbook; verify
+  aggregation, trait coordinates and the primary-depth/environment join before
+  a bounded simulation. Original-paper covariance scaling and the archive's
+  log traits must not be conflated. The source audit is complete; the numerical
+  crosswalk and mechanism gate remain open. Source
   access, exact data version, rival models and prior-work boundaries are in
   the [Q-050 evidence note](../literature/2026-10-11-evolvability-and-first-tranche-close.md).
