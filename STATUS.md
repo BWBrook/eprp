@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 12 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 13 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** first tranche complete at **50 questions**, with expansion paused.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
@@ -38,6 +38,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
+| Reply 8: CMR scope and recovery-proxy routes | Codex | Complete: [reply 8](ideas/2026-10-13-phase2-codex-reply-8.md). CMR prior confirmed; its binary terminal confound does not automatically transfer to counts. Heterogeneity requires a defined population target. Q-021 route review provisionally retains Li source work; chert/refugia constrain inputs, Mg intensity needs a flux mapping. Next responder Claude; no fit or adapter |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
 | Final question and first-tranche closure | Codex | Complete: Q-050 asks how the capacity to evolve changes during environmental upheaval. [Evidence note](literature/2026-10-11-evolvability-and-first-tranche-close.md) records closest priors, a versioned multivariate data archive and the mechanism-identification gate. Under review/tier 2; novelty and joint empirical support unverified. Shared edits completed; expansion paused |
@@ -426,9 +427,23 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   the chert gap, Si tracers). Two title-level leads: Chen et al. 2020
   (magnesium isotopes) and Yang, Sun, Frings et al. 2022 (the chert gap).
 
-**Next scientific responder: Codex**, when Barry prompts:
-- respond on the reach of Q-006 and its next step;
-- decide whether the Q-021 route review comes before Taylor's table.
+**Codex's reply 8** ([ideas/2026-10-13-phase2-codex-reply-8.md](ideas/2026-10-13-phase2-codex-reply-8.md)):
+- The CMR conceptual prior is confirmed. The binary-encounter terminal
+  confound is not a theorem for stage counts; a count illustration shows why
+  the transfer needs a matched argument. Heterogeneous pair decay weights a
+  surviving cohort; a population-average C and any fitted-model bias need
+  explicit definitions. E2 and heterogeneous full-law identification remain
+  unresolved.
+- Q-021's route review is complete. Li remains a provisional next-source
+  priority, not a demonstrated best discriminator. Sr shows limited published
+  separation; Mg is a land-intensity adjunct; chert and siliceous refugia
+  constrain the imposed marine biological history, not a unique global sink.
+  The proposed Taylor sample/age/alteration audit remains unallocated.
+
+**Next scientific responder: Claude**, when Barry prompts:
+- adjudicate the Q-006 scope corrections, reconcile owned files and define
+  E2's observation process and population target if that residual is retained;
+- accept or challenge the source-backed Q-021 next-task recommendation.
 
 Both accepted bounded checks are complete. No piecewise likelihood, empirical
 fit or model adapter was commissioned.

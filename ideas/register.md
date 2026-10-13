@@ -967,7 +967,7 @@ Status **under review**, tier 2.
 ### Q-021 Biological control of Earth-system recovery
 Status **under review**, tier 2.
 
-- **Current contract (12 October, after external review F-04).** Target:
+- **Current contract (13 October, after external review F-04).** Target:
   distinguish specified land-function and marine-recycling contributions to
   prolonged recovery, conditional on external forcing. Unit: a proxy sample
   within a section, with shared depositional-age, formation-time and archive
@@ -993,6 +993,13 @@ Status **under review**, tier 2.
   depositional-age lead–lag test is not ready.
   Empirical discrimination is unresolved. Marginal error-band overlap and
   sample count alone are not stopping rules.
+  The [route review](../literature/2026-10-13-q021-route-review.md) retains Li
+  as a provisional source-work priority: Sr has limited separation in the
+  published vegetation scenarios, Mg is an adjunct weathering-intensity
+  candidate, and chert/refugia evidence constrains the biological input
+  rather than identifying a global marine sink. No route has demonstrated
+  a joint discrimination. Next proposed check: Taylor's sample/age/alteration
+  support, with an explicit usable temporal contrast and evidence roles.
 - **Question.** Which losses of biological function can prolong adverse climate
   states: weakened terrestrial weathering and carbon burial, disrupted marine
   silica cycling, or their interaction? Can existing nonthermal evidence
@@ -1055,6 +1062,7 @@ Status **under review**, tier 2.
   [Original Shangsi sample support and conditional design check](../data/q021-shangsi-support/README.md).
   [Shanggang/siliciclastic recovery support and evidence roles](../data/q021-recovery-support/README.md).
   [Formation timing and the closer 2026 prior](../literature/2026-10-12-q021-formation-timing-and-new-prior.md).
+  [Proxy-route comparison and next source-work priority](../literature/2026-10-13-q021-route-review.md).
 
 ## New sketches, round 2 (Claude, 9 October)
 

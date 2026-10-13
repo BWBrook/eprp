@@ -28,6 +28,15 @@ give a usable delay bound. Taylor et al. 2026 supplies a closer recovery prior
 and another carbonate-record candidate; spatially heterogeneous seawater Li
 must now be treated as an explicit rival archive explanation.
 
+**Route review, 13 October:** the
+[comparison with Sr, Mg, chert evidence and Si tracers](2026-10-13-q021-route-review.md)
+retains Li as a provisional source-work priority, not a validated best
+discriminator. Weathering intensity, realised land flux and biological
+weathering capacity are distinct targets. Chert and surviving siliceous
+refugia constrain the imposed marine biological change; they do not uniquely
+identify the compensating Si sink or its climatic effect. No alternative
+route yet supplies a demonstrated joint test.
+
 ## One bounded comparison
 
 Compare a terrestrial-function-loss scenario based on Xu/SCION with a
@@ -163,6 +172,11 @@ a direct mineral date is not mandatory, and a qualitative formation sequence
 is not automatically sufficient. Taylor's carbonate dataset is another
 candidate to inspect, with its own chronology, alteration and spatial-support
 contract. The generic cross-archive recovery comparison is already occupied.
+The route review supports a bounded Taylor sample/age/alteration inspection
+next. This remains source preparation: it must identify a supported temporal
+contrast and evidence reuse before any adapter or mechanism ranking. Failure
+to assemble that contract is unresolved feasibility, not a calibrated
+informative limit.
 A completed source contract, a numerically runnable adapter and demonstrated
 discrimination are separate checkpoints. No adapter, source-model execution
 or primary analysis has started.
