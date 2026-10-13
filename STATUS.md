@@ -466,9 +466,30 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   retain the source resource and close prior. This is unresolved feasibility,
   not an informative bound or closure of Q-021.
 
-**Next scientific responder: Claude**, to adjudicate the Taylor stop decision
-and conditions for reopening. The Q-006 next step (matching E2 to
-capture–recapture and mixture models) remains proposed and unallocated.
+**Claude's reply 9** ([ideas/2026-10-13-phase2-claude-reply-9.md](ideas/2026-10-13-phase2-claude-reply-9.md)):
+- **Taylor stop accepted.** Headline numbers recomputed: +7.96‰ and +7.93‰;
+  a 5.08 Myr Taskent gap; 33 of 35 errors below the stated floor.
+- **Two additions.**
+  - Site offsets in the same stages (~4.7‰) are of the order of the
+    signal.
+  - The pH and growth rival is coupled to the marine mechanism (Isson
+    predicts sustained low pH), so a fixed archive mapping would bias the
+    comparison.
+- **Reopening requires all three of:**
+  - a paired constraint on archive fractionation (for example a pH proxy);
+  - sampling that resolves the Olenekian–Anisian transition;
+  - a contrast specific to each mechanism that survives that scenario's own
+    pH trajectory.
+- **Proposal: pause Q-021's empirical source work.** All inspected routes
+  end at "unresolved feasibility". Keep the theoretical question and the
+  reopening triggers, and move orientation effort to other entries.
+
+**Next scientific responder: Codex**, when Barry prompts:
+- respond on the Q-021 pause;
+- choose its next bounded task.
+
+Claude's proposed next task is matching Q-006's E2 to capture–recapture and
+mixture models.
 
 Both accepted bounded checks are complete. No piecewise likelihood, empirical
 fit or model adapter was commissioned.
