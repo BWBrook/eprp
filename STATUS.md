@@ -27,8 +27,9 @@ complete at the prediction-table/support-screen level, with independent
 checks and further feasibility gates below. The
 [Q-050 archive check](data/q050-covariance-support/README.md) and
 [source/support audit](data/q050-sample-crosswalk/README.md) are complete.
-Original-workbook access blocks the numerical sample crosswalk; scientific
-discrimination and joint environmental/age support remain unverified.
+Barry has supplied the original workbook and Codex has verified its checksum;
+the numerical sample crosswalk, scientific discrimination and joint
+environmental/age support remain unverified.
 Further Q-021 empirical source work is paused by agent agreement, with its
 question status and tier unchanged.
 
@@ -42,7 +43,8 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Numerical specimen crosswalk incomplete because original workbook downloads return 401/403. Claude next challenges contract; workbook retrieval precedes any join or recovery task |
+| Whole-portfolio checkpoint | Codex pass complete; Claude invited to an independent pass | [All-50 assessment](ideas/2026-10-13-phase2-checkpoint-codex.md) and [reply 11](ideas/2026-10-13-phase2-codex-reply-11.md) prepared. Claude should freeze its own pass before opening either new file; scores/priorities are intentionally omitted from STATUS and the board handoff. No register status/tier changes or new deep dives. Reconcile once both passes exist |
+| Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
 | Q-021 Taylor carbonate archive audit | Codex | Complete: [reply 9](ideas/2026-10-13-phase2-codex-reply-9.md), [sample/archive audit](data/q021-taylor-support/README.md). Preserved 83 rows (60 Taylor base IDs plus labelled repeats and 19 reused Cao rows). Descriptive carbonate recovery supported; temporal archive/local-water mapping unresolved. Taylor-alone stop accepted by Claude; further empirical source work paused. Reply 10 refines reopening conditions to the chosen contrast. No fit or adapter |
 | Reply 8: CMR scope and recovery-proxy routes | Codex | Complete: [reply 8](ideas/2026-10-13-phase2-codex-reply-8.md). CMR prior confirmed; its binary terminal confound does not automatically transfer to counts. Heterogeneity requires a defined population target. Q-021 route review provisionally retains Li source work; chert/refugia constrain inputs, Mg intensity needs a flux mapping. Next responder Claude; no fit or adapter |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
@@ -533,13 +535,29 @@ Claude proposes:
   stop; a target-matched check of prior work comes first; breadth before
   depth.
 
-The Brombacher workbook is supplied and its MD5 is verified.
+**Codex's checkpoint and reply 11** ([assessment](ideas/2026-10-13-phase2-checkpoint-codex.md),
+[reply](ideas/2026-10-13-phase2-codex-reply-11.md)):
+- All 50 independently reassessed from the existing evidence; proposed
+  dispositions and first tests are ready for reconciliation. No status or tier
+  changes or primary-investigation selection. To preserve independence,
+  Claude should freeze its own pass before reading the new assessment/reply;
+  this snapshot deliberately omits Codex's scores and candidate ordering.
+- Coverage correction: 13 register bodies changed since the initial first
+  pass, 37 unchanged; this does not measure which entries received attention.
+- Q-006: stop the standalone structural exercise without calling the exact E2
+  result proved. Reference reuse is reproduced but does not itself establish
+  non-Poisson detection or signed bias. Transfer only the relevant observation
+  requirements to a future Q-038 contract; targets remain distinct.
+- Q-050: supplied workbook size/MD5 independently verified. Access is resolved;
+  numerical crosswalk deferred. Sieve selection and the restricted bivariate
+  phenotypic target are recorded.
 
-**Next scientific responder: Codex**, when Barry prompts: respond to the
-checkpoint proposal, and briefly to the open Q-050 and Q-006 items.
+**Next scientific responder: Claude**, when Barry prompts: accept and freeze
+its independent all-entry pass before comparing the new Codex scores; then one
+reconciliation exchange and a joint short recommendation for Barry.
 
-Claude's proposed next task is matching Q-006's E2 to capture–recapture and
-mixture models.
+Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
+no further proof or mixture analysis is allocated this round.
 
 Both accepted bounded checks are complete. No piecewise likelihood, empirical
 fit or model adapter was commissioned.

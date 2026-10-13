@@ -5,11 +5,13 @@ Owner: Codex. Bounded source audit, 13 October 2026. Supports
 [two-object numerical inspection](../q050-covariance-support/README.md).
 
 **Finding:** a concrete same-site environmental route exists, but the numerical
-specimen-to-sample crosswalk remains incomplete. Dryad metadata were retrieved;
-the original workbook downloads returned HTTP 401/403. Five environmental
-tables were retrieved and inventoried. No phenotype/environment join, model
-fit or recovery simulation was performed. This is an access and support limit,
-not evidence that the dataset is absent or the scientific question fails.
+specimen-to-sample crosswalk remains incomplete. Initial scripted workbook
+downloads returned HTTP 401/403. Barry subsequently supplied the workbook;
+Codex verified its identity during the portfolio checkpoint below. Five
+environmental tables were retrieved and inventoried. No phenotype/environment
+join, model fit or recovery simulation was performed. Joint support remains
+unresolved; neither the earlier access failure nor the present support limit
+establishes that the scientific question fails.
 
 ## Original phenotype data and coordinate contract
 
@@ -34,7 +36,8 @@ Dryad [dataset 10.5061/dryad.8jf2k](https://doi.org/10.5061/dryad.8jf2k),
 dataset ID 3031, version 3046, has one listed file:
 
 - `Data Brombacher et al.xlsx`, file 19832, 845,521 bytes.
-- Declared MD5: `2498cdd3fab3ddb67ae1d52478620a53` (**not locally verified**).
+- Declared MD5: `2498cdd3fab3ddb67ae1d52478620a53`, **now locally verified**
+  on the supplied workbook; it was unverified at the initial source audit.
 - Metadata describe specimen measurements, sample IDs and ages after Bolton
   2010; licence CC0. Published 17 March 2017; modified 21 September 2019.
 - [Dataset API](https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.8jf2k)
@@ -44,6 +47,14 @@ dataset ID 3031, version 3046, has one listed file:
   `stash/downloads/file_stream/19832` returned 403, including a cookie-session
   attempt. No verified alternate workbook source was found in the bounded
   DOI/title/filename search. Metadata are not inspection of workbook contents.
+
+**Checkpoint receipt, 13 October:** Barry supplied
+`data/raw/dryad-downloads/doi_10_5061_dryad_8jf2k__Data_Brombacher_et_al.xlsx`.
+Codex independently verified 845,521 bytes, the declared MD5 above and SHA-256
+`195e15b36f599e9f8c064be046a1d08df58d2dbdb625688407d1d1fcb28b311f`.
+The file is ignored by Git. This resolves access and byte identity; no workbook
+values, specimen aggregation or joins were inspected during the checkpoint.
+The earlier HTTP failures remain retrieval history, not a current blocker.
 
 Required first join: original specimen ID and taxon → original sample/interval
 → source depth and age → each Tsuboi sample index. Preserve source labels,
@@ -125,8 +136,9 @@ morphology series; extrapolating over that gap would add an assumption.
 
 ## Next gate and scientific limit
 
-After workbook access, verify the specimen aggregation and same-primary-depth
-join, retaining unmatched samples, repeated keys and the chronology dependency.
+When next allocated after the portfolio checkpoint, verify the specimen
+aggregation and same-primary-depth join, retaining unmatched samples, repeated
+keys and the chronology dependency.
 Do not substitute nearest-age matches without a supported depth/age contract.
 Fix common trait coordinates and represent finite specimen counts, measurement
 error and time averaging before constructing a joint mean/covariance fixture.
@@ -138,6 +150,17 @@ Only specified models with independently justified restrictions warrant a
 bounded recovery comparison. An alignment regression or temporal ordering
 alone cannot identify inherited constraint, selection and feedback. Novelty
 and empirical mechanism discrimination remain unverified.
+
+**Checkpoint observation clarification:** recover the actual sieve/fraction
+protocol and its consistency across samples. Filtering shell geometry need not
+be a hard projected-area cutoff, and retained lower tails alone do not identify
+the excluded fraction. Treat selection as a modelled rival, not as a diagnosed
+cause of covariance change. Restrict the candidate to bivariate phenotypic
+mean/covariance dynamics in common trait coordinates. One proposed summary is
+directional variance `u' P_t u` for predeclared directions; leading-axis
+orientation requires resolved eigenvalue separation. Neither is genetic
+evolvability. [Reply 11](../../ideas/2026-10-13-phase2-codex-reply-11.md)
+records this qualification; no new fit or simulation is commissioned.
 
 ## Provenance and reproduction
 

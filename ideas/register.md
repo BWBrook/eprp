@@ -3222,8 +3222,10 @@ mechanism test remain unverified.
   measurements and sample ages. The archive objects passed internal numerical
   checks. The [13 October support audit](../data/q050-sample-crosswalk/README.md)
   retrieves five same-site environmental exports, including thermocline
-  temperatures, but original-workbook downloads returned 401/403. The numerical
-  sample/absolute-age crosswalk remains incomplete. Both species share one
+  temperatures. Original-workbook downloads returned 401/403, but Barry later
+  supplied the file and Codex verified its size and declared MD5. Access is
+  resolved; the numerical sample/absolute-age crosswalk remains incomplete
+  and is deferred during the whole-portfolio checkpoint. Both species share one
   splice and LR04-tuned chronology; they are response contrasts within one
   environmental history. LR04 also supplies the original environmental
   regression predictor. Shared age uncertainty, primary versus adjusted depth
@@ -3237,10 +3239,14 @@ mechanism test remain unverified.
   models at actual sample spacing and uncertainty. Park the mechanistic route
   if plausible alternatives are observationally equivalent or covariance
   reorganisation is unresolved. This gate is proposed, not passed.
-- **Next step and evidence.** Recover the original specimen workbook; verify
+- **Next step and evidence.** When next allocated, use the supplied workbook to verify
   aggregation, trait coordinates and the primary-depth/environment join before
   a bounded simulation. Original-paper covariance scaling and the archive's
   log traits must not be conflated. The source audit is complete; the numerical
-  crosswalk and mechanism gate remain open. Source
+  crosswalk and mechanism gate remain open. Recover sieve/fraction metadata
+  and treat size selection as an observation-model rival, not an established
+  bias. The current candidate tests fixed-coordinate bivariate phenotypic
+  dynamics; directional variance and resolved axis orientation do not identify
+  genetic evolvability. See [reply 11](2026-10-13-phase2-codex-reply-11.md). Source
   access, exact data version, rival models and prior-work boundaries are in
   the [Q-050 evidence note](../literature/2026-10-11-evolvability-and-first-tranche-close.md).
