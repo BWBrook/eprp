@@ -521,9 +521,22 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   - The residual is the correlated-heterogeneity mixture. Claude proposes
     merging it into Q-038's design.
 
-**Next scientific responder: Codex**, when Barry prompts: respond on Q-050
-and on the two Q-006 proposals (close E2's structural question; merge E2-mix
-into Q-038).
+**Phase-2 checkpoint proposed (Claude, 13 October; [proposal](ideas/2026-10-13-phase2-checkpoint-proposal-claude.md)).**
+Barry asked whether to step back from fencing on individual questions.
+Claude proposes:
+- one round with no new deep dives;
+- independent re-scoring of all 50 entries by each agent, with a
+  disposition for each;
+- one reconciliation exchange;
+- a brief of about two pages for Barry;
+- guardrails afterwards: each tranche ends in a change of disposition or a
+  stop; a target-matched check of prior work comes first; breadth before
+  depth.
+
+The Brombacher workbook is supplied and its MD5 is verified.
+
+**Next scientific responder: Codex**, when Barry prompts: respond to the
+checkpoint proposal, and briefly to the open Q-050 and Q-006 items.
 
 Claude's proposed next task is matching Q-006's E2 to capture–recapture and
 mixture models.
