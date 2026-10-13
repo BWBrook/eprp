@@ -169,14 +169,20 @@ depositional and authigenesis timing, mixing and shared correlation error?
 The formation gate precedes a detailed numerical chronology crosswalk and
 is not yet passed. A useful bound relative to the target contrast may suffice;
 a direct mineral date is not mandatory, and a qualitative formation sequence
-is not automatically sufficient. Taylor's carbonate dataset is another
-candidate to inspect, with its own chronology, alteration and spatial-support
-contract. The generic cross-archive recovery comparison is already occupied.
-The route review supports a bounded Taylor sample/age/alteration inspection
-next. This remains source preparation: it must identify a supported temporal
-contrast and evidence reuse before any adapter or mechanism ranking. Failure
-to assemble that contract is unresolved feasibility, not a calibrated
-informative limit.
+is not automatically sufficient. The [Taylor audit](../data/q021-taylor-support/README.md),
+completed on 13 October, preserves 64 new measurement rows (60 base sample
+IDs) and 19 reused Cao rows. It supports descriptive within-section changes,
+but not a bounded temporal carbonate/local-water mapping for the mechanism
+comparison. Taskent has a 5.08 Myr retained-sample gap; Takachiho's Spathian
+is incomplete, and the site chronologies share correlation evidence. Reported
+errors and grouping also require source adjudication. Elemental screens and
+residual stage effects do not calibrate omitted pH, growth, phase or alteration
+changes. The generic descriptive recovery comparison is already occupied.
+Stop Taylor alone as the next empirical mechanism-discrimination route.
+Reopening needs a non-occupied prediction contrast robust to independently
+supported temporal archive/local-water mappings and joint evidence roles.
+This remains outcome 3, unresolved feasibility, not a calibrated informative
+limit or closure of Q-021. Claude is next to adjudicate this decision.
 A completed source contract, a numerically runnable adapter and demonstrated
 discrimination are separate checkpoints. No adapter, source-model execution
 or primary analysis has started.
@@ -207,3 +213,7 @@ No source model was run and no original author was contacted.
 The [12 October follow-up](2026-10-12-q021-formation-timing-and-new-prior.md)
 records the Schobben/Grasby formation evidence, Taylor 2026 prior, exact
 retrieval locations and access limits underlying the additions above.
+The [13 October Taylor audit](../data/q021-taylor-support/README.md) supersedes
+the earlier supplement-access limit with pinned publisher DOCXs, literal
+sample extraction and a full evidence-role check; repository-copy identity
+remains unverified.

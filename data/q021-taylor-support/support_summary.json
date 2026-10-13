@@ -1,0 +1,457 @@
+{
+  "source_sha256": "5a34ca9c21319466353d0904c0155a1d178838f9bbf2b4e150702cc746629fc6",
+  "source_caption": "Table S1. Li isotope and other geochemical data from the Late Permian to Middle Triassic from Taşkent, Turkey (this study), Takachiho, Japan (this study) and the Shanggang and Shangsi sections, South China (Cao et al., 2022). The d7Licarb are reported relative to the LSVEC. The error for Taşkent and Takachiho are 2SD of the bracketing standard or the 2SD of repeated analyses, whichever is greater.",
+  "source_columns": [
+    "Section",
+    "Sample ID",
+    "Height (m)",
+    "Stage",
+    "Age (Ma)",
+    "d7Licarb (‰)",
+    "err.",
+    "Li (ppm)",
+    "Li/Ca (umol/mol)",
+    "Mg/Ca (mmol/mol)",
+    "Al/Ca (mmol/mol)",
+    "Sr/Ca (mmol/mol)",
+    "Mn/Sr (mol/mol)",
+    "wt.% carbonate",
+    "Reference",
+    ""
+  ],
+  "sections": {
+    "Taskent": {
+      "rows": 35,
+      "base_ids": 34,
+      "source_age_range_ma": [
+        235.18,
+        252.93
+      ],
+      "stages": {
+        "Changhsingian": {
+          "rows": 8,
+          "base_ids": 8,
+          "source_age_range_ma": [
+            252.05,
+            252.93
+          ],
+          "row_mean_delta7li_permil": 5.55
+        },
+        "Induan": {
+          "rows": 10,
+          "base_ids": 10,
+          "source_age_range_ma": [
+            251.31,
+            251.97
+          ],
+          "row_mean_delta7li_permil": 1.189
+        },
+        "Olenekian": {
+          "rows": 9,
+          "base_ids": 9,
+          "source_age_range_ma": [
+            247.08,
+            251.24
+          ],
+          "row_mean_delta7li_permil": 2.633333
+        },
+        "Anisian": {
+          "rows": 4,
+          "base_ids": 4,
+          "source_age_range_ma": [
+            240.59,
+            242.0
+          ],
+          "row_mean_delta7li_permil": 9.835
+        },
+        "Ladinian": {
+          "rows": 1,
+          "base_ids": 1,
+          "source_age_range_ma": [
+            237.39,
+            237.39
+          ],
+          "row_mean_delta7li_permil": 12.71
+        },
+        "Carnian": {
+          "rows": 3,
+          "base_ids": 2,
+          "source_age_range_ma": [
+            235.18,
+            235.25
+          ],
+          "row_mean_delta7li_permil": 11.013333
+        }
+      },
+      "missing_counts": {
+        "section": 0,
+        "sample_id": 0,
+        "height_m": 0,
+        "stage": 0,
+        "age_ma": 0,
+        "delta7li_permil": 0,
+        "err_as_reported": 0,
+        "li_ppm": 0,
+        "li_ca_umol_mol": 0,
+        "mg_ca_mmol_mol": 0,
+        "al_ca_mmol_mol": 0,
+        "sr_ca_mmol_mol": 0,
+        "mn_sr_mol_mol": 23,
+        "carbonate_wt_percent": 0,
+        "reference": 0
+      },
+      "al_ca_range_mmol_mol": [
+        0.01,
+        0.73
+      ],
+      "err_range_as_reported": [
+        0.05,
+        0.49
+      ],
+      "labelled_duplicate_pairs": [
+        {
+          "base_id": "TKU-331",
+          "docx_rows": [
+            "37",
+            "38"
+          ],
+          "absolute_delta7li_difference_permil": 1.96
+        }
+      ],
+      "descriptive_contrasts": {
+        "Anisian_minus_Induan_Olenekian": {
+          "all_rows": {
+            "early_n": 19,
+            "later_n": 4,
+            "early_mean_permil": 1.873158,
+            "later_mean_permil": 9.835,
+            "later_minus_early_permil": 7.961842
+          },
+          "equal_base_samples": {
+            "early_n": 19,
+            "later_n": 4,
+            "early_mean_permil": 1.873158,
+            "later_mean_permil": 9.835,
+            "later_minus_early_permil": 7.961842
+          }
+        },
+        "Anisian_Ladinian_Carnian_minus_Induan_Olenekian": {
+          "all_rows": {
+            "early_n": 19,
+            "later_n": 8,
+            "early_mean_permil": 1.873158,
+            "later_mean_permil": 10.63625,
+            "later_minus_early_permil": 8.763092
+          },
+          "equal_base_samples": {
+            "early_n": 19,
+            "later_n": 7,
+            "early_mean_permil": 1.873158,
+            "later_mean_permil": 10.918571,
+            "later_minus_early_permil": 9.045414
+          }
+        }
+      },
+      "sample_gap_across_source_stage_groups": {
+        "last_early_sample": "TK-464.5",
+        "last_early_age_ma": "247.08",
+        "first_later_sample": "TK-627",
+        "first_later_age_ma": "242.00",
+        "nominal_gap_myr": 5.08
+      },
+      "rows_below_stated_bracketing_2sd": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "rows_with_all_s5_element_ratios": 12
+    },
+    "Takachiho": {
+      "rows": 29,
+      "base_ids": 26,
+      "source_age_range_ma": [
+        240.53,
+        252.99
+      ],
+      "stages": {
+        "Changhsingian": {
+          "rows": 1,
+          "base_ids": 1,
+          "source_age_range_ma": [
+            252.99,
+            252.99
+          ],
+          "row_mean_delta7li_permil": 0.56
+        },
+        "Induan": {
+          "rows": 9,
+          "base_ids": 7,
+          "source_age_range_ma": [
+            251.46,
+            251.94
+          ],
+          "row_mean_delta7li_permil": -4.345556
+        },
+        "Olenekian": {
+          "rows": 9,
+          "base_ids": 8,
+          "source_age_range_ma": [
+            248.64,
+            251.42
+          ],
+          "row_mean_delta7li_permil": -1.333333
+        },
+        "Anisian": {
+          "rows": 10,
+          "base_ids": 10,
+          "source_age_range_ma": [
+            240.53,
+            247.75
+          ],
+          "row_mean_delta7li_permil": 5.09
+        }
+      },
+      "missing_counts": {
+        "section": 0,
+        "sample_id": 0,
+        "height_m": 0,
+        "stage": 0,
+        "age_ma": 0,
+        "delta7li_permil": 0,
+        "err_as_reported": 0,
+        "li_ppm": 0,
+        "li_ca_umol_mol": 0,
+        "mg_ca_mmol_mol": 0,
+        "al_ca_mmol_mol": 0,
+        "sr_ca_mmol_mol": 0,
+        "mn_sr_mol_mol": 2,
+        "carbonate_wt_percent": 29,
+        "reference": 0
+      },
+      "al_ca_range_mmol_mol": [
+        0.06,
+        0.25
+      ],
+      "err_range_as_reported": [
+        0.89,
+        4.27
+      ],
+      "labelled_duplicate_pairs": [
+        {
+          "base_id": "TCB-45.7",
+          "docx_rows": [
+            "41",
+            "42"
+          ],
+          "absolute_delta7li_difference_permil": 8.68
+        },
+        {
+          "base_id": "TCB-54.0",
+          "docx_rows": [
+            "47",
+            "48"
+          ],
+          "absolute_delta7li_difference_permil": 4.4
+        },
+        {
+          "base_id": "TCD-1.6",
+          "docx_rows": [
+            "55",
+            "56"
+          ],
+          "absolute_delta7li_difference_permil": 6.76
+        }
+      ],
+      "descriptive_contrasts": {
+        "Anisian_minus_Induan_Olenekian": {
+          "all_rows": {
+            "early_n": 18,
+            "later_n": 10,
+            "early_mean_permil": -2.839444,
+            "later_mean_permil": 5.09,
+            "later_minus_early_permil": 7.929444
+          },
+          "equal_base_samples": {
+            "early_n": 15,
+            "later_n": 10,
+            "early_mean_permil": -2.849333,
+            "later_mean_permil": 5.09,
+            "later_minus_early_permil": 7.939333
+          }
+        },
+        "Anisian_Ladinian_Carnian_minus_Induan_Olenekian": {
+          "all_rows": {
+            "early_n": 18,
+            "later_n": 10,
+            "early_mean_permil": -2.839444,
+            "later_mean_permil": 5.09,
+            "later_minus_early_permil": 7.929444
+          },
+          "equal_base_samples": {
+            "early_n": 15,
+            "later_n": 10,
+            "early_mean_permil": -2.849333,
+            "later_mean_permil": 5.09,
+            "later_minus_early_permil": 7.939333
+          }
+        }
+      },
+      "sample_gap_across_source_stage_groups": {
+        "last_early_sample": "TCD-2.7",
+        "last_early_age_ma": "248.64",
+        "first_later_sample": "TCD-3.75",
+        "first_later_age_ma": "247.75",
+        "nominal_gap_myr": 0.89
+      },
+      "rows_below_stated_bracketing_2sd": [],
+      "rows_with_all_s5_element_ratios": 27
+    },
+    "Shanggang": {
+      "rows": 16,
+      "base_ids": 16,
+      "source_age_range_ma": [
+        248.77,
+        252.43
+      ],
+      "stages": {
+        "Olenekian": {
+          "rows": 5,
+          "base_ids": 5,
+          "source_age_range_ma": [
+            248.77,
+            251.2
+          ],
+          "row_mean_delta7li_permil": 4.74
+        },
+        "Induan": {
+          "rows": 7,
+          "base_ids": 7,
+          "source_age_range_ma": [
+            251.27,
+            251.83
+          ],
+          "row_mean_delta7li_permil": 4.385714
+        },
+        "Changhsingian": {
+          "rows": 4,
+          "base_ids": 4,
+          "source_age_range_ma": [
+            251.91,
+            252.43
+          ],
+          "row_mean_delta7li_permil": 2.625
+        }
+      },
+      "missing_counts": {
+        "section": 0,
+        "sample_id": 0,
+        "height_m": 0,
+        "stage": 0,
+        "age_ma": 0,
+        "delta7li_permil": 0,
+        "err_as_reported": 0,
+        "li_ppm": 0,
+        "li_ca_umol_mol": 0,
+        "mg_ca_mmol_mol": 0,
+        "al_ca_mmol_mol": 0,
+        "sr_ca_mmol_mol": 0,
+        "mn_sr_mol_mol": 0,
+        "carbonate_wt_percent": 16,
+        "reference": 0
+      },
+      "al_ca_range_mmol_mol": [
+        0.03,
+        3.62
+      ],
+      "err_range_as_reported": [
+        1.1,
+        1.1
+      ]
+    },
+    "Shangsi": {
+      "rows": 3,
+      "base_ids": 3,
+      "source_age_range_ma": [
+        251.41,
+        253.35
+      ],
+      "stages": {
+        "Induan": {
+          "rows": 1,
+          "base_ids": 1,
+          "source_age_range_ma": [
+            251.41,
+            251.41
+          ],
+          "row_mean_delta7li_permil": -0.25
+        },
+        "Changhsingian": {
+          "rows": 2,
+          "base_ids": 2,
+          "source_age_range_ma": [
+            252.32,
+            253.35
+          ],
+          "row_mean_delta7li_permil": -0.95
+        }
+      },
+      "missing_counts": {
+        "section": 0,
+        "sample_id": 0,
+        "height_m": 0,
+        "stage": 0,
+        "age_ma": 0,
+        "delta7li_permil": 0,
+        "err_as_reported": 0,
+        "li_ppm": 0,
+        "li_ca_umol_mol": 0,
+        "mg_ca_mmol_mol": 0,
+        "al_ca_mmol_mol": 0,
+        "sr_ca_mmol_mol": 0,
+        "mn_sr_mol_mol": 0,
+        "carbonate_wt_percent": 3,
+        "reference": 0
+      },
+      "al_ca_range_mmol_mol": [
+        0.02,
+        0.06
+      ],
+      "err_range_as_reported": [
+        1.1,
+        2.0
+      ]
+    }
+  },
+  "interpretation": "Support inventory and descriptive arithmetic only. Source ages/stages/NA/rounding retained. No age errors, mineral phases or alteration corrections imputed. No fit, test, confidence interval, power claim or independent-row assumption.",
+  "contrast_policy": "Early=source Induan+Olenekian; later=specified source stages. Equal-base alternative averages only explicitly labelled -dup pairs, then weights base IDs equally. Neither policy corrects the raw table."
+}

@@ -996,9 +996,13 @@ Status **under review**, tier 2.
   formation may postdate deposition. Check Li-host formation timing before
   a detailed chronology crosswalk: Festningen petrography is a lead but
   supplies no usable delay bound in the material inspected. That gate remains
-  unpassed. Taylor's longer carbonate records offer another candidate, with
-  chronology/alteration and spatial support still to inspect. A simple
-  depositional-age lead–lag test is not ready.
+  unpassed. The [Taylor audit](../data/q021-taylor-support/README.md) now
+  preserves 64 new measurement rows (60 base IDs) and 19 reused Cao rows.
+  Within-section carbonate increases are supported descriptively, but changing
+  fractionation, alteration and local-water composition are not bounded for
+  mechanism discrimination. Taskent has a 5.08 Myr retained-sample gap;
+  Takachiho has incomplete Spathian coverage and shared chronology ties.
+  A simple depositional-age lead–lag test is not ready.
   Empirical discrimination is unresolved. Marginal error-band overlap and
   sample count alone are not stopping rules.
   The [route review](../literature/2026-10-13-q021-route-review.md) retains Li
@@ -1006,8 +1010,12 @@ Status **under review**, tier 2.
   published vegetation scenarios, Mg is an adjunct weathering-intensity
   candidate, and chert/refugia evidence constrains the biological input
   rather than identifying a global marine sink. No route has demonstrated
-  a joint discrimination. Next proposed check: Taylor's sample/age/alteration
-  support, with an explicit usable temporal contrast and evidence roles.
+  a joint discrimination. The subsequent Taylor audit stops Taylor alone as
+  the next empirical mechanism test: its descriptive comparison is occupied,
+  and source error/grouping conflicts also need adjudication before reuse.
+  Reopening requires a non-occupied prediction contrast robust to independently
+  supported temporal archive/local-water mappings and joint evidence roles.
+  Claude is next to adjudicate this stop decision; Q-021 and other routes remain open.
 - **Question.** Which losses of biological function can prolong adverse climate
   states: weakened terrestrial weathering and carbon burial, disrupted marine
   silica cycling, or their interaction? Can existing nonthermal evidence

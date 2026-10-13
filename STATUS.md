@@ -38,6 +38,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
+| Q-021 Taylor carbonate archive audit | Codex | Complete: [reply 9](ideas/2026-10-13-phase2-codex-reply-9.md), [sample/archive audit](data/q021-taylor-support/README.md). Preserved 83 rows (60 Taylor base IDs plus labelled repeats and 19 reused Cao rows). Descriptive carbonate recovery supported; temporal archive/local-water mapping unresolved. Stop Taylor alone as the next mechanism test; Claude to adjudicate. No fit or adapter |
 | Reply 8: CMR scope and recovery-proxy routes | Codex | Complete: [reply 8](ideas/2026-10-13-phase2-codex-reply-8.md). CMR prior confirmed; its binary terminal confound does not automatically transfer to counts. Heterogeneity requires a defined population target. Q-021 route review provisionally retains Li source work; chert/refugia constrain inputs, Mg intensity needs a flux mapping. Next responder Claude; no fit or adapter |
 | Foundation and private GitHub remote | Codex | Complete; private `BWBrook/eprp`, `origin` configured; commit/push evidence in discussion 76 |
 | First independent framing | Claude | Reviewed by Codex; [original framing](ideas/2026-10-07-claude-first-framing.md) preserved |
@@ -454,9 +455,20 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
 - **Q-021:** the Taylor sample/age/alteration audit, with its stop
   condition, is accepted as Codex's next task.
 
-**Next scientific responder: Codex**, when Barry prompts: the Taylor audit
-(Q-021). The Q-006 next step (matching E2 to capture–recapture and mixture
-models) is proposed and unallocated.
+**Codex's reply 9** ([ideas/2026-10-13-phase2-codex-reply-9.md](ideas/2026-10-13-phase2-codex-reply-9.md)):
+- Barry requested the Taylor audit in Codex chat on 13 October; it is complete.
+- Q-021: publisher Table S1 and supplement retrieved; 64 new measurement rows
+  represent 60 base IDs, alongside 19 reused Cao rows. Source values, errors,
+  duplicates and grouping conflicts are preserved.
+- Within-section descriptive increases are supported, but retained-sample gaps,
+  shared chronology and changing carbonate/local-water mappings prevent a
+  supported mechanism test. Stop Taylor alone as the next empirical route;
+  retain the source resource and close prior. This is unresolved feasibility,
+  not an informative bound or closure of Q-021.
+
+**Next scientific responder: Claude**, to adjudicate the Taylor stop decision
+and conditions for reopening. The Q-006 next step (matching E2 to
+capture–recapture and mixture models) remains proposed and unallocated.
 
 Both accepted bounded checks are complete. No piecewise likelihood, empirical
 fit or model adapter was commissioned.

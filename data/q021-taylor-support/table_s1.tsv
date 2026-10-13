@@ -1,0 +1,84 @@
+docx_table	docx_row	section	sample_id	height_m	stage	age_ma	delta7li_permil	err_as_reported	li_ppm	li_ca_umol_mol	mg_ca_mmol_mol	al_ca_mmol_mol	sr_ca_mmol_mol	mn_sr_mol_mol	carbonate_wt_percent	reference	labelled_duplicate	base_id_from_suffix	source_doi
+1	4	Taskent	TCX-4	4	Changhsingian	252.93	14.46	0.09	0.24	12.03	96.68	0.48	0.58	0.21	59	this study	false	TCX-4	https://doi.org/10.2475/001c.156171
+1	5	Taskent	TCX-10	10	Changhsingian	252.80	6.82	0.10	0.32	6.41	19.68	0.51	1.44	NA	83	this study	false	TCX-10	https://doi.org/10.2475/001c.156171
+1	6	Taskent	TCX-16	16	Changhsingian	252.67	7.00	0.06	0.11	5.98	15.73	0.21	0.78	NA	84	this study	false	TCX-16	https://doi.org/10.2475/001c.156171
+1	7	Taskent	TCX-21	21	Changhsingian	252.56	4.98	0.11	0.18	2.60	11.70	0.06	1.37	NA	72	this study	false	TCX-21	https://doi.org/10.2475/001c.156171
+1	8	Taskent	TCX-25	25	Changhsingian	252.48	7.47	0.11	0.54	9.30	29.61	0.24	1.22	NA	80	this study	false	TCX-25	https://doi.org/10.2475/001c.156171
+1	9	Taskent	TCX-29	29	Changhsingian	252.39	5.12	0.15	0.26	3.87	8.86	0.05	1.72	NA	54	this study	false	TCX-29	https://doi.org/10.2475/001c.156171
+1	10	Taskent	TCX-39	39	Changhsingian	252.17	0.90	0.07	0.03	1.37	24.98	0.25	0.29	0.15	78	this study	false	TCX-39	https://doi.org/10.2475/001c.156171
+1	11	Taskent	TCX-44	44	Changhsingian	252.05	-2.35	0.09	0.29	4.32	2.37	0.49	1.59	NA	66	this study	false	TCX-44	https://doi.org/10.2475/001c.156171
+1	12	Taskent	TK-1.5	48.3	Induan	251.97	6.31	0.10	0.35	10.63	26.03	0.25	2.14	NA	64	this study	false	TK-1.5	https://doi.org/10.2475/001c.156171
+1	13	Taskent	TK-3.8	50.6	Induan	251.92	1.32	0.11	0.22	3.34	7.17	0.04	1.23	NA	57	this study	false	TK-3.8	https://doi.org/10.2475/001c.156171
+1	14	Taskent	TK-6.7	53.5	Induan	251.92	3.75	0.05	0.07	2.57	6.11	0.12	2.49	0.03	61	this study	false	TK-6.7	https://doi.org/10.2475/001c.156171
+1	15	Taskent	TK-18.1	64.9	Induan	251.91	2.58	0.09	0.02	0.34	4.82	0.01	5.17	NA	71	this study	false	TK-18.1	https://doi.org/10.2475/001c.156171
+1	16	Taskent	TK-34.1	80.9	Induan	251.89	-2.23	0.49	0.06	2.57	7.30	0.19	2.70	0.05	69	this study	false	TK-34.1	https://doi.org/10.2475/001c.156171
+1	17	Taskent	TK-72	118.8	Induan	251.78	1.70	0.12	0.22	4.30	6.62	0.18	2.24	NA	65	this study	false	TK-72	https://doi.org/10.2475/001c.156171
+1	18	Taskent	TK-88	134.8	Induan	251.69	-3.62	0.14	0.18	2.73	8.30	0.06	3.20	NA	74	this study	false	TK-88	https://doi.org/10.2475/001c.156171
+1	19	Taskent	TK-129.5	176.3	Induan	251.46	1.00	0.08	0.09	3.80	5.70	0.25	1.33	0.04	82	this study	false	TK-129.5	https://doi.org/10.2475/001c.156171
+1	20	Taskent	TK-136.5	183.3	Induan	251.43	3.61	0.12	0.07	2.60	5.40	0.17	2.21	0.04	74	this study	false	TK-136.5	https://doi.org/10.2475/001c.156171
+1	21	Taskent	TK-176.2	223	Induan	251.31	-2.53	0.12	0.31	4.67	12.89	0.49	3.03	NA	84	this study	false	TK-176.2	https://doi.org/10.2475/001c.156171
+1	22	Taskent	TK-201	247.8	Olenekian	251.24	8.74	0.09	0.47	7.96	86.09	0.45	0.89	NA	70	this study	false	TK-201	https://doi.org/10.2475/001c.156171
+1	23	Taskent	TK-252	278.8	Olenekian	250.99	2.08	0.14	0.25	3.86	7.46	0.31	3.29	NA	69	this study	false	TK-252	https://doi.org/10.2475/001c.156171
+1	24	Taskent	TK-265.5	312.3	Olenekian	250.93	0.23	0.05	0.12	5.46	11.22	0.35	1.55	0.08	71	this study	false	TK-265.5	https://doi.org/10.2475/001c.156171
+1	25	Taskent	TK-305	351.8	Olenekian	250.75	2.51	0.07	0.14	5.62	9.84	0.43	2.07	0.11	66	this study	false	TK-305	https://doi.org/10.2475/001c.156171
+1	26	Taskent	TK-315	361.8	Olenekian	250.55	6.37	0.11	0.13	1.83	2.44	0.04	3.18	NA	59	this study	false	TK-315	https://doi.org/10.2475/001c.156171
+1	27	Taskent	TK-376	422.8	Olenekian	248.68	-2.84	0.14	0.17	2.44	9.97	0.03	2.33	NA	63	this study	false	TK-376	https://doi.org/10.2475/001c.156171
+1	28	Taskent	TK-426	472.8	Olenekian	247.19	-1.42	0.12	0.00	0.03	10.07	0.04	1.41	NA	64	this study	false	TK-426	https://doi.org/10.2475/001c.156171
+1	29	Taskent	TK-450.5	497.3	Olenekian	247.12	2.90	0.08	0.14	5.98	15.13	0.12	0.97	0.59	43	this study	false	TK-450.5	https://doi.org/10.2475/001c.156171
+1	30	Taskent	TK-464.5	511.3	Olenekian	247.08	5.13	0.14	0.24	3.36	9.68	0.04	0.53	NA	70	this study	false	TK-464.5	https://doi.org/10.2475/001c.156171
+1	31	Taskent	TK-627	673.8	Anisian	242.00	7.58	0.13	0.21	2.60	9.00	0.02	1.25	NA	79	this study	false	TK-627	https://doi.org/10.2475/001c.156171
+1	32	Taskent	TKU-25	705	Anisian	241.37	8.29	0.09	0.33	6.69	27.79	0.73	2.01	0.06	54	this study	false	TKU-25	https://doi.org/10.2475/001c.156171
+1	33	Taskent	TKU-56	736	Anisian	240.74	10.91	0.13	0.06	0.89	12.04	0.04	1.86	NA	66	this study	false	TKU-56	https://doi.org/10.2475/001c.156171
+1	34	Taskent	TKU-63.7	743.7	Anisian	240.59	12.56	0.05	0.12	5.65	18.37	0.59	1.54	0.08	61	this study	false	TKU-63.7	https://doi.org/10.2475/001c.156171
+1	35	Taskent	TKU-222	902	Ladinian	237.39	12.71	0.05	0.25	3.44	4.70	0.02	1.09	NA	73	this study	false	TKU-222	https://doi.org/10.2475/001c.156171
+1	36	Taskent	TKU-328	1008	Carnian	235.25	15.72	0.11	0.11	1.57	7.93	0.25	1.52	NA	55	this study	false	TKU-328	https://doi.org/10.2475/001c.156171
+1	37	Taskent	TKU-331	1011	Carnian	235.18	9.64	0.08	0.03	1.36	24.41	0.17	0.83	0.03	63	this study	false	TKU-331	https://doi.org/10.2475/001c.156171
+1	38	Taskent	TKU-331-dup	1011	Carnian	235.18	7.68	0.46	0.03	1.33	8.87	0.19	0.80	NA	63	this study	true	TKU-331	https://doi.org/10.2475/001c.156171
+1	39	Takachiho	TCB-0.3	0.3	Changhsingian	252.99	0.56	3.10	0.09	1.93	11.93	0.06	1.08	0.24	NA	this study	false	TCB-0.3	https://doi.org/10.2475/001c.156171
+1	40	Takachiho	TCB-45.3	45.3	Induan	251.94	-4.21	0.89	0.32	15.31	858.59	0.25	0.42	0.19	NA	this study	false	TCB-45.3	https://doi.org/10.2475/001c.156171
+1	41	Takachiho	TCB-45.7	45.7	Induan	251.93	-11.50	3.97	0.10	2.87	241.70	0.16	0.59	0.41	NA	this study	false	TCB-45.7	https://doi.org/10.2475/001c.156171
+1	42	Takachiho	TCB-45.7-dup	45.7	Induan	251.93	-2.82	0.89	0.10	3.22	241.70	0.16	0.58	0.32	NA	this study	true	TCB-45.7	https://doi.org/10.2475/001c.156171
+1	43	Takachiho	TCB-46.1	46.1	Induan	251.93	-0.83	0.89	0.05	1.13	16.05	0.06	1.38	0.12	NA	this study	false	TCB-46.1	https://doi.org/10.2475/001c.156171
+1	44	Takachiho	TCB-51.0	51	Induan	251.76	-9.09	1.41	0.11	3.92	50.03	0.18	0.43	0.47	NA	this study	false	TCB-51.0	https://doi.org/10.2475/001c.156171
+1	45	Takachiho	TCB-51.7	51.7	Induan	251.59	-3.82	3.71	0.10	3.07	152.46	0.15	0.42	2.23	NA	this study	false	TCB-51.7	https://doi.org/10.2475/001c.156171
+1	46	Takachiho	TCB-52.3	52.3	Induan	251.53	-4.86	0.89	0.09	2.81	158.82	0.15	0.47	0.87	NA	this study	false	TCB-52.3	https://doi.org/10.2475/001c.156171
+1	47	Takachiho	TCB-54.0	54	Induan	251.46	1.21	3.94	0.20	6.67	104.90	0.21	0.28	2.92	NA	this study	false	TCB-54.0	https://doi.org/10.2475/001c.156171
+1	48	Takachiho	TCB-54.0-dup	54	Induan	251.46	-3.19	1.16	0.16	5.04	104.90	0.19	0.28	NA	NA	this study	true	TCB-54.0	https://doi.org/10.2475/001c.156171
+1	49	Takachiho	TCB-54.9	54.9	Olenekian	251.42	-3.01	3.21	0.08	2.35	77.02	0.17	0.34	1.01	NA	this study	false	TCB-54.9	https://doi.org/10.2475/001c.156171
+1	50	Takachiho	TCB-55.7	55.7	Olenekian	251.28	0.13	0.89	0.07	1.91	15.78	0.19	0.30	0.54	NA	this study	false	TCB-55.7	https://doi.org/10.2475/001c.156171
+1	51	Takachiho	TCB-58.4	58.4	Olenekian	251.08	-7.15	0.89	0.14	3.38	73.62	0.11	0.50	0.25	NA	this study	false	TCB-58.4	https://doi.org/10.2475/001c.156171
+1	52	Takachiho	TCB-59.3	59.3	Olenekian	250.92	-0.66	1.97	0.06	1.65	13.88	0.17	0.41	1.14	NA	this study	false	TCB-59.3	https://doi.org/10.2475/001c.156171
+1	53	Takachiho	TCB-59.9	59.9	Olenekian	250.87	3.25	2.57	0.07	1.58	13.88	0.10	0.34	1.37	NA	this study	false	TCB-59.9	https://doi.org/10.2475/001c.156171
+1	54	Takachiho	TCD-1.0	1	Olenekian	249.45	1.91	1.94	0.10	2.19	10.77	0.07	0.42	2.55	NA	this study	false	TCD-1.0	https://doi.org/10.2475/001c.156171
+1	55	Takachiho	TCD-1.6	1.6	Olenekian	249.14	-3.60	0.89	0.08	1.84	13.23	0.06	0.31	3.37	NA	this study	false	TCD-1.6	https://doi.org/10.2475/001c.156171
+1	56	Takachiho	TCD-1.6-dup	1.6	Olenekian	249.14	3.16	1.11	0.06	1.48	13.23	0.07	0.31	NA	NA	this study	true	TCD-1.6	https://doi.org/10.2475/001c.156171
+1	57	Takachiho	TCD-2.7	2.7	Olenekian	248.64	-6.03	0.89	0.12	2.69	13.41	0.11	0.39	3.46	NA	this study	false	TCD-2.7	https://doi.org/10.2475/001c.156171
+1	58	Takachiho	TCD-3.75	3.75	Anisian	247.75	-0.46	2.93	0.14	3.17	13.51	0.15	0.41	0.29	NA	this study	false	TCD-3.75	https://doi.org/10.2475/001c.156171
+1	59	Takachiho	TCD-4.3	4.3	Anisian	247.21	2.61	0.89	0.13	3.02	14.14	0.09	0.36	0.24	NA	this study	false	TCD-4.3	https://doi.org/10.2475/001c.156171
+1	60	Takachiho	TCD-5.0	5	Anisian	246.78	15.00	0.89	0.31	7.26	18.33	0.14	1.71	0.17	NA	this study	false	TCD-5.0	https://doi.org/10.2475/001c.156171
+1	61	Takachiho	TCD-6.15	6.15	Anisian	246.39	4.17	3.27	0.12	2.72	11.98	0.09	0.37	0.48	NA	this study	false	TCD-6.15	https://doi.org/10.2475/001c.156171
+1	62	Takachiho	TCD-7.5	7.5	Anisian	245.93	2.85	1.78	0.11	2.37	13.70	0.08	0.41	0.27	NA	this study	false	TCD-7.5	https://doi.org/10.2475/001c.156171
+1	63	Takachiho	TCD-8.0	8	Anisian	245.75	3.85	4.27	0.11	2.53	11.75	0.07	0.37	0.22	NA	this study	false	TCD-8.0	https://doi.org/10.2475/001c.156171
+1	64	Takachiho	TCD-8.9	8.9	Anisian	244.80	7.72	1.71	0.13	2.96	12.90	0.09	0.34	0.15	NA	this study	false	TCD-8.9	https://doi.org/10.2475/001c.156171
+1	65	Takachiho	TCD-9.9	9.7	Anisian	243.65	9.84	1.69	0.08	1.76	11.86	0.07	0.31	0.39	NA	this study	false	TCD-9.9	https://doi.org/10.2475/001c.156171
+1	66	Takachiho	TCD-11.2	11.2	Anisian	242.15	10.02	2.46	0.20	4.69	19.66	0.13	0.69	0.19	NA	this study	false	TCD-11.2	https://doi.org/10.2475/001c.156171
+1	67	Takachiho	TCD-12.6	12.7	Anisian	240.53	-4.70	2.85	0.09	2.64	15.31	0.14	0.34	0.18	NA	this study	false	TCD-12.6	https://doi.org/10.2475/001c.156171
+1	68	Shanggang	SG-160	78.4	Olenekian	248.77	5.50	1.10	1.56	2.53	10.66	0.36	0.23	3.91	NA	Cao et al. (2022)	false	SG-160	https://doi.org/10.2475/001c.156171
+1	69	Shanggang	SG-145	73.7	Olenekian	250.37	5.80	1.10	4.49	3.55	18.16	0.71	0.52	1.23	NA	Cao et al. (2022)	false	SG-145	https://doi.org/10.2475/001c.156171
+1	70	Shanggang	SG-132	69.3	Olenekian	250.65	3.50	1.10	4.13	4.07	12.09	0.79	0.27	4.22	NA	Cao et al. (2022)	false	SG-132	https://doi.org/10.2475/001c.156171
+1	71	Shanggang	SG-116*	62.7	Olenekian	250.95	4.70	1.10	4.92	4.29	14.48	0.44	0.35	3.83	NA	Cao et al. (2022)	false	SG-116*	https://doi.org/10.2475/001c.156171
+1	72	Shanggang	SG-106	57.4	Olenekian	251.20	4.20	1.10	6.12	5.18	12.68	1.05	0.29	3.59	NA	Cao et al. (2022)	false	SG-106	https://doi.org/10.2475/001c.156171
+1	73	Shanggang	SG-97	51.4	Induan	251.27	1.70	1.10	4.86	4.67	20.79	0.49	0.38	3.50	NA	Cao et al. (2022)	false	SG-97	https://doi.org/10.2475/001c.156171
+1	74	Shanggang	SG-81	43.9	Induan	251.37	5.10	1.10	2.32	2.99	18.38	0.10	0.41	2.68	NA	Cao et al. (2022)	false	SG-81	https://doi.org/10.2475/001c.156171
+1	75	Shangsi	SS030104-2	-2.78	Induan	251.41	-0.25	1.10	0.46	15.10	66.73	0.02	0.90	2.40	NA	Cao et al. (2022)	false	SS030104-2	https://doi.org/10.2475/001c.156171
+1	76	Shanggang	SG-50	36.6	Induan	251.50	3.90	1.10	1.93	3.16	20.32	0.57	0.42	3.12	NA	Cao et al. (2022)	false	SG-50	https://doi.org/10.2475/001c.156171
+1	77	Shanggang	SG-17	29.7	Induan	251.66	3.40	1.10	6.09	8.16	123.98	2.27	0.61	2.92	NA	Cao et al. (2022)	false	SG-17	https://doi.org/10.2475/001c.156171
+1	78	Shanggang	SG-14	28.5	Induan	251.69	3.90	1.10	6.90	13.14	376.03	3.05	0.95	2.77	NA	Cao et al. (2022)	false	SG-14	https://doi.org/10.2475/001c.156171
+1	79	Shanggang	SG-12+5.6	24.0	Induan	251.75	4.70	1.10	2.81	2.02	9.46	0.41	0.34	4.00	NA	Cao et al. (2022)	false	SG-12+5.6	https://doi.org/10.2475/001c.156171
+1	80	Shanggang	SG-12+2.5	21.5	Induan	251.83	8.00	1.10	0.91	1.15	8.41	0.03	0.32	1.56	NA	Cao et al. (2022)	false	SG-12+2.5	https://doi.org/10.2475/001c.156171
+1	81	Shanggang	SG-11+1.3	19.6	Changhsingian	251.91	1.50	1.10	5.95	8.77	507.58	3.62	0.42	1.81	NA	Cao et al. (2022)	false	SG-11+1.3	https://doi.org/10.2475/001c.156171
+1	82	Shanggang	SG-10-0.1	16.5	Changhsingian	251.95	1.20	1.10	1.93	1.47	54.11	0.28	0.45	0.36	NA	Cao et al. (2022)	false	SG-10-0.1	https://doi.org/10.2475/001c.156171
+1	83	Shanggang	SG-10+0.1	14	Changhsingian	252.13	2.60	1.10	2.01	1.45	14.29	0.48	0.52	0.54	NA	Cao et al. (2022)	false	SG-10+0.1	https://doi.org/10.2475/001c.156171
+1	84	Shangsi	SS022169-3*	1.11	Changhsingian	252.32	0.20	1.10	0.63	15.82	23.96	0.06	0.46	3.61	NA	Cao et al. (2022)	false	SS022169-3*	https://doi.org/10.2475/001c.156171
+1	85	Shanggang	SG-9+1.6	9.0	Changhsingian	252.43	5.20	1.10	1.75	1.45	9.56	0.43	0.60	0.08	NA	Cao et al. (2022)	false	SG-9+1.6	https://doi.org/10.2475/001c.156171
+1	86	Shangsi	SS018585-2	10.85	Changhsingian	253.35	-2.10	2.00	0.26	7.61	17.97	0.06	0.90	0.34	NA	Cao et al. (2022)	false	SS018585-2	https://doi.org/10.2475/001c.156171
