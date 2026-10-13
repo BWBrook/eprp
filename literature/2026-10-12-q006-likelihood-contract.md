@@ -5,9 +5,11 @@ Owner: Claude | 12 October 2026 | Delivers the contract proposed in
 section 5. Builds on the corrected
 [information table](2026-10-11-q006-information-table.md).
 
-Status: **a declared experiment, target and open structural question.** It is
-not a proof, a fit or a simulation. The tranche stops here, as the contract
-requires.
+Status (13 October): **E1 is answered** (section 5): all bin rates, and so C,
+are identified. The current gate is **E2, stage-binned counts** (section 7).
+Sections 1–4 still define E1 and C. The section 5 conjecture and the old
+section 6 next steps are kept as history. No proof was checked beyond
+section 5, and no fit or simulation was run.
 
 ## 1. The primary experiment (E1)
 
@@ -98,7 +100,7 @@ are not claimed here:
 **Resolved positively.** Codex
 ([E1 identification note](2026-10-12-q006-e1-observable-identification.md))
 reconstructs λ_j, μ_j and q_j in every bin, edge bins included. It uses the
-first-occurrence density a(s) and the same-species pair density b(s, t).
+first-order aggregate occurrence intensity a(s) (it counts every occurrence, not first appearances) and the same-species pair density b(s, t).
 Claude checked the three points Codex asked to be attacked:
 - **Conditioning.** X(A) > 0 implies D is non-empty. So conditional
   moments are the unconditional ones divided by p, and p cancels.
@@ -144,17 +146,62 @@ The sketch:
 4. **Edge bins** (the first and last of the window) may be identified only
    weakly or not at all. The contrast should use interior bins.
 
-## 6. Stop, and what comes after
+## 6. Next steps proposed on 12 October (superseded)
 
-The tranche stops here. Two possible next steps, either one an allocation
-decision rather than an automatic next step:
-- **(a)** A proof attempt, or a search for a counterexample, on the
-  conjecture in section 5.
-- **(b)** Deriving the piecewise FBD-range likelihood that E1 needs.
-
-**Fisher information comes after the structural question.** It needs a
-parameterisation of the nuisance rates and a regime for sample size and
-ascertainment. A partial tree or a preservation proxy is a later, separate
-experiment, whose error model must be declared.
+These were: (a) a proof or counterexample attempt for the conjecture;
+(b) a piecewise FBD-range likelihood; then Fisher information.
+- (a) was settled by Codex's E1 identification.
+- (b) and the Fisher step are **retired** as current instructions, because
+  the residual question has moved to E2 (section 7).
 
 No rate fit, simulation or primary analysis was run.
+
+## 7. Current gate: E2, stage-binned counts (declared 13 October)
+
+**Why E2.**
+- The capture–recapture prior is confirmed: Liow & Nichols 2010,
+  pp. 84–90, and the MARK documentation of the Cormack–Jolly–Seber model,
+  per [Codex's scope check](2026-10-13-q006-cmr-scope-check.md).
+- So the generic claim that occurrences separate extinction from sampling
+  is not new.
+- Real fossil ages are resolved to stages. The residual question is whether
+  retaining **counts per stage** identifies a fixed extinction contrast that
+  involves the terminal bin.
+
+**Declaration.**
+
+| Element | E2 |
+| --- | --- |
+| Generative process | As E1: budding birth–death from a known origin; λ, μ and q piecewise constant on fixed bins aligned to stages; Poisson preservation; no removal; unsampled species latent; births and deaths at continuous times within bins |
+| Observation | For each sampled species, the vector of **occurrence counts per bin** (K_i1 … K_iJ), with exact species identity. Times within bins are not observed |
+| Comparison variant E2-binary | Presence per bin, 1{K_ij > 0}: the capture–recapture-like data, kept only as a contrast |
+| Ascertainment | Conditioned only on a non-empty record. Censored at the end of the window |
+| Target C | The duration-scaled descriptive contrast of section 3, on the common hazard μ, with J ≥ 3. **E is bin J − 1, "after" is the terminal bin J, "before" is bin J − 2**, so the terminal bin enters through the benchmark (Codex). A focal event cannot itself be the last bin without changing the target |
+| Heterogeneous variant E2-mix (one specified mixture) | Two preservation–hazard types, (ε, μ) = (high, low) and (low, high), with ε mean 1. Types are assigned independently at each birth with a fixed probability (no inheritance), and the types' hazard ratio may differ in E. **The population target is C̄**, the same contrast on the expected-census mean hazard μ̄ (Codex, case 2/3) |
+
+**The question.** In E2, does equality of the full law of the per-species
+bin-count vectors imply equal C? In E2-mix, does it imply equal C̄? And does
+E2-binary fail at the terminal bin, as the capture–recapture analogy
+suggests?
+
+**A sketch, not a result: why counts may succeed where presence fails.**
+- Take a species known to be alive at the start of the terminal bin. Its
+  exposure in that bin is T = min(X, Δ_J), where its death time X is
+  exponential with rate μ_J.
+- Its count K is a Poisson mixture with E[K] = q_J·E[T] and
+  E[K(K − 1)] = q_J²·E[T²]. So
+  E[K(K − 1)]/E[K]² = R(μ_J·Δ_J), with
+  R(x) = 2[1 − e^(−x)(1 + x)]/(1 − e^(−x))².
+- R is strictly increasing from 1 to 2 (checked numerically, 13 October).
+  So the count law identifies μ_J·Δ_J, and then q_J. Presence alone gives
+  one number, P(K > 0).
+- This parallels Codex's final-count illustration. It is **not** an E2
+  result: E2 never observes "alive at the start of bin J" directly, and the
+  joint law of counts in bins J − 1 and J must carry that information.
+
+**Stop rule.** Before any likelihood, simulation or Fisher work:
+1. match E2 and E2-mix to the closest capture–recapture and mixture models
+   (Liow & Nichols's models with covariates, and Pradel's unconditional
+   model);
+2. then settle the question analytically, or hand off a precise open
+   question.

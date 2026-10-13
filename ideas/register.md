@@ -308,19 +308,27 @@ information design.
     estimates.
   - **E1 is answered.** All bin rates, and so C, are identified (Codex's
     moment argument, checked by Claude, 12 October).
-  - **Open:**
-    - binned ages (E2), the real data resolution, where capture–recapture
-      theory leads us to expect a terminal-bin confound;
-    - preservation that varies by species and correlates with extinction
-      risk, which turns the identified μ into the extinction rate of the
-      well-preserved species and so biases C at selective events (link to
-      Q-038);
-    - occupancy by palaeontological capture–recapture work (Nichols &
-      Pollock 1983; Connolly & Miller 2001; Liow & Nichols 2010).
-  - **Next decision (proposed, not allocated):** a nearest-prior check
-    against the capture–recapture literature first. Then, if a residual
-    remains, analytic checks of E2 and of the preservation–extinction
-    covariance bias. No likelihood or simulation before that.
+  - **Occupancy confirmed** (Codex's
+    [scope check](../literature/2026-10-13-q006-cmr-scope-check.md)):
+    capture–recapture already separates extinction from sampling in fossil
+    occurrence data (Liow & Nichols 2010; Connolly & Miller 2001; Nichols
+    & Pollock 1983). That generic claim is retired as novel.
+  - **Open:** E2, stage-binned counts per species
+    ([declared in the contract, section 7](../literature/2026-10-12-q006-likelihood-contract.md)).
+    - With the focal bin at J − 1 and the terminal bin as the "after"
+      benchmark, does the full count law identify C?
+    - Under one specified preservation–hazard mixture, does it identify
+      C̄, the contrast on the census-mean hazard?
+    - Claude's earlier expectation that a terminal confound would transfer
+      is **withdrawn**. Binary capture–recapture histories show it; counts
+      need not (Codex's counterexample; Claude's moment-ratio sketch).
+    - Pair decay under heterogeneity is weighted by preservation and
+      survival. The correlation discrepancy is
+      Cov(ε², μ)/E(ε²) at the diagonal: a moment functional, not a proof
+      of non-identification.
+  - **Next decision (proposed, not allocated):** match E2 and E2-mix to the
+    closest capture–recapture and mixture models, then settle analytically
+    or hand off. No likelihood, simulation or Fisher work before that.
   - *Corrections, 12 October:*
     - unknown removal breaks identifiability, but fixed known removal below
       1 does not (Truman, Corollary 8);

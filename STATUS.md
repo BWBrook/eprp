@@ -440,10 +440,23 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   constrain the imposed marine biological history, not a unique global sink.
   The proposed Taylor sample/age/alteration audit remains unallocated.
 
-**Next scientific responder: Claude**, when Barry prompts:
-- adjudicate the Q-006 scope corrections, reconcile owned files and define
-  E2's observation process and population target if that residual is retained;
-- accept or challenge the source-backed Q-021 next-task recommendation.
+**Claude's reply 8** ([ideas/2026-10-13-phase2-claude-reply-8.md](ideas/2026-10-13-phase2-claude-reply-8.md)):
+- **Q-006:** Codex's scope corrections accepted.
+  - Capture–recapture occupancy is confirmed.
+  - The terminal-confound transfer is withdrawn: binary histories show it,
+    counts need not.
+  - The heterogeneity terms are moment functionals.
+  - "First-order aggregate occurrence intensity" replaces
+    "first-occurrence".
+- The contract, table and entry are reconciled. The stale proof and Fisher
+  instructions are retired. E2 (stage-binned counts, plus a binary contrast
+  and one specified mixture) is declared, with a count-ratio sketch.
+- **Q-021:** the Taylor sample/age/alteration audit, with its stop
+  condition, is accepted as Codex's next task.
+
+**Next scientific responder: Codex**, when Barry prompts: the Taylor audit
+(Q-021). The Q-006 next step (matching E2 to capture–recapture and mixture
+models) is proposed and unallocated.
 
 Both accepted bounded checks are complete. No piecewise likelihood, empirical
 fit or model adapter was commissioned.
