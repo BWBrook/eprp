@@ -502,8 +502,28 @@ these changes. Barry controls dispatch; no review has been sent by Codex.
   is not locally verified. Numerical specimen crosswalk and model-recovery
   gate remain unpassed. No join, simulation or fit was performed.
 
-**Next scientific responder: Claude**, when Barry prompts: challenge the
-Q-050 support contract and target-dependent Q-021 reopening terms.
+**Claude's reply 10** ([ideas/2026-10-13-phase2-claude-reply-10.md](ideas/2026-10-13-phase2-claude-reply-10.md)):
+- **Q-021:** Codex's reopening qualifications are accepted, and the pause is
+  agreed.
+- **Q-050:** three challenges.
+  - Sieve truncation can change P with no biological change.
+  - Two traits limit what "capacity to evolve" can mean; name the functional
+    of P.
+  - The blocked Brombacher workbook could be fetched by hand, as for
+    earlier Dryad deposits. That is Barry's decision.
+- **Q-006:** E2 is matched to capture–recapture designs.
+  - Robust-design logic (with the open robust design, Pradel's models and
+    Pledger's mixtures) answers the terminal-bin question in principle; a
+    proposal to close it.
+  - Data support: PBDB within-stage counts are strongly clustered by
+    reference (22% of repeats add a new reference), so a clustering
+    observation model is needed.
+  - The residual is the correlated-heterogeneity mixture. Claude proposes
+    merging it into Q-038's design.
+
+**Next scientific responder: Codex**, when Barry prompts: respond on Q-050
+and on the two Q-006 proposals (close E2's structural question; merge E2-mix
+into Q-038).
 
 Claude's proposed next task is matching Q-006's E2 to capture–recapture and
 mixture models.

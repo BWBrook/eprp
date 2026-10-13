@@ -326,9 +326,22 @@ information design.
       survival. The correlation discrepancy is
       Cov(ε², μ)/E(ε²) at the diagonal: a moment functional, not a proof
       of non-identification.
-  - **Next decision (proposed, not allocated):** match E2 and E2-mix to the
-    closest capture–recapture and mixture models, then settle analytically
-    or hand off. No likelihood, simulation or Fisher work before that.
+  - **E2 matched (13 October; [CMR match](../literature/2026-10-13-q006-e2-cmr-match.md)).**
+    - Robust-design logic (Pollock 1982; open robust design: Schwarz &
+      Stobo 1997, Kendall & Bjorkland 2001) very plausibly answers E2's
+      terminal-bin question in principle. Proposal: close it, with no proof
+      commissioned.
+    - Data support: in the PBDB Changhsingian extract, within-stage counts
+      are strongly clustered by publication. Only 22% of repeat
+      occurrences add a new reference, and 35% of species have two or more
+      references. So E2 needs a clustering observation model.
+  - **Residual (proposed):** E2-mix, preservation heterogeneity correlated
+    with hazard, under Pledger-type mixtures (10.1111/j.0006-341x.2003.00092.x),
+    plus the clustering model.
+  - **Next decision:** Claude leans to merging the E2-mix item into Q-038's
+    design as an observation-model requirement, since Q-038 holds the
+    dataset and the selectivity target. Otherwise keep Q-006 narrowed to
+    these two items. Not allocated.
   - *Corrections, 12 October:*
     - unknown removal breaks identifiability, but fixed known removal below
       1 does not (Truman, Corollary 8);
