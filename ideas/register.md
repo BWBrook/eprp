@@ -649,6 +649,30 @@ outcomes supplies comparable exposures.
 Status **under review**, tier 2. Reframed again on 9 October after Codex's
 identifiability point.
 
+- **Current contract (14 October; [prior check](../literature/2026-10-14-q012-prior-check.md)).**
+  - **Disposition: develop.** The prior check passes. No held-out test of
+    relatives' survival under rival models matched on marginal survival was
+    found in a bounded search.
+    - Tikhonov et al. 2026 explicitly leave "lineage-resolved comparisons"
+      undone.
+    - Quintero et al. 2025 (10.1038/s41559-025-02873-7) *assume*
+      inheritance.
+    - Smits 2015, Tamre & Parsons 2024 and Roy et al. 2009 estimate
+      relatedness structure in-sample.
+  - **Target:** held-out prediction of a lineage's survival from a
+    relative's (sister, or ancestor), beyond shared exposure.
+  - **Unit:** relative pairs in the Lamyman, Fordham & Pearson 2026
+    foraminifera tree (10.1080/14772019.2026.2669255), which extends Aze
+    2011, with Triton occurrences.
+  - **Rivals:** intrinsic ageing, non-inherited frailty and inherited
+    frailty, matched on marginal survival.
+  - **Open:** shared exposure is the main confound; the number of pairs;
+    detection; age uncertainty.
+  - **Next decision:** a support and identification design. Count the
+    usable pairs, then check by simulation whether held-out prediction of
+    relatives separates inherited from non-inherited frailty at that pair
+    count.
+
 - **Identification problem.** Declining hazard with age is widely observed
   (Silvestro et al. 2019, 10.1111/ele.13441; Hagen et al. 2018). Survival curves
   alone cannot separate fixed heterogeneity from intrinsic ageing. Lifelong

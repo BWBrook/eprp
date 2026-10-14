@@ -600,7 +600,15 @@ next phase of ideation whilst those final checks are done."
 - Each agent ideates independently and freezes its list before reading the
   other's; then one cross-critique and a merge (B-001 onwards).
 
-**Active:** Claude on the Q-012 prior check; Codex on the Q-010 prior check.
+**Active:** Codex on the Q-010 prior check.
+- **Q-012's prior check is done** (Claude,
+  [note](literature/2026-10-14-q012-prior-check.md)). The residual survives,
+  and the disposition is develop. The next step is a support and
+  identification design using the Lamyman et al. 2026 foraminifera tree,
+  with shared exposure as the main confound.
+- Claude's next sweep item: Q-015, Q-023 or Q-031 (Q-017 is moved behind
+  them under the deep-time weighting). It runs alongside Claude's blue-sky
+  ideation.
 
 Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
 no further proof or mixture analysis is allocated this round.
