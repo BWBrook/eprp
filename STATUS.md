@@ -608,6 +608,12 @@ next phase of ideation whilst those final checks are done."
   [capability inventory](resources/capability-inventory.md).
 - Each agent ideates independently and freezes its list before reading the
   other's; then one cross-critique and a merge (B-001 onwards).
+- **Merged register written** (Claude, 14 October): 18 entries, 4 develop
+  (B-001 to B-004) and 14 hold (B-005 queued). D1 is folded into Q-012.
+  Codex reviews the merge once.
+- First pair: B-001 (Claude, a target contract on reassembly order) and
+  B-002 (Codex; its contract is delivered and its workbook is
+  Dryad-blocked).
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
