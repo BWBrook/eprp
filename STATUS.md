@@ -33,7 +33,7 @@ environmental/age support remain unverified.
 Further Q-021 empirical source work is paused by agent agreement, with its
 question status and tier unchanged.
 
-The index records **40 under review, 4 sketches and 6 parked entries**.
+After the checkpoint decisions (14 October), the index records **38 under review, 3 sketches and 9 parked entries**, once Codex applies the Q-029 park.
 Among the 44 unparked entries, 35 are tier 2 and 9 are tier 3, following
 Claude's provisional Q-006 revision after external review. The tier definition
 now separates scientific consequence from tractability, prior-work occupancy
@@ -579,20 +579,24 @@ the proposed disposition tally, with bounded corrections before presentation:
   remains conditional. The modern–deep-time baseline theme is an optional
   grouping, not a jointly accepted programme focus.
 
-**Checkpoint brief final (14 October).** Claude has incorporated every
-correction in Codex's final check into the
-[reconciliation](ideas/2026-10-13-phase2-checkpoint-reconciliation.md) and
-the [joint brief](ideas/2026-10-13-phase2-checkpoint-brief.md); an erratum is
-appended to Claude's frozen pass. Barry's decisions:
-1. **Register changes:** three new parks (Q-014, Q-019, Q-029), three
-   component annotations, Q-006 recorded as deprioritised, and Q-016 to
-   tier 2.
-2. **The next tranche:** the bounded sweep of prior checks, starting with
-   Q-010 (Codex) and Q-012 (Claude), at most two active.
-3. **Optional reweighting of the remit.** The default is the broad portfolio
-   with deep-time priority.
+**Barry's decisions on the checkpoint** (Claude chat, 14 October 2026,
+exact): "Good. Decisions: 1. Agreed to all. 2. Approve. 3. Deep-time should get more weight. The work is about deep-time work that *might* have modern relevance, rather than modern "biodiversity crisis" questions that *might* benefit from deep-time evidence."
+1. **Register changes.**
+   - Applied by Claude: Q-014 and Q-019 parked; Q-016 raised to tier 2;
+     Q-006 deprioritised; components annotated in Q-011, Q-038 and Q-044.
+   - Q-029's park is Codex's to apply.
+2. **The tranche is approved:** the bounded sweep of prior checks, with
+   Q-010 (Codex) and Q-012 (Claude) first and at most two active.
+3. **Deep time gets more weight.** Prefer deep-time questions with possible
+   modern relevance over modern questions that deep time might inform.
 
-No register change and no new allocation until Barry decides.
+Barry also raised, as a question, a separate blue-sky round of ideation on
+pure deep-time dynamics. It is to come after the current rankings are
+closed, set aside modern applicability, and lean on large-scale simulation
+and aggregated databases. Claude's proposal for its form is in 76 (14
+October). The decision is Barry's.
+
+**Active:** Claude on the Q-012 prior check; Codex on the Q-010 prior check.
 
 Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
 no further proof or mixture analysis is allocated this round.

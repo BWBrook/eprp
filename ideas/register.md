@@ -114,12 +114,12 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-011 | What sets the size distribution of extinction events: forcing or biotic amplification? | under review | 2 | Claude |
 | Q-012 | Heritable susceptibility versus intrinsic ageing in extinction risk | under review | 2 | Claude |
 | Q-013 | Would the current extinction register as a mass extinction in the rock record? | under review | 2 | Claude |
-| Q-014 | How long is the extinction debt after a deep-time perturbation? | sketch | 3 | Claude |
+| Q-014 | How long is the extinction debt after a deep-time perturbation? | parked | — | Claude |
 | Q-015 | Could past lineages evolve thermal niches as fast as climate changed? | under review | 2 | Claude |
-| Q-016 | Do range-based risk criteria predict extinction over geological time? | under review | 3 | Claude |
+| Q-016 | Do range-based risk criteria predict extinction over geological time? | under review | 2 | Claude |
 | Q-017 | Dark extinction across scales: one detection framework for unseen losses | under review | 2 | Claude |
 | Q-018 | Do plants and terrestrial biotas have mass extinctions in the same sense? | under review | 2 | Claude |
-| Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | under review | 3 | Claude |
+| Q-019 | How much of macroevolutionary turnover is climate-driven versus biotic? | parked | — | Claude |
 | Q-020 | When does geographic range cease to insure against global extinction? | under review | 2 | Codex |
 | Q-021 | Which lost biological functions prolong Earth-system recovery? | under review | 2 | Codex |
 | Q-022 | How much evolutionary history does each extinction prune? | under review | 2 | Claude |
@@ -187,7 +187,9 @@ Status **parked** (9 October).
 - **Evidence.** [B prior-work note](../literature/2026-10-09-b-selectivity-prior-work.md).
 
 ### Q-003 Threshold or smooth warming–extinction response: a detectability design
-Status **under review**, tier 3.
+Status **under review**, tier 3. **Held as a component of Q-011** (14 October;
+phase-2 checkpoint, Barry approved on 14 October 2026 (Claude chat: "1. Agreed to all.")). It is the observation-aware threshold-versus-smooth
+diagnostic, to run after Q-011's forcing contract.
 
 - **Question.** Under an explicit observation model (proxy time-averaging,
   dating, stage-level sampling), what effect sizes and data would distinguish a
@@ -284,7 +286,11 @@ sampling null was found.
 - **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-006 Fossils versus trees: identifiability of diversification
-Status **under review**, tier 2 (provisional). Prior-work check on 10 October:
+Status **under review**, tier 2 (provisional); **deprioritised; exact E2
+identification unresolved** (14 October; phase-2 checkpoint, Barry approved on 14 October 2026 (Claude chat: "1. Agreed to all.")). Its
+observation component (detection correlated with hazard; collection and
+reference structure) is carried into Q-038's next contract. Q-006's own
+rate-contrast target remains distinct. Prior-work check on 10 October:
 the main theoretical result is published. Moved from tier 3 on 11 October
 after the external review (F-02). The practical precedent was narrower than
 this entry claimed, and the remaining question is reframed below as one of
@@ -602,7 +608,10 @@ These are posed for a prior-work check, nothing more. Prior work is listed at
 metadata depth unless stated, and none of it has been read for this register yet.
 
 ### Q-011 What sets the size distribution of extinction events?
-Status **under review**, tier 2 (prior-work check on 9 October).
+Status **under review**, tier 2 (prior-work check on 9 October). **Component
+from Q-003** (14 October): the detectability diagnostic for threshold versus
+smooth response. Hold until Q-030's audit of forcing chosen independently of
+outcomes supplies comparable exposures.
 
 - **Question.** Given a perturbation catalogue chosen independently of
   extinction, what is the form of the forcing → extinction dose–response
@@ -704,7 +713,11 @@ a bounded demonstration (Codex).
 - **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
 ### Q-014 How long is the extinction debt after a deep-time perturbation?
-Status **sketch**, tier 3 as posed (9 October).
+Status **parked** (14 October; phase-2 checkpoint, Barry approved on 14 October 2026 (Claude chat: "1. Agreed to all.")). The cross-event
+lag proposal lacks a common onset and a resolving chronology. **Reopen** for
+a slow regional perturbation with independent exposure and follow-up: a new
+supported design, not another global regression. Posed 9 October as a
+tier-3 sketch.
 
 - **Finding.** Timings are known for single events: end-Permian lavas about
   300 kyr before extinction onset, with sill onset coincident; K–Pg within
@@ -737,7 +750,9 @@ Status **under review**, tier 2 (9 October; Codex's objection accepted).
 - **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
 
 ### Q-016 Do range-based risk criteria predict extinction over geological time?
-Status **under review**, tier 3. Narrowed on 10 October to range predictors,
+Status **under review**, tier 2 (raised from 3 on 14 October for scientific
+consequence; phase-2 checkpoint, Barry approved on 14 October 2026 (Claude chat: "1. Agreed to all.")). The open archive does not by itself
+demonstrate that forecasting is feasible. Narrowed on 10 October to range predictors,
 by agreement with Codex (76/1300); Q-026 owns trajectory and rate-partition
 predictors. Prior-work check the same day: partly occupied.
 
@@ -901,8 +916,12 @@ mechanisms are scarce.
 - **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-019 How much macroevolutionary turnover is climate-driven versus biotic?
-Status **under review**, tier 3. Prior-work check on 10 October: the headline
-answer is largely occupied.
+Status **parked** (14 October; phase-2 checkpoint, Barry approved on 14 October 2026 (Claude chat: "1. Agreed to all.")). The broad claim
+is occupied, and a larger hierarchical model does not create a distinct
+residual. **Reopen** for a specific mechanism or prediction whose
+contribution is separable from shared climate, diversity and sampling
+histories. Prior-work check on 10 October: the headline answer is largely
+occupied.
 
 - **Occupied.** Rineau et al. 2022 (10.1126/sciadv.add9620, abstract checked by
   Claude) analysed causal dependence in nine marine taxa across the
@@ -2247,7 +2266,11 @@ novelty is still unverified.
 
 Status **under review**, tier 2. Posed 10 October as a tier-1 variance
 partition; reformulated the same day after Codex's identification critique
-(76/1380).
+(76/1380). **Component from Q-006** (14 October; phase-2 checkpoint, approved
+by Barry). The next predictor contract must declare an observation model for
+detection correlated with hazard, and for collection and reference structure
+(the clustering found in [Q-006's PBDB check](../literature/2026-10-13-q006-e2-cmr-match.md)).
+It is a candidate check in the next tranche.
 
 - **Why the partition was dropped** (Codex, accepted). A partition into event,
   clade, trait and residual is not a unique biological decomposition:
@@ -2759,7 +2782,9 @@ entries had a bounded prior-work scan before posing; novelty is unverified.
 
 Status **under review**, tier 2. Posed 10 October as tier 1 (provisional).
 Moved down on 11 October after Codex's estimand critique (76/1404). A deeper
-check the same day sharpened it.
+check the same day sharpened it. **Component from Q-045** (14 October;
+phase-2 checkpoint, approved by Barry). Claim-specific checks against an
+archived extract belong here; Q-045 stays parked as a standalone question.
 
 - **Question.** About 85% of living species are terrestrial (Benton, Wilf &
   Sauquet 2021, 10.1111/nph.17822). Codex reports that the authors call their
