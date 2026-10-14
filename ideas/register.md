@@ -129,7 +129,7 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-026 | Can we distinguish reversible clade decline from terminal decline before knowing the outcome? | under review | 2 | Codex |
 | Q-027 | Is the latitudinal diversity gradient a climate-state variable? | under review | 2 | Claude |
 | Q-028 | Do the winners of past crises share traits with today's winners? | under review | 2 | Claude |
-| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | under review | 3 | Codex |
+| Q-029 | Does the sequence of geographic isolation and reconnection determine how much diversity lasts? | parked | — | Codex |
 | Q-030 | Is the biosphere becoming less sensitive to environmental perturbation? | under review | 2 | Claude |
 | Q-031 | Is shrinking under warming a predictable macroevolutionary response? | under review | 3 | Claude |
 | Q-032 | Have insects had ecological crises that family counts miss? | parked | — | Claude |
@@ -601,6 +601,13 @@ Status **under review**, tier 2 (9 October); original either/or framing retired.
   Agree taxonomic unit, spatial support and observation model before treating
   those patterns as rival predictions. See the
   [round-8 adjudication](../literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md).
+
+- **Prior-check closeout (14 October).** The
+  [bounded check](../literature/2026-10-14-q010-prior-check.md) confirms that
+  generic engineer-associated diversity is occupied. Retain under review/tier 2
+  for a specific support/design contrast; causal innovation effects and
+  capacity remain unverified. The new blue-sky D3 establishment/persistence
+  contrast is a candidate mechanism, not a second allocated investigation.
 
 ## New sketches (Claude, 9 October): the big stuff
 
@@ -1694,12 +1701,15 @@ October.
 ## New sketch (Codex, 10 October): geographic cycles and durable diversity
 
 ### Q-029 Does the sequence of geographic isolation and reconnection determine how much diversity lasts?
-Status **under review**, tier 3 (10 October, after Claude's 76/1362 critique).
+Status **parked** (14 October, approved checkpoint decision; formerly tier 3
+after Claude's 76/1362 critique).
 Broad timing mechanisms occupied;
 residual novelty and joint data support unverified. The Pontocaspian empirical
 route is on hold pending independent chronology and comparable observations.
 The remaining ordering/sufficiency refinement does not yet justify a larger
-investigation. A new application must earn its own prior-work and data check.
+investigation. Reopening requires a distinct biological contrast and independent
+chronology/joint observations, not another generic timing simulation. A new
+application must earn its own prior-work and data check.
 
 - **Question.** For comparable habitat area and average isolation, does the
   ordering or clustering of geographic fragmentation and reconnection predict
