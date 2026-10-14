@@ -96,7 +96,7 @@ parallel, with at most two tasks active.
 | ID | Question | Status | I | T | V | Owner |
 | --- | --- | --- | --- | --- | --- | --- |
 | B-001 | Do ecosystems reassemble in a repeatable order after crises? | **develop** | H | M | H | Claude |
-| B-002 | Can juvenile viability block otherwise useful adult innovations (ammonoids)? | **develop** | H | M (source access pending) | H | Codex |
+| B-002 | Can juvenile viability block otherwise useful adult innovations (ammonoids)? | **develop** | H | M (growth data in hand; transitions unknown) | H | Codex |
 | B-003 | Did prey defences track independent predator capability through the Phanerozoic? | **develop** | H | L–M | M–H | Claude |
 | B-004 | Did burrowers change the conditions under which deep-water benthos could persist? | **develop** | H | L–M | M–H | Codex |
 | B-005 | Do geography-and-climate-only and diversity-dependent spatial models predict different sampled diversity structure? | hold (queued) | H | M | M | Claude |
@@ -126,10 +126,14 @@ the corrections from cross-critique.
 Owner Claude. **Develop.** Source: Claude C5.
 - **Question.** After major Phanerozoic crises, do functional groups
   re-emerge in a shared order, beyond what recovery of richness implies?
-- **Residual.** No sampling-aware test of a shared order across three or
-  more events was found. The best end-Permian accounts conflict:
-  - Chen & Benton 2012 (10.1038/ngeo1475): bottom-up;
-  - Song et al. 2018 (10.1126/sciadv.aat5091): top-down.
+- **Residual.** This bounded search found no sampling-aware test of a
+  shared order across three or more events. The leading end-Permian
+  accounts (Chen & Benton 2012, 10.1038/ngeo1475; Song et al. 2018,
+  10.1126/sciadv.aat5091) measure different endpoints, so they are not a
+  test between assembly rules. The question is whether, for a defined
+  endpoint, a shared order recurs beyond survivor pools, sampling, clade
+  contingency and shared tolerances. The earlier "conflicting accounts"
+  wording is kept in the frozen source list.
 - **Corrections (Codex).**
   - Distinguish guild presence, guild richness, relative dominance, local
     trophic completeness and recovery of process; they need not recover in
@@ -145,28 +149,42 @@ Owner Claude. **Develop.** Source: Claude C5.
   - definitions of the survivor pool;
   - assembly rivals;
   - a consequential degree of repeatability fixed in advance.
-- **Current contract (14 October; [contract](../literature/2026-10-14-b001-reassembly-contract.md)).**
-  - The "conflict" is not a direct test. Chen & Benton assert trophic
-    rebuilding narratively; Song et al. measure subsampled richness by
-    motility class and *infer* top-down order (Nicholls et al. 2026 agree).
-  - **Primary endpoint:** guild re-establishment time, the first bin
-    regaining 50% of baseline subsampled richness, across at least three
-    events. Dominance and local trophic completeness are separate secondary
-    endpoints.
+- **Current contract (14 October, amended 15 October after Codex's merge
+  review; [contract](../literature/2026-10-14-b001-reassembly-contract.md)).**
+  - Chen & Benton assert trophic rebuilding narratively; Song et al.
+    measure subsampled richness by motility class and *infer* top-down
+    order. Nicholls et al. 2026 also treat them as different metrics.
+  - **Primary endpoint:** partial richness restoration time, in Myr to a
+    sustained return to 50% of baseline subsampled richness.
+    - Left, right (10 Myr) and interval censoring are explicit.
+    - The at-risk set is judged from pre-event data only.
+    - Scope: the end-Permian, end-Triassic and K–Pg events. Inference
+      concerns these events, not crises in general.
   - **Rivals:**
     - R0, sampling and survivor-pool null;
     - R1, clade contingency;
     - R2, bottom-up rule;
     - R3, top-down rule;
-    - R4, shared environmental tolerance.
-  - **Key discriminator:** are guilds refilled by *different clades* across
-    events? About 99% of PBDB ecospace values are inherited from higher
-    taxa, so a guild is largely a clade.
-  - **Test:** Kendall's W of concordance, with W ≥ 0.5 beyond the null as
-    support, and an interval below 0.2 as an informative negative.
-  - **Next gate:** a support audit joining Knope et al. 2015 trait coding
-    to PBDB in the recovery windows. Stop below about 6 adequately
-    supported guilds in each of 3 events.
+    - R4, shared tolerance.
+  - **Target:** repeatability ρ, the share of residual variance in log
+    delay due to guild identity, in an interval-censored model with event,
+    covariate (survivors, baseline, detection) and dominant-clade terms.
+    - Negligible ρ₀ = 0.1; rule strength ρ₁ = 0.5; 90% interval; a 2 × 2
+      outcome table.
+    - Kendall's W is descriptive only (its chance mean is 1/m).
+    - A signed contrast δ carries direction (R2 against R3).
+  - **Identification:**
+    - θ and clade are separated only by guilds refilled by different
+      clades;
+    - detection constant within a guild is confounded with θ, so it needs
+      an independent estimate.
+  - **Coding.** In PBDB, 96–99% of populated ecospace values are inherited
+    from higher taxa ([provenance](../data/b001-support/README.md)). That
+    is dependence, not "a guild is a clade".
+  - **Next gate:** a support audit, with support defined first, joining
+    Knope et al. 2015 coding to PBDB. Then a simulated discrimination check
+    on the actual support decides whether to proceed. Six guilds in three
+    events is a planning target only.
 - **Overlap.** Q-007 and Q-009 (linked). It also shares trait resources with
   B-010 and B-011, as different tests.
 
@@ -187,11 +205,22 @@ Owner Codex. **Develop.** Source: Codex D2.
   - Urdy et al. 2010 (10.1002/jez.b.21337): complete growth histories.
   - Gerber 2017 (10.1111/brv.12276): Raup-space geometry.
   - The specific residual remains unverified.
-- **Support gate.** The Walton–Korn workbook (Dryad dataset 7205, version
-  7242, file 34579; CC0; 215,182 bytes; provider MD5
-  0302022d2f622b73754cf0e66c54f2ac) returned HTTP 401/403.
-  - The number of eligible transitions is **unknown** ([support README](../data/ammonoid-growth-support/README.md)).
-  - A manual download (Barry) is the likely route.
+- **Support gate.** Access is resolved; transition support is not.
+  - Barry supplied the Walton–Korn workbook (Dryad 10.5061/dryad.c17p8,
+    file 34579; CC0). Codex verified its size, MD5 and SHA-256 against the
+    provider and audited its content ([support README](../data/ammonoid-growth-support/README.md)).
+  - What it holds:
+    - 179 series rows with 177 exact taxon labels;
+    - 2,643 row and whorl positions with all four conch variables;
+    - source conflicts preserved: duplicated Macrocephalites labels, 12
+      conflicting superfamily cells, a Famennian/Carboniferous
+      inconsistency and one zero.
+  - It encodes **no** evolutionary relations, specimen IDs or maturity
+    labels. The number of eligible historical transitions remains
+    **unknown**.
+  - It is a growth-data route, not a ready transition dataset. Having the
+    file does not establish transition support or physical-model readiness.
+  - Next: a small crosswalk of specimens, primary sources and phylogeny.
 - **Overlap.** Q-036 and Q-050 (development-adjacent, distinct targets);
   B-013 (shares morphology resources).
 
@@ -222,8 +251,11 @@ Owner Codex. **Develop (theory first).** Source: Codex D3.
   - Proxy circularity: engineers alter redox proxies.
   - Palaeozoic "deep sea" is mostly slope and outer shelf.
 - **Staging.**
-  1. A conditional theoretical result: hysteresis in a sediment-diagenesis
-     model with irrigation and colonisation, at realistic parameters.
+  1. A theoretical test, not a required positive: do independently
+     defended parameter ranges in a sediment-diagenesis model with
+     irrigation and colonisation permit a consequential asymmetry between
+     establishment and persistence? A sufficiently strong negative is an
+     acceptable product and would close the empirical route early.
   2. Then a section-support audit.
 - **Overlap.** Q-010 (shared contract on engineering versus external
   opportunity); B-006 (shared threshold template); B-009 (oxygen
