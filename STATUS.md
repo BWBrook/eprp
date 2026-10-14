@@ -38,8 +38,8 @@ environmental/age support remain unverified.
 Further Q-021 empirical source work is paused by agent agreement, with its
 question status and tier unchanged.
 
-After the checkpoint decisions (14 October), the index records **38 under review, 3 sketches and 9 parked entries**, once Codex applies the Q-029 park.
-Among the 41 unparked entries, once Q-029 is parked, 36 are tier 2 and 5 are
+After the checkpoint decisions (14 October), the index records **38 under review, 3 sketches and 9 parked entries**.
+Among the 41 unparked entries, 36 are tier 2 and 5 are
 tier 3. This follows the checkpoint decisions: Q-006 and Q-016 at tier 2, and
 Q-014, Q-019 and Q-029 parked. The tier definition
 now separates scientific consequence from tractability, prior-work occupancy
@@ -49,7 +49,9 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Whole-portfolio checkpoint | Both passes complete; Codex final review complete; Claude next | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) confirms 10 develop / 29 hold / 8 park / 3 component merges. Correct three new parks versus five retained; preserve Q-045's existing standalone parked status. Claude to amend its brief/reconciliation for the stated evidence limits and conditional queue, then present to Barry. No register status/tier changes or new scientific tasks |
+| Blue-sky ideation and cross-critique | Codex / Claude | Both lists frozen: Claude `2df617a`; Codex `868277c`. Codex's [eight candidates](ideas/2026-10-14-blue-sky-ideation-codex.md) and [cross-critique](ideas/2026-10-14-blue-sky-cross-critique-codex.md) are complete. Parent summary exposure, independent fresh scouts and D1's Q-012 overlap are recorded. Claude next: critique Codex, respond to proposed dispositions and agree merge ownership before B-series integration. No primary investigation or large compute |
+| Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
+| Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
 | Q-021 Taylor carbonate archive audit | Codex | Complete: [reply 9](ideas/2026-10-13-phase2-codex-reply-9.md), [sample/archive audit](data/q021-taylor-support/README.md). Preserved 83 rows (60 Taylor base IDs plus labelled repeats and 19 reused Cao rows). Descriptive carbonate recovery supported; temporal archive/local-water mapping unresolved. Taylor-alone stop accepted by Claude; further empirical source work paused. Reply 10 refines reopening conditions to the chosen contrast. No fit or adapter |
 | Reply 8: CMR scope and recovery-proxy routes | Codex | Complete: [reply 8](ideas/2026-10-13-phase2-codex-reply-8.md). CMR prior confirmed; its binary terminal confound does not automatically transfer to counts. Heterogeneity requires a defined population target. Q-021 route review provisionally retains Li source work; chert/refugia constrain inputs, Mg intensity needs a flux mapping. Next responder Claude; no fit or adapter |
@@ -590,7 +592,7 @@ exact): "Good. Decisions: 1. Agreed to all. 2. Approve. 3. Deep-time should get 
 1. **Register changes.**
    - Applied by Claude: Q-014 and Q-019 parked; Q-016 raised to tier 2;
      Q-006 deprioritised; components annotated in Q-011, Q-038 and Q-044.
-   - Q-029's park is Codex's to apply.
+   - Q-029's park applied by Codex on 14 October, in index and body.
 2. **The tranche is approved:** the bounded sweep of prior checks, with
    Q-010 (Codex) and Q-012 (Claude) first and at most two active.
 3. **Deep time gets more weight.** Prefer deep-time questions with possible
@@ -606,7 +608,11 @@ next phase of ideation whilst those final checks are done."
 - Each agent ideates independently and freezes its list before reading the
   other's; then one cross-critique and a merge (B-001 onwards).
 
-**Active:** Codex on the Q-010 prior check.
+**Q-010's prior check is done** (Codex,
+[note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
+diversity is occupied; a specific causal support/design contrast remains worth
+developing. Status/tier unchanged. Coordinate the next brief with blue-sky
+D3/D8 after the cross-critique; no modelling is allocated.
 - **Q-012's prior check is done** (Claude,
   [note](literature/2026-10-14-q012-prior-check.md)). The residual survives,
   and the disposition is develop. The next step is a support and
