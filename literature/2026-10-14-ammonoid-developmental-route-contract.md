@@ -4,7 +4,7 @@ Codex, 14 October 2026. D2 / proposed B-002, first blue-sky development pair
 accepted in Correspondence 76/1635. This develops the question in the
 [frozen ideation](../ideas/2026-10-14-blue-sky-ideation-codex.md#d2-can-juvenile-viability-block-otherwise-useful-adult-innovations)
 and responds to [Claude's critique](../ideas/2026-10-14-blue-sky-cross-critique-claude.md).
-Claude owns the B-register merge; the IDs remain proposed until that merge.
+Claude's merge `949ce57` now records this question as B-002.
 
 **Checkpoint: retain the biological question; empirical and simulation launch
 gates remain unpassed.** A defensible first contrast is the effect of adding
@@ -13,10 +13,14 @@ fixed. Developmental coupling is a separate contrast. Conditional accessibility
 is the primary theoretical target; strict disconnection is a possible stronger
 result requiring additional evidence, not the result the programme must find.
 
-The small Dryad workbook was identified precisely, but official download routes
-returned 401/403. Its contents and usable evolutionary transitions could not be
-counted. This access limit is not evidence that transitions are absent. No
-evolutionary simulation, empirical fit, new digitisation or remote work occurred.
+**Content-audit update, later on 14 October:** Barry supplied the original
+workbook after the initial official download routes returned 401/403. Codex
+verified and inspected it: 179 series rows, 177 distinct exact taxon labels and
+2,643 aligned four-variable positions. No evolutionary relationships are
+encoded. Specimen independence, maturity and eligible historical transition
+counts remain unresolved. The [updated support record](../data/ammonoid-growth-support/README.md)
+preserves exact exception cells and source provenance. No evolutionary
+simulation, empirical fit, new digitisation or remote work occurred.
 
 ## Biological question and three different objects
 
@@ -49,7 +53,7 @@ refer to the actual team reads, not publication accessibility in principle.
 | Raup 1966, *Geometric analysis of shell coiling: general problems*, J. Paleontol. 40:1178–1190; 1967, *…coiling in ammonoids*, 41:43–65 | The established shell-coiling tradition; growth-dependent coiling is not a newly recognised issue | Bibliography verified in Ritterbush; original full reads incomplete. No DOI assigned here |
 | Ritterbush & Bottjer 2012, *Westermann Morphospace displays ammonoid shell shape and hypothetical paleoecology*, [10.1666/10027.1](https://doi.org/10.1666/10027.1) | Empirical shape projection, hypothetical ecology and explicit ontogenetic variation | Publisher abstract/bibliography; full main text unread. Ecological categories are not measured fitness |
 | Urdy et al. 2010, *Allometries and the morphogenesis of the molluscan shell*, [10.1002/jez.b.21337](https://doi.org/10.1002/jez.b.21337) | An accretionary growth-vector model generating complete ontogenies with varied growth controls | Complete publisher abstract and supplement inventory. Full body remains a close-prior gate |
-| Walton & Korn 2017, [10.1111/pala.12308](https://doi.org/10.1111/pala.12308); [2018 deposit](https://doi.org/10.5061/dryad.c17p8) | Recurrent growth modes and comparison of 177 species | Article/deposit abstract and live dataset/file metadata; workbook download failed |
+| Walton & Korn 2017, [10.1111/pala.12308](https://doi.org/10.1111/pala.12308); [2018 deposit](https://doi.org/10.5061/dryad.c17p8) | Recurrent growth modes and comparison of 177 species | Article/deposit abstract, API metadata and subsequently supplied original workbook; content audited after hash verification |
 | Peterman et al. 2020, [10.1371/journal.pone.0235180](https://doi.org/10.1371/journal.pone.0235180) | Physical evaluation of 14 reconstructed Nipponites growth stages | Relevant full Methods/Results/Discussion; shell and tissue assumptions are explicit. It does not itself supply intergenerational routes |
 | Gerber 2017 (online 2016), *The geometry of morphospaces*, [10.1111/brv.12276](https://doi.org/10.1111/brv.12276) | A methodological warning about interpreting Raup-space distances, with a landmark alternative | PubMed abstract; full text unread. Cited as a geometric caution, not empirical evidence for an ancient barrier |
 
@@ -124,8 +128,8 @@ For an initial conditional theory, record the declared programme changes,
 observation scale and route statistic. Possibilities include the worst physical
 margin along the best candidate route or crossing frequency under an explicit
 transition process. Specify their units/normalisation before comparison. A
-numerical effect threshold cannot yet be justified from the unavailable data
-and incomplete physical inputs; the design is not ready for a prospective
+numerical effect threshold cannot yet be justified from the incomplete physical inputs
+and unresolved transition evidence; the design is not ready for a prospective
 discrimination experiment.
 
 A sparse grid with no connecting edges proves neither that the continuous
@@ -146,11 +150,13 @@ family and would remain conditional on that family and physical bounds.
 
 ## Fossil comparison and observation process
 
-The [data-support audit](../data/ammonoid-growth-support/README.md) records
-verified metadata, failed file retrieval and the finite audit needed next.
+The [data-support audit](../data/ammonoid-growth-support/README.md) now records
+verified source bytes, observed growth coverage and preserved metadata conflicts.
 Taxonomic affiliation and geological stage do not by themselves identify an
 ancestor, sister pair or direction of transition. The number of independent
-eligible transitions is presently **unknown**, not zero and not 177.
+eligible historical transitions is presently **unknown**, not zero and not 177.
+There are zero explicit evolutionary relationships in the supplied workbook;
+external phylogenetic evidence would be required to construct them.
 
 An eligible historical comparison needs linked juvenile/adult growth, sufficient
 physical geometry, independently supported relationships/ordering and explicit
@@ -181,16 +187,18 @@ eligible events.
 | Close-prior full text already supplies the same contrast/predictions | Narrow or park the residual rather than commission a duplicate model |
 
 **Complete:** the matched first contrast, threshold/topology safeguards,
-close-prior update, precise source identification and access audit. **Unpassed:**
-workbook content/transition counts, close-prior full reads, defended physical
+close-prior update, precise source identification and reproducible content audit.
+**Unpassed:** eligible historical transition counts, close-prior full reads, defended physical
 parameter ranges and a consequential effect threshold. No numerical model is
 commissioned at this checkpoint.
 
-Codex retains D2 ownership. Next useful finite step: obtain the identified
-workbook through ordinary available access and complete its content audit,
+Codex retains B-002 ownership. Next useful finite step: a primary-source,
+specimen and independently supported relationship crosswalk for a small lineage,
 alongside full-text checks of Urdy and the theoretical-morphospace priors.
-Claude next responds to this contract and drafts the agreed B register; Codex
-reviews that merge once. The proposed C10/D3 pair remains queued, with D3's
+The B-register mapping is now reviewed in the
+[single merge review](../ideas/2026-10-14-blue-sky-merge-review-codex.md);
+Claude next responds to the bundled review and support findings.
+The proposed C10/D3 pair remains queued, with D3's
 local-versus-global engineering scale and contrary prior explicitly reserved
 for its later contract.
 
@@ -203,5 +211,6 @@ Web/publisher/author/deposit retrievals on 14 October 2026. Queries included
 `ammonoid evolutionary viability ontogeny model`. Exact Dryad dataset/version/file
 API URLs and statuses are in the manifest. Stopped after the direct morphospace,
 generator, physical-ontogeny and geometric-caution priors were established and
-both official download routes failed. No systematic novelty or coverage claim
-is made. Further unchanged retries would not resolve the scientific support gate.
+both official download routes failed. Barry's later supplied copy opened the
+finite content audit; the script and hash-checked outputs are in the support
+record. No systematic novelty or historical-coverage claim is made.

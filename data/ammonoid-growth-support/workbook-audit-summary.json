@@ -1,0 +1,1308 @@
+{
+  "source": {
+    "path": "data/raw/ammonoid-growth-walton-korn-2018/Ontogenetic_Conch_Parameter_Data.xlsx",
+    "dataset_url": "https://doi.org/10.5061/dryad.c17p8",
+    "paper_url": "https://doi.org/10.1111/pala.12308",
+    "hashes_before": {
+      "bytes": 215182,
+      "sha256": "fbe2012f1d420ef7b292141ae0ed0ea8d046c4c15303663565dc72e0727ebe40",
+      "md5": "0302022d2f622b73754cf0e66c54f2ac"
+    },
+    "hashes_after": {
+      "bytes": 215182,
+      "sha256": "fbe2012f1d420ef7b292141ae0ed0ea8d046c4c15303663565dc72e0727ebe40",
+      "md5": "0302022d2f622b73754cf0e66c54f2ac"
+    },
+    "unchanged": true
+  },
+  "software": {
+    "python": "3.14.4",
+    "openpyxl": "3.1.5"
+  },
+  "interpretation_limits": [
+    "Rows are workbook series records, not established independent specimens.",
+    "Repeated labels remain separate rows; no deduplication or silent value correction.",
+    "Whorl indices are copied labels, not verified absolute age, maturity, embryonic stages or completeness.",
+    "Stage/Period columns describe geological assignments, not individual developmental stages.",
+    "Source strings are unresolved citations/material descriptions, not inferred DOI links.",
+    "No ancestry, sister relationship or evolutionary transition is inferred from chronology or taxonomy.",
+    "Numeric ratios above one are not automatically invalid: CWI has no imposed upper bound.",
+    "openpyxl does not evaluate formulas; formula and cached-value inventories are separate."
+  ],
+  "sheets": {
+    "Species": {
+      "rows_including_header": 180,
+      "data_rows": 179,
+      "columns": 8,
+      "headers": {
+        "A1": "Species",
+        "B1": "Family",
+        "C1": "Superfamily",
+        "D1": "Stage",
+        "E1": "Period",
+        "F1": "CWI Ontog",
+        "G1": "UWI Ontog",
+        "H1": "Source"
+      },
+      "cell_inventory_in_declared_rectangle": {
+        "text": 1440
+      },
+      "hidden": "visible",
+      "merged_ranges": [],
+      "exact_duplicate_full_rows": [
+        {
+          "key": [
+            "Macrocephalites macrocephalus",
+            "Macrocephalitidae",
+            "Stephanocerataceae",
+            "Callovian",
+            "Jurassic",
+            "ds",
+            "id",
+            "MfN material"
+          ],
+          "rows": [
+            177,
+            178
+          ]
+        },
+        {
+          "key": [
+            "Macrocephalites verus",
+            "Macrocephalitidae",
+            "Stephanocerataceae",
+            "Callovian",
+            "Jurassic",
+            "d",
+            "id",
+            "MfN material"
+          ],
+          "rows": [
+            179,
+            180
+          ]
+        }
+      ]
+    },
+    "dm": {
+      "rows_including_header": 180,
+      "data_rows": 179,
+      "columns": 31,
+      "headers": {
+        "A1": "Species",
+        "B1": "Family",
+        "C1": "Superfamily",
+        "D1": "Stage",
+        "E1": "Period",
+        "F1": "Diameter",
+        "G1": "Whorl 12",
+        "H1": "Whorl 11.5",
+        "I1": "Whorl 11",
+        "J1": "Whorl 10.5",
+        "K1": "Whorl 10",
+        "L1": "Whorl 9.5",
+        "M1": "Whorl 9",
+        "N1": "Whorl 8.5",
+        "O1": "Whorl 8",
+        "P1": "Whorl 7.5",
+        "Q1": "Whorl 7",
+        "R1": "Whorl 6.5",
+        "S1": "Whorl 6",
+        "T1": "Whorl 5.5",
+        "U1": "Whorl 5",
+        "V1": "Whorl 4.5",
+        "W1": "Whorl 4",
+        "X1": "Whorl 3.5",
+        "Y1": "Whorl 3",
+        "Z1": "Whorl 2.5",
+        "AA1": "Whorl 2",
+        "AB1": "Whorl 1.5",
+        "AC1": "Whorl 1",
+        "AD1": "Whorl 0.5",
+        "AE1": "Whorl 0"
+      },
+      "cell_inventory_in_declared_rectangle": {
+        "literal_NA": 1550,
+        "numeric": 2925,
+        "text": 1105
+      },
+      "hidden": "visible",
+      "merged_ranges": [],
+      "exact_duplicate_full_rows": [],
+      "measurement_inventory_G2_AE180": {
+        "counts": {
+          "literal_NA": 1550,
+          "numeric": 2925
+        },
+        "numeric_min": 0.245,
+        "numeric_max": 108.818,
+        "numeric_min_locators": [
+          "AE141"
+        ],
+        "numeric_max_locators": [
+          "H151"
+        ],
+        "zero_cells": [],
+        "negative_cells": [],
+        "screening_rule": ">0; units not labelled in headers"
+      }
+    },
+    "CWI": {
+      "rows_including_header": 180,
+      "data_rows": 179,
+      "columns": 31,
+      "headers": {
+        "A1": "Species",
+        "B1": "Family",
+        "C1": "Superfamily",
+        "D1": "Stage",
+        "E1": "Period",
+        "F1": "Conch Parameter",
+        "G1": "Whorl 12",
+        "H1": "Whorl 11.5",
+        "I1": "Whorl 11",
+        "J1": "Whorl 10.5",
+        "K1": "Whorl 10",
+        "L1": "Whorl 9.5",
+        "M1": "Whorl 9",
+        "N1": "Whorl 8.5",
+        "O1": "Whorl 8",
+        "P1": "Whorl 7.5",
+        "Q1": "Whorl 7",
+        "R1": "Whorl 6.5",
+        "S1": "Whorl 6",
+        "T1": "Whorl 5.5",
+        "U1": "Whorl 5",
+        "V1": "Whorl 4.5",
+        "W1": "Whorl 4",
+        "X1": "Whorl 3.5",
+        "Y1": "Whorl 3",
+        "Z1": "Whorl 2.5",
+        "AA1": "Whorl 2",
+        "AB1": "Whorl 1.5",
+        "AC1": "Whorl 1",
+        "AD1": "Whorl 0.5",
+        "AE1": "Whorl 0"
+      },
+      "cell_inventory_in_declared_rectangle": {
+        "literal_NA": 1649,
+        "numeric": 2826,
+        "text": 1105
+      },
+      "hidden": "visible",
+      "merged_ranges": [],
+      "exact_duplicate_full_rows": [],
+      "measurement_inventory_G2_AE180": {
+        "counts": {
+          "literal_NA": 1649,
+          "numeric": 2826
+        },
+        "numeric_min": 0.296726504751848,
+        "numeric_max": 1.6543478260869564,
+        "numeric_min_locators": [
+          "Y135"
+        ],
+        "numeric_max_locators": [
+          "AD118"
+        ],
+        "zero_cells": [],
+        "negative_cells": [],
+        "screening_rule": ">0; no upper bound imposed"
+      }
+    },
+    "UWI": {
+      "rows_including_header": 180,
+      "data_rows": 179,
+      "columns": 31,
+      "headers": {
+        "A1": "Species",
+        "B1": "Family",
+        "C1": "Superfamily",
+        "D1": "Stage",
+        "E1": "Period",
+        "F1": "Conch Parameter",
+        "G1": "Whorl 12",
+        "H1": "Whorl 11.5",
+        "I1": "Whorl 11",
+        "J1": "Whorl 10.5",
+        "K1": "Whorl 10",
+        "L1": "Whorl 9.5",
+        "M1": "Whorl 9",
+        "N1": "Whorl 8.5",
+        "O1": "Whorl 8",
+        "P1": "Whorl 7.5",
+        "Q1": "Whorl 7",
+        "R1": "Whorl 6.5",
+        "S1": "Whorl 6",
+        "T1": "Whorl 5.5",
+        "U1": "Whorl 5",
+        "V1": "Whorl 4.5",
+        "W1": "Whorl 4",
+        "X1": "Whorl 3.5",
+        "Y1": "Whorl 3",
+        "Z1": "Whorl 2.5",
+        "AA1": "Whorl 2",
+        "AB1": "Whorl 1.5",
+        "AC1": "Whorl 1",
+        "AD1": "Whorl 0.5",
+        "AE1": "Whorl 0"
+      },
+      "cell_inventory_in_declared_rectangle": {
+        "literal_NA": 1832,
+        "numeric": 2643,
+        "text": 1105
+      },
+      "hidden": "visible",
+      "merged_ranges": [],
+      "exact_duplicate_full_rows": [],
+      "measurement_inventory_G2_AE180": {
+        "counts": {
+          "literal_NA": 1832,
+          "numeric": 2643
+        },
+        "numeric_min": 0,
+        "numeric_max": 0.6794124504546514,
+        "numeric_min_locators": [
+          "P138"
+        ],
+        "numeric_max_locators": [
+          "W151"
+        ],
+        "zero_cells": [
+          "P138"
+        ],
+        "negative_cells": [],
+        "screening_rule": "0<=uw/dm<=1 as a screening interval, not source validation"
+      }
+    },
+    "WER": {
+      "rows_including_header": 180,
+      "data_rows": 179,
+      "columns": 31,
+      "headers": {
+        "A1": "Species",
+        "B1": "Family",
+        "C1": "Superfamily",
+        "D1": "Stage",
+        "E1": "Period",
+        "F1": "Conch Parameter",
+        "G1": "Whorl 12",
+        "H1": "Whorl 11.5",
+        "I1": "Whorl 11",
+        "J1": "Whorl 10.5",
+        "K1": "Whorl 10",
+        "L1": "Whorl 9.5",
+        "M1": "Whorl 9",
+        "N1": "Whorl 8.5",
+        "O1": "Whorl 8",
+        "P1": "Whorl 7.5",
+        "Q1": "Whorl 7",
+        "R1": "Whorl 6.5",
+        "S1": "Whorl 6",
+        "T1": "Whorl 5.5",
+        "U1": "Whorl 5",
+        "V1": "Whorl 4.5",
+        "W1": "Whorl 4",
+        "X1": "Whorl 3.5",
+        "Y1": "Whorl 3",
+        "Z1": "Whorl 2.5",
+        "AA1": "Whorl 2",
+        "AB1": "Whorl 1.5",
+        "AC1": "Whorl 1",
+        "AD1": "Whorl 0.5",
+        "AE1": "Whorl 0"
+      },
+      "cell_inventory_in_declared_rectangle": {
+        "literal_NA": 1780,
+        "numeric": 2695,
+        "text": 1105
+      },
+      "hidden": "visible",
+      "merged_ranges": [],
+      "exact_duplicate_full_rows": [],
+      "measurement_inventory_G2_AE180": {
+        "counts": {
+          "literal_NA": 1780,
+          "numeric": 2695
+        },
+        "numeric_min": 1.2814934589397602,
+        "numeric_max": 3.6749822452266776,
+        "numeric_min_locators": [
+          "O10"
+        ],
+        "numeric_max_locators": [
+          "AD2"
+        ],
+        "zero_cells": [],
+        "negative_cells": [],
+        "screening_rule": ">0; <=1 marked review-only"
+      }
+    }
+  },
+  "formulas": {
+    "count": 0,
+    "records": []
+  },
+  "excel_errors": {
+    "count": 0,
+    "records": []
+  },
+  "hyperlinks": [],
+  "comments": [],
+  "defined_names": [],
+  "external_link_count": 0,
+  "raw_xml_inventory": [
+    {
+      "xml_part": "xl/worksheets/sheet1.xml",
+      "stored_cell_elements": 1440,
+      "formula_elements": 0,
+      "value_elements": 1440
+    },
+    {
+      "xml_part": "xl/worksheets/sheet2.xml",
+      "stored_cell_elements": 5580,
+      "formula_elements": 0,
+      "value_elements": 5580
+    },
+    {
+      "xml_part": "xl/worksheets/sheet3.xml",
+      "stored_cell_elements": 5580,
+      "formula_elements": 0,
+      "value_elements": 5580
+    },
+    {
+      "xml_part": "xl/worksheets/sheet4.xml",
+      "stored_cell_elements": 5580,
+      "formula_elements": 0,
+      "value_elements": 5580
+    },
+    {
+      "xml_part": "xl/worksheets/sheet5.xml",
+      "stored_cell_elements": 5580,
+      "formula_elements": 0,
+      "value_elements": 5580
+    }
+  ],
+  "taxon_records": {
+    "row_count": 179,
+    "distinct_exact_species_labels": 177,
+    "duplicate_species_labels": [
+      {
+        "key": [
+          "Macrocephalites macrocephalus"
+        ],
+        "rows": [
+          177,
+          178
+        ]
+      },
+      {
+        "key": [
+          "Macrocephalites verus"
+        ],
+        "rows": [
+          179,
+          180
+        ]
+      }
+    ],
+    "distinct_families": 42,
+    "distinct_superfamilies": 23,
+    "period_row_counts": {
+      "Devonian": 30,
+      "Carboniferous": 115,
+      "Permian": 11,
+      "Triassic": 18,
+      "Jurassic": 5
+    },
+    "stage_row_counts": {
+      "Emsian": 1,
+      "Eifelian": 1,
+      "Givetian": 5,
+      "Famennian": 24,
+      "Tournaisian": 30,
+      "Viséan": 52,
+      "Serpukhovian": 17,
+      "Bashkirian": 12,
+      "Moscovian": 2,
+      "Kasimovian": 1,
+      "Sakmarian": 2,
+      "Artinskian": 4,
+      "Kungurian": 2,
+      "Wordian": 2,
+      "Capitanian": 1,
+      "Anisian": 5,
+      "Carnian": 6,
+      "Norian": 7,
+      "Bajocian": 1,
+      "Callovian": 4
+    },
+    "source_string_groups": [
+      {
+        "source_text": "MfN material",
+        "count": 131,
+        "Species_rows": [
+          2,
+          3,
+          4,
+          5,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19,
+          20,
+          21,
+          24,
+          25,
+          26,
+          27,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          112,
+          113,
+          115,
+          117,
+          118,
+          122,
+          123,
+          124,
+          134,
+          135,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Work et al. 2007",
+        "count": 1,
+        "Species_rows": [
+          6
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "House 1962",
+        "count": 1,
+        "Species_rows": [
+          7
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Bogoslovsky 1971",
+        "count": 2,
+        "Species_rows": [
+          17,
+          23
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Bogoslovsky 1981",
+        "count": 1,
+        "Species_rows": [
+          22
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Bogoslovsky 1969",
+        "count": 1,
+        "Species_rows": [
+          28
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Tilsley & Korn 2009",
+        "count": 1,
+        "Species_rows": [
+          35
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Manger & Saunders 1980",
+        "count": 2,
+        "Species_rows": [
+          69,
+          136
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Ruzhencev & Bogoslovskaya 1978",
+        "count": 2,
+        "Species_rows": [
+          70,
+          133
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Gordon 1965",
+        "count": 3,
+        "Species_rows": [
+          81,
+          142,
+          143
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Ruzhencev & Bogoslovskaya 1971",
+        "count": 3,
+        "Species_rows": [
+          94,
+          137,
+          138
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Korn 1997",
+        "count": 1,
+        "Species_rows": [
+          111
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Kusina 2005",
+        "count": 1,
+        "Species_rows": [
+          114
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Kant 1973",
+        "count": 13,
+        "Species_rows": [
+          116,
+          121,
+          125,
+          126,
+          127,
+          131,
+          139,
+          140,
+          141,
+          144,
+          145,
+          146,
+          157
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Titus 2000",
+        "count": 4,
+        "Species_rows": [
+          119,
+          120,
+          128,
+          129
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Gordon 1968",
+        "count": 1,
+        "Species_rows": [
+          130
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Korn 2007",
+        "count": 1,
+        "Species_rows": [
+          132
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Kutygin 2006",
+        "count": 2,
+        "Species_rows": [
+          147,
+          154
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Tharalson 1984",
+        "count": 1,
+        "Species_rows": [
+          148
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Ruzhencev 1956",
+        "count": 4,
+        "Species_rows": [
+          149,
+          150,
+          152,
+          153
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "MNH Paris",
+        "count": 1,
+        "Species_rows": [
+          151
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Nassichuk 1970",
+        "count": 1,
+        "Species_rows": [
+          155
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      },
+      {
+        "source_text": "Nassichuk 1977",
+        "count": 1,
+        "Species_rows": [
+          156
+        ],
+        "source_column": "H",
+        "dataset_url": "https://doi.org/10.5061/dryad.c17p8"
+      }
+    ],
+    "CWI_Ontog_codes": {
+      "id": 3,
+      "did": 116,
+      "sd": 4,
+      "d": 9,
+      "dsd": 30,
+      "ds": 6,
+      "di": 7,
+      "dis": 1,
+      "dsid": 1,
+      "sid": 1,
+      "disd": 1
+    },
+    "UWI_Ontog_codes": {
+      "i": 3,
+      "id": 56,
+      "idid": 5,
+      "ididi": 1,
+      "d": 4,
+      "isds": 1,
+      "ids": 41,
+      "idi": 39,
+      "isd": 5,
+      "is": 1,
+      "sid": 1,
+      "did": 3,
+      "idis": 1,
+      "sis": 1,
+      "di": 4,
+      "idsi": 2,
+      "polyphasic": 1,
+      "idsd": 2,
+      "sdi": 3,
+      "isid": 1,
+      "sds": 2,
+      "dsdi": 1,
+      "ds": 1
+    },
+    "code_interpretation": "Exact source codes preserved; no legend or molecular meaning inferred.",
+    "stage_labels_assigned_multiple_periods": [
+      {
+        "stage_label": "Famennian",
+        "periods_and_Species_rows": {
+          "Devonian": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "Carboniferous": [
+            32
+          ]
+        },
+        "locators": [
+          "Species!D9:E9",
+          "Species!D10:E10",
+          "Species!D11:E11",
+          "Species!D12:E12",
+          "Species!D13:E13",
+          "Species!D14:E14",
+          "Species!D15:E15",
+          "Species!D16:E16",
+          "Species!D17:E17",
+          "Species!D18:E18",
+          "Species!D19:E19",
+          "Species!D20:E20",
+          "Species!D21:E21",
+          "Species!D22:E22",
+          "Species!D23:E23",
+          "Species!D24:E24",
+          "Species!D25:E25",
+          "Species!D26:E26",
+          "Species!D27:E27",
+          "Species!D28:E28",
+          "Species!D29:E29",
+          "Species!D30:E30",
+          "Species!D31:E31",
+          "Species!D32:E32"
+        ],
+        "interpretation": "Observed inconsistent period assignment for a repeated stage label; no source value corrected."
+      }
+    ]
+  },
+  "alignment_to_Species": {
+    "dm": {
+      "metadata_columns_compared": "A:E",
+      "exact_label_sequence_matches": true,
+      "metadata_cell_mismatches": [
+        {
+          "locator": "dm!C111",
+          "Species_locator": "Species!C111",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "dm!C112",
+          "Species_locator": "Species!C112",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "dm!C113",
+          "Species_locator": "Species!C113",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        }
+      ],
+      "parameter_codes_F": {
+        "dm": 179
+      }
+    },
+    "CWI": {
+      "metadata_columns_compared": "A:E",
+      "exact_label_sequence_matches": true,
+      "metadata_cell_mismatches": [
+        {
+          "locator": "CWI!C111",
+          "Species_locator": "Species!C111",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "CWI!C112",
+          "Species_locator": "Species!C112",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "CWI!C113",
+          "Species_locator": "Species!C113",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        }
+      ],
+      "parameter_codes_F": {
+        "ww/dm": 179
+      }
+    },
+    "UWI": {
+      "metadata_columns_compared": "A:E",
+      "exact_label_sequence_matches": true,
+      "metadata_cell_mismatches": [
+        {
+          "locator": "UWI!C111",
+          "Species_locator": "Species!C111",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "UWI!C112",
+          "Species_locator": "Species!C112",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "UWI!C113",
+          "Species_locator": "Species!C113",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        }
+      ],
+      "parameter_codes_F": {
+        "uw/dm": 179
+      }
+    },
+    "WER": {
+      "metadata_columns_compared": "A:E",
+      "exact_label_sequence_matches": true,
+      "metadata_cell_mismatches": [
+        {
+          "locator": "WER!C111",
+          "Species_locator": "Species!C111",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "WER!C112",
+          "Species_locator": "Species!C112",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        },
+        {
+          "locator": "WER!C113",
+          "Species_locator": "Species!C113",
+          "value": "Pericyclaceae",
+          "Species_value": "Goniatitaceae"
+        }
+      ],
+      "parameter_codes_F": {
+        "WER": 179
+      }
+    }
+  },
+  "measurement_pairing": {
+    "same_whorl_all_four_numeric_cell_positions": 2643,
+    "rows_with_any_all_four_numeric_position": 179,
+    "per_row_all_four_numeric_n_distribution": {
+      "10": 3,
+      "11": 7,
+      "12": 25,
+      "13": 28,
+      "14": 35,
+      "15": 22,
+      "16": 18,
+      "17": 14,
+      "18": 10,
+      "19": 4,
+      "20": 8,
+      "21": 1,
+      "22": 3,
+      "23": 1
+    },
+    "diameter_vs_metric_numeric_mask_disagreements": {
+      "CWI": {
+        "count": 99,
+        "metric_present_diameter_absent": 0,
+        "first_10_exact_locators": [
+          {
+            "metric_locator": "CWI!AE3",
+            "diameter_locator": "dm!AE3",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE4",
+            "diameter_locator": "dm!AE4",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE5",
+            "diameter_locator": "dm!AE5",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE6",
+            "diameter_locator": "dm!AE6",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE7",
+            "diameter_locator": "dm!AE7",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE9",
+            "diameter_locator": "dm!AE9",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE10",
+            "diameter_locator": "dm!AE10",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE11",
+            "diameter_locator": "dm!AE11",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE12",
+            "diameter_locator": "dm!AE12",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "CWI!AE13",
+            "diameter_locator": "dm!AE13",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          }
+        ]
+      },
+      "UWI": {
+        "count": 282,
+        "metric_present_diameter_absent": 0,
+        "first_10_exact_locators": [
+          {
+            "metric_locator": "UWI!AD2",
+            "diameter_locator": "dm!AD2",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AE2",
+            "diameter_locator": "dm!AE2",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AD3",
+            "diameter_locator": "dm!AD3",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AE3",
+            "diameter_locator": "dm!AE3",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AD4",
+            "diameter_locator": "dm!AD4",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AE4",
+            "diameter_locator": "dm!AE4",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AD5",
+            "diameter_locator": "dm!AD5",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AE5",
+            "diameter_locator": "dm!AE5",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AD6",
+            "diameter_locator": "dm!AD6",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "UWI!AE6",
+            "diameter_locator": "dm!AE6",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          }
+        ]
+      },
+      "WER": {
+        "count": 230,
+        "metric_present_diameter_absent": 0,
+        "first_10_exact_locators": [
+          {
+            "metric_locator": "WER!AE2",
+            "diameter_locator": "dm!AE2",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE3",
+            "diameter_locator": "dm!AE3",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE4",
+            "diameter_locator": "dm!AE4",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE5",
+            "diameter_locator": "dm!AE5",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE6",
+            "diameter_locator": "dm!AE6",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE7",
+            "diameter_locator": "dm!AE7",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AD8",
+            "diameter_locator": "dm!AD8",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE9",
+            "diameter_locator": "dm!AE9",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AE10",
+            "diameter_locator": "dm!AE10",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          },
+          {
+            "metric_locator": "WER!AD11",
+            "diameter_locator": "dm!AD11",
+            "diameter_numeric": true,
+            "metric_numeric": false
+          }
+        ]
+      }
+    }
+  },
+  "repeated_combined_numeric_and_NA_profiles": [],
+  "series_structure": {
+    "measurement_rows_per_sheet": 179,
+    "measurement_columns": "G:AE",
+    "whorl_headers": [
+      "Whorl 12",
+      "Whorl 11.5",
+      "Whorl 11",
+      "Whorl 10.5",
+      "Whorl 10",
+      "Whorl 9.5",
+      "Whorl 9",
+      "Whorl 8.5",
+      "Whorl 8",
+      "Whorl 7.5",
+      "Whorl 7",
+      "Whorl 6.5",
+      "Whorl 6",
+      "Whorl 5.5",
+      "Whorl 5",
+      "Whorl 4.5",
+      "Whorl 4",
+      "Whorl 3.5",
+      "Whorl 3",
+      "Whorl 2.5",
+      "Whorl 2",
+      "Whorl 1.5",
+      "Whorl 1",
+      "Whorl 0.5",
+      "Whorl 0"
+    ],
+    "specimen_id_field": null,
+    "series_identifier": "sheet row number only; individual specimen identity is not explicit",
+    "measurement_unit_field": null,
+    "collection_or_source_field": "Species!H2:H180",
+    "duplicate_label_interpretation": "Repeated taxon labels do not establish repeated specimens or erroneous duplicates; preserve both records."
+  },
+  "explicit_label_scans": {
+    "maturity_or_early_life": {
+      "pattern": "\\b(adult|juvenile|mature|maturity|embryo|embryonic|hatchling|hatching|larval|larva|nepionic|ammonitella|protoconch)\\b",
+      "hits": [],
+      "scope": "all worksheet cell text; comments separately inventoried; not a search of the cited literature"
+    },
+    "specimen_or_individual": {
+      "pattern": "\\b(specimen|individual|voucher|catalogue|catalog)\\b",
+      "hits": [],
+      "scope": "all worksheet cell text; comments separately inventoried; not a search of the cited literature"
+    },
+    "phylogeny_or_relationship": {
+      "pattern": "\\b(phylogeny|phylogenetic|ancestor|ancestral|descendant|sister|transition|branch|node|newick|nexus)\\b",
+      "hits": [],
+      "scope": "all worksheet cell text; comments separately inventoried; not a search of the cited literature"
+    }
+  },
+  "explicit_maturity_coverage": "Not computable without life-stage labels; no inference from diameter or Whorl 0.",
+  "explicit_evolutionary_transition_count": 0,
+  "evolutionary_transition_limit": "No relationship table or tree is among the five observed sheets; zero explicit transitions is not zero historical transitions.",
+  "issues": {
+    "counts": {
+      "zero_recorded_not_automatically_invalid": 1
+    },
+    "records": [
+      {
+        "kind": "zero_recorded_not_automatically_invalid",
+        "sheet": "UWI",
+        "cell": "P138",
+        "value": 0,
+        "taxon_label": "Schartymites methorius"
+      }
+    ]
+  }
+}

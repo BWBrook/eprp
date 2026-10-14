@@ -37,10 +37,25 @@
       }
     ]
   },
-  "content_downloaded": false,
-  "content_checksum_verified": false,
-  "workbook_schema_inspected": false,
+  "content_downloaded": true,
+  "content_checksum_verified": true,
+  "workbook_schema_inspected": true,
   "usable_growth_series_count": null,
   "independent_evolutionary_transition_count": null,
-  "counts_note": "Null means unverified, never zero. The 177 species is a published study count, not a count audited from this workbook."
+  "counts_note": "179 source records and 177 exact taxon labels are observed. Scientific suitability, specimen independence and eligible evolutionary transitions remain unverified; null never means zero. Zero explicit transitions refers only to records encoded in this workbook. The retrieval log preserves the earlier failed automated requests; successful access followed Barry supplying the original file.",
+  "content_available_locally": true,
+  "content_delivery": {
+    "provided_by": "Barry",
+    "received_via": "Claude, Correspondence 76/1639, 14 October 2026",
+    "method": "Manual download, copied unchanged to the existing ignored source path",
+    "verified_hashes": {
+      "bytes": 215182,
+      "sha256": "fbe2012f1d420ef7b292141ae0ed0ea8d046c4c15303663565dc72e0727ebe40",
+      "md5": "0302022d2f622b73754cf0e66c54f2ac"
+    }
+  },
+  "observed_series_rows": 179,
+  "distinct_exact_taxon_labels": 177,
+  "aligned_four_measurement_positions": 2643,
+  "explicit_encoded_evolutionary_transition_count": 0
 }
