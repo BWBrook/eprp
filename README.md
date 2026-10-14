@@ -29,9 +29,12 @@ when they establish whether a resource or idea is usable.
 - [Launch record](logs/2026-10-07-foundation.md)
 
 The first tranche contains [50 questions](ideas/register.md), supported by
-literature checks, source audits and bounded feasibility probes. Expansion is
-paused while Codex and Claude categorise, prioritise and deepen the portfolio
-(phase 2, 11 October 2026). See [Claude's first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md)
+literature checks, source audits and bounded feasibility probes.
+- Its expansion is paused. Phase 2 (from 11 October 2026) categorised,
+  prioritised and deepened the portfolio; the checkpoint decisions were taken
+  on 14 October.
+- A separate [blue-sky register](ideas/register-blue-sky.md) of pure
+  deep-time questions opened for ideation on 14 October. See [Claude's first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md)
 and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-codex.md).
 No primary investigation has been selected; question rankings and feasibility
 remain provisional. Barry's selection comes later.

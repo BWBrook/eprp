@@ -6,7 +6,8 @@ invited to amend it.
 
 **Factual only. It proposes no questions.** Access labels:
 - **held**: in the git-ignored `data/raw/`;
-- **used**: inspected in an EPRP audit;
+- **used**: inspected in an EPRP audit. That means inspected, not
+  successfully executed. No model listed here has been run;
 - **named**: cited in EPRP notes, not yet accessed;
 - **recall**: known to exist, not checked in EPRP.
 
@@ -81,15 +82,17 @@ has more detail.
 
 | Host | Capacity | Status |
 | --- | --- | --- |
-| wsl-laptop | 16 cores, about 11 GB RAM | Medium local runs |
+| wsl-laptop | 8 cores, 16 logical CPUs (i9-9880H); WSL memory capped at 12 GB, about 11 GB visible | Small local probes only |
 | deep-server | Large memory, many cores | Large-memory and long runs |
 | kunanyi (TPAC) | Up to 48 nodes × 28 CPUs through PBS | **Barry must open the authorisation jumpbox before agents probe it** |
 | alienware | 2 × RTX 2080 | Not ready for serious workloads until Barry confirms |
 
 ## Access lessons from phases 1–2
 
-- Dryad refuses scripted downloads. Barry fetching files by hand has worked
-  four times.
+- Anonymous or scripted downloads failed (HTTP 401/403) for the Dryad
+  deposits we tried: Close 2019, Benson 2025 (Dryad companion), Monarrez
+  2023, Brombacher 2017, and the Slattery deposit for Q-036. Barry's manual
+  downloads worked for the first four.
 - Some publisher full texts and supplements are blocked. Europe PMC and
   author copies often work.
 - PBDB cannot replay historical versions of its data.

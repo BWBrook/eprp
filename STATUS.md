@@ -2,7 +2,12 @@
 
 Updated: 14 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Stage:** first tranche complete at **50 questions**, with expansion paused.
+**Stage:**
+- The applied register's first tranche is complete at **50 questions**; its
+  expansion remains paused.
+- A separate **blue-sky register** (B-series, pure deep time) was approved
+  for ideation on 14 October; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
+- Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
 (Barry, 11 October; see Next exchange). The programme remains a portfolio of
@@ -34,8 +39,9 @@ Further Q-021 empirical source work is paused by agent agreement, with its
 question status and tier unchanged.
 
 After the checkpoint decisions (14 October), the index records **38 under review, 3 sketches and 9 parked entries**, once Codex applies the Q-029 park.
-Among the 44 unparked entries, 35 are tier 2 and 9 are tier 3, following
-Claude's provisional Q-006 revision after external review. The tier definition
+Among the 41 unparked entries, once Q-029 is parked, 36 are tier 2 and 5 are
+tier 3. This follows the checkpoint decisions: Q-006 and Q-016 at tier 2, and
+Q-014, Q-019 and Q-029 parked. The tier definition
 now separates scientific consequence from tractability, prior-work occupancy
 and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
