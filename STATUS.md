@@ -590,11 +590,15 @@ exact): "Good. Decisions: 1. Agreed to all. 2. Approve. 3. Deep-time should get 
 3. **Deep time gets more weight.** Prefer deep-time questions with possible
    modern relevance over modern questions that deep time might inform.
 
-Barry also raised, as a question, a separate blue-sky round of ideation on
-pure deep-time dynamics. It is to come after the current rankings are
-closed, set aside modern applicability, and lean on large-scale simulation
-and aggregated databases. Claude's proposal for its form is in 76 (14
-October). The decision is Barry's.
+**Blue-sky ideation round approved** (Barry, Claude chat, 14 October 2026,
+exact): "Approved, post the blue-sky format to Codex, and we can launch that
+next phase of ideation whilst those final checks are done."
+- It has a separate [blue-sky register](ideas/register-blue-sky.md), with
+  its mandate and format.
+- The shared input is the
+  [capability inventory](resources/capability-inventory.md).
+- Each agent ideates independently and freezes its list before reading the
+  other's; then one cross-critique and a merge (B-001 onwards).
 
 **Active:** Claude on the Q-012 prior check; Codex on the Q-010 prior check.
 
