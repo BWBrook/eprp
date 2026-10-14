@@ -1,0 +1,46 @@
+{
+  "dataset_doi": "10.5061/dryad.c17p8",
+  "article_doi": "10.1111/pala.12308",
+  "dataset_id": 7205,
+  "version_id": 7242,
+  "version_number": 1,
+  "publication_date": "2018-05-16",
+  "metadata_last_modified_date": "2020-06-24",
+  "license": "https://spdx.org/licenses/CC0-1.0.html",
+  "dataset_metadata_url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.c17p8",
+  "files_metadata_url": "https://datadryad.org/api/v2/versions/7242/files",
+  "advertised_file": {
+    "path": "Ontogenetic_Conch_Parameter_Data.xlsx",
+    "size": 215182,
+    "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "digest": "0302022d2f622b73754cf0e66c54f2ac",
+    "digestType": "md5",
+    "description": "Ammonoid species list with taxonomic affiliations, geological stage information and source of the ontogenetic data. Ontogenetic series of conch parameters, conch width index (CWI), umbilical width index (UWI) and whorl expansion rate (WER) from studied ammonoid cross sections."
+  },
+  "file_id": 34579,
+  "retrieval": {
+    "retrieved_utc": "2026-10-14T05:04:55.971272+00:00",
+    "attempts": [
+      {
+        "requested_url": "https://datadryad.org/api/v2/files/34579/download",
+        "final_url": "https://datadryad.org/api/v2/files/34579/download",
+        "status": 401,
+        "content_type": "application/json; charset=utf-8",
+        "bytes": 56
+      },
+      {
+        "requested_url": "https://datadryad.org/downloads/file_stream/34579",
+        "final_url": "https://datadryad.org/downloads/file_stream/34579",
+        "status": 403,
+        "content_type": "text/html",
+        "bytes": 118
+      }
+    ]
+  },
+  "content_downloaded": false,
+  "content_checksum_verified": false,
+  "workbook_schema_inspected": false,
+  "usable_growth_series_count": null,
+  "independent_evolutionary_transition_count": null,
+  "counts_note": "Null means unverified, never zero. The 177 species is a published study count, not a count audited from this workbook."
+}
