@@ -145,6 +145,28 @@ Owner Claude. **Develop.** Source: Claude C5.
   - definitions of the survivor pool;
   - assembly rivals;
   - a consequential degree of repeatability fixed in advance.
+- **Current contract (14 October; [contract](../literature/2026-10-14-b001-reassembly-contract.md)).**
+  - The "conflict" is not a direct test. Chen & Benton assert trophic
+    rebuilding narratively; Song et al. measure subsampled richness by
+    motility class and *infer* top-down order (Nicholls et al. 2026 agree).
+  - **Primary endpoint:** guild re-establishment time, the first bin
+    regaining 50% of baseline subsampled richness, across at least three
+    events. Dominance and local trophic completeness are separate secondary
+    endpoints.
+  - **Rivals:**
+    - R0, sampling and survivor-pool null;
+    - R1, clade contingency;
+    - R2, bottom-up rule;
+    - R3, top-down rule;
+    - R4, shared environmental tolerance.
+  - **Key discriminator:** are guilds refilled by *different clades* across
+    events? About 99% of PBDB ecospace values are inherited from higher
+    taxa, so a guild is largely a clade.
+  - **Test:** Kendall's W of concordance, with W ≥ 0.5 beyond the null as
+    support, and an interval below 0.2 as an informative negative.
+  - **Next gate:** a support audit joining Knope et al. 2015 trait coding
+    to PBDB in the recovery windows. Stop below about 6 adequately
+    supported guilds in each of 3 events.
 - **Overlap.** Q-007 and Q-009 (linked). It also shares trait resources with
   B-010 and B-011, as different tests.
 
