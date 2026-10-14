@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 13 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 14 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:** first tranche complete at **50 questions**, with expansion paused.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
@@ -43,7 +43,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Whole-portfolio checkpoint | Codex pass complete; Claude invited to an independent pass | [All-50 assessment](ideas/2026-10-13-phase2-checkpoint-codex.md) and [reply 11](ideas/2026-10-13-phase2-codex-reply-11.md) prepared. Claude should freeze its own pass before opening either new file; scores/priorities are intentionally omitted from STATUS and the board handoff. No register status/tier changes or new deep dives. Reconcile once both passes exist |
+| Whole-portfolio checkpoint | Both passes complete; Codex final review complete; Claude next | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) confirms 10 develop / 29 hold / 8 park / 3 component merges. Correct three new parks versus five retained; preserve Q-045's existing standalone parked status. Claude to amend its brief/reconciliation for the stated evidence limits and conditional queue, then present to Barry. No register status/tier changes or new scientific tasks |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
 | Q-021 Taylor carbonate archive audit | Codex | Complete: [reply 9](ideas/2026-10-13-phase2-codex-reply-9.md), [sample/archive audit](data/q021-taylor-support/README.md). Preserved 83 rows (60 Taylor base IDs plus labelled repeats and 19 reused Cao rows). Descriptive carbonate recovery supported; temporal archive/local-water mapping unresolved. Taylor-alone stop accepted by Claude; further empirical source work paused. Reply 10 refines reopening conditions to the chosen contrast. No fit or adapter |
 | Reply 8: CMR scope and recovery-proxy routes | Codex | Complete: [reply 8](ideas/2026-10-13-phase2-codex-reply-8.md). CMR prior confirmed; its binary terminal confound does not automatically transfer to counts. Heterogeneity requires a defined population target. Q-021 route review provisionally retains Li source work; chert/refugia constrain inputs, Mg intensity needs a flux mapping. Next responder Claude; no fit or adapter |
@@ -552,7 +552,7 @@ Claude proposes:
   numerical crosswalk deferred. Sieve selection and the restricted bivariate
   phenotypic target are recorded.
 
-**Checkpoint: both passes frozen and reconciled (Claude, 13 October).**
+**Checkpoint: both passes frozen; draft reconciliation prepared (Claude, 13 October).**
 - [Claude's pass](ideas/2026-10-13-phase2-checkpoint-claude.md) (`81a7347`)
   and [Codex's pass](ideas/2026-10-13-phase2-checkpoint-codex.md)
   (`561862d`) were made independently.
@@ -560,14 +560,28 @@ Claude proposes:
   agreement on 37 of 50 entries; most of the 13 disagreements are labels
   over the same first step.
 - [Draft brief for Barry](ideas/2026-10-13-phase2-checkpoint-brief.md):
-  10 develop, 29 hold, 8 parked (5 new), 3 component merges, none ready for
-  handoff.
+  10 develop, 29 hold, 8 park-category entries, 3 component merges, none ready
+  for handoff. New versus retained parks are corrected in the final check below.
   - Candidates: Q-030, Q-038, Q-025, Q-010, Q-012; then Q-004 and Q-016.
   - Proposed Wave 1: a sweep of target-matched prior checks.
 
-**Next scientific responder: Codex**, when Barry prompts: the single
-reconciliation reply (confirm or amend the resolutions and the brief).
-Barry then decides.
+**Codex's final check (14 October)**
+([review](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md)) confirms
+the proposed disposition tally, with bounded corrections before presentation:
+
+- The eight park-category entries comprise **three new parks** (Q-014,
+  Q-019, Q-029) and five retained parks; Q-045 remains parked as a standalone
+  question while its component is counted under merges.
+- Retain Q-030's unverified novelty, Q-021's target-dependent archive limits,
+  Q-038's deposited-design scope, Q-050's unresolved joint-support gate and
+  Q-022's unrun power calibration.
+- Start the proposed bounded queue with Q-010 and Q-012; later sequencing
+  remains conditional. The modern–deep-time baseline theme is an optional
+  grouping, not a jointly accepted programme focus.
+
+**Next responder: Claude**, to incorporate the final check in its brief and
+reconciliation and present the decisions to Barry. No new allocation or
+register status/tier change was made by this review. Barry then decides.
 
 Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
 no further proof or mixture analysis is allocated this round.
