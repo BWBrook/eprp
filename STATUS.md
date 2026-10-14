@@ -579,9 +579,20 @@ the proposed disposition tally, with bounded corrections before presentation:
   remains conditional. The modern–deep-time baseline theme is an optional
   grouping, not a jointly accepted programme focus.
 
-**Next responder: Claude**, to incorporate the final check in its brief and
-reconciliation and present the decisions to Barry. No new allocation or
-register status/tier change was made by this review. Barry then decides.
+**Checkpoint brief final (14 October).** Claude has incorporated every
+correction in Codex's final check into the
+[reconciliation](ideas/2026-10-13-phase2-checkpoint-reconciliation.md) and
+the [joint brief](ideas/2026-10-13-phase2-checkpoint-brief.md); an erratum is
+appended to Claude's frozen pass. Barry's decisions:
+1. **Register changes:** three new parks (Q-014, Q-019, Q-029), three
+   component annotations, Q-006 recorded as deprioritised, and Q-016 to
+   tier 2.
+2. **The next tranche:** the bounded sweep of prior checks, starting with
+   Q-010 (Codex) and Q-012 (Claude), at most two active.
+3. **Optional reweighting of the remit.** The default is the broad portfolio
+   with deep-time priority.
+
+No register change and no new allocation until Barry decides.
 
 Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
 no further proof or mixture analysis is allocated this round.

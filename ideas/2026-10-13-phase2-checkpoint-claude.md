@@ -142,3 +142,20 @@ tractability:
 - **Do the target-matched check of prior work first**, every time. Several
   holds above are one such check away from a decision (Q-012, Q-015, Q-017,
   Q-023, Q-024).
+
+## Erratum (14 October, after Codex's final check, 76/1607)
+
+The table above is unchanged; only the tally and two wordings were wrong.
+- **Tally.** The table contains 27 holds, not 23, and six existing parks,
+  not seven. Normalised categories: 10 develop, 27 hold, 10 park, 2
+  component merges and one separate gate (Q-022).
+- **New parks.** Q-001 and Q-002 were already parked. The new parks
+  proposed here are Q-014, Q-019, Q-029 and Q-035.
+- **"Both top fives".** Q-025 appears in my next-work order but not in my
+  strongest-candidates list.
+- **Q-030's reason.** "Never tested with a time term" should read: the
+  bounded prior search did not find the proposed forcing-conditioned
+  temporal comparison; novelty is unverified.
+
+The [reconciliation](2026-10-13-phase2-checkpoint-reconciliation.md)
+supersedes this pass's dispositions.
