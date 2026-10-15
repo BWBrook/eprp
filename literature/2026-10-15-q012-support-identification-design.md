@@ -103,8 +103,9 @@ model was fitted, and no calibration was run.
   predicted by its parent's.
 - **Effect size:** daughters of parents at +σ and −σ differ in hazard by a
   factor of exp(2η).
-- **η is identified even when σ = 0, where ρ is not:** then η = 0
-  whatever ρ is. ρ is reported only with σ.
+- **η is well defined at σ = 0, where ρ is not:** then η = 0 whatever ρ
+  is. Being well defined does not make it identified; section 3 sets out
+  what identifies it. ρ is reported only with σ.
 - **Working thresholds:**
   - negligible: η₀ = 0.05, a hazard ratio of at most 1.105;
   - consequential: η₁ = 0.20, a hazard ratio of at least 1.49.
@@ -129,16 +130,22 @@ model was fitted, and no calibration was run.
 | R1. Frailty, not inherited | σ > 0, ρ = 0 | The same marginal survival curve as R0; no dependence among relatives | Identified against R2 |
 | R2. Inherited frailty | σ > 0, ρ > 0 | η > 0 | — |
 | R3a. Exposure by time and ecogroup | h₀(t, ecogroup) | Absorbed by the baseline | Identified (weak lever at lineage level) |
-| R3b. Persistent exposure tied to clades | An environmental field with tree-structured covariance, for example a persistent province | **The same survival likelihood as R2** (Codex's counterexample). It also produces a positive parent-age signature | **Not identified.** η then measures *residual phylogenetic dependence*, not inherited intrinsic susceptibility |
+| R3b. Persistent exposure tied to clades, **unmeasured** | An environmental field with tree-structured covariance, for example a persistent province, *left after* adjustment for measured exposure | **The same survival likelihood as R2** (Codex's counterexample). It also produces a positive parent-age signature | **Not identified, with or without Triton.** Two independent Gaussian fields with the same tree correlation K give covariance (σ_A² + σ_U²)K, so no data on survival alone can split them |
 | R4. Budding depends on frailty | Budding rate λ_i = λ₀ z_i^κ | An association between budding count and duration, within the joint likelihood | Identified, if budding is modelled (section 4) |
 
-**What could break the R2/R3b equivalence:** observed exposure histories
-for lineages. These are Triton's palaeolatitude and ocean-basin
-occurrences through time for each lineage's member morphospecies. Under
-R3b, dependence among relatives follows their *shared observed exposure*.
-Under R2, it persists among relatives whose observed exposures differ.
-Without that data, the claim is restricted to residual phylogenetic
-dependence.
+**What Triton can and cannot do (corrected after Codex's closure check).**
+- Triton's palaeolatitude and ocean-basin histories can **adjust for
+  measured exposure**: dependence among relatives that follows their shared
+  observed geography is removed.
+- They cannot remove **unmeasured** exposure that shares the tree's
+  correlation structure (R3b). After adjustment, η therefore measures
+  **residual phylogenetic dependence after adjustment for measured
+  exposure**.
+- "Inherited susceptibility" may be claimed only under an explicit,
+  defended restriction that separates the two covariance structures, for
+  example an exposure field that decorrelates with time while inherited
+  frailty does not. Any such restriction must be stated before
+  calibration. None is assumed here.
 
 **D1's parent-age signature is a conditional prediction, not a test of
 mechanism.**
@@ -160,8 +167,11 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 - **Budding.** The budding term is (λ₀ z_i^κ)^{m_i} exp(−λ₀ z_i^κ T_i),
   for m_i buds. It also encodes knowledge that there were no later buds.
   - **Only when κ = 0** is it free of x and of the extinction parameters
-    given the observed T. Then the realised topology and budding times can
-    be conditioned on without bias.
+    given the observed T. It can then be **dropped from the full-history
+    likelihood**.
+  - That does not license conditioning on B as a fixed design. The
+    conditional law p(T | B) needs the generally θ-dependent denominator
+    ∫ p_θ(T) p(B | T) dT (Codex). The full-history formulation is kept.
   - Otherwise it stays in the likelihood, as rival R4.
 - **No "left truncation at last budding" is used.** The first version's
   rule is withdrawn. With durations observed, T_i > B_last holds
@@ -172,9 +182,15 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
   - Conditioning the topology as a fixed design while treating durations
     as random would be the wrong conditional experiment.
 - **Inclusion.** O includes a declared inclusion probability, for example
-  P(included | T) = 1 − exp(−ψT): short-lived lineages are less likely to be
-  described. Each lineage's contribution is then
-  f(T | x) P(inc | T) / ∫ f(t | x) P(inc | t) dt.
+  P(included | T) = q_i(T) = 1 − exp(−ψT): short-lived lineages are less
+  likely to be described.
+  - Because the frailties are correlated, the normaliser is joint, not
+    per lineage (Codex):
+    L_inc = ∫ p(x) ∏ᵢ [f_i(T_i | x_i) q_i(T_i)] dx / ∫ p(x) ∏ᵢ Q_i(x_i) dx,
+    where Q_i(x) = ∫ f_i(t | x) q_i(t) dt.
+  - That is the fixed-population scheme. The branching and ascertainment
+    history needs its own corresponding normaliser in the generator, and
+    the estimator must use the same one.
 - **Ancestor assignment** depends on stratigraphic ranges, so the generator
   carries an explicit rule for it. Speculative links are a sensitivity
   subset.
@@ -200,8 +216,10 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 
 **The combined decision:**
 - **Dependence supported:** the η interval has lo > η₀, *and* the
-  landmark skill threshold is met. With Triton exposure, "inheritance";
-  without it, "residual phylogenetic dependence".
+  landmark skill threshold is met. It is reported as **"residual
+  phylogenetic dependence after adjustment for measured exposure"**. The
+  word "inheritance" is used only under a pre-declared restriction that
+  separates R3b (section 3).
 - **Informative negative:** hi < η₁.
 - **Inadequate:** anything else.
 
@@ -211,7 +229,9 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 - R1 with σ ∈ {0.5, 1};
 - R2 with η ∈ {0, 0.05, 0.20, 0.35};
 - R3a;
-- R3b, with and without simulated exposure data;
+- R3m, persistent clade-tied exposure that is *measured* and supplied to the
+  adjustment;
+- R3b, the same exposure left *unmeasured*;
 - R4 with κ ∈ {−0.5, 0.5};
 - each crossed with the inclusion and ancestor rules.
 
@@ -219,26 +239,31 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 
 | Criterion | Requirement |
 | --- | --- |
-| False "supported" under R0, R0′, R1, R3a, R2 at η ≤ η₀, R3b *with* exposure data, and R4 | At most 0.05, with the upper 95% Monte Carlo bound at most 0.07 |
+| False "supported" under R0, R0′, R1, R3a, R3m (the adjustment must remove it), R2 at η ≤ η₀, and R4 | At most 0.05, with the upper 95% Monte Carlo bound at most 0.07 |
 | Power, P(supported \| η = η₁) | At least 0.8, with the lower bound at least 0.75 |
 | Power, P(hi < η₁ \| η = 0) | At least 0.8, with the lower bound at least 0.75 |
 | Coverage of the 90% interval for η | Between 0.85 and 0.95 at each grid point |
 
 - **Non-identifying cases are labelled, not forced:**
   - σ = 0 for ρ, though η is fine;
-  - R3b without exposure data.
+  - R3b, unmeasured exposure. It counts as a true positive for "residual
+    phylogenetic dependence" and as non-identifying for "inheritance".
 - A small measured pilot sets the replicate count before the full grid is
   run.
 
 ## 7. Next gates, in order
 
 1. ~~Lineage-record definition~~ **Done** (15 October; section 1). The
-   lineage records are anagenesis-free units. Overlap means budding, and
-   boundary means bifurcation.
+   lineage records are anagenesis-free units. Overlap means budding;
+   boundary links are bifurcation candidates.
 2. **Triton joint exposure audit.** Join Triton occurrences to the member
    morphospecies of each lineage. Count lineages with palaeolatitude and
    basin coverage through their ranges, and count relative pairs whose
-   observed exposures differ. This decides whether R3b can be separated.
+   observed exposures differ.
+   - This sizes the *measured-exposure adjustment* (R3m). It cannot
+     separate unmeasured exposure (R3b).
+   - Observed exposure is kept separate from ecogroups assigned by
+     phylogenetic affinity.
 3. **Freeze the section 2 and 6 inputs**, then run a small pilot for cost.
 4. **Calibration**, then estimation only if it passes.
 
@@ -258,3 +283,15 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 | Truncation at the last bud omits the survival tilt; the topology is endogenous | A joint likelihood for the realised history. The truncation rule is withdrawn. Budding stays in unless κ = 0. An inclusion term is added |
 | No forecast landmark | A landmark and information table, cross-fitting, censoring-aware scores, a paired comparison and a skill threshold |
 | Calibrate the combined decision | A finite grid, Monte Carlo pass rules, a coverage band, labelled non-identifying cases and a cost pilot first |
+
+**Closure check (15 October 2026;
+[Codex's note](../ideas/2026-10-15-b004-contract-and-q012-amendment-closure-codex.md)).**
+Accepted and applied:
+- the inclusion normaliser is joint over correlated frailty;
+- at κ = 0 the budding factor is dropped from the full-history likelihood,
+  not used to condition on B;
+- η is well defined at σ = 0 but not thereby identified;
+- R3b, unmeasured exposure after adjustment, cannot be identified even with
+  Triton, so the positive outcome is worded "residual phylogenetic
+  dependence after adjustment for measured exposure";
+- boundary links are bifurcation *candidates*.

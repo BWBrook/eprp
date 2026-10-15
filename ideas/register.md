@@ -691,9 +691,11 @@ identifiability point.
       frailty predicted by its parent's. Hazard ratio exp(2η); working
       values 0.05 and 0.20.
     - **Persistent exposure tied to clades (R3b) is equivalent to
-      inheritance** without exposure data, so the claim would then be
-      residual phylogenetic dependence. Triton's palaeogeography is the
-      separating data.
+      inheritance.** Triton geography can adjust for *measured* exposure,
+      but unmeasured exposure with the same tree correlation cannot be
+      split from inheritance. A positive result is therefore "residual
+      phylogenetic dependence after adjustment for measured exposure",
+      unless a pre-declared restriction separates the two.
     - **Likelihood:** a joint likelihood for the realised history. Budding
       stays in the likelihood unless frailty does not affect it, and there
       is an inclusion term. The truncation rule is withdrawn.
@@ -702,8 +704,8 @@ identifiability point.
       and a paired skill test.
     - **Calibration:** a combined decision with Monte Carlo pass rules.
     - **The article confirms the unit** (pp. 3–4): lineages are
-      anagenesis-free; overlap is budding (215) and boundary is
-      bifurcation (49). 169 of 482 ecogroups are inferred, partly from
+      anagenesis-free; overlap is budding (215), and boundary links are
+      bifurcation candidates (49). 169 of 482 ecogroups are inferred, partly from
       relatives, so they are not independent exposure evidence.
     - **Next gates:** a Triton joint exposure audit (384 of 480 species
       have Triton records within their ranges, as the article reports);

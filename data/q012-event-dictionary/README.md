@@ -74,7 +74,8 @@ pseudoextinctions.
 [design](../../literature/2026-10-15-q012-support-identification-design.md),
 section 1):
 - lineage records are anagenesis-free units;
-- overlap is budding, and boundary is bifurcation.
+- overlap is budding; boundary links are bifurcation *candidates*, since
+  equal dates alone do not show two simultaneous descendants.
 
 **Not established here:**
 - exposure. Triton has not been joined;
