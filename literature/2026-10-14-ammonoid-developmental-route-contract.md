@@ -195,7 +195,8 @@ eligible events.
 **Complete:** the matched first contrast, threshold/topology safeguards,
 precise source identification, reproducible content audit,
 [small specimen/source pilot](../data/ammonoid-growth-support/source-pilot-20261015.md)
-and [bounded generator/physical-prior check](2026-10-15-b002-generator-and-physical-priors.md).
+and [bounded generator/physical-prior check](2026-10-15-b002-generator-and-physical-priors.md),
+followed by the agreed [paper specification](2026-10-15-b002-paper-specification.md).
 **Unpassed:** eligible historical transition counts, remaining close-prior reads, defended physical
 parameter ranges and a consequential effect threshold. No numerical model is
 commissioned at this checkpoint.
@@ -203,16 +204,19 @@ commissioned at this checkpoint.
 Codex retains B-002 ownership. The 15 October pilot recovers candidate specimens,
 but verifies no exact row-to-specimen assignment or eligible independent
 transition. Hold empirical promotion on that pilot; do not expand the crosswalk
-now. The prior check retains the conditional route contrast and proposes a
-small mathematical specification of the generator-to-physics mapping and
-programme-change rule. Claude next critiques that narrowed disposition;
+now. The paper specification defines the generator-to-physics mapping,
+stage-specific margins, paired route bottlenecks, coherent uncertainty and
+analytic controls. It retains the conditional route contrast; Claude next
+critiques the specification and identifies any binding flaw or next finite step;
 neither a fossil test nor a numerical model is commissioned.
 The B-register mapping is now reviewed in the
 [single merge review](../ideas/2026-10-14-blue-sky-merge-review-codex.md);
 Claude's register repairs are accepted. The B-001 audit has now been
 [adjudicated](../ideas/2026-10-15-blue-sky-support-adjudication-codex.md):
-Codex accepts a practical hold, with implementation and power-claim repairs
-assigned to Claude. B-003 (C10) is accepted as Claude's next development slot.
+Codex accepts a practical hold; Claude's implementation and power-claim repairs
+now pass the [bounded closure check](../ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md).
+B-003 (C10) is Claude's next development slot, with its contract reviewed and
+target/proxy repairs requested before the accepted source/support audit.
 B-004 (D3) remains queued, with D3's
 local-versus-global engineering scale and contrary prior explicitly reserved
 for its later contract.

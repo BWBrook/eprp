@@ -6,14 +6,14 @@ Updated: 15 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 - The applied register's first tranche is complete at **50 questions**; its
   expansion remains paused.
 - The separate **blue-sky register** (B-series, pure deep time) now contains
-  **18 questions: 4 develop, 14 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
+  **18 questions: 3 develop, 15 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
   Its mapping and ownership have passed Codex's single merge review. Claude's
-  three register repairs are in place at `55db76a`. Codex now accepts Claude's
-  proposed **B-001 hold**, with join/coarsening and power-claim corrections
-  assigned to Claude; the displayed 4/14 tally awaits that register update.
-  B-002's source pilot and bounded generator/physical-prior check are complete;
-  its conditional theoretical residual remains provisional and empirical
-  promotion unsupported.
+  three register repairs are in place at `55db76a`. B-001 is now **hold (support)**;
+  Claude's corrections at `466c8d5` pass Codex's bounded replay check.
+  B-002's source pilot, generator/physical-prior check and paper specification
+  are complete; its conditional theoretical residual remains provisional and
+  empirical promotion unsupported. B-003's contract has received one Codex
+  review; Claude next repairs its target/data claims and audits source support.
 - Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
@@ -56,9 +56,9 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners and four develop/fourteen hold retained. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 remains a component of Claude's queued Q-012 design. No primary investigation selected |
-| First blue-sky development pair | Claude: B-001; Codex: B-002 | [Codex's adjudication](ideas/2026-10-15-blue-sky-support-adjudication-codex.md) accepts a practical B-001 hold but identifies accepted-genus/coarsening mismatches and rejects the universal F-bound claim. Claude owns the correction pass and register update. B-002's [source pilot](data/ammonoid-growth-support/source-pilot-20261015.md) and [generator/physical-prior check](literature/2026-10-15-b002-generator-and-physical-priors.md) are complete: conditional theory retained provisionally; empirical promotion held. Claude next critiques the proposed mathematical specification. No fit or evolutionary simulation |
-| Next blue-sky development slot | Claude: B-003 | Claude proposed an evidence/trait contract in 76/1661; Codex accepted in 76/1662. It follows the B-001 correction handoff. Q-012/D1 follows B-003; B-004 remains queued. Keep at most two substantive tasks active |
+| Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now three/fifteen after B-001's support hold. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 remains a component of Claude's queued Q-012 design. No primary investigation selected |
+| First blue-sky development pair | Claude: B-001; Codex: B-002 | [Correction closure and response](ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md): B-001's five outputs replay exactly, raw hashes unchanged, 4/5/7 at-risk counts; practical hold accepted, universal F-bound claim withdrawn. B-002's [paper specification](literature/2026-10-15-b002-paper-specification.md) defines paired route margins, coherent uncertainty and analytic controls. Claude next critiques it; physical inputs and empirical promotion remain unresolved. No fit or evolutionary simulation |
+| Next blue-sky development slot | Claude: B-003 | [Contract](literature/2026-10-15-b003-escalation-evidence-contract.md) delivered at `eda87fe`; [Codex review](ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md) complete. Claude owns target/proxy repairs and the bounded source/support audit, with definitions repaired before counting. Static Kosnik genus scores cannot estimate within-genus change; hold that Level B route. B-003 remains develop pending support. Q-012/D1 follows B-003; B-004 remains queued. Keep at most two substantive tasks active |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
@@ -633,13 +633,23 @@ next phase of ideation whilst those final checks are done."
   as a practical decision, with the [recorded corrections](ideas/2026-10-15-blue-sky-support-adjudication-codex.md)
   owned by Claude. Exact replay succeeds; accepted-genus sensitivity changes
   at-risk counts from 4/5/8 to 4/5/7. The balanced F arithmetic is correct,
-  but its claimed universal bound is unsupported. Claude updates the register
-  after that correction pass; the current displayed tally remains 4/14.
+  but its claimed universal bound is unsupported. Claude subsequently applied
+  the corrections and register hold at `466c8d5`; the tally is now 3/15.
   Codex's [B-002 prior check](literature/2026-10-15-b002-generator-and-physical-priors.md)
   retains a provisional conditional theoretical residual with empirical
   promotion held. Claude next responds. Its B-003 evidence/trait contract is
   accepted as the next development slot (76/1661–1662), then Q-012/D1;
   B-004 remains queued.
+- **Specification and contract review, 15 October:** Codex's
+  [response](ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md)
+  closes B-001's correction pass, delivers the
+  [B-002 paper specification](literature/2026-10-15-b002-paper-specification.md),
+  and reviews Claude's B-003 contract. Kosnik's fixed genus scores cannot
+  estimate within-genus change; sorting is not inherently a non-predation
+  alternative, and predator morphology requires a functional mapping. Claude
+  next repairs its owned contract/register claims and performs the bounded
+  published-source inventory. B-002 empirical promotion and numerical launch
+  remain held. No new primary investigation or specimen measurement.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
