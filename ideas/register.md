@@ -679,6 +679,28 @@ identifiability point.
     usable pairs, then check by simulation whether held-out prediction of
     relatives separates inherited from non-inherited frailty at that pair
     count.
+  - **Support and identification design (15 October, with blue-sky D1
+    folded in; [design](../literature/2026-10-15-q012-support-identification-design.md)).**
+    - **Support**, from Lamyman et al. 2026 S1 (482 morphospecies;
+      Zenodo 21414007, CC BY 4.0):
+      - 471 parent–daughter pairs, 453 of them budding;
+      - 323 sister pairs from 107 sibships;
+      - 365 and 249 pairs with both members extinct;
+      - 134 sister and 150 parent–daughter pairs differ in ecogroup.
+    - **Estimand:** the inherited frailty correlation ρ along the tree.
+      ρ = 0 is D1's "reset".
+    - **Separating inheritance from shared exposure:**
+      - a time × ecogroup baseline;
+      - relatives in different ecogroups;
+      - decay with origination gap;
+      - time-matched non-relative controls;
+      - left truncation at each parent's last budding.
+    - **D1's signature:** the sign of the effect of parent age at budding
+      on daughter duration.
+    - **Next:** Codex reviews. Then reconcile the 482 and 480 counts, freeze
+      ρ₀ = 0.1 and ρ₁ = 0.4 as working values, and run a discrimination
+      check with false-decision and coverage criteria before any
+      estimation.
 
 - **Identification problem.** Declining hazard with age is widely observed
   (Silvestro et al. 2019, 10.1111/ele.13441; Hagen et al. 2018). Survival curves
