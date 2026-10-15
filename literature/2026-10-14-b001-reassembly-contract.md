@@ -81,13 +81,16 @@ found no cross-event test of order.
 
 | Case | Rule |
 | --- | --- |
-| Baseline | The mean subsampled richness of the last two pre-event bins, with its resampling distribution |
+| Baseline | Subsampled richness in the last pre-event stage (Changhsingian, Rhaetian, Maastrichtian), with its resampling distribution. The penultimate stage is a stability diagnostic only: the Norian lasts 21.6 Myr, so a two-stage mean would not be comparable across events |
 | At-risk set | Guild–event pairs whose baseline meets the support rule (section 8), judged from pre-event data only. A guild absent or unsupported before an event is *not at risk* in that event: missing by design, not dropped after outcomes are seen |
-| Zero or small baseline | Not at risk. A minimum baseline (proposed: 5 subsampled genera) keeps f × baseline meaningful |
-| Retained above f in the first post-event bin | Left-censored: T is in (0, end of the first bin]. These are counted and reported as guilds that did not lose half their richness at this resolution |
-| Never sustained above f within the horizon | Right-censored at H = 10 Myr after the event. For all three events this lies before the next major event (Toarcian, PETM). The Smithian–Spathian crisis falls inside the end-Permian window and counts as continuing stress, not truncation |
-| Crossing observed | Interval-censored on the age span of the crossing bin |
-| Post-event guild cell below the coverage quorum | Kept as unresolved, not dropped: no crossing can be declared in it, so the censoring interval widens across it. Dropping it would select on the outcome |
+| Zero or small baseline | Not at risk. A minimum baseline of 5 subsampled genera keeps f × baseline meaningful |
+| Follow-up | Post-event stages whose base lies within H = 10 Myr of the event: Induan–Anisian (to 10.44 Myr), Hettangian–Pliensbachian (to 17.2 Myr) and Danian–Thanetian (to 10.0 Myr). The next stage (Ladinian, Toarcian, Ypresian) can only confirm a crossing; it is never a crossing itself. The Toarcian carries its own extinction, so confirmation there is conservative |
+| Sustain rule, everywhere | A crossing counts only if the next resolved stage is also at or above f. This applies to the first post-event stage as well. A first stage at or above f followed by a resolved stage below f fails, and the search continues |
+| At or above f in the first stage, sustained | Left-censored: T is in (0, end of the first stage]. These guilds were at or above f by the end of that stage. A coarse first stage cannot tell uninterrupted retention from loss and rapid return within it |
+| Candidate crossing with no resolved confirming stage | Unresolved, not a failure to restore. Right-censored at the *base of the candidate stage*, not at the horizon |
+| No candidate crossing in follow-up | Right-censored at the top of the last follow-up stage. The Smithian–Spathian crisis falls inside the end-Permian follow-up and counts as continuing stress, not truncation |
+| Sustained crossing observed | Interval-censored on the age span of the crossing stage. The model receives explicit lower and upper bounds |
+| Post-event guild cell below the coverage quorum | Kept as unresolved, not dropped: no crossing or confirmation can be declared in it, so the censoring interval widens across it. Dropping it would select on the outcome |
 | Uncertainty in baseline and richness | Repeated subsampling draws give a censoring interval per draw. The analysis is repeated over draws and the results are combined |
 
 Ties are not broken arbitrarily. Overlapping intervals carry uncertain
@@ -155,8 +158,8 @@ model, for example with brms `cens()` (Bürkner 2017,
 log T(g, e) = α(e) + x(g, e)β + c(k(g, e)) + θ(g) + ε(g, e)
 
 - α(e): event effect.
-- x(g, e): log survivor count, log baseline richness, and the detection
-  estimate.
+- x(g, e): log(1 + survivor count), log baseline richness, and the
+  detection estimate. Guilds with zero survivors are counted and reported.
 - c(k): the effect of the dominant clade k (the class contributing most
   baseline occurrences to the guild in that event), with variance σ_c².
 - θ(g): the guild effect, with variance σ_θ².
@@ -167,23 +170,41 @@ log T(g, e) = α(e) + x(g, e)β + c(k(g, e)) + θ(g) + ε(g, e)
   guild's restoration delays in two events filled by *different* dominant
   clades, after the event effects and covariates.
 - ρ = 0 means no shared guild order beyond the modelled nulls and clades.
-- θ is separated from c only by guilds whose dominant clade changes between
-  events. The audit counts these. If there are too few, R1 cannot be
-  excluded, and the result is inadequate discrimination on R1, whatever ρ̂
-  is.
+- This reading assumes independent, homoscedastic guild, clade and residual
+  effects.
 
-**Thresholds, fixed before data:**
+**Identification is a property of the whole incidence structure** (Codex,
+second review).
+- The covariance is V = σ_θ² G + σ_c² C + σ_ε² I, where G and C mark cells
+  sharing a guild or a dominant class.
+- Clade switches within guilds are neither necessary nor sufficient:
+  - two classes, each holding two guilds that never switch across three
+    events, can still separate the components;
+  - a unique clade in every cell makes C = I, so clade and residual
+    variance cannot be separated, even though every guild switches.
+- The audit therefore reports:
+  - the full guild × event × class incidence and composition;
+  - the rank of the covariance basis {PGP, PCP, P} after projecting out the
+    fixed design P (rank 3 is necessary, not sufficient);
+  - counts of each pair type.
+- Switches are reported as a biological diagnostic, not a gate.
+- Removing a shared class effect does not remove all phylogenetic
+  dependence.
+
+**Working thresholds:**
 - **Negligible, ρ₀ = 0.1.** Guild identity explains at most a tenth of the
-  residual variance in delay, so no usable shared sequence exists.
+  residual variance in delay.
 - **Rule strength, ρ₁ = 0.5.** Guild identity explains at least half the
-  residual variance. A sequence that recurs more than it varies is the
-  minimum the stepwise-rule literature implies.
-- These are choices on a new scale, not the W values carried over. Codex can
-  challenge them before the discrimination check.
+  residual variance.
+- These are working discrimination scenarios, not established boundaries of
+  ecological usability. They are not an implication of the stepwise-rule
+  literature. Their interpretation and sensitivity belong in the design
+  product, and they are frozen with the priors before the section 7 check.
 
-**Interval.** A 90% posterior interval for ρ, read as two one-sided
-decisions at 5%. The prior is stated, with a sensitivity run under an
-alternative prior on the variance components.
+**Interval.** A 90% posterior interval for ρ, used for two one-sided
+decisions. The prior is stated, with a sensitivity run under an alternative
+prior on the variance components. Posterior tail probabilities do not by
+themselves give frequentist 5% error rates; section 7 calibrates them.
 
 ## 6. Rival processes and outcomes
 
@@ -240,12 +261,32 @@ censoring rules) under:
 - clade-only (σ_θ = 0);
 - tolerance-only.
 
-Estimate the probability of each outcome cell.
-- **Proceed only if** both hold:
+Also simulate a detection-only control: guild-constant detection
+differences with σ_θ = 0.
+
+Freeze the priors, ρ₀ and ρ₁, the censoring rules and the data generator
+first. Then estimate the probability of each outcome cell, with Monte Carlo
+uncertainty.
+
+**Proceed only if all of these hold:**
+- **Power:**
   - with ρ = ρ₁, the interval excludes ρ₀ with probability ≥ 0.8;
   - with ρ = 0, it excludes ρ₁ with probability ≥ 0.8.
-- **Otherwise park the empirical route** before restoration times are
-  looked at.
+- **False decisions** (Codex, second review). A procedure that always
+  returned [0.2, 0.3] would pass both power criteria.
+  - P(lo > ρ₀ | ρ ≤ ρ₀) ≤ 0.05;
+  - P(hi < ρ₁ | ρ ≥ ρ₁) ≤ 0.05;
+  - both evaluated at ρ = 0, ρ₀, ρ₁ and 0.7.
+- **Coverage:** the 90% interval covers the true ρ at close to its nominal
+  rate on the same grid.
+- **Controls, in acceptance and not only reported:**
+  - clade-only and detection-only (true ρ = 0): P(lo > ρ₀) ≤ 0.05;
+  - tolerance-only: the model with the tolerance covariate gives
+    P(lo > ρ₀) ≤ 0.05.
+
+If the check fails, **park the empirical route** before restoration times
+are looked at.
+- The grid is finite, so it is not a uniform bound.
 - The check uses post-event sampling summaries but not crossing times.
 - This check, not a guild count, decides whether the data can inform. A
   smaller well-resolved table may pass; a larger tied or confounded one may
@@ -253,18 +294,57 @@ Estimate the probability of each outcome cell.
 
 ## 8. Next gate: a support audit, with support defined first
 
-Definitions, fixed before counting:
-- **Bins:** stages or substages on the repository's interval crosswalk.
-  Occurrences resolved to one bin only.
-- **Coverage:** coverage-based subsampling within guild and bin, at quorum
-  0.5.
-- **Baseline support:** quorum reached in both of the last two pre-event
-  bins, and a subsampled baseline of at least 5 genera.
-- **Bin support (all guilds pooled):** a minimum collection count per
-  post-event bin. Bins below it are unresolved for every guild.
-- **Horizon:** 10 Myr.
-- **Trait confidence:** whether each Knope code was entered for the genus
-  or inherited, if the dataset records it; otherwise reported as unknown.
+Definitions, fixed on 15 October 2026 before any screening. They are
+committed separately from the audit's results.
+
+**Population, bins and support:**
+- **Population:** PBDB occurrences with these settings:
+  - marine (`envtype=marine`);
+  - regular preservation;
+  - genus certain;
+  - lumped to one occurrence per genus per collection;
+  - in Knope's nine phyla.
+- **Bins:** PBDB timescale 1 stages, with ages as served on 15 October 2026.
+  An occurrence is assigned to a stage only if its age range lies within
+  that stage.
+- **Events:** 251.902 Ma (end-Permian), 201.4 Ma (end-Triassic) and 66.0
+  Ma (K–Pg).
+- **Follow-up:** as in section 3.
+- **Coverage:**
+  - Good's u, computed from the genus occurrence counts in a guild × stage
+    cell, estimates coverage;
+  - a cell is resolved if u ≥ 0.5;
+  - subsampled richness is the coverage-based rarefaction expectation at
+    coverage 0.5 (Chao & Jost 2012, 10.1890/11-1952.1).
+- **Baseline support:** the last pre-event stage is resolved, with
+  subsampled richness of at least 5 genera.
+- **Stage support (all guilds pooled):** at least 50 collections with a
+  qualifying occurrence. A stage below this is unresolved for every guild.
+
+**Guilds, survivors and clades:**
+- **Guilds** use Knope's codes, which follow the numbering of Bambach et al.
+  2007. They are coarsened as follows:
+  - tiering: pelagic (1), epifaunal (2–3), infaunal (4–6);
+  - motility: fast (1), slow (2), stationary or facultative (3–6);
+  - feeding: suspension (1), deposit or mining (2–3), grazing (4),
+    predatory (5), other (6).
+- **Merge rule:** a guild unsupported at baseline in all three events
+  merges fast and slow into "mobile". If it is still unsupported, it is
+  excluded and counted.
+- **Join:**
+  - PBDB accepted genus name plus phylum to Knope's `taxon_name` plus
+    phylum;
+  - otherwise the name alone, if it is unique in Knope;
+  - otherwise unjoined and counted.
+- **Survivors:** genera occurring in the baseline stage whose PBDB last
+  appearance lies wholly after the event (`lastapp_max_ma` below the event
+  age, from the taxa service).
+- **Dominant class:** the class with the most baseline occurrences in that
+  guild and event.
+- **Trait confidence:** Knope records a source reference per genus
+  (`eco_ref`), but not whether a code was entered for the genus or applied
+  from a higher taxon. Provenance is reported by reference, and the coding
+  level is unknown.
 
 Audit steps:
 1. Download Knope et al. 2015 Dataset S1 (10.1038/ncomms7455; CC BY 4.0)
@@ -275,8 +355,11 @@ Audit steps:
    - the at-risk guild × event table;
    - survivor counts, including zeros;
    - unresolved bins;
-   - the joint guild × dominant-clade table at class rank;
-   - the number of guilds whose dominant clade changes between events.
+   - the full guild × event × class incidence and composition;
+   - the rank of the projected covariance basis, and counts of each pair
+     type (section 5);
+   - the number of guilds whose dominant clade changes between events, as
+     a diagnostic.
 3. The join must not choose a different population just because those
    genera joined successfully.
 
@@ -287,7 +370,7 @@ each of the 3 events. Section 7 decides whether to proceed.
 
 | Resource | Contents | Terms | Coverage |
 | --- | --- | --- | --- |
-| Knope et al. 2015 Supplementary Dataset 1 (10.1038/ncomms7455) | 18,621 genera, Bambach-coded tiering, motility and feeding; stage first and last appearances | CC BY 4.0; 3.8 MB (not yet downloaded) | Whole Phanerozoic, range-through only |
+| Knope et al. 2015 Supplementary Data 1 (10.1038/ncomms7455) | The paper reports 18,621 genera. The deposited sheet has 18,317 rows and 18,228 distinct names. Bambach-numbered tiering, motility and feeding; stage first and last appearances; a source reference per genus | CC BY 4.0; 3,911,680 bytes; downloaded 15 October 2026, sha256 `e5c1eef4…f181` | Whole Phanerozoic, range-through only |
 | PBDB occurrences | Occurrences for subsampling | CC0, API | All events |
 | Foster & Twitchett, PANGAEA 824825 | Permian–Triassic occurrences and ranges, 12 substages | CC BY 3.0 | Permian–Triassic check |
 | Dunhill et al. 2018 Dryad (10.5061/dryad.bg30k); Cribb et al. 2023 Zenodo (10.5281/zenodo.8398420) | End-Triassic modes of life | Open | End-Triassic check |
@@ -313,3 +396,20 @@ All were accepted.
 | 3. Mechanism | Signed contrast δ for direction; an R4 covariate; residual-regularity wording; a precise negative does not prove contingency |
 | 4. Guild against clade | "A guild is largely a clade" is withdrawn. The provenance of the inheritance share is now [reproducible](../data/b001-support/README.md), with denominators. It is labelled as PBDB's coding, not Knope's. The data-absence claim is bounded to this search |
 | 5. Six guilds | Kept as a planning target only. The section 7 discrimination check decides |
+
+**Second review (15 October 2026;
+[Codex's response](../ideas/2026-10-15-blue-sky-support-response-codex.md)).**
+All points were accepted, and they were applied before any screening.
+
+| Review point | Change |
+| --- | --- |
+| Identification needs the whole incidence structure | Section 5: covariance basis and its rank; switches become a diagnostic, not a gate |
+| The power gate passes a constant interval | Section 7: false-decision limits, coverage, a detection-only control, and acceptance criteria for the controls. Priors and the generator are frozen first |
+| Sustain rule at the window edges | Section 3: the sustain rule applies to the first stage as well; an unconfirmed terminal candidate is right-censored at its own base; confirmation-only stages; explicit bounds |
+| log(0) survivors and the unnamed collection threshold | log(1 + s); at least 50 collections per stage |
+| The 201.4–191 Ma window was 10.4 Myr, not 10 | Follow-up is defined by stage bases within 10 Myr, giving declared spans of 10.44, 17.2 and 10.0 Myr |
+| 0.1 and 0.5 | Relabelled as working discrimination scenarios |
+
+The baseline was also changed from the mean of the last two stages to the
+last stage alone. The two-stage mean would have included the 21.6 Myr
+Norian, which is not comparable with the other events' stages.
