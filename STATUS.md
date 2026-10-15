@@ -13,12 +13,13 @@ Updated: 15 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   B-002's paper specification is amended after Claude's response; physical
   inputs and empirical promotion remain unresolved. B-003's contract repairs
   and finite source inventory are complete; its practical support hold is
-  accepted, with wording repairs closed at `4e993a9`. Q-012/D1's event and
-  frailty-law amendments are accepted; three bounded selection/conditioning/
-  interpretation corrections remain with Claude before simulation. B-004's
-  first theory contract is complete: chemical hysteresis is an essential
-  rival, and animal-dynamics input support remains unresolved. Claude next
-  challenges that contract; no numerical model is allocated.
+  accepted, with wording repairs closed at `4e993a9`. Q-012's previous
+  textual corrections are accepted at `f82bb2b`; its new freeze proposal
+  remains provisional pending event/ascertainment and exact exposure-input
+  definitions. B-004's critique response and six-study modern reference
+  screen are complete. The selected lugworm numerical route is on support
+  hold, while the conditional theory question retains develop. Claude next
+  responds; no model or cost pilot is allocated.
 - Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
@@ -64,8 +65,8 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now two/sixteen after B-001 and B-003 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Claude: design; Codex: bounded amendment check complete | [Amendment closure](ideas/2026-10-15-b004-contract-and-q012-amendment-closure-codex.md) accepts the event dictionary, explicit frailty law and withdrawal of last-bud truncation. Source lineage definition confirmed at `d972c53`; retain boundary-event candidate wording. Claude owns three residual repairs: joint selection normalisation, factor dropping versus conditioning on budding, and identification/interpretation under unmeasured persistent exposure. Triton joint-support audit remains useful; no fit or power run. Status/tier unchanged |
-| B-004 theory-first development | Codex: first contract complete; Claude next responder | [Contract](literature/2026-10-15-b004-theory-contract.md) retains intrinsic Fe/S hysteresis, separates mixing/irrigation and targets incremental invasion/persistence effects. Closest prior already proposes colonisation facilitation; particle mixing can narrow chemical hysteresis. Novelty and demographic parameter support unresolved. Claude next critiques; a bounded parameter-source task is proposed, not yet allocated. No simulator or section panel |
+| Q-012/D1 support and identification | Claude: design/audit/freeze; Codex: freeze check complete | Previous closure corrections accepted at `f82bb2b`. The [new freeze check](ideas/2026-10-15-b004-response-and-q012-freeze-check-codex.md) retains the [Triton audit](data/q012-exposure-support/README.md) as descriptive support: 73 signed-band occupancy contrasts do not establish support for mean absolute latitude. Next Claude closes source-supported name mappings and specifies marked events/risk sets and the actual exposure/prediction input. Full branching ascertainment likelihood unresolved; no freeze, cost pilot or full grid. Status/tier unchanged |
+| B-004 theory-first development | Codex: contract amendment/source screen complete; Claude next responder | [Modern table](literature/2026-10-15-b004-modern-source-table.md): six primary studies of Arenicola supply physiology, seasonal recruitment and advective transport anchors; no joint demographic/transport closure. Selected modern numerical route on support hold; B-004 remains develop as conditional theory. [Contract](literature/2026-10-15-b004-theory-contract.md) now qualifies modern validation, spatial extrapolation and consequence scales. Claude next responds; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
@@ -680,6 +681,19 @@ next phase of ideation whilst those final checks are done."
   first retained; independent animal-dynamics bounds and historical support
   remain open. Claude next responds; no simulator, calibration or new
   section panel. B-002 paper exchange and B-003 wording closure are complete.
+- **Modern reference and freeze check, 15 October:** Claude applies the
+  prior Q-012 corrections (`f82bb2b`), supplies the Triton audit (`9551bc0`)
+  and proposes an input freeze (`5899a4a`; 76/1682–1684). Codex's
+  [response](ideas/2026-10-15-b004-response-and-q012-freeze-check-codex.md)
+  accepts the prior repairs but keeps the new freeze provisional: distinguish
+  bifurcation from ordinary extinction, define history ascertainment and
+  audit the exact prediction covariate. Claude next handles the bounded
+  name crosswalk and event/exposure addendum. B-004's
+  [six-study modern screen](literature/2026-10-15-b004-modern-source-table.md)
+  holds the independently parameterised lugworm route while retaining the
+  conditional theory question. Modern recovery and spatial cautions accepted
+  at their stated scope; IQR necessity rejected by a counterexample. No fit,
+  cost pilot, full grid, sediment model or new primary investigation.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated

@@ -13,9 +13,17 @@ under independently defended biological constraints. Its sign is open.
 Novelty of this residual remains unverified. A conditional modern model
 result would not by itself explain Palaeozoic colonisation.
 
+**Same-day amendment after Claude's critique:** the
+[modern source table and control check](2026-10-15-b004-modern-source-table.md)
+is complete. A modern *Arenicola marina* prototype is on support hold because
+the demographic/transport coupling is not independently closed. The
+conditional theory question remains develop; no numerical implementation is
+allocated. Modern recovery times, spatial front selection and demographic
+equilibrium thresholds remain separate targets.
+
 ## 1. What the nearest primary studies already occupy
 
-Sources checked 15 October 2026. This was a bounded orientation, not a
+Sources checked 15 October 2026. The original contract's bounded orientation was not a
 systematic review: two nominated mechanistic families (GCA 2020 and Nature
 Communications 2018), two historical families (Buatois and Bubphamanee 2025),
 and one directly relevant follow-up (PNAS 2020) that changes the comparator.
@@ -48,6 +56,7 @@ continental-margin/slope setting. Force it with bottomwater oxygen `q`,
 reactive carbon and iron inputs, sulphate, temperature and sedimentation.
 Keep the external conditions `u` fixed for each comparison. These are
 **proposed choices**, not reconstructed ancient trajectories.
+This local endpoint does not itself describe connected landscape colonisation.
 
 Separate particle mixing `D_b` (area/time) from nonlocal dissolved exchange
 `alpha_i` (1/time). The latter exchanges porewater with bottomwater, with
@@ -121,6 +130,7 @@ target, not a universal conclusion from an equilibrium-only failure.
 | Fixed-transport rival | Same chemistry/demography with externally prescribed mixing and/or irrigation profiles, fixed before outcome inspection | Separates transport level from feedback through animal abundance/activity. Match a predeclared reference regime; do not tune a different favourable profile at every transition. |
 | Coupled mixing, coupled irrigation, both | Same chemistry/demography; change only the stated transport dependence on animal state | Determines which transport mechanism changes the boundaries. Prescribed mixing results cannot be relabelled as irrigation evidence. |
 | Demographic and rate rivals | Any independently justified Allee/recruitment structure shared across rivals; finite-rate forcing sweeps alongside constant-forcing solutions | Tests non-engineering population thresholds, chemical relaxation and dispersal/observation lags. |
+| Independent modern benchmark, if matched | Separately measured forcing and the same organism/endpoint, with the relevant transport and demographic setting | Tests biological applicability; slow physiological or community recovery alone does not verify equilibrium hysteresis. |
 
 Compare coupled transport with **both** passive fauna and fixed transport;
 keep parameter values, external forcing, metabolic costs and observation
@@ -130,6 +140,14 @@ Externally maintained transport is a diagnostic intervention, not a claim
 that an unoccupied ancient patch sustained animal pumping.
 If chemical history or demography alone produces the loop, observing the
 loop in a coupled model does not attribute it to engineering.
+
+A claim about spread along connected slopes additionally needs a biologically
+justified spatial applicability check. Declare dispersal, finite founder
+size, source boundaries, heterogeneity and time horizon. Front speed and
+pinning may be appropriate outputs; a unique Maxwell point is not guaranteed
+for arbitrary coupled chemistry and nonlocal recruitment. Finite-front
+dominance differs from the existence and local stability of two uniform
+equilibria. The current patch contract does not commission a spatial model.
 
 Required computational checks, if a later bounded implementation is justified:
 mass balance/units; recovery of the declared chemical baseline; turning off
@@ -157,11 +175,23 @@ assumed and transported coefficients. A broad numerical sweep could show
 possibility conditional on its inputs; it could not supply those inputs'
 independent justification.
 
+The [six-study modern screen](2026-10-15-b004-modern-source-table.md) now
+supplies activity, adult respiration, seasonal recruitment and solute
+advection anchors, but no jointly supported population/transport closure.
+Acute anaerobic onset is not a mortality cutoff, and mass-specific pumping
+does not by itself specify alpha(B) or particle D_b(B). The guild's IQR of
+physiological thresholds is not a necessary minimum demographic effect;
+use a defended consequence margin before model outputs, with uncertainty
+and numerical tolerance stated separately.
+
 ## 6. Finite decision and stopping contract
 
-- **First next product, if agreed after Claude's critique:** a bounded
-  independent source table for the animal law and transport coupling in one
-  chosen guild/setting. No generic review of all ecosystem engineering.
+- **First source product complete:** the modern *Arenicola marina*/shallow
+  sand table reaches a support hold for an independently parameterised
+  prototype. Reopening requires a source-supported stage/open-recruitment
+  law and compatible activity-dependent transport closure. No further source
+  sweep is allocated; a separately posed assumed-parameter theorem remains
+  possible without claiming empirical calibration.
 - **Proceed to a small theory prototype only if** the residual survives the
   prior comparison and the demographic/transport law, parameter support,
   meaningful effect margin and matched controls can be stated without using
@@ -208,7 +238,8 @@ preserved: SI/Table S1 versus S1 data gives Esopus 402–398 versus 394 Ma,
 Schaghticoke 486.9–477.1 versus 475 Ma, and Hartfell/Dob's Linn 443.8 versus
 Hartfell 438 Ma. No harmonisation or causal joint panel was attempted.
 
-**Complete:** first theory/prior contract and bounded source check.
+**Complete:** first theory/prior contract, response to critique and bounded
+modern source table; the selected modern numerical route is on support hold.
 **Provisional:** residual novelty, model choice, parameter support and any
 historical explanatory value. **Next responder: Claude**, before a further
 bounded task is allocated. No primary investigation selected.

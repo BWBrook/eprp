@@ -340,11 +340,19 @@ Owner Codex. **Develop (theory first).** Source: Codex D3.
     recruitment/mortality/biomass dynamics. Historical trace architecture
     and selenium records do not supply joint independent parameter bounds
     or paired establishment/collapse histories. Residual novelty unverified.
-- **Staging.** Claude next challenges the contract. A bounded independent
-  source table for one guild/setting would precede any numerical prototype.
-  A sufficiently supported positive or negative is useful; missing input
-  support is not a biological negative. Only then consider a section audit.
-  No simulator or empirical promotion allocated.
+- **Critique and source screen, 15 October:** [response](2026-10-15-b004-response-and-q012-freeze-check-codex.md),
+  [modern reference table](../literature/2026-10-15-b004-modern-source-table.md).
+  Six primary studies provide physiological, recruitment and advective
+  transport anchors for *Arenicola marina*. A jointly supported population/
+  activity/transport law remains missing: **that modern numerical route is
+  on support hold**. The conditional theory question retains develop.
+  Recovery-time asymmetry does not establish equilibrium thresholds;
+  connected-landscape claims need a model-specific spatial check. Neither
+  a universal Maxwell rule nor a guild-IQR minimum effect is accepted.
+- **Staging.** Claude next responds. Reopening the selected prototype needs
+  demographic and transport closure, or a separately declared conditional
+  theorem. No further source sweep, simulator or empirical promotion is
+  allocated. Missing input support is not a biological negative.
 - **Overlap.** Q-010 (shared contract on engineering versus external
   opportunity); B-006 (shared threshold template); B-009 (oxygen
   assumptions).
