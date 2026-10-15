@@ -1,0 +1,483 @@
+morphospecies	s1_row	start_Ma	end_Ma	dominant_ecogroup	ecogroup_no_data	ancestry_evidence	lineages	in_scope
+Acarinina africana	2	56	55.85	1	True	significant	T108	True
+Acarinina alticonica	3	53.68	46.92	1	True	significant	N103-N109-N115-N117-T118;N119-T120	True
+Acarinina angulosa	4	56.55	46.36	1	True	significant	N103-N109-N115-N117-T118;T116	True
+Acarinina aspensis	5	50.38	48.54	1	True	significant	N110-N112-T113;T111	True
+Acarinina boudreauxi	6	50.55	43.36	1	True	significant	N130-N131-N136-N142-N144-T148;N133-T135	True
+Acarinina bullbrooki	7	50.55	40.39	1	False	significant	N130-N131-N136-N142-N144-T148;N133-T135	True
+Acarinina coalingensis	8	57.78	43.8	1	False	significant	N126-T127;N99-N125	True
+Acarinina collactea	9	52.4	23.41	1	False	significant	N110-N112-T113	True
+Acarinina cuneicamerata	10	51.7	43.69	1	False	significant	N103-N109-N115-N117-T118;T116	True
+Acarinina echinata	11	42.86	28.56	1	True	significant	T121	True
+Acarinina esnaensis	12	57.55	51.2	1	True	significant	N128-T129	True
+Acarinina esnehensis	13	56.82	50.38	1	True	significant	N103-N109-N115-N117-T118;N104-T105	True
+Acarinina interposita	14	54.54	50.38	1	True	significant	N103-N109-N115-N117-T118;N110-N112-T113	True
+Acarinina mcgowrani	15	50.44	38	1	False	significant	N130-N131-N136-N142-N144-T148;T140	True
+Acarinina mckannai	16	60.51	57.55	1	False	significant	N102-T100	True
+Acarinina medizzai	17	42.16	28.2	1	False	significant	N110-N112-T113;T114	True
+Acarinina nitida	18	60.54	57.55	1	False	significant	N99-N125	True
+Acarinina pentacamerata	19	52.56	46.92	1	True	significant	N110-N112-T113	True
+Acarinina praetopilensis	20	50.44	39.97	1	False	significant	N130-N131-N136-N142-N144-T148	True
+Acarinina primitiva	21	52.63	38.98	2	False	significant	N126-T127	True
+Acarinina pseudosubsphaerica	22	50.38	41.96	1	False	significant	N119-T120	True
+Acarinina pseudotopilensis	23	56	47.15	1	False	significant	N128-T129;N130-N131-N136-N142-N144-T148	True
+Acarinina punctocarinata	24	49.23	40.39	1	True	significant	N130-N131-N136-N142-N144-T148;N133-T135;T134	True
+Acarinina quetra	25	54.54	50.38	1	True	significant	N130-N131-N136-N142-N144-T148;T132	True
+Acarinina rohri	26	42.46	38.17	1	False	significant	N130-N131-N136-N142-N144-T148;N145-T146;T147	True
+Acarinina sibaiyaensis	27	56	55.85	1	False	significant	N106-T107	True
+Acarinina soldadoensis	28	57.78	48.84	1	False	significant	N102-T100;N103-N109-N115-N117-T118	True
+Acarinina strabocella	29	61.95	60.14	1	False	significant	N99-N125	True
+Acarinina subsphaerica	30	60.54	54.73	1	False	significant	N102-T100	True
+Acarinina topilensis	31	42.86	40.22	1	False	significant	N130-N131-N136-N142-N144-T148;N145-T146	True
+Acarinina wilcoxensis	32	56.55	50.93	1	True	significant	N128-T129	True
+Alicantina lozanoi	33	53.23	42.66	2	False	significant	T75	True
+Alicantina prolata	34	54.54	44.14	2	True	speculative	T75	True
+Antarcticella antarctica	35	37.71	12.98	5	False	significant	L_Antarcticella	True
+Antarcticella cecionii	36	53.4	42.6	5	False	significant	L_Antarcticella	True
+Antarcticella pauciloculata	37	66.03	39.23	5	False	speculative	L_Antarcticella	True
+Antarcticella zeocenica	38	42.6	30.8	5	False	significant	L_Antarcticella	True
+Astrorotalia palmerae	39	50.38	47.43	1	True	significant	T357	True
+Beella digitata	40	5.02	0	4	False	significant	N292-T299	True
+Beella praedigitata	41	12.55	0.32	4	True	significant	N292-T299;N366-N298-N300-T304	True
+Berggrenia praepumilio	42	3.91	0.01	3	True	speculative	L_Berggrenia praepumilio	True
+Berggrenia primoripumilio	43	12.71	5.92	3	True	speculative	L_Berggrenia pumilio	True
+Berggrenia pumilio	44	10.53	0	3	False	speculative	L_Berggrenia pumilio	True
+Bolivina cetacensis	45	23.04	15.99	2	True	speculative	L_Bolivina inflata	True
+Bolivina cf. globigera	46	18.75	0	2	True	speculative	L_Bolivina variabilis	True
+Bolivina cf. variabilis	47	18.75	0	2	True	speculative	L_Bolivina variabilis	True
+Bolivina dubeyi	48	16.39	15.12	2	True	speculative	L_Bolivina inflata	True
+Bolivina flexiserialis	49	6.76	0.13	2	True	speculative	L_Bolivina inflata	True
+Bolivina globigera	50	9.72	3.93	2	True	speculative	L_Bolivina variabilis	True
+Bolivina globulosa	51	10.53	0	2	True	speculative	L_Bolivina inflata	True
+Bolivina infirmirugosa	52	9.72	3.35	2	True	speculative	L_Bolivina variabilis	True
+Bolivina inflata	53	9.11	0	2	True	speculative	L_Bolivina inflata	True
+Bolivina inglei	54	6.14	5.3	2	True	speculative	L_Bolivina inflata	True
+Bolivina martini	55	43.26	30.3	2	True	speculative	L_Bolivina martini	True
+Bolivina mascarenensis	56	23.04	15.99	2	True	speculative	L_Bolivina inflata	True
+Bolivina merecuanai	57	32.92	0	2	True	speculative	L_Bolivina variabilis	True
+Bolivina nairi	58	11.93	0	2	True	speculative	L_Bolivina variabilis	True
+Bolivina pristina	59	26.93	8.77	2	True	speculative	L_Bolivina inflata	True
+Bolivina pseudoplicata	60	11.93	0	2	True	speculative	L_Bolivina variabilis	True
+Bolivina rockallkiddensis	61	32.1	1.88	2	True	speculative	L_Bolivina rockallkiddensis	True
+Bolivina sp. A	62	37.71	0	2	True	speculative	L_Bolivina sp. A	True
+Bolivina subexcavata	63	17.54	0	2	True	speculative	L_Bolivina variabilis	True
+Bolivina tasmanensis	64	24.12	22.16	2	True	speculative	L_Bolivina inflata	True
+Bolivina variabilis	65	32.92	0	2	False	speculative	L_Bolivina variabilis	True
+Candeina nitida	66	8.43	0	1	False	significant	T1034	True
+Candeina praenitida	67	10.03	6.46	1	True	significant	T1034	True
+Cassigerinella chipolensis	68	33.89	10.91	6	False	significant	N1009-T1010	True
+Cassigerinella eocaenica	69	36.94	15.79	6	True	significant	N1007;N1009-T1010	True
+Cassigerinelloita amekiensis	70	49.94	43.73	6	False	significant	N1001-T1003;T1002	True
+Catapsydrax africanus	71	39	34.66	4	False	significant	N207-T208;T209	True
+Catapsydrax dissimilis	72	39	17.51	3	False	significant	N206-N210-N212-T213	True
+Catapsydrax globiformis	73	40.3	34.66	4	False	significant	N206-N210-N212-T213;T211	True
+Catapsydrax howei	74	44.08	33.9	4	False	significant	N206-N210-N212-T213;N207-T208	True
+Catapsydrax indianus	75	26.12	20.26	4	False	significant	N206-N210-N212-T213	True
+Catapsydrax unicavus	76	55.51	7.45	4	False	significant	N190-N199-T200;N206-N210-N212-T213	True
+Chiloguembelina adriatica	77	34.09	27.04	1	True	significant	T1006	True
+Chiloguembelina andreae	78	34.09	30.22	1	True	significant	T1008	True
+Chiloguembelina crinita	79	60.74	44.04	1	True	significant	N1005	True
+Chiloguembelina cubensis	80	42.66	23	1	False	significant	N1005;T1006	True
+Chiloguembelina midwayensis	81	65.76	56.83	2	False	significant	N1005	True
+Chiloguembelina morsei	82	65.96	63.62	1	True	significant	N1005	True
+Chiloguembelina ototara	83	44.14	31.46	1	False	significant	N1005;N1007;T1008	True
+Chiloguembelina parallela	84	55.15	54.19	1	True	significant	N1005	True
+Chiloguembelina subtriangularis	85	63.36	61.16	1	True	significant	N1005	True
+Chiloguembelina trinitatensis	86	57	54.82	1	True	significant	N1005	True
+Chiloguembelina wilcoxensis	87	59.16	53.94	1	False	significant	N1005	True
+Ciperoella anguliofficinalis	88	35.3	15.51	2	False	significant	L_Ciperoella anguliofficinalis	True
+Ciperoella angulisuturalis	89	29.18	20.99	1	False	significant	L_Ciperoella anguliofficinalis;T282	True
+Ciperoella ciperoensis	90	29.84	22.81	2	False	significant	N279-T280	True
+Ciperoella fariasi	91	29.5	21.6	1	True	significant	N279-T280	True
+Clavatorella bermudezi	92	14.63	13.82	4	False	significant	T297	True
+Clavigerinella akersi	93	47.12	42.36	4	False	significant	N220-N221-T362;T222	True
+Clavigerinella caucasica	94	44.36	44.19	4	True	strong	N223-N225-N227-T228	True
+Clavigerinella colombiana	95	47.29	42.96	4	False	significant	N220-N221-T362;T222	True
+Clavigerinella eocanica	96	47.95	34.28	4	False	significant	N220-N221-T362	True
+Clavigerinella jarvisi	97	47.15	42.96	4	False	significant	N220-N221-T362;T222	True
+Cribrohantkenina inflata	98	36.4	33.9	2	False	significant	T230	True
+Dentigloborotalia anfracta	99	8.58	0	6	False	speculative	L_Dentigloborotalia	True
+Dentigloborotalia bauerensis	100	21.12	2.62	6	True	speculative	L_Dentigloborotalia	True
+Dentigloborotalia galapagosensis	101	13.4	0	6	True	significant	L_Dentigloborotalia	True
+Dentoglobigerina altispira	102	21.93	3	1	False	significant	N177-T176	True
+Dentoglobigerina baroemoenensis	103	30.69	5.36	3	False	significant	T178	True
+Dentoglobigerina binaiensis	104	25.2	15.98	4	False	significant	N168;T170	True
+Dentoglobigerina cf. conglomerata	105	6.5	0	3	True	significant	N172-T174	True
+Dentoglobigerina galavisi	107	41.96	22.62	3	False	speculative	N149-N163;N165;N171;N175;N177-T176	True
+Dentoglobigerina globosa	108	27.48	3.13	3	False	significant	N177-T176	True
+Dentoglobigerina globularis	109	34.34	22.03	1	False	significant	N165;N171;N175;N177-T176	True
+Dentoglobigerina juxtabinaiensis	110	19.51	15.12	3	True	significant	T170	True
+Dentoglobigerina larmeui	111	31.46	8.1	3	False	significant	N179-T180	True
+Dentoglobigerina prasaepis	112	33.73	24.59	3	False	significant	N171;N172-T174	True
+Dentoglobigerina pseudovenezuelana	113	47.57	31.67	3	False	significant	N149-N163;N77-T266;T164	True
+Dentoglobigerina sellii	114	32.94	16.28	1	False	significant	N166-T167;N168;T169	True
+Dentoglobigerina taci	115	37.69	33.57	1	False	significant	N149-N163;N165;N171	True
+Dentoglobigerina tapuriensis	116	34.28	23.08	4	False	significant	N166-T167	True
+Dentoglobigerina venezuelana	118	33.68	2.21	4	False	significant	N171;N172-T174	True
+Dipsidripella danvillensis	119	43.34	31.78	7	False	speculative	N1013-T1014	True
+Dipsidripella liqianyui	120	42.36	32.73	7	True	speculative	N1013-T1014;N1015-N1027-N1029-N1031-N1033-T1035	True
+Eoglobigerina edita	121	65.94	62.59	3	True	significant	N257;T258	True
+Eoglobigerina eobulloides	122	66.03	64.61	3	False	significant	N257;T258	True
+Eoglobigerina spiralis	123	62.94	62.33	3	True	significant	T258	True
+Fohsella fohsi	124	13.43	11.81	3	False	significant	T155	True
+Fohsella lenguaensis	125	13.01	6.14	3	False	significant	N152-T154	True
+Fohsella lobata	126	13.2	11.81	3	False	significant	T155	True
+Fohsella paralenguaensis	127	10.15	9.49	3	False	significant	N152-T154	True
+Fohsella peripheroacuta	128	14.01	10.83	3	False	significant	N152-T154	True
+Fohsella peripheroronda	129	21.32	12.21	3	False	significant	N152-T154	True
+Fohsella praefohsi	130	13.78	13.2	3	False	significant	T155	True
+Fohsella robusta	131	13.13	11.81	3	False	significant	T155	True
+Globanomalina archeocompressa	132	66.02	63.77	3	True	significant	N1-N3	True
+Globanomalina australiformis	133	56	43.69	3	True	significant	N13-T14	True
+Globanomalina chapmani	134	61.2	54.24	3	False	significant	N4-T12	True
+Globanomalina compressa	135	64.27	62.06	3	False	significant	N1-N3;N4-T12	True
+Globanomalina ehrenbergi	136	62.48	60.74	3	True	significant	N4-T12	True
+Globanomalina imitata	137	62.53	56	3	True	significant	N5-N6-N8-T9	True
+Globanomalina luxorensis	138	56.55	54.54	2	False	significant	N5-N6-N8-T9	True
+Globanomalina ovalis	139	57.78	55.9	2	True	significant	N5-N6-N8-T9	True
+Globanomalina planocompressa	140	65.89	62.53	3	False	significant	N1-N3	True
+Globanomalina planoconica	141	58.36	50.58	3	True	significant	N4-T12	True
+Globanomalina pseudomenardii	142	60.74	57.1	3	False	significant	N4-T12;T11	True
+Globigerina archaeobulloides	143	33.79	23.64	1	True	significant	N264-N265-N276-N278-N281-N283-T284;N285-N286-T288	True
+Globigerina bulloides	144	27.61	0	2	False	significant	N285-N286-T288	True
+Globigerina eamesi	145	25.68	1.98	1	True	significant	N285-N286-T288;N291-T372	True
+Globigerina falconensis	146	17.53	0	1	False	significant	N285-N286-T288	True
+Globigerina megastoma	147	7.66	0	4	True	significant	N285-N286-T288;T294	True
+Globigerina neofalconensis	148	8.61	0	1	False	significant	N285-N286-T288	True
+Globigerina officinalis	149	43.16	20.35	1	False	significant	N264-N265-N276-N278-N281-N283-T284	True
+Globigerina pseudobesa	150	11.83	4.5	3	True	significant	N285-N286-T288	True
+Globigerina umbilicata	151	2.52	0.59	1	True	significant	N285-N286-T288	True
+Globigerinatella insueta	152	17.57	14.6	1	True	significant	T1028	True
+Globigerinatella sp.	153	19.31	15.32	1	True	significant	L_Globigerinita glutinata;T1028	True
+Globigerinatheka barri	154	43.69	36.31	1	True	significant	N237-T238;N239-N240-N244-N246-T247;T245	True
+Globigerinatheka curryi	155	43.63	41.26	1	True	significant	N239-N240-N244-N246-T247;N251-T252;N253-T254	True
+Globigerinatheka euganea	156	42.46	40.13	1	True	significant	N253-T254	True
+Globigerinatheka index	157	43.42	34.66	1	False	significant	N239-N240-N244-N246-T247;N248-T249	True
+Globigerinatheka korotkovi	158	44.03	35.7	1	True	significant	N237-T238;N239-N240-N244-N246-T247	True
+Globigerinatheka kugleri	159	44.14	37.76	1	False	significant	N237-T238;N239-N240-N244-N246-T247;N251-T252	True
+Globigerinatheka luterbacheri	160	40.22	34.66	1	True	significant	T255	True
+Globigerinatheka mexicana	161	44.14	36.05	1	False	significant	N237-T238;N239-N240-N244-N246-T247;N241-T242	True
+Globigerinatheka semiinvoluta	162	37.95	35.88	1	False	significant	T243	True
+Globigerinatheka subconglobata	163	45.88	39.63	1	False	significant	N237-T238;N239-N240-N244-N246-T247	True
+Globigerinatheka tropicalis	164	39.11	34.03	1	True	significant	T250	True
+Globigerinella adamsi	165	0.01	0	3	False	significant	T302	True
+Globigerinella calida	166	4.41	0	2	False	significant	N301-T303;N366-N298-N300-T304	True
+Globigerinella clavaticamerata	167	27.88	14.88	4	True	speculative	L_Globigerinella clavaticamerata	True
+Globigerinella megaperta	168	29.84	26.71	3	True	significant	L_Globigerinella wagneri	True
+Globigerinella molinae	169	28.16	22.67	3	True	significant	L_Globigerinella clavaticamerata	True
+Globigerinella navazuelensis	170	28.24	19.49	3	True	speculative	L_Globigerinella clavaticamerata	True
+Globigerinella obesa	171	33.52	0	3	False	significant	N366-N298-N300-T304	True
+Globigerinella praesiphonifera	172	28.97	11.92	3	False	significant	N366-N298-N300-T304	True
+Globigerinella radians	173	7.08	0	3	False	speculative	L_Globigerinella radians	True
+Globigerinella roeglina	174	29.04	16.12	4	False	significant	L_Globigerinella roeglina	True
+Globigerinella siphonifera	175	12.64	0	3	False	significant	N366-N298-N300-T304	True
+Globigerinella wagneri	176	33.26	27.09	3	True	significant	L_Globigerinella wagneri	True
+Globigerinita flparkerae	177	11.81	0	1	True	significant	L_Globigerinita glutinata;T1032	True
+Globigerinita glutinata	178	31.89	0	1	False	significant	L_Globigerinita glutinata;N1015-N1027-N1029-N1031-N1033-T1035	True
+Globigerinita iota	179	3.35	0	2	False	significant	L_Globigerinita glutinata;T1025	True
+Globigerinita minuta	180	27.16	0	1	False	speculative	L_Globigerinita minuta	True
+Globigerinita n. name	181	3.58	0	3	False	significant	T1021	True
+Globigerinita polypetala	182	4.92	0.01	1	True	significant	L_Globigerinita glutinata;T1021	True
+Globigerinita uvula	183	22.5	0	1	False	significant	L_Globigerinita uvula	True
+Globigerinoides altiaperturus	184	21.4	16.39	1	False	significant	L_Globigerinoides joli;N327-N329-T330	True
+Globigerinoides bollii	185	21.82	3.14	1	False	significant	N326-N332-N334-T360;T353	True
+Globigerinoides conglobatus	186	6.21	0	1	False	significant	T328	True
+Globigerinoides diminutus	187	16.07	14.78	1	False	significant	N326-N332-N334-T360	True
+Globigerinoides elongatus	188	4.55	0	1	False	significant	L_Globigerinoides elongatus;N327-N329-T330;T331	True
+Globigerinoides eoconglobatus	189	9.38	0	1	False	significant	N327-N329-T330;T328	True
+Globigerinoides extremus	190	8.83	1.97	1	False	significant	N327-N329-T330;T331	True
+Globigerinoides italicus	191	22.52	4.01	1	True	significant	L_first Globigerinoides;T343	True
+Globigerinoides joli	192	22.47	16.39	1	True	significant	L_Globigerinoides joli	True
+Globigerinoides kennetti	193	9.16	5.32	1	False	significant	T353	True
+Globigerinoides mitra	194	17.79	12.28	1	False	significant	N326-N332-N334-T360;T333	True
+Globigerinoides neoparawoodi	195	22.62	14.5	1	True	significant	L_first Globigerinoides;N324-N336-N342-N344-N348-N352-N354-T356;T343	True
+Globigerinoides obliquus	196	21.4	1.3	1	False	significant	L_Globigerinoides joli;N327-N329-T330	True
+Globigerinoides ruber	197	15.12	0	1	False	significant	T335	True
+Globigerinoides rublobatus	198	0.82	0.81	1	True	speculative	L_Globigerinoides rublobatus	True
+Globigerinoides seigliei	199	9.76	4.72	1	False	significant	T335	True
+Globigerinoides subquadratus	200	22.52	11.57	1	False	significant	L_first Globigerinoides;N326-N332-N334-T360	True
+Globigerinoides tenellus	201	2.42	0	2	False	significant	L_Globigerinoides elongatus;T351	True
+Globigerinoidesella fistulosa	202	3.33	1.88	1	False	significant	N337-N339-T341;T340	True
+Globoconella conomiozea	203	7.89	6.52	3	False	significant	N27	True
+Globoconella inflata	204	3.24	0	3	False	significant	T29	True
+Globoconella miotumida	205	16.39	5.83	3	False	significant	N27	True
+Globoconella miozea	206	16.62	11.43	3	False	significant	N27	True
+Globoconella pliozea	207	5.66	4.1	3	False	significant	N27;T28	True
+Globoconella pseudospinosa	208	4.57	4.11	3	True	significant	T29	True
+Globoconella puncticulata	209	4.55	2.43	3	False	significant	T29	True
+Globoconella sphericomiozea	210	5.66	4.51	3	False	significant	N27;T29	True
+Globoconella terminalis	211	6.52	5.02	3	False	significant	N27;T28	True
+Globoconella triangula	212	3.09	0.15	3	True	strong	T29	True
+Globoconusa daubjergensis	213	65.72	62.63	2	False	significant	L_Globoconusa	True
+Globoconusa victori	214	63.93	62.68	2	True	strong	L_Globoconusa	True
+Globoquadrina dehiscens	215	24.23	5.91	3	False	significant	N179-T180;T181	True
+Globorotalia archeomenardii	216	16.14	13.86	3	False	significant	N26-N32;N30;T31	True
+Globorotalia bermudezi	217	1.98	0	4	True	significant	T124	True
+Globorotalia cavernula	218	0.91	0	4	True	significant	N64-T66;T65	True
+Globorotalia challengeri	219	11.23	9.98	4	True	significant	T33	True
+Globorotalia cibaoensis	220	9.44	4.61	4	True	significant	N52-N54-T53	True
+Globorotalia crassaconica	221	4.31	3.51	4	True	significant	T57	True
+Globorotalia crassaformis	222	5.81	0	4	False	significant	N56-N58-N59-T61	True
+Globorotalia crassula	223	5.63	0.91	4	False	significant	N52-N54-T53;T55	True
+Globorotalia cultrata	224	12.46	0	2	False	significant	N34-N40-T44	True
+Globorotalia eastropacia	225	4.61	0	4	False	significant	N48-T50;T49	True
+Globorotalia evoluta	226	4.8	3.91	4	True	significant	N48-T50	True
+Globorotalia excelsa	227	1.85	0	4	True	significant	N62-T63;N64-T66	True
+Globorotalia exilis	228	4.39	2.08	3	False	significant	T38	True
+Globorotalia flexuosa	229	0.4	0.07	3	False	significant	N45-T43	True
+Globorotalia gigantea	230	14.99	8.95	4	True	significant	N26-N32;N47	True
+Globorotalia hessi	231	1.8	0.4	4	True	significant	N56-N58-N59-T61;T60	True
+Globorotalia hirsuta	232	4.35	0	4	False	significant	N48-T50	True
+Globorotalia juanai	233	9.78	4.8	4	True	significant	N47;N48-T50	True
+Globorotalia limbata	234	10.63	2.37	3	False	significant	N34-N40-T44;N35-N37-T39	True
+Globorotalia margaritae	235	6.09	3.83	3	False	significant	N48-T50	True
+Globorotalia menardii	236	12.31	5.99	3	False	significant	N34-N40-T44	True
+Globorotalia merotumida	237	11.2	5.93	3	True	significant	N34-N40-T44;N42-T41	True
+Globorotalia miocenica	238	3.72	2.37	2	False	significant	N35-N37-T39	True
+Globorotalia multicamerata	239	6.66	2.97	3	False	significant	T36	True
+Globorotalia pachytheca	240	1.8	0	4	True	significant	N62-T63;N64-T66	True
+Globorotalia panda	241	14.59	10.5	3	True	speculative	N30;T31	True
+Globorotalia pertenuis	242	3.51	2.3	3	False	significant	T38	True
+Globorotalia plesiotumida	243	8.77	3.72	3	False	significant	N42-T41	True
+Globorotalia praemenardii	244	14.32	10.88	3	False	significant	N34-N40-T44	True
+Globorotalia praescitula	245	18.22	13.77	4	False	speculative	N25;N26-N32;N47	True
+Globorotalia primitiva	246	6.09	4.8	4	True	significant	N48-T50	True
+Globorotalia pseudomiocenica	247	7.62	2.31	2	False	significant	N35-N37-T39	True
+Globorotalia ronda	248	4.01	1.02	4	True	significant	N56-N58-N59-T61	True
+Globorotalia scitula	249	15	0	4	False	significant	N26-N32;N47;N51-N122-T123	True
+Globorotalia tenuitheca	250	3.4	1.31	4	True	significant	N62-T63	True
+Globorotalia tosaensis	251	3.35	0.61	4	False	significant	N62-T63	True
+Globorotalia truncatulinoides	252	2.61	0	4	False	significant	N62-T63;N64-T66	True
+Globorotalia tumida	253	5.82	0	4	False	significant	N45-T43	True
+Globorotalia ungulata	254	4.91	0	2	False	significant	N45-T43;T46	True
+Globorotalia viola	255	3.51	1.41	3	False	significant	N56-N58-N59-T61	True
+Globorotaloides atlanticus	256	24.96	18.72	4	False	significant	T214	True
+Globorotaloides eovariabilis	257	49.18	20.83	4	False	significant	N190-N199-T200;N201-N998-N295-N203-T204	True
+Globorotaloides hexagonus	258	28.24	0	4	False	significant	N201-N998-N295-N203-T204	True
+Globorotaloides oveyi	259	0.01	0	4	False	significant	N201-N998-N295-N203-T204	True
+Globorotaloides quadrocameratus	260	57.89	22.42	4	False	significant	N190-N199-T200	True
+Globorotaloides stainforthi	261	28.12	16.99	4	False	significant	N201-N998-N295-N203-T204;T214	True
+Globorotaloides suteri	262	40.81	15.7	4	False	significant	N190-N199-T200	True
+Globorotaloides testarugosus	263	28.24	22.04	4	False	significant	T202	True
+Globorotaloides variabilis	264	29.57	15	4	False	significant	N201-N998-N295-N203-T204	True
+Globoturborotalita apertura	265	11.24	1.64	2	True	significant	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita barbula	266	37.8	33.68	1	False	significant	L_Globoturborotalita barbula	True
+Globoturborotalita bassriverensis	267	56	33.83	2	False	significant	N308-T309;N314-N318	True
+Globoturborotalita bollii	268	15.37	14.67	1	True	speculative	L_Globoturborotalita pseudopraebulloides	True
+Globoturborotalita brazieri	269	29.71	17.27	1	False	significant	N325-T361	True
+Globoturborotalita bulloidea	270	17.59	3.55	1	True	speculative	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita cancellata	271	37.8	27.88	1	True	significant	L_Globoturborotalita occlusa	True
+Globoturborotalita connecta	272	24.38	16.39	1	False	significant	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita decoraperta	273	11.51	2.74	1	True	significant	N324-N336-N342-N344-N348-N352-N354-T356;N349-T350	True
+Globoturborotalita druryi	274	20.91	0.59	1	True	significant	T373	True
+Globoturborotalita eolabiacrassata	275	48.84	15.98	1	True	significant	T323	True
+Globoturborotalita euapertura	276	28.42	21.44	4	False	significant	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita gnaucki	277	37.76	28.16	2	True	significant	N319-T320;T321	True
+Globoturborotalita labiacrassata	278	32.1	21.48	2	True	significant	T323	True
+Globoturborotalita martini	279	43.69	26.93	1	False	significant	N322	True
+Globoturborotalita nepenthes	280	11.67	4.38	2	False	significant	T355	True
+Globoturborotalita occlusa	281	33.05	12.64	1	False	significant	L_Globoturborotalita occlusa	True
+Globoturborotalita ouachitaensis	282	42.76	21.16	1	False	significant	N314-N318;N319-T320	True
+Globoturborotalita paracancellata	283	37.76	25.2	1	False	significant	L_Globoturborotalita occlusa	True
+Globoturborotalita pseudopraebulloides	284	37.8	14.4	1	True	significant	L_Globoturborotalita pseudopraebulloides	True
+Globoturborotalita rubescens	285	3.62	0	2	False	significant	N349-T350	True
+Globoturborotalita woodi	286	29.18	2.3	1	False	significant	N324-N336-N342-N344-N348-N352-N354-T356	True
+Guembelitria cretacea	287	72.44	64.64	1	False	speculative	N1001-T1003	True
+Guembelitrioides nuttalli	288	52.4	41.96	3	False	significant	N237-T238	True
+Hantkenina alabamensis	289	39.8	33.9	2	False	significant	N223-N225-N227-T228;N358-T229	True
+Hantkenina australis	290	41.96	38.07	3	True	significant	N223-N225-N227-T228;T226	True
+Hantkenina compressa	291	40.98	33.9	2	False	significant	N223-N225-N227-T228	True
+Hantkenina dumblei	292	43.57	39	3	False	significant	N223-N225-N227-T228	True
+Hantkenina lehneri	293	43.59	41.11	3	True	significant	N223-N225-N227-T228;T224	True
+Hantkenina liebusi	294	43.91	39.72	4	False	significant	N223-N225-N227-T228	True
+Hantkenina mexicana	295	44.15	43.46	4	False	strong	N223-N225-N227-T228	True
+Hantkenina nanggulanensis	296	38.07	33.9	2	False	significant	N223-N225-N227-T228;N358-T229;T230	True
+Hantkenina primitiva	297	39.97	33.9	3	True	significant	N223-N225-N227-T228	True
+Hantkenina singanoae	298	44.25	44.14	3	True	strong	N223-N225-N227-T228	True
+Hastigerina pelagica	299	66.04	0	3	False	speculative	L_Hastigerina	True
+Hastigerinella digitata	300	6.76	0	3	False	speculative	L_Hastigerinella	True
+Igorina albeari	301	61.35	57.55	1	False	significant	T73	True
+Igorina pusilla	302	62.33	61.35	1	True	significant	N72;T74	True
+Igorina tadjikistanensis	303	61.85	56	1	False	significant	N72;T74	True
+Jenkinsina columbiana	304	64.64	21.16	6	False	speculative	N1001-T1003	True
+Jenkinsina triseriata	305	50.38	27.04	6	False	significant	N1001-T1003	True
+Morozovella acuta	306	58.45	55.02	1	False	significant	N80-N368-N370-T78	True
+Morozovella acutispira	307	60.89	57.78	1	False	significant	N79;N80-N368-N370-T78;T82	True
+Morozovella aequa	308	57.78	54.15	1	False	significant	N83-N84-T85	True
+Morozovella allisonensis	309	56	55.9	1	False	significant	T369	True
+Morozovella angulata	310	62.33	60.44	1	False	significant	N76-N101;N83-N84-T85	True
+Morozovella apanthesma	311	61.55	55.41	1	False	significant	N83-N84-T85	True
+Morozovella aragonensis	312	53.23	43.26	1	False	significant	N94-T95	True
+Morozovella caucasica	313	50.8	44.98	1	True	significant	N98-T96;T97	True
+Morozovella conicotruncata	314	62.26	60.14	1	False	significant	N76-N101;N80-N368-N370-T78	True
+Morozovella crater	315	54.05	43.57	1	False	significant	N94-T95;N98-T96	True
+Morozovella edgari	316	55.41	54.54	1	False	significant	T371	True
+Morozovella formosa	317	54.54	50.62	1	True	significant	T92	True
+Morozovella gracilis	318	55.41	53.23	1	False	significant	N88-N89-N90-T93;T92	True
+Morozovella lensiformis	319	54.54	52.97	1	False	significant	N94-T95	True
+Morozovella marginodentata	320	55.32	53.03	1	False	significant	N88-N89-N90-T93;T91	True
+Morozovella occlusa	321	60.86	55.02	1	False	significant	N79;N80-N368-N370-T78;T81	True
+Morozovella pasionensis	322	60.97	55.02	1	False	significant	N79;N80-N368-N370-T78;T82	True
+Morozovella praeangulata	323	62.63	61.95	1	False	significant	N76-N101	True
+Morozovella subbotinae	324	57.1	51.04	1	False	significant	N88-N89-N90-T93	True
+Morozovella velascoensis	325	61.35	55.15	1	False	significant	N80-N368-N370-T78	True
+Morozovelloides bandyi	326	48.32	41.96	1	False	significant	N130-N131-N136-N142-N144-T148;N137-N139-T143;T141	True
+Morozovelloides coronatus	327	47.62	40.05	1	False	significant	N130-N131-N136-N142-N144-T148;N137-N139-T143	True
+Morozovelloides crassatus	328	48.26	37.99	1	False	significant	N130-N131-N136-N142-N144-T148;N137-N139-T143	True
+Morozovelloides lehneri	329	43.16	40.05	1	False	significant	T138	True
+Muricohedbergella holmdelensis	330	71.12	66.02	3	True	speculative	N1-N3	True
+Muricohedbergella monmouthensis	331	69.81	66.02	3	False	significant	N256-N2-N198-T67	True
+Mutabella mirabilis	332	18.77	13.85	1	False	significant	L_Globigerinita glutinata;T1030	True
+Neoacarinina blowi	333	3.83	0.25	1	True	speculative	L_Neoacarinina;T29	True
+Neogallitellia vivans	334	17.95	0	2	False	speculative	L_Neogallitellia	True
+Neogloboquadrina acostaensis	335	10.57	1.58	3	False	significant	N23-N156-N157-N160-T161	True
+Neogloboquadrina atlantica	336	11.13	0.1	3	False	speculative	N23-N156-N157-N160-T161;T158	True
+Neogloboquadrina dutertrei	337	7.08	0	4	False	significant	T158	True
+Neogloboquadrina humerosa	338	8.56	1.61	3	False	significant	N23-N156-N157-N160-T161;T158	True
+Neogloboquadrina incompta	339	11.85	0	2	False	speculative	L_Neogloboquadrina incompta;N23-N156-N157-N160-T161	True
+Neogloboquadrina inglei	340	3.49	0.54	3	False	speculative	T158	True
+Neogloboquadrina pachyderma	341	11.13	0	5	False	significant	L_Neogloboquadrina incompta;N23-N156-N157-N160-T161;T159	True
+Orbulina suturalis	342	15.12	0	3	False	significant	T338	True
+Orbulina universa	343	15.06	0	1	False	significant	T338	True
+Orbulinoides beckmanni	344	40.39	39.97	1	True	significant	N253-T254	True
+Orcadia riedeli	345	4.92	0	2	False	speculative	L_Orcadia	True
+Paragloborotalia acrostoma	346	23.3	15.18	3	True	significant	L_Paragloborotalia acrostoma;L_Paragloborotalia incognita	True
+Paragloborotalia bella	347	18.32	13.94	1	False	significant	T194	True
+Paragloborotalia birnageae	348	28.2	7.16	3	False	significant	L_Paragloborotalia birnageae;N193-N195-T197	True
+Paragloborotalia continuosa	349	23.76	8.1	1	False	significant	N23-N156-N157-N160-T161	True
+Paragloborotalia griffinoides	350	55.95	33.9	4	False	significant	N184-N186-N187-N188-T189;N191-T192	True
+Paragloborotalia incognita	351	22.81	16.39	3	True	significant	L_Paragloborotalia incognita	True
+Paragloborotalia kugleri	352	22.99	21.03	1	False	significant	N150-N151-T153	True
+Paragloborotalia mayeri	353	24.23	10.53	1	False	significant	T194	True
+Paragloborotalia nana	354	47.85	17.53	3	False	significant	N191-T192;N193-N195-T197	True
+Paragloborotalia opima	355	30.69	26.93	3	False	significant	N193-N195-T197;T196	True
+Paragloborotalia pseudocontinuosa	356	31.2	15.89	3	True	significant	L_Paragloborotalia incognita	True
+Paragloborotalia pseudokugleri	357	25.2	21.22	1	False	significant	N150-N151-T153	True
+Paragloborotalia semivera	358	28.91	16.28	3	True	significant	L_Paragloborotalia incognita;L_Paragloborotalia semivera	True
+Paragloborotalia siakensis	359	31.04	10.53	2	False	significant	N193-N195-T197;T194	True
+Paragloborotalia zealandica	360	17.18	16.39	3	True	significant	L_Paragloborotalia incognita	True
+Parasubbotina aff. pseudobulloides	361	66.03	65.77	4	False	significant	N182-T183	True
+Parasubbotina eoclava	362	49.13	43.69	6	False	significant	N218-T219	True
+Parasubbotina griffinae	363	48.25	37.22	6	False	significant	N215-N217-N231-N235-T236;N232-T233	True
+Parasubbotina hagni	364	50.59	34.66	3	False	speculative	N184-N186-N187-N188-T189	True
+Parasubbotina inaequispira	365	56	45.26	6	False	significant	N215-N217-N231-N235-T236	True
+Parasubbotina prebetica	366	51.68	50.93	6	True	significant	N215-N217-N231-N235-T236;T216	True
+Parasubbotina pseudobulloides	367	65.77	60.82	4	False	significant	N182-T183	True
+Parasubbotina pseudowilsoni	368	47.48	40.39	3	True	significant	N184-N186-N187-N188-T189	True
+Parasubbotina varianta	369	64.03	32.99	3	False	significant	N182-T183;N184-N186-N187-N188-T189	True
+Parasubbotina variospira	370	62.26	60.54	3	False	significant	N184-N186-N187-N188-T189;T185	True
+Parvularugoglobigerina alabamensis	371	66.02	61.11	2	False	significant	L_Parvularugoglobigerina	True
+Parvularugoglobigerina eugubina	372	66	65.73	3	False	significant	L_Parvularugoglobigerina	True
+Parvularugoglobigerina extensa	373	66.01	65.73	2	True	significant	L_Parvularugoglobigerina	True
+Pearsonites anapetes	374	45.26	43.26	1	True	significant	L_Pearsonites	True
+Pearsonites broedermanni	375	56.25	43.36	1	False	significant	L_Pearsonites	True
+Pearsonites lodoensis	376	56.78	50.48	1	True	significant	L_Pearsonites	True
+Planoglobanomalina pseudoalgeriana	377	51.58	45.04	2	True	significant	N4-T12	True
+Planorotalites capdevilensis	378	50.38	36.62	2	False	significant	N86-T87	True
+Planorotalites pseudoscitula	379	57.1	46.36	2	False	significant	N83-N84-T85;N86-T87	True
+Praemurica inconstans	380	64.27	62.26	2	False	significant	N68-N69-N70-T71	True
+Praemurica pseudoinconstans	381	65.84	62.55	2	False	significant	N68-N69-N70-T71	True
+Praemurica taurica	382	66.02	63.85	2	False	significant	N68-N69-N70-T71	True
+Praemurica uncinata	383	62.68	62.33	2	False	significant	N68-N69-N70-T71	True
+Praeorbulina circularis	384	15.98	14.89	1	False	significant	T338	True
+Praeorbulina curva	385	16.29	15	1	False	significant	T338	True
+Praeorbulina glomerosa	386	16.14	14.23	1	False	significant	T338	True
+Praepararotalia cretacea	387	70.14	66.03		False	speculative	N1013-T1014	False
+Praepararotalia perclara	388	66.33	43.34	2	True	speculative	N1013-T1014	False
+Protentella nicobarensis	389	29.17	4.01	6	True	significant	T367	True
+Protentella prolixa	390	29.18	11.64	6	True	significant	T367	True
+Protentelloides dalhousiei	391	24.59	21.73	4	False	significant	T214	True
+Protentelloides primitivus	392	24.96	21.73	6	True	significant	T214	True
+Pseudoglobigerinella bolivariana	393	47.95	42.76	6	False	significant	N215-N217-N231-N235-T236;N232-T233;T234	True
+Pseudohastigerina micra	394	49.48	32.94	2	False	significant	N5-N6-N8-T9	True
+Pseudohastigerina naguewichiensis	395	36.31	32.1	2	False	significant	T10	True
+Pseudohastigerina sharkriverensis	396	47.85	39.32	2	True	significant	N5-N6-N8-T9;T7	True
+Pseudohastigerina wilcoxensis	397	55.85	42.96	2	True	significant	N5-N6-N8-T9	True
+Pulleniatina finalis	398	1.97	0	3	True	significant	T162	True
+Pulleniatina obliquiloculata	399	4.22	0	3	False	significant	T162	True
+Pulleniatina praecursor	400	4.52	1.9	3	False	significant	T162	True
+Pulleniatina praespectabilis	401	5.98	4.27	3	True	significant	N364;T365	True
+Pulleniatina primalis	402	6.5	4	3	False	significant	N364;T162	True
+Pulleniatina spectabilis	403	5.14	4.27	3	False	significant	T365	True
+Quiltyella clavacella	404	28.24	16.56	4	True	speculative	L_Quiltyella clavacella	True
+Quiltyella nazcaensis	405	25.2	21.52	4	True	speculative	L_Quiltyella clavacella	True
+Rectoguembelina cretacea	406	70.14	62.33	1	False	speculative	L_Rectoguembelina	True
+Riveroinella martinezpicoi	407	16.26	13.3	7	False	significant	N1009-T1010;T1011	True
+Soldaniella toscanae	408	10.11	2.09	1	True	speculative	L_Soldaniella	True
+Sphaeroidinella dehiscens	409	5.54	0	3	False	significant	N345-T347	True
+Sphaeroidinellopsis disjuncta	410	17.87	12.28	3	False	significant	N324-N336-N342-N344-N348-N352-N354-T356;N345-T347	True
+Sphaeroidinellopsis kochi	411	14.4	4.49	3	False	significant	N345-T347;T346	True
+Sphaeroidinellopsis paenedehiscens	412	7.24	2.31	3	False	significant	N345-T347	True
+Sphaeroidinellopsis seminulina	413	16.39	3.05	3	False	significant	N345-T347	True
+Subbotina angiporoides	414	41.94	29.84	3	False	significant	N310-T313;T359	True
+Subbotina cancellata	415	62.91	57.89	3	False	significant	N305;N310-T313	True
+Subbotina corpulenta	416	49.18	29.04	3	False	significant	N267;T268	True
+Subbotina crociapertura	417	49.28	39.97	4	False	significant	N264-N265-N276-N278-N281-N283-T284;N77-T266;T363	True
+Subbotina eocaena	418	51.27	25.44	4	False	significant	N264-N265-N276-N278-N281-N283-T284;N267;N269;N271-T272	True
+Subbotina gortanii	419	39	24.47	4	False	significant	N77-T266	True
+Subbotina hornibrooki	420	56.27	53.76	3	False	significant	N306-T307;N308-T309	True
+Subbotina jacksonensis	421	43.46	33.9	3	False	significant	N269;T270	True
+Subbotina linaperta	422	52.06	31.89	3	False	significant	N310-T313	True
+Subbotina minima	423	43.69	30	3	False	significant	N310-T313;T359	True
+Subbotina patagonica	424	58.34	44.98	4	False	significant	N310-T313	True
+Subbotina projecta	425	37.76	23.87	3	False	significant	N271-T272;T275	True
+Subbotina roesnaesensis	426	56.27	42.86	3	False	significant	N264-N265-N276-N278-N281-N283-T284	True
+Subbotina senni	427	50.58	37.95	5	False	significant	N264-N265-N276-N278-N281-N283-T284;T277	True
+Subbotina tecta	428	37.76	32.1	3	True	significant	N271-T272	True
+Subbotina triangularis	429	62.52	55.02	2	False	significant	N259-N261-N262-T263	True
+Subbotina triloculinoides	430	65.64	57.78	3	False	significant	N259-N261-N262-T263;T260	True
+Subbotina trivialis	431	65.94	62.52	3	False	significant	N257;N259-N261-N262-T263	True
+Subbotina utilisindex	432	39	29.84	4	False	significant	N310-T313	True
+Subbotina velascoensis	433	60.89	55.02	3	False	significant	N305;N306-T307	True
+Subbotina yeguaensis	434	50.38	33.9	4	False	significant	N264-N265-N276-N278-N281-N283-T284;N77-T266	True
+Tenuitella angustiumbilicata	435	33.36	12.27	1	False	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella brasilensis	436	13.74	0	2	False	speculative	L_Tenuitella brasilensis	True
+Tenuitella brevispira	437	32.1	3.91	2	True	speculative	L_Tenuitella brasilensis;N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella cf. minutissima	438	21.77	12.37	2	True	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella gemma	439	34.91	17.59	2	True	significant	N1015-N1027-N1029-N1031-N1033-T1035;T1019	True
+Tenuitella insolita	440	35.72	34.77	4	False	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella jamesi	441	28.73	13.24	2	True	strong	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella minutissima	442	21.36	10.54	2	True	significant	T1019	True
+Tenuitella munda	443	34.78	15.89	1	False	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella neobrevispira	444	13.81	13.67	2	True	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella patefacta	445	35.36	34.11	2	True	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella pieste	446	14.74	12.09	2	True	strong	T1019	True
+Tenuitella praegemma	447	35.14	33.34	4	False	significant	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella selleyi	448	18.51	0	2	True	strong	N1015-N1027-N1029-N1031-N1033-T1035	True
+Trilobatus altospiralis	449	21.82	7.62	1	True	significant	L_Trilobatus altospiralis	True
+Trilobatus bisphericus	450	17.94	15.6	1	False	significant	N337-N339-T341;T338	True
+Trilobatus immaturus	451	23	0	1	False	significant	L_Globoturborotalita occlusa;N337-N339-T341;T287	True
+Trilobatus praeimmaturus	452	21.64	15.98	1	True	significant	N337-N339-T341	True
+Trilobatus primordius	453	26.12	17.47	1	False	significant	L_Globoturborotalita occlusa;T287	True
+Trilobatus quadrilobatus	454	23.01	13.8	1	False	significant	L_Globoturborotalita occlusa;N337-N339-T341;T287	True
+Trilobatus sacculifer	455	11.11	0	1	False	speculative	N337-N339-T341	True
+Trilobatus sicanus	456	16.39	14.53	1	False	significant	T338	True
+Trilobatus subsacculifer	457	22.26	8.1	1	False	significant	N337-N339-T341;T287	True
+Trilobatus trilobus	458	22.88	0	1	False	significant	L_Globoturborotalita occlusa;N337-N339-T341;T287	True
+Turborotalia altispiroides	459	40.64	37.13	2	False	significant	N15-N17;T16	True
+Turborotalia ampliapertura	460	40.22	30.3	2	False	significant	N15-N17;N21-T24;T22	True
+Turborotalia cerroazulensis	461	41.46	34.03	3	False	significant	N15-N17;N18-T19	True
+Turborotalia cocoaensis	462	38.58	34.03	3	False	strong	N15-N17;N18-T19;T20	True
+Turborotalia cunialensis	463	34.4	34.03	2	True	significant	T20	True
+Turborotalia frontosa	464	48.62	40.64	4	False	significant	N15-N17	True
+Turborotalia increbescens	465	39.11	31.67	2	False	significant	N15-N17;N21-T24	True
+Turborotalia pomeroli	466	42.06	35.03	2	False	significant	N15-N17;N18-T19	True
+Turborotalia possagnoensis	467	43.63	40.64	2	False	significant	N15-N17	True
+Turborotalita carcoselleensis	468	44.14	35.96	2	True	speculative	N315-T_316	True
+Turborotalita clarkei	469	1.61	0	4	False	significant	T317	True
+Turborotalita cristata	470	4.51	0	2	True	significant	T317	True
+Turborotalita humilis	471	5.82	0	1	False	significant	N315-T_316;T317	True
+Turborotalita nikolasi	472	66.04	44.14	2	True	speculative	N315-T_316	True
+Turborotalita praequinqueloba	473	35.74	27.15	2	True	significant	N315-T_316	True
+Turborotalita quinqueloba	474	36.94	0	5	False	significant	N315-T_316	True
+Woodringina claytonensis	475	66	64.43	1	False	significant	L_Woodringina	True
+Woodringina hornerstownensis	476	65.96	60.74	1	False	significant	L_Woodringina	True
+Zeauvigerina aegyptiaca	477	59.27	55.15	2	False	significant	L_Zeauvigerina	True
+Zeauvigerina lodoensis	478	57.78	53.79	4	True	speculative	L_Zeauvigerina	True
+Zeauvigerina parri	479	49.55	43.78	4	True	significant	L_Zeauvigerina	True
+Zeauvigerina teuria	480	63.51	58.22	4	True	significant	L_Zeauvigerina	True
+Zeauvigerina waiparaensis	482	69.46	54.84	4	False	speculative	L_Zeauvigerina	True
+Zeauvigerina zelandica	483	56	37.23	4	True	significant	L_Zeauvigerina	True
+`Dentoglobigerina` eotripartita	106	47.38	31.36	3	False	speculative	L_`Dentoglobigerina` eotripartita;N126-T127	True
+`Dentoglobigerina` tripartita	117	37.72	11.77	4	False	significant	T173	True
+`Zeauvigerina` virgata	481	63.93	55.17	4	True	speculative	L_`Zeauvigerina`	True

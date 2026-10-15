@@ -1,0 +1,10 @@
+in-scope S1 species: 480 | Triton species: 395 | exact-name matches: 340 
+kept occurrences (inc, pal.lat, within S1 range): 420490 | species with >=1 kept: 332 
+lineages: 268 | with any data: 211 | covered (>=0.5 of bins): 190 
+median lineage coverage: 0.9895 
+                          
+                           different insufficient no_coexistence similar
+  parent_daughter_boundary         0           49              0       0
+  parent_daughter_overlap         31          147              0      30
+  sister                          42           85             59      48
+pairs with shared members excluded: 157 

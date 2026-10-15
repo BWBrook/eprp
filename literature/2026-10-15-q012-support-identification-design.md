@@ -256,7 +256,18 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 1. ~~Lineage-record definition~~ **Done** (15 October; section 1). The
    lineage records are anagenesis-free units. Overlap means budding;
    boundary links are bifurcation candidates.
-2. **Triton joint exposure audit.** Join Triton occurrences to the member
+2. **Triton joint exposure audit: done** (15 October;
+   [record](../data/q012-exposure-support/README.md)).
+   - 340 of 480 species match exactly; there is a 140-species mapping gap,
+     with the S3 synonyms as the route to close it.
+   - 190 of 268 lineages are covered (median coverage 0.99).
+   - Among relatives co-existing with at least 3 joint data bins, 73 pairs
+     (31 parent–daughter, 42 sister) have observably different
+     palaeolatitude occupancy, and 78 are similar.
+   - So the measured-exposure adjustment (R3m) has a real lever. R3b stays
+     non-identifiable.
+
+   *Original definition of the gate:* join Triton occurrences to the member
    morphospecies of each lineage. Count lineages with palaeolatitude and
    basin coverage through their ranges, and count relative pairs whose
    observed exposures differ.

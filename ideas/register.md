@@ -707,9 +707,15 @@ identifiability point.
       anagenesis-free; overlap is budding (215), and boundary links are
       bifurcation candidates (49). 169 of 482 ecogroups are inferred, partly from
       relatives, so they are not independent exposure evidence.
-    - **Next gates:** a Triton joint exposure audit (384 of 480 species
-      have Triton records within their ranges, as the article reports);
-      freeze inputs; a cost pilot; calibration.
+    - **Triton exposure audit (15 October;
+      [record](../data/q012-exposure-support/README.md)).** 190 of 268
+      lineages are covered. 73 co-existing relative pairs differ
+      observably in palaeolatitude occupancy, and 78 are similar. This is
+      a usable measured-exposure lever, with a 140-species name gap to
+      close.
+    - **Next gates:** freeze the inputs (η thresholds, priors, inclusion
+      and ancestor rules, exposure adjustment); a cost pilot;
+      calibration.
 
 - **Identification problem.** Declining hazard with age is widely observed
   (Silvestro et al. 2019, 10.1111/ele.13441; Hagen et al. 2018). Survival curves

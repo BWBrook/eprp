@@ -12,7 +12,10 @@ Builds two source-located tables without changing any raw value:
   names in S1, with its date relation, whether the daughter is named as a
   lineage's founding morphospecies, and shared lineage membership. No
   speciation mode is assigned: the source tables do not define one at this
-  level (see README).
+  level (see README);
+- species.tsv: one row per S1 morphospecies, with dates, ecogroup (and
+  whether it is inferred, "No Data"), ancestry evidence and lineage
+  memberships.
 
 Run from the repository root:
   uv run data/q012-event-dictionary/build_events.py
@@ -134,7 +137,13 @@ def main():
         mrows.append([parent, name, prow, row, r["Ancestry evidence"], rel, ";".join(founds), anc_lists,
                       ";".join(shared), scope])
 
-    for fn, rows in (("lineage_edges.tsv", lrows), ("morphospecies_edges.tsv", mrows)):
+    srows = [["morphospecies", "s1_row", "start_Ma", "end_Ma", "dominant_ecogroup", "ecogroup_no_data",
+              "ancestry_evidence", "lineages", "in_scope"]]
+    for name, (row, r) in sorted(sp.items()):
+        srows.append([name, row, r["Start"], r["End"], r["Dominant Ecogroup"],
+                      str(r["EcogroupReferenceList"]).strip() == "No Data", r["Ancestry evidence"],
+                      ";".join(sorted(in_lineages[name])), name not in OUT_OF_SCOPE_SPECIES])
+    for fn, rows in (("lineage_edges.tsv", lrows), ("morphospecies_edges.tsv", mrows), ("species.tsv", srows)):
         with (HERE / fn).open("w", newline="") as fh:
             csv.writer(fh, delimiter="\t", lineterminator="\n").writerows(rows)
     summary = dict(

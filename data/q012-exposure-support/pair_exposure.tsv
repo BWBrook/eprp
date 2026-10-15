@@ -1,0 +1,492 @@
+type	lineage_a	lineage_b	shared_members_excluded	coexisting_bins	joint_data_bins	jaccard	abs_pal_lat_diff	class
+parent_daughter_overlap	N126-T127	L_`Dentoglobigerina` eotripartita	1	6	0	NA	NA	insufficient
+parent_daughter_overlap	L_Zeauvigerina	L_`Zeauvigerina`	0	9	0	NA	NA	insufficient
+parent_daughter_overlap	N1013-T1014	L_Antarcticella	0	36	0	NA	NA	insufficient
+parent_daughter_overlap	L_Berggrenia pumilio	L_Berggrenia praepumilio	0	4	0	NA	NA	insufficient
+parent_daughter_overlap	N315-T_316	L_Berggrenia pumilio	0	13	2	0.1	40.4	insufficient
+parent_daughter_overlap	T321	L_Ciperoella anguliofficinalis	0	8	4	0.043	15.63	different
+parent_daughter_overlap	N1009-T1010	L_Dentigloborotalia	0	12	0	NA	NA	insufficient
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	L_first Globigerinoides	1	2	2	0.174	16.35	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella clavaticamerata	0	15	7	0.25	8.94	different
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella radians	0	8	0	NA	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella roeglina	0	14	0	NA	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella wagneri	0	8	0	NA	NA	insufficient
+parent_daughter_overlap	N1015-N1027-N1029-N1031-N1033-T1035	L_Globigerinita glutinata	1	28	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	L_Globigerinita minuta	0	28	1	0.2	7.01	insufficient
+parent_daughter_overlap	L_Globigerinita minuta	L_Globigerinita uvula	0	23	1	0.214	1.26	insufficient
+parent_daughter_overlap	T331	L_Globigerinoides elongatus	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	L_first Globigerinoides	L_Globigerinoides joli	0	2	1	0.2	5.17	insufficient
+parent_daughter_overlap	T328	L_Globigerinoides rublobatus	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	N1001-T1003	L_Globoconusa	0	4	2	0.625	26.47	insufficient
+parent_daughter_overlap	N319-T320	L_Globoturborotalita barbula	0	5	0	NA	NA	insufficient
+parent_daughter_overlap	N314-N318	L_Globoturborotalita occlusa	0	5	1	0.333	30.79	insufficient
+parent_daughter_overlap	L_Globoturborotalita occlusa	L_Globoturborotalita pseudopraebulloides	0	24	0	NA	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	L_Hastigerina	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	L_Hastigerina	L_Hastigerinella	0	7	5	0.185	7.72	different
+parent_daughter_overlap	T29	L_Neoacarinina	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N23-N156-N157-N160-T161	L_Neogloboquadrina incompta	2	9	0	NA	NA	insufficient
+parent_daughter_overlap	N315-T_316	L_Orcadia	0	5	2	0.2	25.72	insufficient
+parent_daughter_overlap	L_Paragloborotalia incognita	L_Paragloborotalia acrostoma	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	N193-N195-T197	L_Paragloborotalia birnageae	1	11	0	NA	NA	insufficient
+parent_daughter_overlap	N193-N195-T197	L_Paragloborotalia incognita	0	15	15	0.565	4.99	similar
+parent_daughter_overlap	L_Paragloborotalia incognita	L_Paragloborotalia semivera	1	13	0	NA	NA	insufficient
+parent_daughter_overlap	N1001-T1003	L_Parvularugoglobigerina	0	6	1	0.714	0.31	insufficient
+parent_daughter_overlap	N103-N109-N115-N117-T118	L_Pearsonites	0	9	9	0.753	2.24	similar
+parent_daughter_overlap	L_Globigerinella roeglina	L_Quiltyella clavacella	0	13	0	NA	NA	insufficient
+parent_daughter_overlap	T373	L_Soldaniella	0	9	0	NA	NA	insufficient
+parent_daughter_overlap	N1015-N1027-N1029-N1031-N1033-T1035	L_Tenuitella brasilensis	1	16	0	NA	NA	insufficient
+parent_daughter_overlap	T287	L_Trilobatus altospiralis	0	5	0	NA	NA	insufficient
+parent_daughter_overlap	N1001-T1003	L_Woodringina	0	6	2	0.692	0.91	insufficient
+parent_daughter_overlap	L_Woodringina	N1005	0	6	5	0.447	2.97	different
+parent_daughter_boundary	N1005	N1007	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N1007	N1009-T1010	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N1013-T1014	N1015-N1027-N1029-N1031-N1033-T1035	1	11	2	0.133	18.5	insufficient
+parent_daughter_overlap	N99-N125	N102-T100	0	4	4	0.71	11.1	similar
+parent_daughter_overlap	N102-T100	N103-N109-N115-N117-T118	1	4	3	0.458	14.29	different
+parent_daughter_overlap	N103-N109-N115-N117-T118	N104-T105	1	7	0	NA	NA	insufficient
+parent_daughter_overlap	N104-T105	N106-T107	0	1	1	0	15.08	insufficient
+parent_daughter_overlap	N103-N109-N115-N117-T118	N110-N112-T113	1	5	5	0.769	6.15	similar
+parent_daughter_overlap	N103-N109-N115-N117-T118	N119-T120	1	3	3	0.25	2.12	different
+parent_daughter_boundary	N99-N125	N126-T127	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N99-N125	N128-T129	0	1	1	0.429	2.22	insufficient
+parent_daughter_overlap	N128-T129	N130-N131-N136-N142-N144-T148	1	6	5	0.417	4.57	different
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	N133-T135	3	8	0	NA	NA	insufficient
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	N137-N139-T143	3	6	0	NA	NA	insufficient
+parent_daughter_overlap	N5-N6-N8-T9	N13-T14	0	13	13	0.291	12.21	different
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	N145-T146	2	2	0	NA	NA	insufficient
+parent_daughter_overlap	N77-T266	N149-N163	1	8	8	0.451	3.47	different
+parent_daughter_overlap	N193-N195-T197	N150-N151-T153	0	5	5	0.61	5.67	similar
+parent_daughter_overlap	N150-N151-T153	N152-T154	0	1	1	0.222	26.08	insufficient
+parent_daughter_overlap	N13-T14	N15-N17	0	6	6	0.074	26.16	different
+parent_daughter_boundary	N149-N163	N165	2	1	0	NA	NA	insufficient
+parent_daughter_boundary	N165	N166-T167	0	1	1	0.444	5.86	insufficient
+parent_daughter_overlap	N166-T167	N168	1	9	2	0.364	3.61	insufficient
+parent_daughter_boundary	N165	N171	3	1	0	NA	NA	insufficient
+parent_daughter_boundary	N171	N172-T174	2	1	0	NA	NA	insufficient
+parent_daughter_boundary	N171	N175	2	1	0	NA	NA	insufficient
+parent_daughter_boundary	N175	N177-T176	2	1	0	NA	NA	insufficient
+parent_daughter_boundary	N175	N179-T180	0	1	1	0.167	2.8	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	N182-T183	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	N182-T183	N184-N186-N187-N188-T189	1	4	2	0.133	3.12	insufficient
+parent_daughter_boundary	N15-N17	N18-T19	3	1	0	NA	NA	insufficient
+parent_daughter_overlap	N310-T313	N190-N199-T200	0	29	26	0.698	5.84	similar
+parent_daughter_overlap	N184-N186-N187-N188-T189	N191-T192	1	23	9	0.209	1.92	different
+parent_daughter_overlap	N191-T192	N193-N195-T197	1	14	0	NA	NA	insufficient
+parent_daughter_overlap	N190-N199-T200	N201-N998-N295-N203-T204	1	30	15	0.421	9.67	different
+parent_daughter_overlap	N190-N199-T200	N206-N210-N212-T213	1	40	24	0.784	10.98	similar
+parent_daughter_overlap	N206-N210-N212-T213	N207-T208	1	11	5	0.241	12.03	different
+parent_daughter_overlap	N184-N186-N187-N188-T189	N215-N217-N231-N235-T236	0	11	11	0.38	15.48	different
+parent_daughter_overlap	N215-N217-N231-N235-T236	N218-T219	0	5	2	0.143	5.03	insufficient
+parent_daughter_boundary	N15-N17	N21-T24	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	N218-T219	N220-N221-T362	0	5	1	0	34.54	insufficient
+parent_daughter_overlap	N220-N221-T362	N223-N225-N227-T228	0	11	7	0.18	11.79	different
+parent_daughter_overlap	N215-N217-N231-N235-T236	N232-T233	2	3	0	NA	NA	insufficient
+parent_daughter_overlap	N215-N217-N231-N235-T236	N237-T238	0	8	6	0.595	0.12	similar
+parent_daughter_overlap	N237-T238	N239-N240-N244-N246-T247	5	3	2	0.409	11.37	insufficient
+parent_daughter_overlap	N193-N195-T197	N23-N156-N157-N160-T161	0	7	7	0.58	0.83	similar
+parent_daughter_overlap	N239-N240-N244-N246-T247	N241-T242	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	N239-N240-N244-N246-T247	N248-T249	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	N23-N156-N157-N160-T161	N25	0	3	0	NA	NA	insufficient
+parent_daughter_overlap	N239-N240-N244-N246-T247	N251-T252	2	7	0	NA	NA	insufficient
+parent_daughter_overlap	N251-T252	N253-T254	1	5	4	0.364	8.24	different
+parent_daughter_overlap	N1-N3	N256-N2-N198-T67	0	4	0	NA	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	N257	0	1	0	NA	NA	insufficient
+parent_daughter_boundary	N257	N259-N261-N262-T263	1	1	1	0.75	12.14	insufficient
+parent_daughter_overlap	N259-N261-N262-T263	N264-N265-N276-N278-N281-N283-T284	0	2	1	0.25	15.21	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N267	1	5	5	0.317	7.96	different
+parent_daughter_boundary	N267	N269	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N25	N26-N32	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N25	N27	0	1	0	NA	NA	insufficient
+parent_daughter_boundary	N269	N271-T272	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	L_Ciperoella anguliofficinalis	N279-T280	0	9	8	0.813	0.24	similar
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N285-N286-T288	1	9	7	0.179	20.7	different
+parent_daughter_overlap	N285-N286-T288	N291-T372	1	24	0	NA	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	N292-T299	1	11	5	0.767	1.51	similar
+parent_daughter_boundary	N26-N32	N30	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	N301-T303	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N259-N261-N262-T263	N305	0	3	3	0.391	14.47	different
+parent_daughter_boundary	N305	N306-T307	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N306-T307	N308-T309	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N305	N310-T313	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N308-T309	N314-N318	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	N315-T_316	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	N314-N318	N319-T320	1	10	0	NA	NA	insufficient
+parent_daughter_overlap	N314-N318	N322	0	11	8	0.406	5.11	different
+parent_daughter_overlap	N325-T361	N324-N336-N342-N344-N348-N352-N354-T356	0	13	12	0.422	1.32	different
+parent_daughter_overlap	L_Globoturborotalita occlusa	N325-T361	0	13	13	0.339	6.17	different
+parent_daughter_boundary	L_first Globigerinoides	N326-N332-N334-T360	1	1	1	1	2.94	insufficient
+parent_daughter_overlap	L_Globigerinoides joli	N327-N329-T330	2	5	0	NA	NA	insufficient
+parent_daughter_overlap	T287	N337-N339-T341	4	5	2	0.133	7.18	insufficient
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	N345-T347	1	17	16	0.768	7.66	similar
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	N349-T350	1	10	3	0.714	7.19	similar
+parent_daughter_boundary	N30	N34-N40-T44	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	N223-N225-N227-T228	N358-T229	2	5	0	NA	NA	insufficient
+parent_daughter_overlap	N34-N40-T44	N35-N37-T39	1	9	0	NA	NA	insufficient
+parent_daughter_overlap	N23-N156-N157-N160-T161	N364	0	2	2	0.464	12.27	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N366-N298-N300-T304	0	14	13	0.325	12.78	different
+parent_daughter_overlap	N34-N40-T44	N42-T41	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	N42-T41	N45-T43	0	3	3	0.806	1.85	similar
+parent_daughter_boundary	N26-N32	N47	3	1	0	NA	NA	insufficient
+parent_daughter_boundary	N47	N48-T50	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N1-N3	N4-T12	1	1	1	0.4	11.66	insufficient
+parent_daughter_boundary	N47	N51-N122-T123	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N47	N52-N54-T53	0	2	0	NA	NA	insufficient
+parent_daughter_overlap	N52-N54-T53	N56-N58-N59-T61	0	2	0	NA	NA	insufficient
+parent_daughter_boundary	N1-N3	N5-N6-N8-T9	0	1	1	0.286	10.42	insufficient
+parent_daughter_overlap	N56-N58-N59-T61	N62-T63	0	4	0	NA	NA	insufficient
+parent_daughter_overlap	N62-T63	N64-T66	3	2	0	NA	NA	insufficient
+parent_daughter_boundary	N256-N2-N198-T67	N68-N69-N70-T71	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	N68-N69-N70-T71	N72	0	1	1	0.444	12.55	insufficient
+parent_daughter_overlap	N68-N69-N70-T71	N76-N101	0	1	1	0.8	10.82	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N77-T266	2	25	21	0.461	12.43	different
+parent_daughter_overlap	N80-N368-N370-T78	N79	3	2	0	NA	NA	insufficient
+parent_daughter_boundary	N76-N101	N80-N368-N370-T78	1	1	1	0.5	0.74	insufficient
+parent_daughter_boundary	N76-N101	N83-N84-T85	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N83-N84-T85	N86-T87	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	N83-N84-T85	N88-N89-N90-T93	0	4	4	0.829	3.57	similar
+parent_daughter_overlap	N88-N89-N90-T93	N94-T95	0	4	4	0.656	5.73	similar
+parent_daughter_overlap	N94-T95	N98-T96	1	10	7	0.551	0.1	similar
+parent_daughter_overlap	N76-N101	N99-N125	0	1	1	0.6	19.52	insufficient
+parent_daughter_overlap	N5-N6-N8-T9	T10	0	5	5	0.412	13.44	different
+parent_daughter_overlap	N1001-T1003	T1002	1	7	0	NA	NA	insufficient
+parent_daughter_boundary	N1005	T1006	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N1007	T1008	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N1009-T1010	T1011	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	N1015-N1027-N1029-N1031-N1033-T1035	T1019	1	12	11	0.363	10.99	different
+parent_daughter_overlap	L_Globigerinita glutinata	T1021	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1025	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1028	1	5	4	0.4	15.1	different
+parent_daughter_overlap	L_Globigerinita glutinata	T1030	1	6	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1032	1	12	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1034	0	11	9	0.542	17.92	similar
+parent_daughter_overlap	N106-T107	T108	0	1	1	1	0	insufficient
+parent_daughter_overlap	N4-T12	T11	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N110-N112-T113	T111	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N110-N112-T113	T114	1	14	0	NA	NA	insufficient
+parent_daughter_overlap	N103-N109-N115-N117-T118	T116	2	4	0	NA	NA	insufficient
+parent_daughter_overlap	N119-T120	T121	0	2	1	0	7.46	insufficient
+parent_daughter_overlap	N51-N122-T123	T124	0	2	0	NA	NA	insufficient
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	T132	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N133-T135	T134	1	5	0	NA	NA	insufficient
+parent_daughter_overlap	N137-N139-T143	T138	0	4	4	0.526	1.86	similar
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	T140	1	6	0	NA	NA	insufficient
+parent_daughter_overlap	N137-N139-T143	T141	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	N145-T146	T147	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N152-T154	T155	0	3	3	0.786	10.84	similar
+parent_daughter_overlap	N23-N156-N157-N160-T161	T158	2	8	7	0.612	8.5	similar
+parent_daughter_overlap	L_Neogloboquadrina incompta	T159	1	10	0	NA	NA	insufficient
+parent_daughter_overlap	N15-N17	T16	1	3	0	NA	NA	insufficient
+parent_daughter_boundary	N364	T162	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N149-N163	T164	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N168	T169	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N168	T170	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	L_`Dentoglobigerina` eotripartita	T173	0	7	0	NA	NA	insufficient
+parent_daughter_overlap	N179-T180	T178	0	23	23	0.575	7.32	similar
+parent_daughter_overlap	N179-T180	T181	1	14	0	NA	NA	insufficient
+parent_daughter_overlap	N184-N186-N187-N188-T189	T185	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N193-N195-T197	T194	1	12	8	0.493	6.99	different
+parent_daughter_overlap	N193-N195-T197	T196	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N18-T19	T20	1	1	1	0.167	32.06	insufficient
+parent_daughter_overlap	N201-N998-N295-N203-T204	T202	0	7	7	0.158	28.82	different
+parent_daughter_overlap	N207-T208	T209	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N206-N210-N212-T213	T211	1	6	0	NA	NA	insufficient
+parent_daughter_overlap	N201-N998-N295-N203-T204	T214	1	11	0	NA	NA	insufficient
+parent_daughter_overlap	N215-N217-N231-N235-T236	T216	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N21-T24	T22	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	N220-N221-T362	T222	3	6	0	NA	NA	insufficient
+parent_daughter_overlap	N223-N225-N227-T228	T224	1	3	0	NA	NA	insufficient
+parent_daughter_overlap	N223-N225-N227-T228	T226	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N358-T229	T230	1	4	4	0.5	0.6	similar
+parent_daughter_overlap	N232-T233	T234	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N241-T242	T243	0	2	2	0.562	1.16	insufficient
+parent_daughter_overlap	N239-N240-N244-N246-T247	T245	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	N248-T249	T250	0	6	6	0.582	12.64	similar
+parent_daughter_overlap	N253-T254	T255	0	2	2	0.083	11.15	insufficient
+parent_daughter_boundary	N257	T258	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	N259-N261-N262-T263	T260	1	8	0	NA	NA	insufficient
+parent_daughter_boundary	N267	T268	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N269	T270	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N271-T272	T275	1	9	0	NA	NA	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	T277	1	11	0	NA	NA	insufficient
+parent_daughter_boundary	N27	T28	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	L_Ciperoella anguliofficinalis	T282	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globoturborotalita occlusa	T287	4	6	0	NA	NA	insufficient
+parent_daughter_boundary	N27	T29	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N285-N286-T288	T294	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N201-N998-N295-N203-T204	T297	0	2	2	0.364	7.66	insufficient
+parent_daughter_overlap	N301-T303	T302	0	1	1	0.429	7.8	insufficient
+parent_daughter_boundary	N30	T31	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	N315-T_316	T317	1	5	3	0.15	16.47	different
+parent_daughter_overlap	N319-T320	T321	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	N314-N318	T323	0	16	0	NA	NA	insufficient
+parent_daughter_overlap	N327-N329-T330	T328	1	6	6	0.881	0.6	similar
+parent_daughter_overlap	N47	T33	0	3	0	NA	NA	insufficient
+parent_daughter_overlap	N327-N329-T330	T331	2	3	0	NA	NA	insufficient
+parent_daughter_overlap	N326-N332-N334-T360	T333	1	6	0	NA	NA	insufficient
+parent_daughter_overlap	N326-N332-N334-T360	T335	0	5	5	0.608	6.58	similar
+parent_daughter_overlap	N337-N339-T341	T338	1	17	17	0.869	5.14	similar
+parent_daughter_overlap	N337-N339-T341	T340	1	3	0	NA	NA	insufficient
+parent_daughter_boundary	L_first Globigerinoides	T343	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	N345-T347	T346	1	8	0	NA	NA	insufficient
+parent_daughter_overlap	L_Globigerinoides elongatus	T351	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N326-N332-N334-T360	T353	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	T373	T355	0	8	8	0.697	0.95	similar
+parent_daughter_overlap	N86-T87	T357	0	4	2	0.545	14.27	insufficient
+parent_daughter_overlap	N310-T313	T359	2	10	0	NA	NA	insufficient
+parent_daughter_overlap	N35-N37-T39	T36	0	5	0	NA	NA	insufficient
+parent_daughter_overlap	N77-T266	T363	1	7	0	NA	NA	insufficient
+parent_daughter_boundary	N364	T365	1	1	1	0.286	6.37	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	T367	0	26	0	NA	NA	insufficient
+parent_daughter_overlap	N80-N368-N370-T78	T369	0	1	0	NA	NA	insufficient
+parent_daughter_overlap	N80-N368-N370-T78	T371	0	1	1	0.444	2.29	insufficient
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	T373	0	20	18	0.537	3.39	similar
+parent_daughter_overlap	N35-N37-T39	T38	0	3	0	NA	NA	insufficient
+parent_daughter_overlap	N45-T43	T46	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N48-T50	T49	1	4	0	NA	NA	insufficient
+parent_daughter_overlap	N52-N54-T53	T55	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N56-N58-N59-T61	T57	0	2	0	NA	NA	insufficient
+parent_daughter_overlap	N56-N58-N59-T61	T60	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N64-T66	T65	1	1	0	NA	NA	insufficient
+parent_daughter_overlap	N5-N6-N8-T9	T7	1	7	0	NA	NA	insufficient
+parent_daughter_boundary	N72	T73	0	1	1	0.6	5.55	insufficient
+parent_daughter_boundary	N72	T74	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	N184-N186-N187-N188-T189	T75	0	13	13	0.299	17.66	different
+parent_daughter_boundary	N79	T81	1	1	0	NA	NA	insufficient
+parent_daughter_boundary	N79	T82	2	1	0	NA	NA	insufficient
+parent_daughter_overlap	N88-N89-N90-T93	T91	1	2	0	NA	NA	insufficient
+parent_daughter_overlap	N88-N89-N90-T93	T92	1	5	4	0.531	7.8	similar
+parent_daughter_overlap	N98-T96	T97	1	4	0	NA	NA	insufficient
+sister	N279-T280	T282	0	7	6	0.685	2.82	similar
+sister	L_Globigerinoides joli	N326-N332-N334-T360	0	6	6	0.702	6.73	similar
+sister	L_Globigerinoides joli	T343	0	6	6	0.222	0.94	different
+sister	N326-N332-N334-T360	T343	0	11	9	0.217	8.19	different
+sister	L_Globigerinita minuta	T1021	0	4	0	NA	NA	insufficient
+sister	L_Globigerinita minuta	T1025	0	3	0	NA	NA	insufficient
+sister	L_Globigerinita minuta	T1028	0	5	0	NA	NA	insufficient
+sister	L_Globigerinita minuta	T1030	0	6	0	NA	NA	insufficient
+sister	L_Globigerinita minuta	T1032	0	12	0	NA	NA	insufficient
+sister	L_Globigerinita minuta	T1034	0	11	1	0.2	24.58	insufficient
+sister	T1021	T1025	0	3	0	NA	NA	insufficient
+sister	T1021	T1028	0	0	0	NA	NA	no_coexistence
+sister	T1021	T1030	0	0	0	NA	NA	no_coexistence
+sister	T1021	T1032	0	4	0	NA	NA	insufficient
+sister	T1021	T1034	0	4	0	NA	NA	insufficient
+sister	T1025	T1028	0	0	0	NA	NA	no_coexistence
+sister	T1025	T1030	0	0	0	NA	NA	no_coexistence
+sister	T1025	T1032	0	3	0	NA	NA	insufficient
+sister	T1025	T1034	0	3	0	NA	NA	insufficient
+sister	T1028	T1030	0	5	3	0.294	6.37	different
+sister	T1028	T1032	0	0	0	NA	NA	no_coexistence
+sister	T1028	T1034	0	0	0	NA	NA	no_coexistence
+sister	T1030	T1032	0	0	0	NA	NA	no_coexistence
+sister	T1030	T1034	0	0	0	NA	NA	no_coexistence
+sister	T1032	T1034	0	11	0	NA	NA	insufficient
+sister	L_Globoturborotalita pseudopraebulloides	N325-T361	0	13	0	NA	NA	insufficient
+sister	L_Globoturborotalita pseudopraebulloides	T287	0	6	0	NA	NA	insufficient
+sister	N325-T361	T287	0	6	6	0.279	17.31	different
+sister	L_Paragloborotalia acrostoma	L_Paragloborotalia semivera	0	7	7	0.212	16.89	different
+sister	N256-N2-N198-T67	N4-T12	0	0	0	NA	NA	no_coexistence
+sister	N256-N2-N198-T67	N5-N6-N8-T9	0	0	0	NA	NA	no_coexistence
+sister	N4-T12	N5-N6-N8-T9	0	18	17	0.484	0.1	different
+sister	L_Globoconusa	L_Parvularugoglobigerina	0	4	3	0.316	28.13	different
+sister	L_Globoconusa	L_Woodringina	0	4	4	0.483	28.72	different
+sister	L_Globoconusa	T1002	0	0	0	NA	NA	no_coexistence
+sister	L_Parvularugoglobigerina	L_Woodringina	0	5	4	0.4	0.78	different
+sister	L_Parvularugoglobigerina	T1002	0	0	0	NA	NA	no_coexistence
+sister	L_Woodringina	T1002	0	0	0	NA	NA	no_coexistence
+sister	N1007	T1006	0	7	1	0.125	41.18	insufficient
+sister	N1009-T1010	T1008	0	7	0	NA	NA	insufficient
+sister	L_Dentigloborotalia	T1011	0	3	0	NA	NA	insufficient
+sister	L_Antarcticella	N1015-N1027-N1029-N1031-N1033-T1035	0	30	0	NA	NA	insufficient
+sister	L_Globigerinita glutinata	L_Tenuitella brasilensis	0	16	0	NA	NA	insufficient
+sister	L_Globigerinita glutinata	T1019	0	12	11	0.366	10.84	different
+sister	L_Tenuitella brasilensis	T1019	0	6	0	NA	NA	insufficient
+sister	L_Pearsonites	N104-T105	0	7	7	0.278	0.88	different
+sister	L_Pearsonites	N110-N112-T113	0	10	10	0.652	11.65	similar
+sister	L_Pearsonites	N119-T120	0	8	8	0.294	2.1	different
+sister	L_Pearsonites	T116	0	9	9	0.641	0.31	similar
+sister	N104-T105	N110-N112-T113	0	3	3	0.364	12.1	different
+sister	N104-T105	N119-T120	0	1	1	0.5	15.42	insufficient
+sister	N104-T105	T116	0	2	2	0.462	4.07	insufficient
+sister	N110-N112-T113	N119-T120	0	10	9	0.243	9.99	different
+sister	N110-N112-T113	T116	0	9	9	0.597	12.07	similar
+sister	N119-T120	T116	0	8	8	0.444	0.99	different
+sister	T111	T114	0	0	0	NA	NA	no_coexistence
+sister	N133-T135	N137-N139-T143	0	5	5	0.678	8.56	similar
+sister	N133-T135	N145-T146	0	2	2	0.545	3.01	insufficient
+sister	N133-T135	T132	0	0	0	NA	NA	no_coexistence
+sister	N133-T135	T140	0	5	1	0.083	13.7	insufficient
+sister	N137-N139-T143	N145-T146	0	2	2	0.5	3.55	insufficient
+sister	N137-N139-T143	T132	0	0	0	NA	NA	no_coexistence
+sister	N137-N139-T143	T140	0	7	2	0.059	16.46	insufficient
+sister	N145-T146	T132	0	0	0	NA	NA	no_coexistence
+sister	N145-T146	T140	0	2	0	NA	NA	insufficient
+sister	T132	T140	0	0	0	NA	NA	no_coexistence
+sister	T138	T141	0	3	3	0.25	1.5	different
+sister	N165	T164	0	1	1	0.222	9.27	insufficient
+sister	N18-T19	N21-T24	0	4	4	0.667	5.75	similar
+sister	N18-T19	T16	0	1	0	NA	NA	insufficient
+sister	N21-T24	T16	0	1	0	NA	NA	insufficient
+sister	N166-T167	N171	0	3	3	0.697	4.61	similar
+sister	T169	T170	0	9	9	0.519	3.19	similar
+sister	N172-T174	N175	0	2	2	0.75	4.18	insufficient
+sister	N177-T176	N179-T180	0	24	24	0.676	4.39	similar
+sister	T178	T181	0	17	17	0.592	7.34	similar
+sister	N191-T192	N215-N217-N231-N235-T236	0	11	1	0.125	23.75	insufficient
+sister	N191-T192	T185	0	0	0	NA	NA	no_coexistence
+sister	N191-T192	T75	0	13	2	0	1.57	insufficient
+sister	N215-N217-N231-N235-T236	T185	0	0	0	NA	NA	no_coexistence
+sister	N215-N217-N231-N235-T236	T75	0	10	10	0.565	5.48	similar
+sister	T185	T75	0	0	0	NA	NA	no_coexistence
+sister	N201-N998-N295-N203-T204	N206-N210-N212-T213	0	38	24	0.388	10.56	different
+sister	L_Paragloborotalia birnageae	L_Paragloborotalia incognita	0	13	12	0.324	13.34	different
+sister	L_Paragloborotalia birnageae	N150-N151-T153	0	5	5	0.366	2.59	different
+sister	L_Paragloborotalia birnageae	N23-N156-N157-N160-T161	0	17	15	0.298	8.44	different
+sister	L_Paragloborotalia birnageae	T194	0	18	16	0.36	1.07	different
+sister	L_Paragloborotalia birnageae	T196	0	2	1	0.143	13.75	insufficient
+sister	L_Paragloborotalia incognita	N150-N151-T153	0	5	5	0.588	3.35	similar
+sister	L_Paragloborotalia incognita	N23-N156-N157-N160-T161	0	9	9	0.56	16.95	similar
+sister	L_Paragloborotalia incognita	T194	0	14	14	0.538	10.44	similar
+sister	L_Paragloborotalia incognita	T196	0	4	4	0.5	3.52	similar
+sister	N150-N151-T153	N23-N156-N157-N160-T161	0	3	3	0.567	0.31	similar
+sister	N150-N151-T153	T194	0	5	5	0.654	1.85	similar
+sister	N150-N151-T153	T196	0	0	0	NA	NA	no_coexistence
+sister	N23-N156-N157-N160-T161	T194	0	14	14	0.669	4.9	similar
+sister	N23-N156-N157-N160-T161	T196	0	0	0	NA	NA	no_coexistence
+sister	T194	T196	0	3	3	0.733	2.04	similar
+sister	T202	T214	0	5	5	0.13	26.34	different
+sister	T202	T297	0	0	0	NA	NA	no_coexistence
+sister	T214	T297	0	0	0	NA	NA	no_coexistence
+sister	N207-T208	T211	0	6	5	0.435	9.95	different
+sister	N218-T219	N232-T233	0	5	2	0.143	3.2	insufficient
+sister	N218-T219	N237-T238	0	7	3	0.2	2.89	different
+sister	N218-T219	T216	0	0	0	NA	NA	no_coexistence
+sister	N232-T233	N237-T238	0	7	7	0.31	3.92	different
+sister	N232-T233	T216	0	0	0	NA	NA	no_coexistence
+sister	N237-T238	T216	0	2	0	NA	NA	insufficient
+sister	N223-N225-N227-T228	T222	0	3	1	0.143	21.55	insufficient
+sister	N358-T229	T224	0	0	0	NA	NA	no_coexistence
+sister	N358-T229	T226	0	0	0	NA	NA	no_coexistence
+sister	T224	T226	0	1	0	NA	NA	insufficient
+sister	L_Neogloboquadrina incompta	N25	0	0	0	NA	NA	no_coexistence
+sister	L_Neogloboquadrina incompta	N364	0	2	2	0.5	23.92	insufficient
+sister	L_Neogloboquadrina incompta	T158	0	9	9	0.73	19.55	similar
+sister	N25	N364	0	0	0	NA	NA	no_coexistence
+sister	N25	T158	0	0	0	NA	NA	no_coexistence
+sister	N364	T158	0	2	2	0.542	10.09	insufficient
+sister	N241-T242	N248-T249	0	7	7	0.558	9.44	similar
+sister	N241-T242	N251-T252	0	7	7	0.431	2.8	different
+sister	N241-T242	T245	0	8	8	0.649	4.78	similar
+sister	N248-T249	N251-T252	0	6	6	0.373	11.2	different
+sister	N248-T249	T245	0	7	7	0.544	14.26	similar
+sister	N251-T252	T245	0	7	7	0.434	1.72	different
+sister	N26-N32	N27	0	3	0	NA	NA	insufficient
+sister	L_Hastigerina	N182-T183	0	7	0	NA	NA	insufficient
+sister	L_Hastigerina	N257	0	2	0	NA	NA	insufficient
+sister	L_Hastigerina	N315-T_316	0	67	7	0.287	22.54	different
+sister	L_Hastigerina	N68-N69-N70-T71	0	5	0	NA	NA	insufficient
+sister	N182-T183	N257	0	2	1	0.875	1.68	insufficient
+sister	N182-T183	N315-T_316	0	7	0	NA	NA	insufficient
+sister	N182-T183	N68-N69-N70-T71	0	5	4	0.838	6.15	similar
+sister	N257	N315-T_316	0	2	0	NA	NA	insufficient
+sister	N257	N68-N69-N70-T71	0	2	1	0.5	7.2	insufficient
+sister	N315-T_316	N68-N69-N70-T71	0	5	0	NA	NA	insufficient
+sister	N259-N261-N262-T263	T258	0	4	4	0.676	12.13	similar
+sister	N264-N265-N276-N278-N281-N283-T284	N305	0	0	0	NA	NA	no_coexistence
+sister	N264-N265-N276-N278-N281-N283-T284	T260	0	0	0	NA	NA	no_coexistence
+sister	N305	T260	0	3	3	0.391	10.52	different
+sister	N30	N47	0	1	0	NA	NA	insufficient
+sister	N267	N285-N286-T288	0	0	0	NA	NA	no_coexistence
+sister	N267	N366-N298-N300-T304	0	0	0	NA	NA	no_coexistence
+sister	N267	N77-T266	0	4	4	0.5	2.39	similar
+sister	N267	T277	0	3	3	0.667	7.2	similar
+sister	N285-N286-T288	N366-N298-N300-T304	0	29	28	0.624	11.31	similar
+sister	N285-N286-T288	N77-T266	0	5	4	0.158	28.74	different
+sister	N285-N286-T288	T277	0	0	0	NA	NA	no_coexistence
+sister	N366-N298-N300-T304	N77-T266	0	10	10	0.358	0.05	different
+sister	N366-N298-N300-T304	T277	0	0	0	NA	NA	no_coexistence
+sister	N77-T266	T277	0	11	11	0.535	1.85	similar
+sister	N269	T268	0	4	4	0.594	2.51	similar
+sister	N271-T272	T270	0	10	7	0.125	6.57	different
+sister	T28	T29	0	2	1	0.417	1.69	insufficient
+sister	N291-T372	T294	0	0	0	NA	NA	no_coexistence
+sister	N34-N40-T44	T31	0	5	0	NA	NA	insufficient
+sister	N306-T307	N310-T313	0	6	4	0.448	10.01	different
+sister	N190-N199-T200	T359	0	10	10	0.819	5.23	similar
+sister	L_Globoturborotalita occlusa	N319-T320	0	17	12	0.365	1.33	different
+sister	L_Globoturborotalita occlusa	N322	0	12	7	0.419	4.09	different
+sister	L_Globoturborotalita occlusa	T323	0	23	11	0.132	30.14	different
+sister	N319-T320	N322	0	17	15	0.365	4.24	different
+sister	N319-T320	T323	0	22	12	0.15	34.38	different
+sister	N322	T323	0	18	7	0.023	33.69	different
+sister	L_Berggrenia pumilio	L_Orcadia	0	5	2	0	14.69	insufficient
+sister	L_Berggrenia pumilio	T317	0	5	2	0.15	22.77	insufficient
+sister	L_Orcadia	T317	0	5	2	0.238	8.08	insufficient
+sister	L_Globoturborotalita barbula	T321	0	3	0	NA	NA	insufficient
+sister	L_first Globigerinoides	N345-T347	0	0	0	NA	NA	no_coexistence
+sister	L_first Globigerinoides	N349-T350	0	0	0	NA	NA	no_coexistence
+sister	L_first Globigerinoides	T373	0	0	0	NA	NA	no_coexistence
+sister	N345-T347	N349-T350	0	11	11	0.865	5.79	similar
+sister	N345-T347	T373	0	18	17	0.648	3.88	similar
+sister	N349-T350	T373	0	11	10	0.513	0.83	similar
+sister	T333	T335	0	4	4	0.444	1.29	different
+sister	T333	T353	0	1	1	0.333	6.91	insufficient
+sister	T335	T353	0	10	10	0.485	10.02	different
+sister	T328	T331	0	3	3	0.848	1.5	similar
+sister	T338	T340	0	3	3	0.676	14.33	similar
+sister	N35-N37-T39	N42-T41	0	8	0	NA	NA	insufficient
+sister	T36	T38	0	3	0	NA	NA	insufficient
+sister	T162	T365	0	2	2	0.444	7.24	insufficient
+sister	L_Globigerinella clavaticamerata	L_Globigerinella radians	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella clavaticamerata	L_Globigerinella roeglina	0	13	0	NA	NA	insufficient
+sister	L_Globigerinella clavaticamerata	L_Globigerinella wagneri	0	3	0	NA	NA	insufficient
+sister	L_Globigerinella clavaticamerata	N292-T299	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella clavaticamerata	N301-T303	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella clavaticamerata	T367	0	15	0	NA	NA	insufficient
+sister	L_Globigerinella radians	L_Globigerinella roeglina	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella radians	L_Globigerinella wagneri	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella radians	N292-T299	0	8	0	NA	NA	insufficient
+sister	L_Globigerinella radians	N301-T303	0	4	0	NA	NA	insufficient
+sister	L_Globigerinella radians	T367	0	4	0	NA	NA	insufficient
+sister	L_Globigerinella roeglina	L_Globigerinella wagneri	0	4	0	NA	NA	insufficient
+sister	L_Globigerinella roeglina	N292-T299	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella roeglina	N301-T303	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella roeglina	T367	0	14	0	NA	NA	insufficient
+sister	L_Globigerinella wagneri	N292-T299	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella wagneri	N301-T303	0	0	0	NA	NA	no_coexistence
+sister	L_Globigerinella wagneri	T367	0	4	0	NA	NA	insufficient
+sister	N292-T299	N301-T303	0	4	4	0.837	0.06	similar
+sister	N292-T299	T367	0	7	0	NA	NA	insufficient
+sister	N301-T303	T367	0	0	0	NA	NA	no_coexistence
+sister	N48-T50	N51-N122-T123	0	9	0	NA	NA	insufficient
+sister	N48-T50	N52-N54-T53	0	5	0	NA	NA	insufficient
+sister	N48-T50	T33	0	0	0	NA	NA	no_coexistence
+sister	N51-N122-T123	N52-N54-T53	0	5	0	NA	NA	insufficient
+sister	N51-N122-T123	T33	0	0	0	NA	NA	no_coexistence
+sister	N52-N54-T53	T33	0	1	0	NA	NA	insufficient
+sister	N13-T14	T10	0	0	0	NA	NA	no_coexistence
+sister	N13-T14	T7	0	3	1	0.333	2.88	insufficient
+sister	T10	T7	0	0	0	NA	NA	no_coexistence
+sister	N56-N58-N59-T61	T55	0	6	0	NA	NA	insufficient
+sister	N62-T63	T57	0	1	0	NA	NA	insufficient
+sister	N62-T63	T60	0	2	0	NA	NA	insufficient
+sister	T57	T60	0	0	0	NA	NA	no_coexistence
+sister	N72	N76-N101	0	2	2	0.571	3.64	insufficient
+sister	T73	T74	0	5	5	0.5	2.95	similar
+sister	N80-N368-N370-T78	N83-N84-T85	0	7	7	0.702	1.61	similar
+sister	N80-N368-N370-T78	N99-N125	0	5	5	0.615	18.35	similar
+sister	N83-N84-T85	N99-N125	0	5	5	0.562	15.85	similar
+sister	N149-N163	T363	0	3	2	0.077	1.86	insufficient
+sister	T81	T82	0	5	5	0.5	3.8	similar
+sister	N79	T369	0	0	0	NA	NA	no_coexistence
+sister	N79	T371	0	0	0	NA	NA	no_coexistence
+sister	T369	T371	0	1	0	NA	NA	insufficient
+sister	N86-T87	N88-N89-N90-T93	0	6	6	0.574	2.8	similar
+sister	N94-T95	T91	0	2	2	0.714	0.24	insufficient
+sister	N94-T95	T92	0	5	5	0.722	0.78	similar
+sister	T91	T92	0	2	2	0.8	0.43	insufficient
+sister	N102-T100	N126-T127	0	4	4	0.737	3.39	similar
+sister	N102-T100	N128-T129	0	4	4	0.73	4.15	similar
+sister	N126-T127	N128-T129	0	8	8	0.694	3.59	similar
+sister	L_Trilobatus altospiralis	N337-N339-T341	0	15	0	NA	NA	insufficient
+sister	L_Soldaniella	T355	0	7	0	NA	NA	insufficient
