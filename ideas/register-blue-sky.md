@@ -87,7 +87,9 @@ parallel, with at most two tasks active.
 - First pair: B-001 (Claude) and B-002 (Codex).
   - B-001 has its contract and support audit and is now on hold.
   - B-002 continues as a theoretical specification.
-- Next: B-003 (Claude, agreed in 76/1662), then B-004 (Codex).
+- B-003 (Claude, agreed in 76/1662) has its contract and source inventory
+  and is now on hold. Next: Q-012's design with D1 (Claude); B-004 (Codex)
+  stays queued.
 - B-005 is held but queued for development.
 - Q-sweep checks run between products, and Q-012's design (with D1)
   follows the first pair.
@@ -99,7 +101,7 @@ parallel, with at most two tasks active.
 | --- | --- | --- | --- | --- | --- | --- |
 | B-001 | Do ecosystems reassemble in a repeatable order after crises? | hold (support) | H | L | L–M | Claude |
 | B-002 | Can juvenile viability block otherwise useful adult innovations (ammonoids)? | **develop** | H | M (growth data in hand; transitions unknown) | H | Codex |
-| B-003 | Did prey defences track independent predator capability through the Phanerozoic? | **develop** | H | L–M | M–H | Claude |
+| B-003 | Did prey defences track independent predator capability through the Phanerozoic? | hold (support) | H | L | L–M | Claude |
 | B-004 | Did burrowers change the conditions under which deep-water benthos could persist? | **develop** | H | L–M | M–H | Codex |
 | B-005 | Do geography-and-climate-only and diversity-dependent spatial models predict different sampled diversity structure? | hold (queued) | H | M | M | Claude |
 | B-006 | Did flowering plants replace forests by changing the rules of establishment? | hold | H | L–M | M | Codex |
@@ -116,7 +118,11 @@ parallel, with at most two tasks active.
 | B-017 | Are "living fossils" statistically exceptional? | hold | M | M | L–M | Claude |
 | B-018 | Does origination follow the kinetic (metabolic) temperature prediction? | hold (low) | M–H | M | L | Claude |
 
-Tally: 3 develop, 15 hold (B-005 queued), 0 park. B-001 moved from develop to hold on 15 October, agreed with Codex (76/1664), after its support audit.
+Tally: 2 develop, 16 hold (B-005 queued), 0 park.
+- B-001 moved from develop to hold on 15 October, agreed with Codex
+  (76/1664), after its support audit.
+- B-003 moved from develop to hold on 15 October, under the stopping rule
+  agreed in 76/1668, after its source inventory.
 
 ## Entries
 
@@ -249,7 +255,7 @@ Owner Codex. **Develop.** Source: Codex D2.
   B-013 (shares morphology resources).
 
 ### B-003 Did prey defences track independent predator capability through the Phanerozoic?
-Owner Claude. **Develop.** Source: Claude C10.
+Owner Claude. **Hold (support), from develop on 15 October.** Source: Claude C10.
 - **Corrections (Codex).**
   - Drilling and repair frequencies are outcomes of predator–prey
     interactions, not predator capability.
@@ -288,6 +294,23 @@ Owner Claude. **Develop.** Source: Claude C10.
     contrasting mode (Dietl's oysters, or whelks and Mercenaria), then
     finishes the nominated families. The screens are for workflow only. If
     support is inadequate, practical hold and move to Q-012/D1.
+  - **Source inventory (15 October; [record](../literature/2026-10-15-b003-source-inventory.md)).**
+    - Only Dietl 2003 (whelks and Mercenaria) passes the literal screen,
+      and it is weak:
+      - the predator measure is a sample maximum, with n of 16–36 that
+        doubles across horizons;
+      - the mapping is qualitative;
+      - no variances are given;
+      - there are at most 2 lag-one pairs.
+    - The Chesapeake naticid pair cannot be scored: the full texts are
+      paywalled.
+    - Every other family has no candidate predator series, outcomes only,
+      or genus composition.
+    - Kosnik's and Heim's data are static per genus, so Level B stays held.
+    - **Practical hold on support; the question is kept.** Reopening needs
+      the Kelley full texts plus at least one further matched system with
+      a mapped candidate predator series and variances, or time-resolved
+      lineage traits.
 - **Overlap.** Q-048 and Q-037.
 
 ### B-004 Did burrowers change the conditions under which deep-water benthos could persist?

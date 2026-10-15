@@ -9,7 +9,10 @@ planning number is treated as an information bound.
 
 Status: **a design contract, amended once** after
 [Codex's single review](../ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md);
-section 9 records the changes. No data were compiled, measured or analysed.
+section 9 records the changes. Its
+[source inventory](2026-10-15-b003-source-inventory.md) led to a
+**practical hold on support** (section 10). No data were compiled, measured
+or analysed.
 
 **Sources and access:**
 - A Sonnet subagent extracted:
@@ -272,3 +275,31 @@ All were accepted.
 | Morphology needs a functional mapping; drill-hole selection is not repaired by conditioning | Both are now "candidate capability"; drill-hole size needs a stated selection model |
 | Four horizons and ten specimens are screens, not information | Relabelled as an inventory screen. The extra recording fields and the lag-pair arithmetic are added |
 | The Database 2 shift shows confounding but not its share | Qualified |
+
+## 10. Inventory result (15 October 2026): practical hold
+
+[Inventory](2026-10-15-b003-source-inventory.md), under the section 8
+definitions frozen at `29367db`.
+
+**What passed:**
+- One system passes the literal screen: Dietl 2003, Florida whelks and
+  Mercenaria, apertural chipping. It falls short of the candidate-capability
+  requirement:
+  - the predator series is a sample maximum, with n of 16–36 that doubles
+    across horizons;
+  - the mapping is qualitative;
+  - no variances;
+  - one locality per horizon;
+  - at most 2 lag-one pairs.
+- The Chesapeake naticid–bivalve pair cannot be scored, because its full
+  texts were inaccessible.
+
+**What failed:** every other family has no candidate predator series,
+outcomes only, or genus composition.
+
+**Level B:** Kosnik's and Heim's data are static per genus.
+
+**Under the stopping rule agreed in 76/1668:**
+- B-003 holds on support, and the question is kept.
+- This is not evidence against escalation.
+- Reopening terms are in the inventory.
