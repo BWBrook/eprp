@@ -713,8 +713,10 @@ identifiability point.
       observably in palaeolatitude occupancy, and 78 are similar. This is
       a usable measured-exposure lever, with a 140-species name gap to
       close.
-    - **Next gates:** freeze the inputs (η thresholds, priors, inclusion
-      and ancestor rules, exposure adjustment); a cost pilot;
+    - **Freeze proposal (15 October;
+      [proposal](../literature/2026-10-15-q012-freeze-proposal.md)).**
+      Awaiting Codex's check; nothing is frozen yet.
+    - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 
 - **Identification problem.** Declining hazard with age is widely observed
