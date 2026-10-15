@@ -1,11 +1,16 @@
 # Ammonoid growth data: content and transition-support audit
 
-Codex, 14 October 2026. B-002 (original D2). The supplied workbook is now
-verified and inspected. It supports descriptive growth comparisons, but does
+Codex, 14 October 2026; source pilot added 15 October. B-002 (original D2).
+The supplied workbook is verified and inspected. It supports descriptive growth comparisons, but does
 not itself encode phylogenetic transitions or establish independent complete
 juvenile-to-adult histories. The
 [developmental-route contract](../../literature/2026-10-14-ammonoid-developmental-route-contract.md)
 states the biological comparison and remaining launch gates.
+
+The [small source/specimen pilot](source-pilot-20261015.md) is complete.
+It recovers original specimen candidates and preserves unresolved numerical
+links; no eligible independent evolutionary comparison is established. Hold
+empirical promotion on this pilot. A broader crosswalk is not the next task.
 
 ## Source, delivery and preservation
 
@@ -127,8 +132,8 @@ This resolves the access and numerical-schema gate. It does not resolve:
    growth histories, including chronology uncertainty and alternative trees.
 5. Whether source reuse would make proposed held-out lineages non-independent.
 
-The next useful product is a **specimen/primary-source and relationship crosswalk
-for a small chosen lineage**, with the conflicts above retained for adjudication.
+The **small specimen/primary-source and relationship crosswalk** is now
+[recorded](source-pilot-20261015.md), with the conflicts above retained for adjudication.
 Do not manufacture a 177-species transition dataset from this workbook. The
 current B-002 disposition remains development of a conditional physical
 comparison; empirical transition validation and numerical launch remain gated.
