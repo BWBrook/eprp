@@ -1,0 +1,125 @@
+{
+ "knope_rows": 18317,
+ "knope_distinct_names": 18228,
+ "knope_sha256": "e5c1eef44f51e788c12c80efdceba9e6597472af57d0a7146ae8f015ecf3f181",
+ "taxa_extract_sha256": "7662b51bd9d3b3a20beeb24c27dd1defe577c6a8b0545f255a189cd5ff4bc78b",
+ "events": {
+  "end_permian": {
+   "extract": "data/raw/pbdb/b001/occs_end_permian.csv",
+   "sha256": "a8bc335ef8b4958e5f3e5c65812bec7b4219071ad80d421c40f31c28f48f21bf",
+   "datainfo": [
+    "\"Access Time\",\"Thu 2026-10-15 01:16:43 GMT\""
+   ],
+   "rows": 56607,
+   "occurrences_not_in_one_stage": 4007
+  },
+  "end_triassic": {
+   "extract": "data/raw/pbdb/b001/occs_end_triassic.csv",
+   "sha256": "db4886ec95bbca9f16c21b81147673beace9487d93c4a1d161c8d3153acb8056",
+   "datainfo": [
+    "\"Access Time\",\"Thu 2026-10-15 01:16:54 GMT\""
+   ],
+   "rows": 50167,
+   "occurrences_not_in_one_stage": 4596
+  },
+  "k_pg": {
+   "extract": "data/raw/pbdb/b001/occs_k_pg.csv",
+   "sha256": "a25385cac5d6cb8680f17364489e617ea56ac3318db545ce662ab0a77b0418a1",
+   "datainfo": [
+    "\"Access Time\",\"Thu 2026-10-15 01:17:11 GMT\""
+   ],
+   "rows": 67097,
+   "occurrences_not_in_one_stage": 8745
+  }
+ },
+ "merged_tier_feed": [
+  "epifaunal|grazing",
+  "epifaunal|other",
+  "epifaunal|suspension",
+  "infaunal|deposit",
+  "infaunal|other",
+  "infaunal|predatory",
+  "infaunal|suspension",
+  "pelagic|deposit",
+  "pelagic|grazing",
+  "pelagic|other",
+  "pelagic|predatory",
+  "pelagic|suspension"
+ ],
+ "at_risk_per_event": {
+  "end_permian": 4,
+  "end_triassic": 5,
+  "k_pg": 8
+ },
+ "baseline_guilds_not_at_risk": {
+  "end_permian": 8,
+  "end_triassic": 7,
+  "k_pg": 9
+ },
+ "zero_survivor_cells": 0,
+ "guilds_at_risk_in_all_three": 4,
+ "guilds_at_risk_in_two_or_more": 5,
+ "guilds_with_dominant_class_switch": [
+  "epifaunal|stationary|suspension",
+  "infaunal|stationary|suspension"
+ ],
+ "pair_types": {
+  "diff_guild|diff_class": 118,
+  "same_guild|same_class": 9,
+  "diff_guild|same_class": 5,
+  "same_guild|diff_class": 4
+ },
+ "covariance_basis": {
+  "event_only": {
+   "rank": 3,
+   "singular_values": [
+    8.224,
+    2.651,
+    2.549
+   ]
+  },
+  "event_plus_covariates": {
+   "rank": 3,
+   "singular_values": [
+    7.028,
+    2.399,
+    2.14
+   ]
+  }
+ },
+ "cells_at_risk": 17,
+ "eco_ref_top": [
+  [
+   "Bambach, R",
+   1777
+  ],
+  [
+   "Huber, M 2010",
+   1759
+  ],
+  [
+   "Brusca, RC and GJ Brusca",
+   1392
+  ],
+  [
+   "Carlson S",
+   1176
+  ],
+  [
+   "Cairns, S",
+   278
+  ],
+  [
+   "Budd AF, Adrain TS, Park JW, Klaus JS, Johnson KG (2008)",
+   249
+  ],
+  [
+   "Poty, E",
+   42
+  ],
+  [
+   "Morris R",
+   32
+  ]
+ ]
+}

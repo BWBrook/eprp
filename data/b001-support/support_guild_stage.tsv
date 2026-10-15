@@ -1,0 +1,264 @@
+event	stage	role	guild	occurrences	genera	goods_u	resolved	stage_supported	subsampled_richness_at_0.5
+end_permian	Wuchiapingian	penultimate	epifaunal|mobile|grazing	256	42	0.949	True	True	9.76
+end_permian	Wuchiapingian	penultimate	epifaunal|stationary|grazing	3	1	1.000	True	True	1.00
+end_permian	Wuchiapingian	penultimate	epifaunal|stationary|predatory	9	2	0.889	True	True	1.00
+end_permian	Wuchiapingian	penultimate	epifaunal|stationary|suspension	6007	287	0.989	True	True	43.65
+end_permian	Wuchiapingian	penultimate	infaunal|mobile|deposit	35	2	0.971	True	True	1.00
+end_permian	Wuchiapingian	penultimate	infaunal|mobile|other	9	2	1.000	True	True	1.00
+end_permian	Wuchiapingian	penultimate	infaunal|stationary|deposit	35	3	1.000	True	True	1.00
+end_permian	Wuchiapingian	penultimate	infaunal|stationary|suspension	2350	84	0.991	True	True	14.42
+end_permian	Wuchiapingian	penultimate	pelagic|mobile|predatory	402	62	0.963	True	True	14.06
+end_permian	Wuchiapingian	penultimate	pelagic|stationary|other	1	1	0.000	False	True	
+end_permian	Changhsingian	baseline	epifaunal|fast|predatory	3	2	0.667	True	True	1.33
+end_permian	Changhsingian	baseline	epifaunal|mobile|grazing	121	29	0.917	True	True	8.72
+end_permian	Changhsingian	baseline	epifaunal|slow|predatory	1	1	0.000	False	True	
+end_permian	Changhsingian	baseline	epifaunal|stationary|grazing	2	1	1.000	True	True	1.00
+end_permian	Changhsingian	baseline	epifaunal|stationary|predatory	9	1	1.000	True	True	1.00
+end_permian	Changhsingian	baseline	epifaunal|stationary|suspension	3672	223	0.986	True	True	38.36
+end_permian	Changhsingian	baseline	infaunal|mobile|deposit	27	3	1.000	True	True	1.00
+end_permian	Changhsingian	baseline	infaunal|mobile|other	8	2	1.000	True	True	1.14
+end_permian	Changhsingian	baseline	infaunal|stationary|deposit	24	3	0.958	True	True	1.00
+end_permian	Changhsingian	baseline	infaunal|stationary|suspension	1119	69	0.986	True	True	9.66
+end_permian	Changhsingian	baseline	pelagic|mobile|predatory	810	46	0.980	True	True	6.05
+end_permian	Changhsingian	baseline	pelagic|mobile|suspension	1	1	0.000	False	True	
+end_permian	Induan	follow	epifaunal|fast|predatory	15	5	0.933	True	True	
+end_permian	Induan	follow	epifaunal|mobile|grazing	173	13	0.983	True	True	
+end_permian	Induan	follow	epifaunal|mobile|suspension	6	1	1.000	True	True	
+end_permian	Induan	follow	epifaunal|stationary|suspension	1295	43	0.992	True	True	
+end_permian	Induan	follow	infaunal|mobile|deposit	14	3	0.929	True	True	
+end_permian	Induan	follow	infaunal|stationary|deposit	3	1	1.000	True	True	
+end_permian	Induan	follow	infaunal|stationary|other	2	1	1.000	True	True	
+end_permian	Induan	follow	infaunal|stationary|suspension	576	17	0.993	True	True	
+end_permian	Induan	follow	pelagic|mobile|predatory	882	31	0.988	True	True	
+end_permian	Induan	follow	pelagic|mobile|suspension	9	2	1.000	True	True	
+end_permian	Olenekian	follow	epifaunal|fast|predatory	18	7	0.833	True	True	
+end_permian	Olenekian	follow	epifaunal|mobile|grazing	134	16	0.948	True	True	
+end_permian	Olenekian	follow	epifaunal|mobile|suspension	12	1	1.000	True	True	
+end_permian	Olenekian	follow	epifaunal|slow|predatory	1	1	0.000	False	True	
+end_permian	Olenekian	follow	epifaunal|stationary|grazing	2	1	1.000	True	True	
+end_permian	Olenekian	follow	epifaunal|stationary|predatory	1	1	0.000	False	True	
+end_permian	Olenekian	follow	epifaunal|stationary|suspension	870	49	0.982	True	True	
+end_permian	Olenekian	follow	infaunal|mobile|deposit	24	6	0.917	True	True	
+end_permian	Olenekian	follow	infaunal|stationary|deposit	14	1	1.000	True	True	
+end_permian	Olenekian	follow	infaunal|stationary|suspension	509	16	0.994	True	True	
+end_permian	Olenekian	follow	pelagic|mobile|deposit	7	1	1.000	True	True	
+end_permian	Olenekian	follow	pelagic|mobile|predatory	3031	142	0.991	True	True	
+end_permian	Olenekian	follow	pelagic|mobile|suspension	13	3	1.000	True	True	
+end_permian	Anisian	follow	epifaunal|fast|predatory	75	11	0.960	True	True	
+end_permian	Anisian	follow	epifaunal|mobile|grazing	332	44	0.985	True	True	
+end_permian	Anisian	follow	epifaunal|mobile|suspension	26	1	1.000	True	True	
+end_permian	Anisian	follow	epifaunal|slow|deposit	2	1	1.000	True	True	
+end_permian	Anisian	follow	epifaunal|slow|predatory	7	1	1.000	True	True	
+end_permian	Anisian	follow	epifaunal|stationary|grazing	2	1	1.000	True	True	
+end_permian	Anisian	follow	epifaunal|stationary|other	74	18	0.919	True	True	
+end_permian	Anisian	follow	epifaunal|stationary|suspension	2258	129	0.988	True	True	
+end_permian	Anisian	follow	infaunal|mobile|deposit	54	7	0.981	True	True	
+end_permian	Anisian	follow	infaunal|mobile|other	4	1	1.000	True	True	
+end_permian	Anisian	follow	infaunal|stationary|deposit	19	4	0.947	True	True	
+end_permian	Anisian	follow	infaunal|stationary|suspension	330	28	0.976	True	True	
+end_permian	Anisian	follow	pelagic|mobile|predatory	3893	175	0.991	True	True	
+end_permian	Anisian	follow	pelagic|mobile|suspension	5	2	0.800	True	True	
+end_permian	Anisian	follow	pelagic|stationary|other	6	1	1.000	True	True	
+end_permian	Ladinian	confirm	epifaunal|fast|predatory	27	13	0.741	True	True	
+end_permian	Ladinian	confirm	epifaunal|mobile|grazing	173	37	0.913	True	True	
+end_permian	Ladinian	confirm	epifaunal|mobile|suspension	10	3	0.900	True	True	
+end_permian	Ladinian	confirm	epifaunal|slow|deposit	7	4	0.571	True	True	
+end_permian	Ladinian	confirm	epifaunal|slow|predatory	9	2	0.889	True	True	
+end_permian	Ladinian	confirm	epifaunal|stationary|grazing	2	1	1.000	True	True	
+end_permian	Ladinian	confirm	epifaunal|stationary|other	41	19	0.732	True	True	
+end_permian	Ladinian	confirm	epifaunal|stationary|suspension	1017	132	0.947	True	True	
+end_permian	Ladinian	confirm	infaunal|mobile|deposit	21	5	0.952	True	True	
+end_permian	Ladinian	confirm	infaunal|mobile|predatory	1	1	0.000	False	True	
+end_permian	Ladinian	confirm	infaunal|mobile|suspension	2	1	1.000	True	True	
+end_permian	Ladinian	confirm	infaunal|stationary|deposit	10	2	1.000	True	True	
+end_permian	Ladinian	confirm	infaunal|stationary|suspension	251	30	0.960	True	True	
+end_permian	Ladinian	confirm	pelagic|mobile|deposit	3	1	1.000	True	True	
+end_permian	Ladinian	confirm	pelagic|mobile|predatory	919	112	0.968	True	True	
+end_permian	Ladinian	confirm	pelagic|mobile|suspension	5	2	1.000	True	True	
+end_permian	Ladinian	confirm	pelagic|stationary|other	2	1	1.000	True	True	
+end_triassic	Norian	penultimate	epifaunal|fast|predatory	15	4	0.933	True	True	1.61
+end_triassic	Norian	penultimate	epifaunal|mobile|grazing	160	38	0.887	True	True	7.76
+end_triassic	Norian	penultimate	epifaunal|mobile|suspension	13	2	0.923	True	True	1.00
+end_triassic	Norian	penultimate	epifaunal|slow|predatory	3	2	0.667	True	True	1.33
+end_triassic	Norian	penultimate	epifaunal|stationary|other	586	54	0.983	True	True	13.15
+end_triassic	Norian	penultimate	epifaunal|stationary|predatory	2	2	0.000	False	True	
+end_triassic	Norian	penultimate	epifaunal|stationary|suspension	1638	214	0.963	True	True	41.72
+end_triassic	Norian	penultimate	infaunal|mobile|deposit	41	8	0.902	True	True	2.21
+end_triassic	Norian	penultimate	infaunal|mobile|predatory	5	1	1.000	True	True	1.00
+end_triassic	Norian	penultimate	infaunal|stationary|deposit	15	1	1.000	True	True	1.00
+end_triassic	Norian	penultimate	infaunal|stationary|other	1	1	0.000	False	True	
+end_triassic	Norian	penultimate	infaunal|stationary|suspension	230	37	0.943	True	True	9.39
+end_triassic	Norian	penultimate	pelagic|mobile|predatory	1125	139	0.965	True	True	34.37
+end_triassic	Norian	penultimate	pelagic|mobile|suspension	1	1	0.000	False	True	
+end_triassic	Norian	penultimate	pelagic|stationary|other	1	1	0.000	False	True	
+end_triassic	Norian	penultimate	pelagic|stationary|suspension	1	1	0.000	False	True	
+end_triassic	Rhaetian	baseline	epifaunal|fast|predatory	45	4	0.933	True	True	1.00
+end_triassic	Rhaetian	baseline	epifaunal|mobile|grazing	91	35	0.802	True	True	12.83
+end_triassic	Rhaetian	baseline	epifaunal|mobile|suspension	15	2	1.000	True	True	1.00
+end_triassic	Rhaetian	baseline	epifaunal|slow|deposit	8	1	1.000	True	True	1.00
+end_triassic	Rhaetian	baseline	epifaunal|slow|predatory	11	4	0.909	True	True	1.70
+end_triassic	Rhaetian	baseline	epifaunal|stationary|other	363	41	0.989	True	True	10.13
+end_triassic	Rhaetian	baseline	epifaunal|stationary|predatory	8	2	1.000	True	True	1.00
+end_triassic	Rhaetian	baseline	epifaunal|stationary|suspension	1598	127	0.974	True	True	15.61
+end_triassic	Rhaetian	baseline	infaunal|mobile|deposit	66	6	0.985	True	True	1.54
+end_triassic	Rhaetian	baseline	infaunal|stationary|deposit	6	2	1.000	True	True	1.20
+end_triassic	Rhaetian	baseline	infaunal|stationary|suspension	393	44	0.969	True	True	9.24
+end_triassic	Rhaetian	baseline	pelagic|mobile|predatory	207	33	0.937	True	True	6.44
+end_triassic	Hettangian	follow	epifaunal|fast|predatory	10	5	0.800	True	True	
+end_triassic	Hettangian	follow	epifaunal|mobile|grazing	49	16	0.837	True	True	
+end_triassic	Hettangian	follow	epifaunal|mobile|suspension	3	2	0.667	True	True	
+end_triassic	Hettangian	follow	epifaunal|slow|deposit	1	1	0.000	False	True	
+end_triassic	Hettangian	follow	epifaunal|stationary|other	43	17	0.791	True	True	
+end_triassic	Hettangian	follow	epifaunal|stationary|suspension	469	67	0.945	True	True	
+end_triassic	Hettangian	follow	infaunal|mobile|deposit	14	4	0.857	True	True	
+end_triassic	Hettangian	follow	infaunal|stationary|deposit	5	2	1.000	True	True	
+end_triassic	Hettangian	follow	infaunal|stationary|other	1	1	0.000	False	True	
+end_triassic	Hettangian	follow	infaunal|stationary|suspension	154	30	0.948	True	True	
+end_triassic	Hettangian	follow	pelagic|mobile|predatory	554	38	0.980	True	True	
+end_triassic	Sinemurian	follow	epifaunal|fast|predatory	17	7	0.882	True	True	
+end_triassic	Sinemurian	follow	epifaunal|mobile|grazing	80	33	0.762	True	True	
+end_triassic	Sinemurian	follow	epifaunal|mobile|suspension	1	1	0.000	False	True	
+end_triassic	Sinemurian	follow	epifaunal|slow|deposit	1	1	0.000	False	True	
+end_triassic	Sinemurian	follow	epifaunal|slow|predatory	1	1	0.000	False	True	
+end_triassic	Sinemurian	follow	epifaunal|stationary|other	46	17	0.804	True	True	
+end_triassic	Sinemurian	follow	epifaunal|stationary|suspension	1414	104	0.979	True	True	
+end_triassic	Sinemurian	follow	infaunal|mobile|deposit	29	4	0.931	True	True	
+end_triassic	Sinemurian	follow	infaunal|stationary|deposit	35	2	1.000	True	True	
+end_triassic	Sinemurian	follow	infaunal|stationary|suspension	333	36	0.973	True	True	
+end_triassic	Sinemurian	follow	pelagic|mobile|predatory	1581	65	0.994	True	True	
+end_triassic	Pliensbachian	follow	epifaunal|fast|predatory	6	5	0.333	False	True	
+end_triassic	Pliensbachian	follow	epifaunal|mobile|grazing	306	34	0.971	True	True	
+end_triassic	Pliensbachian	follow	epifaunal|mobile|suspension	63	1	1.000	True	True	
+end_triassic	Pliensbachian	follow	epifaunal|slow|deposit	4	1	1.000	True	True	
+end_triassic	Pliensbachian	follow	epifaunal|slow|predatory	5	2	1.000	True	True	
+end_triassic	Pliensbachian	follow	epifaunal|stationary|grazing	1	1	0.000	False	True	
+end_triassic	Pliensbachian	follow	epifaunal|stationary|other	110	51	0.736	True	True	
+end_triassic	Pliensbachian	follow	epifaunal|stationary|suspension	3915	144	0.993	True	True	
+end_triassic	Pliensbachian	follow	infaunal|mobile|deposit	82	6	0.988	True	True	
+end_triassic	Pliensbachian	follow	infaunal|mobile|other	1	1	0.000	False	True	
+end_triassic	Pliensbachian	follow	infaunal|mobile|predatory	1	1	0.000	False	True	
+end_triassic	Pliensbachian	follow	infaunal|stationary|deposit	81	3	1.000	True	True	
+end_triassic	Pliensbachian	follow	infaunal|stationary|other	24	1	1.000	True	True	
+end_triassic	Pliensbachian	follow	infaunal|stationary|suspension	880	39	0.998	True	True	
+end_triassic	Pliensbachian	follow	pelagic|mobile|predatory	3787	72	0.998	True	True	
+end_triassic	Toarcian	confirm	epifaunal|fast|predatory	30	7	0.933	True	True	
+end_triassic	Toarcian	confirm	epifaunal|mobile|grazing	41	17	0.732	True	True	
+end_triassic	Toarcian	confirm	epifaunal|mobile|suspension	10	2	1.000	True	True	
+end_triassic	Toarcian	confirm	epifaunal|slow|deposit	6	2	0.833	True	True	
+end_triassic	Toarcian	confirm	epifaunal|slow|predatory	2	2	0.000	False	True	
+end_triassic	Toarcian	confirm	epifaunal|stationary|other	23	15	0.565	True	True	
+end_triassic	Toarcian	confirm	epifaunal|stationary|predatory	15	2	1.000	True	True	
+end_triassic	Toarcian	confirm	epifaunal|stationary|suspension	3105	116	0.993	True	True	
+end_triassic	Toarcian	confirm	infaunal|mobile|deposit	56	3	1.000	True	True	
+end_triassic	Toarcian	confirm	infaunal|stationary|deposit	37	1	1.000	True	True	
+end_triassic	Toarcian	confirm	infaunal|stationary|other	3	1	1.000	True	True	
+end_triassic	Toarcian	confirm	infaunal|stationary|suspension	686	35	0.990	True	True	
+end_triassic	Toarcian	confirm	pelagic|mobile|predatory	3969	88	0.996	True	True	
+end_triassic	Toarcian	confirm	pelagic|mobile|suspension	1	1	0.000	False	True	
+k_pg	Campanian	penultimate	epifaunal|fast|predatory	156	42	0.891	True	True	12.18
+k_pg	Campanian	penultimate	epifaunal|mobile|grazing	221	54	0.900	True	True	13.06
+k_pg	Campanian	penultimate	epifaunal|mobile|suspension	44	6	0.955	True	True	1.48
+k_pg	Campanian	penultimate	epifaunal|slow|deposit	151	17	0.960	True	True	3.17
+k_pg	Campanian	penultimate	epifaunal|slow|predatory	227	41	0.938	True	True	9.62
+k_pg	Campanian	penultimate	epifaunal|stationary|other	139	52	0.842	True	True	19.72
+k_pg	Campanian	penultimate	epifaunal|stationary|predatory	5	1	1.000	True	True	1.00
+k_pg	Campanian	penultimate	epifaunal|stationary|suspension	1882	253	0.953	True	True	49.14
+k_pg	Campanian	penultimate	infaunal|mobile|deposit	172	8	0.994	True	True	1.63
+k_pg	Campanian	penultimate	infaunal|mobile|other	4	2	0.750	True	True	1.00
+k_pg	Campanian	penultimate	infaunal|mobile|predatory	46	3	0.978	True	True	1.00
+k_pg	Campanian	penultimate	infaunal|mobile|suspension	28	2	1.000	True	True	1.03
+k_pg	Campanian	penultimate	infaunal|stationary|deposit	123	12	0.967	True	True	2.95
+k_pg	Campanian	penultimate	infaunal|stationary|other	1	1	0.000	False	True	
+k_pg	Campanian	penultimate	infaunal|stationary|suspension	1023	73	0.983	True	True	12.25
+k_pg	Campanian	penultimate	pelagic|mobile|grazing	48	11	0.938	True	True	3.56
+k_pg	Campanian	penultimate	pelagic|mobile|other	8	3	0.875	True	True	1.52
+k_pg	Campanian	penultimate	pelagic|mobile|predatory	2304	123	0.987	True	True	19.60
+k_pg	Maastrichtian	baseline	epifaunal|fast|predatory	160	43	0.912	True	True	13.36
+k_pg	Maastrichtian	baseline	epifaunal|mobile|grazing	506	52	0.970	True	True	9.11
+k_pg	Maastrichtian	baseline	epifaunal|mobile|suspension	50	5	1.000	True	True	1.52
+k_pg	Maastrichtian	baseline	epifaunal|slow|deposit	235	27	0.962	True	True	5.30
+k_pg	Maastrichtian	baseline	epifaunal|slow|predatory	789	45	0.985	True	True	7.46
+k_pg	Maastrichtian	baseline	epifaunal|stationary|other	356	54	0.952	True	True	7.91
+k_pg	Maastrichtian	baseline	epifaunal|stationary|suspension	4631	249	0.983	True	True	25.41
+k_pg	Maastrichtian	baseline	infaunal|mobile|deposit	448	8	0.993	True	True	1.10
+k_pg	Maastrichtian	baseline	infaunal|mobile|other	12	1	1.000	True	True	1.00
+k_pg	Maastrichtian	baseline	infaunal|mobile|predatory	52	2	1.000	True	True	1.00
+k_pg	Maastrichtian	baseline	infaunal|mobile|suspension	37	4	0.973	True	True	1.42
+k_pg	Maastrichtian	baseline	infaunal|stationary|deposit	564	17	0.989	True	True	3.61
+k_pg	Maastrichtian	baseline	infaunal|stationary|predatory	1	1	0.000	False	True	
+k_pg	Maastrichtian	baseline	infaunal|stationary|suspension	2889	100	0.991	True	True	10.46
+k_pg	Maastrichtian	baseline	pelagic|mobile|grazing	22	8	0.682	True	True	1.16
+k_pg	Maastrichtian	baseline	pelagic|mobile|other	4	2	0.750	True	True	1.00
+k_pg	Maastrichtian	baseline	pelagic|mobile|predatory	2443	99	0.993	True	True	13.58
+k_pg	Danian	follow	epifaunal|fast|predatory	47	22	0.702	True	True	
+k_pg	Danian	follow	epifaunal|mobile|grazing	241	73	0.880	True	True	
+k_pg	Danian	follow	epifaunal|mobile|suspension	6	4	0.667	True	True	
+k_pg	Danian	follow	epifaunal|slow|deposit	66	20	0.848	True	True	
+k_pg	Danian	follow	epifaunal|slow|predatory	210	58	0.857	True	True	
+k_pg	Danian	follow	epifaunal|stationary|other	76	34	0.697	True	True	
+k_pg	Danian	follow	epifaunal|stationary|predatory	29	1	1.000	True	True	
+k_pg	Danian	follow	epifaunal|stationary|suspension	558	135	0.882	True	True	
+k_pg	Danian	follow	infaunal|mobile|deposit	227	10	0.991	True	True	
+k_pg	Danian	follow	infaunal|mobile|other	16	1	1.000	True	True	
+k_pg	Danian	follow	infaunal|mobile|predatory	13	1	1.000	True	True	
+k_pg	Danian	follow	infaunal|mobile|suspension	16	3	0.875	True	True	
+k_pg	Danian	follow	infaunal|stationary|deposit	72	15	0.917	True	True	
+k_pg	Danian	follow	infaunal|stationary|predatory	6	1	1.000	True	True	
+k_pg	Danian	follow	infaunal|stationary|suspension	692	70	0.951	True	True	
+k_pg	Danian	follow	pelagic|mobile|grazing	6	4	0.500	True	True	
+k_pg	Danian	follow	pelagic|mobile|predatory	153	17	0.948	True	True	
+k_pg	Selandian	follow	epifaunal|fast|predatory	11	10	0.182	False	True	
+k_pg	Selandian	follow	epifaunal|mobile|grazing	98	40	0.806	True	True	
+k_pg	Selandian	follow	epifaunal|mobile|suspension	1	1	0.000	False	True	
+k_pg	Selandian	follow	epifaunal|slow|deposit	6	6	0.000	False	True	
+k_pg	Selandian	follow	epifaunal|slow|predatory	195	42	0.944	True	True	
+k_pg	Selandian	follow	epifaunal|stationary|grazing	3	1	1.000	True	True	
+k_pg	Selandian	follow	epifaunal|stationary|other	7	4	0.714	True	True	
+k_pg	Selandian	follow	epifaunal|stationary|predatory	20	1	1.000	True	True	
+k_pg	Selandian	follow	epifaunal|stationary|suspension	93	30	0.806	True	True	
+k_pg	Selandian	follow	infaunal|mobile|deposit	38	8	0.921	True	True	
+k_pg	Selandian	follow	infaunal|mobile|predatory	6	1	1.000	True	True	
+k_pg	Selandian	follow	infaunal|mobile|suspension	1	1	0.000	False	True	
+k_pg	Selandian	follow	infaunal|stationary|deposit	16	4	0.938	True	True	
+k_pg	Selandian	follow	infaunal|stationary|other	2	1	1.000	True	True	
+k_pg	Selandian	follow	infaunal|stationary|predatory	7	1	1.000	True	True	
+k_pg	Selandian	follow	infaunal|stationary|suspension	236	31	0.945	True	True	
+k_pg	Selandian	follow	pelagic|mobile|grazing	1	1	0.000	False	True	
+k_pg	Selandian	follow	pelagic|mobile|other	5	2	0.800	True	True	
+k_pg	Selandian	follow	pelagic|mobile|predatory	28	8	0.929	True	True	
+k_pg	Thanetian	follow	epifaunal|fast|predatory	26	21	0.385	False	True	
+k_pg	Thanetian	follow	epifaunal|mobile|grazing	130	47	0.846	True	True	
+k_pg	Thanetian	follow	epifaunal|mobile|suspension	19	3	0.947	True	True	
+k_pg	Thanetian	follow	epifaunal|slow|deposit	24	9	0.917	True	True	
+k_pg	Thanetian	follow	epifaunal|slow|predatory	238	46	0.958	True	True	
+k_pg	Thanetian	follow	epifaunal|stationary|other	82	24	0.829	True	True	
+k_pg	Thanetian	follow	epifaunal|stationary|suspension	207	51	0.874	True	True	
+k_pg	Thanetian	follow	infaunal|mobile|deposit	48	7	0.958	True	True	
+k_pg	Thanetian	follow	infaunal|mobile|other	1	1	0.000	False	True	
+k_pg	Thanetian	follow	infaunal|mobile|predatory	3	1	1.000	True	True	
+k_pg	Thanetian	follow	infaunal|mobile|suspension	4	2	0.750	True	True	
+k_pg	Thanetian	follow	infaunal|stationary|deposit	54	8	0.944	True	True	
+k_pg	Thanetian	follow	infaunal|stationary|predatory	1	1	0.000	False	True	
+k_pg	Thanetian	follow	infaunal|stationary|suspension	455	44	0.967	True	True	
+k_pg	Thanetian	follow	pelagic|mobile|grazing	5	3	0.800	True	True	
+k_pg	Thanetian	follow	pelagic|mobile|predatory	52	14	0.885	True	True	
+k_pg	Ypresian	confirm	epifaunal|fast|predatory	171	58	0.836	True	True	
+k_pg	Ypresian	confirm	epifaunal|mobile|grazing	364	71	0.926	True	True	
+k_pg	Ypresian	confirm	epifaunal|mobile|other	10	3	0.900	True	True	
+k_pg	Ypresian	confirm	epifaunal|mobile|suspension	25	4	1.000	True	True	
+k_pg	Ypresian	confirm	epifaunal|slow|deposit	58	14	0.931	True	True	
+k_pg	Ypresian	confirm	epifaunal|slow|predatory	568	74	0.963	True	True	
+k_pg	Ypresian	confirm	epifaunal|stationary|other	96	34	0.792	True	True	
+k_pg	Ypresian	confirm	epifaunal|stationary|predatory	10	2	1.000	True	True	
+k_pg	Ypresian	confirm	epifaunal|stationary|suspension	639	119	0.930	True	True	
+k_pg	Ypresian	confirm	infaunal|mobile|deposit	165	15	0.982	True	True	
+k_pg	Ypresian	confirm	infaunal|mobile|other	2	1	1.000	True	True	
+k_pg	Ypresian	confirm	infaunal|mobile|predatory	13	4	0.846	True	True	
+k_pg	Ypresian	confirm	infaunal|mobile|suspension	9	2	1.000	True	True	
+k_pg	Ypresian	confirm	infaunal|stationary|deposit	120	14	0.942	True	True	
+k_pg	Ypresian	confirm	infaunal|stationary|other	2	1	1.000	True	True	
+k_pg	Ypresian	confirm	infaunal|stationary|predatory	10	4	0.900	True	True	
+k_pg	Ypresian	confirm	infaunal|stationary|suspension	754	78	0.967	True	True	
+k_pg	Ypresian	confirm	pelagic|mobile|grazing	33	11	0.879	True	True	
+k_pg	Ypresian	confirm	pelagic|mobile|other	20	15	0.300	False	True	
+k_pg	Ypresian	confirm	pelagic|mobile|predatory	178	33	0.938	True	True	

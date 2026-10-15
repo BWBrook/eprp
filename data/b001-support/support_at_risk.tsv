@@ -1,0 +1,42 @@
+event	guild	baseline_occurrences	baseline_genera	baseline_u	baseline_richness_0.5	penultimate_richness_0.5	survivors	dominant_class	dominant_share	class_composition	at_risk	follow_stages_resolved	confirm_resolved
+end_permian	epifaunal|fast|predatory	3	2	0.667	1.33		2	Chondrichthyes	0.667	Chondrichthyes:2;Malacostraca:1	False	3/3	True
+end_permian	epifaunal|mobile|grazing	121	29	0.917	8.72	9.76	18	Gastropoda	0.992	Gastropoda:120;Echinoidea:1	True	3/3	True
+end_permian	epifaunal|slow|predatory	1	1	0.000			1	Gastropoda	1.000	Gastropoda:1	False	1/3	True
+end_permian	epifaunal|stationary|grazing	2	1	1.000	1.00	1.00	1	Scaphopoda	1.000	Scaphopoda:2	False	2/3	True
+end_permian	epifaunal|stationary|predatory	9	1	1.000	1.00	1.00	1	Scyphozoa	1.000	Scyphozoa:9	False	0/3	False
+end_permian	epifaunal|stationary|suspension	3672	223	0.986	38.36	43.65	32	Rhynchonellata	0.475	Rhynchonellata:1746;Strophomenata:1194;Bivalvia:473;Anthozoa:125;Demospongea:94;Stenolaemata:36;Calcarea:3;Hexactinellida:1	True	3/3	True
+end_permian	infaunal|mobile|deposit	27	3	1.000	1.00	1.00	2	Bivalvia	1.000	Bivalvia:27	False	3/3	True
+end_permian	infaunal|mobile|other	8	2	1.000	1.14	1.00	2	Bivalvia	1.000	Bivalvia:8	False	1/3	False
+end_permian	infaunal|stationary|deposit	24	3	0.958	1.00	1.00	1	Bivalvia	1.000	Bivalvia:24	False	3/3	True
+end_permian	infaunal|stationary|suspension	1119	69	0.986	9.66	14.42	11	Strophomenata	0.814	Strophomenata:911;Bivalvia:162;Lingulata:46	True	3/3	True
+end_permian	pelagic|mobile|predatory	810	46	0.980	6.05	14.06	11	Cephalopoda	0.998	Cephalopoda:808;Conodonta:1;Osteichthyes:1	True	3/3	True
+end_permian	pelagic|mobile|suspension	1	1	0.000			1	Osteichthyes	1.000	Osteichthyes:1	False	3/3	True
+end_triassic	epifaunal|fast|predatory	45	4	0.933	1.00	1.61	3	Chondrichthyes	0.956	Chondrichthyes:43;Malacostraca:2	False	2/3	True
+end_triassic	epifaunal|mobile|grazing	91	35	0.802	12.83	7.76	18	Gastropoda	0.857	Gastropoda:78;Echinoidea:13	True	3/3	True
+end_triassic	epifaunal|mobile|suspension	15	2	1.000	1.00	1.00	2	Bivalvia	0.867	Bivalvia:13;Ophiuroidea:2	False	2/3	True
+end_triassic	epifaunal|slow|deposit	8	1	1.000	1.00		1	Gastropoda	1.000	Gastropoda:8	False	1/3	True
+end_triassic	epifaunal|slow|predatory	11	4	0.909	1.70	1.33	3	Gastropoda	0.727	Gastropoda:8;Ophiuroidea:3	False	1/3	False
+end_triassic	epifaunal|stationary|other	363	41	0.989	10.13	13.15	21	Anthozoa	0.986	Anthozoa:358;Hydrozoa:5	True	3/3	True
+end_triassic	epifaunal|stationary|predatory	8	2	1.000	1.00		1	Scyphozoa	0.750	Scyphozoa:6;Bivalvia:2	False	0/3	True
+end_triassic	epifaunal|stationary|suspension	1598	127	0.974	15.61	41.72	65	Rhynchonellata	0.593	Rhynchonellata:948;Bivalvia:598;Demospongea:28;Crinoidea:14;Anthozoa:5;Stenolaemata:2;Calcarea:2;Craniata:1	True	3/3	True
+end_triassic	infaunal|mobile|deposit	66	6	0.985	1.54	2.21	6	Bivalvia	1.000	Bivalvia:66	False	3/3	True
+end_triassic	infaunal|stationary|deposit	6	2	1.000	1.20	1.00	2	Bivalvia	1.000	Bivalvia:6	False	3/3	True
+end_triassic	infaunal|stationary|suspension	393	44	0.969	9.24	9.39	32	Bivalvia	0.977	Bivalvia:384;Lingulata:9	True	3/3	True
+end_triassic	pelagic|mobile|predatory	207	33	0.937	6.44	34.37	6	Cephalopoda	0.908	Cephalopoda:188;Reptilia:18;Conodonta:1	True	3/3	True
+k_pg	epifaunal|fast|predatory	160	43	0.912	13.36	12.18	25	Malacostraca	0.875	Malacostraca:140;Actinopterygii:18;Merostomata:1;Chondrichthyes:1	True	1/3	True
+k_pg	epifaunal|mobile|grazing	506	52	0.970	9.11	13.06	38	Gastropoda	0.939	Gastropoda:475;Echinoidea:31	True	3/3	True
+k_pg	epifaunal|mobile|suspension	50	5	1.000	1.52	1.48	4	Bivalvia	0.580	Bivalvia:29;Gastropoda:19;Ophiuroidea:2	False	2/3	True
+k_pg	epifaunal|slow|deposit	235	27	0.962	5.30	3.17	10	Echinoidea	0.826	Echinoidea:194;Gastropoda:39;Ophiuroidea:2	True	2/3	True
+k_pg	epifaunal|slow|predatory	789	45	0.985	7.46	9.62	31	Gastropoda	0.990	Gastropoda:781;Ophiuroidea:6;Asteroidea:2	True	3/3	True
+k_pg	epifaunal|stationary|other	356	54	0.952	7.91	19.72	39	Anthozoa	1.000	Anthozoa:356	True	3/3	True
+k_pg	epifaunal|stationary|suspension	4631	249	0.983	25.41	49.14	106	Bivalvia	0.830	Bivalvia:3843;Rhynchonellata:456;Crinoidea:84;Gymnolaemata:67;Anthozoa:59;Craniata:36;Cirripedia:30;Hexactinellida:23;Stenolaemata:12;Demospongea:10;Gastropoda:5;Hydrozoa:3;Calcarea:3	True	3/3	True
+k_pg	infaunal|mobile|deposit	448	8	0.993	1.10	1.63	7	Bivalvia	1.000	Bivalvia:448	False	3/3	True
+k_pg	infaunal|mobile|other	12	1	1.000	1.00	1.00	1	Bivalvia	1.000	Bivalvia:12	False	1/3	True
+k_pg	infaunal|mobile|predatory	52	2	1.000	1.00	1.00	1	Bivalvia	1.000	Bivalvia:52	False	3/3	True
+k_pg	infaunal|mobile|suspension	37	4	0.973	1.42	1.03	3	Malacostraca	1.000	Malacostraca:37	False	2/3	True
+k_pg	infaunal|stationary|deposit	564	17	0.989	3.61	2.95	12	Bivalvia	1.000	Bivalvia:564	False	3/3	True
+k_pg	infaunal|stationary|predatory	1	1	0.000			1	Bivalvia	1.000	Bivalvia:1	False	2/3	True
+k_pg	infaunal|stationary|suspension	2889	100	0.991	10.46	12.25	59	Bivalvia	0.767	Bivalvia:2216;Gastropoda:490;Demospongea:163;Lingulata:13;Anthozoa:7	True	3/3	True
+k_pg	pelagic|mobile|grazing	22	8	0.682	1.16	3.56	5	Reptilia	1.000	Reptilia:22	False	2/3	True
+k_pg	pelagic|mobile|other	4	2	0.750	1.00	1.52	1	Actinopterygii	1.000	Actinopterygii:4	False	1/3	False
+k_pg	pelagic|mobile|predatory	2443	99	0.993	13.58	19.60	12	Cephalopoda	0.932	Cephalopoda:2278;Reptilia:122;Chondrichthyes:38;Actinopterygii:5	True	3/3	True

@@ -181,10 +181,19 @@ Owner Claude. **Develop.** Source: Claude C5.
   - **Coding.** In PBDB, 96–99% of populated ecospace values are inherited
     from higher taxa ([provenance](../data/b001-support/README.md)). That
     is dependence, not "a guild is a clade".
-  - **Next gate:** a support audit, with support defined first, joining
-    Knope et al. 2015 coding to PBDB. Then a simulated discrimination check
-    on the actual support decides whether to proceed. Six guilds in three
-    events is a planning target only.
+  - **Support audit (15 October; [record](../data/b001-support/README.md#b-001-support-audit-knope-coding-joined-to-pbdb-15-october-2026)).**
+    Definitions were committed before screening.
+    - 4, 5 and 8 guilds are at risk; 4 are at risk in all three events.
+    - Only 25–48% of window genera join Knope's coding, and the gaps are
+      outcome-related after the K–Pg.
+    - A best-case bound (perfect, uncensored data) gives power 0.29 and
+      0.27 against the required 0.8. About 17 guilds in all three events
+      would be needed.
+    - **The global guild-grain empirical route is parked; the question is
+      kept.** Proposed status: hold, pending Codex.
+    - Reopening needs a coding source supporting about 17 or more guilds,
+      or a separately contracted estimand needing less replication across
+      guilds.
 - **Overlap.** Q-007 and Q-009 (linked). It also shares trait resources with
   B-010 and B-011, as different tests.
 

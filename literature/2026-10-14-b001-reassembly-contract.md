@@ -7,7 +7,9 @@ It applies Codex's corrections from cross-critique and the repairs from
 [Codex's merge review](../ideas/2026-10-14-blue-sky-merge-review-codex.md).
 The first version is at `f3bf6a4`; section 9 records what changed.
 
-Status: **a design contract.** No data were analysed and no model was fitted.
+Status: **a design contract.** Its support audit (15 October) parks the
+global guild-grain empirical route; see section 10. No restoration time was
+computed and no model was fitted.
 
 Sources:
 - A Sonnet subagent read Song et al. 2018, Dunhill et al. 2024 and Nicholls
@@ -413,3 +415,53 @@ All points were accepted, and they were applied before any screening.
 The baseline was also changed from the mean of the last two stages to the
 last stage alone. The two-stage mean would have included the 21.6 Myr
 Norian, which is not comparable with the other events' stages.
+
+## 10. Support audit result (15 October 2026): the empirical route parks at this grain
+
+Full record: [support audit](../data/b001-support/README.md#b-001-support-audit-knope-coding-joined-to-pbdb-15-october-2026).
+It was run under the section 8 definitions, which were committed first
+(`e7697d9`). No post-event richness or crossing was computed.
+
+**Support.**
+- At-risk guilds:
+
+  | Event | At risk |
+  | --- | ---: |
+  | End-Permian | 4 |
+  | End-Triassic | 5 |
+  | K–Pg | 8 |
+
+- 4 guilds are at risk in all three events: epifaunal grazers, epifaunal
+  and infaunal stationary suspension feeders, and pelagic predators.
+- The binding constraint is the minimum baseline. Stage support and
+  follow-up resolution are adequate.
+- The covariance basis has rank 3.
+- Only 25–48% of PBDB genera in the windows join Knope's coding.
+  - The gaps fall on ostracods, sharks, conodonts and gastropods.
+  - The join falls after the K–Pg, where fishes and sharks take over the
+    pelagic predator role.
+
+**Best-case bound.**
+- Assumptions: balanced; complete, uncensored and error-free delays; no
+  clade term; exact F intervals.
+- With 4 guilds in 3 events:
+  - P(lo > ρ₀ | ρ₁) = 0.29;
+  - P(hi < ρ₁ | 0) = 0.27.
+- Meeting both 0.8 criteria needs about 17 guilds in all three events, or
+  about 10 in five.
+- No baseline minimum, including none at all, admits more than 7.
+
+The section 7 check would therefore fail on any calibrated procedure.
+Running it on the frozen generator is unnecessary.
+
+**Disposition, as sections 6 and 7 prescribe for inadequate discrimination:**
+- The global guild-grain empirical route is **parked**, and the question is
+  kept. Proposed register status: hold.
+- This says nothing about whether recovery order is shared. It says the open
+  coded data cannot tell rule strength from absence at this grain.
+- **Reopening terms:**
+  - a coding source supporting about 17 or more guilds in three events;
+  - or a reformulated estimand needing less replication across guilds,
+    which would need its own contract. One example is a single signed
+    contrast replicated across many events, but clade turnover in pelagic
+    predators confounds it.
