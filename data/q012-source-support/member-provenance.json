@@ -1,0 +1,58 @@
+{
+  "provider_record": 21414007,
+  "source_url": "https://zenodo.org/api/records/21414007/files/Supplementary%20Data.zip/content",
+  "archive_size": 1162702765,
+  "archive_provider_md5": "md5:45350e953472d0096d50a58b5c2b3c3c",
+  "archive_whole_md5_verified": false,
+  "central_directory_entries": 284,
+  "selected_members": [
+    {
+      "member": "Supplementary Data/S3. Supporting Information/Supporting Data.xlsx",
+      "flags": 8,
+      "method": 8,
+      "crc32": "b8e09d04",
+      "compressed_bytes": 878560,
+      "uncompressed_bytes": 902354,
+      "local_header_offset": 138219160,
+      "local_path": "data/raw/lamyman2026/Supporting Data.xlsx",
+      "sha256": "2412991df3ff35d9f62275a500a474feff77e2c89b24ec86289574a8f7a7366b",
+      "remote_member_crc_and_local_sha256_match": true
+    },
+    {
+      "member": "Supplementary Data/S1. Morphospecies Key Information.xlsx",
+      "flags": 8,
+      "method": 8,
+      "crc32": "c36b68e3",
+      "compressed_bytes": 55465,
+      "uncompressed_bytes": 58174,
+      "local_header_offset": 3645,
+      "local_path": "data/raw/lamyman2026/S1. Morphospecies Key Information.xlsx",
+      "sha256": "88cd9b0a054aae64c9adfeadad5ec730dddfb11d169b8100ab61f803f0e05d84",
+      "remote_member_crc_and_local_sha256_match": true
+    },
+    {
+      "member": "Supplementary Data/S6. Phylogenies (nexus files)/All species/All_Species_Lineages.nex",
+      "flags": 8,
+      "method": 8,
+      "crc32": "f8871d87",
+      "compressed_bytes": 5484,
+      "uncompressed_bytes": 19873,
+      "local_header_offset": 142303641,
+      "local_path": "data/raw/lamyman2026/All_Species_Lineages.nex",
+      "sha256": "e8bb5da6f67032f820b27ff2acc4e704b734102d4f4245bb3fddfd19b438ad95",
+      "remote_member_crc_and_local_sha256_match": true
+    },
+    {
+      "member": "Supplementary Data/S6. Phylogenies (nexus files)/All species/All_Species_Morphospecies.nex",
+      "flags": 8,
+      "method": 8,
+      "crc32": "ee0a509a",
+      "compressed_bytes": 11587,
+      "uncompressed_bytes": 52644,
+      "local_header_offset": 142309702,
+      "local_path": "data/raw/lamyman2026/All_Species_Morphospecies.nex",
+      "sha256": "3a0867e048006975d60532c34bcaec548b051769a25b376bb62fafb94a009ce3",
+      "remote_member_crc_and_local_sha256_match": true
+    }
+  ]
+}

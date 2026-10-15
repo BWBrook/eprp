@@ -9,9 +9,12 @@ nor an empirical result. Read with the
 [generator/physical-prior check](2026-10-15-b002-generator-and-physical-priors.md).
 
 **Disposition:** retain the theoretical residual provisionally; hold empirical
-promotion. Claude next critiques this specification. Physical bounds, an
-effect threshold and remaining close-prior checks are unresolved, so no
-numerical engine or expanded specimen crosswalk follows automatically.
+promotion. Claude's [focused response](../ideas/2026-10-15-b002-specification-response-claude.md)
+is incorporated below on 15 October, preserving the original controls and
+distinguishing physical margin loss, endpoint-relative relief and loss of a
+feasible route. Physical bounds, an effect threshold and remaining close-prior
+checks are unresolved. No numerical engine or expanded specimen crosswalk
+follows automatically.
 
 ## 1. Objects held fixed in the comparison
 
@@ -112,12 +115,19 @@ For `X=A,J`, define
 `r_X(gamma,u) = inf_t X(gamma(t),u)`;
 `B_X(u) = sup_{gamma in Gamma} r_X(gamma,u)`.
 
-`B_X` is the best attainable bottleneck margin, or its supremum. The primary
-contrast is `Delta(u)=B_A(u)-B_J(u)`. The ordering `B_J <= B_A` is automatic
-and is **not** a discovery. A consequential margin loss, or a change from a
-positive to a negative best bottleneck, is the proposed conditional result.
-A meaningful effect threshold `delta` must be physically defended before an
-actual model is judged. It is currently unset.
+`B_X` is the best attainable bottleneck margin, or its supremum. Report
+`Delta(u)=B_A(u)-B_J(u)` as the loss of best route margin. The ordering
+`B_J <= B_A` is automatic and is **not** a discovery. This contrast includes
+a uniform juvenile burden; it does not isolate an extra depression relative
+to the endpoints. A meaningful magnitude threshold `delta` requires defended
+physical scales and remains unset.
+
+Following Claude, also report `e_X=min(X(theta0,u),X(theta1,u))`,
+`H_X=e_X-B_X >= 0`, and `Delta_H=H_J-H_A`. These describe endpoint-relative
+relief under the declared margins. A uniform offset `J=A-c` gives
+`Delta=c` and `Delta_H=0`. However, `Delta_H` need not be nonnegative, and
+zero does **not** exclude a juvenile obstruction: an offset can move an
+interior bottleneck below zero while leaving both endpoints feasible.
 
 For finite margins, `B_X>0` ensures some route with a positive margin;
 `B_X<0` excludes a fully feasible route in `Gamma`. At `B_X=0`, a supremum
@@ -127,11 +137,31 @@ process permitting a direct jump between viable programmes can bypass a
 continuous obstruction. None of these quantities gives an ancient waiting
 time or establishes impossibility under unknown heritable changes.
 
+For the narrower claim **juvenile requirements block a continuous route**,
+the sufficient certificate is: both endpoints pass `J`, `B_A>0`, and `B_J<0`
+under the same scenario and route family. Retain margins and `H_X` alongside
+this sign-level claim; neither a positive `Delta` nor `Delta_H` alone proves
+it. Pointwise feasibility is invariant under positive rescaling of constraint
+slacks. To preserve strict signs of the infimum/supremum bottlenecks as well,
+require rescaling ratios bounded above and away from zero over the complete
+domain (for example, continuous positive scales on a compact domain).
+Arbitrary positive but unbounded rescalings can destroy a strict margin.
+Magnitude claims require a second defended scaling sensitivity, not an
+arbitrarily tuned threshold.
+
 This bottleneck needs no distance metric unless `Gamma` itself invokes one.
 Under a continuous bijective coordinate change with continuous inverse,
 transform the generator, endpoints and route family together; `B_X` is then
 unchanged. Choosing a different generator or route family remains a scientific
 assumption. Coordinate invariance does not remove that dependence.
+
+Endpoints must be selected by a rule fixed before inspecting route results.
+For an innovation claim, specify a terminal performance quantity `F_T` and
+require `F_T(theta1)-F_T(theta0)>=epsilon` with a defended `epsilon`, as well
+as all-stage feasible endpoints. Hydrostatic slack alone is not automatically
+performance or fitness. The symmetric toy below is only a worked route case.
+A finite set of endpoint pairs may describe that design's barrier fraction;
+it is neither a natural transition frequency nor independent replication.
 
 An optional deficit-cost diagnostic is
 
@@ -173,6 +203,10 @@ Every continuous route crosses zero, so
 
 `B_A=1`, `B_J=-a^2`, `Delta=1+a^2`.
 
+Here the endpoint margins are `e_A=1`, **`e_J=1-a^2`**, so `H_A=0`,
+`H_J=1` and `Delta_H=1`. Claude's response instead treated the endpoint
+margins as equal; its proposed `1+a^2` value for `Delta_H` is corrected here.
+
 With metric `dx^2`, minimum adult deficit cost is zero and the minimum
 all-stage cost is `integral_{-a}^{a}(a^2-x^2) dx = 4a^3/3`.
 The monotone route attains it; backtracking cannot reduce this nonnegative
@@ -184,6 +218,15 @@ integral. At `a=1/2`, the juvenile bottleneck is `-1/4` and cost is `1/6`.
 | Reparameterise by `eta=sinh(x)` | Use `x=asinh(eta)` and metric `deta^2/(1+eta^2)`; bottlenecks and costs are unchanged. A new Euclidean metric would be a different cost model. |
 | Add a developmental direction | In `[-1,1]^2`, use juvenile margin `x^2+y^2-a^2` and endpoints `(±1,0)`. A unit semicircle has positive margin `1-a^2` and zero cost. The one-dimensional obstruction disappears. |
 | Permit a direct endpoint jump | Both endpoints are feasible; the continuous-route obstruction alone cannot prohibit that transition. No jump probability is asserted. |
+
+Two additional exact controls distinguish the quantities. With endpoints
+`±1`, let `A(x)=x^2+1/4` and `J(x)=A(x)-1/2=x^2-1/4`. Both `J` endpoints
+are `3/4`; `B_A=1/4`, `B_J=-1/4`, `H_A=H_J=1`. Thus a uniform penalty
+**does block** all continuous all-stage routes despite `Delta_H=0`.
+Conversely, with `A=x^2+1` and `J=min(A,3/2)`, both bottlenecks are 1 but
+`H_A=1`, `H_J=1/2`, so `Delta_H=-1/2`. This is compatible with `J<=A`.
+Endpoint-relative relief is a useful description, not an ordered measure of
+the damage caused by juvenile requirements.
 
 These identities give acceptance criteria for any later implementation,
 without commissioning it now. They establish that the proposed diagnostic
@@ -216,3 +259,23 @@ If no consequential margin survives reasonable physical and programme-family
 alternatives, narrow or park the residual. The available workbook still lacks
 verified independent evolutionary transitions; this specification does not
 repair that empirical limitation.
+
+## 7. Next physical task, kept separate from a numerical launch
+
+Claude's input-range table is the appropriate next B-002 prerequisite: trace
+wall/septum and body-chamber rules, densities, admissible fluid allocation,
+stage ecology and allometry to primary evidence, retaining unsupported cells.
+Whorl expansion and umbilical width alone do not determine these inputs.
+Under exact geometric similarity with fixed densities and volume fractions,
+all masses and displaced volume scale as length cubed; the loading fraction
+`q` is constant through size. A growth-stage effect then requires an explicit
+departure from those assumptions or a changed ecological target. An isometric
+null must not be mistaken for a test of missing ontogenetic mechanisms.
+
+After that table, a bounded bindingness probe might be useful. Finding one
+programme with `A>=0` and `J<0` identifies a candidate stage constraint; it
+does not show that routes between two all-stage feasible endpoints are blocked.
+Failure to find such a point excludes only the searched, adequately resolved
+family and supported input domain. Neither result automatically justifies a
+new engine or parks the broader question. The mathematical specification is
+complete at this conditional level; the physical table and probe are not run.

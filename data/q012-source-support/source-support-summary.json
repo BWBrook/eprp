@@ -1,0 +1,302 @@
+{
+  "provider": {
+    "record": "https://zenodo.org/records/21414007",
+    "api": "https://zenodo.org/api/records/21414007",
+    "version_doi": "10.5281/zenodo.21414007",
+    "concept_doi": "10.5281/zenodo.18854730",
+    "version_index": 2,
+    "published": "2026-07-17",
+    "license": "CC BY 4.0",
+    "archive_url": "https://zenodo.org/api/records/21414007/files/Supplementary%20Data.zip/content",
+    "archive_bytes": 1162702765,
+    "archive_provider_md5": "45350e953472d0096d50a58b5c2b3c3c",
+    "archive_whole_md5_locally_verified": false
+  },
+  "files": [
+    {
+      "file": "S1. Morphospecies Key Information.xlsx",
+      "bytes": 58174,
+      "sha256": "88cd9b0a054aae64c9adfeadad5ec730dddfb11d169b8100ab61f803f0e05d84"
+    },
+    {
+      "file": "Supporting Data.xlsx",
+      "bytes": 902354,
+      "sha256": "2412991df3ff35d9f62275a500a474feff77e2c89b24ec86289574a8f7a7366b"
+    },
+    {
+      "file": "All_Species_Lineages.nex",
+      "bytes": 19873,
+      "sha256": "e8bb5da6f67032f820b27ff2acc4e704b734102d4f4245bb3fddfd19b438ad95"
+    },
+    {
+      "file": "All_Species_Morphospecies.nex",
+      "bytes": 52644,
+      "sha256": "3a0867e048006975d60532c34bcaec548b051769a25b376bb62fafb94a009ce3"
+    }
+  ],
+  "counts": {
+    "rows": 482,
+    "unique_names": 482,
+    "in_table_parent_edges": 471,
+    "numeric_overlap": 453,
+    "exact_boundary": 18,
+    "End_zero": 73,
+    "sister_pairs": 323,
+    "sibships": 107,
+    "ancestry_labels": {
+      "significant": 406,
+      "speculative": 67,
+      "strong": 9
+    },
+    "sibship_size_frequencies": {
+      "1": 178,
+      "2": 63,
+      "3": 24,
+      "4": 11,
+      "5": 5,
+      "6": 2,
+      "7": 2
+    },
+    "parent_pairs_both_End_positive": 365,
+    "parent_pairs_both_End_positive_non_speculative_daughter_edge": 333,
+    "sister_pairs_both_End_positive": 249,
+    "sister_pairs_both_End_positive_both_non_speculative_edges": 214,
+    "parent_known_distinct_ecogroups": 148,
+    "sister_known_distinct_ecogroups": 134,
+    "parent_unequal_ecogroups_including_missing": 150,
+    "ecogroup_number_frequencies": {
+      "1": 438,
+      "3": 18,
+      "2": 22,
+      "4": 3,
+      "None": 1
+    }
+  },
+  "scope_reconciliation": {
+    "excluded_rows": [
+      "Praepararotalia cretacea",
+      "Praepararotalia perclara"
+    ],
+    "planktonic_rows": 480,
+    "row_End_zero": 73,
+    "row_End_positive": 407,
+    "summary_living": 72,
+    "summary_extinct": 408,
+    "summary_discrepancy_preserved": true
+  },
+  "lineage_membership": {
+    "normalization": "Derived lookup strips outer whitespace including NBSP; raw sources unchanged; genus abbreviations expanded from S3 Gn, Genera A:B",
+    "lineage_table_rows": 269,
+    "mapped_species": 482,
+    "multiply_listed_species": 170,
+    "unresolved_tokens": [
+      {
+        "lineage": "L_Bolivina Clade",
+        "token": "Bv. Clade"
+      }
+    ],
+    "boundary_with_shared_listed_lineage": 9
+  },
+  "nexus_units": {
+    "All_Species_Morphospecies.nex": {
+      "ntax": 487,
+      "taxlabels": 487,
+      "extra_tip_labels": [
+        "Antarcticella cecionii�",
+        "Bolivina Clade",
+        "Neobulimina_Budding",
+        "Oberhauserellidae_Budding",
+        "Rotaliana_LCA",
+        "preOberhauserellidae_Robertinida"
+      ],
+      "source_names_absent_as_tips": [
+        "Antarcticella cecionii "
+      ]
+    },
+    "All_Species_Lineages.nex": {
+      "ntax": 249,
+      "taxlabels": 249,
+      "extra_tip_labels": [
+        "L_Neobulimina_Budding",
+        "L_Oberhauserellidae_Budding",
+        "L_Rotaliana_LCA",
+        "L_preOberhauserellidae_Robertinida"
+      ],
+      "source_names_absent_as_tips": [
+        "L_first Globigerinoides",
+        "N1-N3",
+        "N1005",
+        "N1007",
+        "N149-N163",
+        "N15-N17",
+        "N165",
+        "N168",
+        "N171",
+        "N175",
+        "N25",
+        "N257",
+        "N26-N32",
+        "N267",
+        "N269",
+        "N27",
+        "N30",
+        "N305",
+        "N364",
+        "N47",
+        "N72",
+        "N76-N101",
+        "N79",
+        "N99-N125"
+      ],
+      "absent_codes_present_as_internal_labels": 24
+    }
+  },
+  "boundary_rows": [
+    {
+      "parent": "Acarinina nitida",
+      "daughter": "Acarinina esnaensis",
+      "boundary_Ma": 57.55,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Morozovella praeangulata",
+      "daughter": "Acarinina strabocella",
+      "boundary_Ma": 61.95,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Praepararotalia cretacea",
+      "daughter": "Antarcticella pauciloculata",
+      "boundary_Ma": 66.03,
+      "daughter_edge_evidence": "speculative",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Antarcticella cecionii ",
+      "daughter": "Antarcticella zeocenica",
+      "boundary_Ma": 42.6,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Praepararotalia perclara",
+      "daughter": "Dipsidripella danvillensis",
+      "boundary_Ma": 43.34,
+      "daughter_edge_evidence": "speculative",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Muricohedbergella holmdelensis",
+      "daughter": "Globanomalina archeocompressa",
+      "boundary_Ma": 66.02,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Globanomalina imitata",
+      "daughter": "Globanomalina australiformis",
+      "boundary_Ma": 56,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Globanomalina planocompressa",
+      "daughter": "Globanomalina imitata",
+      "boundary_Ma": 62.53,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Globanomalina ehrenbergi",
+      "daughter": "Globanomalina pseudomenardii",
+      "boundary_Ma": 60.74,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Globoconella conomiozea",
+      "daughter": "Globoconella terminalis",
+      "boundary_Ma": 6.52,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Subbotina cancellata",
+      "daughter": "Globorotaloides quadrocameratus",
+      "boundary_Ma": 57.89,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Igorina pusilla",
+      "daughter": "Igorina albeari",
+      "boundary_Ma": 61.35,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Praemurica uncinata",
+      "daughter": "Igorina pusilla",
+      "boundary_Ma": 62.33,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Guembelitria cretacea",
+      "daughter": "Jenkinsina columbiana",
+      "boundary_Ma": 64.64,
+      "daughter_edge_evidence": "speculative",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Parasubbotina aff. pseudobulloides",
+      "daughter": "Parasubbotina pseudobulloides",
+      "boundary_Ma": 65.77,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Muricohedbergella monmouthensis",
+      "daughter": "Praemurica taurica",
+      "boundary_Ma": 66.02,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": false
+    },
+    {
+      "parent": "Subbotina trivialis",
+      "daughter": "Subbotina triangularis",
+      "boundary_Ma": 62.52,
+      "daughter_edge_evidence": "significant",
+      "shared_listed_lineage": true
+    },
+    {
+      "parent": "Turborotalita nikolasi",
+      "daughter": "Turborotalita carcoselleensis",
+      "boundary_Ma": 44.14,
+      "daughter_edge_evidence": "speculative",
+      "shared_listed_lineage": true
+    }
+  ],
+  "source_locators": {
+    "S1 count and schema": "Key Information A1:M483; name A, ancestor B, evidence C, Start D, End F, dominant ecogroup K",
+    "482 versus 480": "S1 Key Information A387:A388; S3 Overall %Change Tree1v2 C2/F2; Overall Diversites D11/F11",
+    "living contradiction": "S3 Overall Diversites D12:D13; S1 F2:F483; matching S3 Morphospecies PrevailClass'n O2:O483",
+    "missing ecogroup": "S1 Key Information K387; affected daughter rows37,388",
+    "ecogroup definitions": "S1 Ecogroups Key A2:D8",
+    "lineage membership and ancestors": "S3 Lineages Tree2 A1:I270; genus expansion Gn, Genera A:B; many-membership example B2/B61",
+    "268 lineage summary": "S3 Overall %Change Tree1v2 C3/F3; excludes L_Bolivina Clade",
+    "Nexus mode warning": "S3 S6. Phyl's (Ch'gms) Contents E5; ntax line3 in each Nexus",
+    "normalization examples": "S1 Key Information A36 trailing NBSP; morphospecies Nexus Antarcticella cecionii label contains U+FFFD"
+  },
+  "semantic_warnings": [
+    "Numeric overlap does not independently verify budding; equality does not prove naming or pseudoextinction.",
+    "333 filters the daughter ancestral EDGE, not the parent row's distinct earlier edge.",
+    "Missing ecological category does not establish a different habitat.",
+    "Lineage membership is many-to-many and cannot be used as an exclusive crosswalk without further definitions.",
+    "Nexus transforms buds into bifurcations; named ancestors may be tips; species/lineage row counts are not interchangeable with tip counts.",
+    "No rubric for evidence categories was established by this audit; labels are not statistical probabilities.",
+    "Source summary living count differs from row End coding; no values silently repaired."
+  ]
+}

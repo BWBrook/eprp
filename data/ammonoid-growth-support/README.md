@@ -18,8 +18,10 @@ growth programmes. Published 3D studies supply useful methods and tabulated
 physical measurements, but do not resolve this workbook's specimen,
 maturity, physical-input or independent-relationship gates. The agreed
 [paper specification](../../literature/2026-10-15-b002-paper-specification.md)
-now defines paired route margins and analytic controls. Claude next critiques
-it; no numerical launch or expanded specimen crosswalk is commissioned.
+now defines paired route margins and analytic controls and incorporates
+Claude's response with corrected endpoint-relative controls. Physical-input
+ranges remain unresolved; no numerical launch or expanded specimen crosswalk
+is commissioned.
 
 ## Source, delivery and preservation
 

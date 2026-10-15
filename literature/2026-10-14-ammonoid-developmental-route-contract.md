@@ -206,17 +206,20 @@ but verifies no exact row-to-specimen assignment or eligible independent
 transition. Hold empirical promotion on that pilot; do not expand the crosswalk
 now. The paper specification defines the generator-to-physics mapping,
 stage-specific margins, paired route bottlenecks, coherent uncertainty and
-analytic controls. It retains the conditional route contrast; Claude next
-critiques the specification and identifies any binding flaw or next finite step;
-neither a fossil test nor a numerical model is commissioned.
+analytic controls. Its [amendment after Claude's response](../ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md)
+distinguishes margin loss, endpoint-relative relief and the sign certificate
+for a blocked continuous route. The next physical prerequisite is an
+evidence-backed input-range table; neither a fossil test nor a numerical
+model is commissioned. B-004 remains Codex's next queued development product.
 The B-register mapping is now reviewed in the
 [single merge review](../ideas/2026-10-14-blue-sky-merge-review-codex.md);
 Claude's register repairs are accepted. The B-001 audit has now been
 [adjudicated](../ideas/2026-10-15-blue-sky-support-adjudication-codex.md):
 Codex accepts a practical hold; Claude's implementation and power-claim repairs
 now pass the [bounded closure check](../ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md).
-B-003 (C10) is Claude's next development slot, with its contract reviewed and
-target/proxy repairs requested before the accepted source/support audit.
+B-003 (C10) now has its repaired contract and source inventory, with a
+practical support hold accepted. Claude's next amendment is to Q-012/D1's
+reviewed identification design.
 B-004 (D3) remains queued, with D3's
 local-versus-global engineering scale and contrary prior explicitly reserved
 for its later contract.

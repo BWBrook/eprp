@@ -6,14 +6,17 @@ Updated: 15 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 - The applied register's first tranche is complete at **50 questions**; its
   expansion remains paused.
 - The separate **blue-sky register** (B-series, pure deep time) now contains
-  **18 questions: 3 develop, 15 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
+  **18 questions: 2 develop, 16 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
   Its mapping and ownership have passed Codex's single merge review. Claude's
   three register repairs are in place at `55db76a`. B-001 is now **hold (support)**;
   Claude's corrections at `466c8d5` pass Codex's bounded replay check.
-  B-002's source pilot, generator/physical-prior check and paper specification
-  are complete; its conditional theoretical residual remains provisional and
-  empirical promotion unsupported. B-003's contract has received one Codex
-  review; Claude next repairs its target/data claims and audits source support.
+  B-002's paper specification is amended after Claude's response; physical
+  inputs and empirical promotion remain unresolved. B-003's contract repairs
+  and finite source inventory are complete; its practical support hold is
+  accepted. Q-012/D1's design has received Codex's single review and source
+  replay: event definitions, conditioning and exposure identification need
+  repair before simulation. Claude owns that amendment; B-004 is Codex's
+  next queued development item.
 - Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
@@ -56,9 +59,11 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now three/fifteen after B-001's support hold. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 remains a component of Claude's queued Q-012 design. No primary investigation selected |
-| First blue-sky development pair | Claude: B-001; Codex: B-002 | [Correction closure and response](ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md): B-001's five outputs replay exactly, raw hashes unchanged, 4/5/7 at-risk counts; practical hold accepted, universal F-bound claim withdrawn. B-002's [paper specification](literature/2026-10-15-b002-paper-specification.md) defines paired route margins, coherent uncertainty and analytic controls. Claude next critiques it; physical inputs and empirical promotion remain unresolved. No fit or evolutionary simulation |
-| Next blue-sky development slot | Claude: B-003 | [Contract](literature/2026-10-15-b003-escalation-evidence-contract.md) delivered at `eda87fe`; [Codex review](ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md) complete. Claude owns target/proxy repairs and the bounded source/support audit, with definitions repaired before counting. Static Kosnik genus scores cannot estimate within-genus change; hold that Level B route. B-003 remains develop pending support. Q-012/D1 follows B-003; B-004 remains queued. Keep at most two substantive tasks active |
+| Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now two/sixteen after B-001 and B-003 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
+| First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
+| B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete under repaired definitions; practical hold accepted in the [response](ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md). Claude owns two wording repairs: unverified lineage continuity does not pass the full screen, and Caloosahatchee has a stated multiple-locality exception. No further search or fit allocated |
+| Q-012/D1 support and identification | Claude: design; Codex: single review complete | [Review](ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md) and [reproducible source audit](data/q012-source-support/README.md) delivered. 482 versus 480 reconciled by scope; 73 versus 72 remains a source conflict. Nexus transforms budding; date equality does not prove pseudoextinction. Claude next writes the event dictionary, selection-conditioned likelihood, prediction information set and persistent-exposure rival/decision table before simulation. Status/tier unchanged |
+| Next Codex blue-sky development | Codex: B-004 | Queued first contract on burrowers and deep-water benthos. B-002's conditional paper product is complete; its numerical route remains unlaunched. Keep at most two substantive tasks active |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
@@ -650,6 +655,16 @@ next phase of ideation whilst those final checks are done."
   next repairs its owned contract/register claims and performs the bounded
   published-source inventory. B-002 empirical promotion and numerical launch
   remain held. No new primary investigation or specimen measurement.
+- **Route amendment and Q-012 review, 15 October:** Claude delivered B-003's
+  repaired inventory and support hold (`74c7722`), its B-002 response and
+  Q-012/D1 design (`0f0cd35`). Codex's
+  [single review and response](ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md)
+  accepts the B-003 hold, amends B-002's quantities/controls and requests
+  Q-012 event, selection and exposure-identification repairs before a run.
+  [Source replay](data/q012-source-support/README.md) verifies the basic counts
+  but preserves the extancy discrepancy and warns against treating transformed
+  Nexus bifurcations as biological budding. Claude next amends its owned
+  design/register; B-004 is Codex's next queued product. No fit or power run.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
@@ -658,9 +673,9 @@ developing. Status/tier unchanged. Coordinate the next brief with blue-sky
 D3/D8 after the cross-critique; no modelling is allocated.
 - **Q-012's prior check is done** (Claude,
   [note](literature/2026-10-14-q012-prior-check.md)). The residual survives,
-  and the disposition is develop. The next step is a support and
-  identification design using the Lamyman et al. 2026 foraminifera tree,
-  with shared exposure as the main confound.
+  and the disposition is develop. Its support/identification design is now
+  delivered and reviewed above; shared exposure remains the main confound,
+  with event representation and conditional selection also requiring repair.
 - Claude's next sweep item: Q-015, Q-023 or Q-031 (Q-017 is moved behind
   them under the deep-time weighting). It runs alongside Claude's blue-sky
   ideation.
