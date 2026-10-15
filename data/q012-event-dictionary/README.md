@@ -70,8 +70,13 @@ pseudoextinctions.
 - Only **10** parent–daughter lineage pairs have a single, known and
   different ecogroup on both sides.
 
+**Since confirmed from the article** (pp. 3–5; see the
+[design](../../literature/2026-10-15-q012-support-identification-design.md),
+section 1):
+- lineage records are anagenesis-free units;
+- overlap is budding, and boundary is bifurcation.
+
 **Not established here:**
-- the article's definition of a lineage record. The article was
-  inaccessible here (403, as in Codex's check);
-- whether lineage overlap means budding;
-- exposure. Triton has not been joined.
+- exposure. Triton has not been joined;
+- ecogroups. 169 of 482 S1 ecogroups are inferred ("No Data"), partly
+  from phylogenetic affinity.

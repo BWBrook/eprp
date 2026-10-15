@@ -701,9 +701,13 @@ identifiability point.
       permitted information table, cross-fitting, a censoring-aware score
       and a paired skill test.
     - **Calibration:** a combined decision with Monte Carlo pass rules.
-    - **Next gates:** confirm the lineage definition (article Methods); a
-      Triton joint exposure audit; freeze inputs; a cost pilot;
-      calibration.
+    - **The article confirms the unit** (pp. 3–4): lineages are
+      anagenesis-free; overlap is budding (215) and boundary is
+      bifurcation (49). 169 of 482 ecogroups are inferred, partly from
+      relatives, so they are not independent exposure evidence.
+    - **Next gates:** a Triton joint exposure audit (384 of 480 species
+      have Triton records within their ranges, as the article reports);
+      freeze inputs; a cost pilot; calibration.
 
 - **Identification problem.** Declining hazard with age is widely observed
   (Silvestro et al. 2019, 10.1111/ele.13441; Hagen et al. 2018). Survival curves

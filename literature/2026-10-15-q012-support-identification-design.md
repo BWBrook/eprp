@@ -37,10 +37,25 @@ model was fitted, and no calibration was run.
       speculative ancestry).
     - 234 sister pairs from 72 sibships (150 with both extinct).
     - 52 extant.
-  - **This is conditional on the article's definition** of a lineage
-    record: pseudoextinction-free, as in Aze et al. 2011. The article was
-    inaccessible here (403), so that definition is the first item to
-    confirm.
+  - **The article confirms the unit.** Barry supplied it; it is open
+    access under CC BY 4.0, so the earlier 403 was a site block. It is
+    git-ignored in `data/raw/lamyman2026/article/`, PDF sha256
+    `bf479249…7579`.
+    - "Evolutionary lineages" are assigned to fossil populations that
+      show morphological intergradation, and "The lineage phylogeny aims
+      to retain only true cladogenetic events, thereby removing all cases
+      of anagenesis" (pp. 3–4).
+    - "Budding" means "the ancestor continues to survive after giving rise
+      to its descendant". "Bifurcating" means "two descendants are
+      produced from one ancestor at the same time with the ancestor not
+      surviving" (p. 4, after Foote 1996). So the 215 overlap links are
+      budding and the 49 boundary links are bifurcation candidates.
+    - The conversion follows Aze et al. 2011. Where literature was lacking,
+      "qualitative decisions were made" (p. 5).
+    - Ancestry is stratophenetic: "A cladistic approach has been
+      consciously avoided" (p. 5). It therefore uses stratigraphic order,
+      which is why the generator needs its ancestor-assignment rule
+      (section 4).
   - **The morphospecies level is a sensitivity layer only.** The workbook
     does not define speciation modes there:
     - only 127 of 269 lineage `Start Source` fields name an S1 species;
@@ -52,8 +67,22 @@ model was fitted, and no calibration was run.
   that they convert buds into bifurcations.
 - **Support summary.** At lineage level, the first version's ecogroup lever
   collapses: only 10 parent–daughter pairs differ in a single known
-  ecogroup. Separating inheritance from exposure therefore depends on
-  observed exposure from Triton (section 7).
+  ecogroup.
+- **Ecogroups are partly assigned from relatives.** Where no geochemistry
+  exists, ecogroups are assigned "based on phylogenetic affinity and
+  geographic information", marked "No Data" (p. 6). That applies to 169 of
+  482 S1 rows. Such ecogroups cannot serve as independent exposure
+  evidence, because similarity among relatives is partly built in.
+- **Triton coverage, as reported** (pp. 6–7; to be verified in our audit):
+  - 501,629 macroperforate and 40,673 microperforate records were matched
+    to the 480 morphospecies;
+  - 81 have no Triton records, and 15 have records only outside their
+    assigned ranges;
+  - for the remaining 384, median completeness in 1 Myr bins is 100%
+    (mean 86.4%).
+
+  Separating inheritance from exposure therefore rests on Triton's observed
+  geography (section 7).
 
 ## 2. The frailty law, with an effect-size estimand
 
@@ -203,10 +232,9 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
 
 ## 7. Next gates, in order
 
-1. **Lineage-record definition.** Confirm from the article's Methods that a
-   lineage record is a pseudoextinction-free unit, and what "overlap"
-   means. Barry could supply the PDF through UTAS; it was inaccessible
-   here.
+1. ~~Lineage-record definition~~ **Done** (15 October; section 1). The
+   lineage records are anagenesis-free units. Overlap means budding, and
+   boundary means bifurcation.
 2. **Triton joint exposure audit.** Join Triton occurrences to the member
    morphospecies of each lineage. Count lineages with palaeolatitude and
    basin coverage through their ranges, and count relative pairs whose
