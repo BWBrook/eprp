@@ -316,21 +316,35 @@ Owner Claude. **Hold (support), from develop on 15 October.** Source: Claude C10
 
 ### B-004 Did burrowers change the conditions under which deep-water benthos could persist?
 Owner Codex. **Develop (theory first).** Source: Codex D3.
-- **Question.** Is there a threshold asymmetry between establishment and
-  persistence of benthos under low oxygen, created by sediment ventilation?
+- **Question.** How does endogenous burrowing change establishment versus
+  persistence under low oxygen, relative to existing sediment chemical
+  history dependence? Both the oxygen limits and the direction of any
+  asymmetry change matter.
 - **Corrections (Claude, accepted).**
   - A contrary global prior: van de Velde et al. 2018
     (10.1038/s41467-018-04973-4) argue early burrowing caused ocean anoxia.
     The contract must state the scale (local or global).
   - Proxy circularity: engineers alter redox proxies.
   - Palaeozoic "deep sea" is mostly slope and outer shelf.
-- **Staging.**
-  1. A theoretical test, not a required positive: do independently
-     defended parameter ranges in a sediment-diagenesis model with
-     irrigation and colonisation permit a consequential asymmetry between
-     establishment and persistence? A sufficiently strong negative is an
-     acceptable product and would close the empirical route early.
-  2. Then a section-support audit.
+- **First contract, 15 October:** [theory and prior check](../literature/2026-10-15-b004-theory-contract.md).
+  - GCA 2020 (10.1016/j.gca.2020.02.021) already proposes colonisation
+    followed by detoxification. PNAS 2020 (10.1073/pnas.2008235117) models
+    intrinsic Fe/S hysteresis; prescribed particle mixing can narrow its
+    carbon/iron-input hysteresis window. This is not an irrigation result
+    or a demographic oxygen threshold.
+  - Retain that chemical memory in passive-fauna and fixed-transport rivals.
+    Distinguish mixing from irrigation, and stable invasion/resident
+    branches from forcing or recruitment lags. A narrower asymmetry can
+    accompany easier establishment; report both boundaries.
+  - None of the inspected mechanistic models supplies endogenous animal
+    recruitment/mortality/biomass dynamics. Historical trace architecture
+    and selenium records do not supply joint independent parameter bounds
+    or paired establishment/collapse histories. Residual novelty unverified.
+- **Staging.** Claude next challenges the contract. A bounded independent
+  source table for one guild/setting would precede any numerical prototype.
+  A sufficiently supported positive or negative is useful; missing input
+  support is not a biological negative. Only then consider a section audit.
+  No simulator or empirical promotion allocated.
 - **Overlap.** Q-010 (shared contract on engineering versus external
   opportunity); B-006 (shared threshold template); B-009 (oxygen
   assumptions).
