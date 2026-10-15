@@ -1,0 +1,270 @@
+lineage	s3_row	ancestor	ancestor_in_table	branch_style	start_Ma	end_Ma	ancestor_start_Ma	ancestor_end_Ma	date_relation	founding_morphospecies	founder_link	members	member_ecogroups	ancestor_member_ecogroups	in_scope
+L_`Dentoglobigerina` eotripartita	2	N126-T127	True	dashed	43.8	31.36	57.55	38.98	overlap	Fayolle & Wade (2021)	start	1	3	1;2;3	True
+L_`Zeauvigerina`	3	L_Zeauvigerina	True	dotted	63.93	55.17	69.46	37.23	overlap	`Zeauvigerina` virgata	start	1	4	2;4	True
+L_Antarcticella	4	N1013-T1014	True	dotted	66.03	12.98	70.14	31.78	overlap	Antarcticella pauciloculata	start	4	5	2;7;None	True
+L_Berggrenia praepumilio	5	L_Berggrenia pumilio	True	dotted	3.91	0.01	12.71	0	overlap	Berggrenia praepumilio	start	1	3	3	True
+L_Berggrenia pumilio	6	N315-T_316	True	dotted	12.71	0	66.04	0	overlap	Berggrenia primoripumilio	start	2	3	1;2;5	True
+L_Bolivina Clade	7	L_Rotaliana_LCA	False	dotted	79.81	0			ancestor_outside	Bolivina Clade	start	0			False
+L_Bolivina inflata	8	L_Bolivina Clade	True	dotted	26.93	0	79.81	0	overlap	Bolivina pristina	start	9	2		True
+L_Bolivina martini	9	L_Bolivina Clade	True	dotted	43.26	30.3	79.81	0	overlap	Bolivina martini	start	1	2		True
+L_Bolivina rockallkiddensis	10	L_Bolivina Clade	True	dotted	32.1	1.88	79.81	0	overlap	Bolivina rockallkiddensis	start	1	2		True
+L_Bolivina sp. A	11	L_Bolivina Clade	True	dotted	37.71	0	79.81	0	overlap	Bolivina sp. A	start	1	2		True
+L_Bolivina variabilis	12	L_Bolivina Clade	True	dotted	32.92	0	79.81	0	overlap	Bolivina variabilis	start	9	2		True
+L_Ciperoella anguliofficinalis	13	T321	True	dashed	35.3	15.51	35.3	28.16	overlap	Ciperoella anguliofficinalis	start	2	1;2	2	True
+L_Dentigloborotalia	14	N1009-T1010	True	dotted	21.12	0	36.48	10.91	overlap	Dentigloborotalia bauerensis	start	3	6	6;7	True
+L_first Globigerinoides	15	N324-N336-N342-N344-N348-N352-N354-T356	True	dashed	22.52	21.82	29.18	1.64	overlap	Globigerinoides italicus	start	3	1	1;2;3;4	True
+L_Globigerinella clavaticamerata	16	N366-N298-N300-T304	True	dashed	28.24	14.88	33.52	0	overlap	Globigerinella navazuelensis	start	3	3;4	2;3;4	True
+L_Globigerinella radians	17	N366-N298-N300-T304	True	dotted	7.08	0	33.52	0	overlap	Globigerinella radians	start	1	3	2;3;4	True
+L_Globigerinella roeglina	18	N366-N298-N300-T304	True	dashed	29.04	16.12	33.52	0	overlap	Globigerinella roeglina	start	1	4	2;3;4	True
+L_Globigerinella wagneri	19	N366-N298-N300-T304	True	dashed	33.26	26.71	33.52	0	overlap	Globigerinella wagneri	start	2	3	2;3;4	True
+L_Globigerinita glutinata	20	N1015-N1027-N1029-N1031-N1033-T1035	True	dashed	27.98	0	41.86	0	overlap	Pearson & others (2018b)	start	6	1;2	1;2;4;7	True
+L_Globigerinita minuta	21	L_Globigerinita glutinata	True	dotted	27.16	0	27.98	0	overlap	Globigerinita minuta	start	1	1	1;2	True
+L_Globigerinita uvula	22	L_Globigerinita minuta	True	dotted	22.5	0	27.16	0	overlap	Globigerinita uvula	start	1	1	1	True
+L_Globigerinoides elongatus	23	T331	True	dashed	3.1	0	3.3	1.97	overlap	Tree [WPBP11(CK95)]	start	2	1;2	1	True
+L_Globigerinoides joli	24	L_first Globigerinoides	True	dashed	22.47	16.39	22.52	21.82	overlap	Globigerinoides joli	start	3	1	1	True
+L_Globigerinoides rublobatus	25	T328	True	dotted	0.82	0.81	6.21	0	overlap	Globigerinoides rublobatus	start	1	1	1	True
+L_Globoconusa	26	N1001-T1003	True	dashed	65.72	62.63	72.44	21.16	overlap	Globoconusa daubjergensis	start	2	2	1;6	True
+L_Globoturborotalita barbula	27	N319-T320	True	dashed	37.8	33.68	42.06	21.16	overlap	Globoturborotalita barbula	start	1	1	1;2	True
+L_Globoturborotalita occlusa	28	N314-N318	True	dashed	37.8	12.64	55.02	33.83	overlap	Globoturborotalita cancellata	start	7	1	1;2	True
+L_Globoturborotalita pseudopraebulloides	29	L_Globoturborotalita occlusa	True	dashed	37.8	14.4	37.8	12.64	overlap	Globoturborotalita pseudopraebulloides	start	2	1	1	True
+L_Hastigerina	30	N256-N2-N198-T67	True	dotted	66.04	0	69.81	66.02	overlap	Hastigerina pelagica	start	1	3	3	True
+L_Hastigerinella	31	L_Hastigerina	True	dotted	6.76	0	66.04	0	overlap	Hastigerinella digitata	start	1	3	3	True
+L_Neoacarinina	32	T29	True	dotted	1.93	0.25	5.32	0	overlap	Thompson (1973)	start	1	1	1;3	True
+L_Neogallitellia	33	L_Neobulimina_Budding	False	dotted	17.95	0			ancestor_outside	Neogallitellia vivans	start	1	2		True
+L_Neogloboquadrina incompta	34	N23-N156-N157-N160-T161	True	dashed	9.89	0	23.76	1.58	overlap	Raffi & others (2020)	start	2	2;5	1;2;3;5	True
+L_Orcadia	35	N315-T_316	True	dotted	4.92	0	66.04	0	overlap	Orcadia riedeli	start	1	2	1;2;5	True
+L_Paragloborotalia acrostoma	36	L_Paragloborotalia incognita	True	dashed	22.87	15.18	31.2	15.89	overlap	Leckie & others (2018)	start	1	3	3	True
+L_Paragloborotalia birnageae	37	N193-N195-T197	True	dashed	27.36	7.16	46.11	17.53	overlap	Leckie & others (2018)	start	1	3	2;3	True
+L_Paragloborotalia incognita	38	N193-N195-T197	True	dashed	31.2	15.89	46.11	17.53	overlap	Paragloborotalia pseudocontinuosa	start	5	3	2;3	True
+L_Paragloborotalia semivera	39	L_Paragloborotalia incognita	True	dashed	28.16	16.28	31.2	15.89	overlap	Leckie & others (2018)	start	1	3	3	True
+L_Parvularugoglobigerina	40	N1001-T1003	True	dashed	66.02	61.11	72.44	21.16	overlap	Parvularugoglobigerina alabamensis	start	3	2;3	1;6	True
+L_Pearsonites	41	N103-N109-N115-N117-T118	True	dashed	56.78	43.26	57.44	48.84	overlap	Pearsonites lodoensis	start	3	1	1	True
+L_Quiltyella clavacella	42	L_Globigerinella roeglina	True	dashed	28.24	16.56	29.04	16.12	overlap	Quiltyella clavacella	start	2	4	4	True
+L_Rectoguembelina	43	L_Bolivina Clade	True	dashed	70.14	62.33	79.81	0	overlap	Rectoguembelina cretacea	start	1	1		True
+L_Soldaniella	44	T373	True	dotted	10.11	2.09	20.91	0.59	overlap	Soldaniella toscanae	start	1	1	1	True
+L_Tenuitella brasilensis	45	N1015-N1027-N1029-N1031-N1033-T1035	True	dotted	15.82	0	41.86	0	overlap	Fordham (1986)	start	2	2	1;2;4;7	True
+L_Trilobatus altospiralis	46	T287	True	dashed	21.82	7.62	22.47	17.47	overlap	Trilobatus altospiralis	start	1	1	1	True
+L_Woodringina	47	N1001-T1003	True	dashed	66	60.74	72.44	21.16	overlap	Woodringina claytonensis	start	2	1	1;6	True
+L_Zeauvigerina	48	L_Bolivina Clade	True	dashed	69.46	37.23	79.81	0	overlap	Zeauvigerina waiparaensis	start	6	2;4		True
+N1001-T1003	49	L_Neobulimina_Budding	False	dashed	72.44	21.16			ancestor_outside	Tree [WPBP11(CK95)]	start	4	1;6		True
+N1005	50	L_Woodringina	True	dashed	65.96	42.16	66	60.74	overlap	Tree [WPBP11(CK95)]	start	9	1;2	1	True
+N1007	51	N1005	True	dashed	42.16	36.48	65.96	42.16	boundary	Tree [WPBP11(CK95)]	start	2	1;6	1;2	True
+N1009-T1010	52	N1007	True	dashed	36.48	10.91	42.16	36.48	boundary	Tree [WPBP11(CK95)]	start	3	6;7	1;6	True
+N1013-T1014	53	L_Rotaliana_LCA	False	dashed	70.14	31.78			ancestor_outside	Praepararotalia cretacea	start	4	2;7;None		True
+N1015-N1027-N1029-N1031-N1033-T1035	54	N1013-T1014	True	dashed	41.86	0	70.14	31.78	overlap	Tree [WPBP11(CK95)]	start	13	1;2;4;7	2;7;None	True
+N102-T100	55	N99-N125	True	dashed	60.54	54.73	61.95	57.55	overlap	Acarinina subsphaerica	start	3	1	1	True
+N103-N109-N115-N117-T118	56	N102-T100	True	dashed	57.44	48.84	60.54	54.73	overlap	Aze & others (2011)	start	6	1	1	True
+N104-T105	57	N103-N109-N115-N117-T118	True	dashed	56.55	50.38	57.44	48.84	overlap	Aze & others (2011)	start	1	1	1	True
+N106-T107	58	N104-T105	True	dashed	56	55.85	56.55	50.38	overlap	Acarinina sibaiyaensis	start	1	1	1	True
+N110-N112-T113	59	N103-N109-N115-N117-T118	True	dashed	52.85	23.41	57.44	48.84	overlap	Aze & others (2011)	start	5	1	1	True
+N119-T120	60	N103-N109-N115-N117-T118	True	dashed	50.8	41.96	57.44	48.84	overlap	Aze & others (2011)	start	2	1	1	True
+N126-T127	61	N99-N125	True	dashed	57.55	38.98	61.95	57.55	boundary	Acarinina nitida	end-link	3	1;2;3	1	True
+N128-T129	62	N99-N125	True	dashed	57.55	50.93	61.95	57.55	boundary	Acarinina nitida	end-link	3	1	1	True
+N130-N131-N136-N142-N144-T148	63	N128-T129	True	dashed	55.12	39.97	57.55	50.93	overlap	Aze & others (2011)	start	12	1	1	True
+N133-T135	64	N130-N131-N136-N142-N144-T148	True	dashed	47.15	40.39	55.12	39.97	overlap	Aze & others (2011)	start	3	1	1	True
+N137-N139-T143	65	N130-N131-N136-N142-N144-T148	True	dashed	44.81	37.99	55.12	39.97	overlap	Aze & others (2011)	start	3	1	1	True
+N13-T14	66	N5-N6-N8-T9	True	dashed	56	43.69	62.53	32.94	overlap	Globanomalina australiformis	start	1	3	2;3	True
+N145-T146	67	N130-N131-N136-N142-N144-T148	True	dashed	41.36	40.22	55.12	39.97	overlap	Aze & others (2011)	start	2	1	1	True
+N149-N163	68	N77-T266	True	dashed	41.96	34.78	48.25	24.47	overlap	Dentoglobigerina galavisi	start	3	1;3	3;4	True
+N150-N151-T153	69	N193-N195-T197	True	dashed	25.2	21.03	46.11	17.53	overlap	Paragloborotalia pseudokugleri	start	2	1	2;3	True
+N152-T154	70	N150-N151-T153	True	dashed	21.32	6.14	25.2	21.03	overlap	Fohsella peripheroronda	start	4	3	1	True
+N15-N17	71	N13-T14	True	dashed	48.62	37.22	56	43.69	overlap	Turborotalia frontosa	start	8	2;3;4	3	True
+N165	72	N149-N163	True	dashed	34.78	34.28	41.96	34.78	boundary	Aze & others (2011)	start	3	1;3	1;3	True
+N166-T167	73	N165	True	dashed	34.28	23.08	34.78	34.28	boundary	Dentoglobigerina tapuriensis	start	2	1;4	1;3	True
+N168	74	N166-T167	True	dashed	32.2	24.66	34.28	23.08	overlap	Aze & others (2011)	start	2	1;4	1;4	True
+N171	75	N165	True	dashed	34.28	32.62	34.78	34.28	boundary	Dentoglobigerina tapuriensis	start	5	1;3;4	1;3	True
+N172-T174	76	N171	True	dashed	32.62	0	34.28	32.62	boundary	Aze & others (2011)	start	3	3;4	1;3;4	True
+N175	77	N171	True	dashed	32.62	31.46	34.28	32.62	boundary	Aze & others (2011)	start	2	1;3	1;3;4	True
+N177-T176	78	N175	True	dashed	31.46	3	32.62	31.46	boundary	Dentoglobigerina larmeui	start	4	1;3	1;3	True
+N179-T180	79	N175	True	dashed	31.46	8.1	32.62	31.46	boundary	Dentoglobigerina larmeui	start	2	3	1;3	True
+N182-T183	80	N256-N2-N198-T67	True	dashed	66.03	60.82	69.81	66.02	overlap	Parasubbotina aff. pseudobulloides	start	3	3;4	3	True
+N184-N186-N187-N188-T189	81	N182-T183	True	dashed	63.37	32.99	66.03	60.82	overlap	Aze & others (2011)	start	5	3;4	3;4	True
+N18-T19	82	N15-N17	True	dashed	37.22	34.03	48.62	37.22	boundary	Aze & others (2011)	start	3	2;3	2;3;4	True
+N190-N199-T200	83	N310-T313	True	dashed	57.89	15.7	60.03	29.84	overlap	Globorotaloides quadrocameratus	start	4	4	3;4	True
+N191-T192	84	N184-N186-N187-N188-T189	True	dashed	55.02	33.9	63.37	32.99	overlap	Aze & others (2011)	start	2	3;4	3;4	True
+N193-N195-T197	85	N191-T192	True	dashed	46.11	17.53	55.02	33.9	overlap	Aze & others (2011)	start	4	2;3	3;4	True
+N1-N3	86	L_Oberhauserellidae_Budding	False	dashed	71.12	62.53			ancestor_outside	Muricohedbergella holmdelensis	start	4	3		True
+N201-N998-N295-N203-T204	87	N190-N199-T200	True	dashed	44.25	0	57.89	15.7	overlap	Aze & others (2011)	start	5	4	4	True
+N206-N210-N212-T213	88	N190-N199-T200	True	dashed	54.05	7.45	57.89	15.7	overlap	Aze & others (2011)	start	5	3;4	4	True
+N207-T208	89	N206-N210-N212-T213	True	dashed	43.06	33.9	54.05	7.45	overlap	Aze & others (2011)	start	2	4	3;4	True
+N215-N217-N231-N235-T236	90	N184-N186-N187-N188-T189	True	dashed	56	45.26	63.37	32.99	overlap	Parasubbotina inaequispira	start	4	6	3;4	True
+N218-T219	91	N215-N217-N231-N235-T236	True	dashed	49.13	43.69	56	45.26	overlap	Parasubbotina eoclava	start	1	6	6	True
+N21-T24	92	N15-N17	True	dashed	37.22	31.67	48.62	37.22	boundary	Aze & others (2011)	start	2	2	2;3;4	True
+N220-N221-T362	93	N218-T219	True	dashed	47.95	34.28	49.13	43.69	overlap	Clavigerinella eocanica	start	4	4	6	True
+N223-N225-N227-T228	94	N220-N221-T362	True	dashed	44.36	33.9	47.95	34.28	overlap	Clavigerinella caucasica	start	11	2;3;4	4	True
+N232-T233	95	N215-N217-N231-N235-T236	True	dashed	47.43	37.22	56	45.26	overlap	Aze & others (2011)	start	2	6	6	True
+N237-T238	96	N215-N217-N231-N235-T236	True	dashed	52.4	41.96	56	45.26	overlap	Guembelitrioides nuttalli	start	6	1;3	6	True
+N239-N240-N244-N246-T247	97	N237-T238	True	dashed	43.63	35.7	52.4	41.96	overlap	Globigerinatheka curryi	start	7	1	1;3	True
+N23-N156-N157-N160-T161	98	N193-N195-T197	True	dashed	23.76	1.58	46.11	17.53	overlap	Paragloborotalia continuosa	start	6	1;2;3;5	2;3	True
+N241-T242	99	N239-N240-N244-N246-T247	True	dashed	43.52	36.05	43.63	35.7	overlap	Aze & others (2011)	start	1	1	1	True
+N248-T249	100	N239-N240-N244-N246-T247	True	dashed	42.66	34.66	43.63	35.7	overlap	Aze & others (2011)	start	1	1	1	True
+N25	101	N23-N156-N157-N160-T161	True	dashed	18.22	16.62	23.76	1.58	overlap	Globorotalia praescitula	start	1	4	1;2;3;5	True
+N251-T252	102	N239-N240-N244-N246-T247	True	dashed	43.57	37.76	43.63	35.7	overlap	Aze & others (2011)	start	2	1	1	True
+N253-T254	103	N251-T252	True	dashed	43.41	39.97	43.57	37.76	overlap	Aze & others (2011)	start	3	1	1	True
+N256-N2-N198-T67	104	N1-N3	True	dashed	69.81	66.02	71.12	62.53	overlap	Muricohedbergella monmouthensis	start	1	3	3	True
+N257	105	N256-N2-N198-T67	True	dashed	66.03	65.77	69.81	66.02	overlap	Eoglobigerina eobulloides	start	3	3	3	True
+N259-N261-N262-T263	106	N257	True	dashed	65.77	55.02	66.03	65.77	boundary	Aze & others (2011)	start	3	2;3	3	True
+N264-N265-N276-N278-N281-N283-T284	107	N259-N261-N262-T263	True	dashed	56.27	20.35	65.77	55.02	overlap	Subbotina roesnaesensis	start	7	1;3;4;5	2;3	True
+N267	108	N264-N265-N276-N278-N281-N283-T284	True	dashed	49.48	45.6	56.27	20.35	overlap	Aze & others (2011)	start	2	3;4	1;3;4;5	True
+N269	109	N267	True	dashed	45.6	42.46	49.48	45.6	boundary	Aze & others (2011)	start	2	3;4	3;4	True
+N26-N32	110	N25	True	dashed	16.62	14.78	18.22	16.62	boundary	Globoconella miozea	start	4	3;4	4	True
+N27	111	N25	True	dashed	16.62	5.32	18.22	16.62	boundary	Globoconella miozea	start	6	3	4	True
+N271-T272	112	N269	True	dashed	42.46	25.44	45.6	42.46	boundary	Aze & others (2011)	start	3	3;4	3;4	True
+N279-T280	113	L_Ciperoella anguliofficinalis	True	dashed	29.84	21.6	35.3	15.51	overlap	Ciperoella ciperoensis	start	2	1;2	1;2	True
+N285-N286-T288	114	N264-N265-N276-N278-N281-N283-T284	True	dashed	28.49	0	56.27	20.35	overlap	Aze & others (2011)	start	8	1;2;3;4	1;3;4;5	True
+N291-T372	115	N285-N286-T288	True	dashed	24.28	1.98	28.49	0	overlap	Aze & others (2011)	start	1	1	1;2;3;4	True
+N292-T299	116	N366-N298-N300-T304	True	dashed	10.31	0	33.52	0	overlap	Aze & others (2011)	start	2	4	2;3;4	True
+N30	117	N26-N32	True	dashed	14.78	14.32	16.62	14.78	boundary	Aze & others (2011)	start	2	3	3;4	True
+N301-T303	118	N366-N298-N300-T304	True	dashed	3.81	0	33.52	0	overlap	Aze & others (2011)	start	1	2	2;3;4	True
+N305	119	N259-N261-N262-T263	True	dashed	62.91	60.03	65.77	55.02	overlap	Subbotina cancellata	start	2	3	2;3	True
+N306-T307	120	N305	True	dashed	60.03	55.02	62.91	60.03	boundary	Aze & others (2011)	start	2	3	3	True
+N308-T309	121	N306-T307	True	dashed	56	53.76	60.03	55.02	overlap	Globoturborotalita bassriverensis	start	2	2;3	3	True
+N310-T313	122	N305	True	dashed	60.03	29.84	62.91	60.03	boundary	Aze & others (2011)	start	6	3;4	3	True
+N314-N318	123	N308-T309	True	dashed	55.02	33.83	56	53.76	overlap	Aze & others (2011)	start	2	1;2	2;3	True
+N315-T_316	124	N256-N2-N198-T67	True	dashed	66.04	0	69.81	66.02	overlap	Turborotalita nikolasi	start	5	1;2;5	3	True
+N319-T320	125	N314-N318	True	dashed	42.06	21.16	55.02	33.83	overlap	Aze & others (2011)	start	2	1;2	1;2	True
+N322	126	N314-N318	True	dashed	43.69	26.93	55.02	33.83	overlap	Globoturborotalita martini	start	1	1	1;2	True
+N324-N336-N342-N344-N348-N352-N354-T356	127	N325-T361	True	dashed	29.18	1.64	29.71	17.27	overlap	Globoturborotalita woodi	start	8	1;2;3;4	1	True
+N325-T361	128	L_Globoturborotalita occlusa	True	dashed	29.71	17.27	37.8	12.64	overlap	Globoturborotalita brazieri	start	1	1	1	True
+N326-N332-N334-T360	129	L_first Globigerinoides	True	dashed	21.82	11.57	22.52	21.82	boundary	Globigerinoides bollii	start	4	1	1	True
+N327-N329-T330	130	L_Globigerinoides joli	True	dashed	20.45	1.3	22.47	16.39	overlap	Aze & others (2011)	start	5	1	1	True
+N337-N339-T341	131	T287	True	dashed	21.73	0	22.47	17.47	overlap	Aze & others (2011)	start	8	1	1	True
+N345-T347	132	N324-N336-N342-N344-N348-N352-N354-T356	True	dashed	17.18	0	29.18	1.64	overlap	Aze & others (2011)	start	5	3	1;2;3;4	True
+N349-T350	133	N324-N336-N342-N344-N348-N352-N354-T356	True	dashed	11	0	29.18	1.64	overlap	Tree [WPBP11(CK95)]	start	2	1;2	1;2;3;4	True
+N34-N40-T44	134	N30	True	dashed	14.32	0	14.78	14.32	boundary	Globorotalia praemenardii	start	5	2;3	3	True
+N358-T229	135	N223-N225-N227-T228	True	dashed	37.41	33.9	44.36	33.9	overlap	Aze & others (2011)	start	2	2	2;3;4	True
+N35-N37-T39	136	N34-N40-T44	True	dashed	10.43	2.31	14.32	0	overlap	Aze & others (2011)	start	3	2;3	2;3	True
+N364	137	N23-N156-N157-N160-T161	True	dashed	6.5	5.6	23.76	1.58	overlap	Pulleniatina primalis	start	2	3	1;2;3;5	True
+N366-N298-N300-T304	138	N264-N265-N276-N278-N281-N283-T284	True	dashed	33.52	0	56.27	20.35	overlap	Globigerinella obesa	start	5	2;3;4	1;3;4;5	True
+N42-T41	139	N34-N40-T44	True	dashed	10.08	3.72	14.32	0	overlap	Aze & others (2011)	start	2	3	2;3	True
+N45-T43	140	N42-T41	True	dashed	5.82	0	10.08	3.72	overlap	Globorotalia tumida	start	3	2;3;4	3	True
+N47	141	N26-N32	True	dashed	14.78	8.29	16.62	14.78	boundary	Aze & others (2011)	start	4	4	3;4	True
+N48-T50	142	N47	True	dashed	8.29	0	14.78	8.29	boundary	Aze & others (2011)	start	6	3;4	4	True
+N4-T12	143	N1-N3	True	dashed	62.53	45.04	71.12	62.53	boundary	Globanomalina planocompressa	end-link	6	2;3	3	True
+N51-N122-T123	144	N47	True	dashed	8.29	0	14.78	8.29	boundary	Aze & others (2011)	start	1	4	4	True
+N52-N54-T53	145	N47	True	dashed	9.44	4.61	14.78	8.29	overlap	Globorotalia cibaoensis	start	2	4	4	True
+N56-N58-N59-T61	146	N52-N54-T53	True	dashed	5.81	0	9.44	4.61	overlap	Globorotalia crassaformis	start	4	3;4	4	True
+N5-N6-N8-T9	147	N1-N3	True	dashed	62.53	32.94	71.12	62.53	boundary	Globanomalina planocompressa	end-link	6	2;3	3	True
+N62-T63	148	N56-N58-N59-T61	True	dashed	3.4	0.61	5.81	0	overlap	Globorotalia tenuitheca	start	5	4	3;4	True
+N64-T66	149	N62-T63	True	dashed	1.41	0	3.4	0.61	overlap	Aze & others (2011)	start	4	4	4	True
+N68-N69-N70-T71	150	N256-N2-N198-T67	True	dashed	66.02	62.26	69.81	66.02	boundary	Praemurica taurica	start	4	2	3	True
+N72	151	N68-N69-N70-T71	True	dashed	62.33	61.35	66.02	62.26	overlap	Igorina pusilla	start	2	1	2	True
+N76-N101	152	N68-N69-N70-T71	True	dashed	62.63	61.55	66.02	62.26	overlap	Morozovella praeangulata	start	3	1	2	True
+N77-T266	153	N264-N265-N276-N278-N281-N283-T284	True	dashed	48.25	24.47	56.27	20.35	overlap	Aze & others (2011)	start	4	3;4	1;3;4;5	True
+N79	154	N80-N368-N370-T78	True	dashed	60.14	59.33	61.55	55.15	overlap	Aze & others (2011)	start	3	1	1	True
+N80-N368-N370-T78	155	N76-N101	True	dashed	61.55	55.15	62.63	61.55	boundary	Morozovella apanthesma	start	6	1	1	True
+N83-N84-T85	156	N76-N101	True	dashed	61.55	54.15	62.63	61.55	boundary	Morozovella apanthesma	start	4	1;2	1	True
+N86-T87	157	N83-N84-T85	True	dashed	56.95	36.62	61.55	54.15	overlap	Aze & others (2011)	start	2	2	1;2	True
+N88-N89-N90-T93	158	N83-N84-T85	True	dashed	57.1	51.04	61.55	54.15	overlap	Morozovella subbotinae	start	3	1	1;2	True
+N94-T95	159	N88-N89-N90-T93	True	dashed	54.54	43.26	57.1	51.04	overlap	Morozovella lensiformis	start	3	1	1	True
+N98-T96	160	N94-T95	True	dashed	52.59	43.57	54.54	43.26	overlap	Aze & others (2011)	start	2	1	1	True
+N99-N125	161	N76-N101	True	dashed	61.95	57.55	62.63	61.55	overlap	Acarinina strabocella	start	3	1	1	True
+T10	162	N5-N6-N8-T9	True	dashed	36.31	32.1	62.53	32.94	overlap	Pseudohastigerina naguewichiensis	start	1	2	2;3	True
+T1002	163	N1001-T1003	True	dashed	49.39	43.63	72.44	21.16	overlap	Tree [WPBP11(CK95)]	start	1	6	1;6	True
+T1006	164	N1005	True	dashed	42.16	23	65.96	42.16	boundary	Tree [WPBP11(CK95)]	start	2	1	1;2	True
+T1008	165	N1007	True	dashed	36.48	30.22	42.16	36.48	boundary	Tree [WPBP11(CK95)]	start	2	1	1;6	True
+T1011	166	N1009-T1010	True	dashed	15.78	13.3	36.48	10.91	overlap	Tree [WPBP11(CK95)]	start	1	7	6;7	True
+T1019	167	N1015-N1027-N1029-N1031-N1033-T1035	True	dashed	21.36	10.54	41.86	0	overlap	Tenuitella minutissima	start	3	2	1;2;4;7	True
+T1021	168	L_Globigerinita glutinata	True	dashed	3.91	0	27.98	0	overlap	Fordham (1986)	start	2	1;3	1;2	True
+T1025	169	L_Globigerinita glutinata	True	dashed	2.49	0	27.98	0	overlap	Fordham (1986)	start	1	2	1;2	True
+T1028	170	L_Globigerinita glutinata	True	dashed	18.73	14.6	27.98	0	overlap	Tree [WPBP11(CK95)]	start	2	1	1;2	True
+T1030	171	L_Globigerinita glutinata	True	dashed	18.27	13.85	27.98	0	overlap	Tree [WPBP11(CK95)]	start	1	1	1;2	True
+T1032	172	L_Globigerinita glutinata	True	dashed	11.44	0	27.98	0	overlap	Tree [WPBP11(CK95)]	start	1	1	1;2	True
+T1034	173	L_Globigerinita glutinata	True	dashed	10.03	0	27.98	0	overlap	Candeina praenitida	start	2	1	1;2	True
+T108	174	N106-T107	True	dashed	56	55.85	56	55.85	overlap	Acarinina africana	start	1	1	1	True
+T11	175	N4-T12	True	dashed	60.72	57.1	62.53	45.04	overlap	Aze & others (2011)	start	1	3	2;3	True
+T111	176	N110-N112-T113	True	dashed	49.48	48.54	52.85	23.41	overlap	Aze & others (2011)	start	1	1	1	True
+T114	177	N110-N112-T113	True	dashed	41.26	28.2	52.85	23.41	overlap	Aze & others (2011)	start	1	1	1	True
+T116	178	N103-N109-N115-N117-T118	True	dashed	51.58	43.69	57.44	48.84	overlap	Aze & others (2011)	start	2	1	1	True
+T121	179	N119-T120	True	dashed	42.86	28.56	50.8	41.96	overlap	Acarinina echinata	start	1	1	1	True
+T124	180	N51-N122-T123	True	dashed	1.98	0	8.29	0	overlap	Globorotalia bermudezi	start	1	4	4	True
+T132	181	N130-N131-N136-N142-N144-T148	True	dashed	53.68	50.38	55.12	39.97	overlap	Aze & others (2011)	start	1	1	1	True
+T134	182	N133-T135	True	dashed	44.42	40.39	47.15	40.39	overlap	Aze & others (2011)	start	1	1	1	True
+T138	183	N137-N139-T143	True	dashed	43.16	40.05	44.81	37.99	overlap	Morozovelloides lehneri	start	1	1	1	True
+T140	184	N130-N131-N136-N142-N144-T148	True	dashed	44.08	38	55.12	39.97	overlap	Aze & others (2011)	start	1	1	1	True
+T141	185	N137-N139-T143	True	dashed	43.69	41.96	44.81	37.99	overlap	Aze & others (2011)	start	1	1	1	True
+T147	186	N145-T146	True	dashed	40.81	38.17	41.36	40.22	overlap	Aze & others (2011)	start	1	1	1	True
+T155	187	N152-T154	True	dashed	13.78	11.81	21.32	6.14	overlap	Fohsella praefohsi	start	4	3	3	True
+T158	188	N23-N156-N157-N160-T161	True	dashed	8.1	0	23.76	1.58	overlap	Aze & others (2011)	start	4	3;4	1;2;3;5	True
+T159	189	L_Neogloboquadrina incompta	True	dashed	9.89	0	9.89	0	overlap	Raffi & others (2020)	start	1	5	2;5	True
+T16	190	N15-N17	True	dashed	39.97	37.13	48.62	37.22	overlap	Aze & others (2011)	start	1	2	2;3;4	True
+T162	191	N364	True	dashed	5.6	0	6.5	5.6	boundary	Pearson & others (2023)	start	4	3	3	True
+T164	192	N149-N163	True	dashed	34.78	31.67	41.96	34.78	boundary	Aze & others (2011)	start	1	3	1;3	True
+T169	193	N168	True	dashed	24.66	16.28	32.2	24.66	boundary	Aze & others (2011)	start	1	1	1;4	True
+T170	194	N168	True	dashed	24.66	15.12	32.2	24.66	boundary	Aze & others (2011)	start	2	3;4	1;4	True
+T173	195	L_`Dentoglobigerina` eotripartita	True	dashed	37.72	11.77	43.8	31.36	overlap	`Dentoglobigerina` tripartita	start	1	4	3	True
+T178	196	N179-T180	True	dashed	30.69	5.36	31.46	8.1	overlap	Dentoglobigerina baroemoenensis	start	1	3	3	True
+T181	197	N179-T180	True	dashed	21.48	5.91	31.46	8.1	overlap	Tree [WPBP11(CK95)]	start	1	3	3	True
+T185	198	N184-N186-N187-N188-T189	True	dashed	61.85	60.54	63.37	32.99	overlap	Aze & others (2011)	start	1	3	3;4	True
+T194	199	N193-N195-T197	True	dashed	28.91	10.53	46.11	17.53	overlap	Paragloborotalia semivera	start	3	1;2	2;3	True
+T196	200	N193-N195-T197	True	dashed	29.57	26.93	46.11	17.53	overlap	Aze & others (2011)	start	1	3	2;3	True
+T20	201	N18-T19	True		34.91	34.03	37.22	34.03	overlap	Aze & others (2011)	start	2	2;3	2;3	True
+T202	202	N201-N998-N295-N203-T204	True	dashed	28.24	22.04	44.25	0	overlap	Globorotaloides testarugosus	start	1	4	4	True
+T209	203	N207-T208	True	dashed	37.84	34.66	43.06	33.9	overlap	Aze & others (2011)	start	1	4	4	True
+T211	204	N206-N210-N212-T213	True	dashed	39.42	34.66	54.05	7.45	overlap	Aze & others (2011)	start	1	4	3;4	True
+T214	205	N201-N998-N295-N203-T204	True	dashed	26.93	16.99	44.25	0	overlap	Aze & others (2011)	start	4	4;6	4	True
+T216	206	N215-N217-N231-N235-T236	True	dashed	51.49	50.93	56	45.26	overlap	Aze & others (2011)	start	1	6	6	True
+T22	207	N21-T24	True	dashed	33.05	30.3	37.22	31.67	overlap	Aze & others (2011)	start	1	2	2	True
+T222	208	N220-N221-T362	True	dashed	47.1	42.36	47.95	34.28	overlap	Aze & others (2011)	start	3	4	4	True
+T224	209	N223-N225-N227-T228	True	dashed	43.36	41.11	44.36	33.9	overlap	Aze & others (2011)	start	1	3	2;3;4	True
+T226	210	N223-N225-N227-T228	True	dashed	41.05	38.07	44.36	33.9	overlap	Aze & others (2011)	start	1	3	2;3;4	True
+T230	211	N358-T229	True	dashed	36.4	33.9	37.41	33.9	overlap	Cribrohantkenina inflata	start	2	2	2	True
+T234	212	N232-T233	True	dashed	45.09	42.76	47.43	37.22	overlap	Aze & others (2011)	start	1	6	6	True
+T243	213	N241-T242	True	dashed	37.95	35.88	43.52	36.05	overlap	Aze & others (2011)	start	1	1	1	True
+T245	214	N239-N240-N244-N246-T247	True	dashed	43.41	36.31	43.63	35.7	overlap	Aze & others (2011)	start	1	1	1	True
+T250	215	N248-T249	True	dashed	39.11	34.03	42.66	34.66	overlap	Globigerinatheka tropicalis	start	1	1	1	True
+T255	216	N253-T254	True	dashed	40.22	34.66	43.41	39.97	overlap	Globigerinatheka luterbacheri	start	1	1	1	True
+T258	217	N257	True	dashed	65.77	62.33	66.03	65.77	boundary	Aze & others (2011)	start	3	3	3	True
+T260	218	N259-N261-N262-T263	True	dashed	64.69	57.78	65.77	55.02	overlap	Aze & others (2011)	start	1	3	2;3	True
+T268	219	N267	True	dashed	45.6	29.04	49.48	45.6	boundary	Aze & others (2011)	start	1	3	3;4	True
+T270	220	N269	True	dashed	42.46	33.9	45.6	42.46	boundary	Aze & others (2011)	start	1	3	3;4	True
+T275	221	N271-T272	True	dashed	33.05	23.87	42.46	25.44	overlap	Aze & others (2011)	start	1	3	3;4	True
+T277	222	N264-N265-N276-N278-N281-N283-T284	True	dashed	47.43	37.95	56.27	20.35	overlap	Aze & others (2011)	start	1	5	1;3;4;5	True
+T28	223	N27	True	dashed	5.32	4.1	16.62	5.32	boundary	Aze & others (2011)	start	2	3	3	True
+T282	224	L_Ciperoella anguliofficinalis	True	dashed	27.04	20.99	35.3	15.51	overlap	Aze & others (2011)	start	1	1	1;2	True
+T287	225	L_Globoturborotalita occlusa	True	dashed	22.47	17.47	37.8	12.64	overlap	Aze & others (2011)	start	5	1	1	True
+T29	226	N27	True	dashed	5.32	0	16.62	5.32	boundary	Aze & others (2011)	start	6	1;3	3	True
+T294	227	N285-N286-T288	True	dashed	0.32	0	28.49	0	overlap	Rögl & Bolli (1973)	start	1	4	1;2;3;4	True
+T297	228	N201-N998-N295-N203-T204	True	dashed	14.63	13.82	44.25	0	overlap	Clavatorella bermudezi	start	1	4	4	True
+T302	229	N301-T303	True	dashed	0.01	0	3.81	0	overlap	Globigerinella adamsi	start	1	3	2	True
+T31	230	N30	True	dashed	14.32	10.5	14.78	14.32	boundary	Globorotalia praemenardii	start	2	3	3	True
+T317	231	N315-T_316	True	dashed	4.51	0	66.04	0	overlap	Aze & others (2011)	start	3	1;2;4	1;2;5	True
+T321	232	N319-T320	True	dashed	35.3	28.16	42.06	21.16	overlap	Ciperoella anguliofficinalis	start	1	2	1;2	True
+T323	233	N314-N318	True	dashed	48.84	15.98	55.02	33.83	overlap	Globoturborotalita eolabiacrassata	start	2	1;2	1;2	True
+T328	234	N327-N329-T330	True	dashed	6.21	0	20.45	1.3	overlap	Globigerinoides conglobatus	start	2	1	1	True
+T33	235	N47	True	dashed	11.23	9.98	14.78	8.29	overlap	Globorotalia challengeri	start	1	4	4	True
+T331	236	N327-N329-T330	True	dashed	3.3	1.97	20.45	1.3	overlap	Aze & others (2011)	start	2	1	1	True
+T333	237	N326-N332-N334-T360	True	dashed	17.36	12.28	21.82	11.57	overlap	Aze & others (2011)	start	1	1	1	True
+T335	238	N326-N332-N334-T360	True	dashed	15.12	0	21.82	11.57	overlap	Globigerinoides ruber	start	2	1	1	True
+T338	239	N337-N339-T341	True	dashed	16.89	0	21.73	0	overlap	Aze & others (2011)	start	7	1;3	1	True
+T340	240	N337-N339-T341	True	dashed	3.3	1.88	21.73	0	overlap	Aze & others (2011)	start	1	1	1	True
+T343	241	L_first Globigerinoides	True	dashed	21.82	4.01	22.52	21.82	boundary	Globigerinoides bollii	start	2	1	1	True
+T346	242	N345-T347	True	dashed	11.73	4.49	17.18	0	overlap	Aze & others (2011)	start	1	3	3	True
+T351	243	L_Globigerinoides elongatus	True	dashed	1.98	0	3.1	0	overlap	Aze & others (2011)	start	1	2	1;2	True
+T353	244	N326-N332-N334-T360	True	dashed	12.28	3.14	21.82	11.57	overlap	Aze & others (2011)	start	2	1	1	True
+T355	245	T373	True	dashed	11.67	4.38	20.91	0.59	overlap	Globoturborotalita nepenthes	start	1	2	1	True
+T357	246	N86-T87	True	dashed	50.38	47.43	56.95	36.62	overlap	Astrorotalia palmerae	start	1	1	2	True
+T359	247	N310-T313	True	dashed	38.48	29.84	60.03	29.84	overlap	Aze & others (2011)	start	2	3	3;4	True
+T36	248	N35-N37-T39	True	dashed	6.66	2.97	10.43	2.31	overlap	Globorotalia multicamerata	start	1	3	2;3	True
+T363	249	N77-T266	True	dashed	45.21	39.97	48.25	24.47	overlap	Aze & others (2011)	start	1	4	3;4	True
+T365	250	N364	True	dashed	5.6	4.27	6.5	5.6	boundary	Pearson & others (2023)	start	2	3	3	True
+T367	251	N366-N298-N300-T304	True	dashed	29.18	4.01	33.52	0	overlap	Protentella prolixa	start	2	6	2;3;4	True
+T369	252	N80-N368-N370-T78	True	dashed	56	55.9	61.55	55.15	overlap	Morozovella allisonensis	start	1	1	1	True
+T371	253	N80-N368-N370-T78	True	dashed	55.65	54.54	61.55	55.15	overlap	Tree [GTS2020]	start	1	1	1	True
+T373	254	N324-N336-N342-N344-N348-N352-N354-T356	True	dashed	20.91	0.59	29.18	1.64	overlap	Globoturborotalita druryi	start	1	1	1;2;3;4	True
+T38	255	N35-N37-T39	True	dashed	4.39	2.08	10.43	2.31	overlap	Globorotalia exilis	start	2	3	2;3	True
+T46	256	N45-T43	True	dashed	3.19	0	5.82	0	overlap	Aze & others (2011)	start	1	2	2;3;4	True
+T49	257	N48-T50	True	dashed	3.51	0	8.29	0	overlap	Aze & others (2011)	start	1	4	3;4	True
+T55	258	N52-N54-T53	True	dashed	5.56	0.91	9.44	4.61	overlap	Aze & others (2011)	start	1	4	4	True
+T57	259	N56-N58-N59-T61	True	dashed	4.31	3.51	5.81	0	overlap	Globorotalia crassaconica	start	1	4	3;4	True
+T60	260	N56-N58-N59-T61	True	dashed	1.02	0.4	5.81	0	overlap	Aze & others (2011)	start	1	4	3;4	True
+T65	261	N64-T66	True	dashed	0.8	0	1.41	0	overlap	Aze & others (2011)	start	1	4	4	True
+T7	262	N5-N6-N8-T9	True	dashed	45.09	39.32	62.53	32.94	overlap	Aze & others (2011)	start	1	2	2;3	True
+T73	263	N72	True	dashed	61.35	57.55	62.33	61.35	boundary	Igorina albeari	start	1	1	1	True
+T74	264	N72	True	dashed	61.35	56	62.33	61.35	boundary	Igorina albeari	start	2	1	1	True
+T75	265	N184-N186-N187-N188-T189	True	dotted	54.54	42.66	63.37	32.99	overlap	Alicantina prolata	start	2	2	3;4	True
+T81	266	N79	True	dashed	59.33	55.02	60.14	59.33	boundary	Aze & others (2011)	start	1	1	1	True
+T82	267	N79	True	dashed	59.33	55.02	60.14	59.33	boundary	Aze & others (2011)	start	2	1	1	True
+T91	268	N88-N89-N90-T93	True	dashed	54.63	53.03	57.1	51.04	overlap	Aze & others (2011)	start	1	1	1	True
+T92	269	N88-N89-N90-T93	True	dashed	55.02	50.62	57.1	51.04	overlap	Aze & others (2011)	start	2	1	1	True
+T97	270	N98-T96	True	dashed	47.1	44.98	52.59	43.57	overlap	Aze & others (2011)	start	1	1	1	True

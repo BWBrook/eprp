@@ -1,187 +1,232 @@
-# Q-012 (with D1): support count and identification design
+# Q-012 (with D1): support, events and identification design
 
-Owner: Claude | 15 October 2026 | The next decision in Q-012's
+Owner: Claude | 15 October 2026, amended the same day after Codex's single
+review | The next decision in Q-012's
 [current contract](../ideas/register.md#q-012-heritable-susceptibility-versus-intrinsic-ageing-in-extinction-risk),
 after the [prior check](2026-10-14-q012-prior-check.md). It folds in Codex's
-blue-sky D1: speciation as a reset of vulnerability, or its transmission. It
-carries the lessons of B-001 and B-003:
-- definitions come before counting;
-- planning numbers are not information bounds;
-- a power gate needs false-decision and coverage criteria.
+blue-sky D1: speciation as a reset of vulnerability, or its transmission.
 
-Status: **a support count and design contract.** Relative pairs were counted.
-No durations were compared between relatives, and no model was fitted.
+**History:**
+- The first version is at `0f0cd35`.
+- [Codex's review](../ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md)
+  found four binding problems, all accepted (section 9):
+  - the event units;
+  - identification under persistent exposure;
+  - selection;
+  - the missing forecast landmark.
 
-## 1. Data
+**Status:** a design contract. No outcomes of relatives were compared, no
+model was fitted, and no calibration was run.
 
-- **Source:** Lamyman, Fordham & Pearson 2026, supplementary data, latest
-  version: Zenodo record 21414007 (concept 10.5281/zenodo.18854730), CC BY
-  4.0, 17 July 2026.
-  - The archive is 1,162,702,765 bytes, with provider MD5
-    `45350e95…3b3c3c`.
-  - An earlier version is record 18854731 (March 2026, 1,098,100,706 bytes). The latest is used.
-- **Retrieval:** four small members were taken from the remote archive by
-  HTTP range requests, checked against the zip's own CRCs. The archive was
-  not downloaded whole. They are git-ignored in `data/raw/lamyman2026/`:
+## 1. Data and event units
 
-  | Member | sha256 |
-  | --- | --- |
-  | S1, Morphospecies Key Information.xlsx | `88cd9b0a…f05d84` |
-  | S3, Supporting Data.xlsx | `2412991d…a7366b` |
-  | S6, All_Species_Lineages.nex | `e8bb5da6…38ad95` |
-  | S6, All_Species_Morphospecies.nex | `3a0867e0…09ce3` |
+- **Source:** Lamyman, Fordham & Pearson 2026, supplementary data, Zenodo
+  21414007 (concept 10.5281/zenodo.18854730; CC BY 4.0).
+  - Codex's [source audit](../data/q012-source-support/README.md) pins
+    the members and reconciles scope: 482 − 2 benthic *Praepararotalia* =
+    480.
+  - It preserves a source disagreement: 73/407 present/extinct by row,
+    against 72/408 in S3's summary.
+- **Event dictionary**
+  ([record](../data/q012-event-dictionary/README.md); source-located;
+  rerun reproduces it exactly).
+  - **Primary unit: the source's 268 in-scope lineage records**, with their
+    ancestor codes.
+    - Date relation to the ancestor: 215 overlap, 49 boundary.
+    - 257 in-scope parent–daughter links (188 with both extinct; 16 with
+      speculative ancestry).
+    - 234 sister pairs from 72 sibships (150 with both extinct).
+    - 52 extant.
+  - **This is conditional on the article's definition** of a lineage
+    record: pseudoextinction-free, as in Aze et al. 2011. The article was
+    inaccessible here (403), so that definition is the first item to
+    confirm.
+  - **The morphospecies level is a sensitivity layer only.** The workbook
+    does not define speciation modes there:
+    - only 127 of 269 lineage `Start Source` fields name an S1 species;
+    - membership is many-to-many;
+    - 350 overlapping links share a listed lineage.
+  - **The 18 morphospecies boundary links** stay unresolved: 9 share a
+    lineage and 9 do not. None is censored as a pseudoextinction.
+- **The Nexus chronograms are not used as a budding graph.** S3 E5 warns
+  that they convert buds into bifurcations.
+- **Support summary.** At lineage level, the first version's ecogroup lever
+  collapses: only 10 parent–daughter pairs differ in a single known
+  ecogroup. Separating inheritance from exposure therefore depends on
+  observed exposure from Triton (section 7).
 
-- **S1 has 482 morphospecies.** Each row has its ancestor, the ancestry
-  evidence (406 significant, 9 strong, 67 speculative), start and end ages
-  (GTS2020) with references, a morphogroup and ecogroups.
-- **Reconciliation needed.** S3's summary reports 480 Cenozoic
-  morphospecies and 268 lineages in "this study", against 339 and 210 in Aze
-  et al. 2011. S1's 482 rows need reconciling with that figure before
-  analysis.
-- **Durations are compiled ranges, not occurrence-based ranges.** Triton is
-  a later, independent check of range ends (section 5).
+## 2. The frailty law, with an effect-size estimand
 
-## 2. Support (counted on 15 October; no outcome comparison)
-
-| Unit | Count |
-| --- | ---: |
-| Parent–daughter pairs (ancestor present in the table) | 471 |
-| … with the parent persisting after the daughter appears (budding) | 453 |
-| … with the parent ending exactly at the daughter's start (anagenetic naming or bifurcation) | 18 |
-| … both members extinct | 365 (333 with non-speculative ancestry) |
-| Sister pairs | 323, from 107 sibships |
-| … both members extinct | 249 (214 non-speculative) |
-| Extant morphospecies (right-censored, kept) | 73 |
-| Relatives in *different* dominant ecogroups | 134 of 323 sister pairs; 150 of 471 parent–daughter pairs |
-
-- Sibship sizes:
-
-  | Daughters | 2 | 3 | 4 | 5 | 6 | 7 |
-  | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-  | Sibships | 63 | 24 | 11 | 5 | 2 | 2 |
-
-  178 parents have one daughter.
-- The median duration of extinct morphospecies is 6.2 Myr.
-- **Pairs are not independent replicates.** They nest within sibships and
-  the tree. The unit of replication is the tree structure, so inference
-  must be tree-structured, not built on counts of pairs.
-- Even so, support is an order of magnitude beyond B-001's or B-003's.
-
-## 3. Estimand
-
-**Inherited frailty along the tree.**
-- Each morphospecies i has a hazard h_i(a, t) = z_i h₀(t, e_i) g(a), where:
-  - a is the species' age;
+- **Root lineages:** log frailty x ~ N(0, σ²).
+- **Along each parent → daughter link:**
+  x_d = ρ x_p + σ √(1 − ρ²) ε, with ε ~ N(0, 1).
+- **Frailty:** z = exp(x − σ²/2), so the unconditional mean frailty is 1.
+- **Hazard:** h_i(a, t) = z_i h₀(t, e_i) g(a, s_i), where:
+  - a is the lineage's age;
   - t is calendar time;
-  - e_i is its ecogroup;
-  - z_i is its frailty.
-- Log frailty is inherited: log z_d = ρ log z_p + √(1 − ρ²) ε, with
-  ρ ∈ [0, 1).
-- **Primary estimand: ρ.** ρ = 0 is "reset" in D1's terms: susceptibility is
-  renewed at budding. ρ > 0 is transmission.
+  - e_i is its exposure class (ecogroup, and Triton exposure where
+    available);
+  - s_i is an inherited age state, used only by the R0′ rival in section
+    3.
 
-**Two internal consistency checks follow from vertical inheritance:**
-- sisters' frailty correlation should be about ρ², given that each inherits
-  independently from the parent;
-- the correlation should not decay with the gap between relatives'
-  origination times.
+**Primary estimand: η = ρσ.**
+- η is the standard deviation of the part of a daughter's log frailty
+  predicted by its parent's.
+- **Effect size:** daughters of parents at +σ and −σ differ in hazard by a
+  factor of exp(2η).
+- **η is identified even when σ = 0, where ρ is not:** then η = 0
+  whatever ρ is. ρ is reported only with σ.
+- **Working thresholds:**
+  - negligible: η₀ = 0.05, a hazard ratio of at most 1.105;
+  - consequential: η₁ = 0.20, a hazard ratio of at least 1.49.
 
-**Secondary estimand: held-out predictive skill.** This is the gain in
-log-score from the inherited model over the non-inherited one, when whole
-sibships or clades are held out of the fit.
+  They are frozen before calibration, and Codex may challenge them.
 
-**D1's event-level signature: parent age at budding.**
-- With inherited frailty and survivorship, parents that are old when they bud
-  are selected for low frailty, so their daughters should last **longer**.
-- An inherited ageing clock predicts the opposite sign.
-- A reset predicts no association.
-- Calendar-time exposure is absorbed by h₀.
+**Two correlations.**
+- In the unselected stationary model:
+  - sister log-frailty correlation is ρ²;
+  - raw-frailty correlation is (exp(ρ²σ²) − 1)/(exp(σ²) − 1) (Codex).
+- Selection and observation change both. Neither is used as an observed
+  signature: signatures are computed by simulation under the declared
+  selection.
+- A small fitted ρ does not by itself establish a reset.
 
-## 4. Rivals, matched on marginal durations, and how they are separated
+## 3. Finite rival and decision table
 
-| Rival | Mechanism | Signature |
-| --- | --- | --- |
-| R0. Intrinsic ageing | g(a) varies; no frailty | No relative dependence beyond h₀ |
-| R1. Frailty, not inherited | z drawn independently | The same marginal decline in hazard with age (the Gamma-frailty equivalence); no relative dependence |
-| R2. Inherited frailty | ρ > 0 | Relative dependence that survives a different ecogroup and a long origination gap; sisters ≈ ρ²; positive parent-age signature |
-| R3. Shared exposure | Variation in h₀ by time, ecogroup and finer habitat; no inheritance | Dependence that decays with origination gap and vanishes across ecogroups; time-matched non-relatives show it too |
+| Rival | Generator | What could distinguish it | Status without exposure data |
+| --- | --- | --- | --- |
+| R0. Own-clock ageing | g(a) varies; σ = 0 | No dependence among relatives beyond h₀ | Identified against R2 (η = 0) |
+| R0′. Inherited ageing clock | An explicit inherited state: daughter age offset s_d = parent's age at budding, with g(a + s_d) | Daughters of old budders have *shorter* durations | Identified in sign, conditional on the selection model |
+| R1. Frailty, not inherited | σ > 0, ρ = 0 | The same marginal survival curve as R0; no dependence among relatives | Identified against R2 |
+| R2. Inherited frailty | σ > 0, ρ > 0 | η > 0 | — |
+| R3a. Exposure by time and ecogroup | h₀(t, ecogroup) | Absorbed by the baseline | Identified (weak lever at lineage level) |
+| R3b. Persistent exposure tied to clades | An environmental field with tree-structured covariance, for example a persistent province | **The same survival likelihood as R2** (Codex's counterexample). It also produces a positive parent-age signature | **Not identified.** η then measures *residual phylogenetic dependence*, not inherited intrinsic susceptibility |
+| R4. Budding depends on frailty | Budding rate λ_i = λ₀ z_i^κ | An association between budding count and duration, within the joint likelihood | Identified, if budding is modelled (section 4) |
 
-**Separating them.** Survival curves alone cannot separate R0 from R1. The
-relatives can, through four levers:
-1. a baseline h₀ by calendar time and ecogroup;
-2. the 134 sister and 150 parent–daughter pairs that differ in ecogroup;
-3. **decay with origination gap**: shared exposure decays as relatives'
-   start times separate, and inheritance does not;
-4. **time-matched non-relative controls**: pairs originating in the same
-   window and ecogroup, in different clades. They estimate the residual
-   shared exposure, and inheritance must exceed it.
+**What could break the R2/R3b equivalence:** observed exposure histories
+for lineages. These are Triton's palaeolatitude and ocean-basin
+occurrences through time for each lineage's member morphospecies. Under
+R3b, dependence among relatives follows their *shared observed exposure*.
+Under R2, it persists among relatives whose observed exposures differ.
+Without that data, the claim is restricted to residual phylogenetic
+dependence.
 
-**Selection from parents surviving to bud.**
-- A parent is known to have survived to its last budding event.
-- The likelihood therefore treats each lineage's duration as left-truncated
-  at its last observed budding. The simulation applies the same
-  conditioning.
-- Ancestry is inferred partly from stratigraphic order, so long-ranging
-  species may be likelier to be named ancestors. The generator must include
-  a rule for assigning ancestors, and the "speculative" ancestry links are a
-  sensitivity subset.
+**D1's parent-age signature is a conditional prediction, not a test of
+mechanism.**
+- R2 with survivorship predicts it positive, as does R3b.
+- R0′ predicts it negative.
+- R0 and R1 predict zero.
 
-## 5. Observation model
+It is reported with this table, never alone.
 
-- **Range ends:** compiled from the literature, with age uncertainty. Triton
-  (held in the repository) is a later check, through occurrence density near
-  range ends.
-- **Morphospecies against lineages:**
-  - the 18 parent-ends-at-daughter-start pairs are D1's "naming" class.
-    Their parent end is treated as a pseudo-extinction, so censored, not
-    extinction;
-  - the lineage tree (S6) is the sensitivity analysis.
-- **Ancestry evidence:** results are reported with speculative links
-  included and excluded.
-- **Extant species** are right-censored at 0 Ma.
+## 4. A joint likelihood for the realised history
 
-## 6. Discrimination check, before ρ is estimated
+The data are one realised history of budding, extinction and observation.
+With latent log frailties x, durations T (censored at the present),
+budding times B and the observation and inclusion process O:
 
-1. **Freeze everything first:**
-   - the priors;
-   - the working values ρ₀ = 0.1 (negligible) and ρ₁ = 0.4 (consequential:
-     a parent's frailty explains at least 16% of its daughter's);
-   - the baseline structure;
-   - the truncation and ancestor rules.
+L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
+       × ∏ᵢ p(B_i | T_i, x_i; λ₀, κ) × P(O | T, B; ψ) dx
 
-   These are working scenarios. Codex may challenge them.
-2. **Simulate on the actual topology and budding times** under R0, R1, R3,
-   R2 at ρ₀, R2 at ρ₁, and R2 at 0.7. Durations are simulated conditional on
-   each parent surviving to its last budding.
-3. **Proceed only if all of these hold**, each with Monte Carlo uncertainty:
-   - **Power:** P(lo > ρ₀ | ρ₁) ≥ 0.8, and P(hi < ρ₁ | R1) ≥ 0.8;
-   - **False decisions:** P(lo > ρ₀) ≤ 0.05 under R0, R1, R3 and R2 at ρ₀.
-     R3 is the decisive control;
-   - **Coverage** close to nominal across the grid.
+- **Budding.** The budding term is (λ₀ z_i^κ)^{m_i} exp(−λ₀ z_i^κ T_i),
+  for m_i buds. It also encodes knowledge that there were no later buds.
+  - **Only when κ = 0** is it free of x and of the extinction parameters
+    given the observed T. Then the realised topology and budding times can
+    be conditioned on without bias.
+  - Otherwise it stays in the likelihood, as rival R4.
+- **No "left truncation at last budding" is used.** The first version's
+  rule is withdrawn. With durations observed, T_i > B_last holds
+  automatically, and the joint likelihood above already carries the
+  parent-survival tilt through f(T_p | x_p) and p(x).
+  - Codex's tilted law, p(x | T > B) ∝ p(x) ∏ S(B | x), is the right object
+    only when T beyond B is unobserved.
+  - Conditioning the topology as a fixed design while treating durations
+    as random would be the wrong conditional experiment.
+- **Inclusion.** O includes a declared inclusion probability, for example
+  P(included | T) = 1 − exp(−ψT): short-lived lineages are less likely to be
+  described. Each lineage's contribution is then
+  f(T | x) P(inc | T) / ∫ f(t | x) P(inc | t) dt.
+- **Ancestor assignment** depends on stratigraphic ranges, so the generator
+  carries an explicit rule for it. Speculative links are a sensitivity
+  subset.
+- **Fitting:** a tree-structured latent Gaussian with survival terms,
+  fitted by MCMC (for example Stan) over about 270 latent variables. The
+  cost is to be measured in a small pilot.
 
-   The grid is finite, so it is not a uniform bound.
-4. **Compute.** The check is local and moderate: a tree of about 480 tips and
-   hundreds of replicates. It fits on this machine or on deep-server.
+## 5. Forecasting at a landmark (the secondary estimand)
 
-## 7. Outcomes
+| Element | Specification |
+| --- | --- |
+| Landmark | The daughter lineage's origination t_d |
+| Target | Survival of the daughter to h = 5 Myr after t_d (median lineage duration 6.49 Myr) |
+| Risk set | In-scope daughters with t_d ≥ 5 Ma, so that the horizon is observable. Younger ones are censored by the present and enter only through a censoring-aware score |
+| Permitted relative information | The parent's age at t_d, its earlier budding count and exposure class; older sisters' status and ages at t_d; extinctions of any lineage before t_d; calendar time; Triton exposure up to t_d |
+| Excluded (would leak the future) | The parent's later duration or later buds; sisters' futures; anything after t_d |
+| Parameters | Cross-fitted: estimated from other clade blocks, using their full histories only |
+| Score | Inverse-probability-of-censoring-weighted Brier score at h, and the censoring-aware log score |
+| Comparison | Paired: the same model, with and without the permitted relative information |
+| Skill threshold | The paired skill interval excludes 0, *and* its point estimate reaches at least half the skill expected at η₁ under the frozen generator |
 
-- **Inheritance supported:**
-  - lo > ρ₀;
-  - with dependence surviving both the ecogroup and origination-gap levers;
-  - and held-out skill above the non-inherited model.
-- **Informative negative:** hi < ρ₁. No consequential inherited
-  susceptibility is detected beyond shared exposure, which is D1's reset
-  answer at this grain.
-- **Inadequate:** the interval spans both values, or the check fails. Q-012
-  then parks at this grain.
-- **D1's sign** is reported descriptively, with its interval.
+## 6. Calibration of the combined decision
 
-## 8. Next steps
+**The combined decision:**
+- **Dependence supported:** the η interval has lo > η₀, *and* the
+  landmark skill threshold is met. With Triton exposure, "inheritance";
+  without it, "residual phylogenetic dependence".
+- **Informative negative:** hi < η₁.
+- **Inadequate:** anything else.
 
-- Codex reviews this design once.
-- Then, in order:
-  1. reconcile the 482 and 480 counts;
-  2. freeze the section 6 inputs;
-  3. run the discrimination check.
-- No estimation of ρ, and no comparison of relatives' durations, before the
-  check passes.
+**Grid:**
+- R0;
+- R0′;
+- R1 with σ ∈ {0.5, 1};
+- R2 with η ∈ {0, 0.05, 0.20, 0.35};
+- R3a;
+- R3b, with and without simulated exposure data;
+- R4 with κ ∈ {−0.5, 0.5};
+- each crossed with the inclusion and ancestor rules.
+
+**Pass rules**, each with its Monte Carlo interval:
+
+| Criterion | Requirement |
+| --- | --- |
+| False "supported" under R0, R0′, R1, R3a, R2 at η ≤ η₀, R3b *with* exposure data, and R4 | At most 0.05, with the upper 95% Monte Carlo bound at most 0.07 |
+| Power, P(supported \| η = η₁) | At least 0.8, with the lower bound at least 0.75 |
+| Power, P(hi < η₁ \| η = 0) | At least 0.8, with the lower bound at least 0.75 |
+| Coverage of the 90% interval for η | Between 0.85 and 0.95 at each grid point |
+
+- **Non-identifying cases are labelled, not forced:**
+  - σ = 0 for ρ, though η is fine;
+  - R3b without exposure data.
+- A small measured pilot sets the replicate count before the full grid is
+  run.
+
+## 7. Next gates, in order
+
+1. **Lineage-record definition.** Confirm from the article's Methods that a
+   lineage record is a pseudoextinction-free unit, and what "overlap"
+   means. Barry could supply the PDF through UTAS; it was inaccessible
+   here.
+2. **Triton joint exposure audit.** Join Triton occurrences to the member
+   morphospecies of each lineage. Count lineages with palaeolatitude and
+   basin coverage through their ranges, and count relative pairs whose
+   observed exposures differ. This decides whether R3b can be separated.
+3. **Freeze the section 2 and 6 inputs**, then run a small pilot for cost.
+4. **Calibration**, then estimation only if it passes.
+
+## 8. Unchanged from the first version
+
+- The unit of replication is the tree structure.
+- Extant lineages are right-censored.
+- Speculative ancestry is a sensitivity subset.
+- Inference is restricted to Cenozoic planktonic foraminifera.
+
+## 9. Amendment record (15 October 2026)
+
+| Review finding | Change |
+| --- | --- |
+| Event units: the Nexus files are bifurcating, membership is many-to-many, and the 18 boundary links are not pseudoextinctions; ecogroup count 148, not 150 | A source-located event dictionary. Lineage records are the primary unit, pending their definition. The morphospecies level is sensitivity only, with no mode assigned. The boundary links are unresolved and not censored |
+| Persistent exposure tied to clades is equivalent to inherited frailty; the frailty law was incomplete; ρ alone is not an effect size | R3b added and labelled non-identifying without exposure data. The full law is stated. The estimand becomes η = ρσ. Triton exposure is the separating data. D1's sign is conditional |
+| Truncation at the last bud omits the survival tilt; the topology is endogenous | A joint likelihood for the realised history. The truncation rule is withdrawn. Budding stays in unless κ = 0. An inclusion term is added |
+| No forecast landmark | A landmark and information table, cross-fitting, censoring-aware scores, a paired comparison and a skill threshold |
+| Calibrate the combined decision | A finite grid, Monte Carlo pass rules, a coverage band, labelled non-identifying cases and a cost pilot first |

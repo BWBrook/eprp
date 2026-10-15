@@ -282,14 +282,15 @@ All were accepted.
 definitions frozen at `29367db`.
 
 **What passed:**
-- One system passes the literal screen: Dietl 2003, Florida whelks and
+- One system passes the horizon and sample-count part of the screen (its
+  lineage continuity is unverified): Dietl 2003, Florida whelks and
   Mercenaria, apertural chipping. It falls short of the candidate-capability
   requirement:
   - the predator series is a sample maximum, with n of 16–36 that doubles
     across horizons;
   - the mapping is qualitative;
   - no variances;
-  - one locality per horizon;
+  - one locality per horizon, except three in the Caloosahatchee;
   - at most 2 lag-one pairs.
 - The Chesapeake naticid–bivalve pair cannot be scored, because its full
   texts were inaccessible.

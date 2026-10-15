@@ -1,0 +1,33 @@
+{
+ "inputs": {
+  "S1. Morphospecies Key Information.xlsx": "88cd9b0a054aae64c9adfeadad5ec730dddfb11d169b8100ab61f803f0e05d84",
+  "Supporting Data.xlsx": "2412991df3ff35d9f62275a500a474feff77e2c89b24ec86289574a8f7a7366b"
+ },
+ "lineage_records": 269,
+ "unresolved_member_tokens": [
+  [
+   "L_Bolivina Clade",
+   "Bv. Clade"
+  ]
+ ],
+ "lineage_edges": {
+  "ancestor_outside|in_scope": 4,
+  "ancestor_outside|out": 1,
+  "boundary|in_scope": 49,
+  "overlap|in_scope": 215
+ },
+ "morphospecies_edges": {
+  "boundary|founds_lineage|no_shared_lineage|in_scope": 6,
+  "boundary|founds_lineage|no_shared_lineage|out": 1,
+  "boundary|no_founding_record|no_shared_lineage|in_scope": 2,
+  "boundary|no_founding_record|shares_lineage|in_scope": 8,
+  "boundary|no_founding_record|shares_lineage|out": 1,
+  "overlap|founds_lineage|no_shared_lineage|in_scope": 89,
+  "overlap|founds_lineage|shares_lineage|in_scope": 10,
+  "overlap|no_founding_record|no_shared_lineage|in_scope": 3,
+  "overlap|no_founding_record|shares_lineage|in_scope": 350,
+  "overlap|no_founding_record|shares_lineage|out": 1
+ },
+ "lineage_founders_naming_an_S1_morphospecies": 127,
+ "species_in_multiple_lineages": 170
+}

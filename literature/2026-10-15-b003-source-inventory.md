@@ -31,7 +31,7 @@ workflow only.
 | Kelley 1992, 10.1017/s0022336000020801 (abstract) | *Euspira heros*, *Neverita duplicata*: globosity, relative aperture, relative thickness, height. **Candidate capability**; no mapping stated in the abstract | Kelley 1989's series | Species-level. Horizons, n, variances and reuse of material inaccessible | Fail: cannot be scored |
 | Dietl, Kelley & Handley 2014, 10.1017/s2475262200012156 (NAPC poster abstract, p. 100) | None. Drilling frequency (an outcome) | Thickness | Reanalyses "Kelley's original dataset" with paleoTS: "mixed support for Kelley's original interpretations", "especially for taxa represented by multiple species" | Fail |
 | Dietl, Alexander & Bien 2000, Paleobiology 26:215 (abstract) | None. Repair frequency (an outcome) | Thickness, commissural shelf, ornament (in the crushing row) | Two oyster lineages; over 1,600 valves; horizons inaccessible | Fail |
-| **Dietl 2003**, 10.1046/j.1095-8312.2003.00255.x (full text, HTML) | *Sinistrofulgur*: **maximum** shell length per horizon (Table 10). Candidate capability. The mapping is qualitative ("probability of successful predation depends on the predator:prey size ratio"), with no function or uncertainty | *Mercenaria* mean valve length (Table 9), in the chipping row | 4 joint horizons (Tamiami, Caloosahatchee, Bermont, Fort Thompson; no numeric ages). See the table below. No SD, SE or specimen values. One locality per horizon (three for the Caloosahatchee). No statement of species continuity. At most 2 lag-one pairs | Literal pass, with the caveats below |
+| **Dietl 2003**, 10.1046/j.1095-8312.2003.00255.x (full text, HTML) | *Sinistrofulgur*: **maximum** shell length per horizon (Table 10). Candidate capability. The mapping is qualitative ("probability of successful predation depends on the predator:prey size ratio"), with no function or uncertainty | *Mercenaria* mean valve length (Table 9), in the chipping row | 4 joint horizons (Tamiami, Caloosahatchee, Bermont, Fort Thompson; no numeric ages). See the table below. No SD, SE or specimen values. One locality per horizon (three for the Caloosahatchee). No statement of species continuity. At most 2 lag-one pairs | Partial pass: horizon and sample counts pass; lineage identification is unverified (see below) |
 | Kelley, Hansen, Graham & Huntoon 2001, 10.1016/s0031-0182(00)00207-8 (bibliographic only) | "Efficiency" appears in the title only; the measure is unverified | Not stated | Inaccessible | Fail: cannot be scored |
 | Kelley & Hansen 2006, 10.1016/j.palaeo.2005.11.012 (abstract) | Drilling frequency and prey effectiveness (outcomes) | Outcomes only | 28 assemblages; reuses "previously derived" patterns | Fail: outcomes on both sides |
 | Signor & Brett 1984, 10.1017/s0094837300008174 (abstract) | None. The durophage radiation is narrative | Genus-level frequencies of resistant features (in the crushing row) | Genus composition, not lineages | Fail |
@@ -66,7 +66,7 @@ workflow only.
 
 ## Assessment
 
-**One system passes the literal screen, and it is weak:**
+**One system passes the horizon and sample-count part of the screen, and it is weak:**
 - The predator measure is a **sample maximum** from 16–36 shells per
   horizon. A maximum rises with sample size, and the predator samples
   roughly doubled between the two older horizons and the two younger ones.
@@ -74,7 +74,9 @@ workflow only.
   bias".
 - The functional mapping is qualitative, with no uncertainty.
 - No variances are given.
-- There is one locality per horizon.
+- There is one locality per horizon, except the Caloosahatchee, which has three.
+- Lineage continuity is not stated, so the lineage-identification part of
+  the screen is not established.
 - No numeric ages are given.
 - There are at most two lag-one pairs.
 - It falls short of the contract's candidate-capability requirement, and it

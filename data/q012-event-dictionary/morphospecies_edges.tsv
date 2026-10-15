@@ -1,0 +1,472 @@
+parent	daughter	s1_row_parent	s1_row_daughter	daughter_edge_evidence	date_relation	daughter_founds	founded_lineage_ancestor_lists_parent	shared_lineages	in_scope
+Acarinina sibaiyaensis	Acarinina africana	27	2	significant	overlap	T108	True		True
+Acarinina soldadoensis	Acarinina alticonica	28	3	significant	overlap		False	N103-N109-N115-N117-T118	True
+Acarinina soldadoensis	Acarinina angulosa	28	4	significant	overlap		False	N103-N109-N115-N117-T118	True
+Acarinina pentacamerata	Acarinina aspensis	19	5	significant	overlap		False	N110-N112-T113	True
+Acarinina pseudotopilensis	Acarinina boudreauxi	23	6	significant	overlap		False	N130-N131-N136-N142-N144-T148	True
+Acarinina boudreauxi	Acarinina bullbrooki	6	7	significant	overlap		False	N130-N131-N136-N142-N144-T148;N133-T135	True
+Acarinina nitida	Acarinina coalingensis	18	8	significant	overlap		False	N99-N125	True
+Acarinina pentacamerata	Acarinina collactea	19	9	significant	overlap		False	N110-N112-T113	True
+Acarinina angulosa	Acarinina cuneicamerata	4	10	significant	overlap		False	N103-N109-N115-N117-T118;T116	True
+Acarinina pseudosubsphaerica	Acarinina echinata	22	11	significant	overlap	T121	True		True
+Acarinina nitida	Acarinina esnaensis	18	12	significant	boundary		False		True
+Acarinina soldadoensis	Acarinina esnehensis	28	13	significant	overlap		False	N103-N109-N115-N117-T118	True
+Acarinina soldadoensis	Acarinina interposita	28	14	significant	overlap		False	N103-N109-N115-N117-T118	True
+Acarinina pseudotopilensis	Acarinina mcgowrani	23	15	significant	overlap		False	N130-N131-N136-N142-N144-T148	True
+Acarinina subsphaerica	Acarinina mckannai	30	16	significant	overlap		False	N102-T100	True
+Acarinina collactea	Acarinina medizzai	9	17	significant	overlap		False	N110-N112-T113	True
+Acarinina strabocella	Acarinina nitida	29	18	significant	overlap		False	N99-N125	True
+Acarinina interposita	Acarinina pentacamerata	14	19	significant	overlap		False	N110-N112-T113	True
+Acarinina mcgowrani	Acarinina praetopilensis	15	20	significant	overlap		False	N130-N131-N136-N142-N144-T148	True
+Acarinina coalingensis	Acarinina primitiva	8	21	significant	overlap		False	N126-T127	True
+Acarinina alticonica	Acarinina pseudosubsphaerica	3	22	significant	overlap		False	N119-T120	True
+Acarinina wilcoxensis	Acarinina pseudotopilensis	32	23	significant	overlap		False	N128-T129	True
+Acarinina boudreauxi	Acarinina punctocarinata	6	24	significant	overlap		False	N130-N131-N136-N142-N144-T148;N133-T135	True
+Acarinina pseudotopilensis	Acarinina quetra	23	25	significant	overlap		False	N130-N131-N136-N142-N144-T148	True
+Acarinina topilensis	Acarinina rohri	31	26	significant	overlap		False	N130-N131-N136-N142-N144-T148;N145-T146	True
+Acarinina esnehensis	Acarinina sibaiyaensis	13	27	significant	overlap	N106-T107	True		True
+Acarinina mckannai	Acarinina soldadoensis	16	28	significant	overlap		False	N102-T100	True
+Morozovella praeangulata	Acarinina strabocella	323	29	significant	boundary	N99-N125	True		True
+Acarinina nitida	Acarinina subsphaerica	18	30	significant	overlap	N102-T100	True		True
+Acarinina praetopilensis	Acarinina topilensis	20	31	significant	overlap		False	N130-N131-N136-N142-N144-T148	True
+Acarinina esnaensis	Acarinina wilcoxensis	12	32	significant	overlap		False	N128-T129	True
+Alicantina prolata	Alicantina lozanoi	34	33	significant	overlap		False	T75	True
+Parasubbotina varianta	Alicantina prolata	369	34	speculative	overlap	T75	True		True
+Antarcticella zeocenica	Antarcticella antarctica	38	35	significant	overlap		False	L_Antarcticella	True
+Antarcticella pauciloculata	Antarcticella cecionii	37	36	significant	overlap		False	L_Antarcticella	True
+Praepararotalia cretacea	Antarcticella pauciloculata	387	37	speculative	boundary	L_Antarcticella	True		False
+Antarcticella cecionii	Antarcticella zeocenica	36	38	significant	boundary		False	L_Antarcticella	True
+Planorotalites pseudoscitula	Astrorotalia palmerae	379	39	significant	overlap	T357	True		True
+Beella praedigitata	Beella digitata	41	40	significant	overlap		False	N292-T299	True
+Globigerinella siphonifera	Beella praedigitata	175	41	significant	overlap		False	N366-N298-N300-T304	True
+Berggrenia pumilio	Berggrenia praepumilio	44	42	speculative	overlap	L_Berggrenia praepumilio	True		True
+Turborotalita quinqueloba	Berggrenia primoripumilio	474	43	speculative	overlap	L_Berggrenia pumilio	True		True
+Berggrenia primoripumilio	Berggrenia pumilio	43	44	speculative	overlap		False	L_Berggrenia pumilio	True
+Bolivina tasmanensis	Bolivina cetacensis	64	45	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina cf. variabilis	Bolivina cf. globigera	47	46	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina variabilis	Bolivina cf. variabilis	65	47	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina pristina	Bolivina dubeyi	59	48	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina globulosa	Bolivina flexiserialis	51	49	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina cf. globigera	Bolivina globigera	46	50	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina pristina	Bolivina globulosa	59	51	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina globigera	Bolivina infirmirugosa	50	52	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina globulosa	Bolivina inflata	51	53	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina inflata	Bolivina inglei	53	54	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina cetacensis	Bolivina mascarenensis	45	56	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina subexcavata	Bolivina nairi	63	58	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina subexcavata	Bolivina pseudoplicata	63	60	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina cf. variabilis	Bolivina subexcavata	47	63	speculative	overlap		False	L_Bolivina variabilis	True
+Bolivina pristina	Bolivina tasmanensis	59	64	speculative	overlap		False	L_Bolivina inflata	True
+Bolivina merecuanai	Bolivina variabilis	57	65	speculative	overlap	L_Bolivina variabilis	False	L_Bolivina variabilis	True
+Candeina praenitida	Candeina nitida	67	66	significant	overlap		False	T1034	True
+Globigerinita glutinata	Candeina praenitida	178	67	significant	overlap	T1034	True		True
+Cassigerinella eocaenica	Cassigerinella chipolensis	69	68	significant	overlap		False	N1009-T1010	True
+Chiloguembelina ototara	Cassigerinella eocaenica	83	69	significant	overlap		False	N1007	True
+Jenkinsina triseriata	Cassigerinelloita amekiensis	305	70	significant	overlap		False	N1001-T1003	True
+Catapsydrax howei	Catapsydrax africanus	74	71	significant	overlap		False	N207-T208	True
+Catapsydrax unicavus	Catapsydrax dissimilis	76	72	significant	overlap		False	N206-N210-N212-T213	True
+Catapsydrax unicavus	Catapsydrax globiformis	76	73	significant	overlap		False	N206-N210-N212-T213	True
+Catapsydrax unicavus	Catapsydrax howei	76	74	significant	overlap		False	N206-N210-N212-T213	True
+Catapsydrax dissimilis	Catapsydrax indianus	72	75	significant	overlap		False	N206-N210-N212-T213	True
+Globorotaloides quadrocameratus	Catapsydrax unicavus	260	76	significant	overlap		False	N190-N199-T200	True
+Chiloguembelina cubensis	Chiloguembelina adriatica	80	77	significant	overlap		False	T1006	True
+Chiloguembelina ototara	Chiloguembelina andreae	83	78	significant	overlap		False	T1008	True
+Chiloguembelina midwayensis	Chiloguembelina crinita	81	79	significant	overlap		False	N1005	True
+Chiloguembelina ototara	Chiloguembelina cubensis	83	80	significant	overlap		False	N1005	True
+Chiloguembelina morsei	Chiloguembelina midwayensis	82	81	significant	overlap		False	N1005	True
+Woodringina hornerstownensis	Chiloguembelina morsei	476	82	significant	overlap		False		True
+Chiloguembelina crinita	Chiloguembelina ototara	79	83	significant	overlap		False	N1005	True
+Chiloguembelina crinita	Chiloguembelina parallela	79	84	significant	overlap		False	N1005	True
+Chiloguembelina midwayensis	Chiloguembelina subtriangularis	81	85	significant	overlap		False	N1005	True
+Chiloguembelina wilcoxensis	Chiloguembelina trinitatensis	87	86	significant	overlap		False	N1005	True
+Chiloguembelina crinita	Chiloguembelina wilcoxensis	79	87	significant	overlap		False	N1005	True
+Globoturborotalita gnaucki	Ciperoella anguliofficinalis	277	88	significant	overlap	L_Ciperoella anguliofficinalis;T321	True		True
+Ciperoella anguliofficinalis	Ciperoella angulisuturalis	88	89	significant	overlap		False	L_Ciperoella anguliofficinalis	True
+Ciperoella anguliofficinalis	Ciperoella ciperoensis	88	90	significant	overlap	N279-T280	True		True
+Ciperoella ciperoensis	Ciperoella fariasi	90	91	significant	overlap		False	N279-T280	True
+Globorotaloides hexagonus	Clavatorella bermudezi	258	92	significant	overlap	T297	True		True
+Clavigerinella eocanica	Clavigerinella akersi	96	93	significant	overlap		False	N220-N221-T362	True
+Clavigerinella eocanica	Clavigerinella caucasica	96	94	strong	overlap	N223-N225-N227-T228	True		True
+Clavigerinella eocanica	Clavigerinella colombiana	96	95	significant	overlap		False	N220-N221-T362	True
+Parasubbotina eoclava	Clavigerinella eocanica	362	96	significant	overlap	N220-N221-T362	True		True
+Clavigerinella eocanica	Clavigerinella jarvisi	96	97	significant	overlap		False	N220-N221-T362	True
+Hantkenina nanggulanensis	Cribrohantkenina inflata	296	98	significant	overlap	T230	True	T230	True
+Dentigloborotalia galapagosensis	Dentigloborotalia anfracta	101	99	speculative	overlap		False	L_Dentigloborotalia	True
+Cassigerinella eocaenica	Dentigloborotalia bauerensis	69	100	speculative	overlap	L_Dentigloborotalia	True		True
+Dentigloborotalia bauerensis	Dentigloborotalia galapagosensis	100	101	significant	overlap		False	L_Dentigloborotalia	True
+Dentoglobigerina globosa	Dentoglobigerina altispira	108	102	significant	overlap		False	N177-T176	True
+Dentoglobigerina larmeui	Dentoglobigerina baroemoenensis	111	103	significant	overlap	T178	True		True
+Dentoglobigerina sellii	Dentoglobigerina binaiensis	114	104	significant	overlap		False	N168	True
+Dentoglobigerina venezuelana	Dentoglobigerina cf. conglomerata	118	105	significant	overlap		False	N172-T174	True
+Acarinina primitiva	`Dentoglobigerina` eotripartita	21	106	speculative	overlap		False	N126-T127	True
+Dentoglobigerina pseudovenezuelana	Dentoglobigerina galavisi	113	107	speculative	overlap	N149-N163	True	N149-N163	True
+Dentoglobigerina globularis	Dentoglobigerina globosa	109	108	significant	overlap		False	N177-T176	True
+Dentoglobigerina galavisi	Dentoglobigerina globularis	107	109	significant	overlap		False	N165;N171;N175;N177-T176	True
+Dentoglobigerina binaiensis	Dentoglobigerina juxtabinaiensis	104	110	significant	overlap		False	T170	True
+Dentoglobigerina galavisi	Dentoglobigerina larmeui	107	111	significant	overlap	N177-T176;N179-T180	True		True
+Dentoglobigerina taci	Dentoglobigerina prasaepis	115	112	significant	overlap		False	N171	True
+Subbotina yeguaensis	Dentoglobigerina pseudovenezuelana	434	113	significant	overlap		False	N77-T266	True
+Dentoglobigerina tapuriensis	Dentoglobigerina sellii	116	114	significant	overlap		False	N166-T167	True
+Dentoglobigerina galavisi	Dentoglobigerina taci	107	115	significant	overlap		False	N149-N163;N165;N171	True
+Dentoglobigerina galavisi	Dentoglobigerina tapuriensis	107	116	significant	overlap	N166-T167;N171	True		True
+`Dentoglobigerina` eotripartita	`Dentoglobigerina` tripartita	106	117	significant	overlap	T173	True		True
+Dentoglobigerina prasaepis	Dentoglobigerina venezuelana	112	118	significant	overlap		False	N171;N172-T174	True
+Praepararotalia perclara	Dipsidripella danvillensis	388	119	speculative	boundary		False	N1013-T1014	False
+Dipsidripella danvillensis	Dipsidripella liqianyui	119	120	speculative	overlap		False	N1013-T1014	True
+Eoglobigerina eobulloides	Eoglobigerina edita	122	121	significant	overlap		False	N257;T258	True
+Muricohedbergella monmouthensis	Eoglobigerina eobulloides	331	122	significant	overlap	N257	True		True
+Eoglobigerina edita	Eoglobigerina spiralis	121	123	significant	overlap		False	T258	True
+Fohsella praefohsi	Fohsella fohsi	130	124	significant	overlap		False	T155	True
+Fohsella peripheroronda	Fohsella lenguaensis	129	125	significant	overlap		False	N152-T154	True
+Fohsella fohsi	Fohsella lobata	124	126	significant	overlap		False	T155	True
+Fohsella lenguaensis	Fohsella paralenguaensis	125	127	significant	overlap		False	N152-T154	True
+Fohsella peripheroronda	Fohsella peripheroacuta	129	128	significant	overlap		False	N152-T154	True
+Paragloborotalia kugleri	Fohsella peripheroronda	352	129	significant	overlap	N152-T154	True		True
+Fohsella peripheroacuta	Fohsella praefohsi	128	130	significant	overlap	T155	True		True
+Fohsella lobata	Fohsella robusta	126	131	significant	overlap		False	T155	True
+Muricohedbergella holmdelensis	Globanomalina archeocompressa	330	132	significant	boundary		False	N1-N3	True
+Globanomalina imitata	Globanomalina australiformis	137	133	significant	boundary	N13-T14	True		True
+Globanomalina ehrenbergi	Globanomalina chapmani	136	134	significant	overlap		False	N4-T12	True
+Globanomalina archeocompressa	Globanomalina compressa	132	135	significant	overlap		False	N1-N3	True
+Globanomalina compressa	Globanomalina ehrenbergi	135	136	significant	overlap		False	N4-T12	True
+Globanomalina planocompressa	Globanomalina imitata	140	137	significant	boundary		False		True
+Globanomalina ovalis	Globanomalina luxorensis	139	138	significant	overlap		False	N5-N6-N8-T9	True
+Globanomalina imitata	Globanomalina ovalis	137	139	significant	overlap		False	N5-N6-N8-T9	True
+Globanomalina archeocompressa	Globanomalina planocompressa	132	140	significant	overlap		False	N1-N3	True
+Globanomalina chapmani	Globanomalina planoconica	134	141	significant	overlap		False	N4-T12	True
+Globanomalina ehrenbergi	Globanomalina pseudomenardii	136	142	significant	boundary		False	N4-T12	True
+Globigerina officinalis	Globigerina archaeobulloides	149	143	significant	overlap		False	N264-N265-N276-N278-N281-N283-T284	True
+Globigerina archaeobulloides	Globigerina bulloides	143	144	significant	overlap		False	N285-N286-T288	True
+Globigerina bulloides	Globigerina eamesi	144	145	significant	overlap		False	N285-N286-T288	True
+Globigerina bulloides	Globigerina falconensis	144	146	significant	overlap		False	N285-N286-T288	True
+Globigerina bulloides	Globigerina megastoma	144	147	significant	overlap		False	N285-N286-T288	True
+Globigerina falconensis	Globigerina neofalconensis	146	148	significant	overlap		False	N285-N286-T288	True
+Subbotina roesnaesensis	Globigerina officinalis	426	149	significant	overlap		False	N264-N265-N276-N278-N281-N283-T284	True
+Globigerina bulloides	Globigerina pseudobesa	144	150	significant	overlap		False	N285-N286-T288	True
+Globigerina bulloides	Globigerina umbilicata	144	151	significant	overlap		False	N285-N286-T288	True
+Globigerinatella sp.	Globigerinatella insueta	153	152	significant	overlap		False	T1028	True
+Globigerinita glutinata	Globigerinatella sp.	178	153	significant	overlap		False	L_Globigerinita glutinata	True
+Globigerinatheka subconglobata	Globigerinatheka barri	163	154	significant	overlap		False	N237-T238;N239-N240-N244-N246-T247	True
+Globigerinatheka kugleri	Globigerinatheka curryi	159	155	significant	overlap	N239-N240-N244-N246-T247	True	N239-N240-N244-N246-T247;N251-T252	True
+Globigerinatheka curryi	Globigerinatheka euganea	155	156	significant	overlap		False	N253-T254	True
+Globigerinatheka subconglobata	Globigerinatheka index	163	157	significant	overlap		False	N239-N240-N244-N246-T247	True
+Globigerinatheka subconglobata	Globigerinatheka korotkovi	163	158	significant	overlap		False	N237-T238;N239-N240-N244-N246-T247	True
+Globigerinatheka subconglobata	Globigerinatheka kugleri	163	159	significant	overlap		False	N237-T238;N239-N240-N244-N246-T247	True
+Globigerinatheka euganea	Globigerinatheka luterbacheri	156	160	significant	overlap	T255	True		True
+Globigerinatheka subconglobata	Globigerinatheka mexicana	163	161	significant	overlap		False	N237-T238;N239-N240-N244-N246-T247	True
+Globigerinatheka mexicana	Globigerinatheka semiinvoluta	161	162	significant	overlap		False		True
+Guembelitrioides nuttalli	Globigerinatheka subconglobata	288	163	significant	overlap		False	N237-T238	True
+Globigerinatheka index	Globigerinatheka tropicalis	157	164	significant	overlap	T250	True		True
+Globigerinella calida	Globigerinella adamsi	166	165	significant	overlap	T302	True		True
+Globigerinella siphonifera	Globigerinella calida	175	166	significant	overlap		False	N366-N298-N300-T304	True
+Globigerinella navazuelensis	Globigerinella clavaticamerata	170	167	speculative	overlap		False	L_Globigerinella clavaticamerata	True
+Globigerinella wagneri	Globigerinella megaperta	176	168	significant	overlap		False	L_Globigerinella wagneri	True
+Globigerinella navazuelensis	Globigerinella molinae	170	169	significant	overlap		False	L_Globigerinella clavaticamerata	True
+Globigerinella praesiphonifera	Globigerinella navazuelensis	172	170	speculative	overlap	L_Globigerinella clavaticamerata	True		True
+Globigerina archaeobulloides	Globigerinella obesa	143	171	significant	overlap	N366-N298-N300-T304	True		True
+Globigerinella obesa	Globigerinella praesiphonifera	171	172	significant	overlap		False	N366-N298-N300-T304	True
+Globigerinella siphonifera	Globigerinella radians	175	173	speculative	overlap	L_Globigerinella radians	True		True
+Globigerinella obesa	Globigerinella roeglina	171	174	significant	overlap	L_Globigerinella roeglina	True		True
+Globigerinella praesiphonifera	Globigerinella siphonifera	172	175	significant	overlap		False	N366-N298-N300-T304	True
+Globigerinella obesa	Globigerinella wagneri	171	176	significant	overlap	L_Globigerinella wagneri	True		True
+Globigerinita glutinata	Globigerinita flparkerae	178	177	significant	overlap		False	L_Globigerinita glutinata	True
+Tenuitella munda	Globigerinita glutinata	443	178	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Globigerinita glutinata	Globigerinita iota	178	179	significant	overlap		False	L_Globigerinita glutinata	True
+Globigerinita glutinata	Globigerinita minuta	178	180	speculative	overlap	L_Globigerinita minuta	True		True
+Globigerinita polypetala	Globigerinita n. name	182	181	significant	overlap		False	T1021	True
+Globigerinita glutinata	Globigerinita polypetala	178	182	significant	overlap		False	L_Globigerinita glutinata	True
+Globigerinita minuta	Globigerinita uvula	180	183	significant	overlap	L_Globigerinita uvula	True		True
+Globigerinoides joli	Globigerinoides altiaperturus	192	184	significant	overlap		False	L_Globigerinoides joli	True
+Globigerinoides italicus	Globigerinoides bollii	191	185	significant	overlap	N326-N332-N334-T360;T343	True		True
+Globigerinoides eoconglobatus	Globigerinoides conglobatus	189	186	significant	overlap	T328	True	T328	True
+Globigerinoides subquadratus	Globigerinoides diminutus	200	187	significant	overlap		False	N326-N332-N334-T360	True
+Globigerinoides extremus	Globigerinoides elongatus	190	188	significant	overlap		False	N327-N329-T330;T331	True
+Globigerinoides obliquus	Globigerinoides eoconglobatus	196	189	significant	overlap		False	N327-N329-T330	True
+Globigerinoides obliquus	Globigerinoides extremus	196	190	significant	overlap		False	N327-N329-T330	True
+Globigerinoides neoparawoodi	Globigerinoides italicus	195	191	significant	overlap	L_first Globigerinoides	True	L_first Globigerinoides;T343	True
+Globigerinoides neoparawoodi	Globigerinoides joli	195	192	significant	overlap	L_Globigerinoides joli	True		True
+Globigerinoides bollii	Globigerinoides kennetti	185	193	significant	overlap		False	T353	True
+Globigerinoides subquadratus	Globigerinoides mitra	200	194	significant	overlap		False	N326-N332-N334-T360	True
+Globoturborotalita woodi	Globigerinoides neoparawoodi	286	195	significant	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globigerinoides altiaperturus	Globigerinoides obliquus	184	196	significant	overlap		False	L_Globigerinoides joli;N327-N329-T330	True
+Globigerinoides subquadratus	Globigerinoides ruber	200	197	significant	overlap	T335	True		True
+Globigerinoides conglobatus	Globigerinoides rublobatus	186	198	speculative	overlap	L_Globigerinoides rublobatus	True		True
+Globigerinoides ruber	Globigerinoides seigliei	197	199	significant	overlap		False	T335	True
+Globigerinoides italicus	Globigerinoides subquadratus	191	200	significant	overlap		False	L_first Globigerinoides	True
+Globigerinoides elongatus	Globigerinoides tenellus	188	201	significant	overlap		False	L_Globigerinoides elongatus	True
+Trilobatus sacculifer	Globigerinoidesella fistulosa	455	202	significant	overlap		False	N337-N339-T341	True
+Globoconella miotumida	Globoconella conomiozea	205	203	significant	overlap		False	N27	True
+Globoconella puncticulata	Globoconella inflata	209	204	significant	overlap		False	T29	True
+Globoconella miozea	Globoconella miotumida	206	205	significant	overlap		False	N27	True
+Globorotalia praescitula	Globoconella miozea	245	206	significant	overlap	N26-N32;N27	True		True
+Globoconella terminalis	Globoconella pliozea	211	207	significant	overlap		False	N27;T28	True
+Globoconella sphericomiozea	Globoconella pseudospinosa	210	208	significant	overlap		False	T29	True
+Globoconella sphericomiozea	Globoconella puncticulata	210	209	significant	overlap		False	T29	True
+Globoconella terminalis	Globoconella sphericomiozea	211	210	significant	overlap		False	N27	True
+Globoconella conomiozea	Globoconella terminalis	203	211	significant	boundary		False	N27	True
+Globoconella inflata	Globoconella triangula	204	212	strong	overlap		False	T29	True
+Guembelitria cretacea	Globoconusa daubjergensis	287	213	significant	overlap	L_Globoconusa	True		True
+Globoconusa daubjergensis	Globoconusa victori	213	214	strong	overlap		False	L_Globoconusa	True
+Dentoglobigerina larmeui	Globoquadrina dehiscens	111	215	significant	overlap		False	N179-T180	True
+Globorotalia praescitula	Globorotalia archeomenardii	245	216	significant	overlap		False	N26-N32	True
+Globorotalia scitula	Globorotalia bermudezi	249	217	significant	overlap	T124	True		True
+Globorotalia truncatulinoides	Globorotalia cavernula	252	218	significant	overlap		False	N64-T66	True
+Globorotalia scitula	Globorotalia challengeri	249	219	significant	overlap	T33	True		True
+Globorotalia scitula	Globorotalia cibaoensis	249	220	significant	overlap	N52-N54-T53	True		True
+Globorotalia crassaformis	Globorotalia crassaconica	222	221	significant	overlap	T57	True		True
+Globorotalia cibaoensis	Globorotalia crassaformis	220	222	significant	overlap	N56-N58-N59-T61	True		True
+Globorotalia cibaoensis	Globorotalia crassula	220	223	significant	overlap		False	N52-N54-T53	True
+Globorotalia praemenardii	Globorotalia cultrata	244	224	significant	overlap		False	N34-N40-T44	True
+Globorotalia margaritae	Globorotalia eastropacia	235	225	significant	overlap		False	N48-T50	True
+Globorotalia margaritae	Globorotalia evoluta	235	226	significant	overlap		False	N48-T50	True
+Globorotalia truncatulinoides	Globorotalia excelsa	252	227	significant	overlap		False	N62-T63;N64-T66	True
+Globorotalia limbata	Globorotalia exilis	234	228	significant	overlap	T38	True		True
+Globorotalia tumida	Globorotalia flexuosa	253	229	significant	overlap		False	N45-T43	True
+Globorotalia scitula	Globorotalia gigantea	249	230	significant	overlap		False	N26-N32;N47	True
+Globorotalia ronda	Globorotalia hessi	248	231	significant	overlap		False	N56-N58-N59-T61	True
+Globorotalia margaritae	Globorotalia hirsuta	235	232	significant	overlap		False	N48-T50	True
+Globorotalia scitula	Globorotalia juanai	249	233	significant	overlap		False	N47	True
+Globorotalia cultrata	Globorotalia limbata	224	234	significant	overlap		False	N34-N40-T44	True
+Globorotalia primitiva	Globorotalia margaritae	246	235	significant	overlap		False	N48-T50	True
+Globorotalia praemenardii	Globorotalia menardii	244	236	significant	overlap		False	N34-N40-T44	True
+Globorotalia cultrata	Globorotalia merotumida	224	237	significant	overlap		False	N34-N40-T44	True
+Globorotalia pseudomiocenica	Globorotalia miocenica	247	238	significant	overlap		False	N35-N37-T39	True
+Globorotalia limbata	Globorotalia multicamerata	234	239	significant	overlap	T36	True		True
+Globorotalia excelsa	Globorotalia pachytheca	227	240	significant	overlap		False	N62-T63;N64-T66	True
+Globorotalia archeomenardii	Globorotalia panda	216	241	speculative	overlap		False	N30;T31	True
+Globorotalia exilis	Globorotalia pertenuis	228	242	significant	overlap		False	T38	True
+Globorotalia merotumida	Globorotalia plesiotumida	237	243	significant	overlap		False	N42-T41	True
+Globorotalia archeomenardii	Globorotalia praemenardii	216	244	significant	overlap	N34-N40-T44;T31	True		True
+Paragloborotalia continuosa	Globorotalia praescitula	349	245	speculative	overlap	N25	True		True
+Globorotalia juanai	Globorotalia primitiva	233	246	significant	overlap		False	N48-T50	True
+Globorotalia limbata	Globorotalia pseudomiocenica	234	247	significant	overlap		False	N35-N37-T39	True
+Globorotalia crassaformis	Globorotalia ronda	222	248	significant	overlap		False	N56-N58-N59-T61	True
+Globorotalia praescitula	Globorotalia scitula	245	249	significant	overlap		False	N26-N32;N47	True
+Globorotalia ronda	Globorotalia tenuitheca	248	250	significant	overlap	N62-T63	True		True
+Globorotalia tenuitheca	Globorotalia tosaensis	250	251	significant	overlap		False	N62-T63	True
+Globorotalia tosaensis	Globorotalia truncatulinoides	251	252	significant	overlap		False	N62-T63	True
+Globorotalia plesiotumida	Globorotalia tumida	243	253	significant	overlap	N45-T43	True		True
+Globorotalia tumida	Globorotalia ungulata	253	254	significant	overlap		False	N45-T43	True
+Globorotalia crassaformis	Globorotalia viola	222	255	significant	overlap		False	N56-N58-N59-T61	True
+Globorotaloides stainforthi	Globorotaloides atlanticus	261	256	significant	overlap		False	T214	True
+Globorotaloides quadrocameratus	Globorotaloides eovariabilis	260	257	significant	overlap		False	N190-N199-T200	True
+Globorotaloides variabilis	Globorotaloides hexagonus	264	258	significant	overlap		False	N201-N998-N295-N203-T204	True
+Globorotaloides hexagonus	Globorotaloides oveyi	258	259	significant	overlap		False	N201-N998-N295-N203-T204	True
+Subbotina cancellata	Globorotaloides quadrocameratus	415	260	significant	boundary	N190-N199-T200	True		True
+Globorotaloides variabilis	Globorotaloides stainforthi	264	261	significant	overlap		False	N201-N998-N295-N203-T204	True
+Globorotaloides quadrocameratus	Globorotaloides suteri	260	262	significant	overlap		False	N190-N199-T200	True
+Globorotaloides eovariabilis	Globorotaloides testarugosus	257	263	significant	overlap	T202	True		True
+Globorotaloides eovariabilis	Globorotaloides variabilis	257	264	significant	overlap		False	N201-N998-N295-N203-T204	True
+Globoturborotalita bulloidea	Globoturborotalita apertura	270	265	significant	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita ouachitaensis	Globoturborotalita barbula	282	266	significant	overlap	L_Globoturborotalita barbula	True		True
+Subbotina hornibrooki	Globoturborotalita bassriverensis	420	267	significant	overlap	N308-T309	True	N308-T309	True
+Globoturborotalita pseudopraebulloides	Globoturborotalita bollii	284	268	speculative	overlap		False	L_Globoturborotalita pseudopraebulloides	True
+Globoturborotalita paracancellata	Globoturborotalita brazieri	283	269	significant	overlap	N325-T361	True		True
+Globoturborotalita woodi	Globoturborotalita bulloidea	286	270	speculative	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita bassriverensis	Globoturborotalita cancellata	267	271	significant	overlap	L_Globoturborotalita occlusa	True		True
+Globoturborotalita woodi	Globoturborotalita connecta	286	272	significant	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita woodi	Globoturborotalita decoraperta	286	273	significant	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita woodi	Globoturborotalita druryi	286	274	significant	overlap	T373	True		True
+Globoturborotalita bassriverensis	Globoturborotalita eolabiacrassata	267	275	significant	overlap	T323	True		True
+Globoturborotalita woodi	Globoturborotalita euapertura	286	276	significant	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Globoturborotalita ouachitaensis	Globoturborotalita gnaucki	282	277	significant	overlap		False	N319-T320	True
+Globoturborotalita eolabiacrassata	Globoturborotalita labiacrassata	275	278	significant	overlap		False	T323	True
+Globoturborotalita bassriverensis	Globoturborotalita martini	267	279	significant	overlap	N322	True		True
+Globoturborotalita druryi	Globoturborotalita nepenthes	274	280	significant	overlap	T355	True		True
+Globoturborotalita cancellata	Globoturborotalita occlusa	271	281	significant	overlap		False	L_Globoturborotalita occlusa	True
+Globoturborotalita bassriverensis	Globoturborotalita ouachitaensis	267	282	significant	overlap		False	N314-N318	True
+Globoturborotalita cancellata	Globoturborotalita paracancellata	271	283	significant	overlap		False	L_Globoturborotalita occlusa	True
+Globoturborotalita cancellata	Globoturborotalita pseudopraebulloides	271	284	significant	overlap	L_Globoturborotalita pseudopraebulloides	True		True
+Globoturborotalita decoraperta	Globoturborotalita rubescens	273	285	significant	overlap		False	N349-T350	True
+Globoturborotalita brazieri	Globoturborotalita woodi	269	286	significant	overlap	N324-N336-N342-N344-N348-N352-N354-T356	True		True
+Parasubbotina inaequispira	Guembelitrioides nuttalli	365	288	significant	overlap	N237-T238	True		True
+Hantkenina compressa	Hantkenina alabamensis	291	289	significant	overlap		False	N223-N225-N227-T228	True
+Hantkenina dumblei	Hantkenina australis	292	290	significant	overlap		False	N223-N225-N227-T228	True
+Hantkenina dumblei	Hantkenina compressa	292	291	significant	overlap		False	N223-N225-N227-T228	True
+Hantkenina liebusi	Hantkenina dumblei	294	292	significant	overlap		False	N223-N225-N227-T228	True
+Hantkenina liebusi	Hantkenina lehneri	294	293	significant	overlap		False	N223-N225-N227-T228	True
+Hantkenina mexicana	Hantkenina liebusi	295	294	significant	overlap		False	N223-N225-N227-T228	True
+Hantkenina singanoae	Hantkenina mexicana	298	295	strong	overlap		False	N223-N225-N227-T228	True
+Hantkenina alabamensis	Hantkenina nanggulanensis	289	296	significant	overlap		False	N223-N225-N227-T228;N358-T229	True
+Hantkenina compressa	Hantkenina primitiva	291	297	significant	overlap		False	N223-N225-N227-T228	True
+Clavigerinella caucasica	Hantkenina singanoae	94	298	strong	overlap		False	N223-N225-N227-T228	True
+Muricohedbergella monmouthensis	Hastigerina pelagica	331	299	speculative	overlap	L_Hastigerina	True		True
+Hastigerina pelagica	Hastigerinella digitata	299	300	speculative	overlap	L_Hastigerinella	True		True
+Igorina pusilla	Igorina albeari	302	301	significant	boundary	T73;T74	True		True
+Praemurica uncinata	Igorina pusilla	383	302	significant	boundary	N72	True		True
+Igorina pusilla	Igorina tadjikistanensis	302	303	significant	overlap		False	N72;T74	True
+Guembelitria cretacea	Jenkinsina columbiana	287	304	speculative	boundary		False	N1001-T1003	True
+Jenkinsina columbiana	Jenkinsina triseriata	304	305	significant	overlap		False	N1001-T1003	True
+Morozovella velascoensis	Morozovella acuta	325	306	significant	overlap		False	N80-N368-N370-T78	True
+Morozovella pasionensis	Morozovella acutispira	322	307	significant	overlap		False	N79;N80-N368-N370-T78;T82	True
+Morozovella apanthesma	Morozovella aequa	311	308	significant	overlap		False	N83-N84-T85	True
+Morozovella velascoensis	Morozovella allisonensis	325	309	significant	overlap	T369	True		True
+Morozovella praeangulata	Morozovella angulata	323	310	significant	overlap		False	N76-N101	True
+Morozovella angulata	Morozovella apanthesma	310	311	significant	overlap	N80-N368-N370-T78;N83-N84-T85	True	N83-N84-T85	True
+Morozovella lensiformis	Morozovella aragonensis	319	312	significant	overlap		False	N94-T95	True
+Morozovella crater	Morozovella caucasica	315	313	significant	overlap		False	N98-T96	True
+Morozovella angulata	Morozovella conicotruncata	310	314	significant	overlap		False	N76-N101	True
+Morozovella lensiformis	Morozovella crater	319	315	significant	overlap		False	N94-T95	True
+Morozovella velascoensis	Morozovella edgari	325	316	significant	overlap		False		True
+Morozovella gracilis	Morozovella formosa	318	317	significant	overlap		False	T92	True
+Morozovella subbotinae	Morozovella gracilis	324	318	significant	overlap		False	N88-N89-N90-T93	True
+Morozovella subbotinae	Morozovella lensiformis	324	319	significant	overlap	N94-T95	True		True
+Morozovella subbotinae	Morozovella marginodentata	324	320	significant	overlap		False	N88-N89-N90-T93	True
+Morozovella pasionensis	Morozovella occlusa	322	321	significant	overlap		False	N79;N80-N368-N370-T78	True
+Morozovella velascoensis	Morozovella pasionensis	325	322	significant	overlap		False	N80-N368-N370-T78	True
+Praemurica uncinata	Morozovella praeangulata	383	323	significant	overlap	N76-N101	True		True
+Morozovella aequa	Morozovella subbotinae	308	324	significant	overlap	N88-N89-N90-T93	True		True
+Morozovella conicotruncata	Morozovella velascoensis	314	325	significant	overlap		False	N80-N368-N370-T78	True
+Acarinina praetopilensis	Morozovelloides bandyi	20	326	significant	overlap		False	N130-N131-N136-N142-N144-T148	True
+Morozovelloides crassatus	Morozovelloides coronatus	328	327	significant	overlap		False	N130-N131-N136-N142-N144-T148;N137-N139-T143	True
+Morozovelloides bandyi	Morozovelloides crassatus	326	328	significant	overlap		False	N130-N131-N136-N142-N144-T148;N137-N139-T143	True
+Morozovelloides coronatus	Morozovelloides lehneri	327	329	significant	overlap	T138	True		True
+Muricohedbergella holmdelensis	Muricohedbergella monmouthensis	330	331	significant	overlap	N256-N2-N198-T67	True		True
+Globigerinita glutinata	Mutabella mirabilis	178	332	significant	overlap		False	L_Globigerinita glutinata	True
+Globoconella puncticulata	Neoacarinina blowi	209	333	speculative	overlap		False	T29	True
+Paragloborotalia continuosa	Neogloboquadrina acostaensis	349	335	significant	overlap		False	N23-N156-N157-N160-T161	True
+Paragloborotalia continuosa	Neogloboquadrina atlantica	349	336	speculative	overlap		False	N23-N156-N157-N160-T161	True
+Neogloboquadrina humerosa	Neogloboquadrina dutertrei	338	337	significant	overlap		False	T158	True
+Neogloboquadrina acostaensis	Neogloboquadrina humerosa	335	338	significant	overlap		False	N23-N156-N157-N160-T161	True
+Paragloborotalia continuosa	Neogloboquadrina incompta	349	339	speculative	overlap		False	N23-N156-N157-N160-T161	True
+Neogloboquadrina atlantica	Neogloboquadrina inglei	336	340	speculative	overlap		False	T158	True
+Paragloborotalia continuosa	Neogloboquadrina pachyderma	349	341	significant	overlap		False	N23-N156-N157-N160-T161	True
+Praeorbulina circularis	Orbulina suturalis	384	342	significant	overlap		False	T338	True
+Orbulina suturalis	Orbulina universa	342	343	significant	overlap		False	T338	True
+Globigerinatheka euganea	Orbulinoides beckmanni	156	344	significant	overlap		False	N253-T254	True
+Turborotalita quinqueloba	Orcadia riedeli	474	345	speculative	overlap	L_Orcadia	True		True
+Paragloborotalia pseudocontinuosa	Paragloborotalia acrostoma	356	346	significant	overlap		False	L_Paragloborotalia incognita	True
+Paragloborotalia siakensis	Paragloborotalia bella	359	347	significant	overlap		False	T194	True
+Paragloborotalia nana	Paragloborotalia birnageae	354	348	significant	overlap		False	N193-N195-T197	True
+Paragloborotalia nana	Paragloborotalia continuosa	354	349	significant	overlap	N23-N156-N157-N160-T161	True		True
+Parasubbotina varianta	Paragloborotalia griffinoides	369	350	significant	overlap		False	N184-N186-N187-N188-T189	True
+Paragloborotalia pseudocontinuosa	Paragloborotalia incognita	356	351	significant	overlap		False	L_Paragloborotalia incognita	True
+Paragloborotalia pseudokugleri	Paragloborotalia kugleri	357	352	significant	overlap		False	N150-N151-T153	True
+Paragloborotalia siakensis	Paragloborotalia mayeri	359	353	significant	overlap		False	T194	True
+Paragloborotalia griffinoides	Paragloborotalia nana	350	354	significant	overlap		False	N191-T192	True
+Paragloborotalia nana	Paragloborotalia opima	354	355	significant	overlap		False	N193-N195-T197	True
+Paragloborotalia nana	Paragloborotalia pseudocontinuosa	354	356	significant	overlap	L_Paragloborotalia incognita	True		True
+Paragloborotalia nana	Paragloborotalia pseudokugleri	354	357	significant	overlap	N150-N151-T153	True		True
+Paragloborotalia pseudocontinuosa	Paragloborotalia semivera	356	358	significant	overlap	T194	False	L_Paragloborotalia incognita	True
+Paragloborotalia nana	Paragloborotalia siakensis	354	359	significant	overlap		False	N193-N195-T197	True
+Paragloborotalia incognita	Paragloborotalia zealandica	351	360	significant	overlap		False	L_Paragloborotalia incognita	True
+Muricohedbergella monmouthensis	Parasubbotina aff. pseudobulloides	331	361	significant	overlap	N182-T183	True		True
+Parasubbotina inaequispira	Parasubbotina eoclava	365	362	significant	overlap	N218-T219	True		True
+Parasubbotina inaequispira	Parasubbotina griffinae	365	363	significant	overlap		False	N215-N217-N231-N235-T236	True
+Parasubbotina varianta	Parasubbotina hagni	369	364	speculative	overlap		False	N184-N186-N187-N188-T189	True
+Parasubbotina varianta	Parasubbotina inaequispira	369	365	significant	overlap	N215-N217-N231-N235-T236	True		True
+Parasubbotina inaequispira	Parasubbotina prebetica	365	366	significant	overlap		False	N215-N217-N231-N235-T236	True
+Parasubbotina aff. pseudobulloides	Parasubbotina pseudobulloides	361	367	significant	boundary		False	N182-T183	True
+Parasubbotina varianta	Parasubbotina pseudowilsoni	369	368	significant	overlap		False	N184-N186-N187-N188-T189	True
+Parasubbotina pseudobulloides	Parasubbotina varianta	367	369	significant	overlap		False	N182-T183	True
+Parasubbotina varianta	Parasubbotina variospira	369	370	significant	overlap		False	N184-N186-N187-N188-T189	True
+Guembelitria cretacea	Parvularugoglobigerina alabamensis	287	371	significant	overlap	L_Parvularugoglobigerina	True		True
+Parvularugoglobigerina extensa	Parvularugoglobigerina eugubina	373	372	significant	overlap		False	L_Parvularugoglobigerina	True
+Parvularugoglobigerina alabamensis	Parvularugoglobigerina extensa	371	373	significant	overlap		False	L_Parvularugoglobigerina	True
+Pearsonites broedermanni	Pearsonites anapetes	375	374	significant	overlap		False	L_Pearsonites	True
+Pearsonites lodoensis	Pearsonites broedermanni	376	375	significant	overlap		False	L_Pearsonites	True
+Acarinina esnehensis	Pearsonites lodoensis	13	376	significant	overlap	L_Pearsonites	True		True
+Globanomalina planoconica	Planoglobanomalina pseudoalgeriana	141	377	significant	overlap		False	N4-T12	True
+Planorotalites pseudoscitula	Planorotalites capdevilensis	379	378	significant	overlap		False	N86-T87	True
+Morozovella apanthesma	Planorotalites pseudoscitula	311	379	significant	overlap		False	N83-N84-T85	True
+Praemurica pseudoinconstans	Praemurica inconstans	381	380	significant	overlap		False	N68-N69-N70-T71	True
+Praemurica taurica	Praemurica pseudoinconstans	382	381	significant	overlap		False	N68-N69-N70-T71	True
+Muricohedbergella monmouthensis	Praemurica taurica	331	382	significant	boundary	N68-N69-N70-T71	True		True
+Praemurica inconstans	Praemurica uncinata	380	383	significant	overlap		False	N68-N69-N70-T71	True
+Praeorbulina glomerosa	Praeorbulina circularis	386	384	significant	overlap		False	T338	True
+Trilobatus sicanus	Praeorbulina curva	456	385	significant	overlap		False	T338	True
+Praeorbulina curva	Praeorbulina glomerosa	385	386	significant	overlap		False	T338	True
+Praepararotalia cretacea	Praepararotalia perclara	387	388	speculative	overlap		False	N1013-T1014	False
+Protentella prolixa	Protentella nicobarensis	390	389	significant	overlap		False	T367	True
+Globigerinella obesa	Protentella prolixa	171	390	significant	overlap	T367	True		True
+Protentelloides primitivus	Protentelloides dalhousiei	392	391	significant	overlap		False	T214	True
+Globorotaloides atlanticus	Protentelloides primitivus	256	392	significant	overlap		False	T214	True
+Parasubbotina griffinae	Pseudoglobigerinella bolivariana	363	393	significant	overlap		False	N215-N217-N231-N235-T236;N232-T233	True
+Pseudohastigerina wilcoxensis	Pseudohastigerina micra	397	394	significant	overlap		False	N5-N6-N8-T9	True
+Pseudohastigerina micra	Pseudohastigerina naguewichiensis	394	395	significant	overlap	T10	True		True
+Pseudohastigerina wilcoxensis	Pseudohastigerina sharkriverensis	397	396	significant	overlap		False	N5-N6-N8-T9	True
+Globanomalina luxorensis	Pseudohastigerina wilcoxensis	138	397	significant	overlap		False	N5-N6-N8-T9	True
+Pulleniatina obliquiloculata	Pulleniatina finalis	399	398	significant	overlap		False	T162	True
+Pulleniatina praecursor	Pulleniatina obliquiloculata	400	399	significant	overlap		False	T162	True
+Pulleniatina primalis	Pulleniatina praecursor	402	400	significant	overlap		False	T162	True
+Pulleniatina primalis	Pulleniatina praespectabilis	402	401	significant	overlap		False	N364	True
+Neogloboquadrina acostaensis	Pulleniatina primalis	335	402	significant	overlap	N364	True		True
+Pulleniatina praespectabilis	Pulleniatina spectabilis	401	403	significant	overlap		False	T365	True
+Globigerinella roeglina	Quiltyella clavacella	174	404	speculative	overlap	L_Quiltyella clavacella	True		True
+Quiltyella clavacella	Quiltyella nazcaensis	404	405	speculative	overlap		False	L_Quiltyella clavacella	True
+Cassigerinella eocaenica	Riveroinella martinezpicoi	69	407	significant	overlap		False	N1009-T1010	True
+Globoturborotalita druryi	Soldaniella toscanae	274	408	speculative	overlap	L_Soldaniella	True		True
+Sphaeroidinellopsis paenedehiscens	Sphaeroidinella dehiscens	412	409	significant	overlap		False	N345-T347	True
+Globoturborotalita woodi	Sphaeroidinellopsis disjuncta	286	410	significant	overlap		False	N324-N336-N342-N344-N348-N352-N354-T356	True
+Sphaeroidinellopsis disjuncta	Sphaeroidinellopsis kochi	410	411	significant	overlap		False	N345-T347	True
+Sphaeroidinellopsis seminulina	Sphaeroidinellopsis paenedehiscens	413	412	significant	overlap		False	N345-T347	True
+Sphaeroidinellopsis disjuncta	Sphaeroidinellopsis seminulina	410	413	significant	overlap		False	N345-T347	True
+Subbotina minima	Subbotina angiporoides	423	414	significant	overlap		False	N310-T313;T359	True
+Subbotina trivialis	Subbotina cancellata	431	415	significant	overlap	N305	True		True
+Subbotina eocaena	Subbotina corpulenta	418	416	significant	overlap		False	N267	True
+Subbotina yeguaensis	Subbotina crociapertura	434	417	significant	overlap		False	N264-N265-N276-N278-N281-N283-T284;N77-T266	True
+Subbotina roesnaesensis	Subbotina eocaena	426	418	significant	overlap		False	N264-N265-N276-N278-N281-N283-T284	True
+Subbotina yeguaensis	Subbotina gortanii	434	419	significant	overlap		False	N77-T266	True
+Subbotina velascoensis	Subbotina hornibrooki	433	420	significant	overlap		False	N306-T307	True
+Subbotina eocaena	Subbotina jacksonensis	418	421	significant	overlap		False	N269	True
+Subbotina patagonica	Subbotina linaperta	424	422	significant	overlap		False	N310-T313	True
+Subbotina linaperta	Subbotina minima	422	423	significant	overlap		False	N310-T313	True
+Subbotina cancellata	Subbotina patagonica	415	424	significant	overlap		False	N310-T313	True
+Subbotina tecta	Subbotina projecta	428	425	significant	overlap		False	N271-T272	True
+Subbotina triangularis	Subbotina roesnaesensis	429	426	significant	overlap	N264-N265-N276-N278-N281-N283-T284	True		True
+Subbotina roesnaesensis	Subbotina senni	426	427	significant	overlap		False	N264-N265-N276-N278-N281-N283-T284	True
+Subbotina eocaena	Subbotina tecta	418	428	significant	overlap		False	N271-T272	True
+Subbotina trivialis	Subbotina triangularis	431	429	significant	boundary		False	N259-N261-N262-T263	True
+Subbotina trivialis	Subbotina triloculinoides	431	430	significant	overlap		False	N259-N261-N262-T263	True
+Eoglobigerina eobulloides	Subbotina trivialis	122	431	significant	overlap		False	N257	True
+Subbotina linaperta	Subbotina utilisindex	422	432	significant	overlap		False	N310-T313	True
+Subbotina cancellata	Subbotina velascoensis	415	433	significant	overlap		False	N305	True
+Subbotina roesnaesensis	Subbotina yeguaensis	426	434	significant	overlap		False	N264-N265-N276-N278-N281-N283-T284	True
+Tenuitella munda	Tenuitella angustiumbilicata	443	435	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella brevispira	Tenuitella brasilensis	437	436	speculative	overlap		False	L_Tenuitella brasilensis	True
+Tenuitella munda	Tenuitella brevispira	443	437	speculative	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella angustiumbilicata	Tenuitella cf. minutissima	435	438	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella praegemma	Tenuitella gemma	447	439	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Dipsidripella liqianyui	Tenuitella insolita	120	440	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella angustiumbilicata	Tenuitella jamesi	435	441	strong	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella gemma	Tenuitella minutissima	439	442	significant	overlap	T1019	True	T1019	True
+Tenuitella gemma	Tenuitella munda	439	443	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella cf. minutissima	Tenuitella neobrevispira	438	444	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella insolita	Tenuitella patefacta	440	445	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella minutissima	Tenuitella pieste	442	446	strong	overlap		False	T1019	True
+Tenuitella patefacta	Tenuitella praegemma	445	447	significant	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Tenuitella angustiumbilicata	Tenuitella selleyi	435	448	strong	overlap		False	N1015-N1027-N1029-N1031-N1033-T1035	True
+Trilobatus primordius	Trilobatus altospiralis	453	449	significant	overlap	L_Trilobatus altospiralis	True		True
+Trilobatus trilobus	Trilobatus bisphericus	458	450	significant	overlap		False	N337-N339-T341	True
+Trilobatus primordius	Trilobatus immaturus	453	451	significant	overlap		False	L_Globoturborotalita occlusa;T287	True
+Trilobatus immaturus	Trilobatus praeimmaturus	451	452	significant	overlap		False	N337-N339-T341	True
+Globoturborotalita paracancellata	Trilobatus primordius	283	453	significant	overlap		False	L_Globoturborotalita occlusa	True
+Trilobatus primordius	Trilobatus quadrilobatus	453	454	significant	overlap		False	L_Globoturborotalita occlusa;T287	True
+Trilobatus subsacculifer	Trilobatus sacculifer	457	455	speculative	overlap		False	N337-N339-T341	True
+Trilobatus bisphericus	Trilobatus sicanus	450	456	significant	overlap		False	T338	True
+Trilobatus trilobus	Trilobatus subsacculifer	458	457	significant	overlap		False	N337-N339-T341;T287	True
+Trilobatus immaturus	Trilobatus trilobus	451	458	significant	overlap		False	L_Globoturborotalita occlusa;N337-N339-T341;T287	True
+Turborotalia pomeroli	Turborotalia altispiroides	466	459	significant	overlap		False	N15-N17	True
+Turborotalia pomeroli	Turborotalia ampliapertura	466	460	significant	overlap		False	N15-N17	True
+Turborotalia pomeroli	Turborotalia cerroazulensis	466	461	significant	overlap		False	N15-N17;N18-T19	True
+Turborotalia cerroazulensis	Turborotalia cocoaensis	461	462	strong	overlap		False	N15-N17;N18-T19	True
+Turborotalia cocoaensis	Turborotalia cunialensis	462	463	significant	overlap		False	T20	True
+Globanomalina australiformis	Turborotalia frontosa	133	464	significant	overlap	N15-N17	True		True
+Turborotalia pomeroli	Turborotalia increbescens	466	465	significant	overlap		False	N15-N17	True
+Turborotalia frontosa	Turborotalia pomeroli	464	466	significant	overlap		False	N15-N17	True
+Turborotalia frontosa	Turborotalia possagnoensis	464	467	significant	overlap		False	N15-N17	True
+Turborotalita nikolasi	Turborotalita carcoselleensis	472	468	speculative	boundary		False	N315-T_316	True
+Turborotalita cristata	Turborotalita clarkei	470	469	significant	overlap		False	T317	True
+Turborotalita humilis	Turborotalita cristata	471	470	significant	overlap		False	T317	True
+Turborotalita quinqueloba	Turborotalita humilis	474	471	significant	overlap		False	N315-T_316	True
+Muricohedbergella monmouthensis	Turborotalita nikolasi	331	472	speculative	overlap	N315-T_316	True		True
+Turborotalita quinqueloba	Turborotalita praequinqueloba	474	473	significant	overlap		False	N315-T_316	True
+Turborotalita carcoselleensis	Turborotalita quinqueloba	468	474	significant	overlap		False	N315-T_316	True
+Guembelitria cretacea	Woodringina claytonensis	287	475	significant	overlap	L_Woodringina	True		True
+Woodringina claytonensis	Woodringina hornerstownensis	475	476	significant	overlap		False	L_Woodringina	True
+Zeauvigerina teuria	Zeauvigerina aegyptiaca	480	477	significant	overlap		False	L_Zeauvigerina	True
+Zeauvigerina aegyptiaca	Zeauvigerina lodoensis	477	478	speculative	overlap		False	L_Zeauvigerina	True
+Zeauvigerina zelandica	Zeauvigerina parri	483	479	significant	overlap		False	L_Zeauvigerina	True
+Zeauvigerina waiparaensis	Zeauvigerina teuria	482	480	significant	overlap		False	L_Zeauvigerina	True
+Zeauvigerina waiparaensis	`Zeauvigerina` virgata	482	481	speculative	overlap	L_`Zeauvigerina`	True		True
+Zeauvigerina aegyptiaca	Zeauvigerina zelandica	477	483	significant	overlap		False	L_Zeauvigerina	True

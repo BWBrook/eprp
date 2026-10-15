@@ -295,7 +295,8 @@ Owner Claude. **Hold (support), from develop on 15 October.** Source: Claude C10
     finishes the nominated families. The screens are for workflow only. If
     support is inadequate, practical hold and move to Q-012/D1.
   - **Source inventory (15 October; [record](../literature/2026-10-15-b003-source-inventory.md)).**
-    - Only Dietl 2003 (whelks and Mercenaria) passes the literal screen,
+    - Only Dietl 2003 (whelks and Mercenaria) passes the horizon and
+      sample-count screen (its lineage continuity is unverified),
       and it is weak:
       - the predator measure is a sample maximum, with n of 16–36 that
         doubles across horizons;

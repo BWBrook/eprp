@@ -680,27 +680,30 @@ identifiability point.
     relatives separates inherited from non-inherited frailty at that pair
     count.
   - **Support and identification design (15 October, with blue-sky D1
-    folded in; [design](../literature/2026-10-15-q012-support-identification-design.md)).**
-    - **Support**, from Lamyman et al. 2026 S1 (482 morphospecies;
-      Zenodo 21414007, CC BY 4.0):
-      - 471 parent–daughter pairs, 453 of them budding;
-      - 323 sister pairs from 107 sibships;
-      - 365 and 249 pairs with both members extinct;
-      - 134 sister and 150 parent–daughter pairs differ in ecogroup.
-    - **Estimand:** the inherited frailty correlation ρ along the tree.
-      ρ = 0 is D1's "reset".
-    - **Separating inheritance from shared exposure:**
-      - a time × ecogroup baseline;
-      - relatives in different ecogroups;
-      - decay with origination gap;
-      - time-matched non-relative controls;
-      - left truncation at each parent's last budding.
-    - **D1's signature:** the sign of the effect of parent age at budding
-      on daughter duration.
-    - **Next:** Codex reviews. Then reconcile the 482 and 480 counts, freeze
-      ρ₀ = 0.1 and ρ₁ = 0.4 as working values, and run a discrimination
-      check with false-decision and coverage criteria before any
-      estimation.
+    folded in; amended after Codex's single review;
+    [design](../literature/2026-10-15-q012-support-identification-design.md);
+    [event dictionary](../data/q012-event-dictionary/README.md)).**
+    - **Unit:** the source's 268 lineage records, pending the article's
+      definition. They give 257 parent–daughter links (215 where the
+      parent persists) and 234 sister pairs. The morphospecies level is
+      sensitivity only, because no speciation mode is defined there.
+    - **Estimand:** η = ρσ, the standard deviation of a daughter's log
+      frailty predicted by its parent's. Hazard ratio exp(2η); working
+      values 0.05 and 0.20.
+    - **Persistent exposure tied to clades (R3b) is equivalent to
+      inheritance** without exposure data, so the claim would then be
+      residual phylogenetic dependence. Triton's palaeogeography is the
+      separating data.
+    - **Likelihood:** a joint likelihood for the realised history. Budding
+      stays in the likelihood unless frailty does not affect it, and there
+      is an inclusion term. The truncation rule is withdrawn.
+    - **Forecasting:** at a landmark (daughter origination), with a
+      permitted information table, cross-fitting, a censoring-aware score
+      and a paired skill test.
+    - **Calibration:** a combined decision with Monte Carlo pass rules.
+    - **Next gates:** confirm the lineage definition (article Methods); a
+      Triton joint exposure audit; freeze inputs; a cost pilot;
+      calibration.
 
 - **Identification problem.** Declining hazard with age is widely observed
   (Silvestro et al. 2019, 10.1111/ele.13441; Hagen et al. 2018). Survival curves
