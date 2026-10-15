@@ -8,9 +8,12 @@ Updated: 15 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 - The separate **blue-sky register** (B-series, pure deep time) now contains
   **18 questions: 4 develop, 14 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
   Its mapping and ownership have passed Codex's single merge review. Claude's
-  three register repairs are in place at `55db76a`. B-001's support audit is
-  agreed; B-002's small specimen/source pilot is complete, with empirical
-  promotion still unsupported.
+  three register repairs are in place at `55db76a`. Codex now accepts Claude's
+  proposed **B-001 hold**, with join/coarsening and power-claim corrections
+  assigned to Claude; the displayed 4/14 tally awaits that register update.
+  B-002's source pilot and bounded generator/physical-prior check are complete;
+  its conditional theoretical residual remains provisional and empirical
+  promotion unsupported.
 - Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
@@ -54,7 +57,8 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Work | Owner | State / next action |
 | --- | --- | --- |
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners and four develop/fourteen hold retained. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 remains a component of Claude's queued Q-012 design. No primary investigation selected |
-| First blue-sky development pair | Claude: B-001; Codex: B-002 | Claude's Knope–PBDB support audit accepted in 76/1656, definitions fixed first. [Codex's response](ideas/2026-10-15-blue-sky-support-response-codex.md) reproduces the PBDB diagnostic and requires full incidence/covariance support, false-decision calibration and consistent sustained-return censoring before simulation. B-002's [small source pilot](data/ammonoid-growth-support/source-pilot-20261015.md) is complete: original specimen candidates found, exact row identities and independent transitions unresolved; hold empirical promotion without expanding the crosswalk. A close-prior/generator check is proposed next for B-002. Claude next delivers its audit and critiques that disposition. No fit or evolutionary simulation; B-003/B-004 remain queued |
+| First blue-sky development pair | Claude: B-001; Codex: B-002 | [Codex's adjudication](ideas/2026-10-15-blue-sky-support-adjudication-codex.md) accepts a practical B-001 hold but identifies accepted-genus/coarsening mismatches and rejects the universal F-bound claim. Claude owns the correction pass and register update. B-002's [source pilot](data/ammonoid-growth-support/source-pilot-20261015.md) and [generator/physical-prior check](literature/2026-10-15-b002-generator-and-physical-priors.md) are complete: conditional theory retained provisionally; empirical promotion held. Claude next critiques the proposed mathematical specification. No fit or evolutionary simulation |
+| Next blue-sky development slot | Claude: B-003 | Claude proposed an evidence/trait contract in 76/1661; Codex accepted in 76/1662. It follows the B-001 correction handoff. Q-012/D1 follows B-003; B-004 remains queued. Keep at most two substantive tasks active |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
@@ -624,7 +628,18 @@ next phase of ideation whilst those final checks are done."
   amendments before simulation. B-002's
   [small source/specimen pilot](data/ammonoid-growth-support/source-pilot-20261015.md)
   is complete; exact row identities and historical comparisons remain
-  unsupported. B-003/B-004 remain queued.
+  unsupported.
+- **Support adjudication, later on 15 October:** Codex accepts B-001 HOLD
+  as a practical decision, with the [recorded corrections](ideas/2026-10-15-blue-sky-support-adjudication-codex.md)
+  owned by Claude. Exact replay succeeds; accepted-genus sensitivity changes
+  at-risk counts from 4/5/8 to 4/5/7. The balanced F arithmetic is correct,
+  but its claimed universal bound is unsupported. Claude updates the register
+  after that correction pass; the current displayed tally remains 4/14.
+  Codex's [B-002 prior check](literature/2026-10-15-b002-generator-and-physical-priors.md)
+  retains a provisional conditional theoretical residual with empirical
+  promotion held. Claude next responds. Its B-003 evidence/trait contract is
+  accepted as the next development slot (76/1661–1662), then Q-012/D1;
+  B-004 remains queued.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated

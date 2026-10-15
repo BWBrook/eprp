@@ -22,6 +22,12 @@ counts remain unresolved. The [updated support record](../data/ammonoid-growth-s
 preserves exact exception cells and source provenance. No evolutionary
 simulation, empirical fit, new digitisation or remote work occurred.
 
+**Prior-check update, 15 October:** the [generator and physical-prior check](2026-10-15-b002-generator-and-physical-priors.md)
+inspects Urdy's main model and the named 3D studies. The matched theoretical
+contrast survives provisionally; a new generator or juvenile hydrostatics
+alone would duplicate prior work. Physical reconstruction, relationship
+support and remaining close-prior access limits keep launch gates unpassed.
+
 ## Biological question and three different objects
 
 Could useful adult ammonoid designs remain difficult to reach because changes
@@ -52,7 +58,7 @@ refer to the actual team reads, not publication accessibility in principle.
 | Raup & Michelson 1965, *Theoretical Morphology of the Coiled Shell*, [10.1126/science.147.3663.1294](https://doi.org/10.1126/science.147.3663.1294) | Generating unrealised shell forms to examine functional questions | Official bibliographic record/abstract; body unread |
 | Raup 1966, *Geometric analysis of shell coiling: general problems*, J. Paleontol. 40:1178–1190; 1967, *…coiling in ammonoids*, 41:43–65 | The established shell-coiling tradition; growth-dependent coiling is not a newly recognised issue | Bibliography verified in Ritterbush; original full reads incomplete. No DOI assigned here |
 | Ritterbush & Bottjer 2012, *Westermann Morphospace displays ammonoid shell shape and hypothetical paleoecology*, [10.1666/10027.1](https://doi.org/10.1666/10027.1) | Empirical shape projection, hypothetical ecology and explicit ontogenetic variation | Publisher abstract/bibliography; full main text unread. Ecological categories are not measured fitness |
-| Urdy et al. 2010, *Allometries and the morphogenesis of the molluscan shell*, [10.1002/jez.b.21337](https://doi.org/10.1002/jez.b.21337) | An accretionary growth-vector model generating complete ontogenies with varied growth controls | Complete publisher abstract and supplement inventory. Full body remains a close-prior gate |
+| Urdy et al. 2010, *Allometries and the morphogenesis of the molluscan shell*, [10.1002/jez.b.21337](https://doi.org/10.1002/jez.b.21337) | An accretionary growth-vector model generating complete ontogenies with coupled growth controls | Main Methods, relevant Results and Discussion inspected on 15 October; [source-depth update](2026-10-15-b002-generator-and-physical-priors.md). Supplementary appendices/code remain unverified |
 | Walton & Korn 2017, [10.1111/pala.12308](https://doi.org/10.1111/pala.12308); [2018 deposit](https://doi.org/10.5061/dryad.c17p8) | Recurrent growth modes and comparison of 177 species | Workbook audited; publisher Methods, relevant tables/captions and Discussion inspected on 15 October; [source pilot](../data/ammonoid-growth-support/source-pilot-20261015.md) records selection, candidate specimens and limits |
 | Peterman et al. 2020, [10.1371/journal.pone.0235180](https://doi.org/10.1371/journal.pone.0235180) | Physical evaluation of 14 reconstructed Nipponites growth stages | Relevant full Methods/Results/Discussion; shell and tissue assumptions are explicit. It does not itself supply intergenerational routes |
 | Gerber 2017 (online 2016), *The geometry of morphospaces*, [10.1111/brv.12276](https://doi.org/10.1111/brv.12276) | A methodological warning about interpreting Raup-space distances, with a landmark alternative | PubMed abstract; full text unread. Cited as a geometric caution, not empirical evidence for an ancient barrier |
@@ -187,24 +193,27 @@ eligible events.
 | Close-prior full text already supplies the same contrast/predictions | Narrow or park the residual rather than commission a duplicate model |
 
 **Complete:** the matched first contrast, threshold/topology safeguards,
-close-prior update, precise source identification, reproducible content audit
-and [small specimen/source pilot](../data/ammonoid-growth-support/source-pilot-20261015.md).
-**Unpassed:** eligible historical transition counts, close-prior full reads, defended physical
+precise source identification, reproducible content audit,
+[small specimen/source pilot](../data/ammonoid-growth-support/source-pilot-20261015.md)
+and [bounded generator/physical-prior check](2026-10-15-b002-generator-and-physical-priors.md).
+**Unpassed:** eligible historical transition counts, remaining close-prior reads, defended physical
 parameter ranges and a consequential effect threshold. No numerical model is
 commissioned at this checkpoint.
 
 Codex retains B-002 ownership. The 15 October pilot recovers candidate specimens,
 but verifies no exact row-to-specimen assignment or eligible independent
 transition. Hold empirical promotion on that pilot; do not expand the crosswalk
-now. The proposed next finite product is a full-text close-prior/generator check
-of Urdy and the theoretical-morphospace literature, testing whether a distinct
-conditional theoretical question survives. It is separate from a fossil test
-and does not commission a numerical model.
+now. The prior check retains the conditional route contrast and proposes a
+small mathematical specification of the generator-to-physics mapping and
+programme-change rule. Claude next critiques that narrowed disposition;
+neither a fossil test nor a numerical model is commissioned.
 The B-register mapping is now reviewed in the
 [single merge review](../ideas/2026-10-14-blue-sky-merge-review-codex.md);
-Claude's register repairs are accepted; Claude next critiques the source-pilot
-disposition while undertaking the agreed B-001 support audit.
-The proposed C10/D3 pair remains queued, with D3's
+Claude's register repairs are accepted. The B-001 audit has now been
+[adjudicated](../ideas/2026-10-15-blue-sky-support-adjudication-codex.md):
+Codex accepts a practical hold, with implementation and power-claim repairs
+assigned to Claude. B-003 (C10) is accepted as Claude's next development slot.
+B-004 (D3) remains queued, with D3's
 local-versus-global engineering scale and contrary prior explicitly reserved
 for its later contract.
 

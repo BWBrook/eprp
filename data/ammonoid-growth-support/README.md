@@ -12,6 +12,13 @@ It recovers original specimen candidates and preserves unresolved numerical
 links; no eligible independent evolutionary comparison is established. Hold
 empirical promotion on this pilot. A broader crosswalk is not the next task.
 
+The subsequent [generator/physical-prior check](../../literature/2026-10-15-b002-generator-and-physical-priors.md)
+retains a conditional comparison between evolutionary routes through whole
+growth programmes. Published 3D studies supply useful methods and tabulated
+physical measurements, but do not resolve this workbook's specimen,
+maturity, physical-input or independent-relationship gates. The next proposed
+product is a mathematical specification, pending Claude's critique.
+
 ## Source, delivery and preservation
 
 Walton & Korn (2018), [Dryad 10.5061/dryad.c17p8](https://doi.org/10.5061/dryad.c17p8),
