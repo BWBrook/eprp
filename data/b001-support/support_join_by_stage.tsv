@@ -1,19 +1,19 @@
-event	stage	role	collections	occurrences	genera	genera_joined	genera_join_share	occ_join_share	join_name_phylum	join_name_only	unjoined_ambiguous	unjoined_absent
-end_permian	Wuchiapingian	penultimate	3460	13549	1078	486	0.451	0.672	484	2	0	592
-end_permian	Changhsingian	baseline	2698	10284	900	381	0.423	0.564	379	2	0	519
-end_permian	Induan	follow	2184	5455	357	117	0.328	0.545	117	0	0	240
-end_permian	Olenekian	follow	2647	8292	650	245	0.377	0.559	245	0	0	405
-end_permian	Anisian	follow	3138	10744	1075	424	0.394	0.660	424	0	0	651
-end_permian	Ladinian	confirm	1487	4276	820	366	0.446	0.585	366	0	0	454
-end_triassic	Norian	penultimate	2026	6117	1051	506	0.481	0.627	505	1	0	545
-end_triassic	Rhaetian	baseline	1505	4638	667	301	0.451	0.606	300	1	0	366
-end_triassic	Hettangian	follow	971	2614	479	183	0.382	0.498	181	2	0	296
-end_triassic	Sinemurian	follow	1654	5248	606	271	0.447	0.674	271	0	0	335
-end_triassic	Pliensbachian	follow	4126	13820	750	362	0.483	0.670	361	1	0	388
-end_triassic	Toarcian	confirm	4420	13134	1011	292	0.289	0.608	292	0	0	719
-k_pg	Campanian	penultimate	3140	13161	1815	704	0.388	0.500	704	0	0	1111
-k_pg	Maastrichtian	baseline	3593	24227	1839	717	0.390	0.545	717	0	0	1122
-k_pg	Danian	follow	947	5506	1288	469	0.364	0.442	469	0	0	819
-k_pg	Selandian	follow	181	1979	573	193	0.337	0.391	193	0	0	380
-k_pg	Thanetian	follow	587	3413	855	282	0.330	0.395	282	0	0	573
-k_pg	Ypresian	confirm	1554	10066	2271	557	0.245	0.323	557	0	0	1714
+event	stage	role	collections	occurrences	genera	genera_joined	genera_join_share	occ_join_share	join_name_phylum	join_name_only	unjoined_conflict	unjoined_ambiguous	unjoined_absent
+end_permian	Wuchiapingian	penultimate	3460	13544	1041	483	0.464	0.686	481	2	0	0	558
+end_permian	Changhsingian	baseline	2698	10284	874	380	0.435	0.569	378	2	0	0	494
+end_permian	Induan	follow	2184	5455	348	117	0.336	0.551	117	0	0	0	231
+end_permian	Olenekian	follow	2647	8292	638	246	0.386	0.566	246	0	0	0	392
+end_permian	Anisian	follow	3138	10744	1053	431	0.409	0.671	430	1	0	0	622
+end_permian	Ladinian	confirm	1487	4276	801	369	0.461	0.606	369	0	0	0	432
+end_triassic	Norian	penultimate	2026	6117	1011	510	0.504	0.659	509	1	0	0	501
+end_triassic	Rhaetian	baseline	1505	4637	642	303	0.472	0.634	302	1	0	0	339
+end_triassic	Hettangian	follow	971	2613	449	183	0.408	0.548	181	2	0	0	266
+end_triassic	Sinemurian	follow	1654	5248	563	272	0.483	0.729	272	0	0	0	291
+end_triassic	Pliensbachian	follow	4126	13820	681	363	0.533	0.765	362	1	0	0	318
+end_triassic	Toarcian	confirm	4420	13134	946	291	0.308	0.690	291	0	0	0	655
+k_pg	Campanian	penultimate	3140	13161	1710	699	0.409	0.532	699	0	0	0	1011
+k_pg	Maastrichtian	baseline	3593	24226	1722	721	0.419	0.592	721	0	0	0	1001
+k_pg	Danian	follow	947	5505	1199	478	0.399	0.500	478	0	0	0	721
+k_pg	Selandian	follow	181	1978	524	204	0.389	0.451	204	0	0	0	320
+k_pg	Thanetian	follow	587	3413	780	290	0.372	0.473	290	0	0	0	490
+k_pg	Ypresian	confirm	1554	10064	2115	565	0.267	0.379	565	0	0	0	1550

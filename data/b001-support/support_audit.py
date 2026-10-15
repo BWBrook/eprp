@@ -98,21 +98,29 @@ def load_knope():
     s = xlrd.open_workbook(str(KNOPE)).sheet_by_index(0)
     hdr = s.row_values(0)
     rows = [dict(zip(hdr, s.row_values(i))) for i in range(1, s.nrows)]
-    by_name_phylum, by_name = {}, collections.defaultdict(list)
+    by_name_phylum, by_name = collections.defaultdict(list), collections.defaultdict(list)
     for r in rows:
         rec = dict(tier=int(r["tiering"]), mot=int(r["motility"]), feed=int(r["feeding"]),
                    cls=r["class"], phylum=r["phylum"], ref=str(r["eco_ref"]).split(".")[0][:60])
-        by_name_phylum[(r["taxon_name"], r["phylum"])] = rec
+        by_name_phylum[(r["taxon_name"], r["phylum"])].append(rec)
         by_name[r["taxon_name"]].append(rec)
-    return len(rows), by_name_phylum, by_name
+    repeated = [k for k, v in by_name_phylum.items() if len(v) > 1]
+    conflicting = [k for k in repeated if not consistent(by_name_phylum[k])]
+    return len(rows), by_name_phylum, by_name, repeated, conflicting
+
+
+def consistent(recs):
+    return len({(r["tier"], r["mot"], r["feed"], r["cls"]) for r in recs}) == 1
 
 
 def knope_lookup(genus, phylum, by_name_phylum, by_name):
+    """Repeated Knope keys are used only if every repeat carries the same codes and class."""
     if (genus, phylum) in by_name_phylum:
-        return by_name_phylum[(genus, phylum)], "name+phylum"
-    if len(by_name.get(genus, [])) == 1:
-        return by_name[genus][0], "name"
-    return None, "ambiguous" if genus in by_name else "absent"
+        recs = by_name_phylum[(genus, phylum)]
+        return (recs[0], "name+phylum") if consistent(recs) else (None, "conflict")
+    if genus in by_name:
+        return (by_name[genus][0], "name") if consistent(by_name[genus]) else (None, "ambiguous")
+    return None, "absent"
 
 
 def load_lastapp():
@@ -172,9 +180,11 @@ def guild_key(rec, merged):
 
 
 def main():
-    n_knope, by_name_phylum, by_name = load_knope()
+    n_knope, by_name_phylum, by_name, repeated, conflicting = load_knope()
     lastapp = load_lastapp()
     summary = dict(knope_rows=n_knope, knope_distinct_names=len(by_name),
+                   knope_repeated_name_phylum_keys=len(repeated),
+                   knope_conflicting_name_phylum_keys=sorted("|".join(k) for k in conflicting),
                    knope_sha256=KNOPE_SHA, taxa_extract_sha256=sha256(TAXA), events={})
     occ = {}
     for event, cfg in EVENTS.items():
@@ -186,7 +196,8 @@ def main():
 
     join_rows = [["event", "stage", "role", "collections", "occurrences",
                   "genera", "genera_joined", "genera_join_share", "occ_join_share",
-                  "join_name_phylum", "join_name_only", "unjoined_ambiguous", "unjoined_absent"]]
+                  "join_name_phylum", "join_name_only", "unjoined_conflict", "unjoined_ambiguous",
+                  "unjoined_absent"]]
     class_join = collections.defaultdict(lambda: [0, 0])
     cells = {}
     for event, cfg in EVENTS.items():
@@ -194,13 +205,23 @@ def main():
                  **{s: "follow" for s in cfg["follow"]}, cfg["confirm"]: "confirm"}
         by_stage = collections.defaultdict(list)
         unbinned = 0
+        seen = set()
+        identity = collections.Counter()
         for r in occ[event]:
+            # Accepted genus: the accepted name's first word; a subgenus counts under its parent genus.
+            r["acc_genus"] = r["accepted_name"].split(" ")[0]
+            identity[r["accepted_rank"]] += 1
+            if (r["collection_no"], r["acc_genus"]) in seen:
+                identity["duplicate_collection_genus_removed"] += 1
+                continue
+            seen.add((r["collection_no"], r["acc_genus"]))
             st = stage_of(r)
             if st in roles:
                 by_stage[st].append(r)
             else:
                 unbinned += 1
         summary["events"][event]["occurrences_not_in_one_stage"] = unbinned
+        summary["events"][event]["accepted_identity"] = dict(identity)
         for st, role in roles.items():
             rs = by_stage[st]
             colls = {r["collection_no"] for r in rs}
@@ -208,7 +229,7 @@ def main():
             how = collections.Counter()
             occ_joined = 0
             for r in rs:
-                g, ph = r["genus"], r["phylum"]
+                g, ph = r["acc_genus"], r["phylum"]
                 if not g:
                     continue
                 rec, mode = knope_lookup(g, ph, by_name_phylum, by_name)
@@ -226,7 +247,8 @@ def main():
             join_rows.append([event, st, role, len(colls), len(rs), len(genera), joined,
                               f"{joined / len(genera):.3f}" if genera else "NA",
                               f"{occ_joined / len(rs):.3f}" if rs else "NA",
-                              how["name+phylum"], how["name"], how["ambiguous"], how["absent"]])
+                              how["name+phylum"], how["name"], how["conflict"], how["ambiguous"],
+                              how["absent"]])
 
     def baseline_support(merged):
         sup = collections.defaultdict(dict)
@@ -241,7 +263,9 @@ def main():
         return sup
 
     sup0 = baseline_support(set())
-    all_guilds = {guild_key(rec, set()) for c in cells.values() for rec, _ in c.values()}
+    pre_stages = {(e, cfg[k]) for e, cfg in EVENTS.items() for k in ("penultimate", "baseline")}
+    all_guilds = {guild_key(rec, set()) for key, c in cells.items() if key in pre_stages
+                  for rec, _ in c.values()}
     merged = set()
     for guild in all_guilds:
         tier, mot, feed = guild.split("|")

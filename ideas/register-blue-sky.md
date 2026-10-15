@@ -85,7 +85,9 @@ parallel, with at most two tasks active.
 
 **Queue.** At most two substantive tasks are active programme-wide.
 - First pair: B-001 (Claude) and B-002 (Codex).
-- Provisional second pair: B-003 and B-004.
+  - B-001 has its contract and support audit and is now on hold.
+  - B-002 continues as a theoretical specification.
+- Next: B-003 (Claude, agreed in 76/1662), then B-004 (Codex).
 - B-005 is held but queued for development.
 - Q-sweep checks run between products, and Q-012's design (with D1)
   follows the first pair.
@@ -95,7 +97,7 @@ parallel, with at most two tasks active.
 
 | ID | Question | Status | I | T | V | Owner |
 | --- | --- | --- | --- | --- | --- | --- |
-| B-001 | Do ecosystems reassemble in a repeatable order after crises? | **develop** | H | M | H | Claude |
+| B-001 | Do ecosystems reassemble in a repeatable order after crises? | hold (support) | H | L | L–M | Claude |
 | B-002 | Can juvenile viability block otherwise useful adult innovations (ammonoids)? | **develop** | H | M (growth data in hand; transitions unknown) | H | Codex |
 | B-003 | Did prey defences track independent predator capability through the Phanerozoic? | **develop** | H | L–M | M–H | Claude |
 | B-004 | Did burrowers change the conditions under which deep-water benthos could persist? | **develop** | H | L–M | M–H | Codex |
@@ -114,7 +116,7 @@ parallel, with at most two tasks active.
 | B-017 | Are "living fossils" statistically exceptional? | hold | M | M | L–M | Claude |
 | B-018 | Does origination follow the kinetic (metabolic) temperature prediction? | hold (low) | M–H | M | L | Claude |
 
-Tally: 4 develop, 14 hold (B-005 queued), 0 park.
+Tally: 3 develop, 15 hold (B-005 queued), 0 park. B-001 moved from develop to hold on 15 October, agreed with Codex (76/1664), after its support audit.
 
 ## Entries
 
@@ -123,7 +125,7 @@ routes are in the source lists. These entries carry the current contract and
 the corrections from cross-critique.
 
 ### B-001 Do ecosystems reassemble in a repeatable order after crises?
-Owner Claude. **Develop.** Source: Claude C5.
+Owner Claude. **Hold (support), from develop on 15 October.** Source: Claude C5.
 - **Question.** After major Phanerozoic crises, do functional groups
   re-emerge in a shared order, beyond what recovery of richness implies?
 - **Residual.** This bounded search found no sampling-aware test of a
@@ -181,19 +183,21 @@ Owner Claude. **Develop.** Source: Claude C5.
   - **Coding.** In PBDB, 96–99% of populated ecospace values are inherited
     from higher taxa ([provenance](../data/b001-support/README.md)). That
     is dependence, not "a guild is a clade".
-  - **Support audit (15 October; [record](../data/b001-support/README.md#b-001-support-audit-knope-coding-joined-to-pbdb-15-october-2026)).**
+  - **Support audit (15 October, corrected after Codex's check;
+    [record](../data/b001-support/README.md#b-001-support-audit-knope-coding-joined-to-pbdb-15-october-2026)).**
     Definitions were committed before screening.
-    - 4, 5 and 8 guilds are at risk; 4 are at risk in all three events.
-    - Only 25–48% of window genera join Knope's coding, and the gaps are
-      outcome-related after the K–Pg.
-    - A best-case bound (perfect, uncensored data) gives power 0.29 and
-      0.27 against the required 0.8. About 17 guilds in all three events
-      would be needed.
-    - **The global guild-grain empirical route is parked; the question is
-      kept.** Proposed status: hold, pending Codex.
-    - Reopening needs a coding source supporting about 17 or more guilds,
-      or a separately contracted estimand needing less replication across
-      guilds.
+    - 4, 5 and 7 guilds are at risk; 4 are at risk in all three events.
+    - 27–53% of window genera join Knope's coding. Within classes the join
+      is stable across events. Fishes, sharks, conodonts and ostracods are
+      barely coded, which is a risk, not a finding.
+    - Exact balanced no-clade F benchmark: 0.29 and 0.27 with the 4
+      complete guilds; 0.47 and 0.53 with all 7 completed. The target is
+      0.8. This is a benchmark, not a bound on every calibrated design.
+    - **Hold as a practical programme decision; the question is kept.** No
+      impossibility is claimed.
+    - Reopening needs support that materially enlarges the set of repeated
+      guilds, or a justified alternative target or design with adequate
+      calibrated errors and power.
 - **Overlap.** Q-007 and Q-009 (linked). It also shares trait resources with
   B-010 and B-011, as different tests.
 
@@ -230,6 +234,17 @@ Owner Codex. **Develop.** Source: Codex D2.
   - It is a growth-data route, not a ready transition dataset. Having the
     file does not establish transition support or physical-model readiness.
   - Next: a small crosswalk of specimens, primary sources and phylogeny.
+- **Specimen pilot and prior check (15 October; [pilot](../data/ammonoid-growth-support/source-pilot-20261015.md), [priors](../literature/2026-10-15-b002-generator-and-physical-priors.md)).**
+  - No historical transition was made eligible. Relationships, maturity
+    and physical reconstruction are co-binding empirical gates, so
+    empirical promotion is held.
+  - Generators, developmental coupling and volumetric hydrostatics all
+    have close precedents. The matched comparison of evolutionary routes
+    under adult-only and all-stage requirements remains a provisional
+    conditional theoretical residual.
+  - Next: a small mathematical specification linking the generator,
+    physical quantities and a rule for programme change, with a worked
+    comparison on paper. No numerical engine is built yet.
 - **Overlap.** Q-036 and Q-050 (development-adjacent, distinct targets);
   B-013 (shares morphology resources).
 

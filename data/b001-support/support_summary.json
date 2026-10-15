@@ -1,6 +1,22 @@
 {
  "knope_rows": 18317,
  "knope_distinct_names": 18228,
+ "knope_repeated_name_phylum_keys": 74,
+ "knope_conflicting_name_phylum_keys": [
+  "Costitrimerella|Brachiopoda",
+  "Fengzuella|Brachiopoda",
+  "Heliomedusa|Brachiopoda",
+  "Monomerella|Brachiopoda",
+  "Myloceras|Mollusca",
+  "Onychotreta|Brachiopoda",
+  "Ovidiella|Brachiopoda",
+  "Palaeotrimerella|Brachiopoda",
+  "Paracraniops|Brachiopoda",
+  "Paradinobolus|Brachiopoda",
+  "Pseudopholidops|Brachiopoda",
+  "Rhynobolus|Brachiopoda",
+  "Sinotrimerella|Brachiopoda"
+ ],
  "knope_sha256": "e5c1eef44f51e788c12c80efdceba9e6597472af57d0a7146ae8f015ecf3f181",
  "taxa_extract_sha256": "7662b51bd9d3b3a20beeb24c27dd1defe577c6a8b0545f255a189cd5ff4bc78b",
  "events": {
@@ -11,7 +27,12 @@
     "\"Access Time\",\"Thu 2026-10-15 01:16:43 GMT\""
    ],
    "rows": 56607,
-   "occurrences_not_in_one_stage": 4007
+   "occurrences_not_in_one_stage": 4006,
+   "accepted_identity": {
+    "genus": 56604,
+    "duplicate_collection_genus_removed": 6,
+    "subgenus": 3
+   }
   },
   "end_triassic": {
    "extract": "data/raw/pbdb/b001/occs_end_triassic.csv",
@@ -20,7 +41,12 @@
     "\"Access Time\",\"Thu 2026-10-15 01:16:54 GMT\""
    ],
    "rows": 50167,
-   "occurrences_not_in_one_stage": 4596
+   "occurrences_not_in_one_stage": 4596,
+   "accepted_identity": {
+    "genus": 50164,
+    "duplicate_collection_genus_removed": 2,
+    "subgenus": 3
+   }
   },
   "k_pg": {
    "extract": "data/raw/pbdb/b001/occs_k_pg.csv",
@@ -29,18 +55,22 @@
     "\"Access Time\",\"Thu 2026-10-15 01:17:11 GMT\""
    ],
    "rows": 67097,
-   "occurrences_not_in_one_stage": 8745
+   "occurrences_not_in_one_stage": 8744,
+   "accepted_identity": {
+    "genus": 67072,
+    "subgenus": 25,
+    "duplicate_collection_genus_removed": 6
+   }
   }
  },
  "merged_tier_feed": [
+  "epifaunal|deposit",
   "epifaunal|grazing",
-  "epifaunal|other",
   "epifaunal|suspension",
   "infaunal|deposit",
   "infaunal|other",
   "infaunal|predatory",
   "infaunal|suspension",
-  "pelagic|deposit",
   "pelagic|grazing",
   "pelagic|other",
   "pelagic|predatory",
@@ -49,12 +79,12 @@
  "at_risk_per_event": {
   "end_permian": 4,
   "end_triassic": 5,
-  "k_pg": 8
+  "k_pg": 7
  },
  "baseline_guilds_not_at_risk": {
   "end_permian": 8,
   "end_triassic": 7,
-  "k_pg": 9
+  "k_pg": 11
  },
  "zero_survivor_cells": 0,
  "guilds_at_risk_in_all_three": 4,
@@ -64,7 +94,7 @@
   "infaunal|stationary|suspension"
  ],
  "pair_types": {
-  "diff_guild|diff_class": 118,
+  "diff_guild|diff_class": 102,
   "same_guild|same_class": 9,
   "diff_guild|same_class": 5,
   "same_guild|diff_class": 4
@@ -73,37 +103,37 @@
   "event_only": {
    "rank": 3,
    "singular_values": [
-    8.224,
-    2.651,
-    2.549
+    8.036,
+    2.61,
+    2.521
    ]
   },
   "event_plus_covariates": {
    "rank": 3,
    "singular_values": [
-    7.028,
-    2.399,
-    2.14
+    6.654,
+    2.358,
+    2.135
    ]
   }
  },
- "cells_at_risk": 17,
+ "cells_at_risk": 16,
  "eco_ref_top": [
   [
    "Bambach, R",
-   1777
+   1792
   ],
   [
    "Huber, M 2010",
-   1759
+   1788
   ],
   [
    "Brusca, RC and GJ Brusca",
-   1392
+   1401
   ],
   [
    "Carlson S",
-   1176
+   1170
   ],
   [
    "Cairns, S",
@@ -111,7 +141,7 @@
   ],
   [
    "Budd AF, Adrain TS, Park JW, Klaus JS, Johnson KG (2008)",
-   249
+   250
   ],
   [
    "Poty, E",

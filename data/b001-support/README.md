@@ -2,8 +2,8 @@
 
 Two products are recorded here:
 - the PBDB coding-provenance diagnostic (14–15 October);
-- the support audit (15 October), which parks the global guild-grain
-  empirical route. See [the audit section](#b-001-support-audit-knope-coding-joined-to-pbdb-15-october-2026).
+- the support audit (15 October, corrected after Codex's check), which
+  holds the global guild-grain empirical route. See [the audit section](#b-001-support-audit-knope-coding-joined-to-pbdb-15-october-2026).
 
 ## Coding provenance
 
@@ -77,10 +77,21 @@ populated for 74–76%.
 
 ## B-001 support audit: Knope coding joined to PBDB (15 October 2026)
 
-Status: **support only.** The definitions were fixed in the contract's
-section 8 and committed (`e7697d9`) before this audit ran. No post-event
-richness, crossing or restoration time was computed. Post-event cells were
-assessed only for coverage resolution.
+Status: **support only, corrected once.**
+- The definitions were fixed in the contract's section 8 and committed
+  (`e7697d9`) before this audit ran.
+- No post-event richness, crossing or restoration time was computed.
+  Post-event cells were assessed only for coverage resolution.
+- The first release (`451a96b`) had two defects, found by
+  [Codex's check](../../ideas/2026-10-15-blue-sky-support-adjudication-codex.md).
+  Both are fixed here:
+  - it keyed genera on PBDB's `genus` field, which can carry a subgenus
+    (for example `Cucullaea (Idonearca)`), instead of the accepted genus;
+  - it drew the merge universe from all stages instead of pre-event stages
+    only.
+
+  It also overstated the power calculation as a universal bound. Corrected
+  results replace the first release; that version stays in git history.
 
 ### Rebuild
 
@@ -99,11 +110,19 @@ uv run -q --no-project --with scipy==1.14.1 python -I data/b001-support/power_bo
 | PBDB occurrences, `pbdb/b001/occs_k_pg.csv` (67,097 rows) | 2026-10-15 01:17 GMT | `a25385cac5d6cb8680f17364489e617ea56ac3318db545ce662ab0a77b0418a1` |
 | PBDB genus ranges, `pbdb/b001/genera.csv` (above) | 2026-10-14 23:45 GMT | `7662b51b…c78b` |
 
-**Workbook handling.** The workbook is read with xlrd 2.0.1 and is
-hash-checked. Nothing in it is executed.
-
-**Reproducibility.** A second run reproduced all five audit outputs byte
-for byte.
+**Rules this release adds or makes explicit:**
+- **Genus identity** is the first word of `accepted_name`.
+  - The 3, 3 and 25 subgenus-ranked rows count under their parent genus.
+  - Rows are deduplicated by collection and genus, removing 6, 2 and 6.
+- **Repeated Knope keys.** 74 name–phylum keys repeat, and 13 of those carry
+  conflicting codes or classes (all are listed in the summary).
+  - A repeated key is used only if every repeat agrees; otherwise the
+    genus is unjoined as a conflict.
+  - None of the 13 occurs in these extracts.
+- **The merge universe** is guilds present in the penultimate or baseline
+  stage of any event.
+- **Workbook handling.** The workbook is read with xlrd 2.0.1 and is
+  hash-checked. Nothing in it is executed.
 
 **Outputs (tracked):**
 - [support_summary.json](support_summary.json);
@@ -119,8 +138,7 @@ for byte.
 
 **1. The deposited dataset is smaller than the paper's count.**
 - The paper reports 18,621 genera.
-- The sheet has 18,317 rows and 18,228 distinct names, with 89 repeated
-  names.
+- The sheet has 18,317 rows and 18,228 distinct names.
 - Codes follow Bambach et al. 2007, checked against known classes:
   - cephalopods are pelagic, fast and predatory;
   - rhynchonelliform brachiopods are surficial, attached suspension
@@ -132,26 +150,37 @@ for byte.
   - Huber 2010 (bivalves);
   - Brusca & Brusca 2003;
   - Carlson & Sandy 2001 (brachiopods).
-- **The coding level is unknown.** Codes are probably applied largely at
-  higher-taxon level, as in PBDB.
+- **The coding level is unknown.**
 
-**2. Only 25–48% of PBDB genera in the windows join to Knope** (32–67% of
+**2. 27–53% of PBDB genera in the windows join to Knope** (38–77% of
 occurrences). The gaps are concentrated in particular classes:
 
 | Class | Joined |
 | --- | --- |
 | Ostracoda | 0% |
-| Chondrichthyes | 3–4% |
-| Conodonta | 15% |
-| Gastropoda | 33–44% |
+| Actinopterygii (end-Triassic baseline) | 0% |
+| Chondrichthyes | 3–19% |
+| Conodonta | 0.5–15% |
+| Gastropoda | 35–50% |
 
-- The K–Pg occurrence join falls from 0.545 in the Maastrichtian to
-  0.39–0.44 after the event.
-- Bivalves fall from 0.61 to 0.53 across the K–Pg.
-- The K–Pg pelagic predators are 93% cephalopods at baseline. After the
-  event that role passes to fishes and sharks, which are barely coded. This
-  is outcome-related missingness of exactly the kind the contract warned
-  about.
+- **Within classes, join rates are stable across each event**, for example:
+
+  | Class across the K–Pg | Before | After |
+  | --- | ---: | ---: |
+  | Bivalves | 0.680 | 0.683 |
+  | Gastropods | 0.365 | 0.395 |
+  | Sharks | 0.033 | 0.037 |
+
+  The first release's bivalve decline was produced by the subgenus defect.
+- **The aggregate decline after the K–Pg (0.59 to 0.45–0.50) is
+  compositional.** Well-coded ammonoids (94% joined) disappear.
+- **Risks, not findings:**
+  - Fishes and sharks are barely coded throughout. If their share of
+    pelagic predators rose after an event, this join could not see it.
+  - Whether that happened, and whether coding gaps depend on recovery, is
+    not established here.
+  - Joined cephalopods still supply most pelagic-predator occurrences in
+    the Danian (Codex: 125 of 153).
 
 **3. Few guilds are at risk.**
 
@@ -159,15 +188,18 @@ occurrences). The gaps are concentrated in particular classes:
 | --- | ---: | ---: |
 | End-Permian | 12 | 4 |
 | End-Triassic | 12 | 5 |
-| K–Pg | 17 | 8 |
+| K–Pg | 18 | 7 |
 
-- Stage support is not binding: every stage has 181 or more collections.
-  Almost every at-risk guild is resolved in all follow-up stages and in its
-  confirmation stage.
+- 7 distinct guilds are at risk in some event, across 16 cells.
+- Stage support is not binding: every stage has 181 or more collections,
+  and almost every at-risk guild is resolved in its follow-up and
+  confirmation stages.
 - The binding constraint is the minimum subsampled baseline of 5 genera at
-  coverage 0.5.
+  coverage 0.5. The K–Pg change from the first release comes from a merge
+  with a pre-event trigger: the merged epifaunal mobile deposit guild has a
+  baseline of 4.73 genera, against 5.30 for the slow guild before merging.
 - No at-risk cell has zero survivors.
-- 4 guilds are at risk in all three events:
+- **4 guilds are at risk in all three events:**
   - epifaunal mobile grazers;
   - epifaunal stationary suspension feeders;
   - infaunal stationary suspension feeders;
@@ -176,58 +208,61 @@ occurrences). The gaps are concentrated in particular classes:
   One more (epifaunal stationary "other", the corals) is at risk in two.
 - Dominant class switches in 2 guilds: brachiopods to bivalves in each
   suspension-feeding guild.
-- Pair types among the 17 at-risk cells:
+- Pair types among the 16 cells:
 
   | Pair type | Count |
   | --- | ---: |
   | Same guild, same class | 9 |
   | Same guild, different class | 4 |
   | Different guild, same class | 5 |
-  | Different guild, different class | 118 |
+  | Different guild, different class | 102 |
 
-**4. The covariance basis has rank 3,** with event effects alone and with
-the survivor and baseline covariates. Rank 3 is necessary, not sufficient:
-- event effects only: singular values 8.22, 2.65, 2.55;
-- with the covariates: 7.03, 2.40, 2.14.
+**4. The projected covariance basis has rank 3,** with event effects alone
+and with the survivor and baseline covariates. Rank 3 is necessary, not
+sufficient:
+- event effects only: singular values 8.04, 2.61, 2.52;
+- with the covariates: 6.65, 2.36, 2.14.
 
-**5. Best-case discrimination bound ([power_bound.py](power_bound.py)).**
-- **Assumptions:** balanced guilds × events; complete, uncensored and
-  error-free log delays; event effects only; no clade term; exact F-based
-  90% intervals. The F test is the standard optimal invariant test for
-  these variance-component hypotheses in a balanced design. A calibrated
-  procedure on the real censored, unbalanced and confounded data should do
-  no better.
+**5. Exact balanced no-clade F benchmark ([power_bound.py](power_bound.py)).**
+- **Model:** balanced guilds × events; Gaussian log delays, complete,
+  uncensored and error-free; event means; independent residuals; no clade
+  term; F-based 90% intervals for ρ.
+- The probabilities below hold *for that procedure in that scenario*. They
+  are not a bound on every calibrated analysis of the actual table:
+  - the actual table has unbalanced cells that four complete guilds omit;
+  - shared clade noise is not uniformly worse than independent noise, since
+    same-class contrasts cancel it;
+  - optimality within an invariant family is not optimality over all
+    calibrated procedures.
+
+  Codex reproduced the arithmetic independently in R.
 
 | Events | Guilds in all events | P(lo > 0.1 \| ρ = 0.5) | P(hi < 0.5 \| ρ = 0) |
 | ---: | ---: | ---: | ---: |
-| 3 | 4 (observed) | 0.29 | 0.27 |
-| 3 | 6 (planning target) | 0.41 | 0.45 |
-| 3 | 7 (every guild with any resolved baseline in all three events) | 0.47 | 0.53 |
+| 3 | 4 (complete in the audit) | 0.29 | 0.27 |
+| 3 | 7 (all 7 at-risk guilds, completed to all three events; contains the actual table) | 0.47 | 0.53 |
 | 3 | 17 | 0.81 | 0.93 |
 | 5 | 10 | 0.82 | 0.95 |
 
-- **Even perfect data on these guilds cannot meet the section 7 power
-  criteria** (both at least 0.8).
-- At three events the best case needs about 17 guilds at risk in every
-  event; at five events, about 10. The "about 6" planning target was far
-  too low.
-- **The conclusion does not depend on the baseline minimum.**
-  - A minimum of 2 or 3 genera still gives 4 guilds.
-  - Dropping it entirely gives 7. Each of the three additions has a
-    baseline of 1 to 1.5 subsampled genera in at least one event.
+- In this benchmark the containing design reaches about half the 0.8
+  target.
+- Lowering the baseline minimum to 2 or 3 genera does not change the four
+  complete guilds.
 
-### Consequence (contract section 7)
+### Consequence
 
-**Inadequate discrimination is predicted before any restoration time is
-computed.**
-- The global guild-grain empirical route is **parked**, as the contract
-  prescribed. The question is kept.
-- This is not a finding about recovery order. It is a finding that the open
-  coded data cannot discriminate rule strength from absence at this grain.
-- **Reopening needs one of these:**
-  - about 17 or more supported guilds in three events (or about 10 in five),
-    which needs better coding coverage than this join gives;
-  - a reformulated estimand needing less replication across guilds, such as
-    one signed contrast replicated across many events. That needs its own
-    contract, and it faces clade confounding: pelagic predators are
-    cephalopods before the K–Pg and fishes after.
+**HOLD as a practical programme decision**, agreed with Codex.
+- The open coded data give sparse repeated guilds, and the coding gaps are
+  substantial.
+- On this support, a calibrated actual-design check is very unlikely to be
+  worth its cost. No such check was run, and impossibility is not claimed.
+- The question is kept. This is not evidence against repeatable
+  reassembly.
+- **Reopening:**
+  - better coding or occurrence support that materially enlarges the set of
+    guilds repeated across events;
+  - or a justified alternative target or design that shows adequate
+    calibrated errors and power.
+
+  The 17-guild figure is a benchmark for one procedure, not a necessary
+  condition.
