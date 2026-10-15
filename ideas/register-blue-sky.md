@@ -262,39 +262,32 @@ Owner Claude. **Develop.** Source: Claude C10.
     systems;
   - rivals: shared energetic change and taxonomic replacement.
   No large compilation before the contract.
-- **Current contract (15 October; [contract](../literature/2026-10-15-b003-escalation-evidence-contract.md)).**
+- **Current contract (15 October, amended after Codex's single review;
+  [contract](../literature/2026-10-15-b003-escalation-evidence-contract.md)).**
   - **The scales do not meet.** Matched local systems show prey defences
-    changing directionally:
-    - Kelley 1989: Miocene bivalve shells thickened 8–157%;
-    - Dietl et al. 2000: gryphaeid oysters;
-    - Dietl 2003: whelks and Mercenaria.
-
-    Global tests find nothing (Madin et al. 2006; Kosnik et al. 2011). Yet
-    local studies mostly measure predators through outcomes. The one
-    admissible local predator series, Kelley 1992's naticid morphology,
-    shows predator stasis while prey thickened.
-  - **Admissible predator measures:** body-fossil morphology or size.
-    Drill-hole size counts only with prey thickness conditioned on, because
-    success filters it. Trace frequencies and diversity shares are not
-    admissible.
-  - **Mechanical matching:** each defence counts only against its
-    predator mode (drilling, crushing, apertural peeling, ingestion).
-  - **Estimands:**
-    - Level A: the class of directional coupling within each matched
-      system;
-    - Level B: a Price-equation split of global defence change into
-      within-lineage change and sorting, timed against the matching
-      mode's capability.
-  - **Rivals:** sampling and shared trend; shared energetics (Finnegan et
-    al. 2011 as a covariate); abiotic calcification; replacement;
-    escalation. The key discriminator is specificity to predator mode.
-  - **Clade confounding:** Klompmaker's open compilation is 133 of 141
-    brachiopods in the Palaeozoic and 139 of 147 molluscs in the
-    Paleocene–Pleistocene.
-  - **Next gate:** a source and support audit of the matched-system
-    inventory, and of Kosnik's genus-level scores, with definitions fixed
-    first. The planning target of about 3 supported systems is not an
-    information bound.
+    changing directionally (Kelley 1989; Dietl et al. 2000; Dietl 2003).
+    Global tests find nothing (Madin et al. 2006; Kosnik et al. 2011).
+    Local studies mostly measure predators through outcomes. Kelley 1992's
+    directly measured predator morphology is heterogeneous: mostly stasis,
+    with coevolution and cannibalism unresolved.
+  - **Narrowed target (Level A):** within-lineage change in a prey defence
+    following independently measured, mechanically relevant change in a
+    predator.
+    - It is interpreted only beside a common-cause comparison (energetics,
+      abiotic change).
+    - Lag categories are descriptive only.
+  - **Level B is held.** Kosnik et al. apply one static mean per genus,
+    so within-genus change is zero by construction; their scores describe
+    composition only. Sorting can itself be a predation route, so it is not
+    a rival to escalation by itself.
+  - **Predator measures:** morphology and size are candidate capability
+    and need a functional mapping. Drill-hole size needs a stated
+    selection model. Outcome frequencies are excluded.
+  - **Next gate:** a published-source and support inventory under
+    definitions frozen first. It starts with the Kelley pair and a
+    contrasting mode (Dietl's oysters, or whelks and Mercenaria), then
+    finishes the nominated families. The screens are for workflow only. If
+    support is inadequate, practical hold and move to Q-012/D1.
 - **Overlap.** Q-048 and Q-037.
 
 ### B-004 Did burrowers change the conditions under which deep-water benthos could persist?

@@ -7,7 +7,9 @@ frequencies are interaction outcomes, not predator capability. It also
 carries the lessons of B-001: support is defined before counting, and no
 planning number is treated as an information bound.
 
-Status: **a design contract.** No data were compiled, measured or analysed.
+Status: **a design contract, amended once** after
+[Codex's single review](../ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md);
+section 9 records the changes. No data were compiled, measured or analysed.
 
 **Sources and access:**
 - A Sonnet subagent extracted:
@@ -29,14 +31,14 @@ Status: **a design contract.** No data were compiled, measured or analysed.
 | Work | Predator side | Prey side | Scale | Result |
 | --- | --- | --- | --- | --- |
 | Madin et al. 2006, 10.1126/science.1123591 (full) | Share of carnivorous genera and occurrences | Shares of infaunal or mobile life habits | Global PBDB; bins of about 11 Myr; differenced; lags up to ±3 bins | "none are significant after a Bonferroni correction"; "no evidence that escalation drives macroecological trends at global and million-year time scales" |
-| Kosnik et al. 2011, 10.1666/10022.1 (full) | None (narrative) | Reinforcement (ribs, folds, spines) and size in the most common genera, which make up 40% of occurrences per bin | Global; 48 bins; 1,002 genera of brachiopods, bivalves and gastropods | "Increases in shell durability hypothesized to be the result of increased predation in the late Mesozoic are not evident in the common genera". The gastropod reinforcement rise is Permo-Triassic or earlier |
+| Kosnik et al. 2011, 10.1666/10022.1 (full) | None (narrative) | Reinforcement (ribs, folds, spines) and size in the most common genera, which make up 40% of occurrences per bin. **One static mean per genus is applied in every bin** (p. 321, "Genus Values As Averages"), so the series changes only through composition | Global; 48 bins; 1,002 genera of brachiopods, bivalves and gastropods | "Increases in shell durability hypothesized to be the result of increased predation in the late Mesozoic are not evident in the common genera". The gastropod reinforcement rise is Permo-Triassic or earlier |
 | Aberhan, Kiessling & Fürsich 2006, 10.1666/05028.1 (full) | None (narrative) | Life habit, mobility, cementation, size, ornament | Jurassic; about 22,000 occurrences | Infaunalisation and mobility rise; ornament "remained fairly constant"; tested only against abiotic series |
 | Klompmaker et al. 2017, 10.1126/science.aam7468 (main text) | Drill-hole diameter, calibrated to predator size (556 modern pairs, slope 0.94) | Prey size (shell area); mobility and infaunality only qualitatively (supplementary figs) | Global; 362 occurrences; molluscs and brachiopods | Predator-to-prey size ratio "67-fold increase … directional trend". The authors favour an energetic driver |
 | Kelley 1989, 10.1080/08912968909386497 (abstract) | Naticid predation intensity (an outcome) | Shell thickness, internal volume | Miocene Chesapeake Group; 5 bivalve genera; about 3 Myr | Thickness rose 8–157% in all five genera; "Improvement of predator capabilities apparently did not keep pace" |
-| Kelley 1992, 10.1017/s0022336000020801 (abstract) | **Predator body-fossil morphology**: globosity, aperture, thickness and size of two naticids | (Kelley 1989's prey) | Same system | Stasis in most characters thought to affect efficiency; a size rise in one predator could be coevolution or escape from cannibalism |
+| Kelley 1992, 10.1017/s0022336000020801 (abstract) | **Predator body-fossil morphology**: globosity, aperture, thickness and size of two naticids | (Kelley 1989's prey) | Same system | **Heterogeneous.** Most putative efficiency characters show stasis. Euspira's aperture height fell 9% and its thickness rose 63%. Neverita's thickness fell 37% and its height rose 60%. That size rise permits coevolution; escape from cannibalism is a rival, and neither is eliminated |
 | Dietl, Alexander & Bien 2000, 10.1666/0094-8373(2000)026<0215:eilcep>2.0.co;2 (abstract) | Repair frequency (an outcome, used as "independent evidence of the action of a selective agent") | Commissural shelves, thickness, ornament | Late Cretaceous to early Paleocene gryphaeid oysters; over 1,600 valves | Escalation supported; adaptation "by the enhancement of existing traits" |
 | Dietl 2003, 10.1046/j.1095-8312.2003.00255.x (abstract) | Attack success and position (outcomes); whelk size (morphology) | Mercenaria size | Plio-Pleistocene Florida | Reciprocal; "predator adaptation has outpaced prey antipredatory adaptation" |
-| Signor & Brett 1984, 10.1017/s0094837300008174 (abstract) | Mid-Palaeozoic durophagous fish radiation | Spinose and sculptured genera | Mid-Palaeozoic | Some prey changed by extinction of undefended forms, crinoids "through evolution within established clades" |
+| Signor & Brett 1984, 10.1017/s0094837300008174 (abstract) | Mid-Palaeozoic durophagous fish radiation | Spinose and sculptured genera | Mid-Palaeozoic | Defence frequency rose through three routes: extinction of undefended genera, the radiation of productids, and change "within established clades" of crinoids. All three sit in a predation-driven account, so sorting can itself be a predation route |
 
 Also: Huntley & Kowalewski 2007 (10.1073/pnas.0704960104) tracks
 trace frequency against diversity. Trace frequencies are outcomes, and
@@ -50,15 +52,19 @@ the paper pools drilling with repair.
 - Neither level measures both sides properly:
   - global tests use carnivore share and life-habit shares;
   - local tests mostly measure the predator side through outcomes.
-- The one admissible local predator series (Kelley 1992) shows **predator
-  stasis while prey thickened**. That is the opposite of predator-driven
-  tracking.
+- The one directly measured local predator series (Kelley 1992) is
+  **heterogeneous**: mostly stasis in characters thought to affect
+  efficiency, with some changes in size and thickness. Whether that is
+  coevolution or escape from cannibalism is unresolved.
+- Prey adapting while the measured predator capability is unchanged does
+  not refute predation as the selective agent.
 
-**Residual.** Does matched local escalation add up to global trends in
-prey defence? If so, through within-lineage change or through sorting
-among lineages, once predator capability is measured independently and the
-energetic and abiotic rivals are included? This bounded search found no
-such test.
+**Residual, narrowed.** Does prey defence change *within lineages* follow
+independently measured, mechanically relevant change in predators, once a
+common-cause comparison (energetics, abiotic change) is in place? And can
+such local results be related to global composition? This bounded search
+found no such test. Whether the published local systems can support one is
+the next gate's question.
 
 ## 2. Which predator measures are admissible
 
@@ -66,9 +72,9 @@ such test.
 | --- | --- | --- |
 | Repair-scar frequency | Attacks × failure × survival × preservation | **No.** It indicates a selective agent at most |
 | Drilling frequency, incomplete drilling, attack success, prey effectiveness | Interaction outcomes | **No** |
-| Drill-hole diameter (Klompmaker's calibration) | Predator size, but only for *successful* attacks. If prey thicken, only larger drillers succeed, so part of the series is caused by prey defence | **Conditionally.** Only with prey thickness conditioned on, and incomplete holes included |
-| Predator body-fossil morphology (Kelley 1992's characters; claw dimensions; crushing dentition) | Capability, measured on the predator | **Yes** |
-| Predator body size from body fossils (for example the Heim et al. 2015 compilation, 10.1126/science.1260065; contents and deposit not checked) | Size-limited capability | **Yes**, for size-limited modes |
+| Drill-hole diameter (Klompmaker's calibration) | Predator size, but only for *successful* attacks. If prey thicken, only larger drillers succeed, so part of the series is caused by prey defence | **Not without a stated observation and selection model.** Conditioning on thickness and counting incomplete holes is not enough: unattempted prey and attacks leaving no trace are still missing, and conditioning on the defence changes the target |
+| Predator body-fossil morphology (Kelley 1992's characters; claw dimensions; crushing dentition) | Measured on the predator, independently of the prey | **Candidate capability.** Admitted only with a recorded functional mapping from trait to attack performance, with its uncertainty, per system |
+| Predator body size from body fossils (for example the Heim et al. 2015 compilation, 10.1126/science.1260065; contents and deposit not checked) | Size, for size-limited modes | **Candidate capability**, with the same mapping requirement |
 | Predator diversity or share (Madin et al.; Bambach 2002) | Pressure at most | **No.** Reported only as a weak pressure covariate |
 
 **PBDB's durophage diet coding is negligible.** The subagent found it on 1
@@ -87,61 +93,78 @@ found no compiled time series of bite force or jaw mechanics.
 A prey trait counts as a response to a predator mode only if it sits in that
 mode's row.
 
-## 4. Target and estimands at two levels
+## 4. Target and estimands
 
-**Level A: matched systems.**
-- A system pairs one predator mode, an admissible series of predator
-  capability P(t), and a prey defence D(t) from that mode's row, in the
-  same habitat, region and lineages, across stratigraphic horizons t.
-- The estimand is the **directional coupling** between first differences of
-  P and D at declared lags, with measurement error taken from specimen
-  counts. Each system is classed as one of:
-  - prey-follows-predator (escalation);
-  - predator-follows-prey;
+**Level A: matched systems (the primary target, narrowed).**
+- **Hypothesis:** *within-lineage* change in a prey defence follows
+  independently measured, mechanically relevant change in a predator.
+- **A system pairs:**
+  - one predator mode;
+  - a candidate-capability series P(t) for that predator, with its
+    functional mapping;
+  - a prey defence D(t) from that mode's row.
+
+  Both sides come from the same habitat, region and lineages, across
+  stratigraphic horizons t.
+- **The estimand** is the directional association between changes in P and
+  D at declared lags, with measurement variances. It is interpreted only
+  beside a **common-cause comparison**: energetic and abiotic covariates at
+  the same resolution, specified before the association is computed.
+  Differencing alone does not remove time-varying common causes or shared
+  observation error.
+- **Lag-pattern categories are descriptive only:**
+  - prey after predator;
+  - predator after prey;
   - reciprocal;
-  - prey change with predator stasis (the Kelley pattern);
+  - prey change with no measured predator change;
   - neither.
 
-**Level B: bridging the scales.**
-- A Price-equation decomposition (Price 1970, 10.1038/227520a0) splits the
-  change in a global mean defence trait between bins into two parts:
-  - **sorting** among lineages, which is the replacement rival;
-  - **within-lineage change.**
-- Predator-driven escalation predicts that within-lineage change dominates
-  and is timed to rises in admissible predator capability *of the matching
-  mode*.
-- Kosnik et al. 2011's genus-level reinforcement scores are the candidate
-  trait series.
+  None of them is by itself an attribution of cause.
 
-## 5. Rivals
+**Level B: relating local results to global composition (held).**
+- A Price-equation split (Price 1970, 10.1038/227520a0) of a global defence
+  trait into sorting and within-lineage change needs *time-resolved* traits
+  of lineages that persist.
+- Kosnik et al. 2011 apply one static mean per genus in every bin. Their
+  within-genus component is therefore zero by construction, and they are
+  not evidence for this estimand. They still describe **composition**.
+- **Level B is held** unless time-resolved lineage traits are recovered.
+  Even then:
+  - a genus is not automatically a lineage, since species replace one
+    another within it;
+  - occurrence weights are not abundance or selection;
+  - the decomposition is an identity, not a causal attribution.
+
+## 5. Rivals and what can separate them
 
 | Rival | Prediction |
 | --- | --- |
-| R0. Sampling and shared trend | Coupling disappears after differencing, under common sampling (Madin et al.'s design) |
-| R1. Shared energetics (Bambach 1993, 10.1017/S0094837300000336) | Defences change with productivity or metabolic indices, whatever the predator mode. Finnegan et al. 2011 (10.1666/09066.1) give an independent Meso-Cenozoic gastropod metabolic-rate series as a covariate |
-| R2. Abiotic calcification (temperature, carbonate saturation, aragonite and calcite seas) | Thickness and ornament follow the cost of calcification, not predators |
-| R3. Taxonomic replacement | The sorting term dominates (Madin et al.'s aragonite case; Signor & Brett's bellerophontids) |
-| R4. Escalation | Within-lineage defence change, in the predator mode's row, follows an admissible rise in predator capability at the declared lag |
+| R0. Sampling and shared trend | Association disappears under common sampling and detrending (Madin et al.'s design) |
+| R1. Shared energetics (Bambach 1993, 10.1017/S0094837300000336) | Predator and prey traits both follow productivity or metabolic indices. Finnegan et al. 2011 (10.1666/09066.1) give an independent Meso-Cenozoic gastropod metabolic-rate series |
+| R2. Abiotic calcification (temperature, carbonate saturation, aragonite and calcite seas) | Thickness and ornament follow the cost of calcification |
+| R3. Escalation | Within-lineage defence change, in the predator mode's row, follows candidate-capability change, *and* survives the common-cause comparison |
 
-**Key discriminator: specificity to predator mode.**
-- R1 and R2 predict defence change regardless of which predator mode is
-  rising.
-- R4 predicts *matched* change: a rise in drilling capability should be
-  followed by thickness or burrowing, and a rise in crushing capability by
-  ornament, strength or apertural defence.
+**Mode matching is a mechanistic prediction, not an exclusive test.**
+Energetic and abiotic change can also act on both actors, and can produce
+mode-specific responses. Mode matching sharpens what R3 predicts. It does
+not by itself exclude R1 or R2.
 
-Like B-001's test of refilling by different clades, this narrows the rivals
-but does not by itself identify cause.
+**Sorting is not a rival to escalation by itself.** Signor & Brett place
+extinction of undefended genera, radiation and within-clade change all in a
+predation-driven account. A dominant sorting term cannot separate escalation
+from non-escalation without evidence about what caused the sorting. Level A
+therefore concerns the within-lineage route only.
 
 ## 6. Observation model
 
-**Clade confounding in compilations.** Re-tabulating Klompmaker's open
-Database 2 (10.6084/m9.figshare.5046964; CC BY 4.0):
+**Compositional confounding in compilations.** Re-tabulating Klompmaker's
+open Database 2 (10.6084/m9.figshare.5046964; CC BY 4.0):
 - Palaeozoic rows: 133 of 141 are brachiopods, 131 epifaunal and 123
   stationary;
 - Paleocene–Pleistocene rows: 139 of 147 are molluscs.
 
-Any global trend in prey traits there is largely a change of clade.
+This *demonstrates* compositional confounding. It does not measure how much
+of any particular trait trend the shift explains.
 
 **Taphonomy:**
 - thin and delicate shells preserve and get collected less;
@@ -158,77 +181,94 @@ Any global trend in prey traits there is largely a change of clade.
 - **Resolution:** local sections are time-averaged, and global bins are
   about 11 Myr. The declared lags must exceed the resolution.
 
-## 7. Outcomes, informative either way
+## 7. Outcomes
 
 **Level A, per system:**
-- **Escalation supported:** a defence in the matched row follows an
-  admissible predator change at the declared lag, beyond R0, within
-  lineages.
-- **Informative negative:** precise null coupling, or prey change with
-  documented predator stasis.
+- **Within-lineage tracking supported:**
+  - a matched-row defence follows candidate-capability change at the
+    declared lag;
+  - beyond R0;
+  - and it survives the common-cause comparison.
+- **Descriptive coupling only:** the association is present, but the
+  common-cause comparison is absent or cannot separate the causes.
+- **Informative negative:** a precise null association with adequate
+  support. Prey change with no measured predator change is recorded as
+  that pattern. It does not refute predation as the selective agent.
 - **Inadequate:** anything else.
 
 **Across systems:**
 - The summary is the share of systems in each class.
-- Thresholds are fixed only after the support audit. A discrimination
-  benchmark on the actual supported design, labelled as a benchmark, decides
-  whether the cross-system route is informative.
+- Thresholds are fixed only after the inventory. A discrimination benchmark
+  on the actual supported design, labelled as a benchmark, decides whether
+  the cross-system route is informative.
 
-**Level B:**
-- The quantity is the within-lineage share of defence change, with an
-  interval, and its timing against predator-capability series of the
-  matching mode.
-- A dominant sorting share with no mode matching is an informative result
-  for R3, R1 or R2. It is not a disproof of escalation at local scales.
+## 8. Next gate: a published-source and support inventory
 
-## 8. Next gate: a source and support audit, with definitions fixed first
-
-**Definitions, proposed now and fixed before counting:**
-- **Admissible predator series:** body-fossil morphology or size of the
-  predator mode in that system. Drill-hole size counts only if prey
-  thickness is conditioned on and incomplete holes are counted.
-- **Matched prey series:** a trait in that mode's row, measured on the
-  prey lineages exposed in the same habitat and region.
-- **Supported system:**
+**Definitions, frozen on 15 October 2026 before the inventory:**
+- **Candidate predator series:** body-fossil morphology or size of the
+  predator mode in that system, with the trait-to-performance mapping and
+  its source recorded. Drill-hole size enters only with a stated observation
+  and selection model.
+- **Matched prey series:** a trait in that mode's row, measured on prey
+  lineages exposed in the same habitat and region.
+- **Inventory screen**, for workflow only and not as evidence of adequate
+  information:
   - at least 4 horizons with both series;
   - at least 10 specimens per horizon per side;
-  - lineage-level identification;
+  - identification to lineage level;
   - data deposited or recoverable from published tables.
 
-**Audit steps:**
-1. **Matched-system inventory.** Read the primary papers, then record for
-   each system:
-   - the predator measure and whether it is admissible;
-   - the prey measure and its mechanical match;
-   - horizons and specimens;
-   - lineage resolution;
-   - data availability.
+  Systems that fail the screen stay in the inventory, with reasons. Failure
+  is not evidence of biological absence.
+- **What each system's row records:**
+  - joint horizon support;
+  - age uncertainty;
+  - measurement variances or specimen values, where available;
+  - collection clustering;
+  - lineage continuity;
+  - reuse of samples across papers;
+  - the number of usable lag pairs. Four horizons give three first
+    differences and at most two lag-one pairs.
 
-   The systems:
-   - Kelley 1989 and 1992;
-   - the reappraisal by Dietl, Kelley & Handley (10.1017/s2475262200012156,
-     probably a meeting abstract);
+**Order and stopping rule:**
+1. **Start with the Kelley pair** (Chesapeake Group naticids and bivalves:
+   Kelley 1989, 1992, and the reappraisal by Dietl, Kelley & Handley,
+   10.1017/s2475262200012156, probably a meeting abstract). Add a
+   **contrasting mechanical mode**:
+   - crushing, in Dietl et al. 2000's gryphaeid oysters;
+   - apertural chipping, in Dietl 2003's whelks and Mercenaria.
+2. **Then finish the nominated source families**, with one compact row each,
+   including failures and inaccessible material:
    - Kelley et al. 2001 (10.1016/s0031-0182(00)00207-8);
    - Kelley & Hansen 2006 (10.1016/j.palaeo.2005.11.012);
-   - Dietl et al. 2000; Dietl 2003;
    - Signor & Brett 1984;
    - Syverson et al. 2018 (10.1017/pab.2017.38, crinoid spinosity).
-
-   A bounded search should look for further systems: decapod and gastropod
-   systems, and Palaeozoic crinoids and fishes.
-2. **Support for bridging the scales:**
-   - Kosnik et al.'s appendices (10.1666/10022.s1): whether scores per genus
-     per bin are available for a decomposition;
-   - Klompmaker's Database 1 and 2 (open);
-   - the availability of Finnegan et al.'s and Heim et al.'s data.
-3. **No new compilation or specimen measurement before the audit.** No
-   author contact without Barry's authorisation.
-
-**Planning target, not an information bound:** about 3 supported systems
-with admissible predator series, plus genus-level scores for Level B.
-- If the audit finds fewer, Level A parks.
-- Level B is judged separately on its own support.
+3. **For Level B, record only:**
+   - whether Kosnik's supplement holds time-resolved values (the static
+     definition in the main text stands regardless);
+   - whether Finnegan et al.'s and Heim et al.'s data are available.
+4. **No search beyond the nominated families.** No new specimen
+   measurement, fit or author contact.
+5. **Stopping rule.** If these sources do not jointly support the narrowed
+   Level A target, report a practical hold, and move to Q-012/D1. The
+   planning figure of about 3 systems governs workflow only.
 
 **Overlap.** Q-048 and Q-037. B-011 also uses energetics. B-001's coding
 gaps (fishes and sharks barely coded) also limit any predator-side series
 based on Knope.
+
+## 9. Amendment record (15 October 2026)
+
+All of the following come from
+[Codex's single review](../ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md).
+All were accepted.
+
+| Review point | Change |
+| --- | --- |
+| Kosnik et al. apply static genus means (p. 321), so within-genus change is zero by construction | Level B is held. Kosnik's scores are kept for composition only, and the genus-as-lineage and identity-not-cause caveats are added |
+| Kelley 1992 was over-read as uniform stasis | Restated as heterogeneous, with coevolution and cannibalism unresolved. Prey change without measured predator change does not refute predation |
+| Sorting can be a predation route (Signor & Brett) | Replacement is removed as a rival in itself. Level A is narrowed to within-lineage tracking |
+| Mode matching and lags do not exclude energetic or abiotic common causes | A common-cause comparison is required. Mode matching is a prediction, not an exclusive test. Lag categories are descriptive |
+| Morphology needs a functional mapping; drill-hole selection is not repaired by conditioning | Both are now "candidate capability"; drill-hole size needs a stated selection model |
+| Four horizons and ten specimens are screens, not information | Relabelled as an inventory screen. The extra recording fields and the lag-pair arithmetic are added |
+| The Database 2 shift shows confounding but not its share | Qualified |
