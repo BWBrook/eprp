@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 16 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 17 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
@@ -24,13 +24,18 @@ Updated: 16 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   pass the checked points. Claude's v5/pilot package at `a47eabe` preserves
   the numerical evidence and corrects the eta=0 coverage requirement.
   Claude's control repairs at `0df3504` pass Codex's bounded patch check.
-  **GO for TPAC opening and build/preflight plus R00 only.** Claude stages
-  the frozen payload once Barry opens access. Two small offline diagnostic
-  guards remain due before R00 qualification; the 12-fit panel awaits the
-  actual replay's sampling and cost review. No further long laptop fit,
-  full grid or empirical fit. Claude
-  relays Barry's kunanyi destination and PBS completion-mail approval in
-  76/1733–1734; no background monitoring or pre-opening jumpbox probe.
+  The first kunanyi build/preflight and R00 are complete at `9cb5c16`;
+  both deferred guards are fixed. Codex's [R00 review](ideas/2026-10-17-q012-r00-review-codex.md)
+  reproduces the archive and diagnostics, and 48 new Q=64 tail/state checks
+  pass. Four chains complete in 2:49:58, with zero divergences and adequate
+  R-hat, ESS and eta endpoint precision, but E-BFMI fails in three chains.
+  **The panel remains on hold.** A constant dense metric lacks the proposed
+  energy-repair mechanism. One fixed fractional innovation scaling candidate
+  passes an offline algebra/energy screen; Claude next accepts or challenges
+  it, then implements and preflights it. One same-cap R00 comparison may
+  follow only if the declared checks pass; Codex reviews before panel release.
+  No further long laptop fit, full grid or empirical fit. Barry's kunanyi
+  and PBS mail/wake workflow remains in force; no background monitoring.
   B-004's critique response, six-study modern screen and bounded analytic
   check are complete. B-004 is **hold (support)**: invasion invariance and
   conditional fold responses do not supply a consequential oxygen scale;
@@ -80,7 +85,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex: patch clearance complete; Claude: stage build/R00 after Barry opens TPAC | [Patch clearance](ideas/2026-10-16-q012-pilot-patch-clearance-codex.md) closes execution blockers at `0df3504`: runner refusal/cleanup/fetch fixtures and local stage-to-fetch integration pass; 80 manifest entries and 16 saved-state bank hashes verify. GO build/preflight plus R00 only, with six-hour fit cap. Claude fixes two offline guards (missing binary hashes in both receipts; nonfinite-endpoint precision) before result qualification. Actual cluster compatibility, cost and sampling remain unobserved; Codex reviews R00 before the panel |
+| Q-012/D1 support and identification | Codex: R00 review complete; Claude: respond to exact reparameterisation proposal, then implement/preflight | [R00 review](ideas/2026-10-17-q012-r00-review-codex.md) verifies receipts, hashes, diagnostics and 48 new Q=64 checks. Sampling fails E-BFMI alone (three chains); panel held. Constant dense metric is not supported as the proposed remedy. Fixed w=sigma^.2 eps preserves the target and reduces saved-state energy spread; actual Stan density/gradient and near-zero-sigma preflight are required. If all pass, one unchanged-cap R00 comparison; Codex checks result before panel release |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -819,6 +824,15 @@ next phase of ideation whilst those final checks are done."
   no new model fit is needed to fix them. The panel remains conditional
   on Codex's review of actual R00 receipts, sampling, precision and cost.
 
+- **R00 review, 17 October:** Claude's successful cluster result at `9cb5c16`
+  and 76/1807 reproduces exactly. Codex's [review](ideas/2026-10-17-q012-r00-review-codex.md)
+  confirms adequate ordinary diagnostics and endpoint precision, but three
+  failed E-BFMI values. New posterior tails still pass Q=64 tolerances.
+  The energy calculation challenges a dense-metric rerun as the remedy;
+  the fixed fractional innovation scaling candidate earns implementation
+  and preflight, with a conditional one-fit R00 comparison under the same
+  limits. Claude responds next. No panel release or relaxed threshold.
+
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
 diversity is occupied; a specific causal support/design contrast remains worth
@@ -861,7 +875,9 @@ investigation is selected.
   76/1733–1734): use kunanyi for the intended Q-012 campaign; PBS completion/
   failure email is approved, with Barry waking the agent afterwards. No
   scheduler, cron job or background polling. Prepare the valid experiment
-  and packaging before Barry opens TPAC; no probe or submission yet.
+  and packaging before Barry opens TPAC. The first build and R00 are now
+  complete. Claude relays subsequent access and home-directory staging
+  decisions in 76/1781–1793; site issues are handed to the Nectar maintainer.
 - Stage owned paths only and inspect the whole Git index before committing.
 - Runtime restored on 8 October after Barry changed permissions. Codex verified
   both shell probes and a clean local checkout matching remote bfda1c7 at 16:46
