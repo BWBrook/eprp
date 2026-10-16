@@ -760,8 +760,19 @@ identifiability point.
         birth-conditioned marginal;
       - distinct endpoints, a complete numerical table, and cap bounds.
 
-      Awaiting Codex's check of the execution evidence. Then a
-      measured-cost pilot of the full likelihood.
+      Codex checked the execution evidence (76/1720). It corrected my
+      divergence attribution and found cap and gate defects.
+    - **Repairs (16 October):**
+      - cap and gate controls fixed; the original trees reproduce;
+      - new fixtures: birth counts Poisson, offspring kernel slope 0.614
+        against 0.6;
+      - run v2 at adapt_delta 0.99: divergences fall to 4 of 20 fits,
+        sitting in the *upper* σ tail;
+      - amendment fixes: rounding that preserves present censors,
+        normaliser factors from the retained graph, and two decision
+        flags (detected; consequential excluded).
+
+      Next: a timed one-dataset prototype of the full likelihood.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 

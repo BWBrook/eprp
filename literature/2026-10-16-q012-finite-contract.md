@@ -295,8 +295,16 @@ a full pre-boundary branching process.
   information is used. If a designated lineage is unrecorded, its recorded
   descendants follow the pruning rule (§8.2).
 - **R-root is a generator-only stress scenario.** The fitted root law stays
-  independent, so the four one-dimensional and one two-dimensional
-  factorisation holds for the working model.
+  independent.
+- **The normaliser's factors come from the retained working graph**
+  (corrected 16 October).
+  - π factorises over the connected components of the working cohort's
+    recorded ancestry. Each component's dimension is its number of cohort
+    lineages.
+  - Four one-dimensional factors and one two-dimensional factor is only the
+    intact reference cohort. Dropping N256, for example, leaves five
+    one-dimensional factors.
+  - Nothing is hard-coded to the original six.
 
 ### 8.2 The observation map is defined for every history
 
@@ -316,13 +324,27 @@ a full pre-boundary branching process.
 - The longest-ranging candidate is chosen. Ties go to the older origin,
   then the lineage identifier.
 
-**Rounding to 0.01 Myr**, under labelled working conventions:
-- **Zero or negative rounded durations:** the end is set to start −
-  0.005 Myr, with a count reported.
-- **A daughter whose rounded start is older than its parent's:** set equal
-  to the parent's start, under the joint-age tie rule.
-- **A budding parent whose rounded end equals the daughter's start:** the
-  link becomes a boundary candidate, as rounding does in the source.
+**Rounding to 0.01 Myr**, under labelled working conventions. Corrected
+16 October: the original end = start − 0.005 rule could move a present
+censor beyond the horizon (Codex, 76/1720). The rules apply in this order
+of precedence:
+1. **Present censors stay at 0 Ma.** Extinction and bifurcation ends keep
+   their rounded dates.
+2. **Short intervals keep the end and move the origin.** If the rounded
+   duration is ≤ 0, set origin = end + 0.005. A lineage originating at
+   0.004 Ma and censored at 0 therefore becomes 0.005 → 0.
+3. **Parent–daughter chronology is checked jointly after step 2.**
+   - If a daughter's origin is now older than its parent's, set it equal
+     to the parent's origin, under the joint-age tie.
+   - If that leaves the daughter's duration ≤ 0, or breaks the parent's own
+     ordering, both lineages keep their **unrounded** dates. Such cases are
+     flagged "unroundable" and counted.
+4. **Shared event times** (bifurcation ties, buds at parent age 0) are
+   rounded together, as one time.
+5. **A budding parent whose rounded end equals the daughter's start:** the
+   link becomes a boundary candidate, as rounding does in the source.
+
+Each replicate records the counts for every rule.
 - Treating a single coincident daughter as censored is a working
   convention. It is not proof of non-informative censoring.
 
@@ -397,15 +419,36 @@ Only the relatives' history used to predict frailty differs.
 
 ### 8.4 Distinct decision endpoints and a complete numerical table
 
+**The outcome is two flags, not one exclusive label** (corrected 16
+October). An interval such as [0.08, 0.15] satisfies lo > η₀ and hi < η₁
+at once: dependence is detected, and a consequential effect is excluded
+(Codex, 76/1720).
+- **D**, dependence detected: lo > η₀.
+- **X**, consequential effect excluded: hi < η₁.
+
+| D | X | Reading |
+| --- | --- | --- |
+| Yes | No | **Supported**: consequential dependence possible |
+| Yes | Yes | **Small but non-zero dependence** |
+| No | Yes | **Informative negative** |
+| No | No | **Inadequate** |
+
+In the endpoints below:
+- false support means P(D) where η ≤ η₀;
+- positive power means P(D and not X | η₁);
+- informative-negative power means P(X and not D | η = 0).
+
+The joint frequencies of D and X are reported in every scenario.
+
 **Endpoints, all against the generator's truth:**
 
 | Endpoint | Requirement | Scenarios |
 | --- | --- | --- |
-| (a) False support | At most 0.05; upper Monte Carlo bound at most 0.07 | Every scenario with η ≤ η₀: R0; R0′; R1; R3m; R3m-informative; R2 at η = 0 and 0.05; R4 at η = 0; R-root at η = 0 |
-| (b) Positive power, P(supported \| η = η₁) | At least 0.8; lower bound at least 0.75 | R2 at η₁ = 0.20, σ ∈ {0.5, 1} |
-| (c) Informative-negative power, P(hi < η₁ \| η = 0) | At least 0.8; lower bound at least 0.75 | R1 and R2 at η = 0 |
+| (a) False support, P(D) | At most 0.05; upper Monte Carlo bound at most 0.07 | Every scenario with η ≤ η₀: R0; R0′; R1; R3m; R3m-informative; R2 at η = 0 and 0.05; R4 at η = 0; R-root at η = 0 |
+| (b) Positive power, P(D and not X \| η = η₁) | At least 0.8; lower bound at least 0.75 | R2 at η₁ = 0.20, σ ∈ {0.5, 1} |
+| (c) Informative-negative power, P(X and not D \| η = 0) | At least 0.8; lower bound at least 0.75 | R1 and R2 at η = 0 |
 | (d) Coverage of the 90% interval for η | Between 0.85 and 0.95 | Where the working η is the generator's η: R0, R1, R2, R4 at ψ = ∞, ε = 0 |
-| (e) R3b, separately | P(supported \| R3b, η = 0) is reported as the rate at which unmeasured clade-tied exposure is reported as residual dependence. It is not counted as coverage of η, and it is not a pass of anything | R3b |
+| (e) R3b, separately | P(D \| R3b, η = 0) is reported as the rate at which unmeasured clade-tied exposure is reported as residual dependence. It is not counted as coverage of η, and it is not a pass of anything | R3b |
 
 - Under ψ < ∞, ε > 0, R3m and R3m-informative, coverage is reported
   against the same truth. Any loss is a finding.

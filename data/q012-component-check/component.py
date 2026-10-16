@@ -4,13 +4,15 @@
 # ///
 """Q-012 tiny unconditional component check (Codex 76/1709).
 
-Subcommands, run from the repository root:
-  uv run data/q012-component-check/component.py fixtures
-  uv run data/q012-component-check/component.py first
-  uv run data/q012-component-check/component.py batch
+Subcommands, run from the repository root (config defaults to config.json):
+  uv run --python 3.12 data/q012-component-check/component.py fixtures
+  uv run --python 3.12 data/q012-component-check/component.py first [config]
+  uv run --python 3.12 data/q012-component-check/component.py batch [config]
 
 `fixtures` checks the closed-form cumulative hazard against quadrature,
-simulator invariants and Monte Carlo agreement, and the Stan log density
+simulator invariants, Monte Carlo extinction survival, the birth-count
+distribution, the offspring kernel, the lineage cap and the compute gate,
+and the Stan log density
 against an independent Python implementation (as differences between two
 parameter points, so dropped constants cancel). `first` fits one tree and
 records its cost; `batch` fits the remaining frozen seeds within the declared
@@ -27,7 +29,8 @@ import numpy as np
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-CFG = json.loads((HERE / "config.json").read_text())
+CFG_PATH = HERE / (sys.argv[2] if len(sys.argv) > 2 else "config.json")
+CFG = json.loads(CFG_PATH.read_text())
 OUT = ROOT / "scratch/q012-component"
 CMDSTAN = pathlib.Path.home() / ".cmdstan/cmdstan-2.38.0"
 
@@ -48,23 +51,27 @@ def simulate(seed, truth=CFG["truth"], origins=CFG["root_origins"], H=CFG["horiz
         end = lin["o"] + a_ext
         lin["ext"] = int(end < H)
         lin["v"] = min(end, H)
-        rate = lam0 * z ** kap
-        t, buds = lin["o"], []
-        while True:
-            t += rng.exponential(1.0 / rate)
-            if t >= lin["v"]:
-                break
-            buds.append(t)
+        buds, capped = bud_times(rng, lam0 * z ** kap, lin["o"], lin["v"], room=cap - len(L))
+        if capped:
+            return L, True  # partial history: never summarised or fitted
         lin["m"] = len(buds)
         for b in buds:
-            if len(L) >= cap:
-                capped = True
-                break
             L.append(dict(parent=i, o=b, x=rho * lin["x"] + sig * math.sqrt(1 - rho ** 2) * rng.standard_normal()))
-        if capped:
-            break
         i += 1
-    return L, capped
+    return L, False
+
+
+def bud_times(rng, rate, o, v, room=math.inf):
+    """Homogeneous Poisson buds on (o, v); stops (capped) if a bud would exceed `room` new lineages.
+    Draw order is unchanged from the original loop, so uncapped trees reproduce exactly."""
+    t, buds = o, []
+    while True:
+        t += rng.exponential(1.0 / rate)
+        if t >= v:
+            return buds, False
+        if len(buds) >= room:
+            return buds, True
+        buds.append(t)
 
 
 def stan_data(L):
@@ -132,7 +139,7 @@ def fixtures():
             kids = np.bincount([l["parent"] for l in L if l["parent"] >= 0], minlength=len(L))
             assert all(kids[i] == l["m"] for i, l in enumerate(L)), s
     res["simulator_invariants"] = "pass (20 frozen seeds)"
-    # 3. Monte Carlo against analytic survival and expected buds, one lineage, fixed z
+    # 3. Monte Carlo extinction survival against the analytic value, one lineage, fixed z
     rng = np.random.default_rng(7)
     z, mu0, k, lam0, H1 = 1.7, 0.08, 1.3, 0.09, 10.0
     E = rng.exponential(size=200000)
@@ -142,6 +149,52 @@ def fixtures():
     se = math.sqrt(exact * (1 - exact) / len(a))
     res["mc_survival"] = dict(mc=round(float(surv), 5), exact=round(exact, 5), z_score=round(float((surv - exact) / se), 2))
     assert abs(surv - exact) < 4 * se
+    # 3b. birth counts: Poisson(rate * D) by mean, dispersion and chi-square
+    rng = np.random.default_rng(11)
+    rate, D, n = 0.09 * 1.5 ** 0.5, 10.0, 40000
+    counts = np.array([len(bud_times(rng, rate, 0.0, D)[0]) for _ in range(n)])
+    lamD = rate * D
+    kmax = 6
+    obs = np.array([np.sum(counts == j) for j in range(kmax)] + [np.sum(counts >= kmax)])
+    pmf = [math.exp(-lamD) * lamD ** j / math.factorial(j) for j in range(kmax)]
+    exp_ = np.array(pmf + [1 - sum(pmf)]) * n
+    chi2 = float(np.sum((obs - exp_) ** 2 / exp_))
+    res["birth_counts"] = dict(mean=round(float(counts.mean()), 4), expected=round(lamD, 4),
+                               dispersion=round(float(counts.var() / counts.mean()), 4),
+                               chi2=round(chi2, 2), df=kmax, chi2_crit_0999=22.46)
+    assert abs(counts.mean() - lamD) < 4 * math.sqrt(lamD / n) and chi2 < 22.46
+    # 3c. offspring kernel: regression of daughter on parent log frailty over many trees
+    xp, xd, xr = [], [], []
+    for s in range(5001, 5401):
+        Lk, cp = simulate(s)
+        if cp:
+            continue
+        for l in Lk:
+            if l["parent"] >= 0:
+                xp.append(Lk[l["parent"]]["x"]); xd.append(l["x"])
+            else:
+                xr.append(l["x"])
+    xp, xd, xr = map(np.array, (xp, xd, xr))
+    slope = float(np.cov(xp, xd)[0, 1] / np.var(xp, ddof=1))
+    resid_sd = float(np.std(xd - slope * xp - (xd.mean() - slope * xp.mean()), ddof=2))
+    se_slope = resid_sd / (np.std(xp, ddof=1) * math.sqrt(len(xp)))
+    t = CFG["truth"]
+    res["offspring_kernel"] = dict(pairs=len(xp), slope=round(slope, 4), rho=t["rho"],
+                                   resid_sd=round(resid_sd, 4), expected_resid_sd=round(t["sigma"] * math.sqrt(1 - t["rho"] ** 2), 4),
+                                   root_sd=round(float(np.std(xr, ddof=1)), 4), roots=len(xr), sigma=t["sigma"])
+    assert abs(slope - t["rho"]) < 4 * se_slope
+    assert abs(resid_sd / (t["sigma"] * math.sqrt(1 - t["rho"] ** 2)) - 1) < 0.05
+    assert abs(np.std(xr, ddof=1) / t["sigma"] - 1) < 4 / math.sqrt(2 * len(xr))
+    # 3d. lineage cap returns a recorded non-fit, never a partial history
+    Lc, cc = simulate(CFG["seeds"][0], cap=50)
+    row_c = summarise(CFG["seeds"][0], Lc, cc)
+    res["cap_fixture"] = dict(capped=cc, status=row_c["status"], lineages_at_cap=row_c["N_at_cap"])
+    assert cc and row_c["status"] == "capped (not fitted)"
+    # 3e. compute gate: a first fit over its limit blocks the batch
+    lim = CFG["compute_limit"]["max_seconds_first_fit"]
+    res["gate_fixture"] = dict(over_limit_blocks=not gate_ok([dict(status="fitted", seconds=lim + 1)]),
+                               within_limit_passes=gate_ok([dict(status="fitted", seconds=lim - 1)]))
+    assert res["gate_fixture"]["over_limit_blocks"] and res["gate_fixture"]["within_limit_passes"]
     # 4. Stan log density against Python, as differences between two points
     import cmdstanpy  # noqa: F401
     mdl = model()
@@ -162,28 +215,57 @@ def fixtures():
     print(json.dumps(res, indent=1))
 
 
-def fit_one(mdl, seed):
-    L, capped = simulate(seed)
-    row = dict(seed=seed, N=len(L), capped=capped, n_ext=sum(l["ext"] for l in L),
-               n_buds=sum(l["m"] for l in L), n_censored=sum(1 - l["ext"] for l in L))
+def summarise(seed, L, capped):
+    """Complete-history summaries only for uncapped trees."""
     if capped:
-        row["status"] = "capped (not fitted)"
+        return dict(seed=seed, status="capped (not fitted)", capped=True, N_at_cap=len(L))
+    return dict(seed=seed, status="simulated", capped=False, N=len(L), n_ext=sum(l["ext"] for l in L),
+                n_buds=sum(l["m"] for l in L), n_censored=sum(1 - l["ext"] for l in L))
+
+
+def gate_ok(rows):
+    """The batch may run only if the first fit completed within its declared limit."""
+    return bool(rows) and rows[0].get("status") == "fitted" and \
+        float(rows[0].get("seconds", math.inf)) <= CFG["compute_limit"]["max_seconds_first_fit"]
+
+
+def fit_one(mdl, seed, timeout):
+    L, capped = simulate(seed)
+    row = summarise(seed, L, capped)
+    if capped:
         return row, 0.0
     s = CFG["sampler"]
     t0 = time.time()
-    fit = mdl.sample(data=stan_data(L), chains=s["chains"], parallel_chains=CFG["compute_limit"]["parallel_chains"],
-                     iter_warmup=s["iter_warmup"], iter_sampling=s["iter_sampling"], adapt_delta=s["adapt_delta"],
-                     max_treedepth=s["max_treedepth"], seed=seed + s["seed_offset"], show_progress=False,
-                     output_dir=str(OUT / f"seed{seed}"))
+    try:
+        fit = mdl.sample(data=stan_data(L), chains=s["chains"], parallel_chains=CFG["compute_limit"]["parallel_chains"],
+                         iter_warmup=s["iter_warmup"], iter_sampling=s["iter_sampling"], adapt_delta=s["adapt_delta"],
+                         max_treedepth=s["max_treedepth"], seed=seed + s["seed_offset"], show_progress=False,
+                         output_dir=str(OUT / CFG.get("run_label", "v1") / f"seed{seed}"), timeout=timeout)
+    except TimeoutError:
+        row.update(status="timeout", seconds=round(time.time() - t0, 1))
+        return row, time.time() - t0
+    except RuntimeError as err:
+        row.update(status=f"failed: {str(err)[:80]}", seconds=round(time.time() - t0, 1))
+        return row, time.time() - t0
     secs = time.time() - t0
-    draws = fit.draws_pd(vars=["sigma", "rho", "eta", "kappa", "log_k"])
+    draws = fit.draws_pd()  # one row per saved draw, with sampler diagnostics
+    mv = fit.method_variables()
     summ = fit.summary()
     rh = [c for c in summ.columns if c.lower().startswith("r_hat")][0]
     ess = [c for c in summ.columns if c.lower() in ("ess_bulk", "n_eff")][0]
     core = summ.loc[["sigma", "rho", "eta", "kappa", "log_k", "log_mu0", "log_lambda0"]]
-    div = int(fit.method_variables()["divergent__"].sum())
+    div = int(mv["divergent__"].sum())
     row.update(status="fitted", seconds=round(secs, 1), divergences=div,
-               max_rhat=round(float(core[rh].max()), 3), min_ess=round(float(core[ess].min()), 0))
+               max_rhat_core=round(float(core[rh].max()), 3), min_ess_core=round(float(core[ess].min()), 0))
+    # where the divergent draws sit in sigma (saved states, not trajectories)
+    sig = draws["sigma"].to_numpy()
+    flags = draws["divergent__"].to_numpy() > 0
+    if flags.any():
+        lo10, hi90 = np.quantile(sig, [0.1, 0.9])
+        row.update(div_sigma_median=round(float(np.median(sig[flags])), 3),
+                   nondiv_sigma_median=round(float(np.median(sig[~flags])), 3),
+                   div_in_bottom_sigma_decile=int(np.sum(sig[flags] <= lo10)),
+                   div_in_top_sigma_decile=int(np.sum(sig[flags] >= hi90)))
     truth = CFG["truth"]
     for v, tv in (("sigma", truth["sigma"]), ("rho", truth["rho"]), ("eta", truth["rho"] * truth["sigma"]),
                   ("kappa", truth["kappa"])):
@@ -195,37 +277,43 @@ def fit_one(mdl, seed):
 
 def write_rows(rows):
     import pandas as pd
-    pd.DataFrame(rows).to_csv(HERE / "component_results.tsv", sep="\t", index=False)
+    pd.DataFrame(rows).to_csv(HERE / CFG.get("results_file", "component_results.tsv"), sep="\t", index=False)
 
 
 def first():
     t0 = time.time()
     mdl = model()
     compile_s = time.time() - t0
-    row, secs = fit_one(mdl, CFG["seeds"][0])
+    lim = CFG["compute_limit"]
+    row, secs = fit_one(mdl, CFG["seeds"][0], timeout=lim.get("per_fit_timeout", lim["max_seconds_first_fit"]))
     row["compile_seconds"] = round(compile_s, 1)
     write_rows([row])
     print(json.dumps(row, indent=1))
-    if secs > CFG["compute_limit"]["max_seconds_first_fit"]:
-        print("STOP: first fit exceeded the declared limit; rescope before extending.")
+    if not gate_ok([row]):
+        print("STOP: first fit did not complete within the declared limit; rescope before extending.")
+        sys.exit(2)
 
 
 def batch():
     import pandas as pd
+    prev = pd.read_csv(HERE / CFG.get("results_file", "component_results.tsv"), sep="\t").to_dict("records")
+    if not gate_ok(prev):
+        print("STOP: the first-fit gate has not passed; the batch is not run.")
+        sys.exit(2)
     mdl = model()
-    prev = pd.read_csv(HERE / "component_results.tsv", sep="\t").to_dict("records")
-    rows, total = prev, sum(r.get("seconds", 0) or 0 for r in prev)
+    rows = prev
+    total = sum(float(r.get("seconds", 0) or 0) for r in prev)
     done = {r["seed"] for r in prev}
-    limit = CFG["compute_limit"]["max_seconds_total"]
+    lim = CFG["compute_limit"]
     for s in CFG["seeds"]:
         if s in done:
             continue
-        fitted = [r["seconds"] for r in rows if r.get("status") == "fitted"]
-        expect = max(fitted) if fitted else 0
-        if total + expect > limit:
-            rows.append(dict(seed=s, status="not run (compute limit)"))
+        remaining = lim["max_seconds_total"] - total
+        timeout = min(lim.get("per_fit_timeout", remaining), remaining)
+        if timeout <= 1:
+            rows.append(dict(seed=s, status="not run (compute budget exhausted)"))
             continue
-        row, secs = fit_one(mdl, s)
+        row, secs = fit_one(mdl, s, timeout=timeout)
         total += secs
         rows.append(row)
         write_rows(rows)

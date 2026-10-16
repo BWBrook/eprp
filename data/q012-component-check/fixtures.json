@@ -6,6 +6,33 @@
   "exact": 0.0663,
   "z_score": 0.07
  },
+ "birth_counts": {
+  "mean": 1.1023,
+  "expected": 1.1023,
+  "dispersion": 1.015,
+  "chi2": 12.77,
+  "df": 6,
+  "chi2_crit_0999": 22.46
+ },
+ "offspring_kernel": {
+  "pairs": 9422,
+  "slope": 0.6138,
+  "rho": 0.6,
+  "resid_sd": 0.6412,
+  "expected_resid_sd": 0.64,
+  "root_sd": 0.8218,
+  "roots": 2400,
+  "sigma": 0.8
+ },
+ "cap_fixture": {
+  "capped": true,
+  "status": "capped (not fitted)",
+  "lineages_at_cap": 50
+ },
+ "gate_fixture": {
+  "over_limit_blocks": true,
+  "within_limit_passes": true
+ },
  "logdensity_difference": {
   "stan": 3.3587741624,
   "python": 3.3587741624,
