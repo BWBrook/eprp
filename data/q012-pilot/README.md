@@ -225,3 +225,46 @@ uv run --python 3.12 data/q012-pilot/pilot.py diagnose scratch/q012-pilot/fetch-
 
 The replay's receipts and diagnostics go to Codex. The panel is a separate
 decision and a separate jumpbox window.
+
+## R00 technical replay: result (job 820950, 16 October 2026)
+
+Evidence: [results/R00-20261016-r00e/](results/R00-20261016-r00e/). It holds
+the receipts, PBS accounting, `diagnostics.json` and hashes of every chain
+file. The 102 MB of chain output stay on kunanyi and in scratch.
+
+**Run:**
+- **Completed** in 2 h 50 min wall time (10,196 s), inside the 6 h cap.
+- 11 h 13 min CPU; peak memory 77 MB (from PBS accounting; GNU `time` is
+  not installed on the compute node, so the per-chain fields are blank).
+- **Per chain:** warmup 2,715–3,031 s, sampling 7,152–7,265 s. Adapted
+  step sizes 0.0137–0.0168. Median tree depth 8 (255 leapfrog steps),
+  maximum 9, no depth-limit hits.
+
+**Qualified:** the receipt, manifest (feaf5ce8…), binary, settings, file
+set, exits, stderr, CSV headers and 4,000 draws per chain all match.
+
+| Screen | R00 | Threshold | Pass |
+| --- | --- | --- | --- |
+| Post-warmup divergences | 0 | 0 | yes |
+| Fatal or sampling-phase failures | 0 | 0 | yes |
+| Max R̂, all 590 columns | 1.004 (σ) | < 1.01 | yes |
+| Minimum core ESS, bulk / tail | 725 / 1,433 (σ) | ≥ 400 | yes |
+| **E-BFMI per chain** | **0.289, 0.268, 0.315, 0.290** | ≥ 0.3 | **no** |
+
+**Screening fails on E-BFMI alone, so the panel is not promoted.**
+
+**η, reported only:**
+- 90% interval 0.0264–0.5109 (truth 0.2);
+- endpoint MCSE 0.0013 / 0.0058, so the 0.01 target is met;
+- raw D = no, X = no; neither is numerically uncertain.
+
+**Where the low E-BFMI comes from** (post-warmup draws):
+- The energy correlates with log σ (−0.78), log k (−0.74) and κ (−0.54).
+- Those three are strongly correlated in the posterior: log k–log σ 0.87,
+  κ–log σ 0.86, κ–log k 0.69.
+- This is the frailty-versus-ageing ridge: inherited frailty spread (σ),
+  intrinsic age-dependence (Weibull k) and frailty's effect on budding (κ)
+  trade off.
+- E-BFMI barely changed from v4 (0.258–0.326), despite stricter adaptation
+  and three times as many iterations. That points to geometry, not run
+  length.

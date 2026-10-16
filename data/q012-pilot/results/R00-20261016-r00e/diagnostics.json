@@ -1,0 +1,137 @@
+{
+ "scenario": "R00",
+ "attempt": "scratch/q012-pilot/fetch-20261016-r00e/runs/R00/attempt1",
+ "qualified": true,
+ "qualification_failures": [],
+ "status": "screened",
+ "chains": [
+  {
+   "csv": "chain1.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.2886399437306326,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  },
+  {
+   "csv": "chain2.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.26773118417153713,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  },
+  {
+   "csv": "chain3.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.3146243808295241,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  },
+  {
+   "csv": "chain4.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.2901951450472325,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  }
+ ],
+ "screening": {
+  "zero_post_warmup_divergences": true,
+  "no_fatal_or_sampling_phase_failures": true,
+  "ebfmi_each_chain": false,
+  "rhat_all": true,
+  "ess_bulk_tail_core": true
+ },
+ "screening_pass": false,
+ "rhat_max": [
+  "sigma",
+  1.0040837959571474
+ ],
+ "rhat_over_threshold": [],
+ "rhat_core": {
+  "sigma": 1.0040837959571474,
+  "rho": 1.0001781722140086,
+  "eta": 1.0013150572626184,
+  "kappa": 1.0026146928256643,
+  "kappa_b": 1.000657811188852,
+  "beta": 0.9999187239999215,
+  "gamma": 1.000451120796119,
+  "log_k": 1.0036423009499462,
+  "log_lambda0": 1.000324535057573,
+  "log_b0": 1.0010631571452924,
+  "tau": 1.0007312839787392
+ },
+ "ess_core": {
+  "sigma": {
+   "bulk": 725.3177404832389,
+   "tail": 1433.0427879898577
+  },
+  "rho": {
+   "bulk": 5304.838119500069,
+   "tail": 7477.697222682597
+  },
+  "eta": {
+   "bulk": 1772.7777914316584,
+   "tail": 4393.333174532508
+  },
+  "kappa": {
+   "bulk": 923.705947850183,
+   "tail": 2731.9008122192186
+  },
+  "kappa_b": {
+   "bulk": 5527.7960870834395,
+   "tail": 5991.610173135816
+  },
+  "beta": {
+   "bulk": 19744.937014534065,
+   "tail": 11608.638075299836
+  },
+  "gamma": {
+   "bulk": 5658.399440780078,
+   "tail": 7186.927510499436
+  },
+  "log_k": {
+   "bulk": 815.6262895610104,
+   "tail": 1579.5211957926817
+  },
+  "log_lambda0": {
+   "bulk": 6813.536024816321,
+   "tail": 9634.718614669686
+  },
+  "log_b0": {
+   "bulk": 4423.356814012539,
+   "tail": 6254.9763777673215
+  },
+  "tau": {
+   "bulk": 3199.1285449979378,
+   "tail": 3388.791794663021
+  }
+ },
+ "eta": {
+  "q05": 0.0263547732,
+  "q95": 0.5108626719999999,
+  "mcse_q05": 0.001284569000000001,
+  "mcse_q95": 0.005802410000000036,
+  "endpoints_finite": true,
+  "mcse_finite": true,
+  "mcse_target_met": true,
+  "truth": 0.2,
+  "interval_covers_truth": true,
+  "D": false,
+  "X": false,
+  "D_numerically_uncertain": false,
+  "X_numerically_uncertain": false
+ },
+ "precision": "met"
+}

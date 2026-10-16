@@ -1,0 +1,124 @@
+Job Id: 820949.kunanyi-ohpc
+    Job_Name = q012_build
+    Job_Owner = bwbrook@kunanyi-00.tpac.org.au
+    resources_used.cpupercent = 147
+    resources_used.cput = 00:10:55
+    resources_used.mem = 2538040kb
+    resources_used.ncpus = 4
+    resources_used.vmem = 2766252kb
+    resources_used.walltime = 00:18:09
+    job_state = F
+    queue = normal
+    server = kunanyi-ohpc
+    Checkpoint = u
+    ctime = Fri Oct 16 22:20:11 2026
+    depend = beforeok:820950.kunanyi-ohpc@kunanyi-ohpc
+    Error_Path = kunanyi-00.tpac.org.au:/u/bwbrook/codex_kunanyi/q012-pilot-202
+	61016-r00e/q012_build.e820949
+    exec_host = n011/3*4
+    exec_vnode = (n011:ncpus=4:mem=8388608kb)
+    Hold_Types = n
+    Join_Path = oe
+    Keep_Files = n
+    Mail_Points = ae
+    Mail_Users = barry.brook@utas.edu.au
+    mtime = Fri Oct 16 22:38:20 2026
+    Output_Path = kunanyi-00.tpac.org.au:/u/bwbrook/codex_kunanyi/q012-pilot-20
+	261016-r00e/q012_build.o820949
+    Priority = 0
+    qtime = Fri Oct 16 22:20:11 2026
+    Rerunable = True
+    Resource_List.mem = 8gb
+    Resource_List.ncpus = 4
+    Resource_List.nodect = 1
+    Resource_List.place = scatter
+    Resource_List.select = 1:ncpus=4:mem=8gb
+    Resource_List.walltime = 01:00:00
+    stime = Fri Oct 16 22:20:11 2026
+    session_id = 18465
+    jobdir = /u/bwbrook
+    substate = 92
+    Variable_List = PBS_O_HOME=/u/bwbrook,PBS_O_LANG=C,PBS_O_LOGNAME=bwbrook,
+	PBS_O_PATH=/usr/local/bin:/usr/bin,PBS_O_MAIL=/var/mail/bwbrook,
+	PBS_O_SHELL=/bin/bash,
+	PBS_O_WORKDIR=/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00e,
+	PBS_O_SYSTEM=Linux,XDG_SESSION_ID=96119,SHELL=/bin/bash,
+	SSH_CLIENT=172.27.24.4 37878 22,OLDPWD=/u/bwbrook,LC_ALL=C,USER=bwbrook,
+	MAIL=/var/mail/bwbrook,PATH=/usr/local/bin:/usr/bin,
+	PWD=/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00e,LANG=C,SHLVL=1,
+	HOME=/u/bwbrook,LOGNAME=bwbrook,
+	SSH_CONNECTION=172.27.24.4 37878 172.27.24.9 22,
+	XDG_RUNTIME_DIR=/run/user/145812,_=/opt/pbs/bin/qsub,
+	PBS_O_QUEUE=normal,PBS_O_HOST=kunanyi-00.tpac.org.au
+    comment = Job run at Fri Oct 16 at 22:20 on (n011:ncpus=4:mem=8388608kb) an
+	d finished
+    etime = Fri Oct 16 22:20:11 2026
+    run_count = 1
+    Stageout_status = 1
+    Exit_status = 0
+    Submit_arguments = pbs/build.pbs
+    history_timestamp = 1792150700
+    project = _pbs_project_default
+
+Job Id: 820950.kunanyi-ohpc
+    Job_Name = q012_fit
+    Job_Owner = bwbrook@kunanyi-00.tpac.org.au
+    resources_used.cpupercent = 400
+    resources_used.cput = 11:13:26
+    resources_used.mem = 77184kb
+    resources_used.ncpus = 4
+    resources_used.vmem = 259200kb
+    resources_used.walltime = 02:49:58
+    job_state = F
+    queue = normal
+    server = kunanyi-ohpc
+    Checkpoint = u
+    ctime = Fri Oct 16 22:20:11 2026
+    Error_Path = kunanyi-00.tpac.org.au:/u/bwbrook/codex_kunanyi/q012-pilot-202
+	61016-r00e/q012_fit.e820950
+    exec_host = n011/1*4
+    exec_vnode = (n011:ncpus=4:mem=8388608kb)
+    Hold_Types = n
+    Join_Path = oe
+    Keep_Files = n
+    Mail_Points = ae
+    Mail_Users = barry.brook@utas.edu.au
+    mtime = Sat Oct 17 01:28:20 2026
+    Output_Path = kunanyi-00.tpac.org.au:/u/bwbrook/codex_kunanyi/q012-pilot-20
+	261016-r00e/q012_fit.o820950
+    Priority = 0
+    qtime = Fri Oct 16 22:20:11 2026
+    Rerunable = True
+    Resource_List.mem = 8gb
+    Resource_List.ncpus = 4
+    Resource_List.nodect = 1
+    Resource_List.place = scatter
+    Resource_List.select = 1:ncpus=4:mem=8gb
+    Resource_List.walltime = 06:10:00
+    stime = Fri Oct 16 22:38:21 2026
+    session_id = 20279
+    jobdir = /u/bwbrook
+    substate = 92
+    Variable_List = PBS_O_HOME=/u/bwbrook,PBS_O_LANG=C,PBS_O_LOGNAME=bwbrook,
+	PBS_O_PATH=/usr/local/bin:/usr/bin,PBS_O_MAIL=/var/mail/bwbrook,
+	PBS_O_SHELL=/bin/bash,
+	PBS_O_WORKDIR=/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00e,
+	PBS_O_SYSTEM=Linux,SCEN=R00,XDG_SESSION_ID=96119,SHELL=/bin/bash,
+	SSH_CLIENT=172.27.24.4 37878 22,OLDPWD=/u/bwbrook,LC_ALL=C,USER=bwbrook,
+	MAIL=/var/mail/bwbrook,PATH=/usr/local/bin:/usr/bin,
+	PWD=/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00e,LANG=C,SHLVL=1,
+	HOME=/u/bwbrook,LOGNAME=bwbrook,
+	SSH_CONNECTION=172.27.24.4 37878 172.27.24.9 22,
+	XDG_RUNTIME_DIR=/run/user/145812,_=/opt/pbs/bin/qsub,
+	PBS_O_QUEUE=normal,PBS_O_HOST=kunanyi-00.tpac.org.au
+    comment = Job run at Fri Oct 16 at 22:38 on (n011:ncpus=4:mem=8388608kb) an
+	d finished
+    etime = Fri Oct 16 22:38:20 2026
+    run_count = 1
+    Stageout_status = 1
+    Exit_status = 0
+    Submit_arguments = -v SCEN=R00 -W depend=afterok:820949.kunanyi-ohpc pbs/fi
+	t.pbs
+    history_timestamp = 1792160900
+    project = _pbs_project_default
+
