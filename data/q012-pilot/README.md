@@ -162,6 +162,17 @@ denominator: report [s/n, (s+u)/n].
   - Queue `normal`; 1 node, 4 CPUs, 8 GiB, walltime 06:10:00.
   - Mail points `ae` on both.
   - Tag `r00e`; payload manifest feaf5ce8….
+- **Build 820949 passed (exit 0):**
+  - stanc3 v2.38.0, GCC 12.3.0, Make 3.82;
+  - binary sha256 87f90015…;
+  - preflight log density and gradients match the laptop references within
+    1e-6 at all three points;
+  - the four-chain smoke check passed;
+  - 18 min wall time, 11 min CPU, peak memory 2.5 GB.
+- **R00 820950 started at 11:38 UTC** on n011. The first gradient took
+  14.0–17.6 ms per chain, against 11.1–11.8 ms in the laptop's v5 smoke
+  check, so kunanyi is about 1.2–1.6× slower per core. The projected fit
+  time is roughly 2–4.3 h, inside the 6 h cap.
 - **Payload:** Codex cleared manifest 9327b837… (76/1774). The only changes
   since are the PBS scripts' shell and Lmod initialisation above; data,
   starts, model and run settings are byte-identical. Each tarball was
