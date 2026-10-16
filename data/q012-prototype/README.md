@@ -15,8 +15,9 @@ is fitted to the real data.
 ## Reproduce
 
 ```bash
-uv run --python 3.12 data/q012-prototype/prototype.py checks   # active version's checks (v3)
-uv run --python 3.12 data/q012-prototype/prototype.py fit      # active version's timed fit (v3)
+uv run --python 3.12 data/q012-prototype/prototype.py checks   # active version's checks (v4: with probes and smoke)
+uv run --python 3.12 data/q012-prototype/prototype.py fit      # active version's timed fit (v4)
+uv run --python 3.12 data/q012-prototype/prototype.py record   # rebuild the fit record from CmdStan output alone
 uv run --python 3.12 data/q012-prototype/calibrate.py          # generator size calibration
 ```
 
@@ -25,9 +26,12 @@ uv run --python 3.12 data/q012-prototype/calibrate.py          # generator size 
 - **v2**: `model_v2.stan`, `quadrature.py`, `checks_v2.json`,
   `fit_result_v2.json` and the `v2` block of `config.json`. It follows
   Codex's check (76/1737).
-- **v3** (active): `model_v3.stan`, `checks_v3.json`, `fit_result_v3.json`
-  and the `v3` block of `config.json`. It follows Codex's solver-step
-  approval (76/1742).
+- **v3**: `model_v3.stan`, `checks_v3.json`, `fit_result_v3.json` and the
+  `v3` block of `config.json`. It follows Codex's solver-step approval
+  (76/1742).
+- **v4** (active): `model_v4.stan`, `inits_v4/`, `checks_v4.json`,
+  `fit_result_v4.json` and the `v4` block of `config.json`. It follows
+  Codex's robustness ruling (76/1745).
 
 - Pinned: numpy 2.1.3, pandas 2.2.3, cmdstanpy 1.2.4, and local CmdStan
   2.38.0.
@@ -388,8 +392,9 @@ four-chain result.
 | ρ, 90% interval | 0.03–0.44; truth 0.4 |
 
 **Reading:**
-- Once the chains reached the typical set, the solver removed v2's NaN
-  failure.
+- Neither completed chain reported a sampling-phase failure. (Codex,
+  76/1745, narrowed the original wording, "the solver removed v2's NaN
+  failure in the typical set".)
 - **Robustness:** a KINSOL line-search failure is fatal in Stan, so a chain
   whose initialisation reaches an extreme point dies.
 - **Cost:** the per-gradient cost in sampling is about 2.5 times v1's. The
@@ -418,3 +423,114 @@ candidate search. The earlier outputs are kept as
 - Every median size, quantile and share ≥ 268 is unchanged.
 - End shares moved by at most 0.001.
 - λ₀ = 0.096 is still chosen (7.9 s, within the budget).
+
+## v4: Powell solver, guards and declared starts (16 October, after Codex's ruling 76/1745)
+
+**What changed:**
+- **Solver.** Both mode solves use `solve_powell_tol`: relative solution
+  tolerance 1e-12, Euclidean residual tolerance 1e-11, at most 200 function
+  evaluations. Its evaluation-limit and residual failures are domain errors,
+  which Stan rejects.
+- **Guards, in this order**, each a labelled rejection (`input`, `solver`,
+  `Hessian` or `factorisation`):
+  1. finite inputs, derived variances (σ², σ²(1 − ρ²)) and initial score;
+  2. finite returned mode and score;
+  3. residual ≤ 1e-8;
+  4. finite positive-definite precision;
+  5. finite Newton correction ≤ 1e-8 · max(1, |mode|);
+  6. finite covariance factor.
+
+  The 2-D factor is now the closed-form Cholesky factor of the inverse 2×2
+  precision, algebraically v3's `cholesky_decompose(inverse_spd(P))`.
+- **Algorithm changes, not prior changes:**
+  - four frozen initial-value files ([inits_v4/](inits_v4/)), centred on
+    the prior locations with perturbations of 0.25 prior scale (rule and
+    seed in config.json);
+  - initial step size 0.01, below every adapted step size seen so far.
+
+  The prior locations of λ₀ and b₀ equal their generating values, so the
+  starts are near the truth for those two.
+
+Everything else is unchanged: model, priors, dataset, 40-node AGH, sampler
+and the 1,200 s limit.
+
+### Prefit checks (all pass; [checks_v4.json](checks_v4.json))
+
+- **Established checks.** The precision gate, the extreme reference, Stan
+  against Python lp (≤ 6.4e-10), tight-tolerance stability (|Δlp| = 0) and
+  automatic gradients (worst relative error 5.3e-5) all pass, with the same
+  margins as v3.
+- **Repeated gradients at identical points:** v4 took 1.00–1.17 times as
+  long as v3.
+- **Probes.** 200 fixed points were run through Stan's own initialisation
+  (`initialize.hpp`), which reports a `domain_error` as "Rejecting initial
+  value" and any other exception as "Unrecoverable error". They took 0.6 s
+  of the 120 s budget, with a 10 s cap per point.
+
+  | Points | Initialised | Domain rejection | Unrecoverable, unexpected exit or timeout |
+  | --- | ---: | ---: | ---: |
+  | 4 selected starts | 4 | 0 | 0 |
+  | 6 established points (central, stress, near-one ρ, small σ) | 6 | 0 | 0 |
+  | 4 saved v3 states | 4 | 0 | 0 |
+  | 93 uniform(−2, 2) unconstrained (CmdStan's default initialisation) | 82 | 11 | 0 |
+  | 93 prior-scale points (perturbation 1.0) | 91 | 2 | 0 |
+
+  All 13 domain rejections are Powell residual failures, with norms of
+  order 1e9. These are expected rejections, not passes.
+- **Smoke check.** Four real chains ran from the selected starts and step
+  size, with the fit's seed, for 10 warmup iterations and 1 draw. All four
+  finished in 19.6 s of the 60 s budget, with no fatal error and no
+  rejection. Their draws have no inferential role.
+
+### The v4 timed fit: completed in 891 s
+
+[fit_result_v4.json](fit_result_v4.json). Same dataset (seed 20261060,
+264 recorded lineages), sampler and limit.
+
+| Chain | Warmup / sampling / total (s) | ms per gradient (sampling) | Divergences | Rejections | Fatal |
+| --- | --- | ---: | ---: | ---: | ---: |
+| 1 | 556 / 324 / 880 | 2.55 | 0 | 0 | 0 |
+| 2 | 571 / 277 / 848 | 2.73 | 2 | 0 | 0 |
+| 3 | 575 / 316 / 891 | 2.49 | 0 | 0 | 0 |
+| 4 | 460 / 371 / 831 | 2.69 | 0 | 0 | 0 |
+| v1, same measure | 495–575 / 140–254 / 656–793 | 1.00–1.30 | 4 | — | — |
+
+Median tree depth was 7, with no depth-limit hits. Adapted step sizes were
+0.027–0.046.
+
+**Completion and convergence are separate outcomes:**
+- **Completion:** all four chains finished within the limit.
+- **Convergence is marginal for two nuisance parameters:**
+  - 4 of 590 quantities have R̂ above 1.01: lp__ 1.016, σ 1.014, log k
+    1.012, x[9] 1.012;
+  - bulk ESS is below 400 for σ (172), log k (194) and κ (252);
+  - η itself has R̂ 1.005 and bulk ESS 495 (tail 939).
+- **Both divergences sit in the upper σ tail** (σ = 2.28 and 2.64; the 99th
+  percentile is 2.28), as in the component check.
+
+**90% intervals against the generating values** (one dataset; not a
+recovery or coverage result):
+
+| | 5% | Median | 95% | Truth |
+| --- | ---: | ---: | ---: | ---: |
+| η | 0.029 | 0.192 | 0.492 | 0.2 |
+| σ | 0.45 | 0.99 | 1.84 | 0.5 |
+| ρ | 0.04 | 0.20 | 0.42 | 0.4 |
+| κ | −1.06 | −0.39 | −0.12 | 0 |
+| log λ₀ | −3.42 | −3.08 | −2.80 | −2.65 |
+| log b₀ | −6.24 | −5.40 | −4.63 | −4.80 |
+
+- As in v1, the κ and λ₀ intervals exclude their generating values. One
+  fit cannot attribute this.
+- On this dataset neither decision flag would fire: the lower bound 0.029
+  is below η₀ = 0.05, and the upper bound 0.492 is above η₁ = 0.20. One
+  dataset says nothing about power.
+
+**Cost for planning:**
+- Per chain, the wall time is about 1.2 times v1's: 831–891 s against
+  656–793 s.
+- The sampling gradient costs about 2.2 times v1's (2.49–2.73 ms against
+  1.00–1.30 ms).
+- Scaling the earlier 6,600–20,000 core-hour extrapolation by about 1.2
+  gives roughly 8,000–24,000 core-hours for the full grid. This is a
+  planning figure only.

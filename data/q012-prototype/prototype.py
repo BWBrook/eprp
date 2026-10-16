@@ -391,9 +391,14 @@ def adapt(obsd):
                 C2=len(pairs), c2_par=[a + 1 for a, _ in pairs], c2_dau=[b + 1 for _, b in pairs],
                 Q=len(t), gh_t=list(t), gh_w=list(w))
     if "solver" in VER:
-        data.update(solver_step_tol=VER["solver"]["step_tol"], solver_f_tol=VER["solver"]["f_tol"],
-                    solver_max_steps=VER["solver"]["max_steps"], check_tol=VER["check_tol"])
+        data.update(solver_data(VER["solver"]), check_tol=VER["check_tol"])
     return data
+
+
+def solver_data(sv):
+    """Stan data for the mode solver: Newton (v3) takes a step tolerance, Powell (v4) a relative solution tolerance."""
+    tol = {"solver_rel_tol": sv["rel_tol"]} if "rel_tol" in sv else {"solver_step_tol": sv["step_tol"]}
+    return dict(tol, solver_f_tol=sv["f_tol"], solver_max_steps=sv["max_steps"])
 
 
 # ---------------------------------------------------------------- independent Python target
@@ -627,22 +632,25 @@ def gradient_check(mdl, d, p):
 
 
 def solver_stability(mdl, d, p):
-    tight = CFG["v3"]["solver_tight"]
-    dt = dict(d, solver_step_tol=tight["step_tol"], solver_f_tol=tight["f_tol"], solver_max_steps=tight["max_steps"])
+    dt = dict(d, **solver_data(CFG[CFG["active"]]["solver_tight"]))
     a = float(mdl.log_prob(p, data=d, jacobian=False, sig_figs=15)["lp__"].iloc[0])
     b = float(mdl.log_prob(p, data=dt, jacobian=False, sig_figs=15)["lp__"].iloc[0])
     return dict(lp_default=round(a, 10), lp_tight=round(b, 10), abs_diff=abs(a - b))
 
 
 def gradient_benchmark(d, reps=200):
-    """Repeated log-density-and-gradient evaluations at identical points, v2 against v3 executables."""
+    """Repeated log-density-and-gradient evaluations at identical points: the comparison version against the active one."""
     import subprocess
     import cmdstanpy
     from cmdstanpy.utils import write_stan_json
     work = OUT / "bench"
     work.mkdir(parents=True, exist_ok=True)
-    data_file = work / "data.json"
-    write_stan_json(str(data_file), d)
+    ver_a, ver_b = CFG[CFG["active"]].get("benchmark_against", "v2"), CFG["active"]
+    base = {k: v for k, v in d.items() if not k.startswith("solver_")}
+    data_files = {}
+    for ver in (ver_a, ver_b):
+        data_files[ver] = work / f"data_{ver}.json"
+        write_stan_json(str(data_files[ver]), dict(base, **solver_data(CFG[ver]["solver"])) if "solver" in CFG[ver] else base)
     src = sorted((OUT / "fit_v2").glob("*_1.csv"))[0]
     lines = src.read_text().splitlines()
     head = [l for l in lines if l.startswith("#")][:60]
@@ -654,7 +662,7 @@ def gradient_benchmark(d, reps=200):
     for k, v in (("sigma", "3.0"), ("rho", "0.9"), ("kappa_b", "-1.5")):
         st[header.index(k)] = v
     pts["stress_from_saved_a"] = st
-    exes = {"v2": OUT / "model_v2", "v3": OUT / "model_v3"}
+    exes = {ver: OUT / CFG[ver]["stan_file"].removesuffix(".stan") for ver in (ver_a, ver_b)}
     res = {}
     for pname, row in pts.items():
         res[pname] = {}
@@ -666,7 +674,7 @@ def gradient_benchmark(d, reps=200):
             for n in (1, reps):
                 t0 = time.time()
                 r = subprocess.run([str(exe), "log_prob", f"constrained_params={work / f'{pname}_{n}.csv'}", "jacobian=1",
-                                    "data", f"file={data_file}", "output", f"file={work / f'out_{ver}_{pname}_{n}.csv'}"],
+                                    "data", f"file={data_files[ver]}", "output", f"file={work / f'out_{ver}_{pname}_{n}.csv'}"],
                                    capture_output=True, text=True)
                 times[n] = time.time() - t0
                 if r.returncode != 0:
@@ -674,12 +682,13 @@ def gradient_benchmark(d, reps=200):
                     res[pname][ver + "_error"] = (r.stdout + r.stderr)[-300:]
             if None not in times.values():
                 res[pname][ver + "_ms_per_gradient"] = round(1000 * (times[reps] - times[1]) / (reps - 1), 3)
-        if "v2_ms_per_gradient" in res[pname] and "v3_ms_per_gradient" in res[pname]:
-            res[pname]["v3_over_v2"] = round(res[pname]["v3_ms_per_gradient"] / res[pname]["v2_ms_per_gradient"], 3)
+        if f"{ver_a}_ms_per_gradient" in res[pname] and f"{ver_b}_ms_per_gradient" in res[pname]:
+            res[pname][f"{ver_b}_over_{ver_a}"] = round(res[pname][f"{ver_b}_ms_per_gradient"] / res[pname][f"{ver_a}_ms_per_gradient"], 3)
     return res
 
 
-def checks_v3():
+def checks_solver():
+    VER = CFG[CFG["active"]]
     out = dict(rounding_fixtures=rounding_fixtures())
     mdl = model()
     for label, seed in (("frozen_seed", CFG["seed"]), ("fit_seed", CFG["fit_seed"])):
@@ -715,14 +724,19 @@ def checks_v3():
     passed = all(out[k]["precision_gate_pass"] and out[k]["automatic_gradients_pass"] for k in ("frozen_seed", "fit_seed")) and \
         all(v < 1e-6 for k in ("frozen_seed", "fit_seed") for v in out[k]["stan_vs_python_lp_differences"].values()) and \
         all(s["abs_diff"] < 1e-8 for k in ("frozen_seed", "fit_seed") for s in out[k]["solver_stability"].values())
+    if "probes" in VER:
+        paths, starts = make_inits(d)
+        out["probes"] = probes(d, starts)
+        out["smoke"] = smoke(paths) if out["probes"]["pass"] else "not run: probes failed"
+        passed = passed and out["probes"]["pass"] and isinstance(out["smoke"], dict) and out["smoke"]["pass"]
     out["all_prefit_checks_pass"] = passed
-    (HERE / CFG["v3"]["checks_file"]).write_text(json.dumps(out, indent=1, default=float) + "\n")
+    (HERE / VER["checks_file"]).write_text(json.dumps(out, indent=1, default=float) + "\n")
     print(json.dumps(out, indent=1, default=float))
 
 
 def checks():
-    if CFG.get("active") == "v3":
-        return checks_v3()
+    if CFG.get("active") in ("v3", "v4"):
+        return checks_solver()
     out = dict(rounding_fixtures=rounding_fixtures())
     for label, seed in (("frozen_seed", CFG["seed"]), ("fit_seed", CFG["fit_seed"])):
         out[label] = check_one(seed, saved=(label == "fit_seed"))
@@ -785,16 +799,165 @@ def check_one(seed, saved=False):
     return res
 
 
+def cause(line):
+    """Label an exception message by source; Q012-labelled rejections come from the explicit guards."""
+    low = line.lower()
+    for tag, lab in (("Q012 input failure", "input"), ("Q012 solver failure", "solver"),
+                     ("Q012 Hessian failure", "hessian"), ("Q012 factorisation failure", "factorisation")):
+        if tag in line:
+            return lab
+    if "algebra_solver" in low or "newton" in low or "kinsol" in low:
+        return "solver_internal"
+    if "log(0)" in low or "not finite" in low:
+        return "nonfinite_lp_or_gradient"
+    return "other"
+
+
+def init_points(rule, seed, n, N, pert):
+    """Prior-centred points by the declared init rule (normal: location + pert*scale*z; half-normal: median*exp(pert*z);
+    rho: inv_logit(pert*z); z_rw, eps: pert*z), one numpy stream per point."""
+    out = []
+    for k in range(1, n + 1):
+        rng = np.random.default_rng([seed, k])
+        q = {name: loc + pert * sc * float(rng.standard_normal()) for name, (loc, sc) in rule["normal"].items()}
+        q.update({name: med * math.exp(pert * float(rng.standard_normal())) for name, med in rule["half_normal_median"].items()})
+        q["rho"] = 1 / (1 + math.exp(-pert * float(rng.standard_normal())))
+        q["z_rw"] = list(pert * rng.standard_normal(24))
+        q["eps"] = list(pert * rng.standard_normal(N))
+        out.append(q)
+    return out
+
+
+def make_inits(d):
+    """Write the four frozen v4 initial-value files for the fit dataset."""
+    from cmdstanpy.utils import write_stan_json
+    I = CFG[CFG["active"]]["inits"]
+    pts = init_points(I, I["seed"], 4, d["N"], I["perturbation"])
+    folder = HERE / I["dir"]
+    folder.mkdir(exist_ok=True)
+    paths = []
+    for k, q in enumerate(pts, start=1):
+        paths.append(folder / f"chain{k}.json")
+        write_stan_json(str(paths[-1]), q)
+    return paths, pts
+
+
+def draw_to_params(row, N):
+    return dict(log_h0_1=float(row["log_h0_1"]), z_rw=[float(row[f"z_rw.{j}"]) for j in range(1, 25)], tau=float(row["tau"]),
+                **{k: float(row[k]) for k in ("log_k", "log_lambda0", "kappa", "log_b0", "kappa_b", "beta", "gamma", "sigma", "rho")},
+                eps=[float(row[f"eps.{j}"]) for j in range(1, N + 1)])
+
+
+def probes(d, starts):
+    """Fixed initialisation-like points through Stan's own initialisation, which reports a domain error as
+    'Rejecting initial value' and any other exception as 'Unrecoverable error'. Bounded per point and in total."""
+    import subprocess
+    from concurrent.futures import ThreadPoolExecutor
+    import pandas as pd
+    from cmdstanpy.utils import write_stan_json
+    VER = CFG[CFG["active"]]
+    P = VER["probes"]
+    exe = OUT / VER["stan_file"].removesuffix(".stan")
+    work = OUT / "probes_v4"
+    work.mkdir(parents=True, exist_ok=True)
+    data_file = work / "data.json"
+    write_stan_json(str(data_file), d)
+    pts = [(f"start_chain{k}", "start", q) for k, q in enumerate(starts, start=1)]
+    sp = stress_points(d)
+    est = {"central0": sp["central0"], "central1": sp["central1"], "stress_s3_r09_kbm15": sp["stress_s3_r09_kbm15"],
+           "near_one_rho_099": dict(sp["central0"], rho=0.99), "near_one_rho_0999_s3": dict(sp["central0"], rho=0.999, sigma=3.0),
+           "small_sigma_002": dict(sp["central0"], sigma=0.02)}
+    pts += [(k, "established", q) for k, q in est.items()]
+    for ch in (3, 4):
+        df = pd.read_csv(sorted((OUT / "fit_v3").glob(f"*_{ch}.csv"))[0], comment="#")
+        pts += [(f"saved_v3_chain{ch}_draw{i}", "saved", draw_to_params(df.iloc[i], d["N"])) for i in (250, 750)]
+    rng = np.random.default_rng(P["seed"])
+    n_broad = (P["max_points"] - len(pts)) // 2
+    for k in range(n_broad):
+        u = rng.uniform(-2, 2, size=12 + 24 + d["N"])
+        q = dict(zip(["log_h0_1", "tau", "log_k", "log_lambda0", "kappa", "log_b0", "kappa_b", "beta", "gamma", "sigma", "rho"],
+                     map(float, u[:11])))
+        q.update(tau=math.exp(q["tau"]), sigma=math.exp(q["sigma"]), rho=1 / (1 + math.exp(-q["rho"])),
+                 z_rw=list(u[12:36]), eps=list(u[36:]))
+        pts.append((f"uniform2_{k}", "uniform2", q))
+    for k, q in enumerate(init_points(VER["inits"], P["seed"], n_broad, d["N"], 1.0)):
+        pts.append((f"prior_scale_{k}", "prior_scale", q))
+    assert len(pts) <= P["max_points"]
+    t0 = time.time()
+
+    def run(item):
+        j, (label, kind, q) = item
+        if time.time() - t0 > P["budget_seconds"]:
+            return dict(label=label, kind=kind, outcome="not_run_budget")
+        f = work / f"p{j}.json"
+        write_stan_json(str(f), q)
+        try:
+            r = subprocess.run([str(exe), "sample", "num_samples=1", "num_warmup=0", "adapt", "engaged=0", "algorithm=hmc",
+                                "engine=nuts", "max_depth=1", "stepsize=" + str(VER["init_step_size"]), "init=" + str(f),
+                                "random", f"seed={P['seed']}", "data", f"file={data_file}", "output", f"file={work / f'p{j}.csv'}",
+                                "refresh=0"], capture_output=True, text=True, timeout=P["per_point_timeout_seconds"])
+        except subprocess.TimeoutExpired:
+            return dict(label=label, kind=kind, outcome="timeout")
+        txt = r.stdout + r.stderr
+        lines = txt.splitlines()
+        if "Unrecoverable error" in txt:
+            msg = next((l for l in lines if l.startswith("Exception")), "")
+            return dict(label=label, kind=kind, outcome="unrecoverable", cause=cause(msg), message=msg[:240])
+        if "Rejecting initial value" in txt:
+            i = lines.index(next(l for l in lines if "Rejecting initial value" in l))
+            msg = next((l for l in lines[i + 1:i + 4] if l.startswith("Exception") or "log(0)" in l or "not finite" in l), lines[i + 1])
+            return dict(label=label, kind=kind, outcome="domain_rejection", cause=cause(msg), message=msg.strip()[:240])
+        if r.returncode != 0:
+            return dict(label=label, kind=kind, outcome="unexpected_exit", returncode=r.returncode, tail=txt[-240:])
+        return dict(label=label, kind=kind, outcome="initialised", transition_rejected="about to be rejected" in txt)
+
+    with ThreadPoolExecutor(P["workers"]) as ex:
+        rows = list(ex.map(run, enumerate(pts)))
+    secs = round(time.time() - t0, 1)
+    tally = {}
+    for r in rows:
+        key = r["kind"] + ":" + r["outcome"] + (":" + r["cause"] if "cause" in r else "")
+        tally[key] = tally.get(key, 0) + 1
+    must = [r for r in rows if r["kind"] in ("start", "established", "saved")]
+    bad_rows = [r for r in rows if r["outcome"] in ("unrecoverable", "unexpected_exit", "timeout", "not_run_budget")]
+    ok = all(r["outcome"] == "initialised" for r in must) and not bad_rows and secs <= P["budget_seconds"]
+    return dict(points=len(rows), seconds=secs, tally=tally, must_pass=[(r["label"], r["outcome"]) for r in must],
+                unexpected=bad_rows, domain_rejection_examples=[r for r in rows if r["outcome"] == "domain_rejection"][:6],
+                **{"pass": ok})
+
+
+def smoke(paths):
+    """Four real chains from the selected starts and step size: initialisation, step-size search, ten warmup iterations."""
+    VER = CFG[CFG["active"]]
+    S, s = VER["smoke"], CFG["sampler"]
+    d, _, _ = dataset(CFG["fit_seed"])
+    mdl = model()
+    odir = OUT / S["output_dir"]
+    t0 = time.time()
+    status = "finished"
+    try:
+        mdl.sample(data=d, chains=S["chains"], parallel_chains=S["chains"], iter_warmup=S["iter_warmup"],
+                   iter_sampling=S["iter_sampling"], adapt_delta=s["adapt_delta"], max_treedepth=s["max_treedepth"],
+                   seed=s["seed"], inits=[str(x) for x in paths], step_size=VER["init_step_size"], show_progress=False,
+                   output_dir=str(odir), timeout=S["timeout_seconds"])
+    except TimeoutError:
+        status = "timeout"
+    except RuntimeError as e:
+        status = "error: " + str(e)[:200]
+    rec = chain_record(odir)
+    fatal = [c["fatal"] for c in rec["chains"].values() if c.get("fatal")]
+    done = sum(1 for c in rec["chains"].values() if c.get("complete"))
+    return dict(status=status, seconds=round(time.time() - t0, 1), completed_chains=done, fatal=fatal,
+                rejections=rec["rejections_total"],
+                **{"pass": status == "finished" and done == S["chains"] and not fatal})
+
+
 def chain_record(outdir):
     """Per-chain record from CmdStan output alone: progress, saved draws, timing, and rejected proposals versus
     fatal exceptions by cause. A rejection follows Stan's 'about to be rejected' message, or a rejected initial value
     (which Stan redraws); any other exception ends the chain. Phase is 'init' before the first progress line, then
     taken from the latest progress line."""
     import pandas as pd
-    def cause(line):
-        low = line.lower()
-        return ("solver" if "Q012 solver failure" in line else "hessian" if "Q012 Hessian failure" in line
-                else "solve_newton_internal" if ("algebra_solver" in low or "newton" in low or "kinsol" in low) else "other")
     outdir = pathlib.Path(outdir)
     chains, rej_tot = {}, {}
     for k, f in enumerate(sorted(outdir.glob("*-stdout.txt")), start=1):
@@ -843,11 +1006,16 @@ def fit():
     VER = CFG[CFG.get("active", "v2")]
     row = dict(seed=CFG["fit_seed"], N=d["N"], model=VER["stan_file"], observation=oinfo)
     odir = OUT / VER.get("output_dir", "fit_v2")
+    start = {}
+    if "inits" in VER:
+        assert json.loads((HERE / VER["checks_file"]).read_text())["all_prefit_checks_pass"], "prefit checks have not passed"
+        start = dict(inits=[str(HERE / VER["inits"]["dir"] / f"chain{k}.json") for k in range(1, s["chains"] + 1)],
+                     step_size=VER["init_step_size"])
     try:
         f = mdl.sample(data=d, chains=s["chains"], parallel_chains=lim["parallel_chains"], iter_warmup=s["iter_warmup"],
                        iter_sampling=s["iter_sampling"], adapt_delta=s["adapt_delta"], max_treedepth=s["max_treedepth"],
                        seed=s["seed"], show_progress=False, output_dir=str(odir),
-                       timeout=lim["fit_timeout_seconds"])
+                       timeout=lim["fit_timeout_seconds"], **start)
     except (TimeoutError, RuntimeError) as e:
         row.update(status="timeout" if isinstance(e, TimeoutError) else "chain_failure",
                    seconds=round(time.time() - t0, 1), **partial_summary(odir))

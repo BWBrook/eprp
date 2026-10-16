@@ -1,0 +1,583 @@
+{
+ "rounding_fixtures": {
+  "result": {
+   "A": [
+    10.0,
+    1.005,
+    "bif"
+   ],
+   "B": [
+    1.005,
+    1.0,
+    "ext"
+   ],
+   "D": [
+    1.005,
+    0.0,
+    "present"
+   ],
+   "E": [
+    5.0,
+    0.005,
+    "ext"
+   ]
+  },
+  "counts": {
+   "short_interval_moves": 0,
+   "shared_event_moves": 1,
+   "origin_ties": 0,
+   "ext_near_present": 1,
+   "fallback_components": 0
+  },
+  "budding_links_from_B_or_D": 0
+ },
+ "frozen_seed": {
+  "seed": 20261017,
+  "observation": {
+   "recorded": 62,
+   "ancestry_lost": 0,
+   "reassigned": 1,
+   "labels": {
+    "ext": 34,
+    "bif": 2,
+    "single": 0,
+    "present": 26
+   },
+   "short_interval_moves": 0,
+   "shared_event_moves": 0,
+   "origin_ties": 0,
+   "ext_near_present": 0,
+   "fallback_components": 0
+  },
+  "adapted": {
+   "N": 62,
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1
+  },
+  "precision_gate": {
+   "central0": {
+    "log_err": 2.22e-16,
+    "d_sigma_err": 3.33e-12,
+    "d_kappa_b_err": 3.33e-12,
+    "d_rho_err": 2.22e-12
+   },
+   "central1": {
+    "log_err": 6.66e-16,
+    "d_sigma_err": 1.11e-12,
+    "d_kappa_b_err": 2.22e-12,
+    "d_rho_err": 3.33e-12
+   },
+   "stress_s3_r09_kbm15": {
+    "log_err": 1.95e-05,
+    "d_sigma_err": 1.25e-05,
+    "d_kappa_b_err": 0.000109,
+    "d_rho_err": 2.77e-05
+   },
+   "stress_s18_r09_kbm15": {
+    "log_err": 1.41e-05,
+    "d_sigma_err": 6.6e-05,
+    "d_kappa_b_err": 9.64e-05,
+    "d_rho_err": 2.18e-06
+   },
+   "stress_s3_r09_kbp15": {
+    "log_err": 1.69e-05,
+    "d_sigma_err": 0.00057,
+    "d_kappa_b_err": 0.000272,
+    "d_rho_err": 0.000129
+   },
+   "small_sigma": {
+    "log_err": 1.11e-15,
+    "d_sigma_err": 4.44e-12,
+    "d_kappa_b_err": 5.55e-12,
+    "d_rho_err": 2.22e-12
+   },
+   "small_sigma_002": {
+    "log_err": 2.22e-16,
+    "d_sigma_err": 0.0,
+    "d_kappa_b_err": 6.66e-12,
+    "d_rho_err": 2.22e-12
+   },
+   "near_one_rho_099": {
+    "log_err": 0.0,
+    "d_sigma_err": 6.66e-12,
+    "d_kappa_b_err": 0.0,
+    "d_rho_err": 1.11e-12
+   },
+   "near_one_rho_0999_s3": {
+    "log_err": 4.63e-05,
+    "d_sigma_err": 0.000157,
+    "d_kappa_b_err": 1.67e-05,
+    "d_rho_err": 0.000619
+   }
+  },
+  "precision_gate_pass": true,
+  "reference_precision_extreme": {
+   "n1600": -0.4001313732,
+   "n3200": -0.4001313732
+  },
+  "stan_vs_python_lp_differences": {
+   "central0-central1": 1.7053025658242404e-13,
+   "central0-stress_s3_r09_kbm15": 2.7284841053187847e-11,
+   "central0-near_one_rho_0999_s3": 3.979039320256561e-13
+  },
+  "solver_stability": {
+   "central0": {
+    "lp_default": -397.1205251863,
+    "lp_tight": -397.1205251863,
+    "abs_diff": 0.0
+   },
+   "stress_s3_r09_kbm15": {
+    "lp_default": -10261.9165556704,
+    "lp_tight": -10261.9165556704,
+    "abs_diff": 0.0
+   }
+  },
+  "automatic_gradients": {
+   "central0": {
+    "g_sigma": {
+     "stan": -14.9865919,
+     "fd": -14.9865917,
+     "abs_err": 2.1311345577146312e-07
+    },
+    "g_rho": {
+     "stan": -0.7539365,
+     "fd": -0.7539365,
+     "abs_err": 2.4512492036166122e-09
+    },
+    "g_kappa_b": {
+     "stan": -0.1703534,
+     "fd": -0.1703534,
+     "abs_err": 1.528579093856841e-08
+    },
+    "g_log_h0_1": {
+     "stan": -33.2048111,
+     "fd": -33.2048111,
+     "abs_err": 6.162066767956276e-08
+    },
+    "g_log_k": {
+     "stan": -115.3713338,
+     "fd": -115.3713338,
+     "abs_err": 3.11431875843482e-08
+    },
+    "g_gamma": {
+     "stan": -3.132799,
+     "fd": -3.1327989,
+     "abs_err": 8.481759783407483e-08
+    },
+    "g_log_b0": {
+     "stan": -4.6622593,
+     "fd": -4.6622593,
+     "abs_err": 1.8858527184306695e-08
+    },
+    "g_tau": {
+     "stan": 0.767603,
+     "fd": 0.7676029,
+     "abs_err": 3.847998208961201e-08
+    },
+    "g_eps.1": {
+     "stan": -1.1055391,
+     "fd": -1.1055392,
+     "abs_err": 1.7251495343373335e-08
+    }
+   },
+   "stress_s3_r09_kbm15": {
+    "g_sigma": {
+     "stan": -160339.3259812,
+     "fd": -160339.3259793,
+     "abs_err": 1.8771970644593239e-06
+    },
+    "g_rho": {
+     "stan": 11702.7475513,
+     "fd": 11702.7475653,
+     "abs_err": 1.3977978596813045e-05
+    },
+    "g_kappa_b": {
+     "stan": 62673.015729,
+     "fd": 62673.0157264,
+     "abs_err": 2.6091875042766333e-06
+    },
+    "g_log_h0_1": {
+     "stan": 11.2069499,
+     "fd": 11.2069529,
+     "abs_err": 2.9556317322487757e-06
+    },
+    "g_log_k": {
+     "stan": 21.4315014,
+     "fd": 21.4315014,
+     "abs_err": 2.6296490318600263e-08
+    },
+    "g_gamma": {
+     "stan": 7.7218853,
+     "fd": 7.7218856,
+     "abs_err": 2.9369994791750287e-07
+    },
+    "g_log_b0": {
+     "stan": -9797.1991859,
+     "fd": -9797.1991909,
+     "abs_err": 5.0088328862329945e-06
+    },
+    "g_tau": {
+     "stan": 0.6638019,
+     "fd": 0.6638038,
+     "abs_err": 1.952872145438711e-06
+    },
+    "g_eps.1": {
+     "stan": 5.0904328,
+     "fd": 5.0904318,
+     "abs_err": 9.991061302727644e-07
+    }
+   }
+  },
+  "automatic_gradients_pass": true
+ },
+ "fit_seed": {
+  "seed": 20261060,
+  "observation": {
+   "recorded": 264,
+   "ancestry_lost": 0,
+   "reassigned": 23,
+   "labels": {
+    "ext": 135,
+    "bif": 11,
+    "single": 7,
+    "present": 111
+   },
+   "short_interval_moves": 0,
+   "shared_event_moves": 0,
+   "origin_ties": 0,
+   "ext_near_present": 0,
+   "fallback_components": 0
+  },
+  "adapted": {
+   "N": 264,
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1
+  },
+  "precision_gate": {
+   "central0": {
+    "log_err": 2.22e-16,
+    "d_sigma_err": 3.33e-12,
+    "d_kappa_b_err": 3.33e-12,
+    "d_rho_err": 2.22e-12
+   },
+   "central1": {
+    "log_err": 6.66e-16,
+    "d_sigma_err": 1.11e-12,
+    "d_kappa_b_err": 2.22e-12,
+    "d_rho_err": 3.33e-12
+   },
+   "stress_s3_r09_kbm15": {
+    "log_err": 1.95e-05,
+    "d_sigma_err": 1.25e-05,
+    "d_kappa_b_err": 0.000109,
+    "d_rho_err": 2.77e-05
+   },
+   "stress_s18_r09_kbm15": {
+    "log_err": 1.41e-05,
+    "d_sigma_err": 6.6e-05,
+    "d_kappa_b_err": 9.64e-05,
+    "d_rho_err": 2.18e-06
+   },
+   "stress_s3_r09_kbp15": {
+    "log_err": 1.69e-05,
+    "d_sigma_err": 0.00057,
+    "d_kappa_b_err": 0.000272,
+    "d_rho_err": 0.000129
+   },
+   "small_sigma": {
+    "log_err": 1.11e-15,
+    "d_sigma_err": 4.44e-12,
+    "d_kappa_b_err": 5.55e-12,
+    "d_rho_err": 2.22e-12
+   },
+   "small_sigma_002": {
+    "log_err": 2.22e-16,
+    "d_sigma_err": 0.0,
+    "d_kappa_b_err": 6.66e-12,
+    "d_rho_err": 2.22e-12
+   },
+   "near_one_rho_099": {
+    "log_err": 0.0,
+    "d_sigma_err": 6.66e-12,
+    "d_kappa_b_err": 0.0,
+    "d_rho_err": 1.11e-12
+   },
+   "near_one_rho_0999_s3": {
+    "log_err": 4.63e-05,
+    "d_sigma_err": 0.000157,
+    "d_kappa_b_err": 1.67e-05,
+    "d_rho_err": 0.000619
+   },
+   "saved_draws_40_max": {
+    "log_err": 5.83e-05,
+    "d_sigma_err": 0.000303,
+    "d_kappa_b_err": 1.11e-05,
+    "d_rho_err": 7.12e-06
+   }
+  },
+  "precision_gate_pass": true,
+  "reference_precision_extreme": {
+   "n1600": -0.4001313732,
+   "n3200": -0.4001313732
+  },
+  "stan_vs_python_lp_differences": {
+   "central0-central1": 8.185452315956354e-12,
+   "central0-stress_s3_r09_kbm15": 6.402842700481415e-10,
+   "central0-near_one_rho_0999_s3": 4.320099833421409e-12
+  },
+  "solver_stability": {
+   "central0": {
+    "lp_default": -1603.3921421676,
+    "lp_tight": -1603.3921421676,
+    "abs_diff": 0.0
+   },
+   "stress_s3_r09_kbm15": {
+    "lp_default": -90824.4291092108,
+    "lp_tight": -90824.4291092108,
+    "abs_diff": 0.0
+   }
+  },
+  "automatic_gradients": {
+   "central0": {
+    "g_sigma": {
+     "stan": -35.0363167,
+     "fd": -35.0363155,
+     "abs_err": 1.1997819981957036e-06
+    },
+    "g_rho": {
+     "stan": -6.5215785,
+     "fd": -6.5215778,
+     "abs_err": 7.166504811806362e-07
+    },
+    "g_kappa_b": {
+     "stan": -0.6230765,
+     "fd": -0.6230773,
+     "abs_err": 7.972134530298547e-07
+    },
+    "g_log_h0_1": {
+     "stan": -96.7504377,
+     "fd": -96.7504374,
+     "abs_err": 3.22935463259455e-07
+    },
+    "g_log_k": {
+     "stan": -325.0914562,
+     "fd": -325.0914554,
+     "abs_err": 8.172070806722331e-07
+    },
+    "g_gamma": {
+     "stan": -20.5890295,
+     "fd": -20.5890283,
+     "abs_err": 1.2654245686860577e-06
+    },
+    "g_log_b0": {
+     "stan": -12.8582049,
+     "fd": -12.8582036,
+     "abs_err": 1.3141175809749939e-06
+    },
+    "g_tau": {
+     "stan": -3.1662745,
+     "fd": -3.1662727,
+     "abs_err": 1.8304309725714063e-06
+    },
+    "g_eps.1": {
+     "stan": -0.9178428,
+     "fd": -0.9178428,
+     "abs_err": 5.6498299261242835e-08
+    }
+   },
+   "stress_s3_r09_kbm15": {
+    "g_sigma": {
+     "stan": -1533509.8326975,
+     "fd": -1533509.8328796,
+     "abs_err": 0.00018215482123196125
+    },
+    "g_rho": {
+     "stan": 279591.9903405,
+     "fd": 279591.9905402,
+     "abs_err": 0.00019970256835222244
+    },
+    "g_kappa_b": {
+     "stan": 622835.6133181,
+     "fd": 622835.6132924,
+     "abs_err": 2.565688919275999e-05
+    },
+    "g_log_h0_1": {
+     "stan": -294.0401555,
+     "fd": -294.04011,
+     "abs_err": 4.544213038570888e-05
+    },
+    "g_log_k": {
+     "stan": -846.9762527,
+     "fd": -846.9761888,
+     "abs_err": 6.389834197761957e-05
+    },
+    "g_gamma": {
+     "stan": -12.0087372,
+     "fd": -12.0087498,
+     "abs_err": 1.2517857419069855e-05
+    },
+    "g_log_b0": {
+     "stan": -88715.0622511,
+     "fd": -88715.0622657,
+     "abs_err": 1.4615317923016846e-05
+    },
+    "g_tau": {
+     "stan": -0.0580129,
+     "fd": -0.0579603,
+     "abs_err": 5.266879140333053e-05
+    },
+    "g_eps.1": {
+     "stan": 4.259032,
+     "fd": 4.2590327,
+     "abs_err": 7.709956477697233e-07
+    }
+   }
+  },
+  "automatic_gradients_pass": true
+ },
+ "gradient_benchmark": {
+  "saved_draw_a": {
+   "v3_ms_per_gradient": 1.69,
+   "v4_ms_per_gradient": 1.979,
+   "v4_over_v3": 1.171
+  },
+  "saved_draw_b": {
+   "v3_ms_per_gradient": 1.699,
+   "v4_ms_per_gradient": 1.698,
+   "v4_over_v3": 0.999
+  },
+  "stress_from_saved_a": {
+   "v3_ms_per_gradient": 1.736,
+   "v4_ms_per_gradient": 1.854,
+   "v4_over_v3": 1.068
+  }
+ },
+ "probes": {
+  "points": 200,
+  "seconds": 0.6,
+  "tally": {
+   "start:initialised": 4,
+   "established:initialised": 6,
+   "saved:initialised": 4,
+   "uniform2:domain_rejection:solver_internal": 11,
+   "uniform2:initialised": 82,
+   "prior_scale:initialised": 91,
+   "prior_scale:domain_rejection:solver_internal": 2
+  },
+  "must_pass": [
+   [
+    "start_chain1",
+    "initialised"
+   ],
+   [
+    "start_chain2",
+    "initialised"
+   ],
+   [
+    "start_chain3",
+    "initialised"
+   ],
+   [
+    "start_chain4",
+    "initialised"
+   ],
+   [
+    "central0",
+    "initialised"
+   ],
+   [
+    "central1",
+    "initialised"
+   ],
+   [
+    "stress_s3_r09_kbm15",
+    "initialised"
+   ],
+   [
+    "near_one_rho_099",
+    "initialised"
+   ],
+   [
+    "near_one_rho_0999_s3",
+    "initialised"
+   ],
+   [
+    "small_sigma_002",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain3_draw250",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain3_draw750",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain4_draw250",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain4_draw750",
+    "initialised"
+   ]
+  ],
+  "unexpected": [],
+  "domain_rejection_examples": [
+   {
+    "label": "uniform2_0",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.76488e+09 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v4.stan', li"
+   },
+   {
+    "label": "uniform2_14",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.05727e+09 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v4.stan', li"
+   },
+   {
+    "label": "uniform2_15",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 4.30106e+13 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v4.stan', li"
+   },
+   {
+    "label": "uniform2_39",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 2.61934e-10 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v4.stan', li"
+   },
+   {
+    "label": "uniform2_45",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 6.51266e+08 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v4.stan', li"
+   },
+   {
+    "label": "uniform2_48",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 7.25155e+12 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v4.stan', li"
+   }
+  ],
+  "pass": true
+ },
+ "smoke": {
+  "status": "finished",
+  "seconds": 19.6,
+  "completed_chains": 4,
+  "fatal": [],
+  "rejections": {},
+  "pass": true
+ },
+ "all_prefit_checks_pass": true
+}

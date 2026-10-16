@@ -812,6 +812,18 @@ identifiability point.
       - Next, for Codex: `solve_powell_tol` (whose failures are
         rejections), safer initialisation, a robustness prefit check and a
         smaller 2-D rule.
+    - **v4, Powell with guards and declared starts (Codex 76/1745), 16
+      October:**
+      - The prefit checks, 200 initialisation probes (zero fatal errors)
+        and a 4-chain smoke check pass.
+      - **The one fit completed in 891 s:** four chains, no fatal error,
+        no rejection, 2 divergences in the upper σ tail.
+      - **Convergence is marginal for σ and log k** (R̂ up to 1.014, bulk
+        ESS 172–194). η has R̂ 1.005 and ESS 495; its 90% interval,
+        0.029–0.492, covers the truth, 0.2.
+      - Per chain, the wall time is about 1.2 times v1's.
+      - Next: Codex checks the evidence; then the scenario grid and the
+        kunanyi packaging.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 
