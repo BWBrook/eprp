@@ -21,10 +21,13 @@ Updated: 16 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   starts and summaries replay. Sampling remains inadequate for a campaign:
   two divergences, weak sigma/log-k mixing and low E-BFMI in two chains.
   New tail checks breach the 40-node precision tolerance; fixed 64 nodes
-  pass the checked points. Codex proposes a staged kunanyi pilot package
-  and corrects an impossible equal-tail coverage requirement at eta=0.
-  Claude is next to accept/amend and prepare the package; no further
-  laptop fit, full grid or empirical fit. Claude
+  pass the checked points. Claude's v5/pilot package at `a47eabe` preserves
+  the numerical evidence and corrects the eta=0 coverage requirement.
+  Codex's prelaunch check reproduces the datasets, starts and new precision
+  evidence but finds failed-output screening, binding and job-control
+  defects. **TPAC opening is on hold for bounded package repairs.** Claude
+  owns those repairs; Codex checks the patch next. No further long laptop
+  fit, full grid or empirical fit. Claude
   relays Barry's kunanyi destination and PBS completion-mail approval in
   76/1733–1734; no background monitoring or pre-opening jumpbox probe.
   B-004's critique response, six-study modern screen and bounded analytic
@@ -76,7 +79,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex: v4 evidence check complete; Claude: proposed pilot preparation, acceptance pending | [V4 review and pilot proposal](ideas/2026-10-16-q012-v4-check-and-pilot-codex.md) verifies four completed chains, but two divergences, weak mixing and two low E-BFMI values remain. A 64-node candidate passes new tail checks that 40 nodes fail. Proposed next package: boundary-coverage contract correction; one longer kunanyi technical replay, then 12 unconditional null/threshold/effect datasets across original-rate and size-sensitive panels only if that replay qualifies. No remote probe or new fit; no full campaign clearance. Claude retains code/configuration ownership; Codex checks the concrete package next |
+| Q-012/D1 support and identification | Codex: prelaunch review complete; Claude: bounded package repairs next | [Prelaunch check](ideas/2026-10-16-q012-pilot-prelaunch-check-codex.md) reproduces 13 datasets, 52 starts and new 64-node precision evidence. Screening falsely accepts failed/mixed/incomplete fixtures; source/build binding, runtime setup, notification/fetch and termination controls need repair. Hold TPAC opening until Claude repairs and Codex checks. Six-hour R00 cap and smoke limits accepted; first remote tranche remains build/preflight plus R00, with the 12-fit panel conditional on its separate review. No remote work or full campaign clearance |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -795,6 +798,16 @@ next phase of ideation whilst those final checks are done."
   Claude prepares a bounded kunanyi pilot with stronger sampling and
   explicit failure accounting. Ownership acceptance and package checks
   precede TPAC access; no further local fit or full campaign is launched.
+
+- **Pilot prelaunch review, 16 October:** `a47eabe` and 76/1758 deliver
+  the 64-node package after seed freeze `c93ea58`. Codex's
+  [check](ideas/2026-10-16-q012-pilot-prelaunch-check-codex.md) accepts
+  Amendment 2, the E-BFMI convention correction and the bounded timing
+  amendments. Current numerical/data evidence reproduces, but isolated
+  fixtures expose false screening passes, missing provenance checks,
+  surviving processes after termination and failed-build retrieval failure.
+  Runtime setup and build mail also need correction. Claude owns bounded
+  repairs; Codex rechecks before TPAC opening. No new fit or remote work.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
