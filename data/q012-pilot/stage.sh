@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Stage the pilot payload to kunanyi and submit the build and the technical replay (R00).
 # Run only while Barry has the TPAC jumpbox window open. Uses nectar's password-fed transport.
-#   KUNANYI_SSH_ALIAS=kunanyi data/q012-pilot/stage.sh [TAG]      # campus or eduroam
+#   KUNANYI_SSH_ALIAS=kunanyi data/q012-pilot/stage.sh [TAG]      # campus or eduroam; REMOTE_BASE overrides /u/bwbrook/codex_kunanyi
 #   KUNANYI_SSH_ALIAS=kunanyi-via-nectar data/q012-pilot/stage.sh  # via a running Nectar bastion
 # The 12-fit panel is not submitted here; it waits for Codex's review of the replay.
 set -euo pipefail
@@ -13,9 +13,15 @@ NECTAR="${NECTAR_ROOT:-$HOME/work/nectar}"
 . "$NECTAR/scripts/lib/kunanyi.sh"
 export KUNANYI_SSH_ALIAS="${KUNANYI_SSH_ALIAS:-kunanyi}"
 tpac_transport_setup
+# kunanyi's SFTP server fails on close when writing /scratch (16 Oct 2026: 0-byte file, "close remote: Failure"),
+# while shell writes succeed; use scp's legacy protocol (-O) through a copy of nectar's expect script.
+LEGACY_EXP="$HERE/../../scratch/q012-pilot/tpac-expect-legacy-scp.exp"
+sed 's/spawn scp \\$/spawn scp -O \\/' "$TPAC_EXPECT_SCRIPT" > "$LEGACY_EXP"
+grep -q "spawn scp -O" "$LEGACY_EXP" || die "could not prepare the legacy-scp expect script"
+export TPAC_EXPECT_SCRIPT="$LEGACY_EXP"
 
 TAG="${1:-$(date +%Y%m%dT%H%M%S)}"
-REMOTE="/scratch/bwbrook/q012-pilot-$TAG"
+REMOTE="${REMOTE_BASE:-/u/bwbrook/codex_kunanyi}/q012-pilot-$TAG"
 CACHE="$HERE/../../scratch/q012-pilot"
 TARBALL="$CACHE/cmdstan-2.38.0.tar.gz"
 PAYLOAD="$CACHE/payload-$TAG.tar.gz"

@@ -142,6 +142,31 @@ denominator: report [s/n, (s+u)/n].
    `checks_v5_smoke60.json`. The 300 s rerun completed all four chains in
    70 s. The cluster preflight smoke allows 600 s.
 
+## Staging record (16 October 2026)
+
+- **Submitted:** build/preflight `820938.kunanyi-ohpc`, then R00
+  `820939.kunanyi-ohpc` with `afterok:820938`.
+  - Queue `normal`; 1 node, 4 CPUs, 8 GiB, walltime 06:10:00.
+  - Mail points `ae` on both.
+- **Payload:** manifest 9327b837…, the tarball 67adbed3…, as Codex cleared
+  (76/1774). Both tarballs verified by hash on kunanyi before submission.
+- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00`.
+  - `/scratch/bwbrook` is at its 8 TiB quota ("Disk quota exceeded").
+  - Home holds the 20 TiB allocation (TPAC, per X-ray Cavities' log of 21
+    August).
+  - Barry directed: do not use scratch. The scripts now default to
+    `/u/bwbrook/codex_kunanyi`.
+- **Transfer:** uses scp's legacy protocol (`-O`). kunanyi's SFTP path
+  reported the scratch quota failure only as "close remote: Failure",
+  leaving a 0-byte file. The empty directory
+  `/scratch/bwbrook/q012-pilot-20261016-r00` from that attempt remains
+  (0 bytes).
+- **Host key:** this laptop's stale `kunanyi` pin (`c/CENudr…` and ECDSA)
+  was replaced with Barry's authorisation. The new key, ED25519
+  `IzXcim01EZc9FMqnrbDIfX9WfFSrK1RMwFq5McL4zpI`, is the one accepted on 30
+  June and already held by the Mac mini. A backup is at
+  `~/.ssh/known_hosts.bak-20261016-kunanyi`.
+
 ## Execution, when Codex has checked the package
 
 ```bash

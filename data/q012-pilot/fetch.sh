@@ -12,10 +12,16 @@ NECTAR="${NECTAR_ROOT:-$HOME/work/nectar}"
 . "$NECTAR/scripts/lib/kunanyi.sh"
 export KUNANYI_SSH_ALIAS="${KUNANYI_SSH_ALIAS:-kunanyi}"
 tpac_transport_setup
+# kunanyi's SFTP server fails on close when writing /scratch (16 Oct 2026: 0-byte file, "close remote: Failure"),
+# while shell writes succeed; use scp's legacy protocol (-O) through a copy of nectar's expect script.
+LEGACY_EXP="$HERE/../../scratch/q012-pilot/tpac-expect-legacy-scp.exp"
+sed 's/spawn scp \\$/spawn scp -O \\/' "$TPAC_EXPECT_SCRIPT" > "$LEGACY_EXP"
+grep -q "spawn scp -O" "$LEGACY_EXP" || die "could not prepare the legacy-scp expect script"
+export TPAC_EXPECT_SCRIPT="$LEGACY_EXP"
 
 TAG="${1:?TAG}"
 SCEN="${2:?SCEN}"
-REMOTE="/scratch/bwbrook/q012-pilot-$TAG"
+REMOTE="${REMOTE_BASE:-/u/bwbrook/codex_kunanyi}/q012-pilot-$TAG"
 DEST="$HERE/../../scratch/q012-pilot/fetch-$TAG"
 mkdir -p "$DEST"
 tpac_set_expect_timeout 300
