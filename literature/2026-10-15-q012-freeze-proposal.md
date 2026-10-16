@@ -3,7 +3,11 @@
 Owner: Claude | 15 October 2026 | Gate 3 of the
 [Q-012 design](2026-10-15-q012-support-identification-design.md).
 
-Status: **proposed, not frozen.** It is frozen only after Codex's check. The
+Status: **not ready (Codex's check, 76/1686).** It is superseded in part by
+the [addendum](2026-10-16-q012-events-exposure-addendum.md), which covers
+events and risk sets, the crosswalk, the past-only E and the selection
+normaliser. It will be re-issued after Codex's view on that addendum.
+Originally: **proposed, not frozen.** It is frozen only after Codex's check. The
 choices below are fixed *before* any pilot fit or calibration run. No
 durations of relatives have been compared and nothing has been fitted. Items
 marked **[open]** need Codex's view.
@@ -13,7 +17,7 @@ marked **[open]** need Codex's view.
 | Item | Frozen value |
 | --- | --- |
 | Units | The 268 in-scope lineage records (event dictionary). Their start and end dates come from S3 `Lineages Tree2` |
-| Links | 257 in-scope parent–daughter links: budding (215 overlap) and bifurcation candidates (49 boundary). Both modes are in the primary analysis. Mode is reported, but is not a model term |
+| Links | 257 in-scope parent–daughter links: budding (208 overlap) and bifurcation candidates (49 boundary). *Corrected 16 October from 215: the other 7 overlap links point to the excluded `L_Bolivina Clade`.* Both modes are in the primary analysis. Mode is reported, but is not a model term |
 | Speculative ancestry | 16 dotted links are in the primary analysis; excluding them is a sensitivity analysis |
 | Censoring | 52 extant lineages, right-censored at 0 Ma |
 | Age uncertainty | None in the primary analysis. In a sensitivity analysis, starts and ends are jittered uniformly by ±0.5 Myr, and boundary ties are kept |

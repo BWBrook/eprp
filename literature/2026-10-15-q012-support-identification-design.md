@@ -32,7 +32,7 @@ model was fitted, and no calibration was run.
   rerun reproduces it exactly).
   - **Primary unit: the source's 268 in-scope lineage records**, with their
     ancestor codes.
-    - Date relation to the ancestor: 215 overlap, 49 boundary.
+    - Date relation to the ancestor, for in-scope ancestors: 208 overlap and 49 boundary. Corrected 16 October: 7 further overlap links point to the excluded `L_Bolivina Clade`.
     - 257 in-scope parent–daughter links (188 with both extinct; 16 with
       speculative ancestry).
     - 234 sister pairs from 72 sibships (150 with both extinct).
@@ -48,7 +48,7 @@ model was fitted, and no calibration was run.
     - "Budding" means "the ancestor continues to survive after giving rise
       to its descendant". "Bifurcating" means "two descendants are
       produced from one ancestor at the same time with the ancestor not
-      surviving" (p. 4, after Foote 1996). So the 215 overlap links are
+      surviving" (p. 4, after Foote 1996). So the 208 in-scope overlap links are
       budding and the 49 boundary links are bifurcation candidates.
     - The conversion follows Aze et al. 2011. Where literature was lacking,
       "qualitative decisions were made" (p. 5).
@@ -198,7 +198,11 @@ L(θ) = ∫ p(x | σ, ρ) ∏ᵢ [ h_i(T_i | x_i)^δᵢ S_i(T_i | x_i) ]
   fitted by MCMC (for example Stan) over about 270 latent variables. The
   cost is to be measured in a small pilot.
 
-## 5. Forecasting at a landmark (the secondary estimand)
+## 5. Prediction at a landmark (the secondary estimand)
+
+*Relabelled 16 October:* this is **retrospective cross-clade prediction**,
+not prospective forecasting (see the
+[addendum](2026-10-16-q012-events-exposure-addendum.md), section 4).
 
 | Element | Specification |
 | --- | --- |

@@ -1,10 +1,36 @@
-in-scope S1 species: 480 | Triton species: 395 | exact-name matches: 340 
-kept occurrences (inc, pal.lat, within S1 range): 420490 | species with >=1 kept: 332 
-lineages: 268 | with any data: 211 | covered (>=0.5 of bins): 190 
-median lineage coverage: 0.9895 
+in-scope S1 species: 480 | Triton species (inc): 392 | S1 species reached by crosswalk: 379 
+
+backticks     exact      none     tree1 
+        1       340       101        38 
+kept occurrences: 490847 | species with >=1 kept: 371 
+lineages: 268 | with any data: 235 | covered (>=0.5 of bins): 213 
+median lineage coverage: 1 
+lineage-bins: 3184 | E used source:
+
+       missing older_bin_lag1 older_bin_lag2 
+          1060           2069             55 
+E standardisation: mean 26.262 sd 13.377 
+Jaccard classes:
                           
                            different insufficient no_coexistence similar
   parent_daughter_boundary         0           49              0       0
-  parent_daughter_overlap         31          147              0      30
-  sister                          42           85             59      48
-pairs with shared members excluded: 157 
+  parent_daughter_overlap         31          141              0      36
+  sister                          42           78             59      55
+E classes (>= 5 degrees):
+                          
+                           E_different E_similar insufficient no_coexistence
+  parent_daughter_boundary           0         0           49              0
+  parent_daughter_overlap           69        53           86              0
+  sister                            68        29           78             59
+E systematic classes (|difference of means| >= 5 degrees):
+                          
+                           E_systematic_different E_systematic_similar
+  parent_daughter_boundary                      0                    0
+  parent_daughter_overlap                      52                   70
+  sister                                       53                   44
+                          
+                           insufficient no_coexistence
+  parent_daughter_boundary           49              0
+  parent_daughter_overlap            86              0
+  sister                             78             59
+pairs with shared members: 157 

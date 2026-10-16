@@ -38,9 +38,12 @@ uv run data/q012-event-dictionary/build_events.py
 - Their ancestor codes point back into the table in 264 cases, and to
   scaffold labels in 5 (`L_Rotaliana_LCA`, `L_Neobulimina_Budding`,
   `L_Oberhauserellidae_Budding`).
-- Date relation to the ancestor: **215 overlap** (the ancestor persists
-  after the daughter starts) and **49 boundary** (the ancestor ends at
-  the daughter's start).
+- Date relation to the ancestor, over all 264 in-table ancestors: **215
+  overlap** (the ancestor persists after the daughter starts) and **49
+  boundary** (the ancestor ends at the daughter's start).
+  - Seven of the overlap links point to the excluded `L_Bolivina Clade`.
+  - With in-scope ancestors only, the count is **208 overlap + 49
+    boundary = 257** (Codex's correction, 76/1686).
 - Counting only in-scope lineages whose ancestor is also in scope:
   - 257 parent–daughter links, 188 with both extinct and 16 with
     speculative ancestry;
@@ -77,7 +80,21 @@ section 1):
 - overlap is budding; boundary links are bifurcation *candidates*, since
   equal dates alone do not show two simultaneous descendants.
 
+**Events and risk sets (16 October; `risk_events.py`):**
+- `lineage_events.tsv` classifies each lineage's end:
+
+  | End type | Lineages |
+  | --- | ---: |
+  | Extinction | 191 |
+  | Present | 52 |
+  | Bifurcation candidate (at least 2 daughters start at the end; each has exactly 2) | 24 |
+  | Single coincident daughter | 1 |
+
+- 208 budding events.
+- 11 roots, whose ancestors are out of scope.
+- 6 lineages start before 69 Ma; the oldest start is 72.44 Ma.
+
 **Not established here:**
-- exposure. Triton has not been joined;
+- exposure: see the [exposure audit](../q012-exposure-support/README.md);
 - ecogroups. 169 of 482 S1 ecogroups are inferred ("No Data"), partly
   from phylogenetic affinity.

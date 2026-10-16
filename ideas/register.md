@@ -684,7 +684,7 @@ identifiability point.
     [design](../literature/2026-10-15-q012-support-identification-design.md);
     [event dictionary](../data/q012-event-dictionary/README.md)).**
     - **Unit:** the source's 268 lineage records, pending the article's
-      definition. They give 257 parent–daughter links (215 where the
+      definition. They give 257 parent–daughter links (208 where the
       parent persists) and 234 sister pairs. The morphospecies level is
       sensitivity only, because no speciation mode is defined there.
     - **Estimand:** η = ρσ, the standard deviation of a daughter's log
@@ -704,7 +704,7 @@ identifiability point.
       and a paired skill test.
     - **Calibration:** a combined decision with Monte Carlo pass rules.
     - **The article confirms the unit** (pp. 3–4): lineages are
-      anagenesis-free; overlap is budding (215), and boundary links are
+      anagenesis-free; overlap is budding (208), and boundary links are
       bifurcation candidates (49). 169 of 482 ecogroups are inferred, partly from
       relatives, so they are not independent exposure evidence.
     - **Triton exposure audit (15 October;
@@ -715,7 +715,18 @@ identifiability point.
       close.
     - **Freeze proposal (15 October;
       [proposal](../literature/2026-10-15-q012-freeze-proposal.md)).**
-      Awaiting Codex's check; nothing is frozen yet.
+      Codex judged it not ready (76/1686). The
+      [addendum](../literature/2026-10-16-q012-events-exposure-addendum.md)
+      supplies:
+      - events and risk sets: 191 extinctions, 52 extant, 24 bifurcation
+        candidates as a separate cause, 208 budding events, links
+        208 + 49 = 257;
+      - the name crosswalk: 379 species, 213 lineages covered;
+      - a past-only exposure input, with about 105 relative pairs
+        differing systematically;
+      - a proposal for selection: complete ascertainment as the estimator,
+        with robustness to selection calibrated.
+      No freeze and no pilot yet.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 

@@ -1,0 +1,269 @@
+lineage	start_Ma	end_Ma	end_type	daughters_at_end	n_buds	bud_starts_Ma	ancestor_in_scope	starts_before_69Ma
+L_`Dentoglobigerina` eotripartita	43.8	31.36	extinction	0	1	37.72	True	False
+L_`Zeauvigerina`	63.93	55.17	extinction	0	0		True	False
+L_Antarcticella	66.03	12.98	extinction	0	0		True	False
+L_Berggrenia praepumilio	3.91	0.01	extinction	0	0		True	False
+L_Berggrenia pumilio	12.71	0.0	present	0	1	3.91	True	False
+L_Bolivina inflata	26.93	0.0	present	0	0		False	False
+L_Bolivina martini	43.26	30.3	extinction	0	0		False	False
+L_Bolivina rockallkiddensis	32.1	1.88	extinction	0	0		False	False
+L_Bolivina sp. A	37.71	0.0	present	0	0		False	False
+L_Bolivina variabilis	32.92	0.0	present	0	0		False	False
+L_Ciperoella anguliofficinalis	35.3	15.51	extinction	0	2	29.84;27.04	True	False
+L_Dentigloborotalia	21.12	0.0	present	0	0		True	False
+L_first Globigerinoides	22.52	21.82	bifurcation_candidate	2	1	22.47	True	False
+L_Globigerinella clavaticamerata	28.24	14.88	extinction	0	0		True	False
+L_Globigerinella radians	7.08	0.0	present	0	0		True	False
+L_Globigerinella roeglina	29.04	16.12	extinction	0	1	28.24	True	False
+L_Globigerinella wagneri	33.26	26.71	extinction	0	0		True	False
+L_Globigerinita glutinata	27.98	0.0	present	0	7	27.16;18.73;18.27;11.44;10.03;3.91;2.49	True	False
+L_Globigerinita minuta	27.16	0.0	present	0	1	22.5	True	False
+L_Globigerinita uvula	22.5	0.0	present	0	0		True	False
+L_Globigerinoides elongatus	3.1	0.0	present	0	1	1.98	True	False
+L_Globigerinoides joli	22.47	16.39	extinction	0	1	20.45	True	False
+L_Globigerinoides rublobatus	0.82	0.81	extinction	0	0		True	False
+L_Globoconusa	65.72	62.63	extinction	0	0		True	False
+L_Globoturborotalita barbula	37.8	33.68	extinction	0	0		True	False
+L_Globoturborotalita occlusa	37.8	12.64	extinction	0	3	37.8;29.71;22.47	True	False
+L_Globoturborotalita pseudopraebulloides	37.8	14.4	extinction	0	0		True	False
+L_Hastigerina	66.04	0.0	present	0	1	6.76	True	False
+L_Hastigerinella	6.76	0.0	present	0	0		True	False
+L_Neoacarinina	1.93	0.25	extinction	0	0		True	False
+L_Neogallitellia	17.95	0.0	present	0	0		False	False
+L_Neogloboquadrina incompta	9.89	0.0	present	0	1	9.89	True	False
+L_Orcadia	4.92	0.0	present	0	0		True	False
+L_Paragloborotalia acrostoma	22.87	15.18	extinction	0	0		True	False
+L_Paragloborotalia birnageae	27.36	7.16	extinction	0	0		True	False
+L_Paragloborotalia incognita	31.2	15.89	extinction	0	2	28.16;22.87	True	False
+L_Paragloborotalia semivera	28.16	16.28	extinction	0	0		True	False
+L_Parvularugoglobigerina	66.02	61.11	extinction	0	0		True	False
+L_Pearsonites	56.78	43.26	extinction	0	0		True	False
+L_Quiltyella clavacella	28.24	16.56	extinction	0	0		True	False
+L_Rectoguembelina	70.14	62.33	extinction	0	0		False	True
+L_Soldaniella	10.11	2.09	extinction	0	0		True	False
+L_Tenuitella brasilensis	15.82	0.0	present	0	0		True	False
+L_Trilobatus altospiralis	21.82	7.62	extinction	0	0		True	False
+L_Woodringina	66.0	60.74	extinction	0	1	65.96	True	False
+L_Zeauvigerina	69.46	37.23	extinction	0	1	63.93	False	True
+N1001-T1003	72.44	21.16	extinction	0	4	66.02;66;65.72;49.39	False	True
+N1005	65.96	42.16	bifurcation_candidate	2	0		True	False
+N1007	42.16	36.48	bifurcation_candidate	2	0		True	False
+N1009-T1010	36.48	10.91	extinction	0	2	21.12;15.78	True	False
+N1013-T1014	70.14	31.78	extinction	0	2	66.03;41.86	False	True
+N1015-N1027-N1029-N1031-N1033-T1035	41.86	0.0	present	0	3	27.98;21.36;15.82	True	False
+N102-T100	60.54	54.73	extinction	0	1	57.44	True	False
+N103-N109-N115-N117-T118	57.44	48.84	extinction	0	5	56.78;56.55;52.85;51.58;50.8	True	False
+N104-T105	56.55	50.38	extinction	0	1	56	True	False
+N106-T107	56.0	55.85	extinction	0	1	56	True	False
+N110-N112-T113	52.85	23.41	extinction	0	2	49.48;41.26	True	False
+N119-T120	50.8	41.96	extinction	0	1	42.86	True	False
+N126-T127	57.55	38.98	extinction	0	1	43.8	True	False
+N128-T129	57.55	50.93	extinction	0	1	55.12	True	False
+N130-N131-N136-N142-N144-T148	55.12	39.97	extinction	0	5	53.68;47.15;44.81;44.08;41.36	True	False
+N133-T135	47.15	40.39	extinction	0	1	44.42	True	False
+N137-N139-T143	44.81	37.99	extinction	0	2	43.69;43.16	True	False
+N13-T14	56.0	43.69	extinction	0	1	48.62	True	False
+N145-T146	41.36	40.22	extinction	0	1	40.81	True	False
+N149-N163	41.96	34.78	bifurcation_candidate	2	0		True	False
+N150-N151-T153	25.2	21.03	extinction	0	1	21.32	True	False
+N152-T154	21.32	6.14	extinction	0	1	13.78	True	False
+N15-N17	48.62	37.22	bifurcation_candidate	2	1	39.97	True	False
+N165	34.78	34.28	bifurcation_candidate	2	0		True	False
+N166-T167	34.28	23.08	extinction	0	1	32.2	True	False
+N168	32.2	24.66	bifurcation_candidate	2	0		True	False
+N171	34.28	32.62	bifurcation_candidate	2	0		True	False
+N172-T174	32.62	0.0	present	0	0		True	False
+N175	32.62	31.46	bifurcation_candidate	2	0		True	False
+N177-T176	31.46	3.0	extinction	0	0		True	False
+N179-T180	31.46	8.1	extinction	0	2	30.69;21.48	True	False
+N182-T183	66.03	60.82	extinction	0	1	63.37	True	False
+N184-N186-N187-N188-T189	63.37	32.99	extinction	0	4	61.85;56;55.02;54.54	True	False
+N18-T19	37.22	34.03	extinction	0	1	34.91	True	False
+N190-N199-T200	57.89	15.7	extinction	0	2	54.05;44.25	True	False
+N191-T192	55.02	33.9	extinction	0	1	46.11	True	False
+N193-N195-T197	46.11	17.53	extinction	0	6	31.2;29.57;28.91;27.36;25.2;23.76	True	False
+N1-N3	71.12	62.53	bifurcation_candidate	2	1	69.81	False	True
+N201-N998-N295-N203-T204	44.25	0.0	present	0	3	28.24;26.93;14.63	True	False
+N206-N210-N212-T213	54.05	7.45	extinction	0	2	43.06;39.42	True	False
+N207-T208	43.06	33.9	extinction	0	1	37.84	True	False
+N215-N217-N231-N235-T236	56.0	45.26	extinction	0	4	52.4;51.49;49.13;47.43	True	False
+N218-T219	49.13	43.69	extinction	0	1	47.95	True	False
+N21-T24	37.22	31.67	extinction	0	1	33.05	True	False
+N220-N221-T362	47.95	34.28	extinction	0	2	47.1;44.36	True	False
+N223-N225-N227-T228	44.36	33.9	extinction	0	3	43.36;41.05;37.41	True	False
+N232-T233	47.43	37.22	extinction	0	1	45.09	True	False
+N237-T238	52.4	41.96	extinction	0	1	43.63	True	False
+N239-N240-N244-N246-T247	43.63	35.7	extinction	0	4	43.57;43.52;43.41;42.66	True	False
+N23-N156-N157-N160-T161	23.76	1.58	extinction	0	4	18.22;9.89;8.1;6.5	True	False
+N241-T242	43.52	36.05	extinction	0	1	37.95	True	False
+N248-T249	42.66	34.66	extinction	0	1	39.11	True	False
+N25	18.22	16.62	bifurcation_candidate	2	0		True	False
+N251-T252	43.57	37.76	extinction	0	1	43.41	True	False
+N253-T254	43.41	39.97	extinction	0	1	40.22	True	False
+N256-N2-N198-T67	69.81	66.02	single_coincident_daughter	1	4	66.04;66.04;66.03;66.03	True	True
+N257	66.03	65.77	bifurcation_candidate	2	0		True	False
+N259-N261-N262-T263	65.77	55.02	extinction	0	3	64.69;62.91;56.27	True	False
+N264-N265-N276-N278-N281-N283-T284	56.27	20.35	extinction	0	5	49.48;48.25;47.43;33.52;28.49	True	False
+N267	49.48	45.6	bifurcation_candidate	2	0		True	False
+N269	45.6	42.46	bifurcation_candidate	2	0		True	False
+N26-N32	16.62	14.78	bifurcation_candidate	2	0		True	False
+N27	16.62	5.32	bifurcation_candidate	2	0		True	False
+N271-T272	42.46	25.44	extinction	0	1	33.05	True	False
+N279-T280	29.84	21.6	extinction	0	0		True	False
+N285-N286-T288	28.49	0.0	present	0	2	24.28;0.32	True	False
+N291-T372	24.28	1.98	extinction	0	0		True	False
+N292-T299	10.31	0.0	present	0	0		True	False
+N30	14.78	14.32	bifurcation_candidate	2	0		True	False
+N301-T303	3.81	0.0	present	0	1	0.01	True	False
+N305	62.91	60.03	bifurcation_candidate	2	0		True	False
+N306-T307	60.03	55.02	extinction	0	1	56	True	False
+N308-T309	56.0	53.76	extinction	0	1	55.02	True	False
+N310-T313	60.03	29.84	extinction	0	2	57.89;38.48	True	False
+N314-N318	55.02	33.83	extinction	0	4	48.84;43.69;42.06;37.8	True	False
+N315-T_316	66.04	0.0	present	0	3	12.71;4.92;4.51	True	False
+N319-T320	42.06	21.16	extinction	0	2	37.8;35.3	True	False
+N322	43.69	26.93	extinction	0	0		True	False
+N324-N336-N342-N344-N348-N352-N354-T356	29.18	1.64	extinction	0	4	22.52;20.91;17.18;11	True	False
+N325-T361	29.71	17.27	extinction	0	1	29.18	True	False
+N326-N332-N334-T360	21.82	11.57	extinction	0	3	17.36;15.12;12.28	True	False
+N327-N329-T330	20.45	1.3	extinction	0	2	6.21;3.3	True	False
+N337-N339-T341	21.73	0.0	present	0	2	16.89;3.3	True	False
+N345-T347	17.18	0.0	present	0	1	11.73	True	False
+N349-T350	11.0	0.0	present	0	0		True	False
+N34-N40-T44	14.32	0.0	present	0	2	10.43;10.08	True	False
+N358-T229	37.41	33.9	extinction	0	1	36.4	True	False
+N35-N37-T39	10.43	2.31	extinction	0	2	6.66;4.39	True	False
+N364	6.5	5.6	bifurcation_candidate	2	0		True	False
+N366-N298-N300-T304	33.52	0.0	present	0	7	33.26;29.18;29.04;28.24;10.31;7.08;3.81	True	False
+N42-T41	10.08	3.72	extinction	0	1	5.82	True	False
+N45-T43	5.82	0.0	present	0	1	3.19	True	False
+N47	14.78	8.29	bifurcation_candidate	2	2	11.23;9.44	True	False
+N48-T50	8.29	0.0	present	0	1	3.51	True	False
+N4-T12	62.53	45.04	extinction	0	1	60.72	True	False
+N51-N122-T123	8.29	0.0	present	0	1	1.98	True	False
+N52-N54-T53	9.44	4.61	extinction	0	2	5.81;5.56	True	False
+N56-N58-N59-T61	5.81	0.0	present	0	3	4.31;3.4;1.02	True	False
+N5-N6-N8-T9	62.53	32.94	extinction	0	3	56;45.09;36.31	True	False
+N62-T63	3.4	0.61	extinction	0	1	1.41	True	False
+N64-T66	1.41	0.0	present	0	1	0.8	True	False
+N68-N69-N70-T71	66.02	62.26	extinction	0	2	62.63;62.33	True	False
+N72	62.33	61.35	bifurcation_candidate	2	0		True	False
+N76-N101	62.63	61.55	bifurcation_candidate	2	1	61.95	True	False
+N77-T266	48.25	24.47	extinction	0	2	45.21;41.96	True	False
+N79	60.14	59.33	bifurcation_candidate	2	0		True	False
+N80-N368-N370-T78	61.55	55.15	extinction	0	3	60.14;56;55.65	True	False
+N83-N84-T85	61.55	54.15	extinction	0	2	57.1;56.95	True	False
+N86-T87	56.95	36.62	extinction	0	1	50.38	True	False
+N88-N89-N90-T93	57.1	51.04	extinction	0	3	55.02;54.63;54.54	True	False
+N94-T95	54.54	43.26	extinction	0	1	52.59	True	False
+N98-T96	52.59	43.57	extinction	0	1	47.1	True	False
+N99-N125	61.95	57.55	bifurcation_candidate	2	1	60.54	True	False
+T10	36.31	32.1	extinction	0	0		True	False
+T1002	49.39	43.63	extinction	0	0		True	False
+T1006	42.16	23.0	extinction	0	0		True	False
+T1008	36.48	30.22	extinction	0	0		True	False
+T1011	15.78	13.3	extinction	0	0		True	False
+T1019	21.36	10.54	extinction	0	0		True	False
+T1021	3.91	0.0	present	0	0		True	False
+T1025	2.49	0.0	present	0	0		True	False
+T1028	18.73	14.6	extinction	0	0		True	False
+T1030	18.27	13.85	extinction	0	0		True	False
+T1032	11.44	0.0	present	0	0		True	False
+T1034	10.03	0.0	present	0	0		True	False
+T108	56.0	55.85	extinction	0	0		True	False
+T11	60.72	57.1	extinction	0	0		True	False
+T111	49.48	48.54	extinction	0	0		True	False
+T114	41.26	28.2	extinction	0	0		True	False
+T116	51.58	43.69	extinction	0	0		True	False
+T121	42.86	28.56	extinction	0	0		True	False
+T124	1.98	0.0	present	0	0		True	False
+T132	53.68	50.38	extinction	0	0		True	False
+T134	44.42	40.39	extinction	0	0		True	False
+T138	43.16	40.05	extinction	0	0		True	False
+T140	44.08	38.0	extinction	0	0		True	False
+T141	43.69	41.96	extinction	0	0		True	False
+T147	40.81	38.17	extinction	0	0		True	False
+T155	13.78	11.81	extinction	0	0		True	False
+T158	8.1	0.0	present	0	0		True	False
+T159	9.89	0.0	present	0	0		True	False
+T16	39.97	37.13	extinction	0	0		True	False
+T162	5.6	0.0	present	0	0		True	False
+T164	34.78	31.67	extinction	0	0		True	False
+T169	24.66	16.28	extinction	0	0		True	False
+T170	24.66	15.12	extinction	0	0		True	False
+T173	37.72	11.77	extinction	0	0		True	False
+T178	30.69	5.36	extinction	0	0		True	False
+T181	21.48	5.91	extinction	0	0		True	False
+T185	61.85	60.54	extinction	0	0		True	False
+T194	28.91	10.53	extinction	0	0		True	False
+T196	29.57	26.93	extinction	0	0		True	False
+T20	34.91	34.03	extinction	0	0		True	False
+T202	28.24	22.04	extinction	0	0		True	False
+T209	37.84	34.66	extinction	0	0		True	False
+T211	39.42	34.66	extinction	0	0		True	False
+T214	26.93	16.99	extinction	0	0		True	False
+T216	51.49	50.93	extinction	0	0		True	False
+T22	33.05	30.3	extinction	0	0		True	False
+T222	47.1	42.36	extinction	0	0		True	False
+T224	43.36	41.11	extinction	0	0		True	False
+T226	41.05	38.07	extinction	0	0		True	False
+T230	36.4	33.9	extinction	0	0		True	False
+T234	45.09	42.76	extinction	0	0		True	False
+T243	37.95	35.88	extinction	0	0		True	False
+T245	43.41	36.31	extinction	0	0		True	False
+T250	39.11	34.03	extinction	0	0		True	False
+T255	40.22	34.66	extinction	0	0		True	False
+T258	65.77	62.33	extinction	0	0		True	False
+T260	64.69	57.78	extinction	0	0		True	False
+T268	45.6	29.04	extinction	0	0		True	False
+T270	42.46	33.9	extinction	0	0		True	False
+T275	33.05	23.87	extinction	0	0		True	False
+T277	47.43	37.95	extinction	0	0		True	False
+T28	5.32	4.1	extinction	0	0		True	False
+T282	27.04	20.99	extinction	0	0		True	False
+T287	22.47	17.47	extinction	0	2	21.82;21.73	True	False
+T29	5.32	0.0	present	0	1	1.93	True	False
+T294	0.32	0.0	present	0	0		True	False
+T297	14.63	13.82	extinction	0	0		True	False
+T302	0.01	0.0	present	0	0		True	False
+T31	14.32	10.5	extinction	0	0		True	False
+T317	4.51	0.0	present	0	0		True	False
+T321	35.3	28.16	extinction	0	1	35.3	True	False
+T323	48.84	15.98	extinction	0	0		True	False
+T328	6.21	0.0	present	0	1	0.82	True	False
+T33	11.23	9.98	extinction	0	0		True	False
+T331	3.3	1.97	extinction	0	1	3.1	True	False
+T333	17.36	12.28	extinction	0	0		True	False
+T335	15.12	0.0	present	0	0		True	False
+T338	16.89	0.0	present	0	0		True	False
+T340	3.3	1.88	extinction	0	0		True	False
+T343	21.82	4.01	extinction	0	0		True	False
+T346	11.73	4.49	extinction	0	0		True	False
+T351	1.98	0.0	present	0	0		True	False
+T353	12.28	3.14	extinction	0	0		True	False
+T355	11.67	4.38	extinction	0	0		True	False
+T357	50.38	47.43	extinction	0	0		True	False
+T359	38.48	29.84	extinction	0	0		True	False
+T36	6.66	2.97	extinction	0	0		True	False
+T363	45.21	39.97	extinction	0	0		True	False
+T365	5.6	4.27	extinction	0	0		True	False
+T367	29.18	4.01	extinction	0	0		True	False
+T369	56.0	55.9	extinction	0	0		True	False
+T371	55.65	54.54	extinction	0	0		True	False
+T373	20.91	0.59	extinction	0	2	11.67;10.11	True	False
+T38	4.39	2.08	extinction	0	0		True	False
+T46	3.19	0.0	present	0	0		True	False
+T49	3.51	0.0	present	0	0		True	False
+T55	5.56	0.91	extinction	0	0		True	False
+T57	4.31	3.51	extinction	0	0		True	False
+T60	1.02	0.4	extinction	0	0		True	False
+T65	0.8	0.0	present	0	0		True	False
+T7	45.09	39.32	extinction	0	0		True	False
+T73	61.35	57.55	extinction	0	0		True	False
+T74	61.35	56.0	extinction	0	0		True	False
+T75	54.54	42.66	extinction	0	0		True	False
+T81	59.33	55.02	extinction	0	0		True	False
+T82	59.33	55.02	extinction	0	0		True	False
+T91	54.63	53.03	extinction	0	0		True	False
+T92	55.02	50.62	extinction	0	0		True	False
+T97	47.1	44.98	extinction	0	0		True	False

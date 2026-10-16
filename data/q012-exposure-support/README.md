@@ -1,6 +1,6 @@
 # Q-012: Triton joint exposure audit
 
-Owner: Claude | 15 October 2026 | Gate 2 of the
+Owner: Claude | 15 October 2026, revised 16 October after Codex's freeze check (76/1686) | Gate 2 of the
 [Q-012 design](../../literature/2026-10-15-q012-support-identification-design.md),
 cleared by Codex in 76/1681.
 
@@ -11,93 +11,110 @@ survival outcomes were used.
 ## Rebuild
 
 ```bash
+Rscript data/q012-exposure-support/names.R
+uv run data/q012-exposure-support/crosswalk.py data/q012-exposure-support/triton_names.txt
 Rscript data/q012-exposure-support/build.R
 ```
 
-- Base R; it runs in about 60 s, and a rerun reproduces all five outputs
-  byte for byte.
+- The pipeline is base R plus one uv script (openpyxl 3.1.5, with the S3
+  hash checked).
+- `build.R` runs in about 2 minutes. A rerun reproduces all outputs byte for
+  byte.
 - **Inputs:**
   - Triton v4, 2023 update, `data/raw/triton/triton_update_2023.RData`
     (git-ignored; CC0; Fenton et al. 2021, 10.1038/s41597-021-00942-7).
     SHA-256 `7275120da2727e37b7d951632ea15364b0135d4aeaa5e67dee64a4a3d738af46`,
     the same file as the Q-007 audit.
+  - S3 of Lamyman et al. 2026.
   - `species.tsv` and `lineage_edges.tsv` from the
     [event dictionary](../q012-event-dictionary/README.md).
 - **Outputs:**
   - [summary.txt](summary.txt);
+  - [triton_names.txt](triton_names.txt);
+  - [name_crosswalk.tsv](name_crosswalk.tsv);
   - [species_triton.tsv](species_triton.tsv);
   - [lineage_coverage.tsv](lineage_coverage.tsv);
+  - [lineage_bin_E.tsv](lineage_bin_E.tsv);
   - [pair_exposure.tsv](pair_exposure.tsv);
   - [bin_sites.tsv](bin_sites.tsv).
 
-## Definitions (fixed before the first run; also in the script header)
+## Definitions
 
-- **Occurrences** are Triton `triton.pres` records with:
-  - `trim == "inc"`;
-  - a palaeolatitude;
-  - an exact name match to an in-scope S1 morphospecies, after stripping
-    outer whitespace;
-  - an age within that species' S1 range.
+The full text is in the headers of `crosswalk.py` and `build.R`.
+
+- **Name crosswalk,** source-supported rules only:
+  1. exact name;
+  2. S3 `Morphospecies Tree1v2`, an Aze 2011 name on a "Name Changed" row;
+  3. S1's informal-genus backticks removed.
+
+  Anything else stays unmatched, with its reason recorded. Single-epithet
+  candidates are recorded but not applied.
+- **Occurrences:** `trim == "inc"`, with a palaeolatitude, mapped through
+  the crosswalk, and within the species' S1 range.
 - **Cells:** 1-Myr bins × 10° signed palaeolatitude bands.
-- **Lineage occurrences:** the union of member species' occurrences within
-  the lineage's own range.
-- **Shared members.** Membership is many-to-many, so members shared by both
-  lineages of a pair are excluded from both sides of that comparison.
-- **Coverage:** the share of a lineage's 1-Myr bins with at least one
-  occurrence; "covered" means at least 0.5.
-- **Pair classes**, by the Jaccard similarity of occupied cells, over bins
-  where both lineages exist and both have data:
+- **Lineage occurrences:** the union of members within the lineage's range.
+- **Coverage:** "covered" means at least half the lineage's bins have data.
+- **Exposure covariate E, past-only.** For the hazard in bin b, use the
+  lineage's mean |palaeolatitude| from the nearest **older** bin with data,
+  at most 2 bins older. The bin's own mean and later bins are never used.
+  Otherwise E is missing, with an indicator. It is standardised over
+  observed lineage-bins.
+- **Pair measures,** over co-existing bins with at least 3 joint data bins:
+  - (a) Jaccard similarity of signed band cells, with members shared by the
+    pair excluded;
+  - (b) mean per-bin |difference| in E of at least 5°, using all members;
+  - (c) the |difference of the two lineages' mean E| over the joint bins,
+    at least 5°.
 
-  | Class | Rule |
-  | --- | --- |
-  | No co-existence | The lineages never exist together |
-  | Insufficient | Fewer than 3 joint data bins |
-  | Different | J < 0.5 |
-  | Similar | J ≥ 0.5 |
+  Measure (c) was added after the first rerun, because (b) is inflated by
+  sampling noise in sparse bins. Measure (b) is reported unchanged.
 
 ## Results
 
-**Matching and coverage:**
-- 340 of 480 in-scope S1 species match Triton's 395 names exactly.
-  - 332 have occurrences within their S1 ranges, 420,490 occurrences in all.
-  - The article reports its own matching to all 480 (pp. 6–7). That
-    crosswalk is not in the supplement, so the 140 species without an exact
-    match are a mapping gap, not an absence. The S3 synonym tables are the
-    route to closing it.
-- 211 of 268 lineages have data; 190 are covered (coverage at least 0.5).
-  Median coverage is 0.99.
+**Crosswalk:**
 
-**Relative pairs:**
+| Rule | Triton names |
+| --- | ---: |
+| Exact | 340 |
+| Tree1 | 38 |
+| Backticks | 1 |
+| Unmatched | 13 |
 
-| Pair type | Different | Similar | Insufficient | No co-existence |
-| --- | ---: | ---: | ---: | ---: |
-| Parent–daughter, budding (overlap) | 31 | 30 | 147 | 0 |
-| Parent–daughter, bifurcation candidate (boundary) | 0 | 0 | 49 | 0 |
-| Sister | 42 | 48 | 85 | 59 |
+- That reaches **379 S1 species**, with no collisions.
+- The 13 unmatched are listed with their reasons: 5 *Streptochilus*, 3
+  *Tenuitella*, 2 "Removed", and 3 others.
 
-- **73 relative pairs have observably different palaeolatitude occupancy**
-  while co-existing, with a median difference in mean |palaeolatitude| of
-  9.95°. 78 are similar (median 4.84°).
-- **Bifurcation candidates cannot be compared** on co-existence by
-  definition. The parent's last bins against the daughter's first bins
-  would need a separate rule.
-- **Shared members.** 157 pairs had shared members excluded. That moves
-  many budding pairs into "insufficient".
-- **Sampling geography is uneven.** The number of sites with matched
-  occurrences per 1-Myr bin ranges from 34 to 4,372 (median 81.5), so
-  occupied bands partly reflect where cores were drilled.
+**Coverage:**
+- 371 species have 490,847 in-range occurrences.
+- 235 of 268 lineages have data, and **213 are covered**. Median coverage is
+  1.0.
+
+**E:**
+- 3,184 lineage-bins: 2,069 take the previous bin's value, 55 the value from
+  two bins back, and 1,060 are missing.
+- The missing bins include every lineage's first bin and all bins before
+  66 Ma, where Triton has no data.
+- E is standardised by mean 26.26° and SD 13.38°.
+
+**Pairs:**
+
+| Pair type | Jaccard different / similar | (b) per-bin E | (c) systematic E |
+| --- | --- | --- | --- |
+| Parent–daughter, budding | 31 / 36 | 69 / 53 | **52 / 70** |
+| Sister | 42 / 55 | 68 / 29 | **53 / 44** |
+| Parent–daughter, bifurcation candidates | none can be compared on co-existence | | |
+
+- **About 105 relative pairs differ systematically in E**, the input the
+  model adjusts for. Because E uses all members, the 157 pairs that share
+  members are similar partly by construction.
+- **Sampling geography is uneven:** 34 to 4,372 sites per bin. Occupied
+  latitudes partly reflect where cores were drilled.
 
 ## Reading
 
-- **There is a measured-exposure lever:** about 70 pairs of relatives that
-  lived together in different palaeolatitude bands. That is enough for the
-  calibration's R3m control to be meaningful. Whether it gives adequate
-  power is for calibration to decide, not this audit.
-- **Even so, this cannot separate unmeasured exposure that shares the tree's
-  correlation (R3b).** A positive result stays "residual phylogenetic
-  dependence after adjustment for measured exposure".
-- **Possible extensions, none allocated:**
-  - closing the 140-species name gap through the S3 synonym tables;
-  - a rule for comparing across bifurcations;
-  - a control for site sampling, such as occupancy relative to sampled
-    bands.
+- The measured-exposure adjustment (R3m) has a real lever in the model's
+  own covariate.
+- It cannot separate unmeasured clade-tied exposure (R3b).
+- How the past-only E enters the landmark prediction, and why the pilot
+  is deferred, are in the
+  [addendum](../../literature/2026-10-16-q012-events-exposure-addendum.md).
