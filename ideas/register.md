@@ -773,6 +773,20 @@ identifiability point.
         flags (detected; consequential excluded).
 
       Next: a timed one-dataset prototype of the full likelihood.
+    - **Full-likelihood prototype (16 October;
+      [record](../data/q012-prototype/README.md)).**
+      - Checks pass: the normaliser by quadrature matches Monte Carlo, and
+        the Stan and Python targets agree to 8 × 10⁻¹².
+      - **The generator under-produces tree size:** a median of 94 recorded
+        lineages against the real 268, so its size calibration is
+        required.
+      - One 264-lineage fit took 793 s, about 53 core-minutes. R-hat 1.037
+        and ESS 173 are not adequate.
+      - η's interval covers the truth; λ₀ and κ are biased by thinning,
+        as expected.
+      - **The full grid would cost about 6,600–20,000 core-hours:** HPC
+        scale. That is a resource decision for Barry, after efficiency
+        work.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 

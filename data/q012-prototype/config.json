@@ -1,0 +1,127 @@
+{
+  "purpose": "Q-012 timed one-dataset prototype of the FULL working likelihood (finite contract with Amendment 1), after the component check (Codex 76/1709, 76/1720). Frozen before execution, 16 October 2026. Measures cost and checks the cohort normaliser; it does not estimate power, coverage or recovery.",
+  "time": "Forward time u = 75 - t_Ma (Myr); boundary c = 75 - 66.05 = 8.95; horizon u = 75 (0 Ma)",
+  "generator": {
+    "scenario": "primary reference (finite contract 8.4)",
+    "sigma": 0.5,
+    "rho": 0.4,
+    "kappa": 0.0,
+    "kappa_b": 0.0,
+    "beta": 0.0,
+    "k": 1.0,
+    "lambda0": 0.0708,
+    "b0": 0.0082,
+    "h0_by_3Myr_bin_Ma": [
+      0.1075,
+      0.0751,
+      0.0312,
+      0.0538,
+      0.0605,
+      0.0896,
+      0.012,
+      0.0577,
+      0.0332,
+      0.0442,
+      0.077,
+      0.1233,
+      0.082,
+      0.0737,
+      0.0743,
+      0.0247,
+      0.0702,
+      0.031,
+      0.1449,
+      0.0417,
+      0.1274,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "h0_note": "Marginal extinctions per lineage-Myr by 3-Myr bin (0-3 Ma first) from lineage_events.tsv; the four bins older than 63 Ma, with no recorded extinctions, take the overall marginal rate 0.065 as a declared floor",
+    "E_process": {
+      "mean": 26.26,
+      "sd": 13.38,
+      "phi": 0.8,
+      "rho_E": 0.9,
+      "truncate": [
+        0,
+        90
+      ]
+    },
+    "generator_k_note": "The generator uses k = 1 (piecewise-exponential termination); the estimator still estimates k",
+    "roots_Ma": [
+      72.44,
+      71.12,
+      70.14,
+      70.14,
+      69.46,
+      43.26,
+      37.71,
+      32.92,
+      32.1,
+      26.93,
+      17.95
+    ],
+    "cohort": {
+      "root_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "design_daughter_parent_index": 1,
+      "design_daughter_Ma": 69.81
+    },
+    "lineage_cap": 3000
+  },
+  "observation": {
+    "psi": 1.6094379124341003,
+    "psi_note": "q(1 Myr) = 1 - exp(-psi) = 0.8",
+    "epsilon": 0.06,
+    "round_Ma": 0.01,
+    "E_markov": {
+      "pi_L": 0.8769,
+      "p_first": 0.8043,
+      "p_obs_given_obs": 0.9628,
+      "p_obs_given_missing": 0.2179
+    },
+    "E_observed_value": "the true bin value (no measurement noise in this prototype)",
+    "E_standardise": {
+      "mean": 26.26,
+      "sd": 13.38
+    }
+  },
+  "seed": 20261017,
+  "sampler": {
+    "chains": 4,
+    "iter_warmup": 1000,
+    "iter_sampling": 1000,
+    "adapt_delta": 0.99,
+    "max_treedepth": 12,
+    "seed": 77017
+  },
+  "quadrature_nodes": 24,
+  "compute_limit": {
+    "parallel_chains": 4,
+    "fit_timeout_seconds": 1200,
+    "rule": "One fit only, with a hard 20-minute timeout. A timeout is recorded as the result (the prototype is then too slow for this machine at these settings), not retried with a larger limit."
+  },
+  "priors": {
+    "log_h0[1]": "normal(log(0.065), 1)",
+    "log_h0 random-walk steps": "normal(0, tau)",
+    "tau": "half-normal(0, 0.5)",
+    "log_k": "normal(0, 0.5)",
+    "log_lambda0": "normal(log(0.0708), 1)",
+    "kappa": "normal(0, 1)",
+    "log_b0": "normal(log(0.0082), 1)",
+    "kappa_b": "normal(0, 1)",
+    "beta": "normal(0, 1)",
+    "gamma": "normal(0, 1)",
+    "sigma": "half-normal(0, 1)",
+    "rho": "uniform(0, 1)"
+  },
+  "fit_seed": 20261060,
+  "deviation": "Declared after the first checks, before any fit: the frozen seed 20261017 gave only 62 recorded lineages (real tree 268), unrepresentative for COST. Over 300 seeds the reference generator gives a median of 94 recorded lineages (5-95%: 35-241; 4.3% >= 268), so marginal-rate matching does not reproduce the realised tree size. For costing only, the timed fit uses the first seed from 20261017 upward whose recorded tree has 240-300 lineages: 20261060 (264 recorded; 43 seeds skipped). No inference is drawn from this fit."
+}

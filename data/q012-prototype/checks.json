@@ -1,0 +1,114 @@
+{
+ "frozen_seed": {
+  "seed": 20261017,
+  "generator": {
+   "cohort_attempts": 1,
+   "capped": false,
+   "true_lineages": 66
+  },
+  "observation": {
+   "recorded": 62,
+   "ancestry_lost": 0,
+   "reassigned": 1,
+   "labels": {
+    "ext": 34,
+    "bif": 2,
+    "single": 0,
+    "present": 26
+   },
+   "short_interval_moves": 0,
+   "origin_ties": 0,
+   "unroundable": 0
+  },
+  "seconds_generate_observe_adapt": 0.06,
+  "adapted": {
+   "N": 62,
+   "segments": 874,
+   "pre_segments": 31,
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "ext": 34,
+   "bif": 2,
+   "buds_after_entry": 46,
+   "missing_share_segments": 0.248
+  },
+  "normaliser_gh_vs_mc": [
+   {
+    "point": 0,
+    "log_pi_gh": -1.69696889,
+    "log_pi_mc": -1.69660773,
+    "mc_se_log": 0.00033175,
+    "z": -1.09
+   },
+   {
+    "point": 1,
+    "log_pi_gh": -1.47951426,
+    "log_pi_mc": -1.47955564,
+    "mc_se_log": 0.00041424,
+    "z": 0.1
+   }
+  ],
+  "logdensity_difference": {
+   "stan": 8.50604086,
+   "python": 8.50604086,
+   "abs_err": 5.684341886080802e-14
+  }
+ },
+ "fit_seed": {
+  "seed": 20261060,
+  "generator": {
+   "cohort_attempts": 7,
+   "capped": false,
+   "true_lineages": 281
+  },
+  "observation": {
+   "recorded": 264,
+   "ancestry_lost": 0,
+   "reassigned": 23,
+   "labels": {
+    "ext": 135,
+    "bif": 11,
+    "single": 7,
+    "present": 111
+   },
+   "short_interval_moves": 0,
+   "origin_ties": 0,
+   "unroundable": 0
+  },
+  "seconds_generate_observe_adapt": 0.04,
+  "adapted": {
+   "N": 264,
+   "segments": 3202,
+   "pre_segments": 31,
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "ext": 135,
+   "bif": 11,
+   "buds_after_entry": 223,
+   "missing_share_segments": 0.318
+  },
+  "normaliser_gh_vs_mc": [
+   {
+    "point": 0,
+    "log_pi_gh": -1.69696889,
+    "log_pi_mc": -1.69660773,
+    "mc_se_log": 0.00033175,
+    "z": -1.09
+   },
+   {
+    "point": 1,
+    "log_pi_gh": -1.47951426,
+    "log_pi_mc": -1.47955564,
+    "mc_se_log": 0.00041424,
+    "z": 0.1
+   }
+  ],
+  "logdensity_difference": {
+   "stan": 73.67608945,
+   "python": 73.67608945,
+   "abs_err": 7.73070496506989e-12
+  }
+ }
+}
