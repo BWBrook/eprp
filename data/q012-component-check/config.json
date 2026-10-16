@@ -1,0 +1,26 @@
+{
+  "purpose": "Q-012 tiny unconditional component check (Codex 76/1709). Frozen before execution, 16 October 2026.",
+  "scope": "Fixed immigrant roots and origins; complete histories; budding and extinction only; no bifurcation, exposure, rounding, pruning or reassignment; fixed administrative horizon; no survival conditioning.",
+  "time": "forward time u in Myr, from 0 to the horizon",
+  "horizon": 30.0,
+  "root_origins": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0],
+  "truth": {"mu0": 0.08, "k": 1.0, "lambda0": 0.09, "kappa": 0.0, "sigma": 0.8, "rho": 0.6},
+  "truth_note": "eta = rho * sigma = 0.48, a strong signal chosen to expose implementation failure, not a scenario of the full experiment",
+  "lineage_cap": 400,
+  "seeds": [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020],
+  "sampler": {"chains": 4, "iter_warmup": 1000, "iter_sampling": 1000, "adapt_delta": 0.95, "max_treedepth": 12, "seed_offset": 500000},
+  "compute_limit": {
+    "parallel_chains": 4,
+    "max_seconds_first_fit": 120,
+    "max_seconds_total": 1800,
+    "rule": "Fit one tree first and record its time. If it exceeds max_seconds_first_fit, stop and rescope. Stop the batch if the cumulative wall time would exceed max_seconds_total; do not raise the limit to rescue a run."
+  },
+  "priors": {
+    "log_mu0": "normal(log(0.08), 1)",
+    "log_k": "normal(0, 0.5)",
+    "log_lambda0": "normal(log(0.09), 1)",
+    "kappa": "normal(0, 1)",
+    "sigma": "half-normal(0, 1)",
+    "rho": "uniform(0, 1)"
+  }
+}

@@ -1,0 +1,15 @@
+{
+ "cumhaz_max_rel_err": 5.8776801730688e-09,
+ "simulator_invariants": "pass (20 frozen seeds)",
+ "mc_survival": {
+  "mc": 0.06634,
+  "exact": 0.0663,
+  "z_score": 0.07
+ },
+ "logdensity_difference": {
+  "stan": 3.3587741624,
+  "python": 3.3587741624,
+  "abs_err": 5.684341886080802e-14,
+  "N": 51
+ }
+}

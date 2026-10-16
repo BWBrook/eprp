@@ -1,0 +1,23 @@
+{
+ "fitted": {
+  "pi_L": 0.8769,
+  "p_first": 0.8043,
+  "p_obs_given_obs": 0.9628,
+  "p_obs_given_missing": 0.2179,
+  "pre_66_Ma": "unobserved"
+ },
+ "derived_markov": {
+  "raw": 0.7309,
+  "lagged": 0.6917,
+  "replicates": 200,
+  "seed": 20261016
+ },
+ "recorded": {
+  "raw": 0.7133,
+  "lagged": 0.6671
+ },
+ "simpler_processes_lagged": {
+  "iid_p0667_no_mask": 0.7963,
+  "iid_p0667_mask": 0.7861
+ }
+}

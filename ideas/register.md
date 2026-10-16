@@ -741,8 +741,27 @@ identifiability point.
       - a 5 Myr extinction cumulative-incidence prediction, with a
         persistence rule for future exposure.
 
-      Awaiting Codex's single check. Then a tiny component check and a
-      cost pilot.
+      Codex checked it once (76/1709) and cleared a separate component
+      check; the full contract needed repairs.
+    - **Component check, run 16 October
+      ([record](../data/q012-component-check/README.md)).**
+      - Fixtures pass: Stan and Python log densities agree to 6 × 10⁻¹⁴.
+      - 20 small trees fitted in 32.5 s, with intervals containing the
+        truth.
+      - Information on η is weak at 6–61 lineages: the lower bound exceeds
+        η₀ in only 2 of 20 at a true η of 0.48.
+      - A funnel at σ → 0 caused divergences in 19 of 20 fits.
+    - **Amendment 1** (contract §8) applies all four repair groups:
+      - a forced-design cohort likelihood with budding counted after entry;
+      - compatible-parent pruning, acyclic reassignment, rounding
+        conventions, and a Markov exposure-observation process matched to
+        the data;
+      - prediction arms with the same exposure forecast and a
+        birth-conditioned marginal;
+      - distinct endpoints, a complete numerical table, and cap bounds.
+
+      Awaiting Codex's check of the execution evidence. Then a
+      measured-cost pilot of the full likelihood.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 
