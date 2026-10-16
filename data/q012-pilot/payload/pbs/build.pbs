@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #PBS -N q012_build
 #PBS -q normal
 #PBS -l select=1:ncpus=4:mem=8gb
@@ -22,6 +22,7 @@ rm -f "$R" "$R.tmp"
   echo "start=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 } > "$R.tmp"
 fail() {
+  trap - EXIT
   echo "status=failed" >> "$R.tmp"
   echo "reason=$1" >> "$R.tmp"
   echo "end=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$R.tmp"
@@ -30,13 +31,25 @@ fail() {
   exit 1
 }
 trap 'fail signal_TERM' TERM
+trap 'fail unexpected_exit' EXIT
 
 sha256sum -c --strict --quiet manifest.sha256 > build/manifest_check.txt 2>&1 || fail payload_manifest
 sha256sum -c --strict --quiet cmdstan.sha256 > build/cmdstan_check.txt 2>&1 || fail cmdstan_tarball
 echo "manifest_sha256=$(sha256sum manifest.sha256 | cut -d' ' -f1)" >> "$R.tmp"
 
+# Lmod reads unset variables, so relax nounset around its initialisation and the module commands only.
+set +u
+# kunanyi's /etc/profile.d/lmod.sh returns early in batch jobs (PBS_NODEFILE set), so initialise Lmod as it
+# does for login shells: the site MODULEPATH, then the OpenHPC Lmod bash init.
+if ! type module > /dev/null 2>&1; then
+  export MODULEPATH="${MODULEPATH:-/opt/ohpc/pub/moduledeps/gnu8:/opt/ohpc/pub/modulefiles:/share/apps/modules:/share/apps/eb-modules/all:/share/apps/moduledeps/rosalind/Core}"
+  . /opt/ohpc/admin/lmod/lmod/init/bash
+fi
 module purge
-module load "$MODULE" || fail module_load
+module load "$MODULE"
+rc=$?
+set -u
+[ "$rc" -eq 0 ] || fail module_load
 echo "gxx=$(g++ --version | head -1)" >> "$R.tmp"
 echo "make=$(make --version | head -1)" >> "$R.tmp"
 
@@ -51,6 +64,7 @@ grep -q "not found" build/ldd.txt && fail missing_shared_libraries
 echo "loaded_modules=${LOADEDMODULES:-}" >> "$R.tmp"
 
 bash pbs/preflight.sh "$R.tmp" || fail "$(tail -1 build/preflight_reason.txt 2>/dev/null || echo preflight)"
+trap - EXIT
 echo "status=ok" >> "$R.tmp"
 echo "end=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$R.tmp"
 mv "$R.tmp" "$R"

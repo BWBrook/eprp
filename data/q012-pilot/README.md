@@ -144,13 +144,29 @@ denominator: report [s/n, (s+u)/n].
 
 ## Staging record (16 October 2026)
 
-- **Submitted:** build/preflight `820938.kunanyi-ohpc`, then R00
-  `820939.kunanyi-ohpc` with `afterok:820938`.
+- **The first four builds failed in seconds at the module load.** Each
+  stopped its R00 by `afterok`. They are kept on kunanyi under tags `r00`,
+  `r00b`, `r00c` and `r00d`:
+
+  | Build | Cause | Repair in the next attempt |
+  | --- | --- | --- |
+  | 820938 (manifest 9327b837…, as cleared) | `module: command not found` | `#!/bin/bash -l` |
+  | 820943 | the same | source `/etc/profile.d/lmod.sh` |
+  | 820945 | that file reads `SLURM_NODELIST`, which aborts under `set -u` before a receipt | relax `set -u` around Lmod only, and add an EXIT trap that writes a failed receipt |
+  | 820947 | **`/etc/profile.d/lmod.sh` returns early whenever `PBS_NODEFILE` is set**, so batch jobs never get `module` | initialise Lmod directly in the PBS scripts: the site `MODULEPATH`, then `/opt/ohpc/admin/lmod/lmod/init/bash` |
+
+  The cause is a recent "optimised", warewulf-managed site init. It also
+  affects other projects' PBS scripts that rely on `module`.
+- **Running:** build/preflight `820949.kunanyi-ohpc` (GCC 12.3.0 loaded,
+  GNU Make 3.82), then R00 `820950.kunanyi-ohpc` with `afterok:820949`.
   - Queue `normal`; 1 node, 4 CPUs, 8 GiB, walltime 06:10:00.
   - Mail points `ae` on both.
-- **Payload:** manifest 9327b837…, the tarball 67adbed3…, as Codex cleared
-  (76/1774). Both tarballs verified by hash on kunanyi before submission.
-- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00`.
+  - Tag `r00e`; payload manifest feaf5ce8….
+- **Payload:** Codex cleared manifest 9327b837… (76/1774). The only changes
+  since are the PBS scripts' shell and Lmod initialisation above; data,
+  starts, model and run settings are byte-identical. Each tarball was
+  verified by hash on kunanyi before submission.
+- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261016-r00e`.
   - `/scratch/bwbrook` is at its 8 TiB quota ("Disk quota exceeded").
   - Home holds the 20 TiB allocation (TPAC, per X-ray Cavities' log of 21
     August).

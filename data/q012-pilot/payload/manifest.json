@@ -2,7 +2,7 @@
  "created": "2026-10-16T21:26:52+1100",
  "git_head_at_build": "a8b43c3cf70e97d444da9a53d46149200882728f",
  "files": 80,
- "manifest_sha256": "9327b837e8caa58b3548b7e4631556c385e8b652a50b898170f0f0eb6eb128ad",
+ "manifest_sha256": "feaf5ce8fb237372e572d0675a24117f4221031f1b74f4f2140e42d7a95c7f44",
  "pilot_json_sha256": "86a23beabb54e91a63918593d876eafcaae6e1bb2c5aaecf6757d00b7440645c",
  "scenario_table": {
   "file": "scenarios.tsv",
@@ -569,5 +569,6 @@
     "chain4": "initialised"
    }
   }
- ]
+ ],
+ "amendment": "PBS scripts build.pbs and fit.pbs use #!/bin/bash -l (login shell) so the site profile defines module; job 820938 failed with module: command not found. Previous manifest 9327b837e8caa58b3548b7e4631556c385e8b652a50b898170f0f0eb6eb128ad; then source /etc/profile.d/lmod.sh when module is undefined (job 820943 failed the same way under bash -l). Previous manifest 94b1fecb9ccc1575d6a8cd319757ddde8a85297ddd579df9b4f7a7130dec5ec4; then relax nounset around the Lmod init and module commands (job 820945: lmod.sh SLURM_NODELIST unbound) and add an EXIT receipt trap. Previous manifest ee9f5fe4a07ee6b53109e71d48f08244d9878069c313c2bfa65048ea1c55c3e2; then initialise Lmod directly (site MODULEPATH + /opt/ohpc/admin/lmod/lmod/init/bash), because /etc/profile.d/lmod.sh returns early when PBS_NODEFILE is set (job 820947). Previous manifest e043d47bbe49cf8f60a45e7141698f4e83c53ab5edc696d6a136fa0c9f2cf5ba"
 }
