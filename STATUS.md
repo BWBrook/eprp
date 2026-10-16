@@ -1,12 +1,12 @@
 # EPRP current status
 
-Updated: 15 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 16 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
   expansion remains paused.
 - The separate **blue-sky register** (B-series, pure deep time) now contains
-  **18 questions: 2 develop, 16 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
+  **18 questions: 1 develop, 17 hold**; see [ideas/register-blue-sky.md](ideas/register-blue-sky.md).
   Its mapping and ownership have passed Codex's single merge review. Claude's
   three register repairs are in place at `55db76a`. B-001 is now **hold (support)**;
   Claude's corrections at `466c8d5` pass Codex's bounded replay check.
@@ -14,12 +14,13 @@ Updated: 15 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   inputs and empirical promotion remain unresolved. B-003's contract repairs
   and finite source inventory are complete; its practical support hold is
   accepted, with wording repairs closed at `4e993a9`. Q-012's previous
-  textual corrections are accepted at `f82bb2b`; its new freeze proposal
-  remains provisional pending event/ascertainment and exact exposure-input
-  definitions. B-004's critique response and six-study modern reference
-  screen are complete. The selected lugworm numerical route is on support
-  hold, while the conditional theory question retains develop. Claude next
-  responds; no model or cost pilot is allocated.
+  textual corrections are accepted at `f82bb2b`; its event/exposure addendum
+  at `4b48ddf` supports a finite misspecification experiment, with three
+  amendment groups before a freeze. B-004's critique response, six-study
+  modern screen and bounded analytic check are complete. B-004 is now
+  **hold (support)**: invasion invariance and conditional fold responses do
+  not supply a consequential oxygen scale. Claude next reissues Q-012's
+  finite diagnostic contract; no model or cost pilot is allocated yet.
 - Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
@@ -62,11 +63,11 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
-| Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now two/sixteen after B-001 and B-003 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
+| Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Claude: design/audit/freeze; Codex: freeze check complete | Previous closure corrections accepted at `f82bb2b`. The [new freeze check](ideas/2026-10-15-b004-response-and-q012-freeze-check-codex.md) retains the [Triton audit](data/q012-exposure-support/README.md) as descriptive support: 73 signed-band occupancy contrasts do not establish support for mean absolute latitude. Next Claude closes source-supported name mappings and specifies marked events/risk sets and the actual exposure/prediction input. Full branching ascertainment likelihood unresolved; no freeze, cost pilot or full grid. Status/tier unchanged |
-| B-004 theory-first development | Codex: contract amendment/source screen complete; Claude next responder | [Modern table](literature/2026-10-15-b004-modern-source-table.md): six primary studies of Arenicola supply physiology, seasonal recruitment and advective transport anchors; no joint demographic/transport closure. Selected modern numerical route on support hold; B-004 remains develop as conditional theory. [Contract](literature/2026-10-15-b004-theory-contract.md) now qualifies modern validation, spatial extrapolation and consequence scales. Claude next responds; no further source sweep, simulator or section panel |
+| Q-012/D1 support and identification | Claude: revised finite contract; Codex: addendum check complete | [Addendum ruling](ideas/2026-10-16-b004-analytic-close-and-q012-addendum-check-codex.md) accepts a complete-ascertainment working estimator tested under finite observation stress scenarios. Event/crosswalk counts reproduce; the fitted past-only exposure yields 98 systematic pair contrasts, not the unlagged 105. Claude next closes three groups: event likelihood/chronology, exact prediction input/target, reproducible observation generator. No freeze or pilot yet; full selected-history normaliser remains unresolved. Status/tier unchanged |
+| B-004 theory-first development | Codex: bounded analytic product complete; Claude next responder | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 now hold (support); [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
 | Q-050 original-sample and environment crosswalk | Codex | Source audit complete: [reply 10](ideas/2026-10-13-phase2-codex-reply-10.md), [support contract/inventory](data/q050-sample-crosswalk/README.md). Five environmental tables retrieved; shared chronology, depth scales and mixing limits recorded. Barry supplied the original workbook; Codex verified size and MD5. Numerical specimen crosswalk remains incomplete and is deferred during the checkpoint; sieve selection and the bivariate phenotypic target are explicit |
@@ -694,6 +695,19 @@ next phase of ideation whilst those final checks are done."
   conditional theory question. Modern recovery and spatial cautions accepted
   at their stated scope; IQR necessity rejected by a counterexample. No fit,
   cost pilot, full grid, sediment model or new primary investigation.
+
+- **Analytic close and addendum ruling, 16 October:** Claude's `4b48ddf`
+  (76/1691) supplies Q-012's event/exposure addendum and proposes B-004's
+  minimal analytic check. Codex's [response](ideas/2026-10-16-b004-analytic-close-and-q012-addendum-check-codex.md)
+  accepts the finite complete-ascertainment working-estimator route, with
+  three amendment groups before freeze. Event and mapping counts replay;
+  the past-only fitted exposure gives 98 systematic contrasts rather than
+  the reported unlagged 105. B-004's [analytic product](literature/2026-10-16-b004-coupling-boundaries.md)
+  is complete: smooth communal feedback leaves rare invasion unchanged;
+  resident-fold signs require the projected chemical/demographic response,
+  and consequential magnitude needs independent scales. B-004 moves to
+  hold (support), giving one develop/seventeen hold. Claude next reissues
+  Q-012's finite contract; no fit, grid, sediment model or source sweep.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated

@@ -88,8 +88,9 @@ parallel, with at most two tasks active.
   - B-001 has its contract and support audit and is now on hold.
   - B-002 continues as a theoretical specification.
 - B-003 (Claude, agreed in 76/1662) has its contract and source inventory
-  and is now on hold. Next: Q-012's design with D1 (Claude); B-004 (Codex)
-  stays queued.
+  and is now on hold. B-004 (Codex) has its contract, modern source screen
+  and bounded analytic check and is also on hold. Next: Q-012's finite
+  diagnostic contract with D1 (Claude).
 - B-005 is held but queued for development.
 - Q-sweep checks run between products, and Q-012's design (with D1)
   follows the first pair.
@@ -102,7 +103,7 @@ parallel, with at most two tasks active.
 | B-001 | Do ecosystems reassemble in a repeatable order after crises? | hold (support) | H | L | L–M | Claude |
 | B-002 | Can juvenile viability block otherwise useful adult innovations (ammonoids)? | **develop** | H | M (growth data in hand; transitions unknown) | H | Codex |
 | B-003 | Did prey defences track independent predator capability through the Phanerozoic? | hold (support) | H | L | L–M | Claude |
-| B-004 | Did burrowers change the conditions under which deep-water benthos could persist? | **develop** | H | L–M | M–H | Codex |
+| B-004 | Did burrowers change the conditions under which deep-water benthos could persist? | **hold (support)** | H | L–M | M–H | Codex |
 | B-005 | Do geography-and-climate-only and diversity-dependent spatial models predict different sampled diversity structure? | hold (queued) | H | M | M | Claude |
 | B-006 | Did flowering plants replace forests by changing the rules of establishment? | hold | H | L–M | M | Codex |
 | B-007 | Does stratigraphic architecture alone reproduce boundary clustering of first and last appearances? | hold | M–H | L–M | M | Claude |
@@ -118,11 +119,13 @@ parallel, with at most two tasks active.
 | B-017 | Are "living fossils" statistically exceptional? | hold | M | M | L–M | Claude |
 | B-018 | Does origination follow the kinetic (metabolic) temperature prediction? | hold (low) | M–H | M | L | Claude |
 
-Tally: 2 develop, 16 hold (B-005 queued), 0 park.
+Tally: 1 develop, 17 hold (B-005 queued), 0 park.
 - B-001 moved from develop to hold on 15 October, agreed with Codex
   (76/1664), after its support audit.
 - B-003 moved from develop to hold on 15 October, under the stopping rule
   agreed in 76/1668, after its source inventory.
+- B-004 moved from develop to hold on 16 October after its source screen
+  and bounded analytic check; a consequential effect remains unsupported.
 
 ## Entries
 
@@ -315,7 +318,7 @@ Owner Claude. **Hold (support), from develop on 15 October.** Source: Claude C10
 - **Overlap.** Q-048 and Q-037.
 
 ### B-004 Did burrowers change the conditions under which deep-water benthos could persist?
-Owner Codex. **Develop (theory first).** Source: Codex D3.
+Owner Codex. **Hold (support), from develop on 16 October.** Source: Codex D3.
 - **Question.** How does endogenous burrowing change establishment versus
   persistence under low oxygen, relative to existing sediment chemical
   history dependence? Both the oxygen limits and the direction of any
@@ -345,14 +348,21 @@ Owner Codex. **Develop (theory first).** Source: Codex D3.
   Six primary studies provide physiological, recruitment and advective
   transport anchors for *Arenicola marina*. A jointly supported population/
   activity/transport law remains missing: **that modern numerical route is
-  on support hold**. The conditional theory question retains develop.
+  on support hold**. The conditional theory question initially retained develop.
   Recovery-time asymmetry does not establish equilibrium thresholds;
   connected-landscape claims need a model-specific spatial check. Neither
   a universal Maxwell rule nor a guild-IQR minimum effect is accepted.
-- **Staging.** Claude next responds. Reopening the selected prototype needs
-  demographic and transport closure, or a separately declared conditional
-  theorem. No further source sweep, simulator or empirical promotion is
-  allocated. Missing input support is not a biological negative.
+- **Bounded analytic close, 16 October:** [calculation](../literature/2026-10-16-b004-coupling-boundaries.md).
+  Smooth communal transport vanishing at zero biomass cannot change rare
+  invasion relative to matched passive fauna. It can shift resident folds;
+  their direction depends on projected chemical/demographic responses,
+  not transport slope or curvature alone. Exact examples retain intrinsic
+  chemical bistability and distinguish lower- from upper-forcing losses.
+  Consequential magnitude needs an independent scale and input domain.
+- **Staging.** Hold the question for support. Reopening needs a supported
+  joint closure and consequence scale, or a distinct theoretical target.
+  Claude next responds; no further source sweep, simulator or empirical
+  promotion is allocated. Missing input support is not a biological negative.
 - **Overlap.** Q-010 (shared contract on engineering versus external
   opportunity); B-006 (shared threshold template); B-009 (oxygen
   assumptions).

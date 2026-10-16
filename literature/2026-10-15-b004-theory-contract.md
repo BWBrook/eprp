@@ -4,8 +4,8 @@ Codex, 15 October 2026. First paper contract; source inspection and proposed
 choices are separated below. No numerical model, fit or historical
 calibration has been run. Companion [response and ownership record](../ideas/2026-10-15-b004-contract-and-q012-amendment-closure-codex.md).
 
-**Disposition: develop, theory first.** Generic colonisation feedback is
-already proposed in the closest prior, and sediment chemistry can generate
+**Disposition: hold (support), updated 16 October.** Generic colonisation
+feedback is already proposed in the closest prior, and sediment chemistry can generate
 hysteresis without animals. The narrower question is whether endogenous
 burrowing changes the oxygen conditions for establishment and persistence
 *relative to that chemical memory*, and whether the change is consequential
@@ -17,9 +17,17 @@ result would not by itself explain Palaeozoic colonisation.
 [modern source table and control check](2026-10-15-b004-modern-source-table.md)
 is complete. A modern *Arenicola marina* prototype is on support hold because
 the demographic/transport coupling is not independently closed. The
-conditional theory question remains develop; no numerical implementation is
-allocated. Modern recovery times, spatial front selection and demographic
+conditional theory question initially remained develop; no numerical
+implementation was allocated. Modern recovery times, spatial front selection and demographic
 equilibrium thresholds remain separate targets.
+
+**16 October analytic close:** the [bounded calculation](2026-10-16-b004-coupling-boundaries.md)
+shows that smooth communal transport vanishing at zero biomass leaves rare
+invasion unchanged relative to matched passive fauna. Resident folds can
+move, but their direction requires the projected chemical/demographic
+response, and consequential size needs independent scales and input bounds.
+B-004 is now on support hold; the calculation does not establish historical
+consequence or exclude other engineering mechanisms.
 
 ## 1. What the nearest primary studies already occupy
 
@@ -186,6 +194,11 @@ and numerical tolerance stated separately.
 
 ## 6. Finite decision and stopping contract
 
+- **Bounded analytic product complete, 16 October:** invasion invariance,
+  the fold response, sufficient sign conditions and exact counterexamples
+  are recorded in the linked note. Reopening requires a supported joint
+  closure and consequence scale, or a distinct theoretical target. No
+  further sign-only exercise or numerical prototype is allocated.
 - **First source product complete:** the modern *Arenicola marina*/shallow
   sand table reaches a support hold for an independently parameterised
   prototype. Reopening requires a source-supported stage/open-recruitment
@@ -238,8 +251,8 @@ preserved: SI/Table S1 versus S1 data gives Esopus 402–398 versus 394 Ma,
 Schaghticoke 486.9–477.1 versus 475 Ma, and Hartfell/Dob's Linn 443.8 versus
 Hartfell 438 Ma. No harmonisation or causal joint panel was attempted.
 
-**Complete:** first theory/prior contract, response to critique and bounded
-modern source table; the selected modern numerical route is on support hold.
+**Complete:** first theory/prior contract, response to critique, bounded
+modern source table and analytic boundary check. B-004 is on support hold.
 **Provisional:** residual novelty, model choice, parameter support and any
 historical explanatory value. **Next responder: Claude**, before a further
 bounded task is allocated. No primary investigation selected.
