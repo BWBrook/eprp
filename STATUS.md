@@ -21,7 +21,9 @@ Updated: 16 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   wall time, four divergences, maximum R-hat 1.037 and minimum ESS 173.
   Its shared-event rounding and broader quadrature precision need repair.
   Claude is the next responder on proposed numerical improvements and a
-  bounded generator-only size pilot; no full grid or empirical fit.
+  bounded generator-only size pilot; no full grid or empirical fit. Claude
+  relays Barry's kunanyi destination and PBS completion-mail approval in
+  76/1733–1734; no background monitoring or pre-opening jumpbox probe.
   B-004's critique response, six-study modern screen and bounded analytic
   check are complete. B-004 is **hold (support)**: invasion invariance and
   conditional fold responses do not supply a consequential oxygen scale;
@@ -71,7 +73,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Claude: proposed repair/size pilot, acceptance pending; Codex: full-prototype check complete | [Prototype check](ideas/2026-10-16-q012-full-prototype-check-codex.md) reproduces repaired component fixtures, v2 summaries and full-fit outputs. The 264-lineage fit costs 792.8 s but has four divergences and inadequate mixing, worst for baseline scale tau. Shared-event rounding and quadrature precision need concrete repairs. Prefer unconditional size calibration with a fixed reference and disjoint validation; matching N alone does not match the censoring/information profile. Claude next accepts or amends the bounded code/execution task under the note's limits. Full grid, remote allocation and empirical fit remain unlaunched; question status/tier unchanged |
+| Q-012/D1 support and identification | Claude: proposed repair/size pilot, acceptance pending; Codex: full-prototype check complete | [Prototype check](ideas/2026-10-16-q012-full-prototype-check-codex.md) reproduces repaired component fixtures, v2 summaries and full-fit outputs. The 264-lineage fit costs 792.8 s but has four divergences and inadequate mixing, worst for baseline scale tau. Shared-event rounding and quadrature precision need concrete repairs. Prefer unconditional size calibration with a fixed reference and disjoint validation; matching N alone does not match the censoring/information profile. Claude next accepts or amends the bounded code/execution task under the note's limits. Kunanyi/PBS mail are the relayed destination/workflow; the full grid and empirical fit remain unlaunched; question status/tier unchanged |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -753,7 +755,11 @@ next phase of ideation whilst those final checks are done."
   panel's exact counts. Claude next responds to the proposed numerical/rounding
   repair and bounded generator-only size-calibration tasks. The note limits any
   revised cost fit to one dataset and the existing 1,200 s; no full grid,
-  empirical fit or remote allocation. Resource extrapolations are provisional.
+  empirical fit or remote dispatch. Resource extrapolations are provisional.
+  Claude then relays Barry's choice of kunanyi and PBS end/abort mail
+  (76/1733–1734): cost does not require a smaller grid or cheaper estimator;
+  numerical validity and packaging remain gates. Barry opens the jumpbox
+  when ready and wakes the responsible agent after the completion email.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
@@ -793,6 +799,11 @@ investigation is selected.
 - Compute (Barry in Claude chat, 8 October): TPAC `kunanyi` allocation permits
   a 48-node × 28-CPU PBS job. Barry must open the TPAC authorisation jumpbox
   before agents probe it. Operational rules: `~/work/nectar/docs/machines/kunanyi.md`.
+- Compute update (Barry in Claude chat, 16 October, exact-quote relay in
+  76/1733–1734): use kunanyi for the intended Q-012 campaign; PBS completion/
+  failure email is approved, with Barry waking the agent afterwards. No
+  scheduler, cron job or background polling. Prepare the valid experiment
+  and packaging before Barry opens TPAC; no probe or submission yet.
 - Stage owned paths only and inspect the whole Git index before committing.
 - Runtime restored on 8 October after Barry changed permissions. Codex verified
   both shell probes and a clean local checkout matching remote bfda1c7 at 16:46

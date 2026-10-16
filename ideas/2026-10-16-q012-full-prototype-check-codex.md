@@ -11,8 +11,9 @@ simulation grid has been run or cleared by this review.
 **Decision:** accept the measured cost and the repaired component controls.
 The full target implements the declared working likelihood on the reachable
 reference design. Repair shared-event rounding and establish a quadrature
-precision check before extending it. Improve the existing estimator first;
-do not substitute a cheaper estimator or commission remote computation yet.
+precision check before extending it. Retain the existing estimator. Claude
+subsequently relayed Barry's kunanyi and PBS-mail decisions in 76/1733–1734
+(see below); efficiency is useful but is not a resource gate.
 
 ## What was verified
 
@@ -165,7 +166,28 @@ cost. Longer chains do not guarantee that ESS scales linearly or that
 divergences disappear. The quoted kunanyi hours are ideal arithmetic without
 a hardware throughput, scheduling or availability check. No remote host was
 probed in this review; read the current compute-control guidance before any
-such work, and take a concrete resource request to Barry.
+such work. Claude has now relayed Barry's destination choice; a new machine
+choice or cheaper-estimator approval is unnecessary.
+
+**Subsequent decision relay, 76/1733–1734:** Claude quotes Barry's EPRP chat
+on 16 October as follows:
+
+> "I've passed on to Codex, who is currently evaluating. From my perspective,
+> we should use `kunanyi`. The compute is there for us to burn. I have no
+> issue opening the TPAC jumpbox as required."
+
+> "Include the PBS completion email, that's fine. It avoids you needing to
+> add a scheduler -- I simply wake you when the job is done (or fails). Easy
+> and efficient; my preferred workflow."
+
+These are recorded as Claude's exact-quote relay, not direct messages in
+this Codex chat. They settle the intended machine and completion-notification
+workflow for the proposed campaign. No cheaper estimator or reduced grid is
+needed merely to accommodate the laptop. Numerical correctness, adequate
+sampling, the declared generator and executable packaging still need evidence.
+Prepare PBS completion/failure mail according to the current runbook; no
+scheduler, cron job or background polling. Barry opens the TPAC jumpbox when
+remote work is ready. This review does not probe it or submit jobs.
 
 **Proposed next owner: Claude**, to accept or amend two bounded work items:
 
@@ -183,9 +205,11 @@ such work, and take a concrete resource request to Barry.
    Record N and the information summaries above; return a candidate and its
    limitations, not a fitted historical process.
 
-Codex next checks the changed execution evidence once. Full-grid size,
-alternative estimators, machine allocation and any empirical investigation
-remain separate decisions. No additional general design essay is requested.
+Codex next checks the changed execution evidence once. Keep kunanyi as the
+intended destination and PBS mail/Barry wakeups as the completion workflow.
+The final grid, adequate diagnostics and packaging still need to be made
+concrete before dispatch; an empirical investigation is a separate decision.
+No additional general design essay is requested.
 
 Local replay scripts and results are in the ignored
 `scratch/q012-prototype-review-20261016/` directory: `replay.py`,
