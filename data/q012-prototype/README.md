@@ -15,9 +15,16 @@ is fitted to the real data.
 ## Reproduce
 
 ```bash
-uv run --python 3.12 data/q012-prototype/prototype.py checks
-uv run --python 3.12 data/q012-prototype/prototype.py fit
+uv run --python 3.12 data/q012-prototype/prototype.py checks   # v2 checks
+uv run --python 3.12 data/q012-prototype/prototype.py fit      # v2 timed fit
+uv run --python 3.12 data/q012-prototype/calibrate.py          # generator size calibration
 ```
+
+- **v1**: `model.stan`, `checks.json` and `fit_result.json`. These are
+  preserved; they were produced at `b683c74`.
+- **v2**: `model_v2.stan`, `quadrature.py`, `checks_v2.json`,
+  `fit_result_v2.json` and the `v2` block of `config.json`. It follows
+  Codex's check (76/1737).
 
 - Pinned: numpy 2.1.3, pandas 2.2.3, cmdstanpy 1.2.4, and local CmdStan
   2.38.0.
@@ -151,3 +158,142 @@ about **7,500 fits**.
 
 **The generator's size calibration** (above) has to be settled before any
 grid as well.
+
+## v2 repairs (16 October, after Codex's check 76/1737)
+
+### Rounding of shared events
+
+- **The rule:** a bifurcation time is rounded once and moved as one time.
+  If constraints still fail, the whole component falls back to unrounded
+  dates.
+- **Near the present:** an observed extinction that would round to 0 Ma
+  keeps its label at 0.005 Ma; it does not become a present censor.
+- **Fixtures** (`rounding_fixtures`), with Codex's case:
+
+  | Lineage | Dates (Ma) | Label |
+  | --- | --- | --- |
+  | A | 10 → 1.005 | bif |
+  | B | 1.005 → 1.00 | ext |
+  | D | 1.005 → 0 | present |
+  | E (an extinction at 0.003 Ma) | 5 → 0.005 | ext |
+
+  There are no spurious buds.
+- Neither saved dataset needed any rounding repair.
+
+### The cohort normaliser: adaptive Gauss–Hermite
+
+**Method.**
+- The integrand is jointly concave in the cohort frailties, so 50 Newton
+  steps find its mode.
+- The 1-D case uses nodes centred and scaled at the mode. The 2-D case uses
+  the joint mode and the Cholesky factor of the inverse negative Hessian.
+- 40 nodes.
+- `quadrature.py` mirrors the Stan functions exactly.
+
+**Precision gate** (Codex's): log error at most 10⁻⁴, and derivative
+error at most 10⁻³, for σ, κ_b and ρ.
+- The reference is dense Simpson integration over standard-normal
+  innovations on [−12, 12]. Its own convergence is checked: 800, 1,600 and
+  3,200 intervals agree to 10 digits.
+
+| Points | Worst log error | Worst derivative error |
+| --- | ---: | ---: |
+| Central (2) | 7 × 10⁻¹⁶ | 3 × 10⁻¹² |
+| Codex's stress point (σ 3, ρ 0.9, κ_b −1.5): v1's 24-node rule was off by 0.17 | 2.0 × 10⁻⁵ | 1.1 × 10⁻⁴ |
+| Stress points (σ 1.8; σ 3 with κ_b +1.5; σ 0.05) | 1.7 × 10⁻⁵ | 5.7 × 10⁻⁴ |
+| 40 evenly spaced saved v1 states | 5.8 × 10⁻⁵ | 3.0 × 10⁻⁴ |
+
+**The gate passes.** With 24 nodes, adaptive quadrature fails it at the
+stress points (log error 3 × 10⁻⁴, derivative error 2.5 × 10⁻³). This
+establishes accuracy at the tested points, not a global guarantee.
+
+**Further checks:**
+- Monte Carlo cross-check: z = −1.09 and 0.10.
+- Stan against Python, as log-density differences:
+  - 1.7 × 10⁻¹³ (62 lineages);
+  - 8.2 × 10⁻¹² (264 lineages);
+  - 6.4 × 10⁻¹⁰ between the central point and the stress point, where the
+    difference is 89,221.
+- Finite-difference dlp/dσ: Stan −72.072633 against Python −72.072633.
+
+### Baseline random walk and vectorisation
+
+- **Non-centred:** log_h0[j] = log_h0[j − 1] + τ z_j with z ~ N(0, 1), the
+  same joint prior. In v1, τ had both the worst R-hat and the worst ESS.
+- **Vectorised:** segment sums over contiguous per-lineage blocks, and
+  per-lineage terms as dot products.
+
+## Generator size calibration (Codex's work item b)
+
+`calibrate.py` writes `calibration.json`, with seeds and per-seed counts in
+`calibration_rows.json`. Fixed before running:
+- objective: the median recorded size nearest 268;
+- candidates: λ₀ ∈ {0.080, 0.088, 0.096};
+- 100 common calibration seeds (40001–40100), then 100 disjoint validation
+  seeds (41001–41100);
+- a 120 s budget. It used 9.1 s, with no caps.
+
+| λ₀ | Seeds | Median recorded N (5–95%) | Share ≥ 268 | ext / bif / single / present | Median lineage-Myr | Budding / boundary links (median) | Lagged-E availability |
+| --- | --- | --- | ---: | --- | ---: | --- | ---: |
+| 0.0708 (original) | 30000–30299 | 94 (35–241) | 0.043 | 0.55 / 0.07 / 0.02 / 0.36 | 1,040 | 72 / 14 | 0.670 |
+| 0.080 | calibration | 144.5 (39–337) | 0.11 | 0.53 / 0.06 / 0.02 / 0.39 | 1,490 | 115 / 20 | 0.673 |
+| 0.088 | calibration | 216.5 (66–510) | 0.30 | 0.50 / 0.06 / 0.02 / 0.43 | 2,183 | 178 / 29 | 0.674 |
+| **0.096 (chosen)** | calibration | **276.5 (89–694)** | 0.54 | 0.48 / 0.06 / 0.01 / 0.45 | 2,486 | 231 / 34 | 0.675 |
+| 0.096 | **validation** | **296 (67–648)** | 0.57 | 0.48 / 0.06 / 0.01 / 0.45 | 2,705 | 251 / 39 | 0.669 |
+| **Observed tree** | — | **268** | — | **0.71 / 0.09 / 0.004 / 0.19** | **2,939** | **208 / 49** | **0.667** |
+
+**Reading:**
+- λ₀ = 0.096 calibrates the median size. The spread is wide, which is
+  unconditional.
+- **The calibrated reference is not realistic in turnover:**
+
+  | | Present at the end | Ending in extinction |
+  | --- | ---: | ---: |
+  | Generator | 45% | 48% |
+  | Observed | 19% | 71% |
+
+  It also has fewer boundary links (34–39 against 49). The real tree has
+  more turnover. More censoring means less information per lineage than
+  the real data.
+- **No further parameter was tuned**, as Codex asked.
+- The original-reference panel (seeds 30000–30299) is now saved, and it
+  reproduces the earlier 94 (35–241), 4.3% exactly.
+- **Options for Codex:**
+  - accept size-only calibration, with the turnover mismatch disclosed;
+  - add one declared second target (the extant share), calibrated jointly
+    with a common multiplier on h₀;
+  - use a size-and-turnover-conditioned experiment, labelled as
+    conditional.
+
+### The v2 timed fit: timed out (the bound respected, not retried)
+
+The fit used the same dataset (seed 20261060, 264 recorded lineages), the
+same sampler settings and the same hard limit of 1,200 s. It was
+**terminated at 1,200 s**, against 793 s for v1. See
+[fit_result_v2.json](fit_result_v2.json).
+
+**Diagnosis from the partial output** (no new compute):
+
+| | Chains 1–3 | Chain 4 |
+| --- | --- | --- |
+| Progress at the stop | Sampling, 80–90% done (630–860 saved draws) | Warmup, 600 of 2,000 |
+| Divergences | 0 | — |
+| Tree depth | Median 7, as in v1 | — |
+
+**Two causes:**
+- **Cost.** Each gradient took 0.005–0.0075 s, against 0.0025–0.0034 s in
+  v1, so about 2.2 times slower. Automatic differentiation through 50 Newton
+  iterations and the 1,600-node 2-D grid outweighs the vectorisation gain.
+- **Robustness.** Chain 4 had 85 rejected proposals in early warmup. The
+  unsafeguarded 2-D Newton steps overflowed to NaN, and the Hessian
+  inversion in `log_pi_2d` then failed.
+
+**Remedies for the next bounded step, not applied here:**
+- find the mode with Stan's algebraic solver (`solve_newton`), which gives
+  implicit-function gradients and a line search. That makes it both cheaper
+  and safeguarded;
+- or damp and bound the Newton steps, and use far fewer iterations from a
+  good start;
+- test whether a nested or lower-order 2-D rule still passes the precision
+  gate;
+- then repeat one same-dataset cost fit under the same limit.

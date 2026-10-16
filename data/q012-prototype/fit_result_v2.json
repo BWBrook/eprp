@@ -1,0 +1,42 @@
+{
+ "seed": 20261060,
+ "N": 264,
+ "model": "model_v2.stan",
+ "status": "timeout",
+ "seconds": 1200.0,
+ "diagnosis_from_partial_output": {
+  "chains_progress": {
+   "chain1": "sampling 1800/2000 (860 saved draws)",
+   "chain2": "sampling 1800/2000 (852)",
+   "chain3": "sampling 1600/2000 (630)",
+   "chain4": "warmup 600/2000"
+  },
+  "saved_partial_draws": {
+   "divergences": 0,
+   "treedepth_median": 7,
+   "n_leapfrog_median": 127,
+   "note": "same as v1"
+  },
+  "gradient_seconds": {
+   "v2_chains": [
+    0.006834,
+    0.007484,
+    0.006572,
+    0.004679
+   ],
+   "v1_chains": [
+    0.002805,
+    0.002462,
+    0.002485,
+    0.003357
+   ]
+  },
+  "chain4_warmup_rejections": {
+   "inverse_spd_nan": 78,
+   "not_positive_definite_nan": 5,
+   "ldlt_failed": 2,
+   "source": "model_v2.stan line 50 (2-D AGH Newton Hessian inverse), called from the C2 normaliser"
+  },
+  "reading": "About 2.2x higher cost per gradient (autodiff through 50 Newton iterations and the 1,600-node 2-D grid outweighs vectorisation), and unsafeguarded 2-D Newton steps overflowing to NaN in early warmup stalled one chain. Not retried, per the work-item bound."
+ }
+}

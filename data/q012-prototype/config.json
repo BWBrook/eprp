@@ -123,5 +123,12 @@
     "rho": "uniform(0, 1)"
   },
   "fit_seed": 20261060,
-  "deviation": "Declared after the first checks, before any fit: the frozen seed 20261017 gave only 62 recorded lineages (real tree 268), unrepresentative for COST. Over 300 seeds the reference generator gives a median of 94 recorded lineages (5-95%: 35-241; 4.3% >= 268), so marginal-rate matching does not reproduce the realised tree size. For costing only, the timed fit uses the first seed from 20261017 upward whose recorded tree has 240-300 lineages: 20261060 (264 recorded; 43 seeds skipped). No inference is drawn from this fit."
+  "deviation": "Declared after the first checks, before any fit: the frozen seed 20261017 gave only 62 recorded lineages (real tree 268), unrepresentative for COST. Over 300 seeds the reference generator gives a median of 94 recorded lineages (5-95%: 35-241; 4.3% >= 268), so marginal-rate matching does not reproduce the realised tree size. For costing only, the timed fit uses the first seed from 20261017 upward whose recorded tree has 240-300 lineages: 20261060 (264 recorded; 43 seeds skipped). No inference is drawn from this fit.",
+  "v2": {
+    "note": "Work item (a) after Codex 76/1737, frozen before the v2 fit: adaptive Gauss-Hermite cohort normaliser (40 nodes; precision gate log error <= 1e-4 and derivative error <= 1e-3 against a dense Simpson reference at central, stress and 40 saved v1 states), non-centred baseline random walk (prior unchanged), vectorised segment sums, and shared-event rounding. Same dataset (fit_seed) and the same sampler settings and 1,200 s limit as v1. v1 files (model.stan, checks.json, fit_result.json) are preserved.",
+    "stan_file": "model_v2.stan",
+    "quadrature_nodes": 40,
+    "checks_file": "checks_v2.json",
+    "fit_file": "fit_result_v2.json"
+  }
 }

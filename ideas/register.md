@@ -785,8 +785,18 @@ identifiability point.
       - η's interval covers the truth; λ₀ and κ are biased by thinning,
         as expected.
       - **The full grid would cost about 6,600–20,000 core-hours:** HPC
-        scale. That is a resource decision for Barry, after efficiency
-        work.
+        scale. Barry approved kunanyi on 16 October.
+    - **Codex's work items (a) and (b), 16 October:**
+      - (b) λ₀ = 0.096 calibrates the median size: 276 on the calibration
+        seeds and 296 on validation. But the turnover is unrealistic: 45%
+        present against 19% observed.
+      - (a) The rounding fixtures pass, and adaptive Gauss–Hermite (40
+        nodes) passes the precision gate. The non-centred baseline is in
+        place.
+      - **The v2 cost fit timed out at 1,200 s:** gradients are 2.2× more
+        expensive, and NaNs from the 2-D Newton step stalled one chain. Not
+        retried, per the bound.
+      - Next: a safeguarded or implicit mode solver.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 
