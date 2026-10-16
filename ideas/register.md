@@ -824,6 +824,21 @@ identifiability point.
       - Per chain, the wall time is about 1.2 times v1's.
       - Next: Codex checks the evidence; then the scenario grid and the
         kunanyi packaging.
+    - **Kunanyi pilot package (Codex 76/1750), 16 October:**
+      - **Codex verified v4:** E-BFMI is below 0.3 in two chains, and at 40
+        nodes the precision gate fails at 4 of 8 high-σ states. GO to
+        prepare a bounded pilot, not the campaign.
+      - **v5 = 64 nodes:** every gate passes, including Codex's tail
+        states. Checks are hash-bound.
+      - **The package:** data/q012-pilot/ has a frozen seed table
+        (c93ea58), 13 datasets, PBS build, preflight and fit scripts with
+        receipts, cheap control self-tests, and screening to Codex's
+        thresholds.
+      - **Contract Amendment 2:** coverage at η = 0 is structurally zero.
+        Endpoint (d) now applies only to η > 0.
+      - **Proposed for Codex's check:** a 6 h per-fit cap, not 2 h,
+        because of the measured 64-node cost.
+      - Nothing has been submitted; Barry is not yet asked to open TPAC.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 

@@ -1,0 +1,95 @@
+{
+ "generator_cap": {
+  "outcome": "capped",
+  "expected": "capped",
+  "ok": true
+ },
+ "generator_timeout": {
+  "outcome": "timeout",
+  "expected": "timeout",
+  "ok": true
+ },
+ "complete": {
+  "exit": 0,
+  "status": "complete",
+  "chains_complete": [
+   "yes",
+   "yes",
+   "yes",
+   "yes"
+  ],
+  "maxrss_kb": [
+   "17036",
+   "17064",
+   "17000",
+   "16844"
+  ],
+  "ok": true
+ },
+ "resume_skip": {
+  "exit": 0,
+  "said_skip": true,
+  "second_attempt": false,
+  "ok": true
+ },
+ "array_index_maps_to_first_panel_row": {
+  "exit": 0,
+  "ran": true,
+  "ok": true
+ },
+ "chain_failure": {
+  "exit": 1,
+  "status": "failed",
+  "chain_exits": [
+   "0",
+   "1",
+   "0",
+   "0"
+  ],
+  "ok": true
+ },
+ "signal_term": {
+  "exit": 3,
+  "status": "terminated_TERM",
+  "chains_left_running": false,
+  "ok": true
+ },
+ "timeout": {
+  "exit": 4,
+  "status": "timeout",
+  "attempt": "2",
+  "chain_exits": [
+   "124",
+   "124",
+   "124",
+   "124"
+  ],
+  "ok": true
+ },
+ "stale_data_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "binary_mismatch_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "preflight_local_binary": {
+  "exit": 0,
+  "receipt": [
+   "preflight_log_prob=pass",
+   "smoke_chain1_exit=0",
+   "smoke_chain2_exit=0",
+   "smoke_chain3_exit=0",
+   "smoke_chain4_exit=0",
+   "preflight_smoke=pass"
+  ],
+  "ok": true
+ },
+ "preflight_mismatch_detected": {
+  "exit": 1,
+  "reason": "preflight_mismatch_point_central0",
+  "ok": true
+ },
+ "all_pass": true
+}

@@ -565,6 +565,31 @@ def gate(d, p, h=1e-4):
     return res
 
 
+def v4_states(d):
+    """Codex's eight tail states (divergent plus six highest-sigma) and evenly spaced states from the v4 fit."""
+    import pandas as pd
+    T = CFG[CFG["active"]]["tail_states"]
+    df = pd.concat([pd.read_csv(f, comment="#") for f in sorted((OUT / T["source_fit"]).glob("*.csv"))], ignore_index=True)
+    tail = list(dict.fromkeys([int(i) for i in np.flatnonzero(df["divergent__"].to_numpy())] + [int(i) for i in df.nlargest(6, "sigma").index]))
+    even = [int(i) for i in np.linspace(0, len(df) - 1, T["evenly_spaced"]).astype(int)]
+    return ({i: draw_to_params(df.iloc[i], d["N"]) for i in tail}, {i: draw_to_params(df.iloc[i], d["N"]) for i in even},
+            int(df["sigma"].idxmax()))
+
+
+def binding(d):
+    """SHA-256 of everything a set of checks depends on; a fit or package must match it exactly."""
+    import hashlib
+    VER = CFG[CFG["active"]]
+    h = lambda b: hashlib.sha256(b).hexdigest()
+    files = [HERE / VER["stan_file"], HERE / "prototype.py", HERE / "quadrature.py"] + sorted((HERE / VER["inits"]["dir"]).glob("*.json"))
+    out = {str(f.relative_to(HERE)): h(f.read_bytes()) for f in files}
+    out["config_active_block"] = h(json.dumps(VER, sort_keys=True).encode())
+    out["config_shared"] = h(json.dumps({k: CFG[k] for k in ("generator", "observation", "priors", "sampler", "seed", "fit_seed")},
+                                        sort_keys=True).encode())
+    out["fit_dataset"] = h(json.dumps(d, sort_keys=True, default=float).encode())
+    return out
+
+
 def cohort_A(d, p):
     k = math.exp(p["log_k"])
     hh = log_h0_of(p)
@@ -646,11 +671,13 @@ def gradient_benchmark(d, reps=200):
     work = OUT / "bench"
     work.mkdir(parents=True, exist_ok=True)
     ver_a, ver_b = CFG[CFG["active"]].get("benchmark_against", "v2"), CFG["active"]
-    base = {k: v for k, v in d.items() if not k.startswith("solver_")}
+    base = {k: v for k, v in d.items() if not k.startswith("solver_") and k not in ("Q", "gh_t", "gh_w")}
     data_files = {}
     for ver in (ver_a, ver_b):
+        tq, wq = np.polynomial.hermite.hermgauss(CFG[ver].get("quadrature_nodes", CFG["quadrature_nodes"]))
+        dv = dict(base, Q=len(tq), gh_t=list(tq), gh_w=list(wq))
         data_files[ver] = work / f"data_{ver}.json"
-        write_stan_json(str(data_files[ver]), dict(base, **solver_data(CFG[ver]["solver"])) if "solver" in CFG[ver] else base)
+        write_stan_json(str(data_files[ver]), dict(dv, **solver_data(CFG[ver]["solver"])) if "solver" in CFG[ver] else dv)
     src = sorted((OUT / "fit_v2").glob("*_1.csv"))[0]
     lines = src.read_text().splitlines()
     head = [l for l in lines if l.startswith("#")][:60]
@@ -662,7 +689,7 @@ def gradient_benchmark(d, reps=200):
     for k, v in (("sigma", "3.0"), ("rho", "0.9"), ("kappa_b", "-1.5")):
         st[header.index(k)] = v
     pts["stress_from_saved_a"] = st
-    exes = {ver: OUT / CFG[ver]["stan_file"].removesuffix(".stan") for ver in (ver_a, ver_b)}
+    exes = {ver: OUT / CFG[ver]["stan_file"].removesuffix(".stan") for ver in (ver_a, ver_b)}  # v4 and v5 share one executable
     res = {}
     for pname, row in pts.items():
         res[pname] = {}
@@ -701,6 +728,14 @@ def checks_solver():
         if label == "fit_seed":
             gs = [gate(d, q) for q in saved_draws(40)]
             G["saved_draws_40_max"] = {k: max(g[k] for g in gs) for k in gs[0]}
+            if "tail_states" in VER:
+                tail, even, imax = v4_states(d)
+                gt = {i: gate(d, q) for i, q in tail.items()}
+                r["tail_states_8"] = {str(i): dict(sigma=round(tail[i]["sigma"], 7), rho=round(tail[i]["rho"], 7),
+                                                   **{k: float(f"{v:.4g}") for k, v in g.items()}) for i, g in gt.items()}
+                G["tail_states_8_max"] = {k: max(g[k] for g in gt.values()) for k in next(iter(gt.values()))}
+                ge = [gate(d, q) for q in even.values()]
+                G["v4_states_40_max"] = {k: max(g[k] for g in ge) for k in ge[0]}
         r["precision_gate"] = {k: {kk: float(f"{vv:.3g}") for kk, vv in g.items()} for k, g in G.items()}
         r["precision_gate_pass"] = all(g["log_err"] <= 1e-4 and all(v <= 1e-3 for kk, v in g.items() if kk.startswith("d_")) for g in G.values())
         q = sp["near_one_rho_0999_s3"]
@@ -710,10 +745,14 @@ def checks_solver():
         slp = {n: float(mdl.log_prob(sp[n], data=d, jacobian=False, sig_figs=15)["lp__"].iloc[0]) for n in names}
         plp = {n: python_target(d, sp[n]) for n in names}
         r["stan_vs_python_lp_differences"] = {f"central0-{n}": abs((slp["central0"] - slp[n]) - (plp["central0"] - plp[n])) for n in names[1:]}
-        r["solver_stability"] = {n: solver_stability(mdl, d, sp[n]) for n in ("central0", "stress_s3_r09_kbm15")}
+        if label == "fit_seed" and "tail_states" in VER:
+            sp["max_sigma_v4_state"] = tail[imax]
+            r["max_sigma_v4_state_row"] = imax
+        extra = ["max_sigma_v4_state"] if "max_sigma_v4_state" in sp else []
+        r["solver_stability"] = {n: solver_stability(mdl, d, sp[n]) for n in ["central0", "stress_s3_r09_kbm15"] + extra}
         r["automatic_gradients"] = {}
         ok_all = True
-        for n in ("central0", "stress_s3_r09_kbm15"):
+        for n in ["central0", "stress_s3_r09_kbm15"] + extra:
             rows, ok = gradient_check(mdl, d, sp[n])
             r["automatic_gradients"][n] = rows
             ok_all &= ok
@@ -730,12 +769,13 @@ def checks_solver():
         out["smoke"] = smoke(paths) if out["probes"]["pass"] else "not run: probes failed"
         passed = passed and out["probes"]["pass"] and isinstance(out["smoke"], dict) and out["smoke"]["pass"]
     out["all_prefit_checks_pass"] = passed
+    out["binding"] = binding(d)
     (HERE / VER["checks_file"]).write_text(json.dumps(out, indent=1, default=float) + "\n")
     print(json.dumps(out, indent=1, default=float))
 
 
 def checks():
-    if CFG.get("active") in ("v3", "v4"):
+    if CFG.get("active") in ("v3", "v4", "v5"):
         return checks_solver()
     out = dict(rounding_fixtures=rounding_fixtures())
     for label, seed in (("frozen_seed", CFG["seed"]), ("fit_seed", CFG["fit_seed"])):
@@ -858,7 +898,7 @@ def probes(d, starts):
     VER = CFG[CFG["active"]]
     P = VER["probes"]
     exe = OUT / VER["stan_file"].removesuffix(".stan")
-    work = OUT / "probes_v4"
+    work = OUT / f"probes_{CFG['active']}"
     work.mkdir(parents=True, exist_ok=True)
     data_file = work / "data.json"
     write_stan_json(str(data_file), d)
@@ -899,6 +939,7 @@ def probes(d, starts):
         except subprocess.TimeoutExpired:
             return dict(label=label, kind=kind, outcome="timeout")
         txt = r.stdout + r.stderr
+        (work / f"p{j}.stdout.txt").write_text(txt)
         lines = txt.splitlines()
         if "Unrecoverable error" in txt:
             msg = next((l for l in lines if l.startswith("Exception")), "")
@@ -921,9 +962,15 @@ def probes(d, starts):
     must = [r for r in rows if r["kind"] in ("start", "established", "saved")]
     bad_rows = [r for r in rows if r["outcome"] in ("unrecoverable", "unexpected_exit", "timeout", "not_run_budget")]
     ok = all(r["outcome"] == "initialised" for r in must) and not bad_rows and secs <= P["budget_seconds"]
+    import tarfile
+    with tarfile.open(HERE / f"probes_{CFG['active']}_stdout.tar.gz", "w:gz") as tf:
+        for j in range(len(pts)):
+            f = work / f"p{j}.stdout.txt"
+            if f.exists():
+                tf.add(f, arcname=f.name)
     return dict(points=len(rows), seconds=secs, tally=tally, must_pass=[(r["label"], r["outcome"]) for r in must],
-                unexpected=bad_rows, domain_rejection_examples=[r for r in rows if r["outcome"] == "domain_rejection"][:6],
-                **{"pass": ok})
+                unexpected=bad_rows, rows=[dict(r, index=j) for j, r in enumerate(rows)],
+                stdout_archive=f"probes_{CFG['active']}_stdout.tar.gz", **{"pass": ok})
 
 
 def smoke(paths):
@@ -1008,7 +1055,9 @@ def fit():
     odir = OUT / VER.get("output_dir", "fit_v2")
     start = {}
     if "inits" in VER:
-        assert json.loads((HERE / VER["checks_file"]).read_text())["all_prefit_checks_pass"], "prefit checks have not passed"
+        chk = json.loads((HERE / VER["checks_file"]).read_text())
+        assert chk["all_prefit_checks_pass"], "prefit checks have not passed"
+        assert chk.get("binding") == binding(d), "stale checks: source, configuration, starts or dataset changed since the checks ran"
         start = dict(inits=[str(HERE / VER["inits"]["dir"] / f"chain{k}.json") for k in range(1, s["chains"] + 1)],
                      step_size=VER["init_step_size"])
     try:

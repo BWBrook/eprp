@@ -29,9 +29,13 @@ uv run --python 3.12 data/q012-prototype/calibrate.py          # generator size 
 - **v3**: `model_v3.stan`, `checks_v3.json`, `fit_result_v3.json` and the
   `v3` block of `config.json`. It follows Codex's solver-step approval
   (76/1742).
-- **v4** (active): `model_v4.stan`, `inits_v4/`, `checks_v4.json`,
+- **v4**: `model_v4.stan`, `inits_v4/`, `checks_v4.json`,
   `fit_result_v4.json` and the `v4` block of `config.json`. It follows
-  Codex's robustness ruling (76/1745).
+  Codex's robustness ruling (76/1745). This is the 40-node cost result.
+- **v5** (active, no laptop fit): the 64-node candidate for the kunanyi
+  pilot. Files: `checks_v5.json`, `checks_v5_smoke60.json`,
+  `fixtures_v5.json.gz`, `probes_v5_stdout.tar.gz` and the `v5` block of
+  `config.json`. It follows Codex's v4 check (76/1750).
 
 - Pinned: numpy 2.1.3, pandas 2.2.3, cmdstanpy 1.2.4, and local CmdStan
   2.38.0.
@@ -475,8 +479,9 @@ and the 1,200 s limit.
   | 93 uniform(−2, 2) unconstrained (CmdStan's default initialisation) | 82 | 11 | 0 |
   | 93 prior-scale points (perturbation 1.0) | 91 | 2 | 0 |
 
-  All 13 domain rejections are Powell residual failures, with norms of
-  order 1e9. These are expected rejections, not passes.
+  All 13 domain rejections are Powell residual failures, which are expected
+  rejections, not passes. *Corrected (Codex, 76/1750):* the saved examples'
+  residual norms span 2.62e-10 to 4.30e13, not "of order 1e9".
 - **Smoke check.** Four real chains ran from the selected starts and step
   size, with the fit's seed, for 10 warmup iterations and 1 draw. All four
   finished in 19.6 s of the 60 s budget, with no fatal error and no
@@ -487,7 +492,7 @@ and the 1,200 s limit.
 [fit_result_v4.json](fit_result_v4.json). Same dataset (seed 20261060,
 264 recorded lineages), sampler and limit.
 
-| Chain | Warmup / sampling / total (s) | ms per gradient (sampling) | Divergences | Rejections | Fatal |
+| Chain | Warmup / sampling / total (s) | Amortised ms per leapfrog step (sampling) | Divergences | Rejections | Fatal |
 | --- | --- | ---: | ---: | ---: | ---: |
 | 1 | 556 / 324 / 880 | 2.55 | 0 | 0 | 0 |
 | 2 | 571 / 277 / 848 | 2.73 | 2 | 0 | 0 |
@@ -529,8 +534,56 @@ recovery or coverage result):
 **Cost for planning:**
 - Per chain, the wall time is about 1.2 times v1's: 831–891 s against
   656–793 s.
-- The sampling gradient costs about 2.2 times v1's (2.49–2.73 ms against
-  1.00–1.30 ms).
+- Sampling seconds per leapfrog step are about 2.2 times v1's (2.49–2.73 ms
+  against 1.00–1.30 ms). This is an amortised cost proxy, not a pure
+  gradient benchmark (Codex, 76/1750).
+- The fit used 3,449.6 summed chain-seconds and about 3,563 allocated
+  core-seconds (4 slots × 890.7 s). Neither is measured CPU time or kunanyi
+  throughput.
+- **Codex's added diagnostics (76/1750):**
+  - E-BFMI by chain: 0.278, 0.258, 0.324, 0.326. Two chains are below 0.3.
+  - At 40 nodes the precision gate fails at 4 of 8 high-σ or divergent v4
+    states. 64 nodes pass all 8.
 - Scaling the earlier 6,600–20,000 core-hour extrapolation by about 1.2
   gives roughly 8,000–24,000 core-hours for the full grid. This is a
   planning figure only.
+
+## v5: the 64-node candidate for the kunanyi pilot (Codex 76/1750)
+
+**What changed.** Only the fixed AGH order, 40 → 64 nodes, passed as data.
+The model source (`model_v4.stan`), priors, Powell guards, starts and
+initial step size are v4's. There is no laptop fit: the long fit is the
+kunanyi technical replay ([../q012-pilot/](../q012-pilot/README.md)).
+
+**Why.** Codex found that at 40 nodes the precision gate fails at 4 of 8
+high-σ or divergent v4 states, while 64 nodes pass all 8.
+
+### Checks (all pass; [checks_v5.json](checks_v5.json))
+
+| Check | Worst case | Bound |
+| --- | --- | --- |
+| Old precision gates (central, stress, small σ, near-one ρ, 40 saved v1 states) | log 3.8e-5; derivative 1.9e-4 | 1e-4; 1e-3 |
+| Codex's 8 tail states (2 divergent, 6 highest σ) | log 1.25e-5; d/dσ 1.45e-4 | 1e-4; 1e-3 |
+| 40 evenly spaced v4 states | log 3.5e-7; derivative 7.1e-7 | 1e-4; 1e-3 |
+| Stan against Python lp | 6.8e-10 | 1e-6 |
+| Actual AD against finite differences, including the maximum-σ state (row 2869, σ 2.993) | relative error 4.6e-5 | 1e-4 |
+| Tight-tolerance stability, including the maximum-σ state | \|Δlp\| = 0 | 1e-8 |
+| 200 probes | no unrecoverable error, exit or timeout; 13 Powell residual rejections | — |
+| Smoke check (declared 300 s budget) | 4 of 4 chains in 70 s; no fatal error, no rejection | — |
+
+**Further results:**
+- **Repeated gradients at identical points:** v5 takes 2.3–2.8 times as
+  long as v4 (1.9–2.6 in the first run).
+- **The first v5 run failed the smoke check at v4's 60 s budget**, on cost
+  alone: 1 of 4 chains complete, no fatal error, no rejection. That record
+  is kept as [checks_v5_smoke60.json](checks_v5_smoke60.json). The 300 s
+  budget was declared in config before the rerun.
+- **Kept durably:**
+  - [fixtures_v5.json.gz](fixtures_v5.json.gz) holds the 8 tail states,
+    the 40 v4 states and Codex's two fixture outputs, with hashes of the
+    source v4 CSVs;
+  - [probes_v5_stdout.tar.gz](probes_v5_stdout.tar.gz) holds every probe's
+    full stdout. Every probe row is in checks_v5.json.
+- **Hash binding.** checks_v5.json records SHA-256 hashes of the model
+  source, prototype.py, quadrature.py, the config blocks, the starts and
+  the cost dataset. `fit()` and the pilot's `build` refuse stale checks.

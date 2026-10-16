@@ -447,7 +447,7 @@ The joint frequencies of D and X are reported in every scenario.
 | (a) False support, P(D) | At most 0.05; upper Monte Carlo bound at most 0.07 | Every scenario with η ≤ η₀: R0; R0′; R1; R3m; R3m-informative; R2 at η = 0 and 0.05; R4 at η = 0; R-root at η = 0 |
 | (b) Positive power, P(D and not X \| η = η₁) | At least 0.8; lower bound at least 0.75 | R2 at η₁ = 0.20, σ ∈ {0.5, 1} |
 | (c) Informative-negative power, P(X and not D \| η = 0) | At least 0.8; lower bound at least 0.75 | R1 and R2 at η = 0 |
-| (d) Coverage of the 90% interval for η | Between 0.85 and 0.95 | Where the working η is the generator's η: R0, R1, R2, R4 at ψ = ∞, ε = 0 |
+| (d) Coverage of the 90% interval for η (amended in §9.1) | Between 0.85 and 0.95 | Where the working η is the generator's η and the generating η > 0: R0, R1, R2, R4 at ψ = ∞, ε = 0 |
 | (e) R3b, separately | P(D \| R3b, η = 0) is reported as the rate at which unmeasured clade-tied exposure is reported as residual dependence. It is not counted as coverage of η, and it is not a pass of anything | R3b |
 
 - Under ψ < ∞, ε > 0, R3m and R3m-informative, coverage is reported
@@ -477,8 +477,8 @@ replicates, the all-attempt rate lies in [(1 − c)p, (1 − c)p + c].
 - A pass requires the worst end of that interval to satisfy the rule.
 - An unresolved decision driven by caps is not a pass.
 
-**An item carried from the component check.** Divergent transitions from
-the σ → 0 funnel appeared in 19 of 20 component fits. Before the full
+**An item carried from the component check** (attribution corrected in
+§9.2). Divergent transitions appeared in 19 of 20 component fits. Before the full
 pilot, either reparameterise (for example, sample η and the residual
 scale) or use a stricter adapt_delta. Divergences are reported either way.
 
@@ -489,3 +489,39 @@ scale) or use a stricter adapt_delta. Divergences are reported either way.
    own declared compute limit. Placement (local, deep-server) is decided by
    the measured cost.
 3. No grid and no empirical fit until then.
+
+## 9. Amendment 2 (16 October 2026), after Codex's v4 check (76/1750)
+
+### 9.1 Coverage at η = 0 is structurally zero
+
+Under the fitted priors, σ > 0 and 0 < ρ < 1 almost surely, so η = ρσ > 0.
+The posterior's 5% quantile is then strictly positive, and an equal-tail 90%
+interval cannot contain 0. **At a generating η of exactly 0, coverage is
+zero by construction**, even with a perfect sampler.
+
+- **Endpoint (d)**, coverage between 0.85 and 0.95, now applies only where
+  the generating η > 0 and the working η equals the generator's η.
+  η = 0.05 is interior, so it is covered by (d).
+- **At η = 0**, raw coverage is still reported, labelled "structurally
+  zero". η = 0 is judged through the existing endpoints: (a) false support
+  and (c) informative-negative power.
+- The priors and the D and X definitions are unchanged. No point mass at
+  η = 0 is added to satisfy the old rule.
+
+### 9.2 Where the divergences sit
+
+- The σ → 0 funnel attribution in §8.4 was withdrawn in the component check:
+  - at the first settings, 19 of 20 component fits had divergences;
+  - at adapt_delta 0.99, 4 of 20 did;
+  - the divergent states sit in the upper σ tail.
+- The v4 full-likelihood fit's two divergences are also in the upper σ tail.
+- Divergences are still reported in every fit.
+
+### 9.3 Numerical settings carried forward
+
+- The pilot uses 64-node fixed adaptive Gauss–Hermite quadrature and v4's
+  Powell solver with explicit guards (see `data/q012-prototype/`).
+- At 40 nodes the precision gate failed at 4 of 8 high-σ v4 states (Codex,
+  76/1750).
+- The kunanyi pilot is a numerical and cost pilot. It is not a power or
+  coverage experiment, and no campaign claim follows from it.

@@ -1,0 +1,81 @@
+{
+  "purpose": "Q-012 bounded kunanyi numerical and cost pilot (Codex 76/1750). Not a power, coverage or robustness experiment; no campaign claim follows from it.",
+  "candidate": {
+    "prototype_version": "v5",
+    "stan_file": "model_v4.stan",
+    "quadrature_nodes": 64,
+    "checks_file": "../q012-prototype/checks_v5.json",
+    "note": "Model, priors, Powell solver and guards are v4's unchanged; the fixed AGH order is 64 (data)."
+  },
+  "scenarios_file": "scenarios.tsv",
+  "scenario_note": "R00 is the technical replay of the v4 cost dataset (seed 20261060). P01-P12 are unconditional datasets, lambda0 {0.0708, 0.096} x eta {0, 0.05, 0.20} at sigma 0.5, two seeds per cell, all other generator and observation settings at the primary reference. The table was committed (c93ea58) before any panel dataset was generated. Seeds are never replaced or chosen by lineage count.",
+  "sampler": {
+    "chains": 4,
+    "iter_warmup": 2000,
+    "iter_sampling": 4000,
+    "adapt_delta": 0.995,
+    "max_treedepth": 12,
+    "init_step_size": 0.01,
+    "starts": "prototype v5 init rule (prior-centred, perturbation 0.25 prior scale, seed 20261071), with eps sized to each dataset; never moved to a scenario's generating values"
+  },
+  "generator": {
+    "timeout_seconds": 120,
+    "lineage_cap": "3000 (prototype generator.lineage_cap)",
+    "outcomes": "ok, capped, timeout or error; every outcome stays in the denominator"
+  },
+  "resources": {
+    "queue": "normal",
+    "per_fit": "1 node, 4 CPUs, 8 GiB, four single-threaded chains",
+    "fit_seconds": 21600,
+    "fit_walltime": "06:10:00",
+    "build_walltime": "01:00:00",
+    "ceiling_core_hours": {
+      "fits": 312.0,
+      "fit_job_overhead": 8.67,
+      "build_and_preflight": 4.0,
+      "note": "13 fits x 6 h x 4 CPUs; 10 min per fit job for hash checks and receipts; one 1 h build. Ceilings, not measured cost. Peak memory is recorded; revise the request after the replay if needed."
+    },
+    "smoke_seconds": 600,
+    "amendment": "Proposed by Claude for Codex's package check: the per-fit cap is raised from Codex's 2 h to 6 h. Basis: v4 chains took 831-891 s for 2,000 iterations on this laptop; the pilot runs 6,000 iterations at adapt_delta 0.995 with 64-node quadrature, whose gradients take 1.9-2.8 times v4's at identical points (two checks_v5 benchmark runs), and whose 10-iteration smoke warmup adapted step sizes near 0.0057. That projects to about 1.6-2.7 h per fit here; kunanyi's per-core speed is unmeasured. A 2 h cap would probably time out the replay and spend a jumpbox window."
+  },
+  "runtime": {
+    "cmdstan": "2.38.0, built on a compute node from the release tarball",
+    "cmdstan_url": "https://github.com/stan-dev/cmdstan/releases/download/v2.38.0/cmdstan-2.38.0.tar.gz",
+    "module": "HDF5/1.14.0-gompi-2023a (the runbook's validated GCC 12.3 stack)"
+  },
+  "screening": {
+    "chains_complete": 4,
+    "post_warmup_divergences": 0,
+    "fatal_or_sampling_phase_numerical_failures": 0,
+    "ebfmi_min_per_chain": 0.3,
+    "rhat_max": 1.01,
+    "rhat_scope": "every column except sampler diagnostics: parameters, transformed parameters (including the latent x), generated quantities and lp__",
+    "ess_bulk_and_tail_min_core": 400,
+    "core": [
+      "sigma",
+      "rho",
+      "eta",
+      "kappa",
+      "kappa_b",
+      "beta",
+      "gamma",
+      "log_k",
+      "log_lambda0",
+      "log_b0",
+      "tau"
+    ],
+    "reported_not_screened": "depth-limit hits; rejections by phase and cause",
+    "note": "Screening thresholds, not proofs of unbiased inference. A failure stops promotion; runs are not lengthened and datasets are not replaced automatically."
+  },
+  "decision": {
+    "eta0": 0.05,
+    "eta1": 0.2,
+    "interval": "equal-tail 90% (5% and 95% quantiles), full precision",
+    "mcse": "ArviZ 0.20.0 mcse(method='quantile'), chain-preserving (Vehtari et al. 2021), at probabilities 0.05 and 0.95",
+    "mcse_target": 0.01,
+    "ambiguity": "numerically uncertain when an endpoint +/- 2 MCSE crosses 0.05 or 0.20; reported separately from the raw D and X flags"
+  },
+  "denominators": "Every attempted dataset, cap, timeout and failed fit stays in the denominator. With s resolved successes and u unresolved outcomes among n attempts, report [s/n, (s+u)/n] beside any success-conditioned summary.",
+  "mail": "PBS completion and abort mail to Barry on fit jobs and the panel array (-m ae); abort only on the build (-m a). Approved by Barry, 16 October 2026. No polling or monitor.",
+  "promotion": "The 12-fit panel is submitted only after Codex reviews the replay's receipts and diagnostics. A PBS exit status of 0 does not release it."
+}

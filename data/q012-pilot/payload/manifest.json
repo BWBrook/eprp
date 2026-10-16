@@ -1,0 +1,557 @@
+{
+ "created": "2026-10-16T20:36:40+1100",
+ "git_head_at_build": "c93ea58a7c3fe8fef6c2099cac9d00f54866a8b8",
+ "files": 79,
+ "manifest_sha256": "1610e86cd3a7b676c3fe4dc0911a69ac830c18adc58175183d0d7d90c3b8d777",
+ "pilot_json_sha256": "86a23beabb54e91a63918593d876eafcaae6e1bb2c5aaecf6757d00b7440645c",
+ "scenario_table": {
+  "file": "scenarios.tsv",
+  "sha256": "1c13e5cc02e12b4a0f33f4e733ebb0ca2d04b19faeef666412c2edc9d49135b4",
+  "frozen_commit": "c93ea58"
+ },
+ "prototype_checks": {
+  "file": "../q012-prototype/checks_v5.json",
+  "sha256": "ac111b38ea57f2e6762c4234358694a67ece8d8e2f6b74906e160f95df734677",
+  "binding": {
+   "model_v4.stan": "a5d4ba24eb7216987b0311580ff78ebaaf9818f410a02f2d17d23df6810f3eba",
+   "prototype.py": "fcd63b94af524ff612998f14dea108efb17c01132daed02b5894d78e1c6e93e3",
+   "quadrature.py": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
+   "inits_v4/chain1.json": "98fb05ce37acb03346c233a9d205a4c87385c6da2f33d99bb3da5f1054c8ba64",
+   "inits_v4/chain2.json": "5143d71ee1984770c4695075dfa0817329ca19894e7cf0ceaba243324844dd87",
+   "inits_v4/chain3.json": "32805a82682276cecd1a0b0851f099f4e910f9c36d994db04116af9834b6ad4c",
+   "inits_v4/chain4.json": "da98fb9de82b529bae490ec0aaff4f81e27111a618c2049ac671de7b67ef7d51",
+   "config_active_block": "65cafef28cb6b155e59ae9c30371fdfd69c74c8fcbc997cd7c667af816b6517f",
+   "config_shared": "31adce365a9e1bff33e3d953cbd59bd4673ad2b823971af84218715dcb520e7a",
+   "fit_dataset": "f9d9817e713aa5324c81582e7d1fb935bbf326d5d9bd4052490eb90b2f3cfc52"
+  },
+  "all_prefit_checks_pass": true
+ },
+ "cmdstan": {
+  "version": "2.38.0",
+  "url": "https://github.com/stan-dev/cmdstan/releases/download/v2.38.0/cmdstan-2.38.0.tar.gz",
+  "tarball_sha256": "3ae8d290fa7ed6a0f425520e525460a159a32653b6d45f2153e1662d82f85f10"
+ },
+ "run_env": {
+  "CHAINS": 4,
+  "WARMUP": 2000,
+  "SAMPLING": 4000,
+  "ADAPT_DELTA": 0.995,
+  "MAX_DEPTH": 12,
+  "STEPSIZE": 0.01,
+  "SEED": 77017,
+  "FIT_SECONDS": 21600,
+  "SMOKE_SECONDS": 600,
+  "MODEL_BIN": "./model_v4",
+  "MODULE": "HDF5/1.14.0-gompi-2023a",
+  "CMDSTAN_VERSION": "2.38.0"
+ },
+ "scenarios": [
+  {
+   "id": "R00",
+   "role": "replay",
+   "gen_seed": "20261060",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.22,
+   "true_lineages": 281,
+   "N": 264,
+   "observation": {
+    "recorded": 264,
+    "ancestry_lost": 0,
+    "reassigned": 23,
+    "labels": {
+     "ext": 135,
+     "bif": 11,
+     "single": 7,
+     "present": 111
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P01",
+   "role": "panel",
+   "gen_seed": "20261201",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.0",
+   "eta": "0.0",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.13,
+   "true_lineages": 73,
+   "N": 71,
+   "observation": {
+    "recorded": 71,
+    "ancestry_lost": 0,
+    "reassigned": 2,
+    "labels": {
+     "ext": 45,
+     "bif": 4,
+     "single": 0,
+     "present": 22
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P02",
+   "role": "panel",
+   "gen_seed": "20261202",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.0",
+   "eta": "0.0",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.12,
+   "true_lineages": 89,
+   "N": 83,
+   "observation": {
+    "recorded": 83,
+    "ancestry_lost": 0,
+    "reassigned": 0,
+    "labels": {
+     "ext": 53,
+     "bif": 7,
+     "single": 2,
+     "present": 21
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P03",
+   "role": "panel",
+   "gen_seed": "20261203",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.1",
+   "eta": "0.05",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.08,
+   "true_lineages": 88,
+   "N": 82,
+   "observation": {
+    "recorded": 82,
+    "ancestry_lost": 0,
+    "reassigned": 7,
+    "labels": {
+     "ext": 43,
+     "bif": 2,
+     "single": 1,
+     "present": 36
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P04",
+   "role": "panel",
+   "gen_seed": "20261204",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.1",
+   "eta": "0.05",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.12,
+   "true_lineages": 47,
+   "N": 45,
+   "observation": {
+    "recorded": 45,
+    "ancestry_lost": 0,
+    "reassigned": 0,
+    "labels": {
+     "ext": 31,
+     "bif": 2,
+     "single": 0,
+     "present": 12
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P05",
+   "role": "panel",
+   "gen_seed": "20261205",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.09,
+   "true_lineages": 50,
+   "N": 49,
+   "observation": {
+    "recorded": 49,
+    "ancestry_lost": 0,
+    "reassigned": 0,
+    "labels": {
+     "ext": 34,
+     "bif": 2,
+     "single": 0,
+     "present": 13
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P06",
+   "role": "panel",
+   "gen_seed": "20261206",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.1,
+   "true_lineages": 89,
+   "N": 84,
+   "observation": {
+    "recorded": 84,
+    "ancestry_lost": 0,
+    "reassigned": 5,
+    "labels": {
+     "ext": 40,
+     "bif": 2,
+     "single": 1,
+     "present": 41
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P07",
+   "role": "panel",
+   "gen_seed": "20261207",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.0",
+   "eta": "0.0",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.23,
+   "true_lineages": 410,
+   "N": 385,
+   "observation": {
+    "recorded": 385,
+    "ancestry_lost": 0,
+    "reassigned": 23,
+    "labels": {
+     "ext": 194,
+     "bif": 16,
+     "single": 2,
+     "present": 173
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P08",
+   "role": "panel",
+   "gen_seed": "20261208",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.0",
+   "eta": "0.0",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.24,
+   "true_lineages": 334,
+   "N": 315,
+   "observation": {
+    "recorded": 315,
+    "ancestry_lost": 0,
+    "reassigned": 16,
+    "labels": {
+     "ext": 161,
+     "bif": 18,
+     "single": 6,
+     "present": 130
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P09",
+   "role": "panel",
+   "gen_seed": "20261209",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.1",
+   "eta": "0.05",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.32,
+   "true_lineages": 598,
+   "N": 556,
+   "observation": {
+    "recorded": 556,
+    "ancestry_lost": 0,
+    "reassigned": 29,
+    "labels": {
+     "ext": 273,
+     "bif": 30,
+     "single": 10,
+     "present": 243
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P10",
+   "role": "panel",
+   "gen_seed": "20261210",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.1",
+   "eta": "0.05",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.1,
+   "true_lineages": 84,
+   "N": 75,
+   "observation": {
+    "recorded": 75,
+    "ancestry_lost": 0,
+    "reassigned": 2,
+    "labels": {
+     "ext": 40,
+     "bif": 2,
+     "single": 1,
+     "present": 32
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P11",
+   "role": "panel",
+   "gen_seed": "20261211",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.09,
+   "true_lineages": 20,
+   "N": 19,
+   "observation": {
+    "recorded": 19,
+    "ancestry_lost": 0,
+    "reassigned": 0,
+    "labels": {
+     "ext": 19,
+     "bif": 0,
+     "single": 0,
+     "present": 0
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P12",
+   "role": "panel",
+   "gen_seed": "20261212",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.34,
+   "true_lineages": 699,
+   "N": 649,
+   "observation": {
+    "recorded": 649,
+    "ancestry_lost": 2,
+    "reassigned": 42,
+    "labels": {
+     "ext": 272,
+     "bif": 30,
+     "single": 13,
+     "present": 334
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+#!/bin/bash
+#PBS -N q012_build
+#PBS -q normal
+#PBS -l select=1:ncpus=4:mem=8gb
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -M barry.brook@utas.edu.au
+#PBS -m a
+# Build CmdStan and the model on a compute node, then preflight the binary:
+# (1) log density and gradients at three fixed points against the local reference;
+# (2) a four-chain initialisation and step-size smoke run on the replay dataset.
+# The fit job depends on this job with afterok, so any failure here stops it.
+set -u
+cd "${PBS_O_WORKDIR:?}" || exit 2
+. ./run.env
+mkdir -p build
+R=build/receipt.txt
+rm -f "$R" "$R.tmp"
+{
+  echo "host=$(hostname)"
+  echo "pbs_jobid=${PBS_JOBID:-none}"
+  echo "start=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+} > "$R.tmp"
+fail() {
+  echo "status=failed" >> "$R.tmp"
+  echo "reason=$1" >> "$R.tmp"
+  echo "end=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$R.tmp"
+  mv "$R.tmp" "$R"
+  echo "BUILD FAILED: $1"
+  exit 1
+}
+trap 'fail signal_TERM' TERM
+
+sha256sum -c --strict --quiet manifest.sha256 > build/manifest_check.txt 2>&1 || fail payload_manifest
+sha256sum -c --strict --quiet cmdstan.sha256 > build/cmdstan_check.txt 2>&1 || fail cmdstan_tarball
+echo "manifest_sha256=$(sha256sum manifest.sha256 | cut -d' ' -f1)" >> "$R.tmp"
+
+module purge
+module load "$MODULE" || fail module_load
+echo "gxx=$(g++ --version | head -1)" >> "$R.tmp"
+echo "make=$(make --version | head -1)" >> "$R.tmp"
+
+rm -rf "cmdstan-$CMDSTAN_VERSION"
+tar xzf "cmdstan-$CMDSTAN_VERSION.tar.gz" || fail cmdstan_untar
+( cd "cmdstan-$CMDSTAN_VERSION" && make build -j4 ) > build/cmdstan_build.log 2>&1 || fail cmdstan_build
+( cd "cmdstan-$CMDSTAN_VERSION" && make -j4 "../${MODEL_BIN#./}" ) > build/model_build.log 2>&1 || fail model_build
+echo "stanc=$("cmdstan-$CMDSTAN_VERSION/bin/stanc" --version 2>&1 | head -1)" >> "$R.tmp"
+echo "binary_sha256=$(sha256sum "$MODEL_BIN" | cut -d' ' -f1)" >> "$R.tmp"
+
+bash pbs/preflight.sh "$R.tmp" || fail "$(tail -1 build/preflight_reason.txt 2>/dev/null || echo preflight)"
+echo "status=ok" >> "$R.tmp"
+echo "end=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$R.tmp"
+mv "$R.tmp" "$R"
+echo "BUILD OK"

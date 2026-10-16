@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -N q012_fit
+#PBS -q normal
+#PBS -l select=1:ncpus=4:mem=8gb
+#PBS -l walltime=06:10:00
+#PBS -j oe
+#PBS -M barry.brook@utas.edu.au
+#PBS -m ae
+# One pilot fit. Replay: qsub -v SCEN=R00 -W depend=afterok:<build job> pbs/fit.pbs
+# Panel, only after Codex reviews the replay: qsub -J 1-12 pbs/fit.pbs (index i is the i-th panel row of scenarios.tsv)
+cd "${PBS_O_WORKDIR:?}" || exit 2
+exec bash pbs/fit.sh
