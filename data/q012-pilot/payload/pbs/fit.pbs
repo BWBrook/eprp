@@ -9,4 +9,8 @@
 # One pilot fit. Replay: qsub -v SCEN=R00 -W depend=afterok:<build job> pbs/fit.pbs
 # Panel, only after Codex reviews the replay: qsub -J 1-12 pbs/fit.pbs (index i is the i-th panel row of scenarios.tsv)
 cd "${PBS_O_WORKDIR:?}" || exit 2
+. ./run.env
+# The fit uses the runtime the build and preflight used; fit.sh refuses if the module is not loaded.
+module purge || { echo "REFUSED: module command unavailable"; exit 2; }
+module load "$MODULE" || { echo "REFUSED: module $MODULE unavailable"; exit 2; }
 exec bash pbs/fit.sh

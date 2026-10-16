@@ -44,22 +44,49 @@ Powell solver and guards, with **64-node** fixed AGH. Its checks are in
 
 - **Hashing.** `payload/manifest.sha256` covers every payload file; the
   CmdStan tarball is pinned in `cmdstan.sha256`.
-- **Refusals.** The build verifies both before building. Every fit
-  verifies the manifest and the binary hash recorded by the build receipt,
-  and refuses on any mismatch (exit 2).
+- **The prototype checks** are bound to the model source, code, config,
+  starts and cost dataset, and to every saved-draw CSV bank they consume
+  (v1, v2, v3 and v4 fits).
+- **Refusals.** The build verifies both hashes before building. Every fit
+  refuses (exit 2) unless all of these hold:
+  - the build receipt is `ok` **and was produced for the current payload
+    manifest**;
+  - the binary matches the receipt's hash;
+  - the declared module (the build's GCC 12.3 stack) is loaded, which
+    `fit.pbs` does before starting;
+  - `ldd` finds every shared library on the compute node.
 - **Attempts.** Each fit writes `runs/<id>/attempt<n>/` with per-chain
   CSV, stdout, stderr, exit code and GNU `time` peak memory, plus a
   key=value receipt. Earlier attempts are never overwritten.
 - **Resume and signals.** A complete receipt under the same manifest and
-  binary makes a rerun a no-op (resume/skip). TERM or INT stops the chains
-  and writes a `terminated_*` receipt.
+  binary makes a rerun a no-op (resume/skip). Each chain runs in its own
+  process group within the job's session. On TERM or INT the groups get
+  TERM, then KILL after 5 s. The `terminated_*` receipt is written only
+  after the groups are gone, and it records whether escalation was needed
+  and whether anything survived.
 - **No retries.** Nothing retries, lengthens a run or replaces a dataset.
 
 `pilot.py selftest` exercises every one of these controls with cheap
-fixtures, using the frozen-seed dataset and the local binary. Results:
-[selftest.json](selftest.json).
+fixtures, using the frozen-seed dataset and the local binary. It includes a
+model that ignores TERM, a build receipt for another manifest, an unloaded
+module, retrieval after a failed build with no run directory (`pbs/pack.sh`),
+and a mutated saved-draw bank. Results: [selftest.json](selftest.json).
 
 ## Screening (`pilot.py diagnose`)
+
+**Qualification comes first.** A fit is screened only if every structural
+check passes:
+- its receipt names the same scenario and attempt, status `complete`, the
+  current manifest, the built binary and the declared settings;
+- the build receipt names the same manifest;
+- the attempt holds exactly `chain1`–`chain4` `.csv`, `.stdout`,
+  `.stderr` and `.exit`, and nothing else;
+- every exit is 0, stderr is empty and stdout shows no fatal message;
+- each CSV header matches the declared settings, data file and start file;
+- every chain has exactly the declared number of retained draws.
+
+Otherwise the fit is `unresolved`, with the reasons, and no statistics are
+computed. Nothing is truncated or paired by position.
 
 **Pass rules** (Codex's thresholds; screening, not proof of unbiased
 inference):
@@ -78,27 +105,37 @@ inference):
 - the raw D and X flags, with a separate flag when an endpoint ± 2 MCSE
   crosses 0.05 or 0.20.
 
-E-BFMI follows CmdStan's `diagnose` definition. Validated on the v4 fit, it
+**Finite guards.** Non-finite R̂ or ESS fails. Non-finite endpoints or
+MCSE leave the affected flags and the precision status `unresolved`; they
+are never passed. E-BFMI follows CmdStan's `diagnose` definition.
+
+`pilot.py summarise DIR` gives the same statistics for historical output
+such as the v4 fit, labelled as not pilot qualification. On v4 it
 reproduces R̂, ESS and the η endpoints, and fails v4 on divergences,
-E-BFMI, R̂ and ESS, as it should.
+E-BFMI, R̂ and ESS.
 
 Every attempted dataset, cap, timeout and failed fit stays in the
 denominator: report [s/n, (s+u)/n].
 
-## Proposed amendments to Codex's package (for its check)
+## Amendments to Codex's package (accepted, 76/1765)
 
 1. **The per-fit cap is raised from 2 h to 6 h** (walltime 06:10:00).
    - **Basis:**
      - v4 chains took 831–891 s for 2,000 iterations here;
      - the pilot runs three times as many iterations, at adapt_delta
        0.995;
-     - 64-node gradients cost 1.9–2.8 times v4's at identical points;
+     - 64-node gradients cost 1.7–2.8 times v4's at identical points
+       (three benchmark runs);
      - the smoke warmup adapted step sizes near 0.0057.
    - **Projection:** about 1.6–2.7 h per fit on this laptop. kunanyi's
      per-core speed is unmeasured.
    - **Ceiling:** 13 × 6 h × 4 CPUs = 312 core-hours for the fits, plus
      8.7 for job overhead and 4 for the build. These are ceilings, not
      measured cost.
+   - **Scope of Codex's acceptance:** the cap is accepted for the R00
+     technical replay. The panel's resources are reconsidered from R00's
+     measured cost and diagnostics, and the ceiling is not a release of
+     the panel.
 2. **The local smoke budget for v5 is 300 s, not 60 s.** It was declared
    after the 60 s run timed out on cost alone: 1 of 4 chains complete, no
    fatal error, no rejection. That record is kept as
@@ -125,6 +162,10 @@ either job aborts. Then:
 ```bash
 KUNANYI_SSH_ALIAS=kunanyi data/q012-pilot/fetch.sh TAG R00
 ```
+
+`fetch.sh` runs `pbs/pack.sh` on kunanyi. It archives whatever evidence
+exists (submission record, PBS accounting, build directory, the run's
+attempts and PBS output files), so a failed build is retrievable too.
 
 ```bash
 uv run --python 3.12 data/q012-pilot/pilot.py diagnose scratch/q012-pilot/fetch-TAG/runs/R00/attempt1 R00

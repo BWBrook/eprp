@@ -1,40 +1,29 @@
 {
  "generator_cap": {
   "outcome": "capped",
-  "expected": "capped",
   "ok": true
  },
  "generator_timeout": {
   "outcome": "timeout",
-  "expected": "timeout",
   "ok": true
  },
  "complete": {
   "exit": 0,
   "status": "complete",
-  "chains_complete": [
-   "yes",
-   "yes",
-   "yes",
-   "yes"
-  ],
   "maxrss_kb": [
-   "17036",
-   "17064",
-   "17000",
-   "16844"
+   "16676",
+   "16972",
+   "16916",
+   "17088"
   ],
   "ok": true
  },
  "resume_skip": {
   "exit": 0,
-  "said_skip": true,
-  "second_attempt": false,
   "ok": true
  },
  "array_index_maps_to_first_panel_row": {
   "exit": 0,
-  "ran": true,
   "ok": true
  },
  "chain_failure": {
@@ -48,10 +37,26 @@
   ],
   "ok": true
  },
+ "module_not_loaded_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "module_loaded_passes_module_check": {
+  "exit": 2,
+  "ok": true
+ },
  "signal_term": {
   "exit": 3,
   "status": "terminated_TERM",
-  "chains_left_running": false,
+  "cleanup": "signal TERM; kill_escalated no; survivors no",
+  "left_running": [],
+  "ok": true
+ },
+ "signal_term_ignoring_model": {
+  "exit": 3,
+  "status": "terminated_TERM",
+  "cleanup": "signal TERM; kill_escalated yes; survivors no",
+  "left_running": [],
   "ok": true
  },
  "timeout": {
@@ -72,6 +77,100 @@
  },
  "binary_mismatch_refused": {
   "exit": 2,
+  "ok": true
+ },
+ "build_manifest_mismatch_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "screening_refusals": {
+  "good_attempt_qualifies": {
+   "failures": [],
+   "ok": true
+  },
+  "no_receipt": {
+   "failures": [
+    "no receipt"
+   ],
+   "ok": true
+  },
+  "receipt_for_other_scenario_failed_and_stale": {
+   "failures": [
+    "receipt scenario is 'P12', expected 'FX'",
+    "receipt status is 'failed', expected 'complete'",
+    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '88f8218b608a49f6383918fa74c401ee5c986ec6cc40129841af4db015f987d6'"
+   ],
+   "ok": true
+  },
+  "nonzero_chain_exit": {
+   "failures": [
+    "chain 3 exit '1'"
+   ],
+   "ok": true
+  },
+  "fatal_stderr": {
+   "failures": [
+    "chain 1 stderr not empty: 'Exception: fatal'"
+   ],
+   "ok": true
+  },
+  "fewer_draws_than_declared": {
+   "failures": [
+    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600'",
+    "chain 1 CSV num_samples is '5', expected 6",
+    "chain 1 has 5 retained draws, expected 6"
+   ],
+   "ok": true
+  },
+  "unequal_chain_lengths": {
+   "failures": [
+    "chain 2 has 4 retained draws, expected 5"
+   ],
+   "ok": true
+  },
+  "fifth_csv": {
+   "failures": [
+    "unexpected output file chain5.csv"
+   ],
+   "ok": true
+  },
+  "csv_settings_mismatch": {
+   "failures": [
+    "chain 3 CSV delta is '0.9', expected 0.995"
+   ],
+   "ok": true
+  },
+  "build_receipt_other_manifest": {
+   "failures": [
+    "build receipt is for a different payload manifest"
+   ],
+   "ok": true
+  },
+  "ok": true
+ },
+ "finite_guards": {
+  "nan_mcse_leaves_precision_unresolved": true,
+  "raw_flags_kept": true,
+  "infinite_ess_fails": true,
+  "nan_rhat_fails": true,
+  "nan_endpoint_unresolved": true,
+  "ok": true
+ },
+ "fetch_after_failed_build": {
+  "exit": 0,
+  "archived": [
+   "submitted.txt",
+   "accounting-R00.txt",
+   "build/",
+   "build/cmdstan_build.log",
+   "build/receipt.txt",
+   "q012_build.o1"
+  ],
+  "ok": true
+ },
+ "bank_mutation_breaks_binding": {
+  "copy_matches_checks": true,
+  "matches_after_mutation": false,
   "ok": true
  },
  "preflight_local_binary": {

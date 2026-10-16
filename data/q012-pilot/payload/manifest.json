@@ -1,8 +1,8 @@
 {
- "created": "2026-10-16T20:36:40+1100",
- "git_head_at_build": "c93ea58a7c3fe8fef6c2099cac9d00f54866a8b8",
- "files": 79,
- "manifest_sha256": "1610e86cd3a7b676c3fe4dc0911a69ac830c18adc58175183d0d7d90c3b8d777",
+ "created": "2026-10-16T21:26:52+1100",
+ "git_head_at_build": "a8b43c3cf70e97d444da9a53d46149200882728f",
+ "files": 80,
+ "manifest_sha256": "9327b837e8caa58b3548b7e4631556c385e8b652a50b898170f0f0eb6eb128ad",
  "pilot_json_sha256": "86a23beabb54e91a63918593d876eafcaae6e1bb2c5aaecf6757d00b7440645c",
  "scenario_table": {
   "file": "scenarios.tsv",
@@ -11,10 +11,10 @@
  },
  "prototype_checks": {
   "file": "../q012-prototype/checks_v5.json",
-  "sha256": "ac111b38ea57f2e6762c4234358694a67ece8d8e2f6b74906e160f95df734677",
+  "sha256": "6aa7594033d5fb717810c0d5c2142ebd3f8571743266ee9841c8655af57b5e11",
   "binding": {
    "model_v4.stan": "a5d4ba24eb7216987b0311580ff78ebaaf9818f410a02f2d17d23df6810f3eba",
-   "prototype.py": "fcd63b94af524ff612998f14dea108efb17c01132daed02b5894d78e1c6e93e3",
+   "prototype.py": "1e5373fdc3715de1e3cfcd7a58ce4489898dca91c2f7d284aeef76db74c15fe6",
    "quadrature.py": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
    "inits_v4/chain1.json": "98fb05ce37acb03346c233a9d205a4c87385c6da2f33d99bb3da5f1054c8ba64",
    "inits_v4/chain2.json": "5143d71ee1984770c4695075dfa0817329ca19894e7cf0ceaba243324844dd87",
@@ -22,7 +22,23 @@
    "inits_v4/chain4.json": "da98fb9de82b529bae490ec0aaff4f81e27111a618c2049ac671de7b67ef7d51",
    "config_active_block": "65cafef28cb6b155e59ae9c30371fdfd69c74c8fcbc997cd7c667af816b6517f",
    "config_shared": "31adce365a9e1bff33e3d953cbd59bd4673ad2b823971af84218715dcb520e7a",
-   "fit_dataset": "f9d9817e713aa5324c81582e7d1fb935bbf326d5d9bd4052490eb90b2f3cfc52"
+   "fit_dataset": "f9d9817e713aa5324c81582e7d1fb935bbf326d5d9bd4052490eb90b2f3cfc52",
+   "bank:fit/model-20261016142709_1.csv": "a18e66d20ec666e96fb50e0702b2d9b48975ea4badc1f7fa85f1b5eafd7a2aa9",
+   "bank:fit/model-20261016142709_2.csv": "dda9852008637caf91079cff8c242258903f3f78a42da785f0fac282d9dcf5a6",
+   "bank:fit/model-20261016142709_3.csv": "ab1cff081b432d6151bd4bef42bcdf74e1d54e6cc072ac325ef8088dce417ee7",
+   "bank:fit/model-20261016142709_4.csv": "5bf953d2f357ac7a7dfe85b6cf21ff37b3695646a1f3e6d61f82ce9e8b6e73dd",
+   "bank:fit_v2/model_v2-20261016164103_1.csv": "2ee03a1bef349e8c4053bf8efb1ae79fb95e18268c14442365fc6b1c3b1ec404",
+   "bank:fit_v2/model_v2-20261016164103_2.csv": "1c435962f2484faa1365b4cce6f281c71716f6b47f8bb4565e0b41f1f261a2f7",
+   "bank:fit_v2/model_v2-20261016164103_3.csv": "611af38708ecc489a0ebf8352f135bc726f13d829910e98ce89be919e268be33",
+   "bank:fit_v2/model_v2-20261016164103_4.csv": "3851a56dc95c35b3e4236b5fe59d3f0baa2024ef6135bea277c420301a92d4f6",
+   "bank:fit_v3/model_v3-20261016180316_1.csv": "2dc0e066d2d0631efa385fc1723ae43ddf1978d3059ed0f5f3b5fde29ade64ef",
+   "bank:fit_v3/model_v3-20261016180316_2.csv": "c12d75a4b8513f26484fc40a6954ddf1786a232ba682579028b03556873989f9",
+   "bank:fit_v3/model_v3-20261016180316_3.csv": "30e841201fedc3d2f47b8ca5dba23f3623ef3d532baeae97562d54f7798d7197",
+   "bank:fit_v3/model_v3-20261016180316_4.csv": "37419d974bdae3cf8c8ffcbbe63fab10e459a6b7811471f2cab6fe45e4697f31",
+   "bank:fit_v4/model_v4-20261016191413_1.csv": "b9aa5032bea883729a05c3ee84132d07d4a38103ac7da4a81f309979d57151ef",
+   "bank:fit_v4/model_v4-20261016191413_2.csv": "ce17aa38bd4bd5311299291c361e4b7417c66660b85b96992633e4b1bc7b3ba3",
+   "bank:fit_v4/model_v4-20261016191413_3.csv": "261e0340bc6d29055f5fd528a45c4231e1879f98be9e051be515a280c80425fa",
+   "bank:fit_v4/model_v4-20261016191413_4.csv": "71ed8a237a266fea7937761f7bb091182d14b994a3e600b62eea0a69aea517cd"
   },
   "all_prefit_checks_pass": true
  },
@@ -56,7 +72,7 @@
    "eta": "0.2",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.22,
+   "generator_seconds": 0.05,
    "true_lineages": 281,
    "N": 264,
    "observation": {
@@ -95,7 +111,7 @@
    "eta": "0.0",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.13,
+   "generator_seconds": 0.02,
    "true_lineages": 73,
    "N": 71,
    "observation": {
@@ -134,7 +150,7 @@
    "eta": "0.0",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.12,
+   "generator_seconds": 0.02,
    "true_lineages": 89,
    "N": 83,
    "observation": {
@@ -173,7 +189,7 @@
    "eta": "0.05",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.08,
+   "generator_seconds": 0.02,
    "true_lineages": 88,
    "N": 82,
    "observation": {
@@ -212,7 +228,7 @@
    "eta": "0.05",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.12,
+   "generator_seconds": 0.03,
    "true_lineages": 47,
    "N": 45,
    "observation": {
@@ -251,7 +267,7 @@
    "eta": "0.2",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.09,
+   "generator_seconds": 0.02,
    "true_lineages": 50,
    "N": 49,
    "observation": {
@@ -290,7 +306,7 @@
    "eta": "0.2",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.1,
+   "generator_seconds": 0.02,
    "true_lineages": 89,
    "N": 84,
    "observation": {
@@ -329,7 +345,7 @@
    "eta": "0.0",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.23,
+   "generator_seconds": 0.05,
    "true_lineages": 410,
    "N": 385,
    "observation": {
@@ -368,7 +384,7 @@
    "eta": "0.0",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.24,
+   "generator_seconds": 0.04,
    "true_lineages": 334,
    "N": 315,
    "observation": {
@@ -407,7 +423,7 @@
    "eta": "0.05",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.32,
+   "generator_seconds": 0.07,
    "true_lineages": 598,
    "N": 556,
    "observation": {
@@ -446,7 +462,7 @@
    "eta": "0.05",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.1,
+   "generator_seconds": 0.02,
    "true_lineages": 84,
    "N": 75,
    "observation": {
@@ -485,7 +501,7 @@
    "eta": "0.2",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.09,
+   "generator_seconds": 0.01,
    "true_lineages": 20,
    "N": 19,
    "observation": {
@@ -524,7 +540,7 @@
    "eta": "0.2",
    "sampler_seed": "77017",
    "outcome": "ok",
-   "generator_seconds": 0.34,
+   "generator_seconds": 0.11,
    "true_lineages": 699,
    "N": 649,
    "observation": {

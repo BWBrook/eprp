@@ -2,7 +2,7 @@
 # stan_version_minor = 38
 # stan_version_patch = 0
 # model = model_v4_model
-# start_datetime = 2026-10-16 09:36:38 UTC
+# start_datetime = 2026-10-16 10:26:50 UTC
 # method = log_prob
 #   log_prob
 #     unconstrained_params =  (Default)
@@ -13,7 +13,7 @@
 #   file = /home/bwbrook/git/eprp/data/q012-pilot/payload/data/R00.json
 # init = 2 (Default)
 # random
-#   seed = 1262200373 (Default)
+#   seed = 1265212669 (Default)
 # output
 #   file = /home/bwbrook/git/eprp/data/q012-pilot/payload/preflight/ref_point_max_sigma_v4_state.csv
 #   diagnostic_file =  (Default)

@@ -5,7 +5,7 @@
 #PBS -l walltime=01:00:00
 #PBS -j oe
 #PBS -M barry.brook@utas.edu.au
-#PBS -m a
+#PBS -m ae
 # Build CmdStan and the model on a compute node, then preflight the binary:
 # (1) log density and gradients at three fixed points against the local reference;
 # (2) a four-chain initialisation and step-size smoke run on the replay dataset.
@@ -46,6 +46,9 @@ tar xzf "cmdstan-$CMDSTAN_VERSION.tar.gz" || fail cmdstan_untar
 ( cd "cmdstan-$CMDSTAN_VERSION" && make -j4 "../${MODEL_BIN#./}" ) > build/model_build.log 2>&1 || fail model_build
 echo "stanc=$("cmdstan-$CMDSTAN_VERSION/bin/stanc" --version 2>&1 | head -1)" >> "$R.tmp"
 echo "binary_sha256=$(sha256sum "$MODEL_BIN" | cut -d' ' -f1)" >> "$R.tmp"
+ldd "$MODEL_BIN" > build/ldd.txt 2>&1
+grep -q "not found" build/ldd.txt && fail missing_shared_libraries
+echo "loaded_modules=${LOADEDMODULES:-}" >> "$R.tmp"
 
 bash pbs/preflight.sh "$R.tmp" || fail "$(tail -1 build/preflight_reason.txt 2>/dev/null || echo preflight)"
 echo "status=ok" >> "$R.tmp"

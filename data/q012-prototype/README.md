@@ -572,8 +572,9 @@ high-σ or divergent v4 states, while 64 nodes pass all 8.
 | Smoke check (declared 300 s budget) | 4 of 4 chains in 70 s; no fatal error, no rejection | — |
 
 **Further results:**
-- **Repeated gradients at identical points:** v5 takes 2.3–2.8 times as
-  long as v4 (1.9–2.6 in the first run).
+- **Repeated gradients at identical points:** v5 takes 1.7–2.8 times as
+  long as v4 across three benchmark runs (1.9–2.6, 2.3–2.8 and 1.7–2.4).
+  The spread follows machine load.
 - **The first v5 run failed the smoke check at v4's 60 s budget**, on cost
   alone: 1 of 4 chains complete, no fatal error, no rejection. That record
   is kept as [checks_v5_smoke60.json](checks_v5_smoke60.json). The 300 s
@@ -586,4 +587,12 @@ high-σ or divergent v4 states, while 64 nodes pass all 8.
     full stdout. Every probe row is in checks_v5.json.
 - **Hash binding.** checks_v5.json records SHA-256 hashes of the model
   source, prototype.py, quadrature.py, the config blocks, the starts and
-  the cost dataset. `fit()` and the pilot's `build` refuse stale checks.
+  the cost dataset. Since Codex's prelaunch check (76/1765) it also covers
+  every saved-draw CSV bank the checks read: the v1 states, the v2
+  benchmark points, the v3 probe states and the v4 tail states. `fit()` and
+  the pilot's `build` refuse stale checks.
+- **A harness defect, found while refreshing the binding.** `smoke()`
+  reused its output directory, so the second smoke run counted the first
+  run's chains (8 found, 4 expected) and failed. Earlier output is now
+  moved aside, labelled superseded, before each run. The checks were then
+  rerun in full.

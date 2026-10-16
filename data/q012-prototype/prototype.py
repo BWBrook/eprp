@@ -565,6 +565,9 @@ def gate(d, p, h=1e-4):
     return res
 
 
+SAVED_BANKS = ("fit", "fit_v2", "fit_v3", "fit_v4")
+
+
 def v4_states(d):
     """Codex's eight tail states (divergent plus six highest-sigma) and evenly spaced states from the v4 fit."""
     import pandas as pd
@@ -587,6 +590,10 @@ def binding(d):
     out["config_shared"] = h(json.dumps({k: CFG[k] for k in ("generator", "observation", "priors", "sampler", "seed", "fit_seed")},
                                         sort_keys=True).encode())
     out["fit_dataset"] = h(json.dumps(d, sort_keys=True, default=float).encode())
+    # Saved-draw banks the checks consume: v1 states (gate), v2 (benchmark points), v3 (probe states), v4 (tail states).
+    for bank in SAVED_BANKS:
+        for f in sorted((OUT / bank).glob("*.csv")):
+            out[f"bank:{bank}/{f.name}"] = h(f.read_bytes())
     return out
 
 
@@ -980,6 +987,8 @@ def smoke(paths):
     d, _, _ = dataset(CFG["fit_seed"])
     mdl = model()
     odir = OUT / S["output_dir"]
+    if odir.exists():  # never mix runs: earlier output is kept, labelled superseded
+        odir.rename(odir.with_name(f"{odir.name}_superseded_{time.strftime('%Y%m%dT%H%M%S')}"))
     t0 = time.time()
     status = "finished"
     try:
