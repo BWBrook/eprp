@@ -797,6 +797,21 @@ identifiability point.
         expensive, and NaNs from the 2-D Newton step stalled one chain. Not
         retried, per the bound.
       - Next: a safeguarded or implicit mode solver.
+    - **v3, the built-in solver (Codex 76/1742), 16 October:**
+      - All prefit checks pass, after a declared tolerance deviation made
+        before the fit. They include Stan's automatic gradients against
+        finite differences.
+      - **The one fit timed out at 1,200 s, not retried:**
+        - Chain 1 died at step-size initialisation. KINSOL flag −5 is a
+          fatal `runtime_error` in Stan, not a rejection.
+        - Chain 2 never finished its first iteration.
+        - Two chains completed (848 and 1,018 s, no divergences). The
+          sampling gradient costs about 2.5 times v1's.
+      - Calibration was regenerated: 42 of 700 rows changed, and λ₀ = 0.096
+        is unchanged.
+      - Next, for Codex: `solve_powell_tol` (whose failures are
+        rejections), safer initialisation, a robustness prefit check and a
+        smaller 2-D rule.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 

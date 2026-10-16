@@ -381,7 +381,8 @@ def adapt(obsd):
     paired = {a for a, _ in pairs} | {b for _, b in pairs}
     assert len({a for a, _ in pairs}) == len(pairs), "a cohort parent with two cohort daughters is not supported"
     singles = [k for k in coh if k not in paired]
-    t, w = np.polynomial.hermite.hermgauss(CFG["v2"]["quadrature_nodes"])
+    VER = CFG[CFG.get("active", "v2")]
+    t, w = np.polynomial.hermite.hermgauss(VER["quadrature_nodes"])
     data = dict(N=N, parent=parent, o=o, v=v, r=r, ext=ext, bif=bif, mplus=mplus,
                 S=len(seg["lin"]), seg_lin=seg["lin"], seg_start=seg_start, seg_len=seg_len, seg_bin=seg["bin"], seg_a0=seg["a0"], seg_a1=seg["a1"],
                 seg_E=seg["E"], seg_miss=seg["miss"], term_bin=term_bin, term_a=term_a, term_E=term_E, term_miss=term_miss,
@@ -389,6 +390,9 @@ def adapt(obsd):
                 NC=len(coh), coh=[k + 1 for k in coh], C1=len(singles), c1_lin=[k + 1 for k in singles],
                 C2=len(pairs), c2_par=[a + 1 for a, _ in pairs], c2_dau=[b + 1 for _, b in pairs],
                 Q=len(t), gh_t=list(t), gh_w=list(w))
+    if "solver" in VER:
+        data.update(solver_step_tol=VER["solver"]["step_tol"], solver_f_tol=VER["solver"]["f_tol"],
+                    solver_max_steps=VER["solver"]["max_steps"], check_tol=VER["check_tol"])
     return data
 
 
@@ -501,7 +505,7 @@ def model():
     import cmdstanpy
     cmdstanpy.set_cmdstan_path(str(CMDSTAN))
     OUT.mkdir(parents=True, exist_ok=True)
-    name = CFG["v2"]["stan_file"]
+    name = CFG[CFG.get("active", "v2")]["stan_file"]
     src = OUT / name
     if not src.exists() or src.read_text() != (HERE / name).read_text():
         src.write_text((HERE / name).read_text())
@@ -583,7 +587,142 @@ def rounding_fixtures():
     return dict(result=got, counts=cnt, budding_links_from_B_or_D=0)
 
 
+def unconstrained_target(d, p):
+    """Python target plus the log Jacobian of Stan's transforms (sigma, tau: log; rho: logit)."""
+    return python_target(d, p) + math.log(p["sigma"]) + math.log(p["tau"]) + math.log(p["rho"]) + math.log(1 - p["rho"])
+
+
+def fd_unconstrained(d, p, name, h=1e-6, idx=None):
+    def shift(q, s):
+        q = dict(q)
+        if name in ("sigma", "tau"):
+            q[name] = q[name] * math.exp(s)
+        elif name == "rho":
+            u = math.log(q["rho"] / (1 - q["rho"])) + s
+            q["rho"] = 1 / (1 + math.exp(-u))
+        elif idx is not None:
+            v = list(q[name]); v[idx] += s; q[name] = v
+        else:
+            q[name] = q[name] + s
+        return q
+    return (unconstrained_target(d, shift(p, h)) - unconstrained_target(d, shift(p, -h))) / (2 * h)
+
+
+def stan_grads(mdl, d, p):
+    df = mdl.log_prob(p, data=d, jacobian=True, sig_figs=15)
+    return df.iloc[0].to_dict()
+
+
+def gradient_check(mdl, d, p):
+    g = stan_grads(mdl, d, p)
+    coh_eps = d["coh"][0]  # a cohort lineage: its frailty enters the pre-entry survival and the normaliser
+    rows = {}
+    for name, col, idx in (("sigma", "g_sigma", None), ("rho", "g_rho", None), ("kappa_b", "g_kappa_b", None),
+                           ("log_h0_1", "g_log_h0_1", None), ("log_k", "g_log_k", None), ("gamma", "g_gamma", None),
+                           ("log_b0", "g_log_b0", None), ("tau", "g_tau", None), ("eps", f"g_eps.{coh_eps}", coh_eps - 1)):
+        fd = fd_unconstrained(d, p, name, idx=idx)
+        rows[col] = dict(stan=round(g[col], 7), fd=round(fd, 7), abs_err=abs(g[col] - fd))
+    ok = all(r["abs_err"] <= 1e-4 * max(1.0, abs(r["fd"])) for r in rows.values())
+    return rows, ok
+
+
+def solver_stability(mdl, d, p):
+    tight = CFG["v3"]["solver_tight"]
+    dt = dict(d, solver_step_tol=tight["step_tol"], solver_f_tol=tight["f_tol"], solver_max_steps=tight["max_steps"])
+    a = float(mdl.log_prob(p, data=d, jacobian=False, sig_figs=15)["lp__"].iloc[0])
+    b = float(mdl.log_prob(p, data=dt, jacobian=False, sig_figs=15)["lp__"].iloc[0])
+    return dict(lp_default=round(a, 10), lp_tight=round(b, 10), abs_diff=abs(a - b))
+
+
+def gradient_benchmark(d, reps=200):
+    """Repeated log-density-and-gradient evaluations at identical points, v2 against v3 executables."""
+    import subprocess
+    import cmdstanpy
+    from cmdstanpy.utils import write_stan_json
+    work = OUT / "bench"
+    work.mkdir(parents=True, exist_ok=True)
+    data_file = work / "data.json"
+    write_stan_json(str(data_file), d)
+    src = sorted((OUT / "fit_v2").glob("*_1.csv"))[0]
+    lines = src.read_text().splitlines()
+    head = [l for l in lines if l.startswith("#")][:60]
+    hdr_i = next(i for i, l in enumerate(lines) if not l.startswith("#"))
+    header = lines[hdr_i].split(",")
+    body = [l for l in lines[hdr_i + 1:] if l and not l.startswith("#")]
+    pts = {"saved_draw_a": body[100].split(","), "saved_draw_b": body[500].split(",")}
+    st = list(body[100].split(","))
+    for k, v in (("sigma", "3.0"), ("rho", "0.9"), ("kappa_b", "-1.5")):
+        st[header.index(k)] = v
+    pts["stress_from_saved_a"] = st
+    exes = {"v2": OUT / "model_v2", "v3": OUT / "model_v3"}
+    res = {}
+    for pname, row in pts.items():
+        res[pname] = {}
+        for n in (1, reps):
+            f = work / f"{pname}_{n}.csv"
+            f.write_text("\n".join(head + [",".join(header)] + [",".join(row)] * n) + "\n")
+        for ver, exe in exes.items():
+            times = {}
+            for n in (1, reps):
+                t0 = time.time()
+                r = subprocess.run([str(exe), "log_prob", f"constrained_params={work / f'{pname}_{n}.csv'}", "jacobian=1",
+                                    "data", f"file={data_file}", "output", f"file={work / f'out_{ver}_{pname}_{n}.csv'}"],
+                                   capture_output=True, text=True)
+                times[n] = time.time() - t0
+                if r.returncode != 0:
+                    times[n] = None
+                    res[pname][ver + "_error"] = (r.stdout + r.stderr)[-300:]
+            if None not in times.values():
+                res[pname][ver + "_ms_per_gradient"] = round(1000 * (times[reps] - times[1]) / (reps - 1), 3)
+        if "v2_ms_per_gradient" in res[pname] and "v3_ms_per_gradient" in res[pname]:
+            res[pname]["v3_over_v2"] = round(res[pname]["v3_ms_per_gradient"] / res[pname]["v2_ms_per_gradient"], 3)
+    return res
+
+
+def checks_v3():
+    out = dict(rounding_fixtures=rounding_fixtures())
+    mdl = model()
+    for label, seed in (("frozen_seed", CFG["seed"]), ("fit_seed", CFG["fit_seed"])):
+        d, ginfo, oinfo = dataset(seed)
+        r = dict(seed=seed, observation=oinfo, adapted=dict(N=d["N"], cohort=d["NC"], singles=d["C1"], pairs=d["C2"]))
+        sp = stress_points(d)
+        sp.update({"small_sigma_002": dict(sp["central0"], sigma=0.02), "near_one_rho_099": dict(sp["central0"], rho=0.99),
+                   "near_one_rho_0999_s3": dict(sp["central0"], rho=0.999, sigma=3.0)})
+        G = {k: gate(d, p) for k, p in sp.items()}
+        if label == "fit_seed":
+            gs = [gate(d, q) for q in saved_draws(40)]
+            G["saved_draws_40_max"] = {k: max(g[k] for g in gs) for k in gs[0]}
+        r["precision_gate"] = {k: {kk: float(f"{vv:.3g}") for kk, vv in g.items()} for k, g in G.items()}
+        r["precision_gate_pass"] = all(g["log_err"] <= 1e-4 and all(v <= 1e-3 for kk, v in g.items() if kk.startswith("d_")) for g in G.values())
+        q = sp["near_one_rho_0999_s3"]
+        A = cohort_A(d, q)
+        r["reference_precision_extreme"] = dict(n1600=round(log_norm_ref(d, q, A, 1600), 10), n3200=round(log_norm_ref(d, q, A, 3200), 10))
+        names = ["central0", "central1", "stress_s3_r09_kbm15", "near_one_rho_0999_s3"]
+        slp = {n: float(mdl.log_prob(sp[n], data=d, jacobian=False, sig_figs=15)["lp__"].iloc[0]) for n in names}
+        plp = {n: python_target(d, sp[n]) for n in names}
+        r["stan_vs_python_lp_differences"] = {f"central0-{n}": abs((slp["central0"] - slp[n]) - (plp["central0"] - plp[n])) for n in names[1:]}
+        r["solver_stability"] = {n: solver_stability(mdl, d, sp[n]) for n in ("central0", "stress_s3_r09_kbm15")}
+        r["automatic_gradients"] = {}
+        ok_all = True
+        for n in ("central0", "stress_s3_r09_kbm15"):
+            rows, ok = gradient_check(mdl, d, sp[n])
+            r["automatic_gradients"][n] = rows
+            ok_all &= ok
+        r["automatic_gradients_pass"] = ok_all
+        out[label] = r
+    d, _, _ = dataset(CFG["fit_seed"])
+    out["gradient_benchmark"] = gradient_benchmark(d)
+    passed = all(out[k]["precision_gate_pass"] and out[k]["automatic_gradients_pass"] for k in ("frozen_seed", "fit_seed")) and \
+        all(v < 1e-6 for k in ("frozen_seed", "fit_seed") for v in out[k]["stan_vs_python_lp_differences"].values()) and \
+        all(s["abs_diff"] < 1e-8 for k in ("frozen_seed", "fit_seed") for s in out[k]["solver_stability"].values())
+    out["all_prefit_checks_pass"] = passed
+    (HERE / CFG["v3"]["checks_file"]).write_text(json.dumps(out, indent=1, default=float) + "\n")
+    print(json.dumps(out, indent=1, default=float))
+
+
 def checks():
+    if CFG.get("active") == "v3":
+        return checks_v3()
     out = dict(rounding_fixtures=rounding_fixtures())
     for label, seed in (("frozen_seed", CFG["seed"]), ("fit_seed", CFG["fit_seed"])):
         out[label] = check_one(seed, saved=(label == "fit_seed"))
@@ -646,21 +785,74 @@ def check_one(seed, saved=False):
     return res
 
 
+def chain_record(outdir):
+    """Per-chain record from CmdStan output alone: progress, saved draws, timing, and rejected proposals versus
+    fatal exceptions by cause. A rejection follows Stan's 'about to be rejected' message, or a rejected initial value
+    (which Stan redraws); any other exception ends the chain. Phase is 'init' before the first progress line, then
+    taken from the latest progress line."""
+    import pandas as pd
+    def cause(line):
+        low = line.lower()
+        return ("solver" if "Q012 solver failure" in line else "hessian" if "Q012 Hessian failure" in line
+                else "solve_newton_internal" if ("algebra_solver" in low or "newton" in low or "kinsol" in low) else "other")
+    outdir = pathlib.Path(outdir)
+    chains, rej_tot = {}, {}
+    for k, f in enumerate(sorted(outdir.glob("*-stdout.txt")), start=1):
+        phase, prev, rej, fatal, progress = "init", "", {}, [], None
+        for line in f.read_text(errors="replace").splitlines():
+            if line.startswith("Iteration:"):
+                phase = "sampling" if "(Sampling)" in line else "warmup"
+                progress = " ".join(line.split())
+            elif line.startswith("Exception:"):
+                if prev.startswith("Informational Message") or "Error evaluating the log probability at the initial" in prev:
+                    key = f"{cause(line)}_{'init_value' if 'initial' in prev else phase}"
+                    rej[key] = rej.get(key, 0) + 1
+                    rej_tot[key] = rej_tot.get(key, 0) + 1
+                else:
+                    fatal.append(dict(phase=phase, cause=cause(line), after=prev.strip(), message=line.strip()[:240]))
+            if line.strip():
+                prev = line
+        chains[f"chain{k}"] = dict(stdout=f.name, last_progress=progress, rejections=rej, fatal=fatal)
+    for k, f in enumerate(sorted(outdir.glob("*.csv")), start=1):
+        txt = f.read_text(errors="replace")
+        el = [ln for ln in txt.splitlines() if ln.startswith("#") and "seconds (" in ln]
+        try:
+            dr = pd.read_csv(f, comment="#")
+        except pd.errors.EmptyDataError:
+            dr = pd.DataFrame()
+        c = chains.setdefault(f"chain{k}", {})
+        c.update(csv=f.name, saved_draws=len(dr), complete="seconds (Total)" in txt)
+        if len(dr):
+            c.update(divergences=int(dr["divergent__"].sum()), treedepth_median=float(dr["treedepth__"].median()),
+                     n_leapfrog_median=float(dr["n_leapfrog__"].median()))
+        if el:
+            secs = {ln.split("(")[1].split(")")[0].lower(): float(ln.split()[-3] if ln.split()[-3] != "=" else ln.split()[-2])
+                    for ln in el}
+            c["seconds"] = secs
+            if len(dr) and "sampling" in secs:
+                c["seconds_per_gradient_sampling"] = round(secs["sampling"] / float(dr["n_leapfrog__"].sum()), 6)
+    return dict(chains=chains, rejections_total=rej_tot)
+
+
 def fit():
     d, ginfo, oinfo = dataset(CFG["fit_seed"])
     assert d is not None, "capped dataset"
     mdl = model()
     s, lim = CFG["sampler"], CFG["compute_limit"]
     t0 = time.time()
-    row = dict(seed=CFG["fit_seed"], N=d["N"], model=CFG["v2"]["stan_file"], observation=oinfo)
+    VER = CFG[CFG.get("active", "v2")]
+    row = dict(seed=CFG["fit_seed"], N=d["N"], model=VER["stan_file"], observation=oinfo)
+    odir = OUT / VER.get("output_dir", "fit_v2")
     try:
         f = mdl.sample(data=d, chains=s["chains"], parallel_chains=lim["parallel_chains"], iter_warmup=s["iter_warmup"],
                        iter_sampling=s["iter_sampling"], adapt_delta=s["adapt_delta"], max_treedepth=s["max_treedepth"],
-                       seed=s["seed"], show_progress=False, output_dir=str(OUT / "fit_v2"), timeout=lim["fit_timeout_seconds"])
-    except TimeoutError:
-        row.update(status="timeout", seconds=round(time.time() - t0, 1))
-        (HERE / CFG["v2"]["fit_file"]).write_text(json.dumps(row, indent=1) + "\n")
-        print(row); return
+                       seed=s["seed"], show_progress=False, output_dir=str(odir),
+                       timeout=lim["fit_timeout_seconds"])
+    except (TimeoutError, RuntimeError) as e:
+        row.update(status="timeout" if isinstance(e, TimeoutError) else "chain_failure",
+                   seconds=round(time.time() - t0, 1), **partial_summary(odir))
+        (HERE / VER["fit_file"]).write_text(json.dumps(row, indent=1) + "\n")
+        print(json.dumps(row, indent=1)); return
     secs = time.time() - t0
     dr = f.draws_pd()
     summ = f.summary()
@@ -679,11 +871,57 @@ def fit():
                treedepth_hits=int((dr["treedepth__"] >= s["max_treedepth"]).sum()),
                max_rhat_core=round(float(summ.loc[core, rh].max()), 4), min_ess_core=round(float(summ.loc[core, ess].min()), 0),
                max_rhat_all=round(float(summ[rh].max()), 4), min_ess_all=round(float(summ[ess].min()), 0),
-               worst_rhat_param=str(summ[rh].idxmax()), worst_ess_param=str(summ[ess].idxmin()))
+               worst_rhat_param=str(summ[rh].idxmax()), worst_ess_param=str(summ[ess].idxmin()),
+               chain_record=chain_record(odir))
     row["intervals_90"] = {v: [round(float(q), 3) for q in np.quantile(dr[v], [0.05, 0.5, 0.95])] + [truth.get(v)] for v in core}
-    (HERE / CFG["v2"]["fit_file"]).write_text(json.dumps(row, indent=1) + "\n")
+    (HERE / VER["fit_file"]).write_text(json.dumps(row, indent=1) + "\n")
     print(json.dumps(row, indent=1))
 
 
+CORE = ["sigma", "rho", "eta", "kappa", "kappa_b", "beta", "gamma", "log_k", "log_lambda0", "log_b0", "tau"]
+
+
+def partial_summary(odir):
+    """Chain record plus, when at least two chains completed, R-hat, ESS and 90% intervals over those chains only."""
+    import cmdstanpy
+    out = dict(chain_record=chain_record(odir))
+    done = [str(pathlib.Path(odir) / c["csv"]) for c in out["chain_record"]["chains"].values() if c.get("complete")]
+    out["completed_chains"] = len(done)
+    if len(done) >= 2:
+        f = cmdstanpy.from_csv(done)
+        summ, dr = f.summary(), f.draws_pd()
+        rh = [c for c in summ.columns if c.lower().startswith("r_hat")][0]
+        ess = [c for c in summ.columns if c.lower() in ("ess_bulk", "n_eff")][0]
+        g = CFG["generator"]
+        truth = dict(sigma=g["sigma"], rho=g["rho"], eta=g["sigma"] * g["rho"], kappa=g["kappa"], kappa_b=g["kappa_b"],
+                     beta=g["beta"], log_k=0.0, log_lambda0=math.log(g["lambda0"]), log_b0=math.log(g["b0"]))
+        out["completed_chains_summary"] = dict(
+            max_rhat_core=round(float(summ.loc[CORE, rh].max()), 4), min_ess_core=round(float(summ.loc[CORE, ess].min()), 0),
+            max_rhat_all=round(float(summ[rh].max()), 4), min_ess_all=round(float(summ[ess].min()), 0),
+            worst_rhat_param=str(summ[rh].idxmax()), worst_ess_param=str(summ[ess].idxmin()),
+            intervals_90={v: [round(float(q), 3) for q in np.quantile(dr[v], [0.05, 0.5, 0.95])] + [truth.get(v)] for v in CORE})
+    return out
+
+
+def record():
+    """Rebuild the fit record from the active version's output directory alone (no sampling)."""
+    VER = CFG[CFG["active"]]
+    odir = OUT / VER["output_dir"]
+    stamps = sorted(odir.glob("*.csv"))
+    start = time.mktime(time.strptime(stamps[0].stem.split("-")[1].split("_")[0], "%Y%m%d%H%M%S"))
+    end = max(f.stat().st_mtime for f in odir.iterdir())
+    s = partial_summary(odir)
+    fatal = any(c.get("fatal") for c in s["chain_record"]["chains"].values())
+    rec = dict(note="Supersedes the run-time 'rejections' field, whose counter (since replaced) labelled every exception "
+                    "as a warmup rejection, including fatal ones and rejected initial values.",
+               chain_failure=fatal, completed_chains=s.pop("completed_chains"),
+               seconds_from_file_times=round(end - start, 1), **s)
+    path = HERE / VER["fit_file"]
+    row = json.loads(path.read_text()) if path.exists() else dict(seed=CFG["fit_seed"], model=VER["stan_file"])
+    row["record_from_output"] = rec
+    path.write_text(json.dumps(row, indent=1) + "\n")
+    print(json.dumps(rec, indent=1))
+
+
 if __name__ == "__main__":
-    {"checks": checks, "fit": fit}[sys.argv[1]]()
+    {"checks": checks, "fit": fit, "record": record}[sys.argv[1]]()

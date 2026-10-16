@@ -1,0 +1,213 @@
+{
+ "seed": 20261060,
+ "N": 264,
+ "model": "model_v3.stan",
+ "observation": {
+  "recorded": 264,
+  "ancestry_lost": 0,
+  "reassigned": 23,
+  "labels": {
+   "ext": 135,
+   "bif": 11,
+   "single": 7,
+   "present": 111
+  },
+  "short_interval_moves": 0,
+  "shared_event_moves": 0,
+  "origin_ties": 0,
+  "ext_near_present": 0,
+  "fallback_components": 0
+ },
+ "status": "timeout",
+ "seconds": 1200.0,
+ "rejections": {
+  "by_chain": {
+   "model_v3-20261016180316_0-stdout.txt": {
+    "hessian_warmup": 11,
+    "other_warmup": 1
+   },
+   "model_v3-20261016180316_1-stdout.txt": {
+    "hessian_warmup": 3
+   },
+   "model_v3-20261016180316_2-stdout.txt": {
+    "hessian_warmup": 13,
+    "other_warmup": 2
+   },
+   "model_v3-20261016180316_3-stdout.txt": {
+    "other_warmup": 1,
+    "hessian_warmup": 4
+   }
+  },
+  "total": {
+   "hessian_warmup": 31,
+   "other_warmup": 4
+  }
+ },
+ "record_from_output": {
+  "note": "Supersedes the run-time 'rejections' field, whose counter (since replaced) labelled every exception as a warmup rejection, including fatal ones and rejected initial values.",
+  "chain_failure": true,
+  "completed_chains": 2,
+  "seconds_from_file_times": 1200.3,
+  "chain_record": {
+   "chains": {
+    "chain1": {
+     "stdout": "model_v3-20261016180316_0-stdout.txt",
+     "last_progress": null,
+     "rejections": {
+      "hessian_init": 11
+     },
+     "fatal": [
+      {
+       "phase": "init",
+       "cause": "solve_newton_internal",
+       "after": "Exception initializing step size.",
+       "message": "Exception: Exception: algebra_solver failed with error flag -5. (in 'model_v3.stan', line 56, column 4 to column 121) (in 'model_v3.stan', line 198, column 6 to line 200, column 87)"
+      }
+     ],
+     "csv": "model_v3-20261016180316_1.csv",
+     "saved_draws": 0,
+     "complete": false
+    },
+    "chain2": {
+     "stdout": "model_v3-20261016180316_1-stdout.txt",
+     "last_progress": null,
+     "rejections": {
+      "hessian_init": 3
+     },
+     "fatal": [],
+     "csv": "model_v3-20261016180316_2.csv",
+     "saved_draws": 0,
+     "complete": false
+    },
+    "chain3": {
+     "stdout": "model_v3-20261016180316_2-stdout.txt",
+     "last_progress": "Iteration: 2000 / 2000 [100%] (Sampling)",
+     "rejections": {
+      "hessian_init": 10,
+      "other_init": 1,
+      "hessian_warmup": 3,
+      "other_warmup": 1
+     },
+     "fatal": [],
+     "csv": "model_v3-20261016180316_3.csv",
+     "saved_draws": 1000,
+     "complete": true,
+     "divergences": 0,
+     "treedepth_median": 7.0,
+     "n_leapfrog_median": 127.0,
+     "seconds": {
+      "warm-up": 558.642,
+      "sampling": 459.825,
+      "total": 1018.47
+     },
+     "seconds_per_gradient_sampling": 0.002802
+    },
+    "chain4": {
+     "stdout": "model_v3-20261016180316_3-stdout.txt",
+     "last_progress": "Iteration: 2000 / 2000 [100%] (Sampling)",
+     "rejections": {
+      "solve_newton_internal_init_value": 1,
+      "hessian_init": 2,
+      "hessian_warmup": 2
+     },
+     "fatal": [],
+     "csv": "model_v3-20261016180316_4.csv",
+     "saved_draws": 1000,
+     "complete": true,
+     "divergences": 0,
+     "treedepth_median": 7.0,
+     "n_leapfrog_median": 127.0,
+     "seconds": {
+      "warm-up": 396.526,
+      "sampling": 450.999,
+      "total": 847.525
+     },
+     "seconds_per_gradient_sampling": 0.003098
+    }
+   },
+   "rejections_total": {
+    "hessian_init": 26,
+    "other_init": 1,
+    "hessian_warmup": 5,
+    "other_warmup": 1,
+    "solve_newton_internal_init_value": 1
+   }
+  },
+  "completed_chains_summary": {
+   "max_rhat_core": 1.0303,
+   "min_ess_core": 75.0,
+   "max_rhat_all": 1.0303,
+   "min_ess_all": 75.0,
+   "worst_rhat_param": "sigma",
+   "worst_ess_param": "sigma",
+   "intervals_90": {
+    "sigma": [
+     0.378,
+     0.936,
+     1.722,
+     0.5
+    ],
+    "rho": [
+     0.029,
+     0.197,
+     0.44,
+     0.4
+    ],
+    "eta": [
+     0.022,
+     0.174,
+     0.466,
+     0.2
+    ],
+    "kappa": [
+     -1.278,
+     -0.425,
+     -0.146,
+     0.0
+    ],
+    "kappa_b": [
+     -0.668,
+     0.211,
+     1.053,
+     0.0
+    ],
+    "beta": [
+     -0.191,
+     0.006,
+     0.202,
+     0.0
+    ],
+    "gamma": [
+     -0.208,
+     0.165,
+     0.56,
+     null
+    ],
+    "log_k": [
+     -0.051,
+     0.154,
+     0.459,
+     0.0
+    ],
+    "log_lambda0": [
+     -3.406,
+     -3.081,
+     -2.798,
+     -2.647896278282463
+    ],
+    "log_b0": [
+     -6.306,
+     -5.437,
+     -4.695,
+     -4.803621124711929
+    ],
+    "tau": [
+     0.063,
+     0.278,
+     0.591,
+     null
+    ]
+   }
+  }
+ }
+}

@@ -130,5 +130,26 @@
     "quadrature_nodes": 40,
     "checks_file": "checks_v2.json",
     "fit_file": "fit_result_v2.json"
-  }
+  },
+  "v3": {
+    "note": "Solver step approved by Codex (76/1742), frozen before the v3 fit: cohort modes by Stan solve_newton_tol (step_tol 1e-10, f_tol 1e-8, max_steps 200) with explicit post-solve checks (finite values, score infinity norm <= 1e-8, curvature-scaled Newton correction <= 1e-8 max(1, |mode|)); 40-node AGH unchanged; same dataset (fit_seed 20261060 at the original lambda0 0.0708), sampler (4 chains, 1000+1000, seed 77017, adapt_delta 0.99, max_treedepth 12) and 1,200 s hard limit; one fit, no retry. v1 and v2 outputs preserved.",
+    "stan_file": "model_v3.stan",
+    "quadrature_nodes": 40,
+    "solver": {
+      "step_tol": 1e-12,
+      "f_tol": 1e-11,
+      "max_steps": 200
+    },
+    "solver_tight": {
+      "step_tol": 1e-14,
+      "f_tol": 1e-13,
+      "max_steps": 400
+    },
+    "checks_file": "checks_v3.json",
+    "fit_file": "fit_result_v3.json",
+    "output_dir": "fit_v3",
+    "check_tol": 1e-08,
+    "amendment": "Declared before the fit, after the first prefit check: at Codex's starting tolerances (1e-10, 1e-8) the explicit post-solve check rejected a converged-by-KINSOL mode (Newton correction 2.7e-8 > 1e-8): with small curvature (large sigma) a score residual of 1e-8 implies a correction above 1e-8. The explicit checks are unchanged (threshold now a separate fixed datum, 1e-8); only the solver's own tolerances are tightened to step 1e-12, score 1e-11; stability compared with 1e-14 / 1e-13."
+  },
+  "active": "v3"
 }

@@ -1,0 +1,124 @@
+{
+ "observed": {
+  "N": 268,
+  "ext": 191,
+  "bif": 24,
+  "single": 1,
+  "present": 52,
+  "lineage_Myr": 2939.3,
+  "budding_links": 208,
+  "boundary_links": 49,
+  "lagged_E_availability": 0.6671
+ },
+ "observed_end_shares": {
+  "ext": 0.713,
+  "bif": 0.09,
+  "single": 0.004,
+  "present": 0.194
+ },
+ "calibration": [
+  {
+   "lambda0": 0.08,
+   "seeds": "40001-40100",
+   "n": 100,
+   "capped": 0,
+   "N_median": 144.5,
+   "N_q05": 39.0,
+   "N_q95": 337.05,
+   "share_N_ge_268": 0.11,
+   "end_shares": {
+    "ext": 0.526,
+    "bif": 0.064,
+    "single": 0.016,
+    "present": 0.394
+   },
+   "lineage_Myr_median": 1489.6,
+   "budding_links_median": 114.5,
+   "boundary_links_median": 20.0,
+   "lagged_E_availability_mean": 0.6732
+  },
+  {
+   "lambda0": 0.088,
+   "seeds": "40001-40100",
+   "n": 100,
+   "capped": 0,
+   "N_median": 216.5,
+   "N_q05": 65.95,
+   "N_q95": 509.8,
+   "share_N_ge_268": 0.3,
+   "end_shares": {
+    "ext": 0.495,
+    "bif": 0.062,
+    "single": 0.015,
+    "present": 0.428
+   },
+   "lineage_Myr_median": 2183.3,
+   "budding_links_median": 178.0,
+   "boundary_links_median": 29.0,
+   "lagged_E_availability_mean": 0.6741
+  },
+  {
+   "lambda0": 0.096,
+   "seeds": "40001-40100",
+   "n": 100,
+   "capped": 0,
+   "N_median": 276.5,
+   "N_q05": 88.55,
+   "N_q95": 694.35,
+   "share_N_ge_268": 0.54,
+   "end_shares": {
+    "ext": 0.479,
+    "bif": 0.055,
+    "single": 0.013,
+    "present": 0.452
+   },
+   "lineage_Myr_median": 2486.1,
+   "budding_links_median": 231.0,
+   "boundary_links_median": 34.0,
+   "lagged_E_availability_mean": 0.6753
+  }
+ ],
+ "chosen_lambda0": 0.096,
+ "validation": {
+  "lambda0": 0.096,
+  "seeds": "41001-41100",
+  "n": 100,
+  "capped": 0,
+  "N_median": 296.0,
+  "N_q05": 66.75,
+  "N_q95": 647.8,
+  "share_N_ge_268": 0.57,
+  "end_shares": {
+   "ext": 0.478,
+   "bif": 0.055,
+   "single": 0.013,
+   "present": 0.454
+  },
+  "lineage_Myr_median": 2704.7,
+  "budding_links_median": 250.5,
+  "boundary_links_median": 39.0,
+  "lagged_E_availability_mean": 0.6689
+ },
+ "seconds_calibration_and_validation": 9.1,
+ "budget_exceeded": false,
+ "original_reference_panel": {
+  "lambda0": 0.0708,
+  "seeds": "30000-30299",
+  "n": 300,
+  "capped": 0,
+  "N_median": 94.0,
+  "N_q05": 34.95,
+  "N_q95": 241.0,
+  "share_N_ge_268": 0.043,
+  "end_shares": {
+   "ext": 0.552,
+   "bif": 0.069,
+   "single": 0.016,
+   "present": 0.363
+  },
+  "lineage_Myr_median": 1040.2,
+  "budding_links_median": 71.5,
+  "boundary_links_median": 14.0,
+  "lagged_E_availability_mean": 0.67
+ }
+}

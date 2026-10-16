@@ -47,7 +47,7 @@
    "N_q95": 509.8,
    "share_N_ge_268": 0.3,
    "end_shares": {
-    "ext": 0.495,
+    "ext": 0.496,
     "bif": 0.062,
     "single": 0.015,
     "present": 0.428
@@ -67,7 +67,7 @@
    "N_q95": 694.35,
    "share_N_ge_268": 0.54,
    "end_shares": {
-    "ext": 0.479,
+    "ext": 0.48,
     "bif": 0.055,
     "single": 0.013,
     "present": 0.452
@@ -99,7 +99,7 @@
   "boundary_links_median": 39.0,
   "lagged_E_availability_mean": 0.6689
  },
- "seconds_calibration_and_validation": 9.1,
+ "seconds_calibration_and_validation": 7.9,
  "budget_exceeded": false,
  "original_reference_panel": {
   "lambda0": 0.0708,
@@ -111,7 +111,7 @@
   "N_q95": 241.0,
   "share_N_ge_268": 0.043,
   "end_shares": {
-   "ext": 0.552,
+   "ext": 0.553,
    "bif": 0.069,
    "single": 0.016,
    "present": 0.363

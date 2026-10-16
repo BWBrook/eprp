@@ -15,8 +15,8 @@ is fitted to the real data.
 ## Reproduce
 
 ```bash
-uv run --python 3.12 data/q012-prototype/prototype.py checks   # v2 checks
-uv run --python 3.12 data/q012-prototype/prototype.py fit      # v2 timed fit
+uv run --python 3.12 data/q012-prototype/prototype.py checks   # active version's checks (v3)
+uv run --python 3.12 data/q012-prototype/prototype.py fit      # active version's timed fit (v3)
 uv run --python 3.12 data/q012-prototype/calibrate.py          # generator size calibration
 ```
 
@@ -25,6 +25,9 @@ uv run --python 3.12 data/q012-prototype/calibrate.py          # generator size 
 - **v2**: `model_v2.stan`, `quadrature.py`, `checks_v2.json`,
   `fit_result_v2.json` and the `v2` block of `config.json`. It follows
   Codex's check (76/1737).
+- **v3** (active): `model_v3.stan`, `checks_v3.json`, `fit_result_v3.json`
+  and the `v3` block of `config.json`. It follows Codex's solver-step
+  approval (76/1742).
 
 - Pinned: numpy 2.1.3, pandas 2.2.3, cmdstanpy 1.2.4, and local CmdStan
   2.38.0.
@@ -297,3 +300,121 @@ same sampler settings and the same hard limit of 1,200 s. It was
 - test whether a nested or lower-order 2-D rule still passes the precision
   gate;
 - then repeat one same-dataset cost fit under the same limit.
+
+## v3: the built-in solver (16 October, after Codex's approval 76/1742)
+
+`model_v3.stan` finds each cohort mode with Stan's `solve_newton_tol`
+(KINSOL with a line search, implicit-function gradients), started from
+zero. **Explicit post-solve checks** reject the proposal with a labelled
+message:
+- finite mode and score;
+- score infinity norm ≤ 1e-8;
+- curvature-scaled Newton correction ≤ 1e-8 · max(1, |mode|);
+- positive, finite precision (1-D) or determinant and Cholesky factor (2-D).
+
+The 40-node AGH rule, the dataset, the sampler and the 1,200 s limit are
+unchanged.
+
+**Declared deviation, made before the fit.** At Codex's starting tolerances
+(step 1e-10, score 1e-8) the explicit check rejected a mode that KINSOL had
+accepted, at the frozen-seed central point (Newton correction 2.7e-8 > 1e-8):
+- KINSOL's score tolerance is a scaled-norm stop;
+- when the precision is below 1 (σ > 1), a residual near 1e-8 implies a
+  correction above 1e-8.
+
+So the check threshold is now a separate fixed datum (`check_tol` = 1e-8,
+unchanged). Only the solver's own tolerances were tightened, to step 1e-12
+and score 1e-11. Stability is checked against 1e-14 / 1e-13. See the `v3`
+block of [config.json](config.json).
+
+### Prefit checks (all pass; [checks_v3.json](checks_v3.json))
+
+| Check | Worst case over both seeds | Bound |
+| --- | --- | --- |
+| Rounding fixtures | pass | — |
+| Precision gate: central, stress, small-σ, near-one-ρ, saved states | log error 5.8e-5; derivative error 6.2e-4 | 1e-4; 1e-3 |
+| Extreme reference (Simpson 1,600 against 3,200) | equal to 10 decimal places | — |
+| Stan v3 against Python, lp differences | 6.4e-10 | 1e-6 |
+| Solver stability against the tight tolerances | \|Δlp\| = 0 | 1e-8 |
+| Stan automatic gradients against central finite differences (σ, ρ, κ_b, log h0₁, log k, γ, log b0, τ, a cohort ε) | relative error 5.3e-5 (τ at the stress point) | 1e-4 |
+
+**Repeated gradients at identical points** (`log_prob` method): v3 took
+0.89–0.97 times as long as v2.
+
+### The v3 timed fit: one chain failed, timed out at 1,200 s (not retried)
+
+Same dataset (seed 20261060, 264 recorded lineages), sampler and limit. The
+record is in [fit_result_v3.json](fit_result_v3.json):
+- `record_from_output` was rebuilt from the CmdStan files alone by
+  `prototype.py record`;
+- it supersedes the run-time rejection counter, which labelled every
+  exception as a warmup rejection.
+
+| Chain | Outcome | Warmup / sampling / total (s) | ms per gradient (sampling) | Divergences |
+| --- | --- | --- | ---: | ---: |
+| 1 | **Fatal at step-size initialisation:** KINSOL flag −5 (line search did not converge) | — | — | — |
+| 2 | No first iteration within 1,200 s, after 3 Hessian rejections at initialisation; the cause cannot be read from the output | — | — | — |
+| 3 | Complete | 559 / 460 / 1,018 | 2.80 | 0 |
+| 4 | Complete | 397 / 451 / 848 | 3.10 | 0 |
+| v1, same measure | All four complete | 495–575 / 140–254 / 656–793 | 1.00–1.30 | 4 |
+
+**Why chain 1 died.** In Stan math (`prim/err/check_flag_sundials.hpp`,
+`kinsol_check`), only KINSOL flag −6 (maximum iterations) is a
+`domain_error`, which Stan rejects and continues. Every other negative flag,
+including −5, is a `std::runtime_error`, which ends the chain. The post-solve
+checks never see it.
+
+**Rejections, all chains** (none during sampling):
+- 26 "Hessian" rejections at initialisation and 5 in warmup, all reporting
+  a NaN precision or determinant. **These are not separable from solver
+  failures.** The precision check runs before the mode check, so a
+  non-finite mode or input surfaces as a Hessian failure. With positive
+  terms only, NaN precision almost certainly means a NaN mode or input, so
+  these are best read as non-finite solver outcomes;
+- 2 rejections from Stan's own `cholesky_decompose` symmetry check (entries
+  of order 1e159);
+- 1 initial value rejected for KINSOL maximum iterations, then redrawn.
+
+**The two completed chains**, for information only. This is not a valid
+four-chain result.
+
+| | Value |
+| --- | --- |
+| Maximum R̂ | 1.03 (σ) |
+| Minimum bulk ESS | 75 (σ) |
+| Median tree depth | 7, as in v1 |
+| η, 90% interval | 0.022–0.466; median 0.174; truth 0.2 |
+| σ, 90% interval | 0.38–1.72; truth 0.5 |
+| ρ, 90% interval | 0.03–0.44; truth 0.4 |
+
+**Reading:**
+- Once the chains reached the typical set, the solver removed v2's NaN
+  failure.
+- **Robustness:** a KINSOL line-search failure is fatal in Stan, so a chain
+  whose initialisation reaches an extreme point dies.
+- **Cost:** the per-gradient cost in sampling is about 2.5 times v1's. The
+  likely driver is the 40-node AGH, whose 2-D term has 1,600 nodes. Per
+  completed chain the wall time is about 1.3 times v1's: 848–1,018 s against
+  656–793 s.
+
+**Options for the next bounded step (not applied):**
+- `solve_powell_tol`: its non-convergence paths, maximum iterations and
+  residual norm (`rev/functor/solve_powell.hpp`), are `domain_error`
+  rejections. Add a finiteness guard on the solver's inputs, and run the
+  mode check before the precision check so causes separate;
+- an initialisation that stays out of extreme regions: a smaller init
+  radius or prior-centred inits, and a smaller initial step size;
+- a prefit robustness check: log_prob and its gradient at a few hundred
+  initialisation-like points, requiring no fatal exception;
+- on cost, test whether a smaller 2-D AGH rule passes the precision gate.
+
+### Calibration regenerated from the final source
+
+`calibrate.py` was rerun unchanged: the same grid and seeds, with no new
+candidate search. The earlier outputs are kept as
+`calibration_prerounding.json` and `calibration_rows_prerounding.json`.
+- 42 of 700 rows changed, as expected, all in endpoint-related fields:
+  end labels, link counts and lineage-Myr.
+- Every median size, quantile and share ≥ 268 is unchanged.
+- End shares moved by at most 0.001.
+- λ₀ = 0.096 is still chosen (7.9 s, within the budget).
