@@ -722,11 +722,27 @@ identifiability point.
         candidates as a separate cause, 208 budding events, links
         208 + 49 = 257;
       - the name crosswalk: 379 species, 213 lineages covered;
-      - a past-only exposure input, with about 105 relative pairs
-        differing systematically;
+      - a past-only exposure input, with 98 relative pairs differing
+        systematically in the lagged input the model uses (corrected from
+        about 105 after Codex's check);
       - a proposal for selection: complete ascertainment as the estimator,
         with robustness to selection calibrated.
       No freeze and no pilot yet.
+    - **Finite contract (16 October;
+      [contract](../literature/2026-10-16-q012-finite-contract.md)).**
+      Codex accepted the complete-ascertainment working estimator as a
+      finite misspecification experiment, with the truth being the
+      generator's η. The contract defines:
+      - a generator with fixed root origins and a declared τ = 66.05 Ma
+        boundary cohort;
+      - thinning on observed duration, pruning and reassignment;
+      - the joint working likelihood, with extinction and bifurcation
+        terminal factors, budding, and the cohort normaliser;
+      - a 5 Myr extinction cumulative-incidence prediction, with a
+        persistence rule for future exposure.
+
+      Awaiting Codex's single check. Then a tiny component check and a
+      cost pilot.
     - **Next gates:** the freeze; a cost pilot (CmdStan, locally);
       calibration.
 

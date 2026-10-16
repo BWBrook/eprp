@@ -33,4 +33,26 @@ E systematic classes (|difference of means| >= 5 degrees):
   parent_daughter_boundary           49              0
   parent_daughter_overlap            86              0
   sister                             78             59
+USED (lagged, model input) systematic classes:
+                          
+                           insufficient no_coexistence
+  parent_daughter_boundary           49              0
+  parent_daughter_overlap            93              0
+  sister                             87             59
+                          
+                           used_systematic_different used_systematic_similar
+  parent_daughter_boundary                         0                       0
+  parent_daughter_overlap                         52                      63
+  sister                                          46                      42
+USED (lagged, model input) per-bin classes:
+                          
+                           insufficient no_coexistence used_perbin_different
+  parent_daughter_boundary           49              0                     0
+  parent_daughter_overlap            93              0                    65
+  sister                             87             59                    62
+                          
+                           used_perbin_similar
+  parent_daughter_boundary                   0
+  parent_daughter_overlap                   50
+  sister                                    26
 pairs with shared members: 157 

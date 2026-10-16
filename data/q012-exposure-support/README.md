@@ -64,7 +64,11 @@ The full text is in the headers of `crosswalk.py` and `build.R`.
     pair excluded;
   - (b) mean per-bin |difference| in E of at least 5°, using all members;
   - (c) the |difference of the two lineages' mean E| over the joint bins,
-    at least 5°.
+    at least 5°;
+  - (d) and (e): measures (b) and (c) recomputed on the lagged `used_value`
+    the hazard actually receives. These are the ones that bear on the
+    model. Measures (a)–(c) use unlagged bin means and are descriptive
+    only.
 
   Measure (c) was added after the first rerun, because (b) is inflated by
   sampling noise in sparse bins. Measure (b) is reported unchanged.
@@ -96,17 +100,30 @@ The full text is in the headers of `crosswalk.py` and `build.R`.
   66 Ma, where Triton has no data.
 - E is standardised by mean 26.26° and SD 13.38°.
 
-**Pairs:**
+**Pairs, on the model's own lagged input** (`used_value`; measures (d)
+and (e), at least 3 jointly available used values; corrected 16 October
+after Codex's check):
 
-| Pair type | Jaccard different / similar | (b) per-bin E | (c) systematic E |
+| Pair type | (e) systematic: different / similar / insufficient | (d) per-bin: different / similar |
+| --- | --- | --- |
+| Parent–daughter, budding | **52 / 63** / 93 | 65 / 50 |
+| Sister | **46 / 42** / 87 (59 never co-exist) | 62 / 26 |
+| Parent–daughter, bifurcation candidates | 49 insufficient | — |
+
+- **98 relative pairs differ systematically in the input the model
+  uses.** The earlier "about 105" came from unlagged bin means.
+- These are dependent descriptive contrasts. They are not independent
+  sample sizes, and they do not show that adjustment will remove
+  confounding.
+- Because E uses all members, the 157 pairs that share members are similar
+  partly by construction.
+
+**Unlagged observed bin means** (measures (a)–(c), descriptive only):
+
+| Pair type | (a) Jaccard different / similar | (b) per-bin | (c) systematic |
 | --- | --- | --- | --- |
-| Parent–daughter, budding | 31 / 36 | 69 / 53 | **52 / 70** |
-| Sister | 42 / 55 | 68 / 29 | **53 / 44** |
-| Parent–daughter, bifurcation candidates | none can be compared on co-existence | | |
-
-- **About 105 relative pairs differ systematically in E**, the input the
-  model adjusts for. Because E uses all members, the 157 pairs that share
-  members are similar partly by construction.
+| Parent–daughter, budding | 31 / 36 | 69 / 53 | 52 / 70 |
+| Sister | 42 / 55 | 68 / 29 | 53 / 44 |
 - **Sampling geography is uneven:** 34 to 4,372 sites per bin. Occupied
   latitudes partly reflect where cores were drilled.
 

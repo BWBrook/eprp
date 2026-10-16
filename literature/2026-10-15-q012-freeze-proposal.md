@@ -3,6 +3,9 @@
 Owner: Claude | 15 October 2026 | Gate 3 of the
 [Q-012 design](2026-10-15-q012-support-identification-design.md).
 
+**Superseded (16 October)** by the
+[finite contract](2026-10-16-q012-finite-contract.md).
+
 Status: **not ready (Codex's check, 76/1686).** It is superseded in part by
 the [addendum](2026-10-16-q012-events-exposure-addendum.md), which covers
 events and risk sets, the crosswalk, the past-only E and the selection

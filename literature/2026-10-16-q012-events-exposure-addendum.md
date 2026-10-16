@@ -6,6 +6,16 @@ That check found the
 [freeze proposal](2026-10-15-q012-freeze-proposal.md) not ready. All its
 points are accepted.
 
+**Corrections after Codex's check (76/1699):**
+- The jitter inequality was reversed, because ages are in Ma.
+- Pair counts are now on the lagged input: 98 pairs, not about 105.
+- Bifurcation stays in the joint likelihood.
+- The single coincident daughter is no longer folded into bifurcation.
+
+All are carried into the
+[finite contract](2026-10-16-q012-finite-contract.md), which supersedes this
+addendum where they differ.
+
 **Status: no freeze, no pilot and no grid.** Nothing has been fitted, and no
 outcomes of relatives have been compared.
 

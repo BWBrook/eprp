@@ -33,6 +33,11 @@
 #       in sparse bins and is reported unchanged beside it: the absolute
 #       difference between the two lineages' means over the same joint bins,
 #       "E-systematic-different" if >= 5 degrees with >= 3 joint data bins.
+#   (b) and (c) use the unlagged observed bin means: descriptive only.
+#   (d), (e) added 16 October after Codex's check (76/1699): the same two
+#       measures computed on used_value, the lagged past-only input actually
+#       supplied to the hazard, over co-existing bins with >= 3 jointly
+#       available used values. These are the counts that bear on the model.
 
 out_dir <- "data/q012-exposure-support"
 ev_dir <- "data/q012-event-dictionary"
@@ -127,6 +132,14 @@ compare <- function(a, b, type) {
   eb <- emat[emat$lineage == b & emat$bin %in% co, c("bin", "observed_mean_abs_pal_lat")]
   m <- merge(ea, eb, by = "bin")
   m <- m[!is.na(m[, 2]) & !is.na(m[, 3]), ]
+  ua <- emat[emat$lineage == a & emat$bin %in% co, c("bin", "used_value")]
+  ub <- emat[emat$lineage == b & emat$bin %in% co, c("bin", "used_value")]
+  u <- merge(ua, ub, by = "bin")
+  u <- u[!is.na(u[, 2]) & !is.na(u[, 3]), ]
+  ud <- if (nrow(u)) mean(abs(u[, 2] - u[, 3])) else NA
+  us <- if (nrow(u)) abs(mean(u[, 2]) - mean(u[, 3])) else NA
+  ucls <- if (!length(co)) "no_coexistence" else if (nrow(u) < 3) "insufficient" else if (us >= 5) "used_systematic_different" else "used_systematic_similar"
+  ubcls <- if (!length(co)) "no_coexistence" else if (nrow(u) < 3) "insufficient" else if (ud >= 5) "used_perbin_different" else "used_perbin_similar"
   ed <- if (nrow(m)) mean(abs(m[, 2] - m[, 3])) else NA
   es <- if (nrow(m)) abs(mean(m[, 2]) - mean(m[, 3])) else NA
   ecls <- if (!length(co)) "no_coexistence" else if (nrow(m) < 3) "insufficient" else if (ed >= 5) "E_different" else "E_similar"
@@ -135,6 +148,8 @@ compare <- function(a, b, type) {
              coexisting_bins = length(co), jaccard_joint_bins = length(jb), jaccard = round(j, 3),
              jaccard_class = cls, E_joint_bins = nrow(m), E_mean_abs_diff_deg = round(ed, 2), E_class = ecls,
              E_abs_mean_diff_deg = round(es, 2), E_systematic_class = scls,
+             used_joint_bins = nrow(u), used_abs_mean_diff_deg = round(us, 2), used_systematic_class = ucls,
+             used_mean_abs_diff_deg = round(ud, 2), used_perbin_class = ubcls,
              stringsAsFactors = FALSE)
 }
 pd <- le[le$ancestor %in% le$lineage, ]
@@ -164,6 +179,8 @@ cat("E standardisation: mean", round(mu, 3), "sd", round(sdv, 3), "\n")
 cat("Jaccard classes:\n"); print(table(pair_tab$type, pair_tab$jaccard_class))
 cat("E classes (>= 5 degrees):\n"); print(table(pair_tab$type, pair_tab$E_class))
 cat("E systematic classes (|difference of means| >= 5 degrees):\n"); print(table(pair_tab$type, pair_tab$E_systematic_class))
+cat("USED (lagged, model input) systematic classes:\n"); print(table(pair_tab$type, pair_tab$used_systematic_class))
+cat("USED (lagged, model input) per-bin classes:\n"); print(table(pair_tab$type, pair_tab$used_perbin_class))
 cat("pairs with shared members:", sum(pair_tab$shared_members > 0), "\n")
 sink()
 cat(readLines(file.path(out_dir, "summary.txt")), sep = "\n")
