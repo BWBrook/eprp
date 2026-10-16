@@ -245,6 +245,9 @@ def qualify(attempt, scen, env, manifest_sha, build_receipt):
     if not (attempt / "receipt.txt").exists():
         return ["no receipt"]
     rc = _receipt(attempt / "receipt.txt")
+    bh = build_receipt.get("binary_sha256") or ""
+    if not (len(bh) == 64 and all(ch in "0123456789abcdef" for ch in bh)):
+        fails.append(f"build receipt has no valid binary hash ({bh!r})")
     want = dict(scenario=scen, attempt=attempt.name.removeprefix("attempt"), status="complete", manifest_sha256=manifest_sha,
                 binary_sha256=build_receipt.get("binary_sha256"), settings=settings_line(env))
     fails += [f"receipt {k} is {rc.get(k)!r}, expected {v!r}" for k, v in want.items() if rc.get(k) != v]
@@ -318,7 +321,7 @@ def eta_block(q05, q95, m05, m95, truth):
     ends = _finite(q05) and _finite(q95)
     prec = _finite(m05) and _finite(m95) and m05 >= 0 and m95 >= 0
     return dict(q05=q05, q95=q95, mcse_q05=m05, mcse_q95=m95, endpoints_finite=ends, mcse_finite=prec,
-                mcse_target_met=(max(m05, m95) <= D["mcse_target"]) if prec else None, truth=truth,
+                mcse_target_met=(max(m05, m95) <= D["mcse_target"]) if ends and prec else None, truth=truth,
                 interval_covers_truth=(q05 <= truth <= q95) if ends and truth is not None else None,
                 D=(q05 > D["eta0"]) if ends else None, X=(q95 < D["eta1"]) if ends else None,
                 D_numerically_uncertain=(q05 - 2 * m05 < D["eta0"] < q05 + 2 * m05) if ends and prec else None,
@@ -565,6 +568,12 @@ def selftest():
     scr["csv_settings_mismatch"] = (q(variant("meta", lambda v: (v / "chain3.csv").write_text(
         (v / "chain3.csv").read_text().replace("delta = 0.995", "delta = 0.9", 1)))), bool)
     scr["build_receipt_other_manifest"] = (q(good, b=dict(bld, manifest_sha256="3" * 64)), bool)
+
+    def no_hash(v):
+        (v / "receipt.txt").write_text("\n".join(ln for ln in (v / "receipt.txt").read_text().splitlines()
+                                                 if not ln.startswith("binary_sha256=")) + "\n")
+    nb = {k: x for k, x in dict(bld, manifest_sha256=rcx["manifest_sha256"]).items() if k != "binary_sha256"}
+    scr["binary_hash_absent_from_both_receipts"] = (q(variant("nohash", no_hash), b=nb), bool)
     out["screening_refusals"] = {k: dict(failures=r[:3], ok=pred(r)) for k, (r, pred) in scr.items()}
     out["screening_refusals"]["ok"] = all(v["ok"] for v in out["screening_refusals"].values())
     # Finite guards on statistics.
@@ -575,7 +584,8 @@ def selftest():
         raw_flags_kept=eb["D"] is False and eb["X"] is False,
         infinite_ess_fails=not ess_pass({"sigma": dict(bulk=inf, tail=500.0)}),
         nan_rhat_fails=not rhat_pass({"sigma": nan}),
-        nan_endpoint_unresolved=eta_block(nan, 0.4, 0.003, 0.01, 0.2)["D"] is None)
+        nan_endpoint_unresolved=eta_block(nan, 0.4, 0.003, 0.01, 0.2)["D"] is None,
+        nan_endpoint_leaves_precision_unresolved=eta_block(nan, 0.4, 0.003, 0.01, 0.2)["mcse_target_met"] is None)
     out["finite_guards"]["ok"] = all(out["finite_guards"].values())
     # Retrieval after the earliest failure: a failed build and no run directory.
     fx = CACHE / "selftest_fetch"

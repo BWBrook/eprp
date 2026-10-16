@@ -11,10 +11,10 @@
   "exit": 0,
   "status": "complete",
   "maxrss_kb": [
-   "16676",
-   "16972",
-   "16916",
-   "17088"
+   "16976",
+   "16960",
+   "17028",
+   "16928"
   ],
   "ok": true
  },
@@ -146,6 +146,12 @@
    ],
    "ok": true
   },
+  "binary_hash_absent_from_both_receipts": {
+   "failures": [
+    "build receipt has no valid binary hash ('')"
+   ],
+   "ok": true
+  },
   "ok": true
  },
  "finite_guards": {
@@ -154,6 +160,7 @@
   "infinite_ess_fails": true,
   "nan_rhat_fails": true,
   "nan_endpoint_unresolved": true,
+  "nan_endpoint_leaves_precision_unresolved": true,
   "ok": true
  },
  "fetch_after_failed_build": {
