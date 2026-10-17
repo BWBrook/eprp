@@ -417,3 +417,16 @@ The fit's wall time is the slowest chain's: 4.67 h at N = 264.
 - **Budget:** one fit at a time, 4 CPUs, 8 GiB, a 6 h runner cap (6:10 in
   PBS); at most 53.33 reserved core-hours. No retry, cap raise,
   replacement or search.
+
+### Tranche staging record (17 October 2026)
+
+- **Submitted:** build/preflight `821264.kunanyi-ohpc` (running on n001,
+  GCC 12.3.0), then **P11** `821265.kunanyi-ohpc` with `afterok:821264`.
+  - Queue `normal`; 4 CPUs, 8 GiB, 06:10:00; `ae` mail.
+  - Nothing else was submitted.
+- **Payload:** `payload_v6p`, manifest 592a1ce3…; tarball c29c4630…. Both
+  verified on kunanyi.
+- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261017-v6p`.
+- **P06** is not queued. It waits on P11's qualification, its sampling and
+  endpoint-MCSE screens, and the joint checks; then
+  `submit_fit.sh 20261017-v6p P06`.
