@@ -29,11 +29,17 @@ Updated: 17 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   reproduces the archive and diagnostics, and 48 new Q=64 tail/state checks
   pass. Four chains complete in 2:49:58, with zero divergences and adequate
   R-hat, ESS and eta endpoint precision, but E-BFMI fails in three chains.
-  **The panel remains on hold.** A constant dense metric lacks the proposed
-  energy-repair mechanism. One fixed fractional innovation scaling candidate
-  passes an offline algebra/energy screen; Claude next accepts or challenges
-  it, then implements and preflights it. One same-cap R00 comparison may
-  follow only if the declared checks pass; Codex reviews before panel release.
+  Claude accepts the fractional innovation scaling and withdraws dense_e.
+  The v6 result at `542da62` passes all sampling and precision screens;
+  Codex's [v6 review](ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md)
+  reproduces 60 actual-Stan identities, the result/comparison, and 49 direct
+  joint-state Q=64 checks. **v6 is accepted as the technical pilot candidate.**
+  Release P11 first, then P06 only if P11 passes; keep the other ten held.
+  Retain six-hour fit caps, four CPUs/8 GiB, one fit at a time and unchanged
+  settings. The bounded ceiling is 53.33 reserved core-hours including
+  allowances and one build. Claude prepares the package, corrects dispatch
+  and reporting, then executes within that envelope; Codex reviews outcomes
+  before any further panel release. No automatic retry or cap increase.
   No further long laptop fit, full grid or empirical fit. Barry's kunanyi
   and PBS mail/wake workflow remains in force; no background monitoring.
   B-004's critique response, six-study modern screen and bounded analytic
@@ -85,7 +91,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex: R00 review complete; Claude: respond to exact reparameterisation proposal, then implement/preflight | [R00 review](ideas/2026-10-17-q012-r00-review-codex.md) verifies receipts, hashes, diagnostics and 48 new Q=64 checks. Sampling fails E-BFMI alone (three chains); panel held. Constant dense metric is not supported as the proposed remedy. Fixed w=sigma^.2 eps preserves the target and reduces saved-state energy spread; actual Stan density/gradient and near-zero-sigma preflight are required. If all pass, one unchanged-cap R00 comparison; Codex checks result before panel release |
+| Q-012/D1 support and identification | Codex: v6 result review complete; Claude: bounded P11/P06 preparation and execution | [v6 ruling](ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md) accepts the technical candidate after exact diagnostic/comparison replay, 60 density/AD identities and 49 new Q=64 checks. GO P11 first, P06 only after P11 passes; other ten held. Same six-hour fit caps, sequential 4-CPU/8-GiB jobs, 53.33 core-hour total ceiling. Claude corrects range-coverage/cost wording, MCSE convention and hard-coded R00 dispatch before use; no retries or cap increase. Codex reviews before further release |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -832,6 +838,16 @@ next phase of ideation whilst those final checks are done."
   the fixed fractional innovation scaling candidate earns implementation
   and preflight, with a conditional one-fit R00 comparison under the same
   limits. Claude responds next. No panel release or relaxed threshold.
+
+- **v6 result and staged panel release, 17 October:** Claude's `542da62`
+  and 76/1849 give the first full sampling/precision pass. Codex's
+  [review](ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md)
+  independently confirms it and closes the joint-state quadrature gap.
+  The energy improvement matches the proposed mechanism on R00; panel
+  behaviour and cost remain unknown. Release P11 then, conditionally, P06
+  under unchanged six-hour caps and a 53.33 reserved core-hour ceiling.
+  Claude owns the bounded package/dispatch/reporting corrections and runs;
+  Codex reviews outcomes. The remaining ten cases stay unlaunched.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
