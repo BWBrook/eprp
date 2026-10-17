@@ -1,8 +1,19 @@
 # Q-012 bounded kunanyi pilot: the package
 
-Owner: Claude | 16 October 2026 | Prepared under Codex's ruling 76/1750
-([note](../../ideas/2026-10-16-q012-v4-check-and-pilot-codex.md)). **Nothing
-has been submitted.** Codex checks this package before Barry opens TPAC.
+Owner: Claude | 16–17 October 2026 | Prepared under Codex's rulings 76/1750,
+1765, 1774, 1814 and 1855.
+
+**Status (17 October 2026):**
+- **R00 (v5):** ran (job 820950). It qualified and failed only the E-BFMI
+  screen.
+- **R00 (v6, partial non-centring):** ran (job 821087). It qualified and
+  **passed every screen**. Codex accepted v6 as the technical pilot
+  candidate (76/1855).
+- **Released next, one fit at a time,** from the separately bound package
+  `payload_v6p/`: P11, then P06 only if P11 passes its checks. Ceiling 53.33
+  reserved core-hours.
+- **The other ten panel datasets remain held.** No power, coverage or
+  campaign claim follows from this pilot.
 
 This is a **numerical and cost pilot**. It is not a power, coverage or
 robustness experiment, and no campaign claim follows from it.
@@ -319,17 +330,40 @@ chain output stay on kunanyi and in scratch.
 The E-BFMI values fall inside Codex's ideal-limit proxy for v6, 0.72–0.78.
 
 **Comparison with R00** (`pilot.py compare`):
-- Across the 11 core parameters' mean, 5% and 95% quantiles, the largest
-  MCSE-scaled difference is |z| = 1.69, consistent with Monte Carlo noise
-  over 33 comparisons.
-- η's endpoints differ by z = −1.23 and −1.53.
-- v6 reached no new tail beyond R00's sampled ranges (σ max 3.08 against
-  3.24; |κ_b| max 2.77 against 3.08; ρ min 3.5e-5 against 1.6e-5).
-  Codex's 48-state Q = 64 checks on R00's tails therefore cover it.
-- **σ's lower tail is unchanged in substance:** 1% quantile 0.300 against
-  0.303; minimum 0.156 against 0.145. This posterior is well away from
-  σ = 0, so it does not test the near-zero concern strongly. Small or
-  weak-signal panel trees may.
+- **MCSE-scaled differences (descriptive):** across the 11 core
+  parameters' mean, 5% and 95% quantiles, the largest is |z| = 1.69; η's
+  endpoints differ by z = −1.23 and −1.53.
+  - *Convention:* z = (v6 − R00) / √(MCSE₁² + MCSE₂²) assumes zero
+    covariance between the two fits' Monte Carlo errors.
+  - The fits share seeds and chain IDs, so this is **not a calibrated
+    equality test** (Codex, 76/1855).
+  - Source/AD equivalence and v6's own diagnostics are the stronger
+    evidence.
+- **Quadrature at v6's joint states (corrected):**
+  - The first version of this section claimed that v6 stayed inside
+    R00's marginal ranges, so R00's checks covered it. That is invalid:
+    marginal ranges do not bound joint-state quadrature error, the
+    shortcut tested no points, and maximum ρ in fact rose from 0.730 to
+    0.813.
+  - `compare` now checks selected v6 joint states directly: the six
+    highest σ, largest |κ_b|, smallest and largest ρ, and 40 evenly spaced
+    states, with domain-safe finite-difference steps.
+  - **All 49 pass at Q = 64:** maximum log error 2.42e-5, maximum
+    derivative error 8.38e-5. Doubling the reference grid at the worst
+    point changes the result by 1.3e-15 and 1.7e-11.
+  - These reproduce Codex's independent check exactly.
+- **σ's lower tail, per chain:**
+
+  | | Range across chains |
+  | --- | --- |
+  | 0.1% quantile | 0.198–0.220 |
+  | 1% quantile | 0.281–0.316 |
+  | Minimum | 0.156–0.187 |
+  | Mass below 0.1 | none |
+
+  This posterior is well away from σ = 0, so the near-zero concern
+  remains **incompletely tested**. P11, the weak-data tree, is next for
+  that reason.
 
 **Cost.** Adaptation differed widely between chains:
 
@@ -340,7 +374,46 @@ The E-BFMI values fall inside Codex's ideal-limit proxy for v6, 0.72–0.78.
 | 3 | 0.0333 | 7 | 127 | 3,526 s |
 | 4 | 0.0139 | 8 | 255 | 6,914 s |
 
-The fit's wall time is the slowest chain's: 4.67 h at N = 264. The panel's
-largest trees (N = 385, 556 and 649) would probably exceed 6 h at this
-rate, so panel resources need resetting from this evidence before any
-release.
+The fit's wall time is the slowest chain's: 4.67 h at N = 264.
+- **Seconds per leapfrog step are similar across chains** (0.0067–0.0069),
+  so the spread comes mainly from adapted trajectory length.
+- **Against R00 (v5):** CPU rose about 4.7%, wall time about 65%, and
+  nominal allocation from 11.33 to 18.70 core-hours.
+- *Withdrawn:* an earlier version of this section predicted that the
+  largest panel trees would probably exceed 6 h. Per-step cost is not a
+  function of N alone. In unadapted local probes (20 draws, step 0.002,
+  depth capped at 6, so not posterior or cluster estimates), P05 (N = 49),
+  P06 (N = 84) and P07 (N = 385) cost 3.06, 3.90 and 2.21 times R00 per
+  leapfrog step, while P12 (N = 649) cost 1.26 times. Codex kept the 6 h
+  cap; P06 is the deliberate cost test in the next tranche.
+
+## Next tranche: P11, then P06 (Codex 76/1855–1856)
+
+- **Package:** `payload_v6p/` (candidate `v6p`, manifest 592a1ce3…).
+  - **R00** serves only as the build/preflight reference.
+  - **The permitted fits are P11 and P06**, listed in `fits.txt`.
+  - Data are byte-identical to the frozen originals. The starts are exact
+    a = 0.2 mappings of the original panel starts, and all initialise.
+- **Tranche preflight** ([tranche_preflight_v6p.json](tranche_preflight_v6p.json),
+  all pass), at P11's and P06's mapped starts and at σ = 0.01 and 0.001:
+  - actual-Stan v5/v6 identity, worst 7.5e-13 (log) and 8.0e-15 (scaled
+    gradient), all finite;
+  - Q = 64 against the reference, worst log error 2.9e-15, derivative
+    error 1.2e-11.
+- **Dispatch** ([dispatch_test_v6p.json](dispatch_test_v6p.json), local
+  fixture with fake transport and qsub, all pass):
+  - `FIT_SCEN=P11 stage.sh` submits only the build, then
+    `-v SCEN=P11 -W depend=afterok:<build>`;
+  - a missing scenario and R00 are refused, and no array is submitted;
+  - `submit_fit.sh TAG P06` is refused without a successful build for the
+    same manifest. Once the build has succeeded, it submits only
+    `-v SCEN=P06`.
+- **Order:**
+  1. stage `PAYLOAD_DIR=payload_v6p FIT_SCEN=P11`;
+  2. after P11's mail: fetch, then `diagnose`, then `pilot.py joint` (49
+     direct joint states, plus σ's lower tail);
+  3. only if P11 qualifies and passes the sampling, endpoint-MCSE and
+     joint checks: `submit_fit.sh TAG P06`.
+- **Budget:** one fit at a time, 4 CPUs, 8 GiB, a 6 h runner cap (6:10 in
+  PBS); at most 53.33 reserved core-hours. No retry, cap raise,
+  replacement or search.

@@ -96,7 +96,23 @@
         "R00"
       ],
       "note": "One R00 comparison of the partial non-centring candidate (Codex 76/1814): same data, sampler seed, diag_e, 2,000 + 4,000, adapt_delta 0.995, depth 12, step 0.01, 64 nodes, 1 h build / 6 h fit, 4 CPUs / 8 GiB; starts are the R00 starts mapped to w = sigma^0.2 * eps. No panel, no alpha search, no retry."
+    },
+    "v6p": {
+      "prototype_version": "v6",
+      "stan_file": "model_v6.stan",
+      "checks_file": "../q012-prototype/checks_v6.json",
+      "payload_dir": "payload_v6p",
+      "scenarios": [
+        "R00",
+        "P11",
+        "P06"
+      ],
+      "fits": [
+        "P11",
+        "P06"
+      ],
+      "note": "First bounded panel tranche (Codex 76/1855, ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md): R00 is only the build/preflight reference; P11 first, P06 only if P11 qualifies and passes sampling, endpoint-MCSE and direct joint-state Q = 64 checks. One fit at a time, 4 CPUs / 8 GiB, 6 h runner / 6:10 PBS. Ceiling 53.33 reserved core-hours (48 fitting + 1.33 wrapper + 4 build). No retry, cap raise, replacement or search; the other ten panel datasets stay held."
     }
   },
-  "active_candidate": "v6"
+  "active_candidate": "v6p"
 }

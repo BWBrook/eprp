@@ -185,6 +185,8 @@ def build():
     (PAY / "scenarios.tsv").write_text(lines[0] + "".join(ln for ln in lines[1:] if CAND["scenarios"] == "all"
                                                           or ln.split("\t")[0] in CAND["scenarios"]))
     (PAY / "run.env").write_text("".join(f"{k}={v}\n" for k, v in RUN_ENV.items()))
+    fits = CAND.get("fits", [s["id"] for s in scenarios()] if CAND["scenarios"] == "all" else CAND["scenarios"])
+    (PAY / "fits.txt").write_text("".join(f"{s}\n" for s in fits))  # the only scenarios stage.sh / submit_fit.sh may submit
     tb = cmdstan_tarball()
     (PAY / "cmdstan.sha256").write_text(f"{sha(tb)}  {tb.name}\n")
     nfiles = write_manifest(PAY)
@@ -425,9 +427,62 @@ def summarise(folder):
     return res
 
 
-def compare(dir_a, dir_b, out_file):
+def gate_point(d, q, n_ref=1600):
+    """Q = 64 normaliser against the dense Simpson reference at one joint state: value and d/dsigma, d/drho, d/dkappa_b,
+    with finite-difference steps kept inside the sigma and rho domains."""
+    hs = dict(sigma=min(1e-4, q["sigma"] / 2), rho=min(1e-4, q["rho"] / 2, (1 - q["rho"]) / 2), kappa_b=1e-4)
+
+    def val(p, ref, n):
+        A = P.cohort_A(d, p)
+        return P.log_norm_ref(d, p, A, n) if ref else P.log_norm_agh(d, p, A)
+    res = dict(log_err=abs(val(q, False, n_ref) - val(q, True, n_ref)), h=hs)
+    for name in ("sigma", "kappa_b") + (("rho",) if d["C2"] else ()):
+        h = hs[name]
+        hi, lo = dict(q, **{name: q[name] + h}), dict(q, **{name: q[name] - h})
+        res[f"d_{name}_err"] = abs((val(hi, False, n_ref) - val(lo, False, n_ref)) / (2 * h)
+                                   - (val(hi, True, n_ref) - val(lo, True, n_ref)) / (2 * h))
+    res["pass"] = bool(res["log_err"] <= 1e-4 and all(v <= 1e-3 for k, v in res.items() if k.startswith("d_")))
+    return res
+
+
+def reference_convergence(d, q):
+    """Change in the reference value and derivatives when the Simpson grid doubles from 1,600 to 3,200 intervals."""
+    a, b = gate_point(d, q, 1600), gate_point(d, q, 3200)
+    return dict(log_change=abs(a["log_err"] - b["log_err"]),
+                max_derivative_change=max(abs(a[k] - b[k]) for k in a if k.startswith("d_")))
+
+
+def joint_checks(fit_dir, data_file):
+    """Direct Q = 64 checks at selected joint states of one fit (Codex 76/1855): six highest sigma, largest |kappa_b|,
+    smallest and largest rho, and 40 evenly spaced draws; reference convergence at the largest log error; and the lower
+    tail of sigma per chain. An unperformed check is reported as not tested."""
+    import pandas as pd
+    d = json.loads(pathlib.Path(data_file).read_text())
+    dfs = [pd.read_csv(pathlib.Path(fit_dir) / f"chain{k}.csv", comment="#") for k in range(1, 5)]
+    df = pd.concat(dfs, ignore_index=True)
+    sel = list(dict.fromkeys([int(i) for i in df.nlargest(6, "sigma").index]
+                             + [int(df.kappa_b.abs().idxmax()), int(df.rho.idxmin()), int(df.rho.idxmax())]
+                             + [int(i) for i in np.linspace(0, len(df) - 1, 40).astype(int)]))
+    states = {i: P.draw_to_params(df.iloc[i], d["N"]) for i in sel}
+    gates = {str(i): dict(sigma=float(q["sigma"]), rho=float(q["rho"]), kappa_b=float(q["kappa_b"]), **gate_point(d, q))
+             for i, q in states.items()}
+    worst = max(gates, key=lambda k: gates[k]["log_err"]) if gates else None
+    lower = [dict(chain=k, q001=float(x.sigma.quantile(0.001)), q01=float(x.sigma.quantile(0.01)), min=float(x.sigma.min()),
+                  mass_below_0_1=float((x.sigma < 0.1).mean()), mass_below_0_01=float((x.sigma < 0.01).mean()))
+             for k, x in enumerate(dfs, start=1)]
+    return dict(states_tested=len(gates), status="tested" if gates else "not tested",
+                all_pass=(all(g["pass"] for g in gates.values()) if gates else None),
+                max_log_err=max((g["log_err"] for g in gates.values()), default=None),
+                max_derivative_err=max((v for g in gates.values() for k, v in g.items() if k.startswith("d_") and k.endswith("_err")),
+                                       default=None),
+                reference_convergence_at_worst=(reference_convergence(d, states[int(worst)]) if worst else "not tested"),
+                states=gates, sigma_lower_tail=lower)
+
+
+def compare(dir_a, dir_b, out_file, data_file=None):
     """Mapped comparison of two qualified fits of the same dataset (Codex 76/1814): core summaries and eta endpoints with
-    chain-preserving MCSEs, per-chain cost, and the Q = 64 precision gate at states of B beyond A's sampled ranges."""
+    chain-preserving MCSEs (descriptive z under zero cross-fit covariance), per-chain cost, and direct joint-state Q = 64
+    checks on B (Codex 76/1855; marginal ranges do not establish joint-state accuracy)."""
     import arviz as az
     import pandas as pd
     S = PILOT["screening"]
@@ -452,24 +507,109 @@ def compare(dir_a, dir_b, out_file):
                        seconds=[float(ln.split()[-3]) for ln in (pathlib.Path(d) / f"chain{k}.csv").read_text().splitlines()
                                 if "seconds (" in ln])
                   for k, df in enumerate(dfs, start=1)] for lab, d, dfs in (("a", dir_a, A), ("b", dir_b, B))}
-    # Newly reached tails: B's six highest sigma, largest |kappa_b| and smallest rho, gated where outside A's range.
-    ca, cb = pd.concat(A, ignore_index=True), pd.concat(B, ignore_index=True)
-    d, _, _ = P.dataset(P.CFG["fit_seed"])
-    cand = list(dict.fromkeys([int(i) for i in cb.nlargest(6, "sigma").index] + [int(cb.kappa_b.abs().idxmax()), int(cb.rho.idxmin())]))
-    new = [i for i in cand if cb.sigma[i] > ca.sigma.max() or abs(cb.kappa_b[i]) > ca.kappa_b.abs().max() or cb.rho[i] < ca.rho.min()]
-    gates = {}
-    for i in new:
-        q = P.draw_to_params(cb.iloc[i], d["N"])
-        g = P.gate(d, q)
-        gates[str(i)] = dict(sigma=float(q["sigma"]), rho=float(q["rho"]), kappa_b=float(q["kappa_b"]),
-                             **{k: float(v) for k, v in g.items()},
-                             **{"pass": g["log_err"] <= 1e-4 and all(v <= 1e-3 for k, v in g.items() if k.startswith("d_"))})
-    res = dict(a=str(dir_a), b=str(dir_b), core=rows, max_abs_z=max(max(abs(r["z_mean"]), abs(r["z_q05"]), abs(r["z_q95"])) for r in rows.values()),
-               cost=cost, ranges=dict(a=dict(sigma_max=float(ca.sigma.max()), abs_kappa_b_max=float(ca.kappa_b.abs().max()), rho_min=float(ca.rho.min())),
-                                      b=dict(sigma_max=float(cb.sigma.max()), abs_kappa_b_max=float(cb.kappa_b.abs().max()), rho_min=float(cb.rho.min()))),
-               new_tail_states=gates, new_tail_gate_pass=all(g["pass"] for g in gates.values()))
+    data_file = data_file or PAY / "data" / "R00.json"
+    res = dict(a=str(dir_a), b=str(dir_b), core=rows,
+               max_abs_z=max(max(abs(r["z_mean"]), abs(r["z_q05"]), abs(r["z_q95"])) for r in rows.values()),
+               z_convention=("descriptive: (b - a) / sqrt(mcse_a^2 + mcse_b^2) assumes zero cross-fit Monte Carlo covariance; "
+                             "the fits share seeds and chain IDs, so this is not a calibrated equality test (Codex 76/1855)"),
+               cost=cost, joint_state_checks_b=joint_checks(dir_b, data_file))
     pathlib.Path(out_file).write_text(json.dumps(_clean(res), indent=1) + "\n")
     return res
+
+
+def tranche_preflight():
+    """For each fit of the active candidate other than the R00 build reference (Codex 76/1855): data byte-identical to the
+    frozen original; starts exact a = 0.2 mappings of the original starts; finite actual-Stan v5/v6 density and AD
+    identities at the mapped starts and at sigma 0.01 and 0.001; Q = 64 against the reference at the same scalar points."""
+    from cmdstanpy.utils import write_stan_json
+    I = P.CFG[P.CFG["active"]]["identity"]
+    orig = HERE / "payload"
+    mdl_old, mdl_new = P.model(P.CFG[P.CFG[P.CFG["active"]]["reference_version"]]["stan_file"]), P.model()
+    work = CACHE / "tranche_preflight"
+    work.mkdir(parents=True, exist_ok=True)
+    out = {}
+    for sc in [s for s in CAND["scenarios"] if s != "R00"]:
+        r = dict(data_identical=(PAY / "data" / f"{sc}.json").read_bytes() == (orig / "data" / f"{sc}.json").read_bytes())
+        starts = [json.loads((orig / "inits" / sc / f"chain{k}.json").read_text()) for k in range(1, 5)]
+        same = []
+        for k, q in enumerate(starts, start=1):
+            write_stan_json(str(work / f"{sc}_{k}.json"), P.to_nc(q))
+            same.append((work / f"{sc}_{k}.json").read_bytes() == (PAY / "inits" / sc / f"chain{k}.json").read_bytes())
+        r["starts_exact_mapping"] = all(same)
+        d = json.loads((PAY / "data" / f"{sc}.json").read_text())
+        pts = {f"start_chain{k}": q for k, q in enumerate(starts, start=1)}
+        pts.update(sigma_001=dict(starts[0], sigma=0.01), sigma_0001=dict(starts[0], sigma=0.001))
+        ids = {n: P.identity_point(mdl_old, mdl_new, d, q) for n, q in pts.items()}
+        worst = {k: max(x[k] for x in ids.values()) for k in ("log_identity_error", "grad_w_error", "grad_logsigma_error", "grad_other_error")}
+        r["identity"] = dict(worst=worst, rows=ids, **{"pass": all(x["finite"] for x in ids.values())
+                                                         and worst["log_identity_error"] <= I["log_tol"]
+                                                         and max(worst[k] for k in worst if k.startswith("grad")) <= I["grad_tol"]})
+        gates = {n: gate_point(d, q) for n, q in pts.items()}
+        r["q64"] = dict(rows=gates, **{"pass": all(g["pass"] for g in gates.values())})
+        r["pass"] = r["data_identical"] and r["starts_exact_mapping"] and r["identity"]["pass"] and r["q64"]["pass"]
+        out[sc] = r
+    out["all_pass"] = all(v["pass"] for v in out.values() if isinstance(v, dict))
+    (HERE / f"tranche_preflight_{PILOT['active_candidate']}.json").write_text(json.dumps(_clean(out), indent=1, default=float) + "\n")
+    print(json.dumps(_clean({sc: {k: v for k, v in r.items() if k in ("data_identical", "starts_exact_mapping", "pass")}
+                             | dict(identity_worst=r["identity"]["worst"],
+                                    q64_worst=max((g["log_err"] for g in r["q64"]["rows"].values()), default=None))
+                             for sc, r in out.items() if isinstance(r, dict)} | dict(all_pass=out["all_pass"])), indent=1, default=float))
+
+
+def dispatch_test():
+    """Local fixture for stage.sh and submit_fit.sh (Codex 76/1855): fake transport (local bash and cp), fake qsub/qstat that
+    record every call, and a local 'remote' root. Writes dispatch_test.json."""
+    import os
+    root = CACHE / "dispatch_fixture"
+    shutil.rmtree(root, ignore_errors=True)
+    lib = root / "nectar" / "scripts" / "lib"
+    lib.mkdir(parents=True)
+    (lib / "common.sh").write_text('die() { echo "DIE: $*" >&2; exit 1; }\nrequire_cmd() { :; }\n')
+    (lib / "tpac-expect.exp").write_text("spawn scp \\\n")
+    (lib / "kunanyi.sh").write_text(
+        'tpac_transport_setup() { TPAC_EXPECT_SCRIPT="$(dirname "${BASH_SOURCE[0]}")/tpac-expect.exp"; export TPAC_EXPECT_SCRIPT; }\n'
+        'tpac_set_expect_timeout() { :; }\n'
+        'tpac_quote() { printf "%q" "$1"; }\n'
+        'tpac_expect_ssh() { bash -c "$1"; }\n'
+        'tpac_expect_scp() { cp "$1" "${2#*:}"; }\n')
+    log = root / "qsub.log"
+    (root / "fake_qsub").write_text(f'#!/bin/bash\necho "$*" >> {log}\nn=$(wc -l < {log}); echo "9000$n.fake"\n')
+    (root / "fake_qstat").write_text("#!/bin/bash\necho Job_Name = fake\n")
+    for f in ("fake_qsub", "fake_qstat"):
+        (root / f).chmod(0o755)
+    env = {k: v for k, v in os.environ.items() if not k.startswith("PBS_")}
+    env.update(NECTAR_ROOT=str(root / "nectar"), PAYLOAD_DIR=CAND["payload_dir"], QSUB=str(root / "fake_qsub"),
+               QSTAT=str(root / "fake_qstat"), REMOTE_BASE=str(root / "remote"), KUNANYI_SSH_ALIAS="fixture")
+    run = lambda cmd, extra: subprocess.run(cmd, capture_output=True, text=True, cwd=HERE.parents[1], env=dict(env, **extra))
+    calls = lambda: log.read_text().splitlines() if log.exists() else []
+    out = {}
+    r = run(["bash", str(HERE / "stage.sh"), "fx"], {})
+    out["no_fit_scenario_refused"] = dict(exit=r.returncode, calls=calls(), ok=r.returncode != 0 and not calls())
+    r = run(["bash", str(HERE / "stage.sh"), "fx"], dict(FIT_SCEN="R00"))
+    out["r00_refused"] = dict(exit=r.returncode, calls=calls(), ok=r.returncode != 0 and not calls())
+    r = run(["bash", str(HERE / "stage.sh"), "fx"], dict(FIT_SCEN="P11"))
+    c = calls()
+    out["stage_p11"] = dict(exit=r.returncode, calls=c,
+                            ok=r.returncode == 0 and len(c) == 2 and c[0] == "pbs/build.pbs"
+                            and c[1] == "-v SCEN=P11 -W depend=afterok:90001.fake pbs/fit.pbs"
+                            and not any("R00" in x or "P06" in x or "-J" in x for x in c))
+    remote = root / "remote" / "q012-pilot-fx"
+    out["remote_payload_verified"] = dict(ok=(remote / "manifest.sha256").exists() and (remote / "submitted.txt").exists(),
+                                          submitted=(remote / "submitted.txt").read_text().split() if (remote / "submitted.txt").exists() else None)
+    n0 = len(calls())
+    r = run(["bash", str(HERE / "submit_fit.sh"), "fx", "P06"], {})
+    out["p06_refused_without_build"] = dict(exit=r.returncode, ok=r.returncode != 0 and len(calls()) == n0, said=r.stdout[-120:])
+    (remote / "build").mkdir(exist_ok=True)
+    (remote / "build" / "receipt.txt").write_text(f"status=ok\nmanifest_sha256={sha(remote / 'manifest.sha256')}\n")
+    r = run(["bash", str(HERE / "submit_fit.sh"), "fx", "R00"], {})
+    out["submit_fit_r00_refused"] = dict(exit=r.returncode, ok=r.returncode != 0 and len(calls()) == n0)
+    r = run(["bash", str(HERE / "submit_fit.sh"), "fx", "P06"], {})
+    c = calls()
+    out["submit_fit_p06_after_build"] = dict(exit=r.returncode, new_calls=c[n0:],
+                                             ok=r.returncode == 0 and c[n0:] == ["-v SCEN=P06 pbs/fit.pbs"])
+    out["all_pass"] = all(v["ok"] for v in out.values())
+    (HERE / f"dispatch_test_{PILOT['active_candidate']}.json").write_text(json.dumps(out, indent=1) + "\n")
+    print(json.dumps(out, indent=1))
 
 
 # ---------------------------------------------------------------- control fixtures
@@ -713,6 +853,14 @@ if __name__ == "__main__":
         summarise(sys.argv[2])
     elif cmd == "compare":
         r = compare(sys.argv[2], sys.argv[3], sys.argv[4])
-        print(json.dumps(_clean({k: v for k, v in r.items() if k not in ("core", "cost")}), indent=1))
+        print(json.dumps(_clean({k: v for k, v in r.items() if k not in ("core", "cost", "joint_state_checks_b")}), indent=1))
+    elif cmd == "joint":
+        r = joint_checks(sys.argv[2], sys.argv[3])
+        pathlib.Path(sys.argv[4]).write_text(json.dumps(_clean(r), indent=1) + "\n")
+        print(json.dumps(_clean({k: v for k, v in r.items() if k != "states"}), indent=1))
+    elif cmd == "tranche-preflight":
+        tranche_preflight()
+    elif cmd == "dispatch-test":
+        dispatch_test()
     else:
         {"build": build, "selftest": selftest}[cmd]()

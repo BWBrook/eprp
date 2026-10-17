@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Stage the pilot payload to kunanyi and submit the build and the technical replay (R00).
+# Stage a pilot payload to kunanyi and submit its build/preflight and ONE fit, FIT_SCEN, with afterok.
 # Run only while Barry has the TPAC jumpbox window open. Uses nectar's password-fed transport.
 #   KUNANYI_SSH_ALIAS=kunanyi data/q012-pilot/stage.sh [TAG]      # campus or eduroam; REMOTE_BASE overrides /u/bwbrook/codex_kunanyi
 #   KUNANYI_SSH_ALIAS=kunanyi-via-nectar data/q012-pilot/stage.sh  # via a running Nectar bastion
 #   PAYLOAD_DIR=payload_v6 ... stages the v6 comparison package instead of the cleared payload/
-# The 12-fit panel is not submitted here; it waits for Codex's review of the replay.
+#   FIT_SCEN must be listed in the payload's fits.txt (for payload_v6p: P11 now, P06 later via submit_fit.sh).
+# No array job is ever submitted from here.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 NECTAR="${NECTAR_ROOT:-$HOME/work/nectar}"
@@ -22,6 +23,9 @@ grep -q "spawn scp -O" "$LEGACY_EXP" || die "could not prepare the legacy-scp ex
 export TPAC_EXPECT_SCRIPT="$LEGACY_EXP"
 
 TAG="${1:-$(date +%Y%m%dT%H%M%S)}"
+: "${FIT_SCEN:?set FIT_SCEN to the one fit to submit}"
+QSUB="${QSUB:-/opt/pbs/bin/qsub}"
+QSTAT="${QSTAT:-/opt/pbs/bin/qstat}"
 REMOTE="${REMOTE_BASE:-/u/bwbrook/codex_kunanyi}/q012-pilot-$TAG"
 CACHE="$HERE/../../scratch/q012-pilot"
 TARBALL="$CACHE/cmdstan-2.38.0.tar.gz"
@@ -29,6 +33,7 @@ PAYLOAD="$CACHE/payload-$TAG.tar.gz"
 
 PAYDIR="$HERE/${PAYLOAD_DIR:-payload}"
 ( cd "$PAYDIR" && sha256sum -c --strict --quiet manifest.sha256 )
+grep -qx "$FIT_SCEN" "$PAYDIR/fits.txt" || die "FIT_SCEN=$FIT_SCEN is not a permitted fit for $PAYDIR (fits.txt)"
 ( cd "$CACHE" && sha256sum -c --strict --quiet "$PAYDIR/cmdstan.sha256" )
 tar czf "$PAYLOAD" -C "$PAYDIR" --exclude=runs --exclude=build .
 PAYLOAD_SHA="$(sha256sum "$PAYLOAD" | cut -d' ' -f1)"
@@ -43,7 +48,7 @@ tpac_set_expect_timeout 120
 tpac_expect_ssh "set -e; cd $(tpac_quote "$REMOTE"); \
   echo '$PAYLOAD_SHA  payload.tar.gz' | sha256sum -c --strict; tar xzf payload.tar.gz; \
   sha256sum -c --strict --quiet manifest.sha256; sha256sum -c --strict cmdstan.sha256; \
-  B=\$(/opt/pbs/bin/qsub pbs/build.pbs); F=\$(/opt/pbs/bin/qsub -v SCEN=R00 -W depend=afterok:\$B pbs/fit.pbs); \
-  echo BUILD_JOB=\$B FIT_JOB=\$F | tee submitted.txt; \
-  /opt/pbs/bin/qstat -f \$F | grep -E 'Job_Name|Mail_Users|Mail_Points|depend|Resource_List|queue|Variable_List' | cut -c1-200"
-echo "Staged $REMOTE. Barry receives PBS mail when the replay ends or either job aborts."
+  B=\$($QSUB pbs/build.pbs); F=\$($QSUB -v SCEN=$FIT_SCEN -W depend=afterok:\$B pbs/fit.pbs); \
+  echo BUILD_JOB=\$B FIT_JOB_$FIT_SCEN=\$F | tee submitted.txt; \
+  $QSTAT -f \$F | grep -E 'Job_Name|Mail_Users|Mail_Points|depend|Resource_List|queue|Variable_List' | cut -c1-200"
+echo "Staged $REMOTE: build and $FIT_SCEN. Barry receives PBS mail when the fit ends or either job aborts."
