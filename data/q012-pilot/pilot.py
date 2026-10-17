@@ -8,12 +8,14 @@
   uv run --python 3.12 data/q012-pilot/pilot.py build                 # hash-bound payload from the frozen seed table
   uv run --python 3.12 data/q012-pilot/pilot.py selftest              # cap, timeout, chain-failure, resume, signal and stale-hash fixtures
   uv run --python 3.12 data/q012-pilot/pilot.py diagnose DIR SCEN     # screening of one fitted attempt directory
+  uv run --python 3.12 data/q012-pilot/pilot.py compare A B OUT.json   # mapped comparison of two fits of one dataset
 
 The cluster runs only CmdStan and bash (payload/pbs/); data generation and screening run locally.
 """
 import hashlib
 import importlib.util
 import json
+import math
 import pathlib
 import queue
 import shutil
@@ -423,6 +425,53 @@ def summarise(folder):
     return res
 
 
+def compare(dir_a, dir_b, out_file):
+    """Mapped comparison of two qualified fits of the same dataset (Codex 76/1814): core summaries and eta endpoints with
+    chain-preserving MCSEs, per-chain cost, and the Q = 64 precision gate at states of B beyond A's sampled ranges."""
+    import arviz as az
+    import pandas as pd
+    S = PILOT["screening"]
+    load = lambda d: [pd.read_csv(pathlib.Path(d) / f"chain{k}.csv", comment="#") for k in range(1, 5)]
+    A, B = load(dir_a), load(dir_b)
+    arr = lambda dfs, c: np.stack([x[c].to_numpy() for x in dfs])
+    rows = {}
+    for c in S["core"]:
+        r = {}
+        for lab, dfs in (("a", A), ("b", B)):
+            x = arr(dfs, c)
+            r[lab] = dict(mean=float(x.mean()), sd=float(x.std()), mcse_mean=float(az.mcse(x, method="mean")),
+                          q05=float(np.quantile(x, 0.05)), q50=float(np.quantile(x, 0.5)), q95=float(np.quantile(x, 0.95)),
+                          mcse_q05=float(az.mcse(x, method="quantile", prob=0.05)),
+                          mcse_q95=float(az.mcse(x, method="quantile", prob=0.95)))
+        z = lambda k, m: (r["b"][k] - r["a"][k]) / math.hypot(r["a"][m], r["b"][m])
+        r["z_mean"], r["z_q05"], r["z_q95"] = z("mean", "mcse_mean"), z("q05", "mcse_q05"), z("q95", "mcse_q95")
+        rows[c] = r
+    cost = {lab: [dict(step_size=float(next(ln.split("=")[1] for ln in (pathlib.Path(d) / f"chain{k}.csv").read_text().splitlines()
+                                              if "Step size" in ln)),
+                       treedepth_median=float(df["treedepth__"].median()), leapfrog_mean=float(df["n_leapfrog__"].mean()),
+                       seconds=[float(ln.split()[-3]) for ln in (pathlib.Path(d) / f"chain{k}.csv").read_text().splitlines()
+                                if "seconds (" in ln])
+                  for k, df in enumerate(dfs, start=1)] for lab, d, dfs in (("a", dir_a, A), ("b", dir_b, B))}
+    # Newly reached tails: B's six highest sigma, largest |kappa_b| and smallest rho, gated where outside A's range.
+    ca, cb = pd.concat(A, ignore_index=True), pd.concat(B, ignore_index=True)
+    d, _, _ = P.dataset(P.CFG["fit_seed"])
+    cand = list(dict.fromkeys([int(i) for i in cb.nlargest(6, "sigma").index] + [int(cb.kappa_b.abs().idxmax()), int(cb.rho.idxmin())]))
+    new = [i for i in cand if cb.sigma[i] > ca.sigma.max() or abs(cb.kappa_b[i]) > ca.kappa_b.abs().max() or cb.rho[i] < ca.rho.min()]
+    gates = {}
+    for i in new:
+        q = P.draw_to_params(cb.iloc[i], d["N"])
+        g = P.gate(d, q)
+        gates[str(i)] = dict(sigma=float(q["sigma"]), rho=float(q["rho"]), kappa_b=float(q["kappa_b"]),
+                             **{k: float(v) for k, v in g.items()},
+                             **{"pass": g["log_err"] <= 1e-4 and all(v <= 1e-3 for k, v in g.items() if k.startswith("d_"))})
+    res = dict(a=str(dir_a), b=str(dir_b), core=rows, max_abs_z=max(max(abs(r["z_mean"]), abs(r["z_q05"]), abs(r["z_q95"])) for r in rows.values()),
+               cost=cost, ranges=dict(a=dict(sigma_max=float(ca.sigma.max()), abs_kappa_b_max=float(ca.kappa_b.abs().max()), rho_min=float(ca.rho.min())),
+                                      b=dict(sigma_max=float(cb.sigma.max()), abs_kappa_b_max=float(cb.kappa_b.abs().max()), rho_min=float(cb.rho.min()))),
+               new_tail_states=gates, new_tail_gate_pass=all(g["pass"] for g in gates.values()))
+    pathlib.Path(out_file).write_text(json.dumps(_clean(res), indent=1) + "\n")
+    return res
+
+
 # ---------------------------------------------------------------- control fixtures
 def _run(cmd, root, env=None, timeout=900):
     import os
@@ -662,5 +711,8 @@ if __name__ == "__main__":
         print(json.dumps({k: v for k, v in r.items() if k not in ("chains", "rhat_over_threshold")}, indent=1))
     elif cmd == "summarise":
         summarise(sys.argv[2])
+    elif cmd == "compare":
+        r = compare(sys.argv[2], sys.argv[3], sys.argv[4])
+        print(json.dumps(_clean({k: v for k, v in r.items() if k not in ("core", "cost")}), indent=1))
     else:
         {"build": build, "selftest": selftest}[cmd]()

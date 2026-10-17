@@ -289,3 +289,58 @@ the first wording was too causal):
 - **Next:** fetch with `fetch.sh 20261017-v6r00 R00`, then `pilot.py
   diagnose` (with `active_candidate` v6), the comparison with R00, and
   Q = 64 checks on any new tails.
+
+## v6 R00 comparison: result (job 821087, 17 October 2026)
+
+Evidence: [results/R00-v6-20261017-v6r00/](results/R00-v6-20261017-v6r00/).
+It holds the receipts, accounting, `diagnostics.json`,
+`comparison_with_R00.json` and hashes of every chain file. The 147 MB of
+chain output stay on kunanyi and in scratch.
+
+**Run:**
+- **Completed:** build 821085 (20 min, preflight passed on n008), then the
+  fit in 4 h 40 min wall time (16,825 s), inside the 6 h cap. 11 h 45 min
+  CPU; peak memory 72 MB (PBS).
+- **Qualified:** receipt, manifest 936c2a56…, binary 1a7bc6f9…, settings,
+  files, exits, stderr, CSV headers and 4,000 draws per chain all match.
+
+**Screening: passes on every criterion, the first full pass.**
+
+| Screen | v6 | R00 (v5) |
+| --- | --- | --- |
+| E-BFMI per chain | **0.751, 0.732, 0.768, 0.780** | 0.289, 0.268, 0.315, 0.290 |
+| Divergences / fatal / depth hits | 0 / 0 / 0 | 0 / 0 / 0 |
+| Max R̂, all columns | 1.0016 (τ) | 1.004 (σ) |
+| Minimum core ESS, bulk / tail | 1,125 / 2,298 (σ) | 725 / 1,433 (σ) |
+| η 90% interval (truth 0.2) | 0.0240–0.4993 | 0.0264–0.5109 |
+| η endpoint MCSE | 0.0014 / 0.0049 (met) | 0.0013 / 0.0058 (met) |
+| Raw D / X | no / no; not numerically uncertain | no / no |
+
+The E-BFMI values fall inside Codex's ideal-limit proxy for v6, 0.72–0.78.
+
+**Comparison with R00** (`pilot.py compare`):
+- Across the 11 core parameters' mean, 5% and 95% quantiles, the largest
+  MCSE-scaled difference is |z| = 1.69, consistent with Monte Carlo noise
+  over 33 comparisons.
+- η's endpoints differ by z = −1.23 and −1.53.
+- v6 reached no new tail beyond R00's sampled ranges (σ max 3.08 against
+  3.24; |κ_b| max 2.77 against 3.08; ρ min 3.5e-5 against 1.6e-5).
+  Codex's 48-state Q = 64 checks on R00's tails therefore cover it.
+- **σ's lower tail is unchanged in substance:** 1% quantile 0.300 against
+  0.303; minimum 0.156 against 0.145. This posterior is well away from
+  σ = 0, so it does not test the near-zero concern strongly. Small or
+  weak-signal panel trees may.
+
+**Cost.** Adaptation differed widely between chains:
+
+| Chain | Step size | Median tree depth | Mean leapfrog steps | Sampling time |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.0097 | 9 | 511 | 13,714 s |
+| 2 | 0.0192 | 8 | 255 | 7,082 s |
+| 3 | 0.0333 | 7 | 127 | 3,526 s |
+| 4 | 0.0139 | 8 | 255 | 6,914 s |
+
+The fit's wall time is the slowest chain's: 4.67 h at N = 264. The panel's
+largest trees (N = 385, 556 and 649) would probably exceed 6 h at this
+rate, so panel resources need resetting from this evidence before any
+release.
