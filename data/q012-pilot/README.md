@@ -276,3 +276,16 @@ the first wording was too causal):
     candidate below.
 - E-BFMI barely changed from v4 (0.258–0.326), despite stricter adaptation
   and three times as many iterations.
+
+## v6 R00 comparison: staging record (17 October 2026)
+
+- **Submitted:** build/preflight `821085.kunanyi-ohpc` (running on n008,
+  GCC 12.3.0 loaded), then the v6 R00 comparison `821087.kunanyi-ohpc`
+  with `afterok:821085`.
+  - Queue `normal`; 4 CPUs, 8 GiB, walltime 06:10:00; `ae` mail.
+- **Payload:** `payload_v6/`, manifest 936c2a56…; tarball d4e5ba03….
+  Both tarballs verified by hash on kunanyi.
+- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261017-v6r00`.
+- **Next:** fetch with `fetch.sh 20261017-v6r00 R00`, then `pilot.py
+  diagnose` (with `active_candidate` v6), the comparison with R00, and
+  Q = 64 checks on any new tails.
