@@ -506,11 +506,11 @@ def dataset(seed):
     return adapt(obsd), ginfo, oinfo
 
 
-def model():
+def model(name=None):
     import cmdstanpy
     cmdstanpy.set_cmdstan_path(str(CMDSTAN))
     OUT.mkdir(parents=True, exist_ok=True)
-    name = CFG[CFG.get("active", "v2")]["stan_file"]
+    name = name or CFG[CFG.get("active", "v2")]["stan_file"]
     src = OUT / name
     if not src.exists() or src.read_text() != (HERE / name).read_text():
         src.write_text((HERE / name).read_text())
@@ -585,7 +585,10 @@ def binding(d):
     VER = CFG[CFG["active"]]
     h = lambda b: hashlib.sha256(b).hexdigest()
     files = [HERE / VER["stan_file"], HERE / "prototype.py", HERE / "quadrature.py"] + sorted((HERE / VER["inits"]["dir"]).glob("*.json"))
-    out = {str(f.relative_to(HERE)): h(f.read_bytes()) for f in files}
+    if "reference_version" in VER:
+        ref = CFG[VER["reference_version"]]
+        files += [HERE / ref["stan_file"]] + sorted((HERE / ref["inits"]["dir"]).glob("*.json"))
+    out = {str(f.relative_to(HERE)): h(f.read_bytes()) for f in dict.fromkeys(files)}
     out["config_active_block"] = h(json.dumps(VER, sort_keys=True).encode())
     out["config_shared"] = h(json.dumps({k: CFG[k] for k in ("generator", "observation", "priors", "sampler", "seed", "fit_seed")},
                                         sort_keys=True).encode())
@@ -594,7 +597,48 @@ def binding(d):
     for bank in SAVED_BANKS:
         for f in sorted((OUT / bank).glob("*.csv")):
             out[f"bank:{bank}/{f.name}"] = h(f.read_bytes())
+    if "identity" in VER:
+        for f in sorted((ROOT / VER["identity"]["r00_bank"]).glob("chain*.csv")):
+            out[f"bank:R00/{f.name}"] = h(f.read_bytes())
     return out
+
+
+def to_nc(q):
+    """Map a v5 parameter dict to v6 coordinates: w = sigma^a * eps (everything else unchanged)."""
+    a = CFG[CFG["active"]]["noncentring"]["a"]
+    out = {k: v for k, v in q.items() if k != "eps"}
+    out["w"] = list(float(q["sigma"]) ** a * np.asarray(q["eps"], float))
+    return out
+
+
+def r00_states(d):
+    """Codex's 48 R00 states (76/1814): six highest sigma, largest |kappa_b|, smallest rho, 40 evenly spaced."""
+    import pandas as pd
+    bank = ROOT / CFG[CFG["active"]]["identity"]["r00_bank"]
+    df = pd.concat([pd.read_csv(bank / f"chain{k}.csv", comment="#") for k in range(1, 5)], ignore_index=True)
+    tail = list(dict.fromkeys([int(i) for i in df.nlargest(6, "sigma").index] + [int(df.kappa_b.abs().idxmax()), int(df.rho.idxmin())]))
+    even = [int(i) for i in np.linspace(0, len(df) - 1, 40).astype(int)]
+    return {i: draw_to_params(df.iloc[i], d["N"]) for i in dict.fromkeys(tail + even)}
+
+
+def identity_point(mdl_old, mdl_new, d, q):
+    """Actual Stan log density and AD gradients, v5 against v6, at a mapped state (jacobian = true)."""
+    a = CFG[CFG["active"]]["noncentring"]["a"]
+    go = mdl_old.log_prob(q, data=d, jacobian=True, sig_figs=15).iloc[0]
+    gn = mdl_new.log_prob(to_nc(q), data=d, jacobian=True, sig_figs=15).iloc[0]
+    N, u = d["N"], math.log(q["sigma"])
+    eps = np.asarray(q["eps"], float)
+    ge = np.array([go[f"g_eps.{i}"] for i in range(1, N + 1)])
+    gw = np.array([gn[f"g_w.{i}"] for i in range(1, N + 1)])
+    log_err = abs((gn["lp__"] - go["lp__"]) + a * N * u)
+    scaled = lambda new, exp: np.abs(new - exp) / np.maximum(1.0, np.abs(exp))
+    errs = [scaled(gw, math.exp(-a * u) * ge).max(),
+            scaled(np.array([gn["g_sigma"]]), np.array([go["g_sigma"] - a * float(eps @ ge) - a * N])).max()]
+    others = [c for c in go.index if c.startswith("g_") and not c.startswith("g_eps.") and c != "g_sigma"]
+    errs.append(max(scaled(np.array([gn[c]]), np.array([go[c]])).max() for c in others))
+    finite = bool(np.isfinite(go.to_numpy(float)).all() and np.isfinite(gn.to_numpy(float)).all())
+    return dict(sigma=float(q["sigma"]), lp_v5=float(go["lp__"]), lp_v6=float(gn["lp__"]), log_identity_error=float(log_err),
+                grad_w_error=float(errs[0]), grad_logsigma_error=float(errs[1]), grad_other_error=float(errs[2]), finite=finite)
 
 
 def cohort_A(d, p):
@@ -781,7 +825,45 @@ def checks_solver():
     print(json.dumps(out, indent=1, default=float))
 
 
+def checks_reparam():
+    """v6 against v5 (Codex 76/1814): mapped starts, actual-Stan density/gradient identities, mapped probes, smoke, binding."""
+    from cmdstanpy.utils import write_stan_json
+    VER = CFG[CFG["active"]]
+    I = VER["identity"]
+    d, _, _ = dataset(CFG["fit_seed"])
+    ref = CFG[VER["reference_version"]]
+    starts = [json.loads((HERE / ref["inits"]["dir"] / f"chain{k}.json").read_text()) for k in range(1, 5)]
+    folder = HERE / VER["inits"]["dir"]
+    folder.mkdir(exist_ok=True)
+    paths = []
+    for k, q in enumerate(starts, start=1):
+        paths.append(folder / f"chain{k}.json")
+        write_stan_json(str(paths[-1]), to_nc(q))
+    mdl_old, mdl_new = model(ref["stan_file"]), model()
+    sp = stress_points(d)
+    pts = {f"start_chain{k}": q for k, q in enumerate(starts, start=1)}
+    pts.update(central0=sp["central0"], central1=sp["central1"], stress_s3_r09_kbm15=sp["stress_s3_r09_kbm15"],
+               near_one_rho_099=dict(sp["central0"], rho=0.99), near_one_rho_0999_s3=dict(sp["central0"], rho=0.999, sigma=3.0),
+               small_sigma_002=dict(sp["central0"], sigma=0.02), sigma_001=dict(sp["central0"], sigma=0.01),
+               sigma_0001=dict(sp["central0"], sigma=0.001))
+    pts.update({f"r00_row{i}": q for i, q in r00_states(d).items()})
+    rows = {name: identity_point(mdl_old, mdl_new, d, q) for name, q in pts.items()}
+    worst = {k: max(r[k] for r in rows.values()) for k in ("log_identity_error", "grad_w_error", "grad_logsigma_error", "grad_other_error")}
+    id_ok = all(r["finite"] for r in rows.values()) and worst["log_identity_error"] <= I["log_tol"] and \
+        max(worst[k] for k in ("grad_w_error", "grad_logsigma_error", "grad_other_error")) <= I["grad_tol"]
+    out = dict(identity=dict(points=len(rows), worst=worst, rows=rows, **{"pass": id_ok}))
+    out["probes"] = probes(d, starts)
+    out["smoke"] = smoke(paths) if out["probes"]["pass"] else "not run: probes failed"
+    out["all_prefit_checks_pass"] = id_ok and out["probes"]["pass"] and isinstance(out["smoke"], dict) and out["smoke"]["pass"]
+    out["binding"] = binding(d)
+    (HERE / VER["checks_file"]).write_text(json.dumps(out, indent=1, default=float) + "\n")
+    print(json.dumps({k: v for k, v in out.items() if k not in ("binding",)} | dict(identity=dict(worst=worst, points=len(rows), ok=id_ok)),
+                     indent=1, default=float)[:4000])
+
+
 def checks():
+    if CFG.get("active") == "v6":
+        return checks_reparam()
     if CFG.get("active") in ("v3", "v4", "v5"):
         return checks_solver()
     out = dict(rounding_fixtures=rounding_fixtures())
@@ -937,7 +1019,7 @@ def probes(d, starts):
         if time.time() - t0 > P["budget_seconds"]:
             return dict(label=label, kind=kind, outcome="not_run_budget")
         f = work / f"p{j}.json"
-        write_stan_json(str(f), q)
+        write_stan_json(str(f), to_nc(q) if "noncentring" in VER else q)
         try:
             r = subprocess.run([str(exe), "sample", "num_samples=1", "num_warmup=0", "adapt", "engaged=0", "algorithm=hmc",
                                 "engine=nuts", "max_depth=1", "stepsize=" + str(VER["init_step_size"]), "init=" + str(f),

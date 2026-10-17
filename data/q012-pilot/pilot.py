@@ -24,8 +24,9 @@ import time
 import numpy as np
 
 HERE = pathlib.Path(__file__).resolve().parent
-PAY = HERE / "payload"
 PILOT = json.loads((HERE / "pilot.json").read_text())
+CAND = PILOT["candidates"][PILOT["active_candidate"]]
+PAY = HERE / CAND["payload_dir"]
 _spec = importlib.util.spec_from_file_location("prototype", HERE.parent / "q012-prototype" / "prototype.py")
 P = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(P)
@@ -33,7 +34,7 @@ CACHE = P.OUT.parent / "q012-pilot"
 RUN_ENV = dict(CHAINS=4, WARMUP=PILOT["sampler"]["iter_warmup"], SAMPLING=PILOT["sampler"]["iter_sampling"],
                ADAPT_DELTA=PILOT["sampler"]["adapt_delta"], MAX_DEPTH=PILOT["sampler"]["max_treedepth"],
                STEPSIZE=PILOT["sampler"]["init_step_size"], SEED=77017, FIT_SECONDS=PILOT["resources"]["fit_seconds"],
-               SMOKE_SECONDS=PILOT["resources"]["smoke_seconds"], MODEL_BIN="./model_v4",
+               SMOKE_SECONDS=PILOT["resources"]["smoke_seconds"], MODEL_BIN="./" + CAND["stan_file"].removesuffix(".stan"),
                MODULE="HDF5/1.14.0-gompi-2023a", CMDSTAN_VERSION="2.38.0")
 
 
@@ -76,12 +77,13 @@ def generate(seed, overrides, timeout):
     return out + (round(time.time() - t0, 2),)
 
 
-def write_starts(folder, N):
+def write_starts(folder, N, mapped=False):
+    """The four prior-centred starts by the declared rule; for a reparameterised candidate, mapped exactly to its coordinates."""
     from cmdstanpy.utils import write_stan_json
     rule = P.CFG[P.CFG["active"]]["inits"]
     folder.mkdir(parents=True, exist_ok=True)
     for k, q in enumerate(P.init_points(rule, rule["seed"], 4, N, rule["perturbation"]), start=1):
-        write_stan_json(str(folder / f"chain{k}.json"), q)
+        write_stan_json(str(folder / f"chain{k}.json"), P.to_nc(q) if mapped else q)
 
 
 def log_prob_csv(exe, params_file, data_file, out_file):
@@ -127,24 +129,26 @@ def build():
     """Build the payload: refuse unless the prototype's checks pass and are bound to the current source and settings."""
     from cmdstanpy.utils import write_stan_json
     ver = P.CFG["active"]
-    assert ver == PILOT["candidate"]["prototype_version"], f"prototype active version is {ver}"
-    chk = json.loads((HERE / PILOT["candidate"]["checks_file"]).read_text())
+    assert ver == CAND["prototype_version"], f"prototype active version is {ver}"
+    chk = json.loads((HERE / CAND["checks_file"]).read_text())
     d_fit, _, _ = P.dataset(P.CFG["fit_seed"])
     assert chk["all_prefit_checks_pass"], "prototype checks have not passed"
     assert chk["binding"] == P.binding(d_fit), "stale prototype checks: rerun prototype.py checks"
     table_sha = sha(HERE / PILOT["scenarios_file"])
+    if not (PAY / "pbs").exists():  # a further candidate's package reuses the cleared runner scripts unchanged
+        shutil.copytree(HERE / "payload" / "pbs", PAY / "pbs")
     for sub in ("data", "inits", "preflight"):
         shutil.rmtree(PAY / sub, ignore_errors=True)
         (PAY / sub).mkdir(parents=True)
     rows = []
-    for s in scenarios():
+    for s in [s for s in scenarios() if CAND["scenarios"] == "all" or s["id"] in CAND["scenarios"]]:
         assert int(s["sampler_seed"]) == RUN_ENV["SEED"]
         ov = dict(lambda0=float(s["lambda0"]), sigma=float(s["sigma"]), rho=float(s["rho"]))
         outcome, d, ginfo, oinfo, secs = generate(int(s["gen_seed"]), ov, PILOT["generator"]["timeout_seconds"])
         row = dict(s, outcome=outcome, generator_seconds=secs, true_lineages=(ginfo or {}).get("true_lineages"))
         if outcome == "ok":
             write_stan_json(str(PAY / "data" / f"{s['id']}.json"), d)
-            write_starts(PAY / "inits" / s["id"], d["N"])
+            write_starts(PAY / "inits" / s["id"], d["N"], "noncentring" in P.CFG[ver])
             row.update(N=d["N"], observation=oinfo, cohort=d["NC"], singles=d["C1"], pairs=d["C2"])
         rows.append(row)
         print(s["id"], outcome, row.get("N"), secs)
@@ -156,9 +160,16 @@ def build():
         assert (PAY / "inits" / "R00" / f"chain{k}.json").read_bytes() == \
             (P.HERE / P.CFG[ver]["inits"]["dir"] / f"chain{k}.json").read_bytes(), "R00 starts differ from the checked starts"
     # Preflight points and their local reference log density and gradients.
-    tail, _, imax = P.v4_states(d_fit)
     sp = P.stress_points(d_fit)
-    pts = dict(central0=sp["central0"], stress_s3_r09_kbm15=sp["stress_s3_r09_kbm15"], max_sigma_v4_state=tail[imax])
+    if "tail_states" in P.CFG[ver]:
+        tail, _, imax = P.v4_states(d_fit)
+        pts = dict(central0=sp["central0"], stress_s3_r09_kbm15=sp["stress_s3_r09_kbm15"], max_sigma_v4_state=tail[imax])
+    else:
+        r00 = P.r00_states(d_fit)
+        pts = dict(central0=sp["central0"], stress_s3_r09_kbm15=sp["stress_s3_r09_kbm15"],
+                   max_sigma_r00_state=max(r00.values(), key=lambda q: q["sigma"]))
+    if "noncentring" in P.CFG[ver]:
+        pts = {k: P.to_nc(q) for k, q in pts.items()}
     exe = P.OUT / P.CFG[ver]["stan_file"].removesuffix(".stan")
     for name, q in pts.items():
         write_stan_json(str(PAY / "preflight" / f"point_{name}.json"), q)
@@ -168,7 +179,9 @@ def build():
         if row["outcome"] == "ok":
             row["starts_initialise"] = start_check(exe, row["id"])
     shutil.copy(P.HERE / P.CFG[ver]["stan_file"], PAY / P.CFG[ver]["stan_file"])
-    shutil.copy(HERE / PILOT["scenarios_file"], PAY / "scenarios.tsv")
+    lines = (HERE / PILOT["scenarios_file"]).read_text().splitlines(keepends=True)
+    (PAY / "scenarios.tsv").write_text(lines[0] + "".join(ln for ln in lines[1:] if CAND["scenarios"] == "all"
+                                                          or ln.split("\t")[0] in CAND["scenarios"]))
     (PAY / "run.env").write_text("".join(f"{k}={v}\n" for k, v in RUN_ENV.items()))
     tb = cmdstan_tarball()
     (PAY / "cmdstan.sha256").write_text(f"{sha(tb)}  {tb.name}\n")
@@ -177,7 +190,8 @@ def build():
     man = dict(created=time.strftime("%Y-%m-%dT%H:%M:%S%z"), git_head_at_build=head, files=nfiles,
                manifest_sha256=sha(PAY / "manifest.sha256"), pilot_json_sha256=sha(HERE / "pilot.json"),
                scenario_table=dict(file=PILOT["scenarios_file"], sha256=table_sha, frozen_commit="c93ea58"),
-               prototype_checks=dict(file=PILOT["candidate"]["checks_file"], sha256=sha(HERE / PILOT["candidate"]["checks_file"]),
+               candidate=PILOT["active_candidate"],
+               prototype_checks=dict(file=CAND["checks_file"], sha256=sha(HERE / CAND["checks_file"]),
                                      binding=chk["binding"], all_prefit_checks_pass=chk["all_prefit_checks_pass"]),
                cmdstan=dict(version=RUN_ENV["CMDSTAN_VERSION"], url=PILOT["runtime"]["cmdstan_url"], tarball_sha256=sha(tb)),
                run_env=RUN_ENV, scenarios=rows)
@@ -608,7 +622,7 @@ def selftest():
         for f in (P.OUT / b).glob("*.csv"):
             shutil.copy(f, banks / b / f.name)
     d_fit, _, _ = P.dataset(P.CFG["fit_seed"])
-    real_out, chk = P.OUT, json.loads((HERE / PILOT["candidate"]["checks_file"]).read_text())
+    real_out, chk = P.OUT, json.loads((HERE / CAND["checks_file"]).read_text())
     try:
         P.OUT = banks
         before = P.binding(d_fit) == chk["binding"]

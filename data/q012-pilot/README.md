@@ -258,13 +258,21 @@ set, exits, stderr, CSV headers and 4,000 draws per chain all match.
 - endpoint MCSE 0.0013 / 0.0058, so the 0.01 target is met;
 - raw D = no, X = no; neither is numerically uncertain.
 
-**Where the low E-BFMI comes from** (post-warmup draws):
-- The energy correlates with log σ (−0.78), log k (−0.74) and κ (−0.54).
-- Those three are strongly correlated in the posterior: log k–log σ 0.87,
-  κ–log σ 0.86, κ–log k 0.69.
-- This is the frailty-versus-ageing ridge: inherited frailty spread (σ),
-  intrinsic age-dependence (Weibull k) and frailty's effect on budding (κ)
-  trade off.
+**Interpreting the low E-BFMI** (revised after Codex's review, 76/1814;
+the first wording was too causal):
+- **Correlations, post-warmup draws:**
+  - the energy correlates with log σ (−0.78), log k (−0.74) and κ (−0.54);
+  - those three are strongly correlated with one another (0.69–0.87).
+- This is *consistent with* a frailty-versus-ageing trade-off, but does not
+  establish it as the source.
+- **Codex's energy calculation is the sharper account.** For any fixed
+  Gaussian metric, the stationary exact-Hamiltonian limit of CmdStan's
+  E-BFMI is d / (Var(U) + d/2), with d = 299.
+  - R00's Var(U) of 789–938 predicts 0.275–0.319, which matches the
+    observed values.
+  - A dense metric, or any affine change of coordinates, leaves Var(U)
+    unchanged. My proposed `dense_e` remedy was therefore withdrawn.
+  - A nonlinear reparameterisation can reduce Var(U): see the v6
+    candidate below.
 - E-BFMI barely changed from v4 (0.258–0.326), despite stricter adaptation
-  and three times as many iterations. That points to geometry, not run
-  length.
+  and three times as many iterations.

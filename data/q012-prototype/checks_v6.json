@@ -1,0 +1,2149 @@
+{
+ "identity": {
+  "points": 60,
+  "worst": {
+   "log_identity_error": 2.8698821097350447e-11,
+   "grad_w_error": 9.233765598903989e-15,
+   "grad_logsigma_error": 1.2432443558856201e-14,
+   "grad_other_error": 9.23133892940549e-13
+  },
+  "rows": {
+   "start_chain1": {
+    "sigma": 0.8009515804637334,
+    "lp_v5": -1458.378330332,
+    "lp_v6": -1446.65911781072,
+    "log_identity_error": 7.73425767874869e-12,
+    "grad_w_error": 6.8793205541031115e-15,
+    "grad_logsigma_error": 5.565173086362382e-16,
+    "grad_other_error": 3.0576240029308804e-14,
+    "finite": true
+   },
+   "start_chain2": {
+    "sigma": 0.4089142755330148,
+    "lp_v5": -1474.81307561056,
+    "lp_v6": -1427.59668932899,
+    "log_identity_error": 2.4158453015843406e-12,
+    "grad_w_error": 6.435667655061395e-15,
+    "grad_logsigma_error": 1.061099657111182e-15,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "start_chain3": {
+    "sigma": 0.7631317414442317,
+    "lp_v5": -1472.21340684285,
+    "lp_v6": -1457.94026795446,
+    "log_identity_error": 3.5509373219611007e-12,
+    "grad_w_error": 6.691976338614183e-15,
+    "grad_logsigma_error": 4.69869045004787e-16,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "start_chain4": {
+    "sigma": 0.5973819744332839,
+    "lp_v5": -1560.60221586752,
+    "lp_v6": -1533.39973258498,
+    "log_identity_error": 1.0480505352461478e-12,
+    "grad_w_error": 6.6588446030513415e-15,
+    "grad_logsigma_error": 2.73545205316111e-15,
+    "grad_other_error": 2.1451237479836926e-15,
+    "finite": true
+   },
+   "central0": {
+    "sigma": 0.5,
+    "lp_v5": -1607.12184361625,
+    "lp_v6": -1570.52367248268,
+    "log_identity_error": 4.959588295605499e-12,
+    "grad_w_error": 8.415606942989952e-15,
+    "grad_logsigma_error": 4.625270529450373e-16,
+    "grad_other_error": 5.400144282442791e-15,
+    "finite": true
+   },
+   "central1": {
+    "sigma": 0.8,
+    "lp_v5": -1666.47106612721,
+    "lp_v6": -1654.68908661781,
+    "log_identity_error": 9.615419571673556e-12,
+    "grad_w_error": 7.466662640150677e-15,
+    "grad_logsigma_error": 2.9986280396982173e-15,
+    "grad_other_error": 7.210785915956386e-15,
+    "finite": true
+   },
+   "stress_s3_r09_kbm15": {
+    "sigma": 3.0,
+    "lp_v5": -90827.3478614384,
+    "lp_v6": -90885.3545902801,
+    "log_identity_error": 2.8698821097350447e-11,
+    "grad_w_error": 5.7707113156502604e-15,
+    "grad_logsigma_error": 3.970972384879333e-15,
+    "grad_other_error": 9.51914526322912e-15,
+    "finite": true
+   },
+   "near_one_rho_099": {
+    "sigma": 0.5,
+    "lp_v5": -1654.17377689963,
+    "lp_v6": -1617.57560576607,
+    "log_identity_error": 5.272227099339943e-12,
+    "grad_w_error": 5.485207017751878e-15,
+    "grad_logsigma_error": 1.6148177178208665e-15,
+    "grad_other_error": 9.395352458175824e-15,
+    "finite": true
+   },
+   "near_one_rho_0999_s3": {
+    "sigma": 3.0,
+    "lp_v5": -2052.88266859179,
+    "lp_v6": -2110.88939743347,
+    "log_identity_error": 3.68771679859492e-12,
+    "grad_w_error": 6.089353630827071e-15,
+    "grad_logsigma_error": 1.1209287924190044e-15,
+    "grad_other_error": 7.953817677187268e-15,
+    "finite": true
+   },
+   "small_sigma_002": {
+    "sigma": 0.02,
+    "lp_v5": -1587.64168263405,
+    "lp_v6": -1381.08686794744,
+    "log_identity_error": 4.007461029686965e-12,
+    "grad_w_error": 5.461505051300232e-15,
+    "grad_logsigma_error": 1.2424139299770994e-16,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "sigma_001": {
+    "sigma": 0.01,
+    "lp_v5": -1588.11223182036,
+    "lp_v6": -1344.95924600019,
+    "log_identity_error": 1.2221335055073723e-12,
+    "grad_w_error": 5.215822714908156e-15,
+    "grad_logsigma_error": 6.377331495633342e-16,
+    "grad_other_error": 1.0061396160665481e-16,
+    "finite": true
+   },
+   "sigma_0001": {
+    "sigma": 0.001,
+    "lp_v5": -1590.22322858945,
+    "lp_v6": -1225.4937498592,
+    "log_identity_error": 6.991740519879386e-12,
+    "grad_w_error": 5.4899169294882585e-15,
+    "grad_logsigma_error": 5.218510684198117e-16,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row15012": {
+    "sigma": 3.2368489,
+    "lp_v5": -1382.75870929213,
+    "lp_v6": -1444.7776048592,
+    "log_identity_error": 2.5579538487363607e-12,
+    "grad_w_error": 6.932076147295524e-15,
+    "grad_logsigma_error": 1.4417539053522137e-15,
+    "grad_other_error": 8.628905918982243e-15,
+    "finite": true
+   },
+   "r00_row2398": {
+    "sigma": 3.163692,
+    "lp_v5": -1388.55062624318,
+    "lp_v6": -1449.36248240499,
+    "log_identity_error": 2.0037305148434825e-12,
+    "grad_w_error": 7.20611513788981e-15,
+    "grad_logsigma_error": 2.5517979095054558e-15,
+    "grad_other_error": 9.39177986023641e-15,
+    "finite": true
+   },
+   "r00_row13116": {
+    "sigma": 3.1326852,
+    "lp_v5": -1385.70050446488,
+    "lp_v6": -1445.99232435106,
+    "log_identity_error": 1.9610979506978765e-12,
+    "grad_w_error": 7.437289881005868e-15,
+    "grad_logsigma_error": 1.4006078717091983e-16,
+    "grad_other_error": 6.994405055138486e-15,
+    "finite": true
+   },
+   "r00_row2397": {
+    "sigma": 2.8675594,
+    "lp_v5": -1395.48662062585,
+    "lp_v6": -1451.10937645882,
+    "log_identity_error": 2.3376856006507296e-12,
+    "grad_w_error": 6.757876231290348e-15,
+    "grad_logsigma_error": 2.4072103431199e-16,
+    "grad_other_error": 2.4451049389185632e-14,
+    "finite": true
+   },
+   "r00_row13114": {
+    "sigma": 2.857027,
+    "lp_v5": -1415.95194333377,
+    "lp_v6": -1471.38041042389,
+    "log_identity_error": 5.400124791776761e-13,
+    "grad_w_error": 7.095812405542615e-15,
+    "grad_logsigma_error": 2.1983990572698902e-15,
+    "grad_other_error": 6.042641162815154e-15,
+    "finite": true
+   },
+   "r00_row13113": {
+    "sigma": 2.8543695,
+    "lp_v5": -1420.13382656743,
+    "lp_v6": -1475.51315821051,
+    "log_identity_error": 9.023892744153272e-13,
+    "grad_w_error": 6.836707864303746e-15,
+    "grad_logsigma_error": 1.3246207867971057e-15,
+    "grad_other_error": 1.3988810110276972e-14,
+    "finite": true
+   },
+   "r00_row5048": {
+    "sigma": 0.31502275,
+    "lp_v5": -1531.73402258045,
+    "lp_v6": -1470.74419237582,
+    "log_identity_error": 2.9913849175500218e-12,
+    "grad_w_error": 6.475237116564295e-15,
+    "grad_logsigma_error": 1.9207683210946535e-15,
+    "grad_other_error": 2.6443864974272605e-15,
+    "finite": true
+   },
+   "r00_row14548": {
+    "sigma": 1.1913474,
+    "lp_v5": -1498.91500809578,
+    "lp_v6": -1508.15949269007,
+    "log_identity_error": 5.3930193644191604e-12,
+    "grad_w_error": 7.813346150843845e-15,
+    "grad_logsigma_error": 5.257697584916759e-15,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row0": {
+    "sigma": 2.4768873,
+    "lp_v5": -1407.58069143825,
+    "lp_v6": -1455.47043140498,
+    "log_identity_error": 4.789058039023075e-12,
+    "grad_w_error": 7.938281881670765e-15,
+    "grad_logsigma_error": 1.0735463733628654e-15,
+    "grad_other_error": 7.14251030238645e-14,
+    "finite": true
+   },
+   "r00_row410": {
+    "sigma": 0.91984063,
+    "lp_v5": -1502.19215832516,
+    "lp_v6": -1497.7804621287,
+    "log_identity_error": 7.611689056830073e-13,
+    "grad_w_error": 9.233765598903989e-15,
+    "grad_logsigma_error": 2.067697530158218e-15,
+    "grad_other_error": 3.723371681329514e-15,
+    "finite": true
+   },
+   "r00_row820": {
+    "sigma": 1.4044605,
+    "lp_v5": -1480.66263881996,
+    "lp_v6": -1498.5963300651,
+    "log_identity_error": 4.014566457044566e-13,
+    "grad_w_error": 6.685317831261314e-15,
+    "grad_logsigma_error": 2.070020086110822e-16,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row1230": {
+    "sigma": 0.8173739,
+    "lp_v5": -1535.00267089157,
+    "lp_v6": -1524.35509475906,
+    "log_identity_error": 8.917311333789257e-12,
+    "grad_w_error": 8.01485413990004e-15,
+    "grad_logsigma_error": 2.6068279029611347e-15,
+    "grad_other_error": 1.4830007498337858e-14,
+    "finite": true
+   },
+   "r00_row1640": {
+    "sigma": 1.0212979,
+    "lp_v5": -1522.11513449466,
+    "lp_v6": -1523.22785591882,
+    "log_identity_error": 2.5373037004783328e-12,
+    "grad_w_error": 7.848454828939548e-15,
+    "grad_logsigma_error": 1.4712180332246447e-15,
+    "grad_other_error": 6.696311858741896e-15,
+    "finite": true
+   },
+   "r00_row2051": {
+    "sigma": 0.73505703,
+    "lp_v5": -1509.32933788671,
+    "lp_v6": -1493.07711820494,
+    "log_identity_error": 2.334132886971929e-12,
+    "grad_w_error": 7.624410524787077e-15,
+    "grad_logsigma_error": 1.5128829194480604e-15,
+    "grad_other_error": 1.0878273341010733e-14,
+    "finite": true
+   },
+   "r00_row2461": {
+    "sigma": 1.3225846,
+    "lp_v5": -1475.27475251744,
+    "lp_v6": -1490.03699112725,
+    "log_identity_error": 3.643307877609914e-12,
+    "grad_w_error": 7.942423462527996e-15,
+    "grad_logsigma_error": 9.363851847275187e-16,
+    "grad_other_error": 3.7582124495522744e-15,
+    "finite": true
+   },
+   "r00_row2871": {
+    "sigma": 0.76905881,
+    "lp_v5": -1546.54592574875,
+    "lp_v6": -1532.68128798378,
+    "log_identity_error": 4.291678123991005e-12,
+    "grad_w_error": 7.252423104974688e-15,
+    "grad_logsigma_error": 3.563235934665859e-15,
+    "grad_other_error": 1.058408413773084e-14,
+    "finite": true
+   },
+   "r00_row3281": {
+    "sigma": 1.3728087,
+    "lp_v5": -1491.03626785358,
+    "lp_v6": -1507.76641181478,
+    "log_identity_error": 6.803446694902959e-12,
+    "grad_w_error": 8.10701764315608e-15,
+    "grad_logsigma_error": 4.153986058019032e-15,
+    "grad_other_error": 4.403923124935848e-14,
+    "finite": true
+   },
+   "r00_row3692": {
+    "sigma": 0.96105935,
+    "lp_v5": -1487.59986139162,
+    "lp_v6": -1485.50269220758,
+    "log_identity_error": 3.75788289375123e-12,
+    "grad_w_error": 8.470516302339328e-15,
+    "grad_logsigma_error": 1.6149777811020906e-15,
+    "grad_other_error": 5.20819421346492e-14,
+    "finite": true
+   },
+   "r00_row4102": {
+    "sigma": 1.0389004,
+    "lp_v5": -1492.64870789432,
+    "lp_v6": -1494.66370616929,
+    "log_identity_error": 2.134736831749251e-12,
+    "grad_w_error": 7.428436331937746e-15,
+    "grad_logsigma_error": 1.4178372520294834e-15,
+    "grad_other_error": 7.171598386324108e-14,
+    "finite": true
+   },
+   "r00_row4512": {
+    "sigma": 1.2572804,
+    "lp_v5": -1496.60569326503,
+    "lp_v6": -1508.69430477328,
+    "log_identity_error": 1.120881165661558e-12,
+    "grad_w_error": 7.074615931277102e-15,
+    "grad_logsigma_error": 1.259420637179332e-15,
+    "grad_other_error": 1.6392355044696015e-14,
+    "finite": true
+   },
+   "r00_row4922": {
+    "sigma": 1.1678641,
+    "lp_v5": -1513.82795959212,
+    "lp_v6": -1522.02128010667,
+    "log_identity_error": 1.1404210908949608e-12,
+    "grad_w_error": 6.457431827492343e-15,
+    "grad_logsigma_error": 2.375967712023507e-15,
+    "grad_other_error": 9.166375613693664e-15,
+    "finite": true
+   },
+   "r00_row5333": {
+    "sigma": 0.50834074,
+    "lp_v5": -1537.78510428964,
+    "lp_v6": -1502.06044961547,
+    "log_identity_error": 8.533618256478803e-12,
+    "grad_w_error": 6.951850925610847e-15,
+    "grad_logsigma_error": 1.2432443558856201e-14,
+    "grad_other_error": 1.2898315978372928e-14,
+    "finite": true
+   },
+   "r00_row5743": {
+    "sigma": 1.1981921,
+    "lp_v5": -1500.19853093427,
+    "lp_v6": -1509.74550155019,
+    "log_identity_error": 2.8492763703980017e-12,
+    "grad_w_error": 7.837064407816248e-15,
+    "grad_logsigma_error": 5.587861003498246e-16,
+    "grad_other_error": 8.661115757394215e-15,
+    "finite": true
+   },
+   "r00_row6153": {
+    "sigma": 1.1183755,
+    "lp_v5": -1501.66722274466,
+    "lp_v6": -1507.57433816349,
+    "log_identity_error": 3.4807712268047908e-12,
+    "grad_w_error": 7.577665298052967e-15,
+    "grad_logsigma_error": 3.994196392761247e-15,
+    "grad_other_error": 1.275312353935717e-15,
+    "finite": true
+   },
+   "r00_row6563": {
+    "sigma": 1.7896366,
+    "lp_v5": -1445.23422007362,
+    "lp_v6": -1475.96448442868,
+    "log_identity_error": 3.907985046680551e-14,
+    "grad_w_error": 8.417831789179048e-15,
+    "grad_logsigma_error": 5.09023734995009e-16,
+    "grad_other_error": 7.937728832816233e-15,
+    "finite": true
+   },
+   "r00_row6973": {
+    "sigma": 1.4557244,
+    "lp_v5": -1475.37119112463,
+    "lp_v6": -1495.19778364101,
+    "log_identity_error": 7.954525926834322e-12,
+    "grad_w_error": 8.245888313926634e-15,
+    "grad_logsigma_error": 1.9227010191096994e-16,
+    "grad_other_error": 1.942890293094024e-16,
+    "finite": true
+   },
+   "r00_row7384": {
+    "sigma": 1.3603027,
+    "lp_v5": -1479.13025074069,
+    "lp_v6": -1495.3771934621,
+    "log_identity_error": 2.7711166694643907e-13,
+    "grad_w_error": 8.708902569524019e-15,
+    "grad_logsigma_error": 7.511364827916408e-15,
+    "grad_other_error": 1.1832470306664864e-14,
+    "finite": true
+   },
+   "r00_row7794": {
+    "sigma": 1.2662403,
+    "lp_v5": -1494.41975125028,
+    "lp_v6": -1506.88330298231,
+    "log_identity_error": 6.757261417078553e-12,
+    "grad_w_error": 7.408472232559017e-15,
+    "grad_logsigma_error": 3.1795590180924055e-15,
+    "grad_other_error": 1.998937388150787e-15,
+    "finite": true
+   },
+   "r00_row8204": {
+    "sigma": 0.62210224,
+    "lp_v5": -1516.32910967892,
+    "lp_v6": -1491.26754602598,
+    "log_identity_error": 7.108980071279802e-12,
+    "grad_w_error": 6.5881944777478994e-15,
+    "grad_logsigma_error": 5.544935997762187e-15,
+    "grad_other_error": 9.512360123166336e-15,
+    "finite": true
+   },
+   "r00_row8614": {
+    "sigma": 0.8170706,
+    "lp_v5": -1527.81665471552,
+    "lp_v6": -1517.14948264056,
+    "log_identity_error": 3.8404834867833415e-12,
+    "grad_w_error": 6.516740248796824e-15,
+    "grad_logsigma_error": 2.719835559964851e-15,
+    "grad_other_error": 9.600475816907273e-15,
+    "finite": true
+   },
+   "r00_row9025": {
+    "sigma": 1.0959498,
+    "lp_v5": -1486.84475738123,
+    "lp_v6": -1491.68236648585,
+    "log_identity_error": 3.5456082514429e-12,
+    "grad_w_error": 8.639178172687855e-15,
+    "grad_logsigma_error": 4.487357508373111e-16,
+    "grad_other_error": 6.106226635438361e-16,
+    "finite": true
+   },
+   "r00_row9435": {
+    "sigma": 0.45432327,
+    "lp_v5": -1550.96656015858,
+    "lp_v6": -1509.3101962647,
+    "log_identity_error": 3.886668764607748e-12,
+    "grad_w_error": 6.732704498226607e-15,
+    "grad_logsigma_error": 3.724899855878485e-15,
+    "grad_other_error": 5.695444116327053e-14,
+    "finite": true
+   },
+   "r00_row9845": {
+    "sigma": 1.4086099,
+    "lp_v5": -1466.84532830692,
+    "lp_v6": -1484.93478421326,
+    "log_identity_error": 6.039613253960852e-13,
+    "grad_w_error": 6.788577210986262e-15,
+    "grad_logsigma_error": 3.3253699348848346e-16,
+    "grad_other_error": 1.3516833936599441e-14,
+    "finite": true
+   },
+   "r00_row10255": {
+    "sigma": 0.39770767,
+    "lp_v5": -1534.19774923602,
+    "lp_v6": -1485.51414066802,
+    "log_identity_error": 1.7124079931818414e-12,
+    "grad_w_error": 8.855241996922439e-15,
+    "grad_logsigma_error": 3.988743891670249e-15,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row10666": {
+    "sigma": 0.91762389,
+    "lp_v5": -1498.57882108705,
+    "lp_v6": -1494.03972767828,
+    "log_identity_error": 8.126832540256146e-13,
+    "grad_w_error": 7.923437051849761e-15,
+    "grad_logsigma_error": 2.0122792321330962e-15,
+    "grad_other_error": 1.0443043457777175e-15,
+    "finite": true
+   },
+   "r00_row11076": {
+    "sigma": 0.81485757,
+    "lp_v5": -1503.50961260872,
+    "lp_v6": -1492.69923808433,
+    "log_identity_error": 5.114131340633321e-12,
+    "grad_w_error": 7.845637370662786e-15,
+    "grad_logsigma_error": 1.859113310193061e-15,
+    "grad_other_error": 2.4937305747056517e-14,
+    "finite": true
+   },
+   "r00_row11486": {
+    "sigma": 0.90540115,
+    "lp_v5": -1524.08717493104,
+    "lp_v6": -1518.84006015312,
+    "log_identity_error": 4.014566457044566e-13,
+    "grad_w_error": 8.10025493855154e-15,
+    "grad_logsigma_error": 1.2372589252735246e-15,
+    "grad_other_error": 1.0408340855860843e-16,
+    "finite": true
+   },
+   "r00_row11896": {
+    "sigma": 0.86749939,
+    "lp_v5": -1507.88746572485,
+    "lp_v6": -1500.38244889136,
+    "log_identity_error": 7.744027641365392e-12,
+    "grad_w_error": 5.773696054749092e-15,
+    "grad_logsigma_error": 2.2991060509557266e-15,
+    "grad_other_error": 5.254337589545918e-15,
+    "finite": true
+   },
+   "r00_row12306": {
+    "sigma": 1.0289017,
+    "lp_v5": -1508.65261475448,
+    "lp_v6": -1510.15698827031,
+    "log_identity_error": 2.9309887850104133e-12,
+    "grad_w_error": 6.722149436002507e-15,
+    "grad_logsigma_error": 4.6727891916888874e-15,
+    "grad_other_error": 9.23133892940549e-13,
+    "finite": true
+   },
+   "r00_row12717": {
+    "sigma": 0.74941301,
+    "lp_v5": -1525.86356238521,
+    "lp_v6": -1510.63260868409,
+    "log_identity_error": 2.5490720645393594e-12,
+    "grad_w_error": 6.481363370639032e-15,
+    "grad_logsigma_error": 6.96614132489931e-15,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row13127": {
+    "sigma": 1.7075407,
+    "lp_v5": -1474.43313222094,
+    "lp_v6": -1502.68399124571,
+    "log_identity_error": 5.211830966800335e-12,
+    "grad_w_error": 6.702269395319203e-15,
+    "grad_logsigma_error": 1.3814023058107324e-15,
+    "grad_other_error": 1.3417946936548584e-14,
+    "finite": true
+   },
+   "r00_row13537": {
+    "sigma": 1.6857102,
+    "lp_v5": -1446.39512329105,
+    "lp_v6": -1473.96659470959,
+    "log_identity_error": 4.387601393318619e-12,
+    "grad_w_error": 7.048564988343523e-15,
+    "grad_logsigma_error": 2.2347930379673843e-15,
+    "grad_other_error": 1.708737436360442e-14,
+    "finite": true
+   },
+   "r00_row13947": {
+    "sigma": 0.90796739,
+    "lp_v5": -1497.51702756198,
+    "lp_v6": -1492.4193557235,
+    "log_identity_error": 2.1280754936015e-12,
+    "grad_w_error": 8.612606716290642e-15,
+    "grad_logsigma_error": 1.41103042795314e-15,
+    "grad_other_error": 1.509448847644886e-15,
+    "finite": true
+   },
+   "r00_row14358": {
+    "sigma": 0.54603832,
+    "lp_v5": -1534.96434934287,
+    "lp_v6": -1503.01685807224,
+    "log_identity_error": 2.142286348316702e-12,
+    "grad_w_error": 6.78298664618079e-15,
+    "grad_logsigma_error": 4.816089754883931e-15,
+    "grad_other_error": 3.9898639947466563e-16,
+    "finite": true
+   },
+   "r00_row14768": {
+    "sigma": 0.73616407,
+    "lp_v5": -1523.33194649311,
+    "lp_v6": -1507.15918695914,
+    "log_identity_error": 5.3717030823463574e-12,
+    "grad_w_error": 7.364072375489252e-15,
+    "grad_logsigma_error": 1.4772903052444048e-15,
+    "grad_other_error": 4.529280813226884e-14,
+    "finite": true
+   },
+   "r00_row15178": {
+    "sigma": 1.1103698,
+    "lp_v5": -1477.27471376197,
+    "lp_v6": -1482.80251012806,
+    "log_identity_error": 4.002131959168764e-12,
+    "grad_w_error": 8.156836164212762e-15,
+    "grad_logsigma_error": 3.295812524799182e-15,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row15588": {
+    "sigma": 0.54358051,
+    "lp_v5": -1533.71203534062,
+    "lp_v6": -1501.52634593222,
+    "log_identity_error": 1.8616219676914625e-12,
+    "grad_w_error": 6.289701950711991e-15,
+    "grad_logsigma_error": 2.639550754617007e-15,
+    "grad_other_error": 0.0,
+    "finite": true
+   },
+   "r00_row15999": {
+    "sigma": 1.7633838,
+    "lp_v5": -1449.01708311407,
+    "lp_v6": -1478.96706877071,
+    "log_identity_error": 2.8741453661496053e-12,
+    "grad_w_error": 7.385257079730329e-15,
+    "grad_logsigma_error": 1.926996338037868e-15,
+    "grad_other_error": 1.4233280174935768e-14,
+    "finite": true
+   }
+  },
+  "pass": true
+ },
+ "probes": {
+  "points": 200,
+  "seconds": 1.1,
+  "tally": {
+   "start:initialised": 4,
+   "established:initialised": 6,
+   "saved:initialised": 4,
+   "uniform2:domain_rejection:solver_internal": 11,
+   "uniform2:initialised": 82,
+   "prior_scale:initialised": 91,
+   "prior_scale:domain_rejection:solver_internal": 2
+  },
+  "must_pass": [
+   [
+    "start_chain1",
+    "initialised"
+   ],
+   [
+    "start_chain2",
+    "initialised"
+   ],
+   [
+    "start_chain3",
+    "initialised"
+   ],
+   [
+    "start_chain4",
+    "initialised"
+   ],
+   [
+    "central0",
+    "initialised"
+   ],
+   [
+    "central1",
+    "initialised"
+   ],
+   [
+    "stress_s3_r09_kbm15",
+    "initialised"
+   ],
+   [
+    "near_one_rho_099",
+    "initialised"
+   ],
+   [
+    "near_one_rho_0999_s3",
+    "initialised"
+   ],
+   [
+    "small_sigma_002",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain3_draw250",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain3_draw750",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain4_draw250",
+    "initialised"
+   ],
+   [
+    "saved_v3_chain4_draw750",
+    "initialised"
+   ]
+  ],
+  "unexpected": [],
+  "rows": [
+   {
+    "label": "start_chain1",
+    "kind": "start",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 0
+   },
+   {
+    "label": "start_chain2",
+    "kind": "start",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 1
+   },
+   {
+    "label": "start_chain3",
+    "kind": "start",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 2
+   },
+   {
+    "label": "start_chain4",
+    "kind": "start",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 3
+   },
+   {
+    "label": "central0",
+    "kind": "established",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 4
+   },
+   {
+    "label": "central1",
+    "kind": "established",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 5
+   },
+   {
+    "label": "stress_s3_r09_kbm15",
+    "kind": "established",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 6
+   },
+   {
+    "label": "near_one_rho_099",
+    "kind": "established",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 7
+   },
+   {
+    "label": "near_one_rho_0999_s3",
+    "kind": "established",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 8
+   },
+   {
+    "label": "small_sigma_002",
+    "kind": "established",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 9
+   },
+   {
+    "label": "saved_v3_chain3_draw250",
+    "kind": "saved",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 10
+   },
+   {
+    "label": "saved_v3_chain3_draw750",
+    "kind": "saved",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 11
+   },
+   {
+    "label": "saved_v3_chain4_draw250",
+    "kind": "saved",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 12
+   },
+   {
+    "label": "saved_v3_chain4_draw750",
+    "kind": "saved",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 13
+   },
+   {
+    "label": "uniform2_0",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.76488e+09 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 14
+   },
+   {
+    "label": "uniform2_1",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 15
+   },
+   {
+    "label": "uniform2_2",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 16
+   },
+   {
+    "label": "uniform2_3",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 17
+   },
+   {
+    "label": "uniform2_4",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 18
+   },
+   {
+    "label": "uniform2_5",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 19
+   },
+   {
+    "label": "uniform2_6",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 20
+   },
+   {
+    "label": "uniform2_7",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 21
+   },
+   {
+    "label": "uniform2_8",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 22
+   },
+   {
+    "label": "uniform2_9",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 23
+   },
+   {
+    "label": "uniform2_10",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 24
+   },
+   {
+    "label": "uniform2_11",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 25
+   },
+   {
+    "label": "uniform2_12",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 26
+   },
+   {
+    "label": "uniform2_13",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 27
+   },
+   {
+    "label": "uniform2_14",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.05727e+09 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 28
+   },
+   {
+    "label": "uniform2_15",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 4.30106e+13 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 29
+   },
+   {
+    "label": "uniform2_16",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 30
+   },
+   {
+    "label": "uniform2_17",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 31
+   },
+   {
+    "label": "uniform2_18",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 32
+   },
+   {
+    "label": "uniform2_19",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 33
+   },
+   {
+    "label": "uniform2_20",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 34
+   },
+   {
+    "label": "uniform2_21",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 35
+   },
+   {
+    "label": "uniform2_22",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 36
+   },
+   {
+    "label": "uniform2_23",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 37
+   },
+   {
+    "label": "uniform2_24",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 38
+   },
+   {
+    "label": "uniform2_25",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 39
+   },
+   {
+    "label": "uniform2_26",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 40
+   },
+   {
+    "label": "uniform2_27",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 41
+   },
+   {
+    "label": "uniform2_28",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 42
+   },
+   {
+    "label": "uniform2_29",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 43
+   },
+   {
+    "label": "uniform2_30",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 44
+   },
+   {
+    "label": "uniform2_31",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 45
+   },
+   {
+    "label": "uniform2_32",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 46
+   },
+   {
+    "label": "uniform2_33",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 47
+   },
+   {
+    "label": "uniform2_34",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 48
+   },
+   {
+    "label": "uniform2_35",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 49
+   },
+   {
+    "label": "uniform2_36",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 50
+   },
+   {
+    "label": "uniform2_37",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 51
+   },
+   {
+    "label": "uniform2_38",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 52
+   },
+   {
+    "label": "uniform2_39",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 2.61934e-10 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 53
+   },
+   {
+    "label": "uniform2_40",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 54
+   },
+   {
+    "label": "uniform2_41",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 55
+   },
+   {
+    "label": "uniform2_42",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 56
+   },
+   {
+    "label": "uniform2_43",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 57
+   },
+   {
+    "label": "uniform2_44",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 58
+   },
+   {
+    "label": "uniform2_45",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 6.51266e+08 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 59
+   },
+   {
+    "label": "uniform2_46",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 60
+   },
+   {
+    "label": "uniform2_47",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 61
+   },
+   {
+    "label": "uniform2_48",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 7.25155e+12 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 62
+   },
+   {
+    "label": "uniform2_49",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 63
+   },
+   {
+    "label": "uniform2_50",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 64
+   },
+   {
+    "label": "uniform2_51",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 65
+   },
+   {
+    "label": "uniform2_52",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 66
+   },
+   {
+    "label": "uniform2_53",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 67
+   },
+   {
+    "label": "uniform2_54",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 68
+   },
+   {
+    "label": "uniform2_55",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 69
+   },
+   {
+    "label": "uniform2_56",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 70
+   },
+   {
+    "label": "uniform2_57",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 4.6043e+09 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', lin",
+    "index": 71
+   },
+   {
+    "label": "uniform2_58",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 72
+   },
+   {
+    "label": "uniform2_59",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 73
+   },
+   {
+    "label": "uniform2_60",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 74
+   },
+   {
+    "label": "uniform2_61",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.18234e-11 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 75
+   },
+   {
+    "label": "uniform2_62",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 76
+   },
+   {
+    "label": "uniform2_63",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 77
+   },
+   {
+    "label": "uniform2_64",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 78
+   },
+   {
+    "label": "uniform2_65",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 79
+   },
+   {
+    "label": "uniform2_66",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 80
+   },
+   {
+    "label": "uniform2_67",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 81
+   },
+   {
+    "label": "uniform2_68",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 82
+   },
+   {
+    "label": "uniform2_69",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 83
+   },
+   {
+    "label": "uniform2_70",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 84
+   },
+   {
+    "label": "uniform2_71",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 85
+   },
+   {
+    "label": "uniform2_72",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 86
+   },
+   {
+    "label": "uniform2_73",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 4.94388e+27 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 87
+   },
+   {
+    "label": "uniform2_74",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 88
+   },
+   {
+    "label": "uniform2_75",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 89
+   },
+   {
+    "label": "uniform2_76",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 90
+   },
+   {
+    "label": "uniform2_77",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 91
+   },
+   {
+    "label": "uniform2_78",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 92
+   },
+   {
+    "label": "uniform2_79",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 93
+   },
+   {
+    "label": "uniform2_80",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 94
+   },
+   {
+    "label": "uniform2_81",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 95
+   },
+   {
+    "label": "uniform2_82",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 96
+   },
+   {
+    "label": "uniform2_83",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.66524e+19 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 97
+   },
+   {
+    "label": "uniform2_84",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 98
+   },
+   {
+    "label": "uniform2_85",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 99
+   },
+   {
+    "label": "uniform2_86",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 100
+   },
+   {
+    "label": "uniform2_87",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 101
+   },
+   {
+    "label": "uniform2_88",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 102
+   },
+   {
+    "label": "uniform2_89",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 103
+   },
+   {
+    "label": "uniform2_90",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 104
+   },
+   {
+    "label": "uniform2_91",
+    "kind": "uniform2",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 105
+   },
+   {
+    "label": "uniform2_92",
+    "kind": "uniform2",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 3.23965e+10 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 106
+   },
+   {
+    "label": "prior_scale_0",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 107
+   },
+   {
+    "label": "prior_scale_1",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 108
+   },
+   {
+    "label": "prior_scale_2",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 109
+   },
+   {
+    "label": "prior_scale_3",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 110
+   },
+   {
+    "label": "prior_scale_4",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 111
+   },
+   {
+    "label": "prior_scale_5",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 112
+   },
+   {
+    "label": "prior_scale_6",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 113
+   },
+   {
+    "label": "prior_scale_7",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 114
+   },
+   {
+    "label": "prior_scale_8",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 115
+   },
+   {
+    "label": "prior_scale_9",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 116
+   },
+   {
+    "label": "prior_scale_10",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 117
+   },
+   {
+    "label": "prior_scale_11",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 118
+   },
+   {
+    "label": "prior_scale_12",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 119
+   },
+   {
+    "label": "prior_scale_13",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 120
+   },
+   {
+    "label": "prior_scale_14",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 121
+   },
+   {
+    "label": "prior_scale_15",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 122
+   },
+   {
+    "label": "prior_scale_16",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 123
+   },
+   {
+    "label": "prior_scale_17",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 124
+   },
+   {
+    "label": "prior_scale_18",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 125
+   },
+   {
+    "label": "prior_scale_19",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 126
+   },
+   {
+    "label": "prior_scale_20",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 127
+   },
+   {
+    "label": "prior_scale_21",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 128
+   },
+   {
+    "label": "prior_scale_22",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 129
+   },
+   {
+    "label": "prior_scale_23",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 130
+   },
+   {
+    "label": "prior_scale_24",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 131
+   },
+   {
+    "label": "prior_scale_25",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 132
+   },
+   {
+    "label": "prior_scale_26",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 133
+   },
+   {
+    "label": "prior_scale_27",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 134
+   },
+   {
+    "label": "prior_scale_28",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 135
+   },
+   {
+    "label": "prior_scale_29",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 136
+   },
+   {
+    "label": "prior_scale_30",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 137
+   },
+   {
+    "label": "prior_scale_31",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 138
+   },
+   {
+    "label": "prior_scale_32",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 139
+   },
+   {
+    "label": "prior_scale_33",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 140
+   },
+   {
+    "label": "prior_scale_34",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 141
+   },
+   {
+    "label": "prior_scale_35",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 142
+   },
+   {
+    "label": "prior_scale_36",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 143
+   },
+   {
+    "label": "prior_scale_37",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 144
+   },
+   {
+    "label": "prior_scale_38",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 145
+   },
+   {
+    "label": "prior_scale_39",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 146
+   },
+   {
+    "label": "prior_scale_40",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 147
+   },
+   {
+    "label": "prior_scale_41",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 148
+   },
+   {
+    "label": "prior_scale_42",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 149
+   },
+   {
+    "label": "prior_scale_43",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 150
+   },
+   {
+    "label": "prior_scale_44",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 151
+   },
+   {
+    "label": "prior_scale_45",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 152
+   },
+   {
+    "label": "prior_scale_46",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 153
+   },
+   {
+    "label": "prior_scale_47",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 154
+   },
+   {
+    "label": "prior_scale_48",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 155
+   },
+   {
+    "label": "prior_scale_49",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 156
+   },
+   {
+    "label": "prior_scale_50",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 157
+   },
+   {
+    "label": "prior_scale_51",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 158
+   },
+   {
+    "label": "prior_scale_52",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 159
+   },
+   {
+    "label": "prior_scale_53",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 160
+   },
+   {
+    "label": "prior_scale_54",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 161
+   },
+   {
+    "label": "prior_scale_55",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 162
+   },
+   {
+    "label": "prior_scale_56",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 163
+   },
+   {
+    "label": "prior_scale_57",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 164
+   },
+   {
+    "label": "prior_scale_58",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 165
+   },
+   {
+    "label": "prior_scale_59",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 166
+   },
+   {
+    "label": "prior_scale_60",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 167
+   },
+   {
+    "label": "prior_scale_61",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 168
+   },
+   {
+    "label": "prior_scale_62",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 169
+   },
+   {
+    "label": "prior_scale_63",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 170
+   },
+   {
+    "label": "prior_scale_64",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 171
+   },
+   {
+    "label": "prior_scale_65",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 172
+   },
+   {
+    "label": "prior_scale_66",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 173
+   },
+   {
+    "label": "prior_scale_67",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 174
+   },
+   {
+    "label": "prior_scale_68",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 175
+   },
+   {
+    "label": "prior_scale_69",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 176
+   },
+   {
+    "label": "prior_scale_70",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 177
+   },
+   {
+    "label": "prior_scale_71",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 178
+   },
+   {
+    "label": "prior_scale_72",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 179
+   },
+   {
+    "label": "prior_scale_73",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 180
+   },
+   {
+    "label": "prior_scale_74",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 181
+   },
+   {
+    "label": "prior_scale_75",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 182
+   },
+   {
+    "label": "prior_scale_76",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 183
+   },
+   {
+    "label": "prior_scale_77",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 184
+   },
+   {
+    "label": "prior_scale_78",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 185
+   },
+   {
+    "label": "prior_scale_79",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 186
+   },
+   {
+    "label": "prior_scale_80",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 187
+   },
+   {
+    "label": "prior_scale_81",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 188
+   },
+   {
+    "label": "prior_scale_82",
+    "kind": "prior_scale",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 4.73507e+08 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 189
+   },
+   {
+    "label": "prior_scale_83",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 190
+   },
+   {
+    "label": "prior_scale_84",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": true,
+    "index": 191
+   },
+   {
+    "label": "prior_scale_85",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 192
+   },
+   {
+    "label": "prior_scale_86",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 193
+   },
+   {
+    "label": "prior_scale_87",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 194
+   },
+   {
+    "label": "prior_scale_88",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 195
+   },
+   {
+    "label": "prior_scale_89",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 196
+   },
+   {
+    "label": "prior_scale_90",
+    "kind": "prior_scale",
+    "outcome": "domain_rejection",
+    "cause": "solver_internal",
+    "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 2.17707e+13 but should be lower than the function tolerance: 1e-11. Consider decreasing the relative tolerance and increasing max_num_steps. (in 'model_v6.stan', li",
+    "index": 197
+   },
+   {
+    "label": "prior_scale_91",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 198
+   },
+   {
+    "label": "prior_scale_92",
+    "kind": "prior_scale",
+    "outcome": "initialised",
+    "transition_rejected": false,
+    "index": 199
+   }
+  ],
+  "stdout_archive": "probes_v6_stdout.tar.gz",
+  "pass": true
+ },
+ "smoke": {
+  "status": "finished",
+  "seconds": 24.7,
+  "completed_chains": 4,
+  "fatal": [],
+  "rejections": {},
+  "pass": true
+ },
+ "all_prefit_checks_pass": true,
+ "binding": {
+  "model_v6.stan": "f5dd71b37fb90ff5299098243b0be5b3206233ff850fe7f2025ee08933c1c4da",
+  "prototype.py": "afb001d47d9761ae092003ac2f2a45aa423aaac0223bcb461126444813016067",
+  "quadrature.py": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
+  "inits_v6/chain1.json": "47063b2fe48ba06004a3b30348e0196eb4133b34d17aa114608a00b69aaa712f",
+  "inits_v6/chain2.json": "f44701cc9f3f27ff264a908010b717b3b09258e00bd503e4b6369c2a94620fba",
+  "inits_v6/chain3.json": "09f766e33bac6061ee68d30e55c833e9763155542ac90128f42fe34c4c63b1f3",
+  "inits_v6/chain4.json": "7aba6d2517391ff11125e1b1cae313a416897219120949bec65b47c206d7feb7",
+  "model_v4.stan": "a5d4ba24eb7216987b0311580ff78ebaaf9818f410a02f2d17d23df6810f3eba",
+  "inits_v4/chain1.json": "98fb05ce37acb03346c233a9d205a4c87385c6da2f33d99bb3da5f1054c8ba64",
+  "inits_v4/chain2.json": "5143d71ee1984770c4695075dfa0817329ca19894e7cf0ceaba243324844dd87",
+  "inits_v4/chain3.json": "32805a82682276cecd1a0b0851f099f4e910f9c36d994db04116af9834b6ad4c",
+  "inits_v4/chain4.json": "da98fb9de82b529bae490ec0aaff4f81e27111a618c2049ac671de7b67ef7d51",
+  "config_active_block": "75979a3b75905cbc91453f8a988d297a37b5bc068c5eb8216579b06331aeef30",
+  "config_shared": "31adce365a9e1bff33e3d953cbd59bd4673ad2b823971af84218715dcb520e7a",
+  "fit_dataset": "f9d9817e713aa5324c81582e7d1fb935bbf326d5d9bd4052490eb90b2f3cfc52",
+  "bank:fit/model-20261016142709_1.csv": "a18e66d20ec666e96fb50e0702b2d9b48975ea4badc1f7fa85f1b5eafd7a2aa9",
+  "bank:fit/model-20261016142709_2.csv": "dda9852008637caf91079cff8c242258903f3f78a42da785f0fac282d9dcf5a6",
+  "bank:fit/model-20261016142709_3.csv": "ab1cff081b432d6151bd4bef42bcdf74e1d54e6cc072ac325ef8088dce417ee7",
+  "bank:fit/model-20261016142709_4.csv": "5bf953d2f357ac7a7dfe85b6cf21ff37b3695646a1f3e6d61f82ce9e8b6e73dd",
+  "bank:fit_v2/model_v2-20261016164103_1.csv": "2ee03a1bef349e8c4053bf8efb1ae79fb95e18268c14442365fc6b1c3b1ec404",
+  "bank:fit_v2/model_v2-20261016164103_2.csv": "1c435962f2484faa1365b4cce6f281c71716f6b47f8bb4565e0b41f1f261a2f7",
+  "bank:fit_v2/model_v2-20261016164103_3.csv": "611af38708ecc489a0ebf8352f135bc726f13d829910e98ce89be919e268be33",
+  "bank:fit_v2/model_v2-20261016164103_4.csv": "3851a56dc95c35b3e4236b5fe59d3f0baa2024ef6135bea277c420301a92d4f6",
+  "bank:fit_v3/model_v3-20261016180316_1.csv": "2dc0e066d2d0631efa385fc1723ae43ddf1978d3059ed0f5f3b5fde29ade64ef",
+  "bank:fit_v3/model_v3-20261016180316_2.csv": "c12d75a4b8513f26484fc40a6954ddf1786a232ba682579028b03556873989f9",
+  "bank:fit_v3/model_v3-20261016180316_3.csv": "30e841201fedc3d2f47b8ca5dba23f3623ef3d532baeae97562d54f7798d7197",
+  "bank:fit_v3/model_v3-20261016180316_4.csv": "37419d974bdae3cf8c8ffcbbe63fab10e459a6b7811471f2cab6fe45e4697f31",
+  "bank:fit_v4/model_v4-20261016191413_1.csv": "b9aa5032bea883729a05c3ee84132d07d4a38103ac7da4a81f309979d57151ef",
+  "bank:fit_v4/model_v4-20261016191413_2.csv": "ce17aa38bd4bd5311299291c361e4b7417c66660b85b96992633e4b1bc7b3ba3",
+  "bank:fit_v4/model_v4-20261016191413_3.csv": "261e0340bc6d29055f5fd528a45c4231e1879f98be9e051be515a280c80425fa",
+  "bank:fit_v4/model_v4-20261016191413_4.csv": "71ed8a237a266fea7937761f7bb091182d14b994a3e600b62eea0a69aea517cd",
+  "bank:R00/chain1.csv": "04d7321f0db8cc00167043fcaac04b571d64dc5b3e280fca4f3188f398514b32",
+  "bank:R00/chain2.csv": "cf960e15fba1f3fb04d84d4f9dee7edf7d60287820d4739ec317882d521ddb05",
+  "bank:R00/chain3.csv": "3ac06b991ba8d358e10cac1e41ce79ae94dc2aec0963835783556413c7a60086",
+  "bank:R00/chain4.csv": "715ebadf5dd0da5d59540bc727fda47cdda93d1bb6705e6a969f5d7cbb156b22"
+ }
+}

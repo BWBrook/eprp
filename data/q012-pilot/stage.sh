@@ -3,6 +3,7 @@
 # Run only while Barry has the TPAC jumpbox window open. Uses nectar's password-fed transport.
 #   KUNANYI_SSH_ALIAS=kunanyi data/q012-pilot/stage.sh [TAG]      # campus or eduroam; REMOTE_BASE overrides /u/bwbrook/codex_kunanyi
 #   KUNANYI_SSH_ALIAS=kunanyi-via-nectar data/q012-pilot/stage.sh  # via a running Nectar bastion
+#   PAYLOAD_DIR=payload_v6 ... stages the v6 comparison package instead of the cleared payload/
 # The 12-fit panel is not submitted here; it waits for Codex's review of the replay.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -26,9 +27,10 @@ CACHE="$HERE/../../scratch/q012-pilot"
 TARBALL="$CACHE/cmdstan-2.38.0.tar.gz"
 PAYLOAD="$CACHE/payload-$TAG.tar.gz"
 
-( cd "$HERE/payload" && sha256sum -c --strict --quiet manifest.sha256 )
-( cd "$CACHE" && sha256sum -c --strict --quiet "$HERE/payload/cmdstan.sha256" )
-tar czf "$PAYLOAD" -C "$HERE/payload" --exclude=runs --exclude=build .
+PAYDIR="$HERE/${PAYLOAD_DIR:-payload}"
+( cd "$PAYDIR" && sha256sum -c --strict --quiet manifest.sha256 )
+( cd "$CACHE" && sha256sum -c --strict --quiet "$PAYDIR/cmdstan.sha256" )
+tar czf "$PAYLOAD" -C "$PAYDIR" --exclude=runs --exclude=build .
 PAYLOAD_SHA="$(sha256sum "$PAYLOAD" | cut -d' ' -f1)"
 echo "payload $PAYLOAD_SHA; remote $REMOTE"
 

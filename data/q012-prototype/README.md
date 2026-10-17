@@ -596,3 +596,39 @@ high-σ or divergent v4 states, while 64 nodes pass all 8.
   run's chains (8 found, 4 expected) and failed. Earlier output is now
   moved aside, labelled superseded, before each run. The checks were then
   rerun in full.
+
+## v6: partial non-centring candidate (Codex 76/1814)
+
+**Why.** R00 failed the E-BFMI screen. Codex showed that for any fixed
+Gaussian metric, the stationary limit of CmdStan's E-BFMI is
+d / (Var(U) + d/2), with d = 299. R00's Var(U) predicts the failures, so a
+dense metric cannot remove them; a nonlinear reparameterisation can.
+
+**What changed.** [model_v6.stan](model_v6.stan) is v4/v5 with fixed
+a = 0.2:
+- the free parameter is w = σ^a ε, with w ~ normal(0, σ^a);
+- ε = w / σ^a is reconstructed, and x, the likelihood, the normaliser and
+  every other prior are unchanged;
+- the normal density supplies the inverse-map Jacobian, −aN log σ, exactly
+  once.
+
+The starts (`inits_v6/`) are the R00 starts mapped exactly. The config is
+frozen in the `v6` block.
+
+**Checks (all pass; [checks_v6.json](checks_v6.json)):**
+- **Actual-Stan identity against v5** at 60 points: the 4 mapped starts;
+  central, stress, near-one ρ and small σ; σ = 0.01 and 0.001; and
+  Codex's 48 R00 states, up to σ = 3.237.
+  - log identity, lp_v6 − lp_v5 + aN log σ: worst 2.9e-11 (tolerance
+    1e-7);
+  - ∇w = σ^−a ∇ε, ∇log σ, and all other gradients: worst scaled error
+    9.2e-13 (tolerance 1e-6);
+  - every value finite.
+- **200 mapped probes:** the same outcomes as v5, with no unrecoverable
+  error.
+- **Smoke check:** four chains in 25 s, no fatal error, no rejection.
+- **Binding** adds the reference model, its starts and the R00 draw bank.
+
+Passing these checks establishes equivalence and that v6 runs. It does not
+show that the geometry near σ = 0 is harmless; the R00 comparison tests
+that.

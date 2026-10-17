@@ -77,5 +77,26 @@
   },
   "denominators": "Every attempted dataset, cap, timeout and failed fit stays in the denominator. With s resolved successes and u unresolved outcomes among n attempts, report [s/n, (s+u)/n] beside any success-conditioned summary.",
   "mail": "PBS completion and abort mail to Barry on fit jobs and the panel array (-m ae); abort only on the build (-m a). Approved by Barry, 16 October 2026. No polling or monitor.",
-  "promotion": "The 12-fit panel is submitted only after Codex reviews the replay's receipts and diagnostics. A PBS exit status of 0 does not release it."
+  "promotion": "The 12-fit panel is submitted only after Codex reviews the replay's receipts and diagnostics. A PBS exit status of 0 does not release it.",
+  "candidates": {
+    "v5": {
+      "prototype_version": "v5",
+      "stan_file": "model_v4.stan",
+      "checks_file": "../q012-prototype/checks_v5.json",
+      "payload_dir": "payload",
+      "scenarios": "all",
+      "note": "The cleared R00 + panel package; R00 ran as job 820950 (results/R00-20261016-r00e)."
+    },
+    "v6": {
+      "prototype_version": "v6",
+      "stan_file": "model_v6.stan",
+      "checks_file": "../q012-prototype/checks_v6.json",
+      "payload_dir": "payload_v6",
+      "scenarios": [
+        "R00"
+      ],
+      "note": "One R00 comparison of the partial non-centring candidate (Codex 76/1814): same data, sampler seed, diag_e, 2,000 + 4,000, adapt_delta 0.995, depth 12, step 0.01, 64 nodes, 1 h build / 6 h fit, 4 CPUs / 8 GiB; starts are the R00 starts mapped to w = sigma^0.2 * eps. No panel, no alpha search, no retry."
+    }
+  },
+  "active_candidate": "v6"
 }

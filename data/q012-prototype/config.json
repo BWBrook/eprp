@@ -151,7 +151,7 @@
     "check_tol": 1e-08,
     "amendment": "Declared before the fit, after the first prefit check: at Codex's starting tolerances (1e-10, 1e-8) the explicit post-solve check rejected a converged-by-KINSOL mode (Newton correction 2.7e-8 > 1e-8): with small curvature (large sigma) a score residual of 1e-8 implies a correction above 1e-8. The explicit checks are unchanged (threshold now a separate fixed datum, 1e-8); only the solver's own tolerances are tightened to step 1e-12, score 1e-11; stability compared with 1e-14 / 1e-13."
   },
-  "active": "v5",
+  "active": "v6",
   "v4": {
     "note": "Robustness repair approved by Codex (76/1745), frozen before any v4 check: both cohort mode solves use solve_powell_tol (relative solution tolerance 1e-12, Euclidean residual tolerance 1e-11, at most 200 function evaluations), whose evaluation-limit and residual failures are domain errors. Guards in order: finite inputs, derived variances (sigma^2, sigma^2(1-rho^2)) and initial score; returned mode and score; residual <= check_tol; finite positive-definite precision; finite Newton correction <= check_tol max(1, |mode|); finite factor. Each failure is a labelled rejection. Model, priors, dataset (fit_seed 20261060 at lambda0 0.0708), 40-node AGH, sampler (4 chains, 1000+1000, seed 77017, adapt_delta 0.99, max_treedepth 12) and the 1,200 s limit are unchanged. v1-v3 preserved.",
     "algorithm_changes": "Declared as algorithm changes, not prior changes: (1) four frozen initial-value files (inits_v4/), centred on prior locations (normal priors: mean; half-normal sigma and tau: median; rho: 0.5) with modest perturbations; (2) initial HMC step size 0.01, below every adapted step size seen (v1 0.017-0.041; v3 0.025). The prior locations of lambda0 and b0 equal their generating values, so the starts are near the truth for those two.",
@@ -322,5 +322,98 @@
     "benchmark_against": "v4",
     "checks_file": "checks_v5.json",
     "smoke_amendment": "Declared after the first v5 check run and before any rerun. At the v4 budget of 60 s the 64-node smoke check timed out with 1 of 4 chains complete, no fatal exception and no rejection (record kept as checks_v5_smoke60.json; outputs in scratch fit_v5_smoke60). The cause is cost: 64-node gradients take 1.9-2.6 times v4's at identical points, and the ten-iteration warmup adapted step sizes near 0.006, so trees are deep. The budget is raised to 300 s because the check screens for fatal errors and hangs on the initialisation and step-size path, not cost; its pass rule is unchanged."
+  },
+  "v6": {
+    "note": "Partial non-centring candidate (Codex 76/1814, ideas/2026-10-17-q012-r00-review-codex.md), frozen before any check: v5 (model_v4.stan at 64 nodes) with fixed a = 0.2, free w = sigma^a * eps, w ~ normal(0, sigma^a), eps = w / sigma^a reconstructed; data, priors, likelihood, normaliser, solver and guards unchanged. Starts are the R00 starts mapped exactly. Equivalence to v5 is checked on actual Stan log densities and AD gradients; no alpha search, no dense metric, no laptop fit.",
+    "stan_file": "model_v6.stan",
+    "reference_version": "v5",
+    "noncentring": {
+      "a": 0.2,
+      "free": "w = sigma^a * eps",
+      "prior": "w ~ normal(0, sigma^a)"
+    },
+    "quadrature_nodes": 64,
+    "solver": {
+      "rel_tol": 1e-12,
+      "f_tol": 1e-11,
+      "max_steps": 200
+    },
+    "solver_tight": {
+      "rel_tol": 1e-14,
+      "f_tol": 1e-12,
+      "max_steps": 400
+    },
+    "check_tol": 1e-08,
+    "inits": {
+      "seed": 20261071,
+      "dir": "inits_v6",
+      "perturbation": 0.25,
+      "rule": "the R00 starts (inits_v4) mapped exactly: w = sigma^0.2 * eps, all else unchanged",
+      "normal": {
+        "log_h0_1": [
+          -2.7333680091,
+          1.0
+        ],
+        "log_k": [
+          0.0,
+          0.5
+        ],
+        "log_lambda0": [
+          -2.6478962783,
+          1.0
+        ],
+        "kappa": [
+          0.0,
+          1.0
+        ],
+        "log_b0": [
+          -4.8036211247,
+          1.0
+        ],
+        "kappa_b": [
+          0.0,
+          1.0
+        ],
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "gamma": [
+          0.0,
+          1.0
+        ]
+      },
+      "half_normal_median": {
+        "sigma": 0.6744897502,
+        "tau": 0.3372448751
+      },
+      "mapped_from": "inits_v4"
+    },
+    "init_step_size": 0.01,
+    "probes": {
+      "max_points": 200,
+      "budget_seconds": 120,
+      "per_point_timeout_seconds": 10,
+      "workers": 8,
+      "seed": 20261072,
+      "design": "4 selected starts, 6 established points (central0, central1, stress_s3_r09_kbm15, near_one_rho_099, near_one_rho_0999_s3, small_sigma_002), 4 saved v3 states (chains 3-4, draws 250 and 750); then 93 points uniform(-2, 2) on every unconstrained coordinate (CmdStan's default initialisation) and 93 prior-scale points (the init rule with perturbation 1.0). Each point runs Stan's own initialisation (sample, num_warmup 0, num_samples 1, adaptation off, max_depth 1, stepsize 0.01), so a domain error is reported as 'Rejecting initial value' and any other exception as 'Unrecoverable error'. Every probe's full stdout and classification row is kept. Every point is mapped to v6 coordinates (w = sigma^0.2 * eps) before use.",
+      "pass_rule": "every selected start, established point and saved state initialises with finite log density and gradient; zero unrecoverable errors, unexpected exits or timeouts over all points; domain rejections recorded by cause, not counted as passes; total within 120 s"
+    },
+    "smoke": {
+      "chains": 4,
+      "iter_warmup": 10,
+      "iter_sampling": 1,
+      "timeout_seconds": 300,
+      "output_dir": "fit_v6_smoke",
+      "pass_rule": "all four chains finish, no fatal exception, no timeout; draws have no inferential role"
+    },
+    "identity": {
+      "log_tol": 1e-07,
+      "grad_tol": 1e-06,
+      "rule": "lp_v6 - lp_v5 = -a N log(sigma); grad_w = exp(-a u) grad_eps; grad_u(v6) = grad_u(v5) - a eps'grad_eps - a N; all other unconstrained gradients equal (jacobian = true, u = log sigma). Absolute log tolerance; gradient error scaled by max(1, |expected|).",
+      "points": "4 mapped starts; central0, central1, stress_s3_r09_kbm15, near_one_rho_099, near_one_rho_0999_s3, small_sigma_002; 48 R00 states (six highest sigma, largest |kappa_b|, smallest rho, 40 evenly spaced); central0 at sigma 0.01 and 0.001",
+      "r00_bank": "scratch/q012-pilot/fetch-20261016-r00e/runs/R00/attempt1"
+    },
+    "checks_file": "checks_v6.json"
   }
 }
