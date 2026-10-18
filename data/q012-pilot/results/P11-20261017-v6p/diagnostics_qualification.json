@@ -1,0 +1,12 @@
+{
+ "scenario": "P11",
+ "attempt": "scratch/q012-pilot/fetch-20261017-v6p/runs/P11/attempt1",
+ "qualified": false,
+ "qualification_failures": [
+  "chain 1 stderr not empty: 'Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:'",
+  "chain 2 stderr not empty: 'Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:'",
+  "chain 3 stderr not empty: 'Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:'"
+ ],
+ "status": "unresolved",
+ "screening_pass": null
+}

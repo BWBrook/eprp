@@ -1,0 +1,17 @@
+host=n001.kunanyi
+pbs_jobid=821264.kunanyi-ohpc
+start=2026-10-17T06:55:36Z
+manifest_sha256=592a1ce37f1127424dfd6338aaee3259d3e28eb641a0754d901d41dd7b275586
+gxx=g++ (GCC) 12.3.0
+make=GNU Make 3.82
+stanc=stanc3 v2.38.0 (Unix)
+binary_sha256=be40fca6382a7f20ae8c1a27ee32d3e8575b1fa63531b30806c39fd703795927
+loaded_modules=GCCcore/12.3.0:zlib/1.2.13-GCCcore-12.3.0:binutils/2.40-GCCcore-12.3.0:GCC/12.3.0:numactl/2.0.16-GCCcore-12.3.0:XZ/5.4.2-GCCcore-12.3.0:libxml2/2.11.4-GCCcore-12.3.0:libpciaccess/0.17-GCCcore-12.3.0:hwloc/2.9.1-GCCcore-12.3.0:OpenSSL/1.1:libevent/2.1.12-GCCcore-12.3.0:UCX/1.14.1-GCCcore-12.3.0:libfabric/1.18.0-GCCcore-12.3.0:PMIx/4.2.4-GCCcore-12.3.0:UCC/1.2.0-GCCcore-12.3.0:OpenMPI/4.1.5-GCC-12.3.0:gompi/2023a:Szip/2.1.1-GCCcore-12.3.0:HDF5/1.14.0-gompi-2023a
+preflight_log_prob=pass
+smoke_chain1_exit=0
+smoke_chain2_exit=0
+smoke_chain3_exit=0
+smoke_chain4_exit=0
+preflight_smoke=pass
+status=ok
+end=2026-10-17T07:24:14Z

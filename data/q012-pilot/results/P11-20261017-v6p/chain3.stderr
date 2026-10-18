@@ -1,0 +1,5 @@
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: Exception: Q012 input failure: 1-D initial score (in '../model_v6.stan', line 39, column 6 to column 54) (in '../model_v6.stan', line 232, column 6 to line 233, column 86)
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+

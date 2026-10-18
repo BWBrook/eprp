@@ -430,3 +430,54 @@ The fit's wall time is the slowest chain's: 4.67 h at N = 264.
 - **P06** is not queued. It waits on P11's qualification, its sampling and
   endpoint-MCSE screens, and the joint checks; then
   `submit_fit.sh 20261017-v6p P06`.
+
+### P11 result (job 821265, 17 October 2026): fails; P06 not submitted
+
+Evidence: [results/P11-20261017-v6p/](results/P11-20261017-v6p/). It holds
+the receipts, accounting, the qualification record, the stderr files, the
+unqualified statistics, the joint checks and the chain-file hashes.
+
+**Run.** It completed (exit 0) in 1 h 02 min (3,723 s), using 3.9 CPU-hours
+and 62 MB. The build/preflight (821264, n001) passed.
+
+**Qualification fails, as the rule is written: chains 1–3 have non-empty
+stderr.**
+- The content is four labelled domain rejections in total:
+
+  | Chain | Rejection |
+  | --- | --- |
+  | 1 | Powell residual 2.18e-11 against the 1e-11 tolerance |
+  | 2 | a Powell residual of 1.9e11 |
+  | 2 | `Q012 input failure`, with A = inf |
+  | 3 | `Q012 input failure` on the initial score |
+
+- Stan writes these through `logger.error`
+  (`base_hamiltonian.hpp:83–87`), which goes to stderr.
+- `fit.sh` separates the two streams, so these messages cannot be assigned
+  to a phase from the files.
+- The rule was frozen before the run, so it was not relaxed after seeing
+  the result.
+
+**Even unqualified, the statistics fail the screen** (historical mode;
+information only):
+
+| Screen | P11 | Pass |
+| --- | --- | --- |
+| Post-warmup divergences | **1** (chain 1, at σ = 0.79, ρ = 0.10) | no |
+| E-BFMI | 0.862, 0.906, 0.863, 0.871 | yes |
+| Max R̂ | 1.0016 (σ) | yes |
+| Minimum core ESS, bulk / tail | 2,983 / 3,979 (σ) | yes |
+| η endpoint MCSE | 0.00036 / **0.0113** | target **not met** (0.01) |
+
+**η and the decision flags:**
+- 90% interval 0.0047–0.594 (truth 0.2); raw D = no, X = no.
+
+**The near-zero concern is now genuinely tested:**
+- σ's posterior reaches down to σ = 4e-5, with **16.7% of draws below 0.1
+  and 1.9% below 0.01** in every chain.
+- The one divergence is not near zero.
+- **Direct joint-state checks pass at all 49 states:** maximum log error
+  8.0e-6, derivative error 3.9e-5; reference convergence 4e-16 / 1e-11.
+
+**Stop rule applied:** P11 does not pass, so P06 was **not** submitted.
+The evidence goes to Codex.

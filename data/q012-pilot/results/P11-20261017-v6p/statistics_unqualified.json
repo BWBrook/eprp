@@ -1,0 +1,132 @@
+{
+ "kind": "historical-mode statistics for information only: P11 did not qualify (non-empty stderr), so these are not a qualified screen",
+ "chains": [
+  {
+   "csv": "chain1.csv",
+   "draws": 4000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.8617631059321627,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  },
+  {
+   "csv": "chain2.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.9060469505102597,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  },
+  {
+   "csv": "chain3.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.8634281417206892,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  },
+  {
+   "csv": "chain4.csv",
+   "draws": 4000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.8712943790422103,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0
+  }
+ ],
+ "screening": {
+  "zero_post_warmup_divergences": false,
+  "no_fatal_or_sampling_phase_failures": true,
+  "ebfmi_each_chain": true,
+  "rhat_all": true,
+  "ess_bulk_tail_core": true
+ },
+ "screening_pass": false,
+ "rhat_max": [
+  "sigma",
+  1.0015808683599248
+ ],
+ "rhat_over_threshold": [],
+ "rhat_core": {
+  "sigma": 1.0015808683599248,
+  "rho": 1.000493982567441,
+  "eta": 1.000939883192151,
+  "kappa": 1.000132950168656,
+  "kappa_b": 1.0002146363874218,
+  "beta": 1.0003967450396847,
+  "gamma": 1.0002055197155035,
+  "log_k": 1.0002989763526535,
+  "log_lambda0": 1.000163783710893,
+  "log_b0": 1.0004655459127219,
+  "tau": 1.0005220316567423
+ },
+ "ess_core": {
+  "sigma": {
+   "bulk": 2982.8573761426032,
+   "tail": 3979.057307192136
+  },
+  "rho": {
+   "bulk": 15086.320982233741,
+   "tail": 9753.762360020026
+  },
+  "eta": {
+   "bulk": 5333.304283630954,
+   "tail": 5731.431507543551
+  },
+  "kappa": {
+   "bulk": 11078.111419671835,
+   "tail": 11056.412844663138
+  },
+  "kappa_b": {
+   "bulk": 19524.999227610755,
+   "tail": 11374.243098216702
+  },
+  "beta": {
+   "bulk": 21022.068370715777,
+   "tail": 11295.965827976603
+  },
+  "gamma": {
+   "bulk": 19252.570356526336,
+   "tail": 12040.476993131213
+  },
+  "log_k": {
+   "bulk": 8755.40744381904,
+   "tail": 8962.186457823036
+  },
+  "log_lambda0": {
+   "bulk": 11803.23054143535,
+   "tail": 7879.220677841441
+  },
+  "log_b0": {
+   "bulk": 20395.0695807415,
+   "tail": 12442.58409309345
+  },
+  "tau": {
+   "bulk": 5738.910266085058,
+   "tail": 7204.214299246804
+  }
+ },
+ "eta": {
+  "q05": 0.0046901190850000005,
+  "q95": 0.5943173209999995,
+  "mcse_q05": 0.0003649447999999997,
+  "mcse_q95": 0.01127779000000001,
+  "endpoints_finite": true,
+  "mcse_finite": true,
+  "mcse_target_met": false,
+  "truth": 0.2,
+  "interval_covers_truth": true,
+  "D": false,
+  "X": false,
+  "D_numerically_uncertain": false,
+  "X_numerically_uncertain": false
+ }
+}
