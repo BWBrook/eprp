@@ -560,3 +560,14 @@ The evidence goes to Codex.
     screen).
   - [dispatch_test_v6p2.json](dispatch_test_v6p2.json): only build plus
     P11 (afterok); R00 refused; P06 refused even after a successful build.
+
+### Amended P11 staging record (18 October 2026)
+
+- **Submitted:** build/preflight `821501.kunanyi-ohpc` (running on n017,
+  GCC 12.3.0), then the **amended P11** `821502.kunanyi-ohpc` with
+  `afterok:821501`.
+  - Queue `normal`; 4 CPUs, 8 GiB, 06:10:00; `ae` mail.
+  - Nothing else was submitted.
+- **Payload:** `payload_v6p2`, manifest d2ecaddb…; tarball 5bdc5967….
+  Both verified on kunanyi.
+- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261018-v6p2`.
