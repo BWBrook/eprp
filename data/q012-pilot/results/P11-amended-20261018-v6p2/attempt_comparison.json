@@ -1,0 +1,111 @@
+{
+ "description": "Amended P11 (821502) against the first P11 attempt (821265): same model source (model_v6.stan f5dd71b3…), CmdStan 2.38.0 and GCC 12.3.0 toolchain (rebuilt binaries differ in hash: be40fca6… and ff9861c5…), seed 77017, starts, warmup and adaptation settings; only solver_f_tol (1e-11 -> 1e-10), retained draws (4,000 -> 8,000) and log capture differ.",
+ "chains": {
+  "1": {
+   "columns_identical": true,
+   "n_columns": 125,
+   "first_attempt_draws": 4000,
+   "amended_draws": 8000,
+   "prefix_bitwise_identical": true,
+   "adaptation_identical": true,
+   "divergent_rows_first_attempt": [
+    2425
+   ],
+   "divergent_rows_amended": [
+    2425
+   ]
+  },
+  "2": {
+   "columns_identical": true,
+   "n_columns": 125,
+   "first_attempt_draws": 4000,
+   "amended_draws": 8000,
+   "prefix_bitwise_identical": true,
+   "adaptation_identical": true,
+   "divergent_rows_first_attempt": [],
+   "divergent_rows_amended": [
+    4651
+   ]
+  },
+  "3": {
+   "columns_identical": true,
+   "n_columns": 125,
+   "first_attempt_draws": 4000,
+   "amended_draws": 8000,
+   "prefix_bitwise_identical": true,
+   "adaptation_identical": true,
+   "divergent_rows_first_attempt": [],
+   "divergent_rows_amended": []
+  },
+  "4": {
+   "columns_identical": true,
+   "n_columns": 125,
+   "first_attempt_draws": 4000,
+   "amended_draws": 8000,
+   "prefix_bitwise_identical": true,
+   "adaptation_identical": true,
+   "divergent_rows_first_attempt": [],
+   "divergent_rows_amended": []
+  }
+ },
+ "divergent_transitions": [
+  {
+   "chain": 1,
+   "sampling_row": 2425,
+   "transition": 4426,
+   "in_shared_prefix": true,
+   "logged_rejection": false,
+   "start_state": {
+    "row": 2424,
+    "sigma": 1.3786675,
+    "sigma_pooled_percentile": 0.9734375,
+    "eta": 0.43191164,
+    "rho": 0.31328194,
+    "lp": -116.5434,
+    "n_leapfrog": 127,
+    "treedepth": 7
+   },
+   "saved_state": {
+    "row": 2425,
+    "sigma": 0.79334082,
+    "sigma_pooled_percentile": 0.85503125,
+    "eta": 0.079592731,
+    "rho": 0.10032602,
+    "lp": -123.26536,
+    "n_leapfrog": 97,
+    "treedepth": 6
+   },
+   "stepsize": 0.039571317,
+   "note": "The start state is the previous draw; the saved state is the one selected from the trajectory, not the divergent step."
+  },
+  {
+   "chain": 2,
+   "sampling_row": 4651,
+   "transition": 6652,
+   "in_shared_prefix": false,
+   "logged_rejection": false,
+   "start_state": {
+    "row": 4650,
+    "sigma": 0.030497472,
+    "sigma_pooled_percentile": 0.05265625,
+    "eta": 0.011538433,
+    "rho": 0.37834065,
+    "lp": -116.72508,
+    "n_leapfrog": 63,
+    "treedepth": 6
+   },
+   "saved_state": {
+    "row": 4651,
+    "sigma": 1.0250696,
+    "sigma_pooled_percentile": 0.9231875,
+    "eta": 0.65363193,
+    "rho": 0.63764639,
+    "lp": -122.10788,
+    "n_leapfrog": 161,
+    "treedepth": 7
+   },
+   "stepsize": 0.047472732,
+   "note": "The start state is the previous draw; the saved state is the one selected from the trajectory, not the divergent step."
+  }
+ ]
+}

@@ -3,7 +3,7 @@
 Owner: Claude | 16–17 October 2026 | Prepared under Codex's rulings 76/1750,
 1765, 1774, 1814 and 1855.
 
-**Status (17 October 2026):**
+**Status (18 October 2026):**
 - **R00 (v5):** ran (job 820950). It qualified and failed only the E-BFMI
   screen.
 - **R00 (v6, partial non-centring):** ran (job 821087). It qualified and
@@ -12,15 +12,14 @@ Owner: Claude | 16–17 October 2026 | Prepared under Codex's rulings 76/1750,
 - **P11 first attempt (job 821265):** failed. It did not qualify
   (non-empty stderr), and its unqualified statistics show one divergence and
   an η upper-endpoint MCSE of 0.0113. P06 was held.
-- **Released next (Codex, 76/1895):** ONE amended P11-only attempt from
-  `payload_v6p2/`:
-  - `solver_f_tol` = 1e-10;
-  - an ordered combined log per chain at refresh = 1, with fail-closed,
-    phase-aware qualification;
-  - 8,000 retained draws per chain.
-  - Up to 28.67 further reserved core-hours inside the 53.33 ceiling.
-- **P06 and the other ten panel datasets remain held,** even if the amended
-  P11 passes. No power, coverage or campaign claim follows from this pilot.
+- **Amended P11 (job 821502, Codex 76/1895):** qualified, and **fails the
+  screen on two post-warmup divergences** out of 32,000. No sampling
+  rejection was logged; every other screen passes, including the η
+  endpoint MCSE. Its first 4,000 draws per chain are bitwise identical to
+  the first attempt's, so the tolerance change altered no trajectory.
+  Evidence returned to Codex; no further attempt.
+- **P06 and the other ten panel datasets remain held.** No power, coverage
+  or campaign claim follows from this pilot.
 
 This is a **numerical and cost pilot**. It is not a power, coverage or
 robustness experiment, and no campaign claim follows from it.
@@ -571,3 +570,89 @@ The evidence goes to Codex.
 - **Payload:** `payload_v6p2`, manifest d2ecaddb…; tarball 5bdc5967….
   Both verified on kunanyi.
 - **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261018-v6p2`.
+
+### Amended P11 result (job 821502, 18 October 2026): fails on divergences
+
+Evidence: [results/P11-amended-20261018-v6p2/](results/P11-amended-20261018-v6p2/).
+It holds the receipts, PBS accounting, the qualification and screening
+record (`diagnostics.json`), the combined chain logs (gzipped), the joint
+checks, the cross-attempt comparison and the chain-file hashes.
+
+**Run.** The build/preflight (821501, n017, 19 min) passed, including both
+controls: p75 accepted, p53 rejected with a Powell residual of 2.62e-10
+against 1e-10. The fit completed (all chains exit 0) in 1 h 55 min
+(6,896 s in the runner), using 7.0 CPU-hours and 63 MB.
+
+**Accounting.** (0:19:10 + 1:55:00) × 4 CPUs = **8.94 core-hours** of the
+28.67 released. The pilot total is now 6.06 + 8.94 = **15.00 of the 53.33
+ceiling**.
+
+**Qualification passes.** All four combined logs parse completely under
+the fail-closed parser. The only logged rejections are in warmup:
+
+| Chain | Transition | Cause |
+| --- | --- | --- |
+| 2 | 252 (warmup) | Powell residual 1.86e11 |
+| 2 | 452 (warmup) | `Q012 input failure`, A = inf |
+| 3 | 252 (warmup) | `Q012 input failure`, initial score |
+
+All three fall two transitions after the metric updates at 250 and 450.
+Chains 1 and 4 log nothing, and **no chain logs any sampling-phase
+rejection**.
+
+**Screening fails on one criterion:**
+
+| Screen | Amended P11 | Pass |
+| --- | --- | --- |
+| Post-warmup divergences | **2 of 32,000** (chain 1 transition 4,426; chain 2 transition 6,652) | **no** |
+| Fatal or sampling-phase failures | none | yes |
+| E-BFMI | 0.870, 0.898, 0.869, 0.874 | yes |
+| Max R̂ | 1.0004 (`z_rw.17`); core max 1.0002 (γ) | yes |
+| Minimum core ESS, bulk / tail | 6,209 / 8,530 (σ) | yes |
+| η endpoint MCSE | 0.00022 / 0.0076 | yes (target 0.01) |
+
+η's 90% interval is 0.0050–0.594 (truth 0.2); raw D = no, X = no, neither
+numerically uncertain.
+
+**The first 4,000 draws per chain are bitwise identical to the first
+attempt's** (all 125 columns, every chain), and so are the adapted step
+sizes and metrics. The model source, seed, starts and settings are the
+same; the rebuilt binaries differ in hash but not in output. So:
+- **The tolerance change altered no trajectory.** The first attempt's
+  2.18e-11 rejection (chain 1) is not logged here. Its step is now
+  evaluated, yet the chain is unchanged. At 1e-10 that step must
+  therefore have had an energy error above Stan's 1000 limit (or a
+  non-finite energy), so it diverged regardless of the solver. Whether it
+  belongs to transition 4,426, an unsaved warmup transition or a step-size
+  search cannot be recovered.
+- **The first attempt's other three rejections are now phased**: they are
+  the same three messages at the same transitions, all in warmup.
+- **The new evidence is draws 4,001–8,000 per chain**: 16,000 further
+  transitions with one new divergence (chain 2, transition 6,652).
+
+**Neither divergence has a logged rejection**, so each is an energy error
+above 1000 (or a non-finite log density that raised no exception). The
+start state (the previous draw) and the saved state are not the divergent
+step:
+
+| Divergence | Start σ (pooled percentile) | Saved σ | Step size |
+| --- | --- | --- | --- |
+| chain 1, 4,426 | 1.38 (97th) | 0.79 | 0.040 |
+| chain 2, 6,652 | 0.030 (5th) | 1.03 | 0.047 |
+
+**Lower σ tail (all 8,000 draws):**
+
+| Chain | 0.1% quantile | 1% quantile | Minimum | Below 0.1 | Below 0.01 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 3.7e-4 | 6.3e-3 | 4.9e-5 | 16.0% | 1.7% |
+| 2 | 3.4e-4 | 3.1e-3 | 4.2e-5 | 17.4% | 2.1% |
+| 3 | 1.6e-3 | 6.8e-3 | 3.8e-4 | 16.3% | 1.6% |
+| 4 | 9.2e-4 | 5.4e-3 | 4.6e-5 | 16.6% | 1.8% |
+
+**Direct joint-state checks pass at all 49 states**, each with a converged
+reference: maximum log error 8.0e-6, derivative error 3.9e-5, reference
+convergence 4e-16 / 1e-11. These equal the first attempt's maxima, as the
+shared prefix implies.
+
+**Stop rule applied.** The amended P11 does not pass. Nothing else was
+submitted; P06 and the other ten remain held. The evidence goes to Codex.

@@ -1,0 +1,170 @@
+{
+ "scenario": "P11",
+ "attempt": "scratch/q012-pilot/fetch-20261018-v6p2/runs/P11/attempt1",
+ "qualified": true,
+ "qualification_failures": [],
+ "status": "screened",
+ "chains": [
+  {
+   "csv": "chain1.csv",
+   "draws": 8000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.8695510266842263,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain2.csv",
+   "draws": 8000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.8976286277569456,
+   "rejections": {
+    "solver_internal_warmup": 1,
+    "input_warmup": 1
+   },
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [
+    {
+     "phase": "warmup",
+     "transition": 252,
+     "cause": "solver_internal",
+     "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.85868e+11 but should be lower than the function tolerance: 1e-10. Consider decreasing the relative tolerance and increasin"
+    },
+    {
+     "phase": "warmup",
+     "transition": 452,
+     "cause": "input",
+     "message": "Exception: Exception: Q012 input failure: 1-D sigma, A, B, kappa_b [0.138763,inf,0.0914829,1.62006] (in '../model_v6.stan', line 37, column 6 to column 79) (in '../model_v6.stan', line 232, column 6 t"
+    }
+   ],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain3.csv",
+   "draws": 8000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.8690539730824125,
+   "rejections": {
+    "input_warmup": 1
+   },
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [
+    {
+     "phase": "warmup",
+     "transition": 252,
+     "cause": "input",
+     "message": "Exception: Exception: Q012 input failure: 1-D initial score (in '../model_v6.stan', line 39, column 6 to column 54) (in '../model_v6.stan', line 232, column 6 to line 233, column 86)"
+    }
+   ],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain4.csv",
+   "draws": 8000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.8742507432172075,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [],
+   "log_parse": "complete"
+  }
+ ],
+ "screening": {
+  "zero_post_warmup_divergences": false,
+  "no_fatal_or_sampling_phase_failures": true,
+  "ebfmi_each_chain": true,
+  "rhat_all": true,
+  "ess_bulk_tail_core": true
+ },
+ "screening_pass": false,
+ "rhat_max": [
+  "z_rw.17",
+  1.000416095555381
+ ],
+ "rhat_over_threshold": [],
+ "rhat_core": {
+  "sigma": 1.000145130148283,
+  "rho": 1.000097781036966,
+  "eta": 1.0001433025554398,
+  "kappa": 1.0000197942191276,
+  "kappa_b": 1.0001062308818711,
+  "beta": 1.0000000192968324,
+  "gamma": 1.000208800855567,
+  "log_k": 1.0000541326807246,
+  "log_lambda0": 1.0000335438126542,
+  "log_b0": 1.0000993791405537,
+  "tau": 1.0001910229277007
+ },
+ "ess_core": {
+  "sigma": {
+   "bulk": 6208.763466331815,
+   "tail": 8530.227433682749
+  },
+  "rho": {
+   "bulk": 29884.30495355698,
+   "tail": 21024.861132441085
+  },
+  "eta": {
+   "bulk": 10991.9183050768,
+   "tail": 12453.684480002437
+  },
+  "kappa": {
+   "bulk": 22017.480074754796,
+   "tail": 22052.01614263769
+  },
+  "kappa_b": {
+   "bulk": 36656.299664548125,
+   "tail": 22916.73585052303
+  },
+  "beta": {
+   "bulk": 42346.711624310614,
+   "tail": 22920.848576644654
+  },
+  "gamma": {
+   "bulk": 38337.910399538305,
+   "tail": 24850.92652100762
+  },
+  "log_k": {
+   "bulk": 16415.26118853342,
+   "tail": 16055.971882800955
+  },
+  "log_lambda0": {
+   "bulk": 23090.53475883323,
+   "tail": 15893.648380743025
+  },
+  "log_b0": {
+   "bulk": 41631.73498178971,
+   "tail": 24406.685082195032
+  },
+  "tau": {
+   "bulk": 11413.55406110252,
+   "tail": 13833.223297110451
+  }
+ },
+ "eta": {
+  "q05": 0.004975245515,
+  "q95": 0.5935055189999998,
+  "mcse_q05": 0.0002210923499999999,
+  "mcse_q95": 0.007559955000000007,
+  "endpoints_finite": true,
+  "mcse_finite": true,
+  "mcse_target_met": true,
+  "truth": 0.2,
+  "interval_covers_truth": true,
+  "D": false,
+  "X": false,
+  "D_numerically_uncertain": false,
+  "X_numerically_uncertain": false
+ },
+ "precision": "met"
+}
