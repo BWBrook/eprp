@@ -38,6 +38,7 @@ RUN_ENV = dict(CHAINS=4, WARMUP=PILOT["sampler"]["iter_warmup"], SAMPLING=PILOT[
                STEPSIZE=PILOT["sampler"]["init_step_size"], SEED=77017, FIT_SECONDS=PILOT["resources"]["fit_seconds"],
                SMOKE_SECONDS=PILOT["resources"]["smoke_seconds"], MODEL_BIN="./" + CAND["stan_file"].removesuffix(".stan"),
                MODULE="HDF5/1.14.0-gompi-2023a", CMDSTAN_VERSION="2.38.0")
+RUN_ENV.update(CAND.get("run_env", {}))
 
 
 def sha(path):
@@ -137,8 +138,8 @@ def build():
     assert chk["all_prefit_checks_pass"], "prototype checks have not passed"
     assert chk["binding"] == P.binding(d_fit), "stale prototype checks: rerun prototype.py checks"
     table_sha = sha(HERE / PILOT["scenarios_file"])
-    if not (PAY / "pbs").exists():  # a further candidate's package reuses the cleared runner scripts unchanged
-        shutil.copytree(HERE / "payload" / "pbs", PAY / "pbs")
+    if not (PAY / "pbs").exists():  # a further candidate's package starts from a previous package's runner scripts
+        shutil.copytree(HERE / CAND.get("pbs_source", "payload/pbs"), PAY / "pbs")
     for sub in ("data", "inits", "preflight"):
         shutil.rmtree(PAY / sub, ignore_errors=True)
         (PAY / sub).mkdir(parents=True)
@@ -149,6 +150,7 @@ def build():
         outcome, d, ginfo, oinfo, secs = generate(int(s["gen_seed"]), ov, PILOT["generator"]["timeout_seconds"])
         row = dict(s, outcome=outcome, generator_seconds=secs, true_lineages=(ginfo or {}).get("true_lineages"))
         if outcome == "ok":
+            d = dict(d, **CAND.get("data_overrides", {}))
             write_stan_json(str(PAY / "data" / f"{s['id']}.json"), d)
             write_starts(PAY / "inits" / s["id"], d["N"], "noncentring" in P.CFG[ver])
             row.update(N=d["N"], observation=oinfo, cohort=d["NC"], singles=d["C1"], pairs=d["C2"])
@@ -156,7 +158,7 @@ def build():
         print(s["id"], outcome, row.get("N"), secs)
     # The replay dataset is the prototype's cost dataset at 64 nodes, and its starts are the frozen v4/v5 files.
     d_r00 = json.loads((PAY / "data" / "R00.json").read_text())
-    ref = json.loads(json.dumps(d_fit, default=float))
+    ref = json.loads(json.dumps(dict(d_fit, **CAND.get("data_overrides", {})), default=float))
     assert all(np.allclose(np.asarray(d_r00[k], float), np.asarray(ref[k], float), rtol=0, atol=0) for k in ref), "R00 differs"
     for k in range(1, 5):
         assert (PAY / "inits" / "R00" / f"chain{k}.json").read_bytes() == \
@@ -177,6 +179,17 @@ def build():
         write_stan_json(str(PAY / "preflight" / f"point_{name}.json"), q)
         log_prob_csv(exe, PAY / "preflight" / f"point_{name}.json", PAY / "data" / "R00.json",
                      PAY / "preflight" / f"ref_point_{name}.csv")
+    if "controls" in CAND:  # deterministic solver controls (Codex 76/1895): one admitted point, one rejected point
+        C = CAND["controls"]
+        pdir = HERE.parents[1] / C["probe_dir"]
+        shutil.copy(pdir / f"{C['accept']}.json", PAY / "preflight" / f"point_control_{C['accept']}.json")
+        log_prob_csv(exe, PAY / "preflight" / f"point_control_{C['accept']}.json", PAY / "data" / "R00.json",
+                     PAY / "preflight" / f"ref_point_control_{C['accept']}.csv")
+        shutil.copy(pdir / f"{C['reject']}.json", PAY / "preflight" / f"reject_control_{C['reject']}.json")
+        r = subprocess.run([str(exe), "log_prob", "jacobian=1", f"constrained_params={PAY / 'preflight' / f'reject_control_{C["reject"]}.json'}",
+                            "data", f"file={PAY / 'data' / 'R00.json'}", "output", f"file={CACHE / 'reject_control.csv'}", "sig_figs=15"],
+                           capture_output=True, text=True)
+        assert r.returncode != 0 and "algebra_solver: the norm of the algebraic function" in r.stdout + r.stderr, "reject control was not rejected"
     for row in rows:
         if row["outcome"] == "ok":
             row["starts_initialise"] = start_check(exe, row["id"])
@@ -211,8 +224,9 @@ def _receipt(path):
 def settings_line(env):
     """The settings line fit.sh writes into every receipt, for the given run.env values."""
     e = {k: str(v) for k, v in env.items()}
-    return (f"chains {e['CHAINS']}; warmup {e['WARMUP']}; sampling {e['SAMPLING']}; adapt_delta {e['ADAPT_DELTA']}; "
-            f"max_depth {e['MAX_DEPTH']}; stepsize {e['STEPSIZE']}; seed {e['SEED']}; fit_seconds {e['FIT_SECONDS']}")
+    s = (f"chains {e['CHAINS']}; warmup {e['WARMUP']}; sampling {e['SAMPLING']}; adapt_delta {e['ADAPT_DELTA']}; "
+         f"max_depth {e['MAX_DEPTH']}; stepsize {e['STEPSIZE']}; seed {e['SEED']}; fit_seconds {e['FIT_SECONDS']}")
+    return s + (f"; refresh {e['REFRESH']}; log {e['LOG_FORMAT']}" if "LOG_FORMAT" in e else "")
 
 
 def csv_meta(path):
@@ -256,6 +270,123 @@ def stdout_record(text):
     return rej, fatal
 
 
+import re
+
+LOG_RE = dict(
+    config=re.compile(r"^\s*[A-Za-z_]\w*( = .*)?$"),
+    grad=re.compile(r"^Gradient evaluation took [0-9.e+-]+ seconds$"),
+    trans=re.compile(r"^\d+ transitions using \d+ leapfrog steps per transition would take [0-9.e+-]+ seconds\.$"),
+    iteration=re.compile(r"^Iteration:\s+(\d+) / (\d+) \[\s*\d+%\]\s+\((Warmup|Sampling)\)$"),
+    elapsed1=re.compile(r"^ Elapsed Time: [0-9.e+-]+ seconds \(Warm-up\)$"),
+    elapsed2=re.compile(r"^\s+[0-9.e+-]+ seconds \(Sampling\)$"),
+    elapsed3=re.compile(r"^\s+[0-9.e+-]+ seconds \(Total\)$"))
+LOG_FIXED = dict(
+    adjust="Adjust your expectations accordingly!",
+    warn20a="WARNING: No variance estimation is", warn20b="         performed for num_warmup < 20",
+    rej="Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:",
+    rej3="If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,",
+    rej4="but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.",
+    init="Rejecting initial value:", init_eval="  Error evaluating the log probability at the initial value.",
+    init_log0="  Log probability evaluates to log(0), i.e. negative infinity.",
+    init_grad="  Gradient evaluated at the initial value is not finite.",
+    init_cant="  Stan can't start sampling from this initial value.")
+RECOGNISED_CAUSES = {"input", "solver", "hessian", "factorisation", "solver_internal"}
+
+
+def parse_log(text, warmup, sampling):
+    """Fail-closed parse of one combined, ordered CmdStan sample log (stdout and stderr on one file, refresh = 1).
+    Returns (failures, rejections). A failure is any unrecognised or malformed line, an incomplete rejection envelope,
+    an unrecognised rejection cause, a missing, repeated, out-of-order or mislabelled iteration marker, or a missing
+    completion block. Each rejection records its phase (init, stepsize_init, warmup, sampling) and transition."""
+    lines = text.split("\n")
+    if lines and lines[-1] == "":
+        lines = lines[:-1]
+    fails, rej = [], []
+    total = warmup + sampling
+    state, expect, cur, i = "header", 1, None, 0
+
+    def phase():
+        return {"header": "init", "init": "init", "prewarm": "stepsize_init"}.get(state, cur[1] if cur else "unknown")
+    while i < len(lines):
+        ln = lines[i]
+        if not ln.strip():
+            i += 1
+            continue
+        if state == "header" and LOG_RE["config"].match(ln):
+            i += 1
+            continue
+        if ln == LOG_FIXED["init"]:
+            if state not in ("header", "init"):
+                fails.append(f"line {i + 1}: initial-value rejection after initialisation")
+            state = "init"
+            nxt = lines[i + 1] if i + 1 < len(lines) else ""
+            if nxt == LOG_FIXED["init_eval"] and i + 2 < len(lines) and lines[i + 2].startswith("Exception: "):
+                c = P.cause(lines[i + 2])
+                rej.append(dict(phase="init", transition=None, cause=c, message=lines[i + 2][:200]))
+                if c not in RECOGNISED_CAUSES:
+                    fails.append(f"line {i + 3}: unrecognised initial-value rejection cause: {lines[i + 2][:120]!r}")
+                i += 3
+            elif nxt in (LOG_FIXED["init_log0"], LOG_FIXED["init_grad"]) and i + 2 < len(lines) and lines[i + 2] == LOG_FIXED["init_cant"]:
+                rej.append(dict(phase="init", transition=None, cause="init_nonfinite", message=nxt.strip()))
+                i += 3
+            else:
+                fails.append(f"line {i + 1}: incomplete initial-value rejection envelope")
+                i += 1
+            continue
+        if LOG_RE["grad"].match(ln) or LOG_RE["trans"].match(ln) or ln == LOG_FIXED["adjust"]:
+            if state not in ("header", "init", "prewarm"):
+                fails.append(f"line {i + 1}: gradient-timing block out of place")
+            state = "prewarm"
+            i += 1
+            continue
+        if ln == LOG_FIXED["warn20a"]:
+            if not (i + 1 < len(lines) and lines[i + 1] == LOG_FIXED["warn20b"] and warmup < 20 and state == "prewarm"):
+                fails.append(f"line {i + 1}: unexpected low-warmup warning")
+            i += 2
+            continue
+        m = LOG_RE["iteration"].match(ln)
+        if m:
+            k, n, lab = int(m.group(1)), int(m.group(2)), m.group(3)
+            want = "Warmup" if k <= warmup else "Sampling"
+            if state not in ("prewarm", "iter") or k != expect or n != total or lab != want:
+                fails.append(f"line {i + 1}: iteration marker {k}/{n} ({lab}); expected {expect}/{total} ({want if k == expect else ''})")
+            state, cur, expect = "iter", (k, lab.lower()), k + 1
+            i += 1
+            continue
+        if ln == LOG_FIXED["rej"]:
+            ok = (i + 3 < len(lines) and lines[i + 1].startswith("Exception: ") and lines[i + 2] == LOG_FIXED["rej3"]
+                  and lines[i + 3] == LOG_FIXED["rej4"])
+            if not ok:
+                fails.append(f"line {i + 1}: incomplete rejection envelope")
+                i += 1
+                continue
+            c = P.cause(lines[i + 1])
+            ph = phase()
+            if ph in ("init",):
+                ph = "stepsize_init"
+            rej.append(dict(phase=ph, transition=cur[0] if (cur and state == "iter") else None, cause=c, message=lines[i + 1][:200]))
+            if c not in RECOGNISED_CAUSES:
+                fails.append(f"line {i + 2}: unrecognised rejection cause: {lines[i + 1][:120]!r}")
+            if state not in ("prewarm", "iter"):
+                fails.append(f"line {i + 1}: rejection envelope before initialisation completed")
+            i += 4
+            continue
+        if LOG_RE["elapsed1"].match(ln):
+            if not (state == "iter" and expect == total + 1 and i + 2 < len(lines) and LOG_RE["elapsed2"].match(lines[i + 1])
+                    and LOG_RE["elapsed3"].match(lines[i + 2])):
+                fails.append(f"line {i + 1}: completion block out of place or malformed")
+            state = "done"
+            i += 3
+            continue
+        fails.append(f"line {i + 1}: unrecognised line {ln[:120]!r}")
+        i += 1
+    if state != "done":
+        fails.append(f"no completion block; last marker {cur}")
+    if expect != total + 1:
+        fails.append(f"iteration markers end at {expect - 1}, expected {total}")
+    return fails, rej
+
+
 def qualify(attempt, scen, env, manifest_sha, build_receipt):
     """Structural qualification of one attempt, before any statistics. Returns the list of failures (empty if it qualifies)."""
     attempt = pathlib.Path(attempt)
@@ -274,24 +405,30 @@ def qualify(attempt, scen, env, manifest_sha, build_receipt):
     if build_receipt.get("manifest_sha256") != manifest_sha:
         fails.append("build receipt is for a different payload manifest")
     C = int(env["CHAINS"])
-    expected = {f"chain{k}.{x}" for k in range(1, C + 1) for x in ("csv", "stdout", "stderr", "exit")}
+    combined = env.get("LOG_FORMAT") == "combined"
+    streams = ("log",) if combined else ("stdout", "stderr")
+    expected = {f"chain{k}.{x}" for k in range(1, C + 1) for x in ("csv", "exit") + streams}
     present = {f.name for f in attempt.iterdir()}
     fails += [f"missing {n}" for n in sorted(expected - present)]
     fails += [f"unexpected output file {n}" for n in sorted(present)
-              if (n.endswith((".csv", ".stdout", ".stderr", ".exit")) and n not in expected)
+              if (n.endswith((".csv", ".stdout", ".stderr", ".log", ".exit")) and n not in expected)
               or (n.endswith(".time") and n.removesuffix(".time") + ".csv" not in expected)]
     for k in range(1, C + 1):
         c = attempt / f"chain{k}"
-        if not all((attempt / f"chain{k}.{x}").exists() for x in ("csv", "stdout", "stderr", "exit")):
+        if not all((attempt / f"chain{k}.{x}").exists() for x in ("csv", "exit") + streams):
             continue
         if (attempt / f"chain{k}.exit").read_text().strip() != "0" or rc.get(f"chain{k}_exit") != "0":
             fails.append(f"chain {k} exit {(attempt / f'chain{k}.exit').read_text().strip()!r}")
-        err = (attempt / f"chain{k}.stderr").read_text(errors="replace").strip()
-        if err:
-            fails.append(f"chain {k} stderr not empty: {err.splitlines()[0][:160]!r}")
-        _, fatal = stdout_record((attempt / f"chain{k}.stdout").read_text(errors="replace"))
-        if fatal:
-            fails.append(f"chain {k} fatal: {fatal[0]['message'][:160]!r}")
+        if combined:
+            lf, _ = parse_log((attempt / f"chain{k}.log").read_text(errors="replace"), int(env["WARMUP"]), int(env["SAMPLING"]))
+            fails += [f"chain {k} log: {x}" for x in lf]
+        else:
+            err = (attempt / f"chain{k}.stderr").read_text(errors="replace").strip()
+            if err:
+                fails.append(f"chain {k} stderr not empty: {err.splitlines()[0][:160]!r}")
+            _, fatal = stdout_record((attempt / f"chain{k}.stdout").read_text(errors="replace"))
+            if fatal:
+                fails.append(f"chain {k} fatal: {fatal[0]['message'][:160]!r}")
         if "seconds (Total)" not in pathlib.Path(f"{c}.csv").read_text(errors="replace"):
             fails.append(f"chain {k} CSV incomplete")
         m = csv_meta(f"{c}.csv")
@@ -346,8 +483,9 @@ def eta_block(q05, q95, m05, m95, truth):
                 X_numerically_uncertain=(q95 - 2 * m95 < D["eta1"] < q95 + 2 * m95) if ends and prec else None)
 
 
-def statistics(csvs, outs, truth):
-    """Screening statistics on chain files of equal, already verified length."""
+def statistics(csvs, outs, truth, env=None):
+    """Screening statistics on chain files of equal, already verified length. With a combined log format (env
+    LOG_FORMAT=combined) the per-chain logs are parsed for phase-attributed rejections; otherwise stdout only."""
     import arviz as az
     import pandas as pd
     S = PILOT["screening"]
@@ -355,12 +493,23 @@ def statistics(csvs, outs, truth):
     assert len({len(x) for x in dfs}) == 1, "unequal chain lengths"
     arr = lambda col: np.stack([x[col].to_numpy() for x in dfs])
     chains = []
+    combined = bool(env) and env.get("LOG_FORMAT") == "combined"
     for c, o, x in zip(csvs, outs, dfs):
-        rej, fatal = stdout_record(pathlib.Path(o).read_text(errors="replace"))
+        if combined:
+            lf, rl = parse_log(pathlib.Path(o).read_text(errors="replace"), int(env["WARMUP"]), int(env["SAMPLING"]))
+            rej = {}
+            for r in rl:
+                rej[f"{r['cause']}_{r['phase']}"] = rej.get(f"{r['cause']}_{r['phase']}", 0) + 1
+            fatal = [dict(message=f) for f in lf]
+            extra = dict(rejection_events=rl, log_parse="complete" if not lf else "failed")
+        else:
+            rej, fatal = stdout_record(pathlib.Path(o).read_text(errors="replace"))
+            se = pathlib.Path(o).with_suffix(".stderr")
+            extra = dict(log_parse="stdout only", stderr_nonempty=se.exists() and bool(se.read_text(errors="replace").strip()))
         chains.append(dict(csv=pathlib.Path(c).name, draws=len(x), divergences=int(x["divergent__"].sum()),
                            depth_hits=int((x["treedepth__"] >= PILOT["sampler"]["max_treedepth"]).sum()),
                            ebfmi=ebfmi(x["energy__"].to_numpy()), rejections=rej, fatal=fatal,
-                           sampling_phase_rejections=sum(v for k, v in rej.items() if k.endswith("_sampling"))))
+                           sampling_phase_rejections=sum(v for k, v in rej.items() if k.endswith("_sampling")), **extra))
     cols = [c for c in dfs[0].columns if not c.endswith("__") or c == "lp__"]
     rhat = {c: float(az.rhat(arr(c))) for c in cols}
     ess = {c: dict(bulk=float(az.ess(arr(c), method="bulk")), tail=float(az.ess(arr(c), method="tail"))) for c in S["core"]}
@@ -369,11 +518,13 @@ def statistics(csvs, outs, truth):
     m05, m95 = float(az.mcse(eta, method="quantile", prob=0.05)), float(az.mcse(eta, method="quantile", prob=0.95))
     crit = dict(
         zero_post_warmup_divergences=sum(c["divergences"] for c in chains) == S["post_warmup_divergences"],
-        no_fatal_or_sampling_phase_failures=not any(c["fatal"] or c["sampling_phase_rejections"] for c in chains),
+        no_fatal_or_sampling_phase_failures=(not any(c["fatal"] or c["sampling_phase_rejections"] for c in chains))
+        if combined or not any(c.get("stderr_nonempty") for c in chains) else None,  # separate stderr: phase unknown
         ebfmi_each_chain=all(_finite(c["ebfmi"]) and c["ebfmi"] >= S["ebfmi_min_per_chain"] for c in chains),
         rhat_all=rhat_pass(rhat), ess_bulk_tail_core=ess_pass(ess))
     worst = sorted(rhat.items(), key=lambda kv: -kv[1] if _finite(kv[1]) else -np.inf)
-    return dict(chains=chains, screening=crit, screening_pass=all(crit.values()), rhat_max=worst[0],
+    verdict = False if any(v is False for v in crit.values()) else None if any(v is None for v in crit.values()) else True
+    return dict(chains=chains, screening=crit, screening_pass=verdict, rhat_max=worst[0],
                 rhat_over_threshold=[(k, v) for k, v in worst if not _finite(v) or v >= S["rhat_max"]][:20],
                 rhat_core={c: rhat[c] for c in S["core"]}, ess_core=ess, eta=eta_block(q05, q95, m05, m95, truth))
 
@@ -406,7 +557,8 @@ def diagnose(attempt, scen, env=None, manifest_sha=None, build_receipt=None, wri
     else:
         C = int(env["CHAINS"])
         st = statistics([attempt / f"chain{k}.csv" for k in range(1, C + 1)],
-                        [attempt / f"chain{k}.stdout" for k in range(1, C + 1)], truth)
+                        [attempt / f"chain{k}.{'log' if env.get('LOG_FORMAT') == 'combined' else 'stdout'}" for k in range(1, C + 1)],
+                        truth, env)
         res.update(status="screened", **st)
         res["precision"] = ("met" if st["eta"]["mcse_target_met"] else "not met" if st["eta"]["mcse_target_met"] is False
                             else "unresolved")
@@ -427,29 +579,117 @@ def summarise(folder):
     return res
 
 
-def gate_point(d, q, n_ref=1600):
-    """Q = 64 normaliser against the dense Simpson reference at one joint state: value and d/dsigma, d/drho, d/dkappa_b,
-    with finite-difference steps kept inside the sigma and rho domains."""
-    hs = dict(sigma=min(1e-4, q["sigma"] / 2), rho=min(1e-4, q["rho"] / 2, (1 - q["rho"]) / 2), kappa_b=1e-4)
+REF_TOL = dict(value=1e-6, derivative=1e-5)  # a reference is converged when doubling its resolution moves it less than this
 
-    def val(p, ref, n):
-        A = P.cohort_A(d, p)
-        return P.log_norm_ref(d, p, A, n) if ref else P.log_norm_agh(d, p, A)
-    res = dict(log_err=abs(val(q, False, n_ref) - val(q, True, n_ref)), h=hs)
+
+def _steps(q):
+    return dict(sigma=min(1e-4, q["sigma"] / 2), rho=min(1e-4, q["rho"] / 2, (1 - q["rho"]) / 2), kappa_b=1e-4)
+
+
+def _lse(x):
+    m = float(np.max(x))
+    return m + math.log(float(np.exp(x - m).sum()))
+
+
+def local_reference(d, q, n=1600, L=16.0):
+    """Log cohort normaliser by Simpson integration on a grid centred and scaled at each Newton mode (2-D in 64-row
+    chunks). Independent of the Q = 64 nodes; resolves narrow modes the fixed-innovation reference misses."""
+    sig, rho, kb = q["sigma"], q["rho"], q["kappa_b"]
+    A = P.cohort_A(d, q)
+    b0 = math.exp(q["log_b0"])
+    s2h = 0.5 * sig * sig
+    e = np.linspace(-L, L, n + 1)
+    wt = np.ones(n + 1)
+    wt[1:-1:2], wt[2:-1:2] = 4, 2
+    lw = np.log(wt * 2 * L / (3 * n))
+    ls = lambda x, a, b: -a * np.exp(x - s2h) - b * np.exp(kb * (x - s2h))
+
+    def mode(aa, bb, inv):
+        a, b, y = np.array(aa), np.array(bb), np.zeros(len(aa))
+        for _ in range(200):
+            ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
+            Pm = inv + np.diag(ep + kb * kb * eb)
+            dlt = np.linalg.solve(Pm, -inv @ y - ep - kb * eb)
+            y = y + dlt
+            if np.max(np.abs(dlt)) < 1e-14:
+                break
+        ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
+        return y, np.linalg.cholesky(np.linalg.inv(inv + np.diag(ep + kb * kb * eb)))
+    out = 0.0
+    for ii in d["c1_lin"]:
+        i = ii - 1
+        a, b = A[i], b0 * (d["c"] - d["o"][i])
+        m, T = mode([a], [b], np.array([[1 / sig ** 2]]))
+        x = m[0] + T[0, 0] * e
+        out += math.log(T[0, 0]) + _lse(lw + ls(x, a, b) - 0.5 * x * x / sig ** 2 - math.log(sig) - 0.5 * math.log(2 * math.pi))
+    for ip, idd in zip(d["c2_par"], d["c2_dau"]):
+        ip, idd = ip - 1, idd - 1
+        aa, bb = [A[ip], A[idd]], [b0 * (d["c"] - d["o"][k]) for k in (ip, idd)]
+        inv = np.linalg.inv(sig ** 2 * np.array([[1, rho], [rho, 1]]))
+        m, T = mode(aa, bb, inv)
+        logs = []
+        for s in range(0, n + 1, 64):
+            e1, e2 = e[s:s + 64, None], e[None, :]
+            xp = m[0] + T[0, 0] * e1
+            xd = m[1] + T[1, 0] * e1 + T[1, 1] * e2
+            arr = (lw[s:s + 64, None] + lw[None, :] + ls(xp, aa[0], bb[0]) + ls(xd, aa[1], bb[1])
+                   - 0.5 * (inv[0, 0] * xp * xp + 2 * inv[0, 1] * xp * xd + inv[1, 1] * xd * xd)
+                   - math.log(2 * math.pi) - 2 * math.log(sig) - 0.5 * math.log(1 - rho * rho))
+            logs.append(_lse(arr))
+        out += math.log(T[0, 0] * T[1, 1]) + _lse(np.array(logs))
+    return out
+
+
+def _values(d, q, f):
+    """Value and central-difference derivatives (domain-safe steps) of a normaliser function f(q)."""
+    hs = _steps(q)
+    v = dict(value=f(q))
     for name in ("sigma", "kappa_b") + (("rho",) if d["C2"] else ()):
         h = hs[name]
-        hi, lo = dict(q, **{name: q[name] + h}), dict(q, **{name: q[name] - h})
-        res[f"d_{name}_err"] = abs((val(hi, False, n_ref) - val(lo, False, n_ref)) / (2 * h)
-                                   - (val(hi, True, n_ref) - val(lo, True, n_ref)) / (2 * h))
-    res["pass"] = bool(res["log_err"] <= 1e-4 and all(v <= 1e-3 for k, v in res.items() if k.startswith("d_")))
-    return res
+        v[name] = (f(dict(q, **{name: q[name] + h})) - f(dict(q, **{name: q[name] - h}))) / (2 * h)
+    return v
+
+
+def _converged(a, b):
+    ch = {k: b[k] - a[k] for k in a}
+    return dict(value_change=float(ch["value"]), derivative_changes={k: float(v) for k, v in ch.items() if k != "value"},
+                converged=bool(abs(ch["value"]) <= REF_TOL["value"]
+                               and all(abs(v) <= REF_TOL["derivative"] for k, v in ch.items() if k != "value")))
 
 
 def reference_convergence(d, q):
-    """Change in the reference value and derivatives when the Simpson grid doubles from 1,600 to 3,200 intervals."""
-    a, b = gate_point(d, q, 1600), gate_point(d, q, 3200)
-    return dict(log_change=abs(a["log_err"] - b["log_err"]),
-                max_derivative_change=max(abs(a[k] - b[k]) for k in a if k.startswith("d_")))
+    """Signed change of the fixed-innovation Simpson reference itself (value and derivatives), 1,600 -> 3,200 intervals."""
+    ref = lambda n: (lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), n))
+    return _converged(_values(d, q, ref(1600)), _values(d, q, ref(3200)))
+
+
+def gate_point(d, q):
+    """Q = 64 normaliser against a converged reference at one joint state (value and d/dsigma, d/drho, d/dkappa_b, with
+    domain-safe steps). The fixed-innovation Simpson reference is used when it converges; otherwise the local-mode
+    reference; if neither converges the state is unresolved, never passed."""
+    agh = _values(d, q, lambda p: P.log_norm_agh(d, p, P.cohort_A(d, p)))
+    coarse = reference_convergence(d, q)
+    used, ref = "fixed_innovation_n1600", None
+    if coarse["converged"]:
+        ref = _values(d, q, lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), 1600))
+    else:
+        a = _values(d, q, lambda p: local_reference(d, p, 800, 12.0))
+        b = _values(d, q, lambda p: local_reference(d, p, 1600, 12.0))
+        c = _values(d, q, lambda p: local_reference(d, p, 1600, 16.0))
+        loc = dict(resolution=_converged(a, b), domain=_converged(b, c))
+        if loc["resolution"]["converged"] and loc["domain"]["converged"]:
+            used, ref = "local_mode_n1600_L16", c
+        coarse["local"] = loc
+    res = dict(h=_steps(q), reference=used if ref else "unresolved", reference_convergence=coarse)
+    if ref is None:
+        res["pass"] = None
+        return res
+    res["log_err"] = abs(agh["value"] - ref["value"])
+    for k in agh:
+        if k != "value":
+            res[f"d_{k}_err"] = abs(agh[k] - ref[k])
+    res["pass"] = bool(res["log_err"] <= 1e-4 and all(v <= 1e-3 for k, v in res.items() if k.startswith("d_")))
+    return res
 
 
 def joint_checks(fit_dir, data_file):
@@ -466,16 +706,19 @@ def joint_checks(fit_dir, data_file):
     states = {i: P.draw_to_params(df.iloc[i], d["N"]) for i in sel}
     gates = {str(i): dict(sigma=float(q["sigma"]), rho=float(q["rho"]), kappa_b=float(q["kappa_b"]), **gate_point(d, q))
              for i, q in states.items()}
-    worst = max(gates, key=lambda k: gates[k]["log_err"]) if gates else None
+    tested = {k: g for k, g in gates.items() if g["pass"] is not None}
+    worst = max(tested, key=lambda k: tested[k]["log_err"]) if tested else None
     lower = [dict(chain=k, q001=float(x.sigma.quantile(0.001)), q01=float(x.sigma.quantile(0.01)), min=float(x.sigma.min()),
                   mass_below_0_1=float((x.sigma < 0.1).mean()), mass_below_0_01=float((x.sigma < 0.01).mean()))
              for k, x in enumerate(dfs, start=1)]
-    return dict(states_tested=len(gates), status="tested" if gates else "not tested",
-                all_pass=(all(g["pass"] for g in gates.values()) if gates else None),
-                max_log_err=max((g["log_err"] for g in gates.values()), default=None),
-                max_derivative_err=max((v for g in gates.values() for k, v in g.items() if k.startswith("d_") and k.endswith("_err")),
+    unresolved = [k for k, g in gates.items() if g["pass"] is None]
+    verdict = (None if not gates or unresolved else all(g["pass"] for g in gates.values()))
+    return dict(states_selected=len(gates), states_with_converged_reference=len(tested), unresolved_states=unresolved,
+                status="tested" if gates else "not tested", all_pass=verdict,
+                max_log_err=max((g["log_err"] for g in tested.values()), default=None),
+                max_derivative_err=max((v for g in tested.values() for k, v in g.items() if k.startswith("d_") and k.endswith("_err")),
                                        default=None),
-                reference_convergence_at_worst=(reference_convergence(d, states[int(worst)]) if worst else "not tested"),
+                worst_state=worst, reference_convergence_at_worst=(gates[worst]["reference_convergence"] if worst else "not tested"),
                 states=gates, sigma_lower_tail=lower)
 
 
@@ -556,6 +799,113 @@ def tranche_preflight():
                              for sc, r in out.items() if isinstance(r, dict)} | dict(all_pass=out["all_pass"])), indent=1, default=float))
 
 
+def _lp(mdl, q, d):
+    """Actual-Stan log density and AD gradient (jacobian = true); None if Stan rejects the state, with the message."""
+    try:
+        row = mdl.log_prob(q, data=d, jacobian=True, sig_figs=15).iloc[0]
+        return {k: float(v) for k, v in row.items()}, None
+    except (RuntimeError, ValueError) as e:
+        return None, str(e)[-400:]
+
+
+def amended_preflight():
+    """Preparation checks for an amended candidate with data overrides and solver controls (Codex 76/1895)."""
+    import pandas as pd
+    from cmdstanpy.utils import write_stan_json
+    ov = CAND["data_overrides"]
+    orig, prev = HERE / "payload", HERE / "payload_v6p"
+    out = dict(candidate=PILOT["active_candidate"], overrides=ov)
+    # 1. Data: field-level difference from the frozen originals is exactly the declared override.
+    diffs = {}
+    for sc in CAND["scenarios"]:
+        new, old = json.loads((PAY / "data" / f"{sc}.json").read_text()), json.loads((orig / "data" / f"{sc}.json").read_text())
+        diffs[sc] = sorted(k for k in set(new) | set(old) if new.get(k) != old.get(k))
+    out["data_field_differences"] = diffs
+    data_ok = all(v == sorted(ov) for v in diffs.values()) and all(
+        json.loads((PAY / "data" / f"{sc}.json").read_text())[k] == ov[k] for sc in CAND["scenarios"] for k in ov)
+    # 2. Starts identical to the previous package's exact mappings.
+    starts_ok = all((PAY / "inits" / sc / f"chain{k}.json").read_bytes() == (prev / "inits" / sc / f"chain{k}.json").read_bytes()
+                    for sc in CAND["scenarios"] for k in range(1, 5))
+    out["starts_identical_to_v6p"] = starts_ok
+    mdl_old, mdl_new = P.model(P.CFG[P.CFG[P.CFG["active"]]["reference_version"]]["stan_file"]), P.model()
+    I = P.CFG[P.CFG["active"]]["identity"]
+    dP = json.loads((PAY / "data" / "P11.json").read_text())
+    d_old_tol = dict(dP, **{k: json.loads((orig / "data" / "P11.json").read_text())[k] for k in ov})
+    starts = [json.loads((orig / "inits" / "P11" / f"chain{k}.json").read_text()) for k in range(1, 5)]
+    pts = {f"start_chain{k}": q for k, q in enumerate(starts, start=1)}
+    pts.update(sigma_001=dict(starts[0], sigma=0.01), sigma_0001=dict(starts[0], sigma=0.001))
+    # 3. v5/v6 identities under the new data.
+    ids = {n: P.identity_point(mdl_old, mdl_new, dP, q) for n, q in pts.items()}
+    worst = {k: max(x[k] for x in ids.values()) for k in ("log_identity_error", "grad_w_error", "grad_logsigma_error", "grad_other_error")}
+    id_ok = all(x["finite"] for x in ids.values()) and worst["log_identity_error"] <= I["log_tol"] and \
+        max(worst[k] for k in worst if k.startswith("grad")) <= I["grad_tol"]
+    out["identity"] = dict(worst=worst, **{"pass": id_ok})
+    # 4. Old and new solver thresholds agree on accepted states: starts, small sigma, and the first P11 fit's states.
+    fit = HERE.parents[1] / "scratch/q012-pilot/fetch-20261017-v6p/runs/P11/attempt1"
+    df = pd.concat([pd.read_csv(fit / f"chain{k}.csv", comment="#") for k in range(1, 5)], ignore_index=True)
+    sel = list(dict.fromkeys([int(i) for i in df.nlargest(6, "sigma").index]
+                             + [int(df.kappa_b.abs().idxmax()), int(df.rho.idxmin()), int(df.rho.idxmax())]
+                             + [int(i) for i in np.linspace(0, len(df) - 1, 40).astype(int)]
+                             + [int(i) for i in np.flatnonzero(df.divergent__.to_numpy())]
+                             + [int(df.iloc[k * 4000:(k + 1) * 4000].sigma.idxmin()) for k in range(4)]))
+    states = dict(pts, **{f"p11_row{i}": P.draw_to_params(df.iloc[i], dP["N"]) for i in sel})
+    eq = {}
+    for n, q in states.items():
+        a, ea = _lp(mdl_new, P.to_nc(q), d_old_tol)
+        b, eb = _lp(mdl_new, P.to_nc(q), dP)
+        eq[n] = dict(accepted_old=a is not None, accepted_new=b is not None,
+                     max_abs_difference=(max(abs(a[k] - b[k]) for k in a) if a and b else None))
+    eq_ok = all(r["accepted_old"] and r["accepted_new"] and r["max_abs_difference"] == 0.0 for r in eq.values())
+    out["threshold_equivalence"] = dict(states=len(eq), all_identical=eq_ok,
+                                        max_abs_difference=max((r["max_abs_difference"] or 0.0) for r in eq.values()),
+                                        not_accepted=[n for n, r in eq.items() if not (r["accepted_old"] and r["accepted_new"])])
+    # 5. Deterministic controls: p75 newly admitted, p53 still rejected; AD against actual-LP finite differences at p75.
+    C = CAND["controls"]
+    pdir = HERE.parents[1] / C["probe_dir"]
+    dR = json.loads((PAY / "data" / "R00.json").read_text())
+    dR_old = dict(dR, **{k: json.loads((orig / "data" / "R00.json").read_text())[k] for k in ov})
+    ctl = {}
+    for name in (C["accept"], C["reject"]):
+        q = json.loads((pdir / f"{name}.json").read_text())
+        qp = dict(q, w=q["w"][:dP["N"]])
+        for sc, dn, do, qq in (("R00", dR, dR_old, q), ("P11", dP, d_old_tol, qp)):
+            new, en = _lp(mdl_new, qq, dn)
+            old, eo = _lp(mdl_new, qq, do)
+            ctl[f"{name}_{sc}"] = dict(accepted_f10=new is not None, accepted_f11=old is not None,
+                                       finite=(all(math.isfinite(v) for v in new.values()) if new else None),
+                                       rejection=(en or "")[-200:] if new is None else None)
+    qa = json.loads((pdir / f"{C['accept']}.json").read_text())
+    qa = dict(qa, w=qa["w"][:dP["N"]])
+    base, _ = _lp(mdl_new, qa, dP)
+    fd = {}
+    h = 1e-4
+    for name, col in (("sigma", "g_sigma"), ("kappa_b", "g_kappa_b")):
+        shift = (lambda s: dict(qa, sigma=qa["sigma"] * math.exp(s))) if name == "sigma" else (lambda s: dict(qa, kappa_b=qa["kappa_b"] + s))
+        hi, _ = _lp(mdl_new, shift(h), dP)
+        lo, _ = _lp(mdl_new, shift(-h), dP)
+        g = (hi["lp__"] - lo["lp__"]) / (2 * h)
+        fd[name] = dict(ad=base[col], fd=g, scaled_error=abs(base[col] - g) / max(1.0, abs(g)))
+    ctl_ok = (ctl[f"{C['accept']}_R00"]["accepted_f10"] and not ctl[f"{C['accept']}_R00"]["accepted_f11"]
+              and ctl[f"{C['accept']}_P11"]["accepted_f10"] and ctl[f"{C['accept']}_P11"]["finite"]
+              and not ctl[f"{C['reject']}_R00"]["accepted_f10"] and not ctl[f"{C['reject']}_P11"]["accepted_f10"]
+              and all(v["scaled_error"] <= 1e-6 for v in fd.values()))
+    out["controls"] = dict(rows=ctl, finite_difference_at_accept=fd, **{"pass": bool(ctl_ok)})
+    # 6. Q = 64 gates at the starts, small sigma and the admitted control (converged reference required).
+    qa_eps = dict({k: v for k, v in qa.items() if k != "w"}, eps=list(np.asarray(qa["w"]) / qa["sigma"] ** 0.2))
+    gpts = dict(pts, **{f"control_{C['accept']}_P11": qa_eps})
+    gates = {n: gate_point(dP, q) for n, q in gpts.items()}
+    out["q64"] = dict(rows=gates, **{"pass": all(g["pass"] is True for g in gates.values())})
+    out["binding"] = {str(f.relative_to(HERE.parents[1])): sha(f) for f in
+                      [PAY / "data" / "P11.json", PAY / "data" / "R00.json", PAY / "model_v6.stan", HERE / "pilot.py",
+                       pdir / f"{C['accept']}.json", pdir / f"{C['reject']}.json"] + sorted((PAY / "inits").rglob("*.json"))}
+    out["all_pass"] = bool(data_ok and starts_ok and id_ok and eq_ok and ctl_ok and out["q64"]["pass"])
+    out["data_ok"] = bool(data_ok)
+    (HERE / f"amended_preflight_{PILOT['active_candidate']}.json").write_text(json.dumps(_clean(out), indent=1, default=float) + "\n")
+    print(json.dumps(_clean({k: v for k, v in out.items() if k not in ("binding",)} | dict(q64=dict(
+        worst_log=max((g.get("log_err") or 0) for g in gates.values()), refs={n: g["reference"] for n, g in gates.items()},
+        **{"pass": out["q64"]["pass"]}))), indent=1, default=float)[:5000])
+
+
 def dispatch_test():
     """Local fixture for stage.sh and submit_fit.sh (Codex 76/1855): fake transport (local bash and cp), fake qsub/qstat that
     record every call, and a local 'remote' root. Writes dispatch_test.json."""
@@ -587,12 +937,15 @@ def dispatch_test():
     out["no_fit_scenario_refused"] = dict(exit=r.returncode, calls=calls(), ok=r.returncode != 0 and not calls())
     r = run(["bash", str(HERE / "stage.sh"), "fx"], dict(FIT_SCEN="R00"))
     out["r00_refused"] = dict(exit=r.returncode, calls=calls(), ok=r.returncode != 0 and not calls())
-    r = run(["bash", str(HERE / "stage.sh"), "fx"], dict(FIT_SCEN="P11"))
+    fits = CAND["fits"]
+    first, later = fits[0], (fits[1] if len(fits) > 1 else None)
+    others = [s["id"] for s in scenarios() if s["id"] != first]
+    r = run(["bash", str(HERE / "stage.sh"), "fx"], dict(FIT_SCEN=first))
     c = calls()
-    out["stage_p11"] = dict(exit=r.returncode, calls=c,
-                            ok=r.returncode == 0 and len(c) == 2 and c[0] == "pbs/build.pbs"
-                            and c[1] == "-v SCEN=P11 -W depend=afterok:90001.fake pbs/fit.pbs"
-                            and not any("R00" in x or "P06" in x or "-J" in x for x in c))
+    out[f"stage_{first.lower()}"] = dict(exit=r.returncode, calls=c,
+                                         ok=r.returncode == 0 and len(c) == 2 and c[0] == "pbs/build.pbs"
+                                         and c[1] == f"-v SCEN={first} -W depend=afterok:90001.fake pbs/fit.pbs"
+                                         and not any(o in x for o in others for x in c) and not any("-J" in x for x in c))
     remote = root / "remote" / "q012-pilot-fx"
     out["remote_payload_verified"] = dict(ok=(remote / "manifest.sha256").exists() and (remote / "submitted.txt").exists(),
                                           submitted=(remote / "submitted.txt").read_text().split() if (remote / "submitted.txt").exists() else None)
@@ -605,8 +958,12 @@ def dispatch_test():
     out["submit_fit_r00_refused"] = dict(exit=r.returncode, ok=r.returncode != 0 and len(calls()) == n0)
     r = run(["bash", str(HERE / "submit_fit.sh"), "fx", "P06"], {})
     c = calls()
-    out["submit_fit_p06_after_build"] = dict(exit=r.returncode, new_calls=c[n0:],
-                                             ok=r.returncode == 0 and c[n0:] == ["-v SCEN=P06 pbs/fit.pbs"])
+    if later:
+        out[f"submit_fit_{later.lower()}_after_build"] = dict(exit=r.returncode, new_calls=c[n0:],
+                                                              ok=r.returncode == 0 and c[n0:] == [f"-v SCEN={later} pbs/fit.pbs"])
+    else:
+        out["submit_fit_p06_refused_even_after_build"] = dict(exit=r.returncode, new_calls=c[n0:],
+                                                               ok=r.returncode != 0 and c[n0:] == [])
     out["all_pass"] = all(v["ok"] for v in out.values())
     (HERE / f"dispatch_test_{PILOT['active_candidate']}.json").write_text(json.dumps(out, indent=1) + "\n")
     print(json.dumps(out, indent=1))
@@ -621,8 +978,9 @@ def _run(cmd, root, env=None, timeout=900):
     return r.returncode, r.stdout + r.stderr
 
 
-def _fixture_seal(root, binary="model_v4"):
+def _fixture_seal(root, binary=None):
     """Rewrite a fixture's manifest and a successful build receipt bound to it."""
+    binary = binary or RUN_ENV["MODEL_BIN"][2:]
     write_manifest(root)
     (root / "build").mkdir(exist_ok=True)
     (root / "build" / "receipt.txt").write_text(
@@ -649,7 +1007,7 @@ def selftest():
     shutil.rmtree(root, ignore_errors=True)
     shutil.copytree(PAY / "pbs", root / "pbs")
     exe = P.OUT / P.CFG[P.CFG["active"]]["stan_file"].removesuffix(".stan")
-    shutil.copy(exe, root / "model_v4")
+    shutil.copy(exe, root / RUN_ENV["MODEL_BIN"][2:])
     d, _, _ = P.dataset(P.CFG["seed"])
     (root / "data").mkdir()
     for scen in ("FX", "FY", "FB", "FT"):
@@ -732,7 +1090,7 @@ def selftest():
     out["stale_data_refused"] = dict(exit=code, ok=code == 2 and "manifest mismatch" in txt)
     _fixture_seal(root)
     br = (root / "build" / "receipt.txt").read_text()
-    (root / "build" / "receipt.txt").write_text(br.replace(f"binary_sha256={sha(root / 'model_v4')}", "binary_sha256=" + "0" * 64))
+    (root / "build" / "receipt.txt").write_text(br.replace(f"binary_sha256={sha(root / RUN_ENV['MODEL_BIN'][2:])}", "binary_sha256=" + "0" * 64))
     code, txt = _run(fit, root, dict(SCEN="FX"))
     out["binary_mismatch_refused"] = dict(exit=code, ok=code == 2 and "binary hash" in txt)
     (root / "build" / "receipt.txt").write_text(br.replace(f"manifest_sha256={sha(root / 'manifest.sha256')}", "manifest_sha256=" + "1" * 64))
@@ -759,7 +1117,14 @@ def selftest():
         (v / "receipt.txt").read_text().replace("scenario=FX", "scenario=P12").replace("status=complete", "status=failed")
         .replace(rcx["manifest_sha256"], "2" * 64)))), bool)
     scr["nonzero_chain_exit"] = (q(variant("exit", lambda v: (v / "chain3.exit").write_text("1\n"))), bool)
-    scr["fatal_stderr"] = (q(variant("stderr", lambda v: (v / "chain1.stderr").write_text("Exception: fatal\n"))), bool)
+    def inject(fname, after, text):
+        def f(v):
+            lines = (v / fname).read_text().split("\n")
+            k = next(i for i, ln in enumerate(lines) if ln.startswith(after)) + 1
+            (v / fname).write_text("\n".join(lines[:k] + text.split("\n") + lines[k:]))
+        return f
+    scr["fatal_text_in_log"] = (q(variant("fatal", inject("chain1.log", "Iteration:  3 /", "Exception: fatal"))), bool)
+    scr["separate_stderr_file"] = (q(variant("stderr", lambda v: (v / "chain1.stderr").write_text(""))), bool)
     scr["fewer_draws_than_declared"] = (q(good, e=dict(env, SAMPLING=6)), bool)
 
     def drop_row(v):
@@ -779,6 +1144,52 @@ def selftest():
     scr["binary_hash_absent_from_both_receipts"] = (q(variant("nohash", no_hash), b=nb), bool)
     out["screening_refusals"] = {k: dict(failures=r[:3], ok=pred(r)) for k, (r, pred) in scr.items()}
     out["screening_refusals"]["ok"] = all(v["ok"] for v in out["screening_refusals"].values())
+    # The combined-log parser on a real fixture log (WARMUP 10, SAMPLING 5, refresh 1): phase boundaries and failure cases.
+    log = (good / "chain1.log").read_text()
+    W, S = int(env["WARMUP"]), int(env["SAMPLING"])
+    env_text = lambda exc: "\n".join([LOG_FIXED["rej"], exc, LOG_FIXED["rej3"], LOG_FIXED["rej4"], ""])
+    known = "Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)"
+
+    def after(text, prefix, ins):
+        lines = text.split("\n")
+        k = next(i for i, ln in enumerate(lines) if ln.startswith(prefix)) + 1
+        return "\n".join(lines[:k] + ins.split("\n") + lines[k:])
+
+    def drop(text, prefix):
+        return "\n".join(ln for ln in text.split("\n") if not ln.startswith(prefix))
+    last_warm = f"Iteration: {W} / {W + S}"
+    first_samp = f"Iteration: {W + 1} / {W + S}"
+    cases = dict(
+        clean=(log, lambda f, r: not f and not r),
+        warmup_rejection=(after(log, "Iteration:  3 /", env_text(known)),
+                          lambda f, r: not f and [(x["phase"], x["transition"], x["cause"]) for x in r] == [("warmup", 3, "input")]),
+        boundary_last_warmup=(after(log, last_warm, env_text(known)),
+                              lambda f, r: not f and [(x["phase"], x["transition"]) for x in r] == [("warmup", W)]),
+        boundary_first_sampling=(after(log, first_samp, env_text(known)),
+                                 lambda f, r: not f and [(x["phase"], x["transition"]) for x in r] == [("sampling", W + 1)]),
+        stepsize_init_rejection=(after(log, "Adjust your expectations", env_text(known)),
+                                 lambda f, r: not f and [x["phase"] for x in r] == ["stepsize_init"]),
+        init_rejection=(after(log, "num_threads", "\n".join([LOG_FIXED["init"], LOG_FIXED["init_eval"], known])),
+                        lambda f, r: not f and [x["phase"] for x in r] == ["init"]),
+        unknown_text=(after(log, "Iteration:  5 /", "Something unexpected happened"), lambda f, r: bool(f)),
+        unrecognised_cause=(after(log, "Iteration:  5 /", env_text("Exception: Exception: cholesky_decompose: A is not symmetric")),
+                            lambda f, r: bool(f)),
+        incomplete_envelope=(after(log, "Iteration:  5 /", "\n".join([LOG_FIXED["rej"], known])), lambda f, r: bool(f)),
+        orphan_exception=(after(log, "Iteration:  5 /", known), lambda f, r: bool(f)),
+        missing_marker=(drop(log, "Iteration:  7 /"), lambda f, r: bool(f)),
+        truncated=(log[:log.index(first_samp)], lambda f, r: bool(f)),
+        fatal_step_size=(after(log, "Adjust your expectations", "Exception initializing step size.\n" + known), lambda f, r: bool(f)))
+    pr = {}
+    for name, (text, ok) in cases.items():
+        f, r = parse_log(text, W, S)
+        pr[name] = dict(failures=f[:2], rejections=[(x["phase"], x["transition"], x["cause"]) for x in r], ok=bool(ok(f, r)))
+    pr["ok"] = all(v["ok"] for v in pr.values())
+    out["log_parser"] = pr
+    # End to end: a sampling-phase rejection leaves the attempt qualified but fails the screen.
+    sv = variant("samprej", inject("chain2.log", first_samp, env_text(known)))
+    rs = diagnose(sv, "FX", env=env, manifest_sha=rcx["manifest_sha256"], build_receipt=dict(bld, manifest_sha256=rcx["manifest_sha256"]), write=False)
+    out["sampling_rejection_fails_screen"] = dict(qualified=rs["qualified"], criterion=rs.get("screening", {}).get("no_fatal_or_sampling_phase_failures"),
+                                                  ok=rs["qualified"] and rs.get("screening", {}).get("no_fatal_or_sampling_phase_failures") is False)
     # Finite guards on statistics.
     nan, inf = float("nan"), float("inf")
     eb = eta_block(0.03, 0.40, 0.003, nan, 0.2)
@@ -825,7 +1236,7 @@ def selftest():
     pf = CACHE / "selftest_preflight"
     shutil.rmtree(pf, ignore_errors=True)
     shutil.copytree(PAY, pf, ignore=shutil.ignore_patterns("runs", "build"))
-    shutil.copy(exe, pf / "model_v4")
+    shutil.copy(exe, pf / RUN_ENV["MODEL_BIN"][2:])
     code, txt = _run(["bash", "pbs/preflight.sh", "build/receipt.tmp"], pf, timeout=1200)
     out["preflight_local_binary"] = dict(exit=code, receipt=(pf / "build" / "receipt.tmp").read_text().split(), ok=code == 0)
     refs = sorted((pf / "preflight").glob("ref_point_*.csv"))
@@ -862,5 +1273,7 @@ if __name__ == "__main__":
         tranche_preflight()
     elif cmd == "dispatch-test":
         dispatch_test()
+    elif cmd == "amended-preflight":
+        amended_preflight()
     else:
         {"build": build, "selftest": selftest}[cmd]()

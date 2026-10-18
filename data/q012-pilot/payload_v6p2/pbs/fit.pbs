@@ -1,0 +1,22 @@
+#!/bin/bash -l
+#PBS -N q012_fit
+#PBS -q normal
+#PBS -l select=1:ncpus=4:mem=8gb
+#PBS -l walltime=06:10:00
+#PBS -j oe
+#PBS -M barry.brook@utas.edu.au
+#PBS -m ae
+# One pilot fit. Replay: qsub -v SCEN=R00 -W depend=afterok:<build job> pbs/fit.pbs
+# Panel, only after Codex reviews the replay: qsub -J 1-12 pbs/fit.pbs (index i is the i-th panel row of scenarios.tsv)
+cd "${PBS_O_WORKDIR:?}" || exit 2
+. ./run.env
+# The fit uses the runtime the build and preflight used; fit.sh refuses if the module is not loaded.
+# kunanyi's /etc/profile.d/lmod.sh returns early in batch jobs (PBS_NODEFILE set), so initialise Lmod as it
+# does for login shells: the site MODULEPATH, then the OpenHPC Lmod bash init.
+if ! type module > /dev/null 2>&1; then
+  export MODULEPATH="${MODULEPATH:-/opt/ohpc/pub/moduledeps/gnu8:/opt/ohpc/pub/modulefiles:/share/apps/modules:/share/apps/eb-modules/all:/share/apps/moduledeps/rosalind/Core}"
+  . /opt/ohpc/admin/lmod/lmod/init/bash
+fi
+module purge || { echo "REFUSED: module command unavailable"; exit 2; }
+module load "$MODULE" || { echo "REFUSED: module $MODULE unavailable"; exit 2; }
+exec bash pbs/fit.sh

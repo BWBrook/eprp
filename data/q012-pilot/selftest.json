@@ -11,10 +11,10 @@
   "exit": 0,
   "status": "complete",
   "maxrss_kb": [
+   "17164",
    "16976",
-   "16960",
-   "17028",
-   "16928"
+   "17180",
+   "17052"
   ],
   "ok": true
  },
@@ -98,7 +98,7 @@
    "failures": [
     "receipt scenario is 'P12', expected 'FX'",
     "receipt status is 'failed', expected 'complete'",
-    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '88f8218b608a49f6383918fa74c401ee5c986ec6cc40129841af4db015f987d6'"
+    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '42751ce67a85f6c17b8699e515e4d87bc5b7530cd427cfe6060e93a9e44da093'"
    ],
    "ok": true
   },
@@ -108,17 +108,23 @@
    ],
    "ok": true
   },
-  "fatal_stderr": {
+  "fatal_text_in_log": {
    "failures": [
-    "chain 1 stderr not empty: 'Exception: fatal'"
+    "chain 1 log: line 54: unrecognised line 'Exception: fatal'"
+   ],
+   "ok": true
+  },
+  "separate_stderr_file": {
+   "failures": [
+    "unexpected output file chain1.stderr"
    ],
    "ok": true
   },
   "fewer_draws_than_declared": {
    "failures": [
-    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600'",
-    "chain 1 CSV num_samples is '5', expected 6",
-    "chain 1 has 5 retained draws, expected 6"
+    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined'",
+    "chain 1 log: line 51: iteration marker 1/15 (Warmup); expected 1/16 (Warmup)",
+    "chain 1 log: line 52: iteration marker 2/15 (Warmup); expected 2/16 (Warmup)"
    ],
    "ok": true
   },
@@ -154,6 +160,132 @@
   },
   "ok": true
  },
+ "log_parser": {
+  "clean": {
+   "failures": [],
+   "rejections": [],
+   "ok": true
+  },
+  "warmup_rejection": {
+   "failures": [],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     "input"
+    ]
+   ],
+   "ok": true
+  },
+  "boundary_last_warmup": {
+   "failures": [],
+   "rejections": [
+    [
+     "warmup",
+     10,
+     "input"
+    ]
+   ],
+   "ok": true
+  },
+  "boundary_first_sampling": {
+   "failures": [],
+   "rejections": [
+    [
+     "sampling",
+     11,
+     "input"
+    ]
+   ],
+   "ok": true
+  },
+  "stepsize_init_rejection": {
+   "failures": [],
+   "rejections": [
+    [
+     "stepsize_init",
+     null,
+     "input"
+    ]
+   ],
+   "ok": true
+  },
+  "init_rejection": {
+   "failures": [],
+   "rejections": [
+    [
+     "init",
+     null,
+     "input"
+    ]
+   ],
+   "ok": true
+  },
+  "unknown_text": {
+   "failures": [
+    "line 56: unrecognised line 'Something unexpected happened'"
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "unrecognised_cause": {
+   "failures": [
+    "line 57: unrecognised rejection cause: 'Exception: Exception: cholesky_decompose: A is not symmetric'"
+   ],
+   "rejections": [
+    [
+     "warmup",
+     5,
+     "other"
+    ]
+   ],
+   "ok": true
+  },
+  "incomplete_envelope": {
+   "failures": [
+    "line 56: incomplete rejection envelope",
+    "line 57: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)\""
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "orphan_exception": {
+   "failures": [
+    "line 56: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)\""
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "missing_marker": {
+   "failures": [
+    "line 57: iteration marker 8/15 (Warmup); expected 7/15 ()"
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "truncated": {
+   "failures": [
+    "no completion block; last marker (10, 'warmup')",
+    "iteration markers end at 10, expected 15"
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "fatal_step_size": {
+   "failures": [
+    "line 46: unrecognised line 'Exception initializing step size.'",
+    "line 47: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)\""
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "ok": true
+ },
+ "sampling_rejection_fails_screen": {
+  "qualified": true,
+  "criterion": false,
+  "ok": true
+ },
  "finite_guards": {
   "nan_mcse_leaves_precision_unresolved": true,
   "raw_flags_kept": true,
@@ -184,6 +316,7 @@
   "exit": 0,
   "receipt": [
    "preflight_log_prob=pass",
+   "preflight_controls=pass",
    "smoke_chain1_exit=0",
    "smoke_chain2_exit=0",
    "smoke_chain3_exit=0",

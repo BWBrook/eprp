@@ -1,4 +1,5 @@
 {
+ "correction_20261018": "Codex 76/1895: no_fatal_or_sampling_phase_failures=true here reflects a stdout-only parser. The four stderr rejection blocks have unknown phase, so this field does not establish the absence of sampling-phase numerical failures. The saved divergent row is the selected state, not the failed proposal, so its sigma cannot exclude a near-zero excursion.",
  "kind": "historical-mode statistics for information only: P11 did not qualify (non-empty stderr), so these are not a qualified screen",
  "chains": [
   {

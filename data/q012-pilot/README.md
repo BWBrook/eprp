@@ -9,11 +9,18 @@ Owner: Claude | 16–17 October 2026 | Prepared under Codex's rulings 76/1750,
 - **R00 (v6, partial non-centring):** ran (job 821087). It qualified and
   **passed every screen**. Codex accepted v6 as the technical pilot
   candidate (76/1855).
-- **Released next, one fit at a time,** from the separately bound package
-  `payload_v6p/`: P11, then P06 only if P11 passes its checks. Ceiling 53.33
-  reserved core-hours.
-- **The other ten panel datasets remain held.** No power, coverage or
-  campaign claim follows from this pilot.
+- **P11 first attempt (job 821265):** failed. It did not qualify
+  (non-empty stderr), and its unqualified statistics show one divergence and
+  an η upper-endpoint MCSE of 0.0113. P06 was held.
+- **Released next (Codex, 76/1895):** ONE amended P11-only attempt from
+  `payload_v6p2/`:
+  - `solver_f_tol` = 1e-10;
+  - an ordered combined log per chain at refresh = 1, with fail-closed,
+    phase-aware qualification;
+  - 8,000 retained draws per chain.
+  - Up to 28.67 further reserved core-hours inside the 53.33 ceiling.
+- **P06 and the other ten panel datasets remain held,** even if the amended
+  P11 passes. No power, coverage or campaign claim follows from this pilot.
 
 This is a **numerical and cost pilot**. It is not a power, coverage or
 robustness experiment, and no campaign claim follows from it.
@@ -475,9 +482,81 @@ information only):
 **The near-zero concern is now genuinely tested:**
 - σ's posterior reaches down to σ = 4e-5, with **16.7% of draws below 0.1
   and 1.9% below 0.01** in every chain.
-- The one divergence is not near zero.
+- *Corrected (Codex, 76/1895):* the saved divergent row (σ = 0.79) is the
+  state selected from the trajectory, not the failed proposal. It cannot
+  exclude a near-zero excursion. Likewise, the historical
+  `no_fatal_or_sampling_phase_failures` field read stdout only, so the four
+  stderr rejections have **unknown phase**; it is not an observed zero.
 - **Direct joint-state checks pass at all 49 states:** maximum log error
   8.0e-6, derivative error 3.9e-5; reference convergence 4e-16 / 1e-11.
 
 **Stop rule applied:** P11 does not pass, so P06 was **not** submitted.
 The evidence goes to Codex.
+
+## Amended P11 attempt: preparation (Codex 76/1895)
+
+- **Package:** `payload_v6p2/` (candidate `v6p2`, manifest d2ecaddb…).
+  - **P11 is the only permitted fit**; R00 is the build/preflight
+    reference.
+  - **The sole data change is `solver_f_tol` 1e-11 → 1e-10**, asserted
+    field by field against the frozen originals. `rel_tol` (1e-12),
+    `max_steps` (200), `check_tol` (1e-8), Q = 64, a = 0.2, priors, starts,
+    seed and chain IDs are unchanged.
+  - **Run settings:** 2,000 warmup plus a fixed 8,000 retained draws;
+    `refresh=1`; log format `combined`.
+- **Runner** (`payload_v6p2/pbs/fit.sh`): each chain writes one ordered
+  `chain<k>.log`, with stdout and stderr on the same open file. It refuses
+  unless `run.env` declares the combined format and the refresh setting,
+  and the receipt's settings line records both.
+- **Qualification** (`parse_log`, fail-closed). The only recognised line
+  types are:
+  - the CmdStan config echo and the gradient-timing block;
+  - the low-warmup warning;
+  - sequential `Iteration:` markers 1…N, labelled Warmup up to the warmup
+    count and Sampling after;
+  - complete rejection envelopes, whether initial-value or Metropolis;
+  - the elapsed-time block.
+
+  **Classification:**
+  - Rejections are attributed to init, step-size initialisation, warmup
+    (with transition) or sampling.
+  - Recognised causes in init, step-size and warmup are recorded; any
+    sampling rejection fails the screen.
+  - Unknown text or causes, orphan exceptions, incomplete envelopes,
+    missing, repeated or mislabelled markers, and a missing completion
+    block all fail qualification.
+  - Old separate-stream attempts are still read as before. A non-empty
+    stderr now leaves the sampling-failure criterion *unknown*.
+- **Numerical checks:**
+  - **Reference convergence is signed:** the references are compared
+    directly at 1,600 against 3,200 intervals, and are unconverged above
+    1e-6 in value or 1e-5 in derivatives.
+  - **Disputed points use a local-mode reference:** where the coarse
+    reference is unconverged, a chunked Simpson rule centred at each
+    Newton mode is used, with its own resolution and domain checks.
+  - **Fail-safe:** a state with no converged reference is unresolved,
+    never passed.
+- **Amended preflight** ([amended_preflight_v6p2.json](amended_preflight_v6p2.json),
+  all pass):
+  - data and starts as above;
+  - v5/v6 identities at P11's starts and σ = 0.01 / 0.001;
+  - **1e-11 against 1e-10: identical log density and AD gradients at 60
+    accepted states.** These are P11's starts, small σ, and the first P11
+    fit's 49 joint states, divergent state and per-chain minimum-σ states.
+  - **Controls:** p75 is accepted at 1e-10 and rejected at 1e-11 (on R00
+    and P11, with finite values); p53 is rejected at both. AD agrees with
+    finite differences at p75 (scaled errors 3.6e-8).
+  - **Q = 64:** worst error 1.5e-11. p75 is classified with the
+    local-mode reference, since the coarse reference is unconverged there
+    (it shifts 0.245 when the grid doubles).
+  - For P11-mapped p53, cmdstanpy reports only a generic failure, so that
+    rejection's cause is unconfirmed. For R00 the build asserts the Powell
+    residual message.
+- **Cluster preflight:** adds p75 as a log-density control and p53 as a
+  reject control, which must fail with the Powell residual message.
+- **Controls tested:**
+  - [selftest.json](selftest.json): all pass, including 13 parser cases
+    and the end-to-end sampling rejection (qualified, then fails the
+    screen).
+  - [dispatch_test_v6p2.json](dispatch_test_v6p2.json): only build plus
+    P11 (afterok); R00 refused; P06 refused even after a successful build.
