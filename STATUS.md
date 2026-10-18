@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 17 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 18 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
@@ -34,12 +34,19 @@ Updated: 17 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   Codex's [v6 review](ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md)
   reproduces 60 actual-Stan identities, the result/comparison, and 49 direct
   joint-state Q=64 checks. **v6 is accepted as the technical pilot candidate.**
-  Release P11 first, then P06 only if P11 passes; keep the other ten held.
-  Retain six-hour fit caps, four CPUs/8 GiB, one fit at a time and unchanged
-  settings. The bounded ceiling is 53.33 reserved core-hours including
-  allowances and one build. Claude prepares the package, corrects dispatch
-  and reporting, then executes within that envelope; Codex reviews outcomes
-  before any further panel release. No automatic retry or cap increase.
+  **P11's first attempt fails** at `17d129a`: three nonempty stderr streams,
+  one divergence and eta upper-endpoint MCSE .01128. P06 was correctly held.
+  Codex's [P11 review](ideas/2026-10-18-q012-p11-review-codex.md) reproduces
+  provenance, statistics and all 49 Q=64 checks. Numerical tests support
+  prospective f_tol=1e-10 with other guards unchanged; phase and failing
+  proposal are unrecoverable for the old attempt. Claude prepares ordered
+  per-chain logs and fail-closed qualification, then one explicitly amended
+  P11-only attempt at 2,000 warmup plus fixed 8,000 retained draws. Sampling
+  and precision thresholds and six-hour/four-CPU/8-GiB caps remain. This conditional
+  follow-up reserves at most 28.67 further core-hours within the original
+  53.33 ceiling; 6.06 have been consumed. P06 and the other ten stay held
+  even if it passes, until Codex reviews results and remaining resources.
+  No automatic further retry, extension or cap increase.
   No further long laptop fit, full grid or empirical fit. Barry's kunanyi
   and PBS mail/wake workflow remains in force; no background monitoring.
   B-004's critique response, six-study modern screen and bounded analytic
@@ -91,7 +98,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex: v6 result review complete; Claude: bounded P11/P06 preparation and execution | [v6 ruling](ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md) accepts the technical candidate after exact diagnostic/comparison replay, 60 density/AD identities and 49 new Q=64 checks. GO P11 first, P06 only after P11 passes; other ten held. Same six-hour fit caps, sequential 4-CPU/8-GiB jobs, 53.33 core-hour total ceiling. Claude corrects range-coverage/cost wording, MCSE convention and hard-coded R00 dispatch before use; no retries or cap increase. Codex reviews before further release |
+| Q-012/D1 support and identification | Codex: P11 review complete; Claude: prospective repair and one conditional amended P11 | [P11 ruling](ideas/2026-10-18-q012-p11-review-codex.md) preserves the first attempt as failed/unqualified (stderr, one divergence, eta MCSE .01128). Provenance/statistics and 49 Q=64 checks replay; 108 LP/AD comparisons and a newly admitted stress-point check support f_tol=1e-10. Claude owns ordered per-chain logs, fail-closed qualification/tests and one P11-only 2,000+8,000 attempt after preparation passes. Same six-hour/4-CPU/8-GiB caps and thresholds, at most 28.67 additional core-hours inside original 53.33 ceiling. P06 and other ten remain held pending Codex result/resource review; no further automatic retry |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -848,6 +855,18 @@ next phase of ideation whilst those final checks are done."
   under unchanged six-hour caps and a 53.33 reserved core-hour ceiling.
   Claude owns the bounded package/dispatch/reporting corrections and runs;
   Codex reviews outcomes. The remaining ten cases stay unlaunched.
+
+- **P11 failure and prospective repair, 18 October:** Claude preserved the
+  failed first panel attempt and stopped before P06 (76/1885–1886). Codex's
+  [review](ideas/2026-10-18-q012-p11-review-codex.md) confirms the failures and
+  the useful energy/near-zero/selected-state numerical evidence. A saved
+  divergent row does not locate the failed proposal. The proposed root
+  acceptance threshold earns a bounded prospective trial after independent
+  checks, including a corrected reference for a narrow-mode stress point.
+  Claude repairs ordered logging and fail-closed qualification, then may
+  run one amended P11 with fixed 8,000 retained draws under the same caps.
+  Original failures remain recorded; P06 stays held even after a pass,
+  pending result and resource review. No new programme direction or claim.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
