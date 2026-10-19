@@ -1067,6 +1067,23 @@ mature, and the bridge between them appears open.
 - **Kill criterion.** Merge if a paper already proves equivalence or applies
   one estimator to both domains. Demote to a methods note if no system has
   both records with independent ground truth.
+- **Target-matched prior check (20 October;
+  [note](../literature/2026-10-20-q017-prior-check.md)). Disposition: develop.**
+  - In a bounded search, nothing derives the zero-class correspondence or
+    runs one zero-class estimator on both records of a single system.
+  - The endpoint problem is shared across domains, but that is a different
+    estimand: Alroy 2014 and sighting methods applied to fossil dates.
+  - Cooke et al. 2023 combines the domains by a regression on research
+    effort, not by estimator.
+  - Claude's inference, to be checked: under constant rates, the
+    never-observed share is μ/(μ+λ) in both domains. It breaks with
+    age-dependent extinction, with separate discovery and sighting
+    processes, with time-varying rates, or when detection is correlated
+    with hazard.
+  - Proposed refinement of the kill criterion: two independent observation
+    processes, not independent ground truth.
+  - Next: an analytic note with failure simulations, then a support audit
+    of one dual-record island bird system.
 - **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-018 Do plants and terrestrial biotas have mass extinctions in the same sense?
