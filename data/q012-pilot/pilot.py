@@ -129,6 +129,15 @@ def cmdstan_tarball():
     return tb
 
 
+def data_overrides():
+    """The candidate's data changes: its declared fields, and a quadrature order with its Gauss-Hermite nodes and weights."""
+    ov = dict(CAND.get("data_overrides", {}))
+    if "quadrature_nodes" in CAND:
+        t, w = np.polynomial.hermite.hermgauss(CAND["quadrature_nodes"])
+        ov.update(Q=int(CAND["quadrature_nodes"]), gh_t=[float(x) for x in t], gh_w=[float(x) for x in w])
+    return ov
+
+
 def build():
     """Build the payload: refuse unless the prototype's checks pass and are bound to the current source and settings."""
     from cmdstanpy.utils import write_stan_json
@@ -162,7 +171,7 @@ def build():
         outcome, d, ginfo, oinfo, secs = generate(int(s["gen_seed"]), ov, PILOT["generator"]["timeout_seconds"])
         row = dict(s, outcome=outcome, generator_seconds=secs, true_lineages=(ginfo or {}).get("true_lineages"))
         if outcome == "ok":
-            d = dict(d, **CAND.get("data_overrides", {}))
+            d = dict(d, **data_overrides())
             write_stan_json(str(PAY / "data" / f"{s['id']}.json"), d)
             write_starts(PAY / "inits" / s["id"], d["N"], "noncentring" in P.CFG[ver])
             row.update(N=d["N"], observation=oinfo, cohort=d["NC"], singles=d["C1"], pairs=d["C2"])
@@ -170,7 +179,7 @@ def build():
         print(s["id"], outcome, row.get("N"), secs)
     # The replay dataset is the prototype's cost dataset at 64 nodes, and its starts are the frozen v4/v5 files.
     d_r00 = json.loads((PAY / "data" / "R00.json").read_text())
-    ref = json.loads(json.dumps(dict(d_fit, **CAND.get("data_overrides", {})), default=float))
+    ref = json.loads(json.dumps(dict(d_fit, **data_overrides()), default=float))
     assert all(np.allclose(np.asarray(d_r00[k], float), np.asarray(ref[k], float), rtol=0, atol=0) for k in ref), "R00 differs"
     for k in range(1, 5):
         assert (PAY / "inits" / "R00" / f"chain{k}.json").read_bytes() == \
@@ -216,11 +225,20 @@ def build():
     (PAY / "cmdstan.sha256").write_text(f"{sha(tb)}  {tb.name}\n")
     if "same_inputs_as" in CAND:  # a diagnostic replay must use the earlier package's exact data, starts and controls
         other = HERE / PILOT["candidates"][CAND["same_inputs_as"]]["payload_dir"]
+        quad = {"Q", "gh_t", "gh_w"} if "quadrature_nodes" in CAND else set()
         for sub in ("data", "inits", "preflight"):
             mine = sorted(f.relative_to(PAY) for f in (PAY / sub).rglob("*") if f.is_file())
             theirs = sorted(f.relative_to(other) for f in (other / sub).rglob("*") if f.is_file())
-            body = lambda f: [ln for ln in f.read_text().splitlines() if not ln.startswith("#")] if f.suffix == ".csv" else f.read_bytes()
-            assert mine == theirs and all(body(PAY / f) == body(other / f) for f in mine), f"{sub} differ from {other.name}"
+            assert mine == theirs, f"{sub} file lists differ from {other.name}"
+            for f in mine:
+                if sub == "data":  # identical apart from the declared quadrature fields
+                    a, b = json.loads((PAY / f).read_text()), json.loads((other / f).read_text())
+                    assert set(a) == set(b) and all(a[k] == b[k] for k in a if k not in quad), f"{f} differs beyond {sorted(quad)}"
+                elif quad and f.name.startswith("ref_"):  # order-dependent references are regenerated (Codex 76/2096)
+                    continue
+                else:
+                    body = lambda x: [ln for ln in x.read_text().splitlines() if not ln.startswith("#")] if x.suffix == ".csv" else x.read_bytes()
+                    assert body(PAY / f) == body(other / f), f"{f} differs from {other.name}"
         assert (PAY / CAND["stan_file"]).read_bytes() == (other / CAND["stan_file"]).read_bytes()
     nfiles = write_manifest(PAY)
     head = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=HERE).stdout.strip()
@@ -763,7 +781,8 @@ REF_TOL = dict(value=1e-6, derivative=1e-5)  # a reference is converged when dou
 
 
 def _steps(q):
-    return dict(sigma=min(1e-4, q["sigma"] / 2), rho=min(1e-4, q["rho"] / 2, (1 - q["rho"]) / 2), kappa_b=1e-4)
+    return dict(sigma=min(1e-4, q["sigma"] / 2), rho=min(1e-4, q["rho"] / 2, (1 - q["rho"]) / 2), kappa_b=1e-4, log_k=1e-4,
+                log_h0_1=1e-4)
 
 
 def _lse(x):
@@ -773,7 +792,7 @@ def _lse(x):
 
 def local_reference(d, q, n=1600, L=16.0):
     """Log cohort normaliser by Simpson integration on a grid centred and scaled at each Newton mode (2-D in 64-row
-    chunks). Independent of the Q = 64 nodes; resolves narrow modes the fixed-innovation reference misses."""
+    chunks). Independent of the data's quadrature nodes; resolves narrow modes the fixed-innovation reference misses."""
     sig, rho, kb = q["sigma"], q["rho"], q["kappa_b"]
     A = P.cohort_A(d, q)
     b0 = math.exp(q["log_b0"])
@@ -820,11 +839,16 @@ def local_reference(d, q, n=1600, L=16.0):
     return out
 
 
-def _values(d, q, f):
-    """Value and central-difference derivatives (domain-safe steps) of a normaliser function f(q)."""
+def _axes(d, extra=()):
+    return ("sigma", "kappa_b") + (("rho",) if d["C2"] else ()) + tuple(extra)
+
+
+def _values(d, q, f, extra=()):
+    """Value and central-difference derivatives (domain-safe steps) of a normaliser function f(q), on sigma, kappa_b,
+    rho (when there are pairs) and any extra axes (log_k, log_h0_1)."""
     hs = _steps(q)
     v = dict(value=f(q))
-    for name in ("sigma", "kappa_b") + (("rho",) if d["C2"] else ()):
+    for name in _axes(d, extra):
         h = hs[name]
         v[name] = (f(dict(q, **{name: q[name] + h})) - f(dict(q, **{name: q[name] - h}))) / (2 * h)
     return v
@@ -837,30 +861,32 @@ def _converged(a, b):
                                and all(abs(v) <= REF_TOL["derivative"] for k, v in ch.items() if k != "value")))
 
 
-def reference_convergence(d, q):
+def reference_convergence(d, q, extra=()):
     """Signed change of the fixed-innovation Simpson reference itself (value and derivatives), 1,600 -> 3,200 intervals."""
     ref = lambda n: (lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), n))
-    return _converged(_values(d, q, ref(1600)), _values(d, q, ref(3200)))
+    return _converged(_values(d, q, ref(1600), extra), _values(d, q, ref(3200), extra))
 
 
-def gate_point(d, q):
-    """Q = 64 normaliser against a converged reference at one joint state (value and d/dsigma, d/drho, d/dkappa_b, with
-    domain-safe steps). The fixed-innovation Simpson reference is used when it converges; otherwise the local-mode
-    reference; if neither converges the state is unresolved, never passed."""
-    agh = _values(d, q, lambda p: P.log_norm_agh(d, p, P.cohort_A(d, p)))
-    coarse = reference_convergence(d, q)
+def gate_point(d, q, extra=()):
+    """The data's Q-node normaliser (order d["Q"]) against a converged reference at one joint state: value and
+    derivatives on sigma, kappa_b, rho and any extra axes, with domain-safe steps. The fixed-innovation Simpson reference
+    is used when it converges; otherwise the local-mode reference; if neither converges the state is unresolved, never
+    passed."""
+    agh = _values(d, q, lambda p: P.log_norm_agh(d, p, P.cohort_A(d, p)), extra)
+    coarse = reference_convergence(d, q, extra)
     used, ref = "fixed_innovation_n1600", None
     if coarse["converged"]:
-        ref = _values(d, q, lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), 1600))
+        ref = _values(d, q, lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), 1600), extra)
     else:
-        a = _values(d, q, lambda p: local_reference(d, p, 800, 12.0))
-        b = _values(d, q, lambda p: local_reference(d, p, 1600, 12.0))
-        c = _values(d, q, lambda p: local_reference(d, p, 1600, 16.0))
+        a = _values(d, q, lambda p: local_reference(d, p, 800, 12.0), extra)
+        b = _values(d, q, lambda p: local_reference(d, p, 1600, 12.0), extra)
+        c = _values(d, q, lambda p: local_reference(d, p, 1600, 16.0), extra)
         loc = dict(resolution=_converged(a, b), domain=_converged(b, c))
         if loc["resolution"]["converged"] and loc["domain"]["converged"]:
             used, ref = "local_mode_n1600_L16", c
         coarse["local"] = loc
-    res = dict(h=_steps(q), reference=used if ref else "unresolved", reference_convergence=coarse)
+    res = dict(quadrature_order=int(d["Q"]), h={k: v for k, v in _steps(q).items() if k in _axes(d, extra)},
+               reference=used if ref else "unresolved", reference_convergence=coarse)
     if ref is None:
         res["pass"] = None
         return res
@@ -873,9 +899,9 @@ def gate_point(d, q):
 
 
 def joint_checks(fit_dir, data_file):
-    """Direct Q = 64 checks at selected joint states of one fit (Codex 76/1855): six highest sigma, largest |kappa_b|,
-    smallest and largest rho, and 40 evenly spaced draws; reference convergence at the largest log error; and the lower
-    tail of sigma per chain. An unperformed check is reported as not tested."""
+    """Direct checks of the data's Q-node normaliser at selected joint states of one fit (Codex 76/1855): six highest
+    sigma, largest |kappa_b|, smallest and largest rho, and 40 evenly spaced draws; reference convergence at the largest
+    log error; and the lower tail of sigma per chain. An unperformed check is reported as not tested."""
     import pandas as pd
     d = json.loads(pathlib.Path(data_file).read_text())
     dfs = [pd.read_csv(pathlib.Path(fit_dir) / f"chain{k}.csv", comment="#") for k in range(1, 5)]
@@ -893,7 +919,8 @@ def joint_checks(fit_dir, data_file):
              for k, x in enumerate(dfs, start=1)]
     unresolved = [k for k, g in gates.items() if g["pass"] is None]
     verdict = (None if not gates or unresolved else all(g["pass"] for g in gates.values()))
-    return dict(states_selected=len(gates), states_with_converged_reference=len(tested), unresolved_states=unresolved,
+    return dict(quadrature_order=int(d["Q"]), states_selected=len(gates), states_with_converged_reference=len(tested),
+                unresolved_states=unresolved,
                 status="tested" if gates else "not tested", all_pass=verdict,
                 max_log_err=max((g["log_err"] for g in tested.values()), default=None),
                 max_derivative_err=max((v for g in tested.values() for k, v in g.items() if k.startswith("d_") and k.endswith("_err")),
@@ -1243,7 +1270,7 @@ def trace_check(attempt, data_file, out_file, exe=None, chains=None):
     instrumented local build). Per record: the recorded V and grad V at the previous and failing states against the
     model's log_prob; one leapfrog from the previous state reproducing the failing state and H; two half steps from
     the same previous q, p and metric; actual-LP central differences against AD at the failing state when finite,
-    else the previous state; the Q = 64 normaliser against a converged reference at the same state; and where the
+    else the previous state; the data's Q-node normaliser against a converged reference at the same state; and where the
     energy error arose (potential and kinetic parts, the coordinates with the largest momentum change)."""
     exe = pathlib.Path(exe) if exe else trace_binary()
     attempt = pathlib.Path(attempt)
@@ -1436,6 +1463,165 @@ def diagnostic_preflight():
     return out
 
 
+def w_to_eps(q):
+    """A constrained v6 state (w = sigma^a eps) in the prototype's eps form, for the normaliser checks."""
+    a = P.CFG[CAND["prototype_version"]]["noncentring"]["a"]
+    return dict({k: v for k, v in q.items() if k != "w"}, eps=[float(x) / q["sigma"] ** a for x in q["w"]])
+
+
+def unconstrain_w(q, N):
+    """The unconstrained vector, in Stan's order, of a constrained v6 state."""
+    v = dict(q, tau=math.log(q["tau"]), sigma=math.log(q["sigma"]), rho=math.log(q["rho"]) - math.log1p(-q["rho"]))
+    return np.array([v["log_h0_1"]] + list(v["z_rw"]) + [v[k] for k in ("tau", "log_k", "log_lambda0", "kappa", "log_b0", "kappa_b",
+                                                                       "beta", "gamma", "sigma", "rho")] + list(v["w"][:N]))
+
+
+def lp_constrained(exe, q, data_file, work):
+    """Actual-Stan log density and unconstrained gradient at a constrained state, or the rejection message."""
+    work.mkdir(parents=True, exist_ok=True)
+    (work / "c.json").write_text(json.dumps(q))
+    r = subprocess.run([str(exe), "log_prob", f"constrained_params={work / 'c.json'}", "jacobian=1", "data", f"file={data_file}",
+                        "output", f"file={work / 'lpc.csv'}", "sig_figs=18"], capture_output=True, text=True)
+    if r.returncode:
+        return None, None, next((ln for ln in (r.stdout + r.stderr).splitlines() if "Exception" in ln), "log_prob failed")[:300]
+    row = [ln for ln in (work / "lpc.csv").read_text().splitlines() if ln and not ln.startswith("#")][1].split(",")
+    return float(row[0]), np.array([float(x) for x in row[1:]]), None
+
+
+def order_preflight():
+    """Local wider finite bank before a quadrature-order candidate's fit (Codex 76/2096); writes order_preflight_<cand>.json.
+    (1) Data differ from the earlier package only in Q and its exact Gauss-Hermite nodes and weights; starts identical.
+    (2) The reused instrumented binary is bound through the fetched v6d build receipt to this payload's patch.
+    (3) The order-Q normaliser against a converged reference, with the unchanged 1e-4 value and 1e-3 derivative gates,
+        at: the 49 selected states of amended P11; the 49 of R00 v6; the eight starts; P11 start-1 at sigma 0.01 and
+        0.001; Codex's 48 fixed P11 stress states; and the captured initial/previous/failing triads, with log-k and
+        log-h0 derivatives added. A failed or unresolved state fails the bank.
+    (4) The solver controls at order Q on both datasets: p75 admitted with finite LP/AD, p53 rejected.
+    (5) Actual-Stan order binding: Stan's lp(Q) - lp(64) equals the Python normaliser change logN(64) - logN(Q).
+    (6) AD against actual-LP central differences at the captured triads' finite states, on five axes."""
+    import pandas as pd
+    Q = int(CAND["quadrature_nodes"])
+    exe = trace_binary()
+    work = CACHE / "order_preflight"
+    work.mkdir(parents=True, exist_ok=True)
+    other = HERE / PILOT["candidates"][CAND["same_inputs_as"]]["payload_dir"]
+    out = dict(candidate=PILOT["active_candidate"], quadrature_order=Q, binary=str(exe), binary_sha256=sha(exe))
+    D = {sc: json.loads((PAY / "data" / f"{sc}.json").read_text()) for sc in ("P11", "R00")}
+    D64 = {sc: json.loads((other / "data" / f"{sc}.json").read_text()) for sc in ("P11", "R00")}
+    t, w = np.polynomial.hermite.hermgauss(Q)
+    diffs = {sc: sorted(k for k in set(D[sc]) | set(D64[sc]) if D[sc].get(k) != D64[sc].get(k)) for sc in D}
+    nodes = all(D[sc]["Q"] == Q and D[sc]["gh_t"] == [float(x) for x in t] and D[sc]["gh_w"] == [float(x) for x in w] for sc in D)
+    starts_same = all((PAY / "inits" / sc / f"chain{k}.json").read_bytes() == (other / "inits" / sc / f"chain{k}.json").read_bytes()
+                      for sc in D for k in range(1, 5))
+    out["inputs"] = dict(field_differences=diffs, nodes_exact=nodes, starts_identical=starts_same,
+                         ok=all(v == ["Q", "gh_t", "gh_w"] for v in diffs.values()) and nodes and starts_same)
+    rec = HERE / "results" / "P11-diagnostic-20261019-v6d" / "build_receipt.txt"
+    r = _receipt(rec)
+    out["reused_binary"] = dict(receipt=str(rec.relative_to(HERE)), receipt_sha256=sha(rec), binary_sha256=r.get("binary_sha256"),
+                                ok=sha(rec) == RUN_ENV["REUSE_BUILD_RECEIPT_SHA256"] and r.get("status") == "ok"
+                                and r.get("binary_sha256") == RUN_ENV["REUSE_BIN_SHA256"] and r.get("binary_instrumented") == "yes"
+                                and r.get("patch_original_sha256") == RUN_ENV["PATCH_ORIGINAL_SHA256"]
+                                and r.get("patch_sha256") == sha(PAY / "patch" / "base_nuts.hpp"))
+    # (3) The normaliser bank.
+    bank = {}
+    for name, att, sc in (("amended_P11_49", "scratch/q012-pilot/fetch-20261018-v6p2/runs/P11/attempt1", "P11"),
+                          ("R00_v6_49", "scratch/q012-pilot/fetch-20261017-v6r00/runs/R00/attempt1", "R00")):
+        j = joint_checks(HERE.parents[1] / att, PAY / "data" / f"{sc}.json")
+        bank[name] = dict(states=j["states_selected"], converged=j["states_with_converged_reference"], unresolved=j["unresolved_states"],
+                          failed=[k for k, g in j["states"].items() if g["pass"] is False], max_log_err=j["max_log_err"],
+                          max_derivative_err=j["max_derivative_err"], ok=j["all_pass"] is True and j["states_selected"] == 49)
+    pts = {}
+    for sc in D:
+        for k in range(1, 5):
+            pts[f"start_{sc}_chain{k}"] = (sc, json.loads((PAY / "inits" / sc / f"chain{k}.json").read_text()), ())
+    s1 = json.loads((PAY / "inits" / "P11" / "chain1.json").read_text())
+    for sg in (0.01, 0.001):  # the earlier controls: start 1 with only sigma changed, at the same eps
+        pts[f"P11_start1_sigma_{sg}"] = ("P11", dict(s1, sigma=sg, w=[x / s1["sigma"] ** 0.2 * sg ** 0.2 for x in s1["w"]]), ())
+    stress = json.loads((HERE.parents[1] / "scratch/q012-capture-review-codex/inputs/fixed_48_stress_states.json").read_text())
+    out["stress_source"] = dict(file="review-capture-20261019-codex.tar.gz:inputs/fixed_48_stress_states.json", states=len(stress["states"]),
+                                source_sha256=stress["source_sha256"])
+    for nm, q in stress["states"].items():
+        pts[f"stress_{nm}"] = ("P11", q, ())
+    trace_dir = HERE.parents[1] / "scratch/q012-pilot/fetch-20261019-v6d/runs/P11/attempt1"
+    triads = {}
+    for k in (1, 2):
+        e = next(x for x in read_trace(trace_dir / f"chain{k}.trace.jsonl") if x.get("type") == "divergence" and x["phase"] == "sampling")
+        for st in ("initial", "previous", "failing"):
+            c = constrain(e[st]["q"], D["P11"]["N"])
+            sig = c["sigma"]
+            qw = dict({kk: v for kk, v in c.items() if kk != "eps"}, w=[x * sig ** 0.2 for x in c["eps"]])
+            triads[f"capture_c{k}_{e['transition']}_{st}"] = qw
+            pts[f"capture_c{k}_{e['transition']}_{st}"] = ("P11", qw, ("log_k", "log_h0_1"))
+    gates = {}
+    for nm, (sc, qw, extra) in pts.items():
+        g = gate_point(D[sc], w_to_eps(qw), extra)
+        gates[nm] = dict(dataset=sc, sigma=float(qw["sigma"]), **g)
+    bad = [k for k, g in gates.items() if g["pass"] is not True]
+    tested = [g for g in gates.values() if g["pass"] is not None]
+    bank["points"] = dict(states=len(gates), failed_or_unresolved=bad, max_log_err=max(g["log_err"] for g in tested),
+                          max_derivative_err=max(v for g in tested for kk, v in g.items() if kk.startswith("d_")), ok=not bad)
+    out["normaliser_bank"] = dict(**bank, ok=all(v["ok"] for v in bank.values()))
+    out["normaliser_points"] = gates
+    # (4) Solver controls at order Q.
+    C = CAND["controls"]
+    pdir = HERE.parents[1] / C["probe_dir"]
+    ctl = {}
+    for name in (C["accept"], C["reject"]):
+        q = json.loads((pdir / f"{name}.json").read_text())
+        for sc in D:
+            qq = dict(q, w=q["w"][:D[sc]["N"]])
+            lp, g, err = lp_constrained(exe, qq, PAY / "data" / f"{sc}.json", work)
+            ctl[f"{name}_{sc}"] = dict(accepted=lp is not None, finite=(bool(np.isfinite(lp) and np.all(np.isfinite(g))) if lp is not None else None),
+                                      rejection=err, powell_residual=bool(err and "algebra_solver: the norm of the algebraic function" in err))
+    a, rj = C["accept"], C["reject"]
+    out["controls"] = dict(rows=ctl, ok=all(ctl[f"{a}_{sc}"]["accepted"] and ctl[f"{a}_{sc}"]["finite"] and not ctl[f"{rj}_{sc}"]["accepted"]
+                                            for sc in D))
+    # (5) Actual-Stan order binding at every finite point of the bank.
+    ident = {}
+    for nm, (sc, qw, _) in pts.items():
+        u = unconstrain_w(qw, D[sc]["N"])
+        lq, _, eq = lp_grad(exe, u, PAY / "data" / f"{sc}.json", work)
+        l6, _, e6 = lp_grad(exe, u, other / "data" / f"{sc}.json", work)
+        if eq or e6:
+            ident[nm] = dict(rejected=eq or e6)
+            continue
+        qe = w_to_eps(qw)
+        pred = P.log_norm_agh(D64[sc], qe, P.cohort_A(D64[sc], qe)) - P.log_norm_agh(D[sc], qe, P.cohort_A(D[sc], qe))
+        ident[nm] = dict(stan_change=lq - l6, normaliser_prediction=pred, abs_error=abs(lq - l6 - pred))
+    errs = [v["abs_error"] for v in ident.values() if "abs_error" in v]
+    out["order_binding"] = dict(points=len(ident), checked=len(errs), rejected=[k for k, v in ident.items() if "rejected" in v],
+                                max_abs_error=max(errs), ok=len(errs) == len(ident) and max(errs) <= 1e-9)
+    # (6) AD against actual-LP central differences at the captured triads (finite states), five axes.
+    names = param_names(D["P11"]["N"])
+    fd = {}
+    for nm, qw in triads.items():
+        u = unconstrain_w(qw, D["P11"]["N"])
+        lp0, g0, err = lp_grad(exe, u, PAY / "data" / "P11.json", work)
+        if err:
+            fd[nm] = dict(rejected=err)
+            continue
+        row = {}
+        for ax in ("sigma", "rho", "kappa_b", "log_k", "log_h0_1"):
+            i = names.index(ax)
+            h = 1e-6 * max(1.0, abs(u[i]))
+            up, dn = u.copy(), u.copy()
+            up[i] += h
+            dn[i] -= h
+            hi, _, e1 = lp_grad(exe, up, PAY / "data" / "P11.json", work)
+            lo, _, e2 = lp_grad(exe, dn, PAY / "data" / "P11.json", work)
+            row[ax] = (dict(ad=float(g0[i]), fd=(hi - lo) / (2 * h), scaled_error=abs(g0[i] - (hi - lo) / (2 * h)) / max(1.0, abs(g0[i])))
+                       if not (e1 or e2) else dict(unresolved=e1 or e2))
+        fd[nm] = row
+    se = [v["scaled_error"] for r in fd.values() for v in r.values() if isinstance(v, dict) and "scaled_error" in v]
+    out["ad_vs_fd_captured"] = dict(rows=fd, max_scaled_error=max(se), threshold=1e-5,
+                                    ok=all("rejected" not in r and all("scaled_error" in v for v in r.values()) for r in fd.values())
+                                    and max(se) <= 1e-5)
+    out["all_pass"] = all(out[k]["ok"] for k in ("inputs", "reused_binary", "normaliser_bank", "controls", "order_binding", "ad_vs_fd_captured"))
+    (HERE / f"order_preflight_{PILOT['active_candidate']}.json").write_text(json.dumps(_clean(out), indent=1, default=float) + "\n")
+    print(json.dumps(_clean({k: v for k, v in out.items() if k not in ("normaliser_points",)}), indent=1, default=float)[:6000])
+    return out
+
+
 # ---------------------------------------------------------------- control fixtures
 def _run(cmd, root, env=None, timeout=900):
     import os
@@ -1620,7 +1806,7 @@ def selftest():
     scr["unequal_chain_lengths"] = (q(variant("short", drop_row)), bool)
     scr["extra_chain_csv"] = (q(variant("extra", lambda v: shutil.copy(v / "chain1.csv", v / f"chain{C + 1}.csv"))), bool)
     scr["csv_settings_mismatch"] = (q(variant("meta", lambda v: (v / f"chain{C}.csv").write_text(
-        (v / f"chain{C}.csv").read_text().replace("delta = 0.995", "delta = 0.9", 1)))), bool)
+        (v / f"chain{C}.csv").read_text().replace(f"delta = {env['ADAPT_DELTA']}", "delta = 0.9", 1)))), bool)
     scr["build_receipt_other_manifest"] = (q(good, b=dict(bld, manifest_sha256="3" * 64)), bool)
 
     def no_hash(v):
@@ -1786,6 +1972,49 @@ def selftest():
     code, txt = _run(["bash", "pbs/preflight.sh", "build/receipt.tmp"], pf, timeout=600)
     reason = (pf / "build" / "preflight_reason.txt").read_text().strip()
     out["preflight_mismatch_detected"] = dict(exit=code, reason=reason, ok=code == 1 and "mismatch" in reason)
+    if "REUSE_BIN" in RUN_ENV:  # the preflight-only build job (Codex 76/2096), with a stub 'module' command
+        bj = CACHE / "selftest_buildjob"
+        shutil.rmtree(bj, ignore_errors=True)
+        shutil.copytree(PAY, bj, ignore=shutil.ignore_patterns("runs", "build"))
+        os.symlink(cmdstan_tarball(), bj / cmdstan_tarball().name)
+        src = bj / "reused"
+        src.mkdir()
+        shutil.copy(exe, src / "model_v6")
+        rec = src / "receipt.txt"
+        rec.write_text(f"host=fixture\ngxx=fixture\nstatus=ok\nbinary_sha256={sha(exe)}\nbinary_instrumented=yes\n"
+                       f"patch_original_sha256={RUN_ENV['PATCH_ORIGINAL_SHA256']}\npatch_sha256={sha(PAY / 'patch' / 'base_nuts.hpp')}\n")
+        stub = bj / "stub"
+        stub.mkdir()
+        (stub / "module").write_text("#!/bin/bash\nexit 0\n")
+        (stub / "module").chmod(0o755)
+
+        def job(**over):
+            e = dict(RUN_ENV, MODULE="fixture/1", REUSE_BIN=str(src / "model_v6"), REUSE_BIN_SHA256=sha(exe),
+                     REUSE_BUILD_RECEIPT=str(rec), REUSE_BUILD_RECEIPT_SHA256=sha(rec))
+            e.update(over)
+            _write_env(bj, e)
+            write_manifest(bj)
+            shutil.rmtree(bj / "build", ignore_errors=True)
+            code, txt = _run(["bash", "pbs/build.pbs"], bj, dict(PBS_O_WORKDIR=str(bj), PATH=f"{stub}:{os.environ['PATH']}"), timeout=3600)
+            r = _receipt(bj / "build" / "receipt.txt") if (bj / "build" / "receipt.txt").exists() else {}
+            return code, r
+        code, r = job()
+        bjo = dict(reuse_ok=dict(exit=code, status=r.get("status"), binary=r.get("binary_sha256"),
+                                 preflight=[k for k in r if k.startswith("preflight_")],
+                                 ok=code == 0 and r.get("status") == "ok" and r.get("binary_instrumented") == "yes"
+                                 and r.get("binary_sha256") == sha(exe) and "preflight_exercise_0.5" in r))
+        code, r = job(REUSE_BUILD_RECEIPT_SHA256="0" * 64)
+        bjo["wrong_receipt_hash"] = dict(exit=code, reason=r.get("reason"), ok=code == 1 and r.get("reason") == "reuse_receipt_hash")
+        rec.write_text(rec.read_text().replace(f"patch_sha256={sha(PAY / 'patch' / 'base_nuts.hpp')}", "patch_sha256=" + "4" * 64))
+        code, r = job()
+        bjo["patch_not_bound"] = dict(exit=code, reason=r.get("reason"), ok=code == 1 and r.get("reason") == "reuse_patch_binding")
+        rec.write_text(rec.read_text().replace("patch_sha256=" + "4" * 64, f"patch_sha256={sha(PAY / 'patch' / 'base_nuts.hpp')}"))
+        with open(src / "model_v6", "ab") as f:
+            f.write(b"\0")
+        code, r = job(REUSE_BIN_SHA256=sha(exe))
+        bjo["tampered_binary"] = dict(exit=code, reason=r.get("reason"), ok=code == 1 and r.get("reason") == "reuse_binary_hash")
+        bjo["ok"] = all(v["ok"] for v in bjo.values())
+        out["preflight_only_build_job"] = bjo
     out["all_pass"] = all(v["ok"] for v in out.values() if isinstance(v, dict))
     (HERE / "selftest.json").write_text(json.dumps(out, indent=1) + "\n")
     print(json.dumps(out, indent=1))
@@ -1811,6 +2040,8 @@ if __name__ == "__main__":
         dispatch_test()
     elif cmd == "amended-preflight":
         amended_preflight()
+    elif cmd == "order-preflight":
+        order_preflight()
     elif cmd == "diagnostic-preflight":
         diagnostic_preflight()
     elif cmd == "trace-check":

@@ -11,10 +11,14 @@
   "exit": 0,
   "status": "complete",
   "maxrss_kb": [
-   "17060",
-   "17096"
+   "17228",
+   "17160",
+   "17164",
+   "17092"
   ],
   "traces": [
+   "summary",
+   "summary",
    "summary",
    "summary"
   ],
@@ -45,7 +49,9 @@
   "status": "failed",
   "chain_exits": [
    "0",
-   "1"
+   "1",
+   "0",
+   "0"
   ],
   "ok": true
  },
@@ -76,6 +82,8 @@
   "status": "timeout",
   "attempt": "2",
   "chain_exits": [
+   "124",
+   "124",
    "124",
    "124"
   ],
@@ -108,13 +116,13 @@
    "failures": [
     "receipt scenario is 'P12', expected 'FX'",
     "receipt status is 'failed', expected 'complete'",
-    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '938b75e20d6bb159cdd6275b192073eeac7b3e4d6c9d99e2cd6ccfcc8ec42998'"
+    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '467309291ac0fb498ab053fa54f137c35f4fff98ed150c77e9cedfd11bae1715'"
    ],
    "ok": true
   },
   "nonzero_chain_exit": {
    "failures": [
-    "chain 2 exit '1'"
+    "chain 4 exit '1'"
    ],
    "ok": true
   },
@@ -132,7 +140,7 @@
   },
   "fewer_draws_than_declared": {
    "failures": [
-    "receipt settings is 'chains 2; warmup 10; sampling 5; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64', expected 'chains 2; warmup 10; sampling 6; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64'",
+    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64'",
     "chain 1 log: line 3: header line '    num_samples = 5'; expected '    num_samples = 6'",
     "chain 1 log: line 51: iteration marker 1/15 (Warmup); expected 1/16 (Warmup)"
    ],
@@ -146,13 +154,13 @@
   },
   "extra_chain_csv": {
    "failures": [
-    "unexpected output file chain3.csv"
+    "unexpected output file chain5.csv"
    ],
    "ok": true
   },
   "csv_settings_mismatch": {
    "failures": [
-    "chain 2 CSV delta is '0.9', expected 0.995"
+    "chain 4 CSV delta is '0.9', expected 0.999"
    ],
    "ok": true
   },
@@ -368,7 +376,7 @@
   },
   "header_truncated": {
    "failures": [
-    "line 42: header line 'Gradient evaluation took 0.009751 seconds'; expected 'num_threads = 1 (Default)'"
+    "line 42: header line 'Gradient evaluation took 0.023193 seconds'; expected 'num_threads = 1 (Default)'"
    ],
    "rejections": [],
    "ok": true
@@ -471,6 +479,8 @@
    "preflight_controls=pass",
    "smoke_chain1_exit=0",
    "smoke_chain2_exit=0",
+   "smoke_chain3_exit=0",
+   "smoke_chain4_exit=0",
    "preflight_smoke=pass",
    "preflight_exercise_0.2=pass",
    "events",
@@ -499,15 +509,44 @@
    "9",
    "10",
    "11",
-   "12",
-   "preflight_trace_onoff=pass",
-   "preflight_compare_old_binary=identical"
+   "12"
   ],
   "ok": true
  },
  "preflight_mismatch_detected": {
   "exit": 1,
   "reason": "preflight_mismatch_point_central0",
+  "ok": true
+ },
+ "preflight_only_build_job": {
+  "reuse_ok": {
+   "exit": 0,
+   "status": "ok",
+   "binary": "cc48ac6793db8244f3f06705e8366ce0c0e1503bce9e3e279e59b2e8f7d7a086",
+   "preflight": [
+    "preflight_log_prob",
+    "preflight_controls",
+    "preflight_smoke",
+    "preflight_exercise_0.2",
+    "preflight_exercise_0.5"
+   ],
+   "ok": true
+  },
+  "wrong_receipt_hash": {
+   "exit": 1,
+   "reason": "reuse_receipt_hash",
+   "ok": true
+  },
+  "patch_not_bound": {
+   "exit": 1,
+   "reason": "reuse_patch_binding",
+   "ok": true
+  },
+  "tampered_binary": {
+   "exit": 1,
+   "reason": "reuse_binary_hash",
+   "ok": true
+  },
   "ok": true
  },
  "all_pass": true

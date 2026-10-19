@@ -928,3 +928,39 @@ four are chain 1 at 386–387 and chain 2 at transition 1 and at 630.
 remain held. The evidence goes to Codex for the mechanism and remedy
 review; no remedy (adapt_delta 0.999, reparameterisation, prior, seed or
 fit) is chosen here.
+
+## Remedy trial package: Q = 80 and adapt_delta 0.999 (Codex 76/2096)
+
+One bounded remedy, allocated by Codex after the captured-failure review
+(`ideas/2026-10-19-q012-captured-failure-review-codex.md`). Barry approved,
+in Claude chat on 19 October, one bounded fix and then a simpler estimator
+if it fails. A P11 pass does not release P06 or the other ten, which stay
+held under every outcome.
+
+**Package** `payload_v6q80/` (candidate `v6q80`).
+- **Data:** the only change from v6p2 is Q = 80, with its exact
+  Gauss–Hermite nodes and weights (numpy `hermgauss(80)`; the weights sum to
+  √π). build() asserts that no other field differs. Starts and preflight
+  points are byte-identical; the order-dependent reference CSVs are
+  regenerated at Q = 80.
+- **Sampler:** adapt_delta 0.999. Four chains (IDs 1–4, original starts),
+  2,000 warmup plus exactly 6,000 retained draws each. Everything else is
+  unchanged: a = 0.2, diag_e, depth 12, initial step 0.01, seed 77017,
+  solver settings and guards.
+- **Binary:** the verified v6d instrumented binary (5e9842cb…) is reused;
+  because Q is data, it is not recompiled. The cluster job is
+  preflight-only (`build.pbs`). It verifies:
+  - the v6d build receipt against its pinned hash (15fb01b6…);
+  - that the receipt records the same binary, `binary_instrumented=yes`,
+    and this payload's patch and pinned original;
+  - that the copied binary matches the receipt.
+  It then runs `preflight.sh`: LP/AD at the fixed points against the
+  Q = 80 references, the p75/p53 controls, a smoke run, and the two capture
+  exercises. Trace-on/off identity is a property of the binary,
+  established by its v6d preflight.
+- **Resources:**
+  - preflight job: 4 CPUs, 8 GiB, 1 h;
+  - fit: 4 CPUs, 8 GiB, 6 h runner (6:10 PBS).
+  - At most 28.6667 core-hours, leaving at least 3.9489 of the tranche.
+- **Not permitted:** restart, extension, seed replacement or a passing
+  prefix.
