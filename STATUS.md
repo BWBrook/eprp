@@ -46,12 +46,18 @@ Updated: 19 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   rejections, none in sampling. Identical saved prefixes do not establish
   identical unsaved trajectories. A bounded actual-Stan probe finds tail
   stiffness and accurate local gradients, without reproducing either failure.
-  Next allocation offered to Claude: passive instrumentation and one unchanged
-  .995 replay of P11 chains 1–2, 2,000 warmup plus 6,000 retained each, to
-  capture both known failures. Maximum 10.34 further core-hours including
-  build; 15.00 of the original 53.33 ceiling have been consumed in this
-  tranche. Acceptance is pending. P06 and the other ten remain held;
-  no automatic sampler retuning, further fit, retry or cap increase.
+  Claude's diagnostic replay at `1c94d08` captures both failures and matches
+  both 6,000-row saved prefixes. Codex's [capture review](ideas/2026-10-19-q012-captured-failure-review-codex.md)
+  confirms the passive instrumentation, provenance and local energy blow-ups.
+  Step subdivision sharply reduces each offending leaf's energy error.
+  A new Q=64 accuracy failure at chain 2's preceding state prevents an
+  unchanged-order retry. Fixed Q=80 passes the four captured endpoint checks.
+  Next allocation offered to Claude: wider finite Q=80 preflight, then one
+  conditional P11 attempt at .999 with four chains and fixed 2,000+6,000
+  draws, under the six-hour runner cap. Acceptance is pending. This P11
+  tranche has used 20.72 of 53.33 core-hours; the proposed maximum is 28.67
+  more within the 32.62 remaining. P06 and the other ten stay held under
+  every outcome. No automatic order ladder, retry, extension or cap increase.
   No further long laptop fit, full grid or empirical fit. Barry's kunanyi
   and PBS mail/wake workflow remains in force; no background monitoring.
   B-004's critique response, six-study modern screen and bounded analytic
@@ -103,7 +109,8 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex: amended review complete; Claude: diagnostic allocation offered, acceptance pending | [Amended P11 review](ideas/2026-10-19-q012-amended-p11-review-codex.md) confirms structural qualification and precision, but two divergences remain. Actual-Stan trajectory probes do not reproduce them. Next: passive capture plus unchanged .995 P11 chains 1–2, fixed 2,000+6,000 draws, two CPUs/8 GiB/three-hour runner, one four-CPU/one-hour build; at most 10.34 additional core-hours within 38.33 remaining. Correct saved-prefix causal claims and narrow prospective log grammar. All other panel cases held; Codex reviews captured failure evidence before any sampler remedy |
+| Q-012/D1 support and identification | Codex: capture review complete; Claude: Q80/.999 allocation offered, acceptance pending | [Capture review](ideas/2026-10-19-q012-captured-failure-review-codex.md) reproduces the diagnostic and demonstrates local integration error; a newly checked preceding state breaches Q64 accuracy. Q80 passes four captured endpoint checks. Next: broader finite Q80 preflight, then one conditional four-chain P11 at .999, fixed 2,000+6,000 draws, four CPUs/8 GiB/six-hour runner plus at most one four-CPU/one-hour build/preflight. Maximum 28.67 additional core-hours within 32.62 remaining. Correct causal and quadrature claims; preserve failures. All other panel cases held; Codex reviews outcome |
+| Restarted checkpoint queue and ranking | Claude: Q-038 predictor contract; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Codex accepts the queue; these new Codex checks are not yet started. Keep scientific consequence separate from execution readiness and the value of the next discriminating check. Framework notepad remains Claude-owned; Codex replies on the board |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -882,6 +889,30 @@ next phase of ideation whilst those final checks are done."
   replay of the two affected chains is offered to Claude within the existing
   ceiling. This diagnostic is not a new qualification attempt. P06 and the
   other ten stay held; Claude accepts/responds next, then Codex reviews traces.
+
+- **Captured-failure review, 19 October:** Claude accepted and completed the
+  two-chain diagnostic (76/2070–2093; `1c94d08`). Codex's
+  [review](ideas/2026-10-19-q012-captured-failure-review-codex.md) confirms
+  both recorded paths and passive captures. Subdivision shows that the
+  offending leaf errors converge towards zero; inherited trajectory error
+  explains the residual H-H0 near 100. A missed Q64 normaliser failure at
+  the preceding chain-2 leaf requires a numerical amendment too. Q80 clears
+  the finite four-point screen. Offered to Claude: broader Q80 checks and
+  one conditional .999 P11 attempt, four chains with 6,000 retained draws,
+  within the original resource ceiling. No further panel release; Claude
+  accepts/responds next, then Codex reviews the result.
+
+- **Broader programme steer, 19 October:** Barry's words relayed in 76/2095
+  approve restarting idle questions and keeping a reusable pre-project
+  framework in view, with 25–50 ranked questions before any selection.
+  Claude owns [the framework notepad](ideas/framework-notepad.md) and has
+  restarted Q-038's predictor contract alongside Q-012. Codex accepts Q-018
+  then Q-024 prior checks and Q-010's contrast table as the next queue,
+  with work not yet started. Ranking-method discussion is on the board;
+  no new primary project or software harness is commissioned. Agree the
+  Q-012 stopping principle: one bounded remedy, then consider a simpler
+  estimator if it fails, rather than continuing sampler tuning. P06 remains
+  subject to the current candidate/result and resource review.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
