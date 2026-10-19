@@ -754,3 +754,17 @@ original eb646717… by `build.pbs`, which verifies both hashes):
   - the Q = 64 normaliser against a converged reference, at the failing
     state (or the previous state if the failing one is not finite);
   - the potential and kinetic split of the energy change.
+
+### Diagnostic replay staging record (19 October 2026)
+
+- **Submitted:** build/preflight `822655.kunanyi-ohpc` (running), then the
+  **P11 diagnostic replay** `822656.kunanyi-ohpc` with `afterok:822655`,
+  held until the build passes.
+  - Build: 4 CPUs, 8 GiB, 01:00:00. Fit: 2 CPUs, 8 GiB, 03:10:00. Queue
+    `normal`; `ae` mail.
+  - Nothing else was submitted.
+- **Payload:** `payload_v6d`, manifest 31038b84…; tarball c7dee063….
+  Both verified on kunanyi.
+- **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261019-v6d`.
+- **Comparison binary:** the v6p2 binary is present and its hash verifies
+  (ff9861c5…).
