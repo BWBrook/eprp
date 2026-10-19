@@ -1,0 +1,163 @@
+{
+ "created": "2026-10-19T12:05:16+1100",
+ "git_head_at_build": "e95b322db88f3a32e18439f2db99b82805b17c4f",
+ "files": 31,
+ "manifest_sha256": "31038b84bc2a014560cf3fd17cfe451a20ce2d29fd0c6351d5078ef72f58ee32",
+ "pilot_json_sha256": "0a5b5dcf737dd02a93239feb3c9bc1e7fe6ba8beecf6aea7dc6484eeda88f8fa",
+ "scenario_table": {
+  "file": "scenarios.tsv",
+  "sha256": "1c13e5cc02e12b4a0f33f4e733ebb0ca2d04b19faeef666412c2edc9d49135b4",
+  "frozen_commit": "c93ea58"
+ },
+ "candidate": "v6d",
+ "prototype_checks": {
+  "file": "../q012-prototype/checks_v6.json",
+  "sha256": "3c808bd446cce2c616317fa006ee79f55bc230399a21fcf49ee7eb993bf9db1b",
+  "binding": {
+   "model_v6.stan": "f5dd71b37fb90ff5299098243b0be5b3206233ff850fe7f2025ee08933c1c4da",
+   "prototype.py": "afb001d47d9761ae092003ac2f2a45aa423aaac0223bcb461126444813016067",
+   "quadrature.py": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
+   "inits_v6/chain1.json": "47063b2fe48ba06004a3b30348e0196eb4133b34d17aa114608a00b69aaa712f",
+   "inits_v6/chain2.json": "f44701cc9f3f27ff264a908010b717b3b09258e00bd503e4b6369c2a94620fba",
+   "inits_v6/chain3.json": "09f766e33bac6061ee68d30e55c833e9763155542ac90128f42fe34c4c63b1f3",
+   "inits_v6/chain4.json": "7aba6d2517391ff11125e1b1cae313a416897219120949bec65b47c206d7feb7",
+   "model_v4.stan": "a5d4ba24eb7216987b0311580ff78ebaaf9818f410a02f2d17d23df6810f3eba",
+   "inits_v4/chain1.json": "98fb05ce37acb03346c233a9d205a4c87385c6da2f33d99bb3da5f1054c8ba64",
+   "inits_v4/chain2.json": "5143d71ee1984770c4695075dfa0817329ca19894e7cf0ceaba243324844dd87",
+   "inits_v4/chain3.json": "32805a82682276cecd1a0b0851f099f4e910f9c36d994db04116af9834b6ad4c",
+   "inits_v4/chain4.json": "da98fb9de82b529bae490ec0aaff4f81e27111a618c2049ac671de7b67ef7d51",
+   "config_active_block": "75979a3b75905cbc91453f8a988d297a37b5bc068c5eb8216579b06331aeef30",
+   "config_shared": "31adce365a9e1bff33e3d953cbd59bd4673ad2b823971af84218715dcb520e7a",
+   "fit_dataset": "f9d9817e713aa5324c81582e7d1fb935bbf326d5d9bd4052490eb90b2f3cfc52",
+   "bank:fit/model-20261016142709_1.csv": "a18e66d20ec666e96fb50e0702b2d9b48975ea4badc1f7fa85f1b5eafd7a2aa9",
+   "bank:fit/model-20261016142709_2.csv": "dda9852008637caf91079cff8c242258903f3f78a42da785f0fac282d9dcf5a6",
+   "bank:fit/model-20261016142709_3.csv": "ab1cff081b432d6151bd4bef42bcdf74e1d54e6cc072ac325ef8088dce417ee7",
+   "bank:fit/model-20261016142709_4.csv": "5bf953d2f357ac7a7dfe85b6cf21ff37b3695646a1f3e6d61f82ce9e8b6e73dd",
+   "bank:fit_v2/model_v2-20261016164103_1.csv": "2ee03a1bef349e8c4053bf8efb1ae79fb95e18268c14442365fc6b1c3b1ec404",
+   "bank:fit_v2/model_v2-20261016164103_2.csv": "1c435962f2484faa1365b4cce6f281c71716f6b47f8bb4565e0b41f1f261a2f7",
+   "bank:fit_v2/model_v2-20261016164103_3.csv": "611af38708ecc489a0ebf8352f135bc726f13d829910e98ce89be919e268be33",
+   "bank:fit_v2/model_v2-20261016164103_4.csv": "3851a56dc95c35b3e4236b5fe59d3f0baa2024ef6135bea277c420301a92d4f6",
+   "bank:fit_v3/model_v3-20261016180316_1.csv": "2dc0e066d2d0631efa385fc1723ae43ddf1978d3059ed0f5f3b5fde29ade64ef",
+   "bank:fit_v3/model_v3-20261016180316_2.csv": "c12d75a4b8513f26484fc40a6954ddf1786a232ba682579028b03556873989f9",
+   "bank:fit_v3/model_v3-20261016180316_3.csv": "30e841201fedc3d2f47b8ca5dba23f3623ef3d532baeae97562d54f7798d7197",
+   "bank:fit_v3/model_v3-20261016180316_4.csv": "37419d974bdae3cf8c8ffcbbe63fab10e459a6b7811471f2cab6fe45e4697f31",
+   "bank:fit_v4/model_v4-20261016191413_1.csv": "b9aa5032bea883729a05c3ee84132d07d4a38103ac7da4a81f309979d57151ef",
+   "bank:fit_v4/model_v4-20261016191413_2.csv": "ce17aa38bd4bd5311299291c361e4b7417c66660b85b96992633e4b1bc7b3ba3",
+   "bank:fit_v4/model_v4-20261016191413_3.csv": "261e0340bc6d29055f5fd528a45c4231e1879f98be9e051be515a280c80425fa",
+   "bank:fit_v4/model_v4-20261016191413_4.csv": "71ed8a237a266fea7937761f7bb091182d14b994a3e600b62eea0a69aea517cd",
+   "bank:R00/chain1.csv": "04d7321f0db8cc00167043fcaac04b571d64dc5b3e280fca4f3188f398514b32",
+   "bank:R00/chain2.csv": "cf960e15fba1f3fb04d84d4f9dee7edf7d60287820d4739ec317882d521ddb05",
+   "bank:R00/chain3.csv": "3ac06b991ba8d358e10cac1e41ce79ae94dc2aec0963835783556413c7a60086",
+   "bank:R00/chain4.csv": "715ebadf5dd0da5d59540bc727fda47cdda93d1bb6705e6a969f5d7cbb156b22"
+  },
+  "all_prefit_checks_pass": true
+ },
+ "cmdstan": {
+  "version": "2.38.0",
+  "url": "https://github.com/stan-dev/cmdstan/releases/download/v2.38.0/cmdstan-2.38.0.tar.gz",
+  "tarball_sha256": "3ae8d290fa7ed6a0f425520e525460a159a32653b6d45f2153e1662d82f85f10"
+ },
+ "run_env": {
+  "CHAINS": 2,
+  "WARMUP": 2000,
+  "SAMPLING": 6000,
+  "ADAPT_DELTA": 0.995,
+  "MAX_DEPTH": 12,
+  "STEPSIZE": 0.01,
+  "SEED": 77017,
+  "FIT_SECONDS": 10800,
+  "SMOKE_SECONDS": 600,
+  "MODEL_BIN": "./model_v6",
+  "MODULE": "HDF5/1.14.0-gompi-2023a",
+  "CMDSTAN_VERSION": "2.38.0",
+  "REFRESH": 1,
+  "LOG_FORMAT": "combined",
+  "TRACE_SCHEMA": "q012-nuts-trace-1",
+  "TRACE_CAP_WARMUP": 16,
+  "TRACE_CAP_SAMPLING": 64,
+  "PATCH_TARGET": "stan/src/stan/mcmc/hmc/nuts/base_nuts.hpp",
+  "PATCH_ORIGINAL_SHA256": "eb646717d8c90bf73ed00cc250c34060ca0e3aadcce4d7150235e727106776c7",
+  "COMPARE_BIN": "/u/bwbrook/codex_kunanyi/q012-pilot-20261018-v6p2/model_v6",
+  "COMPARE_BIN_SHA256": "ff9861c5066d635ab9be828c3c2ef268c3c4f14f02da620a9fa84713efce9bf9"
+ },
+ "scenarios": [
+  {
+   "id": "R00",
+   "role": "replay",
+   "gen_seed": "20261060",
+   "lambda0": "0.0708",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.08,
+   "true_lineages": 281,
+   "N": 264,
+   "observation": {
+    "recorded": 264,
+    "ancestry_lost": 0,
+    "reassigned": 23,
+    "labels": {
+     "ext": 135,
+     "bif": 11,
+     "single": 7,
+     "present": 111
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  },
+  {
+   "id": "P11",
+   "role": "panel",
+   "gen_seed": "20261211",
+   "lambda0": "0.096",
+   "sigma": "0.5",
+   "rho": "0.4",
+   "eta": "0.2",
+   "sampler_seed": "77017",
+   "outcome": "ok",
+   "generator_seconds": 0.04,
+   "true_lineages": 20,
+   "N": 19,
+   "observation": {
+    "recorded": 19,
+    "ancestry_lost": 0,
+    "reassigned": 0,
+    "labels": {
+     "ext": 19,
+     "bif": 0,
+     "single": 0,
+     "present": 0
+    },
+    "short_interval_moves": 0,
+    "shared_event_moves": 0,
+    "origin_ties": 0,
+    "ext_near_present": 0,
+    "fallback_components": 0
+   },
+   "cohort": 6,
+   "singles": 4,
+   "pairs": 1,
+   "starts_initialise": {
+    "chain1": "initialised",
+    "chain2": "initialised",
+    "chain3": "initialised",
+    "chain4": "initialised"
+   }
+  }
+ ]
+}

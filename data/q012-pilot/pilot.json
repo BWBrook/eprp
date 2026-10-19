@@ -140,7 +140,72 @@
         "reject": "p53"
       },
       "note": "One amended P11-only attempt (Codex 76/1895, ideas/2026-10-18-q012-p11-review-codex.md): solver_f_tol 1e-10 is the sole data change (rel_tol 1e-12, max_steps 200, check_tol 1e-8 unchanged); one ordered combined log per chain at refresh = 1 with fail-closed, phase-aware qualification; 2,000 warmup + a fixed 8,000 retained draws; same seed, starts, diag_e, adapt_delta 0.995, depth 12, step 0.01, Q = 64, a = 0.2. R00 is the build/preflight reference only. At most one 1 h build plus one 6:10 fit, 28.67 reserved core-hours within the original 53.33. P06 and the other ten stay held even if P11 passes."
+    },
+    "v6d": {
+      "prototype_version": "v6",
+      "stan_file": "model_v6.stan",
+      "checks_file": "../q012-prototype/checks_v6.json",
+      "payload_dir": "payload_v6d",
+      "pbs_source": "payload_v6p2/pbs",
+      "scenarios": [
+        "R00",
+        "P11"
+      ],
+      "fits": [
+        "P11"
+      ],
+      "data_overrides": {
+        "solver_f_tol": 1e-10
+      },
+      "run_env": {
+        "CHAINS": 2,
+        "SAMPLING": 6000,
+        "FIT_SECONDS": 10800,
+        "REFRESH": 1,
+        "LOG_FORMAT": "combined",
+        "TRACE_SCHEMA": "q012-nuts-trace-1",
+        "TRACE_CAP_WARMUP": 16,
+        "TRACE_CAP_SAMPLING": 64,
+        "PATCH_TARGET": "stan/src/stan/mcmc/hmc/nuts/base_nuts.hpp",
+        "PATCH_ORIGINAL_SHA256": "eb646717d8c90bf73ed00cc250c34060ca0e3aadcce4d7150235e727106776c7",
+        "COMPARE_BIN": "/u/bwbrook/codex_kunanyi/q012-pilot-20261018-v6p2/model_v6",
+        "COMPARE_BIN_SHA256": "ff9861c5066d635ab9be828c3c2ef268c3c4f14f02da620a9fa84713efce9bf9"
+      },
+      "controls": {
+        "probe_dir": "scratch/q012-prototype/probes_v6",
+        "accept": "p75",
+        "reject": "p53"
+      },
+      "patch": {
+        "dir": "patch_v6d",
+        "file": "base_nuts.hpp"
+      },
+      "same_inputs_as": "v6p2",
+      "replay_bank": {
+        "attempt": "scratch/q012-pilot/fetch-20261018-v6p2/runs/P11/attempt1",
+        "hashes": "data/q012-pilot/results/P11-amended-20261018-v6p2/chain_files.sha256",
+        "known_divergences": [
+          {
+            "chain": 1,
+            "transition": 4426
+          },
+          {
+            "chain": 2,
+            "transition": 6652
+          }
+        ]
+      },
+      "resources": {
+        "build_ncpus": 4,
+        "build_mem": "8gb",
+        "build_walltime": "01:00:00",
+        "fit_ncpus": 2,
+        "fit_mem": "8gb",
+        "fit_walltime": "03:10:00",
+        "core_hours_max": 10.3333
+      },
+      "note": "Instrumented diagnostic replay of P11 chain IDs 1-2 (Codex 76/2066, ideas/2026-10-19-q012-amended-p11-review-codex.md). Stan 2.38 base_nuts.hpp patched for observation only: transition-initial and pre-leapfrog states copied, one JSON line per divergence at the existing branch to a per-chain sidecar (Q012_TRACE_*), full records capped per phase (warmup 16, sampling 64) with short records and counts beyond. Data, starts, a = 0.2, Q = 64, f_tol 1e-10, guards, priors, seed 77017, diag_e, adapt_delta 0.995, depth 12, step 0.01 and 2,000 warmup unchanged; fixed 6,000 retained draws per chain, refresh 1 combined logs. One 4-CPU/8 GiB/1 h build/preflight and one 2-CPU/8 GiB/3:10 fit (3 h runner): at most 10.3333 core-hours. A diagnostic attempt, not a qualification or a dataset replicate; no retry or extension. P06 and the other ten stay held."
     }
   },
-  "active_candidate": "v6p2"
+  "active_candidate": "v6d"
 }

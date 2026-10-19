@@ -1,0 +1,114 @@
+{
+ "inputs": {
+  "compared_with": "payload_v6p2",
+  "files": 19,
+  "identical": true,
+  "note": "CSV references compared on data lines",
+  "model_identical": true,
+  "run_env_changed": {
+   "CHAINS": [
+    "4",
+    "2"
+   ],
+   "COMPARE_BIN": [
+    null,
+    "/u/bwbrook/codex_kunanyi/q012-pilot-20261018-v6p2/model_v6"
+   ],
+   "COMPARE_BIN_SHA256": [
+    null,
+    "ff9861c5066d635ab9be828c3c2ef268c3c4f14f02da620a9fa84713efce9bf9"
+   ],
+   "FIT_SECONDS": [
+    "21600",
+    "10800"
+   ],
+   "PATCH_ORIGINAL_SHA256": [
+    null,
+    "eb646717d8c90bf73ed00cc250c34060ca0e3aadcce4d7150235e727106776c7"
+   ],
+   "PATCH_TARGET": [
+    null,
+    "stan/src/stan/mcmc/hmc/nuts/base_nuts.hpp"
+   ],
+   "SAMPLING": [
+    "8000",
+    "6000"
+   ],
+   "TRACE_CAP_SAMPLING": [
+    null,
+    "64"
+   ],
+   "TRACE_CAP_WARMUP": [
+    null,
+    "16"
+   ],
+   "TRACE_SCHEMA": [
+    null,
+    "q012-nuts-trace-1"
+   ]
+  },
+  "only_declared_changes": true,
+  "ok": true
+ },
+ "patch": {
+  "original_sha256": "eb646717d8c90bf73ed00cc250c34060ca0e3aadcce4d7150235e727106776c7",
+  "patched_sha256": "f66bbe3134d430a76d7879a6384ad190bc1dc9ceaad192f65d5503eedafc23f8",
+  "pinned_sha256": "eb646717d8c90bf73ed00cc250c34060ca0e3aadcce4d7150235e727106776c7",
+  "removed_lines": [
+   "  ~base_nuts() {}",
+   "      if ((h - H0) > this->max_deltaH_)"
+  ],
+  "added_lines": 222,
+  "added_lines_calling_sampler_machinery": [],
+  "ok": true
+ },
+ "binaries": {
+  "instrumented": "/home/bwbrook/git/eprp/scratch/q012-pilot/trace_build/model_v6",
+  "instrumented_sha256": "cc48ac6793db8244f3f06705e8366ce0c0e1503bce9e3e279e59b2e8f7d7a086",
+  "uninstrumented": "/home/bwbrook/git/eprp/scratch/q012-prototype/model_v6",
+  "uninstrumented_sha256": "575419eaa5db0cf1d34243aacd048f62c7358da4911f9de607d3c42959ee2da5",
+  "marker": true
+ },
+ "lp_ad_identical_instrumented_vs_uninstrumented": {
+  "points": {
+   "point_central0": true,
+   "point_control_p75": true,
+   "point_max_sigma_r00_state": true,
+   "point_stress_s3_r09_kbm15": true
+  },
+  "ok": true
+ },
+ "payload_preflight_local": {
+  "exit": 0,
+  "seconds": 445,
+  "receipt": [
+   "preflight_log_prob=pass",
+   "preflight_controls=pass",
+   "smoke_chain1_exit=0",
+   "smoke_chain2_exit=0",
+   "preflight_smoke=pass",
+   "preflight_exercise_0.2=pass events 1 2 3 4 5 6 7 8 9 10 11 12",
+   "preflight_exercise_0.5=pass events 1 2 3 4 5 6 7 8 9 10 11 12",
+   "preflight_trace_onoff=pass",
+   "preflight_compare_old_binary=identical"
+  ],
+  "reason": null,
+  "ok": true
+ },
+ "trace_records_reproduced": {
+  "exercise_0.2": {
+   "records": 5,
+   "ok": true
+  },
+  "exercise_0.5": {
+   "records": 5,
+   "ok": true
+  },
+  "onoff": {
+   "records": 2,
+   "ok": true
+  },
+  "ok": true
+ },
+ "all_pass": true
+}

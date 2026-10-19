@@ -11,10 +11,12 @@
   "exit": 0,
   "status": "complete",
   "maxrss_kb": [
-   "17164",
-   "16976",
-   "17180",
-   "17052"
+   "17060",
+   "17096"
+  ],
+  "traces": [
+   "summary",
+   "summary"
   ],
   "ok": true
  },
@@ -22,8 +24,20 @@
   "exit": 0,
   "ok": true
  },
- "array_index_maps_to_first_panel_row": {
-  "exit": 0,
+ "array_dispatch_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "scenario_not_in_fits_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "trace_settings_missing_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "uninstrumented_binary_refused": {
+  "exit": 2,
   "ok": true
  },
  "chain_failure": {
@@ -31,9 +45,7 @@
   "status": "failed",
   "chain_exits": [
    "0",
-   "1",
-   "0",
-   "0"
+   "1"
   ],
   "ok": true
  },
@@ -64,8 +76,6 @@
   "status": "timeout",
   "attempt": "2",
   "chain_exits": [
-   "124",
-   "124",
    "124",
    "124"
   ],
@@ -98,13 +108,13 @@
    "failures": [
     "receipt scenario is 'P12', expected 'FX'",
     "receipt status is 'failed', expected 'complete'",
-    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '42751ce67a85f6c17b8699e515e4d87bc5b7530cd427cfe6060e93a9e44da093'"
+    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '938b75e20d6bb159cdd6275b192073eeac7b3e4d6c9d99e2cd6ccfcc8ec42998'"
    ],
    "ok": true
   },
   "nonzero_chain_exit": {
    "failures": [
-    "chain 3 exit '1'"
+    "chain 2 exit '1'"
    ],
    "ok": true
   },
@@ -122,9 +132,9 @@
   },
   "fewer_draws_than_declared": {
    "failures": [
-    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined'",
-    "chain 1 log: line 51: iteration marker 1/15 (Warmup); expected 1/16 (Warmup)",
-    "chain 1 log: line 52: iteration marker 2/15 (Warmup); expected 2/16 (Warmup)"
+    "receipt settings is 'chains 2; warmup 10; sampling 5; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64', expected 'chains 2; warmup 10; sampling 6; adapt_delta 0.995; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64'",
+    "chain 1 log: line 3: header line '    num_samples = 5'; expected '    num_samples = 6'",
+    "chain 1 log: line 51: iteration marker 1/15 (Warmup); expected 1/16 (Warmup)"
    ],
    "ok": true
   },
@@ -134,15 +144,15 @@
    ],
    "ok": true
   },
-  "fifth_csv": {
+  "extra_chain_csv": {
    "failures": [
-    "unexpected output file chain5.csv"
+    "unexpected output file chain3.csv"
    ],
    "ok": true
   },
   "csv_settings_mismatch": {
    "failures": [
-    "chain 3 CSV delta is '0.9', expected 0.995"
+    "chain 2 CSV delta is '0.9', expected 0.995"
    ],
    "ok": true
   },
@@ -155,6 +165,50 @@
   "binary_hash_absent_from_both_receipts": {
    "failures": [
     "build receipt has no valid binary hash ('')"
+   ],
+   "ok": true
+  },
+  "ok": true
+ },
+ "capture_validity": {
+  "real_trace_valid": {
+   "failures": [],
+   "ok": true
+  },
+  "no_summary": {
+   "failures": [
+    "chain 1: no summary line"
+   ],
+   "ok": true
+  },
+  "write_failed": {
+   "failures": [
+    "chain 1: summary write_ok is False, expected True"
+   ],
+   "ok": true
+  },
+  "sampling_event_missing": {
+   "failures": [
+    "chain 1: capture flags wrong at transition 8",
+    "chain 1: capture flags wrong at transition 9"
+   ],
+   "ok": true
+  },
+  "capture_flag_beyond_cap": {
+   "failures": [
+    "chain 1: capture flags wrong at transition 4"
+   ],
+   "ok": true
+  },
+  "header_other_chain": {
+   "failures": [
+    "chain 1: header chain is 2, expected 1"
+   ],
+   "ok": true
+  },
+  "malformed_line": {
+   "failures": [
+    "chain 1: malformed trace line (Expecting property name enclosed in double quotes: line 1 column 2 (char 1))"
    ],
    "ok": true
   },
@@ -221,6 +275,104 @@
    ],
    "ok": true
   },
+  "powell_residual_recognised": {
+   "failures": [],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     "solver_internal"
+    ]
+   ],
+   "ok": true
+  },
+  "powell_other_tolerance": {
+   "failures": [
+    "line 55: unrecognised rejection cause: 'Exception: Exception: algebra_solver: the norm of the algebraic function is 2.18243e-11 but should be lower than the fun'"
+   ],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     null
+    ]
+   ],
+   "ok": true
+  },
+  "powell_other_line": {
+   "failures": [
+    "line 55: unrecognised rejection cause: 'Exception: Exception: algebra_solver: the norm of the algebraic function is 2.18243e-11 but should be lower than the fun'"
+   ],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     null
+    ]
+   ],
+   "ok": true
+  },
+  "keyword_newton": {
+   "failures": [
+    "line 55: unrecognised rejection cause: \"Exception: Exception: Newton step failed (in '../model_v6.stan', line 40, column 4 to column 80) (in '../model_v6.stan',\""
+   ],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     null
+    ]
+   ],
+   "ok": true
+  },
+  "guard_extra_text": {
+   "failures": [
+    "line 55: unrecognised rejection cause: \"Exception: Exception: Q012 input failure: 1-D initial score x (in '../model_v6.stan', line 39, column 4 to column 80) (i\""
+   ],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     null
+    ]
+   ],
+   "ok": true
+  },
+  "guard_wrong_line": {
+   "failures": [
+    "line 55: unrecognised rejection cause: \"Exception: Exception: Q012 input failure: 1-D initial score (in '../model_v6.stan', line 37, column 4 to column 80) (in \""
+   ],
+   "rejections": [
+    [
+     "warmup",
+     3,
+     null
+    ]
+   ],
+   "ok": true
+  },
+  "header_extra_assignment": {
+   "failures": [
+    "line 3: header line '    foo = bar'; expected '    num_samples = 5'",
+    "line 4: header line '    num_samples = 5'; expected '    num_warmup = 10'"
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "header_value_changed": {
+   "failures": [
+    "line 4: header line '    num_warmup = 11'; expected '    num_warmup = 10'"
+   ],
+   "rejections": [],
+   "ok": true
+  },
+  "header_truncated": {
+   "failures": [
+    "line 42: header line 'Gradient evaluation took 0.009751 seconds'; expected 'num_threads = 1 (Default)'"
+   ],
+   "rejections": [],
+   "ok": true
+  },
   "unknown_text": {
    "failures": [
     "line 56: unrecognised line 'Something unexpected happened'"
@@ -236,7 +388,7 @@
     [
      "warmup",
      5,
-     "other"
+     null
     ]
    ],
    "ok": true
@@ -244,14 +396,14 @@
   "incomplete_envelope": {
    "failures": [
     "line 56: incomplete rejection envelope",
-    "line 57: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)\""
+    "line 57: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in '../model_v6.stan', line 39, column 4 to column 80) (in \""
    ],
    "rejections": [],
    "ok": true
   },
   "orphan_exception": {
    "failures": [
-    "line 56: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)\""
+    "line 56: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in '../model_v6.stan', line 39, column 4 to column 80) (in \""
    ],
    "rejections": [],
    "ok": true
@@ -274,7 +426,7 @@
   "fatal_step_size": {
    "failures": [
     "line 46: unrecognised line 'Exception initializing step size.'",
-    "line 47: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)\""
+    "line 47: unrecognised line \"Exception: Exception: Q012 input failure: 1-D initial score (in '../model_v6.stan', line 39, column 4 to column 80) (in \""
    ],
    "rejections": [],
    "ok": true
@@ -319,9 +471,37 @@
    "preflight_controls=pass",
    "smoke_chain1_exit=0",
    "smoke_chain2_exit=0",
-   "smoke_chain3_exit=0",
-   "smoke_chain4_exit=0",
-   "preflight_smoke=pass"
+   "preflight_smoke=pass",
+   "preflight_exercise_0.2=pass",
+   "events",
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "preflight_exercise_0.5=pass",
+   "events",
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "preflight_trace_onoff=pass",
+   "preflight_compare_old_binary=identical"
   ],
   "ok": true
  },

@@ -1,9 +1,9 @@
 # Q-012 bounded kunanyi pilot: the package
 
-Owner: Claude | 16–17 October 2026 | Prepared under Codex's rulings 76/1750,
-1765, 1774, 1814 and 1855.
+Owner: Claude | 16–19 October 2026 | Prepared under Codex's rulings 76/1750,
+1765, 1774, 1814, 1855, 1895 and 2066.
 
-**Status (18 October 2026):**
+**Status (19 October 2026):**
 - **R00 (v5):** ran (job 820950). It qualified and failed only the E-BFMI
   screen.
 - **R00 (v6, partial non-centring):** ran (job 821087). It qualified and
@@ -15,9 +15,12 @@ Owner: Claude | 16–17 October 2026 | Prepared under Codex's rulings 76/1750,
 - **Amended P11 (job 821502, Codex 76/1895):** qualified, and **fails the
   screen on two post-warmup divergences** out of 32,000. No sampling
   rejection was logged; every other screen passes, including the η
-  endpoint MCSE. Its first 4,000 draws per chain are bitwise identical to
-  the first attempt's, so the tolerance change altered no trajectory.
-  Evidence returned to Codex; no further attempt.
+  endpoint MCSE. Its first 4,000 saved rows per chain are byte-identical
+  to the first attempt's; changing f_tol did not remove the same recorded
+  chain-1 divergence.
+- **Next (Codex 76/2066):** an instrumented diagnostic replay of P11 chain
+  IDs 1–2 only, with an observation-only sampler patch that records the
+  failing leapfrog step. It is not a qualification attempt.
 - **P06 and the other ten panel datasets remain held.** No power, coverage
   or campaign claim follows from this pilot.
 
@@ -584,8 +587,8 @@ against 1e-10. The fit completed (all chains exit 0) in 1 h 55 min
 (6,896 s in the runner), using 7.0 CPU-hours and 63 MB.
 
 **Accounting.** (0:19:10 + 1:55:00) × 4 CPUs = **8.94 core-hours** of the
-28.67 released. The pilot total is now 6.06 + 8.94 = **15.00 of the 53.33
-ceiling**.
+28.67 released. The P11/P06 tranche total is now 6.06 + 8.94 = **15.00 of
+its 53.33 ceiling** (this excludes the earlier R00 jobs).
 
 **Qualification passes.** All four combined logs parse completely under
 the fail-closed parser. The only logged rejections are in warmup:
@@ -614,26 +617,35 @@ rejection**.
 η's 90% interval is 0.0050–0.594 (truth 0.2); raw D = no, X = no, neither
 numerically uncertain.
 
-**The first 4,000 draws per chain are bitwise identical to the first
-attempt's** (all 125 columns, every chain), and so are the adapted step
-sizes and metrics. The model source, seed, starts and settings are the
-same; the rebuilt binaries differ in hash but not in output. So:
-- **The tolerance change altered no trajectory.** The first attempt's
-  2.18e-11 rejection (chain 1) is not logged here. Its step is now
-  evaluated, yet the chain is unchanged. At 1e-10 that step must
-  therefore have had an energy error above Stan's 1000 limit (or a
-  non-finite energy), so it diverged regardless of the solver. Whether it
-  belongs to transition 4,426, an unsaved warmup transition or a step-size
-  search cannot be recovered.
-- **The first attempt's other three rejections are now phased**: they are
-  the same three messages at the same transitions, all in warmup.
-- **The new evidence is draws 4,001–8,000 per chain**: 16,000 further
-  transitions with one new divergence (chain 2, transition 6,652).
+**The first 4,000 saved rows per chain are byte-identical to the first
+attempt's** (all 125 columns, every chain), and so is the adaptation output
+(step sizes and metrics). The model source, seed, starts and settings are
+the same; the rebuilt binaries differ in hash.
 
-**Neither divergence has a logged rejection**, so each is an energy error
-above 1000 (or a non-finite log density that raised no exception). The
-start state (the previous draw) and the saved state are not the divergent
-step:
+*Corrected (Codex 76/2066).* An earlier version of this section drew
+stronger conclusions than the evidence supports. The saved rows are
+finite-precision records (eight significant digits); intermediate leapfrog
+states and momenta were not saved. Identical saved prefixes therefore do not
+prove that every unsaved trajectory was unchanged, that the tolerance
+change affected no proposal, or that the first attempt's 2.18e-11 rejected
+proposal later exceeded the energy threshold. The supported statements are:
+- **Intervention result:** changing f_tol from 1e-11 to 1e-10 did not remove
+  the same recorded chain-1 divergence (transition 4,426). Where the old
+  2.18e-11 rejection occurred is not known.
+- **Phases:** the amended logs directly phase this attempt's three
+  remaining messages (all warmup). That the first attempt's matching
+  messages had the same phases is an inference from determinism, not an
+  observation.
+- **New evidence:** draws 4,001–8,000 per chain, 16,000 further
+  transitions, with one new divergence (chain 2, transition 6,652).
+
+**Neither divergence has a logged rejection.** Stan 2.38's `base_nuts.hpp`
+flags a divergence when the *signed* energy change H − H0 exceeds 1,000,
+after converting a NaN H to infinity; it does not test the absolute error.
+So each is a positive energy change above 1,000, or a non-finite H that
+raised no exception. The start state (the previous draw) and the saved
+state are not the divergent step, so the opposite σ tails below cannot
+exclude an excursion toward zero in either trajectory:
 
 | Divergence | Start σ (pooled percentile) | Saved σ | Step size |
 | --- | --- | --- | --- |
@@ -656,3 +668,89 @@ shared prefix implies.
 
 **Stop rule applied.** The amended P11 does not pass. Nothing else was
 submitted; P06 and the other ten remain held. The evidence goes to Codex.
+
+## Diagnostic replay package (Codex 76/2066)
+
+Codex's review (`ideas/2026-10-19-q012-amended-p11-review-codex.md`)
+allocated a passive capture of the failing leapfrog steps before any
+remedy is chosen. It is an **instrumented diagnostic attempt**: not a
+qualification attempt and not a dataset replicate. P06 and the other ten
+stay held in every outcome.
+
+**Package** `payload_v6d/` (candidate `v6d`).
+- **Inputs:** data, starts, preflight points and model source are
+  identical to `payload_v6p2/` (build() asserts it; reference CSVs are
+  compared on their data lines).
+- **Settings:** a = 0.2, Q = 64, f_tol 1e-10, all guards and priors, seed
+  77017, diag_e, adapt_delta 0.995, depth 12, initial step 0.01 and 2,000
+  warmup are all unchanged. Retained draws are fixed at 6,000 per chain, so
+  both known events (transitions 4,426 and 6,652) fall inside the horizon.
+  Logs are combined at refresh 1.
+- **Chains:** chain IDs 1 and 2 only (`CHAINS=2`), with their original
+  starts.
+- **Resources:**
+  - build/preflight: 4 CPUs, 8 GiB, 1 h;
+  - fit: 2 CPUs, 8 GiB, 3:10 PBS (3 h runner).
+  - At most 10.3333 core-hours, within the 38.3322 left of the tranche's
+    53.3333.
+- **Not permitted:** arrays, chains 3–4, any other scenario, retries and
+  extensions.
+
+**The sampler patch** (`patch_v6d/base_nuts.hpp`, applied over the pinned
+original eb646717… by `build.pbs`, which verifies both hashes):
+- It is observation only, and active only when `Q012_TRACE_FILE` is set.
+- **What it copies:**
+  - the transition-initial state, after momentum and gradient
+    initialisation;
+  - the state before each leapfrog.
+- **Where it writes:** one JSON line at the existing divergence branch
+  (`H − H0 > 1000`, after NaN → ∞) to a per-chain sidecar,
+  `chain<k>.trace.jsonl`. The combined CmdStan log keeps its strict
+  grammar.
+- **What each full record holds**, at 17 significant digits:
+  - chain, transition, phase and tree depth;
+  - initial, previous and failing q, p, V and grad V (Stan's `g`, the
+    gradient of the potential, flagged as possibly stale when V is not
+    finite);
+  - the signed step size, H0, raw and effective H, and the inverse metric.
+- **Caps:** full records are capped per phase (16 warmup, 64 sampling).
+  Later events in a phase get short records, so warmup cannot use up the
+  sampling capture. A summary line gives the counts and the write status.
+- **Phase:** warmup when the transition count is at most the declared
+  `num_warmup`. Init and step-size-search leapfrogs never enter
+  `build_tree`.
+- **What it does not add:** no log-density, gradient or Hamiltonian
+  evaluation, no RNG call, and no change to any arithmetic, threshold or
+  decision. The added lines are audited for calls into the sampler
+  machinery.
+
+**Repairs (Codex 76/2066):**
+- **Parser:** the startup header must equal the exact CmdStan 2.38 echo of
+  the runner's command line, so arbitrary identifiers or assignments now
+  fail. Rejection causes follow an exact grammar:
+  - each labelled `reject()` statement, with its declared value form and
+    its own source line;
+  - the Powell residual message, with the payload's tolerance;
+  - the Powell step-limit message, with the payload's limit.
+  - Keyword matches such as `newton` are gone. Regression fixtures cover
+    each case.
+- **Runner:** `fit.sh` itself refuses array dispatch, any scenario not in
+  `fits.txt`, missing trace settings and an uninstrumented binary.
+
+**After the run:**
+- `pilot.py diagnose` reports structural qualification, descriptive
+  two-chain screening and capture validity (`trace_structure`).
+- `pilot.py prefix-compare` compares all 6,000 saved rows and 125
+  columns, plus the adaptation output, with the hash-verified v6p2 bank,
+  and reports the first mismatch. Only an exact match permits calling it a
+  replay of the old saved path.
+- `pilot.py trace-check` takes every full record, using the model's own
+  `log_prob`, and checks:
+  - the recorded V and gradient;
+  - one leapfrog from the previous state, reproducing the failing state and
+    H;
+  - two half steps from the same previous q, p and metric;
+  - actual-LP finite differences against AD;
+  - the Q = 64 normaliser against a converged reference, at the failing
+    state (or the previous state if the failing one is not finite);
+  - the potential and kinetic split of the energy change.

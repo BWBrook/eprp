@@ -1,0 +1,280 @@
+--- base_nuts.orig.hpp	2026-10-19 11:40:56.769197302 +1100
++++ base_nuts.hpp	2026-10-19 11:42:30.439113025 +1100
+@@ -5,9 +5,17 @@
+ #include <stan/math/prim.hpp>
+ #include <stan/mcmc/hmc/base_hmc.hpp>
+ #include <stan/mcmc/hmc/hamiltonians/ps_point.hpp>
++#include <stan/mcmc/hmc/hamiltonians/dense_e_point.hpp>
++#include <stan/mcmc/hmc/hamiltonians/diag_e_point.hpp>
++#include <stan/mcmc/hmc/hamiltonians/unit_e_point.hpp>
+ #include <algorithm>
+ #include <cmath>
++#include <cstdlib>
++#include <fstream>
++#include <iomanip>
+ #include <limits>
++#include <memory>
++#include <stdexcept>
+ #include <string>
+ #include <vector>
+ 
+@@ -55,7 +63,7 @@
+         divergent_(false),
+         energy_(0) {}
+ 
+-  ~base_nuts() {}
++  ~base_nuts() { q012_finish(); }
+ 
+   void set_metric(const Eigen::MatrixXd& inv_e_metric) {
+     this->z_.set_metric(inv_e_metric);
+@@ -76,6 +84,10 @@
+   double get_max_delta() { return this->max_deltaH_; }
+ 
+   sample transition(sample& init_sample, callbacks::logger& logger) {
++    if (!q012_ready_)
++      q012_setup();
++    ++q012_transition_;
++
+     // Initialize the algorithm
+     this->sample_stepsize();
+ 
+@@ -83,6 +95,8 @@
+ 
+     this->hamiltonian_.sample_p(this->z_, this->rand_int_);
+     this->hamiltonian_.init(this->z_, logger);
++    if (q012_on_)
++      q012_copy(q012_initial_, this->z_);
+ 
+     ps_point z_fwd(this->z_);  // State at forward end of trajectory
+     ps_point z_bck(z_fwd);     // State at backward end of trajectory
+@@ -251,16 +265,22 @@
+                   double& sum_metro_prob, callbacks::logger& logger) {
+     // Base case
+     if (depth == 0) {
++      if (q012_on_)
++        q012_copy(q012_prev_, this->z_);
+       this->integrator_.evolve(this->z_, this->hamiltonian_,
+                                sign * this->epsilon_, logger);
+       ++n_leapfrog;
+ 
+       double h = this->hamiltonian_.H(this->z_);
++      const double q012_h_raw = h;
+       if (std::isnan(h))
+         h = std::numeric_limits<double>::infinity();
+ 
+-      if ((h - H0) > this->max_deltaH_)
++      if ((h - H0) > this->max_deltaH_) {
+         this->divergent_ = true;
++        if (q012_on_)
++          q012_emit(q012_h_raw, h, H0, sign, n_leapfrog);
++      }
+ 
+       log_sum_weight = math::log_sum_exp(log_sum_weight, H0 - h);
+ 
+@@ -358,6 +378,206 @@
+   int n_leapfrog_;
+   bool divergent_;
+   double energy_;
++
++  // Q012 diagnostic capture (EPRP; Codex 76/2066). Observation only, enabled when Q012_TRACE_FILE is set. It copies
++  // the transition-initial state (after momentum and gradient initialisation) and the state before each leapfrog, and
++  // writes one JSON line at the existing divergence branch. It adds no log-density, gradient or Hamiltonian
++  // evaluation, no RNG call and no change to any arithmetic, threshold or decision. Phase is warmup when the
++  // transition count is at most Q012_TRACE_WARMUP. Full records are capped per phase; later events in a phase are
++  // written as short records and counted. The summary line is written when the sampler is destroyed.
++  struct q012_state {
++    Eigen::VectorXd q, p, g;
++    double V{0};
++  };
++  bool q012_ready_{false};
++  bool q012_on_{false};
++  bool q012_write_ok_{true};
++  std::shared_ptr<std::ofstream> q012_out_;
++  long q012_transition_{0};
++  long q012_warmup_{-1};
++  long q012_chain_{-1};
++  long q012_cap_[2]{-1, -1};
++  long q012_seen_[2]{0, 0};
++  long q012_captured_[2]{0, 0};
++  q012_state q012_initial_, q012_prev_;
++
++  static long q012_env_long(const char* name) {
++    const char* s = std::getenv(name);
++    if (s == nullptr || *s == '\0')
++      return -1;
++    char* end = nullptr;
++    long v = std::strtol(s, &end, 10);
++    return (end != s && *end == '\0' && v >= 0) ? v : -1;
++  }
++
++  static void q012_num(std::ostream& o, double x) {
++    if (std::isnan(x))
++      o << "NaN";
++    else if (std::isinf(x))
++      o << (x > 0 ? "Infinity" : "-Infinity");
++    else
++      o << x;
++  }
++
++  static void q012_vec(std::ostream& o, const Eigen::VectorXd& v) {
++    o << '[';
++    for (Eigen::Index i = 0; i < v.size(); ++i) {
++      if (i)
++        o << ',';
++      q012_num(o, v(i));
++    }
++    o << ']';
++  }
++
++  static const char* q012_metric_kind(const ps_point&) { return "other"; }
++  static const char* q012_metric_kind(const unit_e_point&) { return "unit_e"; }
++  static const char* q012_metric_kind(const diag_e_point&) { return "diag_e"; }
++  static const char* q012_metric_kind(const dense_e_point&) {
++    return "dense_e";
++  }
++  static void q012_metric(std::ostream& o, const ps_point&) { o << "null"; }
++  static void q012_metric(std::ostream& o, const unit_e_point& z) {
++    q012_vec(o, z.inv_e_metric_);
++  }
++  static void q012_metric(std::ostream& o, const diag_e_point& z) {
++    q012_vec(o, z.inv_e_metric_);
++  }
++  static void q012_metric(std::ostream& o, const dense_e_point& z) {
++    o << '[';
++    for (Eigen::Index i = 0; i < z.inv_e_metric_.rows(); ++i) {
++      if (i)
++        o << ',';
++      q012_vec(o, z.inv_e_metric_.row(i).transpose());
++    }
++    o << ']';
++  }
++
++  static void q012_copy(q012_state& s, const ps_point& z) {
++    s.q = z.q;
++    s.p = z.p;
++    s.g = z.g;
++    s.V = z.V;
++  }
++
++  static void q012_state_json(std::ostream& o, const Eigen::VectorXd& q,
++                              const Eigen::VectorXd& p, double V,
++                              const Eigen::VectorXd& g) {
++    o << "{\"q\":";
++    q012_vec(o, q);
++    o << ",\"p\":";
++    q012_vec(o, p);
++    o << ",\"V\":";
++    q012_num(o, V);
++    o << ",\"grad_V\":";
++    q012_vec(o, g);
++    o << ",\"V_finite\":" << (std::isfinite(V) ? "true" : "false")
++      << ",\"grad_V_current\":" << (std::isfinite(V) ? "true" : "false")
++      << '}';
++  }
++
++  void q012_setup() {
++    q012_ready_ = true;
++    const char* path = std::getenv("Q012_TRACE_FILE");
++    if (path == nullptr || *path == '\0')
++      return;
++    q012_chain_ = q012_env_long("Q012_TRACE_CHAIN");
++    q012_warmup_ = q012_env_long("Q012_TRACE_WARMUP");
++    q012_cap_[0] = q012_env_long("Q012_TRACE_CAP_WARMUP");
++    q012_cap_[1] = q012_env_long("Q012_TRACE_CAP_SAMPLING");
++    q012_on_ = true;
++    try {
++      q012_out_ = std::make_shared<std::ofstream>(path, std::ios::out | std::ios::trunc);
++      std::ostream& o = *q012_out_;
++      o << std::setprecision(17);
++      const bool config_ok = q012_chain_ >= 0 && q012_warmup_ >= 0
++                             && q012_cap_[0] >= 0 && q012_cap_[1] >= 0;
++      o << "{\"type\":\"header\",\"schema\":\"q012-nuts-trace-1\",\"chain\":"
++        << q012_chain_ << ",\"warmup\":" << q012_warmup_
++        << ",\"cap_warmup\":" << q012_cap_[0]
++        << ",\"cap_sampling\":" << q012_cap_[1] << ",\"max_deltaH\":";
++      q012_num(o, this->max_deltaH_);
++      o << ",\"max_depth\":" << this->max_depth_
++        << ",\"dim\":" << this->z_.q.size() << ",\"metric\":\""
++        << q012_metric_kind(this->z_) << "\",\"config_ok\":"
++        << (config_ok ? "true" : "false") << "}\n";
++      o.flush();
++      q012_write_ok_ = config_ok && q012_out_->is_open() && o.good();
++    } catch (...) {
++      q012_write_ok_ = false;
++    }
++  }
++
++  void q012_emit(double h_raw, double h, double H0, double sign,
++                 int n_leapfrog) {
++    try {
++      if (!q012_out_)
++        throw std::runtime_error("no trace stream");
++      std::ostream& o = *q012_out_;
++      const int ph = (q012_warmup_ >= 0 && q012_transition_ <= q012_warmup_) ? 0 : 1;
++      const bool capture = q012_captured_[ph] < q012_cap_[ph];
++      ++q012_seen_[ph];
++      o << "{\"type\":\"divergence\",\"chain\":" << q012_chain_
++        << ",\"transition\":" << q012_transition_ << ",\"phase\":\""
++        << (ph == 0 ? "warmup" : "sampling") << "\",\"phase_event\":"
++        << q012_seen_[ph] << ",\"captured\":" << (capture ? "true" : "false")
++        << ",\"tree_depth\":" << this->depth_ << ",\"n_leapfrog\":"
++        << n_leapfrog << ",\"sign\":";
++      q012_num(o, sign);
++      o << ",\"epsilon\":";
++      q012_num(o, this->epsilon_);
++      o << ",\"signed_epsilon\":";
++      q012_num(o, sign * this->epsilon_);
++      o << ",\"H0\":";
++      q012_num(o, H0);
++      o << ",\"H_raw\":";
++      q012_num(o, h_raw);
++      o << ",\"H_effective\":";
++      q012_num(o, h);
++      o << ",\"delta_effective\":";
++      q012_num(o, h - H0);
++      o << ",\"max_deltaH\":";
++      q012_num(o, this->max_deltaH_);
++      if (capture) {
++        ++q012_captured_[ph];
++        o << ",\"initial\":";
++        q012_state_json(o, q012_initial_.q, q012_initial_.p, q012_initial_.V,
++                        q012_initial_.g);
++        o << ",\"previous\":";
++        q012_state_json(o, q012_prev_.q, q012_prev_.p, q012_prev_.V,
++                        q012_prev_.g);
++        o << ",\"failing\":";
++        q012_state_json(o, this->z_.q, this->z_.p, this->z_.V, this->z_.g);
++        o << ",\"inv_metric\":";
++        q012_metric(o, this->z_);
++      }
++      o << "}\n";
++      o.flush();
++      if (!o.good())
++        q012_write_ok_ = false;
++    } catch (...) {
++      q012_write_ok_ = false;
++    }
++  }
++
++  void q012_finish() {
++    if (!q012_on_ || !q012_out_)
++      return;
++    try {
++      std::ostream& o = *q012_out_;
++      o << "{\"type\":\"summary\",\"transitions\":" << q012_transition_
++        << ",\"seen_warmup\":" << q012_seen_[0]
++        << ",\"captured_warmup\":" << q012_captured_[0]
++        << ",\"dropped_warmup\":" << (q012_seen_[0] - q012_captured_[0])
++        << ",\"seen_sampling\":" << q012_seen_[1]
++        << ",\"captured_sampling\":" << q012_captured_[1]
++        << ",\"dropped_sampling\":" << (q012_seen_[1] - q012_captured_[1])
++        << ",\"write_ok\":" << ((q012_write_ok_ && o.good()) ? "true" : "false")
++        << "}\n";
++      o.flush();
++    } catch (...) {
++    }
++    q012_on_ = false;
++  }
+ };
+ 
+ }  // namespace mcmc

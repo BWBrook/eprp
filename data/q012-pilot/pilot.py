@@ -114,7 +114,8 @@ def start_check(exe, scen):
 def write_manifest(root):
     files = sorted(f for f in root.rglob("*") if f.is_file() and f.name not in ("manifest.sha256", "manifest.json")
                    and not f.relative_to(root).parts[0] in ("runs", "build")
-                   and not f.name.endswith((".tar.gz", ".hpp", ".o", ".d")) and f.name != RUN_ENV["MODEL_BIN"][2:])
+                   and not f.name.endswith((".tar.gz", ".o", ".d")) and f.name != RUN_ENV["MODEL_BIN"][2:]
+                   and not (f.name.endswith(".hpp") and f.parent == root))
     (root / "manifest.sha256").write_text("".join(f"{sha(f)}  {f.relative_to(root)}\n" for f in files))
     return len(files)
 
@@ -140,6 +141,17 @@ def build():
     table_sha = sha(HERE / PILOT["scenarios_file"])
     if not (PAY / "pbs").exists():  # a further candidate's package starts from a previous package's runner scripts
         shutil.copytree(HERE / CAND.get("pbs_source", "payload/pbs"), PAY / "pbs")
+    if "patch" in CAND:  # observation-only sampler patch (Codex 76/2066), bound to the pinned original
+        src = HERE / CAND["patch"]["dir"]
+        member = f"cmdstan-{RUN_ENV['CMDSTAN_VERSION']}/{RUN_ENV['PATCH_TARGET']}"
+        import tarfile
+        with tarfile.open(cmdstan_tarball()) as tf:
+            pinned = hashlib.sha256(tf.extractfile(member).read()).hexdigest()
+        assert pinned == RUN_ENV["PATCH_ORIGINAL_SHA256"] == sha(src / "base_nuts.orig.hpp"), "patch original differs from the pinned source"
+        shutil.rmtree(PAY / "patch", ignore_errors=True)
+        (PAY / "patch").mkdir()
+        for f in (CAND["patch"]["file"], "base_nuts.diff"):
+            shutil.copy(src / f, PAY / "patch" / f)
     for sub in ("data", "inits", "preflight"):
         shutil.rmtree(PAY / sub, ignore_errors=True)
         (PAY / sub).mkdir(parents=True)
@@ -202,6 +214,14 @@ def build():
     (PAY / "fits.txt").write_text("".join(f"{s}\n" for s in fits))  # the only scenarios stage.sh / submit_fit.sh may submit
     tb = cmdstan_tarball()
     (PAY / "cmdstan.sha256").write_text(f"{sha(tb)}  {tb.name}\n")
+    if "same_inputs_as" in CAND:  # a diagnostic replay must use the earlier package's exact data, starts and controls
+        other = HERE / PILOT["candidates"][CAND["same_inputs_as"]]["payload_dir"]
+        for sub in ("data", "inits", "preflight"):
+            mine = sorted(f.relative_to(PAY) for f in (PAY / sub).rglob("*") if f.is_file())
+            theirs = sorted(f.relative_to(other) for f in (other / sub).rglob("*") if f.is_file())
+            body = lambda f: [ln for ln in f.read_text().splitlines() if not ln.startswith("#")] if f.suffix == ".csv" else f.read_bytes()
+            assert mine == theirs and all(body(PAY / f) == body(other / f) for f in mine), f"{sub} differ from {other.name}"
+        assert (PAY / CAND["stan_file"]).read_bytes() == (other / CAND["stan_file"]).read_bytes()
     nfiles = write_manifest(PAY)
     head = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=HERE).stdout.strip()
     man = dict(created=time.strftime("%Y-%m-%dT%H:%M:%S%z"), git_head_at_build=head, files=nfiles,
@@ -226,7 +246,8 @@ def settings_line(env):
     e = {k: str(v) for k, v in env.items()}
     s = (f"chains {e['CHAINS']}; warmup {e['WARMUP']}; sampling {e['SAMPLING']}; adapt_delta {e['ADAPT_DELTA']}; "
          f"max_depth {e['MAX_DEPTH']}; stepsize {e['STEPSIZE']}; seed {e['SEED']}; fit_seconds {e['FIT_SECONDS']}")
-    return s + (f"; refresh {e['REFRESH']}; log {e['LOG_FORMAT']}" if "LOG_FORMAT" in e else "")
+    s += f"; refresh {e['REFRESH']}; log {e['LOG_FORMAT']}" if "LOG_FORMAT" in e else ""
+    return s + (f"; trace {e['TRACE_SCHEMA']} caps {e['TRACE_CAP_WARMUP']}/{e['TRACE_CAP_SAMPLING']}" if "TRACE_SCHEMA" in e else "")
 
 
 def csv_meta(path):
@@ -273,7 +294,6 @@ def stdout_record(text):
 import re
 
 LOG_RE = dict(
-    config=re.compile(r"^\s*[A-Za-z_]\w*( = .*)?$"),
     grad=re.compile(r"^Gradient evaluation took [0-9.e+-]+ seconds$"),
     trans=re.compile(r"^\d+ transitions using \d+ leapfrog steps per transition would take [0-9.e+-]+ seconds\.$"),
     iteration=re.compile(r"^Iteration:\s+(\d+) / (\d+) \[\s*\d+%\]\s+\((Warmup|Sampling)\)$"),
@@ -293,35 +313,100 @@ LOG_FIXED = dict(
 RECOGNISED_CAUSES = {"input", "solver", "hessian", "factorisation", "solver_internal"}
 
 
-def parse_log(text, warmup, sampling):
+def expected_header(env, scen, k, csv_rel):
+    """The exact CmdStan 2.38 configuration echo of fit.sh's command line for chain k (Codex 76/2066: no free-form
+    startup lines). CmdStan marks a value '(Default)' when it equals the default, whether or not it was given."""
+    dflt = lambda v, default: f"{v} (Default)" if str(v) == str(default) else str(v)
+    return ["method = sample (Default)", "  sample", f"    num_samples = {dflt(env['SAMPLING'], 1000)}",
+            f"    num_warmup = {dflt(env['WARMUP'], 1000)}", "    save_warmup = false (Default)", "    thin = 1 (Default)",
+            "    adapt", "      engaged = true (Default)", "      gamma = 0.05 (Default)",
+            f"      delta = {dflt(env['ADAPT_DELTA'], 0.8)}", "      kappa = 0.75 (Default)", "      t0 = 10 (Default)",
+            "      init_buffer = 75 (Default)", "      term_buffer = 50 (Default)", "      window = 25 (Default)",
+            "      save_metric = false (Default)", "    algorithm = hmc (Default)", "      hmc", "        engine = nuts (Default)",
+            "          nuts", f"            max_depth = {dflt(env['MAX_DEPTH'], 10)}", "        metric = diag_e (Default)",
+            "        metric_file =  (Default)", f"        stepsize = {dflt(env['STEPSIZE'], 1)}",
+            "        stepsize_jitter = 0 (Default)", "    num_chains = 1 (Default)", f"id = {dflt(k, 1)}", "data",
+            f"  file = data/{scen}.json", f"init = inits/{scen}/chain{k}.json", "random", f"  seed = {env['SEED']}", "output",
+            f"  file = {csv_rel}", "  diagnostic_file =  (Default)", f"  refresh = {dflt(env['REFRESH'], 100)}",
+            "  sig_figs = 8 (Default)", "  profile_file = profile.csv (Default)", "  save_cmdstan_config = false (Default)",
+            "num_threads = 1 (Default)"]
+
+
+_NUM = r"-?(?:inf|nan|\d+(?:\.\d+)?(?:e[-+]?\d+)?)"
+
+
+def rejection_grammar(stan_file, data_file):
+    """Exact rejection-message grammar (Codex 76/2066: no keyword classifier). Each recognised message is one of the
+    model's labelled reject() statements, with its declared value form, or one of the two Powell failures with the
+    payload's own tolerance or step limit; the innermost source location must be that statement's line in the
+    compiled model file. Returns a function line -> cause, or None when unrecognised."""
+    text = pathlib.Path(stan_file).read_text().splitlines()
+    name = re.escape(pathlib.Path(stan_file).name)
+    data = json.loads(pathlib.Path(data_file).read_text())
+    loc = rf"((?: \(in '\.\./{name}', line \d+, column \d+ to (?:line \d+, )?column \d+\))+)$"
+    val = rf"(?:{_NUM}|\[{_NUM}(?:,{_NUM})*\])"
+    rules = []
+    for i, ln in enumerate(text, 1):
+        m = re.search(r'reject\("(Q012 (input|solver|Hessian|factorisation) failure: [^"]*)"(\s*,[^;]*)?\);', ln)
+        if m:
+            rules.append((re.compile("^Exception: Exception: " + re.escape(m.group(1)) + (val if m.group(3) else "") + loc),
+                          m.group(2).lower(), {i}, None))
+    powell = {i for i, ln in enumerate(text, 1) if "solve_powell_tol(" in ln}
+    rules.append((re.compile(rf"^Exception: Exception: algebra_solver: the norm of the algebraic function is {_NUM} but should "
+                             rf"be lower than the function tolerance: ({_NUM})\. Consider decreasing the relative tolerance and "
+                             rf"increasing max_num_steps\." + loc), "solver_internal", powell,
+                  lambda g: float(g) == float(data["solver_f_tol"])))
+    rules.append((re.compile(r"^Exception: Exception: algebra_solver: maximum number of iterations \((\d+)\) was exceeded in "
+                             r"the solve\." + loc), "solver_internal", powell, lambda g: int(g) == int(data["solver_max_steps"])))
+
+    def cause(line):
+        for rx, c, where, check in rules:
+            m = rx.match(line)
+            if not m:
+                continue
+            first = int(re.match(r" \(in '[^']*', line (\d+)", m.group(m.lastindex)).group(1))
+            if first in where and (check is None or check(m.group(1))):
+                return c
+        return None
+    return cause
+
+
+def parse_log(text, warmup, sampling, header, cause):
     """Fail-closed parse of one combined, ordered CmdStan sample log (stdout and stderr on one file, refresh = 1).
-    Returns (failures, rejections). A failure is any unrecognised or malformed line, an incomplete rejection envelope,
-    an unrecognised rejection cause, a missing, repeated, out-of-order or mislabelled iteration marker, or a missing
-    completion block. Each rejection records its phase (init, stepsize_init, warmup, sampling) and transition."""
+    Returns (failures, rejections). A failure is any departure from the exact expected header, any unrecognised or
+    malformed line, an incomplete rejection envelope, a rejection message outside the exact grammar (cause), a missing,
+    repeated, out-of-order or mislabelled iteration marker, or a missing completion block. Each rejection records its
+    phase (init, stepsize_init, warmup, sampling) and transition."""
     lines = text.split("\n")
     if lines and lines[-1] == "":
         lines = lines[:-1]
     fails, rej = [], []
     total = warmup + sampling
-    state, expect, cur, i = "header", 1, None, 0
+    state, expect, cur, i = "init", 1, None, 0
+    h = 0
+    while i < len(lines) and h < len(header):
+        if lines[i].strip():
+            if lines[i] != header[h]:
+                fails.append(f"line {i + 1}: header line {lines[i][:120]!r}; expected {header[h]!r}")
+            h += 1
+        i += 1
+    if h < len(header):
+        fails.append(f"header ends after {h} of {len(header)} lines")
 
     def phase():
-        return {"header": "init", "init": "init", "prewarm": "stepsize_init"}.get(state, cur[1] if cur else "unknown")
+        return {"init": "init", "prewarm": "stepsize_init"}.get(state, cur[1] if cur else "unknown")
     while i < len(lines):
         ln = lines[i]
         if not ln.strip():
             i += 1
             continue
-        if state == "header" and LOG_RE["config"].match(ln):
-            i += 1
-            continue
         if ln == LOG_FIXED["init"]:
-            if state not in ("header", "init"):
+            if state != "init":
                 fails.append(f"line {i + 1}: initial-value rejection after initialisation")
             state = "init"
             nxt = lines[i + 1] if i + 1 < len(lines) else ""
             if nxt == LOG_FIXED["init_eval"] and i + 2 < len(lines) and lines[i + 2].startswith("Exception: "):
-                c = P.cause(lines[i + 2])
+                c = cause(lines[i + 2])
                 rej.append(dict(phase="init", transition=None, cause=c, message=lines[i + 2][:200]))
                 if c not in RECOGNISED_CAUSES:
                     fails.append(f"line {i + 3}: unrecognised initial-value rejection cause: {lines[i + 2][:120]!r}")
@@ -334,7 +419,7 @@ def parse_log(text, warmup, sampling):
                 i += 1
             continue
         if LOG_RE["grad"].match(ln) or LOG_RE["trans"].match(ln) or ln == LOG_FIXED["adjust"]:
-            if state not in ("header", "init", "prewarm"):
+            if state not in ("init", "prewarm"):
                 fails.append(f"line {i + 1}: gradient-timing block out of place")
             state = "prewarm"
             i += 1
@@ -360,7 +445,7 @@ def parse_log(text, warmup, sampling):
                 fails.append(f"line {i + 1}: incomplete rejection envelope")
                 i += 1
                 continue
-            c = P.cause(lines[i + 1])
+            c = cause(lines[i + 1])
             ph = phase()
             if ph in ("init",):
                 ph = "stepsize_init"
@@ -387,8 +472,14 @@ def parse_log(text, warmup, sampling):
     return fails, rej
 
 
-def qualify(attempt, scen, env, manifest_sha, build_receipt):
-    """Structural qualification of one attempt, before any statistics. Returns the list of failures (empty if it qualifies)."""
+def payload_grammar(scen):
+    """The rejection grammar for a scenario of the active payload."""
+    return rejection_grammar(PAY / CAND["stan_file"], PAY / "data" / f"{scen}.json")
+
+
+def qualify(attempt, scen, env, manifest_sha, build_receipt, grammar=None):
+    """Structural qualification of one attempt, before any statistics. Returns the list of failures (empty if it qualifies).
+    A diagnostic trace sidecar (TRACE_SCHEMA in run.env) is an expected file; its validity is checked separately."""
     attempt = pathlib.Path(attempt)
     fails = []
     if not (attempt / "receipt.txt").exists():
@@ -407,11 +498,14 @@ def qualify(attempt, scen, env, manifest_sha, build_receipt):
     C = int(env["CHAINS"])
     combined = env.get("LOG_FORMAT") == "combined"
     streams = ("log",) if combined else ("stdout", "stderr")
-    expected = {f"chain{k}.{x}" for k in range(1, C + 1) for x in ("csv", "exit") + streams}
+    expected = {f"chain{k}.{x}" for k in range(1, C + 1) for x in ("csv", "exit") + streams
+                + (("trace.jsonl",) if "TRACE_SCHEMA" in env else ())}
+    if combined:
+        grammar = grammar or payload_grammar(scen)
     present = {f.name for f in attempt.iterdir()}
     fails += [f"missing {n}" for n in sorted(expected - present)]
     fails += [f"unexpected output file {n}" for n in sorted(present)
-              if (n.endswith((".csv", ".stdout", ".stderr", ".log", ".exit")) and n not in expected)
+              if (n.endswith((".csv", ".stdout", ".stderr", ".log", ".exit", ".jsonl")) and n not in expected)
               or (n.endswith(".time") and n.removesuffix(".time") + ".csv" not in expected)]
     for k in range(1, C + 1):
         c = attempt / f"chain{k}"
@@ -420,7 +514,8 @@ def qualify(attempt, scen, env, manifest_sha, build_receipt):
         if (attempt / f"chain{k}.exit").read_text().strip() != "0" or rc.get(f"chain{k}_exit") != "0":
             fails.append(f"chain {k} exit {(attempt / f'chain{k}.exit').read_text().strip()!r}")
         if combined:
-            lf, _ = parse_log((attempt / f"chain{k}.log").read_text(errors="replace"), int(env["WARMUP"]), int(env["SAMPLING"]))
+            lf, _ = parse_log((attempt / f"chain{k}.log").read_text(errors="replace"), int(env["WARMUP"]), int(env["SAMPLING"]),
+                              expected_header(env, scen, k, f"runs/{scen}/{attempt.name}/chain{k}.csv"), grammar)
             fails += [f"chain {k} log: {x}" for x in lf]
         else:
             err = (attempt / f"chain{k}.stderr").read_text(errors="replace").strip()
@@ -483,9 +578,10 @@ def eta_block(q05, q95, m05, m95, truth):
                 X_numerically_uncertain=(q95 - 2 * m95 < D["eta1"] < q95 + 2 * m95) if ends and prec else None)
 
 
-def statistics(csvs, outs, truth, env=None):
+def statistics(csvs, outs, truth, env=None, scen=None, grammar=None):
     """Screening statistics on chain files of equal, already verified length. With a combined log format (env
-    LOG_FORMAT=combined) the per-chain logs are parsed for phase-attributed rejections; otherwise stdout only."""
+    LOG_FORMAT=combined) the per-chain logs of scenario scen are parsed for phase-attributed rejections; otherwise
+    stdout only."""
     import arviz as az
     import pandas as pd
     S = PILOT["screening"]
@@ -494,9 +590,12 @@ def statistics(csvs, outs, truth, env=None):
     arr = lambda col: np.stack([x[col].to_numpy() for x in dfs])
     chains = []
     combined = bool(env) and env.get("LOG_FORMAT") == "combined"
-    for c, o, x in zip(csvs, outs, dfs):
+    if combined:
+        grammar = grammar or payload_grammar(scen)
+    for k, (c, o, x) in enumerate(zip(csvs, outs, dfs), start=1):
         if combined:
-            lf, rl = parse_log(pathlib.Path(o).read_text(errors="replace"), int(env["WARMUP"]), int(env["SAMPLING"]))
+            lf, rl = parse_log(pathlib.Path(o).read_text(errors="replace"), int(env["WARMUP"]), int(env["SAMPLING"]),
+                               expected_header(env, scen, k, f"runs/{scen}/{pathlib.Path(o).parent.name}/chain{k}.csv"), grammar)
             rej = {}
             for r in rl:
                 rej[f"{r['cause']}_{r['phase']}"] = rej.get(f"{r['cause']}_{r['phase']}", 0) + 1
@@ -539,26 +638,107 @@ def _clean(x):
     return x
 
 
-def diagnose(attempt, scen, env=None, manifest_sha=None, build_receipt=None, write=True):
+def read_trace(path):
+    """The JSON lines of one trace sidecar (non-finite numbers as NaN / Infinity tokens)."""
+    return [json.loads(ln) for ln in pathlib.Path(path).read_text().splitlines()]
+
+
+def trace_structure(attempt, env, k):
+    """Validity of chain k's divergence trace (Codex 76/2066): header bound to run.env, every divergence recorded once in
+    transition order with its phase, full records for exactly the first cap events of each phase, the summary's counts
+    and write status, full-record vector lengths, and the sampling events equal to the CSV's divergent draws. Returns
+    (failures, summary). Any failure invalidates the diagnostic capture, never the sampler output."""
+    import pandas as pd
+    attempt = pathlib.Path(attempt)
+    f = attempt / f"chain{k}.trace.jsonl"
+    if not f.exists():
+        return [f"chain {k}: no trace file"], None
+    try:
+        rows = read_trace(f)
+    except ValueError as e:
+        return [f"chain {k}: malformed trace line ({e})"], None
+    fails = []
+    W, S = int(env["WARMUP"]), int(env["SAMPLING"])
+    caps = dict(warmup=int(env["TRACE_CAP_WARMUP"]), sampling=int(env["TRACE_CAP_SAMPLING"]))
+    df = pd.read_csv(attempt / f"chain{k}.csv", comment="#")
+    cols = list(df.columns)
+    dim = cols.index([c for c in cols if c.startswith("w.")][-1]) - cols.index("log_h0_1") + 1
+    want = dict(type="header", schema=env["TRACE_SCHEMA"], chain=k, warmup=W, cap_warmup=caps["warmup"],
+                cap_sampling=caps["sampling"], max_deltaH=1000, max_depth=int(env["MAX_DEPTH"]), dim=dim, metric="diag_e",
+                config_ok=True)
+    head = rows[0] if rows else {}
+    fails += [f"chain {k}: header {key} is {head.get(key)!r}, expected {v!r}" for key, v in want.items() if head.get(key) != v]
+    tail = rows[-1] if len(rows) > 1 else {}
+    if tail.get("type") != "summary":
+        fails.append(f"chain {k}: no summary line")
+    events = rows[1:-1] if tail.get("type") == "summary" else rows[1:]
+    seen, cap, last = dict(warmup=0, sampling=0), dict(warmup=0, sampling=0), 0
+    for e in events:
+        if e.get("type") != "divergence" or e.get("chain") != k:
+            fails.append(f"chain {k}: unexpected trace record {str(e)[:80]}")
+            continue
+        t, ph = e["transition"], e["phase"]
+        if not (last < t <= W + S) or ph != ("warmup" if t <= W else "sampling"):
+            fails.append(f"chain {k}: event at transition {t} labelled {ph} out of order or mislabelled")
+        last = t
+        seen[ph] += 1
+        full = all(x in e for x in ("initial", "previous", "failing", "inv_metric"))
+        if e["phase_event"] != seen[ph] or e["captured"] != (seen[ph] <= caps[ph]) or full != e["captured"]:
+            fails.append(f"chain {k}: capture flags wrong at transition {t}")
+        cap[ph] += full
+        if not e["H_effective"] - e["H0"] > e["max_deltaH"]:
+            fails.append(f"chain {k}: event at transition {t} does not exceed the divergence threshold")
+        if not (e["H_effective"] == e["H_raw"] or (math.isnan(e["H_raw"]) and e["H_effective"] == math.inf)):
+            fails.append(f"chain {k}: effective H differs from raw H at transition {t}")
+        if full and not (len(e["inv_metric"]) == dim and all(len(e[s][v]) == dim for s in ("initial", "previous", "failing")
+                                                              for v in ("q", "p", "grad_V"))):
+            fails.append(f"chain {k}: full record at transition {t} has wrong vector lengths")
+    want_tail = dict(type="summary", transitions=W + S, seen_warmup=seen["warmup"], captured_warmup=cap["warmup"],
+                     dropped_warmup=seen["warmup"] - cap["warmup"], seen_sampling=seen["sampling"],
+                     captured_sampling=cap["sampling"], dropped_sampling=seen["sampling"] - cap["sampling"], write_ok=True)
+    if tail.get("type") == "summary":
+        fails += [f"chain {k}: summary {key} is {tail.get(key)!r}, expected {v!r}" for key, v in want_tail.items() if tail.get(key) != v]
+    csv_div = [W + 1 + int(i) for i in np.flatnonzero(df["divergent__"].to_numpy() == 1)]
+    trace_div = [e["transition"] for e in events if e.get("phase") == "sampling"]
+    if csv_div != trace_div:
+        fails.append(f"chain {k}: sampling events {trace_div[:8]} differ from CSV divergent transitions {csv_div[:8]}")
+    return fails, dict(seen=seen, captured=cap, sampling_transitions=trace_div,
+                       warmup_transitions=[e["transition"] for e in events if e.get("phase") == "warmup"])
+
+
+def diagnose(attempt, scen, env=None, manifest_sha=None, build_receipt=None, write=True, grammar=None):
     """Pilot qualification and screening of one fetched attempt (Codex 76/1750, 76/1765). Structural failures leave the
     fit unresolved and no statistics are computed. Defaults: the local payload's run.env and manifest, and the build
-    receipt fetched with the run (<fetch root>/build/receipt.txt)."""
+    receipt fetched with the run (<fetch root>/build/receipt.txt). A traced attempt also reports its capture validity;
+    a diagnostic candidate's screening is descriptive only (Codex 76/2066)."""
     attempt = pathlib.Path(attempt)
     env = env or RUN_ENV
     manifest_sha = manifest_sha or sha(PAY / "manifest.sha256")
     if build_receipt is None:
         br = attempt.parents[2] / "build" / "receipt.txt"
         build_receipt = _receipt(br) if br.exists() else {}
-    fails = qualify(attempt, scen, env, manifest_sha, build_receipt)
+    fails = qualify(attempt, scen, env, manifest_sha, build_receipt, grammar)
     truth = next((float(s["eta"]) for s in scenarios() if s["id"] == scen), None)
     res = dict(scenario=scen, attempt=str(attempt), qualified=not fails, qualification_failures=fails)
+    if "replay_bank" in CAND:
+        res["kind"] = "instrumented diagnostic attempt: not a four-chain qualification or a dataset replicate"
+    if "TRACE_SCHEMA" in env:
+        cf, cs = [], {}
+        for k in range(1, int(env["CHAINS"]) + 1):
+            if (attempt / f"chain{k}.csv").exists():
+                f, sm = trace_structure(attempt, env, k)
+                cf += f
+                cs[f"chain{k}"] = sm
+            else:
+                cf.append(f"chain {k}: no CSV")
+        res["capture"] = dict(valid=not cf, failures=cf, chains=cs)
     if fails:
         res.update(status="unresolved", screening_pass=None)
     else:
         C = int(env["CHAINS"])
         st = statistics([attempt / f"chain{k}.csv" for k in range(1, C + 1)],
                         [attempt / f"chain{k}.{'log' if env.get('LOG_FORMAT') == 'combined' else 'stdout'}" for k in range(1, C + 1)],
-                        truth, env)
+                        truth, env, scen, grammar)
         res.update(status="screened", **st)
         res["precision"] = ("met" if st["eta"]["mcse_target_met"] else "not met" if st["eta"]["mcse_target_met"] is False
                             else "unresolved")
@@ -964,9 +1144,296 @@ def dispatch_test():
     else:
         out["submit_fit_p06_refused_even_after_build"] = dict(exit=r.returncode, new_calls=c[n0:],
                                                                ok=r.returncode != 0 and c[n0:] == [])
+    if "resources" in CAND:  # the PBS requests are the declared ones, and together within the released core-hours
+        R = CAND["resources"]
+        b, f = (PAY / "pbs" / "build.pbs").read_text(), (PAY / "pbs" / "fit.pbs").read_text()
+        hours = lambda w: sum(int(x) / 60 ** i for i, x in enumerate(w.split(":")))
+        ch = R["build_ncpus"] * hours(R["build_walltime"]) + R["fit_ncpus"] * hours(R["fit_walltime"])
+        out["pbs_resources"] = dict(build=[ln for ln in b.splitlines() if ln.startswith("#PBS -l")],
+                                    fit=[ln for ln in f.splitlines() if ln.startswith("#PBS -l")], core_hours=round(ch, 4),
+                                    ok=f"#PBS -l select=1:ncpus={R['build_ncpus']}:mem={R['build_mem']}" in b
+                                    and f"#PBS -l walltime={R['build_walltime']}" in b
+                                    and f"#PBS -l select=1:ncpus={R['fit_ncpus']}:mem={R['fit_mem']}" in f
+                                    and f"#PBS -l walltime={R['fit_walltime']}" in f and round(ch, 4) <= R["core_hours_max"])
     out["all_pass"] = all(v["ok"] for v in out.values())
     (HERE / f"dispatch_test_{PILOT['active_candidate']}.json").write_text(json.dumps(out, indent=1) + "\n")
     print(json.dumps(out, indent=1))
+
+
+# ---------------------------------------------------------------- diagnostic replay (Codex 76/2066)
+def trace_binary():
+    """The instrumented model built locally exactly as build.pbs builds it: the pinned CmdStan tarball, the original
+    header's hash verified, the patch copied over it, then CmdStan and the model (compiled as ../<model>.stan, so its
+    messages carry the cluster's source path). Built once into scratch."""
+    root = CACHE / "trace_build"
+    exe = root / CAND["stan_file"].removesuffix(".stan")
+    patch = HERE / CAND["patch"]["dir"] / CAND["patch"]["file"]
+    stamp = root / "built_from.json"
+    want = dict(patch_sha256=sha(patch), stan_sha256=sha(P.HERE / CAND["stan_file"]), tarball_sha256=sha(cmdstan_tarball()))
+    if exe.exists() and stamp.exists() and json.loads(stamp.read_text()) == want:
+        return exe
+    shutil.rmtree(root, ignore_errors=True)
+    root.mkdir(parents=True)
+    subprocess.run(["tar", "xzf", str(cmdstan_tarball()), "-C", str(root)], check=True)
+    cs = root / f"cmdstan-{RUN_ENV['CMDSTAN_VERSION']}"
+    assert sha(cs / RUN_ENV["PATCH_TARGET"]) == RUN_ENV["PATCH_ORIGINAL_SHA256"]
+    shutil.copy(patch, cs / RUN_ENV["PATCH_TARGET"])
+    shutil.copy(P.HERE / CAND["stan_file"], root / CAND["stan_file"])
+    with open(root / "build.log", "w") as log:
+        subprocess.run(["make", "build", "-j8"], cwd=cs, stdout=log, stderr=subprocess.STDOUT, check=True)
+        subprocess.run(["make", "-j4", f"../{exe.name}"], cwd=cs, stdout=log, stderr=subprocess.STDOUT, check=True)
+    stamp.write_text(json.dumps(want) + "\n")
+    return exe
+
+
+def param_names(N):
+    """Unconstrained coordinate names in Stan's order (the parameters block of model_v6.stan)."""
+    return (["log_h0_1"] + [f"z_rw.{j}" for j in range(1, 25)]
+            + ["tau", "log_k", "log_lambda0", "kappa", "log_b0", "kappa_b", "beta", "gamma", "sigma", "rho"]
+            + [f"w.{j}" for j in range(1, N + 1)])
+
+
+def _exp(x):
+    return math.exp(x) if x < 709 else math.inf
+
+
+def constrain(u, N):
+    """Constrained parameters (prototype dict form, with eps = w / sigma^a) of an unconstrained vector."""
+    names = param_names(N)
+    v = dict(zip(names, (float(x) for x in u)))
+    tau, sig = _exp(v["tau"]), _exp(v["sigma"])
+    rho = 0.5 * (1 + math.tanh(0.5 * v["rho"]))
+    a = P.CFG[CAND["prototype_version"]]["noncentring"]["a"]
+    return dict(log_h0_1=v["log_h0_1"], z_rw=[v[f"z_rw.{j}"] for j in range(1, 25)], tau=tau,
+                **{k: v[k] for k in ("log_k", "log_lambda0", "kappa", "log_b0", "kappa_b", "beta", "gamma")},
+                sigma=sig, rho=rho, eps=[v[f"w.{j}"] / sig ** a for j in range(1, N + 1)])
+
+
+def lp_grad(exe, u, data_file, work):
+    """Log density (propto, Jacobian) and its unconstrained gradient from the model's own log_prob method, printed at
+    18 significant digits. Returns (lp, grad, None) or (None, None, message) on a rejection."""
+    work.mkdir(parents=True, exist_ok=True)
+    (work / "u.json").write_text(json.dumps({"params_r": [float(x) for x in u]}))
+    r = subprocess.run([str(exe), "log_prob", f"unconstrained_params={work / 'u.json'}", "jacobian=1", "data",
+                        f"file={data_file}", "output", f"file={work / 'lp.csv'}", "sig_figs=18"], capture_output=True, text=True)
+    if r.returncode:
+        return None, None, next((ln for ln in (r.stdout + r.stderr).splitlines() if "Exception" in ln), "log_prob failed")[:300]
+    row = [ln for ln in (work / "lp.csv").read_text().splitlines() if ln and not ln.startswith("#")][1].split(",")
+    return float(row[0]), np.array([float(x) for x in row[1:]]), None
+
+
+def leapfrog(exe, data_file, work, q, p, g, m, e):
+    """One explicit leapfrog exactly as Stan's expl_leapfrog orders it, with g = grad V and a diagonal inverse metric m:
+    p -= (e/2) g; q += e (m * p); new V, g; p -= (e/2) g. Returns (q, p, V, g, rejection)."""
+    p = p - (0.5 * e) * g
+    q = q + e * (m * p)
+    lp, gl, err = lp_grad(exe, q, data_file, work)
+    if err:
+        return q, p, math.inf, None, err
+    g = -gl
+    return q, p - (0.5 * e) * g, -lp, g, None
+
+
+def _H(V, p, m):
+    return V + 0.5 * float(p @ (m * p))
+
+
+def trace_check(attempt, data_file, out_file, exe=None, chains=None):
+    """Checks of every full divergence record (Codex 76/2066), with a local build of the same model (default: the
+    instrumented local build). Per record: the recorded V and grad V at the previous and failing states against the
+    model's log_prob; one leapfrog from the previous state reproducing the failing state and H; two half steps from
+    the same previous q, p and metric; actual-LP central differences against AD at the failing state when finite,
+    else the previous state; the Q = 64 normaliser against a converged reference at the same state; and where the
+    energy error arose (potential and kinetic parts, the coordinates with the largest momentum change)."""
+    exe = pathlib.Path(exe) if exe else trace_binary()
+    attempt = pathlib.Path(attempt)
+    d = json.loads(pathlib.Path(data_file).read_text())
+    names = param_names(d["N"])
+    work = CACHE / "trace_check_work"
+    res = dict(attempt=str(attempt), binary=str(exe), binary_sha256=sha(exe), data=str(data_file), records=[])
+    files = sorted(attempt.glob("chain*.trace.jsonl")) if chains is None else [attempt / f"chain{k}.trace.jsonl" for k in chains]
+    for f in files:
+        for e in read_trace(f):
+            if e.get("type") != "divergence" or not e.get("captured"):
+                continue
+            m = np.array(e["inv_metric"])
+            st = {k: dict(q=np.array(e[k]["q"]), p=np.array(e[k]["p"]), V=e[k]["V"], g=np.array(e[k]["grad_V"]))
+                  for k in ("initial", "previous", "failing")}
+            rec = dict(chain=e["chain"], transition=e["transition"], phase=e["phase"], tree_depth=e["tree_depth"],
+                       n_leapfrog=e["n_leapfrog"], signed_epsilon=e["signed_epsilon"], H0=e["H0"], H_raw=e["H_raw"],
+                       delta=e["delta_effective"])
+            for k, x in st.items():
+                c = constrain(x["q"], d["N"])
+                rec[f"{k}_state"] = dict(sigma=c["sigma"], rho=c["rho"], kappa_b=c["kappa_b"], V=x["V"],
+                                         max_abs_w=float(np.max(np.abs(x["q"][-d["N"]:]))), max_abs_eps=float(np.max(np.abs(c["eps"]))))
+            for k in ("previous", "failing"):
+                lp, gl, err = lp_grad(exe, st[k]["q"], data_file, work)
+                if err:
+                    rec[f"{k}_recheck"] = dict(rejected=err, recorded_V_finite=math.isfinite(st[k]["V"]))
+                else:
+                    rec[f"{k}_recheck"] = dict(V_abs_err=abs(-lp - st[k]["V"]), V_identical=-lp == st[k]["V"],
+                                               grad_max_abs_err=float(np.max(np.abs(-gl - st[k]["g"]))),
+                                               grad_identical=bool(np.array_equal(-gl, st[k]["g"])))
+            pv, fl = st["previous"], st["failing"]
+            q1, p1, V1, g1, err = leapfrog(exe, data_file, work, pv["q"], pv["p"], pv["g"], m, e["signed_epsilon"])
+            rep = dict(q_max_abs_err=float(np.max(np.abs(q1 - fl["q"]))), q_identical=bool(np.array_equal(q1, fl["q"])),
+                       rejected=err)
+            if err is None:
+                rep.update(p_max_abs_err=float(np.max(np.abs(p1 - fl["p"]))), p_identical=bool(np.array_equal(p1, fl["p"])),
+                           H=_H(V1, p1, m), H_rel_err=abs(_H(V1, p1, m) - e["H_raw"]) / max(1.0, abs(e["H_raw"])))
+            rec["leapfrog_reproduction"] = rep
+            q, p, g, half = pv["q"], pv["p"], pv["g"], []
+            for _ in range(2):
+                q, p, V, g, err = leapfrog(exe, data_file, work, q, p, g, m, 0.5 * e["signed_epsilon"])
+                half.append(dict(rejected=err, deltaH=None if err else _H(V, p, m) - e["H0"],
+                                 sigma=_exp(q[names.index("sigma")])))
+                if err:
+                    break
+            rec["two_half_steps"] = half
+            at = "failing" if math.isfinite(fl["V"]) else "previous"
+            u = st[at]["q"]
+            lp0, g0, err = lp_grad(exe, u, data_file, work)
+            if err is None:
+                fd = {}
+                for nm in ("sigma", "rho", "kappa_b", names[len(names) - d["N"] + int(np.argmax(np.abs(g0[-d["N"]:])))]):
+                    i = names.index(nm)
+                    h = 1e-6 * max(1.0, abs(u[i]))
+                    up, dn = u.copy(), u.copy()
+                    up[i] += h
+                    dn[i] -= h
+                    a, _, e1 = lp_grad(exe, up, data_file, work)
+                    b, _, e2 = lp_grad(exe, dn, data_file, work)
+                    fd[nm] = (dict(ad=float(g0[i]), fd=(a - b) / (2 * h), scaled_error=abs(g0[i] - (a - b) / (2 * h)) / max(1.0, abs(g0[i])))
+                              if not (e1 or e2) else dict(unresolved=e1 or e2))
+                rec["ad_vs_fd"] = dict(state=at, **fd)
+                rec["normaliser"] = dict(state=at, **gate_point(d, constrain(u, d["N"])))
+            else:
+                rec["ad_vs_fd"] = rec["normaliser"] = dict(state=at, unresolved=err)
+            T = lambda x: 0.5 * float(x["p"] @ (m * x["p"]))
+            dp = np.abs(fl["p"] - pv["p"])
+            rec["energy_split"] = dict(dV=fl["V"] - st["initial"]["V"], dT=T(fl) - T(st["initial"]),
+                                       largest_momentum_change=[(names[i], float(dp[i])) for i in np.argsort(-dp)[:5]])
+            res["records"].append(rec)
+    res["records_checked"] = len(res["records"])
+    pathlib.Path(out_file).write_text(json.dumps(_clean(res), indent=1) + "\n")
+    return res
+
+
+def prefix_compare(attempt, bank, out_file):
+    """Every saved row and column, and the adaptation output, of the diagnostic attempt against the earlier bank's
+    same-numbered rows (Codex 76/2066). Reports the first mismatch per chain; an exact match supports calling the
+    attempt an exact replay of the old saved path, otherwise it is an instrumented diagnostic attempt only."""
+    attempt, bank = pathlib.Path(attempt), pathlib.Path(bank)
+    hashes = dict(ln.split()[::-1] for ln in (HERE.parents[1] / CAND["replay_bank"]["hashes"]).read_text().splitlines())
+    res = dict(attempt=str(attempt), bank=str(bank), chains={})
+
+    def split(path):
+        lines = path.read_text().splitlines()
+        data = [ln for ln in lines if ln and not ln.startswith("#")]
+        i = next(j for j, ln in enumerate(lines) if ln.startswith("# Adaptation terminated"))
+        return data[0].split(","), data[1:], lines[i:i + 4]
+    for k in range(1, int(RUN_ENV["CHAINS"]) + 1):
+        b = bank / f"chain{k}.csv"
+        bank_ok = sha(b) == hashes.get(f"chain{k}.csv")
+        hn, rn, an = split(attempt / f"chain{k}.csv")
+        hb, rb, ab = split(b)
+        n = len(rn)
+        first = next((i for i in range(n) if rn[i] != rb[i]), None)
+        mis = None
+        if first is not None:
+            x, y = rn[first].split(","), rb[first].split(",")
+            j = next(c for c in range(len(x)) if x[c] != y[c])
+            mis = dict(row=first + 1, transition=int(RUN_ENV["WARMUP"]) + first + 1, column=hn[j], attempt=x[j], bank=y[j])
+        res["chains"][f"chain{k}"] = dict(bank_hash_verified=bank_ok, header_identical=hn == hb, rows_compared=n,
+                                          bank_rows=len(rb), identical_rows=(first if first is not None else n),
+                                          all_rows_identical=first is None and n <= len(rb), first_mismatch=mis,
+                                          adaptation_identical=an == ab)
+    c = res["chains"].values()
+    res["exact_replay_of_saved_path"] = all(v["bank_hash_verified"] and v["header_identical"] and v["all_rows_identical"]
+                                            and v["adaptation_identical"] for v in c)
+    pathlib.Path(out_file).write_text(json.dumps(res, indent=1) + "\n")
+    return res
+
+
+def diagnostic_preflight():
+    """Local checks of the diagnostic package before staging (Codex 76/2066); writes diagnostic_preflight_<cand>.json.
+    Inputs byte-identical to the earlier package and run.env changed only where declared; the patch bound to the pinned
+    original, its removed lines and an audit of its added lines (no Hamiltonian, integrator, RNG, gradient or update
+    call); log density and gradients at the payload's preflight points identical between the instrumented and
+    uninstrumented local builds; the payload's own preflight.sh (LP/AD points, p75/p53 controls, smoke, both capture
+    exercises, trace-on/off identity, the uninstrumented build as COMPARE_BIN) on the local instrumented binary; and
+    every full record of those runs' traces reproduced from its previous state by the model's own log_prob."""
+    out = {}
+    other = HERE / PILOT["candidates"][CAND["same_inputs_as"]]["payload_dir"]
+    env_other = dict(ln.split("=", 1) for ln in (other / "run.env").read_text().splitlines())
+    env_mine = dict(ln.split("=", 1) for ln in (PAY / "run.env").read_text().splitlines())
+    changed = sorted(k for k in set(env_other) | set(env_mine) if env_other.get(k) != env_mine.get(k))
+    declared = set(CAND["run_env"]) - set(PILOT["candidates"][CAND["same_inputs_as"]]["run_env"]) | {"CHAINS", "SAMPLING", "FIT_SECONDS"}
+    files = sorted(str(f.relative_to(PAY)) for sub in ("data", "inits", "preflight") for f in (PAY / sub).rglob("*") if f.is_file())
+    body = lambda f: [ln for ln in f.read_text().splitlines() if not ln.startswith("#")] if f.suffix == ".csv" else f.read_bytes()
+    same = all(body(PAY / f) == body(other / f) for f in files)
+    out["inputs"] = dict(compared_with=other.name, files=len(files), identical=same, note="CSV references compared on data lines", model_identical=(
+        (PAY / CAND["stan_file"]).read_bytes() == (other / CAND["stan_file"]).read_bytes()),
+        run_env_changed={k: [env_other.get(k), env_mine.get(k)] for k in changed}, only_declared_changes=set(changed) <= declared,
+        ok=same and set(changed) <= declared)
+    diff = (PAY / "patch" / "base_nuts.diff").read_text().splitlines()
+    removed = [ln[1:] for ln in diff if ln.startswith("-") and not ln.startswith("---")]
+    added = [ln[1:] for ln in diff if ln.startswith("+") and not ln.startswith("+++")]
+    forbidden = re.compile(r"hamiltonian_|integrator_|rand_|sample_p|update_|log_prob|gradient\(|\bH\(|evolve|init_stepsize")
+    out["patch"] = dict(original_sha256=sha(HERE / CAND["patch"]["dir"] / "base_nuts.orig.hpp"), patched_sha256=sha(PAY / "patch" / "base_nuts.hpp"),
+                        pinned_sha256=RUN_ENV["PATCH_ORIGINAL_SHA256"], removed_lines=removed, added_lines=len(added),
+                        added_lines_calling_sampler_machinery=[ln for ln in added if forbidden.search(ln)])
+    out["patch"]["ok"] = (out["patch"]["original_sha256"] == RUN_ENV["PATCH_ORIGINAL_SHA256"]
+                          and not out["patch"]["added_lines_calling_sampler_machinery"])
+    exe = trace_binary()
+    plain = P.OUT / CAND["stan_file"].removesuffix(".stan")
+    out["binaries"] = dict(instrumented=str(exe), instrumented_sha256=sha(exe), uninstrumented=str(plain),
+                           uninstrumented_sha256=sha(plain), marker=b"Q012_TRACE_FILE" in exe.read_bytes() and b"Q012_TRACE_FILE" not in plain.read_bytes())
+    work = CACHE / "diag_preflight_lp"
+    work.mkdir(parents=True, exist_ok=True)
+    lp = {}
+    for f in sorted((PAY / "preflight").glob("point_*.json")):
+        rows = []
+        for b in (exe, plain):
+            log_prob_csv(b, f, PAY / "data" / "R00.json", work / "lp.csv")
+            rows.append([ln for ln in (work / "lp.csv").read_text().splitlines() if ln and not ln.startswith("#")])
+        lp[f.stem] = rows[0] == rows[1]
+    out["lp_ad_identical_instrumented_vs_uninstrumented"] = dict(points=lp, ok=all(lp.values()))
+    pf = CACHE / "diag_preflight"
+    shutil.rmtree(pf, ignore_errors=True)
+    shutil.copytree(PAY, pf, ignore=shutil.ignore_patterns("runs", "build"))
+    shutil.copy(exe, pf / RUN_ENV["MODEL_BIN"][2:])
+    _write_env(pf, dict(env_mine, COMPARE_BIN=str(plain), COMPARE_BIN_SHA256=sha(plain)))
+    t0 = time.time()
+    code, txt = _run(["bash", "pbs/preflight.sh", "build/receipt.tmp"], pf, timeout=3600)
+    rec = (pf / "build" / "receipt.tmp").read_text().splitlines() if (pf / "build" / "receipt.tmp").exists() else []
+    reason = (pf / "build" / "preflight_reason.txt").read_text().strip() if (pf / "build" / "preflight_reason.txt").exists() else None
+    out["payload_preflight_local"] = dict(exit=code, seconds=round(time.time() - t0), receipt=rec, reason=reason,
+                                          ok=code == 0 and "preflight_compare_old_binary=identical" in rec)
+    tc = {}
+    for name, att in (("exercise_0.2", "s0.2"), ("exercise_0.5", "s0.5"), ("onoff", "on")):
+        src = pf / "build" / ("onoff" if name == "onoff" else "exercise") / f"{att}.trace.jsonl"
+        d = CACHE / "diag_preflight_tc" / name
+        shutil.rmtree(d, ignore_errors=True)
+        d.mkdir(parents=True)
+        shutil.copy(src, d / "chain1.trace.jsonl")
+        r = trace_check(d, PAY / "data" / "P11.json", d / "trace_check.json", exe=exe)
+        recs = r["records"]
+        ok = bool(recs) and all(
+            x["previous_recheck"].get("V_identical") and x["previous_recheck"].get("grad_identical")
+            and (x["failing_recheck"].get("V_identical") if "V_identical" in x["failing_recheck"]
+                 else not x["failing_recheck"]["recorded_V_finite"])
+            and x["leapfrog_reproduction"]["q_identical"]
+            and (x["leapfrog_reproduction"]["rejected"] is not None
+                 or (x["leapfrog_reproduction"]["p_identical"] and x["leapfrog_reproduction"]["H_rel_err"] < 1e-12))
+            for x in recs)
+        tc[name] = dict(records=len(recs), ok=ok)
+    out["trace_records_reproduced"] = dict(**tc, ok=all(v["ok"] for v in tc.values()))
+    out["all_pass"] = all(v["ok"] for v in out.values() if isinstance(v, dict) and "ok" in v) and out["binaries"]["marker"]
+    (HERE / f"diagnostic_preflight_{PILOT['active_candidate']}.json").write_text(json.dumps(_clean(out), indent=1) + "\n")
+    print(json.dumps(_clean({k: (v if k != "payload_preflight_local" else {kk: vv for kk, vv in v.items() if kk != "receipt"})
+                             for k, v in out.items()}), indent=1))
+    return out
 
 
 # ---------------------------------------------------------------- control fixtures
@@ -979,12 +1446,13 @@ def _run(cmd, root, env=None, timeout=900):
 
 
 def _fixture_seal(root, binary=None):
-    """Rewrite a fixture's manifest and a successful build receipt bound to it."""
+    """Rewrite a fixture's manifest and a successful build receipt bound to it (instrumented when the binary is)."""
     binary = binary or RUN_ENV["MODEL_BIN"][2:]
     write_manifest(root)
     (root / "build").mkdir(exist_ok=True)
+    inst = "binary_instrumented=yes\n" if b"Q012_TRACE_FILE" in (root / binary).read_bytes() else ""
     (root / "build" / "receipt.txt").write_text(
-        f"status=ok\nmanifest_sha256={sha(root / 'manifest.sha256')}\nbinary_sha256={sha(root / binary)}\n")
+        f"status=ok\nmanifest_sha256={sha(root / 'manifest.sha256')}\nbinary_sha256={sha(root / binary)}\n{inst}")
 
 
 def _write_env(root, env):
@@ -992,7 +1460,7 @@ def _write_env(root, env):
 
 
 def selftest():
-    """Cheap fixtures for every control the cluster relies on; writes selftest.json. Uses the local CmdStan binary."""
+    """Cheap fixtures for every control the cluster relies on; writes selftest.json. Uses the local instrumented build."""
     from cmdstanpy.utils import write_stan_json
     import os
     import signal
@@ -1006,11 +1474,14 @@ def selftest():
     root = CACHE / "selftest"
     shutil.rmtree(root, ignore_errors=True)
     shutil.copytree(PAY / "pbs", root / "pbs")
-    exe = P.OUT / P.CFG[P.CFG["active"]]["stan_file"].removesuffix(".stan")
+    exe = trace_binary()
+    plain = P.OUT / CAND["stan_file"].removesuffix(".stan")
+    C = int(RUN_ENV["CHAINS"])
     shutil.copy(exe, root / RUN_ENV["MODEL_BIN"][2:])
     d, _, _ = P.dataset(P.CFG["seed"])
     (root / "data").mkdir()
-    for scen in ("FX", "FY", "FB", "FT"):
+    (root / "fits.txt").write_text("FX\nFY\nFB\nFT\nNODATA\n")
+    for scen in ("FX", "FY", "FB", "FT", "FZ"):
         write_stan_json(str(root / "data" / f"{scen}.json"), d)
         write_starts(root / "inits" / scen, d["N"])
     bad = json.loads((root / "inits" / "FB" / "chain2.json").read_text())
@@ -1024,15 +1495,29 @@ def selftest():
 
     code, txt = _run(fit, root, dict(SCEN="FX"))
     rc = _receipt(root / "runs" / "FX" / "receipt.txt")
-    out["complete"] = dict(exit=code, status=rc.get("status"), maxrss_kb=[rc.get(f"chain{k}_maxrss_kb") for k in range(1, 5)],
-                           ok=code == 0 and rc.get("status") == "complete")
+    out["complete"] = dict(exit=code, status=rc.get("status"), maxrss_kb=[rc.get(f"chain{k}_maxrss_kb") for k in range(1, C + 1)],
+                           traces=[rc.get(f"chain{k}_trace") for k in range(1, C + 1)],
+                           ok=code == 0 and rc.get("status") == "complete" and all(rc.get(f"chain{k}_trace") == "summary" for k in range(1, C + 1)))
     code, txt = _run(fit, root, dict(SCEN="FX"))
     out["resume_skip"] = dict(exit=code, ok=code == 0 and "SKIP" in txt and not (root / "runs" / "FX" / "attempt2").exists())
-    code, txt = _run(fit, root, dict(PBS_ARRAY_INDEX="1"))
-    out["array_index_maps_to_first_panel_row"] = dict(exit=code, ok=code == 0 and (root / "runs" / "FY" / "receipt.txt").exists())
+    code, txt = _run(fit, root, dict(PBS_ARRAY_INDEX="1", SCEN="FY"))
+    out["array_dispatch_refused"] = dict(exit=code, ok=code == 2 and "array" in txt and not (root / "runs" / "FY").exists())
+    code, txt = _run(fit, root, dict(SCEN="FZ"))
+    out["scenario_not_in_fits_refused"] = dict(exit=code, ok=code == 2 and "not in fits.txt" in txt and not (root / "runs" / "FZ").exists())
+    _write_env(root, {k: v for k, v in env.items() if k != "TRACE_SCHEMA"})
+    _fixture_seal(root)
+    code, txt = _run(fit, root, dict(SCEN="FY"))
+    out["trace_settings_missing_refused"] = dict(exit=code, ok=code == 2 and "TRACE_SCHEMA" in txt)
+    _write_env(root, env)
+    shutil.copy(plain, root / RUN_ENV["MODEL_BIN"][2:])
+    _fixture_seal(root)
+    code, txt = _run(fit, root, dict(SCEN="FY"))
+    out["uninstrumented_binary_refused"] = dict(exit=code, ok=code == 2 and "instrumented" in txt)
+    shutil.copy(exe, root / RUN_ENV["MODEL_BIN"][2:])
+    _fixture_seal(root)
     code, txt = _run(fit, root, dict(SCEN="FB"))
     rc = _receipt(root / "runs" / "FB" / "receipt.txt")
-    out["chain_failure"] = dict(exit=code, status=rc.get("status"), chain_exits=[rc.get(f"chain{k}_exit") for k in range(1, 5)],
+    out["chain_failure"] = dict(exit=code, status=rc.get("status"), chain_exits=[rc.get(f"chain{k}_exit") for k in range(1, C + 1)],
                                 ok=code == 1 and rc.get("status") == "failed" and rc.get("chain2_exit") != "0")
     # Module: a declared module that is not loaded is refused; when loaded, the runner proceeds (here to the skip).
     _write_env(root, dict(env, MODULE=RUN_ENV["MODULE"]))
@@ -1063,7 +1548,7 @@ def selftest():
     out["signal_term"] = dict(exit=code, status=rc.get("status"), cleanup=rc.get("cleanup"), left_running=left,
                               ok=code == 3 and rc.get("status") == "terminated_TERM" and not left)
     # Signal, TERM-ignoring model: the runner must escalate to KILL and leave nothing behind before the receipt.
-    (root / "fake_model").write_text("#!/bin/bash\ntrap '' TERM\nwhile :; do sleep 1; done\n")
+    (root / "fake_model").write_text("#!/bin/bash\n# Q012_TRACE_FILE (runner fixture only)\ntrap '' TERM\nwhile :; do sleep 1; done\n")
     (root / "fake_model").chmod(0o755)
     _write_env(root, dict(slow, MODEL_BIN="./fake_model"))
     _fixture_seal(root, "fake_model")
@@ -1079,7 +1564,7 @@ def selftest():
     code, txt = _run(fit, root, dict(SCEN="FT"))
     rc = _receipt(root / "runs" / "FT" / "receipt.txt")
     out["timeout"] = dict(exit=code, status=rc.get("status"), attempt=rc.get("attempt"),
-                          chain_exits=[rc.get(f"chain{k}_exit") for k in range(1, 5)],
+                          chain_exits=[rc.get(f"chain{k}_exit") for k in range(1, C + 1)],
                           ok=code == 4 and rc.get("status") == "timeout" and rc.get("attempt") == "2")
     _write_env(root, env)
     _fixture_seal(root)
@@ -1102,8 +1587,9 @@ def selftest():
     man, bld = sha(root / "manifest.sha256"), _receipt(root / "build" / "receipt.txt")
     # The FX receipt predates later reseals; requalify it against the manifest and binary it was produced under.
     rcx = _receipt(good / "receipt.txt")
+    gram = rejection_grammar(PAY / CAND["stan_file"], root / "data" / "FX.json")
     q = lambda a, s="FX", e=env, m=None, b=None: qualify(a, s, e, m or rcx["manifest_sha256"],
-                                                         b or dict(bld, manifest_sha256=rcx["manifest_sha256"]))
+                                                         b or dict(bld, manifest_sha256=rcx["manifest_sha256"]), gram)
     scr = {}
     scr["good_attempt_qualifies"] = (q(good), lambda r: r == [])
 
@@ -1116,7 +1602,7 @@ def selftest():
     scr["receipt_for_other_scenario_failed_and_stale"] = (q(variant("other", lambda v: (v / "receipt.txt").write_text(
         (v / "receipt.txt").read_text().replace("scenario=FX", "scenario=P12").replace("status=complete", "status=failed")
         .replace(rcx["manifest_sha256"], "2" * 64)))), bool)
-    scr["nonzero_chain_exit"] = (q(variant("exit", lambda v: (v / "chain3.exit").write_text("1\n"))), bool)
+    scr["nonzero_chain_exit"] = (q(variant("exit", lambda v: (v / f"chain{C}.exit").write_text("1\n"))), bool)
     def inject(fname, after, text):
         def f(v):
             lines = (v / fname).read_text().split("\n")
@@ -1132,9 +1618,9 @@ def selftest():
         j = max(i for i, ln in enumerate(lines) if ln and not ln.startswith("#"))
         (v / "chain2.csv").write_text("\n".join(lines[:j] + lines[j + 1:]) + "\n")
     scr["unequal_chain_lengths"] = (q(variant("short", drop_row)), bool)
-    scr["fifth_csv"] = (q(variant("fifth", lambda v: shutil.copy(v / "chain1.csv", v / "chain5.csv"))), bool)
-    scr["csv_settings_mismatch"] = (q(variant("meta", lambda v: (v / "chain3.csv").write_text(
-        (v / "chain3.csv").read_text().replace("delta = 0.995", "delta = 0.9", 1)))), bool)
+    scr["extra_chain_csv"] = (q(variant("extra", lambda v: shutil.copy(v / "chain1.csv", v / f"chain{C + 1}.csv"))), bool)
+    scr["csv_settings_mismatch"] = (q(variant("meta", lambda v: (v / f"chain{C}.csv").write_text(
+        (v / f"chain{C}.csv").read_text().replace("delta = 0.995", "delta = 0.9", 1)))), bool)
     scr["build_receipt_other_manifest"] = (q(good, b=dict(bld, manifest_sha256="3" * 64)), bool)
 
     def no_hash(v):
@@ -1144,11 +1630,48 @@ def selftest():
     scr["binary_hash_absent_from_both_receipts"] = (q(variant("nohash", no_hash), b=nb), bool)
     out["screening_refusals"] = {k: dict(failures=r[:3], ok=pred(r)) for k, (r, pred) in scr.items()}
     out["screening_refusals"]["ok"] = all(v["ok"] for v in out["screening_refusals"].values())
+    # Capture validity on a real trace: P11, fixed step 0.2, no adaptation, 4 warmup + 8 draws (every transition diverges).
+    tr = root / "runs" / "TR" / "attempt1"
+    tr.mkdir(parents=True)
+    env_tr = dict(env, WARMUP=4, SAMPLING=8, MAX_DEPTH=8, TRACE_CAP_WARMUP=2, TRACE_CAP_SAMPLING=3)
+    subprocess.run([str(exe), "sample", "num_samples=8", "num_warmup=4", "adapt", "engaged=0", "algorithm=hmc", "engine=nuts",
+                    "max_depth=8", "stepsize=0.2", "id=1", "data", f"file={PAY / 'data' / 'P11.json'}",
+                    f"init={PAY / 'inits' / 'P11' / 'chain1.json'}", "random", f"seed={RUN_ENV['SEED']}", "output",
+                    f"file={tr / 'chain1.csv'}", "refresh=1"], capture_output=True, text=True, check=True,
+                   env=dict(os.environ, Q012_TRACE_FILE=str(tr / "chain1.trace.jsonl"), Q012_TRACE_CHAIN="1", Q012_TRACE_WARMUP="4",
+                            Q012_TRACE_CAP_WARMUP="2", Q012_TRACE_CAP_SAMPLING="3"))
+    good_tr, _ = trace_structure(tr, env_tr, 1)
+
+    def tvar(name, mutate):
+        v = root / "runs" / "TRV" / name / "attempt1"
+        shutil.copytree(tr, v)
+        rows = (v / "chain1.trace.jsonl").read_text().splitlines()
+        (v / "chain1.trace.jsonl").write_text("\n".join(mutate(rows)) + "\n")
+        return trace_structure(v, env_tr, 1)[0]
+    flip = lambda rows: [rows[0]] + [r.replace('"captured":false', '"captured":true', 1) if i == 4 else r
+                                     for i, r in enumerate(rows[1:], 1)]
+    capt = dict(
+        real_trace_valid=(good_tr, lambda f: f == []),
+        no_summary=(tvar("nosum", lambda r: r[:-1]), lambda f: any("no summary" in x for x in f)),
+        write_failed=(tvar("wfail", lambda r: r[:-1] + [r[-1].replace('"write_ok":true', '"write_ok":false')]),
+                      lambda f: any("write_ok" in x for x in f)),
+        sampling_event_missing=(tvar("miss", lambda r: [x for x in r if '"transition":7,' not in x]),
+                                lambda f: any("differ from CSV" in x for x in f)),
+        capture_flag_beyond_cap=(tvar("flip", flip), lambda f: any("capture flags" in x for x in f)),
+        header_other_chain=(tvar("chain", lambda r: [r[0].replace('"chain":1', '"chain":2', 1)] + r[1:]),
+                            lambda f: any("header chain" in x for x in f)),
+        malformed_line=(tvar("bad", lambda r: r[:3] + ["{not json"] + r[3:]), lambda f: any("malformed" in x for x in f)))
+    out["capture_validity"] = {k: dict(failures=f[:2], ok=bool(pred(f))) for k, (f, pred) in capt.items()}
+    out["capture_validity"]["ok"] = all(v["ok"] for v in out["capture_validity"].values())
     # The combined-log parser on a real fixture log (WARMUP 10, SAMPLING 5, refresh 1): phase boundaries and failure cases.
     log = (good / "chain1.log").read_text()
     W, S = int(env["WARMUP"]), int(env["SAMPLING"])
     env_text = lambda exc: "\n".join([LOG_FIXED["rej"], exc, LOG_FIXED["rej3"], LOG_FIXED["rej4"], ""])
-    known = "Exception: Exception: Q012 input failure: 1-D initial score (in 'model_v6.stan', line 39)"
+    loc = lambda ln: f" (in '../{CAND['stan_file']}', line {ln}, column 4 to column 80) (in '../{CAND['stan_file']}', line 232, column 6 to line 233, column 86)"
+    known = "Exception: Exception: Q012 input failure: 1-D initial score" + loc(39)
+    ftol = json.loads((root / "data" / "FX.json").read_text())["solver_f_tol"]
+    powell = lambda tol, ln: ("Exception: Exception: algebra_solver: the norm of the algebraic function is 2.18243e-11 but should be lower "
+                              f"than the function tolerance: {tol}. Consider decreasing the relative tolerance and increasing max_num_steps." + loc(ln))
 
     def after(text, prefix, ins):
         lines = text.split("\n")
@@ -1171,6 +1694,16 @@ def selftest():
                                  lambda f, r: not f and [x["phase"] for x in r] == ["stepsize_init"]),
         init_rejection=(after(log, "num_threads", "\n".join([LOG_FIXED["init"], LOG_FIXED["init_eval"], known])),
                         lambda f, r: not f and [x["phase"] for x in r] == ["init"]),
+        powell_residual_recognised=(after(log, "Iteration:  3 /", env_text(powell(f"{ftol:g}", 40))),
+                                    lambda f, r: not f and [(x["phase"], x["cause"]) for x in r] == [("warmup", "solver_internal")]),
+        powell_other_tolerance=(after(log, "Iteration:  3 /", env_text(powell("0.001", 40))), lambda f, r: bool(f)),
+        powell_other_line=(after(log, "Iteration:  3 /", env_text(powell(f"{ftol:g}", 41))), lambda f, r: bool(f)),
+        keyword_newton=(after(log, "Iteration:  3 /", env_text("Exception: Exception: Newton step failed" + loc(40))), lambda f, r: bool(f)),
+        guard_extra_text=(after(log, "Iteration:  3 /", env_text(known.replace("initial score", "initial score x"))), lambda f, r: bool(f)),
+        guard_wrong_line=(after(log, "Iteration:  3 /", env_text(known.replace("line 39,", "line 37,"))), lambda f, r: bool(f)),
+        header_extra_assignment=(after(log, "  sample", "    foo = bar"), lambda f, r: bool(f)),
+        header_value_changed=(log.replace("    num_warmup = 10", "    num_warmup = 11", 1), lambda f, r: bool(f)),
+        header_truncated=(drop(log, "num_threads"), lambda f, r: bool(f)),
         unknown_text=(after(log, "Iteration:  5 /", "Something unexpected happened"), lambda f, r: bool(f)),
         unrecognised_cause=(after(log, "Iteration:  5 /", env_text("Exception: Exception: cholesky_decompose: A is not symmetric")),
                             lambda f, r: bool(f)),
@@ -1180,14 +1713,16 @@ def selftest():
         truncated=(log[:log.index(first_samp)], lambda f, r: bool(f)),
         fatal_step_size=(after(log, "Adjust your expectations", "Exception initializing step size.\n" + known), lambda f, r: bool(f)))
     pr = {}
+    hdr = expected_header(env, "FX", 1, "runs/FX/attempt1/chain1.csv")
     for name, (text, ok) in cases.items():
-        f, r = parse_log(text, W, S)
+        f, r = parse_log(text, W, S, hdr, gram)
         pr[name] = dict(failures=f[:2], rejections=[(x["phase"], x["transition"], x["cause"]) for x in r], ok=bool(ok(f, r)))
     pr["ok"] = all(v["ok"] for v in pr.values())
     out["log_parser"] = pr
     # End to end: a sampling-phase rejection leaves the attempt qualified but fails the screen.
     sv = variant("samprej", inject("chain2.log", first_samp, env_text(known)))
-    rs = diagnose(sv, "FX", env=env, manifest_sha=rcx["manifest_sha256"], build_receipt=dict(bld, manifest_sha256=rcx["manifest_sha256"]), write=False)
+    rs = diagnose(sv, "FX", env=env, manifest_sha=rcx["manifest_sha256"], build_receipt=dict(bld, manifest_sha256=rcx["manifest_sha256"]),
+                  write=False, grammar=gram)
     out["sampling_rejection_fails_screen"] = dict(qualified=rs["qualified"], criterion=rs.get("screening", {}).get("no_fatal_or_sampling_phase_failures"),
                                                   ok=rs["qualified"] and rs.get("screening", {}).get("no_fatal_or_sampling_phase_failures") is False)
     # Finite guards on statistics.
@@ -1237,7 +1772,8 @@ def selftest():
     shutil.rmtree(pf, ignore_errors=True)
     shutil.copytree(PAY, pf, ignore=shutil.ignore_patterns("runs", "build"))
     shutil.copy(exe, pf / RUN_ENV["MODEL_BIN"][2:])
-    code, txt = _run(["bash", "pbs/preflight.sh", "build/receipt.tmp"], pf, timeout=1200)
+    _write_env(pf, dict(RUN_ENV, COMPARE_BIN=str(plain), COMPARE_BIN_SHA256=sha(plain)))
+    code, txt = _run(["bash", "pbs/preflight.sh", "build/receipt.tmp"], pf, timeout=3600)
     out["preflight_local_binary"] = dict(exit=code, receipt=(pf / "build" / "receipt.tmp").read_text().split(), ok=code == 0)
     refs = sorted((pf / "preflight").glob("ref_point_*.csv"))
     lines = refs[0].read_text().splitlines()
@@ -1275,5 +1811,12 @@ if __name__ == "__main__":
         dispatch_test()
     elif cmd == "amended-preflight":
         amended_preflight()
+    elif cmd == "diagnostic-preflight":
+        diagnostic_preflight()
+    elif cmd == "trace-check":
+        r = trace_check(sys.argv[2], sys.argv[3], sys.argv[4], exe=sys.argv[5] if len(sys.argv) > 5 else None)
+        print(json.dumps(_clean({k: v for k, v in r.items() if k != "records"}), indent=1))
+    elif cmd == "prefix-compare":
+        print(json.dumps(prefix_compare(sys.argv[2], sys.argv[3], sys.argv[4]), indent=1))
     else:
         {"build": build, "selftest": selftest}[cmd]()
