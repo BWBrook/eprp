@@ -22,11 +22,16 @@ Owner: Claude | 16–19 October 2026 | Prepared under Codex's rulings 76/1750,
   IDs 1–2, run under an observation-only sampler patch, **exactly
   replayed the saved path** (6,000 rows × 125 columns plus adaptation,
   both chains). It captured both sampling divergences in full. Each is a
-  single-step energy blow-up on an excursion into σ's far upper tail,
-  where the target is computed accurately. It is not a solver failure and
-  not the σ → 0 neck. The first attempt's 2.18e-11 Powell rejection is
-  identified as a warmup step (chain 1, transition 102). Evidence returned
-  to Codex; no remedy chosen.
+  local integration failure: a single leapfrog step on an excursion into
+  σ's upper tail, with coupled κ/log σ and log k/log σ stiffness. Neither
+  is a solver failure or a σ → 0 excursion.
+  - Q = 64 fails its normaliser gate at one captured preceding state
+    (Codex 76/2096).
+  - The first attempt's 2.18e-11 Powell rejection is strongly attributed to
+    a warmup step (chain 1, transition 102).
+- **Remedy allocated (Codex 76/2096):** one bounded trial with Q = 80 and
+  adapt_delta 0.999, four chains, after a wider numerical preflight. P06
+  and the other ten stay held under every outcome.
 - **P06 and the other ten panel datasets remain held.** No power, coverage
   or campaign claim follows from this pilot.
 
@@ -848,44 +853,68 @@ records):
 | Of which kinetic / potential | 1.08 × 10⁷ / 7,840 | 1,336 / 576 |
 | Largest momentum changes | κ 3,843; σ 2,201; log λ0 149 | log k 138; σ 39; log h0 14 |
 | Two half steps, same start: H − H0 | 111, then 146 | 92, then 116 |
+| H − H0 already at the previous leaf (Codex) | 113.82 | 75.79 |
+| Local energy increment from the previous leaf, step split into n = 1/2/4/8/16/32 (Codex) | 1.08e7 / 31.68 / 2.06 / 0.355 / 0.080 / 0.0195 | 1,835 / 40.69 / 6.40 / 1.305 / 0.308 / 0.0759 |
 | AD against actual-LP finite differences (scaled) | ≤ 3.1e-7 | ≤ 4.6e-9 |
-| Q = 64 normaliser against a converged reference | log 9.0e-6, d/dσ 3.0e-4: pass | log 1.5e-10: pass |
+| Q = 64 normaliser against a converged reference, failing state | log 9.0e-6, d/dσ 3.0e-4: pass | log 1.5e-10: pass |
+| Same check at the previous leaf (Codex) | pass | **fails: log error 1.36e-4 > 1e-4** |
 | Solver or guard message | none | none |
 
-- **Where:** both failing steps sit in σ's far upper tail. Across all
-  32,000 saved v6p2 draws, σ's 99.9% quantile is 2.37 and its maximum is
-  3.03. Chain 1's failing step reached σ = 6.20. Chain 2's previous leaf
-  was at σ = 3.57, and its trajectory had started from σ = 0.030.
+- **Where:** both failing steps sit in σ's upper tail. Across all 32,000
+  saved v6p2 draws, σ's 99.9% quantile is 2.37 and its maximum is 3.03.
+  Chain 1's failing step reached σ = 6.20. Chain 2's previous leaf was at
+  σ = 3.57, and its trajectory had started from σ = 0.030.
+  - *Corrected (Codex 76/2096):* the saved maximum is not a bound on the
+    posterior's support.
+  - Earlier, uncaptured parts of these trajectories remain unknown.
 - **What:** in each case a single leapfrog step blew up the energy, mainly
   through the kinetic term, in a region where the gradients are very
   large. At chain 1's failing state, dV/d(log σ) is about 1.1 × 10⁵.
-- **Why it is the integrator:** two half steps from the same previous
-  state keep H − H0 at 92–146. So the full step size is too large for the
-  local curvature there; the target itself is not wrong.
+- **Why it is the integrator:** the local energy increment from the
+  previous leaf collapses as the step is subdivided: from 1.08e7 and 1,835
+  at the full step to 31.7 and 40.7 at half. An earlier version of this
+  section read the H − H0 of about 100 after two half steps as residual
+  local error.
+  - *Corrected (Codex 76/2096):* most of that is inherited from the
+    previous leaf (113.8 and 75.8).
+  - The full step is too large for the coupled κ/log σ and log k/log σ
+    curvature there.
 - **What the evidence rules out** for these two events:
   - solver failure (no message; every evaluation finite);
-  - gradient error (AD agrees with finite differences);
-  - normaliser error (the converged reference passes);
-  - a σ → 0 funnel excursion.
+  - gradient error at the checked states (AD agrees with actual-LP finite
+    differences, on all 54 coordinates in Codex's check);
+  - a σ → 0 excursion at the failing steps.
+- **What it does not rule out:** normaliser error.
+  - *Corrected (Codex 76/2096):* Q = 64 fails the 1e-4 value gate at chain
+    2's previous leaf (log error 1.36e-4). I had checked only the failing
+    states.
+  - The error is small beside the catastrophic local energy error, but the
+    earlier blanket exclusion was wrong.
+  - Fixed Q = 80, 96 and 128 pass at all four previous and failing
+    points.
 - **Not established:** how often such excursions occur, or which remedy
   works.
 
-**The first attempt's 2.18e-11 rejection is located.** Every captured
+**The first attempt's 2.18e-11 rejection: a strongly supported attribution.** Every captured
 previous and failing state (44 states) was evaluated under both data
 files. The two files differ only in `solver_f_tol`
 (`ftol_1e-11_at_captured_states.json`):
-- **Exactly one state is rejected at 1e-11:** the failing step of chain
-  1, warmup transition 102. That is the first leapfrog (tree depth 0)
-  after the metric update at transition 100.
+- **Exactly one state changes between the tolerances:** the failing step
+  of chain 1, warmup transition 102. It is rejected at 1e-11 and finite at
+  1e-10. It is the first leapfrog (tree depth 0) after the metric update at
+  transition 100.
 - **The residual matches:** it is 2.18243e-11, the same six digits as the
   first attempt's chain-1 stderr.
 - **At 1e-10** the same step is finite, but H − H0 = 7.5 × 10¹⁷. It
   diverges at either tolerance.
-- **All other 43 states** give identical log density and gradients at
-  both tolerances.
+- **The other 43 states.** *Corrected (Codex 76/2096):*
+  - 41 are finite, with identical log density and gradients at both
+    tolerances.
+  - 2 are rejected at both: chain 2's warmup failing steps at 252 and 452.
 - **Caveat:** this rests on the replayed path matching the first
   attempt's, which the byte-identical saved rows across all three runs
-  support. The first attempt's own logs could not phase it.
+  support. The residual match strongly supports it, but it does not turn
+  the old, unphased stderr stream into direct phase evidence.
 - **Consequence:** the first attempt's sampling divergence (4,426) was
   never associated with a solver rejection.
 

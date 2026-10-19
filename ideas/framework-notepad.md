@@ -38,6 +38,11 @@ real.
 | Disposition | Develop, hold, park or merge? | Reason plus reopening trigger | 14 Oct checkpoint: 10 develop / 29 hold / 8 park / 3 merges |
 | Ranking (pending) | Which questions most deserve a team? | Ranked list, 25–50 entries | Not yet built |
 
+**The stages are a revisable dependency structure, not a waterfall or a
+document quota** (Codex, 76/2097). An early identification counterexample
+can save a large support audit, so run the cheapest stage that could change
+the disposition first.
+
 Two distinctions earned their place early:
 - **Scientific importance is not next-work priority** (Codex, 11 October).
   Rank them separately.
@@ -71,6 +76,19 @@ Two distinctions earned their place early:
 - **Fixing before diagnosing.** A remedy chosen from the symptom (a solver
   tolerance) was later shown not to touch the cause. Remedy: instrument and
   capture the failure first, then choose the remedy.
+- **Conflating the target, its approximation and the computation.**
+  - Keep three objects separate:
+    - the scientific target;
+    - the implemented approximation (here the Q-node normaliser);
+    - the sampled numerical trajectory.
+  - In Q-012, a quadrature failure sat at a *preceding* trajectory state,
+    while the saved-state and failing-state checks both passed (Codex,
+    76/2096–2097).
+  - Remedy: check each object on its own terms, at the states where the
+    computation actually went.
+  - Instrumentation earned its place by resolving a decision. A seeded
+    project should not inherit the whole Stan diagnostic machinery by
+    default.
 - **Generic classifiers** (keyword matching on error text). Remedy: an exact
   grammar for expected messages; everything else fails closed.
 - **Domain ceilings** (palaeobiology-specific; each domain needs its own
@@ -116,6 +134,9 @@ would get a new repository seeded from the EPRP record:
 - milestones that return to the EPRP pair for review: design freeze, pilot
   result, first estimate, release candidate. Barry reviews at least the
   final version.
+- **The unsuccessful record too** (Codex, 76/2097): the exact claimed
+  estimand, the strongest unresolved objection, and every failed gate
+  alongside the successful artefacts.
 
 **To decide later:**
 - how much autonomy the project pair has between milestones;
@@ -124,11 +145,31 @@ would get a new repository seeded from the EPRP record:
 
 ## 6. Notes to revisit
 
-- Ranking needs a method. Candidate dimensions: consequence, separability
-  (identification), support, prior occupancy, cost, risk of a null result,
-  and value of a negative result. Is a single scale defensible, or only
-  pairwise comparison?
-- Measure the framework, not just the questions: how many entries changed
-  disposition after each stage, and which stages killed the most ideas?
+- **Ranking method.** Codex (76/2097) proposes three views, kept side by
+  side rather than summed:
+  1. **Scientific consequence:** which competing account would change, at
+     what breadth, and whether a positive *or* negative result would
+     matter.
+  2. **Project readiness:** target-specific prior occupancy, separability,
+     actual joint data support, demonstrated computational feasibility.
+     Missing evidence counts as unknown, not as a middling score.
+  3. **Next-work priority:** how much a bounded check could change the
+     disposition or rank, relative to its cost.
+  - Do not penalise "risk of a null" as such. Distinguish an informative
+    negative from a low-power or non-identifiable outcome.
+  - **Procedure:** a common *evidence card* per entry, then ordered bands,
+    then explicit pairwise comparisons near the allocation boundary. Keep
+    ties, and show whether plausible weightings reorder the leaders.
+  - The card covers: target, consequence, strongest rival, closest prior,
+    decisive test, support and feasibility, failure or reopening condition,
+    and uncertainty.
+  - I agree, and would add only that the card should name the *cheapest
+    disposition-changing check*, which links view 3 to the evidence.
+- **Measuring the framework.** Counting kills alone is not enough: a
+  harness can look efficient by admitting only trivial questions (Codex).
+  Track:
+  - which evidence changed each decision;
+  - whether the decision was later reversed;
+  - the attention and compute needed to settle the main rival.
 - As models improve, which gates become cheap enough to run for every
   entry, for example identification simulations?
