@@ -2564,6 +2564,22 @@ It is a candidate check in the next tranche.
   - *Next gate.* A prospective predictor contract for Rhynchonellata and
     Bivalvia: zero-coding, standardisation window, timing of body-size
     measurement, and the unit.
+- **Predictor contract, draft (19 October;
+  [contract and support table](../data/q038-predictor-contract/README.md)).**
+  Awaiting Codex's review.
+  - The rebuilt stage occupancy equals the deposited capture histories for
+    all 3,424 checked genera.
+  - Only half of each cohort is recorded in the stage before. Within-stage
+    originations and range-through gaps carry 56–58% of background losses,
+    so missingness is hazard-related.
+  - Proposed rules:
+    - the incoming cohort is first recorded before stage k;
+    - predictors come from the most recent recorded stage, plus recency;
+    - range is kept as distance, located count and NA;
+    - occupancy is counted by reference;
+    - body size is sensitivity-only, because survivors' specimens may
+      postdate the event (Lilliput leakage).
+  - A synthetic detection-only null is a new park condition.
   - Code is on Zenodo (10.5281/zenodo.7816408, MIT; R and RMark).
 - **Kill criterion.**
   - Park if joint observation modelling, persistent susceptibility and transfer

@@ -1,0 +1,13 @@
+class	k	event	N_incoming	D_incoming	r0	r1	r2	r3plus	D_r0	D_r1plus
+Rhynchonellata	7	LOME	72	14	64	4	4	0	12	2
+Rhynchonellata	21	LD	103	48	78	14	4	7	39	9
+Rhynchonellata	38	EP	119	92	99	8	7	5	78	14
+Rhynchonellata	45	ETr	63	33	46	12	0	5	27	6
+Rhynchonellata	68	KPg	28	11	8	11	0	9	2	9
+Bivalvia	7	LOME	42	5	35	7	0	0	4	1
+Bivalvia	21	LD	65	5	41	11	4	9	5	0
+Bivalvia	38	EP	114	42	79	10	5	20	34	8
+Bivalvia	45	ETr	161	29	107	28	6	20	25	4
+Bivalvia	68	KPg	269	78	144	14	11	100	41	37
+Bivalvia	NA	background (sum)	12740	704	7025	1901	1075	2739	419	285
+Rhynchonellata	NA	background (sum)	5508	925	3592	761	373	782	667	258
