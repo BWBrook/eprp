@@ -1,0 +1,20 @@
+{
+ "chain1_4426": {
+  "saved_row": 2425,
+  "max_rel_diff_initial_vs_previous_saved_draw": 3.4897213560738296e-08,
+  "selected_lp_saved": -123.26536
+ },
+ "chain2_6652": {
+  "saved_row": 4651,
+  "max_rel_diff_initial_vs_previous_saved_draw": 3.561054181440283e-08,
+  "selected_lp_saved": -122.10788
+ },
+ "sigma_upper_tail_v6p2_32000_draws": {
+  "q99": 1.6863938229999968,
+  "q999": 2.3709200147000007,
+  "max": 3.0336381,
+  "frac_above_1_9": 0.0053125,
+  "frac_above_3_5": 0.0,
+  "frac_above_6_2": 0.0
+ }
+}

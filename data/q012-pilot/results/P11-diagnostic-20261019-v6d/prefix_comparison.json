@@ -1,0 +1,27 @@
+{
+ "attempt": "scratch/q012-pilot/fetch-20261019-v6d/runs/P11/attempt1",
+ "bank": "scratch/q012-pilot/fetch-20261018-v6p2/runs/P11/attempt1",
+ "chains": {
+  "chain1": {
+   "bank_hash_verified": true,
+   "header_identical": true,
+   "rows_compared": 6000,
+   "bank_rows": 8000,
+   "identical_rows": 6000,
+   "all_rows_identical": true,
+   "first_mismatch": null,
+   "adaptation_identical": true
+  },
+  "chain2": {
+   "bank_hash_verified": true,
+   "header_identical": true,
+   "rows_compared": 6000,
+   "bank_rows": 8000,
+   "identical_rows": 6000,
+   "all_rows_identical": true,
+   "first_mismatch": null,
+   "adaptation_identical": true
+  }
+ },
+ "exact_replay_of_saved_path": true
+}

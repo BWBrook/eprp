@@ -1,0 +1,4 @@
+grep: write error: Broken pipe
+grep: write error: Broken pipe
+awk: cmd. line:1: (FILENAME=build/onoff/on.csv FNR=90) fatal: print to "standard output" failed (Broken pipe)
+BUILD OK

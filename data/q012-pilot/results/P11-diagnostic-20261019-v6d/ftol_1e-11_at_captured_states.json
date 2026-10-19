@@ -1,0 +1,404 @@
+{
+ "old_data": "data/q012-pilot/payload_v6p/data/P11.json",
+ "old_data_sha256": "c59b43e8076df3ac6c86ab36d97351c934f78420a064d1125206fc12e33653f6",
+ "new_data": "data/q012-pilot/payload_v6d/data/P11.json",
+ "data_fields_differing": [
+  "solver_f_tol"
+ ],
+ "binary_sha256": "cc48ac6793db8244f3f06705e8366ce0c0e1503bce9e3e279e59b2e8f7d7a086",
+ "states": [
+  {
+   "chain": 1,
+   "transition": 101,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 101,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 102,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 102,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "rejected: algebra_solver: the norm of the algebraic function is 2.18243e-11 but should be lower th"
+  },
+  {
+   "chain": 1,
+   "transition": 152,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 152,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 252,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 252,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 386,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 386,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 387,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 387,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 452,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 452,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 852,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 852,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 1951,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 1951,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 1952,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 1952,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 4426,
+   "phase": "sampling",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 1,
+   "transition": 4426,
+   "phase": "sampling",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 1,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 1,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 101,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 101,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 102,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 102,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 151,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 151,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 152,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 152,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 252,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 252,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "rejected: algebra_solver: the norm of the algebraic function is 1.85868e+11 but should be lower th",
+   "old_data": "rejected: algebra_solver: the norm of the algebraic function is 1.85868e+11 but should be lower th"
+  },
+  {
+   "chain": 2,
+   "transition": 452,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 452,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "rejected: Q012 input failure: 1-D sigma, A, B, kappa_b [0.138763,inf,0.0914829,1.62006] (in '../mo",
+   "old_data": "rejected: Q012 input failure: 1-D sigma, A, B, kappa_b [0.138763,inf,0.0914829,1.62006] (in '../mo"
+  },
+  {
+   "chain": 2,
+   "transition": 630,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 630,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 852,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 852,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 1952,
+   "phase": "warmup",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 1952,
+   "phase": "warmup",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 6652,
+   "phase": "sampling",
+   "state": "previous",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  },
+  {
+   "chain": 2,
+   "transition": 6652,
+   "phase": "sampling",
+   "state": "failing",
+   "new_data": "finite",
+   "old_data": "finite",
+   "identical_lp_grad": true
+  }
+ ]
+}

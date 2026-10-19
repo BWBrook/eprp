@@ -18,9 +18,15 @@ Owner: Claude | 16–19 October 2026 | Prepared under Codex's rulings 76/1750,
   endpoint MCSE. Its first 4,000 saved rows per chain are byte-identical
   to the first attempt's; changing f_tol did not remove the same recorded
   chain-1 divergence.
-- **Next (Codex 76/2066):** an instrumented diagnostic replay of P11 chain
-  IDs 1–2 only, with an observation-only sampler patch that records the
-  failing leapfrog step. It is not a qualification attempt.
+- **Diagnostic replay (jobs 822655–822656, Codex 76/2066):** P11 chain
+  IDs 1–2, run under an observation-only sampler patch, **exactly
+  replayed the saved path** (6,000 rows × 125 columns plus adaptation,
+  both chains). It captured both sampling divergences in full. Each is a
+  single-step energy blow-up on an excursion into σ's far upper tail,
+  where the target is computed accurately. It is not a solver failure and
+  not the σ → 0 neck. The first attempt's 2.18e-11 Powell rejection is
+  identified as a warmup step (chain 1, transition 102). Evidence returned
+  to Codex; no remedy chosen.
 - **P06 and the other ten panel datasets remain held.** No power, coverage
   or campaign claim follows from this pilot.
 
@@ -768,3 +774,128 @@ original eb646717… by `build.pbs`, which verifies both hashes):
 - **Remote root:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261019-v6d`.
 - **Comparison binary:** the v6p2 binary is present and its hash verifies
   (ff9861c5…).
+
+### Diagnostic replay result (jobs 822655, 822656, 19 October 2026)
+
+Evidence: [results/P11-diagnostic-20261019-v6d/](results/P11-diagnostic-20261019-v6d/).
+It holds:
+- the receipts, PBS accounting and build output;
+- `diagnostics.json`;
+- the combined logs and the divergence traces (gzipped), plus the
+  preflight exercise traces;
+- `prefix_comparison.json` and `trace_check.json`;
+- the tolerance localisation and the initial-state check, with their
+  scripts in `scripts/`;
+- the chain-file hashes.
+
+**Run.** The build/preflight (822655, n146, 28 min) passed every check:
+- LP/AD points and the p75/p53 controls;
+- the smoke run;
+- both capture exercises, each with 12 of 12 events matching the CSV;
+- the trace-on/off gate;
+- `preflight_compare_old_binary=identical`, so the instrumented binary
+  reproduced the v6p2 binary's output.
+
+The fit (822656, n001) completed with both chains at exit 0 and complete
+traces, in 1 h 55 min (6,877 s in the runner).
+
+*Cosmetic:* `build_job_output.txt` shows three "Broken pipe" messages.
+These come from `grep -q` and `head` closing pipes inside the preflight
+checks. The checks' exit statuses are unaffected. A later package should
+silence them.
+
+**Accounting.** (0:28:23 × 4) + (1:54:44 × 2) = 1.892 + 3.824 = **5.717
+core-hours** of the 10.333 released. The P11/P06 tranche total is now
+15.001 + 5.717 = **20.718 of 53.333**, leaving 32.616.
+
+**Qualification and capture.** Both combined logs pass the strict parser.
+The only logged rejections are chain 2's warmup 252 (Powell) and 452
+(input), as before. Capture is valid for both chains:
+- each has 10 warmup and 1 sampling divergence, all recorded in full;
+- nothing was dropped;
+- `write_ok` is true.
+
+The two-chain screening is descriptive only, and not a qualification:
+- 1 divergence per chain;
+- E-BFMI 0.861 and 0.885;
+- max R̂ 1.0010;
+- minimum core ESS 2,122 bulk / 2,513 tail (σ).
+
+**Exact replay of the saved path.** All 6,000 saved rows and 125 columns
+of both chains, and their adaptation output, are byte-identical to the
+hash-verified v6p2 bank. Each traced transition-initial state equals the
+previous saved draw to 3.5e-8 relative, which is the CSV's precision. So
+the captured sampling events are the two original divergences: chain 1
+transition 4,426 and chain 2 transition 6,652.
+
+**Every full record is reproduced from the trace alone,** using the local
+GCC 13 build of the same source and patch (`trace_check.json`, 22
+records):
+- the recorded V and grad V at the previous and failing states are
+  bitwise identical to `log_prob`;
+- one leapfrog from the previous q, p and metric reproduces the failing
+  q, p and H bitwise.
+
+**The two sampling divergences:**
+
+| | Chain 1, transition 4,426 | Chain 2, transition 6,652 |
+| --- | --- | --- |
+| Tree depth, leapfrog count | 6, 97 | 7, 161 |
+| Step size (signed) | +0.0396 | −0.0475 |
+| σ: initial → previous → failing | 1.38 → 1.91 → **6.20** | 0.030 → **3.57** → 1.59 |
+| V: previous → failing | 199.9 → 7,957 | 165.3 → 692.3 |
+| H − H0 at the failing step | **1.08 × 10⁷** | **1,911** |
+| Of which kinetic / potential | 1.08 × 10⁷ / 7,840 | 1,336 / 576 |
+| Largest momentum changes | κ 3,843; σ 2,201; log λ0 149 | log k 138; σ 39; log h0 14 |
+| Two half steps, same start: H − H0 | 111, then 146 | 92, then 116 |
+| AD against actual-LP finite differences (scaled) | ≤ 3.1e-7 | ≤ 4.6e-9 |
+| Q = 64 normaliser against a converged reference | log 9.0e-6, d/dσ 3.0e-4: pass | log 1.5e-10: pass |
+| Solver or guard message | none | none |
+
+- **Where:** both failing steps sit in σ's far upper tail. Across all
+  32,000 saved v6p2 draws, σ's 99.9% quantile is 2.37 and its maximum is
+  3.03. Chain 1's failing step reached σ = 6.20. Chain 2's previous leaf
+  was at σ = 3.57, and its trajectory had started from σ = 0.030.
+- **What:** in each case a single leapfrog step blew up the energy, mainly
+  through the kinetic term, in a region where the gradients are very
+  large. At chain 1's failing state, dV/d(log σ) is about 1.1 × 10⁵.
+- **Why it is the integrator:** two half steps from the same previous
+  state keep H − H0 at 92–146. So the full step size is too large for the
+  local curvature there; the target itself is not wrong.
+- **What the evidence rules out** for these two events:
+  - solver failure (no message; every evaluation finite);
+  - gradient error (AD agrees with finite differences);
+  - normaliser error (the converged reference passes);
+  - a σ → 0 funnel excursion.
+- **Not established:** how often such excursions occur, or which remedy
+  works.
+
+**The first attempt's 2.18e-11 rejection is located.** Every captured
+previous and failing state (44 states) was evaluated under both data
+files. The two files differ only in `solver_f_tol`
+(`ftol_1e-11_at_captured_states.json`):
+- **Exactly one state is rejected at 1e-11:** the failing step of chain
+  1, warmup transition 102. That is the first leapfrog (tree depth 0)
+  after the metric update at transition 100.
+- **The residual matches:** it is 2.18243e-11, the same six digits as the
+  first attempt's chain-1 stderr.
+- **At 1e-10** the same step is finite, but H − H0 = 7.5 × 10¹⁷. It
+  diverges at either tolerance.
+- **All other 43 states** give identical log density and gradients at
+  both tolerances.
+- **Caveat:** this rests on the replayed path matching the first
+  attempt's, which the byte-identical saved rows across all three runs
+  support. The first attempt's own logs could not phase it.
+- **Consequence:** the first attempt's sampling divergence (4,426) was
+  never associated with a solver rejection.
+
+**Warmup divergences** (20 in all, descriptive): 16 fall in the two
+transitions just after a metric update and step-size reset (101–102,
+151–152, 252, 452, 852, 1951–1952). Nine of those fail on the very first
+leapfrog, and they include chain 2's two logged rejections. The other
+four are chain 1 at 386–387 and chain 2 at transition 1 and at 630.
+
+**Stop rule applied.** Nothing else was submitted. P06 and the other ten
+remain held. The evidence goes to Codex for the mechanism and remedy
+review; no remedy (adapt_delta 0.999, reparameterisation, prior, seed or
+fit) is chosen here.

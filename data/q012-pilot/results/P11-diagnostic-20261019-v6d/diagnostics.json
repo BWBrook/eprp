@@ -1,0 +1,194 @@
+{
+ "scenario": "P11",
+ "attempt": "scratch/q012-pilot/fetch-20261019-v6d/runs/P11/attempt1",
+ "qualified": true,
+ "qualification_failures": [],
+ "kind": "instrumented diagnostic attempt: not a four-chain qualification or a dataset replicate",
+ "capture": {
+  "valid": true,
+  "failures": [],
+  "chains": {
+   "chain1": {
+    "seen": {
+     "warmup": 10,
+     "sampling": 1
+    },
+    "captured": {
+     "warmup": 10,
+     "sampling": 1
+    },
+    "sampling_transitions": [
+     4426
+    ],
+    "warmup_transitions": [
+     101,
+     102,
+     152,
+     252,
+     386,
+     387,
+     452,
+     852,
+     1951,
+     1952
+    ]
+   },
+   "chain2": {
+    "seen": {
+     "warmup": 10,
+     "sampling": 1
+    },
+    "captured": {
+     "warmup": 10,
+     "sampling": 1
+    },
+    "sampling_transitions": [
+     6652
+    ],
+    "warmup_transitions": [
+     1,
+     101,
+     102,
+     151,
+     152,
+     252,
+     452,
+     630,
+     852,
+     1952
+    ]
+   }
+  }
+ },
+ "status": "screened",
+ "chains": [
+  {
+   "csv": "chain1.csv",
+   "draws": 6000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.8606463539298234,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain2.csv",
+   "draws": 6000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.884604597479508,
+   "rejections": {
+    "solver_internal_warmup": 1,
+    "input_warmup": 1
+   },
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [
+    {
+     "phase": "warmup",
+     "transition": 252,
+     "cause": "solver_internal",
+     "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 1.85868e+11 but should be lower than the function tolerance: 1e-10. Consider decreasing the relative tolerance and increasin"
+    },
+    {
+     "phase": "warmup",
+     "transition": 452,
+     "cause": "input",
+     "message": "Exception: Exception: Q012 input failure: 1-D sigma, A, B, kappa_b [0.138763,inf,0.0914829,1.62006] (in '../model_v6.stan', line 37, column 6 to column 79) (in '../model_v6.stan', line 232, column 6 t"
+    }
+   ],
+   "log_parse": "complete"
+  }
+ ],
+ "screening": {
+  "zero_post_warmup_divergences": false,
+  "no_fatal_or_sampling_phase_failures": true,
+  "ebfmi_each_chain": true,
+  "rhat_all": true,
+  "ess_bulk_tail_core": true
+ },
+ "screening_pass": false,
+ "rhat_max": [
+  "z_rw.17",
+  1.0009785374457307
+ ],
+ "rhat_over_threshold": [],
+ "rhat_core": {
+  "sigma": 1.0009468404933966,
+  "rho": 1.0001975285113671,
+  "eta": 1.0002818695341815,
+  "kappa": 1.0001954170526162,
+  "kappa_b": 1.000167679226651,
+  "beta": 1.0001646070332983,
+  "gamma": 0.999878658617938,
+  "log_k": 1.0000585746745332,
+  "log_lambda0": 1.0002619001560844,
+  "log_b0": 1.000255159332593,
+  "tau": 0.9999670010426287
+ },
+ "ess_core": {
+  "sigma": {
+   "bulk": 2122.2954311922217,
+   "tail": 2513.2460803122895
+  },
+  "rho": {
+   "bulk": 10420.772774147546,
+   "tail": 7801.55195009263
+  },
+  "eta": {
+   "bulk": 3771.852280820137,
+   "tail": 3551.7726966846776
+  },
+  "kappa": {
+   "bulk": 7622.462053302547,
+   "tail": 7723.329899096797
+  },
+  "kappa_b": {
+   "bulk": 12795.818308374162,
+   "tail": 8512.153240507021
+  },
+  "beta": {
+   "bulk": 15034.27385864549,
+   "tail": 9199.624799688423
+  },
+  "gamma": {
+   "bulk": 14201.222027210426,
+   "tail": 9526.098324397237
+  },
+  "log_k": {
+   "bulk": 6179.672661736195,
+   "tail": 6913.389792943955
+  },
+  "log_lambda0": {
+   "bulk": 8238.199108498975,
+   "tail": 5414.648423865057
+  },
+  "log_b0": {
+   "bulk": 15361.494478865783,
+   "tail": 8796.31675280691
+  },
+  "tau": {
+   "bulk": 4380.058728140522,
+   "tail": 5122.431431339232
+  }
+ },
+ "eta": {
+  "q05": 0.004334658535000001,
+  "q95": 0.5987028609999999,
+  "mcse_q05": 0.0003919196999999999,
+  "mcse_q95": 0.011337399999999997,
+  "endpoints_finite": true,
+  "mcse_finite": true,
+  "mcse_target_met": false,
+  "truth": 0.2,
+  "interval_covers_truth": true,
+  "D": false,
+  "X": false,
+  "D_numerically_uncertain": false,
+  "X_numerically_uncertain": false
+ },
+ "precision": "not met"
+}
