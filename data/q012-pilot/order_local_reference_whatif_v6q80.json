@@ -1,0 +1,523 @@
+{
+ "summary": {
+  "points": 64,
+  "local_unconverged": [],
+  "fail_local": [],
+  "max_log_err": 4.350353641968674e-05,
+  "max_d_err": 0.0001787821102272602
+ },
+ "points": {
+  "start_P11_chain1": {
+   "local_converged": true,
+   "log_err": 8.881784197001252e-16,
+   "max_d_err": 5.551115123125783e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_P11_chain2": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 2.220446049250313e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_P11_chain3": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 6.661338147750939e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_P11_chain4": {
+   "local_converged": true,
+   "log_err": 3.552713678800501e-15,
+   "max_d_err": 6.661338147750939e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_R00_chain1": {
+   "local_converged": true,
+   "log_err": 8.881784197001252e-16,
+   "max_d_err": 5.551115123125783e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_R00_chain2": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 2.220446049250313e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_R00_chain3": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 6.661338147750939e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "start_R00_chain4": {
+   "local_converged": true,
+   "log_err": 3.552713678800501e-15,
+   "max_d_err": 6.661338147750939e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "P11_start1_sigma_0.01": {
+   "local_converged": true,
+   "log_err": 1.1102230246251565e-15,
+   "max_d_err": 1.7763568394002505e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "P11_start1_sigma_0.001": {
+   "local_converged": true,
+   "log_err": 4.440892098500626e-16,
+   "max_d_err": 1.1102230246251565e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h0.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 6.661338147750939e-16,
+   "max_d_err": 1.2212453270876722e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h0.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 1.5543122344752192e-15,
+   "max_d_err": 1.6653345369377348e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h0.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 1.3322676295501878e-15,
+   "max_d_err": 6.661338147750939e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h2.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 8.881784197001252e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h2.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 5.329070518200751e-15,
+   "max_d_err": 8.881784197001252e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h2.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 2.6645352591003757e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h5.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 1.4210854715202004e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h5.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 5.684341886080802e-14,
+   "max_d_err": 1.4210854715202004e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h5.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 1.4210854715202004e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h10.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 3.637978807091713e-08,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": false,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h10.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 3.637978807091713e-08,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": false,
+   "pass_local": true
+  },
+  "stress_grid-s0.001-h10.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 7.275957614183426e-12,
+   "max_d_err": 0.0,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": false,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h0.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 1.1102230246251565e-15,
+   "max_d_err": 5.551115123125783e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h0.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 1.1102230246251565e-15,
+   "max_d_err": 8.881784197001252e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h0.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 2.220446049250313e-15,
+   "max_d_err": 4.440892098500626e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h2.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 8.881784197001252e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h2.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 1.7763568394002505e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h2.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 1.7763568394002505e-15,
+   "max_d_err": 1.7763568394002505e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h5.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 2.842170943040401e-14,
+   "max_d_err": 2.842170943040401e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h5.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 2.842170943040401e-14,
+   "max_d_err": 1.4210854715202004e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h5.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 2.842170943040401e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h10.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 4.547473508864641e-09,
+   "preflight_reference": "local_mode_n1600_L16",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h10.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 4.547473508864641e-09,
+   "preflight_reference": "local_mode_n1600_L16",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s0.1-h10.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 9.094947017729282e-13,
+   "max_d_err": 4.547473508864641e-09,
+   "preflight_reference": "local_mode_n1600_L16",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h0.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 4.246381024586299e-12,
+   "max_d_err": 3.9968028886505635e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h0.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 8.881784197001252e-16,
+   "max_d_err": 1.4432899320127035e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h0.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 1.4432899320127035e-14,
+   "max_d_err": 1.554312234475219e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h2.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 5.684341886080802e-14,
+   "max_d_err": 8.881784197001252e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h2.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 8.881784197001252e-16,
+   "max_d_err": 4.440892098500626e-12,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h2.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 8.881784197001252e-16,
+   "max_d_err": 1.3322676295501878e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h5.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 3.552713678800501e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h5.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 3.552713678800501e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h5.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 3.552713678800501e-15,
+   "max_d_err": 5.3290705182007514e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h10.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 5.684341886080801e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h10.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 0.0,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s1.0-h10.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 1.4210854715202004e-10,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h0.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 1.3906374718430925e-07,
+   "max_d_err": 3.661249081687856e-07,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h0.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 2.186825522665359e-06,
+   "max_d_err": 6.788800632762104e-06,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h0.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 1.5960032100359456e-06,
+   "max_d_err": 4.2692800406030074e-05,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h2.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 1.1110490305554777e-09,
+   "max_d_err": 2.646771690706373e-09,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h2.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 2.8759731600658256e-06,
+   "max_d_err": 1.829312479273426e-05,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h2.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 4.404177147421251e-06,
+   "max_d_err": 2.3797264714353616e-05,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h5.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 7.105427357601002e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h5.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 4.2898810592717496e-07,
+   "max_d_err": 5.953706416761406e-06,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h5.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 4.2824108081873646e-07,
+   "max_d_err": 5.984683859594497e-06,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h10.0-kb-1.5": {
+   "local_converged": true,
+   "log_err": 0.0,
+   "max_d_err": 5.684341886080801e-10,
+   "preflight_reference": "local_mode_n1600_L16",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h10.0-kb0.0": {
+   "local_converged": true,
+   "log_err": 1.7593890788702993e-09,
+   "max_d_err": 3.439915019498585e-08,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "stress_grid-s3.0-h10.0-kb1.5": {
+   "local_converged": true,
+   "log_err": 1.7593908552271387e-09,
+   "max_d_err": 3.441691376337985e-08,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "capture_c1_4426_initial": {
+   "local_converged": true,
+   "log_err": 5.654143819810997e-11,
+   "max_d_err": 1.021405182655144e-09,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "capture_c1_4426_previous": {
+   "local_converged": true,
+   "log_err": 1.056843501601179e-10,
+   "max_d_err": 4.551914400963142e-09,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "capture_c1_4426_failing": {
+   "local_converged": true,
+   "log_err": 2.1913054484290484e-06,
+   "max_d_err": 8.517061278467963e-05,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "capture_c2_6652_initial": {
+   "local_converged": true,
+   "log_err": 2.6645352591003757e-15,
+   "max_d_err": 1.3322676295501878e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "capture_c2_6652_previous": {
+   "local_converged": true,
+   "log_err": 4.350353641968674e-05,
+   "max_d_err": 0.0001787821102272602,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  },
+  "capture_c2_6652_failing": {
+   "local_converged": true,
+   "log_err": 7.133849067031406e-12,
+   "max_d_err": 8.881784197001252e-11,
+   "preflight_reference": "fixed_innovation_n1600",
+   "preflight_pass": true,
+   "pass_local": true
+  }
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "kunanyi_q64_s_per_leap_v6p2": 0.005375018521171009,
+ "q80_over_q64": [
+  1.5,
+  1.6
+ ],
+ "chains": [
+  {
+   "chain": 1,
+   "stepsize": 0.052707069,
+   "accept": 0.9861010439000001,
+   "mean_leap": 64.92,
+   "depth": {
+    "6": 200
+   },
+   "divergences": 0,
+   "local_warmup_s": 4155.06,
+   "local_sampling_s": 144.681,
+   "local_s_per_leap": 0.011143022181146026
+  },
+  {
+   "chain": 2,
+   "stepsize": 0.035792145,
+   "accept": 0.9950317043000001,
+   "mean_leap": 127.0,
+   "depth": {
+    "6": 2,
+    "7": 198
+   },
+   "divergences": 0,
+   "local_warmup_s": 4412.0,
+   "local_sampling_s": 222.349,
+   "local_s_per_leap": 0.008753897637795275
+  },
+  {
+   "chain": 3,
+   "stepsize": 0.035796687,
+   "accept": 0.98781189425,
+   "mean_leap": 126.04,
+   "depth": {
+    "6": 6,
+    "7": 194
+   },
+   "divergences": 0,
+   "local_warmup_s": 4338.01,
+   "local_sampling_s": 209.018,
+   "local_s_per_leap": 0.008291732783243414
+  },
+  {
+   "chain": 4,
+   "stepsize": 0.034116479,
+   "accept": 0.9949345528500001,
+   "mean_leap": 127.0,
+   "depth": {
+    "6": 2,
+    "7": 198
+   },
+   "divergences": 0,
+   "local_warmup_s": 3932.85,
+   "local_sampling_s": 306.03,
+   "local_s_per_leap": 0.012048425196850393
+  }
+ ],
+ "projection_ratio_1.5": [
+  {
+   "chain": 1,
+   "warmup_h": 0.8351087379136208,
+   "sampling_h": 0.8723655059860548,
+   "total_h": 1.7074742438996757
+  },
+  {
+   "chain": 2,
+   "warmup_h": 1.1287629949076394,
+   "sampling_h": 1.7065683804717955,
+   "total_h": 2.8353313753794347
+  },
+  {
+   "chain": 3,
+   "warmup_h": 1.171693375425784,
+   "sampling_h": 1.693668336020985,
+   "total_h": 2.865361711446769
+  },
+  {
+   "chain": 4,
+   "warmup_h": 0.7310478771295299,
+   "sampling_h": 1.7065683804717955,
+   "total_h": 2.4376162576013254
+  }
+ ],
+ "projection_ratio_1.6": [
+  {
+   "chain": 1,
+   "warmup_h": 0.8907826537745288,
+   "sampling_h": 0.930523206385125,
+   "total_h": 1.821305860159654
+  },
+  {
+   "chain": 2,
+   "warmup_h": 1.2040138612348152,
+   "sampling_h": 1.8203396058365815,
+   "total_h": 3.0243534670713967
+  },
+  {
+   "chain": 3,
+   "warmup_h": 1.249806267120836,
+   "sampling_h": 1.8065795584223838,
+   "total_h": 3.0563858255432197
+  },
+  {
+   "chain": 4,
+   "warmup_h": 0.7797844022714984,
+   "sampling_h": 1.8203396058365815,
+   "total_h": 2.6001240081080796
+  }
+ ]
+}
