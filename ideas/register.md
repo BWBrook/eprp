@@ -941,6 +941,26 @@ Status **under review**, tier 2 (9 October; Codex's objection accepted).
   timescale arguments. First check the Antell & Saupe GSA 2021 abstract
   (10.1130/abs/2021am-369023), whose title suggests a direct overlap.
 - **Evidence.** [Round-1 checks](../literature/2026-10-09-register-checks-round1.md).
+- **Target-matched prior check (20 October;
+  [note](../literature/2026-10-20-q015-prior-check.md)). Disposition:
+  develop, for one bounded support audit.**
+  - The Antell & Saupe GSA abstract (read directly) overlaps in its title
+    only. It estimates rates of *occupied* temperature over the
+    Pleistocene and finds stasis; there is no separation from tracking, no
+    hyperthermal and no survival test.
+  - Ying et al. 2024 separate acclimatisation from migration by a
+    timescale argument.
+  - Survival through warming is predicted by *static* niches (Reddin 2022,
+    2025; the Kiessling 2026 abstract, a competitor to watch).
+  - Narrowed estimand: realised thermal-limit lability, meaning
+    calcification temperature against ambient beyond a fixed-niche plus
+    habitat-tracking null (Jonkers & Kučera 2017). Plasticity and
+    evolution are not separated.
+  - The survival half becomes: does lability add held-out predictive value
+    beyond static niches?
+  - Next: an audit of species-specific calcification-temperature series
+    across the PETM, ETM2 or MECO, with independent ambient temperature.
+    Park if too few lineage × site series.
 
 ### Q-016 Do range-based risk criteria predict extinction over geological time?
 Status **under review**, tier 2 (raised from 3 on 14 October for scientific
