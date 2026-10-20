@@ -1,0 +1,54 @@
+{
+ "no_fit_scenario_refused": {
+  "exit": 1,
+  "calls": [],
+  "ok": true
+ },
+ "r00_refused": {
+  "exit": 1,
+  "calls": [],
+  "ok": true
+ },
+ "stage_p11": {
+  "exit": 0,
+  "calls": [
+   "pbs/build.pbs",
+   "-v SCEN=P11 -W depend=afterok:90001.fake pbs/fit.pbs"
+  ],
+  "ok": true
+ },
+ "remote_payload_verified": {
+  "ok": true,
+  "submitted": [
+   "BUILD_JOB=90001.fake",
+   "FIT_JOB_P11=90002.fake"
+  ]
+ },
+ "p06_refused_without_build": {
+  "exit": 2,
+  "ok": true,
+  "said": "REFUSED: P06 is not a permitted fit\n"
+ },
+ "submit_fit_r00_refused": {
+  "exit": 2,
+  "ok": true
+ },
+ "submit_fit_p06_refused_even_after_build": {
+  "exit": 2,
+  "new_calls": [],
+  "ok": true
+ },
+ "pbs_resources": {
+  "build": [
+   "#PBS -l select=1:ncpus=4:mem=8gb",
+   "#PBS -l walltime=01:00:00"
+  ],
+  "fit": [
+   "#PBS -l select=1:ncpus=4:mem=8gb",
+   "#PBS -l walltime=06:10:00"
+  ],
+  "core_hours": 28.6667,
+  "ok": true
+ },
+ "all_pass": true
+}

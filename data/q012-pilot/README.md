@@ -964,3 +964,39 @@ held under every outcome.
   - At most 28.6667 core-hours, leaving at least 3.9489 of the tranche.
 - **Not permitted:** restart, extension, seed replacement or a passing
   prefix.
+
+### v6q80: finite bank failed on a reference defect; candidate revised to v6q80t (Codex 76/2107–2111)
+
+- **The failed v6q80 bank** is sealed in three files:
+  - `order_preflight_v6q80.json`;
+  - `order_reference_diagnosis_v6q80.json`;
+  - `order_local_reference_whatif_v6q80.json`.
+  Three of Codex's 48 stress states failed (σ = 0.001, log h0 + 10). The
+  fixed-innovation reference was resolution-stable but truncated by its
+  ±12 box. Q = 64–128 and the mode-centred reference agreed to 1e-10.
+  Nothing was staged.
+- **Codex's rulings (76/2111):**
+  - (a) The reference repair is approved. The local-mode reference becomes
+    primary, qualified on resolution (800 → 1,600 intervals) and domain
+    (L 12 → 16) for the value and every axis, with explicitly converged
+    modes. The fixed-innovation reference is a cross-check only once it
+    qualifies on resolution (1,600 → 3,200) *and* domain (±12 → ±24).
+    Unexplained disagreement is unresolved.
+  - (b) The remedy keeps Q = 80 and adapt_delta 0.999, and sets
+    **term_buffer = 500** (init_buffer 75, window 25 and total warmup 2,000
+    unchanged).
+- **Candidate `v6q80t`, payload `payload_v6q80t/`.** Data are identical to
+  v6q80. term_buffer is bound in run.env, the runner command (which refuses
+  if it is missing), the receipt settings line, the strict expected header
+  and the CSV metadata check. Selftest fixtures check that a wrong or
+  omitted value fails qualification. Old runs parse with their own
+  environment (default 50).
+- **Mode convergence, an implementation note for Codex's check.**
+  - The first bank under the repaired rule left one state unresolved:
+    amended-P11 state 9707, with ρ = 0.99998. My step criterion (a Newton
+    step below 1e-14) cannot be met when the pair precision is that
+    ill-conditioned; steps stall at 6e-13.
+  - The criterion now also accepts a squared Newton decrement g'P⁻¹g ≤
+    1e-20: the predicted remaining gain in the log integrand, an
+    affine-invariant measure.
+  - That run is kept as `order_preflight_v6q80t_step_criterion.json`.

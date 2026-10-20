@@ -265,7 +265,8 @@ def settings_line(env):
     s = (f"chains {e['CHAINS']}; warmup {e['WARMUP']}; sampling {e['SAMPLING']}; adapt_delta {e['ADAPT_DELTA']}; "
          f"max_depth {e['MAX_DEPTH']}; stepsize {e['STEPSIZE']}; seed {e['SEED']}; fit_seconds {e['FIT_SECONDS']}")
     s += f"; refresh {e['REFRESH']}; log {e['LOG_FORMAT']}" if "LOG_FORMAT" in e else ""
-    return s + (f"; trace {e['TRACE_SCHEMA']} caps {e['TRACE_CAP_WARMUP']}/{e['TRACE_CAP_SAMPLING']}" if "TRACE_SCHEMA" in e else "")
+    s += f"; trace {e['TRACE_SCHEMA']} caps {e['TRACE_CAP_WARMUP']}/{e['TRACE_CAP_SAMPLING']}" if "TRACE_SCHEMA" in e else ""
+    return s + (f"; term_buffer {e['TERM_BUFFER']}" if "TERM_BUFFER" in e else "")
 
 
 def csv_meta(path):
@@ -339,7 +340,7 @@ def expected_header(env, scen, k, csv_rel):
             f"    num_warmup = {dflt(env['WARMUP'], 1000)}", "    save_warmup = false (Default)", "    thin = 1 (Default)",
             "    adapt", "      engaged = true (Default)", "      gamma = 0.05 (Default)",
             f"      delta = {dflt(env['ADAPT_DELTA'], 0.8)}", "      kappa = 0.75 (Default)", "      t0 = 10 (Default)",
-            "      init_buffer = 75 (Default)", "      term_buffer = 50 (Default)", "      window = 25 (Default)",
+            "      init_buffer = 75 (Default)", f"      term_buffer = {dflt(env.get('TERM_BUFFER', 50), 50)}", "      window = 25 (Default)",
             "      save_metric = false (Default)", "    algorithm = hmc (Default)", "      hmc", "        engine = nuts (Default)",
             "          nuts", f"            max_depth = {dflt(env['MAX_DEPTH'], 10)}", "        metric = diag_e (Default)",
             "        metric_file =  (Default)", f"        stepsize = {dflt(env['STEPSIZE'], 1)}",
@@ -546,7 +547,8 @@ def qualify(attempt, scen, env, manifest_sha, build_receipt, grammar=None):
             fails.append(f"chain {k} CSV incomplete")
         m = csv_meta(f"{c}.csv")
         for key, val in (("num_samples", env["SAMPLING"]), ("num_warmup", env["WARMUP"]), ("delta", env["ADAPT_DELTA"]),
-                         ("max_depth", env["MAX_DEPTH"]), ("stepsize", env["STEPSIZE"]), ("seed", env["SEED"]), ("id", k)):
+                         ("max_depth", env["MAX_DEPTH"]), ("stepsize", env["STEPSIZE"]), ("seed", env["SEED"]), ("id", k),
+                         ("term_buffer", env.get("TERM_BUFFER", 50))):
             try:
                 ok = float(m.get(key, "nan")) == float(val)
             except ValueError:
@@ -790,9 +792,18 @@ def _lse(x):
     return m + math.log(float(np.exp(x - m).sum()))
 
 
+class ReferenceUnresolved(Exception):
+    """A reference calculation that cannot be trusted at this state (Codex 76/2111): a mode solve that did not
+    converge explicitly, a non-finite mode or value, or invalid curvature."""
+
+
 def local_reference(d, q, n=1600, L=16.0):
     """Log cohort normaliser by Simpson integration on a grid centred and scaled at each Newton mode (2-D in 64-row
-    chunks). Independent of the data's quadrature nodes; resolves narrow modes the fixed-innovation reference misses."""
+    chunks). Independent of the data's quadrature nodes; resolves narrow modes the fixed-innovation reference misses.
+    Each mode solve must converge explicitly within 200 iterations: a Newton step below 1e-14 (the original rule), or
+    a squared Newton decrement g'P^-1 g at most 1e-20, the affine-invariant criterion that stays meaningful when the
+    pair precision is ill-conditioned (rho near 1); with finite modes and positive-definite curvature. Otherwise
+    ReferenceUnresolved."""
     sig, rho, kb = q["sigma"], q["rho"], q["kappa_b"]
     A = P.cohort_A(d, q)
     b0 = math.exp(q["log_b0"])
@@ -808,12 +819,22 @@ def local_reference(d, q, n=1600, L=16.0):
         for _ in range(200):
             ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
             Pm = inv + np.diag(ep + kb * kb * eb)
-            dlt = np.linalg.solve(Pm, -inv @ y - ep - kb * eb)
+            grad = -inv @ y - ep - kb * eb
+            dlt = np.linalg.solve(Pm, grad)
+            dec2 = float(grad @ dlt)  # squared Newton decrement: predicted remaining gain in the log integrand
             y = y + dlt
-            if np.max(np.abs(dlt)) < 1e-14:
+            if not np.all(np.isfinite(y)):
+                raise ReferenceUnresolved("non-finite local mode")
+            if np.max(np.abs(dlt)) < 1e-14 or dec2 <= 1e-20:
                 break
+        else:
+            raise ReferenceUnresolved(f"local mode not converged in 200 iterations (last step {float(np.max(np.abs(dlt))):.3g}, "
+                                      f"squared decrement {dec2:.3g})")
         ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
-        return y, np.linalg.cholesky(np.linalg.inv(inv + np.diag(ep + kb * kb * eb)))
+        try:
+            return y, np.linalg.cholesky(np.linalg.inv(inv + np.diag(ep + kb * kb * eb)))
+        except np.linalg.LinAlgError:
+            raise ReferenceUnresolved("local curvature not positive definite")
     out = 0.0
     for ii in d["c1_lin"]:
         i = ii - 1
@@ -839,6 +860,32 @@ def local_reference(d, q, n=1600, L=16.0):
     return out
 
 
+def fixed_reference(d, q, n=1600, L=12.0):
+    """Log cohort normaliser by Simpson integration over the standardised innovations on [-L, L]: the prototype's
+    fixed-innovation reference (quadrature.reference_1d/2d, fixed at L = 12) with a variable box, 2-D in row chunks."""
+    A = P.cohort_A(d, q)
+    singles, pairs = P.cohort_terms(d, q, A)
+    sig, rho, kb = q["sigma"], q["rho"], q["kappa_b"]
+    e = np.linspace(-L, L, n + 1)
+    wt = np.ones(n + 1)
+    wt[1:-1:2], wt[2:-1:2] = 4, 2
+    lw = np.log(wt * 2 * L / (3 * n))
+    out = 0.0
+    for a, b in singles:
+        out += _lse(lw + P.QD._logS(sig * e, sig, a, b, kb) - 0.5 * e * e - 0.5 * math.log(2 * math.pi))
+    for Ap, Bp, Ad, Bd in pairs:
+        logs = []
+        for r in range(0, n + 1, 128):
+            E1, E2 = e[r:r + 128, None], e[None, :]
+            xp = sig * E1
+            xd = rho * xp + sig * math.sqrt(1 - rho * rho) * E2
+            v = (P.QD._logS(xp, sig, Ap, Bp, kb) + P.QD._logS(xd, sig, Ad, Bd, kb) - 0.5 * (E1 * E1 + E2 * E2)
+                 - math.log(2 * math.pi))
+            logs.append(_lse(lw[r:r + 128, None] + lw[None, :] + v))
+        out += _lse(np.array(logs))
+    return out
+
+
 def _axes(d, extra=()):
     return ("sigma", "kappa_b") + (("rho",) if d["C2"] else ()) + tuple(extra)
 
@@ -861,41 +908,79 @@ def _converged(a, b):
                                and all(abs(v) <= REF_TOL["derivative"] for k, v in ch.items() if k != "value")))
 
 
-def reference_convergence(d, q, extra=()):
-    """Signed change of the fixed-innovation Simpson reference itself (value and derivatives), 1,600 -> 3,200 intervals."""
-    ref = lambda n: (lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), n))
-    return _converged(_values(d, q, ref(1600), extra), _values(d, q, ref(3200), extra))
+def _try_values(d, q, f, extra=()):
+    """_values of a reference, or (None, reason) when it is unresolved or non-finite at this state."""
+    try:
+        v = _values(d, q, f, extra)
+    except ReferenceUnresolved as e:
+        return None, str(e)
+    if not all(_finite(x) for x in v.values()):
+        return None, "non-finite reference value or difference"
+    return v, None
 
 
 def gate_point(d, q, extra=()):
-    """The data's Q-node normaliser (order d["Q"]) against a converged reference at one joint state: value and
-    derivatives on sigma, kappa_b, rho and any extra axes, with domain-safe steps. The fixed-innovation Simpson reference
-    is used when it converges; otherwise the local-mode reference; if neither converges the state is unresolved, never
-    passed."""
+    """The data's Q-node normaliser (order d["Q"]) against a qualified reference at one joint state: value and
+    derivatives on sigma, kappa_b, rho and any extra axes, with domain-safe steps. Repaired rule (Codex 76/2111):
+    - primary: the local-mode reference, qualified by resolution (800 -> 1,600 intervals at L = 12) and domain
+      (L = 12 -> 16 at 1,600) convergence of the value and every axis, with explicitly converged modes;
+    - cross-check: the fixed-innovation reference, qualified by its own resolution (1,600 -> 3,200 on [-12, 12]) and
+      domain ([-12, 12] at 1,600 -> [-24, 24] at 3,200, the same spacing) convergence. When qualified it must agree
+      with the primary within the same limits; unexplained disagreement is unresolved;
+    - an unqualified primary leaves the state unresolved, never passed. Accuracy gates are unchanged."""
     agh = _values(d, q, lambda p: P.log_norm_agh(d, p, P.cohort_A(d, p)), extra)
-    coarse = reference_convergence(d, q, extra)
-    used, ref = "fixed_innovation_n1600", None
-    if coarse["converged"]:
-        ref = _values(d, q, lambda p: P.log_norm_ref(d, p, P.cohort_A(d, p), 1600), extra)
+    la, ea = _try_values(d, q, lambda p: local_reference(d, p, 800, 12.0), extra)
+    lb, eb = _try_values(d, q, lambda p: local_reference(d, p, 1600, 12.0), extra)
+    lc, ec = _try_values(d, q, lambda p: local_reference(d, p, 1600, 16.0), extra)
+    if ea or eb or ec:
+        local = dict(qualified=False, failure=ea or eb or ec)
     else:
-        a = _values(d, q, lambda p: local_reference(d, p, 800, 12.0), extra)
-        b = _values(d, q, lambda p: local_reference(d, p, 1600, 12.0), extra)
-        c = _values(d, q, lambda p: local_reference(d, p, 1600, 16.0), extra)
-        loc = dict(resolution=_converged(a, b), domain=_converged(b, c))
-        if loc["resolution"]["converged"] and loc["domain"]["converged"]:
-            used, ref = "local_mode_n1600_L16", c
-        coarse["local"] = loc
+        local = dict(resolution=_converged(la, lb), domain=_converged(lb, lc))
+        local["qualified"] = local["resolution"]["converged"] and local["domain"]["converged"]
+    fa, xa = _try_values(d, q, lambda p: fixed_reference(d, p, 1600, 12.0), extra)
+    fb, xb = _try_values(d, q, lambda p: fixed_reference(d, p, 3200, 12.0), extra)
+    fc, xc = _try_values(d, q, lambda p: fixed_reference(d, p, 3200, 24.0), extra)
+    if xa or xb or xc:
+        fixed = dict(qualified=False, failure=xa or xb or xc)
+    else:
+        fixed = dict(resolution=_converged(fa, fb), domain=_converged(fb, fc))
+        fixed["qualified"] = fixed["resolution"]["converged"] and fixed["domain"]["converged"]
     res = dict(quadrature_order=int(d["Q"]), h={k: v for k, v in _steps(q).items() if k in _axes(d, extra)},
-               reference=used if ref else "unresolved", reference_convergence=coarse)
-    if ref is None:
-        res["pass"] = None
+               local=local, fixed=fixed)
+    if not local["qualified"]:
+        res.update(reference="unresolved", reason="primary local-mode reference not qualified", **{"pass": None})
         return res
-    res["log_err"] = abs(agh["value"] - ref["value"])
+    if fixed["qualified"]:
+        res["cross_check"] = _converged(lc, fc)
+        if not res["cross_check"]["converged"]:
+            res.update(reference="unresolved", reason="qualified references disagree", **{"pass": None})
+            return res
+    else:
+        res["cross_check"] = "fixed-innovation reference not qualified; not used"
+    res["reference"] = "local_mode_n1600_L16"
+    res["reference_value"] = lc
+    res["log_err"] = abs(agh["value"] - lc["value"])
     for k in agh:
         if k != "value":
-            res[f"d_{k}_err"] = abs(agh[k] - ref[k])
+            res[f"d_{k}_err"] = abs(agh[k] - lc[k])
     res["pass"] = bool(res["log_err"] <= 1e-4 and all(v <= 1e-3 for k, v in res.items() if k.startswith("d_")))
     return res
+
+
+def _gate_job(args):
+    d, q, extra = args
+    return gate_point(d, q, extra)
+
+
+def gate_points(jobs):
+    """gate_point over (d, q, extra) jobs in a fork process pool, preserving order."""
+    import multiprocessing as mp
+    import os
+    n = min(len(jobs), 12, max(1, (os.cpu_count() or 2) - 2))
+    if n <= 1:
+        return [gate_point(*j) for j in jobs]
+    with mp.get_context("fork").Pool(n) as pool:
+        return pool.map(_gate_job, jobs, chunksize=1)
 
 
 def joint_checks(fit_dir, data_file):
@@ -910,8 +995,9 @@ def joint_checks(fit_dir, data_file):
                              + [int(df.kappa_b.abs().idxmax()), int(df.rho.idxmin()), int(df.rho.idxmax())]
                              + [int(i) for i in np.linspace(0, len(df) - 1, 40).astype(int)]))
     states = {i: P.draw_to_params(df.iloc[i], d["N"]) for i in sel}
-    gates = {str(i): dict(sigma=float(q["sigma"]), rho=float(q["rho"]), kappa_b=float(q["kappa_b"]), **gate_point(d, q))
-             for i, q in states.items()}
+    results = gate_points([(d, q, ()) for q in states.values()])
+    gates = {str(i): dict(sigma=float(q["sigma"]), rho=float(q["rho"]), kappa_b=float(q["kappa_b"]), **g)
+             for (i, q), g in zip(states.items(), results)}
     tested = {k: g for k, g in gates.items() if g["pass"] is not None}
     worst = max(tested, key=lambda k: tested[k]["log_err"]) if tested else None
     lower = [dict(chain=k, q001=float(x.sigma.quantile(0.001)), q01=float(x.sigma.quantile(0.01)), min=float(x.sigma.min()),
@@ -925,7 +1011,7 @@ def joint_checks(fit_dir, data_file):
                 max_log_err=max((g["log_err"] for g in tested.values()), default=None),
                 max_derivative_err=max((v for g in tested.values() for k, v in g.items() if k.startswith("d_") and k.endswith("_err")),
                                        default=None),
-                worst_state=worst, reference_convergence_at_worst=(gates[worst]["reference_convergence"] if worst else "not tested"),
+                worst_state=worst, reference_at_worst=({k: gates[worst][k] for k in ("local", "fixed", "cross_check")} if worst else "not tested"),
                 states=gates, sigma_lower_tail=lower)
 
 
@@ -1498,6 +1584,8 @@ def order_preflight():
         log-h0 derivatives added. A failed or unresolved state fails the bank.
     (4) The solver controls at order Q on both datasets: p75 admitted with finite LP/AD, p53 rejected.
     (5) Actual-Stan order binding: Stan's lp(Q) - lp(64) equals the Python normaliser change logN(64) - logN(Q).
+    The normaliser gates use the repaired reference rule (gate_point; Codex 76/2111), and the three stress states
+    that failed under the old rule are compared with Codex's independent expanded-domain integration.
     (6) AD against actual-LP central differences at the captured triads' finite states, on five axes."""
     import pandas as pd
     Q = int(CAND["quadrature_nodes"])
@@ -1552,16 +1640,24 @@ def order_preflight():
             qw = dict({kk: v for kk, v in c.items() if kk != "eps"}, w=[x * sig ** 0.2 for x in c["eps"]])
             triads[f"capture_c{k}_{e['transition']}_{st}"] = qw
             pts[f"capture_c{k}_{e['transition']}_{st}"] = ("P11", qw, ("log_k", "log_h0_1"))
-    gates = {}
-    for nm, (sc, qw, extra) in pts.items():
-        g = gate_point(D[sc], w_to_eps(qw), extra)
-        gates[nm] = dict(dataset=sc, sigma=float(qw["sigma"]), **g)
+    names_pts = list(pts)
+    results = gate_points([(D[pts[nm][0]], w_to_eps(pts[nm][1]), pts[nm][2]) for nm in names_pts])
+    gates = {nm: dict(dataset=pts[nm][0], sigma=float(pts[nm][1]["sigma"]), **g) for nm, g in zip(names_pts, results)}
     bad = [k for k, g in gates.items() if g["pass"] is not True]
     tested = [g for g in gates.values() if g["pass"] is not None]
     bank["points"] = dict(states=len(gates), failed_or_unresolved=bad, max_log_err=max(g["log_err"] for g in tested),
                           max_derivative_err=max(v for g in tested for kk, v in g.items() if kk.startswith("d_")), ok=not bad)
     out["normaliser_bank"] = dict(**bank, ok=all(v["ok"] for v in bank.values()))
     out["normaliser_points"] = gates
+    # The repaired stress cases against Codex's independent expanded-domain integration (Codex 76/2111, item 3).
+    ind = json.loads((HERE.parents[1] / "scratch/q012-rulings-review-codex/reference-agent/results.json").read_text())["states"]
+    cmp = {}
+    for nm in ("grid-s0.001-h10.0-kb-1.5", "grid-s0.001-h10.0-kb0.0", "grid-s0.001-h10.0-kb1.5"):
+        rv = gates[f"stress_{nm}"].get("reference_value")
+        cmp[nm] = (_converged(rv, {k: ind[nm]["refs"]["n1600_L48"][k] for k in rv}) if rv
+                   else dict(converged=False, reason="no qualified primary reference"))
+    out["expanded_domain_comparison"] = dict(source="review-rulings-20261020-codex.tar.gz: reference-agent/results.json, n1600_L48",
+                                             rows=cmp, ok=all(v["converged"] for v in cmp.values()))
     # (4) Solver controls at order Q.
     C = CAND["controls"]
     pdir = HERE.parents[1] / C["probe_dir"]
@@ -1616,7 +1712,8 @@ def order_preflight():
     out["ad_vs_fd_captured"] = dict(rows=fd, max_scaled_error=max(se), threshold=1e-5,
                                     ok=bool(all("rejected" not in r and all("scaled_error" in v for v in r.values()) for r in fd.values())
                                             and max(se) <= 1e-5))
-    out["all_pass"] = all(out[k]["ok"] for k in ("inputs", "reused_binary", "normaliser_bank", "controls", "order_binding", "ad_vs_fd_captured"))
+    out["all_pass"] = all(out[k]["ok"] for k in ("inputs", "reused_binary", "normaliser_bank", "expanded_domain_comparison", "controls",
+                                                 "order_binding", "ad_vs_fd_captured"))
     (HERE / f"order_preflight_{PILOT['active_candidate']}.json").write_text(json.dumps(_clean(out), indent=1, default=float) + "\n")
     print(json.dumps(_clean({k: v for k, v in out.items() if k not in ("normaliser_points",)}), indent=1, default=float)[:6000])
     return out
@@ -1808,13 +1905,17 @@ def selftest():
     scr["csv_settings_mismatch"] = (q(variant("meta", lambda v: (v / f"chain{C}.csv").write_text(
         (v / f"chain{C}.csv").read_text().replace(f"delta = {env['ADAPT_DELTA']}", "delta = 0.9", 1)))), bool)
     scr["build_receipt_other_manifest"] = (q(good, b=dict(bld, manifest_sha256="3" * 64)), bool)
+    if "TERM_BUFFER" in env:  # Codex 76/2111: a wrong or omitted terminal buffer fails qualification
+        tb = lambda f: any("term_buffer" in x for x in f)
+        scr["term_buffer_wrong"] = (q(good, e=dict(env, TERM_BUFFER=50)), tb)
+        scr["term_buffer_omitted"] = (q(good, e={k: v for k, v in env.items() if k != "TERM_BUFFER"}), tb)
 
     def no_hash(v):
         (v / "receipt.txt").write_text("\n".join(ln for ln in (v / "receipt.txt").read_text().splitlines()
                                                  if not ln.startswith("binary_sha256=")) + "\n")
     nb = {k: x for k, x in dict(bld, manifest_sha256=rcx["manifest_sha256"]).items() if k != "binary_sha256"}
     scr["binary_hash_absent_from_both_receipts"] = (q(variant("nohash", no_hash), b=nb), bool)
-    out["screening_refusals"] = {k: dict(failures=r[:3], ok=pred(r)) for k, (r, pred) in scr.items()}
+    out["screening_refusals"] = {k: dict(failures=r[:3], ok=bool(pred(r))) for k, (r, pred) in scr.items()}
     out["screening_refusals"]["ok"] = all(v["ok"] for v in out["screening_refusals"].values())
     # Capture validity on a real trace: P11, fixed step 0.2, no adaptation, 4 warmup + 8 draws (every transition diverges).
     tr = root / "runs" / "TR" / "attempt1"
