@@ -1466,8 +1466,11 @@ Status **under review**, tier 2 (prior-work check on 9 October).
   - Bambach, Knoll & Wang 2004: the Frasnian and end-Triassic losses were mostly
     origination deficits, using Sepkoski genera without sampling
     standardisation.
-  - Alroy 2008 (10.1073/pnas.0802597105), with PBDB three-timer rates, keeps the
-    Frasnian result but reverses the end-Triassic.
+  - Alroy 2008 (10.1073/pnas.0802597105), with PBDB three-timer rates, reverses
+    the end-Triassic ("a legitimate mass extinction"). *Corrected 20 October:*
+    he reports no Frasnian partition. "Keeps the Frasnian result" was an
+    inference, and his 11-Myr bins cannot resolve one; the scout read the text
+    second-hand.
   - Stigall 2010 and 2012 link Late Devonian speciation collapse to invasion.
   - Clapham et al. 2009 (10.1666/08033.1) find an end-Guadalupian origination
     drop with provinciality loss.
@@ -1485,6 +1488,19 @@ Status **under review**, tier 2 (prior-work check on 9 October).
   (Rosenzweig 2001; Myers & Knoll 2001, 10.1073/pnas.091092498). The only
   direct current evidence is speciation reversal in whitefish.
 - **Evidence.** [Round-2 note](../literature/2026-10-09-register-checks-round2.md).
+- **Target-matched prior check (20 October;
+  [note](../literature/2026-10-20-q023-q031-prior-checks.md)). Disposition:
+  develop.**
+  - No all-event, standardised recomputation of Bambach's partition was found.
+  - Event-specific standardised work is patchy:
+    - the end-Guadalupian is origination-driven in marine invertebrates but
+      extinction-driven in Karoo tetrapods;
+    - the end-Triassic shows extinction peaks;
+    - the only standardised Frasnian–Famennian signal is an extinction spike,
+      in a conference abstract.
+  - Next: a design note for a stage-level PBDB recomputation with
+    three-timer and gap-filler rates and boundary-smearing diagnostics.
+    Park if origination at boundaries is too unstable to sign the partition.
 
 ### Q-024 Do ecological early-warning signals work on real Quaternary transitions?
 Status **under review**, tier 2. Posed 9 October; a prior-work check on 10
@@ -2119,6 +2135,20 @@ day found the headline occupied.
     (403).
   - The terrestrial and mammal arm is outside Nätscher's compilation and may be
     the larger gap.
+- **Target-matched prior check (20 October;
+  [note](../literature/2026-10-20-q023-q031-prior-checks.md)). Disposition:
+  develop the narrowed version.**
+  - The published PNAS SI is still unread (403). The bioRxiv SI, the Zenodo
+    deposit and the author's thesis contain no partition and no comparison
+    with the temperature–size rule, so the kill criterion is very probably
+    clear.
+  - Claude's re-run of the deposited regression: the published −0.018 per °C
+    includes 4,544 background rows coded 0 °C. Crisis rows alone (n = 432)
+    give −0.025 (SE 0.0085).
+  - Partitions exist for single events only, and disagree. There is no
+    regression of turnover share on warming; the terrestrial arm is a gap.
+  - Next: a support audit of lineage-resolved series with local ΔT.
+    Park if fewer than eight.
 - **Evidence.** [Round-4 note](../literature/2026-10-10-register-checks-round4.md).
 
 ### Q-032 Have insects had ecological crises that family counts miss?
