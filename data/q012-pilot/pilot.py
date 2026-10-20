@@ -1590,7 +1590,7 @@ def order_preflight():
         ident[nm] = dict(stan_change=lq - l6, normaliser_prediction=pred, abs_error=abs(lq - l6 - pred))
     errs = [v["abs_error"] for v in ident.values() if "abs_error" in v]
     out["order_binding"] = dict(points=len(ident), checked=len(errs), rejected=[k for k, v in ident.items() if "rejected" in v],
-                                max_abs_error=max(errs), ok=len(errs) == len(ident) and max(errs) <= 1e-9)
+                                max_abs_error=max(errs), ok=bool(len(errs) == len(ident) and max(errs) <= 1e-9))
     # (6) AD against actual-LP central differences at the captured triads (finite states), five axes.
     names = param_names(D["P11"]["N"])
     fd = {}
@@ -1614,8 +1614,8 @@ def order_preflight():
         fd[nm] = row
     se = [v["scaled_error"] for r in fd.values() for v in r.values() if isinstance(v, dict) and "scaled_error" in v]
     out["ad_vs_fd_captured"] = dict(rows=fd, max_scaled_error=max(se), threshold=1e-5,
-                                    ok=all("rejected" not in r and all("scaled_error" in v for v in r.values()) for r in fd.values())
-                                    and max(se) <= 1e-5)
+                                    ok=bool(all("rejected" not in r and all("scaled_error" in v for v in r.values()) for r in fd.values())
+                                            and max(se) <= 1e-5))
     out["all_pass"] = all(out[k]["ok"] for k in ("inputs", "reused_binary", "normaliser_bank", "controls", "order_binding", "ad_vs_fd_captured"))
     (HERE / f"order_preflight_{PILOT['active_candidate']}.json").write_text(json.dumps(_clean(out), indent=1, default=float) + "\n")
     print(json.dumps(_clean({k: v for k, v in out.items() if k not in ("normaliser_points",)}), indent=1, default=float)[:6000])
