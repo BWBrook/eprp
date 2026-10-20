@@ -210,3 +210,81 @@ counted in stages (`recency.tsv`):
 persistent susceptibility and transfer between events add nothing beyond
 Monarrez et al., Smits & Finnegan and Tikhonov et al. **New, from the
 support table:** park also if the detection-only null cannot be passed.
+
+## Amendments accepted (Codex 76/2112; `ideas/2026-10-20-q038-and-prior-checks-review-codex.md`)
+
+Codex replayed all six support tables byte for byte. It accepts the support
+evidence, the genus-ID primary unit, the separate within-stage entrant
+stratum, and the recency and missing-range distinctions. **This draft is
+not accepted for a fit.** Claude accepts every amendment below; none is
+disputed. The tables above stay as the reviewed snapshot.
+
+1. **Withdrawn: the detection-only null as a zero-gain park condition.**
+   It conflicts with scoring *observed* last appearances.
+   - Codex's two-genus example: equal biological loss of 0.2, survivor
+     detection 0.2 and 0.8. That gives observed loss 0.84 and 0.36, so
+     correct prediction legitimately gains 0.375 nats with no biological
+     selectivity.
+   - The next contract separates two assessments: prediction of fossil
+     observations, and recovery of latent biological victims.
+   - Synthetic validation scores true simulated deaths, with a biological
+     positive control.
+   - Empirical death, D and membership uncertainty enter the likelihood.
+     They are not treated as known labels.
+   - The biological set model is Fisher's conditional:
+     P(S | D, η) ∝ exp(Σ_{i∈S} η_i).
+2. **The incoming cohort (fad < k ≤ lad) is retrospective.** It uses
+   later records to establish membership.
+   - Genera that qualify only through a later record: 29 of 65 Late
+     Devonian Bivalvia, 18 of 63 end-Triassic Rhynchonellata, 50 of 269
+     K–Pg Bivalvia.
+   - The next contract chooses between two targets: a labelled
+     *retrospective conditional* target, or a *prefix-only forecast* with
+     latent current membership. Scaling uses training data only.
+3. **Fold masking.**
+   - Forward chaining (historical forecasting) and leave-one-event-out
+     (retrospective transport) answer different questions.
+   - Both need fold-specific masking of histories, traits,
+     standardisation and smoothing. Later records of a held-out genus can
+     leak its fate.
+   - Known-clade and new-clade targets are kept separate.
+   - There are five events, not ten.
+4. **Taxonomy and attributes.**
+   - Multiple deposited sizes exist for 140 Bivalvia and 9 Rhynchonellata
+     genus IDs, and conflicting order or family labels for 108 and 12
+     Bivalvia IDs. Taking the first non-missing value is not a policy:
+     export the ambiguities and freeze an aggregation rule.
+   - *Corrected:* "unit sensitivity is small" was wrong. At the K–Pg the
+     authors' units give an incoming Bivalvia N/D of 313/87, against
+     269/78 after merging.
+   - The 3,424 history matches validate name-aggregated occupancy, not the
+     merged taxonomy.
+5. **Body size stays out.**
+   - A type species' range does not date the specimen supplying the
+     maximum biovolume, so the "rescue via type species" route is
+     withdrawn. The sign of the leakage is not predetermined.
+   - The archive is already selected for size-annotated, stage-resolved
+     genera. Claims are scoped to this archive unless its
+     representativeness is shown.
+6. **Smaller repairs.**
+   - The age proxy is first-record base minus evaluation age.
+   - Located occurrence rows are distinguished from distinct coordinate
+     pairs.
+   - Recency is kept in Myr as well as stages.
+   - The 56–58% share concerns *observed* losses only.
+   - References and collections need a sampling-opportunity
+     interpretation before they serve as detection replicates.
+   - *Corrected:* the informative event cases are **six**: the end-Permian
+     for both classes, Late Devonian Rhynchonellata, end-Triassic
+     Rhynchonellata (63 incoming, 33 losses) and Bivalvia (161, 29), and
+     K–Pg Bivalvia. The draft said "four", listed five and omitted
+     end-Triassic Rhynchonellata without reason.
+
+**Next deliverable (Claude):**
+- one amended target, observation and fold contract;
+- deterministic prefix-invariance and detection-null examples;
+- an explicit transition and exposure likelihood;
+- an export of attribute ambiguities.
+
+These repairs decide whether a small synthetic recovery probe is earned.
+No empirical fit is commissioned.

@@ -961,6 +961,11 @@ Status **under review**, tier 2 (9 October; Codex's objection accepted).
   - Next: an audit of species-specific calcification-temperature series
     across the PETM, ETM2 or MECO, with independent ambient temperature.
     Park if too few lineage × site series.
+  - **Amended (Codex 76/2112, accepted):** the estimand is an *occupied
+    calcification-temperature response beyond a habitat and observation
+    null*, not thermal limits. Jonkers & Kučera is about 40% attenuation.
+    The response window ends before a survival landmark, with a restricted
+    cohort.
 
 ### Q-016 Do range-based risk criteria predict extinction over geological time?
 Status **under review**, tier 2 (raised from 3 on 14 October for scientific
@@ -1104,6 +1109,11 @@ mature, and the bridge between them appears open.
     processes, not independent ground truth.
   - Next: an analytic note with failure simulations, then a support audit
     of one dual-record island bird system.
+  - **Amended (Codex 76/2112, accepted):** the identity holds as an
+    eventual limit only; the finite window gives μ/(μ+d)·[1 − e^{−(μ+d)T}].
+    The two-independent-lists calibration rule is withdrawn: heterogeneity
+    is unidentified. Duncan et al. 2013 (primary PDF verified) occupies the
+    generic bridge; the specific estimator equivalence remains open.
 - **Evidence.** [Round-7 note](../literature/2026-10-10-register-checks-round7.md).
 
 ### Q-018 Do plants and terrestrial biotas have mass extinctions in the same sense?
@@ -1501,6 +1511,9 @@ Status **under review**, tier 2 (prior-work check on 9 October).
   - Next: a design note for a stage-level PBDB recomputation with
     three-timer and gap-filler rates and boundary-smearing diagnostics.
     Park if origination at boundaries is too unstable to sign the partition.
+  - **Amended (Codex 76/2112, accepted):** a matched Frasnian/end-Triassic
+    design comes first. It fixes an excess-log-depletion scale and
+    predefines baselines, boundaries and lags before extraction.
 
 ### Q-024 Do ecological early-warning signals work on real Quaternary transitions?
 Status **under review**, tier 2. Posed 9 October; a prior-work check on 10
@@ -2149,6 +2162,12 @@ day found the headline occupied.
     regression of turnover share on warming; the terrestrial arm is a gap.
   - Next: a support audit of lineage-resolved series with local ΔT.
     Park if fewer than eight.
+  - **Amended (Codex 76/2112, accepted):**
+    - separate the ectotherm temperature–size-rule and mammal arms; the
+      "tenfold" equid comparison is withdrawn;
+    - four warming values are shared by six events;
+    - the eight-series gate is replaced by an
+      event/lineage/site/temperature-uncertainty support table.
 - **Evidence.** [Round-4 note](../literature/2026-10-10-register-checks-round4.md).
 
 ### Q-032 Have insects had ecological crises that family counts miss?
@@ -2647,6 +2666,16 @@ It is a candidate check in the next tranche.
     - body size is sensitivity-only, because survivors' specimens may
       postdate the event (Lilliput leakage).
   - A synthetic detection-only null is a new park condition.
+  - **Amended (Codex 76/2112, accepted):**
+    - the detection-only zero-gain park condition is withdrawn: it
+      conflicts with scoring observed losses;
+    - observed-history prediction is separated from biological-victim
+      recovery;
+    - the incoming cohort is retrospective; the choice is between a
+      retrospective target and a prefix-only forecast;
+    - fold masking, an attribute-aggregation policy and size exclusion
+      until specimen provenance is dated.
+    - Not yet accepted for a fit. Next: an amended contract.
   - Code is on Zenodo (10.5281/zenodo.7816408, MIT; R and RMark).
 - **Kill criterion.**
   - Park if joint observation modelling, persistent susceptibility and transfer
