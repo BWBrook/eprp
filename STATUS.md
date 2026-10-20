@@ -116,7 +116,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
 | Q-012/D1 support and identification | Codex: two rulings complete; Claude: accepted package/preflight/dispatch owner | [20 October rulings](ideas/2026-10-20-q012-reference-and-adaptation-rulings-codex.md) approve a prospectively repaired reference (resolution and domain checks), full 162-state replay, and term_buffer=500 within unchanged 2,000 warmup, Q80/.999, four chains x 6,000 retained. Mandatory new cluster preflight precedes the one conditional six-hour P11. Maximum remains 28.67 core-hours within 32.62 remaining. No dependency on Q-016; no extra approval of a clean implementation. P06 and ten held, Codex reviews outcome |
-| Restarted checkpoint queue and ranking | Claude: Q-038 predictor contract; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Codex accepts the queue; these new Codex checks are not yet started. Keep scientific consequence separate from execution readiness and the value of the next discriminating check. Framework notepad remains Claude-owned; Codex replies on the board |
+| Restarted checkpoint queue and ranking | Claude: Q-038 amendment and Q-016; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Codex's [backlog review](ideas/2026-10-20-q038-and-prior-checks-review-codex.md) is complete; its separate queued checks are not yet started. Claude's Q-015/017/023/031 source checks retain narrowed analytic/support tasks with material amendments; no new empirical fits or primary promotion. Keep consequence separate from readiness and next-check value. Framework notepad remains Claude-owned |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -129,7 +129,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferral lifted by Barry (76/1515); deposited-design audit below |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
 | Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Initial allocation accepted (76/1514). Codex's [Q-021 prediction/calibration table](literature/2026-10-11-q021-predictions-and-calibration.md) and [Q-027 support audit](data/q027-support-audit/README.md) complete. Claude's Q-027 screen reproduced but its power-design inference challenged; Claude accepted (reply 2), fixed the era, unknown-country and Namibia bugs (k10 now 26/95), and withdrew the warm-stage inference. Claude's reply 2 challenges Q-021 timing and proposes Li cross-prediction; Codex's [response](ideas/2026-10-11-phase2-review-preparation-codex.md) accepts Li as a candidate constraint but requires common proxy mappings and matched assumptions. No status/tier changes or integrated engine |
-| Q-038 data access and flag audit | Claude contract; Codex independent check | Barry supplied Dryad data and lifted deferral. [Design audit](data/q038-flag-audit/README.md) confirms shifted flags under historical RMark without fitting. Claude's [contract](data/q038-monarrez-contract/README.md) and register entry reconciled (reply 2): published-coefficient provenance unresolved; subgenera are nested units, not duplicate observations; zero range is ambiguous. Next gate: a prospective predictor contract. Claude has not sent it [Detail withheld pending disclosure to the data custodian.] |
+| Q-038 data access, flag audit and predictor contract | Codex review complete; Claude amendment next | [Review](ideas/2026-10-20-q038-and-prior-checks-review-codex.md) reproduces all six [predictor support tables](data/q038-predictor-contract/README.md) exactly. Contract needs observed-versus-biological outcome, prefix-only cohort/fold rules, taxonomy mapping and specimen-size provenance amendments before a fit. Exact detection-only counterexample refutes the draft's zero observed-score gate. Earlier [flag audit](data/q038-flag-audit/README.md) remains valid; published-coefficient provenance unresolved. [Detail withheld pending disclosure to the data custodian.] |
 | Q-044 joint-support contract | Claude | Ceiling audit and distance-screen correction accepted in reply 4. Biological saturation and a general distance response are not shown. Two Neogene pairs supply all within-continent species sharing; both group medians are zero. Next: endpoint identity/age/extent support and an explicit observation null; unallocated |
 | External-review response and next contracts | Codex / Claude | [Codex adjudication](ideas/2026-10-11-external-review-response-codex.md) accepts F-01–F-05 at their stated scope, repairs Q-008/Q-009 gates, and adds a Q-006 practical precedent. [Q-021 contract](literature/2026-10-11-q021-lithium-observation-contract.md) complete at the algebra/source stage; trajectories, conversions and empirical discrimination unresolved. Claude's proposed Q-042 cohort/window crosswalk accepted in 76/1528. Next responder Claude; Q-006 information table follows these two tasks |
 | Reply 7: E1 conjecture and Li formation timing | Codex | Complete: [reply 7](ideas/2026-10-12-phase2-codex-reply-7.md). Observable first/same-species pair moments identify all rates under E1, including edge bins; Claude to challenge and reconcile owned Q-006 files. Q-021 formation-first order accepted, gate unpassed; Taylor 2026 adds a closer prior, carbonate candidates and a spatial-heterogeneity rival. No fit or adapter |
@@ -930,6 +930,18 @@ next phase of ideation whilst those final checks are done."
   conditional run proceeds without waiting for Q-016. Other cases remain
   held and no new resource ceiling or repeated tuning is authorised.
 
+- **Q-038 and four prior checks reviewed, 20 October:** the
+  [backlog review](ideas/2026-10-20-q038-and-prior-checks-review-codex.md)
+  accepts Q-038's reproduced support tables but requires target, cohort,
+  split and attribute amendments. Q-015's shell-response target does not
+  identify thermal limits; Q-017 needs finite-window likelihood matching
+  and stronger calibration information than two incomplete lists; Q-023
+  needs a fixed excess-depletion counterfactual; Q-031 needs matched
+  ectotherm/mammal comparators and event-level support. Independent reviews,
+  exact counterexamples and a count-only replay are archived. Claude next
+  responds and integrates accepted changes; sequence narrower tasks within
+  the two-task limit. No primary investigation or empirical fit selected.
+
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
 diversity is occupied; a specific causal support/design contrast remains worth
@@ -940,9 +952,9 @@ D3/D8 after the cross-critique; no modelling is allocated.
   and the disposition is develop. Its support/identification design is now
   delivered and reviewed above; shared exposure remains the main confound,
   with event representation and conditional selection also requiring repair.
-- Claude's next sweep item: Q-015, Q-023 or Q-031 (Q-017 is moved behind
-  them under the deep-time weighting). It runs alongside Claude's blue-sky
-  ideation.
+- Claude's Q-015, Q-017, Q-023 and Q-031 prior checks are now complete and
+  reviewed above. Their narrowed follow-ups retain the deep-time weighting;
+  the review does not start four new support audits simultaneously.
 
 Claude's Q-006 E2/prior map is complete at the stated source/inference depth;
 no further proof or mixture analysis is allocated this round.
@@ -951,10 +963,10 @@ The earlier Q-050 and Q-021 bounded support checks are complete. Those
 checks did not commission a piecewise likelihood, empirical fit or model
 adapter. Q-012's separately authorised prototype is recorded above.
 
-Proposed but not allocated: the estimator-specific Q-027 support contract,
-Q-038's prospective predictor contract, and the Q-044 vintage check. Keep two
-orientation tasks at most. Expansion stays paused and no primary
-investigation is selected.
+Proposed but not allocated: the estimator-specific Q-027 support contract
+and the Q-044 vintage check. Q-038's draft is reviewed and awaits Claude's
+amendment. Keep two orientation tasks at most. Expansion stays paused and
+no primary investigation is selected.
 
 ## Shared checkout and decisions
 
