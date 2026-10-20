@@ -11,10 +11,10 @@
   "exit": 0,
   "status": "complete",
   "maxrss_kb": [
-   "17228",
-   "17160",
-   "17164",
-   "17092"
+   "17148",
+   "17096",
+   "17032",
+   "17116"
   ],
   "traces": [
    "summary",
@@ -116,7 +116,7 @@
    "failures": [
     "receipt scenario is 'P12', expected 'FX'",
     "receipt status is 'failed', expected 'complete'",
-    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '467309291ac0fb498ab053fa54f137c35f4fff98ed150c77e9cedfd11bae1715'"
+    "receipt manifest_sha256 is '2222222222222222222222222222222222222222222222222222222222222222', expected '87f30aac7e336cfaa41ffbc467a3edc62a02ac72728e1ba77910020d0955d91c'"
    ],
    "ok": true
   },
@@ -140,7 +140,7 @@
   },
   "fewer_draws_than_declared": {
    "failures": [
-    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64'",
+    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64; term_buffer 500', expected 'chains 4; warmup 10; sampling 6; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64; term_buffer 500'",
     "chain 1 log: line 3: header line '    num_samples = 5'; expected '    num_samples = 6'",
     "chain 1 log: line 51: iteration marker 1/15 (Warmup); expected 1/16 (Warmup)"
    ],
@@ -167,6 +167,22 @@
   "build_receipt_other_manifest": {
    "failures": [
     "build receipt is for a different payload manifest"
+   ],
+   "ok": true
+  },
+  "term_buffer_wrong": {
+   "failures": [
+    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64; term_buffer 500', expected 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64; term_buffer 50'",
+    "chain 1 log: line 14: header line '      term_buffer = 500'; expected '      term_buffer = 50 (Default)'",
+    "chain 1 CSV term_buffer is '500', expected 50"
+   ],
+   "ok": true
+  },
+  "term_buffer_omitted": {
+   "failures": [
+    "receipt settings is 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64; term_buffer 500', expected 'chains 4; warmup 10; sampling 5; adapt_delta 0.999; max_depth 12; stepsize 0.01; seed 77017; fit_seconds 600; refresh 1; log combined; trace q012-nuts-trace-1 caps 16/64'",
+    "chain 1 log: line 14: header line '      term_buffer = 500'; expected '      term_buffer = 50 (Default)'",
+    "chain 1 CSV term_buffer is '500', expected 50"
    ],
    "ok": true
   },
@@ -376,7 +392,7 @@
   },
   "header_truncated": {
    "failures": [
-    "line 42: header line 'Gradient evaluation took 0.023193 seconds'; expected 'num_threads = 1 (Default)'"
+    "line 42: header line 'Gradient evaluation took 0.013468 seconds'; expected 'num_threads = 1 (Default)'"
    ],
    "rejections": [],
    "ok": true
