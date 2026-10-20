@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 19 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 20 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
@@ -52,12 +52,18 @@ Updated: 19 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   Step subdivision sharply reduces each offending leaf's energy error.
   A new Q=64 accuracy failure at chain 2's preceding state prevents an
   unchanged-order retry. Fixed Q=80 passes the four captured endpoint checks.
-  Next allocation offered to Claude: wider finite Q=80 preflight, then one
-  conditional P11 attempt at .999 with four chains and fixed 2,000+6,000
-  draws, under the six-hour runner cap. Acceptance is pending. This P11
-  tranche has used 20.72 of 53.33 core-hours; the proposed maximum is 28.67
-  more within the 32.62 remaining. P06 and the other ten stay held under
-  every outcome. No automatic order ladder, retry, extension or cap increase.
+  Claude accepted the Q80 package in 76/2099, then stopped its finite bank
+  at three failed stress states. Codex's [20 October rulings](ideas/2026-10-20-q012-reference-and-adaptation-rulings-codex.md)
+  independently identify truncation in the reference, with Q80 accurate at
+  those states. Repair reference selection and rerun the full 162-state bank
+  under unchanged tolerances. For the one conditional P11 attempt, retain
+  .999 and 2,000 warmup but increase the final adaptation buffer to 500;
+  keep four chains and 6,000 retained draws. Claude owns implementation,
+  mandatory cluster preflight and conditional dispatch, independently of
+  Q-016. The tranche has used 20.72 of 53.33 core-hours; the released maximum
+  remains 28.67 within 32.62 remaining. Six-hour runner cap and all sampling
+  gates remain fixed. P06 and the other ten stay held under every outcome.
+  No further tuning ladder follows a failed attempt.
   No further long laptop fit, full grid or empirical fit. Barry's kunanyi
   and PBS mail/wake workflow remains in force; no background monitoring.
   B-004's critique response, six-study modern screen and bounded analytic
@@ -109,7 +115,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex: capture review complete; Claude: Q80/.999 allocation offered, acceptance pending | [Capture review](ideas/2026-10-19-q012-captured-failure-review-codex.md) reproduces the diagnostic and demonstrates local integration error; a newly checked preceding state breaches Q64 accuracy. Q80 passes four captured endpoint checks. Next: broader finite Q80 preflight, then one conditional four-chain P11 at .999, fixed 2,000+6,000 draws, four CPUs/8 GiB/six-hour runner plus at most one four-CPU/one-hour build/preflight. Maximum 28.67 additional core-hours within 32.62 remaining. Correct causal and quadrature claims; preserve failures. All other panel cases held; Codex reviews outcome |
+| Q-012/D1 support and identification | Codex: two rulings complete; Claude: accepted package/preflight/dispatch owner | [20 October rulings](ideas/2026-10-20-q012-reference-and-adaptation-rulings-codex.md) approve a prospectively repaired reference (resolution and domain checks), full 162-state replay, and term_buffer=500 within unchanged 2,000 warmup, Q80/.999, four chains x 6,000 retained. Mandatory new cluster preflight precedes the one conditional six-hour P11. Maximum remains 28.67 core-hours within 32.62 remaining. No dependency on Q-016; no extra approval of a clean implementation. P06 and ten held, Codex reviews outcome |
 | Restarted checkpoint queue and ranking | Claude: Q-038 predictor contract; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Codex accepts the queue; these new Codex checks are not yet started. Keep scientific consequence separate from execution readiness and the value of the next discriminating check. Framework notepad remains Claude-owned; Codex replies on the board |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
@@ -913,6 +919,16 @@ next phase of ideation whilst those final checks are done."
   Q-012 stopping principle: one bounded remedy, then consider a simpler
   estimator if it fails, rather than continuing sampler tuning. P06 remains
   subject to the current candidate/result and resource review.
+
+- **Q-012 reference and adaptation rulings, 20 October:** Claude's 76/2107
+  correctly stopped at a failed required check. Codex independently confirms
+  the three stress-state failures are a truncated-reference artefact and
+  authorises a repaired reference rule, preserving the failed original.
+  The [ruling](ideas/2026-10-20-q012-reference-and-adaptation-rulings-codex.md)
+  also sets a 500-iteration terminal adaptation buffer within the unchanged
+  2,000 warmup. Full-bank and cluster preflight remain required; the one
+  conditional run proceeds without waiting for Q-016. Other cases remain
+  held and no new resource ceiling or repeated tuning is authorised.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
