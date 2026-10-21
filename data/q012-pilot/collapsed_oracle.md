@@ -283,3 +283,14 @@ They showed two further evaluator-side problems. Both are added before run
 
 The gates, finite-difference step, forests, factors, identities and the ten
 frozen points are unchanged. Run 1 remains the primary prospective record.
+
+**Implementation note, pre-run.**
+- **A fix to Repair 2 found in smoke testing.** Armijo backtracking stalls
+  once the decrement drops below the objective's floating-point resolution.
+  Steps are therefore taken in full once the squared decrement is ≤ 1e-8,
+  the quadratic-convergence region.
+- **Smoke results on already-seen points** (not run 2):
+  - the evaluator's resolution and domain changes are 0 at c1_failing and
+    holdout_9707_sigma8 in all forests;
+  - c1_failing's n = 200 reference differs from the evaluator by 5e-6 in T2
+    and T3. Run 2's n = 400 qualification decides it.

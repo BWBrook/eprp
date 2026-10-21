@@ -93,11 +93,48 @@ def d2logF(cf, x, s2h, kb, kap):
     return -a1 * np.exp(lz) - ab * kb * kb * np.exp(kb * lz) - ak * kap * kap * np.exp(kap * lz)
 
 
-def simpson(n, L):
-    u = np.linspace(-L, L, n + 1)
+def simpson_ab(n, a, b):
+    """Simpson nodes on [a, b] (a and b may be arrays; nodes along a new last axis) and their log weights."""
+    t = np.linspace(0.0, 1.0, n + 1)
     w = np.ones(n + 1)
     w[1:-1:2], w[2:-1:2] = 4, 2
-    return u, np.log(w * 2 * L / (3 * n))
+    a, b = np.asarray(a, float), np.asarray(b, float)
+    X = a[..., None] + (b - a)[..., None] * t
+    return X, np.log(w) + np.log((b - a) / (3 * n))[..., None]
+
+
+def sinh_simpson(n, c, sc, lo, hi):
+    """Repair 1b: Simpson in u with x = c + sc sinh(u) over [asinh((lo - c)/sc), asinh((hi - c)/sc)]; nodes dense near c,
+    sparse in the tails. Arrays broadcast over leading axes; returns nodes and log weights including the Jacobian."""
+    c, sc = np.asarray(c, float), np.asarray(sc, float)
+    ua, ub = np.arcsinh((np.asarray(lo, float) - c) / sc), np.arcsinh((np.asarray(hi, float) - c) / sc)
+    U, lw = simpson_ab(n, ua, ub)
+    return c[..., None] + sc[..., None] * np.sinh(U), lw + np.log(sc[..., None] * np.cosh(U))
+
+
+def level_bounds(h, m, s, delta):
+    """Repair 1: [lo, hi] where the concave h falls delta nats below h(m) on each side, found by doubling steps out from
+    m (initial step s) and 80 bisections; vectorised over m and s. Non-finite h counts as below the level."""
+    m, s = np.asarray(m, float), np.asarray(s, float)
+    level = h(m) - delta
+    bounds = []
+    for sgn in (-1.0, 1.0):
+        step, inside = s.copy(), m.copy()
+        for _ in range(200):
+            below = ~(h(m + sgn * step) >= level)
+            if np.all(below):
+                break
+            inside = np.where(below, inside, m + sgn * step)
+            step = np.where(below, step, 2 * step)
+        else:
+            raise Unresolved("level set not bracketed in 200 doublings")
+        a, b = inside, m + sgn * step
+        for _ in range(80):
+            mid = 0.5 * (a + b)
+            below = ~(h(mid) >= level)
+            b, a = np.where(below, mid, b), np.where(below, a, mid)
+        bounds.append(b)
+    return bounds[0], bounds[1]
 
 
 def lse(a, axis=None):
@@ -129,6 +166,7 @@ def joint_mode(par, cfs, sig, rho, kb, kap):
     s2h = 0.5 * sig * sig
     Lam = forest_precision(par, sig, rho)
     x = np.zeros(len(par))
+    obj = lambda z: -0.5 * float(z @ Lam @ z) + sum(float(logF(c, zi, s2h, kb, kap)) for c, zi in zip(cfs, z))
     for _ in range(200):
         g = -Lam @ x + np.array([dlogF(c, xi, s2h, kb, kap) for c, xi in zip(cfs, x)])
         H = Lam - np.diag([d2logF(c, xi, s2h, kb, kap) for c, xi in zip(cfs, x)])
@@ -141,9 +179,18 @@ def joint_mode(par, cfs, sig, rho, kb, kap):
         dec2 = float(g @ dl)
         if not (math.isfinite(dec2) and np.all(np.isfinite(dl))) or dec2 < 0:
             raise Unresolved("invalid joint Newton step or decrement")
-        x = x + dl
         if np.max(np.abs(dl)) < 1e-14 or dec2 <= 1e-20:
+            x = x + dl
             break
+        t, f0 = 1.0, obj(x)
+        for _ in range(60):                     # Repair 2: Armijo backtracking, full steps once dec2 <= 1e-8
+            f1 = obj(x + t * dl)
+            if dec2 <= 1e-8 or (math.isfinite(f1) and f1 >= f0 + 1e-4 * t * dec2):
+                break
+            t *= 0.5
+        else:
+            raise Unresolved("joint line search failed")
+        x = x + t * dl
     else:
         raise Unresolved("joint mode not converged in 200 iterations")
     H = Lam - np.diag([d2logF(c, xi, s2h, kb, kap) for c, xi in zip(cfs, x)])
@@ -154,9 +201,10 @@ def joint_mode(par, cfs, sig, rho, kb, kap):
     return x, np.sqrt(np.diag(np.linalg.inv(H)))
 
 
-def leaf_message(cf, xp, sig, rho, kb, kap, n, L):
-    """log of integral K(x | xp) F(x) dx for each parent point, on conditional mode-centred grids."""
+def leaf_message(cf, xp, sig, rho, kb, kap, n, delta):
+    """log of integral K(x | xp) F(x) dx for each parent point, on conditional level-set grids (Repair 1)."""
     s2h, v = 0.5 * sig * sig, sig * sig * (1 - rho * rho)
+    hobj = lambda z: -(z - rho * xp) ** 2 / (2 * v) + logF(cf, z, s2h, kb, kap)
     x = rho * xp
     for _ in range(200):
         g = -(x - rho * xp) / v + dlogF(cf, x, s2h, kb, kap)
@@ -165,19 +213,32 @@ def leaf_message(cf, xp, sig, rho, kb, kap, n, L):
             raise Unresolved("invalid conditional curvature")
         step = -g / h2
         dec2 = -g * g / h2
-        x = x + step
-        if np.all((np.abs(step) < 1e-14) | (dec2 <= 1e-20)):
+        done = (np.abs(step) < 1e-14) | (dec2 <= 1e-20)
+        t, f0 = np.ones_like(x), hobj(x)
+        for _ in range(60):                     # Repair 2: per-element Armijo backtracking
+            f1 = hobj(x + t * step)
+            ok = done | (dec2 <= 1e-8) | (np.isfinite(f1) & (f1 >= f0 + 1e-4 * t * dec2))
+            if np.all(ok):
+                break
+            t = np.where(ok, t, 0.5 * t)
+        else:
+            raise Unresolved("conditional line search failed")
+        x = x + np.where(done, 1.0, t) * step
+        if np.all(done):
             break
     else:
         raise Unresolved("conditional mode not converged in 200 iterations")
     sc = 1 / np.sqrt(-(-1 / v + d2logF(cf, x, s2h, kb, kap)))
-    u, lw = simpson(n, L)
-    X = x[:, None] + sc[:, None] * u[None, :]
-    h = -(X - rho * xp[:, None]) ** 2 / (2 * v) - 0.5 * (LOG2PI + math.log(v)) + logF(cf, X, s2h, kb, kap)
-    return np.log(sc) + lse(lw[None, :] + h, axis=1)
+
+    def hc(X):
+        c = xp if X.ndim == 1 else xp[:, None]
+        return -(X - rho * c) ** 2 / (2 * v) - 0.5 * (LOG2PI + math.log(v)) + logF(cf, X, s2h, kb, kap)
+    lo, hi = level_bounds(hc, x, sc, delta)
+    X, lw = sinh_simpson(n, x, sc, lo, hi)
+    return lse(lw + hc(X), axis=1)
 
 
-def evaluator(p, forest, mode="full", n_node=200, n_cond=200, L=12.0):
+def evaluator(p, forest, mode="full", n_node=200, n_cond=200, delta=50.0):
     nodes = FORESTS[forest]
     par = [pa for _, pa in nodes]
     if any(pa is not None and par[pa] is not None for pa in par):
@@ -185,13 +246,17 @@ def evaluator(p, forest, mode="full", n_node=200, n_cond=200, L=12.0):
     cfs = coefs(p, [lin for lin, _ in nodes], COHORT[forest], mode)
     sig, rho, kb, kap = p["sigma"], p["rho"], p["kappa_b"], p["kappa"]
     m, s = joint_mode(par, cfs, sig, rho, kb, kap)
-    u, lw = simpson(n_node, L)
-    xr = m[0] + s[0] * u
     s2h = 0.5 * sig * sig
-    tot = -xr ** 2 / (2 * sig ** 2) - math.log(sig) - 0.5 * LOG2PI + logF(cfs[0], xr, s2h, kb, kap)
-    for j in range(1, len(nodes)):
-        tot = tot + leaf_message(cfs[j], xr, sig, rho, kb, kap, n_cond, L)
-    return math.log(s[0]) + float(lse(lw + tot))
+
+    def hroot(x):
+        x = np.atleast_1d(np.asarray(x, float))
+        tot = -x ** 2 / (2 * sig ** 2) - math.log(sig) - 0.5 * LOG2PI + logF(cfs[0], x, s2h, kb, kap)
+        for j in range(1, len(nodes)):
+            tot = tot + leaf_message(cfs[j], x, sig, rho, kb, kap, n_cond, delta)
+        return tot
+    lo, hi = level_bounds(hroot, np.array([m[0]]), np.array([s[0]]), delta)
+    X, lw = sinh_simpson(n_node, m[0], s[0], lo[0], hi[0])
+    return float(lse(lw + hroot(X)))
 
 
 # ---------------------------------------------------------------- reference (independent)
@@ -209,7 +274,9 @@ def e_logint(E, p, forest, cfs):
     return out
 
 
-def ref_box(p, forest, mode):
+def ref_box(p, forest, mode, delta):
+    """Repair 1: per-axis Delta-level sets of the joint log integrand's axis profiles through its mode, in innovation
+    coordinates; fixed at the base theta during differencing."""
     cfs = coefs(p, [lin for lin, _ in FORESTS[forest]], COHORT[forest], mode)
     d = len(FORESTS[forest])
     f = lambda e: -float(e_logint(np.asarray(e)[None, :], p, forest, cfs)[0])
@@ -226,28 +293,31 @@ def ref_box(p, forest, mode):
         raise Unresolved("reference box: singular numerical Hessian")
     if not np.all(np.isfinite(sd)):
         raise Unresolved("reference box: non-finite scales")
-    return mu, sd
+    lo, hi = np.zeros(d), np.zeros(d)
+    for a in range(d):
+        prof = lambda T, a=a: e_logint(mu[None, :] + np.outer(np.atleast_1d(T), np.eye(d)[a]), p, forest, cfs)
+        l, h = level_bounds(prof, np.array([0.0]), np.array([sd[a]]), delta)
+        lo[a], hi[a] = mu[a] + l[0], mu[a] + h[0]
+    return mu, sd, lo, hi
 
 
-def reference(p, forest, box, mode="full", n=200, L=10.0):
+def reference(p, forest, box, mode="full", n=200):
     cfs = coefs(p, [lin for lin, _ in FORESTS[forest]], COHORT[forest], mode)
-    mu, sd = box
-    u, lw = simpson(n, L)
+    mu, sd, lo, hi = box
     d = len(FORESTS[forest])
-    axes = [mu[i] + sd[i] * u for i in range(d)]
-    jac = float(np.sum(np.log(sd)))
+    ax = [sinh_simpson(n, mu[i], sd[i], lo[i], hi[i]) for i in range(d)]
     if d == 1:
-        return jac + float(lse(lw + e_logint(axes[0][:, None], p, forest, cfs)))
+        return float(lse(ax[0][1] + e_logint(ax[0][0][:, None], p, forest, cfs)))
     if d == 2:
-        E = np.stack(np.meshgrid(axes[0], axes[1], indexing="ij"), axis=-1)
-        return jac + float(lse(lw[:, None] + lw[None, :] + e_logint(E, p, forest, cfs)))
+        E = np.stack(np.meshgrid(ax[0][0], ax[1][0], indexing="ij"), axis=-1)
+        return float(lse(ax[0][1][:, None] + ax[1][1][None, :] + e_logint(E, p, forest, cfs)))
     parts = []
-    E12 = np.stack(np.meshgrid(axes[1], axes[2], indexing="ij"), axis=-1)
-    W12 = lw[:, None] + lw[None, :]
-    for a, la in zip(axes[0], lw):
+    E12 = np.stack(np.meshgrid(ax[1][0], ax[2][0], indexing="ij"), axis=-1)
+    W12 = ax[1][1][:, None] + ax[2][1][None, :]
+    for a, la in zip(ax[0][0], ax[0][1]):
         E = np.concatenate([np.full(E12.shape[:2] + (1,), a), E12], axis=-1)
         parts.append(la + float(lse(W12 + e_logint(E, p, forest, cfs))))
-    return jac + float(lse(np.array(parts)))
+    return float(lse(np.array(parts)))
 
 
 def quad_reference(p, forest, mode="full"):
@@ -258,9 +328,10 @@ def quad_reference(p, forest, mode="full"):
     s2h, v = 0.5 * sig * sig, sig * sig * (1 - rho * rho)
     m, s = joint_mode([pa for _, pa in nodes], cfs, sig, rho, kb, kap)
     lr = lambda x: -x * x / (2 * sig * sig) - math.log(sig) - 0.5 * LOG2PI + logF(cfs[0], x, s2h, kb, kap)
+    lo, hi = level_bounds(lambda x: np.asarray(lr(x)), np.array([m[0]]), np.array([s[0]]), 50.0)
     if len(nodes) == 1:
         g0 = lr(m[0])
-        val, _ = integrate.quad(lambda x: math.exp(lr(x) - g0), m[0] - 40 * s[0], m[0] + 40 * s[0], points=[m[0]],
+        val, _ = integrate.quad(lambda x: math.exp(lr(x) - g0), lo[0], hi[0], points=[m[0]],
                                 epsabs=0, epsrel=1e-12, limit=500)
         return g0 + math.log(val)
     g0 = lr(m[0]) - 0.5 * (LOG2PI + math.log(v)) + logF(cfs[1], m[1], s2h, kb, kap)
@@ -268,11 +339,11 @@ def quad_reference(p, forest, mode="full"):
     def inner(xp):
         ld = lambda x: -(x - rho * xp) ** 2 / (2 * v) - 0.5 * (LOG2PI + math.log(v)) + logF(cfs[1], x, s2h, kb, kap)
         cm = rho * xp
-        csd = math.sqrt(v)
-        val, _ = integrate.quad(lambda x: math.exp(lr(xp) + ld(x) - g0), cm - 40 * csd - 40 * s[1], cm + 40 * csd + 40 * s[1],
+        a, b = level_bounds(lambda x: np.asarray(ld(x)), np.array([cm]), np.array([math.sqrt(v)]), 60.0)
+        val, _ = integrate.quad(lambda x: math.exp(lr(xp) + ld(x) - g0), min(a[0], m[1]), max(b[0], m[1]),
                                 points=[m[1], cm], epsabs=0, epsrel=1e-12, limit=500)
         return val
-    val, _ = integrate.quad(inner, m[0] - 40 * s[0], m[0] + 40 * s[0], points=[m[0]], epsabs=0, epsrel=1e-12, limit=500)
+    val, _ = integrate.quad(inner, lo[0], hi[0], points=[m[0]], epsabs=0, epsrel=1e-12, limit=500)
     return g0 + math.log(val)
 
 
@@ -324,6 +395,13 @@ def points():
             if r.get("type") == "divergence" and r["transition"] == tr:
                 for k in ("previous", "failing"):
                     pts[f"c{ch}_{k}"] = pilot.constrain(r[k]["q"], N)
+    # Repair 1 hold-outs, declared before run 2 and not used to design the repair.
+    pts["holdout_c1f_sigma6"] = dict(pts["c1_failing"], sigma=6.0)
+    pts["holdout_c1f_sigma20"] = dict(pts["c1_failing"], sigma=20.0)
+    pts["holdout_9707_sigma8"] = dict(pts["high_rho_9707"], sigma=8.0)
+    # Fresh hold-outs added with Repairs 1b and 2 (349dd3d); not looked at before run 2.
+    pts["holdout_c4f_sigma15"] = dict(pts["c4_failing"], sigma=15.0)
+    pts["holdout_9707_sigma5"] = dict(pts["high_rho_9707"], sigma=5.0)
     return pts
 
 
@@ -347,27 +425,28 @@ def task(args):
     u0 = p_to_u(pe)
     try:
         # identities
-        out["I1_unit_log_numerator"] = max(abs(evaluator(pe, forest, "unit", *s)) for s in ((200, 200, 12.0), (400, 400, 12.0)))
-        box_sel = ref_box(pe, forest, "selection")
-        sel_ref = reference(pe, forest, box_sel, "selection", 400, 10.0)
+        out["I1_unit_log_numerator"] = max(abs(evaluator(pe, forest, "unit", *s)) for s in ((200, 200, 50.0), (400, 400, 50.0)))
+        box_sel = ref_box(pe, forest, "selection", 50.0)
+        sel_ref = reference(pe, forest, box_sel, "selection", 400)
         out["I2_selection_minus_ref"] = evaluator(pe, forest, "selection") - sel_ref
         out["I2_selection_minus_q80"] = evaluator(pe, forest, "selection") - log_pi_q80(pe, forest)
         out["log_pi_q80"] = log_pi_q80(pe, forest)
         # evaluator: primary, resolution, domain; values and 35 derivatives; timing
         ev = {}
-        for key, s in (("primary", (200, 200, 12.0)), ("resolution", (400, 400, 12.0)), ("domain", (200, 200, 16.0))):
+        for key, s in (("primary", (200, 200, 50.0)), ("resolution", (400, 400, 50.0)), ("domain", (200, 200, 70.0))):
             t0 = time.perf_counter()
             v = evaluator(pe, forest, "full", *s)
             ev[key + "_seconds"] = time.perf_counter() - t0
             ev[key] = grad(lambda u: evaluator(u_to_p(u), forest, "full", *s), u0)
         # reference: box at base theta, fixed during differencing
-        box = ref_box(pe, forest, "full")
+        boxes = {50: ref_box(pe, forest, "full", 50.0), 70: ref_box(pe, forest, "full", 70.0)}
+        out["reference_box_delta50"] = [list(map(float, boxes[50][2])), list(map(float, boxes[50][3]))]
         rf = {}
-        for key, s in (("n200_L10", (200, 10.0)), ("n400_L10", (400, 10.0)), ("n400_L14", (400, 14.0))):
+        for key, (n, dl) in (("n200_L10", (200, 50)), ("n400_L10", (400, 50)), ("n400_L14", (400, 70))):
             t0 = time.perf_counter()
-            reference(pe, forest, box, "full", *s)
+            reference(pe, forest, boxes[dl], "full", n)
             rf[key + "_seconds"] = time.perf_counter() - t0
-            rf[key] = grad(lambda u: reference(u_to_p(u), forest, box, "full", *s), u0)
+            rf[key] = grad(lambda u: reference(u_to_p(u), forest, boxes[dl], "full", n), u0)
         pv, pg = ev["primary"]
         res = {}
         res["eval_self_resolution"] = (abs(ev["resolution"][0] - pv), float(np.max(np.abs(ev["resolution"][1] - pg))))
@@ -408,7 +487,7 @@ def main():
     with mp.get_context("fork").Pool(min(12, len(jobs))) as pool:
         rows = pool.map(task, jobs, chunksize=1)
     edges = sum(1 for pa in D["parent"] if pa)
-    out = dict(spec="collapsed_oracle.md (ad09251)", tolerances=TOL, fd_step=H_FD, points={k: dict(sigma=v["sigma"], rho=v["rho"],
+    out = dict(spec="collapsed_oracle.md (ad09251) with Repairs 1, 1b and 2 (9ebc27c, 349dd3d); keys n200_L10/n400_L10/n400_L14 mean n=200/400 at Delta 50 and n=400 at Delta 70", tolerances=TOL, fd_step=H_FD, points={k: dict(sigma=v["sigma"], rho=v["rho"],
                kappa_b=v["kappa_b"]) for k, v in pts.items()},
                decomposition_abs_err=dec, decomposition_pass=bool(all(v <= TOL["decomposition"] for v in dec.values())),
                rows=rows, all_pass=bool(all(r["status"] == "pass" for r in rows)),
@@ -417,7 +496,7 @@ def main():
                                 kernel_evaluations_per_call_primary=edges * 201 * 201 + (N - edges) * 201,
                                 note="arithmetic count for leaf-type contractions; interior interpolation not included"),
                wall_seconds=time.time() - t0)
-    (HERE / "collapsed_oracle_results.json").write_text(json.dumps(out, indent=1, default=float) + "\n")
+    (HERE / "collapsed_oracle_results_run2.json").write_text(json.dumps(out, indent=1, default=float) + "\n")
     print(json.dumps({k: v for k, v in out.items() if k != "rows"}, indent=1, default=float))
     for r in rows:
         print(r["point"], r["forest"], r["status"], {k: r.get(k) for k in ("checks",)} if r["status"] != "pass" else "",
