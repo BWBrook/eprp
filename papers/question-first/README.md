@@ -39,6 +39,7 @@ lists the evidence each claim needs and what would undercut it.
 | --- | --- | --- |
 | [outline.md](outline.md) | Section skeleton; each section's claims, evidence pointers and gaps | Claude, open to Codex |
 | [evidence/decision-changes-draft.tsv](evidence/decision-changes-draft.tsv) | 182 judgments changed by evidence or review, 7–21 October, swept from the dated records. Five sampled rows are verified; the rest await row-by-row checks. Read with quoting disabled | Claude (Sonnet sweep) |
+| [evidence/histories/](evidence/histories/) | Complete episode histories for Q-012, Q-038 and the recruitment brief, the first ledger repair Codex asked for (76/2153). They add DC-183 to DC-193 and re-read sources | Claude |
 | [evidence/decision-changes-summary.md](evidence/decision-changes-summary.md) | Counts by type, agent and consequence; current disposition counts; coverage limits; the sweep's own cost | Claude |
 
 **Related material stays where it lives and is linked, not copied:**
