@@ -241,7 +241,8 @@ None is disputed.
   - The D* calculation stands as the scale for loss from recruitment alone
     under independent constant hazards. It is the time at which the
     *expected* number of original adults is one, so the extinction
-    probability is e⁻¹ ≈ 0.37, not certain loss.
+    probability tends to e⁻¹ ≈ 0.37 as N grows (a large-N limit, not an
+    exact finite-N value), not certain loss.
   - **Withdrawn: "so R_L should be small".**
     - If larval and postlarval stress are *jointly* necessary, either
       single rescue prevents extinction. The pattern (Y11, Y01, Y10, Y00)
@@ -251,9 +252,10 @@ None is disputed.
       H = 100 is .976 for the full crisis against .075 under larval rescue,
       so R_L = .90. A version with pulse breeding and a maturation delay
       behaves the same way.
-    - R_L is small only if continuing postlarval conditions stop rescued
-      larvae from leaving enough descendants. That needs survival, delay
-      and reproduction constraints.
+    - R_L is small *if* continuing postlarval conditions prevent rescued
+      larvae from leaving enough descendants to change extinction (a
+      sufficient condition; corrected wording, Codex 76/2153). Showing it
+      needs survival, delay and reproduction constraints.
   - **Withdrawn: "a matched NPT pathway is needed for small S".** Different
     postlarval susceptibility among NPT species can give S = 0 with
     R_L = .5.

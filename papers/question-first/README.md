@@ -25,7 +25,8 @@ As frontier AI systems cut the cost of *answering* research questions, the
 binding constraint moves to *choosing* them. In EPRP, structured adversarial
 vetting by two AI agents, with a human facilitator, found most candidate
 questions occupied, unanswerable, non-identifiable or under-powered, and
-repaired others, before any project work. The paper would describe the
+repaired others, before promotion to a primary investigation. Bounded
+pilots, such as Q-012's, are part of the vetting. The paper would describe the
 method, report what it caught and at what cost, and offer a transferable
 template.
 

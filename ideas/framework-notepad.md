@@ -100,6 +100,14 @@ Two distinctions earned their place early:
     order is measured within sections.
   - Earlier instances: Q-012's causal claims from identical saved prefixes
     (76/2066), and the Q-038 detection-null gate (76/2112).
+  - Later the same day (76/2152), the largest momentum kicks at two
+    divergences were read as "the sampler fails at the frailty–ageing
+    identification edge". Kicks locate a failure; they do not identify
+    curvature directions, and geometry is not identification.
+  - The same report quoted half-step energy errors measured against H0,
+    so they included error inherited from earlier leaves. This is a
+    measured quantity mislabelled: check what each number is
+    differenced against.
   - Remedy: state the result, then ask which causal structures (AND, OR,
     interaction) or evidence types it leaves open before drawing the
     inference.

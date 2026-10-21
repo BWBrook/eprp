@@ -1072,13 +1072,26 @@ the receipt and patch. Passing:
 | ΔH with the step halved | 333 and 351 | 104 and 75 |
 | Largest momentum changes | κ, σ, log_k | log_k, σ |
 
-  Halving the step still leaves large errors. The stiffness sits in the
-  joint σ–(log_k, κ) geometry, not in the lineage frailties.
+  *Corrected (Codex 76/2152):* the half-step ΔH values above are H − H0.
+  They include energy error inherited at the preceding leaf: +221.90 in
+  chain 1 and +85.62 in chain 4.
+  - The **local** errors are +2,453.6 and +1,675.0 for the full step, and
+    +129.5 and −11.1 after two half steps.
+  - Halving sharply reduces local error, especially in chain 4.
+  - `trace_check` now also reports `local_deltaH` and `previous_minus_H0`.
+  - The largest momentum kicks locate the failure. They do not identify
+    the metric's curvature directions, or exclude coupling through the
+    frailties.
 - **AD against finite differences at the failing states:** scaled errors
   ≤ 4e-8.
 - **The Q80 normaliser passes the repaired gate at both failing states.**
   Log errors are 6.7e-11 and 5.0e-11, with both references qualified.
-  **Normaliser accuracy is excluded as the cause.**
+  - Codex added the preceding states: log errors 2.7e-7 and 2.1e-5,
+    derivatives within 9.4e-5. It also checked AD against finite
+    differences on all 54 coordinates at both endpoints (≤ 2.2e-7).
+  - The scope is therefore "no material normaliser error at the checked
+    endpoints and axes". That is not a blanket exclusion over unsaved
+    trajectory states or every axis.
 
 **Joint-state checks** (`joint_checks.json`): 49 of 49 selected states
 pass, with no state unresolved. The maximum log error is 3.9e-6 and the
@@ -1091,6 +1104,10 @@ maximum derivative error 2.3e-5.
   against 0.11 and 0.59 overall.
 - Unreliable exploration of the σ > 2.5 region therefore bears directly on
   the upper η quantile. The zero-divergence screen guards something real.
+- *Qualified (Codex 76/2152):* the failing sample cannot certify its own
+  tail mass or bias. My reading, that the sampler fails at the edge of the
+  frailty–ageing trade-off, is a **hypothesis, not a result**: geometry is
+  not identification.
 
 **Accounting.** (0:00:58 × 4) + (2:56:55 × 4) = 0.064 + 11.794 =
 **11.859 core-hours**, within the 28.667 released. The tranche total is now

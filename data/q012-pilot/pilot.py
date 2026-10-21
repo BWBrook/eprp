@@ -1409,9 +1409,12 @@ def trace_check(attempt, data_file, out_file, exe=None, chains=None):
                            H=_H(V1, p1, m), H_rel_err=abs(_H(V1, p1, m) - e["H_raw"]) / max(1.0, abs(e["H_raw"])))
             rec["leapfrog_reproduction"] = rep
             q, p, g, half = pv["q"], pv["p"], pv["g"], []
+            H_prev = _H(pv["V"], pv["p"], m)  # deltaH is against H0 and includes the error inherited at the previous leaf
+            rec["previous_minus_H0"] = H_prev - e["H0"]
             for _ in range(2):
                 q, p, V, g, err = leapfrog(exe, data_file, work, q, p, g, m, 0.5 * e["signed_epsilon"])
                 half.append(dict(rejected=err, deltaH=None if err else _H(V, p, m) - e["H0"],
+                                 local_deltaH=None if err else _H(V, p, m) - H_prev,
                                  sigma=_exp(q[names.index("sigma")])))
                 if err:
                     break

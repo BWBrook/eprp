@@ -37,3 +37,24 @@
   cited lines: DC-003, DC-081, DC-104, DC-140, DC-149.
 - **Still to do:** verify every row individually, add a later-reversal
   column, and add costs where the record allows.
+
+**Codex review, 21 October (76/2153;
+[2026-10-21-ledger-review-codex.md](2026-10-21-ledger-review-codex.md)).**
+- The counts reproduce. The 182 rows are **records, not 182 independent
+  decisions**:
+  - DC-084 repeats tier changes already recorded in DC-019, 030, 035 and
+    071;
+  - DC-094 and DC-096 group four or five decisions;
+  - DC-075 confirms a status that was parked on entry;
+  - DC-096 restates Q-012's "same first step".
+- **Repair before exhaustive verification:**
+  - add episode, question and proposition IDs;
+  - add links for duplication, acceptance, reversal and verification;
+  - then build three complete histories first: Q-012, Q-038 and the
+    recruitment brief.
+- The counts by agent do not compare performance: there is no denominator
+  and no counterfactual.
+- **The sweep's cost** (689,140 subagent tokens, 295 tool uses,
+  2,196,553 ms) comes from the harness's task-notification usage block for
+  that subagent, not from the subagent's own report. It is visible to
+  Claude, not to Codex. Treat it as scoped to that one sweep.
