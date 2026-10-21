@@ -797,13 +797,47 @@ class ReferenceUnresolved(Exception):
     converge explicitly, a non-finite mode or value, or invalid curvature."""
 
 
+def _local_mode(a, b, inv, s2h, kb):
+    """Newton mode of one cohort term's log integrand, -y'inv y/2 - sum(a e^(y - s2h) + b e^(kb (y - s2h))), and the
+    Cholesky factor of the inverse curvature there. Converged within 200 iterations when the Newton step is below 1e-14
+    (the original rule) or the squared Newton decrement g'P^-1 g is at most 1e-20. The decrement is affine-invariant in
+    exact arithmetic and stays usable when the pair precision is ill-conditioned (rho near 1); the local quadratic
+    predicts half of it as the remaining log-integrand gain, so 1e-20 means 5e-21, not a bound on the integral.
+    Every iteration rejects a non-finite gradient, curvature, step or decrement and a negative decrement before either
+    stopping test can accept (Codex 76/2121); the final curvature must be positive definite. Else ReferenceUnresolved."""
+    a, b, y = np.asarray(a, float), np.asarray(b, float), np.zeros(len(a))
+    for _ in range(200):
+        ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
+        Pm = inv + np.diag(ep + kb * kb * eb)
+        grad = -inv @ y - ep - kb * eb
+        try:
+            dlt = np.linalg.solve(Pm, grad)
+        except np.linalg.LinAlgError:
+            raise ReferenceUnresolved("singular local curvature")
+        dec2 = float(grad @ dlt)
+        if not (np.all(np.isfinite(grad)) and np.all(np.isfinite(Pm)) and np.all(np.isfinite(dlt)) and math.isfinite(dec2)):
+            raise ReferenceUnresolved("non-finite gradient, curvature, step or decrement in local mode")
+        if dec2 < 0:
+            raise ReferenceUnresolved(f"negative squared Newton decrement {dec2:.3g}")
+        y = y + dlt
+        if not np.all(np.isfinite(y)):
+            raise ReferenceUnresolved("non-finite local mode")
+        if np.max(np.abs(dlt)) < 1e-14 or dec2 <= 1e-20:
+            break
+    else:
+        raise ReferenceUnresolved(f"local mode not converged in 200 iterations (last step {float(np.max(np.abs(dlt))):.3g}, "
+                                  f"squared decrement {dec2:.3g})")
+    ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
+    try:
+        return y, np.linalg.cholesky(np.linalg.inv(inv + np.diag(ep + kb * kb * eb)))
+    except np.linalg.LinAlgError:
+        raise ReferenceUnresolved("local curvature not positive definite")
+
+
 def local_reference(d, q, n=1600, L=16.0):
     """Log cohort normaliser by Simpson integration on a grid centred and scaled at each Newton mode (2-D in 64-row
     chunks). Independent of the data's quadrature nodes; resolves narrow modes the fixed-innovation reference misses.
-    Each mode solve must converge explicitly within 200 iterations: a Newton step below 1e-14 (the original rule), or
-    a squared Newton decrement g'P^-1 g at most 1e-20, the affine-invariant criterion that stays meaningful when the
-    pair precision is ill-conditioned (rho near 1); with finite modes and positive-definite curvature. Otherwise
-    ReferenceUnresolved."""
+    Each mode solve must converge explicitly (_local_mode); otherwise ReferenceUnresolved."""
     sig, rho, kb = q["sigma"], q["rho"], q["kappa_b"]
     A = P.cohort_A(d, q)
     b0 = math.exp(q["log_b0"])
@@ -814,39 +848,18 @@ def local_reference(d, q, n=1600, L=16.0):
     lw = np.log(wt * 2 * L / (3 * n))
     ls = lambda x, a, b: -a * np.exp(x - s2h) - b * np.exp(kb * (x - s2h))
 
-    def mode(aa, bb, inv):
-        a, b, y = np.array(aa), np.array(bb), np.zeros(len(aa))
-        for _ in range(200):
-            ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
-            Pm = inv + np.diag(ep + kb * kb * eb)
-            grad = -inv @ y - ep - kb * eb
-            dlt = np.linalg.solve(Pm, grad)
-            dec2 = float(grad @ dlt)  # squared Newton decrement: predicted remaining gain in the log integrand
-            y = y + dlt
-            if not np.all(np.isfinite(y)):
-                raise ReferenceUnresolved("non-finite local mode")
-            if np.max(np.abs(dlt)) < 1e-14 or dec2 <= 1e-20:
-                break
-        else:
-            raise ReferenceUnresolved(f"local mode not converged in 200 iterations (last step {float(np.max(np.abs(dlt))):.3g}, "
-                                      f"squared decrement {dec2:.3g})")
-        ep, eb = a * np.exp(y - s2h), b * np.exp(kb * (y - s2h))
-        try:
-            return y, np.linalg.cholesky(np.linalg.inv(inv + np.diag(ep + kb * kb * eb)))
-        except np.linalg.LinAlgError:
-            raise ReferenceUnresolved("local curvature not positive definite")
     out = 0.0
     for ii in d["c1_lin"]:
         i = ii - 1
         a, b = A[i], b0 * (d["c"] - d["o"][i])
-        m, T = mode([a], [b], np.array([[1 / sig ** 2]]))
+        m, T = _local_mode([a], [b], np.array([[1 / sig ** 2]]), s2h, kb)
         x = m[0] + T[0, 0] * e
         out += math.log(T[0, 0]) + _lse(lw + ls(x, a, b) - 0.5 * x * x / sig ** 2 - math.log(sig) - 0.5 * math.log(2 * math.pi))
     for ip, idd in zip(d["c2_par"], d["c2_dau"]):
         ip, idd = ip - 1, idd - 1
         aa, bb = [A[ip], A[idd]], [b0 * (d["c"] - d["o"][k]) for k in (ip, idd)]
         inv = np.linalg.inv(sig ** 2 * np.array([[1, rho], [rho, 1]]))
-        m, T = mode(aa, bb, inv)
+        m, T = _local_mode(aa, bb, inv, s2h, kb)
         logs = []
         for s in range(0, n + 1, 64):
             e1, e2 = e[s:s + 64, None], e[None, :]
@@ -2023,6 +2036,27 @@ def selftest():
         nan_endpoint_unresolved=eta_block(nan, 0.4, 0.003, 0.01, 0.2)["D"] is None,
         nan_endpoint_leaves_precision_unresolved=eta_block(nan, 0.4, 0.003, 0.01, 0.2)["mcse_target_met"] is None)
     out["finite_guards"]["ok"] = all(out["finite_guards"].values())
+    # Reference mode guards (Codex 76/2121): invalid values are unresolved before either stopping test can accept.
+    def mode_case(a, b, inv, s2h=0.4, kb=1.13):
+        with np.errstate(all="ignore"):
+            try:
+                y, T = _local_mode(a, b, np.array(inv, float), s2h, kb)
+                return "accepted" if np.all(np.isfinite(y)) and np.all(np.isfinite(T)) else "accepted non-finite"
+            except ReferenceUnresolved as e:
+                return str(e)
+    s, r = 1.0808045, 0.99998221
+    near = np.linalg.inv(s * s * np.array([[1, r], [r, 1]]))
+    mg = dict(valid_single=mode_case([0.5], [0.2], [[1 / 0.81]]),
+              valid_ill_conditioned_pair=mode_case([0.3, 0.4], [0.1, 0.2], near, s2h=0.5 * s * s),
+              infinite_a=mode_case([float("inf")], [0.2], [[1.0]]),
+              nan_b=mode_case([0.5], [float("nan")], [[1.0]]),
+              overflow_pair=mode_case([0.3, 1e300], [0.1, 0.2], near, s2h=-800.0),
+              negative_decrement=mode_case([1e-3], [0.0], [[-4.0]]))
+    out["reference_mode_guards"] = dict(
+        cases=mg,
+        ok=mg["valid_single"] == "accepted" and mg["valid_ill_conditioned_pair"] == "accepted"
+        and all(mg[k].startswith("non-finite") for k in ("infinite_a", "nan_b", "overflow_pair"))
+        and mg["negative_decrement"].startswith("negative squared Newton decrement"))
     # Retrieval after the earliest failure: a failed build and no run directory.
     fx = CACHE / "selftest_fetch"
     shutil.rmtree(fx, ignore_errors=True)

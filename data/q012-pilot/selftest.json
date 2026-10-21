@@ -11,10 +11,10 @@
   "exit": 0,
   "status": "complete",
   "maxrss_kb": [
-   "17148",
-   "17096",
-   "17032",
-   "17116"
+   "17104",
+   "17072",
+   "17104",
+   "16992"
   ],
   "traces": [
    "summary",
@@ -392,7 +392,7 @@
   },
   "header_truncated": {
    "failures": [
-    "line 42: header line 'Gradient evaluation took 0.013468 seconds'; expected 'num_threads = 1 (Default)'"
+    "line 42: header line 'Gradient evaluation took 0.013484 seconds'; expected 'num_threads = 1 (Default)'"
    ],
    "rejections": [],
    "ok": true
@@ -469,6 +469,17 @@
   "nan_rhat_fails": true,
   "nan_endpoint_unresolved": true,
   "nan_endpoint_leaves_precision_unresolved": true,
+  "ok": true
+ },
+ "reference_mode_guards": {
+  "cases": {
+   "valid_single": "accepted",
+   "valid_ill_conditioned_pair": "accepted",
+   "infinite_a": "non-finite gradient, curvature, step or decrement in local mode",
+   "nan_b": "non-finite gradient, curvature, step or decrement in local mode",
+   "overflow_pair": "non-finite gradient, curvature, step or decrement in local mode",
+   "negative_decrement": "negative squared Newton decrement -1.12e-07"
+  },
   "ok": true
  },
  "fetch_after_failed_build": {

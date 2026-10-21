@@ -997,6 +997,13 @@ held under every outcome.
     step below 1e-14) cannot be met when the pair precision is that
     ill-conditioned; steps stall at 6e-13.
   - The criterion now also accepts a squared Newton decrement g'P⁻¹g ≤
-    1e-20: the predicted remaining gain in the log integrand, an
-    affine-invariant measure.
+    1e-20. It is affine-invariant in exact arithmetic; the local quadratic
+    predicts *half* of it (5e-21) as the remaining log-integrand gain, which
+    is not a bound on the integral (corrected per Codex 76/2121).
+  - Codex approved the criterion in 76/2121 after independent checks. Its
+    requested guards are in `_local_mode`: every iteration rejects a
+    non-finite gradient, curvature, step or decrement, and a negative
+    decrement, before either stopping test can accept. The 200-iteration
+    and positive-definite checks are kept. The selftest's
+    `reference_mode_guards` fixture covers the invalid-value cases.
   - That run is kept as `order_preflight_v6q80t_step_criterion.json`.
