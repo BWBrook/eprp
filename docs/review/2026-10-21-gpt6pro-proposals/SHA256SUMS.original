@@ -1,0 +1,10 @@
+# SHA-256 of the files as received from Barry (/mnt/c/Temp/eprp/gpt6pro_proposals, 21 Oct 2026).
+# The prompt and three summaries had CRLF line endings; git stores them with LF, so those four hashes match the
+# received bytes, not the committed blobs. The three full proposals were LF and match exactly.
+32cbbd16e621289f42f934009edb1092f42131e4327d32f1c0cce94132e2994e  ./gpt6pro_eprp_prompt.md
+1f61b7b7593e8569ff1fc31e09fb6b1fce5040d31356ef413ee23ec38282005d  ./hybridisation/2026-10-20-hybridisation-cascades-proposal.md
+31a7238be01b0ede4ac42c42c55ba3cb3da13b65ce859ed6803d37ef5f89b3d6  ./hybridisation/hybridisation_summary.md
+1dcc67b3f591279d7e6c77b383a272d7680d1dad8823504a754db3a3716fb5a6  ./recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md
+868fcd4956415daa5f82f9e19ac57b3a6efb496a33d1af8eae3b2cbe1a4ee478  ./recruitment/recruitment_summary.md
+2cc596462f1eb152971c60a6c882e3a3f6c59f30a6459d19a85b368eb951edf0  ./snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md
+7dab98827523c5c6518d5a927fcdeeffa06faf1a043cce61697c62d4ee7a3932  ./snowball/snowball_summary.md
