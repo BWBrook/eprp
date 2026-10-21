@@ -241,3 +241,45 @@ reference) truncate the long tail.**
   - high_rho_9707 with σ = 8 (a narrow kernel and a long tail together).
 - **Scope.** Run 1 stays the primary record. Run 2 tests one specific
   repair, so it is not a fresh prospective result.
+
+### Amendment to the repair, before run 2 (pre-run smoke tests, 21 October)
+
+Smoke tests of Repair 1, *not* the official run 2, looked at:
+- central0, c1_failing and c4_previous, in all forests;
+- holdout_9707_sigma8, in T1 and T2.
+
+They showed two further evaluator-side problems. Both are added before run
+2.
+
+**Repair 1b: sinh-mapped nodes.**
+- **The problem.** At c1_failing the level-set domain is very skewed: about
+  54 units on the left against 4 on the right. Uniform Simpson nodes then
+  under-resolve the steep side near the mode. The Δ 50 → 70 change of
+  about 1e-5 was really a resolution change.
+- **The fix.** Every 1-D integral uses x = c + s·sinh(u), uniform Simpson
+  in u over [asinh((lo − c)/s), asinh((hi − c)/s)], with Jacobian
+  s·cosh(u). Here c is the mode and s the local curvature scale. Nodes
+  are dense near the mode and sparse in the tail.
+- **The reference** uses the same mapping per axis in innovation
+  coordinates, so it shares node placement but not quadrature structure.
+- **True independence for values** comes from the scipy adaptive
+  Gauss–Kronrod reference on T1 and T2. In 1-D, two Simpson rules on
+  similar grids are only weakly independent.
+
+**Repair 2: damped Newton.**
+- **The problem.** At holdout_9707_sigma8 in T2 (σ = 8, ρ = 0.99998), the
+  undamped joint Newton did not converge in 200 iterations: steps
+  overshoot on the exponential terms.
+- **The fix.** Joint and conditional modes now use Newton steps with
+  backtracking (Armijo, 1e-4). The convergence criteria, guards and the
+  200-iteration limit are unchanged.
+
+**Hold-outs for run 2:**
+- the three already declared, one of which (holdout_9707_sigma8) the smoke
+  tests have now seen;
+- **two fresh points, unseen:**
+  - holdout_c4f_sigma15 (c4_failing with σ = 15);
+  - holdout_9707_sigma5 (high_rho_9707 with σ = 5).
+
+The gates, finite-difference step, forests, factors, identities and the ten
+frozen points are unchanged. Run 1 remains the primary prospective record.
