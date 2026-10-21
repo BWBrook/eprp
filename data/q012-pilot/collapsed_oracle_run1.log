@@ -1,0 +1,123 @@
+{
+ "spec": "collapsed_oracle.md (ad09251)",
+ "tolerances": {
+  "value": 0.0001,
+  "deriv": 0.001,
+  "self_value": 1e-06,
+  "self_deriv": 1e-05,
+  "unit": 1e-08,
+  "selection": 1e-06,
+  "decomposition": 1e-09
+ },
+ "fd_step": 0.0001,
+ "points": {
+  "central0": {
+   "sigma": 0.5,
+   "rho": 0.4,
+   "kappa_b": 0.2
+  },
+  "central1": {
+   "sigma": 0.8,
+   "rho": 0.7,
+   "kappa_b": -0.1
+  },
+  "stress_s3_r09_kbm15": {
+   "sigma": 3.0,
+   "rho": 0.9,
+   "kappa_b": -1.5
+  },
+  "low_rho": {
+   "sigma": 0.5,
+   "rho": 0.05,
+   "kappa_b": 0.2
+  },
+  "small_sigma": {
+   "sigma": 0.05,
+   "rho": 0.4,
+   "kappa_b": 0.2
+  },
+  "high_rho_9707": {
+   "sigma": 1.0808045,
+   "rho": 0.99998221,
+   "kappa_b": 1.1316354
+  },
+  "c1_previous": {
+   "sigma": 2.543276014589137,
+   "rho": 0.20237115125535976,
+   "kappa_b": 1.121930515069693
+  },
+  "c1_failing": {
+   "sigma": 12.03256388184747,
+   "rho": 0.20593409511524152,
+   "kappa_b": 1.1451365989493867
+  },
+  "c4_previous": {
+   "sigma": 3.339400381396401,
+   "rho": 0.30061251667563216,
+   "kappa_b": 0.10559460987383888
+  },
+  "c4_failing": {
+   "sigma": 1.755685127906348,
+   "rho": 0.28258475366885105,
+   "kappa_b": 0.1215341469458569
+  }
+ },
+ "decomposition_abs_err": {
+  "central0": 4.263256414560601e-14,
+  "central1": 0.0,
+  "stress_s3_r09_kbm15": 1.4551915228366852e-11,
+  "low_rho": 8.526512829121202e-14,
+  "small_sigma": 1.4210854715202004e-14,
+  "high_rho_9707": 2.842170943040401e-14,
+  "c1_previous": 2.842170943040401e-14,
+  "c1_failing": 0.0,
+  "c4_previous": 7.105427357601002e-14,
+  "c4_failing": 0.0
+ },
+ "decomposition_pass": true,
+ "all_pass": false,
+ "status_counts": {
+  "fail": 3,
+  "pass": 24,
+  "unresolved (reference not qualified)": 3
+ },
+ "p11_nominal": {
+  "nodes": 19,
+  "edges": 9,
+  "roots": 10,
+  "kernel_evaluations_per_call_primary": 365619,
+  "note": "arithmetic count for leaf-type contractions; interior interpolation not included"
+ },
+ "wall_seconds": 5925.71697640419
+}
+central0 T1_root pass  
+central0 T2_pair pass  
+central0 T3_root_two_daughters pass  
+central1 T1_root pass  
+central1 T2_pair pass  
+central1 T3_root_two_daughters pass  
+stress_s3_r09_kbm15 T1_root pass  
+stress_s3_r09_kbm15 T2_pair pass  
+stress_s3_r09_kbm15 T3_root_two_daughters pass  
+low_rho T1_root pass  
+low_rho T2_pair pass  
+low_rho T3_root_two_daughters pass  
+small_sigma T1_root pass  
+small_sigma T2_pair pass  
+small_sigma T3_root_two_daughters pass  
+high_rho_9707 T1_root pass  
+high_rho_9707 T2_pair pass  
+high_rho_9707 T3_root_two_daughters pass  
+c1_previous T1_root pass  
+c1_previous T2_pair pass  
+c1_previous T3_root_two_daughters pass  
+c1_failing T1_root fail {'checks': {'eval_self_resolution': {'value': 2.4659385644554277e-11, 'deriv': 3.552713678800501e-11}, 'eval_self_domain': {'value': 3.5918812045565573e-05, 'deriv': 0.00010393218730087028}, 'ref_resolution': {'value': 6.330225232886733e-11, 'deriv': 3.339550858072471e-09}, 'ref_domain': {'value': 0.00021515955772599682, 'deriv': 0.012670411493331812}, 'eval_vs_ref': {'value': 0.0001841863506548691, 'deriv': 0.013139443062470946}}} 
+c1_failing T2_pair fail {'checks': {'eval_self_resolution': {'value': 5.420730531113804e-11, 'deriv': 3.552713678800501e-10}, 'eval_self_domain': {'value': 8.18429273010679e-05, 'deriv': 0.000731112628216124}, 'ref_resolution': {'value': 1.2533973858808167e-10, 'deriv': 5.7198690228688065e-09}, 'ref_domain': {'value': 0.00042281723946047123, 'deriv': 0.021734876938239722}, 'eval_vs_ref': {'value': 0.00034999250269862614, 'deriv': 0.022585309480405158}}} 
+c1_failing T3_root_two_daughters fail {'checks': {'eval_self_resolution': {'value': 7.111111699487083e-11, 'deriv': 3.552713678800501e-10}, 'eval_self_domain': {'value': 0.00010242171191521265, 'deriv': 0.0007211874475387958}, 'ref_resolution': {'value': 1.6575540939811617e-10, 'deriv': 7.460698725481052e-09}, 'ref_domain': {'value': 0.0005211694769684527, 'deriv': 0.026253779381590903}, 'eval_vs_ref': {'value': 0.0004292729791899319, 'deriv': 0.027227880536884186}}} 
+c4_previous T1_root unresolved (reference not qualified) {'checks': {'eval_self_resolution': {'value': 1.8829382497642655e-13, 'deriv': 8.881784197001252e-12}, 'eval_self_domain': {'value': 1.3420860867086049e-08, 'deriv': 1.3501200157861604e-07}, 'ref_resolution': {'value': 2.7986502004750946e-12, 'deriv': 6.217248937900877e-11}, 'ref_domain': {'value': 5.802337978977334e-07, 'deriv': 1.346187605832938e-05}, 'eval_vs_ref': {'value': 5.670409430891254e-07, 'deriv': 1.3603123072414292e-05}}} 
+c4_previous T2_pair unresolved (reference not qualified) {'checks': {'eval_self_resolution': {'value': 2.8066438062523957e-13, 'deriv': 1.7763568394002505e-11}, 'eval_self_domain': {'value': 1.6570307792562744e-08, 'deriv': 1.7900347870636324e-07}, 'ref_resolution': {'value': 3.8333780594257405e-12, 'deriv': 8.881784197001252e-11}, 'ref_domain': {'value': 6.161516523661703e-07, 'deriv': 1.4451053687025706e-05}, 'eval_vs_ref': {'value': 5.997081302666629e-07, 'deriv': 1.4633769751526415e-05}}} 
+c4_previous T3_root_two_daughters unresolved (reference not qualified) {'checks': {'eval_self_resolution': {'value': 3.375077994860476e-13, 'deriv': 1.7763568394002505e-11}, 'eval_self_domain': {'value': 1.777450719941953e-08, 'deriv': 1.9973356302216416e-07}, 'ref_resolution': {'value': 5.062616992290714e-12, 'deriv': 1.0658141036401503e-10}, 'ref_domain': {'value': 7.128051144889014e-07, 'deriv': 1.6542465175461984e-05}, 'eval_vs_ref': {'value': 6.951548350286885e-07, 'deriv': 1.674628435921477e-05}}} 
+c4_failing T1_root pass  
+c4_failing T2_pair pass  
+c4_failing T3_root_two_daughters pass  
+exit=0

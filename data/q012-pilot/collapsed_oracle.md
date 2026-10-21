@@ -174,3 +174,70 @@ P11's 19-node graph. That count is arithmetic, not a measurement.
 **Pass:** every point either passes every gate or is declared unresolved
 with a reference-side reason. Any evaluator-side failure ends this route or
 needs a specific, explained repair. No new sampling ladder.
+
+## Run 1 result (21 October, 7ecf567): 24 pass, 3 fail, 3 unresolved
+
+[collapsed_oracle_results_run1.json](collapsed_oracle_results_run1.json),
+wall time 5,926 s.
+
+**What holds:**
+- The factor decomposition matches `python_target` to 1.5e-11.
+- **I1:** unit factors give at most 2.0e-15.
+- **I2:** selection-only factors give at most 4.8e-9 against the
+  reference, and 4.0e-6 against Stan's Q80.
+- **Where it passes,** evaluator against reference agrees to ≤ 5e-8 in
+  value and ≤ 1.2e-6 in derivatives. That holds at:
+  - central0, central1, low ρ, small σ;
+  - σ = 3 with ρ = 0.9;
+  - the narrow-kernel state 9707 (≤ 9e-12 and 2e-10);
+  - chain 1's previous state (σ = 2.54);
+  - chain 4's failing state.
+- Evaluator self-resolution changes are ≤ 7e-11 everywhere.
+
+**Failures** (c1_failing, σ = 12.03; all three forests):
+- The evaluator's own domain check moves by 3.6e-5 to 1.0e-4 in value and
+  1.0e-4 to 7.3e-4 in derivatives, against gates of 1e-6 and 1e-5. **That
+  is an evaluator-side failure.**
+- The reference fails its own domain check too.
+
+**Unresolved** (c4_previous, σ = 3.34): the evaluator converged, but the
+reference's domain check moves derivatives by 1.35e-5 to 1.7e-5, against a
+gate of 1e-5.
+
+**Diagnosis** (scratch, T1). For large σ the log integrand is strongly
+skewed. On the left, the exponential hazard terms vanish and only the
+N(0, σ²) prior tail remains; on the right there is an exponential wall.
+
+| State | σ | Level set 40 nats below the mode, in Laplace SDs (left / right) |
+| --- | ---: | --- |
+| c1_failing | 12.03 | 40.2 / 3.3 |
+| c4_previous | 3.34 | 22.2 / 4.0 |
+| central0 | 0.50 | 9.7 / 7.0 |
+
+**Boxes scaled by the Laplace SD (±12 for the evaluator, ±10 for the
+reference) truncate the long tail.**
+
+## Repair 1 (declared after run 1, before running it)
+
+- **The change: level-set domains replace Laplace-scaled boxes.**
+  - Every 1-D integration in the evaluator (the root grid with its true
+    child messages, and every conditional grid) runs over
+    [x_lo, x_hi], where the concave log integrand falls Δ nats below its
+    mode on each side. The bounds are found by doubling steps out from the
+    mode, then 80 bisections.
+  - The reference's box per axis is likewise the Δ-level set of the joint
+    log integrand's axis profile through the mode, in innovation
+    coordinates.
+- **Settings:**
+  - primary Δ = 50 with n = 200;
+  - resolution check n = 400 at Δ = 50;
+  - domain check Δ = 70 at n = 200 for the evaluator, and n = 400 for the
+    reference.
+- **Unchanged:** gates, finite-difference step, forests, factors,
+  identities and the ten frozen points.
+- **Three added hold-out points, not used in designing the repair:**
+  - c1_failing with σ = 6;
+  - c1_failing with σ = 20;
+  - high_rho_9707 with σ = 8 (a narrow kernel and a long tail together).
+- **Scope.** Run 1 stays the primary record. Run 2 tests one specific
+  repair, so it is not a fresh prospective result.
