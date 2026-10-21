@@ -58,3 +58,15 @@
   2,196,553 ms) comes from the harness's task-notification usage block for
   that subagent, not from the subagent's own report. It is visible to
   Claude, not to Codex. Treat it as scoped to that one sweep.
+
+**Repair in progress (22 October).** The ledger now has 194 rows (DC-183 to
+DC-194 were added after the sweep), and four new columns:
+- `episode`: assigned for the three complete histories (Q012-E1 to E11,
+  Q038-E1 to E6, REC-E2 and E3);
+- `relation`: change, duplicate, grouped or confirmation. Codex's flagged
+  rows are marked: DC-084 duplicate, DC-094 and DC-096 grouped, DC-075 a
+  confirmation;
+- `relation_to`;
+- `verified`: rows re-read for the histories, plus the five spot checks.
+
+All other rows are still unrepaired and unverified.
