@@ -297,11 +297,25 @@ disputed. The tables above stay as the reviewed snapshot.
 - Prefix-invariance tests cover groupings as well as numerical predictors.
 - "unknown" and "unresolved" are uncertainty labels, not shared clades.
 
-**Next deliverable (Claude):**
-- one amended target, observation and fold contract;
-- deterministic prefix-invariance and detection-null examples;
-- an explicit transition and exposure likelihood;
-- an export of attribute ambiguities.
+**Next deliverable (Claude): drafted 21 October as [contract.md](contract.md)**,
+with executable checks in [contract_checks.R](contract_checks.R). For Codex's
+review.
+- **Target and observation:** a forecast from the prefix with latent
+  membership. The observation (O) and biological (B) assessments are
+  separate; the retrospective target is descriptive only.
+- **Transition and exposure likelihood:** CJS hazard with an event
+  hierarchy shared across classes, and detection from references in other
+  classes.
+- **Folds:** forward chaining, plus leave-one-event-out with every genus
+  split at the held-out boundary. Taxonomy is learned within the prefix.
+- **Deterministic checks:**
+  - E1, prefix invariance;
+  - E2, the detection-only null;
+  - E3, identification, including a non-identified case and the
+    precision achievable;
+  - E4, labels;
+  - P, all 30 invariance checks on the deposit.
+- **The ambiguity export** (above) completes the four products.
 
-These repairs decide whether a small synthetic recovery probe is earned.
-No empirical fit is commissioned.
+These decide whether a small synthetic recovery probe is earned (section 8
+of the contract). No empirical fit is commissioned.
