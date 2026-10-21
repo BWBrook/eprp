@@ -251,9 +251,11 @@ disputed. The tables above stay as the reviewed snapshot.
    - There are five events, not ten.
 4. **Taxonomy and attributes.**
    - Multiple deposited sizes exist for 140 Bivalvia and 9 Rhynchonellata
-     genus IDs, and conflicting order or family labels for 108 and 12
-     Bivalvia IDs. Taking the first non-missing value is not a policy:
-     export the ambiguities and freeze an aggregation rule.
+     genus IDs, and 108 and 12 Bivalvia IDs carry more than one order or
+     family label. These are unresolved mappings, not necessarily
+     conflicts: some may be nomenclatural (Codex 76/2121). Taking the first
+     non-missing value is not a policy: export the ambiguities and freeze
+     an aggregation rule.
    - *Corrected:* "unit sensitivity is small" was wrong. At the K–Pg the
      authors' units give an incoming Bivalvia N/D of 313/87, against
      269/78 after merging.

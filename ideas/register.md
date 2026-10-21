@@ -2153,8 +2153,9 @@ day found the headline occupied.
   develop the narrowed version.**
   - The published PNAS SI is still unread (403). The bioRxiv SI, the Zenodo
     deposit and the author's thesis contain no partition and no comparison
-    with the temperature–size rule, so the kill criterion is very probably
-    clear.
+    with the temperature–size rule. Prior occupancy is therefore
+    provisionally clear, pending inspection of the published SI (Codex
+    76/2121).
   - Claude's re-run of the deposited regression: the published −0.018 per °C
     includes 4,544 background rows coded 0 °C. Crisis rows alone (n = 432)
     give −0.025 (SE 0.0085).

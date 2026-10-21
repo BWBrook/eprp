@@ -1,0 +1,315 @@
+class	genus_no	occurrences	duplicated_occurrence_rows	names_n	names	sizes_n	logvol_min	logvol_max	orders_n	orders_by_refs	families_n	families_by_refs	order_policy	family_policy	order_differs_from_own_modal
+Bivalvia	16007	295	0	3	Acila:62|Acila (Acila):41|Acila (Truncacila):192	2	3.38719677	4.345761505	1	Nuculida:95	1	Nuculidae:95	Nuculida	Nuculidae	FALSE
+Bivalvia	16082	1113	0	7	Nucula:755|Nucula (Deminucula):1|Nucula (Lamellinucula):50|Nucula (Linucula):2|Nucula (Nucula):296|Nucula (Pronucula):8|Nucula (Varinucula):1	5	1.918747239	4.485657002	1	Nuculida:290	1	Nuculidae:290	Nuculida	Nuculidae	FALSE
+Bivalvia	16083	1161	0	6	Nuculana:1024|Nuculana (Nuculana):33|Nuculana (Politoleda):12|Nuculana (Praesaccella):86|Nuculana (Scaeoleda):2|Nuculana (Thestyleda):4	5	1.944919725	4.29536991	1	Nuculanida:274	1	Nuculanidae:274	Nuculanida	Nuculanidae	FALSE
+Bivalvia	16105	58	0	2	Portlandia:51|Portlandia (Portlandia):7	2	2.814718105	3.755663279	1	Nuculanida:34	1	Sareptidae:34	Nuculanida	Sareptidae	FALSE
+Bivalvia	16145	363	0	4	Yoldia:277|Yoldia (Cnesterium):18|Yoldia (Kalayoldia):32|Yoldia (Yoldia):36	3	4.345761505	4.902579472	1	Nuculanida:109	1	Sareptidae:109	Nuculanida	Sareptidae	FALSE
+Bivalvia	16162	122	0	2	Solemya:115|Solemya (Petrasma):7	2	5.079540859	5.111815185	1	Solemyida:59	1	Solemyidae:59	Solemyida	Solemyidae	FALSE
+Bivalvia	16201	944	0	10	Anadara:219|Anadara (Anadara):37|Anadara (Cunearca):229|Anadara (Diluvarca):60|Anadara (Larkinia):23|Anadara (Lunarca):37|Anadara (Potiarca):55|Anadara (Rasia):254|Anadara (Tegillarca):2|Anadara (Tosarca):28	9	4.394176442	5.750328348	1	Arcida:125	1	Arcidae:125	Arcida	Arcidae	FALSE
+Bivalvia	16203	410	0	2	Arca:316|Arca (Arca):94	1	5.506127767	5.506127767	1	Arcida:174	1	Arcidae:174	Arcida	Arcidae	FALSE
+Bivalvia	16204	59	0	2	Arcopsis:57|Arcopsis (Arcopsis):2	2	2.147477521	3.183418585	1	Arcida:28	1	Arcidae:28	Arcida	Arcidae	FALSE
+Bivalvia	16210	430	0	4	Barbatia:237|Barbatia (Barbatia):100|Barbatia (Cucullaearca):85|Barbatia (Hawaiarca):8	3	3.547999078	5.562676097	1	Arcida:147	1	Arcidae:147	Arcida	Arcidae	FALSE
+Bivalvia	16211	40	0	2	Bathyarca:34|Bathyarca (Bathyarca):6	1	3.905473871	3.905473871	1	Arcida:19	1	Arcidae:19	Arcida	Arcidae	FALSE
+Bivalvia	16224	718	0	2	Cucullaea:460|Cucullaea (Idonearca):258	2	4.793678931	5.585494171	1	Arcida:158	1	Cucullaeidae:158	Arcida	Cucullaeidae	FALSE
+Bivalvia	16243	1654	767	3	Glycymeris:1534|Glycymeris (Axinactis):2|Glycymeris (Glycymeris):118	2	4.408338234	5.373923402	1	Arcida:256	1	Glycymerididae:256	Arcida	Glycymerididae	FALSE
+Bivalvia	16246	564	0	4	Grammatodon:258|Grammatodon (Cosmetodon):144|Grammatodon (Grammatodon):71|Grammatodon (Indogrammatodon):91	3	3.174205247	4.156420441	1	Arcida:87	1	Parallelodontidae:87	Arcida	Parallelodontidae	FALSE
+Bivalvia	16260	283	0	2	Limopsis:260|Limopsis (Limopsis):23	2	3.490124917	4.925944636	1	Arcida:108	1	Limopsidae:108	Arcida	Limopsidae	FALSE
+Bivalvia	16275	191	0	2	Nemodon:189|Nemodon (Nemodon):2	2	3.619838639	5.365522273	1	Arcida:20	1	Parallelodontidae:20	Arcida	Parallelodontidae	FALSE
+Bivalvia	16277	72	0	2	Noetia:68|Noetia (Noetia):4	1	4.925944636	4.925944636	1	Arcida:21	1	Noetiidae:21	Arcida	Noetiidae	FALSE
+Bivalvia	16288	132	0	2	Pachecoa:82|Pachecoa (Pachecoa):50	2	2.181723081	2.891807831	1	Arcida:18	1	Arcidae:18	Arcida	Arcidae	FALSE
+Bivalvia	16307	87	0	2	Scapharca:19|Scapharca (Scapharca):68	1	5.701913411	5.701913411	1	Arcida:36	1	Arcidae:36	Arcida	Arcidae	FALSE
+Bivalvia	16324	200	0	2	Tucetona:194|Tucetona (Bellaxinaea):6	2	4.328357473	5.405712866	1	Arcida:44	1	Glycymerididae:44	Arcida	Glycymerididae	FALSE
+Bivalvia	16347	282	0	2	Brachidontes:207|Brachidontes (Brachidontes):75	2	4.006061957	4.761110459	1	Mytilida:79	1	Mytilidae:79	Mytilida	Mytilidae	FALSE
+Bivalvia	16370	277	0	5	Lithophaga:265|Lithophaga (Diberus):4|Lithophaga (Leiosolenus):1|Lithophaga (Lithophaga):6|Lithophaga (Myoforceps):1	5	4.394176442	5.676974731	1	Mytilida:124	1	Mytilidae:124	Mytilida	Mytilidae	FALSE
+Bivalvia	16383	69	0	2	Musculus:61|Musculus (Musculus):8	1	4.925944636	4.925944636	1	Mytilida:34	1	Mytilidae:34	Mytilida	Mytilidae	FALSE
+Bivalvia	16392	332	0	3	Mytilus:282|Mytilus (Crenomytilus):33|Mytilus (Mytilus):17	3	5.426459954	6.371370805	1	Mytilida:150	1	Mytilidae:150	Mytilida	Mytilidae	FALSE
+Bivalvia	16396	37	0	2	Perna:36|Perna (Perna):1	2	5.637078916	6.000196999	1	Mytilida:33	1	Mytilidae:33	Mytilida	Mytilidae	FALSE
+Bivalvia	16400	637	0	2	Pinna:515|Pinna (Pinna):122	1	8.268823174	8.268823174	1	Ostreida:204	1	Pinnidae:204	Ostreida	Pinnidae	FALSE
+Bivalvia	16416	101	0	3	Septifer:92|Septifer (Mytilisepta):6|Septifer (Septifer):3	3	3.905473871	4.646627569	1	Mytilida:30	1	Mytilidae:30	Mytilida	Mytilidae	FALSE
+Bivalvia	16420	5	0	2	Solamen:4|Solamen (Exosiperna):1	2	1.357325118	4.187961094	1	Mytilida:4	1	Mytilidae:4	Mytilida	Mytilidae	FALSE
+Bivalvia	16439	76	0	2	Acesta:65|Acesta (Acesta):11	2	5.960797187	6.352082559	1	Pectinida:35	1	Limidae:35	Pectinida	Limidae	FALSE
+Bivalvia	16441	17	0	2	Actinodesma:14|Actinodesma (Actinodesma):3	2	3.973069266	4.444416099	1	Ostreida:10	1	Pterineidae:10	Ostreida	Pterineidae	FALSE
+Bivalvia	16476	924	0	2	Anomia:910|Anomia (Anomia):14	2	4.992036572	5.111815185	1	Pectinida:184	1	Anomiidae:184	Pectinida	Anomiidae	FALSE
+Bivalvia	16510	820	354	3	Bakevellia:708|Bakevellia (Bakevellia):44|Bakevellia (Bakevelloides):68	2	3.387733359	4.46161772	1	Ostreida:137	1	Bakevelliidae:137	Ostreida	Bakevelliidae	FALSE
+Bivalvia	16531	917	0	3	Camptonectes:636|Camptonectes (Camptochlamys):77|Camptonectes (Camptonectes):204	2	4.011529959	4.865547207	1	Pectinida:126	1	Pectinidae:126	Pectinida	Pectinidae	FALSE
+Bivalvia	16538	51	0	2	Carolia:49|Carolia (Carolia):2	1	4.81730078	4.81730078	1	Pectinida:16	1	Anomiidae:16	Pectinida	Anomiidae	FALSE
+Bivalvia	16549	1283	0	4	Chlamys:1185|Chlamys (Chlamys):81|Chlamys (Radulopecten):3|Chlamys (Swiftopecten):14	4	3.516504561	5.998903733	1	Pectinida:336	1	Pectinidae:336	Pectinida	Pectinidae	FALSE
+Bivalvia	16620	128	0	2	Eburneopecten:107|Eburneopecten (Eburneopecten):21	1	2.941915355	2.941915355	1	Pectinida:33	1	Pectinidae:33	Pectinida	Pectinidae	FALSE
+Bivalvia	16635	835	0	2	Entolium:620|Entolium (Entolium):215	1	3.985031463	3.985031463	1	Pectinida:180	1	Entoliidae:180	Pectinida	Entoliidae	FALSE
+Bivalvia	16655	666	0	2	Exogyra:368|Exogyra (Exogyra):298	2	5.018904357	5.904483417	1	Ostreida:100	1	Gryphaeidae:100	Ostreida	Gryphaeidae	FALSE
+Bivalvia	16679	350	0	3	Gervillia:291|Gervillia (Cultriopsis):46|Gervillia (Gervillia):13	2	4.065670262	4.720598689	1	Ostreida:123	1	Bakevelliidae:123	Ostreida	Bakevelliidae	FALSE
+Bivalvia	16691	580	0	3	Gryphaea:443|Gryphaea (Bilobissa):82|Gryphaea (Gryphaea):55	3	4.349705351	4.445978001	1	Ostreida:100	1	Gryphaeidae:100	Ostreida	Gryphaeidae	FALSE
+Bivalvia	16727	840	0	4	Inoceramus:684|Inoceramus (Endocostea):60|Inoceramus (Inoceramus):62|Inoceramus (Sphenoceramus):34	3	4.386795361	6.480731782	1	Myalinida:171	1	Inoceramidae:171	Myalinida	Inoceramidae	FALSE
+Bivalvia	16730	335	0	3	Isognomon:284|Isognomon (Hippochaeta):27|Isognomon (Isognomon):24	2	5.546915323	6.349650198	1	Ostreida:87	1	Malleidae:87	Ostreida	Malleidae	FALSE
+Bivalvia	16760	461	0	3	Leptodesma:199|Leptodesma (Leiopteria):185|Leptodesma (Leptodesma):77	2	4.508588114	4.599898653	1	Ostreida:106	1	Pterineidae:106	Ostreida	Pterineidae	FALSE
+Bivalvia	16765	516	0	2	Lima:451|Lima (Lima):65	1	5.76605369	5.76605369	1	Pectinida:169	1	Limidae:169	Pectinida	Limidae	FALSE
+Bivalvia	16767	71	0	2	Limaria:39|Limaria (Limaria):32	1	4.537458561	4.537458561	1	Pectinida:37	1	Limidae:37	Pectinida	Limidae	FALSE
+Bivalvia	16769	243	0	3	Limatula:238|Limatula (Limatula):2|Limatula (Limatuletta):3	3	2.682903267	4.115752051	1	Pectinida:61	1	Limidae:61	Pectinida	Limidae	FALSE
+Bivalvia	16771	100	0	3	Limea:95|Limea (Eolimea):3|Limea (Limea):2	3	1.380177802	3.049837284	1	Pectinida:48	1	Limidae:48	Pectinida	Limidae	FALSE
+Bivalvia	16782	158	0	2	Lopha:150|Lopha (Actinostreon):8	2	5.222449634	5.319051139	1	Ostreida:74	1	Ostreidae:74	Ostreida	Ostreidae	FALSE
+Bivalvia	16821	108	0	3	Monotis:41|Monotis (Entomonotis):43|Monotis (Monotis):24	2	4.288665279	4.584938221	1	Pectinida:38	1	Monotidae:38	Pectinida	Monotidae	FALSE
+Bivalvia	16826	173	0	2	Myalina:152|Myalina (Myalina):21	1	5.17357693	5.17357693	1	Myalinida:74	1	Myalinidae:74	Myalinida	Myalinidae	FALSE
+Bivalvia	16841	21	0	2	Nayadina:3|Nayadina (Exputens):18	2	4.042216308	4.506577275	1	Ostreida:8	1	Malleidae:8	Ostreida	Malleidae	FALSE
+Bivalvia	16870	1411	0	2	Ostrea:1348|Ostrea (Ostrea):63	2	5.890082534	5.993717075	1	Ostreida:401	1	Ostreidae:401	Ostreida	Ostreidae	FALSE
+Bivalvia	16876	492	0	3	Oxytoma:410|Oxytoma (Oxytoma):53|Oxytoma (Palmoxytoma):29	2	3.206621523	4.966718266	1	Pectinida:107	1	Oxytomidae:107	Pectinida	Oxytomidae	FALSE
+Bivalvia	16904	686	0	2	Pecten:574|Pecten (Pecten):112	2	5.760415617	6.044004715	1	Pectinida:233	1	Pectinidae:233	Pectinida	Pectinidae	FALSE
+Bivalvia	16924	4	0	3	Placuna:2|Placuna (Ephippium):1|Placuna (Placuna):1	2	6.044628318	6.206263193	1	Pectinida:4	1	Placunidae:4	Pectinida	Placunidae	FALSE
+Bivalvia	16936	630	0	2	Plicatula:559|Plicatula (Plicatula):71	1	4.396548052	4.396548052	1	Pectinida:171	1	Plicatulidae:171	Pectinida	Plicatulidae	FALSE
+Bivalvia	16937	52	0	2	Pododesmus:18|Pododesmus (Monia):34	1	5.509979323	5.509979323	1	Pectinida:23	1	Anomiidae:23	Pectinida	Anomiidae	FALSE
+Bivalvia	16957	123	0	3	Propeamussium:90|Propeamussium (Parvamussium):27|Propeamussium (Propeamussium):6	3	2.250391017	5.068592471	1	Pectinida:54	1	Propeamussiidae:54	Pectinida	Propeamussiidae	FALSE
+Bivalvia	16970	257	0	2	Pseudomonotis:183|Pseudomonotis (Pseudomonotis):74	1	3.637054181	3.637054181	1	Pectinida:78	1	Pseudomonotidae:78	Pectinida	Pseudomonotidae	FALSE
+Bivalvia	16974	99	0	2	Pseudopecten:61|Pseudopecten (Pseudopecten):38	1	5.391244241	5.391244241	1	Pectinida:23	1	Pectinidae:23	Pectinida	Pectinidae	FALSE
+Bivalvia	17002	61	0	2	Rastellum:58|Rastellum (Arctostrea):3	1	5.057962136	5.057962136	1	Ostreida:17	1	Ostreidae:17	Ostreida	Ostreidae	FALSE
+Bivalvia	17044	463	0	2	Spondylus:419|Spondylus (Spondylus):44	2	4.839675617	6.912671268	1	Pectinida:171	1	Spondylidae:171	Pectinida	Spondylidae	FALSE
+Bivalvia	17097	338	0	2	Weyla:209|Weyla (Weyla):129	1	4.807149221	4.807149221	1	Pectinida:26	1	Neitheidae:26	Pectinida	Neitheidae	FALSE
+Bivalvia	17135	132	0	2	Goniophora:129|Goniophora (Cosmogoniophora):3	1	4.134643632	4.134643632	1	Modiomorphida:50	1	Modiomorphidae:50	Modiomorphida	Modiomorphidae	FALSE
+Bivalvia	17224	7	0	2	Laevitrigonia:6|Laevitrigonia (Malagasitrigonia):1	2	4.571646041	4.583345904	1	Trigoniida:3	1	Laevitrigoniidae:3	Trigoniida	Laevitrigoniidae	FALSE
+Bivalvia	17226	49	0	2	Linotrigonia:26|Linotrigonia (Oistotrigonia):23	1	4.133471341	4.133471341	1	Trigoniida:15	1	Trigoniidae:15	Trigoniida	Trigoniidae	FALSE
+Bivalvia	17236	12	0	2	Apiotrigonia (Apiotrigonia):11|Megatrigonia:1	2	3.539489045	5.586197345	1	Trigoniida:2	1	Megatrigoniidae:1	Trigoniida	Megatrigoniidae	FALSE
+Bivalvia	17240	213	0	2	Myophorella:168|Myophorella (Myophorella):45	1	5.327748667	5.327748667	1	Trigoniida:30	1	Myophorellidae:30	Trigoniida	Myophorellidae	FALSE
+Bivalvia	17266	517	0	3	Pterotrigonia:290|Pterotrigonia (Pterotrigonia):27|Pterotrigonia (Scabrotrigonia):200	2	4.660671647	4.746921537	1	Trigoniida:69	1	Megatrigoniidae:69	Trigoniida	Megatrigoniidae	FALSE
+Bivalvia	17287	402	0	4	Trigonia:336|Trigonia (Kumatrigonia):5|Trigonia (Pleurotrigonia):1|Trigonia (Trigonia):60	3	3.410939806	4.921528092	1	Trigoniida:112	1	Trigoniidae:112	Trigoniida	Trigoniidae	FALSE
+Bivalvia	17290	89	0	2	Vaugonia:73|Vaugonia (Vaugonia):16	1	4.188522068	4.188522068	1	Trigoniida:23	1	Myophorellidae:23	Trigoniida	Myophorellidae	FALSE
+Bivalvia	17298	174	0	3	Abra:142|Abra (Abra):27|Abra (Syndosmya):5	3	3.380739444	4.006990444	2	Cardiida:43|Veneroida:17	1	Semelidae:54	Cardiida	Semelidae	FALSE
+Bivalvia	17299	45	0	2	Acanthocardia:32|Acanthocardia (Acanthocardia):13	2	4.110983633	5.231879213	2	Cardiida:18|Veneroida:8	1	Cardiidae:25	Cardiida	Cardiidae	FALSE
+Bivalvia	17301	12	0	2	Acrosterigma:6|Acrosterigma (Vasticardium):6	1	5.62553301	5.62553301	1	Cardiida:6	1	Cardiidae:6	Cardiida	Cardiidae	FALSE
+Bivalvia	17311	6	0	1	Agelasina:6	1	5.256070992	5.256070992	1	Cardiida:5	1	Dicerocardiidae:5	Megalodontida	Dicerocardiidae	TRUE
+Bivalvia	17315	28	0	2	Aligena:26|Aligena (Aligena):2	1	2.217953761	2.217953761	2	Cardiida:11|Veneroida:2	1	Kelliidae:13	Cardiida	Kelliidae	FALSE
+Bivalvia	17339	58	0	2	Anodontia:43|Anodontia (Anodontia):15	1	3.86100278	3.86100278	2	Lucinida:18|Veneroida:5	1	Lucinidae:22	Lucinida	Lucinidae	FALSE
+Bivalvia	17367	3	0	1	Asaphis:3	1	5.307777794	5.307777794	1	Cardiida:3	1	Psammobiidae:3	Veneroida	Psammobiidae	TRUE
+Bivalvia	17374	13	0	1	Astartopis:13	1	1.800388608	1.800388608	1	Cardiida:3	1	Astartidae:3	Carditida	Astartidae	TRUE
+Bivalvia	17375	6	0	1	Astartopsis:6	1	3.48730015	3.48730015	1	Cardiida:3	1	Astartidae:3	Carditida	Astartidae	TRUE
+Bivalvia	17389	7	0	2	Azorinus:6|Azorinus (Azorinus):1	2	4.468342392	5.24981303	2	Cardiida:4|Veneroida:1	1	Solecurtidae:5	Cardiida	Solecurtidae	FALSE
+Bivalvia	17399	25	0	3	Basterotia:7|Basterotia (Basterotella):9|Basterotia (Basterotia):9	3	1.748864292	4.463414551	2	Cardiida:4|Veneroida:4	1	Sportellidae:7	Cardiida	Sportellidae	TRUE
+Bivalvia	17408	33	0	2	Bornia:27|Bornia (Bornia):6	2	1.786669151	2.857834524	2	Cardiida:11|Veneroida:3	1	Kelliidae:14	Cardiida	Kelliidae	FALSE
+Bivalvia	17423	260	0	2	Callista:184|Callista (Callista):76	2	5.274490554	5.595043135	2	Cardiida:48|Veneroida:26	1	Veneridae:63	Cardiida	Veneridae	FALSE
+Bivalvia	17427	109	0	3	Callocardia:11|Callocardia (Agriopoma):86|Callocardia (Nitidavenus):12	3	2.867752365	3.643176021	2	Cardiida:15|Veneroida:8	1	Veneridae:23	Cardiida	Veneridae	FALSE
+Bivalvia	17428	67	0	2	Callucina:35|Callucina (Callucina):32	2	3.087547661	4.492617707	2	Lucinida:18|Veneroida:4	1	Lucinidae:21	Lucinida	Lucinidae	FALSE
+Bivalvia	17432	55	0	2	Calva:5|Calva (Calva):50	1	3.942646576	3.942646576	2	Cardiida:2|Veneroida:11	1	Veneridae:11	Cardiida	Veneridae	TRUE
+Bivalvia	17438	2	0	1	Cardiniopsis:2	1	6.086712663	6.086712663	1	Cardiida:1	1	Astartidae:1	Carditida	Astartidae	TRUE
+Bivalvia	17439	3	0	2	Cardiocardita:2|Cardiocardita (Bathycardita):1	2	3.618504368	4.463414551	2	Carditida:1|Veneroida:1	2	Carditidae:1|Permophoridae:1	unresolved	unresolved	FALSE
+Bivalvia	17441	169	0	2	Cardita:152|Cardita (Cardita):17	2	3.715186779	5.079540859	2	Carditida:83|Veneroida:9	2	Carditidae:83|Permophoridae:9	Carditida	Carditidae	FALSE
+Bivalvia	17442	66	0	2	Carditamera:49|Carditamera (Carditamera):17	2	4.531101005	5.216122991	2	Carditida:17|Veneroida:8	2	Carditidae:17|Permophoridae:8	Carditida	Carditidae	FALSE
+Bivalvia	17447	1	0	1	Carditopsis:1	1	2.359034873	2.359034873	1	Cardiida:1	1	Condylocardiidae:1	Carditida	Condylocardiidae	TRUE
+Bivalvia	17459	307	0	2	Chama:300|Chama (Chama):7	1	5.674452927	5.674452927	2	Cardiida:113|Veneroida:2	1	Chamidae:113	Cardiida	Chamidae	FALSE
+Bivalvia	17468	167	0	2	Chione:149|Chione (Chione):18	2	4.869106955	5.050591597	2	Cardiida:50|Veneroida:7	1	Veneridae:53	Cardiida	Veneridae	FALSE
+Bivalvia	17472	167	0	2	Chionopsis:166|Chionopsis (Puberella):1	2	4.971388639	5.392037827	1	Cardiida:23	1	Veneridae:23	Cardiida	Veneridae	FALSE
+Bivalvia	17478	14	0	2	Circe:11|Circe (Circe):3	1	4.667729325	4.667729325	2	Cardiida:5|Veneroida:3	1	Veneridae:8	Cardiida	Veneridae	FALSE
+Bivalvia	17481	16	0	3	Claibornites:4|Claibornites (Claibornites):4|Claibornites (Codalucina):8	2	3.700931786	3.736213426	2	Lucinida:3|Veneroida:9	1	Lucinidae:12	Lucinida	Lucinidae	TRUE
+Bivalvia	17484	148	0	3	Clementia:10|Clementia (Clementia):104|Clementia (Egesta):34	3	4.078918904	5.1964505	2	Cardiida:17|Veneroida:23	1	Veneridae:38	Cardiida	Veneridae	TRUE
+Bivalvia	17485	87	0	3	Clinocardium:31|Clinocardium (Clinocardium):49|Clinocardium (Keenocardium):7	2	4.862627031	5.668548605	1	Cardiida:28	1	Cardiidae:28	Cardiida	Cardiidae	FALSE
+Bivalvia	17488	53	0	2	Codakia:31|Codakia (Codakia):22	1	4.869712707	4.869712707	2	Lucinida:16|Veneroida:9	1	Lucinidae:25	Lucinida	Lucinidae	FALSE
+Bivalvia	17492	48	0	2	Coelopis:25|Coelopis (Coelopis):23	1	2.052328541	2.052328541	2	Carditida:9|Veneroida:8	1	Astartidae:16	Carditida	Astartidae	FALSE
+Bivalvia	17502	32	0	3	Coralliophaga:26|Coralliophaga (Coralliophaga):3|Coralliophaga (Oryctomya):3	3	3.714363556	4.631051051	2	Cardiida:14|Veneroida:4	2	Trapezidae:14|Trapeziidae:4	Cardiida	Trapezidae	FALSE
+Bivalvia	17504	116	0	3	Corbicula:113|Corbicula (Corbicula):2|Corbicula (Loxoptychodon):1	3	2.750344545	4.403635666	2	Cardiida:43|Veneroida:2	1	Corbiculidae:43	Cardiida	Corbiculidae	FALSE
+Bivalvia	17512	2	0	1	Cossmannella:2	1	2.837128174	2.837128174	1	Cardiida:2	1	Permophoridae:2	Pholadomyida	Permophoridae	TRUE
+Bivalvia	17518	827	0	4	Crassatella:786|Crassatella (Crassatella):31|Crassatella (Landinia):2|Crassatella (Pachythaerus):8	3	3.815258737	5.23019202	2	Carditida:148|Veneroida:14	1	Crassatellidae:158	Carditida	Crassatellidae	FALSE
+Bivalvia	17536	33	0	2	Cultellus:27|Cultellus (Cultellus):6	2	4.438803001	5.742389911	2	Solenida:17|Veneroida:1	2	Cultellidae:1|Pharidae:17	Solenida	Pharidae	FALSE
+Bivalvia	17548	216	0	4	Cyclocardia:180|Cyclocardia (Arcturellina):22|Cyclocardia (Cyclocardia):13|Cyclocardia (Vimentum):1	4	2.359034873	4.570823366	2	Carditida:73|Veneroida:7	2	Carditidae:73|Permophoridae:7	Carditida	Carditidae	FALSE
+Bivalvia	17578	309	0	4	Diplodonta:170|Diplodonta (Diplodonta):113|Diplodonta (Zemysina):10|Felaniella (Felaniella):16	3	1.649889111	3.016955523	2	Cardiida:80|Veneroida:38	1	Ungulinidae:106	Cardiida	Ungulinidae	FALSE
+Bivalvia	17581	52	0	1	Disparilia:52	1	3.05030745	3.05030745	1	Cardiida:1	1	Astartidae:1	Carditida	Astartidae	TRUE
+Bivalvia	17583	36	0	3	Divalinga:30|Divalinga (Divalinga):1|Divalinga (Stchepinskya):5	2	2.405073635	3.077045214	2	Lucinida:15|Veneroida:6	1	Lucinidae:20	Lucinida	Lucinidae	FALSE
+Bivalvia	17586	61	0	2	Divaricella:47|Divaricella (Divaricella):14	1	4.128476645	4.128476645	2	Lucinida:27|Veneroida:3	1	Lucinidae:28	Lucinida	Lucinidae	FALSE
+Bivalvia	17592	103	0	4	Donax:92|Donax (Donax):2|Donax (Latona):5|Donax (Paradonax):4	3	3.905473871	5.012344806	2	Cardiida:36|Veneroida:7	1	Donacidae:41	Cardiida	Donacidae	FALSE
+Bivalvia	17595	352	0	6	Dosinia:251|Dosinia (Asa):10|Dosinia (Austrodosinia):1|Dosinia (Dosinella):3|Dosinia (Dosinia):71|Dosinia (Kereia):16	5	4.405989189	5.754278504	2	Cardiida:88|Veneroida:18	1	Veneridae:98	Cardiida	Veneridae	FALSE
+Bivalvia	17615	20	0	2	Eocallista:19|Eocallista (Eocallista):1	1	4.819993822	4.819993822	2	Cardiida:9|Veneroida:1	1	Corbiculidae:9	Cardiida	Corbiculidae	FALSE
+Bivalvia	17632	4	0	1	Eriphylopsis:4	1	2.758409767	2.758409767	1	Cardiida:2	1	Astartidae:2	Carditida	Astartidae	TRUE
+Bivalvia	17634	45	0	2	Erycina:39|Erycina (Erycina):6	1	2.16204315	2.16204315	2	Cardiida:21|Veneroida:4	1	Erycinidae:25	Cardiida	Erycinidae	FALSE
+Bivalvia	17640	117	0	3	Eucrassatella:27|Eucrassatella (Eucrassatella):18|Eucrassatella (Hybolophus):72	3	4.509360642	5.436704184	2	Carditida:18|Veneroida:20	1	Crassatellidae:37	Carditida	Crassatellidae	TRUE
+Bivalvia	17675	220	0	5	Gari:77|Gari (Gari):3|Gari (Garum):5|Gari (Gobraeus):96|Gari (Psammobia):39	4	4.261212198	5.69033803	2	Cardiida:35|Veneroida:62	1	Psammobiidae:88	Veneroida	Psammobiidae	FALSE
+Bivalvia	17684	66	0	3	Gibbolucina:7|Gibbolucina (Eomiltha):51|Gibbolucina (Gibbolucina):8	2	2.691419823	3.868134022	2	Lucinida:4|Veneroida:26	1	Lucinidae:28	Lucinida	Lucinidae	TRUE
+Bivalvia	17687	44	0	3	Glans:31|Glans (Centrocardita):4|Glans (Glans):9	2	2.35862333	4.215702097	2	Carditida:18|Veneroida:7	2	Carditidae:18|Permophoridae:7	Carditida	Carditidae	FALSE
+Bivalvia	17691	171	0	2	Glossus:163|Glossus (Glossus):8	2	4.748704097	5.201398093	2	Cardiida:64|Veneroida:5	1	Glossidae:69	Cardiida	Glossidae	FALSE
+Bivalvia	17693	137	0	2	Glyptoactis:109|Glyptoactis (Glyptoactis):28	1	3.967379901	3.967379901	2	Carditida:26|Veneroida:7	2	Carditidae:26|Permophoridae:7	Carditida	Carditidae	FALSE
+Bivalvia	17704	20	0	2	Goodallia:2|Goodallia (Goodallia):18	2	0.343163688	1.373338877	2	Carditida:2|Veneroida:5	1	Astartidae:7	Carditida	Astartidae	TRUE
+Bivalvia	17706	1	0	1	Goossensia:1	1	2.056120933	2.056120933	1	Cardiida:1	1	Permophoridae:1	Pholadomyida	Permophoridae	TRUE
+Bivalvia	17708	201	0	2	Gouldia:183|Gouldia (Gouldia):18	2	3.151353856	5.926975272	2	Cardiida:23|Veneroida:14	1	Veneridae:37	Cardiida	Veneridae	FALSE
+Bivalvia	17711	3	0	2	Grateloupia:1|Grateloupia (Grateloupia):2	1	4.123757222	4.123757222	2	Cardiida:1|Veneroida:1	1	Veneridae:2	Cardiida	Veneridae	TRUE
+Bivalvia	17730	1	0	1	Heterodonax:1	1	3.702780416	3.702780416	1	Cardiida:1	1	Psammobiidae:1	Veneroida	Psammobiidae	TRUE
+Bivalvia	17760	1	0	1	Isopristes:1	1	4.155474413	4.155474413	1	Cardiida:1	1	Cardiniidae:1	Carditida	Cardiniidae	TRUE
+Bivalvia	17781	1	0	1	Kitsonia:1	1	2.83595437	2.83595437	1	Cardiida:1	1	Trapeziidae:1	unresolved	Trapeziidae	TRUE
+Bivalvia	17785	161	0	2	Laevicardium:145|Laevicardium (Laevicardium):16	2	4.574931266	5.993717075	2	Cardiida:52|Veneroida:6	1	Cardiidae:58	Cardiida	Cardiidae	FALSE
+Bivalvia	17810	8	0	2	Lepton:4|Lepton (Lepton):4	1	2.227259797	2.227259797	2	Cardiida:4|Veneroida:4	1	Leptonidae:8	Cardiida	Leptonidae	TRUE
+Bivalvia	17817	88	0	5	Linga:54|Linga (Bellucina):10|Linga (Illesca):1|Linga (Linga):17|Linga (Pleurolucina):6	4	2.209224281	3.233388083	2	Lucinida:12|Veneroida:16	1	Lucinidae:28	Lucinida	Lucinidae	TRUE
+Bivalvia	17818	7	0	2	Lioconcha:6|Lioconcha (Sulcilioconcha):1	2	3.616723094	4.543783541	1	Cardiida:4	1	Veneridae:4	Cardiida	Veneridae	FALSE
+Bivalvia	17822	76	0	2	Lirodiscus:74|Lirodiscus (Crustuloides):2	2	3.16363677	3.49849058	2	Carditida:13|Veneroida:1	1	Astartidae:13	Carditida	Astartidae	FALSE
+Bivalvia	17824	192	0	2	Lirophora:81|Lirophora (Lirophora):111	2	4.130535733	4.947360188	1	Cardiida:33	1	Veneridae:33	Cardiida	Veneridae	FALSE
+Bivalvia	17835	592	0	3	Lucina:437|Lucina (Lucina):8|Lucina (Lucinisca):147	2	2.760194905	4.456944963	2	Lucinida:165|Veneroida:33	1	Lucinidae:189	Lucinida	Lucinidae	FALSE
+Bivalvia	17845	47	0	2	Lutraria:37|Lutraria (Lutraria):10	1	5.841808908	5.841808908	2	Cardiida:20|Veneroida:4	1	Mactridae:24	Cardiida	Mactridae	FALSE
+Bivalvia	17852	447	0	5	Macoma:186|Macoma (Macoma):79|Macoma (Macoploma):1|Macoma (Psammacoma):144|Macoma (Rexithaerus):37	5	3.843084055	5.345694389	2	Cardiida:53|Veneroida:59	1	Tellinidae:88	Cardiida	Tellinidae	TRUE
+Bivalvia	17856	324	0	2	Macrocallista:302|Macrocallista (Macrocallista):22	1	5.98065428	5.98065428	1	Cardiida:72	1	Veneridae:72	Cardiida	Veneridae	FALSE
+Bivalvia	17858	10	0	1	Macrosolen:10	1	5.429028993	5.429028993	1	Cardiida:9	1	Psammobiidae:9	Veneroida	Psammobiidae	TRUE
+Bivalvia	17859	83	0	5	Mactra:75|Mactra (Barymactra):1|Mactra (Electromactra):1|Mactra (Mactra):4|Mactra (Maorimactra):2	4	3.408480446	5.486687639	2	Cardiida:45|Veneroida:7	1	Mactridae:50	Cardiida	Mactridae	FALSE
+Bivalvia	17881	32	0	2	Meekia:7|Meekia (Meekia):25	1	4.068145916	4.068145916	2	Cardiida:3|Veneroida:5	1	Tancrediidae:7	Cardiida	Tancrediidae	TRUE
+Bivalvia	17900	57	0	2	Mesocallista:56|Mesocallista (Mesocallista):1	1	3.982383197	3.982383197	2	Cardiida:5|Veneroida:1	1	Veneridae:5	Cardiida	Veneridae	FALSE
+Bivalvia	17921	3	0	1	Miodomeris:3	1	0.780139642	0.780139642	1	Cardiida:2	1	Permophoridae:2	Pholadomyida	Permophoridae	TRUE
+Bivalvia	17930	15	0	2	Monitilora:5|Monitilora (Monitilora):10	2	2.631558817	3.979064854	2	Lucinida:3|Veneroida:7	1	Lucinidae:10	Lucinida	Lucinidae	TRUE
+Bivalvia	17946	145	0	2	Myrtea:101|Myrtea (Myrtea):44	1	3.508330006	3.508330006	2	Lucinida:27|Veneroida:11	1	Lucinidae:36	Lucinida	Lucinidae	FALSE
+Bivalvia	17949	8	0	2	Mysella:5|Mysella (Mysella):3	1	1.27152836	1.27152836	2	Cardiida:4|Veneroida:2	1	Montacutidae:6	Cardiida	Montacutidae	FALSE
+Bivalvia	17958	376	0	4	Nemocardium:206|Nemocardium (Keenaea):5|Nemocardium (Nemocardium):157|Nemocardium (Pratulum):8	3	3.673337935	4.948875747	2	Cardiida:65|Veneroida:46	1	Cardiidae:107	Cardiida	Cardiidae	FALSE
+Bivalvia	17959	93	0	2	Neocrassina:83|Neocrassina (Coelastarte):10	2	4.617588667	4.674935991	2	Carditida:18|Veneroida:6	1	Astartidae:23	Carditida	Astartidae	FALSE
+Bivalvia	17972	13	0	2	Nevenulora:2|Nevenulora (Jagonoma):11	1	3.292046714	3.292046714	2	Lucinida:2|Veneroida:1	1	Lucinidae:3	Lucinida	Lucinidae	FALSE
+Bivalvia	17974	180	0	2	Nicaniella:146|Nicaniella (Nicaniella):34	2	1.574161647	3.770927688	2	Carditida:21|Veneroida:8	1	Astartidae:27	Carditida	Astartidae	FALSE
+Bivalvia	17988	6	0	1	Nuttallia:6	1	5.701913411	5.701913411	1	Cardiida:5	1	Psammobiidae:5	Veneroida	Psammobiidae	TRUE
+Bivalvia	17995	43	0	2	Opis:38|Opis (Trigonopis):5	2	2.405073635	4.195552648	2	Carditida:20|Veneroida:4	1	Astartidae:23	Carditida	Astartidae	FALSE
+Bivalvia	18020	38	0	3	Paphia:36|Paphia (Paphia):1|Paphia (Protapes):1	2	4.925944636	5.32799627	2	Cardiida:19|Veneroida:1	1	Veneridae:19	Cardiida	Veneridae	FALSE
+Bivalvia	18040	220	0	2	Parvilucina:217|Parvilucina (Callucinella):3	1	2.744034959	2.744034959	2	Lucinida:39|Veneroida:2	1	Lucinidae:40	Lucinida	Lucinidae	FALSE
+Bivalvia	18056	23	0	4	Petricola:14|Petricola (Petricola):3|Petricola (Petricolaria):5|Petricola (Petricolirus):1	3	4.518286814	4.925944636	2	Cardiida:12|Veneroida:5	2	Petricolidae:5|Petricolina:12	Cardiida	Petricolina	FALSE
+Bivalvia	18075	725	0	6	Pitar:529|Pitar (Hyphantosoma):18|Pitar (Lamelliconcha):40|Pitar (Nanopitar):1|Pitar (Paradione):8|Pitar (Pitar):129	5	1.728460147	5.165070502	2	Cardiida:130|Veneroida:31	1	Veneridae:148	Cardiida	Veneridae	FALSE
+Bivalvia	18098	46	0	2	Polymesoda:36|Polymesoda (Geloina):10	1	5.179981306	5.179981306	2	Cardiida:14|Veneroida:7	1	Corbiculidae:20	Cardiida	Corbiculidae	FALSE
+Bivalvia	18116	1	0	1	Prosocoelus:1	1	5.122827057	5.122827057	1	Cardiida:1	1	Astartidae:1	Carditida	Astartidae	TRUE
+Bivalvia	18119	26	0	1	Prothyris:26	1	3.888785032	3.888785032	1	Cardiida:14	1	Grammysiidae:14	Pholadomyoida	Grammysiidae	TRUE
+Bivalvia	18143	65	0	1	Pseudocardium:65	1	6.207902896	6.207902896	1	Veneroida:16	1	Mactridae:16	Cardiida	Mactridae	TRUE
+Bivalvia	18160	3	0	1	Pterolucina:3	1	3.468708131	3.468708131	1	Cardiida:3	1	Lucinidae:3	Lucinida	Lucinidae	TRUE
+Bivalvia	18211	8	0	2	Sanguinolaria:7|Sanguinolaria (Sanguinolaria):1	2	4.899430433	5.427830773	2	Cardiida:6|Veneroida:1	1	Psammobiidae:7	Veneroida	Psammobiidae	TRUE
+Bivalvia	18218	14	0	1	Scacchia (Scacchia):14	1	1.768936647	1.768936647	1	Veneroida:4	1	Erycinidae:4	Cardiida	Erycinidae	TRUE
+Bivalvia	18247	12	0	2	Serripes:5|Serripes (Serripes):7	1	5.590007604	5.590007604	1	Cardiida:8	1	Cardiidae:8	Cardiida	Cardiidae	FALSE
+Bivalvia	18259	5	0	1	Sita:5	1	1.725370226	1.725370226	1	Cardiida:3	1	Astartidae:3	Carditida	Astartidae	TRUE
+Bivalvia	18265	199	0	4	Solena:28|Solena (Eosolen):133|Solena (Plectosolen):36|Solena (Solena):2	4	4.33957391	5.781581224	2	Solenida:11|Veneroida:44	1	Solenidae:54	Solenida	Solenidae	TRUE
+Bivalvia	18275	228	0	3	Spisula:222|Spisula (Ruellia):1|Spisula (Spisula):5	3	3.06761457	6.207902896	2	Cardiida:72|Veneroida:4	1	Mactridae:74	Cardiida	Mactridae	FALSE
+Bivalvia	18281	1	0	1	Stearnsia:1	1	3.787669662	3.787669662	1	Cardiida:1	1	Crassatellidae:1	Carditida	Crassatellidae	TRUE
+Bivalvia	18287	51	0	3	Strigilla:30|Strigilla (Pisostrigilla):2|Strigilla (Strigilla):19	3	2.180011774	3.474889027	2	Cardiida:14|Veneroida:5	1	Tellinidae:16	Cardiida	Tellinidae	FALSE
+Bivalvia	18299	47	0	3	Tagelus:30|Tagelus (Mesopleura):15|Tagelus (Tagelus):2	2	5.237886148	5.701913411	2	Cardiida:12|Veneroida:10	1	Solecurtidae:20	Cardiida	Solecurtidae	FALSE
+Bivalvia	18304	137	0	2	Tancredia:129|Tancredia (Tancredia):8	2	4.030798134	4.153538967	2	Cardiida:31|Veneroida:2	1	Tancrediidae:33	Cardiida	Tancrediidae	FALSE
+Bivalvia	18306	29	0	2	Tapes:28|Tapes (Tapes):1	2	4.485657002	5.296400546	2	Cardiida:21|Veneroida:1	1	Veneridae:22	Cardiida	Veneridae	FALSE
+Bivalvia	18314	1053	0	13	Tellina:616|Tellina (Cadella):2|Tellina (Cyclotellina):2|Tellina (Elliptotellina):16|Tellina (Eurytellina):211|Tellina (Homalina):1|Tellina (Macaliopsis):3|Tellina (Moerella):130|Tellina (Oudardia):21|Tellina (Peronaea):6|Tellina (Peronidia):10|Tellina (Sinuosipagia):3|Tellina (Tellinella):32	13	2.454608686	5.016653441	2	Cardiida:169|Veneroida:88	1	Tellinidae:222	Cardiida	Tellinidae	FALSE
+Bivalvia	18336	79	0	2	Thyasira:72|Thyasira (Conchocele):7	1	3.645666032	3.645666032	2	Lucinida:40|Veneroida:5	1	Thyasiridae:44	Lucinida	Thyasiridae	FALSE
+Bivalvia	18338	42	0	2	Timoclea:41|Timoclea (Timoclea):1	2	2.875494272	3.905473871	2	Cardiida:25|Veneroida:1	1	Veneridae:26	Cardiida	Veneridae	FALSE
+Bivalvia	18341	58	0	3	Tivela:16|Tivela (Pachydesma):24|Tivela (Tivela):18	2	5.808444102	5.89923427	2	Cardiida:10|Veneroida:14	1	Veneridae:23	Cardiida	Veneridae	TRUE
+Bivalvia	18347	452	0	4	Trachycardium:346|Trachycardium (Mexicardia):43|Trachycardium (Phlogocardia):38|Trachycardium (Trachycardium):25	4	4.516138123	5.648088092	2	Cardiida:64|Veneroida:7	1	Cardiidae:66	Cardiida	Cardiidae	FALSE
+Bivalvia	18350	17	0	2	Trapezium:12|Trapezium (Neotrapezium):5	2	2.954044547	5.601665878	2	Cardiida:8|Veneroida:1	2	Trapezidae:8|Trapeziidae:1	Cardiida	Trapezidae	FALSE
+Bivalvia	18354	2	0	2	Tridacna:1|Tridacna (Chametrachea):1	2	7.188124725	8.431198918	1	Cardiida:2	1	Cardiidae:2	Cardiida	Cardiidae	FALSE
+Bivalvia	18358	300	0	3	Trigoniocardia:91|Trigoniocardia (Apiocardia):47|Trigoniocardia (Trigoniocardia):162	2	3.070819477	3.38719677	2	Cardiida:21|Veneroida:11	1	Cardiidae:26	Cardiida	Cardiidae	FALSE
+Bivalvia	18380	951	0	4	Venericardia:564|Venericardia (Leuroactis):1|Venericardia (Venericardia):7|Venericardia (Venericor):379	3	4.222541021	5.210008948	2	Carditida:116|Veneroida:70	2	Carditidae:116|Permophoridae:70	Carditida	Carditidae	FALSE
+Bivalvia	18391	107	0	3	Venus:67|Venus (Ventricoloidea):37|Venus (Venus):3	2	4.562566328	4.795885228	2	Cardiida:55|Veneroida:3	1	Veneridae:57	Cardiida	Veneridae	FALSE
+Bivalvia	18424	6	0	1	Anapteris:6	1	2.531917934	2.531917934	1	Myoida:2	1	Corbulidae:2	Pholadida	Corbulidae	TRUE
+Bivalvia	18429	1	0	1	Aspidopholas:1	1	3.869690999	3.869690999	1	Myoida:1	1	Pholadidae:1	Pholadida	Pholadidae	TRUE
+Bivalvia	18431	19	0	3	Barnea:12|Barnea (Anchomasa):1|Barnea (Barnea):6	2	5.426459954	5.547848018	2	Myoida:5|Pholadida:10	1	Pholadidae:15	Pholadida	Pholadidae	FALSE
+Bivalvia	18434	399	0	2	Caestocorbula:255|Caestocorbula (Caestocorbula):144	1	3.768734458	3.768734458	2	Myoida:4|Pholadida:43	1	Corbulidae:43	Pholadida	Corbulidae	FALSE
+Bivalvia	18437	522	0	2	Caryocorbula:507|Caryocorbula (Caryocorbula):15	2	3.111743313	3.747673461	1	Pholadida:89	1	Corbulidae:89	Pholadida	Corbulidae	FALSE
+Bivalvia	18439	37	0	1	Clavipholas:37	1	3.543908978	3.543908978	1	Myoida:7	1	Pholadidae:7	Pholadida	Pholadidae	TRUE
+Bivalvia	18441	1234	0	8	Corbula:658|Corbula (Anisocorbula):5|Corbula (Caryocorbula):154|Corbula (Corbula):5|Corbula (Notocorbula):62|Corbula (Serracorbula):1|Corbula (Tenuicorbula):10|Corbula (Varicorbula):339	8	2.657171568	4.093542049	2	Myoida:124|Pholadida:165	1	Corbulidae:250	Pholadida	Corbulidae	FALSE
+Bivalvia	18442	10	0	1	Corbulamella:10	1	0.818998241	0.818998241	1	Myoida:5	1	Corbulidae:5	Pholadida	Corbulidae	TRUE
+Bivalvia	18443	115	0	1	Corbulomima:115	1	2.334096193	2.334096193	1	Myoida:8	1	Corbulidae:8	Pholadida	Corbulidae	TRUE
+Bivalvia	18444	52	0	1	Cryptomya:52	1	4.300502652	4.300502652	1	Pholadida:12	1	Myidae:12	Myoida	Myidae	TRUE
+Bivalvia	18447	18	0	1	Cyrtodaria:18	1	5.071338685	5.071338685	1	Myoida:11	1	Hiatellidae:11	Hiatellida	Hiatellidae	TRUE
+Bivalvia	18456	91	0	3	Gastrochaena:68|Gastrochaena (Rocellaria):18|Gastrochaena (Spengleria):5	3	3.876931035	4.507505762	2	Cardiida:48|Myoida:3	1	Gastrochaenidae:50	Cardiida	Gastrochaenidae	FALSE
+Bivalvia	18457	3	0	1	Gastrochaenopsis:3	1	4.124643489	4.124643489	1	Myoida:2	1	Gastrochaenidae:2	Cardiida	Gastrochaenidae	TRUE
+Bivalvia	18458	3	0	1	Goniochasma:3	1	2.416319951	2.416319951	1	Myoida:3	1	Pholadidae:3	Pholadida	Pholadidae	TRUE
+Bivalvia	18464	35	0	2	Jouannetia:24|Jouannetia (Jouannetia):11	2	4.367783504	4.38224956	2	Myoida:3|Pholadida:14	1	Pholadidae:17	Pholadida	Pholadidae	FALSE
+Bivalvia	18467	10	5	1	Kummelia:10	1	4.702609758	4.702609758	1	Myoida:4	1	Gastrochaenidae:4	Cardiida	Gastrochaenidae	TRUE
+Bivalvia	18469	10	0	2	Lentidium:5|Lentidium (Lentidium):5	2	2.032385899	2.924861835	2	Myoida:4|Pholadida:4	1	Corbulidae:8	Pholadida	Corbulidae	TRUE
+Bivalvia	18473	127	0	3	Mya:28|Mya (Arenomya):61|Mya (Mya):38	3	5.1625253	6.05703468	2	Myoida:28|Pholadida:18	1	Myidae:39	Myoida	Myidae	FALSE
+Bivalvia	18478	5	0	1	Nototeredo:5	1	3.488807497	3.488807497	1	Myoida:4	1	Teredinidae:4	Pholadida	Teredinidae	TRUE
+Bivalvia	18479	35	0	1	Opertochasma:35	1	2.683536142	2.683536142	1	Myoida:8	1	Pholadidae:8	Pholadida	Pholadidae	TRUE
+Bivalvia	18480	1	0	1	Pachydon:1	1	2.877117979	2.877117979	1	Myoida:1	1	Corbulidae:1	Pholadida	Corbulidae	TRUE
+Bivalvia	18485	3	0	1	Parapholas:3	1	5.770732493	5.770732493	1	Myoida:3	1	Pholadidae:3	Pholadida	Pholadidae	TRUE
+Bivalvia	18488	10	0	1	Penitella:10	1	5.544113	5.544113	1	Myoida:3	1	Pholadidae:3	Pholadida	Pholadidae	TRUE
+Bivalvia	18491	25	0	2	Pholas:24|Pholas (Thovana):1	2	5.616747047	5.834439199	2	Myoida:1|Pholadida:14	1	Pholadidae:15	Pholadida	Pholadidae	FALSE
+Bivalvia	18492	1	0	1	Physoida:1	1	2.616249382	2.616249382	1	Myoida:1	1	Corbulidae:1	Pholadida	Corbulidae	TRUE
+Bivalvia	18493	2	0	1	Platyodon:2	1	4.484333698	4.484333698	1	Pholadida:2	1	Myidae:2	Myoida	Myidae	TRUE
+Bivalvia	18498	1	0	1	Ramsetia:1	1	3.660931573	3.660931573	1	Myoida:1	1	Pholadidae:1	Pholadida	Pholadidae	TRUE
+Bivalvia	18500	3	0	1	Saxicavella:3	1	2.584096735	2.584096735	1	Myoida:3	1	Hiatellidae:3	Hiatellida	Hiatellidae	TRUE
+Bivalvia	18507	7	0	1	Terebrimya:7	1	2.456606365	2.456606365	1	Myoida:2	1	Teredinidae:2	Pholadida	Teredinidae	TRUE
+Bivalvia	18510	120	0	2	Teredo:119|Teredo (Teredo):1	2	1.699666631	2.660867974	2	Myoida:1|Pholadida:56	1	Teredinidae:57	Pholadida	Teredinidae	FALSE
+Bivalvia	18512	9	0	1	Tiza:9	1	3.388269714	3.388269714	1	Myoida:1	1	Corbulidae:1	Pholadida	Corbulidae	TRUE
+Bivalvia	18515	3	0	1	Turnus:3	1	3.370445757	3.370445757	1	Myoida:3	1	Teredinidae:3	Pholadida	Teredinidae	TRUE
+Bivalvia	18516	31	0	1	Ursirivus:31	1	3.990969371	3.990969371	1	Myoida:2	1	Corbulidae:2	Pholadida	Corbulidae	TRUE
+Bivalvia	18520	7	0	1	Xylophagella:7	1	3.078424458	3.078424458	1	Myoida:4	1	Pholadidae:4	Pholadida	Pholadidae	TRUE
+Bivalvia	18522	13	0	1	Zirfaea:13	1	5.642919532	5.642919532	1	Myoida:9	1	Pholadidae:9	Pholadida	Pholadidae	TRUE
+Bivalvia	18568	1	0	1	Eomegalodus:1	1	4.182337291	4.182337291	1	Hippuritida:1	1	Megalodontidae:1	Megalodontida	Megalodontidae	TRUE
+Bivalvia	18607	1	0	1	Megalomoidea:1	1	4.459882581	4.459882581	1	Hippuritida:1	1	Megalodontidae:1	Megalodontida	Megalodontidae	TRUE
+Bivalvia	18624	15	0	3	Pachyrisma:11|Pachyrisma (Durga):1|Pachyrisma (Pachymegalodon):3	3	4.504035843	5.562491841	2	Hippuritida:3|Megalodontida:9	1	Megalodontidae:12	Megalodontida	Megalodontidae	FALSE
+Bivalvia	18630	2	0	1	Paramegalodus:2	1	6.41815914	6.41815914	1	Hippuritida:2	1	Megalodontidae:2	Megalodontida	Megalodontidae	TRUE
+Bivalvia	18638	3	0	1	Pinzonella:3	1	3.390495162	3.390495162	1	Hippuritida:1	1	Megalodontidae:1	Megalodontida	Megalodontidae	TRUE
+Bivalvia	18651	1	0	1	Protodiceras:1	1	4.211855684	4.211855684	1	Hippuritida:1	1	Megalodontidae:1	Megalodontida	Megalodontidae	TRUE
+Bivalvia	18699	1	0	1	Asketomorpha:1	1	4.736171779	4.736171779	1	Pholadomyida:1	1	Grammysiidae:1	Pholadomyoida	Grammysiidae	TRUE
+Bivalvia	18707	3	0	1	Pholadomya (Bucardiomya):3	1	4.506577275	4.506577275	1	Pholadomyoida:1	1	Pholadomyidae:1	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18711	69	0	3	Cardiomya:39|Cardiomya (Bowdenia):6|Cardiomya (Cardiomya):24	3	0.882387479	4.070308049	2	Pholadomyoida:8|Poromyida:22	1	Cuspidariidae:27	Poromyida	Cuspidariidae	FALSE
+Bivalvia	18712	2	0	1	Casterella:2	1	3.471551846	3.471551846	1	Pholadomyoida:2	1	Megadesmidae:2	Pholadomyida	Megadesmidae	TRUE
+Bivalvia	18714	59	0	2	Cercomya:54|Cercomya (Capillimya):5	2	4.417689966	5.158149849	2	Pandorida:19|Pholadomyoida:3	1	Laternulidae:21	Pandorida	Laternulidae	FALSE
+Bivalvia	18716	12	0	1	Chaenomya:12	1	4.81898462	4.81898462	1	Pholadomyoida:9	1	Pholadomyidae:9	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18724	1	0	1	Crassiconcha:1	1	4.588912607	4.588912607	1	Pholadomyoida:1	1	Megadesmidae:1	Pholadomyida	Megadesmidae	TRUE
+Bivalvia	18727	174	0	2	Cuspidaria:147|Cuspidaria (Cuspidaria):27	2	3.185316237	4.621214962	2	Pholadomyoida:9|Poromyida:57	1	Cuspidariidae:61	Poromyida	Cuspidariidae	FALSE
+Bivalvia	18733	8	0	1	Ectogrammysia:8	1	3.144839737	3.144839737	1	Pholadomyida:5	1	Grammysiidae:5	Pholadomyoida	Grammysiidae	TRUE
+Bivalvia	18736	23	0	1	Exochorhynchus:23	1	4.756820322	4.756820322	1	Pholadomyoida:4	1	Pholadomyidae:4	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18741	5	0	1	Girardotia:5	1	4.524496951	4.524496951	1	Pholadomyoida:4	1	Pholadomyidae:4	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18744	127	0	2	Goniomya:103|Goniomya (Goniomya):24	1	4.443504076	4.443504076	2	Pholadomyida:41|Pholadomyoida:9	1	Pholadomyidae:48	Pholadomyida	Pholadomyidae	FALSE
+Bivalvia	18750	170	0	1	Homomya:170	1	5.456224012	5.456224012	1	Pholadomyoida:59	1	Pholadomyidae:59	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18755	49	0	2	Laternula:45|Laternula (Laternulina):4	2	4.129653687	5.080902605	2	Pandorida:17|Pholadomyoida:1	1	Laternulidae:18	Pandorida	Laternulidae	FALSE
+Bivalvia	18757	177	0	2	Liopistha:159|Liopistha (Psilomya):18	2	3.42732696	3.524213705	2	Pholadomyoida:7|Poromyida:26	1	Poromyidae:29	Poromyida	Poromyidae	FALSE
+Bivalvia	18760	1	0	1	Machomya:1	1	4.768670146	4.768670146	1	Pholadomyoida:1	1	Pholadomyidae:1	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18762	49	0	1	Megadesmus:49	1	5.233804615	5.233804615	1	Pholadomyoida:26	1	Megadesmidae:26	Pholadomyida	Megadesmidae	TRUE
+Bivalvia	18769	170	0	3	Myonia:109|Myonia (Myonia):2|Myonia (Pachymyonia):59	2	4.96960264	5.828773701	2	Pholadida:38|Pholadomyoida:18	2	Megadesmidae:18|Vacunellidae:38	Pholadida	Vacunellidae	FALSE
+Bivalvia	18771	3	0	1	Neaeroporomya:3	1	2.670177147	2.670177147	1	Pholadomyoida:2	1	Poromyidae:2	Poromyida	Poromyidae	TRUE
+Bivalvia	18772	1	0	1	Neoburmesia:1	1	4.935780725	4.935780725	1	Pholadomyoida:1	1	Pholadomyidae:1	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18777	10	0	1	Osteomya:10	1	4.657607136	4.657607136	1	Pholadomyoida:4	1	Pholadomyidae:4	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18780	37	0	2	Pachymya:26|Pachymya (Pachymya):11	1	6.152798888	6.152798888	2	Pholadomyida:14|Pholadomyoida:2	1	Pholadomyidae:16	Pholadomyida	Pholadomyidae	FALSE
+Bivalvia	18783	79	0	4	Pandora:26|Pandora (Heteroclidus):14|Pandora (Pandora):6|Pandora (Pandorella):33	3	4.070308049	4.570823366	2	Pandorida:19|Pholadomyoida:20	1	Pandoridae:36	Pandorida	Pandoridae	TRUE
+Bivalvia	18790	3	0	1	Pentagrammysia:3	1	4.495536828	4.495536828	1	Pholadomyoida:3	1	Pholadomyidae:3	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18791	124	0	3	Periploma:107|Periploma (Aelga):9|Periploma (Periploma):8	2	4.6809723	4.785555271	2	Pholadomyoida:6|Thraciida:46	1	Periplomatidae:50	Thraciida	Periplomatidae	FALSE
+Bivalvia	18795	879	0	3	Pholadomya:569|Pholadomya (Bucardiomya):109|Pholadomya (Pholadomya):201	3	4.506577275	5.426459954	2	Pholadomyida:183|Pholadomyoida:56	1	Pholadomyidae:213	Pholadomyida	Pholadomyidae	FALSE
+Bivalvia	18808	25	0	2	Poromya:21|Poromya (Poromya):4	2	1.752232432	4.65049118	2	Pholadomyoida:3|Poromyida:15	1	Poromyidae:17	Poromyida	Poromyidae	FALSE
+Bivalvia	18810	45	0	1	Praeundulomya:45	1	4.692397885	4.692397885	1	Pholadomyoida:14	1	Pholadomyidae:14	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18834	6	0	1	Tetorimya:6	1	4.30075873	4.30075873	1	Pholadomyoida:2	1	Pholadomyidae:2	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18836	388	0	5	Thracia:299|Thracia (Cetothrax):25|Thracia (Cyathodonta):19|Thracia (Homoeodesma):17|Thracia (Thracia):28	4	4.812912017	5.426459954	2	Pholadomyoida:16|Thraciida:122	1	Thraciidae:134	Thraciida	Thraciidae	FALSE
+Bivalvia	18843	81	0	2	Verticordia:78|Verticordia (Verticordia):3	2	2.429798234	3.94024864	2	Pholadomyoida:2|Poromyida:23	1	Verticordiidae:25	Poromyida	Verticordiidae	FALSE
+Bivalvia	18845	149	0	1	Wilkingia:149	1	4.289440751	4.289440751	1	Pholadomyoida:45	1	Pholadomyidae:45	Pholadomyida	Pholadomyidae	TRUE
+Bivalvia	18864	6	0	1	Noradonta:6	1	2.711066222	2.711066222	0		1	Lyrodesmatidae:3	Modiomorphida	Lyrodesmatidae	TRUE
+Bivalvia	55265	1	0	1	Rhectomyax:1	1	1.731542352	1.731542352	1	Cardiida:1	1	Psammobiidae:1	Veneroida	Psammobiidae	TRUE
+Bivalvia	59095	1	0	1	Anapella:1	1	3.825335712	3.825335712	1	Veneroida:1	1	Mesodesmatidae:1	Cardiida	Mesodesmatidae	TRUE
+Bivalvia	59349	1	0	1	Beguina:1	1	5.163798557	5.163798557	1	Veneroida:1	1	Permophoridae:1	Pholadomyida	Permophoridae	TRUE
+Bivalvia	59877	2	0	1	Corculum:2	1	5.000781043	5.000781043	1	Veneroida:1	1	Cardiidae:1	Cardiida	Cardiidae	TRUE
+Bivalvia	60309	17	0	1	Eufistulana:17	1	6.450141183	6.450141183	1	Myoida:4	1	Gastrochaenidae:4	Cardiida	Gastrochaenidae	TRUE
+Bivalvia	60579	20	0	2	Haliris:17|Haliris (Haliris):3	2	2.297448577	2.682903267	2	Pholadomyoida:2|Poromyida:8	1	Verticordiidae:10	Poromyida	Verticordiidae	FALSE
+Bivalvia	61322	1	0	1	Nausitora:1	1	2.20095388	2.20095388	1	Myoida:1	1	Teredinidae:1	Pholadida	Teredinidae	TRUE
+Bivalvia	61583	597	0	2	Panopea:581|Panopea (Panopea):16	2	5.026648821	6.536802911	2	Hiatellida:178|Myoida:12	1	Hiatellidae:188	Hiatellida	Hiatellidae	FALSE
+Bivalvia	61928	607	0	2	Protocardia:561|Protocardia (Protocardia):46	1	4.101391179	4.101391179	2	Cardiida:116|Veneroida:11	1	Cardiidae:124	Cardiida	Cardiidae	FALSE
+Bivalvia	62025	655	0	4	Pycnodonte:477|Pycnodonte (Crenostrea):19|Pycnodonte (Phygraea):138|Pycnodonte (Pycnodonte):21	3	4.69634824	5.812664355	1	Ostreida:127	1	Gryphaeidae:127	Ostreida	Gryphaeidae	FALSE
+Bivalvia	62294	4	0	1	Soletellina:4	1	5.456941075	5.456941075	1	Cardiida:3	1	Psammobiidae:3	Veneroida	Psammobiidae	TRUE
+Bivalvia	62533	45	0	1	Tivelina:45	1	3.033505886	3.033505886	1	Veneroida:11	1	Veneridae:11	Cardiida	Veneridae	TRUE
+Bivalvia	77219	1043	0	2	Modiolus:847|Modiolus (Modiolus):196	2	5.868700545	6.1347722	1	Mytilida:304	1	Mytilidae:304	Mytilida	Mytilidae	FALSE
+Bivalvia	81259	15	0	1	Harvella:15	1	4.862627031	4.862627031	1	Veneroida:4	1	Mactridae:4	Cardiida	Mactridae	TRUE
+Bivalvia	86833	2	0	1	Cuneopsis:2	1	5.056158338	5.056158338	1	Unionida:2	1	Unionidae:2	Unionoida	Unionidae	TRUE
+Bivalvia	89625	8	0	1	Choromytilus:8	1	6.044628318	6.044628318	1	Protobranchia:5	1	Mytilidae:5	Mytilida	Mytilidae	TRUE
+Bivalvia	97796	1	0	1	Potamocorbula:1	1	3.802545724	3.802545724	1	Myoida:1	1	Corbulidae:1	Pholadida	Corbulidae	TRUE
+Bivalvia	98761	94	0	1	Kuphus:94	1	7.200407639	7.200407639	1	Myoida:25	1	Teredinidae:25	Pholadida	Teredinidae	TRUE
+Bivalvia	102072	9	0	1	Panamicorbula:9	1	3.905473871	3.905473871	1	Myoida:1	1	Corbulidae:1	Pholadida	Corbulidae	TRUE
+Bivalvia	102971	8	0	2	Standella:3|Standella (Eastonia):5	2	3.94024864	5.005130158	1	Cardiida:5	1	Mactridae:5	Cardiida	Mactridae	FALSE
+Bivalvia	114750	1	0	1	Scissodesma:1	1	5.352266308	5.352266308	1	Veneroida:1	1	Mactridae:1	Cardiida	Mactridae	TRUE
+Bivalvia	116453	2	0	1	Donacilla:2	1	3.630020415	3.630020415	1	Veneroida:2	1	Mesodesmatidae:2	Cardiida	Mesodesmatidae	TRUE
+Bivalvia	120905	2	0	1	Pythinella:2	1	1.07769367	1.07769367	1	Veneroida:2	1	Montacutidae:2	Cardiida	Montacutidae	TRUE
+Bivalvia	126367	1	0	1	Steinmannia:1	1	4.370448337	4.370448337	1	Pteroida:1	1	Inoceramidae:1	Myalinida	Inoceramidae	TRUE
+Bivalvia	145806	11	0	1	Pseudopermophorus:11	1	4.585141603	4.585141603	1	Veneroida:5	1	Permophoridae:5	Pholadomyida	Permophoridae	TRUE
+Bivalvia	158643	1	0	1	Diplothyra:1	1	2.900026692	2.900026692	1	Myoida:1	1	Pholadidae:1	Pholadida	Pholadidae	TRUE
+Bivalvia	278943	3	0	1	Austrochlamys:3	1	5.282607971	5.282607971	1	Protobranchia:2	1	Plicatulidae:2	Pectinida	Plicatulidae	TRUE
+Bivalvia	280886	2	0	1	Adamussium:2	1	5.426459954	5.426459954	1	Pteroida:2	1	Pectinidae:2	Pectinida	Pectinidae	TRUE
+Bivalvia	308462	1	0	1	Xyloredo:1	1	6.05703468	6.05703468	0		1	Pholadidae:1	Pholadida	Pholadidae	TRUE
+Bivalvia	319564	1	0	1	Lissochlamys:1	1	4.070308049	4.070308049	1	Protobranchia:1	1	Plicatulidae:1	Pectinida	Plicatulidae	TRUE
+Bivalvia	344541	3	0	1	Akebiconcha:3	1	5.510940337	5.510940337	0		1	Glossidae:1	Cardiida	Glossidae	TRUE
+Bivalvia	373167	1	0	1	Isorropodon:1	1	4.269381104	4.269381104	1	Veneroida:1	1	Trapeziidae:1	unresolved	Trapeziidae	TRUE
+Bivalvia	373470	1	0	1	Polititapes:1	1	4.878763505	4.878763505	0		1	Veneridae:1	Cardiida	Veneridae	TRUE
+Bivalvia	382048	1	0	1	Asthenothaerus:1	1	4.242833357	4.242833357	1	Pholadomyoida:1	1	Thraciidae:1	Thraciida	Thraciidae	TRUE
+Bivalvia	382129	1	0	1	Cryptostrea:1	1	4.070308049	4.070308049	1	Protobranchia:1	1	Ostreidae:1	Ostreida	Ostreidae	TRUE
+Bivalvia	398920	1	0	1	Mytilimeria:1	1	4.256178597	4.256178597	1	Pholadomyoida:1	1	Lyonsiidae:1	Pandorida	Lyonsiidae	TRUE
+Rhynchonellata	26816	272	0	4	Isorthis:234|Isorthis (Arcualla):18|Isorthis (Isorthis):6|Isorthis (Ovalella):14	3	3.195464847	3.560058668	1	Orthida:97	1	Dalmanellidae:97	Orthida	Dalmanellidae	FALSE
+Rhynchonellata	26991	764	0	2	Schizophoria:658|Schizophoria (Schizophoria):106	1	4.156964444	4.156964444	1	Orthida:183	1	Schizophoriidae:183	Orthida	Schizophoriidae	FALSE
+Rhynchonellata	28157	75	0	2	Anastrophia:55|Anastrophia (Grayina):20	2	2.619661592	3.828912699	1	Pentamerida:35	1	Parastrophinidae:35	Pentamerida	Parastrophinidae	FALSE
+Rhynchonellata	28215	4	0	2	Harpidium:1|Harpidium (Isovella):3	1	5.063697434	5.063697434	1	Pentamerida:3	1	Pentameridae:3	Pentamerida	Pentameridae	FALSE
+Rhynchonellata	28229	13	0	2	Kirkidium:11|Kirkidium (Pinguaella):2	2	2.958557245	4.874389843	1	Pentamerida:7	1	Pentameridae:7	Pentamerida	Pentameridae	FALSE
+Rhynchonellata	28266	92	0	2	Pentamerus:88|Pentamerus (Supertrilobus):4	1	4.403678035	4.403678035	1	Pentamerida:24	1	Pentameridae:24	Pentamerida	Pentameridae	FALSE
+Rhynchonellata	28278	16	0	2	Porambonites:14|Porambonites (Porambonites):2	1	4.084873635	4.084873635	1	Pentamerida:11	1	Porambonitidae:11	Pentamerida	Porambonitidae	FALSE
+Rhynchonellata	28420	145	0	3	Burmirhynchia:131|Burmirhynchia (Burmirhynchia):10|Burmirhynchia (Hopkinsirhynchia):4	2	3.128360598	3.134032691	1	Rhynchonellida:14	1	Tetrarhynchiidae:14	Rhynchonellida	Tetrarhynchiidae	FALSE
+Rhynchonellata	28628	72	0	2	Lacunosella:67|Lacunosella (Lacunosella):5	1	3.709967706	3.709967706	1	Rhynchonellida:16	1	Basiliolidae:16	Rhynchonellida	Basiliolidae	FALSE
+Rhynchonellata	28858	47	0	2	Rhynchonelloidea:45|Rhynchonelloidea (Aalenirhynchia):2	1	3.55197067	3.55197067	1	Rhynchonellida:12	1	Rhynchonellidae:12	Rhynchonellida	Rhynchonellidae	FALSE
+Rhynchonellata	28972	179	0	2	Tetrarhynchia:178|Tetrarhynchia (Rostrirhynchia):1	2	3.01541642	3.382851192	1	Rhynchonellida:23	1	Tetrarhynchiidae:23	Rhynchonellida	Tetrarhynchiidae	FALSE
+Rhynchonellata	29222	116	0	2	Delthyris:112|Delthyris (Quadrifarius):4	2	3.466461685	3.916492856	1	Spiriferida:52	1	Delthyrididae:52	Spiriferida	Delthyrididae	FALSE
+Rhynchonellata	29779	664	0	2	Atrypa:660|Atrypa (Planatrypa):4	2	3.349333642	3.933635847	1	Atrypida:175	1	Atrypidae:175	Atrypida	Atrypidae	FALSE
+Rhynchonellata	29780	15	0	2	Atryparia:8|Atryparia (Costatrypa):7	2	3.424791169	3.694444734	1	Atrypida:11	1	Atrypidae:11	Atrypida	Atrypidae	FALSE
+Rhynchonellata	29783	63	0	2	Atrypina:60|Atrypina (Atrypinopsis):3	1	2.467603859	2.467603859	1	Atrypida:31	1	Atrypinidae:31	Atrypida	Atrypinidae	FALSE
+Rhynchonellata	29786	80	0	2	Atrypoidea:79|Atrypoidea (Lissatrypella):1	1	3.934944895	3.934944895	1	Atrypida:28	1	Lissatrypidae:28	Atrypida	Lissatrypidae	FALSE
+Rhynchonellata	29824	137	0	3	Desquamatia:105|Desquamatia (Independatrypa):19|Desquamatia (Seratrypa):13	2	3.942770654	4.372672571	1	Atrypida:49	1	Atrypidae:49	Atrypida	Atrypidae	FALSE
+Rhynchonellata	29939	131	0	2	Septatrypa:126|Septatrypa (Hircinisca):5	1	3.292026704	3.292026704	1	Atrypida:46	1	Septatrypidae:46	Atrypida	Septatrypidae	FALSE
+Rhynchonellata	29947	64	0	2	Spinatrypina:63|Spinatrypina (Exatrypa):1	1	3.620554359	3.620554359	1	Atrypida:35	1	Atrypidae:35	Atrypida	Atrypidae	FALSE
+Rhynchonellata	65895	9	0	1	Chapursania:9	1	3.86749795	3.86749795	1	Rhynchonellida:2	1	Martiniidae:2	Spiriferida	Martiniidae	TRUE
+Rhynchonellata	237011	1	0	1	Spondylospiriferina:1	1	3.569595989	3.569595989	1	Spiriferida:1	1	Spiriferinidae:1	Spiriferinida	Spiriferinidae	TRUE
