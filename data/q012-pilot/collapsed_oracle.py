@@ -484,7 +484,7 @@ def main():
     pts = points()
     dec = {k: decomposition_check(v) for k, v in pts.items()}
     jobs = [(k, {kk: vv for kk, vv in v.items()}, f) for k, v in pts.items() for f in FORESTS]
-    with mp.get_context("fork").Pool(min(12, len(jobs))) as pool:
+    with mp.get_context("fork").Pool(pilot.workers(len(jobs))) as pool:
         rows = pool.map(task, jobs, chunksize=1)
     edges = sum(1 for pa in D["parent"] if pa)
     out = dict(spec="collapsed_oracle.md (ad09251) with Repairs 1, 1b and 2 (9ebc27c, 349dd3d); keys n200_L10/n400_L10/n400_L14 mean n=200/400 at Delta 50 and n=400 at Delta 70", tolerances=TOL, fd_step=H_FD, points={k: dict(sigma=v["sigma"], rho=v["rho"],

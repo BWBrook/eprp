@@ -985,11 +985,19 @@ def _gate_job(args):
     return gate_point(d, q, extra)
 
 
+def workers(n_jobs):
+    """Process-pool size that follows the machine: the CPUs available to this process less two, capped by the number of
+    jobs; EPRP_WORKERS overrides it."""
+    import os
+    avail = len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else (os.cpu_count() or 2)
+    n = int(os.environ.get("EPRP_WORKERS", max(1, avail - 2)))
+    return max(1, min(n_jobs, n))
+
+
 def gate_points(jobs):
     """gate_point over (d, q, extra) jobs in a fork process pool, preserving order."""
     import multiprocessing as mp
-    import os
-    n = min(len(jobs), 12, max(1, (os.cpu_count() or 2) - 2))
+    n = workers(len(jobs))
     if n <= 1:
         return [gate_point(*j) for j in jobs]
     with mp.get_context("fork").Pool(n) as pool:
