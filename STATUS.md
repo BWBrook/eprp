@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 21 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 22 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
@@ -76,9 +76,16 @@ Updated: 21 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   The [response](ideas/2026-10-21-response-and-next-contracts-codex.md)
   accepts a narrowed local fallback proposal: selected-tree likelihood
   factorisation and a three-toy-forest integration oracle, with no optimiser,
-  HMC or bootstrap. Claude acknowledges that scope before implementation.
-  No further long laptop fit, full grid or empirical fit. Barry's kunanyi
-  and PBS mail/wake workflow remains in force; no background monitoring.
+  HMC or bootstrap. Claude accepted that scope in 76/2154. The
+  [oracle review](ideas/2026-10-22-q012-oracle-review-codex.md) confirms run 1's
+  24 pass / 3 fail / 3 reference-unresolved and supports the repaired scalar
+  case independently. Run 2 remains incomplete at this checkpoint;
+  independent-reference qualification and exception classification need
+  correction before any P11 evaluator/cost check. Barry reports an interrupted
+  laptop run and Claude's migration to always-on `deep-server`; Claude owns
+  setup, dispatch and identification of the authoritative result. No further
+  long laptop run, fit or empirical fit. The kunanyi allocation and PBS
+  mail/wake workflow remain unchanged; no background monitoring.
   B-004's critique response, six-study modern screen and bounded analytic
   check are complete. B-004 is **hold (support)**: invasion invariance and
   conditional fold responses do not supply a consequential oxygen scale;
@@ -128,10 +135,10 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex final review complete; Claude proposed local fallback, narrowed scope awaiting acknowledgement | [Final-screen review](ideas/2026-10-21-q012-final-screen-review-codex.md): preflight and qualification pass; 2/24,000 divergences fail the frozen screen. Twelve raw hashes and all diagnostics reproduce; preceding-state Q80/54-coordinate derivative checks pass. Tuning ends, P06 and ten held. Tranche 32.577/53.333 core-hours. [Next scope](ideas/2026-10-21-response-and-next-contracts-codex.md): same selected-tree likelihood, tiny-forest oracle only; no new fit, bootstrap or cluster release |
+| Q-012/D1 support and identification | Codex oracle review complete; Claude owns repair report and server migration | [Oracle review](ideas/2026-10-22-q012-oracle-review-codex.md): disclosed run 1 has 24 pass / 3 fail / 3 unresolved; repaired T1 passes independent scalar value/all-coordinate derivative checks. Independent-value comparison is ungated; evaluator exceptions lack stage classification. Resolve these when adjudicating the authoritative completed run 2 before a fixed-point P11 evaluator/cost check. Final sampler failure and tuning stop stand; P06 and ten held. Kunanyi tranche 32.577/53.333 core-hours; no fit or new estimator selected |
 | External GPT-6 Pro idea injection, both rounds | Joint review and substantive response complete; follow-ups unallocated | Claude accepts [joint assessment](ideas/2026-10-21-outside-consultations-response-codex.md) at 13f6ae4/76–2141. Recruitment replacement boundary and finite chronology claim audit lead the next information checks, then engineers/reporting; canopy and trail remain alternatives. [Response](ideas/2026-10-21-response-and-next-contracts-codex.md) records two minor recruitment wording qualifications. No register expansion, primary selection or queue displacement |
-| Question-first methods paper WIP | Joint; Claude maintains scaffold/ledger, Codex evidence review | Barry's 21 October instruction relayed in 76/2145 authorises collecting pieces. [Ledger review](papers/question-first/evidence/2026-10-21-ledger-review-codex.md) reproduces 182 extracted records and category counts; overlapping/grouped/confirmation records prevent an episode count or performance comparison. Claude repairs schema/language and verifies three complete cases. No manuscript drafting, comparison harness or release |
-| Restarted checkpoint queue and ranking | Claude: Q-038 contract amendments and narrowed Q-012 fallback; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Conceptual backlog accepted at cd1f8d9; current [review](ideas/2026-10-21-response-and-next-contracts-codex.md) closes the new evidence checkpoint. Q-016 and Q-015/017/023/031 narrower products remain queued; no empirical fits or primary promotion. Codex's separate queue is not yet started. Keep consequence separate from readiness and next-check value. Framework notepad remains Claude-owned |
+| Question-first methods paper WIP | Joint; Codex case review complete, Claude maintains histories/ledger/scaffold | [Case-history review](papers/question-first/evidence/2026-10-22-case-history-review-codex.md) verifies three correction-and-acceptance chains against nine pinned passages. Ledger at d566f53 has 194 records, with 54 rows assigned episode IDs, not 54 independent episodes. Three histories remain partial; narrow estimator/stopping/design-validation claims and preserve Claude's self-corrections. No workflow-performance result, manuscript drafting, comparison harness or release |
+| Restarted checkpoint queue and ranking | Claude: Q-038 predictive-law closure and Q-012 oracle adjudication; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Conceptual backlog accepted at cd1f8d9; 22 October reviews close the next bounded evidence checkpoint. Q-016 and Q-015/017/023/031 narrower products remain queued; no empirical fits or primary promotion. Codex's separate queue is not yet started. Keep consequence separate from readiness and next-check value. Framework notepad remains Claude-owned |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -144,7 +151,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Environmental disruption, susceptibility and cross-scale inference | Claude | [Round-10 checks](literature/2026-10-11-register-checks-round10.md) complete. Codex's round-10 corrections accepted: Q-041 under review/tier 2 with tractability unresolved (generative null over actual intervals; severity conditional on the inherited grid; injection-recovery is sensitivity, not a bound); Q-044 weighted hierarchical identity, Close & Reijenga 2025 prior, arithmetic residual withdrawn; Q-047 under review with an outcome/denominator crosswalk gate and a biological comparator. RECOMBINE checked: grey literature, does not occupy Q-047. Q-042 deeper check: under review, with the bound 1 − (1 − g)/m and an inversion-validation design. Q-048 critique: treatment, denominator, opposite regime (Kelley & Hansen), modern king-crab mirror. New Q-049 (isotherm tracking ratio and extinction). Q-038 deferral lifted by Barry (76/1515); deposited-design audit below |
 | Recovery, historical contingency and regulation of deep-time diversity | Codex | [Round-10 assessment](literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md) complete. Q-047's fossil-to-modern outcome/denominator contract is unresolved. Q-044 has a close 2025 species–area precedent and needs consistent hierarchical weights; Q-008's prior map is updated. Q-041 requires a generative interval null, chronology provenance and an operational exclusion rule. New Q-048 asks whether climate-driven predator suppression protects resident prey; under review/tier 2 with unverified novelty and joint support. Q-043/Q-046 remain parked; Q-026/Q-033 and paused Q-036 remain Codex-owned |
 | Phase-2 categorisation, prioritisation and deeper evidence | Codex and Claude | Initial allocation accepted (76/1514). Codex's [Q-021 prediction/calibration table](literature/2026-10-11-q021-predictions-and-calibration.md) and [Q-027 support audit](data/q027-support-audit/README.md) complete. Claude's Q-027 screen reproduced but its power-design inference challenged; Claude accepted (reply 2), fixed the era, unknown-country and Namibia bugs (k10 now 26/95), and withdrew the warm-stage inference. Claude's reply 2 challenges Q-021 timing and proposes Li cross-prediction; Codex's [response](ideas/2026-10-11-phase2-review-preparation-codex.md) accepts Li as a candidate constraint but requires common proxy mappings and matched assumptions. No status/tier changes or integrated engine |
-| Q-038 data access, flag audit and predictor contract | Codex replacement-contract review complete; Claude amendments next | [Review](ideas/2026-10-21-q038-replacement-contract-review-codex.md) accepts prefix risk set, O/B separation and reproduced outputs; independent full-exposure likelihood/forecast enumeration agrees to 1.1e-16. Repair no-root severity matching/predictive integration, cut every held-out transition including old unobserved tails, specify nuisance prediction and realised-exposure conditioning. Full synthetic generator/priors/gates remain to freeze; no empirical fit or larger campaign. Published-coefficient provenance unresolved; [Detail withheld pending disclosure to the data custodian.] |
+| Q-038 data access, flag audit and predictor contract | Codex v2 review complete; Claude finite predictive-law amendment next | [V2 review](ideas/2026-10-22-q038-v2-contract-review-codex.md) reproduces both TSVs exactly and accepts fixed-path scoring, primary masking and declared nuisance prediction. Define future count/mark integration, entry kernel and scaling in a tiny joint-history oracle before the five-dataset pilot. Zero occupancy mean does not imply zero total B gain when nuisance/event selectivity remains; repair the null. Half-exposure sensitivity also needs an earlier cut. Freeze pilot truth/seeds; no empirical fit or larger campaign. Published-coefficient provenance unresolved; [Detail withheld pending disclosure to the data custodian.] |
 | Q-044 joint-support contract | Claude | Ceiling audit and distance-screen correction accepted in reply 4. Biological saturation and a general distance response are not shown. Two Neogene pairs supply all within-continent species sharing; both group medians are zero. Next: endpoint identity/age/extent support and an explicit observation null; unallocated |
 | External-review response and next contracts | Codex / Claude | [Codex adjudication](ideas/2026-10-11-external-review-response-codex.md) accepts F-01–F-05 at their stated scope, repairs Q-008/Q-009 gates, and adds a Q-006 practical precedent. [Q-021 contract](literature/2026-10-11-q021-lithium-observation-contract.md) complete at the algebra/source stage; trajectories, conversions and empirical discrimination unresolved. Claude's proposed Q-042 cohort/window crosswalk accepted in 76/1528. Next responder Claude; Q-006 information table follows these two tasks |
 | Reply 7: E1 conjecture and Li formation timing | Codex | Complete: [reply 7](ideas/2026-10-12-phase2-codex-reply-7.md). Observable first/same-species pair moments identify all rates under E1, including edge bins; Claude to challenge and reconcile owned Q-006 files. Q-021 formation-first order accepted, gate unpassed; Taylor 2026 adds a closer prior, carbonate candidates and a spatial-heterogeneity rival. No fit or adapter |
@@ -994,6 +1001,24 @@ next phase of ideation whilst those final checks are done."
   narrowed Q-012 scope awaits acknowledgement. No empirical fit, resource
   increase, register expansion or primary selection.
 
+- **Oracle, predictive-law and case-history review, 22 October:** Codex's
+  [Q-012 review](ideas/2026-10-22-q012-oracle-review-codex.md) confirms the
+  disclosed failed run 1 and independently supports the repaired scalar
+  integral. It identifies ungated independent-reference disagreement and
+  evaluator exceptions classified as unresolved. Claude owns the running
+  repair, server migration and authoritative result; adjudicate that result
+  before any fixed-point P11 evaluator/cost check. The
+  [Q-038 v2 review](ideas/2026-10-22-q038-v2-contract-review-codex.md)
+  reproduces both deterministic outputs and accepts their fixed-path scope.
+  Future counts change predictors, so full prediction needs a marked-history
+  law, initial count kernel and joint-set oracle. Correct the null-score gate
+  and the half-exposure cut; after finite closure and truth/seed freeze, the
+  five-dataset runtime pilot can proceed without another routine permission
+  request. The [case review](papers/question-first/evidence/2026-10-22-case-history-review-codex.md)
+  verifies three pinned correction chains; histories remain partial and
+  workflow efficacy unmeasured. Claude responds next and edits owned sources.
+  No empirical fit, primary selection, larger campaign or manuscript release.
+
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
 diversity is occupied; a specific causal support/design contrast remains worth
@@ -1016,8 +1041,8 @@ checks did not commission a piecewise likelihood, empirical fit or model
 adapter. Q-012's separately authorised prototype is recorded above.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract
-and the Q-044 vintage check. Q-038's conceptual amendments are accepted;
-Claude's replacement contract now needs the specific amendments above.
+and the Q-044 vintage check. Q-038's conceptual and fixed-path amendments
+are accepted; the v2 review identifies the remaining predictive-law closure.
 Keep two orientation tasks at most. Expansion stays paused and no primary
 investigation is selected.
 
