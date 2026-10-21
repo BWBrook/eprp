@@ -1,0 +1,259 @@
+{
+ "scenario": "P11",
+ "attempt": "scratch/q012-pilot/fetch-20261021-v6q80t/runs/P11/attempt1",
+ "qualified": true,
+ "qualification_failures": [],
+ "capture": {
+  "valid": true,
+  "failures": [],
+  "chains": {
+   "chain1": {
+    "seen": {
+     "warmup": 6,
+     "sampling": 1
+    },
+    "captured": {
+     "warmup": 6,
+     "sampling": 1
+    },
+    "sampling_transitions": [
+     2779
+    ],
+    "warmup_transitions": [
+     102,
+     152,
+     252,
+     452,
+     1502,
+     1643
+    ]
+   },
+   "chain2": {
+    "seen": {
+     "warmup": 8,
+     "sampling": 0
+    },
+    "captured": {
+     "warmup": 8,
+     "sampling": 0
+    },
+    "sampling_transitions": [],
+    "warmup_transitions": [
+     1,
+     101,
+     102,
+     152,
+     252,
+     452,
+     1501,
+     1502
+    ]
+   },
+   "chain3": {
+    "seen": {
+     "warmup": 11,
+     "sampling": 0
+    },
+    "captured": {
+     "warmup": 11,
+     "sampling": 0
+    },
+    "sampling_transitions": [],
+    "warmup_transitions": [
+     1,
+     101,
+     102,
+     151,
+     152,
+     251,
+     252,
+     451,
+     452,
+     1501,
+     1502
+    ]
+   },
+   "chain4": {
+    "seen": {
+     "warmup": 9,
+     "sampling": 1
+    },
+    "captured": {
+     "warmup": 9,
+     "sampling": 1
+    },
+    "sampling_transitions": [
+     2843
+    ],
+    "warmup_transitions": [
+     1,
+     101,
+     102,
+     151,
+     152,
+     251,
+     252,
+     452,
+     1502
+    ]
+   }
+  }
+ },
+ "status": "screened",
+ "chains": [
+  {
+   "csv": "chain1.csv",
+   "draws": 6000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.8663680953071018,
+   "rejections": {
+    "input_warmup": 1
+   },
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [
+    {
+     "phase": "warmup",
+     "transition": 452,
+     "cause": "input",
+     "message": "Exception: Exception: Q012 input failure: 1-D sigma, A, B, kappa_b [0.00103329,inf,0.0173554,-2.24475] (in '../model_v6.stan', line 37, column 6 to column 79) (in '../model_v6.stan', line 232, column "
+    }
+   ],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain2.csv",
+   "draws": 6000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.8458760320952393,
+   "rejections": {
+    "solver_internal_warmup": 1
+   },
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [
+    {
+     "phase": "warmup",
+     "transition": 1502,
+     "cause": "solver_internal",
+     "message": "Exception: Exception: algebra_solver: the norm of the algebraic function is 3.46769e+19 but should be lower than the function tolerance: 1e-10. Consider decreasing the relative tolerance and increasin"
+    }
+   ],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain3.csv",
+   "draws": 6000,
+   "divergences": 0,
+   "depth_hits": 0,
+   "ebfmi": 0.8593184517690311,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [],
+   "log_parse": "complete"
+  },
+  {
+   "csv": "chain4.csv",
+   "draws": 6000,
+   "divergences": 1,
+   "depth_hits": 0,
+   "ebfmi": 0.8835420293266983,
+   "rejections": {},
+   "fatal": [],
+   "sampling_phase_rejections": 0,
+   "rejection_events": [],
+   "log_parse": "complete"
+  }
+ ],
+ "screening": {
+  "zero_post_warmup_divergences": false,
+  "no_fatal_or_sampling_phase_failures": true,
+  "ebfmi_each_chain": true,
+  "rhat_all": true,
+  "ess_bulk_tail_core": true
+ },
+ "screening_pass": false,
+ "rhat_max": [
+  "w.12",
+  1.001074942723785
+ ],
+ "rhat_over_threshold": [],
+ "rhat_core": {
+  "sigma": 1.0008502460722513,
+  "rho": 1.0002126490075829,
+  "eta": 1.000373223155858,
+  "kappa": 1.000353304806994,
+  "kappa_b": 1.000224429934676,
+  "beta": 1.0004371464706179,
+  "gamma": 0.9999406392160762,
+  "log_k": 1.0001869604482743,
+  "log_lambda0": 1.0001130465469756,
+  "log_b0": 1.0003890151979655,
+  "tau": 1.0002172836253562
+ },
+ "ess_core": {
+  "sigma": {
+   "bulk": 4772.363032666197,
+   "tail": 6590.501613289281
+  },
+  "rho": {
+   "bulk": 25343.379781825777,
+   "tail": 16862.95342303062
+  },
+  "eta": {
+   "bulk": 9131.977378467085,
+   "tail": 10084.83313480733
+  },
+  "kappa": {
+   "bulk": 20841.497631239235,
+   "tail": 18317.66419184744
+  },
+  "kappa_b": {
+   "bulk": 30739.131034955277,
+   "tail": 17882.84551635375
+  },
+  "beta": {
+   "bulk": 39786.369734917535,
+   "tail": 18244.17121631879
+  },
+  "gamma": {
+   "bulk": 33579.50274434051,
+   "tail": 19059.895340330608
+  },
+  "log_k": {
+   "bulk": 13053.15849070035,
+   "tail": 11436.529612457138
+  },
+  "log_lambda0": {
+   "bulk": 18359.64691859039,
+   "tail": 11610.887893631587
+  },
+  "log_b0": {
+   "bulk": 42216.823352668805,
+   "tail": 16977.276210123568
+  },
+  "tau": {
+   "bulk": 10586.409121183517,
+   "tail": 12063.506311161836
+  }
+ },
+ "eta": {
+  "q05": 0.004731259835,
+  "q95": 0.5900810559999999,
+  "mcse_q05": 0.00023992600000000011,
+  "mcse_q95": 0.007711699999999988,
+  "endpoints_finite": true,
+  "mcse_finite": true,
+  "mcse_target_met": true,
+  "truth": 0.2,
+  "interval_covers_truth": true,
+  "D": false,
+  "X": false,
+  "D_numerically_uncertain": false,
+  "X_numerically_uncertain": false
+ },
+ "precision": "met"
+}

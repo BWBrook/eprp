@@ -1007,3 +1007,99 @@ held under every outcome.
     and positive-definite checks are kept. The selftest's
     `reference_mode_guards` fixture covers the invalid-value cases.
   - That run is kept as `order_preflight_v6q80t_step_criterion.json`.
+
+### v6q80t staging record (21 October 2026)
+
+- **Staged** with `stage.sh 20261021-v6q80t`, with `FIT_SCEN=P11`, after
+  Barry opened the jumpbox.
+- **Remote:** `/u/bwbrook/codex_kunanyi/q012-pilot-20261021-v6q80t`. Payload
+  sha `bb62811b…`; manifest `d4ed5408…` and the CmdStan hash were verified on
+  kunanyi.
+- **Jobs:**
+  - preflight-only build **839387**;
+  - the one P11 fit **839388**, `afterok`.
+- 4 CPUs and 8 GB each; 1:00:00 and 6:10:00.
+
+### v6q80t result (jobs 839387, 839388, 21 October 2026): fails the frozen screen on divergences
+
+Evidence: `results/P11-v6q80t-20261021/`. It holds receipts, accounting,
+the four combined logs and traces (gz), `diagnostics.json`,
+`trace_check.json.gz`, `joint_checks.json`, chain-file hashes, and the fetch
+archive hash (`e634487e…`).
+
+**Cluster preflight passed.** The reused binary `5e9842cb…` was bound to
+the receipt and patch. Passing:
+- the LP/AD points;
+- the controls;
+- the smoke run;
+- both capture exercises (12 of 12 events each).
+
+**The fit completed.** All four chains, 2,000 warmup (term_buffer 500) and
+6,000 draws each.
+- Wall time 2:56:55; chains 9,583–10,612 s.
+- The planning projection (1.7–3.1 h) held. The 6-hour cap was not
+  approached.
+- Qualified, and capture valid in all chains.
+
+**Screen** (frozen; Codex 76/2111):
+
+| Criterion | Result |
+| --- | --- |
+| Zero post-warmup divergences | **fails: 2 of 24,000** (chain 1 transition 2779; chain 4 transition 2843) |
+| No fatal or sampling-phase failures | pass |
+| E-BFMI, each chain | pass (0.846–0.884) |
+| R-hat, all quantities | pass (max 1.0011, w.12) |
+| Bulk and tail ESS, core | pass (minimum σ bulk 4,772) |
+
+- **η:** 90% interval 0.0047–0.5901, which covers the truth 0.2; D and X
+  are false; the MCSE target is met.
+- **Adapted step sizes:** 0.0325–0.0369. Mean acceptance 0.992–0.995,
+  against a target of 0.999. Tree depth ≤ 7, with no depth hits.
+- **Comparison:** the amended v6p2 attempt (Q64, 0.995, term_buffer 50)
+  had 2 divergences in 32,000 draws. **The remedy did not reduce the
+  divergence count.**
+
+**The two divergences, replayed** (`trace_check.json.gz`):
+- **Both leapfrogs reproduce exactly:** q and p are identical, and H has a
+  relative error of about 1e-16. V and grad V are rechecked at the
+  previous and failing states.
+- **Both are single-step energy blow-ups.**
+
+| | Chain 1 | Chain 4 |
+| --- | --- | --- |
+| σ, previous → failing | 2.54 → 12.03 | 3.34 → 1.76 |
+| ΔH | 2,676 | 1,761 |
+| ΔH with the step halved | 333 and 351 | 104 and 75 |
+| Largest momentum changes | κ, σ, log_k | log_k, σ |
+
+  Halving the step still leaves large errors. The stiffness sits in the
+  joint σ–(log_k, κ) geometry, not in the lineage frailties.
+- **AD against finite differences at the failing states:** scaled errors
+  ≤ 4e-8.
+- **The Q80 normaliser passes the repaired gate at both failing states.**
+  Log errors are 6.7e-11 and 5.0e-11, with both references qualified.
+  **Normaliser accuracy is excluded as the cause.**
+
+**Joint-state checks** (`joint_checks.json`): 49 of 49 selected states
+pass, with no state unresolved. The maximum log error is 3.9e-6 and the
+maximum derivative error 2.3e-5.
+
+**The divergences sit where η's upper tail lives.**
+- In the retained draws, corr(σ, η) = 0.645 and corr(σ, log_k) = 0.454.
+- P(σ > 2) is 0.37% posterior, against 4.6% prior.
+- The 88 draws with σ > 2 have an η median of 0.65 and a q95 of 1.79,
+  against 0.11 and 0.59 overall.
+- Unreliable exploration of the σ > 2.5 region therefore bears directly on
+  the upper η quantile. The zero-divergence screen guards something real.
+
+**Accounting.** (0:00:58 × 4) + (2:56:55 × 4) = 0.064 + 11.794 =
+**11.859 core-hours**, within the 28.667 released. The tranche total is now
+20.718 + 11.859 = **32.577 of 53.333**, leaving 20.756.
+
+**Disposition, under the agreed stop rules:**
+- This attempt **fails**: no retry, extension, seed change or selection of
+  a passing prefix.
+- **Sampler tuning ends.**
+- P06 and the other ten stay held.
+- The next step is the simpler-estimator discussion with Codex. Barry
+  approved stepping back on 19 October.
