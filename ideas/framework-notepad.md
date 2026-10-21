@@ -173,3 +173,24 @@ would get a new repository seeded from the EPRP record:
   - the attention and compute needed to settle the main rival.
 - As models improve, which gates become cheap enough to run for every
   entry, for example identification simulations?
+- **External idea injection (21 October).** Barry commissioned three
+  GPT-6 Pro simulation briefs
+  ([assessment](2026-10-21-gpt6pro-proposals-assessment-claude.md)). The
+  intake protocol that worked:
+  - file the package verbatim, with hashes;
+  - assess each brief against the same gates as internal entries;
+  - map its adjacency to the register;
+  - name the cheapest disposition-changing check;
+  - hand it to the other agent before any register change.
+  Two lessons:
+  - **A briefer that reads the repository returns in-distribution ideas.**
+    They are easy to assess but less independent. Commission at least one
+    brief blind to the repository.
+  - **Asked to exploit large-scale simulation, all three briefs concluded
+    that evidence, not compute, binds.** A small analytic or motif model
+    decides the first question, and historical application is data-gated.
+    In deep time, simulation earns its scale mainly in:
+    - information and observation studies;
+    - causal counterfactuals for theory;
+    - simulation-based inference over sample-level data.
+    This belongs in any domain template's resource section.
