@@ -89,6 +89,20 @@ Two distinctions earned their place early:
   - Instrumentation earned its place by resolving a decision. A seeded
     project should not inherit the whole Stan diagnostic machinery by
     default.
+- **Stretching a correct partial result into a broader conclusion.** This
+  is Claude's recurring error, and the one the counter-agent catches most.
+  - On 21 October, a correct bound (larval-only failure cannot extinguish a
+    large population quickly) became "so the larval rescue effect must be
+    small". Codex's exact counterexample: when both stresses are jointly
+    necessary, either single rescue prevents extinction.
+  - The same day, "this chronology fixes interregional synchrony" became
+    "so it cannot test the SPICE–extinction relation", although local
+    order is measured within sections.
+  - Earlier instances: Q-012's causal claims from identical saved prefixes
+    (76/2066), and the Q-038 detection-null gate (76/2112).
+  - Remedy: state the result, then ask which causal structures (AND, OR,
+    interaction) or evidence types it leaves open before drawing the
+    inference.
 - **Generic classifiers** (keyword matching on error text). Remedy: an exact
   grammar for expected messages; everything else fails closed.
 - **Domain ceilings** (palaeobiology-specific; each domain needs its own
@@ -182,33 +196,46 @@ would get a new repository seeded from the EPRP record:
   - map its adjacency to the register;
   - name the cheapest disposition-changing check;
   - hand it to the other agent before any register change.
-  Two lessons:
-  - **A briefer that reads the repository returns in-distribution ideas.**
-    They are easy to assess but less independent. Commission at least one
-    brief blind to the repository.
-  - **Asked to exploit large-scale simulation, all three briefs concluded
-    that evidence, not compute, binds.** A small analytic or motif model
-    decides the first question, and historical application is data-gated.
-    In deep time, simulation earns its scale mainly in:
+  Two lessons, both working hypotheses (Codex 76/2138):
+  - **A briefer that reads the repository may return in-distribution
+    ideas.** They are easy to assess but possibly less independent. Run
+    blind consultations as well.
+  - **Asked to exploit large-scale simulation, all three briefs put an
+    analytic or motif-scale gate first and found historical application
+    data-gated.** That shows the first gate is cheap. It does not show that
+    compute never binds later theory work. Where scale may earn its place
+    in deep time:
     - information and observation studies;
     - causal counterfactuals for theory;
     - simulation-based inference over sample-level data.
-    This belongs in any domain template's resource section.
   - **The blind test (same day,
     [assessment](2026-10-21-gpt6pro-blind-ediacaran-assessment-claude.md)).**
     - A repository-blind Ediacaran–Cambrian consultation returned six
       paper-sized questions, and dropped others that failed its own gates.
     - They were anchored in 2023–2026 literature, with archive access
-      tested by download and kill tests measured in days. All 25 DOIs
-      verified.
-    - It produced the two best ideas in the whole package.
-    - **Confound:** the prompt carried our standards, so the test isolates
-      topic anchoring, not method anchoring.
-    - **Working rule:**
-      - blind consultations for novelty and fast kills;
-      - informed briefs for depth on gaps next to registered questions;
-      - record the consultant's own novelty probabilities, for later
-        calibration.
+      tested by download and kill tests measured in days.
+    - All 25 DOIs matched bibliographically. That verifies identity, not
+      what each claim says.
+    - *Corrected (Codex 76/2138):* the comparison isolates nothing, **not
+      even topic anchoring**. Topic, prompt, scale, emphasis on simulation,
+      output unit and the stochastic run all differed, and the prompt
+      carried our standards.
+      - "More useful per word" is an evaluator's judgement.
+      - A real method test would match topics and prompts, vary only
+        repository access, replicate the runs and blind the evaluation.
+      - The rule "blind for novelty and fast kills, informed for depth" is a
+        working hypothesis.
+    - **Calibration** of the consultant's novelty probabilities needs:
+      - a defined proposition and review horizon;
+      - kept unresolved outcomes.
+      A failed download is not "not novel", and surviving a finite search
+      is not proof of novelty.
+    - **How the consultant's ideas fared under Codex's checks:**
+      - innovation persistence was already posed (Westrop 2024);
+      - the general chronology-circularity principle is occupied (Arens &
+        Jahren 2002; Maloof 2010; Crampton 2016);
+      - card 5's archive is accessible through the publisher's Figshare,
+        where its Dryad route failed.
 - **Candidate paper (Barry, 21 October 2026).** His words in Claude chat:
   "*most* of the time should probably be spent ideating, checking, pressure
   testing, ranking, re-checking, etc. the ideas, before any focused
@@ -221,8 +248,14 @@ would get a new repository seeded from the EPRP record:
     - Q-012 as the case study. The most advanced question needed weeks of
       identification and numerical vetting before any scientific estimate.
     - the external-consultant experiments.
-  - **To make it a paper rather than an anecdote,** start logging per
-    decision now:
+  - **To make it a paper rather than an anecdote,** log each changed
+    decision inside the existing dated records, not in a new harness
+    (Codex 76/2138). For each, record:
+    - the initial inference;
     - the evidence that changed it;
-    - its cost, in attention and compute;
-    - whether it later held.
+    - the current judgment;
+    - its cost and the later check.
+    Codex's 21 October response records the first four. Time and token
+    costs are not yet instrumented, so no efficiency claim can be made.
+    These are records of changed judgments, not yet evidence that the
+    workflow improves the final science.

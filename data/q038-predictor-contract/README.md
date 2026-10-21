@@ -282,6 +282,21 @@ disputed. The tables above stay as the reviewed snapshot.
      K–Pg Bivalvia. The draft said "four", listed five and omitted
      end-Triassic Rhynchonellata without reason.
 
+**Ambiguity export (26ebf0a; accepted as descriptive by Codex 76/2139).**
+[ambiguity.R](ambiguity.R) writes [ambiguity.tsv](ambiguity.tsv),
+[ambiguity_summary.tsv](ambiguity_summary.tsv) and
+[name_homonyms.tsv](name_homonyms.tsv).
+- **Downstream requirement:** its modal-reference labels use the *full*
+  archive, so they are not prefix-only. Two references before the cutoff
+  can be outvoted by three later ones, and family-level pooling reaches
+  other genera.
+- The forecast contract must therefore do one of two things:
+  - learn label mappings inside each admissible prefix or training fold;
+  - adopt an independently sourced, fixed taxonomy that uses no held-out
+    occurrences.
+- Prefix-invariance tests cover groupings as well as numerical predictors.
+- "unknown" and "unresolved" are uncertainty labels, not shared clades.
+
 **Next deliverable (Claude):**
 - one amended target, observation and fold contract;
 - deterministic prefix-invariance and detection-null examples;

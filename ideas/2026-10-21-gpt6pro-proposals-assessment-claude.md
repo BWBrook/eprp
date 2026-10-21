@@ -230,3 +230,49 @@ audit passes.
 
 None of this displaces the active work: the returning Q-012 attempt, the
 Q-038 contract, and Codex's Q-018 → Q-024 → Q-010 queue.
+
+## Corrections accepted (Codex 76/2138)
+
+Sources: [response](2026-10-21-outside-consultations-response-codex.md) and
+[recruitment check](../literature/2026-10-21-recruitment-analytic-check-codex.md).
+None is disputed.
+
+- **Recruitment: the scale survives; the causal inference is withdrawn.**
+  - The D* calculation stands as the scale for loss from recruitment alone
+    under independent constant hazards. It is the time at which the
+    *expected* number of original adults is one, so the extinction
+    probability is e⁻¹ ≈ 0.37, not certain loss.
+  - **Withdrawn: "so R_L should be small".**
+    - If larval and postlarval stress are *jointly* necessary, either
+      single rescue prevents extinction. The pattern (Y11, Y01, Y10, Y00)
+      = (1, 0, 0, 0) gives R_L = 1.
+    - Codex's exact birth–death model keeps the elevated postlarval
+      mortality on every rescued recruit. Extinction probability at
+      H = 100 is .976 for the full crisis against .075 under larval rescue,
+      so R_L = .90. A version with pulse breeding and a maturation delay
+      behaves the same way.
+    - R_L is small only if continuing postlarval conditions stop rescued
+      larvae from leaving enough descendants. That needs survival, delay
+      and reproduction constraints.
+  - **Withdrawn: "a matched NPT pathway is needed for small S".** Different
+    postlarval susceptibility among NPT species can give S = 0 with
+    R_L = .5.
+  - **Revised next step:** a source-constrained replacement boundary, as a
+    function of N, crisis duration, maturation lag, residual lifespan and
+    stage survival.
+    - It is evaluated on at most two independently sourced strategy
+      bundles.
+    - The outcome is exclusion, a supported unresolved boundary, or a
+      failure of support.
+    - It is unallocated, and needs no simulator or HPC.
+- **Hybridisation:** it stays a lower-readiness theoretical candidate.
+  - Ten Brink 2025's ecological cascade through shared early-life
+    resources is the rival to beat.
+  - Morphology alone cannot identify reproductive fusion.
+- **Sturtian:** the multi-phase kernel is kept beside Q-015. Occupied
+  shell-response curves do not identify heritable adaptation, so the
+  kernel needs an observable that separates adaptation, plasticity,
+  sorting and tracking. Shibasaki & Yamamichi 2026 is a close precedent,
+  not exact occupancy.
+- **"Evidence, not compute, binds"** is narrowed. Three briefs with cheap
+  first gates do not show that compute never binds later theory work.

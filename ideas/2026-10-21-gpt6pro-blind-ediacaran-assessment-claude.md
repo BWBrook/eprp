@@ -160,3 +160,62 @@ framework notepad's "measuring the framework" item asks.
    advantage?
 4. Should the three blind candidates enter the blue-sky list now, or wait
    for the paused expansion to reopen?
+
+## Corrections accepted (Codex 76/2138)
+
+Sources: [response](2026-10-21-outside-consultations-response-codex.md) and
+[chronology prior check](../literature/2026-10-21-chronology-dependency-prior-codex.md).
+None is disputed.
+
+- **Chronology: the critique is narrowed, and the principle is occupied.**
+  - Farrell's S2 fixes interregional biomere boundaries in CONOP. Its S4
+    locates SPICE independently, from isotope depths.
+  - The composite cannot independently demonstrate interregional biomere
+    synchrony. But measured isotope–fossil order within a section
+    survives, and numerical lags need their own calibration audit.
+  - My summary ("cannot test their synchrony with SPICE") blurred
+    distinctions that the consultant's B2 kept.
+  - Circularity of fossil-derived correlation is already addressed by
+    Arens & Jahren 2002, Maloof et al. 2010 and Crampton et al. 2016.
+  - **Residual:** a finite claim audit. Take at most three explicit
+    mechanistic claims, the order or lag each needs, and the provenance of
+    their constraints. Then ask whether withholding target-derived links
+    changes which mechanism remains possible.
+  - A universal 0.5 Myr tolerance is not meaningful for every mechanism.
+    Without the raw CONOP matrix, dropping derived biozone ages is an
+    aggregate sensitivity analysis.
+  - If the audit only rediscovers declared assumptions, fold its checks
+    into Q-041 and Q-005.
+- **Engineers and preservation: access is now shown.** Codex retrieved the
+  publisher's Figshare supplement (10.6084/m9.figshare.27909116.v1; MD5
+  matches; CC BY 4.0) where Dryad returned 401/403.
+  - It holds 1,540 flagged occurrence rows; 1,197 bed fields are empty.
+  - The twenty-record audit must separate explicit absence from
+    non-reporting. Detection bounds need external restrictions.
+- **Innovation persistence: priority lowered.** Westrop et al. 2024
+  explicitly contrasts transient orthid blooms with sustained Ordovician
+  success, and considers displacement, environment and taphonomy. A new
+  matched-opportunity design might survive. A bloom is not itself the
+  origin of an innovation.
+- **Canopy, trail and stolon candidates: not excluded by scope.** EPRP's
+  remit is broader than extinction, and disciplinary identity is not a
+  reason to exclude.
+  - The canopy question stays as conditional theory, gated by biological
+    closure (exchange and uptake bounds), not by access to CFD.
+  - The trail check could cheaply change a claim about early movement.
+  - Withheld Bed B limits historical apportionment, not a test of the
+    isotropy statistic.
+  - All three are unallocated alternatives.
+- **The comparison isolates nothing, not even topic anchoring.** DOI
+  matches are bibliographic checks, and "more useful per word" is an
+  evaluator's judgement. Calibration needs a defined proposition and
+  horizon. The notepad is amended to match.
+
+**Ranking of next checks, Codex's and accepted:**
+1. recruitment's source-constrained replacement boundary, and
+   chronology's claim-level consequence (the leading pair);
+2. the engineers/reporting audit;
+3. trail measurement and the canopy bound, as credible alternatives.
+
+This orders the value of information gathering. It does not rank eventual
+scientific importance. Nothing is allocated while the two-task limit holds.
