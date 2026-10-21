@@ -194,3 +194,35 @@ would get a new repository seeded from the EPRP record:
     - causal counterfactuals for theory;
     - simulation-based inference over sample-level data.
     This belongs in any domain template's resource section.
+  - **The blind test (same day,
+    [assessment](2026-10-21-gpt6pro-blind-ediacaran-assessment-claude.md)).**
+    - A repository-blind Ediacaran–Cambrian consultation returned six
+      paper-sized questions, and dropped others that failed its own gates.
+    - They were anchored in 2023–2026 literature, with archive access
+      tested by download and kill tests measured in days. All 25 DOIs
+      verified.
+    - It produced the two best ideas in the whole package.
+    - **Confound:** the prompt carried our standards, so the test isolates
+      topic anchoring, not method anchoring.
+    - **Working rule:**
+      - blind consultations for novelty and fast kills;
+      - informed briefs for depth on gaps next to registered questions;
+      - record the consultant's own novelty probabilities, for later
+        calibration.
+- **Candidate paper (Barry, 21 October 2026).** His words in Claude chat:
+  "*most* of the time should probably be spent ideating, checking, pressure
+  testing, ranking, re-checking, etc. the ideas, before any focused
+  project-specific work is done... There's probably a paper in that idea
+  alone."
+  - **The evidence would be this programme's own record:**
+    - the register's dispositions and the reasons for each kill;
+    - reversals;
+    - the correspondence thread;
+    - Q-012 as the case study. The most advanced question needed weeks of
+      identification and numerical vetting before any scientific estimate.
+    - the external-consultant experiments.
+  - **To make it a paper rather than an anecdote,** start logging per
+    decision now:
+    - the evidence that changed it;
+    - its cost, in attention and compute;
+    - whether it later held.
