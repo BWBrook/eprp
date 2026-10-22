@@ -22,6 +22,8 @@ access:
   licence: CC0
   routes:
     - {type: figshare-collection, url: "https://doi.org/10.6084/m9.figshare.c.5242154", state: "v4, 11 items, 20 item versions", checked: 2026-10-22}
+    - {type: r-package, url: "chronosphere::fetch(src = 'triton')", state: "serves v1 and v3 only; series 'main' at v3 is the sample-level no_dup table; pre-v4 units", checked: 2026-10-22}
+    - {type: web-query, url: "https://www.mikrotax.org/system/ranges-tritonbiogeog.php", state: "experimental map query on a pre-v3 copy; no API", checked: 2026-10-22}
     - {type: github, url: "https://github.com/IFenton/TritonDB", state: "v1 code only, last push 2021-07-20, no licence", checked: 2026-10-22}
   api: "none beyond the Figshare API"
 versioning:
@@ -187,8 +189,19 @@ four NSB snapshots ([link_nsb.py](link_nsb.py),
 - Triton covers 11,104 of NSB's 14,503 dated foraminifera samples (77%).
 
 **Downstream.** BioDeepTime (822 Triton time series), a relational copy on
-pforams@mikrotax, and large analyses including Fenton et al. (2023, *Nature*)
-and Woodhouse et al. (2023, *Nature*).
+pforams@mikrotax, and about 50 citing papers (OpenAlex 53, Crossref 47, on
+2026-10-22). Uses include ecogroup and community-equitability biogeography
+(Swain et al. 2024, *Nature*, doi:10.1038/s41586-024-07337-9; Woodhouse et al.
+2023, *Biogeosciences*, doi:10.5194/bg-20-121-2023), Pliocene–Pleistocene
+turnover networks (Larina et al. 2025, *Nat. Commun.*,
+doi:10.1038/s41467-025-60362-8), thermal niches against climate models (Mathes
+et al. 2024, *GEB*, doi:10.1111/geb.13905), extinction risk and occupancy as an
+independent check on NSB (Smith, Kocsis & Kiessling 2025, *Biogeosciences*,
+doi:10.5194/bg-22-3503-2025), fossil-record completeness (Lamyman et al. 2026,
+*J. Syst. Palaeontol.*, doi:10.1080/14772019.2026.2669255) and sampling
+heterogeneity (Andréoletti et al. 2026, *Paleobiology*,
+doi:10.1017/pab.2026.10094). These studies sit on different versions (v1, v2,
+v3, v4), so their numbers are not interchangeable.
 
 ## Structure
 
@@ -256,6 +269,13 @@ tp = tp[tp["trim"] == "inc"]
 
 The TSV files are unchanged exports of the presence tables
 ([triton_export.R](triton_export.R)); their row counts match the profile.
+
+**Other routes.** The R package `chronosphere` (`fetch(src = "triton")`)
+serves v1 and v3 but not v4. At v3 its series `main` is the sample-level
+`triton_no_dup` table, not the published one, and the four holes corrected in
+v4 still carry "Count". Mikrotax offers an experimental map query
+(ranges-tritonbiogeog.php) on an unedited copy of a pre-v3 version, with no
+API. Triton is not in PANGAEA, GBIF or PBDB.
 [triton_checks.R](triton_checks.R) reruns the data checks quoted here
 ([checks.tsv](profile/checks.tsv)).
 
@@ -320,6 +340,26 @@ The TSV files are unchanged exports of the presence tables
 10. **Cenozoic only.** No records older than 66 Ma, so no Cretaceous baseline
     for the K–Pg (relevant to Q-007).
 
+**What the literature says** (source claims, from our ecosystem scan):
+
+- *Sampling heterogeneity.* Andréoletti et al. (2026) model Triton's
+  sampling: raw data show an excess of recent occurrences for extinct
+  species; geography explains about a third of the variation, and age method
+  and biostratigraphic purpose are significant predictors.
+- *Taxonomy.* Smith et al. (2025) find Triton consistently less diverse than
+  NSB's other plankton groups and suggest taxonomic lumping. Weitkamp et al.
+  (2025, doi:10.5194/jm-44-1-2025) call Neogene planktonic foraminiferal
+  taxonomy out of date. Triton's ranges and names rest on the Aze et al.
+  (2011) framework, which Lamyman et al. (2026) supersede; they find 43 of 390
+  macroperforate morphospecies with no Triton records.
+- *Individual errors.* Pearson et al. (2023, doi:10.5194/jm-42-211-2023)
+  identify the only Atlantic *Pulleniatina primalis* record older than 6 Ma
+  (DSDP Site 141) as a database error.
+- *Provenance.* A 2026 thesis comparing Triton, Neptune and eODP in PBDB
+  (McCoy, University of Victoria; abstract only) notes that Triton and Neptune
+  lack provenance for many occurrences, and that the databases diverge in the
+  Oligocene and the last few million years.
+
 ## Overlap with other sources
 
 - **NSB.** Every Triton Neptune row links to an NSB sample (above).
@@ -332,6 +372,14 @@ The TSV files are unchanged exports of the presence tables
   samples are in Triton.
 - **BioDeepTime** holds 822 Triton series and 609 NSB series, so the same
   foraminiferal data can enter it twice.
+- **PBDB and eODP.** No Triton import into PBDB. PBDB's own planktonic
+  foraminifera are modest (about 74,000 Globigerinoidea occurrences). The eODP
+  project (Sessa et al. 2023, doi:10.1029/2022GC010655) loads shipboard
+  drilling data into PBDB and Macrostrat from the same reports Triton mined,
+  with different taxonomy: an alternative, not a duplicate.
+- **Related compilations.** ForCenS-LGM (Jonkers et al. 2024, 2,365 Last
+  Glacial Maximum assemblages, CC BY 4.0) and FORCIS (modern water-column
+  census) postdate or complement Triton; neither is included in it.
 
 ## EPRP relevance
 
@@ -354,8 +402,14 @@ CC0 on every Figshare item; the paper applies the CC0 waiver to the data.
 Cite Fenton et al. (2021) and the Figshare version. The paper asks: "If a
 significant fraction of your data subset derives from ForCenS or Neptune, we
 ask those papers are also cited". That means Siccha & Kucera (2017) and
-Renaudie et al. (2020), plus Lazarus (1994) and Spencer-Cervato (1999). Terms
-of the constituent PANGAEA datasets are not stated in Triton's documents.
+Renaudie et al. (2020), plus Lazarus (1994) and Spencer-Cervato (1999).
+
+Licence signals are not fully consistent. The collection's DataCite record
+says CC BY 4.0 while every item says CC0. One input, the ForCenS dataset on
+PANGAEA (doi:10.1594/PANGAEA.873570), is CC BY-NC-SA 3.0, which sits
+awkwardly with CC0 redistribution of its records. Terms of the other PANGAEA
+inputs are not stated in Triton's documents. Inside EPRP, treat the data as
+CC0 for analysis, and cite the inputs.
 
 ## Verification log
 
@@ -373,3 +427,5 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | Pipeline, sources, filters, column definitions, `trim` rule, merge rules | source claim (paper, readme, version histories and R code read in full) |
 | 2026-10-22 | Neptune export date 14 March 2019 | inferred (deposited sheet name and file date) |
 | 2026-10-22 | Variant purposes (full, unrounded) | source claim (readme v2) |
+| 2026-10-22 | chronosphere serves v1 and v3; `main` v3 = no_dup; pre-v4 units | checked (live fetch by the ecosystem scan) |
+| 2026-10-22 | Uses, critiques, related compilations, licence records | source claim (papers, DataCite and registries read by the ecosystem scan) |

@@ -479,7 +479,9 @@ longer resolved.
 
 ## Overlap with other sources
 
-- **Triton (planktonic foraminifera).** Measured at site level, 2023 NSB
+- **Triton (planktonic foraminifera; [entry](../triton/README.md)).** Every
+  Triton Neptune record links to an NSB sample by `sample_id`; Triton's copy
+  is NSB as exported in March 2019. Measured at site level, 2023 NSB
   against the 2023 Triton update (`trim == "inc"`). 181 of NSB's 203
   foraminifera sites (89%), carrying 95% of its foraminifera occurrences, also
   appear in Triton. All 164 sites where Triton credits Neptune are in NSB.

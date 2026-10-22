@@ -211,6 +211,26 @@ the workflow when they generalise.
 - *Run a lineage-and-literature scan alongside profiling.* It found the
   outage's cause, the current R access route, documented critiques and four
   downstream compilations; none of these was visible from the data.
+**Triton (compilation, 22 October 2026; [entry](triton/README.md)).**
+
+- *Test a compilation for duplicates with its own key.* Triton's 2023 file
+  silently dropped the deduplication its 2021 version applied: 28,838
+  duplicate rows by the authors' own key, most of them one record arriving via
+  both Neptune and PANGAEA.
+- *Know which table you loaded.* File names repeat across versions with
+  different contents, the "deduplicated" file is a different (sample-level)
+  product, and a third-party mirror (`chronosphere`) labels that product
+  "main". Record the version DOI and sha256 of the exact file.
+- *Look for carried identifiers before matching records.* Triton keeps NSB's
+  `sample_id`, which made a record-level overlap with NSB a join rather than a
+  taxonomic matching problem, and dated Triton's NSB copy to March 2019.
+- *Downstream copies lag.* `chronosphere` stops at v3 and Mikrotax at a
+  pre-v3 copy; both miss v4's unit corrections.
+- *A data paper's counts may not match its deposit.* Reconcile them and
+  report the difference rather than quoting the paper.
+
+**Both pilots.**
+
 - *Profile many versions; mirror few.* The year-end series was worth
   profiling, but keeping all 372 snapshots locally was not: Zenodo preserves
   them, and forward-looking work uses the latest (Barry, 22 October). The mirror
