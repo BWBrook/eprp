@@ -294,3 +294,77 @@ frozen points are unchanged. Run 1 remains the primary prospective record.
     holdout_9707_sigma8 in all forests;
   - c1_failing's n = 200 reference differs from the evaluator by 5e-6 in T2
     and T3. Run 2's n = 400 qualification decides it.
+
+## Run 2 result (22 October; Repairs 1, 1b and 2 at 8962871)
+
+[collapsed_oracle_results_run2.json](collapsed_oracle_results_run2.json):
+15 points × 3 forests = 45 rows.
+
+**By the frozen status rule: 33 pass, 4 fail, 8 unresolved (reference not
+qualified).**
+- **Replicated exactly.** Runs on the laptop (10,820 s) and on deep-server
+  (4,239 s) agree **bitwise in all 1,639 recorded values**.
+- **The evaluator converges everywhere.** Its self-resolution and
+  self-domain changes are **≤ 1.4e-10 in value and derivatives in all 45
+  rows**. That includes σ = 12, 15 and 20, and ρ = 0.99998 with σ = 5 and
+  8. Run 1's evaluator-side failure is cured.
+- **The 33 passes include:**
+  - every T1 row;
+  - every central, low-ρ, small-σ and high-ρ row;
+  - c1_previous and c4_failing;
+  - both 9707 hold-outs, among them the fresh σ = 5 point, which passes in
+    all three forests.
+- **4 fail:** stress_s3_r09_kbm15 and c4_previous, in T2 and T3. Each
+  fails **only** the I2 selection identity, scored against the tensor
+  reference (3.85e-5 and 1.16e-6, against a gate of 1e-6). That reference
+  is itself unqualified there.
+- **8 unresolved:** c1_failing and the σ = 6, 15 and 20 hold-outs, in T2
+  and T3. The tensor reference fails its own domain check, by up to 5e-5
+  in value and 1e-2 in derivatives at σ = 15. The evaluator is converged.
+
+**Post-hoc corroboration** (outside the frozen gates, and declared as such;
+[oracle_posthoc/](oracle_posthoc/)):
+- **(a) Values, T1 and T2.** The scipy adaptive Gauss–Kronrod reference
+  shares no grid or node code with the evaluator. It agrees with the
+  evaluator to **≤ 1.4e-14 at every point**, every fail and unresolved row
+  included.
+- **(b) The selection identity.** The evaluator's selection-only numerator
+  agrees with the pilot's qualified repaired-rule reference (local mode,
+  800 → 1,600 intervals, L 12 → 16; all qualified) to **≤ 2.6e-8 at all 15
+  points**, in T1 and T2. The four "fail" labels therefore come from the
+  unqualified tensor reference, not from the evaluator.
+
+**Diagnosis of the reference.**
+- Its per-axis level sets come from axis profiles through the mode. Those
+  under-cover the joint level set when large σ skews and correlates the
+  integrand in innovation coordinates.
+- Its domain change grows with σ: about 6e-7 at σ = 3.3–6, and 5e-5 at
+  σ = 15.
+
+**Not yet verified by any qualified independent reference:** T2
+derivatives, and T3 values and derivatives, at the six points with σ ≥ 3
+listed above.
+
+**Cost.**
+- Evaluator calls: T1 0.01–0.05 s; T2 2–6 s; T3 4–8 s. That is about 5×
+  run 1, because the level-set bisections of the root re-run nested child
+  messages. This is an implementation cost, not an intrinsic one.
+- Finite-difference gradients (71 calls) take minutes per forest.
+- P11's 19-node tree has interior nodes, so interpolated messages would be
+  needed. They remain untested.
+- **At this cost, the evaluator is a validation tool, not yet a fitting
+  kernel.**
+
+**Reading.**
+- **The repairs fixed the evaluator.** Every remaining row that is not a
+  pass is a failure on the reference side, and corroboration (a) and (b)
+  supports the evaluator at every point it covers.
+- **Under the frozen rule, the oracle has still not passed.**
+
+**Decision for Codex:**
+- (i) A bounded repair to the reference only: a nested adaptive
+  Gauss–Kronrod reference for T3 values, plus finite-difference derivatives
+  of the adaptive references at the six points.
+- (ii) Accept the evaluator on the present evidence, and consider the
+  fixed-point P11 check: interpolation first, then cost.
+- (iii) Stop the route.
