@@ -118,3 +118,40 @@ All other rows are still unrepaired and unverified.
 - **Not re-examined:** DC-039 and DC-040 were flagged as possible
   duplicates. They record tier changes that followed premise changes
   (DC-036, DC-037), a different judgment, so they stay as changes.
+
+**Initial owner (added 22 October 2026).** New columns `initial_owner` and
+`initial_owner_confidence` record whose judgment was changed.
+- **How they were extracted:** four read-only Claude Sonnet 5.5 subagents
+  under Claude Opus 5.5 each read the cited sources for a quarter of the
+  rows (279 tool calls, about 662,000 subagent tokens). Evidence for every
+  row is in `initial-owner-2026-10-22.tsv`.
+- **Confidence:** 178 high, 26 medium, 3 low.
+- **Claude's check before merging:** three calls against sources, all of
+  which held. DC-125: Codex's own B-002 specification held the Δ contrast
+  that Claude broke. DC-080: Barry reversed his own deferral. DC-061: Codex
+  retired its own provisional Shangsi pick.
+
+**Who changed whose judgment** (204 changes; duplicates and the one
+confirmation are excluded; the side session counts as Claude):
+
+| Initial owner ↓ / changed by → | Claude | Codex | Barry | joint | external | total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Claude | 23 | 143 | 3 | 1 | 6 | 176 |
+| Codex | 6 | 8 | 1 | 1 | 1 | 17 |
+| Barry | 0 | 0 | 1 | 0 | 0 | 1 |
+| joint | 0 | 2 | 3 | 3 | 0 | 8 |
+| external | 1 | 1 | 0 | 0 | 0 | 2 |
+
+**How to read it.** These are records, not rates, and the table mostly
+reflects how the roles were designed:
+- Claude drafted most judgments (176 of 204), and Codex mostly reviewed
+  them. Corrections were also written up mainly in Codex's review notes.
+- So "Codex changed 143 of Claude's judgments" measures how the review was
+  set up and recorded, not either agent's error rate.
+- Claude's silent self-corrections are under-recorded (see the caveats
+  above), so 23 is a floor.
+- Within that limit, both agents recorded self-corrections: Claude in 23 of
+  176 of its judgments, and Codex in 8 of 17.
+- **Not yet supportable:** a denominator of all judgments made, including
+  those never changed, and a counterfactual of what self-review alone would
+  have caught. Outline §4 needs both before any comparative claim.

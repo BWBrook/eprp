@@ -1,0 +1,208 @@
+id	initial_owner	confidence	evidence
+DC-001	Claude	high	ideas/2026-10-07-claude-first-framing.md:3,64-66 Proposer: Claude; "Agent inference to be checked against the full text" (Song criticism)
+DC-002	joint	medium	first-framing.md:97 Claude drafted family B (Late Quaternary); codex-deep-time-response.md:132 "my proposed Late Quaternary assignment"
+DC-003	Claude	high	literature/2026-10-disruption-susceptibility.md:3,83-84 Owner: Claude; "[inference] ... rate carries little beyond magnitude / window"
+DC-004	Claude	high	disruption-susceptibility.md:3,99 Owner: Claude; "The one mechanistic deep-time-to-modern bridge has a single calibration event"
+DC-005	Claude	high	literature/2026-10-disruption-susceptibility.md:3,276 Owner: Claude; "the threshold claim is unidentifiable" (Claude simulation gate)
+DC-006	Claude	high	recovery-contracts-and-response.md:130 Codex: "Claude's unchecked 2-10 Myr back-of-envelope estimate should be withdrawn"
+DC-007	Claude	medium	recovery-contracts-and-response.md:1-12 Codex reply to Claude 82/1137, 76/1143: "proposed layered simulator"; board text not in repo
+DC-008	Claude	high	literature/2026-10-disruption-susceptibility.md:3,303 Owner: Claude; "A reusable stage-level forcing-response table would serve A-C"
+DC-009	Claude	medium	literature/2026-10-08-transfer-inputs.md:3,55 Owner: Claude, "earlier version ... stated wrongly"; Codex note :5 says both agents missed it
+DC-010	Claude	medium	literature/2026-10-08-transfer-inputs.md:3,55 Owner: Claude, 50%/500 m as 2018 calibration; Codex note :5 "both agents' ... missed-source"
+DC-011	Claude	high	literature/2026-10-09-a-mi-transfer-prior-work.md:3 and b-selectivity-prior-work.md:3 Owner: Claude; A and B were Claude candidates
+DC-012	Claude	high	literature/2026-10-09-register-checks-round1.md:3,17 Owner: Claude; sketches Q-011 to Q-015 "posed as tier 1" in Claude's register section
+DC-013	Claude	high	literature/2026-10-09-register-checks-round1.md:199,227 audit owner Claude: "My hyperthermal-loop proposal (82/1224) fails the gate"
+DC-014	Claude	high	literature/2026-10-09-register-checks-round1.md:3,93 Owner: Claude, "A decisive design"; round2.md:83 "my 'decisive design'"
+DC-015	Claude	high	literature/2026-10-09-register-checks-round1.md:3,117 Owner: Claude; round2.md:88 "I described Payne et al. 2016's genus rule wrongly"
+DC-016	Claude	high	literature/2026-10-09-register-checks-round2.md:3,94-95 Owner: Claude; "The 'up to 400% vs 60%' pair I quoted on the board (76/1223)"
+DC-017	Claude	high	literature/2026-10-09-register-checks-round1.md:235-239 Claude's lessons: "Cross-event questions hit a ceiling of roughly 6-30 events"
+DC-018	Codex	medium	ideas/register.md:113 Q-010 Owner Codex; original index title "environmental capacity or realised dynamics" (git 2cc0148, Codex)
+DC-019	Claude	high	literature/2026-10-09-register-checks-round2.md:3,15 Owner: Claude; "## Q-022 ... promising, tier 1" (Claude-posed round-2 sketch)
+DC-020	Claude	high	data/phanda-stage-differences/README.md:3,53 Owner: Claude; "first version drew the older stage's scenario once per 10,000-draw block"
+DC-021	Claude	high	literature/2026-10-10-register-checks-round3.md:3,41-42 Owner: Claude; stale "never checked"/"Huang ... analogue" text was Claude's Q-022
+DC-022	Claude	high	literature/2026-10-10-register-checks-round3.md:3,35-36 Owner: Claude; "My first statement, that events 'mostly vanish' against background"
+DC-023	Claude	high	clade-futures-and-geographic-cycles.md:114 "Claude suggests that origination failure could be more terminal"; prediction-units.md:12-13
+DC-024	Claude	high	literature/2026-10-10-register-checks-round5.md:3,12-16 "Codex's corrections to Claude-owned entries"; Q-027 Claude (register.md:1744)
+DC-025	Claude	high	literature/2026-10-10-register-checks-round5.md:3,22-23 "Winner is never defined from the outcome was wrong"; Q-028 Claude-owned
+DC-026	Claude	medium	literature/2026-10-10-prediction-units-and-priority.md:111-118 "In 76/1347 Claude proposes estimating the baseline from richness increments"
+DC-027	Codex	high	ideas/register.md:1929-1931 "New sketch (Codex, 10 October)"; Q-029 Codex-owned, tier 2 as posed; round5.md:57 Claude critique
+DC-028	Claude	high	literature/2026-10-10-register-checks-round6.md:3,25 Owner: Claude; "My claim that the proxy 'fails its modern calibration' overstated"
+DC-029	Claude	high	literature/2026-10-10-register-checks-round6.md:3,13 "Codex's corrections to Claude-owned entries"; Q-025 Claude round 2 (register.md:1362)
+DC-030	Claude	high	literature/2026-10-10-register-checks-round8.md:3,18 Owner: Claude; Q-038 under "round 7 (Claude)" (register.md:2539); "withdrawn"
+DC-031	Claude	high	literature/2026-10-10-register-checks-round8.md:3,30 Owner: Claude; "My earlier description of Tikhonov et al.'s 57.3% was wrong"
+DC-032	Claude	high	literature/2026-10-10-register-checks-round6.md:3,44-47 Claude: "a prefix-only predictor exists: the sum of posterior probabilities"
+DC-033	Claude	high	literature/2026-10-10-register-checks-round6.md:3,85 Claude: "Kill criterion. Fewer than about 3-4 independent crossed pairs"
+DC-034	Codex	high	literature/2026-10-10-boundary-counts-and-incumbency.md:151 Codex: "Add an entry, initially under review/tier 2" (Q-036); register.md:2425
+DC-035	Claude	high	ideas/register.md:1742-1747 "round 3 (Claude)"; Q-027 "Posed 9 October as a tier-1 sketch. Moved down ... prior-work check"
+DC-036	Claude	high	ideas/register.md:2303,2365-2367 "round 5 (Claude)"; Q-035 "Posed 10 October; a prior-work check ... found the concept published"
+DC-037	Claude	high	ideas/register.md:2493-2497 "round 6 (Claude)"; Q-037 "Posed and checked on 10 October. The modern half of the premise did not hold up"
+DC-038	Claude	high	literature/2026-10-10-register-checks-round4.md:3,36-37,46 Owner: Claude; Q-031 (Claude, register.md:134) "Tier 2 -> 3"
+DC-039	Claude	high	literature/2026-10-10-register-checks-round6.md:3,154,173,178 Owner: Claude; Q-035 (Claude entry) "Tier 2 -> 3"
+DC-040	Claude	high	literature/2026-10-10-register-checks-round7.md:3,19,42 Owner: Claude; Q-037 (Claude entry) "Tier 2 -> 3"
+DC-041	Claude	high	literature/2026-10-10-register-checks-round7.md:3,106,126 Owner: Claude; Q-019 (Claude, register.md:122) "Tier 2 -> 3"
+DC-042	Claude	high	literature/2026-10-10-register-checks-round7.md:3,149,166 Owner: Claude; Q-006 (Claude, register.md:109) "Tier 2 -> 3"
+DC-043	Claude	high	literature/2026-10-10-register-checks-round3.md:3,155 Owner: Claude; Q-016 (Claude, register.md:119) "A rolling forecast ... already exists"
+DC-044	Claude	high	literature/2026-10-10-register-checks-round4.md:3,12-14 Owner: Claude; Q-022 design "revised after Codex 76/1340"
+DC-045	Claude	high	literature/2026-10-10-register-checks-round7.md:3,44 Owner: Claude; Q-005 (Claude, register.md:108) reframed to variance/autocorrelation
+DC-046	Claude	high	literature/2026-10-10-register-checks-round7.md:3,64 Owner: Claude; Q-017 (Claude, register.md:120) reframed to estimator equivalence
+DC-047	Claude	high	literature/2026-10-10-register-checks-round7.md:3,86 Owner: Claude; Q-018 (Claude, register.md:121) narrowed
+DC-048	Claude	high	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:3,97,115,118,134 Owner: Claude; D column =3 for Q-016, Q-027, Q-044, Q-024
+DC-049	Claude	high	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:94,101,217-218 Claude: "Merge into Q-004"; "fold into Q-038"
+DC-050	Claude	high	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:103 Claude: Q-049 priority "A-", "Simulation of R separability at PBDB resolution"
+DC-051	Claude	high	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:98 Claude ranked Q-020 (Codex entry) band C: "Hold until a prediction"
+DC-052	Claude	high	ideas/2026-10-11-phase2-claude-reply-2.md:3,13 Owner: Claude; "Only a handful of warm stages" withdrawn (data/q027-joint-support/README.md)
+DC-053	Claude	high	ideas/2026-10-11-phase2-claude-reply-2.md:14-15,27 "Accept; my bug" (Claude owns Q-027 builder; new baseline 74/26/4)
+DC-054	Claude	high	ideas/2026-10-11-phase2-claude-reply-2.md:21 "My 'collapse duplicates' and the register's 'about 20% duplicates' are withdrawn"
+DC-055	Claude	high	ideas/2026-10-11-phase2-claude-reply-2.md:22 "My 'non-zero exactly when present' was wrong for 2.8% of present cells"
+DC-056	Claude	high	ideas/2026-10-11-phase2-claude-reply-2.md:19; Claude contract b517a0a: Phi coefficients "appear to describe survival", unconfirmed
+DC-057	Codex	high	literature/2026-10-11-q021-predictions-and-calibration.md:3,24-31 "Owner: Codex"; proposes vegetation vs authigenic-clay contrast
+DC-058	Claude	high	ideas/2026-10-11-phase2-claude-reply-3.md:46,50 "'Cannot rise' ... are withdrawn"; "My 'unreachable' was wrong" (Q-044 Claude-owned)
+DC-059	Claude	high	ideas/2026-10-11-phase2-claude-reply-4.md:38-40 "My 'overlap decays with distance' is withdrawn from the contract and the entry"
+DC-060	Claude	high	ideas/2026-10-11-phase2-claude-reply-4.md:26 "bounded at 56-89%"; reply-5.md:16-17 "Withdrawn: the '56-89% interval'" (Q-042 Claude-owned)
+DC-061	Codex	medium	ideas/2026-10-11-phase2-codex-reply-5.md:22 "My earlier selection of Shangsi was explicitly provisional" (timing point: Claude)
+DC-062	Claude	high	ideas/2026-10-11-external-review-response-claude.md:30 "F-01 ... Q-042, Claude"; review.md:54 quotes entry's 56-79% interval
+DC-063	Claude	high	ideas/2026-10-11-external-review-response-claude.md:31 "F-02 ... Q-006, Claude"; Claude first pass :132 "Park after a quick check"
+DC-064	Claude	high	ideas/2026-10-11-external-review-response-claude.md:32 "F-03 ... Q-035, Q-047, Q-049, Claude"; register index owner Claude for all three
+DC-065	Claude	high	ideas/2026-10-11-phase2-claude-reply-3.md:89-91 "Each model already outputs the *fluxes* a Li box model needs" (Claude's gate)
+DC-066	Claude	high	ideas/2026-10-11-external-review-response-claude.md:34 "F-05 ... Q-032, Claude"; register index Q-032 parked, owner Claude
+DC-067	Codex	medium	ideas/2026-10-11-external-review-response-codex.md:19 "withdraw my earlier presumption of parking"; Claude's first pass proposed it too
+DC-068	Codex	high	ideas/2026-10-11-external-review-response-codex.md:20,83-87 "My own audit found the same problem in Q-008 ... Q-009" (Codex entries)
+DC-069	Claude	medium	Register header from 2cc0148 (Claude created register per STATUS); response-claude.md:63 "shared text in the register header"
+DC-070	Claude	high	ideas/2026-10-11-phase2-claude-reply-3.md:11 "I accept Codex's candidate as the base. It is better than my draft"; first draft 8543ed7
+DC-071	Claude	high	ideas/register.md:3092 "Posed 10 October as tier 1 (provisional)"; index owner Claude; register-checks-round9.md:3,14 (Claude adopts Codex)
+DC-072	Claude	high	literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:19 "Claude owns ... Q-044/Q-045"; STATUS.md:237
+DC-073	Codex	high	register index Q-043 owner Codex; STATUS.md:236-237 "Codex's round 8 ... adds Q-043"; round9.md:58 Claude "Q-043 parked. Agreed."
+DC-074	Claude	high	literature/2026-10-11-register-checks-round9.md:44,49-50 "Corrections to Claude's round-8 Q-043 critique"; "I had written that they did"
+DC-075	Codex	high	literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:3,20 "Owner: Codex"; "Q-046, new: record ... as parked"
+DC-076	Claude	high	literature/2026-10-11-register-checks-round10.md:14-18 accepts Codex correction of Claude's Q-041 null; STATUS.md:236 round 7 Claude
+DC-077	Claude	high	ideas/register.md:3154-3156 "The arithmetic residual from round 9 ... is withdrawn"; round 9 is Claude's (round9.md:3 Owner: Claude)
+DC-078	Claude	high	literature/2026-10-11-register-checks-round10.md:3,42-46 "Owner: Claude"; accepts Codex correction on Q-047 (Claude-owned, round 9)
+DC-079	Codex	high	data/q050-covariance-support/README.md:3,31-33 "Owner: Codex"; "our first-tranche note rendered as time increments" (Codex Q-050 note)
+DC-080	Barry	high	literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:18-20 Barry: "Leave the Q-038 work for now"
+DC-081	Claude	high	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:3,139 "Owner: Claude"; "Seven of the nine are mine"
+DC-082	Claude	high	literature/2026-10-11-register-checks-round10.md:3,99-108 Claude critique: "I suggest Codex consider this framing; Q-048 is Codex's entry"
+DC-083	external	medium	literature/2026-10-11-register-checks-round10.md:118-119 Raup 1979 "as many as 96 percent"; Barnosky 2011 Table 1: a published figure
+DC-084	Claude	medium	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:27-29; 4 of 5 entries Claude-owned (Q-022, 027, 038, 044), Q-007 joint
+DC-085	Claude	medium	ideas/register.md:66-68 rule in register Claude created (2cc0148); derived from Barry's 9 Oct "as you narrow ... consider expanding"
+DC-086	Codex	medium	Codex commit 6f75070 STATUS "Next owner: Barry, for review of the whole first tranche"; Claude commit 16be1b9 replaced it
+DC-087	Claude	high	ideas/2026-10-12-phase2-claude-reply-6.md:11-14 "My blanket 'removal breaks identifiability' was wrong" (Q-006 information table, Claude)
+DC-088	Codex	high	ideas/2026-10-12-phase2-codex-reply-6.md:30-33,50-56 proposes gate order; claude-reply-6.md:49 "agree with the gate, but reverse its order"
+DC-089	Claude	high	literature/2026-10-12-q006-likelihood-contract.md:3,127 "Owner: Claude"; "Claude's conjecture (unproven; for challenge)"
+DC-090	Codex	medium	git 2d761bd q021-lithium-observation-contract.md "Owner: Codex" uses one delta7Li_sw(t_i); codex-reply-7.md:62
+DC-091	Claude	high	literature/2026-10-12-q006-likelihood-contract.md:127 "Claude's conjecture"; claude-reply-7.md:30-40 withdraws it as the CMR analogue
+DC-092	Claude	high	ideas/2026-10-12-phase2-claude-reply-7.md:51,82 terminal confound for E2; claude-reply-8.md:13 "My terminal-confound transfer is withdrawn"
+DC-093	Codex	medium	ideas/2026-10-12-phase2-codex-reply-7.md:66 "Proposed next Q-021 task: obtain Taylor's sample deposit"; Claude accepted (reply-8:50)
+DC-094	Claude	high	ideas/2026-10-13-phase2-checkpoint-reconciliation.md:50-53 Claude pass Develop vs Codex Hold; checkpoint-claude.md:45,55,66,74 Develop
+DC-095	Claude	high	ideas/2026-10-13-phase2-checkpoint-reconciliation.md:56 "Q-035 | Park | Hold"; checkpoint-claude.md:67 "Park"
+DC-096	Claude	high	ideas/2026-10-13-phase2-checkpoint-reconciliation.md:45-49 Claude pass hold variants vs "Develop (Codex)"; checkpoint-claude.md
+DC-097	Claude	high	ideas/2026-10-13-phase2-checkpoint-proposal-claude.md:3,15,19 "Owner: Claude"; "17 of 50 entries changed"
+DC-098	Claude	high	literature/2026-10-13-q006-e2-cmr-match.md:3,70-79 "Owner: Claude"; "not independent Poisson detections" (22% of repeats add a reference)
+DC-099	joint	medium	ideas/2026-10-13-phase2-checkpoint-proposal-claude.md:3-8,33-39 Barry asks "continue to fence"; both agents had run the series
+DC-100	Claude	high	ideas/2026-10-13-phase2-claude-reply-9.md:41 "Reopen only when all three hold"; claude-reply-10.md:8 "too strict"
+DC-101	Claude	high	ideas/2026-10-12-phase2-claude-reply-7.md:109-124 lists Li, Sr, Mg, chert gap, Si tracers; q021-route-review.md:3 is Codex's
+DC-102	Claude	high	ideas/2026-10-13-phase2-checkpoint-brief.md:3-5 "Drafted by Claude"; erratum checkpoint-claude.md:152 "already parked"
+DC-103	Claude	high	ideas/2026-10-13-phase2-checkpoint-claude.md:62,120 "never tested with a time term"; erratum :156-158; Q-030 Claude-owned
+DC-104	Claude	high	Brief draft 4694c4d:ideas/2026-10-13-phase2-checkpoint-brief.md:23 "Draft by Claude" - "Q-021: Li archives cannot yet date the recovery"
+DC-105	Claude	high	ideas/2026-10-13-phase2-checkpoint-reconciliation.md@4694c4d:3,52 'Drafted by Claude'; Q-022 'The premortem already shows the power gate's expected answer'
+DC-106	Claude	high	ideas/2026-10-13-phase2-checkpoint-brief.md@4694c4d:3,24-31 'Draft by Claude'; 'would have reached sooner... Access was rarely the binding problem'
+DC-107	Claude	medium	ideas/register.md@4e6a2b3^:117,122 Q-014/Q-019 owner Claude tier 3; register.md:1932 Q-029 tier 3 'after Claude's 76/1362 critique'
+DC-108	Claude	high	git 0b4a575 ideas/register.md Q-016 row 'under review | 3 | Claude'; entry 'Hence tier 3' (Claude register round 3)
+DC-109	Claude	medium	STATUS.md:1096 'Claude's Q-006 E2/prior map'; checkpoint-claude.md:38 'E2 answered in principle'; codex-reply-11.md:37-40 objects
+DC-110	Claude	high	ideas/2026-10-14-blue-sky-ideation-claude.md:86-88 C1 'publishable impossibility result' (Claude's own list)
+DC-111	Claude	high	ideas/2026-10-14-blue-sky-ideation-claude.md:91 C3 original title (causal share); register-blue-sky B-007 'Claude C3'
+DC-112	Claude	high	ideas/2026-10-14-blue-sky-ideation-claude.md:307 C10 original title; register-blue-sky B-003 'Claude C10'
+DC-113	Codex	high	ideas/2026-10-14-blue-sky-ideation-codex.md:33,170-190 D3 'Develop: establishment versus persistence support'; B-004 'Source: Codex D3'
+DC-114	Claude	high	ideas/2026-10-14-blue-sky-cross-critique-claude.md:72-77 'Proposal: stage it. 1. A conditional theoretical result first: ... hysteresis'
+DC-115	Claude	high	literature/2026-10-14-b001-reassembly-contract.md:3 'Owner: Claude'; @f3bf6a4:135-136 'W >= 0.5 and above the 95th percentile of the null'
+DC-116	joint	low	ideas/2026-10-13-phase2-checkpoint-brief.md:120-121 default 'broad portfolio with deep-time priority' (joint recommendation of both passes)
+DC-117	Codex	high	ideas/2026-10-14-blue-sky-ideation-codex.md:31 'D1 ... Develop within Q-012, not a second queue item' (Codex's own list)
+DC-118	Claude	high	ideas/2026-10-13-phase2-checkpoint-claude.md:87,89 Claude's frozen pass '23 hold' / '7 already parked'; Codex recount at final-check:103-104
+DC-119	Codex	high	ideas/2026-10-14-blue-sky-ideation-codex.md:429-433 Codex's own 'Discarded/parked during ideation' list of further candidates
+DC-120	Claude	high	literature/2026-10-14-b001-reassembly-contract.md:3 'Owner: Claude'; first version @f3bf6a4 (threshold endpoint, 'a guild is largely a clade')
+DC-121	Claude	high	literature/2026-10-14-b001-reassembly-contract.md:3 'Owner: Claude'; @55db76a:88,265 'Horizon: 10 Myr'; contract:418 corrects to 10.4
+DC-122	Claude	high	data/b001-support/README.md:9-11 'Owner: Claude'; Codex adjudication:36-52 corrects the 'tracked audit' 4/5/8 and support_audit.py:211
+DC-123	joint	medium	ideas/register-blue-sky.md:70-72 'Claude drafted the merge; Codex accepted the merge (76/1635)' (develop disposition); :123 'agreed with Codex'
+DC-124	Claude	high	literature/2026-10-14-b001-reassembly-contract.md@55db76a:170 'θ is separated from c only by guilds whose dominant clade changes'
+DC-125	Codex	high	literature/2026-10-15-b002-paper-specification.md@47137a2:115-116 (Codex, header) 'The primary contrast is Delta(u)=B_A(u)-B_J(u)'
+DC-126	Claude	high	ideas/2026-10-15-b002-specification-response-claude.md (Owner: Claude) repair '1 + a^2'; spec.md:207-208 'Claude's response... its proposed 1+a^2'
+DC-127	Claude	high	ideas/2026-10-15-blue-sky-support-reply-2-claude.md:53-60 slack 'mass-balance window'; Codex review:46 'the proposed dismissal'
+DC-128	Claude	high	literature/2026-10-15-b003-escalation-evidence-contract.md:3 'Owner: Claude'; Level B used Kosnik genus scores as the candidate trait series
+DC-129	Claude	high	literature/2026-10-15-b003-escalation-evidence-contract.md:3 'Owner: Claude'; original @eda87fe read Kelley 1992 as predator stasis
+DC-130	joint	medium	ideas/register-blue-sky.md:70-72 merge 'Claude drafted... Codex accepted'; STATUS.md:151 '4 develop/14 hold'; B-003 later hold agreed 76/1668
+DC-131	Claude	high	literature/2026-10-15-b003-source-inventory.md:3 'Owner: Claude'; row @74c7722 read 'Literal pass'; Codex review:59-62
+DC-132	Claude	high	literature/2026-10-15-q012-support-identification-design.md:3 'Owner: Claude'; first version 0f0cd35 (Nexus bifurcations, 150 ecogroups)
+DC-133	Claude	high	literature/2026-10-15-q012-support-identification-design.md:3 'Owner: Claude'; Codex review:114-148 counterexample to the frailty law
+DC-134	Claude	high	literature/2026-10-15-q012-support-identification-design.md:3 'Owner: Claude'; :298 'The truncation rule is withdrawn'
+DC-135	Claude	high	literature/2026-10-15-q012-support-identification-design.md:3 'Owner: Claude'; sibship/clade split design, :299 'No forecast landmark'
+DC-136	joint	low	register-blue-sky.md@16785e6^ B-004 'Owner Codex' (D3 asymmetry) + Claude staging 'hysteresis'; closure-codex.md:19-23 repairs
+DC-137	Claude	high	ideas/2026-10-15-b004-critique-claude.md:3,20,49,77 'Owner: Claude' (modern positive control; Maxwell control; IQR scale)
+DC-138	Claude	high	literature/2026-10-15-q012-support-identification-design.md:3 'Owner: Claude'; :303-305 inclusion normaliser repaired per Codex
+DC-139	Claude	high	git 5899a4a 'Q-012: proposed input freeze before the cost pilot' (Claude co-author); literature/2026-10-15-q012-freeze-proposal.md
+DC-140	Claude	high	ideas/2026-10-15-blue-sky-support-reply-claude.md:53 'The 'about 6' planning target was wrong'; contract@f3bf6a4:159 'fewer than about 6'
+DC-141	joint	medium	register-blue-sky.md:70-72 merge 'Claude drafted... Codex accepted' (develop, theory first); closure-codex.md:8 Codex 'retain B-004 as develop'
+DC-142	Claude	high	literature/2026-10-16-q012-events-exposure-addendum.md:3,60 'Owner: Claude'; 'parent start < daughter start'
+DC-143	Claude	high	literature/2026-10-16-q012-events-exposure-addendum.md:134 'about 105 pairs'; Codex check:90 'build.R currently compares observed_mean_abs_pal_lat'
+DC-144	Claude	high	literature/2026-10-16-q012-finite-contract.md:3 'Owner: Claude'; Codex check cites contract lines 79-85, 154-174 at a71e39d
+DC-145	Claude	high	ideas/register.md:753 'A funnel at σ → 0 caused divergences in 19 of 20 fits'; data/q012-component-check/README.md:3 'Owner: Claude'
+DC-146	Claude	high	data/q012-component-check/README.md:3 'Owner: Claude' (component.py lineage cap and compute gates); Codex check:92
+DC-147	Claude	high	ideas/2026-10-16-q012-full-prototype-check-codex.md:3 'Review of Claude's fd232a4 and b683c74'; contract §8.2 rounding map is Claude's
+DC-148	Claude	high	ideas/2026-10-16-q012-full-prototype-check-codex.md:3-4 'Review of Claude's fd232a4'; prototype README:213 24-node checks (Owner: Claude)
+DC-149	Claude	high	data/q012-prototype/README.md:129-135 'direction the complete-ascertainment working model should be biased under thinning' (Owner: Claude)
+DC-150	Claude	high	data/q012-prototype/README.md:399-401 original wording 'the solver removed v2's NaN failure in the typical set' (Owner: Claude)
+DC-151	Claude	high	data/q012-prototype/README.md:201 '40 nodes'; :545 'At 40 nodes the precision gate fails at 4 of 8' (Owner: Claude)
+DC-152	Claude	high	literature/2026-10-16-q012-finite-contract.md:3,450 'Owner: Claude'; '(d) Coverage of the 90% interval... Between 0.85 and 0.95'
+DC-153	Claude	high	ideas/2026-10-16-q012-pilot-prelaunch-check-codex.md:3-5 'Claude owns implementation'; data/q012-pilot/README.md:3 'Owner: Claude'
+DC-154	Claude	high	data/q012-pilot/README.md:305 'My proposed dense_e remedy was therefore withdrawn' (Owner: Claude); r00-review-codex.md:3,9
+DC-155	Claude	high	data/q012-pilot/README.md:399-403 'The first version... claimed that v6 stayed inside R00's marginal ranges' (Owner: Claude)
+DC-156	Codex	medium	ideas/2026-10-16-q012-v4-check-and-pilot-codex.md:121-124 Codex's proposed package 'Only if that replay passes... run 12 unconditional datasets'
+DC-157	Claude	high	git 17d129a data/q012-pilot/README.md:478 "The one divergence is not near zero." (Claude-co-authored commit); Codex review :79-80 corrects
+DC-158	Claude	high	git ac1c8aa diff, data/q012-pilot/README.md: "The tolerance change altered no trajectory"; Codex review :82 "Claude should correct"
+DC-159	Claude	high	data/q012-pilot/README.md:889 "I had checked only the failing states"; blanket exclusion of normaliser error was Claude's
+DC-160	joint	low	AGENTS.md:21-23, STATUS.md:177 shared plan: research before selection; Barry's ideas/framework-notepad.md:6-10 critiques agents' practice
+DC-161	Claude	medium	Claude's frozen bank stopped (git a415b2e, 76/2107); histories/q012.md E7 lists Claude, though a415b2e already blamed the reference
+DC-162	Claude	high	data/q038-predictor-contract/README.md@9bfba9d:189-191,212 "park also if the detection-only null cannot be passed" (Owner: Claude)
+DC-163	Claude	high	README.md@9bfba9d:120-122 "incoming cohort is first recorded before stage k and alive at k by range-through" (Owner: Claude)
+DC-164	Claude	high	README.md@9bfba9d:113 "subgenera merged"; support.R:59 takes first non-missing logvol (9bfba9d); Codex review :105 rejects
+DC-165	Claude	high	literature/2026-10-20-q015-prior-check.md:3,62-63 "Owner: Claude"; "Measure realised thermal-limit **lability**"
+DC-166	Claude	high	literature/2026-10-20-q017-prior-check.md:1-3,146 "Owner: Claude"; "two conditionally independent" kill-criterion relaxation
+DC-167	Claude	high	literature/2026-10-20-q023-q031-prior-checks.md:1-3,24 "Owner: Claude"; "The residual. Recompute Bambach, Knoll & Wang's partition"
+DC-168	Claude	high	git 8c41db4 q023-q031-prior-checks.md:144-146 "about ten times the experimental terrestrial value"; :120 five values; :154 eight
+DC-169	Claude	high	README.md@9bfba9d:100 "Unit sensitivity is small." in "Owner: Claude" draft; corrected in README.md:100,259
+DC-170	Claude	high	README.md@9bfba9d:154 "recovered: for example, through each genus's type species"; Owner: Claude
+DC-171	Claude	high	README.md@9bfba9d:105 "Event-level contrasts rest mainly on four cases" (lists five); Owner: Claude
+DC-172	Claude	high	literature/2026-10-09-register-checks-round2.md:1-3,46 "Owner: Claude"; Alroy row "Frasnian deficit stands" (scout read second-hand)
+DC-173	Claude	high	data/q012-pilot/README.md:996-997 "My step criterion (a Newton step below 1e-14) cannot be met"; Codex 76/2121 only checked
+DC-174	Claude	high	ideas/2026-10-21-gpt6pro-proposals-assessment-claude.md:3,77-78 "Owner: Claude"; "should give a small R_L"; withdrawn :245
+DC-175	Claude	high	ideas/2026-10-21-gpt6pro-proposals-assessment-claude.md:3 "Owner: Claude"; NPT-pathway inference (:74-76); withdrawn :257
+DC-176	Claude	high	ideas/2026-10-21-gpt6pro-blind-ediacaran-assessment-claude.md:44-46 "That chronology cannot then test those boundaries' synchrony"
+DC-177	Claude	medium	blind-ediacaran-assessment-claude.md:81,126 "most macroevolutionary idea"; "Best item for EPRP"; idea itself came from GPT-6 Pro
+DC-178	external	medium	Consultation ediacaran_cambrian_consultation.md:106,493 "Raw archive retrieval did not succeed"; Claude md:77-78 relays it as a gate
+DC-179	Claude	high	blind-ediacaran-assessment-claude.md:100-113 "outside our extinction core", "not ours", "not registered" for canopy/trail/stolon cards
+DC-180	Claude	high	blind-ediacaran-assessment-claude.md:128-129 "The blind run was more useful per word, and produced the two best ideas"
+DC-181	Claude	high	ideas/2026-10-21-gpt6pro-proposals-assessment-claude.md:189 (git ba6bdf1) "Evidence, not compute, is the binding constraint."
+DC-182	Claude	high	data/q038-predictor-contract/ambiguity.R:14-19 "Frozen clade policy" modal over all references (26ebf0a, Claude)
+DC-183	Claude	high	data/q038-predictor-contract/contract.md:1 "Owner: Claude"; v1 c523389; Codex review :49 "Contract lines 168-180 solve Sum q = D_O"
+DC-184	Claude	high	contract.md "Owner: Claude" (v1 c523389); Codex review :87 "Contract lines 204-209 ... split genera spanning k*"
+DC-185	Claude	high	contract.md "Owner: Claude" (v1 c523389); Codex review :114 lines 94-102, 164-167, 199-200 forecast/beta_b transfer
+DC-186	Claude	high	contract.md "Owner: Claude" (v1 c523389); Codex review :139 E3 toy M=3 identification and SEs "retain as design evidence"
+DC-187	Claude	high	ideas/2026-10-21-gpt6pro-proposals-assessment-claude.md@13f6ae4:254 "R_L is small only if" (Claude's text); fixed in 70e00e0
+DC-188	Claude	high	assessment-claude.md@13f6ae4:243-244 "extinction probability is e^-1"; Codex check says "tends to e^-1" (recruitment-analytic-check:16)
+DC-189	Claude	high	data/q012-pilot/README.md@bd84335 "dH with the step halved 333 and 351 ... Halving the step still leaves large errors" (Claude)
+DC-190	Claude	high	data/q012-pilot/README.md:1108-1109 "My reading, that the sampler fails at the edge of the frailty-ageing trade-off"; notepad:104
+DC-191	Claude	high	data/q012-pilot/README.md@bd84335:1081 "Normaliser accuracy is excluded as the cause."
+DC-192	Claude	high	data/q012-pilot/projection_v6q80/README.md:3,46 "Claude, 19-20 October"; "The six-hour runner cap is not at risk"
+DC-193	Claude	high	response-and-next-contracts-codex.md:28,37 "smaller version of Claude's proposed" task; "Do not rank maximum marginal likelihood"
+DC-194	Claude	high	data/q012-pilot/collapsed_oracle.md:1-2,217 "Owner: Claude"; "Boxes scaled by the Laplace SD (+/-12 evaluator, +/-10 reference)"
+DC-195	Claude	high	data/q038-predictor-contract/contract.md:532-536 "Owner: Claude" v3 O7 helper omitted first-record emission; range 0.094 (git 1073cd2)
+DC-196	Claude	high	contract.md:537-541 O6b first-capture survival conditioned on positive count, 0.7958 (Owner: Claude, v3 1073cd2)
+DC-197	Claude	high	data/q038-probe/README.md:32 "LOEO restarts keep the observed history"; Claude implementation 690756f, C2 shared defect (Codex review :73)
+DC-198	Claude	high	data/q038-probe/README.md@b0ccd5d:41-42 "prior SD of 1 shows real contraction" (Claude); Codex review :109-117 provisional
+DC-199	Claude	high	data/q038-probe/README.md@b0ccd5d:53 "10^5 core-hours" (Claude); Codex campaign-cost note :22-105: full-fit subtotal only
+DC-200	Claude	high	data/q038-predictor-contract/contract.md:250 "Standardisation: within each event's risk set" (Owner: Claude); Codex note :149-163
+DC-201	Claude	high	data/q038-probe/README.md@b0ccd5d:47 "about 11 h" forecast (Claude); Claude's own pilot outcome 4407167: 0/5 pass
+DC-202	Claude	high	data/q012-pilot/collapsed_oracle.md:493,553 run-3 "15 pass, 1 unresolved" (Owner: Claude); histories/q012.md E12 (Claude)
+DC-203	Claude	high	collapsed_oracle.md:433,549-551 run-3 declaration "unqualified in all 16" (Owner: Claude); corrected by Codex 76/2194
+DC-204	Claude	medium	collapsed_oracle.md:658-660 "two cells stay unresolved and P11 stays held pending Codex's decision"; Codex run4 review stops repair
+DC-205	Claude	high	data/q012-pilot/p11_fixedpoint.md:1,193-203 "Owner: Claude"; Amendment 1 "The diagnostic was mis-specified"
+DC-206	Claude	high	data/q012-pilot/p11_fixedpoint.md:1,224 "Owner: Claude"; Amendment 2 "I2 gates against the qualified selection reference"
+DC-207	Claude	high	data/q012-exposure-support/README.md:1,113 "Owner: Claude"; "98 relative pairs differ systematically in the input the model uses"
