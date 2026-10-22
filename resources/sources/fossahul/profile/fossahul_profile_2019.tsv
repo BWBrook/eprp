@@ -1,0 +1,231 @@
+metric	key	value
+records		11871
+columns		61
+distinct_ID		11867
+distinct_AgeID		1961
+records_sharing_AgeID_with_another		10730
+distinct_genus_species		515
+distinct_genera		220
+distinct_site_name_coordinate_pairs		652
+distinct_site_names		602
+distinct_coordinates		272
+records_by:Class	Mammalia	9435
+records_by:Class	Aves	1733
+records_by:Class	Reptilia	593
+records_by:Class	Amphibia	97
+records_by:Class	?	6
+records_by:Class		5
+records_by:Class	Sauropsida	2
+records_by:Status	Extant	6059
+records_by:Status	na	3035
+records_by:Status	Extinct	2493
+records_by:Status	Extinct/Extant	279
+records_by:Status		5
+records_by:Megafauna..40kg.	No	7501
+records_by:Megafauna..40kg.	Yes	3190
+records_by:Megafauna..40kg.	na	1175
+records_by:Megafauna..40kg.		5
+records_by:DatingTechnique	Radiocarbon	4748
+records_by:DatingTechnique	AMS Radiocarbon	2611
+records_by:DatingTechnique	U-series Th/U (TIMS)	1522
+records_by:DatingTechnique	OSL	1344
+records_by:DatingTechnique	AAR	710
+records_by:DatingTechnique	U-series Th/U (ICP-MS)	222
+records_by:DatingTechnique	U-series Th/U (MC-ICP-MS)	149
+records_by:DatingTechnique	Radiocarbon (ABOX)	142
+records_by:DatingTechnique	EU-ESR	112
+records_by:DatingTechnique	LU-ESR	80
+records_by:DatingTechnique	ESR	58
+records_by:DatingTechnique	Radiocarbon (C13 adjusted to -25 o/oo VPBD)	53
+records_by:DatingTechnique	CSUS-ESR	49
+records_by:DatingTechnique	US-ESR	20
+records_by:DatingTechnique	U-series Th/U	19
+records_by:DatingTechnique	Radiocarbon (ABA)	11
+records_by:DatingTechnique	Stratigraphic correlation	10
+records_by:DatingTechnique		5
+records_by:DatingTechnique	na	3
+records_by:DatingTechnique	TL	2
+records_by:DatingTechnique	TT-OSL	1
+records_by:AgeType	=	9346
+records_by:AgeType	>	1266
+records_by:AgeType	<	1157
+records_by:AgeType	na	97
+records_by:AgeType		5
+records_by:PrecisionType	1S	8815
+records_by:PrecisionType	2S	2342
+records_by:PrecisionType	no info	666
+records_by:PrecisionType	na	40
+records_by:PrecisionType		5
+records_by:PrecisionType	2s	3
+records_by:Association	Indirect	9941
+records_by:Association	Direct	1781
+records_by:Association	na	83
+records_by:Association	null	60
+records_by:Association		6
+records_by:Quality	C	6296
+records_by:Quality	B	4004
+records_by:Quality	A	1398
+records_by:Quality	A*	168
+records_by:Quality	NA	5
+records_by:preQuality	C	6249
+records_by:preQuality	B	3246
+records_by:preQuality	m	2200
+records_by:preQuality	m*	171
+records_by:preQuality		5
+records_by:OverallRegion	Main Australia	8314
+records_by:OverallRegion	Australian Islands	1787
+records_by:OverallRegion	New Guinea	1757
+records_by:OverallRegion	na	6
+records_by:OverallRegion		5
+records_by:OverallRegion	Austrlian Islands	2
+records_by:AdministrativeDivision	SA	3882
+records_by:AdministrativeDivision	WA	2458
+records_by:AdministrativeDivision	QLD	1793
+records_by:AdministrativeDivision	Simbu	1047
+records_by:AdministrativeDivision	NSW	969
+records_by:AdministrativeDivision	TAS	507
+records_by:AdministrativeDivision	VIC	388
+records_by:AdministrativeDivision	Eastern Highlands Province	232
+records_by:AdministrativeDivision	Eastern Highlands	124
+records_by:AdministrativeDivision	Western Highlands	105
+records_by:AdministrativeDivision		85
+records_by:AdministrativeDivision	Western Highlands Province	80
+records_by:AdministrativeDivision	New Ireland Province	78
+records_by:AdministrativeDivision	Sandaun Province	67
+records_by:AdministrativeDivision	NT	27
+records_by:AdministrativeDivision	Irian Jaya	24
+records_by:AdministrativeDivision	na	5
+records_by:DatedRemain	Sediment	7022
+records_by:DatedRemain	Eggshell	1330
+records_by:DatedRemain	Bone	1132
+records_by:DatedRemain	Tooth	557
+records_by:DatedRemain	Flowstone	521
+records_by:DatedRemain	Charcoal	245
+records_by:DatedRemain	Fireplace	143
+records_by:DatedRemain	Calcite filling in bone	130
+records_by:DatedRemain	Multiple bones	112
+records_by:DatedRemain	Speleothem	103
+records_by:DatedRemain	Youngest flowstone	46
+records_by:DatedRemain	Flowstone (oldest)	45
+records_by:DatedRemain	Post-depositional formation	44
+records_by:DatedRemain	Marine shell	43
+records_by:DatedRemain	tooth	40
+records_by:DatedRemain	Flowstone (broken straw)	37
+records_by:DatedRemain	Midden	36
+records_by:DatedRemain	Snail shell/Broken straw	36
+records_by:DatedRemain	Calcite straw (reworked in bone breccia)	31
+records_by:DatedRemain	Calcite within tooth	30
+records_by:DatedRemain	Calcite cement	28
+records_by:DatedRemain	na	26
+records_by:DatedRemain	Flowstones	23
+records_by:DatedRemain	Wood	21
+records_by:DatedRemain	Plant remains	15
+records_by:DatedRemain	Sarcophilus hair	14
+records_by:DatedRemain	Coralline speleothem	10
+records_by:DatedRemain	Carbonate nodules	8
+records_by:DatedRemain	Gut content	8
+records_by:DatedRemain	Skull (dentary)	8
+records_by:DatedRemain	Carcass remains	6
+records_by:DatedRemain		5
+records_by:DatedRemain	Bulk bone	5
+records_by:DatedRemain	Shell	5
+records_by:DatedRemain	Crop contents of Diprotodon	1
+records_by:DatedRemain	Fish otolith	1
+records_by:DatedRemain	Flowstone (interbedded with unit D)	1
+records_by:DatedRemain	Skull	1
+records_by:DatedRemain	Skull (maxilla)	1
+records_by:DatedRemain	Snail shell	1
+records_by:Quality_x_Megafauna	C|No	4146
+records_by:Quality_x_Megafauna	B|No	2319
+records_by:Quality_x_Megafauna	C|Yes	1505
+records_by:Quality_x_Megafauna	B|Yes	1212
+records_by:Quality_x_Megafauna	A|No	1007
+records_by:Quality_x_Megafauna	C|na	645
+records_by:Quality_x_Megafauna	B|na	473
+records_by:Quality_x_Megafauna	A|Yes	348
+records_by:Quality_x_Megafauna	A*|Yes	125
+records_by:Quality_x_Megafauna	A|na	43
+records_by:Quality_x_Megafauna	A*|No	29
+records_by:Quality_x_Megafauna	A*|na	14
+records_by:Quality_x_Megafauna	NA|	5
+records_by:Technique_x_Quality	Radiocarbon|C	3420
+records_by:Technique_x_Quality	AMS Radiocarbon|B	1483
+records_by:Technique_x_Quality	Radiocarbon|B	1292
+records_by:Technique_x_Quality	AMS Radiocarbon|C	1094
+records_by:Technique_x_Quality	U-series Th/U (TIMS)|B	721
+records_by:Technique_x_Quality	OSL|A	681
+records_by:Technique_x_Quality	AAR|C	674
+records_by:Technique_x_Quality	U-series Th/U (TIMS)|C	469
+records_by:Technique_x_Quality	OSL|C	355
+records_by:Technique_x_Quality	U-series Th/U (TIMS)|A	331
+records_by:Technique_x_Quality	OSL|B	308
+records_by:Technique_x_Quality	U-series Th/U (MC-ICP-MS)|A	145
+records_by:Technique_x_Quality	U-series Th/U (ICP-MS)|A	126
+records_by:Technique_x_Quality	Radiocarbon (ABOX)|A	109
+records_by:Technique_x_Quality	LU-ESR|B	66
+records_by:Technique_x_Quality	ESR|C	58
+records_by:Technique_x_Quality	EU-ESR|B	55
+records_by:Technique_x_Quality	EU-ESR|C	54
+records_by:Technique_x_Quality	U-series Th/U (ICP-MS)|B	53
+records_by:Technique_x_Quality	Radiocarbon (C13 adjusted to -25 o/oo VPBD)|C	52
+records_by:Technique_x_Quality	CSUS-ESR|A*	49
+records_by:Technique_x_Quality	U-series Th/U (ICP-MS)|C	43
+records_by:Technique_x_Quality	Radiocarbon|A*	36
+records_by:Technique_x_Quality	AAR|A*	35
+records_by:Technique_x_Quality	AMS Radiocarbon|A*	34
+records_by:Technique_x_Quality	Radiocarbon (ABOX)|C	33
+records_by:Technique_x_Quality	U-series Th/U|C	19
+records_by:Technique_x_Quality	Radiocarbon (ABA)|B	11
+records_by:Technique_x_Quality	Stratigraphic correlation|C	10
+records_by:Technique_x_Quality	US-ESR|B	10
+records_by:Technique_x_Quality	LU-ESR|A*	9
+records_by:Technique_x_Quality	US-ESR|C	8
+records_by:Technique_x_Quality	|NA	5
+records_by:Technique_x_Quality	U-series Th/U (MC-ICP-MS)|B	4
+records_by:Technique_x_Quality	EU-ESR|A*	3
+records_by:Technique_x_Quality	LU-ESR|A	3
+records_by:Technique_x_Quality	na|C	3
+records_by:Technique_x_Quality	LU-ESR|C	2
+records_by:Technique_x_Quality	TL|C	2
+records_by:Technique_x_Quality	AAR|A	1
+records_by:Technique_x_Quality	Radiocarbon (C13 adjusted to -25 o/oo VPBD)|B	1
+records_by:Technique_x_Quality	TT-OSL|A	1
+records_by:Technique_x_Quality	U-series Th/U (TIMS)|A*	1
+records_by:Technique_x_Quality	US-ESR|A	1
+records_by:Technique_x_Quality	US-ESR|A*	1
+coordinate_decimals:Latitude	1	8465
+coordinate_decimals:Latitude	0	3406
+coordinate_decimals:Longitude	1	9852
+coordinate_decimals:Longitude	0	2019
+uncertainty_nonmissing		0
+latitude_range		-42.8 to -2.6
+longitude_range		14.9 to 153.4
+age_ka_range_by_technique	AAR	0.05 to 139.9575 (n=710, median 56.7064)
+age_ka_range_by_technique	AMS Radiocarbon	0.0 to 58.4 (n=2611, median 13.3)
+age_ka_range_by_technique	CSUS-ESR	37.0 to 544.0 (n=49, median 68.0)
+age_ka_range_by_technique	ESR	13.0 to 310.0 (n=58, median 49.0)
+age_ka_range_by_technique	EU-ESR	14.3 to 897.0 (n=112, median 130.0)
+age_ka_range_by_technique	LU-ESR	16.4 to 578.0 (n=80, median 70.5)
+age_ka_range_by_technique	OSL	1.2 to 535.0 (n=1344, median 77.0)
+age_ka_range_by_technique	Radiocarbon	0.0 to 54.2 (n=4748, median 12.05)
+age_ka_range_by_technique	Radiocarbon (ABA)	12.5 to 12.5 (n=11, median 12.5)
+age_ka_range_by_technique	Radiocarbon (ABOX)	23.4 to 46.8 (n=142, median 32.8)
+age_ka_range_by_technique	Radiocarbon (C13 adjusted to -25 o/oo VPBD)	0.94 to 6.44 (n=53, median 1.58)
+age_ka_range_by_technique	Stratigraphic correlation	700.0 to 700.0 (n=10, median 700.0)
+age_ka_range_by_technique	TL	44.0 to 55.0 (n=2, median 49.5)
+age_ka_range_by_technique	TT-OSL	43.8 to 43.8 (n=1, median 43.8)
+age_ka_range_by_technique	U-series Th/U	24.0 to 780.0 (n=19, median 76.0)
+age_ka_range_by_technique	U-series Th/U (ICP-MS)	3.0 to 466.0 (n=222, median 289.0)
+age_ka_range_by_technique	U-series Th/U (MC-ICP-MS)	44.9 to 151.0 (n=149, median 112.0)
+age_ka_range_by_technique	U-series Th/U (TIMS)	5.3 to 484.0 (n=1522, median 119.5)
+age_ka_range_by_technique	US-ESR	40.0 to 481.0 (n=20, median 61.0)
+age_ka_range_by_technique	na	13.3 to 26.87 (n=3, median 13.3)
+age_nonnumeric		5
+age_ka_bins	<12	3959
+age_ka_bins	12-30	3126
+age_ka_bins	50-130	1731
+age_ka_bins	30-50	1634
+age_ka_bins	130-500	1286
+age_ka_bins	>=500	130
+publication_year_range		1955 to 2018
+records_with_quality_reason		8620

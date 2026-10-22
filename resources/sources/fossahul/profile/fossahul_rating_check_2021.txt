@@ -1,0 +1,11 @@
+script lines dropped: 4 
+records	11873
+preQuality_agrees	11873
+Quality_agrees	11872
+      recomputed
+stored    A   A*    B    C   NA
+  A    1398    0    0    0    0
+  A*      0  228    0    0    0
+  B       0    0 4182    0    0
+  C       0    0    0 6064    0
+  <NA>    0    0    0    0    1

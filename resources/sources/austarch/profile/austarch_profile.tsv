@@ -1,0 +1,104 @@
+metric	key	value
+rows		5522
+distinct_ADSID		5522
+distinct_sites		1784
+distinct_IBRA_regions		75
+by:METHOD	Radiocarbon	5044
+by:METHOD	OSL	176
+by:METHOD	TL	156
+by:METHOD	OSL (SAR)	44
+by:METHOD	OCR	35
+by:METHOD	U-series	28
+by:METHOD	ESR	26
+by:METHOD	Cation-Ratio	7
+by:METHOD	TL (Additive/Regenerative)	5
+by:METHOD	AAR	1
+by:RECORD_SOURCE	c14	5044
+by:RECORD_SOURCE	nonc14	478
+by:MATERIAL_TOP_LEVEL	Charcoal	3177
+by:MATERIAL_TOP_LEVEL	Marine Shell	1144
+by:MATERIAL_TOP_LEVEL	Quartz Grains	339
+by:MATERIAL_TOP_LEVEL	Freshwater Shell	256
+by:MATERIAL_TOP_LEVEL	Bone	232
+by:MATERIAL_TOP_LEVEL	Other	202
+by:MATERIAL_TOP_LEVEL	Wood/Plant Material	83
+by:MATERIAL_TOP_LEVEL	Soil	51
+by:MATERIAL_TOP_LEVEL		19
+by:MATERIAL_TOP_LEVEL	Terrestrial Shell	11
+by:MATERIAL_TOP_LEVEL	Pollen	8
+by:SITE_TYPE	Rockshelter	2252
+by:SITE_TYPE	Open site	1344
+by:SITE_TYPE	Midden	904
+by:SITE_TYPE	Hearth	277
+by:SITE_TYPE	Burial	142
+by:SITE_TYPE	Shell mound	130
+by:SITE_TYPE	Earth mound	86
+by:SITE_TYPE	Rockshelter with midden deposits	75
+by:SITE_TYPE	Rock Engraving	35
+by:SITE_TYPE	Shell midden	27
+by:SITE_TYPE	Mudwasp Nest	26
+by:SITE_TYPE	Rockshelter (contains midden type deposits)	24
+by:SITE_TYPE		19
+by:SITE_TYPE	Rock engraving/art  coatings	18
+by:SITE_TYPE	Fish Trap	17
+by:SITE_TYPE	Sedimentary unit beneath hearths	17
+by:SITE_TYPE	Shell mound/midden	14
+by:SITE_TYPE	Auger from sandsheet	12
+by:SITE_TYPE	Midden complex	6
+by:SITE_TYPE	Quarry	6
+by:AGE_NORM		156
+by:AGE_NORM	0	21
+by:AGE_NORM	650	19
+by:AGE_NORM	450	18
+by:AGE_NORM	660	17
+by:AGE_NORM	500	17
+by:AGE_NORM	630	16
+by:AGE_NORM	870	16
+by:AGE_NORM	710	16
+by:AGE_NORM	1520	16
+by:AGE_NORM	1100	15
+by:AGE_NORM	350	15
+by:AGE_NORM	320	15
+by:AGE_NORM	330	15
+by:AGE_NORM	950	15
+by:AGE_NORM	1580	15
+by:AGE_NORM	340	15
+by:AGE_NORM	1420	15
+by:AGE_NORM	900	15
+by:AGE_NORM	830	15
+by:Data pertinent for time-series analysis or calibration	Terrestrial	3472
+by:Data pertinent for time-series analysis or calibration	Marine	1110
+by:Data pertinent for time-series analysis or calibration		478
+by:Data pertinent for time-series analysis or calibration	Unusuable	462
+by:Open or Closed Site	Open	3107
+by:Open or Closed Site	Closed	2382
+by:Open or Closed Site		33
+by:Directly Related to occupation? Yes/Unknown	U	2703
+by:Directly Related to occupation? Yes/Unknown	Y	2395
+by:Directly Related to occupation? Yes/Unknown	N	310
+by:Directly Related to occupation? Yes/Unknown		114
+by:DATE_ISSUES (first 40 chars)		5147
+by:DATE_ISSUES (first 40 chars)	Date is considered erroneous - see Notes	190
+by:DATE_ISSUES (first 40 chars)	Date not associated with human activity,	185
+ages_numeric		5366
+ages_with_inequality_or_qualifier		45
+age_nonnumeric_examples	Modern	55
+age_nonnumeric_examples		9
+age_nonnumeric_examples	na	6
+age_nonnumeric_examples	Not distinguishable from background	4
+age_nonnumeric_examples	<1000	3
+age_nonnumeric_examples	Not reported	3
+age_nonnumeric_examples	>55000	3
+age_nonnumeric_examples	<200	2
+age_nonnumeric_examples	>42,000	2
+age_nonnumeric_examples	Infinite	2
+coordinates_numeric		5437
+latitude_decimals	2	2978
+latitude_decimals	1	1117
+latitude_decimals	4	1079
+latitude_decimals	0	137
+latitude_decimals	3	124
+latitude_decimals	5	2
+radiocarbon_age_range_bp		0.0 to 51700.0
+radiocarbon_older_than_10000_bp		931
+radiocarbon_older_than_30000_bp		173
