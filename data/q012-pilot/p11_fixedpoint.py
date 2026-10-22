@@ -484,6 +484,8 @@ def assemble():
         unres = [r["key"] + ": " + r["unresolved"] for k, r in recs.items() if r["point"] == name and "unresolved" in r]
         missing = [_key(t) for t in tasks() if t[1] == name and _key(t) not in recs]
         row.update(unresolved=unres, missing=missing)
+        cand_unres = [x for x in unres if not x.startswith("R2|")]          # R2 never decides the candidate's status
+        cand_missing = [x for x in missing if not x.startswith("R2|")]
         c = {s: g("cand", s) for s in SETTINGS}
         if all(c.values()) and not any("unresolved" in v for v in c.values()):
             tot = {s: (sum(c[s]["per_tree"].values()), np.sum([c[s]["grad"][k] for k in c[s]["per_tree"]], axis=0)) for s in SETTINGS}
@@ -530,9 +532,11 @@ def assemble():
             identities=("I1" in row and row["I1"] <= TOL["unit"] and row["I2"]["ref_qualified"]
                         and abs(row["I2"]["selection_minus_ref"]) <= TOL["selection"]))
         row["checks"] = checks
-        row["R2_status"] = ("not run" if "R2_qualified" not in row else "reference-unresolved" if not row["R2_qualified"]
+        r2_raised = any(x.startswith("R2|") for x in unres)
+        row["R2_status"] = ("reference-unresolved (raised)" if r2_raised else "not run" if "R2_qualified" not in row
+                            else "reference-unresolved" if not row["R2_qualified"]
                             else "pass" if ok(row["chain_vs_R2"], TOL["value"], TOL["deriv"]) else "fail")
-        row["status"] = ("unresolved" if unres or missing else "pass" if all(checks.values())
+        row["status"] = ("unresolved" if cand_unres or cand_missing else "pass" if all(checks.values())
                          else "interpolation fail" if not checks["interpolation"] else "fail")
         rows.append(row)
     out = dict(spec="p11_fixedpoint.md with Amendments 1-2 and section 6", tolerances=TOL, r1_gradient_points=R1_GRAD_POINTS,

@@ -1,0 +1,387 @@
+{
+ "38001": {
+  "n": 4000,
+  "divergent": 50,
+  "by_chain": [
+   14,
+   19,
+   7,
+   10
+  ],
+  "stepsize": [
+   0.0609,
+   0.0652,
+   0.0577,
+   0.0676
+  ],
+  "leapfrog_median": 63.0,
+  "scales": {
+   "s_alpha.1": {
+    "median_all": 0.0215,
+    "median_divergent": 0.0247,
+    "divergent_median_quantile": 0.549
+   },
+   "s_alpha.2": {
+    "median_all": 0.025,
+    "median_divergent": 0.1314,
+    "divergent_median_quantile": 0.974
+   },
+   "s_omega": {
+    "median_all": 0.5066,
+    "median_divergent": 0.6554,
+    "divergent_median_quantile": 0.783
+   },
+   "tau": {
+    "median_all": 0.1149,
+    "median_divergent": 0.0913,
+    "divergent_median_quantile": 0.412
+   },
+   "s_fam": {
+    "median_all": 0.3019,
+    "median_divergent": 0.2992,
+    "divergent_median_quantile": 0.466
+   },
+   "s_ord": {
+    "median_all": 0.153,
+    "median_divergent": 0.1762,
+    "divergent_median_quantile": 0.62
+   },
+   "s_b": {
+    "median_all": 0.2768,
+    "median_divergent": 0.2884,
+    "divergent_median_quantile": 0.672
+   },
+   "s_nu": {
+    "median_all": 0.2126,
+    "median_divergent": 0.2091,
+    "divergent_median_quantile": 0.395
+   }
+  },
+  "redundancy": {
+   "class1": {
+    "corr_gd0_mean_nu": -0.393,
+    "corr_gd0_mean_bfam": -0.8,
+    "corr_alpha_mean_ffam": -0.49,
+    "corr_alpha_mean_gord": -0.575,
+    "sd_gd0": 0.055,
+    "sd_gd0_plus_means": 0.024
+   },
+   "class2": {
+    "corr_gd0_mean_nu": -0.446,
+    "corr_gd0_mean_bfam": -0.851,
+    "corr_alpha_mean_ffam": -0.437,
+    "corr_alpha_mean_gord": -0.58,
+    "sd_gd0": 0.053,
+    "sd_gd0_plus_means": 0.017
+   }
+  }
+ },
+ "38002": {
+  "n": 4000,
+  "divergent": 96,
+  "by_chain": [
+   10,
+   52,
+   10,
+   24
+  ],
+  "stepsize": [
+   0.0759,
+   0.0918,
+   0.0735,
+   0.0702
+  ],
+  "leapfrog_median": 63.0,
+  "scales": {
+   "s_alpha.1": {
+    "median_all": 0.0306,
+    "median_divergent": 0.0788,
+    "divergent_median_quantile": 0.839
+   },
+   "s_alpha.2": {
+    "median_all": 0.0156,
+    "median_divergent": 0.0161,
+    "divergent_median_quantile": 0.512
+   },
+   "s_omega": {
+    "median_all": 0.8226,
+    "median_divergent": 0.844,
+    "divergent_median_quantile": 0.539
+   },
+   "tau": {
+    "median_all": 0.5998,
+    "median_divergent": 0.7025,
+    "divergent_median_quantile": 0.681
+   },
+   "s_fam": {
+    "median_all": 0.2988,
+    "median_divergent": 0.2907,
+    "divergent_median_quantile": 0.414
+   },
+   "s_ord": {
+    "median_all": 0.2218,
+    "median_divergent": 0.2261,
+    "divergent_median_quantile": 0.532
+   },
+   "s_b": {
+    "median_all": 0.2746,
+    "median_divergent": 0.2736,
+    "divergent_median_quantile": 0.481
+   },
+   "s_nu": {
+    "median_all": 0.1991,
+    "median_divergent": 0.1958,
+    "divergent_median_quantile": 0.409
+   }
+  },
+  "redundancy": {
+   "class1": {
+    "corr_gd0_mean_nu": -0.389,
+    "corr_gd0_mean_bfam": -0.818,
+    "corr_alpha_mean_ffam": -0.401,
+    "corr_alpha_mean_gord": -0.731,
+    "sd_gd0": 0.057,
+    "sd_gd0_plus_means": 0.025
+   },
+   "class2": {
+    "corr_gd0_mean_nu": -0.396,
+    "corr_gd0_mean_bfam": -0.835,
+    "corr_alpha_mean_ffam": -0.431,
+    "corr_alpha_mean_gord": -0.708,
+    "sd_gd0": 0.05,
+    "sd_gd0_plus_means": 0.017
+   }
+  }
+ },
+ "38003": {
+  "n": 4000,
+  "divergent": 20,
+  "by_chain": [
+   3,
+   4,
+   6,
+   7
+  ],
+  "stepsize": [
+   0.0693,
+   0.0656,
+   0.0673,
+   0.0733
+  ],
+  "leapfrog_median": 63.0,
+  "scales": {
+   "s_alpha.1": {
+    "median_all": 0.0331,
+    "median_divergent": 0.0333,
+    "divergent_median_quantile": 0.504
+   },
+   "s_alpha.2": {
+    "median_all": 0.0181,
+    "median_divergent": 0.0406,
+    "divergent_median_quantile": 0.823
+   },
+   "s_omega": {
+    "median_all": 0.8667,
+    "median_divergent": 0.8061,
+    "divergent_median_quantile": 0.402
+   },
+   "tau": {
+    "median_all": 0.5326,
+    "median_divergent": 0.5152,
+    "divergent_median_quantile": 0.47
+   },
+   "s_fam": {
+    "median_all": 0.354,
+    "median_divergent": 0.3637,
+    "divergent_median_quantile": 0.586
+   },
+   "s_ord": {
+    "median_all": 0.272,
+    "median_divergent": 0.2778,
+    "divergent_median_quantile": 0.531
+   },
+   "s_b": {
+    "median_all": 0.3309,
+    "median_divergent": 0.3255,
+    "divergent_median_quantile": 0.424
+   },
+   "s_nu": {
+    "median_all": 0.2308,
+    "median_divergent": 0.2375,
+    "divergent_median_quantile": 0.651
+   }
+  },
+  "redundancy": {
+   "class1": {
+    "corr_gd0_mean_nu": -0.408,
+    "corr_gd0_mean_bfam": -0.826,
+    "corr_alpha_mean_ffam": -0.405,
+    "corr_alpha_mean_gord": -0.751,
+    "sd_gd0": 0.065,
+    "sd_gd0_plus_means": 0.027
+   },
+   "class2": {
+    "corr_gd0_mean_nu": -0.404,
+    "corr_gd0_mean_bfam": -0.863,
+    "corr_alpha_mean_ffam": -0.441,
+    "corr_alpha_mean_gord": -0.773,
+    "sd_gd0": 0.059,
+    "sd_gd0_plus_means": 0.018
+   }
+  }
+ },
+ "38004": {
+  "n": 4000,
+  "divergent": 9,
+  "by_chain": [
+   0,
+   4,
+   5,
+   0
+  ],
+  "stepsize": [
+   0.0519,
+   0.0756,
+   0.0616,
+   0.0719
+  ],
+  "leapfrog_median": 63.0,
+  "scales": {
+   "s_alpha.1": {
+    "median_all": 0.0547,
+    "median_divergent": 0.0447,
+    "divergent_median_quantile": 0.359
+   },
+   "s_alpha.2": {
+    "median_all": 0.0182,
+    "median_divergent": 0.0593,
+    "divergent_median_quantile": 0.93
+   },
+   "s_omega": {
+    "median_all": 0.666,
+    "median_divergent": 0.5355,
+    "divergent_median_quantile": 0.239
+   },
+   "tau": {
+    "median_all": 0.1389,
+    "median_divergent": 0.349,
+    "divergent_median_quantile": 0.882
+   },
+   "s_fam": {
+    "median_all": 0.302,
+    "median_divergent": 0.2826,
+    "divergent_median_quantile": 0.332
+   },
+   "s_ord": {
+    "median_all": 0.419,
+    "median_divergent": 0.4111,
+    "divergent_median_quantile": 0.471
+   },
+   "s_b": {
+    "median_all": 0.3507,
+    "median_divergent": 0.3225,
+    "divergent_median_quantile": 0.163
+   },
+   "s_nu": {
+    "median_all": 0.1888,
+    "median_divergent": 0.1761,
+    "divergent_median_quantile": 0.172
+   }
+  },
+  "redundancy": {
+   "class1": {
+    "corr_gd0_mean_nu": -0.273,
+    "corr_gd0_mean_bfam": -0.841,
+    "corr_alpha_mean_ffam": -0.258,
+    "corr_alpha_mean_gord": -0.873,
+    "sd_gd0": 0.066,
+    "sd_gd0_plus_means": 0.029
+   },
+   "class2": {
+    "corr_gd0_mean_nu": -0.253,
+    "corr_gd0_mean_bfam": -0.901,
+    "corr_alpha_mean_ffam": -0.286,
+    "corr_alpha_mean_gord": -0.88,
+    "sd_gd0": 0.06,
+    "sd_gd0_plus_means": 0.017
+   }
+  }
+ },
+ "38005": {
+  "n": 4000,
+  "divergent": 119,
+  "by_chain": [
+   1,
+   84,
+   13,
+   21
+  ],
+  "stepsize": [
+   0.0601,
+   0.0992,
+   0.085,
+   0.0834
+  ],
+  "leapfrog_median": 63.0,
+  "scales": {
+   "s_alpha.1": {
+    "median_all": 0.0159,
+    "median_divergent": 0.0059,
+    "divergent_median_quantile": 0.195
+   },
+   "s_alpha.2": {
+    "median_all": 0.0228,
+    "median_divergent": 0.1187,
+    "divergent_median_quantile": 0.984
+   },
+   "s_omega": {
+    "median_all": 0.6655,
+    "median_divergent": 0.6101,
+    "divergent_median_quantile": 0.383
+   },
+   "tau": {
+    "median_all": 0.4075,
+    "median_divergent": 0.6117,
+    "divergent_median_quantile": 0.824
+   },
+   "s_fam": {
+    "median_all": 0.3155,
+    "median_divergent": 0.3476,
+    "divergent_median_quantile": 0.761
+   },
+   "s_ord": {
+    "median_all": 0.2191,
+    "median_divergent": 0.2581,
+    "divergent_median_quantile": 0.703
+   },
+   "s_b": {
+    "median_all": 0.2528,
+    "median_divergent": 0.2823,
+    "divergent_median_quantile": 0.886
+   },
+   "s_nu": {
+    "median_all": 0.1957,
+    "median_divergent": 0.2007,
+    "divergent_median_quantile": 0.653
+   }
+  },
+  "redundancy": {
+   "class1": {
+    "corr_gd0_mean_nu": -0.383,
+    "corr_gd0_mean_bfam": -0.796,
+    "corr_alpha_mean_ffam": -0.457,
+    "corr_alpha_mean_gord": -0.741,
+    "sd_gd0": 0.051,
+    "sd_gd0_plus_means": 0.022
+   },
+   "class2": {
+    "corr_gd0_mean_nu": -0.464,
+    "corr_gd0_mean_bfam": -0.812,
+    "corr_alpha_mean_ffam": -0.39,
+    "corr_alpha_mean_gord": -0.673,
+    "sd_gd0": 0.049,
+    "sd_gd0_plus_means": 0.019
+   }
+  }
+ }
+}
