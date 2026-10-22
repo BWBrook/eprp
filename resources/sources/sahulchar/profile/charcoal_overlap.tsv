@@ -1,7 +1,7 @@
 table	metric	key	value
 records	sahul	sahulchar	393
-records	sahul	rpd	182
-records	sahul	gcd	185
+records	sahul	rpd	181
+records	sahul	gcd	184
 records	sahul	neotoma	17
 pairwise	sahulchar_records_with_rpd_within_deg	0.02	139
 pairwise	sahulchar_records_with_rpd_within_deg	0.05	190
@@ -11,14 +11,14 @@ pairwise	sahulchar_records_with_neotoma_within_deg	0.02	21
 pairwise	sahulchar_records_with_neotoma_within_deg	0.05	29
 pairwise	rpd_records_with_sahulchar_within_deg	0.02	111
 pairwise	rpd_records_with_sahulchar_within_deg	0.05	141
-pairwise	rpd_records_with_gcd_within_deg	0.02	171
-pairwise	rpd_records_with_gcd_within_deg	0.05	173
+pairwise	rpd_records_with_gcd_within_deg	0.02	170
+pairwise	rpd_records_with_gcd_within_deg	0.05	172
 pairwise	rpd_records_with_neotoma_within_deg	0.02	3
 pairwise	rpd_records_with_neotoma_within_deg	0.05	9
 pairwise	gcd_records_with_sahulchar_within_deg	0.02	119
 pairwise	gcd_records_with_sahulchar_within_deg	0.05	146
-pairwise	gcd_records_with_rpd_within_deg	0.02	162
-pairwise	gcd_records_with_rpd_within_deg	0.05	168
+pairwise	gcd_records_with_rpd_within_deg	0.02	161
+pairwise	gcd_records_with_rpd_within_deg	0.05	167
 pairwise	gcd_records_with_neotoma_within_deg	0.02	3
 pairwise	gcd_records_with_neotoma_within_deg	0.05	8
 pairwise	neotoma_records_with_sahulchar_within_deg	0.02	16
@@ -27,14 +27,14 @@ pairwise	neotoma_records_with_rpd_within_deg	0.02	3
 pairwise	neotoma_records_with_rpd_within_deg	0.05	9
 pairwise	neotoma_records_with_gcd_within_deg	0.02	3
 pairwise	neotoma_records_with_gcd_within_deg	0.05	8
-places	distinct_within_0.02deg		349
+places	distinct_within_0.02deg		348
 places	by_number_of_sources	1	182
 places	by_number_of_sources	3	83
-places	by_number_of_sources	2	82
+places	by_number_of_sources	2	81
 places	by_number_of_sources	4	2
 places	by_source_combination	sahulchar	170
 places	by_source_combination	gcd+rpd+sahulchar	82
-places	by_source_combination	gcd+rpd	53
+places	by_source_combination	gcd+rpd	52
 places	by_source_combination	gcd+sahulchar	15
 places	by_source_combination	neotoma+sahulchar	11
 places	by_source_combination	rpd	7

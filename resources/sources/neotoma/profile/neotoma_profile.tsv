@@ -3,6 +3,7 @@ check	datasets_listed		611
 check	datasets_downloaded		611
 check	listed_not_downloaded		0
 check	duplicate_downloads		0
+check	doi_strings_and_case_insensitive		570 532
 all	datasets_by:database	Indo-Pacific Pollen Database	610
 all	datasets_by:database	Neotoma	1
 all	datasets_by:country	Australia	355
@@ -20,7 +21,9 @@ all	datasets_by:region	australia	421
 all	datasets_by:region	outside	109
 all	datasets_by:region	new_guinea	50
 all	datasets_by:region	torres_strait	31
+all	default_agemodel_labels_distinct		23
 sahul	datasets		502
+sahul	proxy_datasets_excluding_geochronologic		336
 sahul	sites		261
 sahul	datasets_by:type_region	geochronologic | australia	140
 sahul	datasets_by:type_region	pollen | australia	138
@@ -42,9 +45,23 @@ sahul	datasets_by:type_region	X-ray fluorescence (XRF) | australia	1
 sahul	datasets_by:type_region	specimen stable isotope | australia	1
 sahul	datasets_by:geometry	Point	365
 sahul	datasets_by:geometry	Polygon	137
+sahul	created_year:pollen	2013	5
+sahul	created_year:pollen	2014	11
+sahul	created_year:pollen	2015	4
+sahul	created_year:pollen	2018	3
+sahul	created_year:pollen	2019	1
+sahul	created_year:pollen	2020	3
+sahul	created_year:pollen	2021	19
+sahul	created_year:pollen	2022	21
+sahul	created_year:pollen	2023	17
+sahul	created_year:pollen	2024	77
+sahul	created_year:pollen	2025	6
+sahul	created_year:pollen surface sample	2024	28
+sahul	created_year:pollen surface sample	2026	113
 sahul_pollen	datasets		167
 sahul_pollen	sites		144
 sahul_pollen	sites_with_multiple_pollen_datasets		20
+sahul_pollen	of_which_sharing_a_collection_unit		3
 sahul_pollen	samples		5911
 sahul_pollen	taxa_median_per_dataset		46
 sahul_pollen	datasets_by:units	NISP	151
@@ -53,32 +70,65 @@ sahul_pollen	datasets_by:units	percent digitized	3
 sahul_pollen	datasets_by:units	NISP;percent	1
 sahul_pollen	datasets_by:units	NISP;number	1
 sahul_pollen	datasets_by:units	NISP digitized	1
-sahul_pollen	datasets_by:default_agetype	Calibrated radiocarbon years BP	142
-sahul_pollen	datasets_by:default_agetype	Radiocarbon years BP	20
-sahul_pollen	datasets_by:default_agetype	Calendar years AD/BC	2
-sahul_pollen	datasets_by:default_agetype	Calendar years BP	2
-sahul_pollen	datasets_by:default_agetype		1
+sahul_pollen	datasets_by:units	count;percent	1
+sahul_pollen	datasets_by:units	count	1
+sahul_pollen	datasets_with_several_flagged_defaults		16
+sahul_pollen	datasets_by:api_default_agetype	Calibrated radiocarbon years BP	142
+sahul_pollen	datasets_by:api_default_agetype	Radiocarbon years BP	20
+sahul_pollen	datasets_by:api_default_agetype	Calendar years AD/BC	2
+sahul_pollen	datasets_by:api_default_agetype	Calendar years BP	2
+sahul_pollen	datasets_by:api_default_agetype		1
+sahul_pollen	datasets_by:preferred_default_agetype	Calibrated radiocarbon years BP	157
+sahul_pollen	datasets_by:preferred_default_agetype	Radiocarbon years BP	5
+sahul_pollen	datasets_by:preferred_default_agetype	Calendar years AD/BC	2
+sahul_pollen	datasets_by:preferred_default_agetype	Calendar years BP	2
+sahul_pollen	datasets_by:preferred_default_agetype		1
 sahul_pollen	datasets_by:default_agemodel	Bacon SHCal20	65
-sahul_pollen	datasets_by:default_agemodel	Bacon	36
+sahul_pollen	datasets_by:default_agemodel	Bacon	43
 sahul_pollen	datasets_by:default_agemodel	Bacon SHCal13	24
-sahul_pollen	datasets_by:default_agemodel	linear interpolation	14
+sahul_pollen	datasets_by:default_agemodel	clam	10
 sahul_pollen	datasets_by:default_agemodel	Linear Interpolation	5
 sahul_pollen	datasets_by:default_agemodel	SHCal13 Bacon	5
 sahul_pollen	datasets_by:default_agemodel	Bacon and SHCal13	3
 sahul_pollen	datasets_by:default_agemodel	SHCal20 Bacon	3
-sahul_pollen	datasets_by:default_agemodel	clam	2
-sahul_pollen	datasets_by:default_agemodel	polynomial interpolation	1
-sahul_pollen	datasets_by:default_agemodel	Cubic spline and linear basal accumulation of peaty sand.	1
+sahul_pollen	datasets_by:default_agemodel	linear interpolation	1
 sahul_pollen	datasets_by:default_agemodel		1
-sahul_pollen	default_controls_lt_5		52
+sahul_pollen	datasets_by:default_agemodel	OxCal P_Sequence deposition model	1
+sahul_pollen	datasets_by:default_agemodel	Bacon SH13	1
+sahul_pollen	datasets_by:default_agemodel	Basal date	1
+sahul_pollen	datasets_by:default_agemodel	Oxcal SHCal20	1
+sahul_pollen	datasets_by:default_agemodel	Bacon Marine20	1
+sahul_pollen	datasets_by:default_agemodel	Bacon SHCal	1
+sahul_pollen	datasets_by:default_agemodel	SHCal	1
+sahul_pollen	default_agemodel_labels_distinct		16
+sahul_pollen	default_controls_lt_5		51
+sahul_pollen	default_dated_controls_lt	5	65
+sahul_pollen	default_dated_controls_lt	3	41
+sahul_pollen	default_dated_controls_lt	1	7
+sahul_pollen	datasets_with_default_ages		163
 sahul_pollen	max_age_median		8886
 sahul_pollen	max_age_ge	2000	147
 sahul_pollen	max_age_ge	20000	28
 sahul_pollen	max_age_ge	40000	12
-sahul_pollen	calibrated_default_age_gt_55ka	50301 Egg Lagoon	56479
-sahul_pollen	calibrated_default_age_gt_55ka	52582 Lynch's Crater	203098
-sahul_pollen	calibrated_default_age_gt_55ka	52767 Lake Selina	78733
-sahul_pollen	calibrated_default_age_gt_55ka	57643 Old Lake Coomboo Depression	494620
-sahul_pollen	calibrated_default_age_gt_55ka	58651 Kosipe	60981
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	1630 Lake George	max 116711; oldest dated control 18600; Radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	14963 Komanimambuno Mire	max 34000; oldest dated control 21760; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	48656 Lake Hordorli	max 67577; oldest dated control 31700; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	51928 Tortoise Lagoon	max 30898; oldest dated control 23860; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	52487 Telefomin (Upper Sepik)	max 24371; oldest dated control 12120; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	52564 Sirunki Wabag	max 35223; oldest dated control 25800; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	52582 Lynch's Crater	max 203098; oldest dated control 37940; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	52767 Lake Selina	max 78733; oldest dated control 52110; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	53259 Lake Carpentaria	max 49494; oldest dated control 40036; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	54475 Aluaipugua	max 22464; oldest dated control 18540; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	57643 Old Lake Coomboo Depression	max 494620; oldest dated control 225000; Calibrated radiocarbon years BP
+sahul_pollen	ages_beyond_oldest_dated_control_by_20pct	58411 Haeapugua	max 41531; oldest dated control 31862; Calibrated radiocarbon years BP
+sahul_pollen	radiocarbon_type_ages_gt_50ka	1630 Lake George	116711 (Radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	1683 Lynch's Crater	192649 (Radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	48656 Lake Hordorli	67577 (Calibrated radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	50301 Egg Lagoon	56479 (Calibrated radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	52582 Lynch's Crater	203098 (Calibrated radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	52767 Lake Selina	78733 (Calibrated radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	57643 Old Lake Coomboo Depression	494620 (Calibrated radiocarbon years BP)
+sahul_pollen	radiocarbon_type_ages_gt_50ka	58651 Kosipe	60981 (Calibrated radiocarbon years BP)
 sahul	datasets_without_doi		166
 sahul	datasets_without_doi_by:type	geochronologic	166

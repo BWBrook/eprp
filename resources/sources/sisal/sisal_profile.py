@@ -36,7 +36,7 @@ def region(lat, lon):
         return None
     if 141 <= lon <= 144.5 and -10.6 < lat <= -9:
         return "torres_strait"
-    if lat <= -10.6 and 112 <= lon <= 155:
+    if -45 <= lat <= -10.6 and 112 <= lon <= 155 and not (lon < 121 and lat > -17):
         return "australia"
     if 130.8 <= lon <= 156 and -12 <= lat <= 0:
         return "new_guinea"
@@ -109,6 +109,23 @@ for reg in ("australia", "new_guinea", "torres_strait", "wallacea"):
         add(t, "current_entities_oldest_age_ge", thr, sum(a >= thr for a in oldest.values()))
     add(t, "samples_aragonite", "", sum("aragonite" in s["mineralogy"] for s in smps))
     add(t, "samples_aragonite_not_corrected", "", sum("aragonite" in s["mineralogy"] and s["arag_corr"] == "no" for s in smps))
+    for k, v in Counter(site_name[ent_site[s["entity_id"]]] for s in smps if "aragonite" in s["mineralogy"]).most_common(5):
+        add(t, "aragonite_samples_by:site", k, v)
+    cur_ids = {e["entity_id"] for e in current}
+    lgm = Counter()
+    for r in orig:
+        e = smp_ent.get(r["sample_id"])
+        a = num(r["interp_age"])
+        if e in cur_ids and a is not None and 18000 <= a <= 24000:
+            lgm[e] += 1
+    add(t, "current_entities_with_samples_18_24ka", "", len(lgm))
+    add(t, "sites_with_samples_18_24ka", "", len({ent_site[e] for e in lgm}))
+    add(t, "samples_18_24ka", "", sum(lgm.values()))
+    name = {e["entity_id"]: e["entity_name"] for e in ents}
+    for e, n in lgm.most_common():
+        add(t, "samples_18_24ka_by:entity", f'{site_name[ent_site[e]]} {name[e]}', n)
+    for k, v in Counter("0-2 ka" if a < 2000 else "2-10 ka" if a < 10000 else "10-20 ka" if a < 20000 else ">=20 ka" for a in oldest.values()).most_common():
+        add(t, "current_entities_by:oldest_age", k, v)
     for sid in sorted(sites, key=lambda s: site_name[s]):
         se = [e for e in current if e["site_id"] == sid]
         ages = [a for e in se for a in age[e["entity_id"]]]

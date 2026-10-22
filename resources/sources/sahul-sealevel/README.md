@@ -44,7 +44,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); source scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "checked against the Beyer comparison by the independent review of beyer2020, 2026-10-22; no separate review yet"
 ---
 
 # Sahul sea level and palaeogeography pack
@@ -120,15 +120,19 @@ a MATLAB file.
 - **The stack is not zeroed at the present.** Short-stack sea level is +8.5 m
   (1σ 5.2) at 0 ka and 0 at 5 ka; subtract the offset you intend, and record
   it, before building a land mask.
-- **Pico's "Sahul" is a narrower region than the continent's shelf.** At
-  21 ka it gains 1.08 million km², while Beyer's land mask gains 2.36 million
-  km² within our Sahul boxes, and Williams et al. (2018) report Australia
-  alone losing 2.12 million km² of land between the Last Glacial Maximum and
-  8 ka. The file does not define the region; do not use it as continental
-  land area.
-- **Eustatic only, except Borreggine.** The stack and Pico's areas apply a
-  global curve to modern topography: no regional isostasy, sedimentation or
-  tectonics.
+- **Pico's "Sahul" is not the continent's shelf.** At 21 ka it gains 1.08
+  million km², against 2.36 million in Beyer's land mask over our Sahul boxes
+  (1.79 million in the Australia box alone). Beyer's gain on the northern
+  shelf is 0.88–1.25 million depending on the box, bracketing Pico's figure,
+  so the undefined region is plausibly the northern (Arafura–Carpentaria)
+  shelf. Do not use it as continental land area. In the Holocene the two
+  disagree for a different reason: Beyer's masks put the coast too far
+  seaward (0.40 against 0.0015 million km² at 6 ka).
+- **Sea-level treatment differs.** The stack is one global curve; applied to
+  modern topography it ignores regional isostasy, sedimentation and tectonics.
+  The Pico deposit does not say whether its areas use regional
+  glacio-isostatic sea level (the independent review believes they do);
+  Borreggine's regional ICE-PC2 product does.
 - **Borreggine's domain stops at 18.15°S**, so it covers Sunda and northern
   Sahul, not the continent, and only five time slices.
 - **Deposit dates mislead.** The Borreggine deposit is dated 2023 on Zenodo;

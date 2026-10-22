@@ -6,7 +6,7 @@ status: frozen
 last_update: 2017-08-10
 scope:
   taxa: [not taxonomic; palaeoclimate archives]
-  time: "Holocene and last glacial records, mostly the last 35 kyr; 6 ka comparison"
+  time: "Holocene and last glacial records; free-text end ages run to about 150 ka; 6 ka comparison"
   space: "Australia and surrounding seas, by OZ-INTIMATE region (TNW, TSW, TNE, TSE, StA, TeE, TeS, NSO, SSO)"
   record_unit: "one palaeoclimate record (core, speleothem, coral, lake or swamp sequence) described in free text"
 size:
@@ -39,14 +39,15 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); source scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # SHAPE / OZ-INTIMATE palaeoarchive index
 
 ## Summary
 
-A one-sheet spreadsheet listing 37 Australasian palaeoclimate records that
+A one-sheet spreadsheet listing 37 Australasian palaeoclimate records (seven
+of them multi-site or regional compilations) that
 underlie the OZ-INTIMATE synthesis (Reeves et al. 2013) and the SHAPE 6 ka
 model evaluation (Ackerley et al. 2017), with each record's region, reference,
 archive type, proxy, climate sensitivity, resolution and age span. It holds no
@@ -59,11 +60,13 @@ Our counts ([profile](profile/shape_profile.tsv)):
 
 - 37 records; regions (records can carry several codes): TNW 10, TSW 8, TSE 8,
   TeS 8, TeE 6, StA 4, NSO 3, TNE 3, SSO 1.
-- Archive types (from free text, approximate): marine cores 13, corals 5,
-  lakes 4, swamps or peat 3, speleothems 2, other or mixed 10.
+- Archive types (keyword classes from free text, approximate): marine cores
+  12, speleothems 5, lakes 4, corals 3, swamps or peat 1, mixed 3, other 9.
 - Completeness: coordinates or record identifiers in 35 rows, a 0–6 ka change
-  statement in 22, start and end ages in 26 and 27, a link to data in 12, of
-  which only 5 give a URL or DOI (the others give a person to contact).
+  statement in 22, start and end ages in 26 and 27. The data-link column is
+  filled in 12 rows: 6 give a URL or DOI (two to a data repository, NOAA;
+  four to paper supplements, per the independent review) and 6 give only a
+  person's email address.
 
 ## Provenance and lineage
 
@@ -97,8 +100,9 @@ Dating Resolution, Start Year, End Year, Link to Data Storage, Notes.
 
 - **Metadata only**, in free text with mixed coordinate formats and no stable
   record identifiers; several rows describe multi-site or regional records.
-- **Few data links.** Only 5 of 37 rows link to data; the rest must be traced
-  through their references.
+- **Few data links.** Only 6 of 37 rows give a URL or DOI, and only two of
+  those reach a data repository; the rest must be traced through their
+  references.
 - **Personal contacts.** Some cells give individuals' email addresses as the
   data route; treat them as personal data, not as a catalogue route.
 - Qualitative change and sensitivity columns mix sea-surface temperature,
@@ -125,6 +129,9 @@ underlying record's own publication when used.
 
 - 2026-10-22, checked: file mirrored; 37 records and column completeness
   counted; region codes; data-link cells.
+- 2026-10-22, independent review (Claude Sonnet subagent): corrected the
+  link count (a bare DOI was missed) and the speleothem count (stalagmite rows
+  were missed); both fixed in [shape_profile.py](shape_profile.py).
 - 2026-10-22, source claim (source scan, Claude Sonnet subagent): authorship,
   dates and licence; identity with the journal supplement; selection criteria
   and the SHAPE project history.

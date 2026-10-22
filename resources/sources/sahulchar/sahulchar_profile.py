@@ -36,7 +36,7 @@ def region(lat, lon):
         return "no_coordinates"
     if 141 <= lon <= 144.5 and -10.6 < lat <= -9:
         return "torres_strait"
-    if lat <= -10.6 and 112 <= lon <= 155:
+    if -45 <= lat <= -10.6 and 112 <= lon <= 155 and not (lon < 121 and lat > -17):
         return "australia"
     if 130.8 <= lon <= 156 and -12 <= lat <= 0:
         return "new_guinea"
@@ -67,12 +67,12 @@ add("sahul_units", "n_char_rec_sum", "", sum(int(u["N_CHAR_REC"] or 0) for u in 
 add("sahul_units", "with_neotoma_site_id", "", sum(bool(u["NEO_SITEID"].strip()) for u in sah))
 add("sahul_units", "with_n_char_rec_zero", "", sum((u["N_CHAR_REC"] or "0") == "0" for u in sah))
 ages = [num(u["MAXAGE"]) for u in sah if num(u["MAXAGE"]) is not None]
-add("sahul_units", "with_maxage", "", len(ages))
+add("sahul_units", "with_maxage_oldest_dated_horizon", "", len(ages))
 add("sahul_units", "maxage_median", "", round(statistics.median(ages)))
 for thr in (20000, 50000, 130000):
     add("sahul_units", "maxage_ge", thr, sum(a >= thr for a in ages))
-for k, v in Counter(u["DEPOSIT"] for u in sah if (num(u["MAXAGE"]) or 0) >= 130000).most_common(5):
-    add("sahul_units", "maxage_ge_130000_by:DEPOSIT", k, v)
+for k, v in Counter(u["UNITTYPE"] for u in sah).most_common():
+    add("sahul_units", "by:UNITTYPE", k, v)
 years = [int(u["PUBYEAR"]) for u in sah if u["PUBYEAR"].isdigit()]
 add("sahul_units", "pubyear_range", "", f"{min(years)} to {max(years)}")
 
@@ -88,6 +88,20 @@ for col in ("CHARMETHOD", "CHARMEAS", "DATASOURCE"):
         add("sahul_char", f"by:{col}", k, v)
 add("sahul_char", "charvalue_missing", "", sum(num(o["CHARVALUES"]) is None for o in char))
 add("sahul_char", "est_age_missing", "", sum(num(o["EST_AGE"]) is None for o in char))
+by_unit = {}
+for o in char:
+    by_unit.setdefault(o["UNITID"], []).append(o)
+add("sahul_char", "units_with_charcoal_rows", "", len(by_unit))
+add("sahul_char", "units_with_no_charcoal_est_age", "", sum(all(num(o["EST_AGE"]) is None for o in v) for v in by_unit.values()))
+add("sahul_char", "units_with_any_digitised_rows", "", sum(any(o["DATASOURCE"] == "Digitised" for o in v) for v in by_unit.values()))
+cmax = {u: max(a for o in v if (a := num(o["EST_AGE"])) is not None) for u, v in by_unit.items() if any(num(o["EST_AGE"]) is not None for o in v)}
+add("sahul_char", "units_with_charcoal_est_age", "", len(cmax))
+add("sahul_char", "oldest_charcoal_est_age_median", "", round(statistics.median(cmax.values())))
+for thr in (20000, 50000, 130000):
+    add("sahul_char", "units_oldest_charcoal_est_age_ge", thr, sum(a >= thr for a in cmax.values()))
+for u in sorted(sah, key=lambda u: -(num(u["MAXAGE"]) or 0)):
+    if (num(u["MAXAGE"]) or 0) >= 130000:
+        add("sahul_units", "maxage_ge_130000", u["UNITNAME"], f'MAXAGE {u["MAXAGE"]}; oldest charcoal EST_AGE {cmax.get(u["UNITID"], "none")}; deposit {u["DEPOSIT"]}')
 for col in ("AGETYPE", "METHOD", "CALCURVE"):
     for k, v in Counter(o[col] for o in age).most_common(8):
         add("sahul_ages", f"by:{col}", k, v)

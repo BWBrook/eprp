@@ -19,21 +19,21 @@ global	sites_by:gcd_version	GCD1	384
 global	sites_by:gcd_version	GCD2	278
 global	sites_by:gcd_version	GCD4	205
 global	sites_by:gcd_version	GCD3	68
-sahul	sites		185
-sahul	sites_by:region	australia	152
+sahul	sites		184
+sahul	sites_by:region	australia	151
 sahul	sites_by:region	new_guinea	24
 sahul	sites_by:region	torres_strait	9
-sahul	sites_by:gcd_version	GCD2	104
+sahul	sites_by:gcd_version	GCD2	103
 sahul	sites_by:gcd_version	GCD1	43
 sahul	sites_by:gcd_version	GCD3	25
 sahul	sites_by:gcd_version	GCD4	13
 sahul	sites_by:country	Australia	148
-sahul	sites_by:country	NA	14
+sahul	sites_by:country	NA	13
 sahul	sites_by:country	Indonesia	12
 sahul	sites_by:country	Papua New Guinea	11
-sahul	samples		15332
+sahul	samples		15197
 sahul	samples_by:METHOD	SIEV	8558
-sahul	samples_by:METHOD	POLS	6774
+sahul	samples_by:METHOD	POLS	6639
 sahul	samples_by:METHOD	ACID	0
 sahul	samples_by:METHOD	CPRO	0
 sahul	samples_by:METHOD	GRAV	0
@@ -42,9 +42,12 @@ sahul	samples_by:METHOD	HVLQ	0
 sahul	samples_by:METHOD	IMAG	0
 sahul	samples_by:METHOD	NOTK	0
 sahul	samples_by:METHOD	OTHE	0
+sahul	sites_by:methods_present	POLS	137
+sahul	sites_by:methods_present	SIEV	39
+sahul	sites_by:methods_present	POLS+SIEV	8
 sahul	samples_by:TYPE	CONC	9627
 sahul	samples_by:TYPE	INFL	3507
-sahul	samples_by:TYPE	C0P0	1706
+sahul	samples_by:TYPE	C0P0	1571
 sahul	samples_by:TYPE	OTHE	492
 sahul	samples_by:TYPE	NOTK	0
 sahul	samples_by:TYPE	SOIL	0
@@ -56,12 +59,12 @@ sahul	samples_by:UNIT	X125	755
 sahul	samples_by:UNIT	MMML	734
 sahul	samples_by:UNIT	SQC0	562
 sahul	samples_by:UNIT	SQCU	510
-sahul	samples_by:UNIT	CPRA	453
 sahul	samples_by:UNIT	SQCY	349
+sahul	samples_by:UNIT	CPRA	318
 sahul	samples_est_age_missing		0
-sahul	site_max_est_age_median		9255
-sahul	sites_max_est_age_ge	20000	38
-sahul	sites_max_est_age_ge	50000	18
+sahul	site_max_est_age_median		9221
+sahul	sites_max_est_age_ge	20000	37
+sahul	sites_max_est_age_ge	50000	17
 release	row	1	GCD_3.0.0 | 300 | 16024
 release	row	2	GCD_3.0.1 | 301 | 16142
 release	row	3	GCD_3.0.2 | 302 | 16169

@@ -35,7 +35,7 @@ def region(lat, lon):
         return None
     if 141 <= lon <= 144.5 and -10.6 < lat <= -9:
         return "torres_strait"
-    if lat <= -10.6 and 112 <= lon <= 155:
+    if -45 <= lat <= -10.6 and 112 <= lon <= 155 and not (lon < 121 and lat > -17):
         return "australia"
     if 130.8 <= lon <= 156 and -12 <= lat <= 0:
         return "new_guinea"

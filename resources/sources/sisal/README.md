@@ -44,7 +44,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); source scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # SISAL version 3
@@ -55,19 +55,22 @@ SISAL is the community database of speleothem (cave carbonate) records:
 oxygen and carbon isotopes, trace elements and U-series or layer-counted
 chronologies for 902 speleothems from 365 caves, with each record's original
 age model and up to seven standardised SISAL age models. Australia has 16
-caves and 49 entities, from the Kimberley (Ball Gown, KNI-51) to the Nullarbor
-margin (Mairs), the south-west (Golgotha and others), the Snowy Mountains
-(Jersey, Harrie Wood) and Tasmania (Lynds). Reach for it for precisely dated
-hydroclimate, especially the Australian monsoon. Most Australian records are
-late Holocene or modern; only eight reach 20 ka, so glacial-age coverage is
-thin, and nothing in New Guinea is included.
+caves and 49 entities, from the Kimberley (Ball Gown, KNI-51) to the
+Flinders Ranges (Mairs), the south-west (Golgotha and others), the Snowy
+Mountains (Jersey, Harrie Wood) and Tasmania (Lynds). Reach for it for
+precisely dated hydroclimate, especially the Australian monsoon. Most
+Australian records cover only the last few thousand years. Glacial coverage
+is very thin: eight entities at five caves reach 20 ka, but only five
+entities at four caves have samples in the last glacial maximum window
+(18–24 ka), three-quarters of them from one stalagmite at Mairs Cave. Nothing
+in New Guinea is included.
 
 ## Contents
 
 Counts are our own ([profile](profile/sisal_profile.tsv)) and match the v3
 description (365 sites, 902 entities).
 
-| Cave | Current entities | Samples | Original-chronology span (BP) |
+| Cave | Current entities | Samples (all entities) | Original-chronology span of current entities (BP) |
 | --- | ---: | ---: | --- |
 | KNI-51 (Kimberley) | 20 | 2,160 | -58 to 20,877 |
 | Ball Gown (Kimberley) | 6 | 502 | 8,367 to 39,971 |
@@ -78,15 +81,17 @@ description (365 sites, 902 entities).
 | Golgotha (south-west) | 4 | 901 | -61 to 773 |
 | Crystal, Moondyne, Labyrinth, Yonderup (south-west) | 4 | 635 | modern to 190 |
 | Jersey (Snowy Mountains, flowstone) | 1 | 133 | 34,977 to 98,936 |
-| Harrie Wood, Careys, Cathedral (south-east) | 6 | 1,351 | modern to 82 |
+| Harrie Wood, Careys (Snowy Mountains); Cathedral (central-west NSW) | 6 | 1,351 | modern to 82 |
 | Lynds (Tasmania) | 1 | 53 | 5,081 to 8,888 |
 
 - Australia: 9,202 samples, 9,172 with δ18O and 4,683 with δ13C; Mg/Ca and
   Sr/Ca on 7 entities, Ba/Ca, U/Ca and P/Ca on 4. 421 dating rows (246
   MC-ICP-MS U/Th, 31 TIMS, 42 radiocarbon, 58 "other", 44 events).
-- Wallacean margin (not Sahul): Liang Luar on Flores (13 current entities,
-  4,636 samples, to 90.9 ka) and Gempa Bumi on Sulawesi (to 42.1 ka), both
-  central to Indo-Australian monsoon reconstructions.
+- Ball Gown's 502 samples include 30 from its one superseded entity.
+- Wallacean margin (not Sahul): Liang Luar on Flores (13 current or partially
+  modified entities; 4,636 samples including those of three superseded
+  entities; to 90.9 ka) and Gempa Bumi on Sulawesi (to 42.1 ka), both central
+  to Indo-Australian monsoon reconstructions.
 
 ## Provenance and lineage
 
@@ -129,14 +134,18 @@ the CSVs, and a second zip of the same CSVs.
 
 ## Weaknesses and pitfalls
 
-- **Thin glacial coverage.** Of 48 current Australian entities, 27 reach 2 ka,
-  8 reach 20 ka and one (Jersey Cave) reaches 40 ka. Nothing from New Guinea.
+- **Thin glacial coverage.** By oldest age, 21 of the 48 current Australian
+  entities lie within the last 2 ka, 14 reach 2–10 ka, 5 reach 10–20 ka and 8
+  reach 20 ka or more (one, Jersey Cave, beyond 40 ka). Only five entities at
+  four caves have samples between 18 and 24 ka: 721 samples, 540 of them from
+  Mairs Cave stalagmite MC-S2, the rest from Ball Gown, Cave C126 and KNI-51.
+  Nothing from New Guinea.
 - **Standardised age models are patchy.** 16 current Australian entities have
   no SISAL model at all, and those with models have different subsets of the
-  seven; the CSVs carry only central ages, so use the ensembles for rigorous
-  work.
-- **Aragonite.** All 1,472 Australian aragonite samples are flagged as not
-  corrected for mineralogy.
+  seven. The CSVs carry each model's central age with 2σ bounds; for full
+  uncertainty use the ensembles.
+- **Aragonite.** All 1,472 Australian aragonite samples, all from KNI-51, are
+  flagged as not corrected for mineralogy.
 - **Superseded and partially modified entities** coexist with current ones;
   filter on `entity_status` (one Australian entity is superseded; Liang Luar
   has three).
@@ -171,6 +180,12 @@ README requires, plus each record's own publications.
   equal the source scan's independent download; counts above from the CSVs.
 - 2026-10-22, checked: Australian and Wallacean entities, samples, dating,
   model coverage, oldest ages and aragonite flags.
+- 2026-10-22, checked ([sisal_profile.py](sisal_profile.py)): oldest-age
+  classes, samples in the 18–24 ka window by entity, aragonite by cave.
 - 2026-10-22, source claim (source scan, Claude Sonnet subagent): version
   chain and DOIs, licence and citation requirements, equilibrium flags,
   ensemble record.
+- 2026-10-22, independent review (Claude Sonnet subagent): showed that
+  "reaching 20 ka" overstated glacial coverage, corrected the Mairs and
+  Cathedral locations, the sample scope and the uncertainty wording; all
+  applied.

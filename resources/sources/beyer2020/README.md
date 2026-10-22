@@ -41,7 +41,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); source scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # Beyer et al. (2020): climate and vegetation for the last 120,000 years
@@ -56,7 +56,9 @@ climate forcing for Late Quaternary species-distribution, demographic and
 human-dispersal models, and it covers exposed continental shelves, so Sahul is
 drawn as one landmass at low sea level. Reach for it to drive Sahul
 simulations through the last glacial cycle; respect its assumptions (equilibrium
-snapshots, a single global sea-level curve, extrapolated shelf climate).
+snapshots, a single global sea-level curve, extrapolated shelf climate), take
+shelf vegetation from the monthly-NPP file, and do not use its Holocene
+coastlines, which are too far seaward.
 
 ## Contents
 
@@ -70,7 +72,8 @@ Counts are our own ([profile](profile/beyer_profile.tsv)).
 - *Grid.* 720 × 300 cells, 0.5°, latitudes 59.75°S to 89.75°N; time in years
   before present, −120,000 to 0.
 - *Sahul.* Land area within our Sahul boxes (Australia, New Guinea, Torres
-  Strait), from the data's own land mask:
+  Strait), from the data's own land mask (the Holocene rows are too high; see
+  the pitfalls):
 
 | Time | Land area (million km²) | Gain on present |
 | --- | ---: | ---: |
@@ -86,9 +89,11 @@ Counts are our own ([profile](profile/beyer_profile.tsv)).
 | 100 ka | 9.57 | 0.84 |
 | 120 ka | 9.09 | 0.36 |
 
-  Over land in the 110–155°E, 45°S–0 window, mean annual temperature (BIO1)
+  Area-weighted over land in the Sahul boxes, mean annual temperature (BIO1)
   is 21.9 °C at present and 19.2 °C at 21 ka; mean annual precipitation
-  (BIO12) 822 and 712 mm.
+  (BIO12) 735 and 652 mm.
+- *Connectivity.* In the land mask New Guinea is joined to Australia in every
+  slice tested from 3 ka back to 120 ka, and separate only at 0, 1 and 2 ka.
 
 ## Provenance and lineage
 
@@ -122,7 +127,7 @@ land ice).
 - Continuous, global, monthly fields through the whole last glacial cycle at
   a resolution usable for regional models.
 - Shelves included, so Sahul's connected landmass is represented.
-- Simple, documented files, with matching vegetation fields.
+- Simple, documented files.
 
 ## Weaknesses and pitfalls
 
@@ -134,27 +139,49 @@ land ice).
   extended from modern coasts by inverse-distance weighting.
 - **Equilibrium snapshots.** Each slice is a 30-year mean of an equilibrium
   run; no sub-millennial variability or transient behaviour.
+- **Holocene coastlines are too far seaward.** The mask adds 0.40 million km²
+  of land to the Sahul boxes at 6 ka and 0.57 million at 8 ka, where Pico et
+  al. (2020) give almost none (0.0015 and 0.006 million), and it keeps New
+  Guinea joined to Australia until 3 ka, long after Torres Strait flooded.
+  The mid-Holocene masks behave as if sea level were about 10 m below present
+  (inferred: the Spratt and Lisiecki stack reads +8.5 m at 0 ka, so a mask
+  built relative to its 0 ka value sits 12–18 m low at 6–8 ka). Do not use
+  the 1–10 ka masks for coastline, Torres Strait or Gulf of Carpentaria
+  questions.
+- **Exposed shelf has no vegetation in the main file.** Land cells that are sea
+  today are coded biome 0 ("water") with NPP 0 in
+  `LateQuaternary_Environment.nc`: 473 of 3,934 land cells in the Sahul boxes
+  at 21 ka (12%), and similar shares whenever shelf is exposed. The
+  monthly-NPP file gives these cells vegetation. Excluding them, the two files
+  differ in one biome cell at 21 ka and their NPP correlates at 0.95 (0.73
+  with them). Take biome, NPP and LAI from `LateQuaternary_MonthlyNPP.nc` for
+  any shelf work. At present the files also differ in 194 arid-zone cells
+  (shrubland against desert), a threshold difference.
 - **Metadata errors.** The longitude variable is labelled `degrees_north` and
   latitude `degrees_east`; the paper's labels for BIO4, BIO5 and BIO6 differ
   from the file's (the file follows the standard definitions). The `Source`
-  attribute points to an older, empty Figshare article.
-- **The two files disagree on vegetation.** The annual biome and NPP in the
-  monthly-NPP file differ from the main file: in the Sahul window 195 cells
-  change biome at present and 577 at 21 ka, and NPP correlates at only 0.96
-  and 0.73. Use one file consistently.
+  attribute names an earlier Figshare article (8327081), not this deposit.
 - **Potential vegetation only**, with no land use.
-- **No Australian validation site** is singled out in the evaluation.
+- **No Sahul-specific skill assessment** in the paper's evaluation (source
+  scan).
 
 ## Overlap with other sources
 
 - **Krapp et al. (2021)** extends the same model chain to 800 ka with a
   statistical emulator; prefer this dataset within 120 ka.
-- **Sea-level and shelf area.** The land gain in our Sahul boxes at 21 ka
-  (2.36 million km²) is consistent with Williams et al. (2018), who report
-  Australia (without New Guinea) losing 2.12 million km² of land between the
-  Last Glacial Maximum and 8 ka, but it is more than twice the "Sahul" shelf
-  gain in Pico et al. (2020, 1.08 million km²), whose region is evidently
-  narrower ([sahul-sealevel](../sahul-sealevel/README.md)).
+- **Sea-level and shelf area.** At 21 ka Beyer's mask gains 2.36 million km²
+  in our Sahul boxes: 1.79 million in the Australia box, 0.78 million in the
+  New Guinea box, 1.25 million in an Arafura–Carpentaria–Torres box
+  (125–146°E, 20–5°S), 0.88 million on the northern shelf (129–146°E,
+  17–8°S), 0.48 million on the north-west shelf and 0.12 million around Bass
+  Strait. Pico et al.'s (2020) "Sahul" gain of 1.08 million km² lies between
+  the two northern-shelf figures, so their undefined region is plausibly the
+  northern shelf; their Sunda gain (1.94 million) compares with Beyer's 1.67
+  million in a 98–118°E, 8°S–8°N box. Williams et al. (2018) report Australia
+  losing 2.12 million km² of land between the Last Glacial Maximum and 8 ka;
+  Beyer's Australia box loses about 1.37 million over the same interval (1.79
+  less 0.42), lower partly because its 8 ka mask is too low (above). See
+  [sahul-sealevel](../sahul-sealevel/README.md).
 
 ## EPRP relevance
 
@@ -174,7 +201,15 @@ and the Figshare DOI.
 - 2026-10-22, checked: dimensions, variables, units (including the swapped
   coordinate labels) and time axis; Sahul land areas, BIO1 and BIO12 means;
   differences between the two files.
-- 2026-10-22, checked: Pico et al. (2020) shelf-area values from its deposit.
+- 2026-10-22, checked ([beyer_profile.py](beyer_profile.py)): land gain by
+  sub-region and time, area-weighted BIO1 and BIO12, New Guinea–Australia
+  connectivity, water-coded land cells and the file comparison with and
+  without them; Pico et al. (2020) values from
+  [sealevel_profile.py](../sahul-sealevel/sealevel_profile.py).
+- 2026-10-22, independent review (Claude Sonnet subagent): diagnosed the
+  water-coded shelf cells behind the file disagreement, the too-seaward
+  Holocene masks, the scope of the Williams comparison and the sub-regions
+  that match Pico; all applied.
 - 2026-10-22, source claim (paper, via source scan, Claude Sonnet subagent):
   method, observational baselines, land mask and ice sources; Williams et al.
   (2018) land-area figures; citation count.

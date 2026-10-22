@@ -41,14 +41,14 @@ sahul_units	rows		393
 sahul_units	n_char_rec_sum		510
 sahul_units	with_neotoma_site_id		65
 sahul_units	with_n_char_rec_zero		9
-sahul_units	with_maxage		367
+sahul_units	with_maxage_oldest_dated_horizon		367
 sahul_units	maxage_median		6991
 sahul_units	maxage_ge	20000	61
 sahul_units	maxage_ge	50000	18
 sahul_units	maxage_ge	130000	10
-sahul_units	maxage_ge_130000_by:DEPOSIT	Other	6
-sahul_units	maxage_ge_130000_by:DEPOSIT	Lake sediment	3
-sahul_units	maxage_ge_130000_by:DEPOSIT	ND	1
+sahul_units	by:UNITTYPE	Core	366
+sahul_units	by:UNITTYPE	Excavation	15
+sahul_units	by:UNITTYPE	Other	12
 sahul_units	pubyear_range		0 to 2023
 sahul_observations	rows		40392
 sahul_observations	by:WHATAMI	particles counted	37899
@@ -77,6 +77,24 @@ sahul_char	by:DATASOURCE	Paleofire database	4499
 sahul_char	by:DATASOURCE	Neotoma	807
 sahul_char	charvalue_missing		236
 sahul_char	est_age_missing		9674
+sahul_char	units_with_charcoal_rows		384
+sahul_char	units_with_no_charcoal_est_age		116
+sahul_char	units_with_any_digitised_rows		136
+sahul_char	units_with_charcoal_est_age		268
+sahul_char	oldest_charcoal_est_age_median		8208
+sahul_char	units_oldest_charcoal_est_age_ge	20000	54
+sahul_char	units_oldest_charcoal_est_age_ge	50000	26
+sahul_char	units_oldest_charcoal_est_age_ge	130000	16
+sahul_units	maxage_ge_130000	Alexandra Cave ALEX	MAXAGE 1338000; oldest charcoal EST_AGE 305700.0; deposit Other
+sahul_units	maxage_ge_130000	Dead Sheep Cave DS	MAXAGE 1204000; oldest charcoal EST_AGE 1204000.0; deposit Other
+sahul_units	maxage_ge_130000	Blanche Cave BC	MAXAGE 506000; oldest charcoal EST_AGE 506000.0; deposit Other
+sahul_units	maxage_ge_130000	Specimen Cave SP	MAXAGE 421000; oldest charcoal EST_AGE 421000.0; deposit Other
+sahul_units	maxage_ge_130000	Victoria Fossil Cave VFC	MAXAGE 370000; oldest charcoal EST_AGE 370000.0; deposit Other
+sahul_units	maxage_ge_130000	Caledonia Fen 1997 2001 composite	MAXAGE 350000; oldest charcoal EST_AGE 140722.78; deposit ND
+sahul_units	maxage_ge_130000	Lake Coomboo_core1	MAXAGE 350000; oldest charcoal EST_AGE 202308.17; deposit Lake sediment
+sahul_units	maxage_ge_130000	Robertson Cave RC	MAXAGE 238000; oldest charcoal EST_AGE 238000.0; deposit Other
+sahul_units	maxage_ge_130000	Lake Wangoom LW87 core	MAXAGE 200000; oldest charcoal EST_AGE 196604.19; deposit Lake sediment
+sahul_units	maxage_ge_130000	LC2	MAXAGE 146300; oldest charcoal EST_AGE 138301.0; deposit Lake sediment
 sahul_ages	by:AGETYPE	Radiocarbon years BP	1876
 sahul_ages	by:AGETYPE	Years BP	586
 sahul_ages	by:AGETYPE	Other	15

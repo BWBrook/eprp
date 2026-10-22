@@ -17,12 +17,13 @@ columns	filled	Start Year	26
 columns	filled	End Year	27
 columns	filled	Link to Data Storage	12
 columns	filled	Notes	27
-records	by:record_type_class	marine core	13
-records	by:record_type_class	other	10
-records	by:record_type_class	coral	5
+records	by:record_type_class	marine core	12
+records	by:record_type_class	other	9
+records	by:record_type_class	speleothem	5
 records	by:record_type_class	lake	4
-records	by:record_type_class	swamp or peat	3
-records	by:record_type_class	speleothem	2
+records	by:record_type_class	coral	3
+records	by:record_type_class	mixed	3
+records	by:record_type_class	swamp or peat	1
 records	by:region_code	TNW	10
 records	by:region_code	TSW	8
 records	by:region_code	TSE	8
@@ -32,4 +33,6 @@ records	by:region_code	StA	4
 records	by:region_code	NSO	3
 records	by:region_code	TNE	3
 records	by:region_code	SSO	1
-records	link_cell_with_url		5
+records	link_cell_filled		12
+records	link_cell_with_url_or_doi		6
+records	link_cell_with_email_only		6

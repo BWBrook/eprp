@@ -2,7 +2,8 @@
 
 Usage: python3 rpd_profile.py RPD_CSV_ZIP OUT_TSV
 
-Sahul regions by coordinates: Australia (lat <= -10.6, lon 112-155, with
+Sahul regions by coordinates: Australia (lat <= -10.6, lon 112-155, excluding the
+sea south of the Lesser Sundas at lon < 121 and lat > -17; with
 Tasmania), Torres Strait (lon 141-144.5, lat -10.6 to -9), New Guinea (lon
 130.8-156, lat -12 to 0, with Aru and the Bismarck Archipelago). Writes
 long-format counts (table, metric, key, value). Standard library only.
@@ -36,7 +37,7 @@ def region(lat, lon):
         return None
     if 141 <= lon <= 144.5 and -10.6 < lat <= -9:
         return "torres_strait"
-    if lat <= -10.6 and 112 <= lon <= 155:
+    if -45 <= lat <= -10.6 and 112 <= lon <= 155 and not (lon < 121 and lat > -17):
         return "australia"
     if 130.8 <= lon <= 156 and -12 <= lat <= 0:
         return "new_guinea"
@@ -86,6 +87,12 @@ sample_entity = {s["ID_SAMPLE"]: s["ID_ENTITY"] for s in sample}
 new_model = {sample_entity.get(m["ID_SAMPLE"]) for m in model}
 add("global", "entities_with_new_age_model", "", len(new_model - {None}))
 add("sahul", "entities_with_new_age_model", "", len(ids & new_model))
+model_names = {m["ID_MODEL"]: m["model_name"] for m in table("model_name")}
+for k, v in Counter(model_names.get(m["ID_MODEL"], m["ID_MODEL"]) for m in model).most_common(6):
+    add("global", "age_model_rows_by:model_name", k, v)
+for k, v in Counter(model_names.get(m["ID_MODEL"], m["ID_MODEL"]) for m in model if sample_entity.get(m["ID_SAMPLE"]) in ids).most_common(6):
+    add("sahul", "age_model_rows_by:model_name", k, v)
+add("sahul", "distinct_entity_coordinates", "", len({(e["latitude"], e["longitude"]) for e in sah}))
 maxage = defaultdict(float)
 for c in chron:
     e = sample_entity.get(c["ID_SAMPLE"])
@@ -97,12 +104,19 @@ add("sahul", "entities_with_original_ages", "", len(ages))
 add("sahul", "original_max_age_median_yr", "", round(statistics.median(ages)))
 for thr in (2000, 20000, 50000):
     add("sahul", "entities_original_max_age_ge", thr, sum(a >= thr for a in ages))
+long = {e for e, a in maxage.items() if a >= 20000}
+add("sahul", "entities_reaching_20ka_with_new_age_model", "", f"{len(long & new_model)} of {len(long)}")
 s_dates = [d for d in dates if d["ID_ENTITY"] in ids]
 add("sahul", "dates", "", len(s_dates))
 for k, v in Counter(d["date_type"] for d in s_dates).most_common(8):
     add("sahul", "dates_by:date_type", k, v)
 for k, v in Counter(d["age_used"] for d in s_dates).most_common(5):
     add("sahul", "dates_by:age_used", k, v)
+for code in sorted(MISSING):
+    add("global", "date_info_cells_with_code", code, sum(code in d.values() for d in dates))
+    add("global", "reason_age_not_used_equal_code", code, sum(d["reason_age_not_used"] == code for d in dates))
+dated_ents = {d["ID_ENTITY"] for d in s_dates}
+add("sahul", "entities_with_no_age_used_value_on_any_date", "", sum(all(d["age_used"] in MISSING for d in s_dates if d["ID_ENTITY"] == e) for e in dated_ents))
 
 with open(sys.argv[2], "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")

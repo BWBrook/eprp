@@ -12,7 +12,7 @@ scope:
 size:
   as_of: "route ippd-sahul snapshot 2026-10-22T0634Z"
   datasets: 611
-  sahul_datasets: 502
+  sahul_datasets: "502 (336 proxy, 166 geochronologic)"
   sahul_sites: 261
   sahul_pollen_datasets: 167
   sahul_pollen_samples: 5911
@@ -40,13 +40,13 @@ lineage:
 eprp_questions: []
 citation:
   - "Williams, J. W. et al. (2018). The Neotoma Paleoecology Database, a multiproxy, international, community-curated data resource. Quaternary Research 89: 156-177. doi:10.1017/qua.2017.105"
-  - "Herbert, A. V. et al. (2024). The Indo-Pacific Pollen Database, a Neotoma constituent database. Climate of the Past 20: 2473-2485. doi:10.5194/cp-20-2473-2024"
+  - "Herbert, A. V. et al. (2024). Climate of the Past 20: 2473-2485 (the Indo-Pacific Pollen Database in Neotoma). doi:10.5194/cp-20-2473-2024"
   - "each dataset's DOI, with the acknowledgement text in Neotoma's data use policy"
 entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); source scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # Neotoma, with the Indo-Pacific Pollen Database
@@ -56,13 +56,15 @@ entry:
 Neotoma is the main community database for Quaternary palaeoecology; its
 Australasian content is the Indo-Pacific Pollen Database (IPPD), now being
 moved into it. We hold every IPPD dataset plus every other dataset in
-Australia and New Guinea: 611 datasets, 502 of them in Sahul at 261 sites,
-including 167 fossil-pollen sequences, 141 modern surface samples and 17
-charcoal records, each with its samples, counts and chronologies. Reach for it
-for vegetation history, pollen-based climate or land-cover reconstruction, and
-as the vegetation side of megafauna, fire and human-arrival questions. It is
+Australia and New Guinea: 611 datasets, 502 of them in Sahul at 261 sites (336
+proxy datasets and 166 geochronologic ones that carry their dates), including
+167 fossil-pollen sequences, 141 modern surface samples and 17 charcoal
+records, each with its samples, counts and chronologies. Reach for it for
+vegetation history, pollen-based climate or land-cover reconstruction, and as
+the vegetation side of megafauna, fire and human-arrival questions. It is
 open (CC BY 4.0) and well structured, but the upload is unfinished and the
-chronologies are uneven: check each record's age model before using its ages.
+chronologies are uneven: choose each record's chronology deliberately, and do
+not use ages beyond its oldest dating control.
 
 ## Contents
 
@@ -80,15 +82,16 @@ assigned from coordinates, as in the other Sahul entries.
 
 - The snapshot's 611 datasets are 610 IPPD and one Neotoma surface sample;
   109 lie outside Sahul (New Zealand, Fiji, New Caledonia, French Polynesia,
-  Vanuatu, Indonesia west of New Guinea).
-- *Pollen.* 167 datasets at 144 sites (20 sites have more than one), 5,911
-  samples, median 46 taxa per dataset. 151 datasets are raw counts (NISP); 11
-  are percentages, 4 of them digitised from diagrams.
-- *Time.* The default chronology's oldest age has a median of 8.9 ka; 28
-  datasets reach 20 ka and 12 reach 40 ka.
-- *Upload history.* Most Sahul pollen datasets were added in 2024; all 113
-  Sahul surface-sample datasets created this year were added in 2026 (source
-  scan).
+  Vanuatu, Tonga, Norfolk Island, Indonesia west of New Guinea).
+- *Pollen.* 167 datasets at 144 sites, 5,911 samples, median 46 taxa per
+  dataset. 151 are raw counts (NISP); 8 are percentages; 4 were digitised
+  from diagrams (3 as percentages, 1 as counts); 4 mix units.
+- *Time.* Under each dataset's preferred default chronology (below), 163
+  datasets have ages: the oldest age has a median of 8.9 ka; 28 reach 20 ka
+  and 12 reach 40 ka.
+- *Upload history.* 77 of the 167 Sahul pollen datasets (46%) were added in
+  2024, more than in any other year; all 113 Sahul surface-sample datasets
+  created this year were added in 2026, and 28 in 2024.
 
 ## Provenance and lineage
 
@@ -106,10 +109,14 @@ south-eastern Australian pollen database is related but separate.
 Site (point or lake polygon, altitude, geopolitical units) → collection unit
 (core, depositional environment) → dataset (type, constituent database, PI,
 DOIs) → sample (depth, ages under each chronology) → datum (taxon, ecological
-group, units, value). Chronologies belong to the collection unit, one flagged
-default, each with its model, age type and controls. 137 of the 502 Sahul
-datasets sit on polygon sites; use centroids for point work. Age types in use:
-calibrated radiocarbon BP, radiocarbon BP, calendar BP and calendar AD/BC.
+group, units, value). Chronologies belong to the collection unit; one default
+may be flagged per age type, and 16 Sahul pollen datasets flag several. Each
+chronology lists its controls: dating controls (radiocarbon, Pb-210, U-series,
+"other dating methods") and tie-points (core tops, interpolations, settlement
+horizons, biostratigraphic events). 137 of the 502 Sahul datasets sit on
+polygon sites (lake outlines); use their centres for point work. Age types in
+use: calibrated radiocarbon BP, radiocarbon BP, calendar BP and calendar
+AD/BC.
 
 ## Access
 
@@ -118,8 +125,9 @@ calibrated radiocarbon BP, radiocarbon BP, calendar BP and calendar AD/BC.
   lists a constituent database; `downloads/{id,id,...}` returns full
   datasets. The tested script is [neotoma_snapshot.sh](neotoma_snapshot.sh).
   Set `limit` explicitly (default 25). A `loc=` filter given as WKT is
-  silently ignored and returns global data; only GeoJSON polygons work, and
-  SISAL speleothem sites carry no gpid, so they appear only through `loc`.
+  silently ignored and returns global data; only GeoJSON polygons work. SISAL
+  speleothem sites carry no geopolitical unit, so they appear only through a
+  polygon query (the source scan found 28 in a 110–160°E, 50°S–5°N box).
 - **Mirror.** `deep-server:/data/paleodata/neotoma/ippd-sahul/raw/2026-10-22T0634Z_url/`
   (four listings and 62 download batches; every listed dataset downloaded
   once) and `neotoma/octopus-wfs/` (the OCTOPUS copy). Index:
@@ -129,8 +137,8 @@ calibrated radiocarbon BP, radiocarbon BP, calendar BP and calendar AD/BC.
 
 - Raw counts for 151 of 167 Sahul pollen sequences, so taxa can be
   re-harmonised and re-analysed, not just replotted.
-- Full chronologies with their controls, and new Bacon models (SHCal13 or
-  SHCal20) for most records.
+- Full chronologies with their controls; Bacon models for 146 of the 167
+  preferred defaults (102 name SHCal13 or SHCal20; 43 say only "Bacon").
 - 141 modern surface samples for calibration, absent from other copies.
 - Open licence, DOIs per dataset, a documented API with an R client.
 
@@ -138,23 +146,35 @@ calibrated radiocarbon BP, radiocarbon BP, calendar BP and calendar AD/BC.
 
 - **Unfinished transfer.** 299 of the IPPD's 530 sites are in Neotoma; the
   rest exist only in the IPPD's earlier forms.
-- **Uncalibrated and thin chronologies.** The default chronology of 20 Sahul
-  pollen datasets is in radiocarbon years, and 52 rest on fewer than five
-  controls. Default model labels are inconsistent (25 variants such as "Bacon
-  SHCal20", "SHCal20 Bacon", "linear interpolation", "Linear Interpolation").
-- **Labels that cannot be right.** Five datasets label default ages beyond the
-  radiocarbon range as calibrated radiocarbon years: Lynch's Crater 203 ka,
-  Old Lake Coomboo Depression 495 ka, Lake Selina 79 ka, Kosipe 61 ka, Egg
-  Lagoon 56 ka. These long records rest on other dating; treat the age type
-  as wrong, not the ages.
-- **Duplicates per site.** 20 sites carry more than one pollen dataset (Blue
-  Lake three, Lynch's Crater two); choose deliberately.
+- **The API's default chronology is not always the calibrated one.** For 20
+  Sahul pollen datasets the first flagged default is in radiocarbon years;
+  15 of these also flag a calibrated default. Only 5 have no calibrated
+  chronology (Lake George, Lynch's Crater dataset 1683, Bega Swamp, Blue Lake,
+  Yarlington Tier). Our profile prefers a flagged calibrated or calendar
+  chronology; do the same.
+- **Thinly dated chronologies.** 65 of 167 preferred defaults rest on fewer
+  than five dating controls, 41 on fewer than three, and 7 on none.
+- **Ages beyond the dated range.** In 12 datasets the default ages run more
+  than 20% beyond the oldest dating control, into the glacial or beyond:
+  Lynch's Crater dataset 52582 to 203 ka on controls ending at 37.9 ka, Lake
+  George to 117 ka on controls ending at 18.6 ka, Lake Selina to 79 ka on
+  52 ka, Lake Hordorli to 68 ka on 32 ka, Old Lake Coomboo Depression to
+  495 ka on 225 ka. These are model extrapolations, not dates; for Lynch's
+  Crater use dataset 1683, whose 26 dating controls reach 210 ka. Eight
+  datasets also label ages beyond 50 ka as radiocarbon or calibrated
+  radiocarbon years, which they cannot be.
+- **Model labels are free text.** 16 distinct labels among the preferred
+  defaults of Sahul pollen datasets ("Bacon SHCal20", "SHCal20 Bacon", "Bacon
+  and SHCal13", "linear interpolation", "Linear Interpolation"), 23 across the
+  snapshot.
+- **Several datasets per site.** 20 sites carry more than one pollen dataset;
+  17 of them are separate cores, 3 share a collection unit. Lynch's Crater's
+  two datasets (1683 and 52582) come from different collection units with
+  different chronologies.
 - **Geochronologic datasets have no DOIs** (all 166 in Sahul), so the ages
-  behind a chronology cannot be cited separately.
-- **Digitised percentages.** 4 datasets were digitised from published diagrams,
-  with their precision.
-- **API traps** as above (WKT ignored, default limit 25, sites as polygons,
-  case-variant duplicate DOIs).
+  behind a chronology cannot be cited separately; dataset DOIs include
+  case-variant duplicates (570 strings, 532 distinct ignoring case).
+- **API traps** as above (WKT ignored, default limit 25, sites as polygons).
 
 ## Overlap with other sources
 
@@ -170,9 +190,10 @@ calibrated radiocarbon BP, radiocarbon BP, calendar BP and calendar AD/BC.
   collections; the 22 Lynch's Crater collections (1,863 occurrences) duplicate
   a Neotoma pollen site, while the Stony Creek Basin cores (Sniderman 2011)
   and the Tasmanian records are only in PBDB.
-- **Charcoal.** Neotoma's 17 Sahul charcoal datasets all fall within 5 km of a
-  SahulCHAR record (16 within 2 km); Neotoma adds no charcoal places of its
-  own.
+- **Charcoal.** 16 of Neotoma's 17 Sahul charcoal datasets lie within about
+  2 km of a SahulCHAR record; Ijomba, in central New Guinea, does not, but it
+  is in the GCD and RPD. Neotoma adds no charcoal place missing from all
+  three other sources.
 
 ## EPRP relevance
 
@@ -193,12 +214,20 @@ governance.
 ## Verification log
 
 - 2026-10-22, checked: snapshot of 611 datasets in 62 download batches; every
-  listed dataset downloaded once; counts above from the snapshot.
-- 2026-10-22, checked: age types, model labels, control counts and oldest
-  default ages per dataset; datasets without DOIs.
+  listed dataset downloaded once; counts above from
+  [neotoma_profile.py](neotoma_profile.py).
+- 2026-10-22, checked: flagged defaults per dataset, API and preferred default
+  age types, dating controls and tie-points, ages beyond the oldest dating
+  control, model labels, units, upload years, DOI strings.
 - 2026-10-22, checked: OCTOPUS copy (311 datasets, 155,952 baseline rows)
-  joined by Neotoma site ID; PBDB Quaternary plant collections within 5 km.
+  joined by Neotoma site ID; PBDB Quaternary plant collections within 5 km;
+  charcoal locations against SahulCHAR, RPD and GCD.
 - 2026-10-22, source claim (source scan, Claude Sonnet subagent, URLs in its
   report): licence and attribution policy, IPPD history and size, API
-  behaviour (WKT, limits, rate limit), neotoma2 version, database dumps, upload
-  dates.
+  behaviour (WKT, limits, rate limit), neotoma2 version, database dumps, the
+  SISAL sites seen through a polygon query.
+- 2026-10-22, independent review (Claude Sonnet subagent): showed the
+  radiocarbon-default count was an artefact of picking the first flagged
+  default, that the long ages are extrapolations, the Ijomba exception, the
+  label-count scope and a polygon-centre bias (closing vertex counted twice);
+  all corrected. Ijomba's 9 km distance is the reviewer's figure.

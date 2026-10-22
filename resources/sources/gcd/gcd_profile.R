@@ -14,7 +14,7 @@ tab <- function(table, metric, x, n = 15) {
 }
 region <- function(lat, lon) {
   ifelse(!is.na(lon) & lon >= 141 & lon <= 144.5 & lat > -10.6 & lat <= -9, "torres_strait",
-  ifelse(!is.na(lat) & lat <= -10.6 & lon >= 112 & lon <= 155, "australia",
+  ifelse(!is.na(lat) & lat >= -45 & lat <= -10.6 & lon >= 112 & lon <= 155 & !(lon < 121 & lat > -17), "australia",
   ifelse(!is.na(lon) & lon >= 130.8 & lon <= 156 & lat >= -12 & lat <= 0, "new_guinea", NA)))
 }
 
@@ -33,6 +33,8 @@ tab("sahul", "sites_by:country", ss$country)
 ds <- d[d$ID_SITE %in% ss$id_site, ]
 add("sahul", "samples", "", nrow(ds))
 tab("sahul", "samples_by:METHOD", ds$METHOD)
+site_methods <- tapply(as.character(ds$METHOD), ds$ID_SITE, function(m) paste(sort(unique(m)), collapse = "+"))
+tab("sahul", "sites_by:methods_present", site_methods)
 tab("sahul", "samples_by:TYPE", ds$TYPE)
 tab("sahul", "samples_by:UNIT", ds$UNIT, 10)
 add("sahul", "samples_est_age_missing", "", sum(is.na(ds$EST_AGE)))

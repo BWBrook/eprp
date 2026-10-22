@@ -37,6 +37,19 @@ region:australia	current_entities_oldest_age_ge	20000	8
 region:australia	current_entities_oldest_age_ge	40000	1
 region:australia	samples_aragonite		1472
 region:australia	samples_aragonite_not_corrected		1472
+region:australia	aragonite_samples_by:site	KNI-51	1472
+region:australia	current_entities_with_samples_18_24ka		5
+region:australia	sites_with_samples_18_24ka		4
+region:australia	samples_18_24ka		721
+region:australia	samples_18_24ka_by:entity	Mairs cave MC-S2	540
+region:australia	samples_18_24ka_by:entity	Ball Gown cave BGC-14	76
+region:australia	samples_18_24ka_by:entity	Cave C126 C126-118	63
+region:australia	samples_18_24ka_by:entity	KNI-51 KNI-51-8	33
+region:australia	samples_18_24ka_by:entity	Ball Gown cave BGC-5	9
+region:australia	current_entities_by:oldest_age	0-2 ka	21
+region:australia	current_entities_by:oldest_age	2-10 ka	14
+region:australia	current_entities_by:oldest_age	>=20 ka	8
+region:australia	current_entities_by:oldest_age	10-20 ka	5
 region:australia	site	Ball Gown cave	6 current entities; 502 samples; 8367 to 39971 BP
 region:australia	site	Cape range	1 current entities; 1500 samples; -60 to 1439 BP
 region:australia	site	Careys cave	1 current entities; 181 samples; -40 to 82 BP
@@ -82,5 +95,18 @@ region:wallacea	current_entities_oldest_age_ge	20000	12
 region:wallacea	current_entities_oldest_age_ge	40000	4
 region:wallacea	samples_aragonite		240
 region:wallacea	samples_aragonite_not_corrected		0
+region:wallacea	aragonite_samples_by:site	Liang Luar	240
+region:wallacea	current_entities_with_samples_18_24ka		6
+region:wallacea	sites_with_samples_18_24ka		2
+region:wallacea	samples_18_24ka		305
+region:wallacea	samples_18_24ka_by:entity	Gempa bumi cave GB09-03	99
+region:wallacea	samples_18_24ka_by:entity	Liang Luar LR06-C6	61
+region:wallacea	samples_18_24ka_by:entity	Liang Luar LL_Comp_2013	60
+region:wallacea	samples_18_24ka_by:entity	Liang Luar LR06-C3_2013	41
+region:wallacea	samples_18_24ka_by:entity	Liang Luar LR06-C5	35
+region:wallacea	samples_18_24ka_by:entity	Liang Luar LR06-B3_2013	9
+region:wallacea	current_entities_by:oldest_age	>=20 ka	12
+region:wallacea	current_entities_by:oldest_age	0-2 ka	2
+region:wallacea	current_entities_by:oldest_age	10-20 ka	1
 region:wallacea	site	Gempa bumi cave	2 current entities; 1077 samples; 30 to 42130 BP
 region:wallacea	site	Liang Luar	13 current entities; 4636 samples; -54 to 90936 BP

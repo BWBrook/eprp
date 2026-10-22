@@ -13,7 +13,7 @@ NSB, Triton, FRED (documented, not mirrored), FosSahul, SahulArch, AustArch,
 OCTOPUS; then the Australian tranche of 22 October: PBDB (Australia and New
 Guinea extract), ASUD, Neotoma/IPPD, RPD, GCD, SahulCHAR, SISAL, Beyer 2020,
 the SHAPE index, the Sahul sea-level pack and Krapp 2021. See
-[INDEX.md](INDEX.md). Ranks 1–8 below are now catalogued.
+[INDEX.md](INDEX.md). Ranks 1–8 below are now catalogued; their entries supersede the scan figures quoted in the table.
 
 ## Ranked: Australia and Sahul
 

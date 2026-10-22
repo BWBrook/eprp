@@ -1,0 +1,3 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+sisal/ora-v3	2026-10-22T0643Z_url	2026-10-22T06:44:21+00:00	CC BY 4.0 (ORA doi:10.5287/ora-2nanwp4rk)	5	574956458	c02158bc6217	https://ora.ox.ac.uk/objects/uuid:1e91e2ac-ca9f-46e5-85f3-8d82d4d3cfd4/files/r9k41zf383
+sisal/zenodo-ensembles	10726619	2026-10-22T07:27:57+00:00	cc-by-4.0	1	2575418451	c02158bc6217	https://zenodo.org/api/records/10726619/files/SISAL_v3_age_ensembles.tar.gz/content

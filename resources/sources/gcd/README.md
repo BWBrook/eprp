@@ -6,15 +6,15 @@ status: "active online (paleofire.org); last packaged release 2020-10-26; moving
 last_update: "online database live; CRAN GCD 4.0.7 dated 2020-10-26"
 scope:
   taxa: [not taxonomic; sedimentary charcoal records]
-  time: "Late Quaternary; Sahul sites mostly Holocene (median oldest age 9.3 ka), 38 reach 20 ka"
-  space: "global; 185 Sahul sites in the CRAN release (Australia 152, New Guinea 24, Torres Strait 9)"
+  time: "Late Quaternary; Sahul sites mostly Holocene (median oldest age 9.2 ka), 37 reach 20 ka"
+  space: "global; 184 Sahul sites in the CRAN release (Australia 151, New Guinea 24, Torres Strait 9)"
   record_unit: "site (one core) with charcoal samples: depth, estimated age, quantity, unit, method, type"
 size:
   as_of: "CRAN GCD 4.0.7"
   sites: 935
   samples: 174980
-  sahul_sites: 185
-  sahul_samples: 15332
+  sahul_sites: 184
+  sahul_samples: 15197
 access:
   tier: open-nc
   licence: "data: CC BY-NC-ND per the paleofire.org terms of use (site footer: All Rights Reserved); CRAN package code: GPL (>= 2)"
@@ -44,7 +44,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); source scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22 (no major findings); findings applied"
 ---
 
 # Global Paleofire Database (formerly the Global Charcoal Database)
@@ -54,7 +54,7 @@ entry:
 The GCD, now called the Global Paleofire Database, is the long-standing
 community archive of sedimentary charcoal records, maintained by the
 International Paleofire Network at paleofire.org. Its last packaged release
-(CRAN `GCD` 4.0.7, 2020) holds 935 sites and 174,980 samples, 185 sites of them
+(CRAN `GCD` 4.0.7, 2020) holds 935 sites and 174,980 samples, 184 sites of them
 in Sahul. It is the source for most Sahul charcoal in the
 [RPD](../rpd/README.md) and much of [SahulCHAR](../sahulchar/README.md). Its
 data terms are non-commercial and no-derivatives, and the package is frozen,
@@ -68,17 +68,20 @@ site table exported to `derived/paleofiresites_4.0.7.tsv`).
 
 | | Global | Sahul |
 | --- | ---: | ---: |
-| Sites | 935 | 185 |
-| Samples | 174,980 | 15,332 |
+| Sites | 935 | 184 |
+| Samples | 174,980 | 15,197 |
 
-- Sahul sites by region: Australia 152, New Guinea 24, Torres Strait 9. By
-  GCD version of entry: GCD2 104, GCD1 43, GCD3 25, GCD4 13. The `country`
-  field disagrees with coordinates for some (14 blank).
-- Sahul samples: sieved 8,558, pollen-slide 6,774; concentration 9,627,
-  influx 3,507, charcoal-to-pollen ratio 1,706, other 492; units led by
+- Sahul sites by region: Australia 151, New Guinea 24, Torres Strait 9. By
+  GCD version of entry: GCD2 103, GCD1 43, GCD3 25, GCD4 13. The `country`
+  field agrees with the coordinates where filled; 13 are blank (marine cores,
+  islands).
+- Sahul methods: by site, 137 used pollen slides only, 39 sieving only and 8
+  both; by sample the balance reverses (sieved 8,558, pollen-slide 6,774),
+  because sieved records are longer. Measures: concentration 9,627 samples,
+  influx 3,507, charcoal-to-pollen ratio 1,571, other 492; units led by
   particles >125 µm (3,356).
-- Median oldest estimated age per Sahul site 9.3 ka; 38 sites reach 20 ka and
-  18 reach 50 ka.
+- Median oldest estimated age per Sahul site 9.2 ka; 37 sites reach 20 ka and
+  17 reach 50 ka (some of them marine cores, such as ODP Site 820).
 - The package also carries lookup tables (methods, 169 units, site and
   basin types), publications (714) and dates (4,904).
 
@@ -124,7 +127,9 @@ record's original chronology. Two vegetation rasters (`PNV_*`) need the
 - **Restrictive and conflicting terms.** Data are CC BY-NC-ND under the
   paleofire.org terms, with an "All Rights Reserved" footer, while the RPD
   republishes GCD-derived records under CC BY 4.0. Keep use non-commercial
-  and cite the GCD until the conflict is resolved.
+  and cite the GCD until the conflict is resolved. Our mirror is the CRAN
+  package, distributed under GPL (>= 2) with its data; the derived site table
+  is a format conversion for internal use.
 - **Frozen package, moving database.** CRAN has not been updated since 2020;
   the online database has grown by about 300 sites and is being migrated to
   Neotoma.
@@ -137,9 +142,9 @@ record's original chronology. Two vegetation rasters (`PNV_*`) need the
 
 ## Overlap with other sources
 
-From [charcoal_overlap.py](../sahulchar/charcoal_overlap.py): 162 of the 185
+From [charcoal_overlap.py](../sahulchar/charcoal_overlap.py): 161 of the 184
 Sahul GCD sites lie within about 2 km of an RPD entity and 119 within 2 km of
-a SahulCHAR record (146 within 5 km). Five places are GCD-only.
+a SahulCHAR record (146 within about 5 km). Five places are GCD-only.
 
 ## EPRP relevance
 
@@ -160,6 +165,9 @@ papers and the package.
   above; release table of 14 versions.
 - 2026-10-22, checked: Sahul overlap with RPD, SahulCHAR and Neotoma by
   location.
+- 2026-10-22, independent review (Claude Sonnet subagent): corrected the
+  country-field wording, added the site-level method view, and found a
+  non-Sahul marine core (Lombok Ridge) in the region box, now excluded.
 - 2026-10-22, source claim (source scan, Claude Sonnet subagent): terms of use,
   network history and hosting, version papers, online site count, Neotoma
   migration status, stale help text.
