@@ -274,8 +274,11 @@ sites' dates C.
   chronologies meet. A shared code is not proof of the same determination:
   447 of the 4,233 records differ by more than 1% in age from the SahulArch
   row with that code.
-- **PBDB.** 2,253 Quaternary vertebrate occurrences in Sahul, with interval
-  ages, not dates; only 9 shared references. Complementary, not overlapping.
+- **PBDB.** 2,316 Quaternary tetrapod occurrences in the 22 October extract
+  by interval midpoint (2,263 with a maximum age of 2.58 Ma or less), with
+  interval ages, not dates; only 9 shared references. Complementary, not
+  overlapping: only 78 of PBDB's 414 Quaternary tetrapod collections lie
+  within 5 km of a FosSahul site (see the [PBDB entry](../pbdb/README.md)).
 - **Neotoma** has no vertebrate datasets for Australia or New Guinea.
 - **OCTOPUS** holds a blurred, restructured copy of 11,858 records with the
   March 2021 ratings but without its 6 additions and 8 older records (5 of

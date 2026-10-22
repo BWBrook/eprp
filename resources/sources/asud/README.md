@@ -3,7 +3,7 @@ id: asud
 name: Australian Stratigraphic Units Database (ASUD)
 kind: database
 status: active
-last_update: "live; WFS capabilities copyright 2020"
+last_update: "updated daily (Geoscience Australia); snapshot 2026-10-22"
 scope:
   taxa: [not taxonomic; stratigraphic units]
   time: "Archean to Holocene"
@@ -18,20 +18,22 @@ size:
   groups_and_suites: 1761
 access:
   tier: open
-  licence: "CC-BY-4.0 (WFS AccessConstraints: Commonwealth of Australia (Geoscience Australia) 2020)"
+  licence: "CC-BY-4.0 (WFS AccessConstraints and the eCat record; copyright Geoscience Australia and the Geological Society of Australia)"
   routes:
     - {type: wfs, url: "https://services.ga.gov.au/gis/stratunits/ows (stratunit:StratigraphicUnit; also gsmlp:GeologicUnitView and gsmlb:GeologicUnit, same 18,357 units)", state: "live; CSV output, no feature cap", checked: 2026-10-22}
+    - {type: web-ui, url: "https://asud.ga.gov.au/", state: "search interface; per-state, Antarctic and offshore zips of pipe-delimited text behind /search-state (names, definitions, references)", checked: 2026-10-22}
+    - {type: catalogue, url: "eCat a05f7892-8ca9-7506-e044-00144fdd4fa6; https://pid.geoscience.gov.au/dataset/ga/21884", state: "metadata only; no DOI", checked: 2026-10-22}
   api: "OGC WFS 2.0.0 (GeoServer); GeoSciML views alongside the native layer"
 versioning:
   replay: none
-  notes: "live register with no releases; snapshot and record the date"
+  notes: "live register updated daily, with no releases; snapshot and record the date. The WFS warns that some attribute names have changed"
 mirror:
   path: deep-server:/data/paleodata/asud
   policy: "dated snapshots of the native StratigraphicUnit layer"
   state: "snapshot 2026-10-22T0604Z_wfs, row count equals numberMatched"
 lineage:
-  upstream: ["Geoscience Australia and state geological surveys"]
-  downstream: ["used here to check PBDB formation names and ages (pbdb entry)"]
+  upstream: ["National Register of Stratigraphic Names (from 1949); Australian Stratigraphy Commission and its state subcommissions"]
+  downstream: ["Macrostrat name lexicon (12,279 names, 2015 import)", "Wikidata property P2367 (5,955 items)", "used here to check PBDB formation names and ages (pbdb entry)"]
 eprp_questions: []
 citation:
   - "Geoscience Australia, Australian Stratigraphic Units Database, https://services.ga.gov.au/gis/stratunits/ows, retrieved 2026-10-22, CC BY 4.0"
@@ -39,7 +41,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); documentation scan by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # Australian Stratigraphic Units Database (ASUD)
@@ -86,9 +88,18 @@ snapshot; the CSV row count equals the server's `numberMatched` (18,357).
 
 ## Provenance and lineage
 
-Geoscience Australia maintains ASUD with the state and territory geological
-surveys; every unit is marked "synthesis from multiple sources". Each unit has
-a persistent identifier, `http://pid.geoscience.gov.au/geologicFeature/au/SU<STRATNO>`.
+ASUD began in 1949 as the National Register of Stratigraphic Names and is
+the national standard for Australian geological names. Geoscience Australia
+maintains it with the Australian Stratigraphy Commission, a standing
+committee of the Geological Society of Australia: new names are reserved,
+defined on a unit definition form and approved by a state or territory
+subcommission. Card files ran to 1979, and some legacy information still
+exists only on cards. GA states about 17,500 current names, 36,000 name
+variations and 16,000 references, and daily updates. Every unit in the WFS is
+marked "synthesis from multiple sources", and each has a persistent
+identifier, `http://pid.geoscience.gov.au/geologicFeature/au/SU<STRATNO>`.
+Macrostrat imported 12,279 ASUD names in 2015, and Wikidata links 5,955
+items to ASUD identifiers.
 
 ## Structure
 
@@ -107,6 +118,9 @@ carry the same units with fewer fields.
   in one request (14 MB). `data_mirror.py wfs
   https://services.ga.gov.au/gis/stratunits/ows stratunit:StratigraphicUnit
   asud --license ...` takes a dated snapshot and checks the row count.
+- **Bulk text.** The search site offers per-state, Antarctic and offshore
+  zips of pipe-delimited text with definitions and references, which the WFS
+  lacks; not yet mirrored.
 - **Mirror.** `deep-server:/data/paleodata/asud/raw/2026-10-22T0604Z_wfs/`
   (CSV and schema, read-only, sha256 manifest). Index:
   [snapshots.tsv](snapshots.tsv).
@@ -114,34 +128,55 @@ carry the same units with fewer fields.
 ## Strengths
 
 - National coverage under one schema with persistent identifiers.
-- Ages are internally consistent for 99.5% of checkable units: of 14,914 units
-  whose text age resolves through the PBDB interval table and that have real
-  numeric ages, 14,838 have numeric ages that overlap the named interval.
-- Names are near-unique (17 duplicated names in 18,357 units), so matching is
-  practical; 93.8% of PBDB's named Australian collections find a unit.
+- Ages are internally consistent for most units. Of 15,643 units with a real
+  numeric age and a text age we can resolve (PBDB's interval table plus
+  "Late Permian"-style series names; inverted ranges swapped), 14,662 (93.7%)
+  lie within the named interval widened by 5% or 1 Myr, 923 (5.9%) overlap it
+  but extend beyond, and 58 (0.4%) are disjoint.
+- Full names are near-unique (17 duplicated in 18,357 units); folded names
+  collide more (the independent review found 100 groups after dropping rank
+  words), but with state and age the matching works: 93.9% of PBDB's named
+  Australian collections find a unit, 77.3% exactly.
 - Open licence and a simple, uncapped WFS.
 
 ## Weaknesses and pitfalls
 
-- **Some numeric ages contradict the unit's own text age.** 76 units are
-  disjoint. Some are typos: the Allaru Mudstone (STRATNO 291) is "Albian" in
-  text but 45–44 Ma in numbers, with era "Cenozoic"; the Buchargingah Granite
-  reads 6–419.62 Ma; the Jindera Granite 40.4–403.4 Ma. Others follow older
-  boundaries: units described as "Cryogenian" carry ages of about 830 Ma,
-  older than the period's current base. One is stale text: the Talbragar
-  Fossil Fish Bed's text says Early–Middle Jurassic, its numbers 161.5–151 Ma.
-- **Inverted and placeholder ages.** 57 units have an older age younger than
-  the younger age. 13 units of unknown age carry 0–0 Ma, which reads as Recent
-  to any numeric filter.
-- **Era fields are derived and coarse.** `OLDERAGE` and `YOUNGERAGE` give the
-  era only, and units on era boundaries are labelled inconsistently; do not
-  use them to check ages.
+- **Some numeric ages contradict the unit's own text age.** 58 units are
+  disjoint from their text age; 36 of them by 5 Myr or less (scale and
+  boundary differences), 22 by more. The clear errors include the Allaru
+  Mudstone (STRATNO 291: "Albian" in text, 45–44 Ma in numbers, era
+  "Cenozoic"), the Lagoon River Quartzite ("Neoproterozoic", 1,462–1,315 Ma),
+  the Cundaline Formation and the Copper Hills Porphyry (Archean eras that
+  disagree by 120–180 Myr). Six units described as "Cryogenian" carry ages of
+  735–1,147 Ma, several older than the period's current base, which suggests
+  older boundary definitions.
+- **Inverted ranges.** 57 units have an older age younger than the younger
+  age, among them the Buchargingah Granite (6 and 419.62 Ma), the Jindera
+  Granite (40.4 and 403.4) and the Talbragar Fossil Fish Bed (151 and 161.5).
+  Swap them before any age test; some, like Buchargingah's 6 Ma, are garbled
+  as well as swapped.
+- **Placeholder ages.** 337 units carry an older age of 4,031 Ma (313) or
+  4,567 Ma (24), the base of the eon named in a vague text age ("Archean",
+  "Precambrian"); 13 units of unknown age carry 0–0 Ma. A numeric filter reads
+  the first as Hadean rocks and the second as Recent.
+- **Era fields follow the numbers.** `OLDERAGE` and `YOUNGERAGE` give the era
+  of the numeric ages, so they inherit numeric errors (the Allaru Mudstone is
+  "Cenozoic"), and the convention at boundaries varies: an older age of 66 Ma
+  is labelled Cenozoic (272 units), but 251.902 Ma and 538.8 Ma are labelled
+  Paleozoic (261 and 433) and 2,500 Ma Neoarchean (674). Do not use them to
+  check ages.
+- **Untested units.** 351 units have numeric ages but no text age, and 124
+  have a text age we could not resolve; 1,889 have no numeric age.
 - **Gaps in fossiliferous Cenozoic units.** The Fyansford Formation, Muddy
-  Creek Marl, Glen Aire Clay and Black Rock Sandstone of Victoria, all classic
-  fossil units, are not in the register.
-- **Homonyms across states.** "Cave Hill", "Black Rock", "Drummond" and
-  "Glenelg" each name unrelated units in different states or eras; match with
-  state and age, not name alone.
+  Creek Marl, Glen Aire Clay, Wataepoolan limestone and Black Rock Sandstone
+  of Victoria, all classic fossil units, are not among the WFS layer's names
+  or descriptions. GA lists about 36,000 name variations that the WFS does not
+  carry, so some may exist as synonyms.
+- **Homonyms.** "Cave Hill" (a Victorian sandstone and a Western Australian
+  member) and "Black Rock" (a New South Wales subgroup and a Western Australian
+  granodiorite) name unrelated units in different states; PBDB's "Glenelg" and
+  "Drummond" match unrelated ASUD units of the same name. Match with state and
+  age, not name alone.
 - **Antarctic units are mixed in.** 561 units belong to the Australian
   Antarctic Territory; filter on `STATE` for continental work.
 
@@ -149,8 +184,8 @@ carry the same units with fewer fields.
 
 ASUD is the reference for PBDB's Australian stratigraphy; the matching and age
 comparison are reported in the [PBDB entry](../pbdb/README.md#overlap-with-other-sources).
-Macrostrat, PBDB's usual stratigraphic partner, is not yet assessed for
-Australia.
+Macrostrat, PBDB's usual stratigraphic partner, has no Australian columns,
+only ASUD-derived names from 2015, so ASUD is the live authority.
 
 ## EPRP relevance
 
@@ -165,14 +200,23 @@ CC BY 4.0. Cite Geoscience Australia, the service URL and the retrieval date.
 
 ## Verification log
 
-- 2026-10-22, checked: WFS capabilities list three layers, each with
-  `numberMatched` 18,357; licence text in `AccessConstraints`.
+- 2026-10-22, checked (not stored): WFS capabilities list three layers, each
+  with `numberMatched` 18,357; licence text in `AccessConstraints`.
 - 2026-10-22, checked: snapshot of `stratunit:StratigraphicUnit`, 18,357 CSV
-  rows; profile counts above.
-- 2026-10-22, checked: text age against numeric age for every unit, through
-  the PBDB interval table; inverted and 0–0 ages; the Allaru, Elcho Island and
-  other records read directly.
-- 2026-10-22, checked: absence of Fyansford, Muddy Creek, Glen Aire and Black
-  Rock Sandstone by name search of the snapshot.
+  rows (the manifest records numberMatched 18,357); profile counts above.
+- 2026-10-22, checked ([asud_profile.py](asud_profile.py)): text age against
+  numeric age for the 15,643 units where both are usable, after swapping
+  inverted ranges; placeholder, 0–0 and inverted ages; era labels at
+  boundaries; the Allaru, Elcho Island and other records read directly.
+- 2026-10-22, checked: absence of Fyansford, Muddy Creek, Glen Aire,
+  Wataepoolan and Black Rock Sandstone by name search of the snapshot.
 - 2026-10-22, inferred: the "Cryogenian" cases follow older period
-  boundaries, from their numeric ages of about 830 Ma.
+  boundaries, from their numeric ages.
+- 2026-10-22, independent review (Claude Sonnet subagent): found the first
+  version of the age check counted inverted ranges as disagreements (76
+  reported; 58 after the fix) and missed the placeholder ages; both corrected.
+- 2026-10-22, source claim (documentation scan, Claude Sonnet subagent, URLs
+  in its report): history from 1949, custodianship and naming procedure, the
+  name and reference counts, daily updates, eCat and PID records with no DOI,
+  the bulk zips, Macrostrat and Wikidata uses. No peer-reviewed assessment of
+  ASUD's ages or names was found.

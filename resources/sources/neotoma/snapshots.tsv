@@ -1,0 +1,3 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+neotoma/ippd-sahul	2026-10-22T0634Z_url	2026-10-22T06:40:03+00:00	CC BY 4.0 (Neotoma data use and embargo policy v.2025)	66	103349065	c02158bc6217	https://api.neotomadb.org/v2.0/data/datasets/db?database=Indo-Pacific%20Pollen%20Database&limit=10000
+neotoma/octopus-wfs	2026-10-22T0634Z_wfs	2026-10-22T06:34:36+00:00	CC-BY-4.0 per OCTOPUS documentation; IPPD data CC BY 4.0 under the Neotoma data use policy	4	52356832	c02158bc6217	http://geoserver.octopusdata.org/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=be10-denude%3Aippd_datasets&outputFormat=csv

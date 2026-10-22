@@ -1,0 +1,130 @@
+table	metric	key	value
+attrs	global	Title	Late Quaternary Environment v1.0
+attrs	global	Source	https://figshare.com/articles/Late_Pleistocene_and_Holocene_climate_bioclimate_and_vegetation/8327081
+attrs	global	Citation	"Beyer R, Krapp M, Manica A (2020): ""High-resolution terrestrial climate, bioclimate and vegetation for the last 120,000 years"""
+attrs	global	Date	23-Apr-2020 12:43:11
+dims	longitude		720
+dims	latitude		300
+dims	time		72
+dims	month		12
+variables	longitude	('longitude',)	degrees_north | 
+variables	latitude	('latitude',)	degrees_east | 
+variables	time	('time',)	years since present | 
+variables	month	('month',)	 | 
+variables	temperature	('time', 'month', 'latitude', 'longitude')	degrees celsius | monthly mean temperature
+variables	precipitation	('time', 'month', 'latitude', 'longitude')	millimetres per month | monthly precipitation
+variables	cloudiness	('time', 'month', 'latitude', 'longitude')	percent | monthly mean cloudiness
+variables	relative_humidity	('time', 'month', 'latitude', 'longitude')	percent | monthly mean relative humidity
+variables	wind_speed	('time', 'month', 'latitude', 'longitude')	metres per second | monthly mean (absolute) wind speed
+variables	min_temperature	('time', 'latitude', 'longitude')	degrees celsius | annual minimum temperature
+variables	max_temperature	('time', 'latitude', 'longitude')	degrees celsius | annual maximum temperature
+variables	biome	('time', 'latitude', 'longitude')	categorical | biome
+variables	npp	('time', 'latitude', 'longitude')	grams carbon per metre^2 | annual net primary production
+variables	lai	('time', 'latitude', 'longitude')	metre^2 per metre^2 | leaf area index
+variables	BIO1	('time', 'latitude', 'longitude')	 | Annual Mean Temperature
+variables	BIO4	('time', 'latitude', 'longitude')	 | Temperature Seasonality (standard deviation *100)
+variables	BIO5	('time', 'latitude', 'longitude')	 | Max Temperature of Warmest Month
+variables	BIO6	('time', 'latitude', 'longitude')	 | Min Temperature of Coldest Month
+variables	BIO7	('time', 'latitude', 'longitude')	 | Temperature Annual Range (BIO5-BIO6)
+variables	BIO8	('time', 'latitude', 'longitude')	 | Mean Temperature of Wettest Quarter
+variables	BIO9	('time', 'latitude', 'longitude')	 | Mean Temperature of Driest Quarter
+variables	BIO10	('time', 'latitude', 'longitude')	 | Mean Temperature of Warmest Quarter
+variables	BIO11	('time', 'latitude', 'longitude')	 | Mean Temperature of Coldest Quarter
+variables	BIO12	('time', 'latitude', 'longitude')	 | Annual Precipitation
+variables	BIO13	('time', 'latitude', 'longitude')	 | Precipitation of Wettest Month
+variables	BIO14	('time', 'latitude', 'longitude')	 | Precipitation of Driest Month
+variables	BIO15	('time', 'latitude', 'longitude')	 | Precipitation Seasonality (Coefficient of Variation)
+variables	BIO16	('time', 'latitude', 'longitude')	 | Precipitation of Wettest Quarter
+variables	BIO17	('time', 'latitude', 'longitude')	 | Precipitation of Driest Quarter
+variables	BIO18	('time', 'latitude', 'longitude')	 | Precipitation of Warmest Quarter
+variables	BIO19	('time', 'latitude', 'longitude')	 | Precipitation of Coldest Quarter
+time	steps		72
+time	range		-120000 to 0
+sahul_window	land_cells	0	3333
+sahul_window	land_area_km2	0	9408720
+sahul_boxes	land_area_km2	0	8732614
+sahul_boxes	land_gain_vs_0ka_km2	0	0
+sahul_window	bio1_mean_land_c	0	21.89
+sahul_window	bio12_mean_land_mm	0	821.9
+sahul_window	biome_cells_0	13	1179
+sahul_window	biome_cells_0	21	1087
+sahul_window	biome_cells_0	1	424
+sahul_window	biome_cells_0	15	202
+sahul_window	biome_cells_0	12	141
+sahul_window	biome_cells_0	6	95
+sahul_window	biome_cells_0	5	71
+sahul_window	biome_cells_0	3	55
+monthly_npp_file_vs_main	biome_cells_differing	0	195
+monthly_npp_file_vs_main	npp_correlation	0	0.962
+monthly_npp_file_vs_main	same_land_mask	0	True
+sahul_window	land_cells	-6000	3476
+sahul_window	land_area_km2	-6000	9831193
+sahul_boxes	land_area_km2	-6000	9133481
+sahul_boxes	land_gain_vs_0ka_km2	-6000	400867
+sahul_window	bio1_mean_land_c	-6000	21.75
+sahul_window	bio12_mean_land_mm	-6000	774.6
+sahul_window	land_cells	-12000	4031
+sahul_window	land_area_km2	-12000	11463371
+sahul_boxes	land_area_km2	-12000	10416987
+sahul_boxes	land_gain_vs_0ka_km2	-12000	1684372
+sahul_window	bio1_mean_land_c	-12000	21.37
+sahul_window	bio12_mean_land_mm	-12000	830.5
+sahul_window	land_cells	-21000	4306
+sahul_window	land_area_km2	-21000	12250120
+sahul_boxes	land_area_km2	-21000	11092951
+sahul_boxes	land_gain_vs_0ka_km2	-21000	2360337
+sahul_window	bio1_mean_land_c	-21000	19.22
+sahul_window	bio12_mean_land_mm	-21000	712.2
+sahul_window	biome_cells_-21000	21	1642
+sahul_window	biome_cells_-21000	13	1143
+sahul_window	biome_cells_-21000	0	576
+sahul_window	biome_cells_-21000	1	295
+sahul_window	biome_cells_-21000	14	202
+sahul_window	biome_cells_-21000	15	188
+sahul_window	biome_cells_-21000	3	51
+sahul_window	biome_cells_-21000	5	49
+monthly_npp_file_vs_main	biome_cells_differing	-21000	577
+monthly_npp_file_vs_main	npp_correlation	-21000	0.732
+monthly_npp_file_vs_main	same_land_mask	-21000	True
+sahul_window	land_cells	-30000	4271
+sahul_window	land_area_km2	-30000	12150509
+sahul_boxes	land_area_km2	-30000	10999528
+sahul_boxes	land_gain_vs_0ka_km2	-30000	2266914
+sahul_window	bio1_mean_land_c	-30000	19.81
+sahul_window	bio12_mean_land_mm	-30000	824.3
+sahul_window	land_cells	-40000	4199
+sahul_window	land_area_km2	-40000	11945338
+sahul_boxes	land_area_km2	-40000	10831290
+sahul_boxes	land_gain_vs_0ka_km2	-40000	2098675
+sahul_window	bio1_mean_land_c	-40000	19.91
+sahul_window	bio12_mean_land_mm	-40000	761.1
+sahul_window	land_cells	-50000	4127
+sahul_window	land_area_km2	-50000	11738958
+sahul_boxes	land_area_km2	-50000	10643343
+sahul_boxes	land_gain_vs_0ka_km2	-50000	1910728
+sahul_window	bio1_mean_land_c	-50000	20.7
+sahul_window	bio12_mean_land_mm	-50000	679.5
+sahul_window	land_cells	-60000	4185
+sahul_window	land_area_km2	-60000	11903961
+sahul_boxes	land_area_km2	-60000	10792992
+sahul_boxes	land_gain_vs_0ka_km2	-60000	2060377
+sahul_window	bio1_mean_land_c	-60000	20.35
+sahul_window	bio12_mean_land_mm	-60000	772.7
+sahul_window	land_cells	-80000	3857
+sahul_window	land_area_km2	-80000	10951660
+sahul_boxes	land_area_km2	-80000	10031712
+sahul_boxes	land_gain_vs_0ka_km2	-80000	1299097
+sahul_window	bio1_mean_land_c	-80000	21.4
+sahul_window	bio12_mean_land_mm	-80000	756.6
+sahul_window	land_cells	-100000	3656
+sahul_window	land_area_km2	-100000	10356233
+sahul_boxes	land_area_km2	-100000	9568976
+sahul_boxes	land_gain_vs_0ka_km2	-100000	836362
+sahul_window	bio1_mean_land_c	-100000	21.58
+sahul_window	bio12_mean_land_mm	-100000	722.7
+sahul_window	land_cells	-120000	3461
+sahul_window	land_area_km2	-120000	9787569
+sahul_boxes	land_area_km2	-120000	9092955
+sahul_boxes	land_gain_vs_0ka_km2	-120000	360341
+sahul_window	bio1_mean_land_c	-120000	21.95
+sahul_window	bio12_mean_land_mm	-120000	814.3

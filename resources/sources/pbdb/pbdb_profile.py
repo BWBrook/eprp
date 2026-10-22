@@ -1,11 +1,13 @@
 """Profile a PBDB regional extract written by pbdb_snapshot.sh (data_mirror.py url).
 
 Usage: python3 pbdb_profile.py SNAPSHOT_DIR SUFFIX OUT_TSV
-SUFFIX is "" for the core extract or "_idng" for the Indonesian New Guinea box.
+SUFFIX is "" for the core extract or "_idng" for the Indonesian box (New Guinea,
+Raja Ampat, Misool and Seram).
 
 Writes long-format counts (table, metric, key, value). Checks every CSV row count
 against the provider count file, checks duplicated CSV columns are identical, then
-profiles geography, time (GTS2020 period of the interval midpoint), age resolution,
+profiles geography, time (period of the interval midpoint, on the GTS2020-era
+boundaries PBDB's ages use), age resolution,
 taxonomy, plate models, entry history, specimens, references and strata.
 Standard library only.
 """
@@ -18,10 +20,10 @@ import sys
 from collections import Counter
 
 csv.field_size_limit(1 << 30)
-PERIODS = [(0, 2.58, "Quaternary"), (2.58, 23.03, "Neogene"), (23.03, 66.0, "Paleogene"), (66.0, 145.0, "Cretaceous"),
-           (145.0, 201.4, "Jurassic"), (201.4, 251.902, "Triassic"), (251.902, 298.9, "Permian"),
-           (298.9, 358.9, "Carboniferous"), (358.9, 419.2, "Devonian"), (419.2, 443.8, "Silurian"),
-           (443.8, 486.85, "Ordovician"), (486.85, 538.8, "Cambrian"), (538.8, 635.0, "Ediacaran"),
+PERIODS = [(0, 2.58, "Quaternary"), (2.58, 23.04, "Neogene"), (23.04, 66.0, "Paleogene"), (66.0, 143.1, "Cretaceous"),
+           (143.1, 201.4, "Jurassic"), (201.4, 251.902, "Triassic"), (251.902, 298.9, "Permian"),
+           (298.9, 358.86, "Carboniferous"), (358.86, 419.62, "Devonian"), (419.62, 443.1, "Silurian"),
+           (443.1, 486.85, "Ordovician"), (486.85, 538.8, "Cambrian"), (538.8, 635.0, "Ediacaran"),
            (635.0, 4600.0, "pre-Ediacaran")]
 COUNT_FILES = {"collections": "colls-list", "specimens": "specs-list", "measurements": "specs-measurements",
                "references": "occs-refs", "taxa": "occs-taxa", "strata": "occs-strata"}

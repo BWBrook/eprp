@@ -1,0 +1,35 @@
+table	metric	key	value
+sheet	name		Sheet1
+sheet	dimensions		38 x 28
+records	rows		37
+columns	filled	Region/Country	37
+columns	filled	Reference	37
+columns	filled	Record Type (eg. marine sed. core)	37
+columns	filled	Record ID and Coord.	35
+columns	filled	Proxy	37
+columns	filled	Proxy Measurement	36
+columns	filled	Climate Sensitivity	36
+columns	filled	Change (0 ka to 6 ka)	22
+columns	filled	Comparison to Present?	32
+columns	filled	Sample Resolution	31
+columns	filled	Dating Resolution	25
+columns	filled	Start Year	26
+columns	filled	End Year	27
+columns	filled	Link to Data Storage	12
+columns	filled	Notes	27
+records	by:record_type_class	marine core	13
+records	by:record_type_class	other	10
+records	by:record_type_class	coral	5
+records	by:record_type_class	lake	4
+records	by:record_type_class	swamp or peat	3
+records	by:record_type_class	speleothem	2
+records	by:region_code	TNW	10
+records	by:region_code	TSW	8
+records	by:region_code	TSE	8
+records	by:region_code	TeS	8
+records	by:region_code	TeE	6
+records	by:region_code	StA	4
+records	by:region_code	NSO	3
+records	by:region_code	TNE	3
+records	by:region_code	SSO	1
+records	link_cell_with_url		5

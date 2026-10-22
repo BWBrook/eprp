@@ -1,0 +1,86 @@
+table	metric	key	value
+global	rows	site	365
+global	rows	entity	902
+global	rows	sample	448573
+global	rows	dating	13689
+global	rows	original_chronology	439092
+global	rows	sisal_chronology	319684
+global	entities_by:status	current	816
+global	entities_by:status	current partially modified	54
+global	entities_by:status	superseded	32
+global	samples_with_sisal_chronology		319684
+region:australia	sites		16
+region:australia	entities		49
+region:australia	entities_by:status	current	48
+region:australia	entities_by:status	superseded	1
+region:australia	samples		9202
+region:australia	samples_with_d18O		9172
+region:australia	samples_with_d13C		4683
+region:australia	entities_with_Mg_Ca		7
+region:australia	entities_with_Sr_Ca		7
+region:australia	entities_with_Ba_Ca		4
+region:australia	entities_with_U_Ca		4
+region:australia	entities_with_P_Ca		4
+region:australia	dating_rows		421
+region:australia	dating_by:date_type	MC-ICP-MS U/Th	246
+region:australia	dating_by:date_type	other (see notes)	58
+region:australia	dating_by:date_type	C14	42
+region:australia	dating_by:date_type	TIMS	31
+region:australia	dating_by:date_type	Event; actively forming	15
+region:australia	dating_by:date_type	Event; hiatus	13
+region:australia	dating_by:date_type	Event; end of laminations	8
+region:australia	dating_by:date_type	Event; start of laminations	8
+region:australia	current_entities_with_any_sisal_model		32
+region:australia	current_entities_without_sisal_model		16
+region:australia	current_entities_oldest_age_ge	2000	27
+region:australia	current_entities_oldest_age_ge	20000	8
+region:australia	current_entities_oldest_age_ge	40000	1
+region:australia	samples_aragonite		1472
+region:australia	samples_aragonite_not_corrected		1472
+region:australia	site	Ball Gown cave	6 current entities; 502 samples; 8367 to 39971 BP
+region:australia	site	Cape range	1 current entities; 1500 samples; -60 to 1439 BP
+region:australia	site	Careys cave	1 current entities; 181 samples; -40 to 82 BP
+region:australia	site	Cathedral cave	2 current entities; 578 samples; -60 to 13 BP
+region:australia	site	Cave C126	2 current entities; 312 samples; 5676 to 25640 BP
+region:australia	site	Chillagoe cave	1 current entities; 777 samples; -53 to 723 BP
+region:australia	site	Crystal cave, Australia	1 current entities; 247 samples; -59 to 8 BP
+region:australia	site	Golgotha cave	4 current entities; 901 samples; -61 to 773 BP
+region:australia	site	Harrie Wood cave	3 current entities; 592 samples; -64 to 28 BP
+region:australia	site	Jersey cave	1 current entities; 133 samples; 34977 to 98936 BP
+region:australia	site	KNI-51	20 current entities; 2160 samples; -58 to 20877 BP
+region:australia	site	Labyrinth cave	1 current entities; 161 samples; -59 to 49 BP
+region:australia	site	Lynds cave	1 current entities; 53 samples; 5081 to 8888 BP
+region:australia	site	Mairs cave	2 current entities; 878 samples; 14887 to 23135 BP
+region:australia	site	Moondyne cave	1 current entities; 44 samples; -42 to 38 BP
+region:australia	site	Yonderup cave	1 current entities; 183 samples; -53 to 190 BP
+region:new_guinea	sites		0
+region:new_guinea	entities		0
+region:torres_strait	sites		0
+region:torres_strait	entities		0
+region:wallacea	sites		2
+region:wallacea	entities		18
+region:wallacea	entities_by:status	current	11
+region:wallacea	entities_by:status	current partially modified	4
+region:wallacea	entities_by:status	superseded	3
+region:wallacea	samples		5713
+region:wallacea	samples_with_d18O		5702
+region:wallacea	samples_with_d13C		3127
+region:wallacea	entities_with_Mg_Ca		1
+region:wallacea	entities_with_Sr_Ca		1
+region:wallacea	entities_with_Ba_Ca		0
+region:wallacea	entities_with_U_Ca		0
+region:wallacea	entities_with_P_Ca		0
+region:wallacea	dating_rows		285
+region:wallacea	dating_by:date_type	MC-ICP-MS U/Th	178
+region:wallacea	dating_by:date_type	TIMS	98
+region:wallacea	dating_by:date_type	Event; hiatus	8
+region:wallacea	dating_by:date_type	Event; actively forming	1
+region:wallacea	current_entities_with_any_sisal_model		13
+region:wallacea	current_entities_without_sisal_model		2
+region:wallacea	current_entities_oldest_age_ge	2000	13
+region:wallacea	current_entities_oldest_age_ge	20000	12
+region:wallacea	current_entities_oldest_age_ge	40000	4
+region:wallacea	samples_aragonite		240
+region:wallacea	samples_aragonite_not_corrected		0
+region:wallacea	site	Gempa bumi cave	2 current entities; 1077 samples; 30 to 42130 BP
+region:wallacea	site	Liang Luar	13 current entities; 4636 samples; -54 to 90936 BP

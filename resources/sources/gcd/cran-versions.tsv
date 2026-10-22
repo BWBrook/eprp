@@ -1,0 +1,15 @@
+version	num_version	date	cran_url	mirrored
+GCD_3.0.0	300	2013-11-15	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_3.0.0.tar.gz	FALSE
+GCD_3.0.1	301	2014-03-13	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_3.0.1.tar.gz	FALSE
+GCD_3.0.2	302	2014-04-09	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_3.0.2.tar.gz	FALSE
+GCD_3.0.3	303	2014-05-01	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_3.0.3.tar.gz	FALSE
+GCD_3.0.4	304	2014-05-22	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_3.0.4.tar.gz	FALSE
+GCD_3.0.5	305	2015-04-22	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_3.0.5.tar.gz	FALSE
+GCD_4.0.0	400	2018-03-01	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.0.tar.gz	FALSE
+GCD_4.0.1	401	2018-03-27	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.1.tar.gz	FALSE
+GCD_4.0.2	402	2018-05-02	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.2.tar.gz	FALSE
+GCD_4.0.3	403	2018-08-20	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.3.tar.gz	FALSE
+GCD_4.0.4	404	2018-11-28	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.4.tar.gz	FALSE
+GCD_4.0.5	405	2019-12-11	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.5.tar.gz	FALSE
+GCD_4.0.6	406	2020-02-28	https://cran.r-project.org/src/contrib/Archive/GCD/GCD_4.0.6.tar.gz	FALSE
+GCD_4.0.7	407	2020-10-26	https://cran.r-project.org/src/contrib/GCD_4.0.7.tar.gz	TRUE

@@ -90,11 +90,16 @@ for cno, p in pb_pts.items():
     d, k = nearest(p, fs_pts)
     if d <= 5 and pb_gen[cno]:
         nearby = set().union(*(fs_gen[q] for q in fs_pts if km(p, q) <= 5))
-        pairs.append(len(pb_gen[cno] & nearby) / len(pb_gen[cno]))
+        pairs.append((len(pb_gen[cno] & nearby), len(pb_gen[cno])))
 add("paired_within_5km", "pbdb_collections_with_genera", "", len(pairs))
 if pairs:
-    add("paired_within_5km", "share_of_pbdb_genera_also_in_fossahul_within_5km_median", "", round(statistics.median(pairs), 2))
-    add("paired_within_5km", "collections_with_no_shared_genus", "", sum(x == 0 for x in pairs))
+    shares = [s / n for s, n in pairs]
+    add("paired_within_5km", "share_of_pbdb_genera_also_in_fossahul_within_5km_median", "", round(statistics.median(shares), 2))
+    add("paired_within_5km", "share_mean", "", round(statistics.mean(shares), 2))
+    add("paired_within_5km", "pooled_shared_of_collection_genera", "", f"{sum(s for s, _ in pairs)} of {sum(n for _, n in pairs)}")
+    add("paired_within_5km", "collections_all_genera_shared", "", sum(s == n for s, n in pairs))
+    add("paired_within_5km", "collections_with_no_shared_genus", "", sum(s == 0 for s, _ in pairs))
+    add("paired_within_5km", "collections_with_one_genus", "", sum(n == 1 for _, n in pairs))
 
 pg = {g for g, _ in pb_all_gen}
 fg = set().union(*fs_gen.values())

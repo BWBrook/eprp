@@ -4,14 +4,16 @@ Usage: python3 pbdb_asud_match.py PBDB_SNAPSHOT_DIR ASUD_CSV OUT_TSV OUT_EXAMPLE
 
 Tiers: exact (case and punctuation folded, trailing rank words such as Formation or Fm
 dropped), then core (trailing lithology words such as Limestone or Sands also dropped).
-Units in the collection's state are preferred; a match found only in other states is
-tagged _other_state (likely a homonym) and left out of the age check. For unique
-matches with numeric ages, tests whether the PBDB collection's age range overlaps the
-ASUD unit's. Also counts PBDB formation names that differ only in rank
+Spelling folds: Harbor/Harbour, Mt/Mount. Units in the collection's state are
+preferred; a match found only in other states is tagged _other_state (likely a
+homonym) and left out of the age check. For unique matches with numeric ages, tests
+whether the PBDB collection's age range overlaps the ASUD unit's, by tier, against a
+null of random same-state ASUD units (20 draws, seed 1). Also counts PBDB formation names that differ only in rank
 or lithology words. Core extract only (Australian names). Standard library only.
 """
 
 import csv
+import random
 import re
 import sys
 from collections import Counter, defaultdict
@@ -21,6 +23,7 @@ RANK = {"formation", "fm", "group", "gp", "member", "mbr", "beds", "bed", "subgr
 LITH = {"limestone", "limestones", "sandstone", "sandstones", "sand", "sands", "shale", "shales", "siltstone", "mudstone",
         "claystone", "clay", "clays", "conglomerate", "marl", "coquina", "calcarenite", "greywacke", "chert", "dolomite",
         "quartzite", "volcanics", "coal", "measures", "tuff", "basalt", "gravel", "gravels", "silt", "slate", "breccia", "chalk"}
+FOLD = {"harbor": "harbour", "mt": "mount"}
 RANK_FIELD = {"formation": "Formation, beds", "geological_group": "Group, Suite", "member": "Member, phase"}
 STATES = [("queen", "QLD"), ("new s", "NSW"), ("victoria", "VIC"), ("western a", "WA"), ("west a", "WA"), ("south a", "SA"),
           ("tasman", "TAS"), ("northern t", "NT"), ("northwest t", "NT"), ("australian capital", "ACT")]
@@ -28,7 +31,7 @@ out, examples = [], []
 
 
 def norm(s):
-    w = re.sub(r"[^a-z0-9 ]", " ", s.lower()).split()
+    w = [FOLD.get(x, x) for x in re.sub(r"[^a-z0-9 ]", " ", s.lower()).split()]
     while w and w[-1] in RANK:
         w.pop()
     return " ".join(w)
@@ -71,9 +74,17 @@ with open(f"{pbdb}/collections.csv", newline="", encoding="utf-8") as f:
 cols = [c for c in cols if c["cc"] == "AU"]
 out.append(("collections", "AU_rows", "", len(cols)))
 
+dated = defaultdict(list)
+for u in units:
+    if num(u["NUMERICOLDERAGE"]) is not None and num(u["NUMERICYOUNGERAGE"]) is not None:
+        for s in u["STATE"].split(", "):
+            dated[s].append(u)
+rng = random.Random(1)
+
 for field, rank in RANK_FIELD.items():
-    tiers, occ_tiers, ages = Counter(), Counter(), Counter()
+    tiers, occ_tiers, ages, by_tier = Counter(), Counter(), Counter(), Counter()
     unmatched = Counter()
+    null_pool = []
     for c in cols:
         name, n_occs = c[field].strip(), int(c["n_occs"] or 0)
         if not name:
@@ -111,6 +122,9 @@ for field, rank in RANK_FIELD.items():
         gap = max(yng - hi, lo - old, 0)
         key = "overlap" if gap == 0 else "gap_le_5myr" if gap <= 5 else "gap_5_20myr" if gap <= 20 else "gap_gt_20myr"
         ages[key] += 1
+        by_tier[(tier, gap == 0)] += 1
+        if code in dated:
+            null_pool.append((lo, hi, code))
         if gap > 20 and len(examples) < 60:
             examples.append((field, c["collection_no"], name, f'{c["max_ma"]}-{c["min_ma"]}', u["NAME"], u["STATE"],
                              f'{u["NUMERICOLDERAGE"]}-{u["NUMERICYOUNGERAGE"]}', round(gap, 1)))
@@ -120,6 +134,16 @@ for field, rank in RANK_FIELD.items():
         out.append((field, "occurrences_by_tier", k, v))
     for k, v in sorted(ages.items()):
         out.append((field, "age_check_unique_matches", k, v))
+    for t in sorted({t for t, _ in by_tier}):
+        n = by_tier[(t, True)] + by_tier[(t, False)]
+        out.append((field, "age_overlap_share_by_tier", t, f"{by_tier[(t, True)]} of {n}"))
+    if null_pool:
+        hits = 0
+        for _ in range(20):
+            for lo, hi, code in null_pool:
+                u = rng.choice(dated[code])
+                hits += num(u["NUMERICYOUNGERAGE"]) <= hi and num(u["NUMERICOLDERAGE"]) >= lo
+        out.append((field, "age_overlap_share_random_same_state_unit_20_draws", "", round(hits / (20 * len(null_pool)), 3)))
     for k, v in unmatched.most_common(15):
         out.append((field, "top_unmatched_by_occs", k, v))
 

@@ -1,0 +1,612 @@
+datasetid	datasettype	database	siteid	sitename	lon	lat	geometry	country	region	samples	taxa	units	chronologies	default_agetype	default_agemodel	default_controls	max_age_default	dois
+251	loss-on-ignition	Indo-Pacific Pollen Database	247	Bega Swamp	149.5	-36.51667	Point	Australia	australia	479	1	percent dry mass	2	Radiocarbon years BP	Linear Interpolation	60		2
+252	pollen	Indo-Pacific Pollen Database	247	Bega Swamp	149.5	-36.51667	Point	Australia	australia	489	111	NISP	2	Radiocarbon years BP	Linear Interpolation	60	12183	2
+285	pollen	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	43	102	NISP	2	Radiocarbon years BP	Linear Interpolation	28	13339	2
+1630	pollen	Indo-Pacific Pollen Database	1583	Lake George	149.418218	-35.111608000000004	Polygon	Australia	australia	68	92	NISP	2	Radiocarbon years BP	Linear Interpolation	16	116711	2
+1682	loss-on-ignition	Indo-Pacific Pollen Database	1628	Lynch's Crater	145.6881	-17.3667	Point	Australia	australia	232	1	percent dry mass	1	Radiocarbon years BP	Linear Interpolation	28		2
+1683	pollen	Indo-Pacific Pollen Database	1628	Lynch's Crater	145.6881	-17.3667	Point	Australia	australia	234	22	NISP	1	Radiocarbon years BP	Linear Interpolation	28	192649	2
+3043	pollen	Indo-Pacific Pollen Database	2945	Yarlington Tier	147.30056	-42.54361	Point	Australia	australia	21	67	NISP	1	Radiocarbon years BP	Linear Interpolation	3	9804	1
+7914	geochronologic	Indo-Pacific Pollen Database	247	Bega Swamp	149.5	-36.51667	Point	Australia	australia	1	1		2	Radiocarbon years BP	Linear Interpolation	60		0
+7937	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		2	Radiocarbon years BP	Linear Interpolation	28		0
+8327	geochronologic	Indo-Pacific Pollen Database	1583	Lake George	149.418218	-35.111608000000004	Polygon	Australia	australia	1	1		2	Radiocarbon years BP	Linear Interpolation	16		0
+8362	geochronologic	Indo-Pacific Pollen Database	1628	Lynch's Crater	145.6881	-17.3667	Point	Australia	australia	1	1		1	Radiocarbon years BP	Linear Interpolation	14		0
+8767	geochronologic	Indo-Pacific Pollen Database	2945	Yarlington Tier	147.30056	-42.54361	Point	Australia	australia	1	1		1	Radiocarbon years BP	Linear Interpolation	3		0
+14620	geochronologic	Indo-Pacific Pollen Database	9865	Lake Kirkpatrick	168.573484	-45.027516000000006	Polygon	New Zealand	outside	1	1		1	Radiocarbon years BP	Bchron	42		0
+14621	charcoal	Indo-Pacific Pollen Database	9865	Lake Kirkpatrick	168.573484	-45.027516000000006	Polygon	New Zealand	outside	24	1	number	1	Radiocarbon years BP	Bchron	42	625	1
+14622	pollen	Indo-Pacific Pollen Database	9865	Lake Kirkpatrick	168.573484	-45.027516000000006	Polygon	New Zealand	outside	26	59	NISP	1	Radiocarbon years BP	Bchron	42	736	1
+14627	geochronologic	Indo-Pacific Pollen Database	9868	Dukes Tarn	168.492688	-44.96418	Polygon	New Zealand	outside	1	1		1	Calibrated radiocarbon years BP	Bchron	30		0
+14628	charcoal	Indo-Pacific Pollen Database	9868	Dukes Tarn	168.492688	-44.96418	Polygon	New Zealand	outside	39	1	number	1	Calibrated radiocarbon years BP	Bchron	30	671	1
+14629	pollen	Indo-Pacific Pollen Database	9868	Dukes Tarn	168.492688	-44.96418	Polygon	New Zealand	outside	46	18	NISP	1	Calibrated radiocarbon years BP	Bchron	30	792	1
+14895	geochronologic	Indo-Pacific Pollen Database	9979	Bonatoa Bog	178.53333	-18.06667	Point	Fiji	outside	1	1		1	Calibrated radiocarbon years BP	Bacon	10		0
+14896	charcoal	Indo-Pacific Pollen Database	9979	Bonatoa Bog	178.53333	-18.06667	Point	Fiji	outside	20	1	number	1	Calibrated radiocarbon years BP	Bacon	10	3898	1
+14897	pollen	Indo-Pacific Pollen Database	9979	Bonatoa Bog	178.53333	-18.06667	Point	Fiji	outside	21	94	NISP	1	Calibrated radiocarbon years BP	Bacon	5	4075	1
+14920	geochronologic	Indo-Pacific Pollen Database	9988	Brass Tarn	145.04318	-5.78747	Point	Papua New Guinea	new_guinea	1	1		4	Radiocarbon years BP	linear interpolation	12		0
+14921	pollen	Indo-Pacific Pollen Database	9988	Brass Tarn	145.04318	-5.78747	Point	Papua New Guinea	new_guinea	49	78	NISP	4	Radiocarbon years BP	linear interpolation	12	10800	1
+14939	geochronologic	Indo-Pacific Pollen Database	9996	Ijomba	137.216632	-4.0211559999999995	Polygon	Indonesia	new_guinea	1	1		2	Radiocarbon years BP	linear interpolation	15		0
+14940	charcoal	Indo-Pacific Pollen Database	9996	Ijomba	137.216632	-4.0211559999999995	Polygon	Indonesia	new_guinea	32	1	number	2	Radiocarbon years BP	linear interpolation	15	13965	1
+14941	pollen	Indo-Pacific Pollen Database	9996	Ijomba	137.216632	-4.0211559999999995	Polygon	Indonesia	new_guinea	32	111	NISP	2	Radiocarbon years BP	linear interpolation	15	13965	1
+14958	geochronologic	Indo-Pacific Pollen Database	10004	Eagle Tarn	146.591092	-42.680062	Polygon	Australia	australia	1	1		2	Radiocarbon years BP	linear interpolation	8		0
+14959	pollen	Indo-Pacific Pollen Database	10004	Eagle Tarn	146.591092	-42.680062	Polygon	Australia	australia	55	110	NISP	2	Radiocarbon years BP	linear interpolation	8	12114	1
+14960	geochronologic	Indo-Pacific Pollen Database	10005	Adamsons Peak	146.83782000000002	-43.347714	Polygon	Australia	australia	1	1		2	Radiocarbon years BP	linear interpolation	4		0
+14961	pollen	Indo-Pacific Pollen Database	10005	Adamsons Peak	146.83782000000002	-43.347714	Polygon	Australia	australia	39	112	NISP	2	Radiocarbon years BP	linear interpolation	4	16344	1
+14962	geochronologic	Indo-Pacific Pollen Database	10006	Komanimambuno Mire	145.08903	-5.82037	Point	Papua New Guinea	new_guinea	1	1		2	Radiocarbon years BP	linear interpolation	12		0
+14963	pollen	Indo-Pacific Pollen Database	10006	Komanimambuno Mire	145.08903	-5.82037	Point	Papua New Guinea	new_guinea	34	74	NISP	2	Radiocarbon years BP	linear interpolation	12	28476	1
+14964	pollen	Indo-Pacific Pollen Database	10006	Komanimambuno Mire	145.08903	-5.82037	Point	Papua New Guinea	new_guinea	6	74	NISP	4	Radiocarbon years BP	linear interpolation	2	1768	1
+14967	geochronologic	Indo-Pacific Pollen Database	10008	Camerons Lagoon	146.676126	-41.958962	Polygon	Australia	australia	1	1		3	Radiocarbon years BP	linear interpolation	12		0
+14968	charcoal	Indo-Pacific Pollen Database	10008	Camerons Lagoon	146.676126	-41.958962	Polygon	Australia	australia	21	1	mm^2/ml	3	Radiocarbon years BP	linear interpolation	12	7829	1
+14969	pollen	Indo-Pacific Pollen Database	10008	Camerons Lagoon	146.676126	-41.958962	Polygon	Australia	australia	21	79	NISP	3	Radiocarbon years BP	linear interpolation	12	7829	1
+14970	geochronologic	Indo-Pacific Pollen Database	10009	Sundown Swamp	144.67463	-41.12666	Point	Australia	australia	1	1		2	Radiocarbon years BP	polynomial interpolation	9		0
+14971	charcoal	Indo-Pacific Pollen Database	10009	Sundown Swamp	144.67463	-41.12666	Point	Australia	australia	13	1	mm^2/ml	2	Radiocarbon years BP	polynomial interpolation	9	4388	1
+14972	pollen	Indo-Pacific Pollen Database	10009	Sundown Swamp	144.67463	-41.12666	Point	Australia	australia	13	41	NISP	2	Radiocarbon years BP	polynomial interpolation	9	4388	1
+14987	geochronologic	Indo-Pacific Pollen Database	10016	Stockyard Swamp	144.749224	-40.529061999999996	Polygon	Australia	australia	1	1		2	Radiocarbon years BP	linear interpolation	3		0
+14988	charcoal	Indo-Pacific Pollen Database	10016	Stockyard Swamp	144.749224	-40.529061999999996	Polygon	Australia	australia	16	1	mm^2/ml	2	Radiocarbon years BP	linear interpolation	6	5540	1
+14989	pollen	Indo-Pacific Pollen Database	10016	Stockyard Swamp	144.749224	-40.529061999999996	Polygon	Australia	australia	16	39	NISP	2	Radiocarbon years BP	linear interpolation	6	5540	1
+15004	geochronologic	Indo-Pacific Pollen Database	10024	Rotten Swamp	148.885604	-35.7077	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	10		0
+15005	pollen	Indo-Pacific Pollen Database	10024	Rotten Swamp	148.885604	-35.7077	Polygon	Australia	australia	16	30	NISP	1	Calibrated radiocarbon years BP	Bacon	10	7744	1
+15010	geochronologic	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	1	1		2	Radiocarbon years BP	linear interpolation	16		0
+15011	geochemistry	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	40	2	percent	2	Radiocarbon years BP	linear interpolation	16	32734	1
+15012	charcoal	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	41	1	mm^2/ml	2	Radiocarbon years BP	linear interpolation	16	32734	1
+15013	pollen	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	33	37	NISP	2	Radiocarbon years BP	linear interpolation	16	32734	1
+15014	charcoal	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	1	1	mm^2/ml	1	Calendar years BP	collection date	2	-43	1
+15015	pollen surface sample	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	1	8	NISP	1	Calendar years BP	collection date	2	-43	1
+15016	geochemistry	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	1	2	percent	1	Calendar years BP	collection date	3	-43	1
+15017	charcoal	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	1	1	mm^2/ml	1	Calendar years BP	collection date	3	-43	1
+15018	pollen surface sample	Indo-Pacific Pollen Database	10027	Lac Suprin	166.991512	-22.287302	Polygon	New Caledonia	outside	1	17	NISP	1	Calendar years BP	collection date	3	-43	1
+15057	geochronologic	Indo-Pacific Pollen Database	10047	Granta Pools	146.384538	-41.507992	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	clam	15		0
+15058	charcoal	Indo-Pacific Pollen Database	10047	Granta Pools	146.384538	-41.507992	Polygon	Australia	australia	90	1	particles/cm^2/yr	1	Calibrated radiocarbon years BP	clam	15	7512	1
+15059	pollen	Indo-Pacific Pollen Database	10047	Granta Pools	146.384538	-41.507992	Polygon	Australia	australia	90	67	NISP;percent	1	Calibrated radiocarbon years BP	clam	15	7512	1
+15159	geochronologic	Indo-Pacific Pollen Database	10085	Lake St Clair	146.18492	-42.10391	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	linear interpolation	12		0
+15160	pollen	Indo-Pacific Pollen Database	10085	Lake St Clair	146.18492	-42.10391	Point	Australia	australia	39	79	NISP	1	Calibrated radiocarbon years BP	linear interpolation	12	16399	1
+15289	geochronologic	Indo-Pacific Pollen Database	10154	Jacksons Bog	149.137132	-37.110052	Polygon	Australia	australia	1	1		2	Radiocarbon years BP	Cubic spline and linear basal accumulation of peaty sand.	12		0
+15290	pollen	Indo-Pacific Pollen Database	10154	Jacksons Bog	149.137132	-37.110052	Polygon	Australia	australia	36	64	NISP	2	Radiocarbon years BP	Cubic spline and linear basal accumulation of peaty sand.	12	12800	1
+16208	geochronologic	Indo-Pacific Pollen Database	10526	Ringarooma River	147.70406	-41.27155	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon	8		0
+16209	pollen	Indo-Pacific Pollen Database	10526	Ringarooma River	147.70406	-41.27155	Point	Australia	australia	22	53	NISP	2	Calibrated radiocarbon years BP	Bacon	8	982	1
+16210	pollen	Indo-Pacific Pollen Database	10526	Ringarooma River	147.70406	-41.27155	Point	Australia	australia	17	16	NISP	0			0		1
+20266	geochronologic	Indo-Pacific Pollen Database	13475	Vaifanaura’amo’ora	-149.54707	-17.63315	Point	French Polynesia	outside	1	1		1	Calibrated radiocarbon years BP	P-Sequence Bayesian (Poisson)	30		0
+20273	charcoal	Indo-Pacific Pollen Database	13475	Vaifanaura’amo’ora	-149.54707	-17.63315	Point	French Polynesia	outside	370	1	number	1	Calibrated radiocarbon years BP	P-Sequence Bayesian (Poisson)	30	43996	1
+20274	pollen	Indo-Pacific Pollen Database	13475	Vaifanaura’amo’ora	-149.54707	-17.63315	Point	French Polynesia	outside	44	95	NISP	1	Calibrated radiocarbon years BP	P-Sequence Bayesian (Poisson)	30	43781	1
+25510	geochronologic	Indo-Pacific Pollen Database	16395	Lake Vera	145.879612	-42.27431	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	20		0
+25511	pollen	Indo-Pacific Pollen Database	16395	Lake Vera	145.879612	-42.27431	Polygon	Australia	australia	116	84	NISP;number	1	Calibrated radiocarbon years BP	Bacon	20	2404	1
+32423	geochronologic	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	clam	40		0
+32424	cladocera	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	62	14	NISP	1	Calibrated radiocarbon years BP	clam	40	13395	1
+32425	charcoal	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	184	1	NISP	1	Calibrated radiocarbon years BP	clam	100	14602	1
+32426	pollen	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	184	111	NISP	1	Calibrated radiocarbon years BP	clam	100	14602	1
+32891	charcoal	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	533	1	number	1	Calibrated radiocarbon years BP	clam	100	14663	1
+33805	X-ray fluorescence (XRF)	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	5361	36	kcps	1	Calibrated radiocarbon years BP	clam	100	14603	1
+34032	geochemistry	Indo-Pacific Pollen Database	18866	Paddy's Lake	145.961348	-41.451456	Polygon	Australia	australia	77	4	per mille;percent	1	Calibrated radiocarbon years BP	clam	100	14601	1
+34551	geochronologic	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	36		0
+34552	charcoal	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	109	1	number	1	Calibrated radiocarbon years BP	Bacon	36	11710	1
+34553	pollen	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	109	75	NISP	1	Calibrated radiocarbon years BP	Bacon	36	11710	1
+41503	geochronologic	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	1	1		1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	28		0
+41504	plant macrofossil	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	9	3	NISP;present/absent	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	28	1318	1
+41505	charcoal	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	27	1	number;particles/ml	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	84	1375.6	1
+41506	pollen	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	27	82	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	84	1375.6	1
+41507	plant macrofossil	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	26	52	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	84	1331.7	1
+41508	charcoal	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	270	1	number	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	84	1413.9	1
+41509	paleomagnetic	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	250	1	κ (SI) × 10^-5	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	84	1413.9	1
+41510	insect	Indo-Pacific Pollen Database	23920	Ra'irua marsh	-147.67874	-23.86816	Point	French Polynesia	outside	26	15	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	84	1331.7	1
+41511	geochronologic	Indo-Pacific Pollen Database	23921	Waitetoke	175.78865	-36.61015	Point	New Zealand	outside	1	1		1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	24		0
+41512	plant macrofossil	Indo-Pacific Pollen Database	23921	Waitetoke	175.78865	-36.61015	Point	New Zealand	outside	13	23	NISP;present/absent	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	24	3489.3	1
+41513	charcoal	Indo-Pacific Pollen Database	23921	Waitetoke	175.78865	-36.61015	Point	New Zealand	outside	28	1	number;particles/ml	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	24	5369.8	1
+41514	pollen	Indo-Pacific Pollen Database	23921	Waitetoke	175.78865	-36.61015	Point	New Zealand	outside	28	101	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	24	5369.8	1
+41515	charcoal	Indo-Pacific Pollen Database	23921	Waitetoke	175.78865	-36.61015	Point	New Zealand	outside	100	1	number	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	12	1008.1	1
+41516	paleomagnetic	Indo-Pacific Pollen Database	23921	Waitetoke	175.78865	-36.61015	Point	New Zealand	outside	262	1	κ (SI) × 10^-5	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	12	4963.1	1
+41517	geochronologic	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	1	1		1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48		0
+41518	plant macrofossil	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	24	79	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	615.5	1
+41519	plant macrofossil	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	24	14	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	615.5	1
+41520	charcoal	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	56	1	number;particles/ml	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	620.5	1
+41521	pollen	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	56	109	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	620.5	1
+41522	charcoal	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	279	1	number	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	657.8	1
+41523	paleomagnetic	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	526	1	κ (SI) × 10^-5	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	676.4	1
+41528	insect	Indo-Pacific Pollen Database	23922	Tamewhera	175.75907	-36.59345	Point	New Zealand	outside	24	73	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	48	615.5	1
+41529	geochronologic	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	1	1		1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49		0
+41530	plant macrofossil	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	35	49	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49	8722.7	1
+41531	charcoal	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	30	1	number;particles/ml	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49	8250.2	1
+41532	pollen	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	30	50	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49	8250.2	1
+41533	charcoal	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	132	1	number	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49	8722.7	1
+41534	paleomagnetic	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	184	1	κ (SI) × 10^-5	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49	14391.5	1
+41535	insect	Indo-Pacific Pollen Database	23925	Tukou marsh	-144.35198	-27.60401	Point	French Polynesia	outside	33	29	NISP	1	Calibrated radiocarbon years BP	OxCal Poisson Depositional Model	49	8722.7	1
+45645	geochronologic	Indo-Pacific Pollen Database	26171	Swallow Lagoon	153.454772	-27.49895	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	OxCal P_Sequence deposition model	57		0
+45646	plant macrofossil	Indo-Pacific Pollen Database	26171	Swallow Lagoon	153.454772	-27.49895	Polygon	Australia	australia	9	1	present/absent	2	Calibrated radiocarbon years BP	OxCal P_Sequence deposition model	57		1
+45647	charcoal	Indo-Pacific Pollen Database	26171	Swallow Lagoon	153.454772	-27.49895	Polygon	Australia	australia	88	1	number;particles/cm^2/yr	2	Calibrated radiocarbon years BP	OxCal P_Sequence deposition model	57	8217	1
+45648	pollen	Indo-Pacific Pollen Database	26171	Swallow Lagoon	153.454772	-27.49895	Polygon	Australia	australia	88	46	NISP	2	Calibrated radiocarbon years BP	OxCal P_Sequence deposition model	19	8217	1
+46529	geochronologic	Indo-Pacific Pollen Database	26593	Perning fossil Homo site	112.48208199999999	-7.378926	Polygon	Indonesia	outside	1	1		1	Calendar years BP	linear interpolation	12		0
+46530	phytolith	Indo-Pacific Pollen Database	26593	Perning fossil Homo site	112.48208199999999	-7.378926	Polygon	Indonesia	outside	18	46	NISP	1	Calendar years BP	linear interpolation	12	1514340	2
+46531	pollen	Indo-Pacific Pollen Database	26593	Perning fossil Homo site	112.48208199999999	-7.378926	Polygon	Indonesia	outside	62	160	NISP	1	Calendar years BP	linear interpolation	12	1520000	2
+46532	phytolith	Indo-Pacific Pollen Database	26594	Jetis Quarry	112.46966	-7.38532	Point	Indonesia	outside	1	2	NISP	1	Calendar years BP	individually dated analysis unit	2	1430000	1
+46533	pollen	Indo-Pacific Pollen Database	26594	Jetis Quarry	112.46966	-7.38532	Point	Indonesia	outside	8	47	NISP	1	Calendar years BP	individually dated analysis unit	2	1430000	2
+47109	geochronologic	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	15		0
+47110	pollen	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	77	66	NISP	1	Calibrated radiocarbon years BP	Bacon	15	17794	2
+47111	loss-on-ignition	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	92	1	percent	1	Calibrated radiocarbon years BP	Bacon	15	17794	2
+48646	geochronologic	Indo-Pacific Pollen Database	27225	Wainisavulevu Creek	178.02395	-17.83876	Point	Fiji	outside	1	1		2	Radiocarbon years BP	linear interpolation	2		0
+48647	pollen	Indo-Pacific Pollen Database	27225	Wainisavulevu Creek	178.02395	-17.83876	Point	Fiji	outside	14	100	NISP	2	Radiocarbon years BP	linear interpolation	2	24423	2
+48648	geochronologic	Indo-Pacific Pollen Database	27226	Lake Tagimaucia	-179.940552	-16.823578	Polygon	Fiji	outside	1	1		1	Calibrated radiocarbon years BP	Bacon	14		0
+48649	pollen	Indo-Pacific Pollen Database	27226	Lake Tagimaucia	-179.940552	-16.823578	Polygon	Fiji	outside	61	128	NISP	1	Calibrated radiocarbon years BP	Bacon	14	17062	2
+48650	geochronologic	Indo-Pacific Pollen Database	27227	Lowelak Swamp	151.41667	-2.93333	Point	Papua New Guinea	new_guinea	1	1		2	Radiocarbon years BP	linear interpolation	6		0
+48651	pollen	Indo-Pacific Pollen Database	27227	Lowelak Swamp	151.41667	-2.93333	Point	Papua New Guinea	new_guinea	8	54	NISP	2	Radiocarbon years BP	linear interpolation	6	2160	2
+48652	geochronologic	Indo-Pacific Pollen Database	27228	Nadrau Swamp	177.957382	-17.711806	Polygon	Fiji	outside	1	1		1	Calibrated radiocarbon years BP	Bacon	6		0
+48653	pollen	Indo-Pacific Pollen Database	27228	Nadrau Swamp	177.957382	-17.711806	Polygon	Fiji	outside	31	116	NISP	1	Calibrated radiocarbon years BP	Bacon	6	2718	2
+48654	geochronologic	Indo-Pacific Pollen Database	27229	Lake Hordorli	140.589384	-2.541258	Polygon	Indonesia	new_guinea	1	1		2	Radiocarbon years BP	linear interpolation	15		0
+48655	charcoal	Indo-Pacific Pollen Database	27229	Lake Hordorli	140.589384	-2.541258	Polygon	Indonesia	new_guinea	60	1	mm^2/ml	2	Radiocarbon years BP	linear interpolation	15	58988	2
+48656	pollen	Indo-Pacific Pollen Database	27229	Lake Hordorli	140.589384	-2.541258	Polygon	Indonesia	new_guinea	60	45	NISP	2	Radiocarbon years BP	linear interpolation	15	58988	2
+48665	geochronologic	Indo-Pacific Pollen Database	27233	Bandung DPDR-II	107.72905	-6.99042	Point	Indonesia	outside	1	1		1	Calendar years BP	Bacon	22		0
+48666	pollen	Indo-Pacific Pollen Database	27233	Bandung DPDR-II	107.72905	-6.99042	Point	Indonesia	outside	100	94	NISP	1	Calendar years BP	Bacon	22	130694	2
+48758	specimen stable isotope	Indo-Pacific Pollen Database	26171	Swallow Lagoon	153.454772	-27.49895	Polygon	Australia	australia	281	1	per mille	2	Calibrated radiocarbon years BP	OxCal P_Sequence deposition model	38	7723	2
+48759	plant macrofossil	Indo-Pacific Pollen Database	26171	Swallow Lagoon	153.454772	-27.49895	Polygon	Australia	australia	281	1	present/absent	2	Calibrated radiocarbon years BP	OxCal P_Sequence deposition model	38	7723	2
+49425	geochronologic	Indo-Pacific Pollen Database	27514	Madura cave	127.081098	-31.98135	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	6		0
+49426	pollen	Indo-Pacific Pollen Database	27514	Madura cave	127.081098	-31.98135	Polygon	Australia	australia	8	11	percent digitized	1	Calibrated radiocarbon years BP	Bacon	6	7292	2
+50064	geochronologic	Indo-Pacific Pollen Database	27708	Big Reedy Lagoon	148.2381	-40.35765	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	27		0
+50065	charcoal	Indo-Pacific Pollen Database	27708	Big Reedy Lagoon	148.2381	-40.35765	Point	Australia	australia	59	1	concentration	1	Calibrated radiocarbon years BP	Bacon	27	13712	2
+50066	pollen	Indo-Pacific Pollen Database	27708	Big Reedy Lagoon	148.2381	-40.35765	Point	Australia	australia	59	77	NISP	1	Calibrated radiocarbon years BP	Bacon	27	13712	2
+50115	geochronologic	Indo-Pacific Pollen Database	27742	truwana East Coast Lagoon	148.36452	-40.3421	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	4		0
+50116	charcoal	Indo-Pacific Pollen Database	27742	truwana East Coast Lagoon	148.36452	-40.3421	Point	Australia	australia	41	1	NISP	1	Calibrated radiocarbon years BP	Bacon	8	6832.166667	2
+50117	pollen	Indo-Pacific Pollen Database	27742	truwana East Coast Lagoon	148.36452	-40.3421	Point	Australia	australia	41	68	NISP	1	Calibrated radiocarbon years BP	Bacon	8	6832.166667	2
+50118	geochronologic	Indo-Pacific Pollen Database	27743	Green Lagoon	148.14384	-40.44297	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	18		0
+50119	charcoal	Indo-Pacific Pollen Database	27743	Green Lagoon	148.14384	-40.44297	Point	Australia	australia	42	1	particles/cm^2/yr	1	Calibrated radiocarbon years BP	Bacon	18	7344.4	2
+50120	pollen	Indo-Pacific Pollen Database	27743	Green Lagoon	148.14384	-40.44297	Point	Australia	australia	42	66	NISP	1	Calibrated radiocarbon years BP	Bacon	18	7344.4	2
+50121	geochronologic	Indo-Pacific Pollen Database	27744	Middle Patriarch Lagoon	148.1833	-39.9963	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	16		0
+50122	pollen	Indo-Pacific Pollen Database	27744	Middle Patriarch Lagoon	148.1833	-39.9963	Point	Australia	australia	48	60	NISP	1	Calibrated radiocarbon years BP	Bacon	16	12143	2
+50123	geochronologic	Indo-Pacific Pollen Database	27745	Yakka Lagoon	148.2447	-40.3589	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	6		0
+50124	charcoal	Indo-Pacific Pollen Database	27745	Yakka Lagoon	148.2447	-40.3589	Point	Australia	australia	24	1	concentration	1	Calibrated radiocarbon years BP	Bacon	6	644.8	2
+50125	pollen	Indo-Pacific Pollen Database	27745	Yakka Lagoon	148.2447	-40.3589	Point	Australia	australia	24	62	NISP	1	Calibrated radiocarbon years BP	Bacon	6	644.8	2
+50299	geochronologic	Indo-Pacific Pollen Database	27844	Egg Lagoon	143.99167	-39.64417	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon	20		0
+50300	charcoal	Indo-Pacific Pollen Database	27844	Egg Lagoon	143.99167	-39.64417	Point	Australia	australia	18	1	NISP digitized	2	Calibrated radiocarbon years BP	Bacon	20	56479	2
+50301	pollen	Indo-Pacific Pollen Database	27844	Egg Lagoon	143.99167	-39.64417	Point	Australia	australia	18	34	NISP digitized	2	Calibrated radiocarbon years BP	Bacon	20	56479	2
+50302	charcoal	Indo-Pacific Pollen Database	27844	Egg Lagoon	143.99167	-39.64417	Point	Australia	australia	18	1	NISP digitized	2	Calibrated radiocarbon years BP	Bacon	20	56479	2
+51927	geochronologic	Indo-Pacific Pollen Database	28026	Tortoise Lagoon	153.473128	-27.516430000000003	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	14		0
+51928	pollen	Indo-Pacific Pollen Database	28026	Tortoise Lagoon	153.473128	-27.516430000000003	Polygon	Australia	australia	54	58	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	14	30898	2
+51929	geochronologic	Indo-Pacific Pollen Database	28027	Fern Pool	126.279914	-15.9374	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	6		0
+51930	pollen	Indo-Pacific Pollen Database	28027	Fern Pool	126.279914	-15.9374	Polygon	Australia	australia	21	40	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	6	11797	2
+51931	geochronologic	Indo-Pacific Pollen Database	28028	Black Springs	126.38350600000001	-15.630718000000002	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	8		0
+51932	pollen	Indo-Pacific Pollen Database	28028	Black Springs	126.38350600000001	-15.630718000000002	Polygon	Australia	australia	25	40	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	8	14322	2
+51973	geochronologic	Indo-Pacific Pollen Database	28031	Gap Springs	126.134392	-16.402210000000004	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	10		0
+51974	pollen	Indo-Pacific Pollen Database	28031	Gap Springs	126.134392	-16.402210000000004	Polygon	Australia	australia	26	42	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	10	15552	2
+52026	geochronologic	Indo-Pacific Pollen Database	28039	Crystal Lagoon	148.35079	-40.47712	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	33		0
+52027	charcoal	Indo-Pacific Pollen Database	28039	Crystal Lagoon	148.35079	-40.47712	Point	Australia	australia	46	1	particles/cm^2/yr	1	Calibrated radiocarbon years BP	Bacon	33	33247	2
+52028	pollen	Indo-Pacific Pollen Database	28039	Crystal Lagoon	148.35079	-40.47712	Point	Australia	australia	50	75	NISP	1	Calibrated radiocarbon years BP	Bacon	33	34499	2
+52029	geochronologic	Indo-Pacific Pollen Database	28040	Welsby Lagoon	153.448984	-27.438134	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	24		0
+52030	pollen	Indo-Pacific Pollen Database	28040	Welsby Lagoon	153.448984	-27.438134	Polygon	Australia	australia	47	61	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	24	24089	2
+52033	geochronologic	Indo-Pacific Pollen Database	28043	Tower Hill	142.35618399999998	-38.320172	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	14		0
+52034	pollen	Indo-Pacific Pollen Database	28043	Tower Hill	142.35618399999998	-38.320172	Polygon	Australia	australia	82	61	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	14	23280	2
+52052	geochronologic	Indo-Pacific Pollen Database	28058	Hidden Swamp	147.6303	-38.01735	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	3		0
+52053	pollen	Indo-Pacific Pollen Database	28058	Hidden Swamp	147.6303	-38.01735	Point	Australia	australia	61	38	percent digitized	1	Calibrated radiocarbon years BP	Bacon SHCal13	3	8547	2
+52056	geochronologic	Indo-Pacific Pollen Database	28060	Lake Condah	141.82922200000002	-38.064328	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	6		0
+52057	pollen	Indo-Pacific Pollen Database	28060	Lake Condah	141.82922200000002	-38.064328	Polygon	Australia	australia	13	8	percent digitized	1	Calibrated radiocarbon years BP	Bacon SHCal13	6	6823	2
+52241	geochronologic	Indo-Pacific Pollen Database	28152	Club Lake	148.29042	-36.41358	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	16		0
+52242	pollen	Indo-Pacific Pollen Database	28152	Club Lake	148.29042	-36.41358	Point	Australia	australia	42	118	NISP	1	Calibrated radiocarbon years BP	Bacon	16	8195	2
+52243	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		0			0		0
+52244	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		0			0		0
+52462	pollen	Indo-Pacific Pollen Database	10008	Camerons Lagoon	146.676126	-41.958962	Polygon	Australia	australia	21	77	NISP	3	Radiocarbon years BP	linear interpolation	4		2
+52486	geochronologic	Indo-Pacific Pollen Database	28205	Telefomin (Upper Sepik)	141.6333	-5.1833	Point	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon	8		0
+52487	pollen	Indo-Pacific Pollen Database	28205	Telefomin (Upper Sepik)	141.6333	-5.1833	Point	Papua New Guinea	new_guinea	22	57	NISP	2	Calibrated radiocarbon years BP	Bacon	8	24371	2
+52558	geochronologic	Indo-Pacific Pollen Database	10008	Camerons Lagoon	146.676126	-41.958962	Polygon	Australia	australia	1	1		0			0		0
+52563	geochronologic	Indo-Pacific Pollen Database	28232	Sirunki Wabag	143.53279400000002	-5.44388	Polygon	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon	18		0
+52564	pollen	Indo-Pacific Pollen Database	28232	Sirunki Wabag	143.53279400000002	-5.44388	Polygon	Papua New Guinea	new_guinea	118	107	NISP	2	Calibrated radiocarbon years BP	Bacon	18	35223	2
+52565	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		0			0		0
+52567	geochronologic	Indo-Pacific Pollen Database	28233	Micalong Swamp	148.524	-35.318	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	8		0
+52568	pollen	Indo-Pacific Pollen Database	28233	Micalong Swamp	148.524	-35.318	Point	Australia	australia	55	43	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	8	16709	2
+52569	geochronologic	Indo-Pacific Pollen Database	28234	Lake Tyrrell	142.83017	-35.24664	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	12		0
+52570	pollen	Indo-Pacific Pollen Database	28234	Lake Tyrrell	142.83017	-35.24664	Point	Australia	australia	49	153	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	12	8135	2
+52573	geochronologic	Indo-Pacific Pollen Database	28236	Cave Bay Cave	144.7747	-40.5297	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon	20		0
+52574	pollen	Indo-Pacific Pollen Database	28236	Cave Bay Cave	144.7747	-40.5297	Point	Australia	australia	12	42	NISP	2	Calibrated radiocarbon years BP	Bacon	20	10351	2
+52579	geochronologic	Indo-Pacific Pollen Database	28239	Xere Wapo	166.95938600000002	-22.297654	Polygon	New Caledonia	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	18		0
+52580	pollen	Indo-Pacific Pollen Database	28239	Xere Wapo	166.95938600000002	-22.297654	Polygon	New Caledonia	outside	64	71	NISP	2	Calibrated radiocarbon years BP	Bacon	18	78505	2
+52581	geochronologic	Indo-Pacific Pollen Database	1628	Lynch's Crater	145.6881	-17.3667	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	30		0
+52582	pollen	Indo-Pacific Pollen Database	1628	Lynch's Crater	145.6881	-17.3667	Point	Australia	australia	234	15	NISP	1	Calibrated radiocarbon years BP	Bacon	30	203098	2
+52583	geochronologic	Indo-Pacific Pollen Database	28240	St. Louis Lac	166.55445	-22.23278	Point	New Caledonia	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	18		0
+52584	pollen	Indo-Pacific Pollen Database	28240	St. Louis Lac	166.55445	-22.23278	Point	New Caledonia	outside	29	54	NISP	2	Calibrated radiocarbon years BP	Bacon	18	6688	2
+52585	geochronologic	Indo-Pacific Pollen Database	28241	Native Companion Lagoon	153.41	-27.68	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	40		0
+52586	pollen	Indo-Pacific Pollen Database	28241	Native Companion Lagoon	153.41	-27.68	Point	Australia	australia	55	73	NISP	1	Calibrated radiocarbon years BP	Bacon	40	37868	2
+52589	geochronologic	Indo-Pacific Pollen Database	28243	Wyndham	128.13965	-15.57036	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	12		0
+52590	pollen	Indo-Pacific Pollen Database	28243	Wyndham	128.13965	-15.57036	Point	Australia	australia	38	102	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	12	12248	2
+52591	geochronologic	Indo-Pacific Pollen Database	28244	Lac Emeric	166.9694	-22.3	Point	New Caledonia	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	10		0
+52592	pollen	Indo-Pacific Pollen Database	28244	Lac Emeric	166.9694	-22.3	Point	New Caledonia	outside	46	32	NISP	2	Calibrated radiocarbon years BP	Bacon	10	35651	2
+52593	geochronologic	Indo-Pacific Pollen Database	28245	Yanamuga	146.27051	-6.41215	Point	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon	16		0
+52594	pollen	Indo-Pacific Pollen Database	28245	Yanamuga	146.27051	-6.41215	Point	Papua New Guinea	new_guinea	21	91	NISP	2	Calibrated radiocarbon years BP	Bacon	16	2575	2
+52766	geochronologic	Indo-Pacific Pollen Database	28317	Lake Selina	145.609294	-41.87897	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon	12		0
+52767	pollen	Indo-Pacific Pollen Database	28317	Lake Selina	145.609294	-41.87897	Polygon	Australia	australia	72	78	NISP	2	Calibrated radiocarbon years BP	Bacon	12	78733	2
+52768	geochronologic	Indo-Pacific Pollen Database	28318	Anouwe 2	169.82227	-20.23932	Point	Vanuatu	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	10		0
+52769	pollen	Indo-Pacific Pollen Database	28318	Anouwe 2	169.82227	-20.23932	Point	Vanuatu	outside	20	52	NISP	2	Calibrated radiocarbon years BP	Bacon	10	16087	2
+53116	geochronologic	Indo-Pacific Pollen Database	28450	Cotters Lake	146.25733	-38.94021	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	4		0
+53117	pollen	Indo-Pacific Pollen Database	28450	Cotters Lake	146.25733	-38.94021	Point	Australia	australia	19	26	NISP	1	Calibrated radiocarbon years BP	Bacon	4	4837	1
+53122	geochronologic	Indo-Pacific Pollen Database	28453	Darby Beach	146.25023	-38.94503	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	4		0
+53123	pollen	Indo-Pacific Pollen Database	28453	Darby Beach	146.25023	-38.94503	Point	Australia	australia	4	23	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	4	6663	2
+53124	geochronologic	Indo-Pacific Pollen Database	28454	Lizard Island	145.45279	-14.66792	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	18		0
+53125	pollen	Indo-Pacific Pollen Database	28454	Lizard Island	145.45279	-14.66792	Point	Australia	australia	43	64	NISP	1	Calibrated radiocarbon years BP	Bacon	18	8685	2
+53139	geochronologic	Indo-Pacific Pollen Database	28460	Black Swamp	151.4667	-32.05	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	8		0
+53140	pollen	Indo-Pacific Pollen Database	28460	Black Swamp	151.4667	-32.05	Point	Australia	australia	9	53	NISP	1	Calibrated radiocarbon years BP	Bacon	8	10473	2
+53141	geochronologic	Indo-Pacific Pollen Database	28461	Tiam Point	142.30687	-10.21537	Point	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon	10		0
+53142	pollen	Indo-Pacific Pollen Database	28461	Tiam Point	142.30687	-10.21537	Point	Australia	torres_strait	51	33	NISP	1	Calibrated radiocarbon years BP	Bacon	10	7651	2
+53143	geochronologic	Indo-Pacific Pollen Database	28462	Waruid 1	142.15	-10.0667	Point	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon	8		0
+53144	pollen	Indo-Pacific Pollen Database	28462	Waruid 1	142.15	-10.0667	Point	Australia	torres_strait	31	16	NISP	1	Calibrated radiocarbon years BP	Bacon	8	7206	1
+53145	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		0			0		0
+53252	geochronologic	Indo-Pacific Pollen Database	28487	Eweburn Bog	167.80889	-45.32	Point	New Zealand	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	14		0
+53253	pollen	Indo-Pacific Pollen Database	28487	Eweburn Bog	167.80889	-45.32	Point	New Zealand	outside	61	99	NISP	2	Calibrated radiocarbon years BP	Bacon	14	9432	2
+53254	geochronologic	Indo-Pacific Pollen Database	28488	Tidal River	146.33003	-39.02284	Point	Australia	australia	1	1		1	Calendar years AD/BC	Bacon	6		0
+53255	pollen	Indo-Pacific Pollen Database	28488	Tidal River	146.33003	-39.02284	Point	Australia	australia	24	40	NISP	1	Calendar years AD/BC	Bacon	6	5944	1
+53256	geochronologic	Indo-Pacific Pollen Database	28489	Lake Frome	139.9	-30.78	Point	Australia	australia	1	1		1	Calendar years AD/BC	Bacon	36		0
+53257	pollen	Indo-Pacific Pollen Database	28489	Lake Frome	139.9	-30.78	Point	Australia	australia	147	72	NISP	1	Calendar years AD/BC	Bacon	36	21533	2
+53258	geochronologic	Indo-Pacific Pollen Database	28490	Lake Carpentaria	140.3539	-12.5217	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	40		0
+53259	pollen	Indo-Pacific Pollen Database	28490	Lake Carpentaria	140.3539	-12.5217	Point	Australia	australia	40	44	NISP	1	Calibrated radiocarbon years BP	Bacon	40	49494	2
+54466	geochronologic	Indo-Pacific Pollen Database	29033	Lake Modewarre	144.11	-38.24	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	10		0
+54467	pollen	Indo-Pacific Pollen Database	29033	Lake Modewarre	144.11	-38.24	Point	Australia	australia	37	37	NISP	1	Calibrated radiocarbon years BP	Bacon	10	3161	2
+54470	geochronologic	Indo-Pacific Pollen Database	29035	Cobb Valley CV1	172.86	-41.03	Point	New Zealand	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	8		0
+54471	pollen	Indo-Pacific Pollen Database	29035	Cobb Valley CV1	172.86	-41.03	Point	New Zealand	outside	35	50	NISP	2	Calibrated radiocarbon years BP	Bacon	8	13307	2
+54472	geochronologic	Indo-Pacific Pollen Database	29036	Lake Hanlon	172.1029	-41.425	Point	New Zealand	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	8		0
+54473	pollen	Indo-Pacific Pollen Database	29036	Lake Hanlon	172.1029	-41.425	Point	New Zealand	outside	67	103	NISP	2	Calibrated radiocarbon years BP	Bacon	8	12457	2
+54474	geochronologic	Indo-Pacific Pollen Database	29037	Aluaipugua	143.154132	-5.969621999999999	Polygon	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon	8		0
+54475	pollen	Indo-Pacific Pollen Database	29037	Aluaipugua	143.154132	-5.969621999999999	Polygon	Papua New Guinea	new_guinea	16	50	NISP	2	Calibrated radiocarbon years BP	Bacon	8	22464	2
+54511	geochronologic	Indo-Pacific Pollen Database	29065	Cobb Valley CV3	172.86	-41.03	Point	New Zealand	outside	1	1		2	Calibrated radiocarbon years BP	Bacon	4		0
+54512	pollen	Indo-Pacific Pollen Database	29065	Cobb Valley CV3	172.86	-41.03	Point	New Zealand	outside	42	57	NISP	2	Calibrated radiocarbon years BP	Bacon	4	23014	2
+54665	pollen	Indo-Pacific Pollen Database	10006	Komanimambuno Mire	145.08903	-5.82037	Point	Papua New Guinea	new_guinea	40	56	NISP	4	Radiocarbon years BP	linear interpolation	2		2
+57630	geochronologic	Indo-Pacific Pollen Database	30433	Moon Point	153.05901799999998	-25.217651999999998	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	10		0
+57631	pollen	Indo-Pacific Pollen Database	30433	Moon Point	153.05901799999998	-25.217651999999998	Polygon	Australia	australia	32	54	NISP	1	Calibrated radiocarbon years BP	Bacon	10	34712	2
+57632	geochronologic	Indo-Pacific Pollen Database	30434	Four Mile Billabong	136.784542	-13.865662	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	2		0
+57633	pollen	Indo-Pacific Pollen Database	30434	Four Mile Billabong	136.784542	-13.865662	Polygon	Australia	australia	23	34	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	2	9202	2
+57636	geochronologic	Indo-Pacific Pollen Database	30436	ODP820	146.3	-16.633	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	2		0
+57637	pollen	Indo-Pacific Pollen Database	30436	ODP820	146.3	-16.633	Point	Australia	australia	71	66	NISP	1	Calibrated radiocarbon years BP	Bacon	2	42905	2
+57638	geochronologic	Indo-Pacific Pollen Database	30434	Four Mile Billabong	136.784542	-13.865662	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SH13	14		0
+57639	pollen	Indo-Pacific Pollen Database	30434	Four Mile Billabong	136.784542	-13.865662	Polygon	Australia	australia	32	35	NISP	1	Calibrated radiocarbon years BP	Bacon SH13	14	11493	2
+57640	geochronologic	Indo-Pacific Pollen Database	30437	Sandy Creek	144.42	-15.57	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon and SHCal13	12		0
+57641	pollen	Indo-Pacific Pollen Database	30437	Sandy Creek	144.42	-15.57	Point	Australia	australia	3	14	NISP	1	Calibrated radiocarbon years BP	Bacon and SHCal13	12	26135	2
+57642	geochronologic	Indo-Pacific Pollen Database	30438	Old Lake Coomboo Depression	153.16800800000001	-25.225569999999998	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon	30		0
+57643	pollen	Indo-Pacific Pollen Database	30438	Old Lake Coomboo Depression	153.16800800000001	-25.225569999999998	Polygon	Australia	australia	58	37	NISP	1	Calibrated radiocarbon years BP	Bacon	30	494620	1
+57649	geochronologic	Indo-Pacific Pollen Database	30441	Zurath Islet	142.101152	-10.277370000000001	Polygon	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon and SHCal13	6		0
+57650	pollen	Indo-Pacific Pollen Database	30441	Zurath Islet	142.101152	-10.277370000000001	Polygon	Australia	torres_strait	32	18	NISP	1	Calibrated radiocarbon years BP	Bacon and SHCal13	6	11147	2
+57651	geochronologic	Indo-Pacific Pollen Database	30442	Boigu Gawat	142.2333	-10.0167	Point	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon and SHCal13	4		0
+57652	pollen	Indo-Pacific Pollen Database	30442	Boigu Gawat	142.2333	-10.0167	Point	Australia	torres_strait	13	12	NISP	1	Calibrated radiocarbon years BP	Bacon and SHCal13	4	7222	2
+57664	geochronologic	Indo-Pacific Pollen Database	30447	Argan	142.1112	-10.085804	Polygon	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	SHCal13 Bacon	6		0
+57665	pollen	Indo-Pacific Pollen Database	30447	Argan	142.1112	-10.085804	Polygon	Australia	torres_strait	26	29	NISP	1	Calibrated radiocarbon years BP	SHCal13 Bacon	6	5533	2
+57666	geochronologic	Indo-Pacific Pollen Database	30448	Boulder Flat	148.9192	-37.4571	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	SHCal13 Bacon	8		0
+57667	pollen	Indo-Pacific Pollen Database	30448	Boulder Flat	148.9192	-37.4571	Point	Australia	australia	34	75	NISP	1	Calibrated radiocarbon years BP	SHCal13 Bacon	8	30887	2
+57796	geochronologic	Indo-Pacific Pollen Database	30426	Two Mile Lake	118.27	-34.5	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	4		0
+57797	pollen	Indo-Pacific Pollen Database	30426	Two Mile Lake	118.27	-34.5	Point	Australia	australia	12	37	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	4	8886	2
+57839	geochronologic	Indo-Pacific Pollen Database	30505	Badu 15	142.16236	-10.105296	Polygon	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	12		0
+57840	pollen	Indo-Pacific Pollen Database	30505	Badu 15	142.16236	-10.105296	Polygon	Australia	torres_strait	16	12	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	12	3812	1
+57870	geochronologic	Indo-Pacific Pollen Database	30518	Bar20	142.1728	-10.133932	Polygon	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	4		0
+57871	pollen	Indo-Pacific Pollen Database	30518	Bar20	142.1728	-10.133932	Polygon	Australia	torres_strait	10	21	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	4	3157	1
+57872	geochronologic	Indo-Pacific Pollen Database	30519	Waruid	142.15	-10.0667	Point	Australia	torres_strait	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	6		0
+57873	pollen	Indo-Pacific Pollen Database	30519	Waruid	142.15	-10.0667	Point	Australia	torres_strait	19	22	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	6	5518	2
+57874	geochronologic	Indo-Pacific Pollen Database	30520	Gallahers Swamp	150.7272	-34.495	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	8		0
+57875	pollen	Indo-Pacific Pollen Database	30520	Gallahers Swamp	150.7272	-34.495	Point	Australia	australia	20	91	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	8	22497	2
+57981	geochronologic	Indo-Pacific Pollen Database	30611	Melaleuca Inlet	146.0833	-43.2667	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	8		0
+57982	pollen	Indo-Pacific Pollen Database	30611	Melaleuca Inlet	146.0833	-43.2667	Point	Australia	australia	22	82	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	8	10290	2
+57983	geochronologic	Indo-Pacific Pollen Database	30612	KG 951 VC 1	146.126944	-16.8042	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	2		0
+57984	pollen	Indo-Pacific Pollen Database	30612	KG 951 VC 1	146.126944	-16.8042	Polygon	Australia	australia	6	24	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	2	9404	2
+58048	geochronologic	Indo-Pacific Pollen Database	30625	Magnificent Shelter	144.4	-15.64	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	6		0
+58049	pollen	Indo-Pacific Pollen Database	30625	Magnificent Shelter	144.4	-15.64	Point	Australia	australia	2	17	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	6	9180	2
+58050	geochronologic	Indo-Pacific Pollen Database	30626	Red Bluff	144.39	-15.6	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	4		0
+58051	pollen	Indo-Pacific Pollen Database	30626	Red Bluff	144.39	-15.6	Point	Australia	australia	2	16	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	4	8289	2
+58052	geochronologic	Indo-Pacific Pollen Database	30627	Ooze Lake	146.7014	-43.5011	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	4		0
+58053	pollen	Indo-Pacific Pollen Database	30627	Ooze Lake	146.7014	-43.5011	Point	Australia	australia	20	132	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	4	21734	2
+58056	geochronologic	Indo-Pacific Pollen Database	30629	Wathumba	153.2571	-24.981692	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	SHCal13 Bacon	6		0
+58057	pollen	Indo-Pacific Pollen Database	30629	Wathumba	153.2571	-24.981692	Polygon	Australia	australia	20	42	NISP	1	Calibrated radiocarbon years BP	SHCal13 Bacon	6	4351	2
+58058	geochronologic	Indo-Pacific Pollen Database	30630	Witherspoon Swamp	145.41047	-17.816926	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	SHCal13 Bacon	4		0
+58059	pollen	Indo-Pacific Pollen Database	30630	Witherspoon Swamp	145.41047	-17.816926	Polygon	Australia	australia	16	46	NISP	1	Calibrated radiocarbon years BP	SHCal13 Bacon	4	4817	1
+58060	geochronologic	Indo-Pacific Pollen Database	30630	Witherspoon Swamp	145.41047	-17.816926	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	SHCal13 Bacon	4		0
+58061	pollen	Indo-Pacific Pollen Database	30630	Witherspoon Swamp	145.41047	-17.816926	Polygon	Australia	australia	39	52	NISP	1	Calibrated radiocarbon years BP	SHCal13 Bacon	4	7651	2
+58105	geochronologic	Indo-Pacific Pollen Database	30644	KG 951 VC 2	146.126944	-16.8042	Polygon	Australia	australia	1	1		1	Calendar years BP	Bacon	4		0
+58106	pollen	Indo-Pacific Pollen Database	30644	KG 951 VC 2	146.126944	-16.8042	Polygon	Australia	australia	18	28	NISP	1	Calendar years BP	Bacon	4	13321	2
+58107	geochronologic	Indo-Pacific Pollen Database	30645	Lashmar's Lagoon	138.06425	-35.80476	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	50		0
+58108	pollen	Indo-Pacific Pollen Database	30645	Lashmar's Lagoon	138.06425	-35.80476	Point	Australia	australia	30	61	count;percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	50	6662	2
+58181	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal13	30		0
+58182	pollen	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	30	37	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal13	30	2106	2
+58201	geochronologic	Indo-Pacific Pollen Database	30716	Kelela Swamp	138.907858	-4.023536	Polygon	Indonesia	new_guinea	1	1		2	Calibrated radiocarbon years BP	SHCal20 Bacon	8		0
+58202	pollen	Indo-Pacific Pollen Database	30716	Kelela Swamp	138.907858	-4.023536	Polygon	Indonesia	new_guinea	37	65	NISP	2	Calibrated radiocarbon years BP	SHCal20 Bacon	8	9703	2
+58410	geochronologic	Indo-Pacific Pollen Database	30921	Haeapugua	142.83413000000002	-5.846194000000001	Polygon	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	SHCal20 Bacon	20		0
+58411	pollen	Indo-Pacific Pollen Database	30921	Haeapugua	142.83413000000002	-5.846194000000001	Polygon	Papua New Guinea	new_guinea	84	68	NISP	2	Calibrated radiocarbon years BP	SHCal20 Bacon	20	41531	2
+58412	geochronologic	Indo-Pacific Pollen Database	30922	Tugupugua	142.562642	-5.723796	Polygon	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	SHCal20 Bacon	10		0
+58413	pollen	Indo-Pacific Pollen Database	30922	Tugupugua	142.562642	-5.723796	Polygon	Papua New Guinea	new_guinea	40	75	NISP	2	Calibrated radiocarbon years BP	SHCal20 Bacon	10	19387	1
+58422	geochronologic	Indo-Pacific Pollen Database	30928	Lake Emaotul	168.41489	-17.73264	Point	Vanuatu	outside	1	1		1	Calendar years BP	rbacon	82		0
+58423	macrocharcoal	Indo-Pacific Pollen Database	30928	Lake Emaotul	168.41489	-17.73264	Point	Vanuatu	outside	32	1	number	1	Calendar years BP	rbacon	82	1594	2
+58424	microcharcoal	Indo-Pacific Pollen Database	30928	Lake Emaotul	168.41489	-17.73264	Point	Vanuatu	outside	32	1	number	1	Calendar years BP	rbacon	82	1594	1
+58425	pollen	Indo-Pacific Pollen Database	30928	Lake Emaotul	168.41489	-17.73264	Point	Vanuatu	outside	32	109	NISP	1	Calendar years BP	rbacon	82	1594	2
+58445	geochronologic	Indo-Pacific Pollen Database	30938	Ngofe Marsh	-174.04306	-18.66361	Point	Tonga	outside	1	1		1	Calendar years BP	rbacon	24		0
+58446	macrocharcoal	Indo-Pacific Pollen Database	30938	Ngofe Marsh	-174.04306	-18.66361	Point	Tonga	outside	61	1	number	1	Calendar years BP	rbacon	24	7434	2
+58447	microcharcoal	Indo-Pacific Pollen Database	30938	Ngofe Marsh	-174.04306	-18.66361	Point	Tonga	outside	61	1	number	1	Calendar years BP	rbacon	24	7434	2
+58448	pollen	Indo-Pacific Pollen Database	30938	Ngofe Marsh	-174.04306	-18.66361	Point	Tonga	outside	61	107	NISP	1	Calendar years BP	rbacon	24	7434	2
+58553	geochronologic	Indo-Pacific Pollen Database	30974	Supulah Hill	138.95836	-4.068664	Polygon	Indonesia	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+58554	pollen	Indo-Pacific Pollen Database	30974	Supulah Hill	138.95836	-4.068664	Polygon	Indonesia	new_guinea	37	63	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	43127	2
+58555	geochronologic	Indo-Pacific Pollen Database	30975	Doge-Doge Swamp	177.3352	-18.06	Point	Fiji	outside	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+58556	pollen	Indo-Pacific Pollen Database	30975	Doge-Doge Swamp	177.3352	-18.06	Point	Fiji	outside	16	33	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	4	4398	2
+58557	geochronologic	Indo-Pacific Pollen Database	30976	Kingston Swamp	167.956856	-29.056777999999998	Polygon	Norfolk Island	outside	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+58558	pollen	Indo-Pacific Pollen Database	30976	Kingston Swamp	167.956856	-29.056777999999998	Polygon	Norfolk Island	outside	17	63	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	4793	2
+58569	geochronologic	Indo-Pacific Pollen Database	30981	Voli Voli	177.492726	-18.155859999999997	Polygon	Fiji	outside	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	14		0
+58570	pollen	Indo-Pacific Pollen Database	30981	Voli Voli	177.492726	-18.155859999999997	Polygon	Fiji	outside	32	53	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	14	5898	2
+58571	geochronologic	Indo-Pacific Pollen Database	30982	Yacata Pond	-179.510632	-17.258566	Polygon	Fiji	outside	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+58572	pollen	Indo-Pacific Pollen Database	30982	Yacata Pond	-179.510632	-17.258566	Polygon	Fiji	outside	31	45	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	5951	2
+58629	geochronologic	Indo-Pacific Pollen Database	30987	Anumon Swamp	169.8275	-20.1628	Point	Vanuatu	outside	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+58630	pollen	Indo-Pacific Pollen Database	30987	Anumon Swamp	169.8275	-20.1628	Point	Vanuatu	outside	7	34	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	4	1742	2
+58646	geochronologic	Indo-Pacific Pollen Database	31000	Bogong Creek Swamp	148.958628	-35.761061999999995	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+58647	pollen	Indo-Pacific Pollen Database	31000	Bogong Creek Swamp	148.958628	-35.761061999999995	Polygon	Australia	australia	16	60	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	8	10868	1
+58648	geochronologic	Indo-Pacific Pollen Database	31001	Lower Hogayaku Lake	137.37561999999997	-3.9924799999999996	Polygon	Indonesia	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+58649	pollen	Indo-Pacific Pollen Database	31001	Lower Hogayaku Lake	137.37561999999997	-3.9924799999999996	Polygon	Indonesia	new_guinea	22	44	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	8	6392	2
+58650	geochronologic	Indo-Pacific Pollen Database	31002	Kosipe	147.24654	-8.42526	Point	Papua New Guinea	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	22		0
+58651	pollen	Indo-Pacific Pollen Database	31002	Kosipe	147.24654	-8.42526	Point	Papua New Guinea	new_guinea	45	74	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	22	60981	2
+58652	geochronologic	Indo-Pacific Pollen Database	31003	Tipoeka Estuary	136.858108	-4.780716	Polygon	Indonesia	new_guinea	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+58653	pollen	Indo-Pacific Pollen Database	31003	Tipoeka Estuary	136.858108	-4.780716	Polygon	Indonesia	new_guinea	61	52	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	10383	2
+58704	geochronologic	Indo-Pacific Pollen Database	31038	Kurnell Fen	151.1667	-34.0167	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+58705	pollen	Indo-Pacific Pollen Database	31038	Kurnell Fen	151.1667	-34.0167	Point	Australia	australia	33	105	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	8	8512	2
+58706	geochronologic	Indo-Pacific Pollen Database	31039	Couridjah Lake	150.542738	-34.23198	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+58707	pollen	Indo-Pacific Pollen Database	31039	Couridjah Lake	150.542738	-34.23198	Polygon	Australia	australia	27	10	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	1712	2
+58721	geochronologic	Indo-Pacific Pollen Database	31051	Den Plain	146.2333	-41.5	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+58722	pollen	Indo-Pacific Pollen Database	31051	Den Plain	146.2333	-41.5	Point	Australia	australia	15	38	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	4	3211	2
+58723	geochronologic	Indo-Pacific Pollen Database	31052	Digger's Creek	148.47879	-36.383858000000004	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	10		0
+58724	pollen	Indo-Pacific Pollen Database	31052	Digger's Creek	148.47879	-36.383858000000004	Polygon	Australia	australia	29	102	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	10	11708	2
+58729	geochronologic	Indo-Pacific Pollen Database	31056	Five Mile Beach	146.433312	-38.95756	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+58730	pollen	Indo-Pacific Pollen Database	31056	Five Mile Beach	146.433312	-38.95756	Polygon	Australia	australia	23	61	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	15655	2
+58862	geochronologic	Indo-Pacific Pollen Database	31128	Garden Creek Swamp	144.3	-15.66	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+58863	pollen	Indo-Pacific Pollen Database	31128	Garden Creek Swamp	144.3	-15.66	Point	Australia	australia	24	34	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	4	5769	1
+58864	geochronologic	Indo-Pacific Pollen Database	31128	Garden Creek Swamp	144.3	-15.66	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+58865	pollen	Indo-Pacific Pollen Database	31128	Garden Creek Swamp	144.3	-15.66	Point	Australia	australia	11	35	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	4	4502	2
+59042	pollen surface sample	Indo-Pacific Pollen Database	31287	Bridgewater Caves South	141.41	-38.32	Point	Australia	australia	12	29	percent	1	Calendar years BP	Collection date	12	-32	2
+59045	pollen surface sample	Indo-Pacific Pollen Database	31288	Discovery Bay	141.388	-38.312	Point	Australia	australia	5	27	percent	1	Calendar years BP	Collection date	5	-32	2
+59046	pollen surface sample	Indo-Pacific Pollen Database	31289	Long Swamp	141.0833	-38.0833	Point	Australia	australia	3	32	percent	1	Calendar years BP	Collection date	3	-32	2
+59047	geochronologic	Indo-Pacific Pollen Database	31290	Boomer Swamp	141.3	-38.2167	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59048	pollen	Indo-Pacific Pollen Database	31290	Boomer Swamp	141.3	-38.2167	Point	Australia	australia	50	47	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	7538	2
+59109	geochronologic	Indo-Pacific Pollen Database	31342	Bridgewater Beach Peats	141.39	-38.32	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+59110	pollen	Indo-Pacific Pollen Database	31342	Bridgewater Beach Peats	141.39	-38.32	Point	Australia	australia	5	32	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	6859	2
+59111	geochronologic	Indo-Pacific Pollen Database	31342	Bridgewater Beach Peats	141.39	-38.32	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Basal date	2		0
+59112	pollen	Indo-Pacific Pollen Database	31342	Bridgewater Beach Peats	141.39	-38.32	Point	Australia	australia	5	39	percent	1	Calibrated radiocarbon years BP	Basal date	2	5464	2
+59113	geochronologic	Indo-Pacific Pollen Database	31343	Shipwreck Rock	141.025	-38.07	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+59114	pollen	Indo-Pacific Pollen Database	31343	Shipwreck Rock	141.025	-38.07	Point	Australia	australia	5	27	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	7427	1
+59166	geochronologic	Indo-Pacific Pollen Database	31392	Bridgewater Lake	141.3833	-38.3	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59167	pollen	Indo-Pacific Pollen Database	31392	Bridgewater Lake	141.3833	-38.3	Point	Australia	australia	35	60	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	7625	2
+59195	geochronologic	Indo-Pacific Pollen Database	31392	Bridgewater Lake	141.3833	-38.3	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+59196	pollen	Indo-Pacific Pollen Database	31392	Bridgewater Lake	141.3833	-38.3	Point	Australia	australia	36	56	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	4690	2
+59362	geochronologic	Indo-Pacific Pollen Database	31289	Long Swamp	141.0833	-38.0833	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59363	pollen	Indo-Pacific Pollen Database	31289	Long Swamp	141.0833	-38.0833	Point	Australia	australia	40	68	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	7088	2
+59366	geochronologic	Indo-Pacific Pollen Database	31289	Long Swamp	141.0833	-38.0833	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+59367	pollen	Indo-Pacific Pollen Database	31289	Long Swamp	141.0833	-38.0833	Point	Australia	australia	7	36	percent	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	549	2
+59544	geochronologic	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	5		0
+59545	pollen	Indo-Pacific Pollen Database	19924	Dove Lake	145.960078	-41.662478	Polygon	Australia	australia	77	63	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	5	16121	2
+59546	geochronologic	Indo-Pacific Pollen Database	31495	Willigobung Swamp	148.0333	-35.6667	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59547	pollen	Indo-Pacific Pollen Database	31495	Willigobung Swamp	148.0333	-35.6667	Point	Australia	australia	29	38	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	10834	2
+59586	geochronologic	Indo-Pacific Pollen Database	31514	Mueller's Rock	148.5	-35.39	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59587	pollen	Indo-Pacific Pollen Database	31514	Mueller's Rock	148.5	-35.39	Point	Australia	australia	21	67	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	15612	2
+59588	geochronologic	Indo-Pacific Pollen Database	31515	Rennix Gap	148.5	-36.3667	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	56		0
+59589	pollen	Indo-Pacific Pollen Database	31515	Rennix Gap	148.5	-36.3667	Point	Australia	australia	36	49	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	56	15825	2
+59590	geochronologic	Indo-Pacific Pollen Database	31516	Tom Gregory Swamp	148.49	-35.38	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59591	pollen	Indo-Pacific Pollen Database	31516	Tom Gregory Swamp	148.49	-35.38	Point	Australia	australia	16	93	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	14454	2
+59592	geochronologic	Indo-Pacific Pollen Database	31517	Upper Lake Wurawina cirque	146.27929799999998	-42.537732	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+59593	pollen	Indo-Pacific Pollen Database	31517	Upper Lake Wurawina cirque	146.27929799999998	-42.537732	Polygon	Australia	australia	20	107	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	2	12168	2
+59597	geochronologic	Indo-Pacific Pollen Database	30645	Lashmar's Lagoon	138.06425	-35.80476	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	14		0
+59598	pollen	Indo-Pacific Pollen Database	30645	Lashmar's Lagoon	138.06425	-35.80476	Point	Australia	australia	64	49	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	14	9470	2
+59599	pollen	Indo-Pacific Pollen Database	31519	McKenna Lagoon	145.508896	-34.426062	Polygon	Australia	australia	8	14	NISP	2	Calendar years BP	Bacon	2	159	2
+59608	geochronologic	Indo-Pacific Pollen Database	31523	Mulloon Creek Swamp	149.585	-35.39667	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	14		0
+59609	pollen	Indo-Pacific Pollen Database	31523	Mulloon Creek Swamp	149.585	-35.39667	Point	Australia	australia	20	86	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	14	3837	2
+59616	geochronologic	Indo-Pacific Pollen Database	31525	Nursery Swamp	148.9669	-35.6814	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	12		0
+59617	pollen	Indo-Pacific Pollen Database	31525	Nursery Swamp	148.9669	-35.6814	Point	Australia	australia	25	53	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	12	16559	2
+59618	geochronologic	Indo-Pacific Pollen Database	31526	Pengilly's Bog	148.414	-36.3793	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	12		0
+59619	pollen	Indo-Pacific Pollen Database	31526	Pengilly's Bog	148.414	-36.3793	Point	Australia	australia	11	76	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	12	12952	2
+59620	geochronologic	Indo-Pacific Pollen Database	31527	Rock Arch Swamp	150.6537	-34.5108	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59621	pollen	Indo-Pacific Pollen Database	31527	Rock Arch Swamp	150.6537	-34.5108	Point	Australia	australia	13	89	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	15630	2
+59643	geochronologic	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Oxcal SHCal20	24		0
+59644	pollen	Indo-Pacific Pollen Database	279	Blue Lake	148.31667	-36.41667	Point	Australia	australia	28	58	count	1	Calibrated radiocarbon years BP	Oxcal SHCal20	24	19825	2
+59657	pollen surface sample	Neotoma	31558	Bridgewater Lake	141.383	-38.32	Point	Australia	australia	14	56	NISP	1	Calendar years BP	Collection date	14	-32	2
+59828	geochronologic	Indo-Pacific Pollen Database	31729	Yaouk Swamp	148.0833	-35.8167	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59829	pollen	Indo-Pacific Pollen Database	31729	Yaouk Swamp	148.0833	-35.8167	Point	Australia	australia	30	83	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	13236	2
+59830	geochronologic	Indo-Pacific Pollen Database	31730	Wilpena Creek	138.92	-30.87	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	10		0
+59831	pollen	Indo-Pacific Pollen Database	31730	Wilpena Creek	138.92	-30.87	Point	Australia	australia	22	30	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	10	988	2
+59832	geochronologic	Indo-Pacific Pollen Database	31730	Wilpena Creek	138.92	-30.87	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	3		0
+59833	pollen	Indo-Pacific Pollen Database	31730	Wilpena Creek	138.92	-30.87	Point	Australia	australia	4	20	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	3	7481	2
+59888	geochronologic	Indo-Pacific Pollen Database	31753	Woorady PC15	145.75	-40.03	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+59889	pollen	Indo-Pacific Pollen Database	31753	Woorady PC15	145.75	-40.03	Point	Australia	australia	18	40	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	8	15414	2
+59890	geochronologic	Indo-Pacific Pollen Database	31754	WooradyPC23	146.28	-40.82	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon Marine20	4		0
+59891	pollen	Indo-Pacific Pollen Database	31754	WooradyPC23	146.28	-40.82	Point	Australia	australia	5	26	NISP	2	Calibrated radiocarbon years BP	Bacon Marine20	4	12288	2
+59892	geochronologic	Indo-Pacific Pollen Database	31755	Snowy Flats	148.8642	-35.5655	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	10		0
+59893	pollen	Indo-Pacific Pollen Database	31755	Snowy Flats	148.8642	-35.5655	Point	Australia	australia	25	83	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	10	7851	2
+59903	geochronologic	Indo-Pacific Pollen Database	31760	Talita Kupai	142.210138	-10.169272000000001	Polygon	Australia	torres_strait	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+59904	pollen	Indo-Pacific Pollen Database	31760	Talita Kupai	142.210138	-10.169272000000001	Polygon	Australia	torres_strait	17	18	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	2184	1
+59905	geochronologic	Indo-Pacific Pollen Database	31761	Hazards Lagoon	148.292286	-42.179394	Polygon	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+59906	pollen	Indo-Pacific Pollen Database	31761	Hazards Lagoon	148.292286	-42.179394	Polygon	Australia	australia	32	41	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	4	22630	1
+59967	pollen	Indo-Pacific Pollen Database	9988	Brass Tarn	145.04318	-5.78747	Point	Papua New Guinea	new_guinea	49	50	NISP	4	Radiocarbon years BP	linear interpolation	6		2
+60138	geochronologic	Indo-Pacific Pollen Database	31962	Cotter Source Bog	148.8167	-35.9667	Point	Australia	australia	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+60139	pollen	Indo-Pacific Pollen Database	31962	Cotter Source Bog	148.8167	-35.9667	Point	Australia	australia	16	37	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	8	12609	2
+60147	geochronologic	Indo-Pacific Pollen Database	30442	Boigu Gawat	142.2333	-10.0167	Point	Australia	torres_strait	1	1		2	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+60148	pollen	Indo-Pacific Pollen Database	30442	Boigu Gawat	142.2333	-10.0167	Point	Australia	torres_strait	13	11	NISP	2	Calibrated radiocarbon years BP	Bacon SHCal20	6	3514	2
+60236	pollen surface sample	Indo-Pacific Pollen Database	30518	Bar20	142.1728	-10.133932	Polygon	Australia	torres_strait	4	18	NISP	1	Calendar years BP	Collection date	4	-50	2
+60670	pollen surface sample	Indo-Pacific Pollen Database	32444	Arkaroola Devils Arch	139.3523	-30.3167	Point	Australia	australia	4	33	NISP	1	Calendar years BP	Collection date	4	-35	2
+60671	geochronologic	Indo-Pacific Pollen Database	32444	Arkaroola Devils Arch	139.3523	-30.3167	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal	4		0
+60672	pollen	Indo-Pacific Pollen Database	32444	Arkaroola Devils Arch	139.3523	-30.3167	Point	Australia	australia	3	25	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal	4	584	2
+60673	pollen surface sample	Indo-Pacific Pollen Database	32445	Arkaroola Waterfall	139.284	-30.267	Point	Australia	australia	3	22	NISP	1	Calendar years BP	Collection date	3	-35	2
+60680	pollen surface sample	Indo-Pacific Pollen Database	32449	Brachina Gorge 1	138.5492	-31.355	Point	Australia	australia	3	28	NISP	1	Calendar years BP	Collection date	3	-35	2
+60681	geochronologic	Indo-Pacific Pollen Database	32449	Brachina Gorge 1	138.5492	-31.355	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+60682	pollen	Indo-Pacific Pollen Database	32449	Brachina Gorge 1	138.5492	-31.355	Point	Australia	australia	3	30	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	8	7898	2
+60683	geochronologic	Indo-Pacific Pollen Database	32450	Brachina Gorge 2	138.54433	-31.3405	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	SHCal	2		0
+60684	pollen	Indo-Pacific Pollen Database	32450	Brachina Gorge 2	138.54433	-31.3405	Point	Australia	australia	1	17	NISP	1	Calibrated radiocarbon years BP	SHCal	2	5735	2
+60685	pollen surface sample	Indo-Pacific Pollen Database	32450	Brachina Gorge 2	138.54433	-31.3405	Point	Australia	australia	4	31	NISP	1	Calendar years BP	Collection date	4	-35	2
+60976	geochronologic	Indo-Pacific Pollen Database	32677	Brachina Gorge 3	138.538	-31.34033	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+60977	pollen	Indo-Pacific Pollen Database	32677	Brachina Gorge 3	138.538	-31.34033	Point	Australia	australia	3	31	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	8	3979	1
+60978	geochronologic	Indo-Pacific Pollen Database	32678	Brachina Gorge 4	138.538	-31.34033	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	10		0
+60979	pollen	Indo-Pacific Pollen Database	32678	Brachina Gorge 4	138.538	-31.34033	Point	Australia	australia	6	32	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	10	7818	1
+60980	pollen surface sample	Indo-Pacific Pollen Database	32678	Brachina Gorge 4	138.538	-31.34033	Point	Australia	australia	2	26	NISP	1	Calendar years BP	Collection date	2	-36	1
+61061	geochronologic	Indo-Pacific Pollen Database	32758	Brachina Gorge 7	138.54433	-31.3405	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61062	pollen	Indo-Pacific Pollen Database	32758	Brachina Gorge 7	138.54433	-31.3405	Point	Australia	australia	3	30	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	6553	1
+61069	geochronologic	Indo-Pacific Pollen Database	32762	Chambers Gorge	139.19	-30.97	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61070	pollen	Indo-Pacific Pollen Database	32762	Chambers Gorge	139.19	-30.97	Point	Australia	australia	2	24	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	10620	1
+61071	geochronologic	Indo-Pacific Pollen Database	32762	Chambers Gorge	139.19	-30.97	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61072	pollen	Indo-Pacific Pollen Database	32762	Chambers Gorge	139.19	-30.97	Point	Australia	australia	2	22	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	6092	1
+61073	geochronologic	Indo-Pacific Pollen Database	32763	Chambers Gorge 1	139.2432	-30.9593	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61074	pollen	Indo-Pacific Pollen Database	32763	Chambers Gorge 1	139.2432	-30.9593	Point	Australia	australia	1	17	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	432	1
+61075	pollen surface sample	Indo-Pacific Pollen Database	32763	Chambers Gorge 1	139.2432	-30.9593	Point	Australia	australia	3	27	NISP	1	Calendar years BP	Collection date	3	-35	1
+61110	pollen surface sample	Indo-Pacific Pollen Database	32762	Chambers Gorge	139.19	-30.97	Point	Australia	australia	7	35	NISP	1	Calendar years BP	Collection date	7	-35	1
+61111	geochronologic	Indo-Pacific Pollen Database	32786	Chambers Gorge, Medlin Site	139.27933	-30.97033	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61112	pollen	Indo-Pacific Pollen Database	32786	Chambers Gorge, Medlin Site	139.27933	-30.97033	Point	Australia	australia	1	26	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	8054	1
+61113	pollen surface sample	Indo-Pacific Pollen Database	32786	Chambers Gorge, Medlin Site	139.27933	-30.97033	Point	Australia	australia	3	25	NISP	1	Calendar years BP	Collection date	3	-35	1
+61114	geochronologic	Indo-Pacific Pollen Database	32787	Griselda Hill	139.34006	-30.314376	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+61115	pollen	Indo-Pacific Pollen Database	32787	Griselda Hill	139.34006	-30.314376	Polygon	Australia	australia	8	31	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	8	9860	1
+61116	pollen surface sample	Indo-Pacific Pollen Database	32787	Griselda Hill	139.34006	-30.314376	Polygon	Australia	australia	1	20	NISP	1	Calendar years BP	Collection date	1	-42	1
+61120	geochronologic	Indo-Pacific Pollen Database	32788	Haematite Hill	139.43183	-30.296	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+61121	pollen	Indo-Pacific Pollen Database	32788	Haematite Hill	139.43183	-30.296	Point	Australia	australia	2	27	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	664	1
+61122	pollen surface sample	Indo-Pacific Pollen Database	32788	Haematite Hill	139.43183	-30.296	Point	Australia	australia	4	28	NISP	1	Calendar years BP	Collection date	4	-35	1
+61140	geochronologic	Indo-Pacific Pollen Database	32805	Mount Chambers	139.2197	-30.9622	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61141	pollen	Indo-Pacific Pollen Database	32805	Mount Chambers	139.2197	-30.9622	Point	Australia	australia	4	26	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	1148	1
+61142	geochronologic	Indo-Pacific Pollen Database	32806	Mount Chambers 2	139.2207	-30.9623	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+61143	pollen	Indo-Pacific Pollen Database	32806	Mount Chambers 2	139.2207	-30.9623	Point	Australia	australia	2	21	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	565	1
+61144	pollen surface sample	Indo-Pacific Pollen Database	32805	Mount Chambers	139.2197	-30.9622	Point	Australia	australia	3	25	NISP	1	Calendar years BP	Collection date	3	-35	1
+61145	pollen surface sample	Indo-Pacific Pollen Database	32805	Mount Chambers	139.2197	-30.9622	Point	Australia	australia	7	31	NISP	1	Calendar years BP	Collection date	7	-35	1
+61146	pollen surface sample	Indo-Pacific Pollen Database	32807	Mua Hillside	142.129492	-10.138288	Polygon	Australia	torres_strait	7	26	NISP	1	Calendar years BP	Collection date	7	-55	1
+61147	pollen surface sample	Indo-Pacific Pollen Database	32808	Mulgrave Peak	142.23390799999999	-10.207074	Polygon	Australia	torres_strait	5	29	NISP	1	Calendar years BP	Collection date	5	-55	1
+61222	geochronologic	Indo-Pacific Pollen Database	32840	North Well Creek 1	139.26033	-30.27083	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	1		0
+61223	pollen	Indo-Pacific Pollen Database	32840	North Well Creek 1	139.26033	-30.27083	Point	Australia	australia	1	20	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	1	545	1
+61224	pollen surface sample	Indo-Pacific Pollen Database	32840	North Well Creek 1	139.26033	-30.27083	Point	Australia	australia	4	28	NISP	1	Calendar years BP	Collection date	4	-35	1
+61225	geochronologic	Indo-Pacific Pollen Database	32841	North Well Creek 2	139.43183	-30.296	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61226	pollen	Indo-Pacific Pollen Database	32841	North Well Creek 2	139.43183	-30.296	Point	Australia	australia	1	20	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	3959	1
+61227	pollen surface sample	Indo-Pacific Pollen Database	32841	North Well Creek 2	139.43183	-30.296	Point	Australia	australia	4	27	NISP	1	Calendar years BP	Collection date	4	-35	1
+61228	geochronologic	Indo-Pacific Pollen Database	32842	Oppaminda Track	139.3563	-30.3818	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+61229	pollen	Indo-Pacific Pollen Database	32842	Oppaminda Track	139.3563	-30.3818	Point	Australia	australia	1	23	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	777	1
+61230	pollen surface sample	Indo-Pacific Pollen Database	32842	Oppaminda Track	139.3563	-30.3818	Point	Australia	australia	3	24	NISP	1	Calendar years BP	Collection date	3	-35	1
+61245	geochronologic	Indo-Pacific Pollen Database	32850	Paralana Springs Road	139.44	-30.3	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61246	pollen	Indo-Pacific Pollen Database	32850	Paralana Springs Road	139.44	-30.3	Point	Australia	australia	2	21	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	586	1
+61247	pollen surface sample	Indo-Pacific Pollen Database	32850	Paralana Springs Road	139.44	-30.3	Point	Australia	australia	1	21	NISP	1	Calendar years BP	Collection date	1	-42	1
+61248	geochronologic	Indo-Pacific Pollen Database	32851	Radium Creek	139.35817	-30.27283	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61249	pollen	Indo-Pacific Pollen Database	32851	Radium Creek	139.35817	-30.27283	Point	Australia	australia	1	20	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	4911	1
+61250	pollen surface sample	Indo-Pacific Pollen Database	32851	Radium Creek	139.35817	-30.27283	Point	Australia	australia	4	26	NISP	1	Calendar years BP	Collection date	4	-35	1
+61251	geochronologic	Indo-Pacific Pollen Database	32852	Radium Creek 2	139.3583	-30.26883	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	2		0
+61252	pollen	Indo-Pacific Pollen Database	32852	Radium Creek 2	139.3583	-30.26883	Point	Australia	australia	1	26	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	2	2472	1
+61255	geochronologic	Indo-Pacific Pollen Database	32852	Radium Creek 2	139.3583	-30.26883	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+61256	pollen	Indo-Pacific Pollen Database	32852	Radium Creek 2	139.3583	-30.26883	Point	Australia	australia	2	23	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	436	1
+61257	pollen surface sample	Indo-Pacific Pollen Database	32852	Radium Creek 2	139.3583	-30.26883	Point	Australia	australia	6	28	NISP	1	Calendar years BP	Collection date	6	-35	1
+61258	pollen surface sample	Indo-Pacific Pollen Database	30442	Boigu Gawat	142.2333	-10.0167	Point	Australia	torres_strait	7	14	NISP	1	Calendar years BP	Collection date	7	-55	1
+61259	pollen surface sample	Indo-Pacific Pollen Database	32854	Grize	142.1167	-10.15	Point	Australia	torres_strait	1	9	NISP	1	Calendar years BP	Collection date	1	-55	1
+61260	pollen surface sample	Indo-Pacific Pollen Database	32855	Badu Roadside	142.15	-10.1167	Point	Australia	torres_strait	1	11	NISP	1	Calendar years BP	Collection date	1	-55	1
+61317	geochronologic	Indo-Pacific Pollen Database	32873	Lake Colac	143.59	-38.3	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	32		0
+61318	pollen	Indo-Pacific Pollen Database	32873	Lake Colac	143.59	-38.3	Point	Australia	australia	51	69	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	32	2451	1
+61319	geochronologic	Indo-Pacific Pollen Database	30627	Ooze Lake	146.7014	-43.5011	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	10		0
+61320	pollen	Indo-Pacific Pollen Database	30627	Ooze Lake	146.7014	-43.5011	Point	Australia	australia	51	160	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	10	14585	1
+61321	geochronologic	Indo-Pacific Pollen Database	31517	Upper Lake Wurawina cirque	146.27929799999998	-42.537732	Polygon	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+61322	pollen	Indo-Pacific Pollen Database	31517	Upper Lake Wurawina cirque	146.27929799999998	-42.537732	Polygon	Australia	australia	17	125	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	5794	1
+61323	geochronologic	Indo-Pacific Pollen Database	32874	Yam Camp	144.3	-15.66	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	4		0
+61324	pollen	Indo-Pacific Pollen Database	32874	Yam Camp	144.3	-15.66	Point	Australia	australia	4	16	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	4	4307	1
+61343	geochronologic	Indo-Pacific Pollen Database	32889	Blundell's Flat	148.49	-35.19	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	8		0
+61344	pollen	Indo-Pacific Pollen Database	32889	Blundell's Flat	148.49	-35.19	Point	Australia	australia	18	50	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	8	2494	1
+61536	geochronologic	Indo-Pacific Pollen Database	32902	Delegate River	148.833	-37.25	Point	Australia	australia	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+61537	pollen	Indo-Pacific Pollen Database	32902	Delegate River	148.833	-37.25	Point	Australia	australia	27	43	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	16336	1
+61538	geochronologic	Indo-Pacific Pollen Database	32903	Canala	165.95	-21.5167	Point	New Caledonia	outside	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	10		0
+61539	pollen	Indo-Pacific Pollen Database	32903	Canala	165.95	-21.5167	Point	New Caledonia	outside	15	80	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	10	3315	1
+61552	geochronologic	Indo-Pacific Pollen Database	32916	Mago Island	179.1569	-17.4439	Point	Fiji	outside	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+61553	pollen	Indo-Pacific Pollen Database	32916	Mago Island	179.1569	-17.4439	Point	Fiji	outside	16	28	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	8297	1
+61554	geochronologic	Indo-Pacific Pollen Database	32917	Umej	169.808	-20.201	Point	Vanuatu	outside	1	1		1	Calibrated radiocarbon years BP	Bacon SHCal20	6		0
+61555	pollen	Indo-Pacific Pollen Database	32917	Umej	169.808	-20.201	Point	Vanuatu	outside	16	60	NISP	1	Calibrated radiocarbon years BP	Bacon SHCal20	6	12204	1
+73985	pollen trap	Indo-Pacific Pollen Database	41661	Casuarina campus	130.88	-12.37	Point		australia	1	27	NISP	1	Calendar years BP	Collection date	1	-55	1
+73986	pollen trap	Indo-Pacific Pollen Database	41662	Palmerston campus	130.98	-12.48	Point		australia	1	25	NISP	1	Calendar years BP	Collection date	1	-55	1
+73987	pollen surface sample	Indo-Pacific Pollen Database	41663	Lanyon House	149.068	-35.483	Point		australia	7	24	NISP	1	Calendar years BP	Collection date	7	-40	1
+73988	pollen surface sample	Indo-Pacific Pollen Database	41664	Above Lake Johnson	145.55	-41.9	Point		australia	1	31	percent	1	Calendar years BP	Collection date	1	-57	1
+74085	pollen surface sample	Indo-Pacific Pollen Database	41675	Barron River	145.6393	-16.8309	Point		australia	8	64	NISP	1	Calendar years BP	Collection date	8	-55	1
+74086	pollen surface sample	Indo-Pacific Pollen Database	41676	Mulgrave River	145.9167	-17.2	Point		australia	6	60	NISP	1	Calendar years BP	Collection date	6	-55	1
+74087	pollen surface sample	Indo-Pacific Pollen Database	41677	Mutchero Inlet	145.9667	-17.2333	Point		australia	4	61	NISP	1	Calendar years BP	Collection date	4	-55	1
+74088	pollen surface sample	Indo-Pacific Pollen Database	41678	Russell River	145.95	-17.24	Point		australia	6	67	NISP	1	Calendar years BP	Collection date	6	-55	1
+74100	pollen surface sample	Indo-Pacific Pollen Database	41686	Airstrip shelter	128.083	-31.753	Point		australia	1	7	NISP	1	Calendar years BP	Collection date	1	-23	1
+74101	pollen surface sample	Indo-Pacific Pollen Database	41687	Alexander Morrison NP	115.567	-30.067	Point		australia	1	21	NISP	1	Calendar years BP	Collection date	1	-47	1
+74102	pollen surface sample	Indo-Pacific Pollen Database	41688	Badgingarra NP	115.433	-30.483	Point		australia	1	25	NISP	1	Calendar years BP	Collection date	1	-47	1
+74103	pollen surface sample	Indo-Pacific Pollen Database	41689	Bellenden Ker	145.917	-17.25	Point		australia	1	44	NISP	1	Calendar years BP	Collection date	1	-20	1
+74140	pollen surface sample	Indo-Pacific Pollen Database	41715	Boar Pocket Rd	145.6	-17.167	Point		australia	1	26	NISP	1	Calendar years BP	Collection date	1	-23	1
+74141	pollen surface sample	Indo-Pacific Pollen Database	41716	Boco Valley	145.6	-41.65	Point		australia	1	23	percent	1	Calendar years BP	Collection date	1	-57	1
+74142	pollen surface sample	Indo-Pacific Pollen Database	41717	Burns Plains	146.21	-42.1	Point		australia	5	52	percent	1	Calendar years BP	Collection date	5	-57	1
+74143	pollen surface sample	Indo-Pacific Pollen Database	41718	Chewko	145.367	-17.067	Point		australia	2	39	NISP	1	Calendar years BP	Collection date	2	-26	1
+74144	pollen surface sample	Indo-Pacific Pollen Database	41719	Coolimba	115.1	-29.867	Point		australia	1	25	NISP	1	Calendar years BP	Collection date	1	-47	1
+74145	pollen surface sample	Indo-Pacific Pollen Database	41720	Dryandra State Forest	116.883	-32.783	Point		australia	3	29	NISP	1	Calendar years BP	Collection date	3	-47	1
+74160	pollen surface sample	Indo-Pacific Pollen Database	41731	Cradle Link Road	145.89	-41.54	Point		australia	6	46	percent	1	Calendar years BP	Collection date	6	-57	1
+74172	pollen surface sample	Indo-Pacific Pollen Database	41740	Danbulla	145.6	-17.183	Point		australia	1	48	NISP	1	Calendar years BP	Collection date	1	-23	1
+74173	pollen surface sample	Indo-Pacific Pollen Database	41741	Davies Creek	145.55	-17	Point		australia	1	54	NISP	1	Calendar years BP	Collection date	1	-23	1
+74174	pollen surface sample	Indo-Pacific Pollen Database	41742	Downfall Creek	145.583	-17.133	Point		australia	1	48	NISP	1	Calendar years BP	Collection date	1	-23	1
+74190	pollen surface sample	Indo-Pacific Pollen Database	41750	Diprose Cave	131.367	-30.95	Point		australia	1	5	NISP	1	Calendar years BP	Collection date	1	-23	1
+74191	pollen surface sample	Indo-Pacific Pollen Database	41751	Draepi Swamp	144.1833	-5.65	Point		new_guinea	7	38	NISP	1	Calendar years BP	Collection date	7	-18	1
+74295	pollen surface sample	Indo-Pacific Pollen Database	41824	El Arish	146	-17.8	Point		australia	1	61	NISP	1	Calendar years BP	Collection date	1	-23	1
+74296	pollen surface sample	Indo-Pacific Pollen Database	41825	Enoggra State Forest	153.167	-28.25	Point		australia	1	31	NISP	1	Calendar years BP	Collection date	1	-23	1
+74297	pollen surface sample	Indo-Pacific Pollen Database	41826	Gunung Kerinci	100.767	-1.067	Point		outside	11	76	NISP	1	Calendar years BP	Collection date	11	-35	1
+74298	pollen surface sample	Indo-Pacific Pollen Database	41827	Guruanglakugl	145.0472	-5.8056	Point		new_guinea	2	31	percent	1	Calendar years BP	Collection date	2	-34	1
+74303	pollen surface sample	Indo-Pacific Pollen Database	41828	Hardwood River Valley	146.31	-42.95	Point		australia	1	22	percent	1	Calendar years BP	Collection date	1	-57	1
+74304	pollen surface sample	Indo-Pacific Pollen Database	41829	Harlequin Hill	146.31	-42.95	Point		australia	3	34	percent	1	Calendar years BP	Collection date	3	-57	1
+74305	pollen surface sample	Indo-Pacific Pollen Database	41830	Hartz Mountains	146.75	-43.24	Point		australia	3	24	NISP	1	Calendar years BP	Collection date	3	-30	1
+74306	pollen surface sample	Indo-Pacific Pollen Database	41831	Hastie Swamp	145.33	-17	Point		australia	1	46	NISP	1	Calendar years BP	Collection date	1	-26	1
+74307	pollen surface sample	Indo-Pacific Pollen Database	41832	Herberton Range	145.45	-17.35	Point		australia	1	47	NISP	1	Calendar years BP	Collection date	1	-23	1
+74396	pollen surface sample	Indo-Pacific Pollen Database	41918	John Forrest National Park	116.083	-31.867	Point		australia	2	33	NISP	1	Calendar years BP	Collection date	2	-47	1
+74397	pollen surface sample	Indo-Pacific Pollen Database	41919	Kaban/Kalunga Waterhole	145.417	-17.517	Point		australia	1	19	NISP	1	Calendar years BP	Collection date	1	-26	1
+74398	pollen surface sample	Indo-Pacific Pollen Database	41920	Kalamunda National Park	116.067	-31.95	Point		australia	1	26	NISP	1	Calendar years BP	Collection date	1	-47	1
+74399	pollen surface sample	Indo-Pacific Pollen Database	41921	Kinrara Swamp	145.033	-18.483	Point		australia	1	18	NISP	1	Calendar years BP	Collection date	1	-23	1
+74400	pollen surface sample	Indo-Pacific Pollen Database	41922	Knowels Cave	130.633	-31.117	Point		australia	1	3	NISP	1	Calendar years BP	Collection date	1	-23	1
+74428	pollen surface sample	Indo-Pacific Pollen Database	41929	Kuranda	145.633	-16.817	Point		australia	1	41	NISP	1	Calendar years BP	Collection date	1	-23	1
+74429	pollen surface sample	Indo-Pacific Pollen Database	41930	Lake Chisholm	145.06	-41.13	Point		australia	2	26	percent	1	Calendar years BP	Collection date	2	-57	1
+74568	pollen surface sample	Indo-Pacific Pollen Database	42006	Lake Crosby	141.733	-35.05	Point		australia	1	10	percent	1	Calendar years BP	Collection date	1	0	1
+74569	pollen surface sample	Indo-Pacific Pollen Database	42007	Lake Flannigan	143.9547	-39.6147	Point		australia	1	12	percent	1	Calendar years BP	Collection date	1	0	1
+74573	pollen surface sample	Indo-Pacific Pollen Database	42010	Lake Lascelles	142.372	-35.725	Point		australia	1	9	percent	1	Calendar years BP	Collection date	1	0	1
+74574	pollen surface sample	Indo-Pacific Pollen Database	42011	Lake Ranfurly East	142.1215	-34.1877	Point		australia	1	6	percent	1	Calendar years BP	Collection date	1	0	1
+74575	pollen surface sample	Indo-Pacific Pollen Database	42012	Lake Tali Karng	146.7904	-37.5419	Point		australia	1	21	percent	1	Calendar years BP	Collection date	1	-31	1
+74576	pollen surface sample	Indo-Pacific Pollen Database	42013	Lamington National Park	153.167	-28.2	Point		australia	3	68	NISP	1	Calendar years BP	Collection date	3	-26	1
+74577	pollen surface sample	Indo-Pacific Pollen Database	42014	Lebani Valley	143	-5.1	Point		new_guinea	7	36	NISP	1	Calendar years BP	Collection date	7	-43	1
+74591	pollen surface sample	Indo-Pacific Pollen Database	42021	Lumbi Swamp	143.6432	-6.145	Point		new_guinea	1	23	NISP	1	Calendar years BP	Collection date	1	-43	1
+74592	pollen surface sample	Indo-Pacific Pollen Database	42022	Maalan turnoff	145.617	-17.6	Point		australia	1	61	NISP	1	Calendar years BP	Collection date	1	-23	1
+74593	pollen surface sample	Indo-Pacific Pollen Database	42023	McKenzie Road Bog	146.7668	-38.4341	Point		australia	1	16	percent	1	Calendar years BP	Collection date	1	-36	1
+74594	pollen surface sample	Indo-Pacific Pollen Database	42024	McNamee Creek	145.85	-17.633	Point		australia	1	59	NISP	1	Calendar years BP	Collection date	1	-23	1
+74617	pollen surface sample	Indo-Pacific Pollen Database	42040	Meadlow Bath	150.3	-33.7	Point		australia	1	11	percent	1	Calendar years BP	Collection date	1	-41	1
+74618	pollen surface sample	Indo-Pacific Pollen Database	42041	Mill Bay	145.3	-42.14	Point		australia	2	33	percent	1	Calendar years BP	Collection date	2	-57	1
+74619	pollen surface sample	Indo-Pacific Pollen Database	42042	Mirriwinni	145.9	-17.417	Point		australia	1	54	NISP	1	Calendar years BP	Collection date	1	-23	1
+74620	pollen surface sample	Indo-Pacific Pollen Database	42043	Mt Koghi	166.52	-22.17	Point		outside	2	41	NISP	1	Calendar years BP	Collection date	2	-48	1
+74641	pollen surface sample	Indo-Pacific Pollen Database	42050	Mount Kernot	146.333	-37.867	Point		australia	1	11	percent	1	Calendar years BP	Collection date	1	-47	1
+74642	pollen surface sample	Indo-Pacific Pollen Database	42051	Mount Whitelaw	146.2572	-37.7969	Point		australia	1	16	percent	1	Calendar years BP	Collection date	1	-47	1
+74643	pollen surface sample	Indo-Pacific Pollen Database	42052	Moxon Saddle Lagoon	145.62	-41.9	Point		australia	1	18	percent	1	Calendar years BP	Collection date	1	-57	1
+74644	pollen surface sample	Indo-Pacific Pollen Database	42053	Mount Anne	146.4199	-42.9404	Point		australia	4	43	percent	1	Calendar years BP	Collection date	4	-57	1
+74699	pollen surface sample	Indo-Pacific Pollen Database	42076	Mount Arrowsmith	146.0669	-42.2093	Point		australia	1	34	percent	1	Calendar years BP	Collection date	1	-63	1
+74700	pollen surface sample	Indo-Pacific Pollen Database	42077	Mount Giluwe	143.8833	-6.027	Point		new_guinea	6	34	NISP	1	Calendar years BP	Collection date	6	-43	1
+74701	pollen surface sample	Indo-Pacific Pollen Database	42078	Mount Read	145.5399	-41.8413	Point		australia	2	37	percent	1	Calendar years BP	Collection date	2	-57	1
+74702	pollen surface sample	Indo-Pacific Pollen Database	42079	Blue Lake (Mt Gambier)	140.7782	-37.8479	Point		australia	1	10	percent	1	Calendar years BP	Collection date	1	-32	1
+74703	pollen surface sample	Indo-Pacific Pollen Database	42080	Mount Glorious	152.7651	-27.3328	Point		australia	1	36	NISP	1	Calendar years BP	Collection date	1	-23	1
+74704	pollen surface sample	Indo-Pacific Pollen Database	42081	Mount Hagen	144.0459	-5.7597	Point		new_guinea	11	49	NISP	1	Calendar years BP	Collection date	11	-20	1
+74751	pollen surface sample	Indo-Pacific Pollen Database	42100	Mount Wilhelm	145.0379	-5.7844	Point		new_guinea	29	43	percent	1	Calendar years BP	Collection date	29	-29	1
+74752	pollen surface sample	Indo-Pacific Pollen Database	42101	Mount Latrobe	146.3781	-38.9982	Point		australia	1	10	percent	1	Calendar years BP	Collection date	1	-20	1
+74753	pollen surface sample	Indo-Pacific Pollen Database	42102	Murphys Glen	150.4855	-33.7681	Point		australia	2	13	percent	1	Calendar years BP	Collection date	2	-41	1
+74763	pollen surface sample	Indo-Pacific Pollen Database	42106	Murrawijnie	130.8759	-31.3651	Point		australia	2	7	NISP	1	Calendar years BP	Collection date	2	-23	1
+74764	pollen surface sample	Indo-Pacific Pollen Database	42107	Naracoopa	144.1098	-39.9138	Point		australia	1	16	percent	1	Calendar years BP	Collection date	1	-47	1
+74765	pollen surface sample	Indo-Pacific Pollen Database	42108	Nardello's Lagoon	145.417	-17.117	Point		australia	1	45	NISP	1	Calendar years BP	Collection date	1	-26	1
+74766	pollen surface sample	Indo-Pacific Pollen Database	42109	Northwest Moorland	145.6164	-41.4399	Point		australia	1	24	percent	1	Calendar years BP	Collection date	1	-57	1
+74777	pollen surface sample	Indo-Pacific Pollen Database	42114	Peppertree Marsh	147.8289	-41.8887	Point		australia	1	11	percent	1	Calendar years BP	Collection date	1	-47	1
+74778	pollen surface sample	Indo-Pacific Pollen Database	42115	Perched Lake	145.6861	-42.5645	Point		australia	7	42	percent	1	Calendar years BP	Collection date	7	-57	1
+74779	pollen surface sample	Indo-Pacific Pollen Database	42116	Phil's Hill	148.2667	-40.3667	Point		australia	1	16	percent	1	Calendar years BP	Collection date	1	-47	1
+74780	pollen surface sample	Indo-Pacific Pollen Database	42117	Piney Creek	145.2596	-41.882	Point		australia	7	66	percent	1	Calendar years BP	Collection date	7	-57	1
+74791	pollen surface sample	Indo-Pacific Pollen Database	42121	Plaine des Lacs	166.9348	-22.2521	Point		outside	13	70	NISP	1	Calendar years BP	Collection date	13	-48	1
+74792	pollen surface sample	Indo-Pacific Pollen Database	42122	Salt Lake	142.3179	-37.5823	Point		australia	1	11	percent	1	Calendar years BP	Collection date	1	-47	1
+74793	pollen surface sample	Indo-Pacific Pollen Database	42123	Shag Tarn	172.176	-41.336	Point		outside	2	45	NISP	1	Calendar years BP	Collection date	2	-28	1
+74794	pollen surface sample	Indo-Pacific Pollen Database	42124	Sluice Creek	145.5323	-17.5344	Point		australia	1	57	NISP	1	Calendar years BP	Collection date	1	-23	1
+74795	pollen surface sample	Indo-Pacific Pollen Database	42125	Snow Hill Marshes	147.8472	-41.8993	Point		australia	1	10	percent	1	Calendar years BP	Collection date	1	-47	1
+74796	pollen surface sample	Indo-Pacific Pollen Database	42126	Stencils Cave	129.7	-31.467	Point		australia	1	8	NISP	1	Calendar years BP	Collection date	1	-23	1
+74797	pollen surface sample	Indo-Pacific Pollen Database	42127	Stirling Moss	146.5	-37.1333	Point		australia	1	13	percent	1	Calendar years BP	Collection date	1	-47	1
+74798	pollen surface sample	Indo-Pacific Pollen Database	42128	Stonehaven Creek	145.9845	-42.2036	Point		australia	1	39	percent	1	Calendar years BP	Collection date	1	-57	1
+74814	pollen surface sample	Indo-Pacific Pollen Database	42136	Danau di Atas	100.7542	-1.0722	Point		outside	19	107	NISP	1	Calendar years BP	Collection date	19	-35	1
+74815	pollen surface sample	Indo-Pacific Pollen Database	42137	Tamaringa Billabong	145.4792	-37.1595	Point		australia	1	7	percent	1	Calendar years BP	Collection date	1	-47	1
+74816	pollen surface sample	Indo-Pacific Pollen Database	29037	Aluaipugua	143.154132	-5.969621999999999	Polygon	Papua New Guinea	new_guinea	4	28	NISP	1	Calendar years BP	Collection date	4	-43	1
+74849	pollen surface sample	Indo-Pacific Pollen Database	42163	Tinaroo Range	145.5657	-17.1341	Point		australia	1	54	NISP	1	Calendar years BP	Collection date	1	-23	1
+74850	pollen surface sample	Indo-Pacific Pollen Database	42164	Tinaroo Road	145.517	-17.117	Point		australia	1	18	NISP	1	Calendar years BP	Collection date	1	-23	1
+74851	pollen surface sample	Indo-Pacific Pollen Database	42165	Tontouta	166.1542	-21.9956	Point		outside	2	36	NISP	1	Calendar years BP	Collection date	2	-48	1
+74852	pollen surface sample	Indo-Pacific Pollen Database	30447	Argan	142.1112	-10.085804	Polygon	Australia	torres_strait	5	20	NISP	1	Calendar years BP	Collection date	5	-56	1
+74853	pollen surface sample	Indo-Pacific Pollen Database	31760	Talita Kupai	142.210138	-10.169272000000001	Polygon	Australia	torres_strait	3	14	NISP	1	Calendar years BP	Collection date	3	-56	1
+74854	pollen surface sample	Indo-Pacific Pollen Database	30519	Waruid	142.15	-10.0667	Point	Australia	torres_strait	5	17	NISP	1	Calendar years BP	Collection date	5	-56	1
+74910	pollen surface sample	Indo-Pacific Pollen Database	28461	Tiam Point	142.30687	-10.21537	Point	Australia	torres_strait	8	28	NISP	1	Calendar years BP	Collection date	8	-56	1
+74911	pollen surface sample	Indo-Pacific Pollen Database	30441	Zurath Islet	142.101152	-10.277370000000001	Polygon	Australia	torres_strait	4	10	NISP	1	Calendar years BP	Collection date	4	-56	1
+74912	pollen surface sample	Indo-Pacific Pollen Database	42215	Tumoulin Swamp	145.4579	-17.5512	Point		australia	1	19	NISP	1	Calendar years BP	Collection date	1	-26	1
+74913	pollen surface sample	Indo-Pacific Pollen Database	42216	Tyndall Ranges	145.58	-41.93	Point		australia	4	93	NISP	1	Calendar years BP	Collection date	4	-36	1
+74914	pollen surface sample	Indo-Pacific Pollen Database	42217	Vale of Belvoir	145.89	-41.54	Point		australia	7	50	percent	1	Calendar years BP	Collection date	7	-57	1
+74915	pollen surface sample	Indo-Pacific Pollen Database	42218	Wanteen Shelter	128.4431	-31.7857	Point		australia	1	8	NISP	1	Calendar years BP	Collection date	1	-23	1
+74916	pollen surface sample	Indo-Pacific Pollen Database	42219	Watheroo National Park	115.85	-30.317	Point		australia	3	33	NISP	1	Calendar years BP	Collection date	3	-47	1
+74917	pollen surface sample	Indo-Pacific Pollen Database	42220	Weylk	144	-5.75	Point		new_guinea	5	20	NISP	1	Calendar years BP	Collection date	5	-20	1
+75100	pollen surface sample	Indo-Pacific Pollen Database	42339	Willsmere Billabong	145.0489	-37.7829	Point		australia	1	15	percent	1	Calendar years BP	Collection date	1	-38	1
+75101	pollen surface sample	Indo-Pacific Pollen Database	42340	Windin	145.7488	-17.3248	Point		australia	1	69	NISP	1	Calendar years BP	Collection date	1	-23	1
+75102	pollen surface sample	Indo-Pacific Pollen Database	42342	Wriggly Stick Swamp	149.4048	-37.7551	Point		australia	1	16	percent	1	Calendar years BP	Collection date	1	-47	1
+75134	pollen surface sample	Indo-Pacific Pollen Database	42371	Yanchep National Park	115.6849	-31.5407	Point		australia	2	37	NISP	1	Calendar years BP	Collection date	2	-47	1
+75290	pollen surface sample	Indo-Pacific Pollen Database	42469	Wabag	143.6662	-5.483	Point		new_guinea	18	65	NISP	1	Calendar years BP	Collection date	18	-17	1
+75291	pollen surface sample	Indo-Pacific Pollen Database	42470	Yawi Ti	143.8994	-6.6224	Point		new_guinea	1	23	NISP	1	Calendar years BP	Collection date	1	-43	1
+75420	pollen surface sample	Indo-Pacific Pollen Database	42569	Badmenangidongwa	145.0083	-5.8143	Point		new_guinea	2	25	percent	1	Calendar years BP	Collection date	2	-26	1
+75421	pollen surface sample	Indo-Pacific Pollen Database	42570	Big Dam Marsh	147.6884	-41.6765	Point		australia	2	15	percent	1	Calendar years BP	Collection date	2	0	1
+75422	pollen surface sample	Indo-Pacific Pollen Database	42571	Mount Painter Sanctuary	139.3476	-30.2326	Point		australia	7	29	NISP	1	Calendar years BP	Collection date	7	-45	1
+75423	pollen surface sample	Indo-Pacific Pollen Database	42573	Big Heathy Swamp	145.6243	-41.3906	Point		australia	1	22	percent	1	Calendar years BP	Collection date	1	-47	1
+75424	pollen surface sample	Indo-Pacific Pollen Database	42574	Big Willum Swamp	141.9983	-12.6564	Point		australia	1	13	NISP	1	Calendar years BP	Collection date	1	-62	1
+75425	pollen surface sample	Indo-Pacific Pollen Database	42576	Bolobek Peatland	144.5762	-37.425	Point		australia	1	8	percent	1	Calendar years BP	Collection date	1	-47	1
+75426	pollen surface sample	Indo-Pacific Pollen Database	42578	Bunya Mountains	151.6074	-26.8864	Point		australia	3	44	NISP	1	Calendar years BP	Collection date	3	-26	1
+75427	pollen surface sample	Indo-Pacific Pollen Database	42579	Carlisle Perched Lake	143.4128	-38.558	Point		australia	1	11	percent	1	Calendar years BP	Collection date	1	-44	1
+75428	pollen surface sample	Indo-Pacific Pollen Database	42581	Cascade Bog	146.3309	-37.8582	Point		australia	1	13	percent	1	Calendar years BP	Collection date	1	-30	1
+75429	pollen surface sample	Indo-Pacific Pollen Database	42582	Fitzgerald River NP	119.4069	-34.2476	Point		australia	2	16	NISP	1	Calendar years BP	Collection date	2	-50	1
+75430	pollen surface sample	Indo-Pacific Pollen Database	42583	Forester Marsh	147.4928	-41.0049	Point		australia	1	17	percent	1	Calendar years BP	Collection date	1	-46	1
+75443	pollen surface sample	Indo-Pacific Pollen Database	42592	Gordon Inlet	119.458	-34.292	Point		australia	1	15	NISP	1	Calendar years BP	Collection date	1	0	1
+75444	pollen surface sample	Indo-Pacific Pollen Database	42593	Greens Bush	144.9333	-38.4333	Point		australia	1	14	percent	1	Calendar years BP	Collection date	1	-42	1
+75445	pollen surface sample	Indo-Pacific Pollen Database	42594	Mount Moogoga	144.3512	-5.896	Point		new_guinea	2	23	NISP	1	Calendar years BP	Collection date	2	-20	1

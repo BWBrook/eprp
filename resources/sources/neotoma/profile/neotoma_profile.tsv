@@ -1,0 +1,84 @@
+table	metric	key	value
+check	datasets_listed		611
+check	datasets_downloaded		611
+check	listed_not_downloaded		0
+check	duplicate_downloads		0
+all	datasets_by:database	Indo-Pacific Pollen Database	610
+all	datasets_by:database	Neotoma	1
+all	datasets_by:country	Australia	355
+all	datasets_by:country		115
+all	datasets_by:country	New Zealand	28
+all	datasets_by:country	Papua New Guinea	24
+all	datasets_by:country	Indonesia	21
+all	datasets_by:country	French Polynesia	18
+all	datasets_by:country	Fiji	17
+all	datasets_by:country	New Caledonia	17
+all	datasets_by:country	Vanuatu	10
+all	datasets_by:country	Tonga	4
+all	datasets_by:country	Norfolk Island	2
+all	datasets_by:region	australia	421
+all	datasets_by:region	outside	109
+all	datasets_by:region	new_guinea	50
+all	datasets_by:region	torres_strait	31
+sahul	datasets		502
+sahul	sites		261
+sahul	datasets_by:type_region	geochronologic | australia	140
+sahul	datasets_by:type_region	pollen | australia	138
+sahul	datasets_by:type_region	pollen surface sample | australia	117
+sahul	datasets_by:type_region	pollen | new_guinea	19
+sahul	datasets_by:type_region	geochronologic | new_guinea	16
+sahul	datasets_by:type_region	charcoal | australia	15
+sahul	datasets_by:type_region	pollen surface sample | new_guinea	13
+sahul	datasets_by:type_region	pollen surface sample | torres_strait	11
+sahul	datasets_by:type_region	geochronologic | torres_strait	10
+sahul	datasets_by:type_region	pollen | torres_strait	10
+sahul	datasets_by:type_region	loss-on-ignition | australia	3
+sahul	datasets_by:type_region	charcoal | new_guinea	2
+sahul	datasets_by:type_region	plant macrofossil | australia	2
+sahul	datasets_by:type_region	pollen trap | australia	2
+sahul	datasets_by:type_region	cladocera | australia	1
+sahul	datasets_by:type_region	geochemistry | australia	1
+sahul	datasets_by:type_region	X-ray fluorescence (XRF) | australia	1
+sahul	datasets_by:type_region	specimen stable isotope | australia	1
+sahul	datasets_by:geometry	Point	365
+sahul	datasets_by:geometry	Polygon	137
+sahul_pollen	datasets		167
+sahul_pollen	sites		144
+sahul_pollen	sites_with_multiple_pollen_datasets		20
+sahul_pollen	samples		5911
+sahul_pollen	taxa_median_per_dataset		46
+sahul_pollen	datasets_by:units	NISP	151
+sahul_pollen	datasets_by:units	percent	8
+sahul_pollen	datasets_by:units	percent digitized	3
+sahul_pollen	datasets_by:units	NISP;percent	1
+sahul_pollen	datasets_by:units	NISP;number	1
+sahul_pollen	datasets_by:units	NISP digitized	1
+sahul_pollen	datasets_by:default_agetype	Calibrated radiocarbon years BP	142
+sahul_pollen	datasets_by:default_agetype	Radiocarbon years BP	20
+sahul_pollen	datasets_by:default_agetype	Calendar years AD/BC	2
+sahul_pollen	datasets_by:default_agetype	Calendar years BP	2
+sahul_pollen	datasets_by:default_agetype		1
+sahul_pollen	datasets_by:default_agemodel	Bacon SHCal20	65
+sahul_pollen	datasets_by:default_agemodel	Bacon	36
+sahul_pollen	datasets_by:default_agemodel	Bacon SHCal13	24
+sahul_pollen	datasets_by:default_agemodel	linear interpolation	14
+sahul_pollen	datasets_by:default_agemodel	Linear Interpolation	5
+sahul_pollen	datasets_by:default_agemodel	SHCal13 Bacon	5
+sahul_pollen	datasets_by:default_agemodel	Bacon and SHCal13	3
+sahul_pollen	datasets_by:default_agemodel	SHCal20 Bacon	3
+sahul_pollen	datasets_by:default_agemodel	clam	2
+sahul_pollen	datasets_by:default_agemodel	polynomial interpolation	1
+sahul_pollen	datasets_by:default_agemodel	Cubic spline and linear basal accumulation of peaty sand.	1
+sahul_pollen	datasets_by:default_agemodel		1
+sahul_pollen	default_controls_lt_5		52
+sahul_pollen	max_age_median		8886
+sahul_pollen	max_age_ge	2000	147
+sahul_pollen	max_age_ge	20000	28
+sahul_pollen	max_age_ge	40000	12
+sahul_pollen	calibrated_default_age_gt_55ka	50301 Egg Lagoon	56479
+sahul_pollen	calibrated_default_age_gt_55ka	52582 Lynch's Crater	203098
+sahul_pollen	calibrated_default_age_gt_55ka	52767 Lake Selina	78733
+sahul_pollen	calibrated_default_age_gt_55ka	57643 Old Lake Coomboo Depression	494620
+sahul_pollen	calibrated_default_age_gt_55ka	58651 Kosipe	60981
+sahul	datasets_without_doi		166
+sahul	datasets_without_doi_by:type	geochronologic	166

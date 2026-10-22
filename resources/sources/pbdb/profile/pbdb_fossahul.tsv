@@ -12,7 +12,11 @@ fossahul_to_pbdb	within_km	5	49
 fossahul_to_pbdb	within_km	25	201
 paired_within_5km	pbdb_collections_with_genera		78
 paired_within_5km	share_of_pbdb_genera_also_in_fossahul_within_5km_median		0.98
+paired_within_5km	share_mean		0.68
+paired_within_5km	pooled_shared_of_collection_genera		372 of 613
+paired_within_5km	collections_all_genera_shared		39
 paired_within_5km	collections_with_no_shared_genus		17
+paired_within_5km	collections_with_one_genus		32
 genera	pbdb		279
 genera	fossahul		219
 genera	shared		131

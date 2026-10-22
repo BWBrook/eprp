@@ -70,32 +70,47 @@ units	with_hierarchy_field	BED	55
 units	duplicate_names		17
 units	numeric_ages_0_0		13
 units	numeric_ages_0_0_by_text_age	unknown	13
-units	text_vs_numeric_age	no_numeric_age	1902
-units	text_vs_numeric_age	numeric_disjoint_from_text_age	76
-units	text_vs_numeric_age	numeric_overlaps_text_age	14838
-units	text_vs_numeric_age	text_age_not_in_interval_table	1541
-units	disjoint_example	2762	Buchargingah Granite | NSW | text Silurian | numeric 6-419.62 Ma | gap 413.6 Myr
-units	disjoint_example	8980	Jindera Granite | NSW, VIC | text Silurian - Early Devonian | numeric 40.4-403.4 Ma | gap 353.1 Myr
+units	numeric_older_age_ge_4000_ma	4031	313
+units	numeric_older_age_ge_4000_ma	4567	24
+units	older_era_label_at_boundary	66 Ma	Cenozoic 272
+units	older_era_label_at_boundary	251.902 Ma	Paleozoic 261
+units	older_era_label_at_boundary	538.8 Ma	Paleozoic 433
+units	older_era_label_at_boundary	1000 Ma	Mesoproterozoic 367
+units	older_era_label_at_boundary	1600 Ma	Paleoproterozoic 387
+units	older_era_label_at_boundary	2500 Ma	Neoarchean 674
+units	text_vs_numeric_age	inverted_then_swapped	56
+units	text_vs_numeric_age	no_real_numeric_age	2239
+units	text_vs_numeric_age	no_text_age	351
+units	text_vs_numeric_age	numeric_disjoint_from_text_age	58
+units	text_vs_numeric_age	numeric_overlaps_but_extends_beyond_text_age	923
+units	text_vs_numeric_age	numeric_within_text_age	14662
+units	text_vs_numeric_age	text_age_not_resolved	124
+units	disjoint_gap_myr	0-1	11
+units	disjoint_gap_myr	1-5	25
+units	disjoint_gap_myr	5-20	11
+units	disjoint_gap_myr	20-more	11
 units	disjoint_example	40962	Lagoon River Quartzite | TAS | text Neoproterozoic | numeric 1462-1315 Ma | gap 315.0 Myr
 units	disjoint_example	31026	Cundaline Formation | WA | text Paleoarchean | numeric 3022-3015 Ma | gap 178.0 Myr
 units	disjoint_example	4684	Copper Hills Porphyry | WA | text Mesoarchean | numeric 3321-3321 Ma | gap 121.0 Myr
 units	disjoint_example	437	Angalarri Siltstone | NT, WA | text Cryogenian | numeric 1147-838 Ma | gap 118.0 Myr
-units	disjoint_example	82948	Mittiebah Formation | NT | text Paleoproterozoic | numeric 1483-1600 Ma | gap 117.0 Myr
 units	disjoint_example	31393	Little Broken Hill Gabbro | NSW | text Cryogenian | numeric 827-827 Ma | gap 107.0 Myr
 units	disjoint_example	20586	Wooltana Volcanics | SA | text Cryogenian | numeric 830-827 Ma | gap 107.0 Myr
 units	disjoint_example	291	Allaru Mudstone | NSW, NT, QLD, SA | text Albian | numeric 45-44 Ma | gap 55.5 Myr
-units	disjoint_example	31109	Bombarri Granodiorite | QLD | text Ordovician | numeric 410-443.1 Ma | gap 33.1 Myr
 units	disjoint_example	40192	Keene Basalt | WA | text Cryogenian | numeric 753-752 Ma | gap 32.0 Myr
 units	disjoint_example	5300	Dean Quartzite | NT, SA, WA | text Cryogenian | numeric 850-750 Ma | gap 30.0 Myr
-units	disjoint_example	36135	Strathgordon Metamorphic Complex | TAS | text Neoproterozoic | numeric 510-538.8 Ma | gap 28.8 Myr
 units	disjoint_example	24240	Danswell Creek Granodiorite | NSW | text Middle Devonian | numeric 356-353 Ma | gap 26.3 Myr
-units	disjoint_example	39254	Gustav Group | ATA | text Coniacian - Aptian | numeric 89.8-113.2 Ma | gap 23.4 Myr
-units	disjoint_example	39255	Marambio Group | ATA | text Coniacian - Aptian | numeric 89.8-113.2 Ma | gap 23.4 Myr
 units	disjoint_example	23466	Cape Sir John Granodiorite | TAS | text Early Devonian - Middle Devonian | numeric 361-361 Ma | gap 21.3 Myr
-units	disjoint_example	33821	Taloola Ignimbrite Member | SA | text Early Cambrian | numeric 490-511.48 Ma | gap 16.5 Myr
-units	disjoint_example	25720	Halls Reward Metamorphics | QLD | text Early Ordovician - Ordovician | numeric 486.85-500 Ma | gap 13.1 Myr
+units	disjoint_example	11980	Mitchell River Volcanics | QLD | text Late Permian | numeric 279-274 Ma | gap 14.1 Myr
 units	disjoint_example	13301	Mud Tank Carbonatite | NT, SA | text Cryogenian | numeric 735-732 Ma | gap 12.0 Myr
-units	disjoint_example	17675	Talbragar Fossil Fish Bed | NSW | text Early Jurassic - Middle Jurassic | numeric 151-161.5 Ma | gap 10.5 Myr
-units	disjoint_example	32393	Ellersley Formation | NSW | text Lochkovian | numeric 403-413.02 Ma | gap 10.0 Myr
+units	disjoint_example	21125	Amarra Granite | QLD | text Late Silurian - Early Devonian | numeric 382-382 Ma | gap 11.5 Myr
+units	disjoint_example	4506	Coolac Serpentinite | NSW | text Early Silurian - Late Silurian | numeric 409-392 Ma | gap 10.6 Myr
+units	disjoint_example	36721	Waterfall Suite | QLD | text Late Permian - Early Triassic | numeric 274-270 Ma | gap 10.1 Myr
 units	disjoint_example	33131	Kout Norien Granodiorite | VIC | text Middle Cambrian | numeric 487-466 Ma | gap 10.0 Myr
 units	disjoint_example	40843	Hippolyte Rocks Granite | TAS | text Middle Devonian | numeric 373.8-373.8 Ma | gap 8.5 Myr
+units	disjoint_example	23496	Collingullie Granite | NSW | text Wenlock - Ludlow | numeric 415.4-415.4 Ma | gap 7.3 Myr
+units	disjoint_example	74368	Hazeldene Quartz Diorite | QLD | text Late Permian | numeric 268.7-267 Ma | gap 7.1 Myr
+units	disjoint_example	74801	Glen Eden Granite | NSW | text Early Triassic | numeric 240-240 Ma | gap 7.0 Myr
+units	disjoint_example	20423	Wondalga Granodiorite | NSW | text Late Silurian | numeric 446.6-432 Ma | gap 5.3 Myr
+units	disjoint_example	4958	Crows Nest Granite | QLD | text Late Permian - Early Triassic | numeric 242-234 Ma | gap 5.0 Myr
+units	disjoint_example	6665	Finlayson Granite | QLD | text Late Permian | numeric 247-246 Ma | gap 4.9 Myr
+units	disjoint_example	23511	Corner Granite | TAS | text Devonian | numeric 354-354 Ma | gap 4.9 Myr
