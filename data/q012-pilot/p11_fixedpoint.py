@@ -398,7 +398,9 @@ def tasks():
             out += [("R1big", name, j) for j in range(35)]
         out += [("R1big", name, "base"), ("R2", name, "n400_L10"), ("R2", name, "n400_L14")]
         out += [("cand", name, s) for s in SETTINGS] + [("R1chain", name, None), ("R2", name, "n200_L10"), ("ident", name, None)]
-    return out
+    first = [("ident", "central0", None), ("R1chain", "central0", None), ("R2", "central0", "n200_L10"),
+             ("cand", "central0", "primary"), ("R1big", "central0", "base")]          # one of each kind early: smoke
+    return first + [t for t in out if t not in first]
 
 
 def _key(r):
