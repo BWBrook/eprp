@@ -85,7 +85,9 @@ analysis has to be reconstructed. Forward-looking work uses the latest
 version, after the entry's pitfalls are dealt with (for NSB, its stale stored
 ages). Persistent, DOI-versioned repositories such as Zenodo and Figshare
 already preserve the rest; a full local history earns its place only for a
-source that lacks such an archive.
+source that lacks such an archive. A live database with no releases (PBDB,
+ASUD, the OCTOPUS layers) is the extreme case: each dated snapshot is a
+version that cannot be fetched again, so keep them all.
 
 ## Entry template
 
@@ -164,7 +166,9 @@ Body sections, in order:
    provider export (filtered files, default downloads) from the raw tables.
 5. Read the primary description paper and documentation in full; scan for
    lineage, overlap, uses and published critiques.
-6. Write the entry; quote our numbers, cite theirs. Rebuild the index.
+6. Write the entry; quote our numbers, cite theirs. Every number labelled
+   `checked` must come from committed code with a committed output. Rebuild
+   the index.
 7. Have the entry reviewed independently before treating it as settled.
 8. Add any issue that needs a provider or custodian to act (errors, stale
    documentation, licence conflicts, access problems) to
@@ -301,6 +305,44 @@ the workflow when they generalise.
   fossil records are almost entirely foreign-museum or NSB specimens, and
   Macrostrat has no Australian columns. PBDB's Australian subset is the real
   deep-time workhorse ([BACKLOG.md](BACKLOG.md)).
+
+**PBDB, ASUD and the Quaternary tranche (22 October 2026; [pbdb](pbdb/README.md),
+[asud](asud/README.md), [neotoma](neotoma/README.md), [sahulchar](sahulchar/README.md)).**
+
+- *A live, unversioned database's snapshots are its only versions.* Keep every
+  dated PBDB extract; neither `created` filtering nor timestamps rebuild a past
+  state, and interval ages are recomputed when time scales change.
+- *Make live snapshots self-verifying.* Fetch a `limit=0&rowcount` count beside
+  every table, and take a second extract minutes later: the two PBDB extracts
+  were identical, which shows the output is deterministic.
+- *Ask for everything once.* Entry history (`crmod`), all three plate models
+  and specimens cost nothing extra at download time and decided several
+  findings. Overlapping `show` blocks duplicate column names; check that the
+  duplicates agree before trusting any reader.
+- *Check documentation against the data.* PBDB's User Guide says its time
+  scales are mostly GTS2012; the ages use GTS2020-era boundaries. Neotoma
+  labels 200 ka ages "calibrated radiocarbon". Data win.
+- *Match to an authority with state and age, and report a null.* Name
+  matching alone produced homonyms across states. Reporting exact and
+  core-name tiers separately, and the age agreement of random same-state units
+  (12% against 95%), shows what the match is worth.
+- *Use one regional classification across sources.* The same Sahul boxes in
+  every profiler made the four charcoal sources comparable, and exposed that
+  Pico et al.'s "Sahul" is a narrower region than Beyer's land mask.
+- *Scope every percentage to its table and region.* The review caught
+  collection-level timestamps applied to occurrences, early-Palaeozoic
+  plate-model differences stated as general, and extract-wide blanks stated
+  as Australian.
+- *Describe distributions, not medians.* A 98% median overlap hid that 22% of
+  paired collections shared nothing.
+- *Commit the checks behind every "checked".* Scratch scripts became
+  `pbdb_checks.py`; a claim with no committed code behind it is not checked.
+- *Strip personal data from committed outputs.* NetCDF attributes and
+  spreadsheet cells carried individuals' email addresses.
+- *Keep raw read-only.* A script bug pointed its output at a mirrored input;
+  the permissions refused the write.
+- *Run large pulls per host in parallel.* Zenodo served about 0.6 MB/s to
+  deep-server; OSF and Figshare downloads ran alongside instead of in a queue.
 
 **Outreach (Barry, 22 October 2026).**
 

@@ -10,7 +10,10 @@ written.
 ## Done or in progress
 
 NSB, Triton, FRED (documented, not mirrored), FosSahul, SahulArch, AustArch,
-OCTOPUS. See [INDEX.md](INDEX.md).
+OCTOPUS; then the Australian tranche of 22 October: PBDB (Australia and New
+Guinea extract), ASUD, Neotoma/IPPD, RPD, GCD, SahulCHAR, SISAL, Beyer 2020,
+the SHAPE index, the Sahul sea-level pack and Krapp 2021. See
+[INDEX.md](INDEX.md). Ranks 1–8 below are now catalogued.
 
 ## Ranked: Australia and Sahul
 
@@ -49,7 +52,16 @@ OCTOPUS. See [INDEX.md](INDEX.md).
 - **CHELSA-TraCE21k**: 3.85 TB; licence statements conflict.
 - **PaleoView**: tool, not archived data. **BRIDGE HadCM3 raw runs**:
   redundant with Beyer 2020.
-- **Macrostrat**: no Australian columns (negative result).
+- **Macrostrat**: no Australian columns (negative result; its name lexicon
+  holds 12,279 names imported from ASUD in 2015).
+- **GEBCO_2026** (doi:10.5285/4f68d5c7-45eb-f999-e063-7086abc036fa, 7 GB) and
+  **AusBathyTopo 250 m 2026** (doi:10.26186/151280, CC BY 4.0, 2.4 GB, south
+  of 8°S only): modern topography and bathymetry for palaeoshoreline work;
+  DOI-versioned, fetch on demand.
+- **Salles et al. 2024** (Zenodo 10889086): figure outputs of a landscape
+  model, not a time series of palaeotopography.
+- **Lambeck et al. 2014** and **Williams et al. 2018** sea-level curves: tables
+  in supplements only (Williams CC BY-NC-ND).
 - **Museums Victoria Collections API**: blocked to scripts (Cloudflare 403);
   retry from another host.
 - **Queensland Museum palaeontology CSV**: dead link; queued for the museum
