@@ -1,0 +1,27 @@
+table	metric	key	value
+pbdb	quaternary_tetrapod_collections		414
+pbdb	of_which_max_ma_le_0.9		167
+fossahul	distinct_coordinate_sites_3dp		438
+pbdb_to_fossahul	nearest_km_median		34.2
+pbdb_to_fossahul	within_km	1	19
+pbdb_to_fossahul	within_km	5	78
+pbdb_to_fossahul	within_km	25	169
+fossahul_to_pbdb	nearest_km_median		26.2
+fossahul_to_pbdb	within_km	1	16
+fossahul_to_pbdb	within_km	5	49
+fossahul_to_pbdb	within_km	25	201
+paired_within_5km	pbdb_collections_with_genera		78
+paired_within_5km	share_of_pbdb_genera_also_in_fossahul_within_5km_median		0.98
+paired_within_5km	collections_with_no_shared_genus		17
+genera	pbdb		279
+genera	fossahul		219
+genera	shared		131
+genera	pbdb_only_by_class	Aves	96
+genera	pbdb_only_by_class	Mammalia	30
+genera	pbdb_only_by_class	Reptilia	20
+genera	pbdb_only_by_class	Amphibia	2
+megafauna	fossahul_megafauna_genera		31
+megafauna	of_which_in_pbdb		25
+megafauna	missing_from_pbdb		Congruus, Mirounga, Ovis, Pallimnarchus, Sus, gen indet
+megafauna	pbdb_collections_with_fossahul_megafauna_genus		282
+pbdb_to_fossahul	collections_gt_25km_from_any_fossahul_site		245

@@ -1,0 +1,338 @@
+table	metric	key	value
+occurrences	duplicated_column_names		44
+occurrences	duplicated_column_value_mismatches		0
+collections	duplicated_column_names		17
+collections	duplicated_column_value_mismatches		0
+specimens	duplicated_column_names		1
+specimens	duplicated_column_value_mismatches		0
+measurements	duplicated_column_names		1
+measurements	duplicated_column_value_mismatches		0
+references	duplicated_column_names		0
+references	duplicated_column_value_mismatches		0
+taxa	duplicated_column_names		0
+taxa	duplicated_column_value_mismatches		0
+strata	duplicated_column_names		0
+strata	duplicated_column_value_mismatches		0
+check	occurrences_rows_vs_datainfo	329	329
+check	collections_rows_vs_count	70	70
+check	specimens_rows_vs_count	122	122
+check	measurements_rows_vs_count	242	242
+check	references_rows_vs_count	25	25
+check	taxa_rows_vs_count	507	507
+check	strata_rows_vs_count	21	21
+occurrences	rows		329
+occurrences	distinct_occurrence_no		329
+occurrences	rows_with_reid_no		6
+occurrences	distinct_collections		70
+occurrences	by:cc	ID	329
+occurrences	by:state		130
+occurrences	by:state	New Guinea	57
+occurrences	by:state	Paupa	56
+occurrences	by:state	Maluku	43
+occurrences	by:state	Irian Jaya	42
+occurrences	by:state	unknown	1
+occurrences	by:period_of_interval_midpoint	Neogene	141
+occurrences	by:period_of_interval_midpoint	Triassic	76
+occurrences	by:period_of_interval_midpoint	Permian	72
+occurrences	by:period_of_interval_midpoint	Jurassic	17
+occurrences	by:period_of_interval_midpoint	Quaternary	12
+occurrences	by:period_of_interval_midpoint	Cretaceous	10
+occurrences	by:period_of_interval_midpoint	Ordovician	1
+occurrences	age_span_myr_median		6.8
+occurrences	age_span_gt_myr	1	323
+occurrences	age_span_gt_myr	5	248
+occurrences	age_span_gt_myr	10	19
+occurrences	age_span_gt_myr	20	1
+occurrences	with_direct_ma_value		1
+occurrences	by:direct_ma_method	14C	1
+occurrences	by:phylum	Cnidaria	107
+occurrences	by:phylum	Mollusca	94
+occurrences	by:phylum	Brachiopoda	62
+occurrences	by:phylum	Bryozoa	31
+occurrences	by:phylum	Porifera	11
+occurrences	by:phylum	Foraminifera	10
+occurrences	by:phylum		5
+occurrences	by:phylum	Echinodermata	3
+occurrences	by:phylum	Chordata	2
+occurrences	by:phylum	NO_PHYLUM_SPECIFIED	1
+occurrences	by:phylum	Arthropoda	1
+occurrences	by:phylum	Chlorophyta	1
+occurrences	by:phylum	Annelida	1
+occurrences	by:class	Anthozoa	103
+occurrences	by:class	Bivalvia	66
+occurrences	by:class	Rhynchonellata	42
+occurrences	by:class	Stenolaemata	31
+occurrences	by:class	Strophomenata	20
+occurrences	by:class	Gastropoda	18
+occurrences	by:class		14
+occurrences	by:class	Cephalopoda	10
+occurrences	by:class	Demospongiae	8
+occurrences	by:class	Hydrozoa	4
+occurrences	by:class	Calcarea	3
+occurrences	by:class	NO_CLASS_SPECIFIED	3
+occurrences	by:class	Crinoidea	3
+occurrences	by:class	Trilobita	1
+occurrences	by:class	Reptilia	1
+occurrences	by:class	Chlorophyceae	1
+occurrences	by:class	Aves	1
+occurrences	by:accepted_rank	species	178
+occurrences	by:accepted_rank	genus	117
+occurrences	by:accepted_rank	subgenus	9
+occurrences	by:accepted_rank	phylum	9
+occurrences	by:accepted_rank		5
+occurrences	by:accepted_rank	class	4
+occurrences	by:accepted_rank	subfamily	4
+occurrences	by:accepted_rank	family	1
+occurrences	by:accepted_rank	suborder	1
+occurrences	by:accepted_rank	order	1
+occurrences	by:identified_rank	species	231
+occurrences	by:identified_rank	genus	72
+occurrences	by:identified_rank	phylum	9
+occurrences	by:identified_rank	class	4
+occurrences	by:identified_rank	subfamily	4
+occurrences	by:identified_rank	subspecies	3
+occurrences	by:identified_rank	subgenus	2
+occurrences	by:identified_rank	family	1
+occurrences	by:identified_rank	suborder	1
+occurrences	by:identified_rank		1
+occurrences	by:identified_rank	order	1
+occurrences	identified_name_open_nomenclature		162
+occurrences	accepted_name_blank		5
+occurrences	by:difference		211
+occurrences	by:difference	species not entered	54
+occurrences	by:difference	recombined as	54
+occurrences	by:difference	taxon not entered	5
+occurrences	by:difference	rank change, species not entered	3
+occurrences	by:difference	misspelling of, species not entered	1
+occurrences	by:difference	variant of	1
+occurrences	by:environment	marine indet.	122
+occurrences	by:environment	carbonate indet.	97
+occurrences	by:environment	marginal marine indet.	55
+occurrences	by:environment	reef, buildup or bioherm	31
+occurrences	by:environment	shallow subtidal indet.	18
+occurrences	by:environment	foreshore	4
+occurrences	by:environment	coastal indet.	1
+occurrences	by:environment	cave	1
+occurrences	rows_with_abundance		71
+occurrences	by:abund_unit		38
+occurrences	by:abund_unit	specimens	32
+occurrences	by:abund_unit	individuals	1
+occurrences	distinct_accepted_names		232
+occurrences	with_formation		225
+occurrences	quaternary_by:class	Anthozoa	6
+occurrences	quaternary_by:class	Cephalopoda	4
+occurrences	quaternary_by:class	Reptilia	1
+occurrences	quaternary_by:class	Aves	1
+occurrences	quaternary_by:environment	reef, buildup or bioherm	6
+occurrences	quaternary_by:environment	foreshore	4
+occurrences	quaternary_by:environment	cave	1
+occurrences	quaternary_by:environment	marine indet.	1
+occurrences	quaternary_chordate_genera		2
+occurrences	created_year	2004	70
+occurrences	created_year	2006	57
+occurrences	created_year	2019	51
+occurrences	created_year	2012	43
+occurrences	created_year	2011	31
+occurrences	created_year	2008	24
+occurrences	created_year	2025	21
+occurrences	created_year	2003	16
+occurrences	created_year	2007	11
+occurrences	created_year	2014	2
+occurrences	created_year	2009	1
+occurrences	created_year	2018	1
+occurrences	created_year	2020	1
+occurrences	modified_date_top	2004-07-29	54
+occurrences	modified_date_top	2006-07-27	37
+occurrences	modified_date_top	2011-09-14	31
+occurrences	modified_date_top	2012-05-25	27
+occurrences	modified_date_top	2025-01-19	21
+occurrences	enterer_top	M. Clapham	72
+occurrences	enterer_top	E. Leckey	57
+occurrences	enterer_top	M. Kosnik	56
+occurrences	enterer_top	B. Allen	51
+occurrences	enterer_top	U. Merkel	45
+occurrences	enterer_top	D. MacFarlan	21
+occurrences	enterer_top	W. Kiessling	20
+occurrences	enterer_top	A. Hendy	4
+occurrences	enterer_top	S. Peters	1
+occurrences	enterer_top	L. Spahr	1
+collections	rows		70
+collections	with_zero_occurrences		0
+collections	by:cc	ID	70
+collections	by:state		30
+collections	by:state	Irian Jaya	10
+collections	by:state	Maluku	10
+collections	by:state	Paupa	10
+collections	by:state	New Guinea	9
+collections	by:state	unknown	1
+collections	by:latlng_precision	seconds	37
+collections	by:latlng_precision	minutes	11
+collections	by:latlng_precision	1	11
+collections	by:latlng_precision	3	6
+collections	by:latlng_precision	2	5
+collections	by:latlng_basis	estimated from map	30
+collections	by:latlng_basis	based on nearby landmark	25
+collections	by:latlng_basis	based on political unit	12
+collections	by:latlng_basis		1
+collections	by:latlng_basis	unpublished field data	1
+collections	by:latlng_basis	stated in text	1
+collections	by:geogscale	outcrop	25
+collections	by:geogscale		24
+collections	by:geogscale	small collection	11
+collections	by:geogscale	local area	7
+collections	by:geogscale	hand sample	3
+collections	with_formation		49
+collections	with_geological_group		7
+collections	with_member		18
+collections	with_zone		0
+collections	by:collection_type	taxonomic	53
+collections	by:collection_type	general faunal/floral	11
+collections	by:collection_type	biostratigraphic	3
+collections	by:collection_type	taphonomic	3
+collections	by:environment	marine indet.	31
+collections	by:environment	carbonate indet.	18
+collections	by:environment	marginal marine indet.	8
+collections	by:environment	shallow subtidal indet.	5
+collections	by:environment	reef, buildup or bioherm	3
+collections	by:environment	foreshore	3
+collections	by:environment	cave	1
+collections	by:environment	coastal indet.	1
+collections	by:lithology1	"""limestone"""	25
+collections	by:lithology1	sandstone	13
+collections	by:lithology1	marl	12
+collections	by:lithology1	not reported	8
+collections	by:lithology1	"""shale"""	6
+collections	by:lithology1	mudstone	3
+collections	by:lithology1	siltstone	1
+collections	by:lithology1	claystone	1
+collections	by:lithology1	"""reef rocks"""	1
+collections	by:stratscale	group of beds	34
+collections	by:stratscale		24
+collections	by:stratscale	bed	10
+collections	by:stratscale	formation	1
+collections	by:stratscale	member	1
+collections	by:temporal_resolution		67
+collections	by:temporal_resolution	time-averaged	3
+collections	by:period_of_interval_midpoint	Neogene	25
+collections	by:period_of_interval_midpoint	Triassic	14
+collections	by:period_of_interval_midpoint	Permian	13
+collections	by:period_of_interval_midpoint	Quaternary	6
+collections	by:period_of_interval_midpoint	Jurassic	6
+collections	by:period_of_interval_midpoint	Cretaceous	5
+collections	by:period_of_interval_midpoint	Ordovician	1
+collections	paleocoords_computed	gplates	65
+collections	paleocoords_computed	scotese	37
+collections	paleocoords_computed	seton	37
+collections	abs_paleolat_diff_gplates_vs_scotese_median_deg		0.25
+collections	abs_paleolat_diff_gplates_vs_scotese_gt_deg	5	1
+collections	abs_paleolat_diff_gplates_vs_scotese_gt_deg	10	0
+collections	abs_paleolat_diff_gplates_vs_scotese_gt_deg	20	0
+collections	by:geoplate	800	53
+collections	by:geoplate	682	12
+collections	by:geoplate	not computable using this model	5
+collections	created_year	2025	12
+collections	created_year	2012	11
+collections	created_year	2006	11
+collections	created_year	2019	10
+collections	created_year	2004	10
+collections	created_year	2008	7
+collections	created_year	2011	4
+collections	created_year	2007	2
+collections	created_year	2020	1
+collections	created_year	2018	1
+collections	created_year	2003	1
+collections	modified_date_top	2025-02-22	70
+collections	enterer_top	M. Clapham	13
+collections	enterer_top	D. MacFarlan	12
+collections	enterer_top	B. Allen	10
+collections	enterer_top	M. Kosnik	10
+collections	enterer_top	U. Merkel	9
+collections	enterer_top	E. Leckey	9
+collections	enterer_top	A. Hendy	3
+collections	enterer_top	C. Peredo	1
+collections	enterer_top	L. Spahr	1
+collections	enterer_top	S. Peters	1
+collections	top_references_by_collections	90468	12
+collections	top_references_by_collections	11806	10
+collections	top_references_by_collections	11263	9
+collections	top_references_by_collections	41777	7
+collections	top_references_by_collections	27748	4
+collections	top_references_by_collections	42501	3
+collections	top_references_by_collections	70110	3
+collections	top_references_by_collections	27657	3
+collections	top_references_by_collections	27404	3
+collections	top_references_by_collections	69734	2
+specimens	rows		122
+specimens	by:class	Strophomenata	86
+specimens	by:class	Rhynchonellata	26
+specimens	by:class	Bivalvia	6
+specimens	by:class	Trilobita	2
+specimens	by:class	Gastropoda	2
+specimens	by:is_type		85
+specimens	by:is_type	paratype	25
+specimens	by:is_type	holotype	12
+specimens	by:specimen_part	valve	112
+specimens	by:specimen_part	shell	8
+specimens	by:specimen_part	cephalon	1
+specimens	by:specimen_part	pygidium	1
+specimens	distinct_occurrences		32
+measurements	rows		242
+measurements	by:measurement_type	length	114
+measurements	by:measurement_type	width	110
+measurements	by:measurement_type	height	18
+measurements	by:class	Strophomenata	172
+measurements	by:class	Rhynchonellata	49
+measurements	by:class	Bivalvia	13
+measurements	by:class	Trilobita	4
+measurements	by:class	Gastropoda	4
+references	rows		25
+references	by:publication_type	journal article	20
+references	by:publication_type	book chapter	1
+references	by:publication_type	guidebook	1
+references	by:publication_type	unpublished	1
+references	by:publication_type	serial monograph	1
+references	by:publication_type	book/book chapter	1
+references	with_doi		3
+references	pubyr_range		1912 to 2018
+references	by:decade	1980s	5
+references	by:decade	1990s	4
+references	by:decade	2000s	3
+references	by:decade	1910s	3
+references	by:decade	1930s	3
+references	by:decade	2010s	2
+references	by:decade	1920s	2
+references	by:decade	1970s	1
+references	by:decade	1960s	1
+references	by:decade	1940s	1
+references	by:language	English	15
+references	by:language	German	8
+references	by:language		2
+taxa	rows		507
+taxa	by:taxon_rank	genus	177
+taxa	by:taxon_rank	species	129
+taxa	by:taxon_rank	family	123
+taxa	by:taxon_rank	order	50
+taxa	by:taxon_rank	class	17
+taxa	by:taxon_rank	phylum	11
+taxa	by:is_extant	extinct	250
+taxa	by:is_extant	extant	237
+taxa	by:is_extant		20
+strata	rows		21
+strata	with_formation		18
+strata	distinct_formations		15
+strata	distinct_groups		2
+strata	top_strata_by_occs	 |  | 	72
+strata	top_strata_by_occs	 | Nabire | 	56
+strata	top_strata_by_occs	 | Aiduna | 	43
+strata	top_strata_by_occs	 | Klasaman | Malaloenoe	29
+strata	top_strata_by_occs	 | Aifat | 	27
+strata	top_strata_by_occs	 |  | Athyridenkalk	21
+strata	top_strata_by_occs	 | Klasaman | Jef Lio	19
+strata	top_strata_by_occs	 |  | Nuculamergel	11
+strata	top_strata_by_occs	 | Aucella Sandstone | 	10
+strata	top_strata_by_occs	Facet Limestone | Gamta | 	9
+strata	top_strata_by_occs	 | Bogal | Lios	8
+strata	top_strata_by_occs	 | Klasaman | Klamesin Sandstone	7
+strata	top_strata_by_occs	 | Aucella Limestone | 	4
+strata	top_strata_by_occs	 | Keskain | 	4
+strata	top_strata_by_occs	 | Aimau | 	2

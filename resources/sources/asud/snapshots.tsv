@@ -1,0 +1,2 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+asud	2026-10-22T0604Z_wfs	2026-10-22T06:04:38+00:00	CC BY 4.0 (WFS AccessConstraints: (c) Commonwealth of Australia (Geoscience Australia) 2020, Creative Commons Attribution 4.0 International Licence)	2	13947418	11dea7fc959c	https://services.ga.gov.au/gis/stratunits/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=stratunit%3AStratigraphicUnit&outputFormat=csv

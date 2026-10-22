@@ -21,7 +21,8 @@ hashed with sha256, then made read-only. A live WFS has no versions: each `wfs`
 run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
 (GeoServer outputFormat=csv) and its schema; the row count must equal the
 server's numberMatched, and DEST/versions.tsv lists all snapshots. `url` does the
-same for plain files with no provider checksum (raw/<UTC timestamp>_url/).
+same for plain files with no provider checksum (raw/<UTC timestamp>_url/). A live
+snapshot cannot resume, so a failed wfs or url run removes its partial directory.
 Interrupted downloads resume from their .part files and completed versions are
 skipped. verify re-hashes mirrored files against their manifests. Standard
 library only.
@@ -257,11 +258,8 @@ def mirror_version(r, raw_root, tool_sha):
     return True
 
 
-def wfs_snapshot(url, layers, dest, licence, tool_sha):
+def wfs_snapshot(url, layers, dest, vdir, stamp, licence, tool_sha):
     import csv
-    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H%MZ")
-    vdir = os.path.join(dest, "raw", f"{stamp}_wfs")
-    os.makedirs(vdir, exist_ok=False)
     files, counts = [], {}
     for layer in layers:
         q = f"{url}?service=WFS&version=2.0.0&request=GetFeature&typeNames={urllib.parse.quote(layer)}"
@@ -293,10 +291,7 @@ def wfs_snapshot(url, layers, dest, licence, tool_sha):
     finish_snapshot(vdir, manifest, dest)
 
 
-def url_snapshot(urls, dest, licence, tool_sha):
-    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H%MZ")
-    vdir = os.path.join(dest, "raw", f"{stamp}_url")
-    os.makedirs(vdir, exist_ok=False)
+def url_snapshot(urls, dest, vdir, stamp, licence, tool_sha):
     files = []
     for spec in urls:
         name, sep, u = spec.partition("::")
@@ -388,11 +383,21 @@ def main():
     with open(__file__, "rb") as f:
         tool_sha = hashlib.sha256(f.read()).hexdigest()
     if a.command in ("wfs", "url"):
-        os.makedirs(raw_root, exist_ok=True)
-        if a.command == "wfs":
-            wfs_snapshot(a.wfs_url, a.layers.split(","), a.dest, a.license, tool_sha)
-        else:
-            url_snapshot(a.urls, a.dest, a.license, tool_sha)
+        stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H%MZ")
+        vdir = os.path.join(raw_root, f"{stamp}_{a.command}")
+        os.makedirs(vdir)
+        try:
+            if a.command == "wfs":
+                wfs_snapshot(a.wfs_url, a.layers.split(","), a.dest, vdir, stamp, a.license, tool_sha)
+            else:
+                url_snapshot(a.urls, a.dest, vdir, stamp, a.license, tool_sha)
+        except BaseException:
+            for name in os.listdir(vdir):
+                os.chmod(os.path.join(vdir, name), 0o644)
+                os.remove(os.path.join(vdir, name))
+            os.rmdir(vdir)
+            print(f"snapshot failed; removed partial {vdir}", file=sys.stderr, flush=True)
+            raise
         return 0
     os.makedirs(raw_root, exist_ok=True)
     lock = open(os.path.join(a.dest, ".mirror.lock"), "w")
