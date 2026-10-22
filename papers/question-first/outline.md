@@ -62,7 +62,10 @@ the question.*
 - **Evidence:** framework notepad §1–2 and §6; register conventions;
   76/2097 (the three views).
 - **Gaps:** a figure of the pipeline, built from real entries (Q-012,
-  Q-038, Q-017) rather than an idealised diagram.
+  Q-038, Q-017) rather than an idealised diagram. **Draft (22 October):**
+  `figures/pipeline_timeline.png`, from 122 sourced events in
+  `evidence/pipeline-events.tsv`. It shows stages revisited, not a
+  waterfall: repairs make up 42 of the 122 events.
 
 ## 4. Roles and protocol
 
@@ -106,6 +109,9 @@ the question.*
 ### 5b. What vetting changed
 
 - **Evidence:** `evidence/decision-changes-draft.tsv`, once verified.
+- **Draft figure:** `figures/decision_changes_by_day.png`, showing records
+  per day by who changed the judgment and by what evidence. It shows
+  records, not rates.
 - **Gaps:**
   - verify every row against its source;
   - add cost where the record allows;
