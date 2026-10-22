@@ -28,3 +28,27 @@ campaign and any empirical fit remain held.
 4. **Shared future effects.** Event, class-stage and clade effects belong
    in the outer predictive draw. Each genus's own future marks are
    integrated given that draw.
+
+## Benchmark and execution plan (22 October 2026, deep-server)
+
+**Benchmark** ([pilot/bench_38001.json](pilot/bench_38001.json)): dataset
+38001, with 2,777 components and 126,305 rows.
+- **Run:** 100 warmup and 100 sampling iterations, 4 chains × 12 threads.
+  It took **1,334 s, about 6.7 s per iteration**, with no divergences and
+  no tree-depth hits. R-hat was 1.04 and the minimum bulk ESS 83, as
+  expected from so short a run.
+- **β̄_e:** Rhynchonellata 0.73 ± 0.16 and Bivalvia 0.46 ± 0.16, with
+  truth 0.5 inside both 95% intervals. The posterior SD of 0.16 against a
+  prior SD of 1 shows real contraction.
+
+**The five full fits** (1,000 warmup and 1,000 sampling iterations) run
+**concurrently**, at 4 chains × 3 threads each (60 threads).
+- **Forecast:** about 3.7 h per fit at 12 threads per chain, and roughly
+  three times longer at 3, so **about 11 h** in total.
+- **Execution limit: 24 h.** Each fit writes its own result file as it
+  finishes, so an interruption keeps the completed fits.
+
+**Cost signal for the planned campaign.** About 3.7 h × 48 threads per fit
+means the 600-dataset campaign of section 8 would need on the order of
+**10⁵ core-hours**. Its design and cost therefore need revising before
+anyone proposes it. The completed pilot will make that estimate precise.
