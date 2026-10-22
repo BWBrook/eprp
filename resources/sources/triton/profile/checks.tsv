@@ -1,0 +1,122 @@
+v1	rows_all	1716250
+v1	rows_pres	512941
+v1	trim_exc_pres	8986
+v1	dup_rows_v1_key_lat3dp	6
+v1	dup_groups_spanning_sources	0
+v1	ages_gt0	438022
+v1	share_ages_more_than_2dp	0.4215
+v1	share_ages_on_5kyr_grid	0.6122
+v1	max_age_err	5
+v1	age_err_zero_share_nonorig	0.8549
+v1	rows_species:Globoconella triangula	6
+v1	rows_species:Globoconella sphericomiozea	0
+v1	rows_species:Globoconella conoidea	0
+v1	units_4holes:Relative abundance	0
+v1	units_4holes:Count	1520
+v1	units_4holes:Number per gram	0
+v1	units_4holes:Binned	0
+v1	units_4holes:P/A	0
+v1	units_4holes:Mixed	0
+v1	share_pal_lat_eq_lat_at_round_age_0	0.9202
+v1	round_age_is_integer	TRUE
+v1	total_IDd_nonmissing_share	0.3567
+v2_full	rows_all	1806905
+v2_full	rows_pres	541846
+v2_full	trim_exc_pres	11778
+v2_full	dup_rows_v1_key_lat3dp	28838
+v2_full	dup_groups_spanning_sources	16256
+v2_full	ages_gt0	466783
+v2_full	share_ages_more_than_2dp	0.4342
+v2_full	share_ages_on_5kyr_grid	0.6101
+v2_full	max_age_err	5
+v2_full	age_err_zero_share_nonorig	0.8263
+v2_full	rows_species:Globoconella triangula	6
+v2_full	rows_species:Globoconella sphericomiozea	0
+v2_full	rows_species:Globoconella conoidea	0
+v2_full	units_4holes:Relative abundance	0
+v2_full	units_4holes:Count	1520
+v2_full	units_4holes:Number per gram	0
+v2_full	units_4holes:Binned	0
+v2_full	units_4holes:P/A	0
+v2_full	units_4holes:Mixed	0
+v2_full	share_pal_lat_eq_lat_at_round_age_0	0.9211
+v2_full	round_age_is_integer	TRUE
+v2_full	total_IDd_nonmissing_share	0.3447
+v2_No_rounding	rows_all	1716250
+v2_No_rounding	rows_pres	512941
+v2_No_rounding	trim_exc_pres	8989
+v2_No_rounding	dup_rows_v1_key_lat3dp	6
+v2_No_rounding	dup_groups_spanning_sources	0
+v2_No_rounding	ages_gt0	447697
+v2_No_rounding	share_ages_more_than_2dp	0.9532
+v2_No_rounding	share_ages_on_5kyr_grid	0.08
+v2_No_rounding	max_age_err	5
+v2_No_rounding	age_err_zero_share_nonorig	0.8549
+v2_No_rounding	rows_species:Globoconella triangula	6
+v2_No_rounding	rows_species:Globoconella sphericomiozea	0
+v2_No_rounding	rows_species:Globoconella conoidea	0
+v2_No_rounding	units_4holes:Relative abundance	0
+v2_No_rounding	units_4holes:Count	1520
+v2_No_rounding	units_4holes:Number per gram	0
+v2_No_rounding	units_4holes:Binned	0
+v2_No_rounding	units_4holes:P/A	0
+v2_No_rounding	units_4holes:Mixed	0
+v2_No_rounding	share_pal_lat_eq_lat_at_round_age_0	0.9203
+v2_No_rounding	round_age_is_integer	TRUE
+v2_No_rounding	total_IDd_nonmissing_share	0.3567
+v3_update	rows_all	1806905
+v3_update	rows_pres	541846
+v3_update	trim_exc_pres	9780
+v3_update	dup_rows_v1_key_lat3dp	28838
+v3_update	dup_groups_spanning_sources	16256
+v3_update	ages_gt0	476439
+v3_update	share_ages_more_than_2dp	0.609
+v3_update	share_ages_on_5kyr_grid	0.4327
+v3_update	max_age_err	5
+v3_update	age_err_zero_share_nonorig	0.8263
+v3_update	rows_species:Globoconella triangula	6
+v3_update	rows_species:Globoconella sphericomiozea	0
+v3_update	rows_species:Globoconella conoidea	0
+v3_update	units_4holes:Relative abundance	0
+v3_update	units_4holes:Count	1520
+v3_update	units_4holes:Number per gram	0
+v3_update	units_4holes:Binned	0
+v3_update	units_4holes:P/A	0
+v3_update	units_4holes:Mixed	0
+v3_update	share_pal_lat_eq_lat_at_round_age_0	0.9211
+v3_update	round_age_is_integer	TRUE
+v3_update	total_IDd_nonmissing_share	0.3447
+v4_update	rows_all	1806905
+v4_update	rows_pres	541846
+v4_update	trim_exc_pres	9780
+v4_update	dup_rows_v1_key_lat3dp	28838
+v4_update	dup_groups_spanning_sources	16256
+v4_update	ages_gt0	476439
+v4_update	share_ages_more_than_2dp	0.609
+v4_update	share_ages_on_5kyr_grid	0.4327
+v4_update	max_age_err	5
+v4_update	age_err_zero_share_nonorig	0.8263
+v4_update	rows_species:Globoconella triangula	6
+v4_update	rows_species:Globoconella sphericomiozea	0
+v4_update	rows_species:Globoconella conoidea	0
+v4_update	units_4holes:Relative abundance	0
+v4_update	units_4holes:Count	0
+v4_update	units_4holes:Number per gram	1520
+v4_update	units_4holes:Binned	0
+v4_update	units_4holes:P/A	0
+v4_update	units_4holes:Mixed	0
+v4_update	share_pal_lat_eq_lat_at_round_age_0	0.9211
+v4_update	round_age_is_integer	TRUE
+v4_update	total_IDd_nonmissing_share	0.3447
+v4_no_dup	rows_all	1730637
+v4_no_dup	rows_pres	514243
+v4_no_dup	dup_rows_v1_key_lat3dp	11894
+v4_no_dup	ages_gt0	451510
+v4_no_dup	share_ages_more_than_2dp	0.6202
+v4_no_dup	share_ages_on_5kyr_grid	0.423
+v4_no_dup	rows_species:Globoconella triangula	6
+v4_no_dup	rows_species:Globoconella sphericomiozea	0
+v4_no_dup	rows_species:Globoconella conoidea	0
+v4_no_dup	share_pal_lat_eq_lat_at_round_age_0	0.9234
+v4_no_dup	round_age_is_integer	TRUE
+v4_no_dup	total_IDd_nonmissing_share	0.3567

@@ -1,0 +1,64 @@
+== NSB 2018-10-27_10059720
+linked_rows_nsb_group_F	108339
+linked_rows_orig_name_matches_nsb_name_in_sample	101051
+rows_linked	108339
+triton_neptune_rows	108339
+triton_neptune_samples	11105
+triton_neptune_samples_in_snapshot	11105
+age_pairs	108339
+age_diff_median_triton_minus_nsb_myr	-0.0000
+age_absdiff_gt_0.01_myr	45082
+age_absdiff_gt_0.1_myr	8438
+age_absdiff_gt_0.5_myr	0
+age_absdiff_gt_1.0_myr	0
+nsb_foram_samples	16023
+nsb_foram_samples_linked_from_triton	11105
+nsb_dated_foram_samples_linked_from_triton	11105 of 14133
+== NSB 2019-08-30_10059743
+linked_rows_nsb_group_F	108339
+linked_rows_orig_name_matches_nsb_name_in_sample	101051
+rows_linked	108339
+triton_neptune_rows	108339
+triton_neptune_samples	11105
+triton_neptune_samples_in_snapshot	11105
+age_pairs	108339
+age_diff_median_triton_minus_nsb_myr	-0.0000
+age_absdiff_gt_0.01_myr	45082
+age_absdiff_gt_0.1_myr	8438
+age_absdiff_gt_0.5_myr	0
+age_absdiff_gt_1.0_myr	0
+nsb_foram_samples	16023
+nsb_foram_samples_linked_from_triton	11105
+nsb_dated_foram_samples_linked_from_triton	11105 of 14147
+== NSB 2020-12-15_10062080
+linked_rows_nsb_group_F	108339
+linked_rows_orig_name_matches_nsb_name_in_sample	101051
+rows_linked	108339
+triton_neptune_rows	108339
+triton_neptune_samples	11105
+triton_neptune_samples_in_snapshot	11105
+age_pairs	108339
+age_diff_median_triton_minus_nsb_myr	-0.0000
+age_absdiff_gt_0.01_myr	45118
+age_absdiff_gt_0.1_myr	8538
+age_absdiff_gt_0.5_myr	67
+age_absdiff_gt_1.0_myr	36
+nsb_foram_samples	16023
+nsb_foram_samples_linked_from_triton	11105
+nsb_dated_foram_samples_linked_from_triton	11105 of 14147
+== NSB 2023-06-05_10063218
+linked_rows_nsb_group_F	108339
+linked_rows_orig_name_matches_nsb_name_in_sample	101051
+rows_linked	108339
+triton_neptune_rows	108339
+triton_neptune_samples	11105
+triton_neptune_samples_in_snapshot	11105
+age_pairs	108337
+age_diff_median_triton_minus_nsb_myr	-0.0000
+age_absdiff_gt_0.01_myr	57165
+age_absdiff_gt_0.1_myr	21843
+age_absdiff_gt_0.5_myr	8044
+age_absdiff_gt_1.0_myr	3422
+nsb_foram_samples	16023
+nsb_foram_samples_linked_from_triton	11105
+nsb_dated_foram_samples_linked_from_triton	11104 of 14503
