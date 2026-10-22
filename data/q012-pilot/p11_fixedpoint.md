@@ -241,3 +241,38 @@ method:
 - it is **qualified** when n = 800 and L = 16 each agree with it to 1e-6;
 - the gate is ≤ 1e-6 when the reference is qualified;
 - the Q80 difference is recorded and not gated.
+
+## Cost addendum: gradients by Fisher's identity (outside the frozen batch)
+
+This is a probe for section 4's cost question, not an estimator and not part
+of the batch: [fisher_gradient_probe.py](fisher_gradient_probe.py),
+[fisher_gradient_probe.json](fisher_gradient_probe.json).
+
+∇_θ log Z = E_post[∇_θ log g_θ(x)] is evaluated on the evaluator's **own**
+quadrature nodes and weights.
+- **Analytic parts:** the root and edge Gaussian terms, the exponent
+  dependence on κ and κ_b, and the σ-dependence of lz.
+- **Coefficient derivatives:** central differences of the cheap `coefs()`
+  (h = 1e-6).
+
+**Results, T1 and T2** at central0, stress_s3_r09_kbm15, high_rho_9707,
+c1_failing and holdout_9707_sigma8:
+- **Agreement:** the 35-coordinate Fisher gradient agrees with the
+  evaluator's central-difference gradient (h = 1e-4) to at most 4.0e-7.
+  The largest gradient component is 61.
+- **The residual is the finite-difference error.** Halving h cuts it by a
+  factor of exactly 4.00 (2e-4 → 1e-4 → 5e-5) at three cells, the h²
+  truncation law. So the Fisher gradient is the more accurate of the two.
+- **Cost:** T2 takes 0.6–0.7 s by Fisher against 40–47 s by finite
+  differences, about 65× less. T1 takes 0.02 s against 0.26 s.
+
+**Implication for section 4.**
+- With finite differences, one P11 gradient is 71 values, about 140 s on
+  one mac-mini core.
+- Extended to trees, Fisher's identity would cost about one value. Each
+  message would carry its θ-gradient as a conditional expectation, and
+  interior tables would hold those 35-vectors with exact x-derivatives
+  from Cov(·, x_c | x_j)·ρ/v.
+- That would move collapsed HMC from infeasible to plausible. **The tree
+  version is not built or tested here.** The batch's per-tree candidate
+  gradients at all 15 points would be its validation data.

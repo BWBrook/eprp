@@ -1,0 +1,72 @@
+{
+ "central0/T1_root": {
+  "max_abs_diff": 8.739488005504725e-08,
+  "worst": "log_k",
+  "max_abs_grad": 1.1005919910100914,
+  "fisher_seconds": 0.021217486995738,
+  "fd_seconds": 0.25295103199459845
+ },
+ "central0/T2_pair": {
+  "max_abs_diff": 1.4862967567808028e-07,
+  "worst": "log_k",
+  "max_abs_grad": 1.752437130697615,
+  "fisher_seconds": 0.6667416749987751,
+  "fd_seconds": 41.90868354599661
+ },
+ "stress_s3_r09_kbm15/T1_root": {
+  "max_abs_diff": 4.348126309006162e-08,
+  "worst": "log_k",
+  "max_abs_grad": 3.1816495525394117,
+  "fisher_seconds": 0.019478599999274593,
+  "fd_seconds": 0.2641259150041151
+ },
+ "stress_s3_r09_kbm15/T2_pair": {
+  "max_abs_diff": 9.488388919010049e-08,
+  "worst": "log_k",
+  "max_abs_grad": 3.901678373381401,
+  "fisher_seconds": 0.6721150029989076,
+  "fd_seconds": 44.38125288300216
+ },
+ "high_rho_9707/T1_root": {
+  "max_abs_diff": 8.119137825945977e-08,
+  "worst": "log_k",
+  "max_abs_grad": 1.479368810470838,
+  "fisher_seconds": 0.020514707000984345,
+  "fd_seconds": 0.2579370050007128
+ },
+ "high_rho_9707/T2_pair": {
+  "max_abs_diff": 1.277044754388612e-07,
+  "worst": "log_k",
+  "max_abs_grad": 3.9329763445472565,
+  "fisher_seconds": 0.6201346570014721,
+  "fd_seconds": 39.8691200530011
+ },
+ "c1_failing/T1_root": {
+  "max_abs_diff": 2.383451587206764e-07,
+  "worst": "sigma",
+  "max_abs_grad": 36.64446890869755,
+  "fisher_seconds": 0.01966380099474918,
+  "fd_seconds": 0.2618114680008148
+ },
+ "c1_failing/T2_pair": {
+  "max_abs_diff": 3.9529419382233755e-07,
+  "worst": "sigma",
+  "max_abs_grad": 61.088911165469995,
+  "fisher_seconds": 0.7014169439935358,
+  "fd_seconds": 47.2991105589972
+ },
+ "holdout_9707_sigma8/T1_root": {
+  "max_abs_diff": 1.0603665145936247e-07,
+  "worst": "sigma",
+  "max_abs_grad": 16.806927406189942,
+  "fisher_seconds": 0.02019391200155951,
+  "fd_seconds": 0.27098544100590516
+ },
+ "holdout_9707_sigma8/T2_pair": {
+  "max_abs_diff": 1.0659899984943877e-07,
+  "worst": "sigma",
+  "max_abs_grad": 16.97966832178821,
+  "fisher_seconds": 0.6082590730002266,
+  "fd_seconds": 41.64608873799443
+ }
+}
