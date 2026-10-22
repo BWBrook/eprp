@@ -452,3 +452,7 @@ QUADPACK (`scipy.integrate.quad`) in x coordinates.
 - **Outputs:** `collapsed_oracle_results_run3.json`, holding raw values and
   receipts, full vectors, and the amended adjudication of the 16 cells.
   The run-1 and run-2 frozen outcomes are kept unchanged.
+
+*Pre-execution correction:* QUADPACK rejects epsrel below 50·eps (about
+1.11e-14). The tightened rerun therefore uses inner epsrel **1.2e-14**, not
+1e-14. Nothing else changes.
