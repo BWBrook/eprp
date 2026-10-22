@@ -1,10 +1,10 @@
 # Decision-change ledger: summary (draft, updated 22 October 2026)
 
-**Rows:** 207 in `decision-changes-draft.tsv`, dated 7–22 October. Basis: 44 quoted, 160 paraphrase, 3 uncertain.
+**Rows:** 207 in `decision-changes-draft.tsv`, dated 7–22 October. Basis: 44 quoted, 163 paraphrase. **Every row has now been re-read against its source** (see "Verification sweep" below). 204 rows are changes; 2 are duplicates and 1 is a confirmation.
 
-**By evidence_type:** logic 62, prior-work 33, computation 30, counterexample 25, source-check 22, data-audit 22, human-decision 9, other 4, replication 0.
+**By evidence_type:** logic 60, prior-work 34, computation 30, counterexample 26, source-check 22, data-audit 22, human-decision 8, other 5, replication 0.
 
-**By changed_by:** Codex 154, Claude 32, Barry 9, external (GPT-6 Pro review) 8, joint 3, Claude side session 1.
+**By changed_by:** Codex 156, Claude 29, Barry 8, external (GPT-6 Pro review) 7, joint 6, Claude side session 1.
 
 **22 October additions (DC-195 to DC-207):**
 - Q-038 oracle corrections (O7, O6b).
@@ -83,3 +83,38 @@ DC-194 were added after the sweep), and four new columns:
 - `verified`: rows re-read for the histories, plus the five spot checks.
 
 All other rows are still unrepaired and unverified.
+
+**Verification sweep (Claude, 22 October 2026).**
+- **Scope:** the 166 rows still marked "no", split across four parallel
+  Claude Sonnet 5.5 subagents under Claude Opus 5.5. They were read-only and
+  wrote only verdict tables, with 343 tool calls and about 826,000 subagent
+  tokens between them.
+- **Checks:** each row was checked against its cited passage for verbatim
+  quotes, faithful paraphrase, changed_by, evidence_type and date.
+- **Result:** 143 verified, 23 corrected, 0 unverifiable. The verdicts and
+  the evidence read for each are in `verification-2026-10-22.tsv`.
+- **Claude's review before merging:**
+  - Claude spot-checked three verdicts against the sources (DC-012,
+    DC-068, DC-148) and two structural ones (DC-117, DC-121). All held.
+  - Rationale stays in the verification file, not in the ledger fields.
+  - Hand-written values replaced four proposals whose text mixed values
+    with advice (DC-082, DC-099, DC-117, DC-121).
+- **Corrections that change attribution:**
+  - DC-019 and DC-084 → joint;
+  - DC-033 and DC-068 → Codex (DC-068 was the GPT-6 Pro review's general
+    finding, but Codex's own audit fixed Q-008 and Q-009);
+  - DC-099 → joint, as "other": Barry asked a question; he did not decide;
+  - DC-117 → a confirmation, not a change: Codex's own list already placed
+    D1 within Q-012.
+- **Corrections of substance:**
+  - DC-012: Q-014 went from tier 1 to tier 3 as posed, not to tier 2;
+  - DC-121: the baseline change was Claude's own fix, not Codex's;
+  - DC-148: the 160-state check stood as reassuring at its scope.
+- **Basis:** three "uncertain" basis values became "paraphrase" (DC-027,
+  DC-043, DC-076).
+- **What "verified" means:** the passage was re-read and the row matches
+  it. It does not validate the scientific conclusion. Board messages are
+  not in the repository, so rows were settled from files.
+- **Not re-examined:** DC-039 and DC-040 were flagged as possible
+  duplicates. They record tier changes that followed premise changes
+  (DC-036, DC-037), a different judgment, so they stay as changes.
