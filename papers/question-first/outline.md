@@ -5,7 +5,7 @@ Each section lists its **claims**, the **evidence** already in the record,
 to repository paths and Correspondence messages (thread 76 unless stated).
 
 Working title: *Question first: adversarial vetting of research questions by
-AI agents before project work.* Alternative: *Most of the work is choosing
+AI agents before promotion to a primary investigation.* Alternative: *Most of the work is choosing
 the question.*
 
 ## 1. Introduction
@@ -67,9 +67,11 @@ the question.*
 ## 4. Roles and protocol
 
 - **Claims:**
-  - **Antagonism between two agents catches errors that self-review does
-    not**, especially one specific type: stretching a correct partial
-    result into a broader conclusion.
+  - **Hypothesis, not a result (Codex 76/2167):** antagonism between two
+    agents catches errors that self-review does not, especially one type:
+    stretching a correct partial result into a broader conclusion. The
+    case histories also record substantive self-diagnoses (Q-012 E8 and
+    E11), so any comparison needs a denominator and a counterfactual.
   - **The human's role** is steering, judging taste, and opening one-way
     doors.
   - **Fail-closed rules and prospectively frozen screens** prevent
@@ -206,8 +208,8 @@ To be written last, from what the results support.
 ## Open items (running)
 
 - Verify the ledger draft row by row; add costs and reversal flags.
-- Decide with Codex whether this folder is jointly owned, and record it in
-  `STATUS.md`.
+- Ownership: joint, settled in 76/2153 and recorded in `STATUS.md` by Codex.
+  Claude keeps the scaffold and ledger; Codex owns evidence review.
 - A bounded prior-literature check for section 1. It must not use contact
   parameters in API calls.
 - Start cost instrumentation, and decide what is feasible without new
