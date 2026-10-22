@@ -1,0 +1,17 @@
+table	metric	key	value
+pbdb	australian_mesozoic_non_fish_chordate_occurrences		760
+poropat	rows		299
+poropat	body_fossil_rows		238
+poropat	distinct_binomials		90
+poropat	binomials_in_pbdb_extract		85
+poropat	distinct_genera		144
+poropat	genera_in_pbdb_extract		119
+poropat	binomial_not_in_pbdb_extract	Cratochelone byrnei	
+poropat	binomial_not_in_pbdb_extract	Eiectus longmani	
+poropat	binomial_not_in_pbdb_extract	Eomurunna yurrgensis	
+poropat	binomial_not_in_pbdb_extract	Minmi paravertebra	
+poropat	binomial_not_in_pbdb_extract	Trucheosaurus major	
+units	poropat_distinct_normalised		50
+units	in_pbdb_formations		28
+units	in_asud_names		49
+units	not_in_asud	windalia	

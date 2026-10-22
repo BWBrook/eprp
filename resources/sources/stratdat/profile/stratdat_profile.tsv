@@ -1,0 +1,245 @@
+table	metric	key	value
+picks	rows		50128
+picks	distinct_stratdat_no		50128
+picks	boreholes		1636
+picks	distinct_zone_names		1374
+picks	by:ONSHORE_OFFSHORE	offshore	45528
+picks	by:ONSHORE_OFFSHORE	onshore	4600
+picks	by:STATE	Western Australia	27651
+picks	by:STATE	Ashmore and Cartier Islands	8869
+picks	by:STATE	Victoria	7332
+picks	by:STATE	Northern Territory	2480
+picks	by:STATE	South Australia	1556
+picks	by:STATE	Tasmania	1238
+picks	by:STATE	Queensland	997
+picks	by:STATE	New South Wales	5
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Dampier Sub-basin	5280
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Vulcan Sub-basin	4628
+picks	by:BOREHOLE_PROVINCE	Browse Basin,Caswell Sub-basin	4154
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Barrow Sub-basin	3405
+picks	by:BOREHOLE_PROVINCE	Gippsland Basin	2554
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Rankin Platform	2514
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Exmouth Plateau	2273
+picks	by:BOREHOLE_PROVINCE	Otway Basin,Inner Otway Basin	1952
+picks	by:BOREHOLE_PROVINCE	Gippsland Basin,Central Deep	1932
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Exmouth Sub-basin	1882
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Petrel Sub-basin	1877
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Beagle Sub-basin	1624
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Londonderry High	1054
+picks	by:BOREHOLE_PROVINCE	Eromanga Basin,Cooper Basin,Lake Eyre Basin	976
+picks	by:BOREHOLE_PROVINCE	Bass Basin,Cape Wickham Sub-basin	914
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Ashmore Platform	899
+picks	by:BOREHOLE_PROVINCE	Browse Basin,Barcoo Sub-basin	882
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Vulcan Sub-basin,Ashmore Platform	623
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Laminaria High,Flamingo High	594
+picks	by:BOREHOLE_PROVINCE	Roebuck Basin,Bedout Sub-basin	582
+picks	by:BOREHOLE_PROVINCE	Perth Basin,Vlaming Sub-basin	476
+picks	by:BOREHOLE_PROVINCE	Gippsland Basin,Southern Terrace	458
+picks	by:BOREHOLE_PROVINCE	Money Shoal Basin,Arafura Basin	444
+picks	by:BOREHOLE_PROVINCE	Eucla Basin,Duntroon Sub-basin	438
+picks	by:BOREHOLE_PROVINCE	Gippsland Basin,Northern Terrace	426
+picks	by:BOREHOLE_PROVINCE	Canning Basin,Fitzroy Trough	395
+picks	by:BOREHOLE_PROVINCE	Gippsland Basin,Seaspray Depression	368
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Nancar Trough,Sahul Syncline	349
+picks	by:BOREHOLE_PROVINCE	Browse Basin,Yampi Shelf	290
+picks	by:BOREHOLE_PROVINCE	Eucla Basin	285
+picks	by:BOREHOLE_PROVINCE	Bonaparte Basin,Londonderry High,Sahul Syncline	264
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Dampier Sub-basin,Rankin Platform	255
+picks	by:BOREHOLE_PROVINCE	Amadeus Basin,Arunta Orogen	246
+picks	by:BOREHOLE_PROVINCE	Eromanga Basin,Cooper Basin	234
+picks	by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Barrow Sub-basin,Rankin Platform	214
+picks	by:CLASS	dinocyst	11916
+picks	by:CLASS	planktonic foraminifera	7828
+picks	by:CLASS	spore pollen	5221
+picks	by:CLASS	spore pollen subzone	4507
+picks	by:CLASS	nannoplankton	3962
+picks	by:CLASS		3309
+picks	by:CLASS	time slice	2936
+picks	by:CLASS	dinocyst subzone	2894
+picks	by:CLASS	sequence	2738
+picks	by:CLASS	stage/age	826
+picks	by:CLASS	benthic foraminifera	672
+picks	by:CLASS	series/epoch	657
+picks	by:CLASS	nannoplankton subzone	524
+picks	by:CLASS	system/period	370
+picks	by:CLASS	sequence boundary	271
+picks	by:HIGH_LOW	H	20966
+picks	by:HIGH_LOW	L	19964
+picks	by:HIGH_LOW	M	9071
+picks	by:HIGH_LOW	B	65
+picks	by:HIGH_LOW	T	56
+picks	by:HIGH_LOW		6
+picks	by:PICK_DESC	PALAEO	26823
+picks	by:PICK_DESC	SNGL DEPTH	9441
+picks	by:PICK_DESC	SEQ BD/INT	3115
+picks	by:PICK_DESC	TIMESLICE	2999
+picks	by:PICK_DESC	MIN AGE	2255
+picks	by:PICK_DESC	MAX AGE	1646
+picks	by:PICK_DESC	UNCON FLT	1522
+picks	by:PICK_DESC	FORMATION	1377
+picks	by:PICK_DESC	WELL	417
+picks	by:PICK_DESC	LOG PICK	325
+picks	by:PICK_DESC	LOG PALAEO	104
+picks	by:PICK_DESC	ALL DATA	92
+picks	by:PICK_DESC		6
+picks	by:PICK_DESC	CONDENSED	3
+picks	by:PICK_DESC	KEY HORIZ	2
+picks	by:PREFERRED_ALTERNATE	P	49045
+picks	by:PREFERRED_ALTERNATE	A	1082
+picks	by:PREFERRED_ALTERNATE		1
+picks	by:CONFIDENCE_CODE	Side Wall Core3	9387
+picks	by:CONFIDENCE_CODE	Side Wall Core2	8694
+picks	by:CONFIDENCE_CODE	Ditch Cut3	5004
+picks	by:CONFIDENCE_CODE	Horizon3	4914
+picks	by:CONFIDENCE_CODE	Side Wall Core1	4166
+picks	by:CONFIDENCE_CODE	Side Wall Core4	4069
+picks	by:CONFIDENCE_CODE	Horizon2	2466
+picks	by:CONFIDENCE_CODE	Ditch Cut2	2206
+picks	by:CONFIDENCE_CODE	Ditch Cut4	1591
+picks	by:CONFIDENCE_CODE		1196
+picks	by:CONFIDENCE_CODE	Side Wall Core5	927
+picks	by:CONFIDENCE_CODE	Horizon5	809
+picks	by:CONFIDENCE_CODE	Ditch Cut1	767
+picks	by:CONFIDENCE_CODE	Ditch Cut5	517
+picks	by:CONFIDENCE_CODE	Misc3	437
+picks	by:SOURCE_REF	Original Esso data set	8152
+picks	by:SOURCE_REF	Ryan, D.J. et al., 2002, Browse Basin Composite Well Log Plots. (GeoCat No.40115)	1070
+picks	by:SOURCE_REF	Kennard, J.M., Colwell, J.B. and others (in prep 1998/99). Vulcan Sub-Basin Well Folio. AGSO Canberra.	1037
+picks	by:SOURCE_REF	AGSO Record No. 1993/31 - Dampier Sub-basin Module, Spencer.L., et al 1993	894
+picks	by:SOURCE_REF	AGSO Record No. 1994/19 Barrow Exmouth Sub-basins Module, Spencer.L., et al 1994	876
+picks	by:SOURCE_REF	Spencer, L.K., et al 1995 Beagle, Bedout, Offshore Canning and Rowley Sub-basins Module. AGSO Record 1995/03.	757
+picks	by:SOURCE_REF	Spencer et al.,1996, Exmouth and Outer Rankin Platform Module. AGSO record 1995/80.	514
+picks	by:SOURCE_REF	Kennard, J.M. 1996. AGSO Petrel Sub-basin Study 1995-1996 Well Folio, AGSO, Canberra.	445
+picks	by:SOURCE_REF	Kennard, J.M., Deighton, I., Edwards, D.S., Boreham, C.J., 2002. Petrel Sub-basin geohistory modelling CD-ROM. AGSO-Geoscience Australia, Record.	309
+picks	by:SOURCE_REF	McConachie, B., et al (1995) AGSO Record No. 1995/7.	249
+picks	by:SOURCE_REF	Morgan data sheet	234
+picks	by:SOURCE_REF	Morgan, R., 1985.  Palynology review of previous oil drilling, Bass Basin, Australia.	198
+picks	by:SOURCE_REF	Partridge, A.D., 1996 (May). New interpretations of STRATDAT datums from palaeontological range charts available as Basic Data on open file.	192
+picks	by:SOURCE_REF	Partridge, A.D., 1996b. Interpretation of STRATDAT datums from palaeontological range charts available as Basic Data on open file.	171
+picks	by:SOURCE_REF	Morgan, R., July 1999. Palynology Review of the Pre-Tertiary of the Bight-Duntroon Basins for Primary Industries and Resources South Australia.	167
+picks	by:BOREHOLE_TYPE	Petroleum	49841
+picks	by:BOREHOLE_TYPE	Stratigraphic	284
+picks	by:BOREHOLE_TYPE	Groundwater	3
+picks	by:ACTIVE	A	50128
+picks	by:OVERALL_ACCESS	O	50128
+picks	boreholes_by:BOREHOLE_PROVINCE	Eromanga Basin,Cooper Basin,Lake Eyre Basin	143
+picks	boreholes_by:BOREHOLE_PROVINCE	Bonaparte Basin,Vulcan Sub-basin	136
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Dampier Sub-basin	127
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Barrow Sub-basin	106
+picks	boreholes_by:BOREHOLE_PROVINCE	Gippsland Basin	102
+picks	boreholes_by:BOREHOLE_PROVINCE	Gippsland Basin,Central Deep	72
+picks	boreholes_by:BOREHOLE_PROVINCE	Browse Basin,Caswell Sub-basin	68
+picks	boreholes_by:BOREHOLE_PROVINCE	Otway Basin,Inner Otway Basin	63
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Exmouth Sub-basin	60
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Rankin Platform	50
+picks	boreholes_by:BOREHOLE_PROVINCE	Bonaparte Basin,Petrel Sub-basin	48
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Exmouth Plateau	37
+picks	boreholes_by:BOREHOLE_PROVINCE	Amadeus Basin,Arunta Orogen	33
+picks	boreholes_by:BOREHOLE_PROVINCE	Bonaparte Basin,Londonderry High	32
+picks	boreholes_by:BOREHOLE_PROVINCE	Eromanga Basin,Cooper Basin	29
+picks	boreholes_by:BOREHOLE_PROVINCE	Bass Basin,Cape Wickham Sub-basin	28
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Beagle Sub-basin	26
+picks	boreholes_by:BOREHOLE_PROVINCE	Gippsland Basin,Seaspray Depression	22
+picks	boreholes_by:BOREHOLE_PROVINCE	Canning Basin,Fitzroy Trough	22
+picks	boreholes_by:BOREHOLE_PROVINCE	Browse Basin,Yampi Shelf	21
+picks	boreholes_by:BOREHOLE_PROVINCE	Gippsland Basin,Northern Terrace	19
+picks	boreholes_by:BOREHOLE_PROVINCE	Gippsland Basin,Southern Terrace	19
+picks	boreholes_by:BOREHOLE_PROVINCE	Canning Basin,Broome Platform	18
+picks	boreholes_by:BOREHOLE_PROVINCE	Bonaparte Basin,Vulcan Sub-basin,Ashmore Platform	16
+picks	boreholes_by:BOREHOLE_PROVINCE	Perth Basin,Vlaming Sub-basin	16
+picks	boreholes_by:BOREHOLE_PROVINCE	Bonaparte Basin,Ashmore Platform	14
+picks	boreholes_by:BOREHOLE_PROVINCE	Perth Basin,Abrolhos Sub-basin	13
+picks	boreholes_by:BOREHOLE_PROVINCE	Browse Basin,Barcoo Sub-basin	12
+picks	boreholes_by:BOREHOLE_PROVINCE	McArthur Basin	10
+picks	boreholes_by:BOREHOLE_PROVINCE	Bonaparte Basin,Laminaria High,Flamingo High	10
+picks	boreholes_by:BOREHOLE_PROVINCE	McArthur Basin,Carpentaria Basin	9
+picks	boreholes_by:BOREHOLE_PROVINCE	Money Shoal Basin,Arafura Basin	9
+picks	boreholes_by:BOREHOLE_PROVINCE	Perth Basin,Beagle Ridge	8
+picks	boreholes_by:BOREHOLE_PROVINCE	Canning Basin,Lennard Shelf	8
+picks	boreholes_by:BOREHOLE_PROVINCE	Northern Carnarvon Basin,Peedamullah Shelf	8
+picks	borehole_rig_release_decade	1980s	552
+picks	borehole_rig_release_decade	1990s	419
+picks	borehole_rig_release_decade	1970s	264
+picks	borehole_rig_release_decade	2000s	191
+picks	borehole_rig_release_decade	1960s	177
+picks	borehole_rig_release_decade	1950s	16
+picks	borehole_rig_release_decade	2010s	9
+picks	borehole_rig_release_decade	1930s	3
+picks	borehole_rig_release_decade	1940s	1
+picks	borehole_rig_release_decade	1910s	1
+picks	with_top_and_base_age		44406
+picks	base_younger_than_top		103
+picks	zone_span_myr_median		3.04
+picks	base_age_period_bin_ma	66-145	19963
+picks	base_age_period_bin_ma	145-252	9781
+picks	base_age_period_bin_ma	23-66	7775
+picks	base_age_period_bin_ma	0-23	3727
+picks	base_age_period_bin_ma	252-541	2961
+picks	base_age_period_bin_ma	>539	199
+picks	sample_depth_m_median_max		1951 14900
+picks	with_stratno_midpoint		5579
+picks	with_strat_unit_midpoint		5579
+picks	with_coordinates		50128
+picks	picks_with_top_and_midpoint_units		5383
+picks	top_unit_differs_from_midpoint_unit		5096
+age_check_top_unit_vs_asud	picks	gap_5_20myr	490
+age_check_top_unit_vs_asud	picks	gap_gt_20myr	336
+age_check_top_unit_vs_asud	picks	gap_le_5myr	701
+age_check_top_unit_vs_asud	picks	overlap	4834
+age_check_top_unit_vs_asud	picks	top_unit_not_matched_uniquely	4
+age_check_top_unit_vs_asud	overlap_by:CLASS	dinocyst	1141 of 1485
+age_check_top_unit_vs_asud	overlap_by:CLASS	spore pollen	786 of 961
+age_check_top_unit_vs_asud	overlap_by:CLASS	sequence	716 of 930
+age_check_top_unit_vs_asud	overlap_by:CLASS	nannoplankton	512 of 684
+age_check_top_unit_vs_asud	overlap_by:CLASS	planktonic foraminifera	398 of 556
+age_check_top_unit_vs_asud	overlap_by:CLASS	dinocyst subzone	256 of 303
+age_check_top_unit_vs_asud	overlap_by:CLASS	series/epoch	178 of 226
+age_check_top_unit_vs_asud	overlap_by:CLASS	system/period	134 of 184
+age_check_top_unit_vs_asud	overlap_by:CLASS	spore pollen subzone	150 of 183
+age_check_top_unit_vs_asud	overlap_by:CLASS	stage/age	150 of 176
+age_check_top_unit_vs_asud	overlap_by:CLASS	conodont	116 of 143
+age_check_top_unit_vs_asud	overlap_by:CLASS	benthic foraminifera	61 of 108
+age_check_vs_asud	stratno_midpoint_with_several_units		4006
+age_check_vs_asud	picks	gap_5_20myr	562
+age_check_vs_asud	picks	gap_gt_20myr	3269
+age_check_vs_asud	picks	gap_le_5myr	357
+age_check_vs_asud	picks	overlap	938
+age_check_vs_asud	overlap_by:CLASS	dinocyst	7 of 1378
+age_check_vs_asud	overlap_by:CLASS	sequence	269 of 762
+age_check_vs_asud	overlap_by:CLASS	nannoplankton	90 of 677
+age_check_vs_asud	overlap_by:CLASS	planktonic foraminifera	163 of 463
+age_check_vs_asud	overlap_by:CLASS	spore pollen	24 of 355
+age_check_vs_asud	overlap_by:CLASS	dinocyst subzone	0 of 275
+age_check_vs_asud	overlap_by:CLASS	series/epoch	86 of 214
+age_check_vs_asud	overlap_by:CLASS	spore pollen subzone	5 of 151
+age_check_vs_asud	overlap_by:CLASS	stage/age	26 of 149
+age_check_vs_asud	overlap_by:CLASS	system/period	54 of 143
+age_check_vs_asud	overlap_by:CLASS	conodont	17 of 121
+age_check_vs_asud	overlap_by:CLASS	benthic foraminifera	78 of 104
+age_check_vs_asud	overlap_by:CLASS	unknown	0 of 69
+age_check_vs_asud	overlap_by:CLASS	eon	33 of 61
+age_check_vs_asud	overlap_by:CLASS	composite	0 of 52
+age_check_vs_asud	overlap_by:CLASS	nannoplankton subzone	45 of 47
+age_check_vs_asud	overlap_by:CLASS	trilobite	31 of 33
+age_check_vs_asud	overlap_by:CLASS	time slice	0 of 26
+age_check_vs_asud	overlap_by:CLASS	planktonic foraminifera subzone	0 of 7
+age_check_vs_asud	overlap_by:CLASS	sub-series/epoch	7 of 7
+age_check_vs_asud	overlap_by:CLASS	spore pollen sub-subzone	0 of 5
+age_check_vs_asud	overlap_by:CLASS	era	2 of 5
+age_check_vs_asud	overlap_by:CLASS	nontaxa	0 of 5
+age_check_vs_asud	overlap_by:CLASS	composite subzone	0 of 5
+age_check_vs_asud	overlap_by:CLASS	sub-stage	0 of 5
+age_check_vs_asud	overlap_by:CLASS	sub-system/period	1 of 4
+age_check_vs_asud	overlap_by:CLASS	informal	0 of 1
+age_check_vs_asud	overlap_by:CLASS	dinocyst sub-subzone	0 of 1
+age_check_vs_asud	overlap_by:CLASS	graptolite subzone	0 of 1
+age_check_vs_asud	gap_example	15211	Cornea 2 DW1 855.6 m | Proterozoic 541-2500 Ma | ASUD Woodbine Group 66-.0117 Ma | gap 475.0
+age_check_vs_asud	gap_example	15212	Cornea 2 DW1 880 m | Proterozoic 541-2500 Ma | ASUD Woodbine Group 66-.0117 Ma | gap 475.0
+age_check_vs_asud	gap_example	57808	Stroma 1 673 m | Proterozoic 541-2500 Ma | ASUD Woodbine Group 66-.0117 Ma | gap 475.0
+age_check_vs_asud	gap_example	57809	Stroma 1 674 m | Proterozoic 541-2500 Ma | ASUD Woodbine Group 66-.0117 Ma | gap 475.0
+age_check_vs_asud	gap_example	48026	Ronald 1 81.5 m | Furongian 485.37-497 Ma | ASUD Walker River Formation 121.4-93.9 Ma | gap 364.0
+age_check_vs_asud	gap_example	48123	Burdo 1 31.64 m | Cambrian 485.37-541 Ma | ASUD Walker River Formation 121.4-93.9 Ma | gap 364.0
+age_check_vs_asud	gap_example	48034	Chanin 1 76.5 m | Cambrian 485.37-541 Ma | ASUD Walker River Formation 121.4-93.9 Ma | gap 364.0
+age_check_vs_asud	gap_example	48025	Ronald 1 64.3 m | Furongian 485.37-497 Ma | ASUD Walker River Formation 121.4-93.9 Ma | gap 364.0
+age_check_vs_asud	gap_example	48509	Sever 1 28 m | Cambrian 485.37-541 Ma | ASUD Walker River Formation 121.4-93.9 Ma | gap 364.0
+age_check_vs_asud	gap_example	66658	The Brothers 1 351.43 m | Cambrian 485.37-541 Ma | ASUD Wilgunya Subgroup 143.1-93.9 Ma | gap 342.3

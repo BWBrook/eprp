@@ -23,6 +23,8 @@ run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
 server's numberMatched, and DEST/versions.tsv lists all snapshots. `url` does the
 same for plain files with no provider checksum (raw/<UTC timestamp>_url/). A live
 snapshot cannot resume, so a failed wfs or url run removes its partial directory.
+`url` refuses an HTML response for a file not named .html or .htm (a login or
+bot-check page served in place of the file).
 Interrupted downloads resume from their .part files and completed versions are
 skipped. verify re-hashes mirrored files against their manifests. Standard
 library only.
@@ -302,6 +304,8 @@ def url_snapshot(urls, dest, vdir, stamp, licence, tool_sha):
             try:
                 with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=600) as r, \
                         open(target + ".part", "wb") as out:
+                    if r.headers.get_content_type() == "text/html" and not name.endswith((".html", ".htm")):
+                        raise ValueError(f"{u}: served an HTML page (login or bot check?), not {name}")
                     expected = r.headers.get("Content-Length")
                     while chunk := r.read(1 << 20):
                         out.write(chunk)

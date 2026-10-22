@@ -1,0 +1,2 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+stratdat	2026-10-22T0856Z_wfs	2026-10-22T08:56:39+00:00	CC BY 4.0 (GA STRATDAT, eCat 146442, doi:10.26186/146442; WFS capabilities)	2	40208169	c02158bc6217	https://services.ga.gov.au/gis/resfacs/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=resfacs%3ABiostratigraphy&outputFormat=csv
