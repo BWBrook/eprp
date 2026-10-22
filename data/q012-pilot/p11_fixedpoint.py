@@ -383,10 +383,9 @@ def benchmark():
 
 # ---------------------------------------------------------------- the frozen batch (p11_fixedpoint.md section 6)
 BIG = "2-5-7-8-10-11-14"
-R1_GRAD_POINTS = ("central0", "high_rho_9707", "c1_failing", "holdout_c1f_sigma20", "holdout_9707_sigma8",
-                  "holdout_c4f_sigma15")
+R1_GRAD_POINTS = tuple(json.loads(BANK.read_text()))       # all 15 (section 6)
 R2_SETTINGS = {"n200_L10": (200, 50.0), "n400_L10": (400, 50.0), "n400_L14": (400, 70.0)}
-WALL_LIMIT = 14 * 3600
+WALL_LIMIT = 10 * 3600
 RESULTS = HERE / "p11_fixedpoint_run.jsonl"
 SUMMARY = HERE / "p11_fixedpoint_results.json"
 TOL = dict(O.TOL, interpolation_value=1e-6, interpolation_deriv=1e-5)

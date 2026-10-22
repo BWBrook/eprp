@@ -144,9 +144,51 @@ The 15 frozen oracle states:
 They are written once to `p11_fixedpoint_bank.json`, so the batch does not
 depend on scratch files.
 
-## 6. Benchmark, frozen bank and ceiling
+## 6. Benchmark, frozen bank and ceiling (frozen before the batch)
 
-(Filled in after the one-value benchmark, before the batch.)
+**Benchmark** ([p11_fixedpoint_benchmark.json](p11_fixedpoint_benchmark.json),
+laptop, one core, central0):
+
+| Quantity | Seconds | Difference from candidate |
+| --- | ---: | ---: |
+| Candidate P11 value, primary (big tree 4.1, chain 1.5, pair 0.6, singletons ~0.004 each) | 6.2 | — |
+| Candidate, resolution / domain | 6.5 / 6.1 | −4.8e-13 / 5.7e-14 (log numerator) |
+| R1 exact, big tree | 254 | −3.8e-13 |
+| R1 exact, chain | 2.7 | −1.1e-13 |
+| R2 tensor, chain, n = 200 (box 0.03) | 0.87 | −1.1e-13 |
+| log π (Q80) | 0.002 | — |
+
+**mac-mini calibration**
+([p11_fixedpoint_calibration_macmini.json](p11_fixedpoint_calibration_macmini.json),
+Apple M4, one process, at central0, holdout_9707_sigma8, holdout_c1f_sigma20
+and c1_failing):
+- Candidate value 1.9–2.2 s and R1 big-tree value 55–60 s, with no extra
+  cost at the stress points.
+- R1 − candidate is −3.8e-13, −6.3e-11, 0.0 and 0.0. The candidate value at
+  central0 is bit-identical to the laptop's.
+- A direct probe of the Hermite tables over their needed ranges found
+  pointwise errors of at most 1e-12 at σ = 12 and 20, 8e-10 at central0
+  and 3e-7 at holdout_9707_sigma8, at the range edges.
+- Needed ranges sit close to the table's upper edge: for example 34.4
+  against 34.9 at holdout_9707_sigma8. Amendment 1's check guards this.
+
+**Frozen bank:** all 15 points of section 5, in
+[p11_fixedpoint_bank.json](p11_fixedpoint_bank.json). Every check of
+section 3 runs at every point, including **R1's full 35-derivative check
+of the big tree at all 15 points**. That is 660 tasks: per point, 70
+exact big-tree evaluations by coordinate plus a base value, three
+candidate settings, three R2 settings, R1 on the chain, and identities.
+
+**Forecast and ceiling:**
+- Forecast: about 21 performance-core-hours. Over 8 workers on 4
+  performance and 6 efficiency cores, that is about 4 h wall, or roughly
+  32 allocated core-hours.
+- **Ceiling:** 10 h wall on mac-mini with 8 workers (`pilot.workers`),
+  at most 80 allocated core-hours.
+- Tasks not started by the deadline are recorded as skipped. Their points
+  are reported *unresolved (not run)*, never imputed.
+- Results append to `p11_fixedpoint_run.jsonl` task by task, so a restart
+  resumes. `assemble` writes `p11_fixedpoint_results.json`.
 
 ## Amendment 1: table coverage check (before the benchmark)
 
