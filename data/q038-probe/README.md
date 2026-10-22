@@ -138,6 +138,11 @@ five attempted seeds completed and wrote results.
   at its 0.82–0.98 quantile in four seeds. Its truth is 0 (σ_α = 0 in S2).
 - **No single funnel.** The other hierarchical scales show no consistent
   shift in divergent draws.
+- **Caveat on "divergent draws".** These are the states CmdStan *saved*
+  for transitions flagged divergent: the selected states, not the points
+  where the integrator failed (as Codex established for Q-012 on
+  18 October). The step-size and redundancy findings do not depend on
+  them. The s_α-tail association is indicative only.
 
 ## Divergence diagnostic (declared before launch; not an adopted model)
 
