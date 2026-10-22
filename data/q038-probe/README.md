@@ -231,3 +231,21 @@ vectorised over posterior draws.
   genera). The integrated score's Monte Carlo SE is about 0.43 nats in
   total (0.0013 per genus). The draws here are truth-perturbed stand-ins,
   not a posterior, so the scores carry no inferential meaning.
+
+## Per-gradient cost benchmark (queued 22 October; Codex 76/2215)
+
+`run.py tbench SEED THREADS GRAIN` times gradients for one chain.
+- **Start:** the pilot fit's last draw, with its adapted step size and
+  diagonal metric. Tree depth ≤ 4 and no adaptation, so every iteration
+  runs 15 leapfrog steps.
+- **Timing:** (wall₄₁ − wall₁) / (gradients₄₁ − gradients₁) removes start-up
+  and data loading.
+- **Smoke test:** on deep-server under load, 0.102 s per gradient at 2
+  threads (15 gradients per iteration, as designed).
+- **Queued:** `q038_tbench_queue.sh` on deep-server waits for the four
+  diagnostic fits to finish. It then runs threads 1, 2, 3, 4, 6, 8, 12 and
+  16 at grain sizes 50, 1 and 250, **one at a time** on the idle machine,
+  writing `pilot/tbench_tT_gG.json`.
+- The pilot suggests 3 threads per chain costs about a fifth of the
+  core-hours of 12. This measures the curve, in isolation, before any
+  model simplification.
