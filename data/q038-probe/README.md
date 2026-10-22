@@ -96,3 +96,67 @@ are now correct.
 **The running fits are unaffected.** On all five pilot datasets, the
 repaired code's full-fold and all forward-fold Stan data are identical to
 those of the pre-repair code the fits run on.
+
+## Pilot outcome (22 October 2026): 0 of 5 pass the convergence screen
+
+[pilot/summary.json](pilot/summary.json) and `pilot/fit_SEED.json`. All
+five attempted seeds completed and wrote results.
+
+| Seed | Wall (h) | Allocated core-h | Divergences | Max R-hat | Min bulk / tail ESS | β̄_e Rhynch. [95%] | β̄_e Bival. [95%] |
+| --- | ---: | ---: | ---: | ---: | --- | --- | --- |
+| 38001 | 3.19 | 38.3 | 50 | 1.053 | 119 / 405 | 0.73 [0.42, 1.04] | 0.46 [0.15, 0.75] |
+| 38002 | 3.10 | 37.2 | 96 | 1.013 | 383 / 168 | 0.53 [−0.17, 1.19] | 0.37 [−0.30, 1.02] |
+| 38003 | 3.04 | 36.5 | 20 | 1.008 | 337 / 687 | 1.02 [0.26, 1.67] | 0.79 [0.12, 1.38] |
+| 38004 | 3.19 | 38.3 | 9 | 1.010 | 176 / 353 | 0.98 [0.61, 1.36] | 0.32 [−0.00, 0.66] |
+| 38005 | 3.08 | 37.0 | 119 | 1.024 | 153 / 38 | 0.47 [−0.00, 0.98] | 0.71 [0.23, 1.18] |
+
+- **Screen:** R-hat ≤ 1.01, bulk and tail ESS ≥ 400, zero divergences. No
+  fit passes. There were no tree-depth hits; the median is 63 leapfrog
+  steps.
+- **Recovery:** truth β̄_e = 0.5 lies in 9 of 10 intervals. Given the
+  failed screen, this is not recovery evidence.
+- **Cost:** 3.0–3.2 h wall at 4 chains × 3 threads, **about 37 allocated
+  core-hours per fit**. That is a fifth of the 178 extrapolated from the
+  48-thread benchmark: `reduce_sum` scales poorly to 12 threads per chain.
+  At this configuration, 600 full fits would be about 22,500 core-hours.
+  Convergence, not runtime, is now the binding problem.
+
+**Diagnosis** (`divergence_diagnosis.json`, from the CmdStan draws):
+- **Divergences are chain-specific and track the adapted step size.** In
+  38005, 84 of 119 are in the chain with step 0.099 (the others have
+  0.060–0.085). In 38002, 52 of 96 are in the chain with step 0.092 (the
+  others ≈ 0.07).
+- **Additive redundancy:**
+  - corr(gd0, mean b_fam) is −0.80 to −0.90;
+  - corr(gd0, mean ν) is −0.25 to −0.46;
+  - corr(mean α, mean g_ord) is −0.58 to −0.88;
+  - gd0's posterior SD (0.049–0.066) is 2.5–3× that of the identified sum
+    gd0 + mean ν + mean b_fam (0.017–0.029).
+
+  The worst R-hat is on gd0 in three seeds.
+- **Baseline walk:** the median of Bivalvia's s_α in divergent draws sits
+  at its 0.82–0.98 quantile in four seeds. Its truth is 0 (σ_α = 0 in S2).
+- **No single funnel.** The other hierarchical scales show no consistent
+  shift in divergent draws.
+
+## Divergence diagnostic (declared before launch; not an adopted model)
+
+**Runs:** seeds **38001** (worst R-hat) and **38005** (most divergences),
+same data, same 4 × (1,000 + 1,000) iterations, deep-server, 4 chains × 3
+threads, all four fits concurrent (48 threads).
+
+| Variant | Model | adapt_delta | Isolates |
+| --- | --- | ---: | --- |
+| `ad95` | [model.stan](model.stan), unchanged | 0.95 | step-size tuning |
+| `stz95` | [model_stz.stan](model_stz.stan) | 0.95 | additive redundancy, at the same tuning |
+
+- **`model_stz.stan`:** f_fam, g_ord, b_fam and ν are `sum_to_zero_vector`
+  within class, scaled so each element keeps marginal SD s. The
+  intercepts α and gd0 then carry the means. The likelihood is
+  unchanged.
+- This changes the prior, not the data model. It is offered to Codex as a
+  candidate repair, not adopted.
+- **Reported:** the same screen and receipts as the pilot, via
+  `run.py diag SEED VARIANT THREADS` writing `pilot/diag_VARIANT_SEED.json`.
+- **Ceiling:** 12 h wall per fit, about 600 allocated core-hours at most.
+  The forecast is 4–6 h, because adapt_delta 0.95 takes smaller steps.

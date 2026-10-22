@@ -71,21 +71,24 @@ def load_data(seed):
             for r, c in zip(z["meta"], z["counts"])]
 
 
-def model():
+def model(stan_file="model.stan"):
     from cmdstanpy import CmdStanModel, set_cmdstan_path
     set_cmdstan_path(str(pathlib.Path.home() / ".cmdstan/cmdstan-2.38.0"))
-    return CmdStanModel(stan_file=str(HERE / "model.stan"), cpp_options={"STAN_THREADS": True})
+    return CmdStanModel(stan_file=str(HERE / stan_file), cpp_options={"STAN_THREADS": True})
 
 
-def fit(seed, threads=12, warmup=None, sampling=None, tag="fit"):
+DIAG = {"ad95": ("model.stan", 0.95), "stz95": ("model_stz.stan", 0.95)}     # pilot divergence diagnosis (README)
+
+
+def fit(seed, threads=12, warmup=None, sampling=None, tag="fit", stan_file="model.stan", adapt_delta=None):
     D, m = core.load_design(), load_manifest()
     gen = load_data(seed)
     data = core.stan_data(gen, core.components(gen, ("full",), D), D)
-    mdl = model()
+    mdl = model(stan_file)
     t0 = time.time()
     f = mdl.sample(data=data, chains=FIT["chains"], parallel_chains=FIT["chains"], threads_per_chain=threads, seed=seed,
                    iter_warmup=warmup or FIT["warmup"], iter_sampling=sampling or FIT["sampling"],
-                   adapt_delta=FIT["adapt_delta"], max_treedepth=FIT["max_treedepth"], show_progress=False,
+                   adapt_delta=adapt_delta or FIT["adapt_delta"], max_treedepth=FIT["max_treedepth"], show_progress=False,
                    output_dir=str(OUT / f"{tag}_{seed}"))
     wall = time.time() - t0
     s = f.summary()
@@ -94,7 +97,7 @@ def fit(seed, threads=12, warmup=None, sampling=None, tag="fit"):
     rhat = float(s["R_hat"].max()); ess_b = float(s["ESS_bulk"].min()); ess_t = float(s["ESS_tail"].min())
     draws = f.stan_variables()
     be = draws["beta_e"]
-    rec = dict(seed=seed, tag=tag, wall_seconds=wall, components=data["N"], rows=data["R"], threads_per_chain=threads,
+    rec = dict(seed=seed, tag=tag, stan_file=stan_file, adapt_delta=adapt_delta or FIT["adapt_delta"], wall_seconds=wall, components=data["N"], rows=data["R"], threads_per_chain=threads,
                warmup=warmup or FIT["warmup"], sampling=sampling or FIT["sampling"], divergences=div, treedepth_hits=depth,
                rhat_max=rhat, ess_bulk_min=ess_b, ess_tail_min=ess_t,
                success=bool(div == 0 and rhat <= FIT["rhat_max"] and ess_b >= FIT["ess_min"] and ess_t >= FIT["ess_min"]),
@@ -138,5 +141,7 @@ if __name__ == "__main__":
         fit(int(a[1]), int(a[2]) if len(a) > 2 else 12, warmup=100, sampling=100, tag="bench")
     elif cmd == "fit":
         fit(int(a[1]), int(a[2]) if len(a) > 2 else 12)
+    elif cmd == "diag":
+        fit(int(a[1]), int(a[3]), tag=f"diag_{a[2]}", stan_file=DIAG[a[2]][0], adapt_delta=DIAG[a[2]][1])
     elif cmd == "summarise":
         summarise()
