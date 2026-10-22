@@ -76,12 +76,20 @@ Counts are our own ([profile](profile/sealevel_profile.tsv)).
   continental shelf relative to today, for "Sahul" and Sunda, under ICE-PC2 and
   Waelbroeck et al. (2002). Sahul peaks at 1.10 million km² at 26 ka
   (Waelbroeck; 1.09 million under ICE-PC2), Sunda at 1.96 million.
-- **Borreggine et al. (2026).** Six files (7.5 GB): `paleotopo.zip` (CSV
-  grids at 45, 50, 55, 60 and 65 ka, about 0.07°, 84.9–155.07°E,
-  18.15°S–18.15°N), MITgcm inputs and outputs, a migration-model package with
-  ICE-PC2 regional sea level back to 126 ka (a glacio-isostatic product), and
-  CESM output (6.8 GB). Details from the source scan; our mirror is still
-  downloading.
+- **Borreggine et al. (2026).** The deposit is the code and data of
+  *IslandHopper* (Powell, Borreggine and Wilkinson, Harvard, 2018–2023), a
+  MATLAB model of seafaring pathways from Sunda to Sahul at 45, 50, 55, 60
+  and 65 ka. It computes island-to-island routes and their costs
+  (intervisibility and travel time) and implements Birdsell's (1977)
+  northern and southern routes. Its inputs are ICE-PC2 regional sea level
+  back to 126 ka on a Gauss–Legendre degree-512 grid (Pico et al. 2017),
+  GMRT present-day topography (from which palaeotopography is computed), and
+  MITgcm ocean currents averaged over austral summer and winter for each time
+  slice. Six files (7.5 GB): README, `paleotopo.zip` (CSV grids at the five
+  slices, about 0.07°, 84.9–155.07°E, 18.15°S–18.15°N, per the source scan),
+  MITgcm inputs and outputs, the migration-model package (code, sea-level and
+  topography files) and CESM output (6.8 GB). Our mirror holds the README and
+  is still downloading the rest.
 
 ## Provenance and lineage
 
@@ -150,7 +158,9 @@ come from the same ice model. Modern topography for palaeoshoreline work
 Land area, coastline position and connectivity (Sahul–New Guinea, Bass
 Strait, the Arafura plain) through the last glacial cycle, for megafauna,
 human-dispersal and climate simulations, and for sensitivity tests on the
-sea-level history.
+sea-level history. IslandHopper is a ready-made, documented model of the
+crossing into Sahul, with regional sea level and ocean currents, for
+human-arrival questions alongside [SahulArch](../sahularch/README.md).
 
 ## Citation and terms
 
@@ -164,6 +174,8 @@ landing page and dataset DOIs, and the access date. Cite the three papers.
   [sealevel_profile.py](sealevel_profile.py).
 - 2026-10-22, checked: the comparison with Beyer's land mask
   ([beyer_profile.py](../beyer2020/beyer_profile.py)).
+- 2026-10-22, checked: the Borreggine deposit's README (IslandHopper; data,
+  code and time slices), read from the mirror.
 - 2026-10-22, source claim (source scan, Claude Sonnet subagent): Borreggine
-  file list, grid extent and contents; Williams et al. (2018) land areas;
+  file list, sizes, grid extent and contents of the zips; Williams et al. (2018) land areas;
   NOAA mirrors; paper details.
