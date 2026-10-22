@@ -544,3 +544,27 @@ runs yet):
 - **Before the later S0 campaign,** shared nuisance and clade effects are
   either zeroed globally, or removing them only at events is labelled as
   model misspecification.
+
+### E. Implementation corrections (Codex 76/2213 and 76/2215)
+
+- **Scaling units.** The synthetic probe does not standardise within each
+  event's risk set, as section 5 and section A's "What is frozen" say. It
+  uses one fixed affine transform per predictor, derived from all 19,426
+  deposit genus-transitions
+  ([deposit_constants.py](../q038-probe/deposit_constants.py), which
+  reproduces [deposit_constants.json](../q038-probe/deposit_constants.json)
+  byte for byte). Coefficients are therefore per deposit-wide SD, not per
+  risk-set SD.
+  - These are external constants for the synthetic pilot.
+  - Because they come from the whole deposit, they do not meet the
+    prefix-only rule for empirical hindcasting. Before any empirical fit,
+    derive the scales from admissible training information or fix them as
+    scientific units. This choice is open.
+- **LOEO restarts keep the observed history.** A non-held-out genus with a
+  record after k restarts at its first post-boundary capture. The
+  likelihood conditions on that capture and its count, and contributes
+  nothing for any held-out transition. Its covariates still use the genus's
+  observed history from its own first record onward, including any stage-k
+  record allowed under ε = 1. The first-record exception applies only at
+  that first record. The implementation reset the history at the restart;
+  this was corrected, and check C6 covers it.

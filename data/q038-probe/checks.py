@@ -134,6 +134,57 @@ for fam in (0, 17, 33):
 out["C5_max_z_generator_vs_likelihood"] = worst
 out["C5_ok"] = worst < 4.5
 
+# ---- C6: LOEO restarts condition on capture but keep the observed history (Codex 76/2213) -----------------------------
+res6 = {}
+# (a) Codex's counterexample: records (1,2), (8,1), (9,2); k = 7; his independent alive/dead recursion gave -8.9884258733
+Dc = dict(D); Dc["T"] = 10; Dc["E"] = np.array([0] + [2] * 10)
+pc = core.truth_params(np.random.default_rng(913), D, json.loads((HERE / "manifest.json").read_text())["omega_calibrated"])
+cc = np.zeros(11, dtype=int); cc[1], cc[8], cc[9] = 2, 1, 2
+gc = [dict(cls="Rhynchonellata", fam=3, ord=0, f=1, counts=cc)]
+res6["counterexample_components"] = core.components(gc, ("loeo", 7), Dc)
+suf = core.component_loglik(cc, 8, 10, "Rhynchonellata", 3, 0, pc, Dc)
+res6["counterexample_suffix"] = suf
+res6["counterexample_vs_codex_recursion"] = abs(suf - (-8.9884258733))
+pcx = copy.deepcopy(pc)
+for c in core.CLASSES:
+    pcx["omega"][c][0] += 10
+pcx["delta"][0] += 10
+res6["counterexample_change_under_event7_parameters"] = abs(
+    sum(core.component_loglik(cc, f, C, "Rhynchonellata", 3, 0, pcx, Dc) for _, f, C in res6["counterexample_components"])
+    - sum(core.component_loglik(cc, f, C, "Rhynchonellata", 3, 0, pc, Dc) for _, f, C in res6["counterexample_components"]))
+# (b) total probability of a restarted suffix with a fixed earlier history (tiny C1 design; restart at 3, censored at 8)
+for cf in (1, 2):
+    s = 0.0
+    for fut in itertools.product(*[range(E1[t - 1] + 1) for t in range(4, 9)]):
+        cnt = np.zeros(T1 + 1, dtype=int); cnt[1], cnt[3] = 2, cf; cnt[4:9] = fut
+        s += math.exp(core.component_loglik(cnt, 3, 8, "Rhynchonellata", 3, 0, pt, Dt))
+    res6[f"restart_total_probability_count_{cf}"] = s
+# (c) every LOEO restart on the real design (C4's simulated data): suffix = full - prefix-to-capture, and its Stan rows
+# equal the full-fold rows for the same transitions
+full = core.stan_data(gen, core.components(gen, ("full",), D), D)
+row0 = {gi: full["c_tr0"][i] - 1 for i, (gi, f, C) in enumerate(core.components(gen, ("full",), D))}
+worst_id, worst_row, n_restart = 0.0, 0.0, 0
+for kk in core.EVENTS:
+    comps = core.components(gen, ("loeo", kk), D)
+    dk = core.stan_data(gen, comps, D)
+    for i, (gi, f, C) in enumerate(comps):
+        g = gen[gi]
+        if f == g["f"]:
+            continue
+        n_restart += 1
+        ll = lambda a, b: core.component_loglik(g["counts"], a, b, g["cls"], g["fam"], g["ord"], p, D)
+        worst_id = max(worst_id, abs(ll(f, C) - (ll(g["f"], C) - ll(g["f"], f))))
+        a, b = dk["c_tr0"][i] - 1, row0[gi] + (f - g["f"])
+        for j in range(C - f):
+            worst_row = max(worst_row, max(abs(u - v) for u, v in zip(dk["tr_feat"][a + j], full["tr_feat"][b + j])),
+                            abs(dk["em_w"][a + j] - full["em_w"][b + j]))
+res6.update(real_design_restarts=n_restart, max_suffix_identity_error=worst_id, max_restart_row_vs_full_row=worst_row)
+out["C6"] = res6
+out["C6_ok"] = (res6["counterexample_components"] == [(0, 1, 7), (0, 8, 10)] and res6["counterexample_vs_codex_recursion"] < 1e-9
+                and res6["counterexample_change_under_event7_parameters"] < 1e-12
+                and all(abs(res6[f"restart_total_probability_count_{cf}"] - 1) < 1e-12 for cf in (1, 2))
+                and n_restart > 0 and worst_id < 1e-9 and worst_row == 0.0)
+
 # ---- C2: Stan likelihood equals the Python reference (likelihood_only, jacobian=False) ---------------------------------
 from cmdstanpy import CmdStanModel, set_cmdstan_path  # noqa: E402
 set_cmdstan_path(str(pathlib.Path.home() / ".cmdstan/cmdstan-2.38.0"))

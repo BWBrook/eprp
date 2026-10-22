@@ -3,7 +3,8 @@
 One feature convention for generator, likelihood, fold builder and forecast (Codex's implementation requirement):
 - Stages t = 1..T. A genus alive in stage t emits a reference count Binomial(E_t, 1 - exp(-theta_t)) (epsilon = 1), then
   survives the transition t -> t+1 with probability phi_t. A dead genus emits zero.
-- The CJS likelihood conditions on the first record f and on its count (declared convention).
+- The CJS likelihood conditions on the first record f and on its count (declared convention). A LOEO restart conditions
+  on its capture and count but keeps the genus's earlier observed history for covariates (origin = first record).
 - Hazard covariates for the transition s -> s+1 use records in stages < s, with the first-record stage always included
   (so the transition out of f uses f's own record). Detection at stage t uses w = log mean count over recorded stages < t.
 - Covariates use FIXED affine transforms frozen from the deposit (deposit_constants.json), never data-dependent z-scores,
@@ -69,6 +70,12 @@ def history_from_counts(counts, f, upto):
     return h
 
 
+def component_history(counts, f):
+    """Observed history through a component's conditioning start f, from the genus's own first record. A LOEO restart
+    conditions on its capture at f but keeps the earlier observed marks as covariates (Codex 76/2213)."""
+    return history_from_counts(counts, int(np.flatnonzero(counts)[0]), f)
+
+
 # ---------------------------------------------------------------- hazard and detection given parameters
 def eta(params, cls, fam, ordr, s, feats):
     """logit(1 - phi) for the transition s -> s+1."""
@@ -98,8 +105,8 @@ def log_binom(y, n, th):
 
 
 def component_loglik(counts, f, C, cls, fam, ordr, params, D):
-    """log P(counts at f+1..C | first record at f with its count), censored after C."""
-    h = History(f, int(counts[f]))
+    """log P(counts at f+1..C | capture at f with its count and the observed history before f), censored after C."""
+    h = component_history(counts, f)
     logphi, log1mphi, logp0, ll_em = {}, {}, {}, {}
     for t in range(f, C):
         e = eta(params, cls, fam, ordr, t, h.hazard_features(t, D))     # transition t -> t+1 uses records < t (+ f)
@@ -239,7 +246,7 @@ def stan_data(genera, comps, D, likelihood_only=0, grainsize=50):
     for gi, f, C in comps:
         g = genera[gi]
         cnt = g["counts"]
-        h = History(f, int(cnt[f]))
+        h = component_history(cnt, f)
         d["c_cls"].append(cl[g["cls"]]); d["c_fam"].append(g["fam"] + 1); d["c_ord"].append(g["ord"] + 1)
         d["c_f"].append(f); d["c_C"].append(C)
         d["c_last"].append(max(t for t in range(f, C + 1) if cnt[t] > 0))

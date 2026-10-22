@@ -111,10 +111,16 @@ def fit(seed, threads=12, warmup=None, sampling=None, tag="fit"):
 
 
 def summarise():
-    rows = [json.loads((OUT / f"fit_{s}.json").read_text()) for s in SEEDS if (OUT / f"fit_{s}.json").exists()]
-    out = dict(n=len(rows), successes=sum(r["success"] for r in rows),
-               wall_seconds=[r["wall_seconds"] for r in rows], divergences=[r["divergences"] for r in rows],
+    """Every attempted seed is accounted for: a seed without a result file is reported as such (Codex 76/2215)."""
+    att = {s: json.loads((OUT / f"fit_{s}.json").read_text()) if (OUT / f"fit_{s}.json").exists() else None for s in SEEDS}
+    rows = [r for r in att.values() if r]
+    out = dict(attempted=len(SEEDS), completed=len(rows), no_result=[s for s, r in att.items() if r is None],
+               successes=sum(r["success"] for r in rows), failed_screen=[r["seed"] for r in rows if not r["success"]],
+               wall_seconds=[r["wall_seconds"] for r in rows],
+               allocated_core_hours=[r["wall_seconds"] * FIT["chains"] * r["threads_per_chain"] / 3600 for r in rows],
+               divergences=[r["divergences"] for r in rows], treedepth_hits=[r["treedepth_hits"] for r in rows],
                rhat_max=[r["rhat_max"] for r in rows], ess_bulk_min=[r["ess_bulk_min"] for r in rows],
+               ess_tail_min=[r["ess_tail_min"] for r in rows],
                beta_e={c: [(r["beta_e"][c]["mean"], r["beta_e"][c]["sd"]) for r in rows] for c in core.CLASSES},
                note="Runtime/convergence pilot only; five datasets cannot pass any recovery gate (contract v3 D).")
     (OUT / "summary.json").write_text(json.dumps(out, indent=1, default=float) + "\n")

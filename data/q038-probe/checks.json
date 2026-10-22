@@ -39,6 +39,29 @@
  "C4_ok": true,
  "C5_max_z_generator_vs_likelihood": 1.9984088068259076,
  "C5_ok": true,
+ "C6": {
+  "counterexample_components": [
+   [
+    0,
+    1,
+    7
+   ],
+   [
+    0,
+    8,
+    10
+   ]
+  ],
+  "counterexample_suffix": -8.98842587327675,
+  "counterexample_vs_codex_recursion": 2.3250734670909878e-11,
+  "counterexample_change_under_event7_parameters": 0.0,
+  "restart_total_probability_count_1": 0.9999999999999998,
+  "restart_total_probability_count_2": 1.0000000000000004,
+  "real_design_restarts": 169,
+  "max_suffix_identity_error": 1.4210854715202004e-14,
+  "max_restart_row_vs_full_row": 0.0
+ },
+ "C6_ok": true,
  "C2": {
   "full": {
    "python": -2750.743080354491,
