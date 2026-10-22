@@ -250,6 +250,23 @@ def hash_file(path, *algos):
     return [h.hexdigest() for h in hs]
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args, **kwargs):
+        return None
+
+
+def dryad_resolve(url):
+    """Dryad's file API redirects to pre-signed storage, which rejects the bearer token: return the target."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Authorization": f"Bearer {dryad_token()}"})
+    try:
+        with urllib.request.build_opener(_NoRedirect).open(req, timeout=60):
+            return url
+    except urllib.error.HTTPError as e:
+        if e.code in (301, 302, 303, 307, 308):
+            return e.headers["Location"]
+        raise
+
+
 def download(url, dest, size, checksum):
     algo, expected = checksum.split(":", 1)
     part = dest + ".part"
@@ -260,12 +277,14 @@ def download(url, dest, size, checksum):
             have = 0
         try:
             if have < size:
-                headers = {"User-Agent": UA}
+                fetch, headers = url, {"User-Agent": UA}
                 if url.startswith(f"{DRYAD}/api/"):
-                    headers["Authorization"] = f"Bearer {dryad_token()}"
+                    fetch = dryad_resolve(url)
+                    if fetch == url:
+                        headers["Authorization"] = f"Bearer {dryad_token()}"
                 if have:
                     headers["Range"] = f"bytes={have}-"
-                with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=300) as r:
+                with urllib.request.urlopen(urllib.request.Request(fetch, headers=headers), timeout=300) as r:
                     mode = "ab" if have and r.status == 206 else "wb"
                     with open(part, mode) as out:
                         while chunk := r.read(1 << 20):
