@@ -342,9 +342,19 @@ c1_failing and holdout_9707_sigma8:
 
 **Fisher gradient at all 15 points** ([fisher_tree_check.json](fisher_tree_check.json)):
 - Against the batch's finite-difference per-tree gradients it agrees to at
-  most 6.6e-7 at the ten points with σ ≤ 8. At the five with σ ≥ 12 or the
-  c4 states it agrees to at most 5.5e-6. The h² test at the worst point is
-  reported below.
+  most 6.6e-7 at nine points.
+- At the other six it agrees to 1.2e-6–5.5e-6: the four captured v6q80t
+  states (c1 and c4, previous and failing) and the σ = 15 and σ = 20
+  hold-outs.
+- **This is still the finite-difference error.** At the worst point
+  (holdout_c4f_sigma15, big tree, gradients up to 251), halving h cuts the
+  gap by exactly 4.00 and 4.00 (2.2e-5 → 5.5e-6 → 1.4e-6). The larger
+  absolute gaps come from larger third derivatives, not from the Fisher
+  gradient.
+- **mac-mini's `matmul` warnings** (divide-by-zero, overflow and invalid,
+  at the root `w @ f`) are spurious. All inputs are finite, and the result
+  equals `einsum` and a plain Python loop to 3e-14. This is a known numpy
+  2.x behaviour with Apple's Accelerate library.
 
 **Reading.**
 - The collapsed evaluator with Hermite-interpolated interior messages is
