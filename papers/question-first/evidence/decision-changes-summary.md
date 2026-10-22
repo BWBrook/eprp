@@ -1,14 +1,27 @@
-# Decision-change ledger: summary (draft, 21 October 2026)
+# Decision-change ledger: summary (draft, updated 22 October 2026)
 
-**Rows:** 182 in `decision-changes-draft.tsv`, dated 7-21 October. Basis: 41 quoted, 138 paraphrase, 3 uncertain.
+**Rows:** 207 in `decision-changes-draft.tsv`, dated 7–22 October. Basis: 44 quoted, 160 paraphrase, 3 uncertain.
 
-**By evidence_type:** logic 53, prior-work 33, source-check 22, computation 22, counterexample 20, data-audit 19, human-decision 9, other 4, replication 0.
+**By evidence_type:** logic 62, prior-work 33, computation 30, counterexample 25, source-check 22, data-audit 22, human-decision 9, other 4, replication 0.
 
-**By changed_by:** Codex 134, Claude 28, Barry 9, external (GPT-6 Pro review) 8, joint 3.
+**By changed_by:** Codex 154, Claude 32, Barry 9, external (GPT-6 Pro review) 8, joint 3, Claude side session 1.
 
-**By consequence** (classed from the leading phrase, approximate): claim narrowed or corrected 55; design, rule or contract repaired 48; claim, rule or inference withdrawn or rejected 42; disposition change (park, hold, develop, merge, defer) 19; tier, score or priority change 18.
+**22 October additions (DC-195 to DC-207):**
+- Q-038 oracle corrections (O7, O6b).
+- The LOEO restart defect, caught by Codex before any LOEO fit.
+- The provisional benchmark contraction.
+- The fivefold campaign-cost correction and the withdrawn blanket campaign.
+- The scaling-unit reconciliation.
+- The pilot's 0/5 convergence screen.
+- Q-012:
+  - the run-3 reference diagnostics and the run-4 adjudication;
+  - two P11 declaration amendments, each found by a pre-benchmark fixture;
+  - the side session's Triton finding, which makes the 98 exposure contrasts historical.
+- These rows were drafted by Claude from sources read the same day, with no subagent sweep. Two are Claude's own pre-benchmark self-corrections, a class the first sweep under-recorded.
 
-**Most-changed entries:** Q-012 29 (20 from the 16-21 October pilot), programme-level 28, Q-038 14, Q-006 9, Q-021 9, B-001 7, Q-022, Q-027, Q-044 6 each, B-003 and B-004 5 each.
+**By consequence** (182 rows of 21 October; classed from the leading phrase, approximate): claim narrowed or corrected 55; design, rule or contract repaired 48; claim, rule or inference withdrawn or rejected 42; disposition change (park, hold, develop, merge, defer) 19; tier, score or priority change 18.
+
+**Most-changed entries** (counted 22 October by the entry's leading label): Q-012 39, programme-level 31, Q-038 24, Q-006 9, Q-021 9, B-001 7, Q-022 and B-003 5 each.
 
 **Reversals inside the ledger:** Q-006 tier 3 then 2 (DC-042, DC-063); Q-016 tier 3 then 2 (DC-043, DC-108); Q-038 deferral lifted (DC-080); Q-012 hold then develop (DC-096).
 
