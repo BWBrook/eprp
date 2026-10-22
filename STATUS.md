@@ -79,13 +79,18 @@ Updated: 22 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   HMC or bootstrap. Claude accepted that scope in 76/2154. The
   [oracle review](ideas/2026-10-22-q012-oracle-review-codex.md) confirms run 1's
   24 pass / 3 fail / 3 reference-unresolved and supports the repaired scalar
-  case independently. Run 2 remains incomplete at this checkpoint;
-  independent-reference qualification and exception classification need
-  correction before any P11 evaluator/cost check. Barry reports an interrupted
-  laptop run and Claude's migration to always-on `deep-server`; Claude owns
-  setup, dispatch and identification of the authoritative result. No further
-  long laptop run, fit or empirical fit. The kunanyi allocation and PBS
-  mail/wake workflow remain unchanged; no background monitoring.
+  case independently. Run 2 at `8930890` is complete: **33 pass / 4 fail /
+  8 reference-unresolved** under the frozen rules. The
+  [run-2 adjudication](ideas/2026-10-22-q012-run2-adjudication-codex.md)
+  reproduces all 45 decisions and supports the four selection identities
+  post hoc, including T3. Full-likelihood accuracy at twelve rows remains
+  unresolved. Claude's bounded reference-only repair is accepted: six named
+  states in T2/T3 plus ordinary/narrow-kernel controls; keep the evaluator
+  unchanged, qualify domains/errors and repair decision classification.
+  P11 evaluation/cost work remains conditional on closure. Claude reports
+  the `deep-server` clone and cross-host replication; the latter's second
+  receipt remains due. Interrupted attempts remain distinct. No long laptop
+  run or new fit; the kunanyi allocation and mail/wake workflow are unchanged.
   B-004's critique response, six-study modern screen and bounded analytic
   check are complete. B-004 is **hold (support)**: invasion invariance and
   conditional fold responses do not supply a consequential oxygen scale;
@@ -135,10 +140,10 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
-| Q-012/D1 support and identification | Codex oracle review complete; Claude owns repair report and server migration | [Oracle review](ideas/2026-10-22-q012-oracle-review-codex.md): disclosed run 1 has 24 pass / 3 fail / 3 unresolved; repaired T1 passes independent scalar value/all-coordinate derivative checks. Independent-value comparison is ungated; evaluator exceptions lack stage classification. Resolve these when adjudicating the authoritative completed run 2 before a fixed-point P11 evaluator/cost check. Final sampler failure and tuning stop stand; P06 and ten held. Kunanyi tranche 32.577/53.333 core-hours; no fit or new estimator selected |
+| Q-012/D1 support and identification | Codex run-2 adjudication complete; Claude owns bounded reference-only repair | [Run-2 decision](ideas/2026-10-22-q012-run2-adjudication-codex.md): 33 pass / 4 fail / 8 unresolved reproduce. All evaluator self-checks pass; qualified selection corroboration supports T3 too, but twelve full-factor rows remain unresolved. Repair reference values/35-coordinate derivatives at six T2/T3 states plus two controls, qualify domains/errors and correct decision logic before any P11 evaluator/cost check. Save full gradients and cross-host comparison receipts. Sampler tuning ends; P06 and ten held. Kunanyi tranche 32.577/53.333 core-hours; no fit or estimator selected |
 | External GPT-6 Pro idea injection, both rounds | Joint review and substantive response complete; follow-ups unallocated | Claude accepts [joint assessment](ideas/2026-10-21-outside-consultations-response-codex.md) at 13f6ae4/76–2141. Recruitment replacement boundary and finite chronology claim audit lead the next information checks, then engineers/reporting; canopy and trail remain alternatives. [Response](ideas/2026-10-21-response-and-next-contracts-codex.md) records two minor recruitment wording qualifications. No register expansion, primary selection or queue displacement |
 | Question-first methods paper WIP | Joint; Codex case review complete, Claude maintains histories/ledger/scaffold | [Case-history review](papers/question-first/evidence/2026-10-22-case-history-review-codex.md) verifies three correction-and-acceptance chains against nine pinned passages. Ledger at d566f53 has 194 records, with 54 rows assigned episode IDs, not 54 independent episodes. Three histories remain partial; narrow estimator/stopping/design-validation claims and preserve Claude's self-corrections. No workflow-performance result, manuscript drafting, comparison harness or release |
-| Restarted checkpoint queue and ranking | Claude: Q-038 predictive-law closure and Q-012 oracle adjudication; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Conceptual backlog accepted at cd1f8d9; 22 October reviews close the next bounded evidence checkpoint. Q-016 and Q-015/017/023/031 narrower products remain queued; no empirical fits or primary promotion. Codex's separate queue is not yet started. Keep consequence separate from readiness and next-check value. Framework notepad remains Claude-owned |
+| Restarted checkpoint queue and ranking | Claude: Q-038 predictive-law closure and Q-012 reference repair; Codex: Q-018 next, then Q-024 and Q-010 contrast | Barry's 19 October steer relayed in 76/2095 supports resuming queued checks and a ranked set of 25–50 questions before selection. Conceptual backlog accepted at cd1f8d9; 22 October reviews close the next bounded evidence checkpoint. Q-016 and Q-015/017/023/031 narrower products remain queued; no empirical fits or primary promotion. Codex's separate queue is not yet started. Keep consequence separate from readiness and next-check value. Framework notepad remains Claude-owned |
 | B-004 theory-first development | Codex: analytic product complete; Claude accepts hold | [Analytic note](literature/2026-10-16-b004-coupling-boundaries.md) proves rare-invasion invariance for smooth communal transport vanishing at zero biomass and derives conditional resident-fold responses. Exact examples retain intrinsic chemical bistability. B-004 hold (support) accepted in 76/1701; [modern table](literature/2026-10-15-b004-modern-source-table.md) still lacks a joint demographic/transport closure. No consequential oxygen scale or historical exclusion established; no further source sweep, simulator or section panel |
 | Approved Q-010 prior check and Q-029 park | Codex | Complete: [Q-010 closeout](literature/2026-10-14-q010-prior-check.md) retains under review/tier 2 for a specific support/design contrast; generic engineering/diversity is occupied. Q-029 parked in index and body. Coordinate any Q-010 follow-up with blue-sky D3/D8; no duplicate allocation |
 | Whole-portfolio checkpoint | Both passes complete; checkpoint approved by Barry | [Final reconciliation check](ideas/2026-10-14-phase2-checkpoint-final-check-codex.md) records 10 develop / 29 hold / 8 park / 3 component merges; Q-045 remains parked as a standalone entry. Approved status/tier and component changes are applied, including Codex's Q-029 park. The bounded prior-check tranche is underway; no primary investigation selected |
@@ -1018,6 +1023,18 @@ next phase of ideation whilst those final checks are done."
   verifies three pinned correction chains; histories remain partial and
   workflow efficacy unmeasured. Claude responds next and edits owned sources.
   No empirical fit, primary selection, larger campaign or manuscript release.
+
+- **Completed oracle run 2 adjudicated, 22 October:** Claude's `8930890`
+  and 76/2186 supply the new completed result. The
+  [adjudication](ideas/2026-10-22-q012-run2-adjudication-codex.md) reproduces
+  33 pass / 4 fail / 8 unresolved, supports the selection-identity repair
+  from existing receipts, and accepts a bounded independent-reference
+  repair for the remaining twelve full-factor rows. A Gaussian-envelope
+  domain bound is available from concavity; no new integrals were run by
+  Codex. Claude benchmarks and freezes the finite batch on an always-on
+  host, retaining full gradients and numerical/provenance receipts. No
+  P11 evaluator or fit yet. Q-038 v2 and the paper snapshots are unchanged;
+  the existing reviews and 76/2166–2167 remain the outstanding handoff.
 
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
