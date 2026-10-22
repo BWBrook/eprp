@@ -76,3 +76,24 @@ reichgelt_versions	sheet_comparison	S6	cells differing by position 1168; cells o
 reichgelt_versions	sheet_comparison	S7	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
 reichgelt_versions	s6_doi_cell_forms	dryad copy	bare 90
 reichgelt_versions	s6_doi_cell_forms	revised	double doi.org prefix 2; single doi.org prefix 88
+craffey_ediacaran	occurrences		1540
+craffey_ediacaran	collections		415
+craffey_ediacaran	genera		278
+craffey_ediacaran	occurrences_in_australia		340
+craffey_ediacaran	collections_in_australia		77
+craffey_ediacaran	australian_collections_in_pbdb_au_extract		36
+craffey_ediacaran	australian_occurrences_by:formation	Rawnsley Quartzite	321
+craffey_ediacaran	australian_occurrences_by:formation	Arumbera Sandstone	10
+craffey_ediacaran	australian_occurrences_by:formation	Wonoka	5
+craffey_ediacaran	australian_occurrences_by:formation	Unidentified	2
+craffey_ediacaran	australian_occurrences_by:formation	Pound Quartzite	1
+craffey_ediacaran	australian_occurrences_by:formation	Wilpena	1
+couzens_enamel	rows		282
+couzens_enamel	specimens		246
+couzens_enamel	taxa		76
+couzens_enamel	assemblages		42
+couzens_enamel	rows_by:Status	Fossil	157
+couzens_enamel	rows_by:Status	Modern	125
+couzens_enamel	est_age_ma_range		0.0 to 24.1
+couzens_enamel	genera		43
+couzens_enamel	genera_in_fossahul		24

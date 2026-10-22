@@ -8,7 +8,7 @@ Usage: uv run deposits_profile.py AU_FOSSIL_DEPOSITS_DIR OUT_TSV
 
 For each deposit's latest raw version: the manifest's title, DOI, publication
 date and licence, then every file with its size. Spreadsheets
-(.xlsx, .xls and the .xlsx members of zips) and .csv/.tsv files are read as
+(.xlsx, .xls and the .xlsx members of zips) and .csv/.tsv files (and members) are read as
 tables; .txt, .md, .R and .m files give a line count and (for .txt and .md) the
 first line; .tps files give their specimen blocks; other types are listed as
 not_parsed, and a summary row lists the types skipped.
@@ -157,6 +157,9 @@ for dep in deposits:
                         out.append((dep, name, "zip_member", f"{i.filename} {i.file_size}"))
                         if i.filename.lower().endswith(".xlsx"):
                             xlsx_sheets(dep, f"{name}::{i.filename}", io.BytesIO(z.read(i.filename)))
+                        elif i.filename.lower().endswith((".csv", ".tsv")):
+                            text = io.TextIOWrapper(io.BytesIO(z.read(i.filename)), encoding="utf-8-sig", errors="replace", newline="")
+                            table(dep, f"{name}::{i.filename}", "", list(csv.reader(text, delimiter="\t" if i.filename.lower().endswith(".tsv") else ",")))
                         else:
                             out.append((dep, f"{name}::{i.filename}", "not_parsed", os.path.splitext(i.filename)[1]))
                             skipped[os.path.splitext(i.filename)[1].lower()] += 1
@@ -172,7 +175,7 @@ out.append(("(all)", "", "files", n_files))
 out.append(("(all)", "", "bytes", n_bytes))
 out.append(("(all)", "", "not_parsed_types", "; ".join(f"{k} {n}" for k, n in sorted(skipped.items())) or "none"))
 
-EMAIL = re.compile(r"[\w.+-]+@[\w-]+(\.[\w-]+)+")
+EMAIL = re.compile(r"[\w.+-]+\s*(@|\[at\])\s*[\w-]+((\.|\[dot\])[\w-]+)+")
 with open(sys.argv[2], "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")
     w.writerow(["deposit", "file", "metric", "value"])

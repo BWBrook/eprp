@@ -3,27 +3,27 @@ id: au-fossil-deposits
 name: Deposited datasets for Australia's flagship fossil biotas (Ediacaran to Holocene)
 kind: deposit
 status: active
-last_update: 2025-09-02
+last_update: 2026-05-15
 scope:
-  taxa: ["Ediacaran organisms", "Cambrian trilobites", "Permian bryozoans", "Eocene plants", "Quaternary mammals", "pollen and charcoal"]
+  taxa: ["Ediacaran organisms", "Ediacaran assemblages worldwide (co-occurrence)", "Cambrian trilobites", "Permian bryozoans", "Eocene plants", "Quaternary mammals", "kangaroo teeth (microwear, enamel)", "pollen and charcoal"]
   time: "Ediacaran to Holocene"
   space: "Australia (Nilpena and the Flinders Ranges, Kangaroo Island, Riversleigh, Naracoorte, Cloggs Cave, Tasmania and others)"
   record_unit: "varies: a specimen's measurements, a site's taxon counts, a date, a sample's pollen or charcoal"
 size:
-  as_of: "2026-10-22"
-  deposits: 13
-  mirror_directories: 14
-  mirrored_files: 35
-  mirrored_bytes: 1531197
+  as_of: "2026-10-23"
+  deposits: 16
+  mirror_directories: 17
+  mirrored_files: 42
+  mirrored_bytes: 5945093
 access:
   tier: open
   licence: "per deposit in snapshots.tsv: CC0 (Dryad deposits and their Zenodo copies); CC BY 4.0 (Figshare deposits, the revised Reichgelt record, Gutarra et al.); CC BY with no version stated (thylacine and devil dates)"
   routes:
     - {type: zenodo, url: "https://zenodo.org/api/records/", state: "open; Zenodo copies of Dryad deposits and the Gutarra et al. record; record ids in snapshots.tsv", checked: 2026-10-22}
     - {type: figshare, url: "https://api.figshare.com/v2/articles/", state: "open; Figshare and institutional Figshare articles; ids in snapshots.tsv", checked: 2026-10-22}
-    - {type: dryad, url: "https://doi.org/10.5061/dryad.69p8cz9cc", state: "Craffey et al. 2024; catalogue index open (dryad-versions.tsv); file downloads need a Dryad API token; not mirrored", checked: 2026-10-22}
-    - {type: dryad, url: "https://doi.org/10.5061/dryad.4j0zpc8nf", state: "Arman et al. 2025; catalogue index open (dryad-versions.tsv); file downloads need a Dryad API token; not mirrored", checked: 2026-10-22}
-    - {type: dryad, url: "https://doi.org/10.5061/dryad.4b8gthtmd", state: "Couzens et al. 2026; catalogue index open (dryad-versions.tsv); file downloads need a Dryad API token; not mirrored", checked: 2026-10-22}
+    - {type: dryad, url: "https://doi.org/10.5061/dryad.69p8cz9cc", state: "Craffey et al. 2024; mirrored through the Dryad API with a token (index open; downloads redirect to pre-signed storage)", checked: 2026-10-23}
+    - {type: dryad, url: "https://doi.org/10.5061/dryad.4j0zpc8nf", state: "Arman et al. 2025; mirrored through the Dryad API with a token (index open; downloads redirect to pre-signed storage)", checked: 2026-10-23}
+    - {type: dryad, url: "https://doi.org/10.5061/dryad.4b8gthtmd", state: "Couzens et al. 2026; mirrored through the Dryad API with a token (index open; downloads redirect to pre-signed storage)", checked: 2026-10-23}
   api: "Zenodo, Figshare and Dryad APIs (data_mirror.py)"
 versioning:
   replay: exact
@@ -31,7 +31,7 @@ versioning:
 mirror:
   path: deep-server:/data/paleodata/au-fossil-deposits
   policy: "small open deposits with tabular data; scans, CT data and non-derivative licences documented only"
-  state: "13 deposits in 14 directories (the Reichgelt deposit in two versions), 35 files, 1.5 MB, each directory with a manifest"
+  state: "16 deposits in 17 directories (the Reichgelt deposit in two versions), 42 files, 5.9 MB, each directory with a manifest"
 lineage:
   upstream:
     - "FosSahul (the thylacine and devil dates rate and select its records, keyed by FosSahul ID)"
@@ -76,7 +76,9 @@ the open occurrence source for these biotas. What deposits do offer is
 specimen-level measurements (Ediacaran, Cambrian), taxon counts by excavation
 unit for one Quaternary cave (Cloggs Cave), locality-level species richness
 (Riversleigh), Quaternary dates, charcoal and pollen (Naracoorte, Tasmania) and
-a thylacine and devil date table. We mirror 13 deposits (1.5 MB in all).
+a thylacine and devil date table, and kangaroo dental microwear and enamel
+across living and fossil species. One deposit (Craffey et al.) compiles
+Ediacaran occurrences worldwide. We mirror 16 deposits (5.9 MB in all).
 
 ## Contents
 
@@ -101,18 +103,13 @@ column's filled cells are numbers (rules in
 | Naracoorte charcoal and pollen, Weij et al. (`naracoorte-charcoal-pollen`) | Table 1 speleothem U-Th data (70 samples); Table 2 U-Pb isochron data (155 rows for 14 samples); Table 3 U-Th or U-Pb age with charcoal and pollen concentrations (70 samples; 65 with charcoal concentrations, the other five giving a U-Pb age only) | CC BY 4.0 |
 | Tasmanian pollen and wildfire (`tasmania-pollen-fire`) | 50 modern surface samples with burn code and index (66 columns) and a 49-sample core with depths and ages (66 columns), plus R and MATLAB code | CC0 |
 | Thylacine and devil dates (`thylacine-devil-dates`) | 277 date rows: 234 linked to FosSahul IDs and 43 new dates with none; 102 marked Accepted and 175 Rejected | CC BY (no version stated) |
+| Ediacaran co-occurrence, Craffey et al. 2024 (`craffey-ediacaran-cooccurrence`) | a zip of data, results and R code: 1,540 occurrence rows (29 columns, PBDB-style: collection number, genus, coordinates, formation, lithology) in 415 collections and 278 genera worldwide, 340 of them (77 collections) in Australia, mostly the Rawnsley Quartzite (321); site-by-genus matrices for the Avalon, White Sea and Nama assemblages; co-occurrence results | CC0 |
+| Kangaroo dental microwear, Arman et al. 2025 (`arman-kangaroo-microwear`) | S1: 2,650 microwear rows for 960 specimens (genus, species, tooth facet and position, macrowear stage, ecoregion, island, age, texture parameters), an ANOVA subset (937 rows) and test summaries; S2: model-selection tables per texture parameter | CC0 |
+| Kangaroo enamel, Couzens et al. 2026 (`couzens-kangaroo-enamel`) | a zip of data and R code: 282 enamel measurement rows for 246 specimens of 76 macropodoid taxa (157 fossil, 125 modern rows; estimated ages 0 to 24.1 Ma; 42 assemblage labels), per-taxon summaries (68 taxa), enamel maps, body-mass compilations, a 2,408-row marsupial herbivore occurrence table and PBDB genus extracts; paper in Science 392: 488-492 (per its README) | CC0 |
 
 **Documented, not mirrored** (source claims from the source scan unless
 stated):
 
-- *Dryad-only, open catalogue but downloads need a login* (Barry to fetch by
-  hand, or with a Dryad API account): Craffey et al. 2024, Ediacaran
-  co-occurrence data (1,540 occurrences from PBDB and literature;
-  doi:10.5061/dryad.69p8cz9cc); Arman et al. 2025, kangaroo dental microwear
-  (doi:10.5061/dryad.4j0zpc8nf); Couzens et al. 2026, kangaroo enamel and tooth
-  shape across 41 fossil assemblages (doi:10.5061/dryad.4b8gthtmd). All three
-  are small: 0.24, 3.4 and 0.81 MB, CC0, one version each, published 2024-11-26,
-  2025-01-02 and 2026-05-15 (checked, [dryad-versions.tsv](dryad-versions.tsv)).
 - *Non-derivative licences* (CC BY-NC-ND): Kimberella from Nilpena, Perth
   Basin Permian-Triassic invertebrates, Winton palynology, Talbragar and
   Koonwarra teleosts, among others.
@@ -165,9 +162,10 @@ Riversleigh Appendix 1 (.xls) is read with xlrd.
   deposits_profile.py DIR profile/deposits_profile.tsv`; the overlap script's
   usage line names its inputs.
 - **Dryad.** `data_mirror.py dryad DOI DEST --index-only` indexes any Dryad
-  deposit without a token ([dryad-versions.tsv](dryad-versions.tsv)); file
-  downloads need a Dryad API account (client ID and secret; the tool's
-  documentation).
+  deposit without a token ([dryad-versions.tsv](dryad-versions.tsv));
+  `data_mirror.py dryad DOI DEST --latest` downloads it with the Dryad API
+  account on deep-server (credentials outside the repository; see the
+  catalogue README), verifying Dryad's sha256 for each file.
 
 ## Strengths
 
@@ -265,8 +263,15 @@ all checked unless marked:
   by value, not sample by sample); 8 of the deposit's values are not in
   SahulCHAR, and the rows citing the paper are ages and charcoal counts only, so
   its pollen concentrations are not in SahulCHAR.
-- **PBDB.** Craffey et al.'s Ediacaran data (Dryad-only) were compiled from
-  PBDB and the literature (source claim).
+- **PBDB.** Craffey et al.'s Ediacaran occurrences carry PBDB-style
+  collection numbers and fields; they were compiled from PBDB and the
+  literature (source claim). Of their 77 Australian collections, 36 match a
+  collection in our PBDB Australian extract; the other 41 are presumably
+  literature compilations or collections changed since (inferred, not
+  checked).
+- **FosSahul and PBDB, kangaroos.** Couzens et al.'s 76 macropodoid taxa
+  span 43 genera, 24 of them in FosSahul; their deposit also bundles PBDB
+  genus extracts and a 2,408-row marsupial herbivore occurrence table.
 
 ## EPRP relevance
 
@@ -283,14 +288,14 @@ revised record CC BY 4.0.
 ## Verification log
 
 - 2026-10-22, checked ([deposits_profile.py](deposits_profile.py),
-  [output](profile/deposits_profile.tsv)): 14 mirror directories holding 35
-  files and 1,531,197 bytes; each manifest's title, DOI, publication date and
+  [output](profile/deposits_profile.tsv)): 17 mirror directories holding 42
+  files and 5,945,093 bytes; each manifest's title, DOI, publication date and
   licence; per sheet or table, data rows, columns, numeric columns and distinct
   IDs or taxa; .xls files (xlrd) and the .xlsx members of the Gutarra zip read;
   the .doc and .docx files reported as not parsed; authors' email addresses
   redacted from echoed text.
 - 2026-10-22, checked (`data_mirror.py verify` on each deposit directory,
-  [output](profile/mirror_verify.txt)): 35 of 35 files re-hash to the sha256 in
+  [output](profile/mirror_verify.txt), rerun 2026-10-23): 42 of 42 files re-hash to the sha256 in
   their manifests. The tool records that hash after comparing the provider's size
   and checksum at download (tool documentation).
 - 2026-10-22, checked ([deposits_overlap.py](deposits_overlap.py),
@@ -305,6 +310,12 @@ revised record CC BY 4.0.
   one version each. `data_mirror.py dryad DOI DEST --index-only` on the three
   Dryad-only DOIs ([dryad-versions.tsv](dryad-versions.tsv)): one version each,
   with file names, sizes and sha256.
+- 2026-10-23, checked: the three Dryad deposits mirrored with
+  `data_mirror.py dryad DOI DEST --latest` (Dryad API account), each file
+  matching Dryad's sha256; all seven files are byte-identical to Barry's
+  hand-downloaded copies. Profiled by [deposits_profile.py](deposits_profile.py)
+  (now reading CSV members of zips); Craffey and Couzens counts and overlaps
+  by [deposits_overlap.py](deposits_overlap.py).
 - 2026-10-22, source claim (Zenodo record metadata, open GET, not committed):
   Gutarra et al. record 17035672 published 2025-09-02, with the 300,730-byte
   communities zip and a 38,496,573,147-byte CFD zip; record 6462287 lists the

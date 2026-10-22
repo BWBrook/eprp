@@ -77,9 +77,6 @@ the table.
   or account. Record-level work should filter the GBIF open-data snapshot on
   AWS (288 GB, monthly, citable). ALA's fossil specimens are a subset of
   GBIF's ([gbif-ala-fossils](gbif-ala-fossils/README.md)).
-- **Dryad-only deposits** (Craffey et al. 2024, Arman et al. 2025, Couzens et
-  al. 2026): downloads need a Dryad API account; Barry to fetch
-  ([au-fossil-deposits](au-fossil-deposits/README.md)).
 - **TimeScale Creator GA datapack** (eCat 68802): licence conflict, C9(f).
 
 ## Elsewhere

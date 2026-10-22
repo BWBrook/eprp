@@ -1,6 +1,16 @@
+arman-kangaroo-microwear ok  v4_337315/README.md
+arman-kangaroo-microwear ok  v4_337315/S1_data.xlsx
+arman-kangaroo-microwear ok  v4_337315/S2_data.xlsx
+arman-kangaroo-microwear 0 files failed verification
 cloggs-cave-mammals ok  7225693/Cloggs_XU_and_SU_data.xlsx
 cloggs-cave-mammals ok  7225693/README.md
 cloggs-cave-mammals 0 files failed verification
+couzens-kangaroo-enamel ok  v7_442234/Couzens_et_al_dryad_v2_(2).zip
+couzens-kangaroo-enamel ok  v7_442234/README.md
+couzens-kangaroo-enamel 0 files failed verification
+craffey-ediacaran-cooccurrence ok  v8_331096/Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip
+craffey-ediacaran-cooccurrence ok  v8_331096/README.md
+craffey-ediacaran-cooccurrence 0 files failed verification
 dickinsonia-growth ok  5214230/Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx
 dickinsonia-growth ok  5214230/README_Evans_EdiacaraGrowingPains_2021_Paleobiology.xlsx
 dickinsonia-growth 0 files failed verification

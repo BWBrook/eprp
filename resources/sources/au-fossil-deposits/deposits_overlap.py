@@ -229,6 +229,55 @@ for s in dryad:
 add(R, "s6_doi_cell_forms", "dryad copy", doi_forms(dryad["S6"]))
 add(R, "s6_doi_cell_forms", "revised", doi_forms(revised["S6"]))
 
+
+def zipped_csv(deposit, member):
+    import io
+    import zipfile
+    z = glob.glob(os.path.join(root, deposit, "raw", "*", "*.zip"))[0]
+    with zipfile.ZipFile(z) as zf:
+        name = next(n for n in zf.namelist() if n.endswith(member))
+        return list(csv.DictReader(io.TextIOWrapper(zf.open(name), encoding="utf-8-sig", errors="replace")))
+
+
+C = "craffey_ediacaran"
+occ = zipped_csv("craffey-ediacaran-cooccurrence", "Occurrence Data.csv")
+add(C, "occurrences", "", len(occ))
+add(C, "collections", "", len({r["collection_no"] for r in occ}))
+add(C, "genera", "", len({r["genus"] for r in occ}))
+
+
+def australian(r):
+    try:
+        lat, lng = float(r["lat"]), float(r["lng"])
+    except ValueError:
+        return False
+    return -45 <= lat <= -10.6 and 112 <= lng <= 155
+
+
+au_occ = [r for r in occ if australian(r)]
+add(C, "occurrences_in_australia", "", len(au_occ))
+add(C, "collections_in_australia", "", len({r["collection_no"] for r in au_occ}))
+with open(os.path.join(pbdb, "collections.csv"), newline="", encoding="utf-8") as f:
+    pbdb_colls = {r["collection_no"] for r in csv.DictReader(f)}
+add(C, "australian_collections_in_pbdb_au_extract", "", len({r["collection_no"] for r in au_occ} & pbdb_colls))
+for k, n in collections.Counter(r["formation"] for r in au_occ).most_common(6):
+    add(C, "australian_occurrences_by:formation", k, n)
+
+K = "couzens_enamel"
+main = zipped_csv("couzens-kangaroo-enamel", "data/main_data_file.csv")
+add(K, "rows", "", len(main))
+add(K, "specimens", "", len({r["Specimen_number"] for r in main}))
+add(K, "taxa", "", len({r["Taxon"] for r in main}))
+add(K, "assemblages", "", len({r["Assemblage"] for r in main if r["Assemblage"] not in ("", "NA")}))
+for k, n in collections.Counter(r["Status"] for r in main).most_common():
+    add(K, "rows_by:Status", k, n)
+ages = [float(r["Est_age_Ma"]) for r in main if re.fullmatch(r"[\d.]+", r["Est_age_Ma"] or "")]
+add(K, "est_age_ma_range", "", f"{min(ages)} to {max(ages)}" if ages else "none")
+fs_genera = {r["Genus"].strip() for r in fs}
+k_genera = {r["Taxon"].split("_")[0].split()[0] for r in main if r["Taxon"]}
+add(K, "genera", "", len(k_genera))
+add(K, "genera_in_fossahul", "", len(k_genera & fs_genera))
+
 with open(out_path, "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")
     w.writerow(["table", "metric", "key", "value"])
