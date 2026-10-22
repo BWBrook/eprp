@@ -541,3 +541,54 @@ frozen outcomes are unchanged.
     claim of a pass for that cell.
   - **(b)** Whether this record is enough to consider the bounded
     fixed-point P11 evaluator, interior-node and cost check.
+
+### Run 3 corrections (Codex 76/2194; [review](../../ideas/2026-10-22-q012-run3-review-codex.md))
+
+- **The unresolved control failed on 37 of its 72 reference values,** not
+  36: 36 primary values plus the tightened rerun.
+- **The run-3 declaration was wrong to call the run-2 tensor reference
+  unqualified in all 16 cells.** It was qualified in the four controls
+  (central0 and holdout_9707_sigma8, T2 and T3) and unqualified in the 12
+  problem cells.
+- **The recorded run-3 screen stays as it is: 15 pass, 1 unresolved.** Its
+  qualification is now **provisional**. `_quad(full_output=1)` kept only
+  Python warnings, which SciPy suppresses in that mode, and dropped the
+  non-success messages SciPy returns instead.
+  - Codex's one authorised probe (σ = 8, T3) reproduced the original
+    receipt exactly.
+  - Of its 1,265 calls, 35 inner calls returned roundoff messages ("the
+    error may be underestimated") that the receipt never recorded.
+
+## Reference v2, run 4 (declared before execution)
+
+This is the bounded correction set out in 76/2194.
+- **Diagnostics.** Every QUADPACK return is kept in full. A non-success
+  message (the tuple's fourth element) or a Python IntegrationWarning
+  makes that integral's value **unqualified**. Messages are propagated from
+  inner to outer receipts. A regression fixture must show that a
+  subdivision-limited integral is flagged and that the flag reaches
+  qualification.
+- **The narrow-kernel leaf is standardised.**
+  - With u = (x_c − ρx_p)/s and s = σ√(1 − ρ²), the leaf log integrand is
+    −u²/2 − ½log 2π + log F_c(ρx_p + s·u), with curvature bound 1 in u.
+  - There is no extra log-s term, since N(x; ρx_p, s²)dx = φ(u)du.
+  - The root integral is unchanged.
+- **Budget, prospective.** Total estimated relative error ≤ **1e-10**:
+  h × (0.1 × the 1e-5 reference-derivative gate). That allows at most 1e-6
+  of derivative uncertainty to integration. The run-3 record at 1e-11 is
+  preserved.
+- **Requested tolerances matched to the budget.** The primary run uses
+  inner epsrel 1e-12 and outer 1e-11. The tightened central rerun uses
+  inner 2e-13, outer 2e-12 and R + 4, and must agree within 1e-10.
+  Diagnostics in the tightened rerun also leave the cell unresolved.
+  Tails ≤ 1e-14 are unchanged.
+- **Procedure.**
+  1. The fixture.
+  2. **One control smoke check:** holdout_9707_sigma8, T3, central value.
+  3. If needed, only the existing **1,152 reference values** (16 cells ×
+     72), with keys bound to `refv2` in a new file,
+     `collapsed_oracle_run4_reference.jsonl`, so no run-3 key can be
+     reused.
+- **Candidates.** The run-3 evaluator vectors are reused unchanged. No new
+  points, no likelihood change and no integrator search. Persistent
+  diagnostics leave a cell unresolved, and P11 stays held.
