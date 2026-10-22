@@ -476,3 +476,68 @@ T3 reference values, against the unchanged evaluator:
   benchmarked.
 - **If the limit is reached,** completed tasks persist and the same command
   resumes. No settings change.
+
+## Run 3 result (22 October; reference repair, deep-server, 9839843)
+
+Outputs:
+- [collapsed_oracle_results_run3.json](collapsed_oracle_results_run3.json):
+  the amended adjudication and the full 35-coordinate evaluator and
+  reference vectors;
+- `collapsed_oracle_run3_cells.jsonl.gz`: all 4,560 task records with
+  their receipts;
+- [collapsed_oracle_run3.log](collapsed_oracle_run3.log).
+
+**4,560 tasks finished in 242 s**, against a forecast of 170 s and a
+limit of 1,800 s. No task is missing, and no evaluator task failed.
+
+**Amended adjudication of the 16 cells: 15 pass, 1 unresolved.**
+`all_pass` is false. Decomposition passes, and the run-1 and run-2
+frozen outcomes are unchanged.
+
+| Cells | Run 2 (frozen) | Run 3 (amended) |
+| --- | --- | --- |
+| stress_s3_r09_kbm15 and c4_previous, T2 and T3 | fail (I2 against the tensor reference) | **pass** |
+| c1_failing, and the σ = 6, 15 and 20 hold-outs, T2 and T3 | unresolved (tensor domain) | **pass** |
+| central0, T2 and T3 | pass | pass |
+| holdout_9707_sigma8, T2 | pass | pass |
+| holdout_9707_sigma8, T3 | pass | **unresolved (reference: a value not qualified)** |
+
+**Across all 16 cells:**
+- Evaluator against the new reference: at most **1.4e-14 in value** and
+  **1.4e-10 across all 35 derivatives**.
+- Evaluator self-resolution and self-domain changes: at most 3.6e-15 in
+  value and 1.4e-10 in derivatives.
+- The reference's tightened rerun changed central values by at most
+  1.4e-14.
+- Every qualified reference value has a total estimated relative error
+  ≤ 9.6e-12.
+
+**Cause of the one unresolved cell.**
+- In holdout_9707_sigma8 T3 (σ = 8, ρ = 0.99998, a leaf-kernel SD of
+  about 0.048), **36 of the 72 reference values carry total estimated
+  relative errors of 1.03e-11 to 2.28e-11**, against the declared budget
+  of 1e-11.
+- The excess comes entirely from QUADPACK's own `abserr` estimates for
+  the two narrow leaf integrals (about 5e-12 to 1.1e-11 each). The budget
+  counts each leaf once, so two leaves double it.
+- There are no warnings, every tail bound is ≤ 5e-32, and the tightened
+  rerun's estimate is 1.65e-11.
+- Agreement with the evaluator in this cell is 7.1e-15 in value and
+  1.1e-10 in derivatives.
+- **By the declared rule, the cell is unresolved.** The budget is not
+  relaxed after the fact.
+
+**Reading.**
+- **All six named problem states now pass in T2 and T3** against a
+  qualified, independently implemented reference. So does every control
+  except one T3 control cell, whose reference misses its own error budget
+  by at most a factor of 2.3.
+- **Under the declared rules the oracle has still not fully passed.** One
+  cell is reference-unresolved, for a stated cause.
+- **For Codex:**
+  - **(a)** Accept the 15 passes, and judge whether a conservative
+    QUADPACK estimate at about 2e-11 belongs in the unresolved category or
+    calls for a declared tolerance change for future checks. I make no
+    claim of a pass for that cell.
+  - **(b)** Whether this record is enough to consider the bounded
+    fixed-point P11 evaluator, interior-node and cost check.
