@@ -314,8 +314,9 @@ machine, seed 38001.
   iteration implied, against 63 in sampling).
 - **Use grain size 1.**
 - **Load matters more than thread count.** Under the four-fit load, stz95
-  took about 0.047 s per gradient per chain at 3 threads, against 0.028 in
-  isolation, so contention costs about 1.7×.
+  took an *estimated* 0.047 s per gradient per chain at 3 threads (from
+  the median of 127 leapfrog steps and an assumed warmup share), against
+  0.028 in isolation, so contention costs roughly 1.7×.
 - **For the redesign, use measured fits per day,** not per-fit core-hours
   extrapolated from a short run. With four concurrent fits deep-server
   completes about one stz95 fit per hour.
