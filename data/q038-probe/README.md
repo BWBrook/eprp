@@ -160,3 +160,37 @@ threads, all four fits concurrent (48 threads).
   `run.py diag SEED VARIANT THREADS` writing `pilot/diag_VARIANT_SEED.json`.
 - **Ceiling:** 12 h wall per fit, about 600 allocated core-hours at most.
   The forecast is 4–6 h, because adapt_delta 0.95 takes smaller steps.
+
+## Scenario generators for the redesign (implemented, not run)
+
+`core.TRUTH`, `truth_params(..., scenario)`, `calibrate_omega(..., scenario)`
+and `simulate(..., obs=None | "S3" | "S4")` now generate contract v3
+section B's scenarios. Nothing has been fitted. Three choices are made
+here and flagged for Codex:
+
+1. **S0 zeroes the shared nuisance and clade effects globally** (γ = 0,
+   s_f = s_o = 0), with β̄_e = 0 and τ = 0. This is the first of Codex's
+   two options in 76/2195. Events are then exactly η = α + ω, while
+   background occupancy (β_b) and detection heterogeneity remain. The
+   fitted model is therefore not misspecified under S0.
+2. **S3: survivor-tracking exposure** uses E_t × (1 − L_c,k), rounded, for
+   t = k+1 … k+3 (the forecast window M) after each event. L_c,k is the
+   calibrated class event loss, not each dataset's realised loss, so
+   genera are still simulated one at a time. The fit still uses E_t.
+3. **S4: reference-level clustering** draws one ζ_r ~ N(0, 0.5²) per
+   reference and stage, shared by all genera of both classes. Each genus
+   is detected by reference r with probability 1 − exp(−θ e^{ζ_r}).
+
+S3 and S4 change only the observation process, so each needs a stated
+biological baseline (Codex 76/2215): S1 for the occupancy-mean claim, or
+S0 for a generic selectivity claim. That is the redesign's choice.
+
+**Check C7** (all of C1–C7 pass):
+- The S2 path is unchanged: all five pilot datasets regenerate
+  identically.
+- S0 and S1 calibrations reproduce the deposit event losses on a fresh
+  seed, to 1.5e-14 and 0.0035. S0's event η has zero spread.
+- S3: a tiny design's post-event mean count matches round(40 × 0.735) × p
+  (z = 1.0), while the fitted path matches 40 × p (z = 1.3).
+- S4: the stage mean matches the ζ-integrated expectation (z = 1.6),
+  0.947 against 0.792 for the plain binomial.

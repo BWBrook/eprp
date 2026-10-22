@@ -185,6 +185,64 @@ out["C6_ok"] = (res6["counterexample_components"] == [(0, 1, 7), (0, 8, 10)] and
                 and all(abs(res6[f"restart_total_probability_count_{cf}"] - 1) < 1e-12 for cf in (1, 2))
                 and n_restart > 0 and worst_id < 1e-9 and worst_row == 0.0)
 
+# ---- C7: scenario generators S0, S1, S3, S4 (redesign support; nothing is fitted) ---------------------------------------
+res7 = {}
+man = json.loads((HERE / "manifest.json").read_text())
+same = True
+for seed in man["seeds"]:                                   # (a) the S2 path is unchanged: pilot datasets regenerate exactly
+    rng = np.random.default_rng(seed)
+    pp = core.truth_params(rng, D, man["omega_calibrated"])
+    g2 = core.simulate(rng, D, pp)
+    z = np.load(HERE / f"pilot/data_{seed}.npz")
+    same &= np.array_equal(np.array([g["counts"] for g in g2]), z["counts"]) and np.array_equal(
+        np.array([[core.CLASSES.index(g["cls"]), g["fam"], g["ord"], g["entry"], g["f"], g["death"]] for g in g2]), z["meta"])
+res7["S2_pilot_datasets_regenerated_identically"] = bool(same)
+for sc_ in ("S0", "S1"):                                    # (b) calibration hits the deposit event losses on a fresh seed
+    om_s = core.calibrate_omega(D, scenario=sc_)
+    p_s = core.truth_params(np.random.default_rng(39000), D, om_s, sc_, draw=False)
+    _, mem = core.simulate(np.random.default_rng(39001), D, p_s, record_members=True)
+    err, spread = 0.0, 0.0
+    for c in core.CLASSES:
+        for i, k in enumerate(core.EVENTS):
+            et = np.array(mem[(c, k)])
+            err = max(err, abs(float(np.mean(1 / (1 + np.exp(-(et + om_s[c][i]))))) - core.TARGET_LOSS[c][i]))
+            spread = max(spread, float(np.ptp(et)))
+    res7[f"{sc_}_max_event_loss_error_fresh_seed"] = err
+    res7[f"{sc_}_max_event_eta_spread"] = spread          # S0: eta = alpha + omega at events, so zero spread
+T8 = 9                                                      # (c) S3: post-event mean count = round(E x (1 - L)) x p
+D8 = tiny_design(T8, (40,) * T8)
+D8["entries"] = {"Rhynchonellata": np.array([0, 60000] + [0] * (T8 - 1)), "Bivalvia": np.zeros(T8 + 1, dtype=int)}
+p8 = core.truth_params(np.random.default_rng(1), D, {c: [0.0] * 5 for c in core.CLASSES}, "S0", draw=False)
+for c in core.CLASSES:
+    p8["alpha"][c] = np.full(T8 + 1, -3.0); p8["gd"][c] = 0.0; p8["gd0"][c] = math.log(0.02)
+pr = -math.expm1(-0.02)
+for obs, n_eff in ((None, 40), ("S3", int(round(40 * (1 - core.TARGET_LOSS["Rhynchonellata"][0]))))):
+    g8 = core.simulate(np.random.default_rng(88), D8, p8, obs=obs)
+    y8 = np.array([g["counts"][8] for g in g8 if g["f"] < 8 and g["death"] >= 8])
+    res7[f"{obs or 'fitted'}_stage8_mean_count"] = float(y8.mean())
+    res7[f"{obs or 'fitted'}_stage8_expected"] = n_eff * pr
+    res7[f"{obs or 'fitted'}_stage8_z"] = abs(float(y8.mean()) - n_eff * pr) / (float(y8.std()) / math.sqrt(len(y8)))
+T7, E7 = 3, (40, 40, 40)                                    # (d) S4: stage-2 mean count = sum_r 1 - exp(-theta e^zeta_r)
+D7 = tiny_design(T7, E7)
+D7["entries"] = {"Rhynchonellata": np.array([0, 60000, 0, 0]), "Bivalvia": np.zeros(T7 + 1, dtype=int)}
+p7 = core.truth_params(np.random.default_rng(1), D, {c: [0.0] * 5 for c in core.CLASSES}, "S0", draw=False)
+for c in core.CLASSES:
+    p7["alpha"][c] = np.full(T7 + 1, -3.0); p7["gd"][c] = 0.0; p7["gd0"][c] = math.log(0.02)
+g7 = core.simulate(np.random.default_rng(77), D7, p7, obs="S4")
+zr = np.random.default_rng(77)
+zeta7 = {t: zr.normal(0, core.S4_SD, E7[t - 1]) for t in range(1, T7 + 1)}
+y2 = np.array([g["counts"][2] for g in g7 if g["f"] == 1 and g["death"] >= 2])
+mu2 = float(np.sum(-np.expm1(-0.02 * np.exp(zeta7[2]))))
+res7["S4_stage2_mean_count"] = float(y2.mean())
+res7["S4_stage2_expected"] = mu2
+res7["S4_stage2_binomial_without_zeta"] = 40 * float(-math.expm1(-0.02))
+res7["S4_stage2_z"] = abs(float(y2.mean()) - mu2) / (float(y2.std()) / math.sqrt(len(y2)))
+out["C7"] = res7
+out["C7_ok"] = (res7["S2_pilot_datasets_regenerated_identically"] and res7["S0_max_event_eta_spread"] == 0.0
+                and res7["S0_max_event_loss_error_fresh_seed"] < 0.02 and res7["S1_max_event_loss_error_fresh_seed"] < 0.03
+                and res7["S3_stage8_z"] < 4 and res7["fitted_stage8_z"] < 4
+                and res7["S4_stage2_z"] < 4)
+
 # ---- C2: Stan likelihood equals the Python reference (likelihood_only, jacobian=False) ---------------------------------
 from cmdstanpy import CmdStanModel, set_cmdstan_path  # noqa: E402
 set_cmdstan_path(str(pathlib.Path.home() / ".cmdstan/cmdstan-2.38.0"))

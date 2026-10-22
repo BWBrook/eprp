@@ -128,13 +128,19 @@ def component_loglik(counts, f, C, cls, fam, ordr, params, D):
 # ---------------------------------------------------------------- truth and generator
 TRUTH_S2 = dict(alpha=dict(Rhynchonellata=0.19, Bivalvia=0.05), beta_b=0.3, beta_e=0.5, tau=0.3, gamma=0.2, s_fam=0.3,
                 s_ord=0.3, gd0=math.log(0.01), gd=0.5, s_b=0.3, s_nu=0.2)
+TRUTH = dict(S2=TRUTH_S2, S1=dict(TRUTH_S2, beta_e=0.0),
+             S0=dict(TRUTH_S2, beta_e=0.0, tau=0.0, gamma=0.0, s_fam=0.0, s_ord=0.0))
+# S0 zeroes the shared nuisance and clade effects globally (Codex 76/2195, first option), so at events eta = alpha + omega;
+# background occupancy (beta_b) and detection heterogeneity are kept. S3 and S4 perturb observation only (simulate obs=).
+S3_WINDOW, S4_SD = 3, 0.5
 TARGET_LOSS = dict(Rhynchonellata=(26 / 98, 76 / 144, 99 / 128, 40 / 76, 27 / 55),
                    Bivalvia=(10 / 48, 6 / 67, 42 / 124, 34 / 181, 101 / 340))   # deposit class-event D/N (events.tsv)
 
 
 def truth_params(rng, D, omega, scenario="S2", draw=True):
-    """Truth parameter dict. Random effects are drawn from rng when draw=True (archived); omega is supplied (calibrated)."""
-    T, tr = D["T"], TRUTH_S2
+    """Truth parameter dict. Random effects are drawn from rng when draw=True (archived); omega is supplied (calibrated).
+    A zero scale draws zeros but consumes the same stream."""
+    T, tr = D["T"], TRUTH[scenario]
     p = dict(alpha={}, omega={}, gamma={}, f_fam={}, g_ord={}, b_fam={}, nu={}, beta_b={}, beta_e={}, gd0={}, gd={})
     zf = lambda n, s: rng.normal(0, s, n) if draw else np.zeros(n)
     p["delta"] = list(zf(5, tr["tau"]))
@@ -148,16 +154,29 @@ def truth_params(rng, D, omega, scenario="S2", draw=True):
         p["nu"][c] = zf(T + 1, tr["s_nu"])
         p["beta_b"][c], p["beta_e"][c] = tr["beta_b"], tr["beta_e"]
         p["gd0"][c], p["gd"][c] = tr["gd0"], tr["gd"]
-    if scenario != "S2":
-        raise NotImplementedError("only the S2 positive control is generated in the five-dataset pilot")
     return p
 
 
-def simulate(rng, D, params, record_members=False):
+def s3_scale():
+    """S3: true opportunity E_t x (1 - L_ck) for t = k+1..k+S3_WINDOW after each event, with L_ck the calibrated (target)
+    class event loss; the fit still uses E_t."""
+    return {(c, t): 1 - TARGET_LOSS[c][i] for c in CLASSES for i, k in enumerate(EVENTS) for t in range(k + 1, k + S3_WINDOW + 1)}
+
+
+def simulate(rng, D, params, record_members=False, obs=None):
     """Forward simulation. Returns genera with observed counts from their first record, latent death stage, and (if
-    asked) each event's members with their event eta excluding omega (for calibration)."""
+    asked) each event's members with their event eta excluding omega (for calibration). obs: None (the fitted
+    observation model), "S3" (survivor-tracking exposure) or "S4" (reference-level clustering, one zeta per reference
+    and stage shared by all genera)."""
     T, E = D["T"], D["E"]
     genera, members = [], {(c, k): [] for c in CLASSES for k in EVENTS}
+    sc = s3_scale() if obs == "S3" else {}
+    zeta = {t: rng.normal(0, S4_SD, int(E[t])) for t in range(1, T + 1)} if obs == "S4" else {}
+
+    def detect(c, t, th):
+        if obs == "S4":
+            return int(np.sum(rng.random(int(E[t])) < -np.expm1(-th * np.exp(zeta[t]))))
+        return int(rng.binomial(int(round(E[t] * sc.get((c, t), 1.0))) if sc else E[t], -math.expm1(-th)))
     for c in CLASSES:
         n_entry = rng.poisson(D["entries"][c][1:])
         for e, n in enumerate(n_entry, start=1):
@@ -167,7 +186,7 @@ def simulate(rng, D, params, record_members=False):
                 h, death = None, T
                 for t in range(e, T + 1):
                     th = theta(params, c, fam, t, h.w(t) if h else 0.0)
-                    y = int(rng.binomial(E[t], -math.expm1(-th)))
+                    y = detect(c, t, th)
                     if h is None and y > 0:
                         h = History(t, y)
                     counts[t] = y if h else 0
@@ -188,14 +207,14 @@ def simulate(rng, D, params, record_members=False):
     return (genera, members) if record_members else genera
 
 
-def calibrate_omega(D, seed=38000):
+def calibrate_omega(D, seed=38000, scenario="S2"):
     """Event excesses solved sequentially (event order) so the mean event loss among members at the design covariates,
     with random effects at zero, equals the deposit class-event D/N. Deterministic given the seed."""
     omega = {c: [0.0] * 5 for c in CLASSES}
     from scipy.optimize import brentq
     for k_i, k in enumerate(EVENTS):
         rng = np.random.default_rng(seed)
-        p = truth_params(np.random.default_rng(0), D, omega, draw=False)
+        p = truth_params(np.random.default_rng(0), D, omega, scenario, draw=False)
         _, mem = simulate(rng, D, p, record_members=True)
         for c in CLASSES:
             et = np.array(mem[(c, k)])
