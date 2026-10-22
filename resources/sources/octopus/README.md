@@ -28,7 +28,7 @@ versioning:
   replay: none
   notes: "live database; each row carries DBVERNO; past versions archived on Zenodo and marked obsolete"
 mirror:
-  path: "per collection: deep-server:/data/paleodata/sahularch/octopus-wfs, /data/paleodata/fossahul/octopus-wfs"
+  path: "deep-server:/data/paleodata/<collection>/octopus-wfs (sahularch, fossahul so far)"
   policy: "snapshot collections as they are catalogued, not the whole platform"
   state: "SahulArch and FosSahul layers snapshotted 2026-10-22"
 lineage:

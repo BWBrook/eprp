@@ -261,6 +261,33 @@ the workflow when they generalise.
   use, contribution, inviting originators); an agent should not register
   on his behalf without his say.
 
+**Sahul tranche (22 October 2026; [FosSahul](fossahul/README.md),
+[SahulArch](sahularch/README.md), [AustArch](austarch/README.md),
+[OCTOPUS](octopus/README.md)).**
+
+- *A live service can be the only release.* SahulArch's DOIs hold no files;
+  the data exist as WFS layers. Snapshot them, check row counts against the
+  server, and record the version stamp and server time (`data_mirror.py
+  wfs`).
+- *Compare every copy in circulation.* The AustArch copy used in Barry's
+  rc-dates work differs from the ADS deposit (251 missing ages, spreadsheet
+  damage to depth ranges, seven limiting ages lost their sign). FosSahul's
+  GitHub, Figshare, TERN and OCTOPUS copies differ in coordinates, schema and
+  record count.
+- *Re-run the provider's own algorithm.* FosSahul's rating script reproduces
+  the 2021 ratings exactly but not the 2019 file's, which locates when the
+  ratings were corrected.
+- *Read README claims as hypotheses.* FosSahul's README says coordinates are
+  rounded; the current file is not. The precision varies by release, and the
+  catalogue records which is which.
+- *Record authorship and authorisation.* Barry co-authored FosSahul 1; the
+  entry says so, and records his authorisation of the GitHub copy and of the
+  private AustArch copy, quoting him.
+- *Scan before choosing.* The Australian scan found that obvious-looking
+  routes (Atlas of Living Australia fossil records, Macrostrat) are empty for
+  Australian palaeontology, and that PBDB's Australian subset is the real
+  deep-time workhorse ([BACKLOG.md](BACKLOG.md)).
+
 **Both pilots.**
 
 - *Profile many versions; mirror few.* The year-end series was worth

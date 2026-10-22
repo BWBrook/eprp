@@ -229,9 +229,11 @@ there.
 - **p3k14c** (global radiocarbon compilation) holds 3,657 Australian dates,
   all from AustArch and none older than 10,000 BP. Do not pool with
   SahulArch.
-- **FosSahul.** About 33 site names are shared (Cuddie Springs, Warratyi,
-  Kutikina and others; a name-matching heuristic). These are the sites where
-  human and megafaunal chronologies can be compared directly.
+- **FosSahul.** 372 radiocarbon laboratory codes occur in both (382
+  SahulArch rows; 4,233 FosSahul records, mostly indirect charcoal and shell
+  ages), and about 33 site names are shared (Cuddie Springs, Warratyi,
+  Kutikina and others). These are the sites where human and faunal
+  chronologies meet; the same date can enter both databases.
 - [Detail withheld pending disclosure to the data custodian.]
 
 ## EPRP relevance

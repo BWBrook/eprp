@@ -5,8 +5,12 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 
 | Source | Kind | Access | Taxa | Time | Size | Mirror | EPRP questions |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| [austarch](austarch/README.md): AustArch, radiocarbon and other ages from Australian archae… | compilation | restricted | not taxonomic; archaeological age determinations | radiocarbon to about 55 ka; luminescence and othe… | 5,522 ages | yes | – |
+| [fossahul](fossahul/README.md): FosSahul, quality-rated fossil ages for Sahul's Late Quater… | compilation | open | non-human vertebrates (mammals, birds, reptiles, amphibians) | Late Quaternary, mostly the last 130 kyr (ages to… | 11,872 records | yes | – |
 | [fred](fred/README.md): FRED, the Fossil Record Electronic Database (New Zealand Fo… | database | registered | all fossil groups: a controlled list of 51 groups; foramini… | Cambrian to Recent, mostly Late Cretaceous–Cenozo… | 105,492 localities | no | Q-034 |
 | [nsb](nsb/README.md): Neptune Sandbox Berlin (NSB) | database | open | calcareous nannofossils, planktonic foraminifera, radiolari… | Late Jurassic to Recent; occurrence ages 0-151.08… | 783,987 occurrences | yes | Q-007, Q-016 |
+| [octopus](octopus/README.md): OCTOPUS, an open geochronology and environmental database f… | database | open | not taxonomic; hosts age and proxy collections | Quaternary (cosmogenic nuclides to Pleistocene; l… | 25 layers | yes | – |
+| [sahularch](sahularch/README.md): SahulArch, a geochronological database for the archaeology … | compilation | open-nc | not taxonomic; archaeological age determinations | radiocarbon 0-55,000 BP; OSL to 239 ka; TL to 270… | 10,714 ages | yes | – |
 | [triton](triton/README.md): Triton, a species-level database of Cenozoic planktonic for… | compilation | open | planktonic foraminifera | Cenozoic; ages 0-66.0 Ma (GTS2020) | 541,846 presence rows | yes | Q-005, Q-007, Q-012, Q-020, Q-027 |
 
 ## By EPRP question
