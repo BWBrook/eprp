@@ -6,6 +6,7 @@ Usage:
   python3 data_mirror.py figshare COLLECTION_ID|article/ARTICLE_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py wfs WFS_URL LAYER[,LAYER...] DEST --license TEXT
+  python3 data_mirror.py url DEST --license TEXT URL [URL ...]
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
 
 Writes DEST/versions.tsv (every version the provider offers) and
@@ -19,7 +20,8 @@ against the provider's size and checksum (md5, or the blob hash for GitHub),
 hashed with sha256, then made read-only. A live WFS has no versions: each `wfs`
 run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
 (GeoServer outputFormat=csv) and its schema; the row count must equal the
-server's numberMatched, and DEST/versions.tsv lists all snapshots.
+server's numberMatched, and DEST/versions.tsv lists all snapshots. `url` does the
+same for plain files with no provider checksum (raw/<UTC timestamp>_url/).
 Interrupted downloads resume from their .part files and completed versions are
 skipped. verify re-hashes mirrored files against their manifests. Standard
 library only.
@@ -288,6 +290,42 @@ def wfs_snapshot(url, layers, dest, licence, tool_sha):
     manifest = {"provider": "wfs", "record": url, "version": stamp, "layers": counts, "license": licence,
                 "files": files, "retrieved_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
                 "tool": {"name": "data_mirror.py", "sha256": tool_sha}}
+    finish_snapshot(vdir, manifest, dest)
+
+
+def url_snapshot(urls, dest, licence, tool_sha):
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H%MZ")
+    vdir = os.path.join(dest, "raw", f"{stamp}_url")
+    os.makedirs(vdir, exist_ok=False)
+    files = []
+    for u in urls:
+        target = os.path.join(vdir, urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(u).path)) or "download")
+        for attempt in range(6):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=600) as r, \
+                        open(target + ".part", "wb") as out:
+                    expected = r.headers.get("Content-Length")
+                    while chunk := r.read(1 << 20):
+                        out.write(chunk)
+                if expected is not None and os.path.getsize(target + ".part") != int(expected):
+                    raise IOError(f"{u}: {os.path.getsize(target + '.part')} of {expected} bytes")
+                break
+            except TRANSIENT + (IOError,) as e:
+                if attempt == 5 or (isinstance(e, urllib.error.HTTPError) and e.code not in RETRYABLE):
+                    raise
+                time.sleep(retry_wait(e, attempt))
+        os.replace(target + ".part", target)
+        os.chmod(target, 0o444)
+        files.append({"key": os.path.basename(target), "size": os.path.getsize(target), "checksum": "none (plain URL)",
+                      "sha256": hash_file(target, "sha256")[0], "url": u})
+        print(f"{os.path.basename(target)}: {os.path.getsize(target)} bytes", flush=True)
+    manifest = {"provider": "url", "record": urls[0], "version": stamp, "license": licence, "files": files,
+                "retrieved_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                "tool": {"name": "data_mirror.py", "sha256": tool_sha}}
+    finish_snapshot(vdir, manifest, dest)
+
+
+def finish_snapshot(vdir, manifest, dest):
     with open(os.path.join(vdir, "MANIFEST.json"), "w") as f:
         json.dump(manifest, f, indent=2)
     os.chmod(os.path.join(vdir, "MANIFEST.json"), 0o444)
@@ -295,7 +333,7 @@ def wfs_snapshot(url, layers, dest, licence, tool_sha):
     snapshots = []
     for v in sorted(os.listdir(os.path.join(dest, "raw"))):
         mpath = os.path.join(dest, "raw", v, "MANIFEST.json")
-        if v.endswith("_wfs") and os.path.exists(mpath):
+        if v.endswith(("_wfs", "_url")) and os.path.exists(mpath):
             m = json.load(open(mpath))
             snapshots.append({"dir": v, "version": m["version"], "record": m["record"], "doi": None,
                               "publication_date": m["retrieved_utc"], "license": m["license"],
@@ -331,6 +369,10 @@ def main():
     p.add_argument("layers")
     p.add_argument("dest")
     p.add_argument("--license", required=True, help="licence as stated by the provider (a WFS carries none)")
+    p = sub.add_parser("url")
+    p.add_argument("dest")
+    p.add_argument("urls", nargs="+")
+    p.add_argument("--license", required=True, help="licence or terms as stated by the provider")
     p = sub.add_parser("verify")
     p.add_argument("dest")
     p.add_argument("--only", nargs="*", default=None)
@@ -342,9 +384,12 @@ def main():
         return 1 if bad else 0
     with open(__file__, "rb") as f:
         tool_sha = hashlib.sha256(f.read()).hexdigest()
-    if a.command == "wfs":
+    if a.command in ("wfs", "url"):
         os.makedirs(raw_root, exist_ok=True)
-        wfs_snapshot(a.wfs_url, a.layers.split(","), a.dest, a.license, tool_sha)
+        if a.command == "wfs":
+            wfs_snapshot(a.wfs_url, a.layers.split(","), a.dest, a.license, tool_sha)
+        else:
+            url_snapshot(a.urls, a.dest, a.license, tool_sha)
         return 0
     os.makedirs(raw_root, exist_ok=True)
     lock = open(os.path.join(a.dest, ".mirror.lock"), "w")
