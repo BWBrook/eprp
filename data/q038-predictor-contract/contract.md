@@ -381,3 +381,150 @@ shared reference effect is a meaningful clustering challenge.
    take their own priors?
 4. The ω structure: independent per class-event, or shared per event like
    δ.
+
+## v3 amendments (Codex 76/2166; [review](../../ideas/2026-10-22-q038-v2-contract-review-codex.md))
+
+These supersede the matching parts of sections 3, 4, 5 and 8 above. The new
+oracle is [marked_history_oracle.R](marked_history_oracle.R), with output
+[marked_history_oracle.tsv](marked_history_oracle.tsv).
+
+### A. The marked-history predictive law (replaces the fixed-path q in section 4)
+
+**What updates during prediction.** The detection covariate w (log mean
+references per recorded stage, from stages < t) and the history covariates
+update with each genus's **own** future records:
+- x_occ: log references at the last recorded stage before s, for the
+  transition s → s + 1;
+- recency;
+- completeness.
+
+Age advances deterministically.
+
+**What is frozen.** Every z-score's mean and SD are fixed at the forecast
+origin, from the risk set's prefix values. Future values are transformed
+with the same constants.
+- With scaling frozen, genera are conditionally independent given θ and
+  their own marks, so the joint set law factorises within each draw.
+  **O3:** a brute-force joint enumeration of two genera matches the product
+  of their marginals to 1.1e-16.
+- Re-standardising over future risk sets would couple them (O3: an error
+  of 1.5e-4), so it is not used.
+
+**How the unseen marks are integrated.** For each training posterior draw
+θ⁽ᵐ⁾, the stage-k and later reference counts are integrated over:
+- **exactly** when the count space is small (the oracle);
+- **by Monte Carlo** otherwise, with at least 2,000 future paths per genus
+  per draw, and the Monte Carlo SE of each q reported.
+
+The realised post-boundary exposure Eₜ is conditioned on: this is the
+hindcast. The set and count law then conditions after integration, as in
+v2.
+
+**Oracle results:**
+- **O1** reproduces Codex's example exactly: q = 0.6686077 integrated,
+  against 0.6852245 with predictors frozen.
+- **O2:** total probability is 1; the joint total is 1; and set and count
+  normalisation holds.
+- **O4:** the predictive function takes only the prefix. All 18 replaced
+  future record patterns leave it unchanged, range 0.
+- **O5:** Monte Carlo agrees with exact enumeration, |z| = 0.19 at
+  200,000 paths.
+
+**Entry and first capture.**
+- A genus enters (originates) at a latent stage, as a Poisson count per
+  stage and class.
+- While alive, its stage-t reference count is Binomial(Eₜ, 1 − e^{−θ}), so
+  P(recorded) = 1 − e^{−θE}, which is v2's exposure law. θ uses w = 0
+  before any record.
+- The first record is the first positive count, and the CJS conditions on
+  it. The first-capture count is zero-truncated binomial.
+- **With ε < 1,** the stage of death has exposure εθ, and first capture
+  tilts survival out of f, as in F3 and O6. At ε = 0.5 the tilted survival
+  is 0.796 against an untilted 0.70, with the generator enumeration in
+  agreement.
+
+**Spatial marks.** Range is **removed from the primary nuisance set.** It
+returns later as a sensitivity, with its own spatial-mark kernel. The
+primary nuisance set is recency, age and completeness, all functions of the
+record history and integrated as above.
+
+### B. Null definitions and scenario labels (replace section 8's scenarios)
+
+| Label | Truth | Expected B gain | Gates applied |
+| --- | --- | --- | --- |
+| **S0, uniform biological null** | Event transition η = α_c,k + ω_c,k only: no occupancy, nuisance, clade or event-deviation terms. Background and detection heterogeneity kept | 0 | null B gain within ±0.02 nats per genus; O gain reported (positive is expected, not a failure) |
+| **S1, zero-mean occupancy with other selectivity** | β̄_e = 0, τ = 0.3, nuisance γ = 0.2, clade s = 0.3 at events | Positive (Codex's two-member example: 0.0555 nats) | coverage and bias for β̄_e,c only; **no B-null gate** |
+| **S2, positive control** | β̄_e = 0.5 per SD; otherwise as S1 | Positive | coverage and bias for β̄_e,c; held-out B gain reported |
+| **S3 and S4** | Survivor-tracking exposure; reference-level clustering (section 8) | — | false-selectivity diagnostics, as in section 8 |
+
+**Incremental occupancy gain** is reported separately. It is the B gain of
+the full model minus that of a matched model with the occupancy slope fixed
+at 0 and the same nuisance structure.
+
+### C. Masking for the ε = 0.5 sensitivity (amends section 5)
+
+- **With ε < 1, every left component is censored at k* − 1, not k*.**
+  Stage-k emission depends on the held-out transition when ε < 1:
+  φp + (1 − φ)[1 − (1 − p)^ε] is 0.4140 at φ = 0.2 and 0.5768 at φ = 0.9
+  (O7).
+- **O7, enumerated:**
+
+  | Cut | Range of the likelihood over φ_k |
+  | --- | ---: |
+  | At k, with ε = 0.5 | 0.094 |
+  | At k − 1, with ε = 0.5 | 0 |
+  | At k, with ε = 1 | 1e-16 |
+
+- **Genera first recorded at k*** lose that record under the k − 1 cut, and
+  restart at their first record after k*.
+- The primary ε = 1 rule (cut at k*) is unchanged.
+
+### D. Manifest for the five-dataset pilot
+
+This pilot measures runtime and convergence only. It cannot pass any
+recovery gate.
+
+**Design:**
+- Scenario **S2**; seeds **38001 to 38005**, one dataset each.
+- The deposit's 87 stages and their durations ([stages.tsv](stages.tsv)),
+  both classes, and the five events at k = 7, 21, 38, 45 and 68.
+- **Entries:** Poisson per stage and class, with mean equal to the
+  deposit's first-record count for that stage and class.
+- **Exposure Eₜ:** `refs_other_classes` ([exposure.tsv](exposure.tsv)).
+
+**Hazard truth:**
+- α_c,t constant: logit 0.19 for Rhynchonellata and logit 0.05 for
+  Bivalvia (σ_α = 0).
+- **Event excess ω_c,k:** solved deterministically, before the run, so
+  that the mean event loss among members at the design covariates equals
+  the deposit's class-event D/N:
+  - Rhynchonellata 0.27, 0.53, 0.77, 0.53, 0.49;
+  - Bivalvia 0.21, 0.09, 0.34, 0.19, 0.30.
+- β_b = 0.3; β̄_e,c = 0.5.
+- τ = 0.3, with δₖ drawn once per dataset from its seed.
+- γ = 0.2 for each z-scored nuisance (recency in Myr, age, completeness).
+- Taxonomy: 40 families in 8 orders per class, assigned uniformly at entry,
+  with s_f = s_o = 0.3.
+
+**Detection truth:**
+- θ = 0.01 · exp(0.5 w + b_fam + ν_c,t), with s_b = 0.3 and
+  ν_c,t ~ N(0, 0.2²).
+- ε = 1; W = M = 3.
+
+**Fit and gates:**
+- Stan CJS with latent states marginalised by the forward algorithm: 4
+  chains, 1,000 warmup and 1,000 draws.
+- A fit succeeds only with R-hat ≤ 1.01, bulk and tail ESS ≥ 400 and zero
+  divergences.
+- **Record:** runtime per dataset, every failure type, and contraction of
+  β̄_e,c relative to the prior.
+
+**Decision conventions for the later campaign** (declared now; nothing
+runs yet):
+- **Coverage:** Clopper–Pearson 95% intervals.
+- **Bias and gain:** pass only if the 95% Monte Carlo interval lies inside
+  the tolerance band; fail if it lies wholly outside; otherwise
+  unresolved.
+- **Failed fits** count as non-coverage. Bias and score are reported
+  conditional on successful fits, alongside the failure rate, with no
+  values imputed.
