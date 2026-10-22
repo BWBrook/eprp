@@ -52,8 +52,8 @@ OCTOPUS. See [INDEX.md](INDEX.md).
 - **Macrostrat**: no Australian columns (negative result).
 - **Museums Victoria Collections API**: blocked to scripts (Cloudflare 403);
   retry from another host.
-- **Queensland Museum palaeontology CSV**: dead link; obtaining it means
-  contacting the museum (Barry's call).
+- **Queensland Museum palaeontology CSV**: dead link; queued for the museum
+  as [CONTACTS.md](CONTACTS.md) C6.
 
 ## Elsewhere
 

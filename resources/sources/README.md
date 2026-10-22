@@ -17,6 +17,8 @@ fitness-for-purpose verdict. Suitability is always relative to a question.
 resources/sources/
   README.md                 this file: conventions, template, lessons
   INDEX.md, index.tsv       generated index of all entries (build_index.py)
+  BACKLOG.md                ranked sources to catalogue next
+  CONTACTS.md               outreach queue: issues for outside parties, held for one tranche
   build_index.py            rebuilds the index: uv run resources/sources/build_index.py
   paleodata-README.md       the README installed at /data/paleodata/
   <id>/README.md            the entry: YAML front matter + guide
@@ -164,6 +166,10 @@ Body sections, in order:
    lineage, overlap, uses and published critiques.
 6. Write the entry; quote our numbers, cite theirs. Rebuild the index.
 7. Have the entry reviewed independently before treating it as settled.
+8. Add any issue that needs a provider or custodian to act (errors, stale
+   documentation, licence conflicts, access problems) to
+   [CONTACTS.md](CONTACTS.md). Never contact them directly; Barry handles the
+   queue as one tranche.
 
 ## Lessons so far
 
@@ -295,6 +301,13 @@ the workflow when they generalise.
   fossil records are almost entirely foreign-museum or NSB specimens, and
   Macrostrat has no Australian columns. PBDB's Australian subset is the real
   deep-time workhorse ([BACKLOG.md](BACKLOG.md)).
+
+**Outreach (Barry, 22 October 2026).**
+
+- *Queue contacts; send them as one tranche.* Cataloguing keeps turning up
+  issues only providers can fix. Collect them per recipient in
+  [CONTACTS.md](CONTACTS.md), so that one message goes to each party and
+  replies are tracked in one place.
 
 **Both pilots.**
 

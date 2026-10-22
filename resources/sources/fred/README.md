@@ -271,8 +271,8 @@ classes the dataset as restricted ("Research IP", "Commercial data"). The
 public map service's header says "These map data are released free under
 the Creative Commons Attribution 3.0 New Zealand (CC-BY 3.0) Licence" but
 does not name FRED. Whether the locality skeleton may be archived or shared
-is unresolved; settling it means asking the custodian (frf@earthsciences.nz),
-which is Barry's decision.
+is unresolved; settling it means asking the custodian (frf@earthsciences.nz).
+That question is parked in [CONTACTS.md](../CONTACTS.md) as C8.
 
 ## Verification log
 
