@@ -592,3 +592,25 @@ This is the bounded correction set out in 76/2194.
 - **Candidates.** The run-3 evaluator vectors are reused unchanged. No new
   points, no likelihood change and no integrator search. Persistent
   diagnostics leave a cell unresolved, and P11 stays held.
+
+**Run 4: fixtures and smoke check**
+([collapsed_oracle_refrepair_v2.py](collapsed_oracle_refrepair_v2.py)).
+
+**Fixtures:** all pass.
+- A subdivision-limited integral's returned message is captured.
+- An injected inner message unqualifies the value.
+- A clean central0 T2 value qualifies.
+- Keys are version-bound (`refv2|…`), and there are 1,152 tasks.
+
+**Smoke check** (holdout_9707_sigma8, T3, central value; 1.9 s):
+- The value agrees with the run-3 evaluator to 7.1e-15.
+- The total estimated relative error is 1.06e-11, well inside the 1e-10
+  budget, with tails ≤ 5e-32.
+- **2 of 1,174 inner leaf integrations still return the QUADPACK message**
+  "roundoff error is detected… the error may be underestimated". That is
+  down from 35 of 1,265 in Codex's probe of the old code.
+- **The value is therefore unqualified,** by the declared rule.
+
+The 1,152-value batch is still needed to settle the other 15 cells under
+the corrected diagnostics. Forecast: under 2 minutes on deep-server. Limit:
+900 s.
