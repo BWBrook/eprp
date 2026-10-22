@@ -295,3 +295,60 @@ c1_failing and holdout_9707_sigma8:
   machine.
 - To be rerun at all 15 points once the batch completes. It is still a
   cost probe, not an estimator.
+
+## Results: the frozen batch (22–23 October 2026)
+
+- **Run:** 660 of 660 tasks completed, with no unresolved and no skipped
+  tasks. mac-mini, 8 workers, 4.97 h wall, 39.7 core-hours, within the 10 h
+  and 80 core-hour ceiling.
+- **Records:** receipts in [p11_fixedpoint_run.jsonl.gz](p11_fixedpoint_run.jsonl.gz),
+  assembly in [p11_fixedpoint_results.json](p11_fixedpoint_results.json).
+
+**All 15 points pass every candidate check** (section 3; maxima over the
+15 points):
+
+| Check | Value | Derivatives (all 35) | Tolerance |
+| --- | ---: | ---: | --- |
+| Self: resolution | 1.3e-10 | 3.9e-10 | 1e-6 / 1e-5 |
+| Self: domain | 2.3e-11 | 3.2e-10 | 1e-6 / 1e-5 |
+| R1 interpolation, big tree (two interior levels) | 6.3e-11 | 2.8e-10 | 1e-6 / 1e-5 |
+| R1 interpolation, chain 4 → 9 → 12 | 8.0e-11 | 1.4e-10 | 1e-6 / 1e-5 |
+| I1, unit factors | 8.0e-15 | — | 1e-8 |
+| I2, selection against the qualified reference (qualified at all 15) | 1.1e-7 | — | 1e-6 |
+
+**R2, the independent tensor reference on the chain**, reported separately:
+- **It qualifies at 9 points.** There the candidate chain agrees with it to
+  8.0e-11 in value and 5.5e-9 in derivatives (tolerance 1e-4 / 1e-3).
+- **It is reference-unresolved at 6:** stress_s3_r09_kbm15, c1_failing,
+  c4_previous, holdout_c1f_sigma6, holdout_c1f_sigma20 and
+  holdout_c4f_sigma15. These are the large-σ or stress states where its
+  axis-box limit was already known. As declared, this does not change the
+  candidate's status.
+
+**Cost (section 4).**
+- **One P11 collapsed log-likelihood value:** 3.0–3.7 s on one mac-mini
+  core under the 8-worker load, and about 2 s alone.
+- **One 35-coordinate finite-difference gradient** (71 values): 191–253 s
+  under load.
+- **One Fisher-identity gradient** (cost addendum, 15-point check below):
+  2.1–2.4 s under the same load, about 100× cheaper.
+- **Implied arithmetic, not a fit:**
+  - Maximum marginal likelihood with about 100–300 gradients would take
+    roughly 4–12 min of one core with Fisher gradients, against 5–21 h with
+    finite differences.
+  - Collapsed HMC with about 2.5 × 10⁵ gradients per four-chain fit would
+    take about 160 core-hours with Fisher gradients, against about 15,000
+    with finite differences.
+
+**Fisher gradient at all 15 points** ([fisher_tree_check.json](fisher_tree_check.json)):
+- Against the batch's finite-difference per-tree gradients it agrees to at
+  most 6.6e-7 at the ten points with σ ≤ 8. At the five with σ ≥ 12 or the
+  c4 states it agrees to at most 5.5e-6. The h² test at the worst point is
+  reported below.
+
+**Reading.**
+- The collapsed evaluator with Hermite-interpolated interior messages is
+  numerically qualified on the whole P11 forest at every frozen point,
+  including σ = 20 and ρ ≈ 1.
+- This earns the fixed-point check, and only that. **No estimator,
+  optimiser or fit has been chosen or run.**
