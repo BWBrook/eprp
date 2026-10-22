@@ -273,6 +273,25 @@ c1_failing and holdout_9707_sigma8:
   message would carry its θ-gradient as a conditional expectation, and
   interior tables would hold those 35-vectors with exact x-derivatives
   from Cov(·, x_c | x_j)·ρ/v.
-- That would move collapsed HMC from infeasible to plausible. **The tree
-  version is not built or tested here.** The batch's per-tree candidate
-  gradients at all 15 points would be its validation data.
+- That would move collapsed HMC from infeasible to plausible.
+
+**Tree version, built the same evening** ([fisher_tree.py](fisher_tree.py),
+[fisher_tree_check.json](fisher_tree_check.json)).
+- **Gradient messages.** Each message carries its θ-gradient upward:
+  G_j(x_p) = E[∂θ log K + ∂θ log F_j + Σ_c G_c | x_p].
+- **Tables.** Interior tables hold G_c with exact x-derivatives,
+  E[∂ₓf] + (ρ/v) Cov(f, x_c), in local cubic-Hermite interpolants with
+  tangent extension. The value tables are unchanged.
+- **Preliminary check against the batch's finite-difference per-tree
+  gradients:** at most 2.2e-7 at central0 and 6.7e-8 at central1, over all
+  10 trees, including the big tree's two interior levels.
+- **The residual is the finite-difference error.** On the big tree, halving
+  h gives ratios of 4.00 and 4.02 at central0, and 4.03 and 4.11 at
+  high_rho_9707 (ρ ≈ 1). The drift at h = 5e-5 is the roundoff floor of
+  the difference quotient, so the Fisher gradient's own error is below
+  about 1e-9 there.
+- **Cost:** about 9 s for the whole P11 gradient on the laptop, about 1.5
+  value-equivalents, against about 440 s for finite differences on the same
+  machine.
+- To be rerun at all 15 points once the batch completes. It is still a
+  cost probe, not an estimator.
