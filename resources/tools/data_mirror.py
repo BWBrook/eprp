@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Mirror every version of a Zenodo record or Figshare collection into a read-only local archive.
+"""Mirror versions of a Zenodo record, Figshare collection or GitHub repository into a read-only local archive.
 
 Usage:
   python3 data_mirror.py zenodo RECORD_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py figshare COLLECTION_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
+  python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
 
 Writes DEST/versions.tsv (every version the provider offers) and
@@ -11,8 +12,10 @@ DEST/raw/<version_dir>/ holding the unchanged files plus MANIFEST.json for the
 selected versions: --latest takes the newest version of each record (Figshare:
 of each article), --only names version_dirs, and both may be combined. Zenodo
 version_dirs are <version>_<record>; Figshare ones are <article-title>_v<N>_<article>,
-one per version of every article in the collection. Files are verified against
-the provider's size and md5, hashed with sha256, then made read-only.
+one per version of every article in the collection; GitHub ones are
+<commit-date>_<sha10>, one per commit on the default branch. Files are verified
+against the provider's size and checksum (md5, or the blob hash for GitHub),
+hashed with sha256, then made read-only.
 Interrupted downloads resume from their .part files and completed versions are
 skipped. verify re-hashes mirrored files against their manifests. Standard
 library only.
@@ -30,9 +33,10 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
-UA = "eprp-data-mirror/3 (research data archive)"
+UA = "eprp-data-mirror/4 (research data archive)"
 RETRYABLE = (429, 500, 502, 503, 504)
 TRANSIENT = (urllib.error.URLError, http.client.HTTPException, TimeoutError, ConnectionError)
 
@@ -81,11 +85,8 @@ def zenodo_versions(record_id):
     for h in hits.values():
         m = h["metadata"]
         v = slug(m.get("version", ""))
-        files = []
-        for x in h["files"]:
-            algo, md5 = x["checksum"].split(":", 1)
-            assert algo == "md5", x["checksum"]
-            files.append({"key": x["key"], "size": x["size"], "md5": md5, "url": x["links"]["self"]})
+        files = [{"key": x["key"], "size": x["size"], "checksum": x["checksum"], "url": x["links"]["self"]}
+                 for x in h["files"]]
         out.append({
             "dir": f"{v}_{h['id']}" if v else str(h["id"]), "provider": "zenodo", "record": h["id"],
             "version": m.get("version"), "doi": h.get("doi"), "concept_doi": h.get("conceptdoi"),
@@ -107,8 +108,8 @@ def figshare_versions(collection_id):
         for v in get_json(f"{api}/articles/{a['id']}/versions"):
             d = get_json(f"{api}/articles/{a['id']}/versions/{v['version']}")
             time.sleep(0.3)
-            files = [{"key": f["name"], "size": f["size"], "md5": f["computed_md5"], "url": f["download_url"]}
-                     for f in d["files"]]
+            files = [{"key": f["name"], "size": f["size"], "checksum": "md5:" + f["computed_md5"],
+                      "url": f["download_url"]} for f in d["files"]]
             out.append({
                 "dir": f"{slug(d['title'])}_v{v['version']}_{a['id']}", "provider": "figshare", "record": a["id"],
                 "version": v["version"], "doi": d.get("doi"), "concept_doi": collection.get("doi"),
@@ -119,21 +120,59 @@ def figshare_versions(collection_id):
     return sorted(out, key=lambda r: (r["publication_date"], r["record"], r["version"]))
 
 
+def github_versions(repo):
+    api = f"https://api.github.com/repos/{repo}"
+    meta = get_json(api)
+    commits, page = [], 1
+    while True:
+        batch = get_json(f"{api}/commits?sha={meta['default_branch']}&per_page=100&page={page}")
+        commits.extend(batch)
+        if len(batch) < 100:
+            break
+        page += 1
+    out = []
+    for c in commits:
+        when = c["commit"]["committer"]["date"]
+        out.append({
+            "dir": f"{when[:10]}_{c['sha'][:10]}", "provider": "github", "record": c["sha"], "version": c["sha"][:10],
+            "doi": None, "concept_doi": f"https://github.com/{repo}", "publication_date": when,
+            "title": c["commit"]["message"].splitlines()[0], "creators": [c["commit"]["author"]["name"]],
+            "license": (meta.get("license") or {}).get("spdx_id") or "none stated", "files": None, "repo": repo,
+        })
+    return sorted(out, key=lambda r: r["publication_date"])
+
+
+def github_files(repo, sha):
+    tree = get_json(f"https://api.github.com/repos/{repo}/git/trees/{sha}?recursive=1")
+    if tree.get("truncated"):
+        raise RuntimeError(f"tree listing truncated for {repo}@{sha}")
+    return [{"key": t["path"], "size": t["size"], "checksum": "gitblob:" + t["sha"],
+             "url": f"https://raw.githubusercontent.com/{repo}/{sha}/{urllib.parse.quote(t['path'])}"}
+            for t in tree["tree"] if t["type"] == "blob"]
+
+
 def write_index(versions, path):
     cols = ["version_dir", "version", "record_id", "doi", "publication_date", "license", "total_bytes", "files"]
     tmp = path + ".part"
     with open(tmp, "w") as f:
         f.write("\t".join(cols) + "\n")
         for r in versions:
-            files = ";".join(f"{x['key']}|{x['size']}|md5:{x['md5']}" for x in sorted(r["files"], key=lambda x: x["key"]))
+            fl = sorted(r["files"] or [], key=lambda x: x["key"])
+            files = ";".join(f"{x['key']}|{x['size']}|{x['checksum']}" for x in fl)
+            total = str(sum(x["size"] for x in fl)) if r["files"] is not None else ""
             row = [r["dir"], str(r["version"] or ""), str(r["record"]), r["doi"] or "", r["publication_date"],
-                   r["license"], str(sum(x["size"] for x in r["files"])), files]
+                   r["license"], total, files]
             f.write("\t".join(row) + "\n")
     os.replace(tmp, path)
 
 
 def hash_file(path, *algos):
-    hs = [hashlib.new(a) for a in algos]
+    hs = []
+    for a in algos:
+        h = hashlib.sha1() if a == "gitblob" else hashlib.new(a)
+        if a == "gitblob":
+            h.update(b"blob %d\0" % os.path.getsize(path))
+        hs.append(h)
     with open(path, "rb") as f:
         while chunk := f.read(1 << 20):
             for h in hs:
@@ -141,7 +180,8 @@ def hash_file(path, *algos):
     return [h.hexdigest() for h in hs]
 
 
-def download(url, dest, size, md5_expected):
+def download(url, dest, size, checksum):
+    algo, expected = checksum.split(":", 1)
     part = dest + ".part"
     for attempt in range(8):
         have = os.path.getsize(part) if os.path.exists(part) else 0
@@ -158,9 +198,9 @@ def download(url, dest, size, md5_expected):
                     with open(part, mode) as out:
                         while chunk := r.read(1 << 20):
                             out.write(chunk)
-            md5, sha = hash_file(part, "md5", "sha256")
+            got_sum, sha = hash_file(part, algo, "sha256")
             got = os.path.getsize(part)
-            if got == size and md5 == md5_expected:
+            if got == size and got_sum == expected:
                 os.replace(part, dest)
                 return sha
             if got >= size:
@@ -180,15 +220,19 @@ def mirror_version(r, raw_root, tool_sha):
     if os.path.exists(manifest_path):
         return False
     os.makedirs(vdir, exist_ok=True)
+    if r["files"] is None:
+        r["files"] = github_files(r["repo"], r["record"])
     files = []
     for x in sorted(r["files"], key=lambda x: x["key"]):
         dest = os.path.join(vdir, x["key"])
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        algo, expected = x["checksum"].split(":", 1)
         if os.path.exists(dest):
-            got_md5, sha = hash_file(dest, "md5", "sha256")
-            if got_md5 != x["md5"]:
-                raise IOError(f"{dest} exists with wrong md5")
+            got_sum, sha = hash_file(dest, algo, "sha256")
+            if got_sum != expected:
+                raise IOError(f"{dest} exists with wrong {algo}")
         else:
-            sha = download(x["url"], dest, x["size"], x["md5"])
+            sha = download(x["url"], dest, x["size"], x["checksum"])
         os.chmod(dest, 0o444)
         files.append({**x, "sha256": sha})
         time.sleep(1)
@@ -220,7 +264,7 @@ def verify(raw_root, only):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="command", required=True)
-    for provider in ("zenodo", "figshare"):
+    for provider in ("zenodo", "figshare", "github"):
         p = sub.add_parser(provider)
         p.add_argument("record_id")
         p.add_argument("dest")
@@ -244,7 +288,7 @@ def main():
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
         sys.exit(f"another mirror run holds {a.dest}/.mirror.lock")
-    versions = (zenodo_versions if a.command == "zenodo" else figshare_versions)(a.record_id)
+    versions = {"zenodo": zenodo_versions, "figshare": figshare_versions, "github": github_versions}[a.command](a.record_id)
     write_index(versions, os.path.join(a.dest, "versions.tsv"))
     print(f"{len(versions)} versions indexed", flush=True)
     if a.index_only:
@@ -255,7 +299,7 @@ def main():
             sys.exit(f"unknown version_dir: {' '.join(sorted(unknown))}")
     chosen = set(a.only or [])
     if a.latest:
-        group = (lambda r: "all") if a.command == "zenodo" else (lambda r: r["record"])
+        group = (lambda r: r["record"]) if a.command == "figshare" else (lambda r: "all")
         newest = {}
         for r in versions:
             key = group(r)
