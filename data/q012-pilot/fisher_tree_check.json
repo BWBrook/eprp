@@ -1,0 +1,156 @@
+{
+ "central0": {
+  "trees": {
+   "1": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 8.739043916294875e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.1005919910100914,
+    "fisher_seconds": 0.02282079100405099
+   },
+   "2-5-7-8-10-11-14": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 2.2168526303545377e-07,
+    "worst": "log_k",
+    "max_abs_grad": 4.827751376019762,
+    "fisher_seconds": 6.166916782000044
+   },
+   "3": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 1.323030907052214e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.9567219368044064,
+    "fisher_seconds": 0.02847605900024064
+   },
+   "4-9-12": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 1.4151161820130653e-07,
+    "worst": "log_k",
+    "max_abs_grad": 1.9603924798339278,
+    "fisher_seconds": 2.126105536997784
+   },
+   "6": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 1.255203052608067e-09,
+    "worst": "log_k",
+    "max_abs_grad": 1.9860598523946393,
+    "fisher_seconds": 0.028670959000010043
+   },
+   "13": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 1.5183780899263866e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.8351872150557114,
+    "fisher_seconds": 0.02833525800087955
+   },
+   "15-18": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 5.6618026711419134e-08,
+    "worst": "log_k",
+    "max_abs_grad": 2.731359259495747,
+    "fisher_seconds": 0.8343331389987725
+   },
+   "16": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 6.52600770090217e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.2360918652110087,
+    "fisher_seconds": 0.03056446999835316
+   },
+   "17": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 7.944722454564235e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.5284080811817091,
+    "fisher_seconds": 0.026901049001025967
+   },
+   "19": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 4.454884994231634e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.1086409586313906,
+    "fisher_seconds": 0.02588834299967857
+   }
+  },
+  "fisher_seconds_total": 9.31901238700084,
+  "fd_gradient_seconds_batch": 234.12097095814534,
+  "max_abs_grad_diff": 2.2168526303545377e-07
+ },
+ "central1": {
+  "trees": {
+   "1": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 3.35275123219958e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.2686325771671392,
+    "fisher_seconds": 0.023813532003259752
+   },
+   "2-5-7-8-10-11-14": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 6.657674678223202e-08,
+    "worst": "log_k",
+    "max_abs_grad": 6.862265379012911,
+    "fisher_seconds": 5.710385027996381
+   },
+   "3": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 5.227234201043984e-09,
+    "worst": "log_k",
+    "max_abs_grad": 1.9758360010824205,
+    "fisher_seconds": 0.021844805996806826
+   },
+   "4-9-12": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 4.003522668938331e-08,
+    "worst": "log_k",
+    "max_abs_grad": 3.832930530300871,
+    "fisher_seconds": 2.036921840001014
+   },
+   "6": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 2.10585854309997e-09,
+    "worst": "sigma",
+    "max_abs_grad": 1.858640767484765,
+    "fisher_seconds": 0.02175190599518828
+   },
+   "13": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 4.6191193092681715e-09,
+    "worst": "log_k",
+    "max_abs_grad": 2.0242793737690334,
+    "fisher_seconds": 0.02243800900032511
+   },
+   "15-18": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 2.2496848384179202e-08,
+    "worst": "log_k",
+    "max_abs_grad": 3.0615051234583746,
+    "fisher_seconds": 0.8449972169983084
+   },
+   "16": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 2.4037750234739974e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.4648761096536234,
+    "fisher_seconds": 0.025686225002573337
+   },
+   "17": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 2.9818310931517544e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.7090508670936089,
+    "fisher_seconds": 0.027581634996749926
+   },
+   "19": {
+    "value_minus_batch": 0.0,
+    "max_abs_grad_diff": 1.4911411216900206e-08,
+    "worst": "log_k",
+    "max_abs_grad": 1.8364527383685214,
+    "fisher_seconds": 0.029191442001319956
+   }
+  },
+  "fisher_seconds_total": 8.764611639991926,
+  "fd_gradient_seconds_batch": 226.50020837481134,
+  "max_abs_grad_diff": 6.657674678223202e-08
+ }
+}
