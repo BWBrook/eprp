@@ -19,7 +19,35 @@ counts, and the names and status lists. See [INDEX.md](INDEX.md). Ranks 1–15
 below are now catalogued; their entries supersede the scan figures quoted in
 the table.
 
-## Ranked: Australia and Sahul
+## Next: driven by the EPRP question registers (23 October 2026)
+
+A survey of the applied register (50 questions) and the blue-sky register (18)
+against this catalogue (Claude Sonnet subagent, 23 October; its scores are its
+own construct) found little overlap: the catalogue serves 12 of 68 questions,
+through Triton, NSB, FRED and the PBDB Australian extract, and no question
+names any of the Australian-tranche sources (their uses are inferred: Q-024,
+Q-034, Q-047, Q-022). The registers' inputs are mostly global and deep-time.
+Ranked by the questions served (develop status weighted above hold) and by
+readiness:
+
+| # | Source | Serves | Access | Notes |
+| ---: | --- | --- | --- | --- |
+| 1 | **PBDB, global** | 43 questions (8 develop), incl. Q-023, Q-030, Q-038, B-005 | API data1.2, CC0; GBIF DwC-A subset; DOI archives 2019–20 | Dated snapshots only (no replay). Preserve the main agents' vintages beside it as archived extracts: Benson 2022-05-23 (1.1 GB), Close 2017-12, Monarrez, and the 2026-10-15 b001 and q042 extracts |
+| 2 | **Dryad deposits the registers name** (now mirrorable with the API account) | Monarrez 2023 (Q-038, top develop); Walton-Korn (B-002, the only blue-sky develop); Close 2019 (Q-044, Q-045); Benson companion (Q-027); Brombacher 2017 (Q-050); Slattery (Q-036); Crampton (Q-011); Malanoski 2024 (Q-002); graptoloid CONOP (Q-005); Lidgard, bryozoans, GOBE and B-016 deposits | `data_mirror.py dryad` | Small; one tranche. Several are held only as Barry's hand-supplied zips |
+| 3 | **Fossil-inclusive dated trees** | Q-012 (active), Q-022, Q-004, Q-043 | Lamyman 2026, Zenodo 18854730 (1.16 GB, CC BY 4.0); Aze 2011; Cantalapiedra 2019 (Figshare) | Only 0.9 MB of Lamyman is held locally |
+| 4 | **Palaeogeography and plate models** | 15 questions; the Triton/NSB plate-model inconsistency blocking Q-012 exposure; B-005, Q-020, Q-040, Q-049 | PaleoDEM (Zenodo 5348492); GPlates rotation models (Seton 2012, Matthews 2016, Merdith 2021; recall) | PBDB already returns three palaeocoordinate models |
+| 5 | **Climate reconstructions and forcing** | Q-030 (develop), Q-027, Q-049, Q-007, Q-011, Q-003 | PhanDA, PhanSST (GitHub, no licence declared; papers CC BY), HadCM3L priors (Zenodo 8237751), Song 2021 (Zenodo 5027293), CENOGRID and LR04; LIP, CO2 and δ13C event tables (Green 2022, Rothman 2017) | 62 MB held locally; licence question for the repositories |
+| 6 | **Time scale** | Q-041, Q-035, Q-005 | GTS2020 and ICS boundary ages with uncertainties | TimeScale Creator datapack blocked (C9 f) |
+| 7 | **Macrostrat, global** | B-005, B-007, B-008 and inferred others | open API, CC BY 4.0 | Reclassify: the Australian negative does not decide a global need |
+| 8 | **Island-extinction compilations** | Q-034, Q-017, Q-004 | Rozzi 2023 (Figshare, GitHub); Cooke 2023 (Zenodo 10014585) | Joins the Sahul and FRED work |
+| 9 | **Modern-bridge time series and invasions** | Q-025 (develop), Q-028, Q-047 | BioTIME, GRIIS, SInAS 3.1.1, Seebens first records, GloNAF | Hosting to confirm |
+| 10 | **LegacyPollen and LegacyAge 1.0** | Q-024 | ESSD data papers (PANGAEA; recall) | Neotoma covers the Sahul slice only |
+
+Also: document the main agents' local holdings (`data/raw/`, 2.9 GB on the
+laptop) as catalogue entries or archived extracts, so nothing is fetched
+twice; their Triton v4 files match this mirror's manifest.
+
+## Ranked: Australia and Sahul (22 October; catalogued)
 
 | # | Source | Holds | Access and licence | Why |
 | ---: | --- | --- | --- | --- |
