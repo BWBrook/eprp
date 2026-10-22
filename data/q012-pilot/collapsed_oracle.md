@@ -456,3 +456,23 @@ QUADPACK (`scipy.integrate.quad`) in x coordinates.
 *Pre-execution correction:* QUADPACK rejects epsrel below 50·eps (about
 1.11e-14). The tightened rerun therefore uses inner epsrel **1.2e-14**, not
 1e-14. Nothing else changes.
+
+**Benchmark and forecast** (deep-server, a20973e;
+[collapsed_oracle_run3_benchmark.json](collapsed_oracle_run3_benchmark.json)).
+
+T3 reference values, against the unchanged evaluator:
+
+| Point | Reference time | Estimated relative error | Evaluator − reference |
+| --- | ---: | ---: | ---: |
+| central0 | 0.73 s | 6.1e-13 | 0 |
+| c1_failing | 2.96 s | 4.0e-13 | −1.4e-14 |
+| holdout σ = 20 | 3.77 s | 4.8e-13 | 0 |
+
+- All three are qualified, with no warnings. Evaluator calls take
+  1.5–1.8 s.
+- **Forecast:** 4,560 tasks on 62 workers, about 170 s.
+- **Declared execution limit: 1,800 s.** That is above the benchmark's own
+  4 × forecast of 680 s, because the n = 400 resolution settings were not
+  benchmarked.
+- **If the limit is reached,** completed tasks persist and the same command
+  resumes. No settings change.

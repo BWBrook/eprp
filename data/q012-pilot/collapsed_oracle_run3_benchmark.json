@@ -1,0 +1,39 @@
+{
+ "central0": {
+  "ref_seconds": 0.7313408390618861,
+  "ref_value": -24.562257955985892,
+  "qualified": true,
+  "total_rel": 6.126854769065711e-13,
+  "eval_seconds": 1.492965099052526,
+  "eval_minus_ref": 0.0,
+  "inner_calls": 482,
+  "outer_neval": 210
+ },
+ "c1_failing": {
+  "ref_seconds": 2.9575490510324016,
+  "ref_value": -69.60916849092752,
+  "qualified": true,
+  "total_rel": 3.997928001140815e-13,
+  "eval_seconds": 1.6909690899774432,
+  "eval_minus_ref": -1.4210854715202004e-14,
+  "inner_calls": 1158,
+  "outer_neval": 546
+ },
+ "holdout_c1f_sigma20": {
+  "ref_seconds": 3.767107059014961,
+  "ref_value": -144.73610075425947,
+  "qualified": true,
+  "total_rel": 4.822421617836112e-13,
+  "eval_seconds": 1.795178556931205,
+  "eval_minus_ref": 0.0,
+  "inner_calls": 1246,
+  "outer_neval": 588
+ },
+ "forecast": {
+  "tasks": 4560,
+  "workers": 62,
+  "worst_seconds_per_value_set": 9.152642729808576,
+  "forecast_wall_seconds": 170.06200685063678,
+  "limit_seconds": 680.2480274025471
+ }
+}
