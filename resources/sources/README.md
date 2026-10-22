@@ -380,9 +380,16 @@ the workflow when they generalise.
   extinct list mixes species and subspecies of living species, and carries a
   current name beside the listed one (117 rows differ). Truncating listed
   names to binomials would mark living species extinct and miss renamed ones.
-- *A record's year is not a living animal.* ALA's records of extinct species
-  dated after 1950 mix genuine late records, subfossil specimens, synonymies
-  and name collisions; screen them before using last-record dates.
+- *A record's year is not a living animal.* ALA's 4,993 records of extinct
+  mammals dated from 1950 come mostly from one agency's recent use of a name
+  for another animal, a resurrected name, a misdated museum batch and
+  historical reports; a minority are genuine late records, and 3 are fossils.
+  Facet each species' records by provider, basis and decade before using
+  last-record dates, and count its undated records.
+- *Printed terms can differ from catalogue terms, file by file.* GA's eCat
+  metadata says CC BY 4.0 for every biozonation chart record; the PDFs print
+  CC BY 4.0, CC BY 3.0 AU, a bare Commonwealth copyright line, nothing, or
+  "no part may be reproduced", depending on the file.
 - *Redact as you echo.* A profiler that echoes spreadsheet headers or README
   text copied an author's email address; profilers now redact addresses.
 - *Read the provider's field documentation before interpreting fields.* The

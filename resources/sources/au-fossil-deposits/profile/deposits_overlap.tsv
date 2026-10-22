@@ -1,0 +1,78 @@
+table	metric	key	value
+thylacine_devil	rows		277
+thylacine_devil	rows_with_fossahul_id		234
+thylacine_devil	distinct_fossahul_ids		234
+thylacine_devil	ids_in_current_fossahul		234
+thylacine_devil	rows_by_accepted_rejected		Accepted 102; Rejected 175
+thylacine_devil	rows_flagged_new_date		43
+thylacine_devil	new_date_rows_by_state		NSW 1; VIC 14; WA 28
+thylacine_devil	qr_category_by_decision	Accepted	A 58; A* 44
+thylacine_devil	qr_category_by_decision	Rejected	A 8; B 38; C 129
+thylacine_devil	new_date_qr_category		A* 43
+thylacine_devil	rejected_rows_rated_A	DatingTechnique	U-series Th/U 8
+thylacine_devil	rejected_rows_rated_A	Association	Indirect 8
+thylacine_devil	rejected_rows_rated_A	QR sub-Category	a 2; b 4; w 2
+thylacine_devil	linked_genus_identical		234 of 234
+thylacine_devil	linked_ageid_identical		211 of 234
+thylacine_devil	linked_ageid_deposit_na		21 (FosSahul also NA for 4)
+thylacine_devil	linked_ageid_different_code		2
+thylacine_devil	linked_ageid_different_code	8214	deposit GaK-3814, WA, -31.655, 127.43222; FosSahul GaK-3888, WA, -31.655, 127.4322
+thylacine_devil	linked_ageid_different_code	8261	deposit Wk-36184, NSW, -35.7167, 148.5; FosSahul Y-1367, Eastern Highlands, -5.9085, 145.1472
+thylacine_devil	linked_coordinates		differ 20; not numeric 1; within 0.05 degrees 213
+thylacine_devil	linked_decision_by_current_fossahul_quality	Accepted	A 47; B 6; C 6
+thylacine_devil	linked_decision_by_current_fossahul_quality	Rejected	A 8; B 61; C 106
+thylacine_devil	linked_qr_category_vs_current_quality	A	A 54; B 6; C 6
+thylacine_devil	linked_qr_category_vs_current_quality	A*	C 1
+thylacine_devil	linked_qr_category_vs_current_quality	B	B 17; C 21
+thylacine_devil	linked_qr_category_vs_current_quality	C	A 1; B 44; C 84
+thylacine_devil	linked_qr_category_equals_current_quality		155 of 234
+thylacine_devil	fossahul_thylacinus_sarcophilus_records		370
+thylacine_devil	fossahul_records_linked_by_id		234
+thylacine_devil	new_dates_found_in_fossahul_by_ageid		43 of 43 AgeIDs in 43 records; IDs 9303-9345; Year 2018 43
+thylacine_devil	fossahul_records_not_in_deposit		93
+thylacine_devil	coverage_by_fossahul_division	Eastern Highlands	records 1; linked by ID 1; new dates 0; not in deposit 0
+thylacine_devil	coverage_by_fossahul_division	NSW	records 17; linked by ID 16; new dates 1; not in deposit 0
+thylacine_devil	coverage_by_fossahul_division	NT	records 1; linked by ID 1; new dates 0; not in deposit 0
+thylacine_devil	coverage_by_fossahul_division	QLD	records 50; linked by ID 50; new dates 0; not in deposit 0
+thylacine_devil	coverage_by_fossahul_division	SA	records 86; linked by ID 54; new dates 0; not in deposit 32
+thylacine_devil	coverage_by_fossahul_division	Simbu	records 30; linked by ID 0; new dates 0; not in deposit 30
+thylacine_devil	coverage_by_fossahul_division	TAS	records 19; linked by ID 0; new dates 0; not in deposit 19
+thylacine_devil	coverage_by_fossahul_division	VIC	records 28; linked by ID 14; new dates 14; not in deposit 0
+thylacine_devil	coverage_by_fossahul_division	WA	records 138; linked by ID 98; new dates 28; not in deposit 12
+thylacine_devil	not_in_deposit	SA	32 records; Kelly Hill Cave; Seton Rockshelter; region Kangaroo Island 32; Year 2013 21; 2015 11; Quality A 8; B 22; C 2; IDs 10191-10586
+thylacine_devil	not_in_deposit	Simbu	30 records; Nombe Rockshelter; region Mt Elimbari Ridge 30; Year 1991 12; 2016 18; Quality B 3; C 27; IDs 8193-11197
+thylacine_devil	not_in_deposit	TAS	19 records; 5 sites; region Franklin River 1; Montagu 6; Smithton 2; Tasmanian Southern Ranges - Florentine River Valley 6; Waratah/Wynyard 4; Year 1985 10; 2006 1; 2008 7; 2012 1; Quality A 2; B 1; C 16; IDs 7510-8169
+thylacine_devil	not_in_deposit	WA	12 records; Kudjal Yolgah Cave (Cave Number 6WI-9); region Leeuwin– Naturaliste National Park 12; Year 2016 12; Quality B 12; IDs 9715-9857
+thylacine_devil	record_creators_shared_surnames		bradshaw; saltre (4 creators on the deposit's Figshare record, 8 on the FosSahul 2.0 record)
+cloggs_cave	taxon_rows		38
+cloggs_cave	rows_identified_to_species		24 (of which cf. 4)
+cloggs_cave	rows_indeterminate		14
+cloggs_cave	non_mammal_rows		5: Agamidae sp. indet.; Scincidae sp. indet.; Varanus sp. indet.; Anura sp. indet.; Aves spp. indet.; to species: 0
+cloggs_cave	xu_totals_row_sum		4886
+cloggs_cave	xu_totals_row_equals_column_sums		yes
+cloggs_cave	su_totals_row_sum		4886
+cloggs_cave	su_totals_row_equals_column_sums		yes
+cloggs_cave	fossahul_records		20
+cloggs_cave	pbdb_collections		1
+cloggs_cave	sahulchar_units		0
+naracoorte_weij	sahulchar_units_citing_doi		6: Alexandra Cave ALEX; Blanche Cave BC; Dead Sheep Cave DS; New Cave NC; Specimen Cave SP; Victoria Fossil Cave VFC
+naracoorte_weij	sahulchar_observation_rows_citing_doi		113
+naracoorte_weij	sahulchar_observation_rows_by_type		age 56; particles counted 57
+naracoorte_weij	sahulchar_observation_units		7: Alexandra Cave ALEX 12; Blanche Cave BC 24; Dead Sheep Cave DS 19; New Cave NC 10; Robertson Cave RC 4; Specimen Cave SP 32; Victoria Fossil Cave VFC 12
+naracoorte_weij	sahulchar_observation_samples		60
+naracoorte_weij	deposit_table3_sample_rows		70
+naracoorte_weij	deposit_table3_rows_with_charcoal		65
+naracoorte_weij	charcoal_values_in_both		57
+naracoorte_weij	sahulchar_charcoal_values_not_in_deposit		0
+reichgelt_versions	sheets		8 in both
+reichgelt_versions	sheet_comparison	README	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	sheet_comparison	S1	cells differing by position 187; cells only in Dryad copy 0, only in revised 9 (after stripping doi.org prefixes); same rows in any order no
+reichgelt_versions	cells_only_in_revised	S1	geographic area x1; South Australia x4; Queensland x1; Victoria x2; New South Wales x1
+reichgelt_versions	sheet_comparison	S2	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	sheet_comparison	S3	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	sheet_comparison	S4	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	sheet_comparison	S5	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	sheet_comparison	S6	cells differing by position 1168; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	sheet_comparison	S7	cells differing by position 0; cells only in Dryad copy 0, only in revised 0 (after stripping doi.org prefixes); same rows in any order yes
+reichgelt_versions	s6_doi_cell_forms	dryad copy	bare 90
+reichgelt_versions	s6_doi_cell_forms	revised	double doi.org prefix 2; single doi.org prefix 88

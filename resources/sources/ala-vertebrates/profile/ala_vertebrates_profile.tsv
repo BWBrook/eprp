@@ -3,18 +3,28 @@ Actinopterygii	records		4966455
 Actinopterygii	records_pre1950		96535
 Actinopterygii	records_since1950		4725872
 Actinopterygii	records_undated		144048
+Actinopterygii	records_not_identified_to_species		885059
 Actinopterygii	species		4936
+Actinopterygii	species_rank_names		4932
 Actinopterygii	species_with_pre1950_records		2038
 Actinopterygii	species_no_record_since_1950		116
+Actinopterygii	facet_entry_not_species_rank	Carassius X Cyprinus HYBRID	49
+Actinopterygii	facet_entry_not_species_rank	Nannoperca sp. 1	895
+Actinopterygii	facet_entry_not_species_rank	Oncorhynchus mykiss X Salvelinus fontinalis	2
+Actinopterygii	facet_entry_not_species_rank	Salmo trutta X Salvelinus fontinalis	2
 Amphibia	records		2151126
 Amphibia	records_pre1950		7201
 Amphibia	records_since1950		2055440
 Amphibia	records_undated		88485
+Amphibia	records_not_identified_to_species		43132
 Amphibia	species		258
+Amphibia	species_rank_names		258
 Amphibia	species_with_pre1950_records		135
 Amphibia	species_no_record_since_1950		0
+Amphibia	epbc_extinct_entries		4
 Amphibia	epbc_extinct_species		4
 Amphibia	epbc_extinct_in_ala		4
+Amphibia	epbc_extinct_not_in_ala		0
 Amphibia	epbc_extinct_no_record_since_1950		0
 Amphibia	epbc_extinct_records_since1950	Rheobatrachus silus	98
 Amphibia	epbc_extinct_records_since1950	Rheobatrachus vitellinus	44
@@ -24,15 +34,27 @@ Aves	records		111991879
 Aves	records_pre1950		281526
 Aves	records_since1950		108416943
 Aves	records_undated		3293410
+Aves	records_not_identified_to_species		1788388
 Aves	species		884
+Aves	species_rank_names		880
 Aves	species_with_pre1950_records		769
 Aves	species_no_record_since_1950		9
+Aves	facet_entry_not_species_rank	Anas superciliosa X Anas platyrhynchos	37
+Aves	facet_entry_not_species_rank	Anas superciliosa X platyrhynchos	5373
+Aves	facet_entry_not_species_rank	Charadrius hiaticula tundrae	3
+Aves	facet_entry_not_species_rank	Numenius phaeopus hudsonicus	120
+Aves	epbc_extinct_entries		22
 Aves	epbc_extinct_species		7
 Aves	epbc_extinct_in_ala		7
+Aves	epbc_extinct_not_in_ala		0
 Aves	epbc_extinct_no_record_since_1950		4
 Aves	epbc_extinct_records_since1950	Porphyrio albus	2
 Aves	epbc_extinct_records_since1950	Psephotellus pulcherrimus	5
 Aves	epbc_extinct_records_since1950	Zosterops albogularis	2
+Aves	epbc_extinct_no_record_since_1950_pre1950_undated	Aplonis fusca	63 26
+Aves	epbc_extinct_no_record_since_1950_pre1950_undated	Gerygone insularis	20 2
+Aves	epbc_extinct_no_record_since_1950_pre1950_undated	Nestor productus	2 1
+Aves	epbc_extinct_no_record_since_1950_pre1950_undated	Zosterops strenuus	37 19
 Aves	no_record_since_1950_not_epbc_extinct	Anas eatoni	3
 Aves	no_record_since_1950_not_epbc_extinct	Bartramia longicauda	9
 Aves	no_record_since_1950_not_epbc_extinct	Emberiza citrinella	2
@@ -42,18 +64,24 @@ Chondrichthyes	records		1202422
 Chondrichthyes	records_pre1950		7226
 Chondrichthyes	records_since1950		1190228
 Chondrichthyes	records_undated		4968
+Chondrichthyes	records_not_identified_to_species		25583
 Chondrichthyes	species		338
+Chondrichthyes	species_rank_names		338
 Chondrichthyes	species_with_pre1950_records		130
 Chondrichthyes	species_no_record_since_1950		1
 Mammalia	records		6362915
 Mammalia	records_pre1950		25170
 Mammalia	records_since1950		5990342
 Mammalia	records_undated		347403
+Mammalia	records_not_identified_to_species		402213
 Mammalia	species		416
+Mammalia	species_rank_names		416
 Mammalia	species_with_pre1950_records		336
 Mammalia	species_no_record_since_1950		14
+Mammalia	epbc_extinct_entries		39
 Mammalia	epbc_extinct_species		34
 Mammalia	epbc_extinct_in_ala		32
+Mammalia	epbc_extinct_not_in_ala	Bettongia pusilla; Conilurus capricornensis	2
 Mammalia	epbc_extinct_no_record_since_1950		11
 Mammalia	epbc_extinct_records_since1950	Chaeropus ecaudatus	7
 Mammalia	epbc_extinct_records_since1950	Chaeropus yirratji	15
@@ -76,6 +104,17 @@ Mammalia	epbc_extinct_records_since1950	Potorous platyops	2
 Mammalia	epbc_extinct_records_since1950	Pseudomys gouldii	965
 Mammalia	epbc_extinct_records_since1950	Rattus nativitatis	4
 Mammalia	epbc_extinct_records_since1950	Thylacinus cynocephalus	156
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Bettongia anhydra	2 2
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Caloprymnus campestris	10 32
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Notomys macrotis	1 1
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Notomys mordax	0 4
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Notomys robustus	0 2
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Perameles myosuros	14 7
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Perameles papillon	3 39
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Pseudomys auritus	0 4
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Pseudomys glaucus	0 2
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Pteropus brunneus	0 2
+Mammalia	epbc_extinct_no_record_since_1950_pre1950_undated	Rattus macleari	0 9
 Mammalia	no_record_since_1950_not_epbc_extinct	Crocidura trichura	3
 Mammalia	no_record_since_1950_not_epbc_extinct	Dasycercus archeri	30
 Mammalia	no_record_since_1950_not_epbc_extinct	Leptonychotes weddelli	4
@@ -83,10 +122,664 @@ Reptilia	records		2321411
 Reptilia	records_pre1950		16726
 Reptilia	records_since1950		2013225
 Reptilia	records_undated		291460
+Reptilia	records_not_identified_to_species		101190
 Reptilia	species		1153
+Reptilia	species_rank_names		1153
 Reptilia	species_with_pre1950_records		571
 Reptilia	species_no_record_since_1950		32
+Reptilia	epbc_extinct_entries		1
 Reptilia	epbc_extinct_species		1
 Reptilia	epbc_extinct_in_ala		1
+Reptilia	epbc_extinct_not_in_ala		0
 Reptilia	epbc_extinct_no_record_since_1950		0
 Reptilia	epbc_extinct_records_since1950	Emoia nativitatis	121
+extinct_since1950	records	Chaeropus ecaudatus	7
+extinct_since1950	basis_of_record	Chaeropus ecaudatus | Fossil specimen	3
+extinct_since1950	basis_of_record	Chaeropus ecaudatus | Preserved specimen	3
+extinct_since1950	basis_of_record	Chaeropus ecaudatus | Observation	1
+extinct_since1950	dataResourceName	Chaeropus ecaudatus | Natural History Museum (London) Collection Specimens	3
+extinct_since1950	dataResourceName	Chaeropus ecaudatus | AMNH Mammal Collections	2
+extinct_since1950	dataResourceName	Chaeropus ecaudatus | BowerBird	1
+extinct_since1950	dataResourceName	Chaeropus ecaudatus | Queensland Museum provider for OZCAM	1
+extinct_since1950	decade	Chaeropus ecaudatus | 1960	5
+extinct_since1950	decade	Chaeropus ecaudatus | 1970	1
+extinct_since1950	decade	Chaeropus ecaudatus | 2010	1
+extinct_since1950	stateProvince	Chaeropus ecaudatus | Western Australia	6
+extinct_since1950	stateProvince	Chaeropus ecaudatus | Northern Territory	1
+extinct_since1950	year	Chaeropus ecaudatus | 1965	1
+extinct_since1950	year	Chaeropus ecaudatus | 1967	1
+extinct_since1950	year	Chaeropus ecaudatus | 1968	3
+extinct_since1950	year	Chaeropus ecaudatus | 1970	1
+extinct_since1950	year	Chaeropus ecaudatus | 2013	1
+extinct_since1950	raw_scientificName	Chaeropus ecaudatus | Chaeropus ecaudatus	4
+extinct_since1950	raw_scientificName	Chaeropus ecaudatus | Chaeropus ecaudatus occidentalis Ogilby, 1838	3
+extinct_since1950	records	Chaeropus yirratji	15
+extinct_since1950	basis_of_record	Chaeropus yirratji | Human observation	14
+extinct_since1950	basis_of_record	Chaeropus yirratji | Preserved specimen	1
+extinct_since1950	dataResourceName	Chaeropus yirratji | Fauna Atlas N.T.	14
+extinct_since1950	dataResourceName	Chaeropus yirratji | Northern Territory Museum and Art Gallery provider for OZCAM	1
+extinct_since1950	decade	Chaeropus yirratji | 1960	8
+extinct_since1950	decade	Chaeropus yirratji | 1980	3
+extinct_since1950	decade	Chaeropus yirratji | 1990	4
+extinct_since1950	stateProvince	Chaeropus yirratji | Northern Territory	15
+extinct_since1950	year	Chaeropus yirratji | 1968	8
+extinct_since1950	year	Chaeropus yirratji | 1983	1
+extinct_since1950	year	Chaeropus yirratji | 1988	2
+extinct_since1950	year	Chaeropus yirratji | 1996	4
+extinct_since1950	raw_scientificName	Chaeropus yirratji | Chaeropus yirratji	15
+extinct_since1950	records	Conilurus albipes	6
+extinct_since1950	basis_of_record	Conilurus albipes | Preserved specimen	5
+extinct_since1950	basis_of_record	Conilurus albipes | Human observation	1
+extinct_since1950	dataResourceName	Conilurus albipes | South Australian Museum Adelaide provider for OZCAM	4
+extinct_since1950	dataResourceName	Conilurus albipes | NSW BioNet Atlas	2
+extinct_since1950	decade	Conilurus albipes | 1960	4
+extinct_since1950	decade	Conilurus albipes | 2000	1
+extinct_since1950	decade	Conilurus albipes | 2020	1
+extinct_since1950	stateProvince	Conilurus albipes | South Australia	4
+extinct_since1950	stateProvince	Conilurus albipes | New South Wales	2
+extinct_since1950	year	Conilurus albipes | 1966	4
+extinct_since1950	year	Conilurus albipes | 2004	1
+extinct_since1950	year	Conilurus albipes | 2020	1
+extinct_since1950	raw_scientificName	Conilurus albipes | Conilurus albipes	2
+extinct_since1950	raw_scientificName	Conilurus albipes | Conilurus albipes (Lichtenstein, 1829)	4
+extinct_since1950	records	Emoia nativitatis	121
+extinct_since1950	basis_of_record	Emoia nativitatis | Preserved specimen	117
+extinct_since1950	basis_of_record	Emoia nativitatis | Material Sample	4
+extinct_since1950	dataResourceName	Emoia nativitatis | Australian Museum provider for OZCAM	103
+extinct_since1950	dataResourceName	Emoia nativitatis | Queensland Museum provider for OZCAM	10
+extinct_since1950	dataResourceName	Emoia nativitatis | Australian National Wildlife Collection provider for OZCAM	7
+extinct_since1950	dataResourceName	Emoia nativitatis | South Australian Museum Adelaide provider for OZCAM	1
+extinct_since1950	decade	Emoia nativitatis | 1970	84
+extinct_since1950	decade	Emoia nativitatis | 1980	10
+extinct_since1950	decade	Emoia nativitatis | 1990	19
+extinct_since1950	decade	Emoia nativitatis | 2010	8
+extinct_since1950	stateProvince	Emoia nativitatis | Australian Christmas Island Territory	7
+extinct_since1950	stateProvince	Emoia nativitatis | Christmas Island	4
+extinct_since1950	stateProvince	Emoia nativitatis | Western Australia	1
+extinct_since1950	stateProvince	Emoia nativitatis | Not supplied	109
+extinct_since1950	year	Emoia nativitatis | 1978	1
+extinct_since1950	year	Emoia nativitatis | 1979	83
+extinct_since1950	year	Emoia nativitatis | 1980	10
+extinct_since1950	year	Emoia nativitatis | 1998	19
+extinct_since1950	year	Emoia nativitatis | 2010	2
+extinct_since1950	year	Emoia nativitatis | 2012	4
+extinct_since1950	year	Emoia nativitatis | 2014	2
+extinct_since1950	raw_scientificName	Emoia nativitatis | Emoia nativitatis	17
+extinct_since1950	raw_scientificName	Emoia nativitatis | Emoia nativitatis (Boulenger, 1887)	1
+extinct_since1950	raw_scientificName	Emoia nativitatis | Emoia nativitatus (Boulenger, 1887)	103
+extinct_since1950	records	Lagorchestes asomatus	10
+extinct_since1950	basis_of_record	Lagorchestes asomatus | Human observation	10
+extinct_since1950	dataResourceName	Lagorchestes asomatus | Fauna Atlas N.T.	8
+extinct_since1950	dataResourceName	Lagorchestes asomatus | NSW BioNet Atlas	2
+extinct_since1950	decade	Lagorchestes asomatus | 1960	8
+extinct_since1950	decade	Lagorchestes asomatus | 2010	1
+extinct_since1950	decade	Lagorchestes asomatus | 2020	1
+extinct_since1950	stateProvince	Lagorchestes asomatus | Northern Territory	8
+extinct_since1950	stateProvince	Lagorchestes asomatus | New South Wales	2
+extinct_since1950	year	Lagorchestes asomatus | 1968	8
+extinct_since1950	year	Lagorchestes asomatus | 2017	1
+extinct_since1950	year	Lagorchestes asomatus | 2023	1
+extinct_since1950	raw_scientificName	Lagorchestes asomatus | Lagorchestes asomatus	10
+extinct_since1950	records	Lagorchestes leporides	15
+extinct_since1950	basis_of_record	Lagorchestes leporides | Human observation	14
+extinct_since1950	basis_of_record	Lagorchestes leporides | Observation	1
+extinct_since1950	dataResourceName	Lagorchestes leporides | NSW BioNet Atlas	14
+extinct_since1950	dataResourceName	Lagorchestes leporides | BowerBird	1
+extinct_since1950	decade	Lagorchestes leporides | 2010	1
+extinct_since1950	decade	Lagorchestes leporides | 2020	14
+extinct_since1950	stateProvince	Lagorchestes leporides | New South Wales	15
+extinct_since1950	year	Lagorchestes leporides | 2013	1
+extinct_since1950	year	Lagorchestes leporides | 2022	1
+extinct_since1950	year	Lagorchestes leporides | 2023	13
+extinct_since1950	raw_scientificName	Lagorchestes leporides | Lagorchestes leporides	15
+extinct_since1950	records	Leporillus apicalis	71
+extinct_since1950	basis_of_record	Leporillus apicalis | Human observation	65
+extinct_since1950	basis_of_record	Leporillus apicalis | Preserved specimen	6
+extinct_since1950	dataResourceName	Leporillus apicalis | Fauna Atlas N.T.	56
+extinct_since1950	dataResourceName	Leporillus apicalis | SA Fauna	7
+extinct_since1950	dataResourceName	Leporillus apicalis | Northern Territory Museum and Art Gallery provider for OZCAM	4
+extinct_since1950	dataResourceName	Leporillus apicalis | Australian Museum provider for OZCAM	2
+extinct_since1950	dataResourceName	Leporillus apicalis | NSW BioNet Atlas	2
+extinct_since1950	decade	Leporillus apicalis | 1950	1
+extinct_since1950	decade	Leporillus apicalis | 1960	1
+extinct_since1950	decade	Leporillus apicalis | 1980	46
+extinct_since1950	decade	Leporillus apicalis | 1990	13
+extinct_since1950	decade	Leporillus apicalis | 2000	9
+extinct_since1950	decade	Leporillus apicalis | 2010	1
+extinct_since1950	stateProvince	Leporillus apicalis | Northern Territory	58
+extinct_since1950	stateProvince	Leporillus apicalis | Western Australia	7
+extinct_since1950	stateProvince	Leporillus apicalis | South Australia	3
+extinct_since1950	stateProvince	Leporillus apicalis | New South Wales	2
+extinct_since1950	stateProvince	Leporillus apicalis | Victoria	1
+extinct_since1950	year	Leporillus apicalis | 1957	1
+extinct_since1950	year	Leporillus apicalis | 1963	1
+extinct_since1950	year	Leporillus apicalis | 1980	2
+extinct_since1950	year	Leporillus apicalis | 1983	2
+extinct_since1950	year	Leporillus apicalis | 1985	20
+extinct_since1950	year	Leporillus apicalis | 1986	7
+extinct_since1950	year	Leporillus apicalis | 1987	13
+extinct_since1950	year	Leporillus apicalis | 1988	1
+extinct_since1950	year	Leporillus apicalis | 1989	1
+extinct_since1950	year	Leporillus apicalis | 1990	1
+extinct_since1950	year	Leporillus apicalis | 1994	1
+extinct_since1950	year	Leporillus apicalis | 1996	11
+extinct_since1950	year	Leporillus apicalis | 2000	2
+extinct_since1950	year	Leporillus apicalis | 2001	5
+extinct_since1950	year	Leporillus apicalis | 2004	1
+extinct_since1950	year	Leporillus apicalis | 2008	1
+extinct_since1950	year	Leporillus apicalis | 2018	1
+extinct_since1950	raw_scientificName	Leporillus apicalis | Leporillus apicalis	69
+extinct_since1950	raw_scientificName	Leporillus apicalis | Leporillus apicalis (Gould, 1853)	2
+extinct_since1950	records	Macrotis leucura	8
+extinct_since1950	basis_of_record	Macrotis leucura | Human observation	7
+extinct_since1950	basis_of_record	Macrotis leucura | Preserved specimen	1
+extinct_since1950	dataResourceName	Macrotis leucura | Fauna Atlas N.T.	7
+extinct_since1950	dataResourceName	Macrotis leucura | Northern Territory Museum and Art Gallery provider for OZCAM	1
+extinct_since1950	decade	Macrotis leucura | 1960	8
+extinct_since1950	stateProvince	Macrotis leucura | Northern Territory	8
+extinct_since1950	year	Macrotis leucura | 1966	2
+extinct_since1950	year	Macrotis leucura | 1967	1
+extinct_since1950	year	Macrotis leucura | 1968	5
+extinct_since1950	raw_scientificName	Macrotis leucura | Macrotis leucura	8
+extinct_since1950	records	Melomys rubicola	2
+extinct_since1950	basis_of_record	Melomys rubicola | Preserved specimen	2
+extinct_since1950	dataResourceName	Melomys rubicola | Queensland Museum provider for OZCAM	2
+extinct_since1950	decade	Melomys rubicola | 1980	1
+extinct_since1950	decade	Melomys rubicola | 1990	1
+extinct_since1950	stateProvince	Melomys rubicola | Queensland	2
+extinct_since1950	year	Melomys rubicola | 1987	1
+extinct_since1950	year	Melomys rubicola | 1995	1
+extinct_since1950	raw_scientificName	Melomys rubicola | Melomys rubicola	2
+extinct_since1950	records	Notamacropus greyi	245
+extinct_since1950	basis_of_record	Notamacropus greyi | Preserved specimen	245
+extinct_since1950	dataResourceName	Notamacropus greyi | Queen Victoria Museum Art Gallery provider for OZCAM	245
+extinct_since1950	decade	Notamacropus greyi | 1970	245
+extinct_since1950	stateProvince	Notamacropus greyi | Tasmania	245
+extinct_since1950	year	Notamacropus greyi | 1976	245
+extinct_since1950	raw_scientificName	Notamacropus greyi | Macropus greyi	245
+extinct_since1950	records	Notomys amplus	26
+extinct_since1950	basis_of_record	Notomys amplus | Human observation	15
+extinct_since1950	basis_of_record	Notomys amplus | Preserved specimen	11
+extinct_since1950	dataResourceName	Notomys amplus | Fauna Atlas N.T.	15
+extinct_since1950	dataResourceName	Notomys amplus | Northern Territory Museum and Art Gallery provider for OZCAM	9
+extinct_since1950	dataResourceName	Notomys amplus | Australian Museum provider for OZCAM	2
+extinct_since1950	decade	Notomys amplus | 1970	4
+extinct_since1950	decade	Notomys amplus | 1980	21
+extinct_since1950	decade	Notomys amplus | 1990	1
+extinct_since1950	stateProvince	Notomys amplus | Northern Territory	24
+extinct_since1950	stateProvince	Notomys amplus | Western Australia	2
+extinct_since1950	year	Notomys amplus | 1972	4
+extinct_since1950	year	Notomys amplus | 1980	7
+extinct_since1950	year	Notomys amplus | 1982	4
+extinct_since1950	year	Notomys amplus | 1983	6
+extinct_since1950	year	Notomys amplus | 1984	1
+extinct_since1950	year	Notomys amplus | 1985	2
+extinct_since1950	year	Notomys amplus | 1988	1
+extinct_since1950	year	Notomys amplus | 1996	1
+extinct_since1950	raw_scientificName	Notomys amplus | Notomys amplus	24
+extinct_since1950	raw_scientificName	Notomys amplus | Notomys amplus Brazenor, 1936	2
+extinct_since1950	records	Notomys longicaudatus	22
+extinct_since1950	basis_of_record	Notomys longicaudatus | Preserved specimen	13
+extinct_since1950	basis_of_record	Notomys longicaudatus | Human observation	7
+extinct_since1950	basis_of_record	Notomys longicaudatus | Occurrence	2
+extinct_since1950	dataResourceName	Notomys longicaudatus | Northern Territory Museum and Art Gallery provider for OZCAM	11
+extinct_since1950	dataResourceName	Notomys longicaudatus | Fauna Atlas N.T.	7
+extinct_since1950	dataResourceName	Notomys longicaudatus | Encyclopedia of Life Images - Flickr Group	2
+extinct_since1950	dataResourceName	Notomys longicaudatus | Australian Museum provider for OZCAM	1
+extinct_since1950	dataResourceName	Notomys longicaudatus | Queensland Museum provider for OZCAM	1
+extinct_since1950	decade	Notomys longicaudatus | 1970	1
+extinct_since1950	decade	Notomys longicaudatus | 1980	16
+extinct_since1950	decade	Notomys longicaudatus | 1990	3
+extinct_since1950	decade	Notomys longicaudatus | 2010	2
+extinct_since1950	stateProvince	Notomys longicaudatus | Northern Territory	18
+extinct_since1950	stateProvince	Notomys longicaudatus | New South Wales	1
+extinct_since1950	stateProvince	Notomys longicaudatus | Queensland	1
+extinct_since1950	stateProvince	Notomys longicaudatus | Not supplied	2
+extinct_since1950	year	Notomys longicaudatus | 1972	1
+extinct_since1950	year	Notomys longicaudatus | 1980	8
+extinct_since1950	year	Notomys longicaudatus | 1982	3
+extinct_since1950	year	Notomys longicaudatus | 1983	2
+extinct_since1950	year	Notomys longicaudatus | 1984	1
+extinct_since1950	year	Notomys longicaudatus | 1988	1
+extinct_since1950	year	Notomys longicaudatus | 1989	1
+extinct_since1950	year	Notomys longicaudatus | 1996	3
+extinct_since1950	year	Notomys longicaudatus | 2011	2
+extinct_since1950	raw_scientificName	Notomys longicaudatus | Hapalotis longicaudata	2
+extinct_since1950	raw_scientificName	Notomys longicaudatus | Notomys longicaudatus	18
+extinct_since1950	raw_scientificName	Notomys longicaudatus | Notomys longicaudatus (Gould, 1844)	1
+extinct_since1950	raw_scientificName	Notomys longicaudatus | Notomys longicaudatus?	1
+extinct_since1950	records	Nyctophilus howensis	1
+extinct_since1950	basis_of_record	Nyctophilus howensis | Preserved specimen	1
+extinct_since1950	dataResourceName	Nyctophilus howensis | Australian National Wildlife Collection provider for OZCAM	1
+extinct_since1950	decade	Nyctophilus howensis | 1970	1
+extinct_since1950	stateProvince	Nyctophilus howensis | New South Wales	1
+extinct_since1950	year	Nyctophilus howensis | 1972	1
+extinct_since1950	raw_scientificName	Nyctophilus howensis | Nyctophilus howensis	1
+extinct_since1950	records	Onychogalea lunata	23
+extinct_since1950	basis_of_record	Onychogalea lunata | Human observation	22
+extinct_since1950	basis_of_record	Onychogalea lunata | Preserved specimen	1
+extinct_since1950	dataResourceName	Onychogalea lunata | Fauna Atlas N.T.	22
+extinct_since1950	dataResourceName	Onychogalea lunata | AMNH Mammal Collections	1
+extinct_since1950	decade	Onychogalea lunata | 1950	1
+extinct_since1950	decade	Onychogalea lunata | 1960	21
+extinct_since1950	decade	Onychogalea lunata | 1970	1
+extinct_since1950	stateProvince	Onychogalea lunata | Northern Territory	22
+extinct_since1950	stateProvince	Onychogalea lunata | Western Australia	1
+extinct_since1950	year	Onychogalea lunata | 1952	1
+extinct_since1950	year	Onychogalea lunata | 1968	21
+extinct_since1950	year	Onychogalea lunata | 1970	1
+extinct_since1950	raw_scientificName	Onychogalea lunata | Onychogalea lunata	23
+extinct_since1950	records	Perameles eremiana	28
+extinct_since1950	basis_of_record	Perameles eremiana | Human observation	21
+extinct_since1950	basis_of_record	Perameles eremiana | Preserved specimen	7
+extinct_since1950	dataResourceName	Perameles eremiana | Fauna Atlas N.T.	21
+extinct_since1950	dataResourceName	Perameles eremiana | Northern Territory Museum and Art Gallery provider for OZCAM	6
+extinct_since1950	dataResourceName	Perameles eremiana | Australian Museum provider for OZCAM	1
+extinct_since1950	decade	Perameles eremiana | 1960	18
+extinct_since1950	decade	Perameles eremiana | 1970	1
+extinct_since1950	decade	Perameles eremiana | 1980	8
+extinct_since1950	decade	Perameles eremiana | 1990	1
+extinct_since1950	stateProvince	Perameles eremiana | Northern Territory	27
+extinct_since1950	stateProvince	Perameles eremiana | New South Wales	1
+extinct_since1950	year	Perameles eremiana | 1968	18
+extinct_since1950	year	Perameles eremiana | 1970	1
+extinct_since1950	year	Perameles eremiana | 1983	5
+extinct_since1950	year	Perameles eremiana | 1988	2
+extinct_since1950	year	Perameles eremiana | 1989	1
+extinct_since1950	year	Perameles eremiana | 1996	1
+extinct_since1950	raw_scientificName	Perameles eremiana | Perameles eremiana	27
+extinct_since1950	raw_scientificName	Perameles eremiana | Perameles eremiana Spencer, 1897	1
+extinct_since1950	records	Perameles fasciata	3356
+extinct_since1950	basis_of_record	Perameles fasciata | Human observation	3356
+extinct_since1950	dataResourceName	Perameles fasciata | NSW BioNet Atlas	3356
+extinct_since1950	decade	Perameles fasciata | 2020	3356
+extinct_since1950	stateProvince	Perameles fasciata | New South Wales	3356
+extinct_since1950	year	Perameles fasciata | 2023	33
+extinct_since1950	year	Perameles fasciata | 2024	705
+extinct_since1950	year	Perameles fasciata | 2025	1921
+extinct_since1950	year	Perameles fasciata | 2026	697
+extinct_since1950	raw_scientificName	Perameles fasciata | Perameles fasciata	3356
+extinct_since1950	records	Perameles notina	1
+extinct_since1950	basis_of_record	Perameles notina | Preserved specimen	1
+extinct_since1950	dataResourceName	Perameles notina | Museums Victoria provider for OZCAM	1
+extinct_since1950	decade	Perameles notina | 1970	1
+extinct_since1950	stateProvince	Perameles notina | Victoria	1
+extinct_since1950	year	Perameles notina | 1972	1
+extinct_since1950	raw_scientificName	Perameles notina | Perameles notina	1
+extinct_since1950	records	Pipistrellus murrayi	30
+extinct_since1950	basis_of_record	Pipistrellus murrayi | Preserved specimen	23
+extinct_since1950	basis_of_record	Pipistrellus murrayi | Material Sample	7
+extinct_since1950	dataResourceName	Pipistrellus murrayi | Australian National Wildlife Collection provider for OZCAM	29
+extinct_since1950	dataResourceName	Pipistrellus murrayi | Australian Museum provider for OZCAM	1
+extinct_since1950	decade	Pipistrellus murrayi | 1980	29
+extinct_since1950	decade	Pipistrellus murrayi | 2000	1
+extinct_since1950	stateProvince	Pipistrellus murrayi | Australian Christmas Island Territory	29
+extinct_since1950	stateProvince	Pipistrellus murrayi | Not supplied	1
+extinct_since1950	year	Pipistrellus murrayi | 1984	29
+extinct_since1950	year	Pipistrellus murrayi | 2001	1
+extinct_since1950	raw_scientificName	Pipistrellus murrayi | Pipistrellus murrayi	29
+extinct_since1950	raw_scientificName	Pipistrellus murrayi | Pipistrellus murrayi Andrews, 1900	1
+extinct_since1950	records	Porphyrio albus	2
+extinct_since1950	basis_of_record	Porphyrio albus | Fossil specimen	2
+extinct_since1950	dataResourceName	Porphyrio albus | Australian National Wildlife Collection provider for OZCAM	2
+extinct_since1950	decade	Porphyrio albus | 1960	2
+extinct_since1950	stateProvince	Porphyrio albus | New South Wales	2
+extinct_since1950	year	Porphyrio albus | 1962	2
+extinct_since1950	raw_scientificName	Porphyrio albus | Porphyrio albus	2
+extinct_since1950	records	Potorous platyops	2
+extinct_since1950	basis_of_record	Potorous platyops | Preserved specimen	2
+extinct_since1950	dataResourceName	Potorous platyops | South Australian Museum Adelaide provider for OZCAM	2
+extinct_since1950	decade	Potorous platyops | 1960	2
+extinct_since1950	stateProvince	Potorous platyops | South Australia	2
+extinct_since1950	year	Potorous platyops | 1967	2
+extinct_since1950	raw_scientificName	Potorous platyops | Potorous platyops Gould, 1844	2
+extinct_since1950	records	Psephotellus pulcherrimus	5
+extinct_since1950	basis_of_record	Psephotellus pulcherrimus | Occurrence	5
+extinct_since1950	dataResourceName	Psephotellus pulcherrimus | WildNet - Queensland Wildlife Data	5
+extinct_since1950	decade	Psephotellus pulcherrimus | 1970	1
+extinct_since1950	decade	Psephotellus pulcherrimus | 1990	4
+extinct_since1950	stateProvince	Psephotellus pulcherrimus | Queensland	5
+extinct_since1950	year	Psephotellus pulcherrimus | 1970	1
+extinct_since1950	year	Psephotellus pulcherrimus | 1990	4
+extinct_since1950	raw_scientificName	Psephotellus pulcherrimus | Psephotellus pulcherrimus	5
+extinct_since1950	records	Pseudomys gouldii	965
+extinct_since1950	basis_of_record	Pseudomys gouldii | Machine observation	492
+extinct_since1950	basis_of_record	Pseudomys gouldii | Human observation	322
+extinct_since1950	basis_of_record	Pseudomys gouldii | Preserved specimen	151
+extinct_since1950	dataResourceName	Pseudomys gouldii | AWC Ecological Monitoring Surveys	812
+extinct_since1950	dataResourceName	Pseudomys gouldii | AMNH Mammal Collections	144
+extinct_since1950	dataResourceName	Pseudomys gouldii | Northern Territory Museum and Art Gallery provider for OZCAM	4
+extinct_since1950	dataResourceName	Pseudomys gouldii | Australian Museum provider for OZCAM	3
+extinct_since1950	dataResourceName	Pseudomys gouldii | Fauna Atlas N.T.	2
+extinct_since1950	decade	Pseudomys gouldii | 1960	145
+extinct_since1950	decade	Pseudomys gouldii | 1980	6
+extinct_since1950	decade	Pseudomys gouldii | 1990	2
+extinct_since1950	decade	Pseudomys gouldii | 2010	74
+extinct_since1950	decade	Pseudomys gouldii | 2020	738
+extinct_since1950	stateProvince	Pseudomys gouldii | Western Australia	957
+extinct_since1950	stateProvince	Pseudomys gouldii | Northern Territory	6
+extinct_since1950	stateProvince	Pseudomys gouldii | New South Wales	2
+extinct_since1950	year	Pseudomys gouldii | 1962	1
+extinct_since1950	year	Pseudomys gouldii | 1967	144
+extinct_since1950	year	Pseudomys gouldii | 1980	4
+extinct_since1950	year	Pseudomys gouldii | 1989	2
+extinct_since1950	year	Pseudomys gouldii | 1996	2
+extinct_since1950	year	Pseudomys gouldii | 2011	1
+extinct_since1950	year	Pseudomys gouldii | 2014	2
+extinct_since1950	year	Pseudomys gouldii | 2015	1
+extinct_since1950	year	Pseudomys gouldii | 2016	35
+extinct_since1950	year	Pseudomys gouldii | 2017	19
+extinct_since1950	year	Pseudomys gouldii | 2018	3
+extinct_since1950	year	Pseudomys gouldii | 2019	13
+extinct_since1950	year	Pseudomys gouldii | 2020	20
+extinct_since1950	year	Pseudomys gouldii | 2021	3
+extinct_since1950	year	Pseudomys gouldii | 2022	9
+extinct_since1950	year	Pseudomys gouldii | 2023	637
+extinct_since1950	year	Pseudomys gouldii | 2024	56
+extinct_since1950	year	Pseudomys gouldii | 2025	13
+extinct_since1950	raw_scientificName	Pseudomys gouldii | Pseudomys fieldi	4
+extinct_since1950	raw_scientificName	Pseudomys gouldii | Pseudomys gouldii	958
+extinct_since1950	raw_scientificName	Pseudomys gouldii | Pseudomys gouldii (Waterhouse, 1839)	3
+extinct_since1950	records	Rattus nativitatis	4
+extinct_since1950	basis_of_record	Rattus nativitatis | Occurrence	4
+extinct_since1950	dataResourceName	Rattus nativitatis | Encyclopedia of Life Images - Flickr Group	4
+extinct_since1950	decade	Rattus nativitatis | 2010	4
+extinct_since1950	stateProvince	Rattus nativitatis | Not supplied	4
+extinct_since1950	year	Rattus nativitatis | 2011	4
+extinct_since1950	raw_scientificName	Rattus nativitatis | Rattus nativitatis	4
+extinct_since1950	records	Rheobatrachus silus	98
+extinct_since1950	basis_of_record	Rheobatrachus silus | Preserved specimen	73
+extinct_since1950	basis_of_record	Rheobatrachus silus | Occurrence	25
+extinct_since1950	dataResourceName	Rheobatrachus silus | Queensland Museum provider for OZCAM	31
+extinct_since1950	dataResourceName	Rheobatrachus silus | WildNet - Queensland Wildlife Data	25
+extinct_since1950	dataResourceName	Rheobatrachus silus | South Australian Museum Adelaide provider for OZCAM	19
+extinct_since1950	dataResourceName	Rheobatrachus silus | Australian Museum provider for OZCAM	9
+extinct_since1950	dataResourceName	Rheobatrachus silus | NMNH Extant Specimen Records (USNM, US)	4
+extinct_since1950	dataResourceName	Rheobatrachus silus | University of Michigan Museum of Zoology, Division of Reptiles & Amphibians	4
+extinct_since1950	dataResourceName	Rheobatrachus silus | Museum of Comparative Zoology, Harvard University	2
+extinct_since1950	dataResourceName	Rheobatrachus silus | Natural History Museum (London) Collection Specimens	2
+extinct_since1950	dataResourceName	Rheobatrachus silus | Australian National Wildlife Collection provider for OZCAM	1
+extinct_since1950	dataResourceName	Rheobatrachus silus | Field Museum of Natural History (Zoology) Amphibian and Reptile Collection	1
+extinct_since1950	decade	Rheobatrachus silus | 1970	96
+extinct_since1950	decade	Rheobatrachus silus | 1980	2
+extinct_since1950	stateProvince	Rheobatrachus silus | Queensland	96
+extinct_since1950	stateProvince	Rheobatrachus silus | Not supplied	2
+extinct_since1950	year	Rheobatrachus silus | 1972	20
+extinct_since1950	year	Rheobatrachus silus | 1973	4
+extinct_since1950	year	Rheobatrachus silus | 1974	10
+extinct_since1950	year	Rheobatrachus silus | 1976	27
+extinct_since1950	year	Rheobatrachus silus | 1977	4
+extinct_since1950	year	Rheobatrachus silus | 1978	25
+extinct_since1950	year	Rheobatrachus silus | 1979	6
+extinct_since1950	year	Rheobatrachus silus | 1981	1
+extinct_since1950	year	Rheobatrachus silus | 1989	1
+extinct_since1950	raw_scientificName	Rheobatrachus silus | RHEOBATRACHUS SILUS	4
+extinct_since1950	raw_scientificName	Rheobatrachus silus | Rheobatrachus silus	62
+extinct_since1950	raw_scientificName	Rheobatrachus silus | Rheobatrachus silus Liem, 1973	32
+extinct_since1950	records	Rheobatrachus vitellinus	44
+extinct_since1950	basis_of_record	Rheobatrachus vitellinus | Occurrence	22
+extinct_since1950	basis_of_record	Rheobatrachus vitellinus | Preserved specimen	20
+extinct_since1950	basis_of_record	Rheobatrachus vitellinus | Material Sample	2
+extinct_since1950	dataResourceName	Rheobatrachus vitellinus | WildNet - Queensland Wildlife Data	22
+extinct_since1950	dataResourceName	Rheobatrachus vitellinus | South Australian Museum Adelaide provider for OZCAM	13
+extinct_since1950	dataResourceName	Rheobatrachus vitellinus | Queensland Museum provider for OZCAM	8
+extinct_since1950	dataResourceName	Rheobatrachus vitellinus | Australian Museum provider for OZCAM	1
+extinct_since1950	decade	Rheobatrachus vitellinus | 1980	44
+extinct_since1950	stateProvince	Rheobatrachus vitellinus | Queensland	44
+extinct_since1950	year	Rheobatrachus vitellinus | 1984	39
+extinct_since1950	year	Rheobatrachus vitellinus | 1985	5
+extinct_since1950	raw_scientificName	Rheobatrachus vitellinus | Rheobatrachus vitellinus	30
+extinct_since1950	raw_scientificName	Rheobatrachus vitellinus | Rheobatrachus vitellinus M. Mahony et al,, 1984	1
+extinct_since1950	raw_scientificName	Rheobatrachus vitellinus | Rheobatrachus vitellinus Mahony, Tyler & Davies, 1984	13
+extinct_since1950	records	Taudactylus acutirostris	525
+extinct_since1950	basis_of_record	Taudactylus acutirostris | Preserved specimen	454
+extinct_since1950	basis_of_record	Taudactylus acutirostris | Occurrence	39
+extinct_since1950	basis_of_record	Taudactylus acutirostris | Material Sample	25
+extinct_since1950	basis_of_record	Taudactylus acutirostris | Human observation	7
+extinct_since1950	dataResourceName	Taudactylus acutirostris | Queensland Museum provider for OZCAM	239
+extinct_since1950	dataResourceName	Taudactylus acutirostris | Field Museum of Natural History (Zoology) Amphibian and Reptile Collection	113
+extinct_since1950	dataResourceName	Taudactylus acutirostris | South Australian Museum Adelaide provider for OZCAM	61
+extinct_since1950	dataResourceName	Taudactylus acutirostris | WildNet - Queensland Wildlife Data	39
+extinct_since1950	dataResourceName	Taudactylus acutirostris | Australian Museum provider for OZCAM	21
+extinct_since1950	dataResourceName	Taudactylus acutirostris | Museum of Comparative Zoology, Harvard University	16
+extinct_since1950	dataResourceName	Taudactylus acutirostris | Australian National Wildlife Collection provider for OZCAM	12
+extinct_since1950	dataResourceName	Taudactylus acutirostris | LACM Vertebrate Collection	8
+extinct_since1950	dataResourceName	Taudactylus acutirostris | The distribution and host range of the pandemic disease chytridiomycosis in Australia, spanning surveys from 1956 to 2007. 	7
+extinct_since1950	dataResourceName	Taudactylus acutirostris | University of Michigan Museum of Zoology, Division of Reptiles & Amphibians	3
+extinct_since1950	dataResourceName	Taudactylus acutirostris | MVZ Herp Collection (Arctos)	2
+extinct_since1950	dataResourceName	Taudactylus acutirostris | NMNH Extant Specimen Records (USNM, US)	2
+extinct_since1950	dataResourceName	Taudactylus acutirostris | Museums Victoria provider for OZCAM	1
+extinct_since1950	dataResourceName	Taudactylus acutirostris | The reptiles and amphibians collection (RA) of the Muséum national d'Histoire Naturelle (MNHN - Paris)	1
+extinct_since1950	decade	Taudactylus acutirostris | 1960	29
+extinct_since1950	decade	Taudactylus acutirostris | 1970	283
+extinct_since1950	decade	Taudactylus acutirostris | 1980	164
+extinct_since1950	decade	Taudactylus acutirostris | 1990	49
+extinct_since1950	stateProvince	Taudactylus acutirostris | Queensland	524
+extinct_since1950	stateProvince	Taudactylus acutirostris | Not supplied	1
+extinct_since1950	year	Taudactylus acutirostris | 1960	5
+extinct_since1950	year	Taudactylus acutirostris | 1967	8
+extinct_since1950	year	Taudactylus acutirostris | 1968	13
+extinct_since1950	year	Taudactylus acutirostris | 1969	3
+extinct_since1950	year	Taudactylus acutirostris | 1970	42
+extinct_since1950	year	Taudactylus acutirostris | 1971	26
+extinct_since1950	year	Taudactylus acutirostris | 1972	87
+extinct_since1950	year	Taudactylus acutirostris | 1973	25
+extinct_since1950	year	Taudactylus acutirostris | 1974	24
+extinct_since1950	year	Taudactylus acutirostris | 1975	38
+extinct_since1950	year	Taudactylus acutirostris | 1976	11
+extinct_since1950	year	Taudactylus acutirostris | 1977	8
+extinct_since1950	year	Taudactylus acutirostris | 1978	22
+extinct_since1950	year	Taudactylus acutirostris | 1980	17
+extinct_since1950	year	Taudactylus acutirostris | 1981	25
+extinct_since1950	year	Taudactylus acutirostris | 1982	14
+extinct_since1950	year	Taudactylus acutirostris | 1983	17
+extinct_since1950	year	Taudactylus acutirostris | 1984	6
+extinct_since1950	year	Taudactylus acutirostris | 1985	3
+extinct_since1950	year	Taudactylus acutirostris | 1986	12
+extinct_since1950	year	Taudactylus acutirostris | 1987	1
+extinct_since1950	year	Taudactylus acutirostris | 1988	40
+extinct_since1950	year	Taudactylus acutirostris | 1989	29
+extinct_since1950	year	Taudactylus acutirostris | 1990	20
+extinct_since1950	year	Taudactylus acutirostris | 1991	16
+extinct_since1950	year	Taudactylus acutirostris | 1993	10
+extinct_since1950	year	Taudactylus acutirostris | 1994	1
+extinct_since1950	year	Taudactylus acutirostris | 1996	2
+extinct_since1950	raw_scientificName	Taudactylus acutirostris | TAUDACTYLUS ACUTIROSTRIS	3
+extinct_since1950	raw_scientificName	Taudactylus acutirostris | Taudactylus acutirostris	438
+extinct_since1950	raw_scientificName	Taudactylus acutirostris | Taudactylus acutirostris (Andersson, 1916)	84
+extinct_since1950	records	Taudactylus diurnus	309
+extinct_since1950	basis_of_record	Taudactylus diurnus | Preserved specimen	298
+extinct_since1950	basis_of_record	Taudactylus diurnus | Occurrence	10
+extinct_since1950	basis_of_record	Taudactylus diurnus | Human observation	1
+extinct_since1950	dataResourceName	Taudactylus diurnus | Field Museum of Natural History (Zoology) Amphibian and Reptile Collection	123
+extinct_since1950	dataResourceName	Taudactylus diurnus | Queensland Museum provider for OZCAM	97
+extinct_since1950	dataResourceName	Taudactylus diurnus | Australian Museum provider for OZCAM	54
+extinct_since1950	dataResourceName	Taudactylus diurnus | WildNet - Queensland Wildlife Data	10
+extinct_since1950	dataResourceName	Taudactylus diurnus | South Australian Museum Adelaide provider for OZCAM	7
+extinct_since1950	dataResourceName	Taudactylus diurnus | NMNH Extant Specimen Records (USNM, US)	6
+extinct_since1950	dataResourceName	Taudactylus diurnus | Museums Victoria provider for OZCAM	5
+extinct_since1950	dataResourceName	Taudactylus diurnus | Australian National Wildlife Collection provider for OZCAM	2
+extinct_since1950	dataResourceName	Taudactylus diurnus | Museum of Comparative Zoology, Harvard University	2
+extinct_since1950	dataResourceName	Taudactylus diurnus | University of Michigan Museum of Zoology, Division of Reptiles & Amphibians	2
+extinct_since1950	dataResourceName	Taudactylus diurnus | ALA species sightings and OzAtlas	1
+extinct_since1950	decade	Taudactylus diurnus | 1960	82
+extinct_since1950	decade	Taudactylus diurnus | 1970	225
+extinct_since1950	decade	Taudactylus diurnus | 2010	2
+extinct_since1950	stateProvince	Taudactylus diurnus | Queensland	307
+extinct_since1950	stateProvince	Taudactylus diurnus | Western Australia	1
+extinct_since1950	stateProvince	Taudactylus diurnus | Not supplied	1
+extinct_since1950	year	Taudactylus diurnus | 1961	32
+extinct_since1950	year	Taudactylus diurnus | 1962	11
+extinct_since1950	year	Taudactylus diurnus | 1963	25
+extinct_since1950	year	Taudactylus diurnus | 1965	10
+extinct_since1950	year	Taudactylus diurnus | 1967	1
+extinct_since1950	year	Taudactylus diurnus | 1969	3
+extinct_since1950	year	Taudactylus diurnus | 1970	10
+extinct_since1950	year	Taudactylus diurnus | 1971	23
+extinct_since1950	year	Taudactylus diurnus | 1972	107
+extinct_since1950	year	Taudactylus diurnus | 1973	27
+extinct_since1950	year	Taudactylus diurnus | 1974	15
+extinct_since1950	year	Taudactylus diurnus | 1975	6
+extinct_since1950	year	Taudactylus diurnus | 1976	7
+extinct_since1950	year	Taudactylus diurnus | 1978	30
+extinct_since1950	year	Taudactylus diurnus | 2014	1
+extinct_since1950	year	Taudactylus diurnus | 2016	1
+extinct_since1950	raw_scientificName	Taudactylus diurnus | TAUDACTYLUS DIURNUS	2
+extinct_since1950	raw_scientificName	Taudactylus diurnus | Taudactylus diurnis	6
+extinct_since1950	raw_scientificName	Taudactylus diurnus | Taudactylus diurnus	233
+extinct_since1950	raw_scientificName	Taudactylus diurnus | Taudactylus diurnus Straughan & Lee, 1966	66
+extinct_since1950	raw_scientificName	Taudactylus diurnus | Taudactylus diurnus Straughan and Lee, 1966	2
+extinct_since1950	records	Thylacinus cynocephalus	156
+extinct_since1950	basis_of_record	Thylacinus cynocephalus | Observation	148
+extinct_since1950	basis_of_record	Thylacinus cynocephalus | Occurrence	4
+extinct_since1950	basis_of_record	Thylacinus cynocephalus | Preserved specimen	3
+extinct_since1950	basis_of_record	Thylacinus cynocephalus | Human observation	1
+extinct_since1950	dataResourceName	Thylacinus cynocephalus | Tasmanian Natural Values Atlas	148
+extinct_since1950	dataResourceName	Thylacinus cynocephalus | Encyclopedia of Life Images - Flickr Group	4
+extinct_since1950	dataResourceName	Thylacinus cynocephalus | Queen Victoria Museum Art Gallery provider for OZCAM	2
+extinct_since1950	dataResourceName	Thylacinus cynocephalus | ALA species sightings and OzAtlas	1
+extinct_since1950	dataResourceName	Thylacinus cynocephalus | Australian National Wildlife Collection provider for OZCAM	1
+extinct_since1950	decade	Thylacinus cynocephalus | 1950	19
+extinct_since1950	decade	Thylacinus cynocephalus | 1960	76
+extinct_since1950	decade	Thylacinus cynocephalus | 1970	54
+extinct_since1950	decade	Thylacinus cynocephalus | 1990	1
+extinct_since1950	decade	Thylacinus cynocephalus | 2000	1
+extinct_since1950	decade	Thylacinus cynocephalus | 2010	5
+extinct_since1950	stateProvince	Thylacinus cynocephalus | Tasmania	150
+extinct_since1950	stateProvince	Thylacinus cynocephalus | New South Wales	1
+extinct_since1950	stateProvince	Thylacinus cynocephalus | Not supplied	5
+extinct_since1950	year	Thylacinus cynocephalus | 1950	1
+extinct_since1950	year	Thylacinus cynocephalus | 1952	2
+extinct_since1950	year	Thylacinus cynocephalus | 1954	2
+extinct_since1950	year	Thylacinus cynocephalus | 1955	2
+extinct_since1950	year	Thylacinus cynocephalus | 1956	2
+extinct_since1950	year	Thylacinus cynocephalus | 1957	4
+extinct_since1950	year	Thylacinus cynocephalus | 1959	6
+extinct_since1950	year	Thylacinus cynocephalus | 1960	2
+extinct_since1950	year	Thylacinus cynocephalus | 1961	9
+extinct_since1950	year	Thylacinus cynocephalus | 1962	3
+extinct_since1950	year	Thylacinus cynocephalus | 1963	5
+extinct_since1950	year	Thylacinus cynocephalus | 1964	6
+extinct_since1950	year	Thylacinus cynocephalus | 1965	3
+extinct_since1950	year	Thylacinus cynocephalus | 1966	7
+extinct_since1950	year	Thylacinus cynocephalus | 1967	8
+extinct_since1950	year	Thylacinus cynocephalus | 1968	12
+extinct_since1950	year	Thylacinus cynocephalus | 1969	21
+extinct_since1950	year	Thylacinus cynocephalus | 1970	9
+extinct_since1950	year	Thylacinus cynocephalus | 1971	8
+extinct_since1950	year	Thylacinus cynocephalus | 1972	12
+extinct_since1950	year	Thylacinus cynocephalus | 1973	10
+extinct_since1950	year	Thylacinus cynocephalus | 1974	5
+extinct_since1950	year	Thylacinus cynocephalus | 1975	3
+extinct_since1950	year	Thylacinus cynocephalus | 1976	1
+extinct_since1950	year	Thylacinus cynocephalus | 1977	1
+extinct_since1950	year	Thylacinus cynocephalus | 1978	5
+extinct_since1950	year	Thylacinus cynocephalus | 1995	1
+extinct_since1950	year	Thylacinus cynocephalus | 2000	1
+extinct_since1950	year	Thylacinus cynocephalus | 2011	4
+extinct_since1950	year	Thylacinus cynocephalus | 2014	1
+extinct_since1950	raw_scientificName	Thylacinus cynocephalus | Thylacinus cynocephalus	156
+extinct_since1950	records	Zosterops albogularis	2
+extinct_since1950	basis_of_record	Zosterops albogularis | Human observation	2
+extinct_since1950	dataResourceName	Zosterops albogularis | ALA species sightings and OzAtlas	2
+extinct_since1950	decade	Zosterops albogularis | 2010	2
+extinct_since1950	stateProvince	Zosterops albogularis | Not supplied	2
+extinct_since1950	year	Zosterops albogularis | 2013	2
+extinct_since1950	raw_scientificName	Zosterops albogularis | Zosterops albogularis	2
+extinct_since1950	Amphibia_all_species_by:basis_of_record	Preserved specimen	845
+extinct_since1950	Amphibia_all_species_by:basis_of_record	Occurrence	96
+extinct_since1950	Amphibia_all_species_by:basis_of_record	Material Sample	27
+extinct_since1950	Amphibia_all_species_by:basis_of_record	Human observation	8
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Queensland Museum provider for OZCAM	375
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Field Museum of Natural History (Zoology) Amphibian and Reptile Collection	237
+extinct_since1950	Amphibia_all_species_by:dataResourceName	South Australian Museum Adelaide provider for OZCAM	100
+extinct_since1950	Amphibia_all_species_by:dataResourceName	WildNet - Queensland Wildlife Data	96
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Australian Museum provider for OZCAM	85
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Museum of Comparative Zoology, Harvard University	20
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Australian National Wildlife Collection provider for OZCAM	15
+extinct_since1950	Amphibia_all_species_by:dataResourceName	NMNH Extant Specimen Records (USNM, US)	12
+extinct_since1950	Amphibia_all_species_by:dataResourceName	University of Michigan Museum of Zoology, Division of Reptiles & Amphibians	9
+extinct_since1950	Amphibia_all_species_by:dataResourceName	LACM Vertebrate Collection	8
+extinct_since1950	Amphibia_all_species_by:dataResourceName	The distribution and host range of the pandemic disease chytridiomycosis in Australia, spanning surveys from 1956 to 2007. 	7
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Museums Victoria provider for OZCAM	6
+extinct_since1950	Amphibia_all_species_by:dataResourceName	Natural History Museum (London) Collection Specimens	2
+extinct_since1950	Amphibia_all_species_by:dataResourceName	MVZ Herp Collection (Arctos)	2
+extinct_since1950	Amphibia_all_species_by:dataResourceName	The reptiles and amphibians collection (RA) of the Muséum national d'Histoire Naturelle (MNHN - Paris)	1
+extinct_since1950	Amphibia_all_species_by:dataResourceName	ALA species sightings and OzAtlas	1
+extinct_since1950	Amphibia_all_species_by:decade	1970	604
+extinct_since1950	Amphibia_all_species_by:decade	1980	210
+extinct_since1950	Amphibia_all_species_by:decade	1960	111
+extinct_since1950	Amphibia_all_species_by:decade	1990	49
+extinct_since1950	Amphibia_all_species_by:decade	2010	2
+extinct_since1950	Amphibia_records		976
+extinct_since1950	Aves_all_species_by:basis_of_record	Occurrence	5
+extinct_since1950	Aves_all_species_by:basis_of_record	Fossil specimen	2
+extinct_since1950	Aves_all_species_by:basis_of_record	Human observation	2
+extinct_since1950	Aves_all_species_by:dataResourceName	WildNet - Queensland Wildlife Data	5
+extinct_since1950	Aves_all_species_by:dataResourceName	Australian National Wildlife Collection provider for OZCAM	2
+extinct_since1950	Aves_all_species_by:dataResourceName	ALA species sightings and OzAtlas	2
+extinct_since1950	Aves_all_species_by:decade	1990	4
+extinct_since1950	Aves_all_species_by:decade	1960	2
+extinct_since1950	Aves_all_species_by:decade	2010	2
+extinct_since1950	Aves_all_species_by:decade	1970	1
+extinct_since1950	Aves_records		9
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Human observation	3855
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Machine observation	492
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Preserved specimen	476
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Observation	150
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Occurrence	10
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Material Sample	7
+extinct_since1950	Mammalia_all_species_by:basis_of_record	Fossil specimen	3
+extinct_since1950	Mammalia_all_species_by:dataResourceName	NSW BioNet Atlas	3376
+extinct_since1950	Mammalia_all_species_by:dataResourceName	AWC Ecological Monitoring Surveys	812
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Queen Victoria Museum Art Gallery provider for OZCAM	247
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Fauna Atlas N.T.	152
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Tasmanian Natural Values Atlas	148
+extinct_since1950	Mammalia_all_species_by:dataResourceName	AMNH Mammal Collections	147
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Northern Territory Museum and Art Gallery provider for OZCAM	36
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Australian National Wildlife Collection provider for OZCAM	31
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Australian Museum provider for OZCAM	10
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Encyclopedia of Life Images - Flickr Group	10
+extinct_since1950	Mammalia_all_species_by:dataResourceName	SA Fauna	7
+extinct_since1950	Mammalia_all_species_by:dataResourceName	South Australian Museum Adelaide provider for OZCAM	6
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Queensland Museum provider for OZCAM	4
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Natural History Museum (London) Collection Specimens	3
+extinct_since1950	Mammalia_all_species_by:dataResourceName	BowerBird	2
+extinct_since1950	Mammalia_all_species_by:dataResourceName	Museums Victoria provider for OZCAM	1
+extinct_since1950	Mammalia_all_species_by:dataResourceName	ALA species sightings and OzAtlas	1
+extinct_since1950	Mammalia_all_species_by:decade	2020	4110
+extinct_since1950	Mammalia_all_species_by:decade	1970	309
+extinct_since1950	Mammalia_all_species_by:decade	1960	296
+extinct_since1950	Mammalia_all_species_by:decade	1980	130
+extinct_since1950	Mammalia_all_species_by:decade	2010	89
+extinct_since1950	Mammalia_all_species_by:decade	1990	26
+extinct_since1950	Mammalia_all_species_by:decade	1950	21
+extinct_since1950	Mammalia_all_species_by:decade	2000	12
+extinct_since1950	Mammalia_records		4993
+extinct_since1950	Reptilia_all_species_by:basis_of_record	Preserved specimen	117
+extinct_since1950	Reptilia_all_species_by:basis_of_record	Material Sample	4
+extinct_since1950	Reptilia_all_species_by:dataResourceName	Australian Museum provider for OZCAM	103
+extinct_since1950	Reptilia_all_species_by:dataResourceName	Queensland Museum provider for OZCAM	10
+extinct_since1950	Reptilia_all_species_by:dataResourceName	Australian National Wildlife Collection provider for OZCAM	7
+extinct_since1950	Reptilia_all_species_by:dataResourceName	South Australian Museum Adelaide provider for OZCAM	1
+extinct_since1950	Reptilia_all_species_by:decade	1970	84
+extinct_since1950	Reptilia_all_species_by:decade	1990	19
+extinct_since1950	Reptilia_all_species_by:decade	1980	10
+extinct_since1950	Reptilia_all_species_by:decade	2010	8
+extinct_since1950	Reptilia_records		121
+bionet_by_year	Perameles fasciata	2023	33
+bionet_by_year	Perameles fasciata	2024	705
+bionet_by_year	Perameles fasciata	2025	1921
+bionet_by_year	Perameles fasciata	2026	697
+bionet_by_year	Perameles nasuta	2015	6531
+bionet_by_year	Perameles nasuta	2016	1269
+bionet_by_year	Perameles nasuta	2017	1133
+bionet_by_year	Perameles nasuta	2018	3950
+bionet_by_year	Perameles nasuta	2019	1026
+bionet_by_year	Perameles nasuta	2020	1620
+bionet_by_year	Perameles nasuta	2021	4352
+bionet_by_year	Perameles nasuta	2022	3128
+bionet_by_year	Perameles nasuta	2023	2515
+bionet_by_year	Perameles nasuta	2024	3387
+bionet_by_year	Perameles nasuta	2025	818
+bionet_by_year	Perameles nasuta	2026	76

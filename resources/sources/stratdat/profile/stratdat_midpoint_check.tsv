@@ -1,0 +1,123 @@
+table	metric	key	value
+strat_unit_midpoint_vs_top_sequence	picks_with_midpoint		5579
+strat_unit_midpoint_vs_top_sequence	boreholes_with_a_rebuilt_sequence		369
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	1.00	249 of 5090 (4.9%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.90	414 of 4281 (9.7%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.70	963 of 3595 (26.8%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.55	2248 of 3270 (68.7%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.52	2746 of 3204 (85.7%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.50	3213 of 3214 (100.0%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.48	2843 of 3133 (90.7%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.45	2355 of 3083 (76.4%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	1.00	353 of 5561 (6.3%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.90	631 of 5260 (12.0%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.70	1411 of 4707 (30.0%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.55	3001 of 4356 (68.9%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.52	3645 of 4305 (84.7%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.50	4117 of 4263 (96.6%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.48	3506 of 4163 (84.2%)
+strat_unit_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.45	2807 of 4024 (69.8%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	1.00	181 of 1453 (12.5%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.90	239 of 1453 (16.4%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.70	509 of 1453 (35.0%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.55	1046 of 1453 (72.0%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.52	1277 of 1453 (87.9%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.50	1453 of 1453 (100.0%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.48	1278 of 1453 (88.0%)
+strat_unit_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.45	1115 of 1453 (76.7%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	0	249 of 5090 (4.9%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	5	303 of 4831 (6.3%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	10	306 of 4762 (6.4%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	25	318 of 4609 (6.9%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	50	317 of 4482 (7.1%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	100	348 of 4399 (7.9%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	250	463 of 4098 (11.3%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	500	727 of 3619 (20.1%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	1000	939 of 2852 (32.9%)
+strat_unit_midpoint_vs_top_sequence	strict:best_fraction_0.30_to_1.00_step_0.01	0.50	3213 of 3214 (100.0%)
+strat_unit_midpoint_vs_top_sequence	strict:best_offset_m_0_to_1000_step_5	1000	939 of 2852 (32.9%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_half_depth_by_sample_depth_m	0-1000	444 of 445 (99.8%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_half_depth_by_sample_depth_m	1000-2000	769 of 769 (100.0%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_half_depth_by_sample_depth_m	2000-3000	761 of 761 (100.0%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_half_depth_by_sample_depth_m	3000-4000	931 of 931 (100.0%)
+strat_unit_midpoint_vs_top_sequence	strict:match_at_half_depth_by_sample_depth_m	4000-99999	308 of 308 (100.0%)
+sequence_midpoint_vs_top_sequence	picks_with_midpoint		3070
+sequence_midpoint_vs_top_sequence	boreholes_with_a_rebuilt_sequence		114
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	1.00	243 of 2532 (9.6%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.90	367 of 2259 (16.2%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.70	669 of 1898 (35.2%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.55	1483 of 1916 (77.4%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.52	1849 of 2113 (87.5%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.50	2204 of 2207 (99.9%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.48	1762 of 1854 (95.0%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_fraction	0.45	1364 of 1645 (82.9%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	1.00	257 of 3057 (8.4%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.90	417 of 2972 (14.0%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.70	1084 of 2802 (38.7%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.55	2034 of 2608 (78.0%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.52	2276 of 2587 (88.0%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.50	2511 of 2557 (98.2%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.48	1913 of 2382 (80.3%)
+sequence_midpoint_vs_top_sequence	sequence:match_at_depth_fraction	0.45	1420 of 2238 (63.4%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	1.00	209 of 935 (22.4%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.90	309 of 935 (33.0%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.70	536 of 935 (57.3%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.55	843 of 935 (90.2%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.52	890 of 935 (95.2%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.50	935 of 935 (100.0%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.48	898 of 935 (96.0%)
+sequence_midpoint_vs_top_sequence	strict_fixed_set:match_at_depth_fraction	0.45	828 of 935 (88.6%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	0	243 of 2532 (9.6%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	5	253 of 2468 (10.3%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	10	261 of 2414 (10.8%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	25	270 of 2378 (11.4%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	50	305 of 2364 (12.9%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	100	356 of 2302 (15.5%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	250	481 of 2205 (21.8%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	500	619 of 1954 (31.7%)
+sequence_midpoint_vs_top_sequence	strict:match_at_depth_minus_offset_m	1000	704 of 1330 (52.9%)
+sequence_midpoint_vs_top_sequence	strict:best_fraction_0.30_to_1.00_step_0.01	0.50	2204 of 2207 (99.9%)
+sequence_midpoint_vs_top_sequence	strict:best_offset_m_0_to_1000_step_5	990	717 of 1348 (53.2%)
+strat_unit_below_distance	depth_fraction_plus_distance_is_a_known_unit_top_within_0.06m	1.0	9 of 5579 (0.2%)
+strat_unit_below_distance	depth_fraction_plus_distance_is_a_known_unit_top_within_0.06m	0.5	3818 of 5579 (68.4%)
+base_and_state_fields	strat_unit_base_filled		5579
+base_and_state_fields	strat_unit_base_equals_midpoint		5464 of 5579 (97.9%)
+base_and_state_fields	strat_unit_midpoint_with_several_units_semicolon		137
+base_and_state_fields	strat_unit_base_is_a_member_of_midpoint_list		5557 of 5579 (99.6%)
+base_and_state_fields	STRAT_UNIT_TOP_differs_STRAT_UNIT_MIDPOINT	strat_unit	5096 of 5383 (94.7%)
+base_and_state_fields	SEQUENCE_TOP_differs_SEQUENCE_MIDPOINT	sequence	2355 of 2600 (90.6%)
+base_and_state_fields	STATE_STRAT_UNIT_TOP_differs_STATE_STRAT_UNIT_MIDPOINT	state_strat_unit	8332 of 9690 (86.0%)
+base_and_state_fields	SEQUENCE_BASE_equals_SEQUENCE_MIDPOINT	sequence	3067 of 3070 (99.9%)
+base_and_state_fields	STATE_STRAT_UNIT_BASE_equals_STATE_STRAT_UNIT_TOP	state_strat_unit	11751 of 11751 (100.0%)
+base_and_state_fields	STRAT_UNIT_BASE_equals_STRAT_UNIT_MIDPOINT	strat_unit	5464 of 5579 (97.9%)
+base_and_state_fields	state_strat_unit_base_filled_and_top_filled_together		50128
+base_and_state_fields	filled	STRAT_UNIT_MIDPOINT	5579
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	STRAT_UNIT_MIDPOINT	50128
+base_and_state_fields	filled	STRAT_UNIT_BASE	5579
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	STRAT_UNIT_BASE	50128
+base_and_state_fields	filled	STRATNO_MIDPOINT	5579
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	STRATNO_MIDPOINT	50128
+base_and_state_fields	filled	STRATIGRAPHIC_AGE_MIDPOINT	8653
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	STRATIGRAPHIC_AGE_MIDPOINT	46670
+base_and_state_fields	filled	DINOCYST_MIDPOINT	4608
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	DINOCYST_MIDPOINT	41085
+base_and_state_fields	filled	SPORE_POLLEN_MIDPOINT	0
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	SPORE_POLLEN_MIDPOINT	44549
+base_and_state_fields	filled	DISTANCE_TO_STRAT_UNIT_BELOW_M	5579
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	DISTANCE_TO_STRAT_UNIT_BELOW_M	50128
+base_and_state_fields	filled	SEQUENCE_MIDPOINT	3070
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	SEQUENCE_MIDPOINT	44287
+base_and_state_fields	filled	SEQUENCE_BASE	3070
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	SEQUENCE_BASE	44287
+base_and_state_fields	filled	DISTANCE_TO_SEQUENCE_BELOW_M	3070
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	DISTANCE_TO_SEQUENCE_BELOW_M	44287
+base_and_state_fields	filled	STATE_STRAT_UNIT_MIDPOINT	10651
+base_and_state_fields	filled_exactly_when_strat_unit_midpoint_filled	STATE_STRAT_UNIT_MIDPOINT	37140
+yampi_1	picks_with_strat_unit_top		246
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Woodbine Group	408 | 825 | 2.02
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Woodbine Group,Oliver Formation	670 | 1349 | 2.01
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Woodbine Group,Hibernia Formation	789 | 1613.8 | 2.05
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Woodbine Group,Bassett Formation	942 | 1884.4 | 2.00
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Bathurst Island Group,Puffin Formation	1014 | 2078 | 2.05
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Gibson Formation	1395 | 2826.6 | 2.03
+yampi_1	unit_top_m | first_sample_depth_m_whose_midpoint_unit_is_it | ratio	Bathurst Island Group,Jamieson Formation	1549 | 3107 | 2.01

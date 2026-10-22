@@ -1,2 +1,2 @@
 route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
-ga-biozonation	2026-10-22T0856Z_url	2026-10-22T08:56:49+00:00	CC BY 4.0 (Geoscience Australia eCat records 76687, 23332-24225, 31035, 61127, 64962)	39	120369345	c02158bc6217	https://d28rz98at9flks.cloudfront.net/76687/Chart_03_Arafura_Money_Shoal_Basins.pdf
+ga-biozonation	2026-10-22T0856Z_url	2026-10-22T08:56:49+00:00	eCat metadata: CC BY 4.0 (records 76687, 23332-24225, 31035, 61127, 64962); PDFs print CC BY 4.0, CC BY 3.0 AU, all rights reserved or only a copyright line, see README	39	120369345	c02158bc6217	https://d28rz98at9flks.cloudfront.net/76687/Chart_03_Arafura_Money_Shoal_Basins.pdf

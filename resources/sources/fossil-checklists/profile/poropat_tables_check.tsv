@@ -1,0 +1,68 @@
+check	key	value
+rows	A1	49
+rows	A2	2
+rows	A3	12
+rows	A4	6
+rows	A5	41
+rows	A6	16
+rows	A7	4
+rows	A8	5
+rows	A9	12
+rows	A10	75
+rows	A11	16
+rows	A12	61
+rows	all	299
+cells_with_cid_placeholder	all	0
+empty_cells	all	0
+cells_with_unbalanced_brackets	all	1
+unbalanced_cell	A5	taxon: Elasmosauridae incertae sedis (‘Plesiosaurus’ macrospondylus
+set_aside_line	page header	198 STEPHEN F. POROPAT ET AL. AUSTRALIAN MESOZOIC TETRAPODS
+set_aside_line	appendix title	Appendix
+set_aside_line	caption	Table A1. Chronostratigraphically arranged inventory of Australian Mesozoic temnospondyl occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	page header	ALCHERINGA: AN AUSTRALASIAN JOURNAL OF PALAEONTOLOGY 199
+set_aside_line	caption	Table A2. Chronostratigraphically arranged inventory of Australian parareptilian and basal neodiapsidan occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A3. Chronostratigraphically arranged inventory of Australian ichthyosauromorphan occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A4. Chronostratigraphically arranged inventory of Australian Mesozoic lepidosaurian occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A5. Chronostratigraphically arranged inventory of Australian sauropterygian occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	continued marker	(continued)
+set_aside_line	page header	200 STEPHEN F. POROPAT ET AL. AUSTRALIAN MESOZOIC TETRAPODS
+set_aside_line	caption	Table A5. Continued.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A6. Chronostratigraphically arranged inventory of Australian Mesozoic testudinatan occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A7. Chronostratigraphically arranged inventory of Australian Mesozoic non-archosaurian archosauromorph occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A8. Chronostratigraphically arranged inventory of Australian Mesozoic crocodylomorph occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	page header	ALCHERINGA: AN AUSTRALASIAN JOURNAL OF PALAEONTOLOGY 201
+set_aside_line	caption	Table A9. Chronostratigraphically arranged inventory of Australian Mesozoic pterosaur occurrences.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A10. Chronostratigraphically arranged inventory of Australian Mesozoic dinosaur occurrences (including Avialae).
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	continued marker	(continued)
+set_aside_line	page header	202 STEPHEN F. POROPAT ET AL. AUSTRALIAN MESOZOIC TETRAPODS
+set_aside_line	caption	Table A10. Continued.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	continued marker	(continued)
+set_aside_line	page header	ALCHERINGA: AN AUSTRALASIAN JOURNAL OF PALAEONTOLOGY 203
+set_aside_line	caption	Table A10. Continued.
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A11. Chronostratigraphically arranged inventory of Australian Mesozoic synapsid occurrences (including Mammalia).
+set_aside_line	column header	Taxon Rock unit Age range Reference
+set_aside_line	caption	Table A12. Chronostratigraphically arranged inventory of Australian end-Permian and Mesozoic tetrapod ichnofossil occurrences.
+set_aside_line	column header	Taxon Rock unit Chronostratigraphic Range Reference
+set_aside_line	continued marker	(continued)
+set_aside_line	page header	204 STEPHEN F. POROPAT ET AL. AUSTRALIAN MESOZOIC TETRAPODS
+set_aside_line	caption	Table A12. Continued.
+set_aside_line	column header	Taxon Rock unit Chronostratigraphic Range Reference
+set_aside_line	continued marker	(continued)
+set_aside_line	page header	ALCHERINGA: AN AUSTRALASIAN JOURNAL OF PALAEONTOLOGY 205
+set_aside_line	caption	Table A12. Continued.
+set_aside_line	column header	Taxon Rock unit Chronostratigraphic Range Reference
+body_segments_not_in_a_cell_of_their_table	all	0
+nonspace_character_count_differences	all	0
