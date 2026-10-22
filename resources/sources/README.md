@@ -16,6 +16,8 @@ fitness-for-purpose verdict. Suitability is always relative to a question.
 ```text
 resources/sources/
   README.md                 this file: conventions, template, lessons
+  INDEX.md, index.tsv       generated index of all entries (build_index.py)
+  build_index.py            rebuilds the index: uv run resources/sources/build_index.py
   paleodata-README.md       the README installed at /data/paleodata/
   <id>/README.md            the entry: YAML front matter + guide
   <id>/<provider>-versions.tsv  full version index, where the source is versioned
@@ -160,7 +162,7 @@ Body sections, in order:
    provider export (filtered files, default downloads) from the raw tables.
 5. Read the primary description paper and documentation in full; scan for
    lineage, overlap, uses and published critiques.
-6. Write the entry; quote our numbers, cite theirs.
+6. Write the entry; quote our numbers, cite theirs. Rebuild the index.
 7. Have the entry reviewed independently before treating it as settled.
 
 ## Lessons so far
