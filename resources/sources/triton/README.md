@@ -31,7 +31,7 @@ versioning:
   notes: "four published data versions (2021, 2022, 2023, 2025); file names repeat across versions with different contents"
 mirror:
   path: deep-server:/data/paleodata/triton
-  policy: "all 20 item versions (1.6 GB): each data version is a distinct product"
+  policy: "all 20 item versions (1.6 GB): each data version is a distinct product, and the small code, documentation and working-file versions record each version's pipeline"
   state: "complete 2026-10-22"
 lineage:
   upstream:
@@ -53,7 +53,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); paper, documentation and ecosystem reads by Claude Sonnet subagents
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # Triton
@@ -63,7 +63,8 @@ entry:
 Triton is the largest species-level compilation of Cenozoic planktonic
 foraminifera: about 540,000 presence records of 395 species in 51,000 samples
 from 5,000 holes and cores. Taxonomy is harmonised, ages are kept or re-derived
-on GTS2020, and every record has a palaeolatitude. It merges six sources:
+on GTS2020, and every record has a palaeolatitude (from two different plate
+models; Pitfall 4). It merges six sources:
 PANGAEA, ocean-drilling reports, Neptune (NSB), the ForCenS core-top census,
 Fenton et al. (2016) and land sections from Lloyd et al. (2012). Reach for it
 for foraminiferal diversity, biogeography, thermal-niche and turnover studies
@@ -83,10 +84,16 @@ Counts are our own ([profile](profile/)), from v4 (2025-01-23),
 | Samples | 51,135 | 50,968 |
 | Holes and cores | 5,003 | 4,996 |
 | Species (harmonised) | 395 | 392 |
-| Original names | | 3,492 |
+| Original-name strings | 3,608 | 3,492 |
+| Distinct original names, after splitting merged synonyms | 2,770 | |
+
+`orig.species` joins merged synonyms with ", " (1,259 such strings), so name
+strings overcount names. Sample and hole identifiers belong to one source:
+3,435 of 47,415 samples with a depth share position and depth with another
+source's sample, so samples and holes double-count some physical ones.
 
 The companion data frame `triton` adds 1,265,059 zero-abundance rows, 1,806,905
-rows in all. Zeros are not uniformly true absences (Pitfall 5).
+rows in all. Zeros are not uniformly true absences (Pitfall 6).
 
 **By source** (in-range presences):
 
@@ -101,8 +108,10 @@ rows in all. Zeros are not uniformly true absences (Pitfall 5).
 
 **Time** (in range, GTS2020): Pleistocene–Holocene 280,065; Pliocene 73,096;
 Miocene 98,369; Oligocene 22,533; Eocene 44,641; Paleocene 13,362. Ages run
-from 0 to 65.997 Ma; 64,644 in-range rows have age 0 (core-tops). Every row has
-an age and a palaeolatitude: rows without either were dropped during the build.
+from 0 to 65.997 Ma, with 682 rows marginally negative (to −0.00006 Ma).
+64,644 in-range rows have age 0, almost all ForCenS core-tops (64,033). Every
+row has an age and a palaeolatitude: rows without either were dropped during
+the build.
 
 **Space** (in range, present latitude): 0–30° 296,988; 30–60° 213,465; above
 60° 21,613 (4.1%). Northern hemisphere 353,949, southern 178,117.
@@ -137,9 +146,17 @@ has four versions, each a different product. All are mirrored.
   8,986 presences out of range; the paper reports 10,990.
 - **v4 against v3.** The version-history document says units changed from
   "Count" to "Number per gram" for holes SA03-1, AMC99-1, ST04-1 and
-  188.1165.1165B. Our checks find exactly 1,520 such rows relabelled, and no
-  other difference in our profile. The v2 variants were not regenerated and
-  keep the old labels.
+  188.1165.1165B. Our checks find exactly 1,520 presence rows relabelled
+  (3,371 with zeros). The independent review compared the tables cell by cell:
+  the only other differences are a date stamp, floating-point noise below
+  3e-6, and whitespace in 12 `orig.species` cells. The v2 variants were not
+  regenerated and keep the old labels.
+- **v1 to the 2023 update.** On the 512,941 shared rows (independent review):
+  3,663 Fenton et al. (2016) rows (66% of that source) change age, by up to
+  1.18 Myr. v1's code skipped time-scale conversion for rows with no
+  publication year, and the 2023 code converts them. `pal.lat` changes in 1,863
+  rows (38 by more than 1°), `trim` in 44. Species and abundances are
+  unchanged.
 - **Readme lag.** The readme (v2) describes only the v2 files; v3 and v4 are
   documented only in the version-history `.docx` files.
 
@@ -150,7 +167,8 @@ Leeds, MfN Berlin, NHM London). The deposited R pipeline (`Triton code` v3)
 runs: age models (`Triton_1AgeModels.R`), source loaders (`Triton_2Neptune_plus.R`,
 `Triton_3Pangaea.R`, `Triton_4MoveDB.R`, `Triton_5IODPextra.R`), combination
 (`Triton_6CombinedData.R`) and the sample-level merge
-(`Triton_8_RemovingDuplicates.R`). Source details, from the documentation read:
+(`Triton_8_RemovingDuplicates.R`). Source details, from the deposited code and
+documents:
 
 - **Neptune.** One export of all Cenozoic foraminifera on GTS2012, with
   questionable, invalid and reworked records excluded. The deposited
@@ -180,17 +198,28 @@ four NSB snapshots ([link_nsb.py](link_nsb.py),
 [result](profile/link_nsb_v4.txt)):
 
 - all 108,339 Neptune rows (11,105 samples) link to NSB foraminifera samples,
-  with matching holes and depths;
-- 93.3% carry an original name that NSB records in the same sample;
-- against NSB's 2018-10-27 and 2019-08-30 snapshots, ages differ only by the
-  GTS2012-to-GTS2020 conversion (none by more than 0.5 Myr). That fits the
-  March 2019 export. Against NSB's final 2023 snapshot, 3,422 rows differ by
-  more than 1 Myr: Triton does not carry NSB's later age-model revisions;
-- Triton covers 11,104 of NSB's 14,503 dated foraminifera samples (77%).
+  with no hole or depth mismatch;
+- Triton's pre-conversion age (`orig.age`) equals NSB's stored age on every
+  row in the 2018-10-27 and 2019-08-30 snapshots, and 207 rows differ against
+  2020-12-15. That is consistent with the March 2019 sheet name. All Neptune
+  rows have `age.calc == "Orig"`;
+- Triton's `pal.lat` equals NSB's `paleo_latitude` on all 106,095 rows where
+  NSB has one (2018-10-27): Neptune rows carry NSB's Seton et al. (2012)
+  palaeocoordinates, not Triton's Matthews et al. (2016) ones;
+- 93.3% carry an original name string that NSB records in the same sample,
+  96.5% once merged synonyms are split;
+- against NSB's final 2023 snapshot, 3,422 rows differ by more than 1 Myr from
+  NSB's stored ages, and 5,101 from ages recomputed from NSB's current models
+  (NSB Pitfall 5). Triton does not carry NSB's later age-model revisions;
+- Triton's Neptune rows cover 11,104 of NSB's 14,503 dated foraminifera
+  samples (77%). This is a lower bound: the same samples can also enter Triton
+  through PANGAEA or drilling-report copies.
 
 **Downstream.** BioDeepTime (822 Triton time series), a relational copy on
 pforams@mikrotax, and about 50 citing papers (OpenAlex 53, Crossref 47, on
-2026-10-22). Uses include ecogroup and community-equitability biogeography
+2026-10-22). Uses include Cenozoic diversity and turnover (Fenton et al. 2023,
+*Nature*, doi:10.1038/s41586-023-05712-6; Woodhouse et al. 2023, *Nature*,
+doi:10.1038/s41586-023-05694-5), ecogroup and community-equitability biogeography
 (Swain et al. 2024, *Nature*, doi:10.1038/s41586-024-07337-9; Woodhouse et al.
 2023, *Biogeosciences*, doi:10.5194/bg-20-121-2023), Pliocene–Pleistocene
 turnover networks (Larina et al. 2025, *Nat. Commun.*,
@@ -207,9 +236,11 @@ v3, v4), so their numbers are not interchangeable.
 
 Each RData file holds a pair of data frames: `<name>` with zero abundances and
 `<name>.pres` with presences (`abundance > 0`). The main tables have 72
-columns. The `no_dup` tables (`triton.no.dup`, `triton.no.dup.pres`) have 25,
-keyed by a merged sample id `triton.SID`, with no `trim`, `db.source`, `source`,
-hole or original sample identifiers.
+columns. `rowID` is unique; `sampleID` and `holeID` are scoped to one source.
+The `no_dup` tables (`triton.no.dup`, `triton.no.dup.pres`) have 25 columns,
+keyed by a merged sample id `triton.SID`. They keep the merged original sample
+ids in `sep.sampleID` (with `no.samples`, `sep.abun`, `sep.abun.units`), but
+have no `trim`, `db.source` or `source` column.
 
 Key columns of `triton.pres` (definitions from the paper and code):
 
@@ -223,20 +254,28 @@ Key columns of `triton.pres` (definitions from the paper and code):
   `rel.abun = abundance / num.ind × 100`, and is computed even for binned
   ranks.
 - **Age.** `age` is in Ma on GTS2020. `age.calc` records how it was obtained:
-  `Orig`, `Model`, `Interp`, `Zone` or `Magneto`. `age.err` is the zone width
-  for `Zone`, 0 for most `Model` and `Interp` rows, and NA for `Orig`; rows
-  with `age.err` above 5 were removed. `round.age` is the age rounded to whole
-  Ma. `orig.age` (v3 onwards) is the age before conversion.
-- **Place.** `latitude` and `longitude` are present-day positions. `pal.lat`
-  and `pal.long` use Matthews et al. (2016) via GPlates. For most sources they
-  were computed on whole-Ma ages, and set to present positions near age 0.
-  `round.lat` and `round.pal.lat` are rounded to 5°.
+  `Orig`, `Model`, `Interp`, `Zone` or `Magneto`. `age.err` is 0 on every
+  `Model`, `Interp` and `Magneto` row, NA on every `Orig` row, and the zone
+  width (`rng.age`) on `Zone` rows, whose age is the zone midpoint. Rows with
+  `age.err` above 5 were removed. `round.age` is the age rounded to whole Ma.
+  `orig.age` (v3 onwards) is the age before conversion.
+- **Place.** `latitude` and `longitude` are present-day positions. Neptune
+  rows carry NSB's palaeocoordinates: Seton et al. (2012), at the sample's own
+  age. All other rows use Matthews et al. (2016) via GPlates, computed on
+  whole-Ma ages, with present positions where `round.age` is 0 (age below
+  0.5 Ma). `round.lat` and `round.pal.lat` are rounded to 5°.
 - **Range flag.** `trim` is `exc` when the sample age lies more than 5 Myr
   (ages above 23 Ma) or 2 Myr (younger) beyond the species' global speciation
   or extinction age (`Speciation`, `Extinction`), otherwise `inc`.
 - **Provenance.** `db.source`, `dbID`, `source`, `year`, `reason`,
-  `processing`, `preservation`, `sample.type` (free text mixing PANGAEA device
-  terms with labels such as "ODP").
+  `processing`, `preservation`, `sample.type`.
+
+Code vocabularies (distinct values in the v4 presence table,
+[checks.tsv](profile/checks.tsv)): `trim` 2; `Macro/micro` 2; `segment` 4;
+`age.calc` 5; `abun.units` 5; `reason` 6; `age.model` 23; `processing` 31;
+`sample.type` 34 (free text mixing PANGAEA device terms with labels such as
+"ODP"); `AM.type` 79; `preservation` 1,043 (unstandardised free text).
+`reason` has six codes; the paper lists four.
 
 ## Access
 
@@ -246,6 +285,7 @@ Key columns of `triton.pres` (definitions from the paper and code):
 /data/paleodata/triton/raw/<item>_v<N>_<id>/        every item version + MANIFEST.json
 /data/paleodata/triton/derived/Triton_v4_13517414/  triton_update_2023.RData, triton_no_dup.RData,
     triton_update_2023_pres.tsv.gz, triton_no_dup_pres.tsv.gz  (for non-R use)
+    triton_update_2023_pres_dedup_cross_source.tsv.gz         (Pitfall 1 recipe)
 /data/paleodata/triton/derived/Triton_v2_13517414/  the three v2 tables, unzipped
 ```
 
@@ -263,12 +303,22 @@ tp <- subset(e$triton.pres, trim == "inc")
 
 ```python
 import pandas as pd
-tp = pd.read_csv("/data/paleodata/triton/derived/Triton_v4_13517414/triton_update_2023_pres.tsv.gz", sep="\t")
+tp = pd.read_csv("/data/paleodata/triton/derived/Triton_v4_13517414/triton_update_2023_pres.tsv.gz",
+                 sep="\t", low_memory=False)
 tp = tp[tp["trim"] == "inc"]
 ```
 
 The TSV files are unchanged exports of the presence tables
 ([triton_export.R](triton_export.R)); their row counts match the profile.
+
+**Removing cross-source duplicates.** [triton_dedup.R](triton_dedup.R) drops
+only rows that duplicate another source's record by v1's key and have a
+recorded depth, keeping the highest-priority source in each group (v1's order:
+ForCenS, IODP, Neptune, PANGAEA, Lloyd, Fenton; a different order can be
+passed). On v4 it removes 16,260 rows (PANGAEA 13,858, Fenton 2,282, Neptune
+120) and leaves 525,586 ([log](profile/dedup_v4.txt)). It does not recompute
+`num.ind` or `rel.abun`; afterwards 794 of 45,465 non-presence/absence samples
+have relative abundances summing below 100.
 
 **Other routes.** The R package `chronosphere` (`fetch(src = "triton")`)
 serves v1 and v3 but not v4. At v3 its series `main` is the sample-level
@@ -276,6 +326,7 @@ serves v1 and v3 but not v4. At v3 its series `main` is the sample-level
 v4 still carry "Count". Mikrotax offers an experimental map query
 (ranges-tritonbiogeog.php) on an unedited copy of a pre-v3 version, with no
 API. Triton is not in PANGAEA, GBIF or PBDB.
+
 [triton_checks.R](triton_checks.R) reruns the data checks quoted here
 ([checks.tsv](profile/checks.tsv)).
 
@@ -294,50 +345,81 @@ API. Triton is not in PANGAEA, GBIF or PBDB.
 
 ## Weaknesses and pitfalls
 
-1. **The 2023 update is not deduplicated, and the deduplicated file is a
-   different product.** v1 removed duplicate records (same species,
-   abundance, depth and position to 0.001°), keeping one by source priority.
-   The 2023 pipeline (code v2) no longer does. `triton_update_2023.RData` has 28,838
-   duplicate rows by v1's own key (5.3%), in 16,256 groups that span two
-   sources, mostly Neptune and PANGAEA. Its row and sample counts equal v2's
-   non-deduplicated table. `triton_no_dup.RData` is not a record-level
-   deduplication. It merges records into samples by position, depth and
-   whole-Ma age, drops samples with more than half their species out of range,
-   averages or sums abundances across units, and keeps 25 columns without
-   `trim` or source. To count occurrences, deduplicate the full table by v1's
-   key. Use the full table for whole assemblages, accepting that
-   deduplication can leave assemblages incomplete.
+1. **The 2023 update is not deduplicated, and neither available fix is
+   simple.** v1 removed records sharing species, abundance, depth and position
+   to 0.001°, keeping one per group by source priority (ForCenS, IODP,
+   Neptune, PANGAEA, Lloyd, Fenton). The 2023 pipeline (code v2) no longer
+   does, so `triton_update_2023.RData` has 28,832 duplicate rows by v1's exact
+   key (5.3%), in 22,342 groups ([checks.tsv](profile/checks.tsv)). Its row and
+   sample counts equal v2's non-deduplicated table.
+   - *Cross-source copies:* 16,256 groups (16,267 excess rows) span two sources,
+     12,608 of them Neptune and PANGAEA. These are true duplicates.
+   - *Within one source:* 6,086 groups (12,565 rows). Most are not duplicates:
+     8,450 of the duplicate rows have no depth, so v1's key collides distinct
+     samples at one position. In 1,249 of those 1,991 groups the ages differ by
+     more than 0.5 Myr. Applying v1's key wholesale would delete 62% of Fenton
+     et al. (2016) and 47% of Lloyd et al. (2012) records.
+   - *The remedy:* drop cross-source copies only, with a recorded depth
+     ([triton_dedup.R](triton_dedup.R), Access). Choose the source priority
+     deliberately: v1's keeps the Neptune copy, with its 2019 NSB age and Seton
+     palaeocoordinates. Records with the same species, depth and position but
+     a different abundance or unit survive (about 4,750 more, per the
+     independent review).
+   - *`triton_no_dup.RData` is a different product.* It merges records into
+     samples by position, depth and whole-Ma age, and drops samples with more
+     than half their species out of range (out-of-range rows in kept samples
+     remain: 8,618 would be `exc`). It merges abundances by unit: maximum for
+     presence/absence and binned, mean for relative abundance and number per
+     gram, sum for counts (the version history says mean). Use it for
+     sample-level work, not occurrence counts.
 2. **File names do not identify versions.** v3 and v4 ship files with the
    same names and different contents. Cite the Figshare version DOI, and check
    the sha256 in the mirror's manifest.
-3. **Neptune records are frozen at March 2019.** See Provenance: 3,422 of
-   them differ from NSB's final ages by more than 1 Myr. For Neptune-derived
-   samples, decide which chronology to trust; NSB's final snapshot has its own
-   stale-age problem.
-4. **Age uncertainty is mostly unrecorded.** 59% of in-range ages are the
-   original authors' (no error given). Among re-derived ages, 83% carry
-   `age.err = 0`, a placeholder rather than a measured zero. Zone-midpoint
-   ages can rest on zones up to 5 Myr wide.
-5. **Zeros are not uniformly absences.** Zero-abundance rows come from
+3. **Neptune records are frozen at 2019.** Ages and palaeocoordinates are
+   NSB's as they stood in 2018–19 (Provenance). 3,422 rows differ from NSB's
+   final stored ages by more than 1 Myr, and 5,101 from its recomputed ages.
+   For Neptune-derived samples, decide which chronology to trust.
+4. **Two plate models.** The 108,339 Neptune rows (20% of presences) carry
+   Seton et al. (2012) palaeocoordinates at the sample's exact age; the rest
+   are Matthews et al. (2016) on whole-Ma ages. The paper says all are
+   Matthews. Palaeolatitude bands therefore pool two models; recompute
+   palaeocoordinates for Neptune rows if that matters.
+5. **Age uncertainty is mostly unrecorded.** 59% of in-range ages are the
+   original authors' (no error given). `age.err` is 0 on every `Model`,
+   `Interp` and `Magneto` row (83% of re-derived ages): a placeholder, not a
+   measured zero. Zone-midpoint ages can rest on zones up to 5 Myr wide.
+6. **Zeros are not uniformly absences.** Zero-abundance rows come from
    explicit absence codes, binned codes outside the expected sequence, blank
    drilling-report cells, and Neptune entries originally coded "extremely
    rare or questionable".
-6. **Mixed abundance units.** 45% binned, 11% presence/absence. `rel.abun`
+7. **Mixed abundance units.** 45% binned, 11% presence/absence. `rel.abun`
    is computed for binned ranks, and the "Relative abundance" or "Count" label
    was assigned by rule, so a count dataset can be mislabelled.
-7. **Purpose-driven recording.** 30% of presence rows come from
+8. **Purpose-driven recording.** 30% of presence rows come from
    biostratigraphic studies that often list marker species only, so absence
    from such a sample is weak evidence.
-8. **Range flag is coarse.** `trim` uses global speciation and extinction
+9. **Range flag is coarse.** `trim` uses global speciation and extinction
    ages (often from subtropical zonations) and the sample age alone; the
    authors expect it to be less precise at high latitudes.
-9. **Documentation and data disagree in places.** The readme says v1 ages
-   were rounded to 5 kyr. In the data, 61% of v1 ages fall on a 5-kyr grid,
-   and 42% carry more than two decimal places. The unrounded v2 table has 8%
-   on the grid. The paper's counts differ slightly from the deposited v1 (see
-   Versions). Some described merge rules differ from the code (documentation
-   read, section 7).
-10. **Cenozoic only.** No records older than 66 Ma, so no Cretaceous baseline
+10. **Documentation and data disagree in places.**
+    - *Rounding.* The readme says v1 ages were rounded to 5 kyr; the code
+      rounds converted ages to two decimals, and the version history says the
+      same. By method, v1 original ages sit on a 10-kyr grid (98%) and zone
+      midpoints on 5 kyr (99%), while age-model ages (`Model`, `Interp`,
+      `Magneto`, 44% of v1 ages) are essentially unrounded. Those are the ages
+      the readme's rationale targets.
+    - *Counts.* The paper's counts differ slightly from the deposited v1 (see
+      Versions).
+    - *Merge rules.* The version history describes means for merged counts;
+      the code sums them (Pitfall 1).
+    - *Conversion.* v1 skipped time-scale conversion for records with no
+      publication year (Versions).
+    - *File names.* The readme's `Triton_non_rounded.RData` is
+      `triton_No_rounding.RData` in the zip.
+11. **Identifiers are source-scoped.** No `sampleID` or `holeID` spans
+    sources, so a physical sample reported via two sources counts twice in
+    sample and hole totals, and in per-site sample counts.
+12. **Cenozoic only.** No records older than 66 Ma, so no Cretaceous baseline
     for the K–Pg (relevant to Q-007).
 
 **What the literature says** (source claims, from our ecosystem scan):
@@ -383,13 +465,23 @@ API. Triton is not in PANGAEA, GBIF or PBDB.
 
 ## EPRP relevance
 
-- **Q-007** (biotic legacy): the event-support gate used
-  `triton_update_2023.RData` (`trim == "inc"`). Its sample counts per site
-  include the duplicates in Pitfall 1; presence-based site counts are less
-  affected.
-- **Q-012** (heritable susceptibility vs ageing): the exposure audit and name
-  crosswalk use the same file. Their measures are built from unique bins,
-  bands and holes, which duplicates do not change.
+The independent review reran both EPRP builds that use Triton, unchanged and
+then after deduplication. Both reproduce their committed outputs from the
+mirror's v4 file.
+
+- **Q-007** (biotic legacy): the event-support gate uses
+  `triton_update_2023.RData` (`trim == "inc"`). Its event-window sample counts
+  are inflated by 11–13%, but the gate's qualifying sites are unchanged after
+  deduplication. Only EOT site 1332 changes, on the biota criterion, and it
+  fails the temperature test regardless.
+- **Q-012** (heritable susceptibility vs ageing): the exposure build uses the
+  same file. Its Jaccard and coverage measures are robust to duplicates. Its
+  exposure index (a row-weighted mean |palaeolatitude|) is not. After removing
+  duplicates with a recorded depth, the mean changes in 1,454 of 2,267
+  lineage-bins (423 by 1° or more), and 8 exposure classes flip. Per-bin site
+  counts are inflated because hole IDs are source-scoped. Its palaeolatitudes
+  also pool two plate models (Pitfall 4). These are side-session findings,
+  not yet passed to the Q-012 owners.
 - **Q-005, Q-020, Q-027** name Triton as a candidate input.
 - Good for: species-level diversity, ranges, biogeography and thermal-niche
   work across the Cenozoic; assemblage-level analyses where counts exist.
@@ -421,8 +513,11 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | All 20 item versions mirrored with size and md5 verification | checked |
 | 2026-10-22 | Profiles of all eight data tables across v1–v4 ([profile/](profile/)) | checked |
 | 2026-10-22 | v4 RData files differ from v3's despite identical names (md5) | checked |
-| 2026-10-22 | Duplicates by v1's key, unit relabelling, age grids, `age.err`, species presence ([checks.tsv](profile/checks.tsv)) | checked |
-| 2026-10-22 | Record-level link of Neptune rows to four NSB snapshots | checked |
+| 2026-10-22 | Duplicates by v1's exact key, split by source and depth; unit relabelling; age grids by method; `age.err`; vocabularies; source-scoped samples ([checks.tsv](profile/checks.tsv)) | checked |
+| 2026-10-22 | Cross-source dedup recipe on v4 ([dedup_v4.txt](profile/dedup_v4.txt)) | checked |
+| 2026-10-22 | Record-level link of Neptune rows to four NSB snapshots: `orig.age` and `pal.lat` equal NSB's (2018–19) | checked |
+| 2026-10-22 | v1-to-2023 drift (Fenton conversion), v3/v4 cell-by-cell, `no_dup` replication, Q-007 and Q-012 reruns with and without duplicates | checked (independent review) |
+| 2026-10-22 | Entry reviewed adversarially: 5 major and 11 minor findings, all applied | checked (Claude Sonnet subagent) |
 | 2026-10-22 | TSV exports equal the presence tables (row counts) | checked |
 | 2026-10-22 | Pipeline, sources, filters, column definitions, `trim` rule, merge rules | source claim (paper, readme, version histories and R code read in full) |
 | 2026-10-22 | Neptune export date 14 March 2019 | inferred (deposited sheet name and file date) |

@@ -76,7 +76,8 @@ res <- do.call(rbind, out)
 write.table(res, args[3], sep = "\t", quote = FALSE, row.names = FALSE)
 
 if (length(args) >= 4) {
-  nep <- pres[pres$db.source == "Neptune", c("sampleID", "holeID", "species", "orig.species", "age", "round.age",
-                                             "sample.depth", "trim", "abundance", "abun.units")]
+  nep <- pres[pres$db.source == "Neptune", c("sampleID", "holeID", "species", "orig.species", "age", "orig.age",
+                                             "age.calc", "round.age", "pal.lat", "sample.depth", "trim",
+                                             "abundance", "abun.units")]
   write.table(nep, args[4], sep = "\t", quote = FALSE, row.names = FALSE)
 }

@@ -1,7 +1,17 @@
 == NSB 2018-10-27_10059720
+linked_rows_all_name_parts_match	104318
+linked_rows_any_name_part_matches	104507
+linked_rows_depth_differs_gt_0.01m	0
+linked_rows_hole_mismatch	0
 linked_rows_nsb_group_F	108339
-linked_rows_orig_name_matches_nsb_name_in_sample	101051
+linked_rows_nsb_pal_lat_null	2244
+linked_rows_orig_age_differs	0
+linked_rows_orig_age_equals_nsb_age	108339
+linked_rows_pal_lat_differs	0
+linked_rows_pal_lat_equals_nsb	106095
+linked_rows_whole_name_matches	101051
 rows_linked	108339
+rows_sample_not_in_snapshot	0
 triton_neptune_rows	108339
 triton_neptune_samples	11105
 triton_neptune_samples_in_snapshot	11105
@@ -12,12 +22,22 @@ age_absdiff_gt_0.1_myr	8438
 age_absdiff_gt_0.5_myr	0
 age_absdiff_gt_1.0_myr	0
 nsb_foram_samples	16023
-nsb_foram_samples_linked_from_triton	11105
-nsb_dated_foram_samples_linked_from_triton	11105 of 14133
+nsb_foram_samples_linked_from_triton_neptune_rows	11105
+nsb_dated_foram_samples_linked_from_triton_neptune_rows	11105 of 14133
 == NSB 2019-08-30_10059743
+linked_rows_all_name_parts_match	104318
+linked_rows_any_name_part_matches	104507
+linked_rows_depth_differs_gt_0.01m	0
+linked_rows_hole_mismatch	0
 linked_rows_nsb_group_F	108339
-linked_rows_orig_name_matches_nsb_name_in_sample	101051
+linked_rows_nsb_pal_lat_null	2244
+linked_rows_orig_age_differs	0
+linked_rows_orig_age_equals_nsb_age	108339
+linked_rows_pal_lat_differs	554
+linked_rows_pal_lat_equals_nsb	105541
+linked_rows_whole_name_matches	101051
 rows_linked	108339
+rows_sample_not_in_snapshot	0
 triton_neptune_rows	108339
 triton_neptune_samples	11105
 triton_neptune_samples_in_snapshot	11105
@@ -28,12 +48,22 @@ age_absdiff_gt_0.1_myr	8438
 age_absdiff_gt_0.5_myr	0
 age_absdiff_gt_1.0_myr	0
 nsb_foram_samples	16023
-nsb_foram_samples_linked_from_triton	11105
-nsb_dated_foram_samples_linked_from_triton	11105 of 14147
+nsb_foram_samples_linked_from_triton_neptune_rows	11105
+nsb_dated_foram_samples_linked_from_triton_neptune_rows	11105 of 14147
 == NSB 2020-12-15_10062080
+linked_rows_all_name_parts_match	104318
+linked_rows_any_name_part_matches	104507
+linked_rows_depth_differs_gt_0.01m	0
+linked_rows_hole_mismatch	0
 linked_rows_nsb_group_F	108339
-linked_rows_orig_name_matches_nsb_name_in_sample	101051
+linked_rows_nsb_pal_lat_null	2244
+linked_rows_orig_age_differs	207
+linked_rows_orig_age_equals_nsb_age	108132
+linked_rows_pal_lat_differs	809
+linked_rows_pal_lat_equals_nsb	105286
+linked_rows_whole_name_matches	101051
 rows_linked	108339
+rows_sample_not_in_snapshot	0
 triton_neptune_rows	108339
 triton_neptune_samples	11105
 triton_neptune_samples_in_snapshot	11105
@@ -44,12 +74,22 @@ age_absdiff_gt_0.1_myr	8538
 age_absdiff_gt_0.5_myr	67
 age_absdiff_gt_1.0_myr	36
 nsb_foram_samples	16023
-nsb_foram_samples_linked_from_triton	11105
-nsb_dated_foram_samples_linked_from_triton	11105 of 14147
+nsb_foram_samples_linked_from_triton_neptune_rows	11105
+nsb_dated_foram_samples_linked_from_triton_neptune_rows	11105 of 14147
 == NSB 2023-06-05_10063218
+linked_rows_all_name_parts_match	104318
+linked_rows_any_name_part_matches	104507
+linked_rows_depth_differs_gt_0.01m	0
+linked_rows_hole_mismatch	0
 linked_rows_nsb_group_F	108339
-linked_rows_orig_name_matches_nsb_name_in_sample	101051
+linked_rows_nsb_pal_lat_null	1895
+linked_rows_orig_age_differs	23949
+linked_rows_orig_age_equals_nsb_age	84388
+linked_rows_pal_lat_differs	14621
+linked_rows_pal_lat_equals_nsb	91823
+linked_rows_whole_name_matches	101051
 rows_linked	108339
+rows_sample_not_in_snapshot	0
 triton_neptune_rows	108339
 triton_neptune_samples	11105
 triton_neptune_samples_in_snapshot	11105
@@ -59,6 +99,8 @@ age_absdiff_gt_0.01_myr	57165
 age_absdiff_gt_0.1_myr	21843
 age_absdiff_gt_0.5_myr	8044
 age_absdiff_gt_1.0_myr	3422
+age_absdiff_vs_nsb_recomputed_gt_0.5_myr	11639
+age_absdiff_vs_nsb_recomputed_gt_1.0_myr	5101
 nsb_foram_samples	16023
-nsb_foram_samples_linked_from_triton	11105
-nsb_dated_foram_samples_linked_from_triton	11104 of 14503
+nsb_foram_samples_linked_from_triton_neptune_rows	11105
+nsb_dated_foram_samples_linked_from_triton_neptune_rows	11104 of 14503

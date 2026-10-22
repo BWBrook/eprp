@@ -215,10 +215,20 @@ the workflow when they generalise.
   downstream compilations; none of these was visible from the data.
 **Triton (compilation, 22 October 2026; [entry](triton/README.md)).**
 
-- *Test a compilation for duplicates with its own key.* Triton's 2023 file
-  silently dropped the deduplication its 2021 version applied: 28,838
-  duplicate rows by the authors' own key, most of them one record arriving via
-  both Neptune and PANGAEA.
+- *Test a compilation for duplicates with its own key, then test the key.*
+  Triton's 2023 file silently dropped the deduplication its 2021 version
+  applied: 28,832 duplicate rows by the authors' own key. But 44% of them
+  collide distinct samples within one source (rows with no depth), so the
+  authors' key would have deleted real records. Only the cross-source groups
+  are true duplicates.
+- *Check derived fields against their inputs, not their documentation.*
+  Triton's paper says all palaeocoordinates are Matthews et al. (2016); the
+  20% from Neptune are NSB's Seton et al. (2012) values, found by comparing
+  them with NSB record by record.
+- *Rerun downstream analyses when a data flaw is found.* Rerunning EPRP's
+  Q-007 and Q-012 builds with and without duplicates turned "probably
+  harmless" into measured effects (Q-007 gate unchanged; Q-012 exposure
+  classes shift).
 - *Know which table you loaded.* File names repeat across versions with
   different contents, the "deduplicated" file is a different (sample-level)
   product, and a third-party mirror (`chronosphere`) labels that product
