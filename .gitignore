@@ -27,3 +27,7 @@ tmp/
 # Operating-system metadata
 .DS_Store
 Thumbs.db
+
+# compiled CmdStan executables
+data/q038-probe/model
+data/q038-probe/model_stz
