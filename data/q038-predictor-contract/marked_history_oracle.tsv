@@ -26,6 +26,10 @@ O6_eps0.5_enumerated	0.7958106
 O6_eps0.5_first_count_is_2_given_capture_and_survival	0.1973753
 O7_stage_k_emission_phi.2	0.4140356
 O7_stage_k_emission_phi.9	0.5767544
-O7_cut_at_k_range_over_phi_k	0.09407263
+O7_cut_at_k_range_over_phi_k	0.05644358
 O7_cut_at_k_minus_1_range_over_phi_k	0
-O7_eps1_cut_at_k_range_over_phi_k	1.110223e-16
+O7_eps1_cut_at_k_range_over_phi_k	2.775558e-17
+O7_eps1.0_total_probability_cut_at_k	1
+O7_eps0.5_total_probability_cut_at_k	1
+O6b_eps0.5_survival_given_first_count_1	0.7765089
+O6b_eps0.5_survival_given_first_count_2	0.8852969

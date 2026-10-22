@@ -471,7 +471,7 @@ at 0 and the same nuisance structure.
 
   | Cut | Range of the likelihood over φ_k |
   | --- | ---: |
-  | At k, with ε = 0.5 | 0.094 |
+  | At k, with ε = 0.5 | 0.0564 (corrected; see below) |
   | At k − 1, with ε = 0.5 | 0 |
   | At k, with ε = 1 | 1e-16 |
 
@@ -528,3 +528,19 @@ runs yet):
 - **Failed fits** count as non-coverage. Bias and score are reported
   conditional on successful fits, alongside the failure rate, with no
   values imputed.
+
+**Correction to the v3 oracle (Codex 76/2195).**
+- **O7.** The helper omitted the first-record emission but still divided by
+  the capture probability. Fixed, total probability is exactly 1 at
+  ε = 1 and at ε = 0.5. The corrected range of the cut-at-k likelihood over
+  φ_k at ε = 0.5 is **0.05644358**, not 0.094. The k − 1 cut stays at 0.
+- **O6b.** With counts retained, survival out of the first-capture stage
+  conditions on the **actual first count**: at ε = 0.5 it is **0.7765**
+  for a count of 1 and **0.8853** for a count of 2, against 0.7958 when
+  conditioning only on a positive count. The ε = 0.5 sensitivity uses the
+  count-conditioned form.
+- These affect only the optional ε = 0.5 sensitivity. The primary ε = 1
+  implementation is cleared (76/2195).
+- **Before the later S0 campaign,** shared nuisance and clade effects are
+  either zeroed globally, or removing them only at events is labelled as
+  model misspecification.

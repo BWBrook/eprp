@@ -171,7 +171,7 @@ lik_eps_cut <- function(y, f, C, phi, p, eps) {          # P(y_{f+1..C} | first 
   pe <- 1 - (1 - p)^eps; tot <- 0
   for (d in f:(C + 1)) {                                   # last stage alive (C + 1 = alive beyond C)
     pr <- if (d <= C) prod(phi[f:d][-length(f:d)]) * (1 - phi[d]) else prod(phi[f:C])
-    em <- 1
+    em <- if (d == f) pe[f] else p[f]                      # the first record itself (fixed: Codex 76/2195)
     for (t in (f + 1):C) if (t <= C && t > f) {
       alive <- t <= d; pt <- if (!alive) 0 else if (t == d) pe[t] else p[t]
       em <- em * (if (y[t] == 1) pt else 1 - pt)
@@ -186,6 +186,13 @@ ph <- function(e) { v <- c(.8, .8, .8, .8); v[kk] <- e; v }
 put("O7_cut_at_k_range_over_phi_k", diff(range(sapply(c(.2, .5, .9), function(e) lik_eps_cut(y, 1, kk, ph(e), pp, .5)))))
 put("O7_cut_at_k_minus_1_range_over_phi_k", diff(range(sapply(c(.2, .5, .9), function(e) lik_eps_cut(y, 1, kk - 1, ph(e), pp, .5)))))
 put("O7_eps1_cut_at_k_range_over_phi_k", diff(range(sapply(c(.2, .5, .9), function(e) lik_eps_cut(y, 1, kk, ph(e), pp, 1)))))
+# Total probability over every continuation of the first record must be 1 (the omitted first emission broke this).
+Hs <- as.matrix(expand.grid(rep(list(0:1), kk - 1)))
+for (eps in c(1, .5)) put(sprintf("O7_eps%.1f_total_probability_cut_at_k", eps),
+                          sum(apply(Hs, 1, function(z) lik_eps_cut(c(1, z, 0, 0), 1, kk, ph(.5), pp, eps))))
+# O6b: with counts retained, survival out of the first-capture stage conditions on the actual first count c.
+for (cc in 1:Ef) put(sprintf("O6b_eps0.5_survival_given_first_count_%d", cc),
+                     phi_f * dbinom(cc, Ef, r0) / (phi_f * dbinom(cc, Ef, r0) + (1 - phi_f) * dbinom(cc, Ef, 1 - exp(-.5 * theta0))))
 
 kv <- data.frame(name = names(res), value = vapply(res, function(v) format(signif(v, 10)), ""))
 write.table(kv, file.path(out, "marked_history_oracle.tsv"), sep = "\t", quote = FALSE, row.names = FALSE)
