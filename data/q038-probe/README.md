@@ -194,3 +194,35 @@ S0 for a generic selectivity claim. That is the redesign's choice.
   (z = 1.0), while the fitted path matches 40 × p (z = 1.3).
 - S4: the stage mean matches the ζ-integrated expectation (z = 1.6),
   0.947 against 0.792 for the plain binomial.
+
+## Posterior-predictive scoring (implemented; redesign item 2)
+
+[score.py](score.py) implements contract v2 section 4 under v3 section A,
+vectorised over posterior draws.
+- `from_stan` maps a fit's draws to a draws-last layout, which `core.eta`
+  already broadcasts over.
+- **Exact stage-k branching.** For each draw, q sums the stage-k reference
+  count exactly; the binomial tail dropped has mass below 1e-18. It then
+  applies the zero-record survival recursion through k + M. Both q and
+  1 − q come from complementary log formulas.
+- **Set and count laws.** The O law (no record in k+1 … k+M, over the
+  prefix risk set) and the synthetic B law (deaths at k among true
+  members) both condition **after** integration:
+  log Σ_m P(S|θ_m) − log Σ_m P(D|θ_m). The count law uses a
+  Poisson-binomial dynamic programme.
+- **Also reported:** the gain per genus against log 1/C(N, D), the
+  unconditional score, and batch-means delta-method Monte Carlo SEs
+  (Codex's minor item).
+
+**Checks** ([score_checks.json](score_checks.json)):
+- **S1:** the vectorised q equals `core.predict_q(exact=True)` to 8.7e-14
+  over 216 genus-draw comparisons (actual design, events 21, 38 and 68,
+  M = 2).
+- **S2:** q + (1 − q) = 1 exactly.
+- **S3:** by brute force over all 2⁹ sets of a nine-genus risk set, the
+  conditional set law is normalised to 3.6e-15 for every D, and the count
+  DP matches enumeration to 2.8e-16.
+- **S4, cost:** one event's O and B scores over 400 draws take 7 s (331
+  genera). The integrated score's Monte Carlo SE is about 0.43 nats in
+  total (0.0013 per genus). The draws here are truth-perturbed stand-ins,
+  not a posterior, so the scores carry no inferential meaning.

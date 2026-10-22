@@ -106,11 +106,12 @@ full fits.
 - Fold posteriors may differ in per-row cost, so row multiples are work
   counts, not runtime predictions.
 
-## 6. Implementation still needed (none of it started)
+## 6. Implementation still needed
 
 1. Forward-fold fitting (the fold builder exists) and the matched model.
-2. The outer posterior-predictive scoring workflow, with the Monte Carlo
-   SE of the integrated log set score (Codex's minor item).
+2. ~~The outer posterior-predictive scoring workflow~~: done in
+   [score.py](score.py), checks S1–S4. It costs about 7 s per event per 400
+   draws, negligible beside the fits.
 3. Posterior predictive diagnostics for S3 and S4.
 4. A campaign runner with durable attempt and failure receipts, so the
    denominator never comes from completed result files.

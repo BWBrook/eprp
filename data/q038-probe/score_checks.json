@@ -1,0 +1,33 @@
+{
+ "S1_vectorised_q_vs_predict_q": {
+  "max_abs": 8.709699628184353e-14,
+  "comparisons": 216
+ },
+ "S2_complement_max_abs": 0.0,
+ "S3_conditional_set_law_total_by_D_max_abs_minus_1": 3.552713678800501e-15,
+ "S3_count_dp_vs_brute_max_abs": 2.7755575615628914e-16,
+ "S4_event38_scores_400_draws": {
+  "seconds": 7.079762651999772,
+  "O": {
+   "N": 331,
+   "D": 219,
+   "informative": true,
+   "conditional": -180.66695155849246,
+   "conditional_se": 0.4278377448161437,
+   "gain_per_genus": 0.08484323513521848,
+   "uncond": -184.39491778031106,
+   "uncond_se": 0.4271805363812365
+  },
+  "B": {
+   "N": 250,
+   "D": 137,
+   "informative": true,
+   "conditional": -147.69365725180856,
+   "conditional_se": 0.4009688996653262,
+   "gain_per_genus": 0.08582582805915842,
+   "uncond": -151.56848153881302,
+   "uncond_se": 0.3858530435178656
+  }
+ },
+ "ok": true
+}
