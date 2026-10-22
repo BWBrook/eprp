@@ -1,0 +1,104 @@
+{
+ "contract": "data/q038-predictor-contract/contract.md v3 section D",
+ "scenario": "S2",
+ "seeds": [
+  38001,
+  38002,
+  38003,
+  38004,
+  38005
+ ],
+ "truth": {
+  "alpha": {
+   "Rhynchonellata": 0.19,
+   "Bivalvia": 0.05
+  },
+  "beta_b": 0.3,
+  "beta_e": 0.5,
+  "tau": 0.3,
+  "gamma": 0.2,
+  "s_fam": 0.3,
+  "s_ord": 0.3,
+  "gd0": -4.605170185988091,
+  "gd": 0.5,
+  "s_b": 0.3,
+  "s_nu": 0.2
+ },
+ "target_event_loss": {
+  "Rhynchonellata": [
+   0.2653061224489796,
+   0.5277777777777778,
+   0.7734375,
+   0.5263157894736842,
+   0.4909090909090909
+  ],
+  "Bivalvia": [
+   0.20833333333333334,
+   0.08955223880597014,
+   0.3387096774193548,
+   0.1878453038674033,
+   0.29705882352941176
+  ]
+ },
+ "omega_calibrated": {
+  "Rhynchonellata": [
+   0.6493395415544023,
+   1.829790603897871,
+   2.841405345540049,
+   1.6272928388836616,
+   1.581750916402485
+  ],
+  "Bivalvia": [
+   1.7950660253254676,
+   0.9205758964156909,
+   2.358023428104652,
+   1.5258658123768793,
+   2.225455720972095
+  ]
+ },
+ "omega_calibration_seed": 38000,
+ "feature_transform": {
+  "log_refs": {
+   "mean": 0.622,
+   "sd": 0.799
+  },
+  "rec": {
+   "mean": 8.901,
+   "sd": 23.136
+  },
+  "age": {
+   "mean": 65.117,
+   "sd": 76.032
+  },
+  "comp": {
+   "mean": 0.798,
+   "sd": 0.25
+  }
+ },
+ "feature_convention": "Q-038 primary probe (contract v3, data/q038-predictor-contract/contract.md; cleared by Codex 76/2195).\n\nOne feature convention for generator, likelihood, fold builder and forecast (Codex's implementation requirement):\n- Stages t = 1..T. A genus alive in stage t emits a reference count Binomial(E_t, 1 - exp(-theta_t)) (epsilon = 1), then\n  survives the transition t -> t+1 with probability phi_t. A dead genus emits zero.\n- The CJS likelihood conditions on the first record f and on its count (declared convention).\n- Hazard covariates for the transition s -> s+1 use records in stages < s, with the first-record stage always included\n  (so the transition out of f uses f's own record). Detection at stage t uses w = log mean count over recorded stages < t.\n- Covariates use FIXED affine transforms frozen from the deposit (deposit_constants.json), never data-dependent z-scores,\n  so a coefficient means the same thing in generator, fit and forecast.\n- Before the first record (generator only) covariates are 0 and w = 0.",
+ "families_per_class": 40,
+ "families_per_order": 5,
+ "events": [
+  7,
+  21,
+  38,
+  45,
+  68
+ ],
+ "fit": {
+  "chains": 4,
+  "warmup": 1000,
+  "sampling": 1000,
+  "adapt_delta": 0.8,
+  "max_treedepth": 10,
+  "rhat_max": 1.01,
+  "ess_min": 400
+ },
+ "inputs": {
+  "data/q038-predictor-contract/stages.tsv": "bdbfe9246fb600d90a1ed1a1993121020e74b158d5e68e0760012b98c9ae5134",
+  "data/q038-predictor-contract/exposure.tsv": "556bc95177ac58e6d9597648b94b7695ae229acc62628d3ee787f9e1c8b626a0",
+  "data/q038-probe/deposit_constants.json": "e1323eecaa96b1ca2f5ee7cd4978ab8dca45553d1cae6c7d4ea4727b3304f32f",
+  "data/q038-probe/core.py": "3a28147385f0a885e5b1f982354546578dca3d0c88c55fd5b01093481a1b5299",
+  "data/q038-probe/model.stan": "df34743f8c0fbb9a548c998caebdefa44944ebf1bd36eb6600346827af2c667f"
+ }
+}

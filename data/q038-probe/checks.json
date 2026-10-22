@@ -1,0 +1,64 @@
+{
+ "C1_total_probability": {
+  "first_count_1_C5": 0.9999999999999999,
+  "first_count_1_C8": 0.9999999999999984,
+  "first_count_2_C5": 0.9999999999999999,
+  "first_count_2_C8": 0.9999999999999989
+ },
+ "C1_ok": true,
+ "C3": {
+  "q_forecast_exact": 0.9155075058718676,
+  "q_likelihood_ratio": 0.915507505871868,
+  "abs_diff": 4.440892098500626e-16,
+  "q_mc": 0.914875,
+  "mc_z": 1.0136082038139247
+ },
+ "C3_ok": true,
+ "C4": {
+  "forward_7_future_replacement_identical": true,
+  "loeo_7_future_replacement_identical": true,
+  "loeo_7_loglik_change_under_event_parameters": 0.0,
+  "loeo_7_old_unseen_tails_censored_at_k": 10,
+  "forward_21_future_replacement_identical": true,
+  "loeo_21_future_replacement_identical": true,
+  "loeo_21_loglik_change_under_event_parameters": 0.0,
+  "loeo_21_old_unseen_tails_censored_at_k": 323,
+  "forward_38_future_replacement_identical": true,
+  "loeo_38_future_replacement_identical": true,
+  "loeo_38_loglik_change_under_event_parameters": 0.0,
+  "loeo_38_old_unseen_tails_censored_at_k": 926,
+  "forward_45_future_replacement_identical": true,
+  "loeo_45_future_replacement_identical": true,
+  "loeo_45_loglik_change_under_event_parameters": 0.0,
+  "loeo_45_old_unseen_tails_censored_at_k": 1228,
+  "forward_68_future_replacement_identical": true,
+  "loeo_68_future_replacement_identical": true,
+  "loeo_68_loglik_change_under_event_parameters": 0.0,
+  "loeo_68_old_unseen_tails_censored_at_k": 1880
+ },
+ "C4_ok": true,
+ "C5_max_z_generator_vs_likelihood": 1.9984088068259076,
+ "C5_ok": true,
+ "C2": {
+  "full": {
+   "python": -2750.743080354491,
+   "stan": -2750.7430803545053,
+   "abs_diff": 1.4097167877480388e-11,
+   "components": 400
+  },
+  "forward_38": {
+   "python": -2702.809019778464,
+   "stan": -2702.8090197784727,
+   "abs_diff": 8.640199666842818e-12,
+   "components": 400
+  },
+  "loeo_45": {
+   "python": -2735.2262317228488,
+   "stan": -2735.226231722863,
+   "abs_diff": 1.4097167877480388e-11,
+   "components": 400
+  }
+ },
+ "C2_ok": true,
+ "all_ok": true
+}
