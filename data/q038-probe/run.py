@@ -113,6 +113,38 @@ def fit(seed, threads=12, warmup=None, sampling=None, tag="fit", stan_file="mode
     return rec
 
 
+PARAMS = ("alpha1", "z_alpha", "s_alpha", "z_omega", "mu_omega", "s_omega", "beta_b", "beta_e", "z_delta", "tau", "gam",
+          "z_fam", "z_ord", "s_fam", "s_ord", "gd0", "gd", "z_b", "s_b", "z_nu", "s_nu")
+
+
+def tbench(seed, threads, grain):
+    """Seconds per gradient for one chain at THREADS threads and reduce_sum GRAIN (Codex 76/2215: measure before
+    simplifying). Fixed small step, tree depth <= 4, no adaptation: (wall_41 - wall_1) / (gradients_41 - gradients_1)
+    removes start-up and data-loading cost. Starts from the pilot fit's last draw with its adapted step and diagonal
+    metric, so trajectories run the full 15 leapfrog steps rather than diverging at once."""
+    D = core.load_design()
+    gen = load_data(seed)
+    data = core.stan_data(gen, core.components(gen, ("full",), D), D, grainsize=grain)
+    from cmdstanpy import from_csv
+    mdl = model()
+    pil = from_csv(str(OUT / f"fit_{seed}"))          # start in the typical set: last pilot draw, adapted step and metric
+    v = pil.stan_variables()
+    init = {k: (v[k][-1].tolist() if np.ndim(v[k][-1]) else float(v[k][-1])) for k in PARAMS}
+    walls, grads = [], []
+    for n in (1, 41):
+        t0 = time.time()
+        f = mdl.sample(data=data, chains=1, threads_per_chain=threads, seed=seed, iter_warmup=0, iter_sampling=n,
+                       adapt_engaged=False, step_size=float(pil.step_size[0]), metric={"inv_metric": pil.metric[0].tolist()},
+                       max_treedepth=4, inits=init, show_progress=False, output_dir=str(OUT / f"tbench_t{threads}_g{grain}_n{n}"))
+        walls.append(time.time() - t0)
+        grads.append(int(f.method_variables()["n_leapfrog__"].sum()))
+    sec = (walls[1] - walls[0]) / (grads[1] - grads[0])
+    rec = dict(seed=seed, threads=threads, grainsize=grain, walls=walls, gradients=grads, seconds_per_gradient=sec,
+               core_seconds_per_gradient=sec * threads, host=__import__("socket").gethostname())
+    (OUT / f"tbench_t{threads}_g{grain}.json").write_text(json.dumps(rec, indent=1) + "\n")
+    print(json.dumps(rec))
+
+
 def summarise():
     """Every attempted seed is accounted for: a seed without a result file is reported as such (Codex 76/2215)."""
     att = {s: json.loads((OUT / f"fit_{s}.json").read_text()) if (OUT / f"fit_{s}.json").exists() else None for s in SEEDS}
@@ -143,5 +175,7 @@ if __name__ == "__main__":
         fit(int(a[1]), int(a[2]) if len(a) > 2 else 12)
     elif cmd == "diag":
         fit(int(a[1]), int(a[3]), tag=f"diag_{a[2]}", stan_file=DIAG[a[2]][0], adapt_delta=DIAG[a[2]][1])
+    elif cmd == "tbench":
+        tbench(int(a[1]), int(a[2]), int(a[3]))
     elif cmd == "summarise":
         summarise()
