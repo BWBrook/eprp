@@ -6,7 +6,7 @@ Usage:
   python3 data_mirror.py figshare COLLECTION_ID|article/ARTICLE_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py wfs WFS_URL LAYER[,LAYER...] DEST --license TEXT
-  python3 data_mirror.py url DEST --license TEXT URL [URL ...]
+  python3 data_mirror.py url DEST --license TEXT [NAME::]URL [[NAME::]URL ...]
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
 
 Writes DEST/versions.tsv (every version the provider offers) and
@@ -298,8 +298,11 @@ def url_snapshot(urls, dest, licence, tool_sha):
     vdir = os.path.join(dest, "raw", f"{stamp}_url")
     os.makedirs(vdir, exist_ok=False)
     files = []
-    for u in urls:
-        target = os.path.join(vdir, urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(u).path)) or "download")
+    for spec in urls:
+        name, sep, u = spec.partition("::")
+        if not sep:
+            name, u = urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(spec).path)) or "download", spec
+        target = os.path.join(vdir, name)
         for attempt in range(6):
             try:
                 with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=600) as r, \
