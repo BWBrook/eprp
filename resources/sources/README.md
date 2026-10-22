@@ -165,8 +165,16 @@ the workflow when they generalise.
 - *Measure overlap at site level first.* It is cheap and decisive (NSB
   foraminifera are 95% inside Triton's sites); record-level matching needs
   harmonised taxonomy and can wait for a question that needs it.
-- *Live services die; deposits survive.* Both NSB's website and its Chronos
-  predecessor are gone, while the Zenodo snapshots remain. Prefer deposited
-  versions as the citable input.
+- *Live services die; deposits survive.* NSB's website went down with a
+  museum cyberattack in October 2023 and never returned; its Chronos
+  predecessor vanished earlier. The Zenodo snapshots, uploaded weeks after the
+  attack, are now the only route. Prefer deposited versions as the citable
+  input, and record each service's status with a date.
+- *Aggregator copies go stale.* GBIF still serves a 2016 copy of NSB, a third
+  smaller and without ages. Record such copies in the entry so nobody mistakes
+  them for the source.
+- *Run a lineage-and-literature scan alongside profiling.* It found the
+  outage's cause, the current R access route, documented critiques and four
+  downstream compilations; none of these was visible from the data.
 - *Zenodo serves about 0.2–0.3 MB/s per connection.* Fetch the newest version
   and checkpoints first, then let the full history download unattended.

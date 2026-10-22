@@ -21,9 +21,11 @@ access:
   licence: CC-BY-4.0 (Zenodo snapshots)
   routes:
     - {type: zenodo-snapshots, url: "https://doi.org/10.5281/zenodo.8238613", state: "372 versions, 2014-08-16 to 2023-06-05", checked: 2026-10-22}
-    - {type: website, url: "http://nsb-mfn-berlin.de", state: "no connection from WSL or deep-server", checked: 2026-10-22}
-    - {type: postgresql, url: "guest login on the MfN server (Renaudie et al. 2020, p. 25)", state: "not tested; depends on the live server", checked: 2026-10-22}
-  api: none
+    - {type: r-package, url: "chronosphere::fetch('neptune'); NSBcompanion 3.1 (github.com/plannapus/NSBcompanion)", state: "serves the Zenodo snapshots; not run here", checked: 2026-10-22}
+    - {type: gbif, url: "https://doi.org/10.15468/bvu6a8", state: "frozen pre-2015 copy, 500,808 records, no ages", checked: 2026-10-22}
+    - {type: website, url: "https://nsb.mfn-berlin.de", state: "offline since the October 2023 MfN cyberattack; host no longer resolves", checked: 2026-10-22}
+    - {type: postgresql, url: "guest login on the MfN server", state: "offline with the website", checked: 2026-10-22}
+  api: "none live; a beta age-model API (2022) went offline with the server"
 versioning:
   replay: exact
   notes: every snapshot ships a PostgreSQL dump, an SQLite copy and denormalised tables
@@ -33,7 +35,7 @@ mirror:
   state: latest complete 2026-10-22; remaining versions downloading
 lineage:
   upstream: [DSDP Initial Reports range charts (DSDP CD-ROM), ODP and IODP reports and Janus core tables, published range charts, Chronos Neptune (2002-2008)]
-  downstream: [Triton (108,339 of 541,846 presence records), Mikrotax occurrence summaries, PBDB query link (Chronos era)]
+  downstream: [Triton (108,339 of 541,846 presence records), BioDeepTime (609 time series), Mikrotax (Nannotax, pforams) occurrence plots, Uneptune (Cretaceous nannofossils, partly converted from Neptune), GBDB feed, WoRMS Polycystina names, GBIF (pre-2015 copy)]
 eprp_questions: [Q-007, Q-016]
 citation:
   - "Renaudie, J., Lazarus, D. B. & Diver, P. (2020). NSB (Neptune Sandbox Berlin): an expanded and improved database of marine planktonic microfossil data and deep-sea stratigraphy. Palaeontologia Electronica 23(1): a11. doi:10.26879/1032"
@@ -58,8 +60,10 @@ assignment. Reach for it for species-level diversity, origination and
 extinction, range and biogeography studies of open-ocean plankton, or to tie
 ocean-drilling stratigraphy to a common time scale. Its 372 dated full-database
 snapshots on Zenodo make any analysis exactly reproducible, a property PBDB
-lacks. The live service is unreachable and the last snapshot is from June 2023,
-so treat it as frozen.
+lacks. The live service has been offline since a cyberattack on the Museum für
+Naturkunde Berlin in October 2023, and nobody at the museum maintains it any
+more. The June 2023 snapshot is the de facto final version; treat NSB as
+frozen.
 
 ## Contents
 
@@ -165,7 +169,18 @@ Source: Renaudie et al. (2020), read in full, unless marked otherwise.
   sources were back-filled. The project has been unfunded and voluntary since
   2015. Snapshot counts show little growth after 2019: 768,057 occurrences in
   the paper (submitted September 2019) against 783,987 in June 2023 (+2.1%).
-  The last age-model revision in the database is dated 2023-01-21.
+  The last age-model revision in the database is dated 2023-01-21. The
+  website's last changelog entry (2022-03-08) added a Triton query page and a
+  beta age-model API.
+- **October 2023 onwards.** A cyberattack took the museum's servers offline
+  (MfN press release, 20 October 2023). The Wayback Machine's last good capture
+  of the site is 2023-09-25; by January 2024 it returned HTTP 503. Renaudie
+  uploaded the 372 snapshots to Zenodo in October–November 2023. In January
+  2025 he wrote that Lazarus retired in 2021, that he himself had left in
+  early 2023, and that the database had been handed to MARUM (Bremen) to
+  bring back online. No relaunch has appeared as of October 2026. Dowding et
+  al. (2026, *Nat. Ecol. Evol.*, doi:10.1038/s41559-026-02985-8) cite NSB's
+  loss as a case of under-funded single-maintainer infrastructure.
 
 The 2014-08-16 snapshot (500,756 occurrences, 42,029 samples, 11,777 names in
 the old taxonomy table) matches the paper's pre-renovation state (500,622,
@@ -173,8 +188,14 @@ the old taxonomy table) matches the paper's pre-renovation state (500,622,
 Berlin web era.
 
 **Downstream.** Triton (Fenton et al. 2021; 2023 update) takes 108,339 of its
-541,846 presence records (20%) directly from Neptune. Mikrotax draws
-occurrence summaries from NSB by SQL. See Overlap.
+541,846 presence records (20%) directly from Neptune; its paper calls Neptune
+"the core of our dataset". BioDeepTime (Smith et al. 2023) took 609 NSB time
+series (31,634 samples) queried in October 2022. Nannotax and pforams@mikrotax
+plot NSB occurrences per species. NSB fed GBDB and supplied WoRMS's Polycystina
+names. Uneptune (Zhang et al. 2026, *J. Micropalaeontol.* 45: 147), a Cretaceous
+nannofossil database three times the size of Neptune's Cretaceous content,
+was built partly from converted Neptune data. A GBIF dataset (MfN, 2013–2016)
+holds a frozen pre-2015 copy. See Overlap.
 
 ## Structure
 
@@ -257,12 +278,22 @@ rows = con.execute(open("resources/sources/nsb/occurrences.sql").read()).fetchal
 ```
 
 Deduplicate on `(sample_id, resolved_taxon_id)` before presence analyses (see
-Pitfalls). The R package NSBcompanion (github.com/plannapus/NSBcompanion)
-implements the same filters but expects a PostgreSQL connection, so it needs
-the dump restored locally while the live server is down.
+Pitfalls).
 
-**Live service.** The website and its SQL guest login did not respond on
-2026-10-22. No API has ever existed.
+**R.** `chronosphere::fetch("neptune")` serves the Zenodo snapshots by version
+(series `sqlite`, `occs`, `filtered`, `agemodels`). NSBcompanion 3.1 (May
+2025, MIT, doi:10.5281/zenodo.3408197) builds on it: `getNeptuneData()`
+applies the portal filters, and there are helpers for age models, synonymy,
+Pacman trimming, palaeocoordinates and age-scale conversion. Neither was run
+here.
+
+**GBIF.** Dataset doi:10.15468/bvu6a8 holds 500,808 records, a frozen copy
+matching the pre-2015 database, without ages or stratigraphic context. Do not
+use it as NSB.
+
+**Live service.** Offline since October 2023: the website, the PostgreSQL
+guest login and the beta age-model API (2022). On 2026-10-22 the host names no
+longer resolved.
 
 ## Strengths
 
@@ -276,8 +307,15 @@ the dump restored locally while the live server is down.
 - **Breadth across plankton groups.** Four major groups plus dinocysts from
   one set of drill holes on one chronology, so cross-group comparisons share
   sampling frame and age models.
-- **Documented lineage.** A 28-page description paper and source citations
-  for 87% of samples.
+- **Documented lineage and heavy use.** A 28-page description paper, source
+  citations for 87% of samples, and 149 publications on the maintainers' list
+  of works using or citing it, including diversity studies of diatoms
+  (Lazarus et al. 2014), radiolarians (Trubovitz et al. 2020,
+  doi:10.1038/s41467-020-18879-7) and four plankton groups (Jamson et al. 2022,
+  doi:10.1111/pala.12615), and community-novelty work (Pandolfi et al. 2020,
+  doi:10.1126/science.abb3996). Its age models underpin hiatus and
+  sedimentation compilations (Dutkiewicz et al. 2024,
+  doi:10.1038/s41467-024-46171-5).
 - **Small and fast.** The whole database is a 21 MB zip; full scans take
   seconds.
 
@@ -303,9 +341,10 @@ the dump restored locally while the live server is down.
    of 41,314 samples present in both, 28,397 (69%) changed age by more than
    0.01 Myr, 11,671 (28%) by more than 0.5 Myr, 7,178 (17%) by more than
    1 Myr and 948 (2.3%) by more than 5 Myr; 2,931 gained or lost an age
-   ([drift.tsv](profile/drift.tsv)). Some of this may reflect the 2015
-   adoption of GTS2012 as the default scale (inference); the year-end
-   snapshots will separate scale changes from model revisions. Pin a snapshot; never mix extracts from different versions or
+   ([drift.tsv](profile/drift.tsv)). Part of this is the time-scale change:
+   the website changelog records ages remapped from Berggren et al. (1995) to
+   GTS2012 on 2015-06-02. The year-end snapshots will separate that from
+   age-model revisions. Pin a snapshot; never mix extracts from different versions or
    from the defunct Chronos instance.
 5. **Age quality labels were messy before the renovation.** In the 2014-08-16
    snapshot the quality field holds about 30 free-text variants ("good",
@@ -320,15 +359,39 @@ the dump restored locally while the live server is down.
 8. **Uneven coverage.** Southern Ocean (2%) and high-latitude (above 60°,
    4%) material is thin; Cretaceous data are mostly nannofossils and
    foraminifera.
-9. **Frozen and unfunded.** No updates since June 2023 and no reachable
-   service. The newest drilling material is IODP Expedition 342 (2012);
-   only 52 IODP holes are included.
+9. **Frozen and unmaintained.** No updates since June 2023, no live service,
+   and no maintainer at the museum. The newest drilling material is IODP
+   Expedition 342 (2012); only 52 IODP holes are included.
 10. **Palaeocoordinates are single-model.** Seton et al. (2012) rotations
     from present hole positions; 7,221 samples (11.7%) have none.
 11. **Undocumented codes.** Taxon status `O`, sample status `c` and `w`,
     and qualifiers `abs`, `mis`, `pr`, `gr`, `rw` are not defined in the
     paper. The paper's own counts are internally inconsistent in places, for
-    example 767,600 against 768,057 occurrences.
+    example 767,600 against 768,057 occurrences. Published totals elsewhere
+    range from 500,808 to "over one million"; quote counts from a named
+    snapshot.
+
+**What the literature says** (source claims; read by our ecosystem scan):
+
+- *Age precision.* Spencer-Cervato (1999, doi:10.26879/99013): about 0.36 Myr
+  for Neogene and 0.66 Myr for Paleogene age models; two-thirds of holes hold
+  at least one hiatus, which pushes adjacent sample ages too old or too young.
+  Lazarus et al. (2014, doi:10.1371/journal.pone.0084857): mismatches are mostly
+  under 0.5 Myr but can exceed 1 Myr between low- and high-latitude sites, so
+  bins much finer than 0.5–1 Myr add little real resolution.
+- *Diversity reconstruction.* Renaudie & Lazarus (2013, doi:10.1666/12016):
+  subsampled NSB diversity recovers first-order trends but distorts detail;
+  studies relating diversity to palaeoceanographic change need taxonomically
+  comprehensive, quantitative data. Lloyd et al. (2012, doi:10.1666/11041.1):
+  raw foraminiferal diversity tracks sampling intensity.
+- *Outliers.* Lazarus, Weinkauf & Diver (2012, doi:10.1666/10067.1):
+  reworking, age-model error and taxonomic uncertainty displace a small
+  fraction of occurrences and extend ranges; Pacman trimming is their remedy.
+- *Sedimentation bias.* Renaudie & Lazarus (2025, doi:10.5194/bg-22-1929-2025):
+  drilled sedimentation rates fall systematically with age, so any metric
+  correlated with sedimentation rate inherits an age bias.
+- *Coverage.* Zhang et al. (2026): heavy weighting toward the modern;
+  Cretaceous content skewed to low latitudes and the Upper Cretaceous.
 
 ## Overlap with other sources
 
@@ -340,12 +403,21 @@ the dump restored locally while the live server is down.
   plus non-drilling cores. For foraminifera Triton largely contains NSB and
   extends it, on GTS2020 with its own taxonomy. Never pool the two without
   deduplication. Record-level identity was not tested.
-- **PBDB.** No bulk ingestion is documented; the link was a query page from
-  the Chronos era. Not measured.
-- **Mikrotax.** Shares the taxonomic lineage (the IODP Taxonomic Name List)
-  and shows NSB occurrence summaries.
-- **Nannofossils, radiolarians, diatoms and dinocysts** have no comparable
-  open compilation we know of. For these groups NSB is the primary source.
+  Triton's own figures agree: Neptune supplies 108,339 non-zero records from
+  164 sites; NSB's website reported in 2023 that 21.2% of Triton occurrences
+  were already in NSB, which is essentially Neptune's own share.
+- **BioDeepTime** (Zenodo 8154672, CC-BY 4.0) holds 609 NSB time series and
+  822 Triton series; NSB foraminifera can therefore enter it twice.
+- **GBIF** holds a pre-2015 copy (500,808 records) without ages.
+- **PBDB.** No ingestion found: the Chronos-era link was a PBDB-hosted query
+  front end, and a name search of PBDB finds no Neptune reference. The
+  separate eODP project (doi:10.1029/2022gc010655) loads ocean-drilling
+  occurrences into PBDB and Macrostrat from the original reports; overlap with
+  NSB there is likely but unmeasured.
+- **Mikrotax and Uneptune.** Share the taxonomic lineage (the IODP Taxonomic
+  Name List). Uneptune supersedes Neptune for Cretaceous nannofossils.
+- **Radiolarians, diatoms, dinocysts and Cenozoic nannofossils** have no
+  comparable open compilation we know of. For these NSB is the primary source.
 
 ## EPRP relevance
 
@@ -362,10 +434,23 @@ the dump restored locally while the live server is down.
 
 ## Citation and terms
 
-Cite the paper and the specific Zenodo version record used (front matter).
-The Zenodo snapshots are CC-BY 4.0. The paper itself is CC BY-NC-SA 4.0; the
-website footer in 2019 screenshots showed CC BY-SA. Neither applies to the
-deposited snapshots, which carry their own licence.
+Cite the paper, which the website named as the database citation, and the
+specific Zenodo version record used (front matter). Renaudie & Lazarus (2025)
+cite the 2023-06-05 record, 10.5281/zenodo.10063218. If a derived dataset
+leans on NSB through Triton, Triton asks that Neptune be cited too.
+
+The website said NSB "is free to use … The only obligation is to cite the
+database properly". Licence labels differ by object:
+
+| Object | Licence |
+| --- | --- |
+| Zenodo snapshots (the input we use) | CC-BY 4.0 |
+| GBIF copy | CC BY 4.0 |
+| Website footer badge (2021–2023) | CC BY-SA 4.0, on the site template |
+| Description paper | CC BY-NC-SA 4.0 |
+| NSBcompanion | MIT |
+
+The deposited snapshots carry their own licence, which governs our mirror.
 
 ## Verification log
 
@@ -381,4 +466,9 @@ deposited snapshots, which carry their own licence.
 | 2026-10-22 | Sample-age drift 2014-08-16 → 2023-06-05 | checked |
 | 2026-10-22 | Triton source composition and site-level overlap, from EPRP's held Triton copy | checked |
 | 2026-10-22 | History, schema relations, filter definitions, quality classes, limitations | source claim (Renaudie et al. 2020, read in full) |
+| 2026-10-22 | Offline since October 2023 cyberattack; last good capture 2023-09-25, 503 by 2024-01-22; MARUM handover | source claim (MfN release; Wayback; Renaudie blog 2023-11-02, 2025-01-31, 2025-05-22; Dowding et al. 2026) |
+| 2026-10-22 | chronosphere and NSBcompanion 3.1 serve the Zenodo snapshots | source claim (package code and pages read; not run) |
+| 2026-10-22 | GBIF copy: 500,808 records, CC BY 4.0, modified 2016 | checked (GBIF API) |
+| 2026-10-22 | Downstream uses, published critiques, website terms and changelog | source claim (papers and archived pages read by the ecosystem scan) |
+| 2026-10-22 | GTS2012 remap on 2015-06-02 | source claim (archived website changelog) |
 | 2026-10-22 | `DN` = dinocysts; `program` codes C, M, R | checked (inferred from genera and leg ranges) |
