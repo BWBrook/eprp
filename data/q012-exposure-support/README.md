@@ -127,6 +127,28 @@ after Codex's check):
 - **Sampling geography is uneven:** 34 to 4,372 sites per bin. Occupied
   latitudes partly reflect where cores were drilled.
 
+## Known input issues (22 October 2026, open)
+
+The side session's Triton catalogue work (board 76/2201; evidence on branch
+`worktree-side-work` at `ebcee43`, `resources/sources/triton/`) found two
+input defects. Both must be settled before E enters an empirical fit.
+
+- **Duplicates.** The 2023 file was not deduplicated. 16,256 cross-source
+  groups are true duplicates. The conservative recipe
+  (`triton_dedup.R`, cross-source copies with a recorded depth only) removes
+  16,260 rows.
+  - Rerunning `build.R` on the deduplicated file leaves Jaccard and coverage
+    robust.
+  - E changes in 1,454 of 2,267 lineage-bins, 423 of them by at least 1°.
+  - 8 `E_class` and 8 E-systematic values flip, and so do 2 `used_systematic`
+    and 2 `used_perbin` values. The 98 systematic contrasts above are
+    therefore not final.
+  - Per-bin site counts are inflated because hole IDs are scoped to one
+    source.
+- **Mixed plate models.** The 108,339 Neptune-sourced rows carry NSB's own
+  Seton et al. (2012) palaeolatitudes and NSB's 2018–19 ages. All other rows
+  use Matthews et al. (2016) at whole-Ma ages. E pools both models.
+
 ## Reading
 
 - The measured-exposure adjustment (R3m) has a real lever in the model's
