@@ -229,6 +229,26 @@ the workflow when they generalise.
 - *A data paper's counts may not match its deposit.* Reconcile them and
   report the difference rather than quoting the paper.
 
+**FRED (registered access, 22 October 2026; [entry](fred/README.md)).**
+
+- *A registered source still gets a full entry.* Contents, provenance, terms
+  and a step-by-step access recipe are all documentable from public pages,
+  the manual, the custodian's metadata and the description paper. What it
+  cannot get is a profile; counts come from the provider, dated.
+- *Look behind the map.* Public web maps often sit on open WFS/WMS layers
+  that expose more than the stated public view (FRED's gives locality text
+  for all 105,492 localities). Record such routes, but do not harvest until
+  the terms are clear.
+- *Licence signals conflict across layers.* A service-wide CC-BY header and
+  a restricted dataset classification can both apply. Resolving it is a
+  question for the custodian, which is an outward-facing step for Barry.
+- *Measure overlap through stable identifiers.* FR numbers in PBDB
+  collection names gave a measured overlap (about 2% of localities, half of
+  PBDB's New Zealand occurrences) without any FRED access.
+- *Registration is Barry's call.* Accounts carry obligations (research-only
+  use, contribution, inviting originators); an agent should not register
+  on his behalf without his say.
+
 **Both pilots.**
 
 - *Profile many versions; mirror few.* The year-end series was worth
