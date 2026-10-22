@@ -1,0 +1,19 @@
+{
+ "laptop_result": "data/q012-pilot/collapsed_oracle_results_run2.json",
+ "laptop_sha256": "d74892826d051616b222db22136f1f214075380141a97ce1ecaa20d8c1565f89",
+ "laptop_wall_seconds": 10819.893334627151,
+ "deepserver_result": "data/q012-pilot/collapsed_oracle_results_run2_deepserver.json",
+ "deepserver_sha256": "8deeacdc5630a88aea34ed06878927a286531b7a2bc34d5590a4ce99e8f9ee27",
+ "deepserver_wall_seconds": 4239.227972984314,
+ "compared_scalar_leaves_excluding_timing_and_rss": 1639,
+ "differing": 0,
+ "code_commit": "8962871 (both hosts; deep-server checkout at d566f53 contains the same collapsed_oracle.py and pilot.py)",
+ "deepserver_environment": [
+  "deep-server",
+  "d566f536f5eae86f7b1fbdcb4cbe99e95a5c955e",
+  "64",
+  "3.12.3 2.1.3 1.14.1"
+ ],
+ "laptop_environment": "laptop 8962871211034c165f20bd3bc7adf49a588a1b52 16",
+ "note": "Authoritative run-2 record: the laptop result; the deep-server result is a bitwise replicate. Interrupted attempts (21 Oct evening; earlier) produced no results and are not evidence."
+}
