@@ -381,5 +381,167 @@ def benchmark():
     print(json.dumps(out, indent=1, default=float))
 
 
+# ---------------------------------------------------------------- the frozen batch (p11_fixedpoint.md section 6)
+BIG = "2-5-7-8-10-11-14"
+R1_GRAD_POINTS = ("central0", "high_rho_9707", "c1_failing", "holdout_c1f_sigma20", "holdout_9707_sigma8",
+                  "holdout_c4f_sigma15")
+R2_SETTINGS = {"n200_L10": (200, 50.0), "n400_L10": (400, 50.0), "n400_L14": (400, 70.0)}
+WALL_LIMIT = 14 * 3600
+RESULTS = HERE / "p11_fixedpoint_run.jsonl"
+SUMMARY = HERE / "p11_fixedpoint_results.json"
+TOL = dict(O.TOL, interpolation_value=1e-6, interpolation_deriv=1e-5)
+
+
+def tasks():
+    out = []
+    for name in json.loads(BANK.read_text()):
+        if name in R1_GRAD_POINTS:
+            out += [("R1big", name, j) for j in range(35)]
+        out += [("R1big", name, "base"), ("R2", name, "n400_L10"), ("R2", name, "n400_L14")]
+        out += [("cand", name, s) for s in SETTINGS] + [("R1chain", name, None), ("R2", name, "n200_L10"), ("ident", name, None)]
+    return out
+
+
+def _key(r):
+    return f"{r[0]}|{r[1]}|{r[2]}"
+
+
+def _lists(d):
+    return {k: [float(x) for x in v] for k, v in d.items()}
+
+
+def run_task(t):
+    kind, name, arg = t
+    p = load_bank()[name]
+    u0 = O.p_to_u(p)
+    rec = dict(key=_key(t), kind=kind, point=name, arg=arg, host=__import__("socket").gethostname())
+    t0 = time.perf_counter()
+    if time.time() > float(__import__("os").environ.get("P11_DEADLINE", "inf")):
+        rec.update(skipped="execution ceiling reached before start")
+        return rec
+    try:
+        if kind == "ident":
+            rec["I1_unit_max_abs"] = max(abs(v) for s in ("primary", "resolution") for v in trees_log(p, "unit", s).values())
+            rec["I2"] = selection_identity(p)
+        elif kind == "cand":
+            base, g, sec = fd_trees(lambda u: trees_log(O.u_to_p(u), "full", arg), u0)
+            rec.update(per_tree=base, grad=_lists(g), **sec)
+            if arg == "primary":
+                lp, glp = O.grad(lambda u: log_pi_p11(O.u_to_p(u)), u0)
+                rec.update(log_pi=lp, log_pi_grad=[float(x) for x in glp])
+        elif kind == "R2":
+            n, dl = R2_SETTINGS[arg]
+            box = O.ref_box(p, "C_chain_4_9_12", "full", dl)
+            v, g = O.grad(lambda u: O.reference(O.u_to_p(u), "C_chain_4_9_12", box, "full", n), u0)
+            rec.update(value=v, grad=[float(x) for x in g])
+        elif kind == "R1chain":
+            base, g, sec = fd_trees(lambda u: trees_log(O.u_to_p(u), "full", "primary", exact=True, only={CHAIN}), u0)
+            rec.update(value=base[CHAIN], grad=[float(x) for x in g[CHAIN]], **sec)
+        elif kind == "R1big":
+            f = lambda u: trees_log(O.u_to_p(u), "full", "primary", exact=True, only={BIG})[BIG]
+            if arg == "base":
+                rec["value"] = f(u0)
+            else:
+                e = np.zeros(len(u0)); e[arg] = O.H_FD
+                rec.update(plus=f(u0 + e), minus=f(u0 - e))
+    except Unresolved as e:
+        rec["unresolved"] = str(e)
+    rec["seconds"] = time.perf_counter() - t0
+    rec["maxrss_kb"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    return rec
+
+
+def run():
+    import os
+    done = set()
+    if RESULTS.exists():
+        done = {json.loads(l)["key"] for l in RESULTS.read_text().splitlines() if l.strip() and "skipped" not in json.loads(l)}
+    todo = [t for t in tasks() if _key(t) not in done]
+    os.environ["P11_DEADLINE"] = str(time.time() + WALL_LIMIT)
+    nw = O.pilot.workers(len(todo))
+    print(f"{len(todo)} tasks ({len(done)} already done), {nw} workers, deadline {WALL_LIMIT / 3600:.0f} h", flush=True)
+    t0 = time.time()
+    with mp.get_context("spawn").Pool(nw) as pool, RESULTS.open("a") as fh:
+        for i, rec in enumerate(pool.imap_unordered(run_task, todo, chunksize=1), 1):
+            fh.write(json.dumps(rec, default=float) + "\n"); fh.flush()
+            print(f"{i}/{len(todo)} {rec['key']} {rec.get('seconds', 0):.0f}s {rec.get('unresolved', rec.get('skipped', ''))}"
+                  f" elapsed {(time.time() - t0) / 3600:.2f} h", flush=True)
+
+
+def assemble():
+    recs = {}
+    for l in RESULTS.read_text().splitlines():
+        r = json.loads(l)
+        if "skipped" not in r:
+            recs[r["key"]] = r
+    bank_ = json.loads(BANK.read_text())
+    rows, cost = [], dict(core_seconds=sum(r["seconds"] for r in recs.values()), tasks=len(recs),
+                          expected_tasks=len(tasks()), hosts=sorted({r["host"] for r in recs.values()}))
+    for name in bank_:
+        g = lambda kind, arg: recs.get(f"{kind}|{name}|{arg}")
+        row = dict(point=name, sigma=bank_[name]["sigma"], rho=bank_[name]["rho"])
+        unres = [r["key"] + ": " + r["unresolved"] for k, r in recs.items() if r["point"] == name and "unresolved" in r]
+        missing = [_key(t) for t in tasks() if t[1] == name and _key(t) not in recs]
+        row.update(unresolved=unres, missing=missing)
+        c = {s: g("cand", s) for s in SETTINGS}
+        if all(c.values()) and not any("unresolved" in v for v in c.values()):
+            tot = {s: (sum(c[s]["per_tree"].values()), np.sum([c[s]["grad"][k] for k in c[s]["per_tree"]], axis=0)) for s in SETTINGS}
+            pv, pg = tot["primary"]
+            row["log_numerator"] = pv
+            row["log_likelihood_collapsed"] = pv - c["primary"]["log_pi"]
+            row["self_resolution"] = (abs(tot["resolution"][0] - pv), float(np.max(np.abs(tot["resolution"][1] - pg))))
+            row["self_domain"] = (abs(tot["domain"][0] - pv), float(np.max(np.abs(tot["domain"][1] - pg))))
+            row["candidate_seconds"] = {s: dict(value=c[s]["value_seconds"], gradient=c[s]["gradient_seconds"]) for s in SETTINGS}
+            cg = {k: np.array(v) for k, v in c["primary"]["grad"].items()}
+            cv = c["primary"]["per_tree"]
+            r1c = g("R1chain", None)
+            if r1c and "unresolved" not in r1c:
+                row["R1_chain"] = (abs(r1c["value"] - cv[CHAIN]), float(np.max(np.abs(np.array(r1c["grad"]) - cg[CHAIN]))))
+            r1b = g("R1big", "base")
+            if r1b and "unresolved" not in r1b:
+                row["R1_big_value"] = abs(r1b["value"] - cv[BIG])
+                co = [g("R1big", j) for j in range(35)]
+                if name in R1_GRAD_POINTS and all(co) and not any("unresolved" in x for x in co):
+                    gr = np.array([(x["plus"] - x["minus"]) / (2 * O.H_FD) for x in co])
+                    d = np.abs(gr - cg[BIG])
+                    row["R1_big_deriv"] = float(np.max(d))
+                    row["R1_big_worst_coordinate"] = O.NAMES[int(np.argmax(d))]
+            r2 = {k: g("R2", k) for k in R2_SETTINGS}
+            if all(r2.values()) and not any("unresolved" in v for v in r2.values()):
+                rv, rg = r2["n400_L10"]["value"], np.array(r2["n400_L10"]["grad"])
+                rres = (abs(r2["n200_L10"]["value"] - rv), float(np.max(np.abs(np.array(r2["n200_L10"]["grad"]) - rg))))
+                rdom = (abs(r2["n400_L14"]["value"] - rv), float(np.max(np.abs(np.array(r2["n400_L14"]["grad"]) - rg))))
+                row["R2_resolution"], row["R2_domain"] = rres, rdom
+                row["R2_qualified"] = bool(rres[0] <= TOL["self_value"] and rres[1] <= TOL["self_deriv"]
+                                           and rdom[0] <= TOL["self_value"] and rdom[1] <= TOL["self_deriv"])
+                row["chain_vs_R2"] = (abs(cv[CHAIN] - rv), float(np.max(np.abs(cg[CHAIN] - rg))))
+        idn = g("ident", None)
+        if idn and "unresolved" not in idn:
+            row["I1"], row["I2"] = idn["I1_unit_max_abs"], idn["I2"]
+        ok = lambda pair, tv, td: pair[0] <= tv and pair[1] <= td
+        checks = dict(
+            self=("self_resolution" in row and ok(row["self_resolution"], TOL["self_value"], TOL["self_deriv"])
+                  and ok(row["self_domain"], TOL["self_value"], TOL["self_deriv"])),
+            interpolation=("R1_chain" in row and "R1_big_value" in row
+                           and ok(row["R1_chain"], TOL["interpolation_value"], TOL["interpolation_deriv"])
+                           and row["R1_big_value"] <= TOL["interpolation_value"]
+                           and (name not in R1_GRAD_POINTS or row.get("R1_big_deriv", math.inf) <= TOL["interpolation_deriv"])),
+            identities=("I1" in row and row["I1"] <= TOL["unit"] and row["I2"]["ref_qualified"]
+                        and abs(row["I2"]["selection_minus_ref"]) <= TOL["selection"]))
+        row["checks"] = checks
+        row["R2_status"] = ("not run" if "R2_qualified" not in row else "reference-unresolved" if not row["R2_qualified"]
+                            else "pass" if ok(row["chain_vs_R2"], TOL["value"], TOL["deriv"]) else "fail")
+        row["status"] = ("unresolved" if unres or missing else "pass" if all(checks.values())
+                         else "interpolation fail" if not checks["interpolation"] else "fail")
+        rows.append(row)
+    out = dict(spec="p11_fixedpoint.md with Amendments 1-2 and section 6", tolerances=TOL, r1_gradient_points=R1_GRAD_POINTS,
+               rows=rows, status_counts={s: sum(r["status"] == s for r in rows) for s in sorted({r["status"] for r in rows})},
+               r2_counts={s: sum(r["R2_status"] == s for r in rows) for s in sorted({r["R2_status"] for r in rows})}, cost=cost)
+    SUMMARY.write_text(json.dumps(out, indent=1, default=float) + "\n")
+    print(json.dumps({k: v for k, v in out.items() if k != "rows"}, indent=1, default=float))
+    for r in rows:
+        print(r["point"], r["status"], r["R2_status"], {k: v for k, v in r["checks"].items() if not v}, r["unresolved"][:2])
+
+
 if __name__ == "__main__":
-    {"bank": bank, "fixtures": fixtures, "benchmark": benchmark}[ARGS[0]]()
+    {"bank": bank, "fixtures": fixtures, "benchmark": benchmark, "run": run, "assemble": assemble}[ARGS[0]]()
