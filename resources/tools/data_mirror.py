@@ -3,8 +3,9 @@
 
 Usage:
   python3 data_mirror.py zenodo RECORD_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
-  python3 data_mirror.py figshare COLLECTION_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
+  python3 data_mirror.py figshare COLLECTION_ID|article/ARTICLE_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
+  python3 data_mirror.py wfs WFS_URL LAYER[,LAYER...] DEST --license TEXT
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
 
 Writes DEST/versions.tsv (every version the provider offers) and
@@ -15,7 +16,10 @@ version_dirs are <version>_<record>; Figshare ones are <article-title>_v<N>_<art
 one per version of every article in the collection; GitHub ones are
 <commit-date>_<sha10>, one per commit on the default branch. Files are verified
 against the provider's size and checksum (md5, or the blob hash for GitHub),
-hashed with sha256, then made read-only.
+hashed with sha256, then made read-only. A live WFS has no versions: each `wfs`
+run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
+(GeoServer outputFormat=csv) and its schema; the row count must equal the
+server's numberMatched, and DEST/versions.tsv lists all snapshots.
 Interrupted downloads resume from their .part files and completed versions are
 skipped. verify re-hashes mirrored files against their manifests. Standard
 library only.
@@ -97,12 +101,15 @@ def zenodo_versions(record_id):
     return sorted(out, key=lambda r: (r["publication_date"], r["record"]))
 
 
-def figshare_versions(collection_id):
+def figshare_versions(record_id):
     api = "https://api.figshare.com/v2"
-    collection = get_json(f"{api}/collections/{collection_id}")
-    articles = get_json(f"{api}/collections/{collection_id}/articles?page_size=1000")
-    if len(articles) != collection["articles_count"]:
-        raise RuntimeError(f"index incomplete: {len(articles)} of {collection['articles_count']} articles")
+    if record_id.startswith("article/"):
+        collection, articles = {}, [{"id": int(record_id.split("/", 1)[1])}]
+    else:
+        collection = get_json(f"{api}/collections/{record_id}")
+        articles = get_json(f"{api}/collections/{record_id}/articles?page_size=1000")
+        if len(articles) != collection["articles_count"]:
+            raise RuntimeError(f"index incomplete: {len(articles)} of {collection['articles_count']} articles")
     out = []
     for a in articles:
         for v in get_json(f"{api}/articles/{a['id']}/versions"):
@@ -248,6 +255,54 @@ def mirror_version(r, raw_root, tool_sha):
     return True
 
 
+def wfs_snapshot(url, layers, dest, licence, tool_sha):
+    import csv
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H%MZ")
+    vdir = os.path.join(dest, "raw", f"{stamp}_wfs")
+    os.makedirs(vdir, exist_ok=False)
+    files, counts = [], {}
+    for layer in layers:
+        q = f"{url}?service=WFS&version=2.0.0&request=GetFeature&typeNames={urllib.parse.quote(layer)}"
+        with urllib.request.urlopen(urllib.request.Request(q + "&resultType=hits", headers={"User-Agent": UA}), timeout=120) as r:
+            head = r.read().decode("utf-8", "replace")
+        matched = int(re.search(r'numberMatched="(\d+)"', head).group(1))
+        served = re.search(r'timeStamp="([^"]+)"', head)
+        name = layer.split(":")[-1]
+        for kind, suffix, query in (("data", ".csv", q + "&outputFormat=csv"),
+                                    ("schema", "_schema.xml", f"{url}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames={urllib.parse.quote(layer)}")):
+            target = os.path.join(vdir, name + suffix)
+            with urllib.request.urlopen(urllib.request.Request(query, headers={"User-Agent": UA}), timeout=600) as r, \
+                    open(target, "wb") as out:
+                while chunk := r.read(1 << 20):
+                    out.write(chunk)
+            if kind == "data":
+                with open(target, newline="", encoding="utf-8", errors="replace") as f:
+                    rows = sum(1 for _ in csv.reader(f)) - 1
+                if rows != matched:
+                    raise IOError(f"{layer}: {rows} CSV rows but numberMatched {matched}")
+                counts[layer] = {"numberMatched": matched, "server_timeStamp": served.group(1) if served else None}
+            os.chmod(target, 0o444)
+            files.append({"key": os.path.basename(target), "size": os.path.getsize(target), "checksum": "none (live service)",
+                          "sha256": hash_file(target, "sha256")[0], "url": query})
+        print(f"{layer}: {matched} features", flush=True)
+    manifest = {"provider": "wfs", "record": url, "version": stamp, "layers": counts, "license": licence,
+                "files": files, "retrieved_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                "tool": {"name": "data_mirror.py", "sha256": tool_sha}}
+    with open(os.path.join(vdir, "MANIFEST.json"), "w") as f:
+        json.dump(manifest, f, indent=2)
+    os.chmod(os.path.join(vdir, "MANIFEST.json"), 0o444)
+    os.chmod(vdir, 0o555)
+    snapshots = []
+    for v in sorted(os.listdir(os.path.join(dest, "raw"))):
+        mpath = os.path.join(dest, "raw", v, "MANIFEST.json")
+        if v.endswith("_wfs") and os.path.exists(mpath):
+            m = json.load(open(mpath))
+            snapshots.append({"dir": v, "version": m["version"], "record": m["record"], "doi": None,
+                              "publication_date": m["retrieved_utc"], "license": m["license"],
+                              "files": [{"key": x["key"], "size": x["size"], "checksum": "sha256:" + x["sha256"]} for x in m["files"]]})
+    write_index(snapshots, os.path.join(dest, "versions.tsv"))
+
+
 def verify(raw_root, only):
     bad = 0
     for v in sorted(os.listdir(raw_root)):
@@ -271,6 +326,11 @@ def main():
         p.add_argument("--only", nargs="*", default=None, help="version_dir names to fetch")
         p.add_argument("--latest", action="store_true", help="fetch the newest version of each record")
         p.add_argument("--index-only", action="store_true")
+    p = sub.add_parser("wfs")
+    p.add_argument("wfs_url")
+    p.add_argument("layers")
+    p.add_argument("dest")
+    p.add_argument("--license", required=True, help="licence as stated by the provider (a WFS carries none)")
     p = sub.add_parser("verify")
     p.add_argument("dest")
     p.add_argument("--only", nargs="*", default=None)
@@ -282,6 +342,10 @@ def main():
         return 1 if bad else 0
     with open(__file__, "rb") as f:
         tool_sha = hashlib.sha256(f.read()).hexdigest()
+    if a.command == "wfs":
+        os.makedirs(raw_root, exist_ok=True)
+        wfs_snapshot(a.wfs_url, a.layers.split(","), a.dest, a.license, tool_sha)
+        return 0
     os.makedirs(raw_root, exist_ok=True)
     lock = open(os.path.join(a.dest, ".mirror.lock"), "w")
     try:
