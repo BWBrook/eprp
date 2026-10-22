@@ -1,0 +1,131 @@
+table	metric	key	value
+apc	rows		113869
+apc	by:taxonomicStatus	taxonomic synonym	36202
+apc	by:taxonomicStatus	accepted	34577
+apc	by:taxonomicStatus	nomenclatural synonym	24754
+apc	by:taxonomicStatus	misapplied	5254
+apc	by:taxonomicStatus	excluded	3759
+apc	by:taxonomicStatus	orthographic variant	3650
+apc	by:taxonomicStatus	pro parte misapplied	2679
+apc	by:taxonomicStatus	basionym	1284
+apc	by:nameType	scientific	95507
+apc	by:nameType	phrase name	11040
+apc	by:nameType	autonym	6133
+apc	by:nameType	named hybrid	614
+apc	by:nameType	hybrid formula parents known	517
+apc	by:nameType	intergrade	53
+apc	by:nameType	named hybrid autonym	4
+apc	by:nameType	cultivar	1
+apc	by:license	http://creativecommons.org/licenses/by/3.0/	113869
+apc	accepted		34577
+apc	accepted_by:taxonRank	Species	26726
+apc	accepted_by:taxonRank	Genus	3114
+apc	accepted_by:taxonRank	Subspecies	2968
+apc	accepted_by:taxonRank	Variety	1280
+apc	accepted_by:taxonRank	Family	309
+apc	accepted_by:taxonRank	Form	81
+apc	max_modified		2026-10-21 17:47:19.038338+11
+epbc	species_rows		2222
+epbc	by:status	Endangered	870
+epbc	by:status	Vulnerable	784
+epbc	by:status	Critically Endangered	458
+epbc	by:status	Extinct	102
+epbc	by:status	Conservation Dependent	7
+epbc	by:status	Extinct in the wild	1
+epbc	extinct_by:class	Mammalia	39
+epbc	extinct_by:class	Aves	22
+epbc	extinct_by:class	Magnoliopsida	19
+epbc	extinct_by:class	Liliopsida	7
+epbc	extinct_by:class	Polypodiatae	5
+epbc	extinct_by:class	Amphibia	4
+epbc	extinct_by:class	Lycopodopiatae	2
+epbc	extinct_by:class	Reptilia	1
+epbc	extinct_by:class	Oligochaeta	1
+epbc	extinct_by:class	Psilotatae	1
+epbc	extinct_by:class	Rhodophyceae	1
+epbc	date_extracted		2026-Aug-28
+epbc	rows_with_different_current_name		117
+epbc	extinct_mammal_entries_by_words		2 words 34; 3 words 5
+avonet	sheet_rows	Metadata	82
+avonet	sheet_rows	AVONET1_BirdLife	11010
+avonet	sheet_rows	AVONET2_eBird	10662
+avonet	sheet_rows	AVONET3_BirdTree	9994
+avonet	sheet_rows	Pigot2020_BirdTree	9994
+avonet	sheet_rows	AVONET_Raw_Data	90372
+avonet	sheet_rows	Mass_Sources	43
+avonet	sheet_rows	Data_Sources	84
+avonet	sheet_rows	Measurers	155
+avonet	sheet_rows	BirdLife-eBird crosswalk	11353
+avonet	sheet_rows	BirdLife–BirdTree crosswalk	11292
+combine	rows		6263
+combine	columns		60
+combine	iucn2020_not_recognised		273
+combine	phylacine_not_recognised		160
+combine	distinct_phylacine_binomials		5831
+combine	by:biogeographical_realm	Neotropical	1544
+combine	by:biogeographical_realm	Afrotropical	1282
+combine	by:biogeographical_realm	Indomalayan	799
+combine	by:biogeographical_realm	Australasian	712
+combine	by:biogeographical_realm	Palearctic	592
+combine	by:biogeographical_realm	NA	514
+combine	by:biogeographical_realm	Nearctic	303
+combine	by:biogeographical_realm	Indomalayan, Palearctic	159
+combine	by:biogeographical_realm	Nearctic, Neotropical	124
+combine	by:biogeographical_realm	Afrotropical, Palearctic	54
+phylacine	rows		5831
+phylacine	by:IUCN.Status.1.2	LC	3157
+phylacine	by:IUCN.Status.1.2	DD	777
+phylacine	by:IUCN.Status.1.2	VU	525
+phylacine	by:IUCN.Status.1.2	EN	464
+phylacine	by:IUCN.Status.1.2	NT	350
+phylacine	by:IUCN.Status.1.2	EP	270
+phylacine	by:IUCN.Status.1.2	CR	204
+phylacine	by:IUCN.Status.1.2	EX	82
+phylacine	by:IUCN.Status.1.2	EW	2
+combine	australasian_species		786
+combine	australasian_species_in_phylacine		785
+cross	epbc_extinct_mammal_binomials		34
+cross	epbc_extinct_mammal_unmatched	Chaeropus yirratji	no candidate
+cross	epbc_extinct_mammal_unmatched	Notamacropus greyi	Macropus_greyi EX
+cross	epbc_extinct_mammal_living_in_phylacine	Nyctophilus howensis	Nyctophilus_howensis CR
+cross	epbc_extinct_mammal_unmatched	Perameles fasciata	no candidate
+cross	epbc_extinct_mammal_unmatched	Perameles myosuros	no candidate
+cross	epbc_extinct_mammal_unmatched	Perameles notina	no candidate
+cross	epbc_extinct_mammal_unmatched	Perameles papillon	no candidate
+cross	epbc_extinct_mammal_living_in_phylacine	Pipistrellus murrayi	Pipistrellus_murrayi CR
+cross	epbc_extinct_mammal_unmatched	Pseudomys auritus	no candidate
+cross	epbc_extinct_mammal_by:match	exact	27
+cross	epbc_extinct_mammal_by:match	unmatched	7
+cross	epbc_extinct_mammal_matched_by:IUCN.Status.1.2	EX	25
+cross	epbc_extinct_mammal_matched_by:IUCN.Status.1.2	CR	2
+cross	fossahul_rows_by_status		Extant 6060; ? 3035; Extinct 2480; Extinct/Extant 280; Exinct 17; (blank) 1
+cross	fossahul_extinct_mammal_binomials		64
+cross	fossahul_extinct_mammal_unmatched	Antechinus puteus	no candidate
+cross	fossahul_extinct_mammal_unmatched	Bohra illuminata	no candidate
+cross	fossahul_extinct_mammal_unmatched	Bohra nullarbora	no candidate
+cross	fossahul_extinct_mammal_unmatched	Congruus kitcheneri	Wallabia_kitcheneri EP
+cross	fossahul_extinct_mammal_living_in_phylacine	Dasyurus viverrinus	Dasyurus_viverrinus EN
+cross	fossahul_extinct_mammal_living_in_phylacine	Dendrolagus goodfellowi	Dendrolagus_goodfellowi EN
+cross	fossahul_extinct_mammal_unmatched	Dendrolagus noibano	no candidate
+cross	fossahul_extinct_mammal_living_in_phylacine	Macropus dorsalis	Macropus_dorsalis LC
+cross	fossahul_extinct_mammal_unmatched	Macropus siva	no candidate
+cross	fossahul_extinct_mammal_unmatched	Macropus thor	no candidate
+cross	fossahul_extinct_mammal_unmatched	Nototherium inerme	no candidate
+cross	fossahul_extinct_mammal_unmatched	Nototherium trilobus	Zygomaturus_trilobus EP
+cross	fossahul_extinct_mammal_unmatched	Palorchestes azael	Palorchestes_azeal EP
+cross	fossahul_extinct_mammal_unmatched	Palorchestes parvus	no candidate
+cross	fossahul_extinct_mammal_unmatched	Palorchestes pickeringi	no candidate
+cross	fossahul_extinct_mammal_unmatched	Perameles sobbei	no candidate
+cross	fossahul_extinct_mammal_unmatched	Phascolarctos stirtoni	no candidate
+cross	fossahul_extinct_mammal_unmatched	Protemnodon devisi	no candidate
+cross	fossahul_extinct_mammal_unmatched	Pseudomys auritus	no candidate
+cross	fossahul_extinct_mammal_unmatched	Ramsayia magna	no candidate
+cross	fossahul_extinct_mammal_unmatched	Sarcophilus laniarius	no candidate
+cross	fossahul_extinct_mammal_unmatched	Simosthenurus baileyi	no candidate
+cross	fossahul_extinct_mammal_unmatched	Thylacoleo hilli	no candidate
+cross	fossahul_extinct_mammal_by:match	exact	44
+cross	fossahul_extinct_mammal_by:match	unmatched	20
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	EP	33
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	EX	8
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	EN	2
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	LC	1

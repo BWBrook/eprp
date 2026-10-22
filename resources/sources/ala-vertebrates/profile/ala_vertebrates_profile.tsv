@@ -1,0 +1,92 @@
+table	metric	key	value
+Actinopterygii	records		4966455
+Actinopterygii	records_pre1950		96535
+Actinopterygii	records_since1950		4725872
+Actinopterygii	records_undated		144048
+Actinopterygii	species		4936
+Actinopterygii	species_with_pre1950_records		2038
+Actinopterygii	species_no_record_since_1950		116
+Amphibia	records		2151126
+Amphibia	records_pre1950		7201
+Amphibia	records_since1950		2055440
+Amphibia	records_undated		88485
+Amphibia	species		258
+Amphibia	species_with_pre1950_records		135
+Amphibia	species_no_record_since_1950		0
+Amphibia	epbc_extinct_species		4
+Amphibia	epbc_extinct_in_ala		4
+Amphibia	epbc_extinct_no_record_since_1950		0
+Amphibia	epbc_extinct_records_since1950	Rheobatrachus silus	98
+Amphibia	epbc_extinct_records_since1950	Rheobatrachus vitellinus	44
+Amphibia	epbc_extinct_records_since1950	Taudactylus acutirostris	525
+Amphibia	epbc_extinct_records_since1950	Taudactylus diurnus	309
+Aves	records		111991879
+Aves	records_pre1950		281526
+Aves	records_since1950		108416943
+Aves	records_undated		3293410
+Aves	species		884
+Aves	species_with_pre1950_records		769
+Aves	species_no_record_since_1950		9
+Aves	epbc_extinct_species		7
+Aves	epbc_extinct_in_ala		7
+Aves	epbc_extinct_no_record_since_1950		4
+Aves	epbc_extinct_records_since1950	Porphyrio albus	2
+Aves	epbc_extinct_records_since1950	Psephotellus pulcherrimus	5
+Aves	epbc_extinct_records_since1950	Zosterops albogularis	2
+Aves	no_record_since_1950_not_epbc_extinct	Anas eatoni	3
+Aves	no_record_since_1950_not_epbc_extinct	Bartramia longicauda	9
+Aves	no_record_since_1950_not_epbc_extinct	Emberiza citrinella	2
+Aves	no_record_since_1950_not_epbc_extinct	Euplectes orix	11
+Aves	no_record_since_1950_not_epbc_extinct	Lalage leucopyga	16
+Chondrichthyes	records		1202422
+Chondrichthyes	records_pre1950		7226
+Chondrichthyes	records_since1950		1190228
+Chondrichthyes	records_undated		4968
+Chondrichthyes	species		338
+Chondrichthyes	species_with_pre1950_records		130
+Chondrichthyes	species_no_record_since_1950		1
+Mammalia	records		6362915
+Mammalia	records_pre1950		25170
+Mammalia	records_since1950		5990342
+Mammalia	records_undated		347403
+Mammalia	species		416
+Mammalia	species_with_pre1950_records		336
+Mammalia	species_no_record_since_1950		14
+Mammalia	epbc_extinct_species		34
+Mammalia	epbc_extinct_in_ala		32
+Mammalia	epbc_extinct_no_record_since_1950		11
+Mammalia	epbc_extinct_records_since1950	Chaeropus ecaudatus	7
+Mammalia	epbc_extinct_records_since1950	Chaeropus yirratji	15
+Mammalia	epbc_extinct_records_since1950	Conilurus albipes	6
+Mammalia	epbc_extinct_records_since1950	Lagorchestes asomatus	10
+Mammalia	epbc_extinct_records_since1950	Lagorchestes leporides	15
+Mammalia	epbc_extinct_records_since1950	Leporillus apicalis	71
+Mammalia	epbc_extinct_records_since1950	Macrotis leucura	8
+Mammalia	epbc_extinct_records_since1950	Melomys rubicola	2
+Mammalia	epbc_extinct_records_since1950	Notamacropus greyi	245
+Mammalia	epbc_extinct_records_since1950	Notomys amplus	26
+Mammalia	epbc_extinct_records_since1950	Notomys longicaudatus	22
+Mammalia	epbc_extinct_records_since1950	Nyctophilus howensis	1
+Mammalia	epbc_extinct_records_since1950	Onychogalea lunata	23
+Mammalia	epbc_extinct_records_since1950	Perameles eremiana	28
+Mammalia	epbc_extinct_records_since1950	Perameles fasciata	3356
+Mammalia	epbc_extinct_records_since1950	Perameles notina	1
+Mammalia	epbc_extinct_records_since1950	Pipistrellus murrayi	30
+Mammalia	epbc_extinct_records_since1950	Potorous platyops	2
+Mammalia	epbc_extinct_records_since1950	Pseudomys gouldii	965
+Mammalia	epbc_extinct_records_since1950	Rattus nativitatis	4
+Mammalia	epbc_extinct_records_since1950	Thylacinus cynocephalus	156
+Mammalia	no_record_since_1950_not_epbc_extinct	Crocidura trichura	3
+Mammalia	no_record_since_1950_not_epbc_extinct	Dasycercus archeri	30
+Mammalia	no_record_since_1950_not_epbc_extinct	Leptonychotes weddelli	4
+Reptilia	records		2321411
+Reptilia	records_pre1950		16726
+Reptilia	records_since1950		2013225
+Reptilia	records_undated		291460
+Reptilia	species		1153
+Reptilia	species_with_pre1950_records		571
+Reptilia	species_no_record_since_1950		32
+Reptilia	epbc_extinct_species		1
+Reptilia	epbc_extinct_in_ala		1
+Reptilia	epbc_extinct_no_record_since_1950		0
+Reptilia	epbc_extinct_records_since1950	Emoia nativitatis	121

@@ -26,7 +26,8 @@ resources/sources/
   <id>/<id>_profile.py      our profiling code for that source
   <id>/profile/             profiling outputs quoted by the entry
   <id>/*.sql, *.py, *.R     tested extraction recipes and checks
-resources/tools/            source-independent tools (data_mirror.py: Zenodo, Figshare)
+resources/tools/            source-independent tools (data_mirror.py: Zenodo, Figshare,
+                            GitHub, Dryad, WFS and plain URLs)
 ```
 
 The mirror on `deep-server` uses the same `<id>`:
@@ -51,6 +52,12 @@ Anything under `derived/` must be rebuildable from `raw/` by committed code,
 and its entry says which script writes it (for NSB, `nsb_profile.py` unzips
 the SQLite and `age_check.py` writes recomputed ages). Deploy a tool to
 `_tools/` only from a committed version, and check its sha256 matches.
+
+Dryad serves its indexes openly but its file downloads only to an API
+account. `data_mirror.py dryad` reads `DRYAD_CLIENT_ID` and
+`DRYAD_CLIENT_SECRET` from the environment or from
+`~/.config/dryad/credentials` (`KEY=value` lines, mode 600) on the host that
+runs it. Credentials never enter the repository.
 
 ## Entry kinds
 
@@ -343,6 +350,56 @@ the workflow when they generalise.
   the permissions refused the write.
 - *Run large pulls per host in parallel.* Zenodo served about 0.6 MB/s to
   deep-server; OSF and Figshare downloads ran alongside instead of in a queue.
+
+**Ranks 9–15 (22 October 2026; [stratdat](stratdat/README.md),
+[fossil-checklists](fossil-checklists/README.md),
+[au-fossil-deposits](au-fossil-deposits/README.md),
+[gbif-ala-fossils](gbif-ala-fossils/README.md), [austraits](austraits/README.md),
+[ala-vertebrates](ala-vertebrates/README.md), [names-status](names-status/README.md)).**
+
+- *A negative result is a finding; write it down.* No deposit holds occurrence
+  or census data for any flagship Australian biota, and GBIF and ALA fossil
+  records add little beyond foreign-museum specimens and NSB's copy. The
+  entries say so, so the searches are not repeated.
+- *Publishers block servers; repositories do not.* Publisher PDFs returned 403
+  to deep-server, and one "PDF" was a bot-check page. `data_mirror.py url` now
+  refuses HTML served for a non-HTML file name. Prefer a repository copy;
+  otherwise fetch on the laptop and verify the copy.
+- *Dryad downloads need a token; Zenodo copies usually exist.* The source scan
+  found Zenodo copies carrying the Dryad DOI for 50 of 58 deposits.
+  `data_mirror.py dryad` indexes without a token and downloads with one.
+- *Check field names against an independent authority.* STRATDAT's
+  `_MIDPOINT` unit fields do not describe the same unit as `_TOP` for 95% of
+  picks; matching unit names to ASUD's ages showed which field to trust.
+- *Tables in PDFs are data; check every extraction.* Count rows per table
+  against the PDF, and test the extraction for empty and merged fields.
+- *Aggregators page shallowly.* GBIF slows beyond an offset of about 10,000
+  and ALA stops at 5,000. Partition queries (by dataset, then by latitude) and
+  reconcile the harvest with the service's reported count.
+- *Subspecies are not species; listed names are not current names.* EPBC's
+  extinct list mixes species and subspecies of living species, and carries a
+  current name beside the listed one (117 rows differ). Truncating listed
+  names to binomials would mark living species extinct and miss renamed ones.
+- *A record's year is not a living animal.* ALA's records of extinct species
+  dated after 1950 mix genuine late records, subfossil specimens, synonymies
+  and name collisions; screen them before using last-record dates.
+- *Redact as you echo.* A profiler that echoes spreadsheet headers or README
+  text copied an author's email address; profilers now redact addresses.
+- *Read the provider's field documentation before interpreting fields.* The
+  mirrored STRATDAT schema already stated the time scale, the meaning of the
+  pick codes and the confidence scale that the first draft called
+  undocumented; and testing the documented `_MIDPOINT` definition against the
+  data showed the fields hold the unit at half the sample depth.
+- *An absence needs spelling variants and the right window.* Four of five
+  "absent" Mesozoic tetrapods were misspellings in the source, a variant
+  spelling in PBDB, or an age-window artefact.
+- *Count data rows, not spreadsheet rows.* Captions, headers and totals
+  inflated several deposit counts.
+- *Pick the denominator that answers the question.* "13% raw values" in
+  AusTraits mixed categorical traits, where the mode is the normal label,
+  with numeric ones (30% raw).
+- *Quality screens can share an author with what they screen.* The
+  thylacine and devil "screen" of FosSahul applies FosSahul's own rating.
 
 **Outreach (Barry, 22 October 2026).**
 

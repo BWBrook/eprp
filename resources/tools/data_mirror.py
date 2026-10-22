@@ -5,6 +5,7 @@ Usage:
   python3 data_mirror.py zenodo RECORD_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py figshare COLLECTION_ID|article/ARTICLE_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
+  python3 data_mirror.py dryad DOI DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py wfs WFS_URL LAYER[,LAYER...] DEST --license TEXT
   python3 data_mirror.py url DEST --license TEXT [NAME::]URL [[NAME::]URL ...]
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
@@ -15,7 +16,11 @@ selected versions: --latest takes the newest version of each record (Figshare:
 of each article), --only names version_dirs, and both may be combined. Zenodo
 version_dirs are <version>_<record>; Figshare ones are <article-title>_v<N>_<article>,
 one per version of every article in the collection; GitHub ones are
-<commit-date>_<sha10>, one per commit on the default branch. Files are verified
+<commit-date>_<sha10>, one per commit on the default branch; Dryad ones are
+v<version>_<version-id>, one per published version (catalogue reads are open,
+but file downloads need a Dryad API account: DRYAD_CLIENT_ID and
+DRYAD_CLIENT_SECRET in the environment or ~/.config/dryad/credentials, mode
+600, exchanged for a bearer token). Files are verified
 against the provider's size and checksum (md5, or the blob hash for GitHub),
 hashed with sha256, then made read-only. A live WFS has no versions: each `wfs`
 run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
@@ -132,6 +137,59 @@ def figshare_versions(record_id):
     return sorted(out, key=lambda r: (r["publication_date"], r["record"], r["version"]))
 
 
+DRYAD = "https://datadryad.org"
+_dryad_token = None
+
+
+def dryad_token():
+    """Bearer token for Dryad file downloads, from DRYAD_CLIENT_ID and DRYAD_CLIENT_SECRET in the
+    environment or in ~/.config/dryad/credentials (KEY=VALUE lines, readable only by the owner)."""
+    global _dryad_token
+    if _dryad_token:
+        return _dryad_token
+    creds = {k: os.environ[k] for k in ("DRYAD_CLIENT_ID", "DRYAD_CLIENT_SECRET") if k in os.environ}
+    path = os.path.expanduser("~/.config/dryad/credentials")
+    if len(creds) < 2 and os.path.exists(path):
+        if os.stat(path).st_mode & 0o077:
+            sys.exit(f"{path} must be readable by its owner only (chmod 600)")
+        for line in open(path):
+            k, sep, v = line.strip().partition("=")
+            if sep:
+                creds.setdefault(k.strip(), v.strip())
+    if not {"DRYAD_CLIENT_ID", "DRYAD_CLIENT_SECRET"} <= creds.keys():
+        sys.exit("Dryad downloads need an API account: set DRYAD_CLIENT_ID and DRYAD_CLIENT_SECRET")
+    body = urllib.parse.urlencode({"grant_type": "client_credentials", "client_id": creds["DRYAD_CLIENT_ID"],
+                                   "client_secret": creds["DRYAD_CLIENT_SECRET"]}).encode()
+    req = urllib.request.Request(f"{DRYAD}/oauth/token", data=body, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        _dryad_token = json.load(r)["access_token"]
+    return _dryad_token
+
+
+def dryad_versions(doi):
+    ds = urllib.parse.quote(f"doi:{doi.removeprefix('doi:')}", safe="")
+    meta = get_json(f"{DRYAD}/api/v2/datasets/{ds}")
+    vers = get_json(f"{DRYAD}/api/v2/datasets/{ds}/versions")["_embedded"]["stash:versions"]
+    out = []
+    for v in vers:
+        files, url = [], DRYAD + v["_links"]["stash:files"]["href"]
+        while url:
+            page = get_json(url)
+            files += [{"key": f["path"], "size": f["size"], "checksum": f"{f['digestType'].replace('-', '')}:{f['digest']}",
+                       "url": DRYAD + f["_links"]["stash:download"]["href"]} for f in page["_embedded"]["stash:files"]]
+            nxt = page["_links"].get("next")
+            url = DRYAD + nxt["href"] if nxt else None
+        vid = v["_links"]["self"]["href"].rsplit("/", 1)[1]
+        out.append({
+            "dir": f"v{v['versionNumber']}_{vid}", "provider": "dryad", "record": vid, "version": v["versionNumber"],
+            "doi": meta.get("identifier"), "concept_doi": meta.get("identifier"),
+            "publication_date": v.get("publicationDate") or "", "title": v.get("title"),
+            "creators": [f"{x.get('firstName', '')} {x.get('lastName', '')}".strip() for x in meta.get("authors", [])],
+            "license": meta.get("license", ""), "files": files,
+        })
+    return sorted(out, key=lambda r: (r["publication_date"], r["version"]))
+
+
 def github_versions(repo):
     api = f"https://api.github.com/repos/{repo}"
     meta = get_json(api)
@@ -203,6 +261,8 @@ def download(url, dest, size, checksum):
         try:
             if have < size:
                 headers = {"User-Agent": UA}
+                if url.startswith(f"{DRYAD}/api/"):
+                    headers["Authorization"] = f"Bearer {dryad_token()}"
                 if have:
                     headers["Range"] = f"bytes={have}-"
                 with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=300) as r:
@@ -359,7 +419,7 @@ def verify(raw_root, only):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="command", required=True)
-    for provider in ("zenodo", "figshare", "github"):
+    for provider in ("zenodo", "figshare", "github", "dryad"):
         p = sub.add_parser(provider)
         p.add_argument("record_id")
         p.add_argument("dest")
@@ -409,7 +469,8 @@ def main():
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
         sys.exit(f"another mirror run holds {a.dest}/.mirror.lock")
-    versions = {"zenodo": zenodo_versions, "figshare": figshare_versions, "github": github_versions}[a.command](a.record_id)
+    versions = {"zenodo": zenodo_versions, "figshare": figshare_versions, "github": github_versions,
+                "dryad": dryad_versions}[a.command](a.record_id)
     write_index(versions, os.path.join(a.dest, "versions.tsv"))
     print(f"{len(versions)} versions indexed", flush=True)
     if a.index_only:

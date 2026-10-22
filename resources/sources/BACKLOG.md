@@ -12,8 +12,12 @@ written.
 NSB, Triton, FRED (documented, not mirrored), FosSahul, SahulArch, AustArch,
 OCTOPUS; then the Australian tranche of 22 October: PBDB (Australia and New
 Guinea extract), ASUD, Neotoma/IPPD, RPD, GCD, SahulCHAR, SISAL, Beyer 2020,
-the SHAPE index, the Sahul sea-level pack and Krapp 2021. See
-[INDEX.md](INDEX.md). Ranks 1–8 below are now catalogued; their entries supersede the scan figures quoted in the table.
+the SHAPE index, the Sahul sea-level pack and Krapp 2021; then ranks 9–15:
+STRATDAT, GA biozonation charts, fossil checklists, Australian fossil-biota
+deposits, GBIF and ALA fossil records, AusTraits, the ALA vertebrate species
+counts, and the names and status lists. See [INDEX.md](INDEX.md). Ranks 1–15
+below are now catalogued; their entries supersede the scan figures quoted in
+the table.
 
 ## Ranked: Australia and Sahul
 
@@ -66,6 +70,17 @@ the SHAPE index, the Sahul sea-level pack and Krapp 2021. See
   retry from another host.
 - **Queensland Museum palaeontology CSV**: dead link; queued for the museum
   as [CONTACTS.md](CONTACTS.md) C6.
+- **Australian Faunal Directory**: per-taxon CSV exports, no licence of its
+  own, and a 1,000-taxon export limit; full extract and licence queued as C17.
+- **BirdLife Australia Working List**: no licence found.
+- **ALA records and GBIF downloads**: both bulk routes need an email address
+  or account. Record-level work should filter the GBIF open-data snapshot on
+  AWS (288 GB, monthly, citable). ALA's fossil specimens are a subset of
+  GBIF's ([gbif-ala-fossils](gbif-ala-fossils/README.md)).
+- **Dryad-only deposits** (Craffey et al. 2024, Arman et al. 2025, Couzens et
+  al. 2026): downloads need a Dryad API account; Barry to fetch
+  ([au-fossil-deposits](au-fossil-deposits/README.md)).
+- **TimeScale Creator GA datapack** (eCat 68802): licence conflict, C9(f).
 
 ## Elsewhere
 

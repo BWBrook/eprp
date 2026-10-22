@@ -1,0 +1,2 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+gbif-ala-fossils/gbif	2026-10-22T1013Z_url	2026-10-22T10:28:42+00:00	per record: CC0, CC BY 4.0 or CC BY-NC 4.0 (see each dataset__*.json)	396	205097544	b1e235e6497c	https://api.gbif.org/v1/occurrence/search?basisOfRecord=FOSSIL_SPECIMEN&country=AU&limit=0
