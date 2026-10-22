@@ -368,3 +368,87 @@ listed above.
 - (ii) Accept the evaluator on the present evidence, and consider the
   fixed-point P11 check: interpolation first, then cost.
 - (iii) Stop the route.
+
+## Reference repair, run 3 (declared before execution; Codex 76/2165 and 76/2189)
+
+This is a bounded batch for **16 cells**:
+- the six states in T2 and T3: stress_s3_r09_kbm15, c4_previous,
+  c1_failing, and the σ = 6, 15 and 20 hold-outs;
+- **controls** central0 and holdout_9707_sigma8, in T2 and T3.
+
+There is no full rerun and no new point search. Any unresolved cell stays
+unresolved.
+
+**The evaluator is unchanged** (the algorithm at 8962871). It is re-run only
+to save **full 35-coordinate vectors**: the value at θ and at θ ± h·e_j for
+every coordinate. That is done at the primary (200, 200, Δ50), resolution
+(400, 400, Δ50) and domain (200, 200, Δ70) settings, with h = 1e-4.
+
+**The new reference** (`collapsed_oracle_refrepair.py`) is nested adaptive
+QUADPACK (`scipy.integrate.quad`) in x coordinates.
+- **Leaves.** L_c(x_r) = ∫ N(x; ρx_r, σ²(1 − ρ²)) F_c(x) dx.
+- **Root.** H(x_r) = log N(x_r; 0, σ²) + log F_r(x_r) + Σ_c log L_c(x_r).
+  - The T3 star multiplies its two leaf integrals at each root abscissa.
+    This is a shared analytic factorisation, disclosed here.
+  - Local factor coefficients come from the shared `coefs`, the target
+    definition validated by the decomposition check. **Nothing else is
+    shared with the evaluator:** no mode, level-set or sinh code.
+- **Anchors:** Brent maximisation (`minimize_scalar`); g by central
+  difference.
+- **Domains by Codex's strong-concavity envelope.**
+  - Curvature lower bounds: c = 1/(σ²(1 − ρ²)) for leaves; c = 1/σ² for
+    the root, since its descendant messages are log-concave (Prékopa).
+  - The envelope is h(x) ≤ h(a) + g²/(2c) − (c/2)(x − a − g/c)².
+  - The integration box is a + g/c ± R/√c, with tail mass at most
+    exp{h(a) + g²/(2c)} · √(2π/c) · erfc(R/√2).
+  - R is increased (from 12, in steps of 2) until that bound, relative to
+    the integral, is ≤ 1e-16. In the bound, |g| is inflated by 10% plus
+    1e-8.
+- **Error accounting.**
+  - quad settings: inner epsrel 1e-13, outer epsrel 1e-12, epsabs 0, limit
+    1000.
+  - Each QUADPACK abserr is kept. The largest inner relative error and
+    inner tail bound are propagated into the root value, and evaluation
+    counts are recorded.
+  - **Warnings make a value unqualified.**
+- **Qualification of every value** (θ and all 70 perturbations): the
+  estimated total relative error (outer + maximum inner + tails) must be
+  ≤ 1e-11, with no warning.
+  - A relative uncertainty of 1e-11 adds at most about 1e-7 to a centred
+    derivative.
+  - For the central value only, a tightened rerun (inner epsrel 1e-14,
+    outer 1e-13, R + 4) must agree within 1e-10. That is the reference's
+    own resolution and domain evidence.
+
+**Decisions** (the 2165 defects closed).
+
+| Rule | Outcome |
+| --- | --- |
+| Any exception inside the evaluator | **fail (evaluator: stage)** |
+| Evaluator self-checks beyond 1e-6 (value) or 1e-5 (derivative) | **fail (evaluator: self-convergence)** |
+| Reference exception, warning or failed qualification | **unresolved (reference: reason)** |
+| Two qualified references that disagree by more than 1e-6 in value | **unresolved (reference disagreement)** |
+| Evaluator against the qualified reference beyond 1e-4 (value) or 1e-3 (any of 35 derivatives) | **fail (accuracy)** |
+
+- The run-2 tensor reference is recorded but **unqualified** in all 16
+  cells, so it does not enter.
+- **I1** comes from run 2. **I2** comes from the post-hoc qualified
+  selection check: T2 directly, T3 by Codex's unit-third-daughter transfer
+  (76/2189).
+- **all_pass** additionally requires decomposition_pass.
+- The fixtures, run before the batch, must show three things:
+  1. an otherwise passing cell with a 0.01 independent-value disagreement
+     does not pass;
+  2. an injected evaluator mode failure becomes "fail (evaluator:
+     joint_mode)";
+  3. decomposition_pass = false gives all_pass = false.
+
+**Execution.**
+- Every value is a separately persisted task, appended to
+  `collapsed_oracle_run3_cells.jsonl`. A restart skips completed tasks.
+- First a deep-server benchmark of one T3 central reference value and one
+  evaluator call, then a forecast and a fixed execution limit, then the
+  batch, run without a further permission request.
+- **Outputs:** `collapsed_oracle_results_run3.json`, holding raw values and
+  receipts, full vectors, and the amended adjudication of the 16 cells.
+  The run-1 and run-2 frozen outcomes are kept unchanged.
