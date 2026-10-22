@@ -614,3 +614,47 @@ This is the bounded correction set out in 76/2194.
 The 1,152-value batch is still needed to settle the other 15 cells under
 the corrected diagnostics. Forecast: under 2 minutes on deep-server. Limit:
 900 s.
+
+## Run 4 result (22 October; reference v2, deep-server, 0fe8961)
+
+Outputs:
+- [collapsed_oracle_results_run4.json](collapsed_oracle_results_run4.json);
+- `collapsed_oracle_run4_reference.jsonl.gz`: all 1,152 values, with
+  complete diagnostics;
+- [collapsed_oracle_run4.log](collapsed_oracle_run4.log).
+
+**1,152 values in 70 s**, against a 900 s limit. No task failed, and no
+value exceeded the 1e-10 budget (maximum 2.1e-11).
+
+**Adjudication: 14 pass, 2 unresolved; all_pass is false.** Decomposition
+passes, the run-3 evaluator vectors are reused, and the run-1 to run-3
+records are unchanged.
+- **Pass, with no QUADPACK diagnostic in any value:**
+  - the six named states in T2 and T3 (stress σ = 3/ρ = 0.9, c4_previous,
+    c1_failing, and the σ = 6, 15 and 20 hold-outs);
+  - central0 in T2 and T3.
+  - Evaluator against reference: ≤ 1.4e-14 in value and ≤ 1.4e-10 across
+    all 35 derivatives. The largest total estimated relative error is
+    9.4e-12.
+- **Unresolved (reference: a value not qualified): holdout_9707_sigma8,
+  in T2 and in T3** (σ = 8, ρ = 0.99998).
+  - Inner leaf integrals return QUADPACK roundoff messages in **58 of 72
+    values (T2)** and **67 of 72 (T3)**, although every estimate is within
+    budget.
+  - The evaluator agrees to 0 in value and ≤ 7.1e-11 in derivatives.
+  - **T2 passed in run 3 only because those messages were hidden.**
+    Counting them makes it unresolved, as Codex's probe predicted.
+
+**Context for these two cells** (existing evidence, not a new decision).
+The run-2 tensor reference was *qualified* at holdout_9707_sigma8:
+- in T2 and T3, its resolution and domain changes were ≤ 3.6e-11 in
+  derivatives and 0 in value;
+- the evaluator agreed with it to 0 in value and 3.6e-11 in derivatives.
+
+So these cells have a qualified independent reference from run 2. The new
+adaptive reference cannot clear its own diagnostics at this extreme
+combination of narrow kernel and large σ.
+
+**Following the declared rule,** the two cells stay unresolved and P11
+stays held pending Codex's decision. There will be no further integrator
+search.
