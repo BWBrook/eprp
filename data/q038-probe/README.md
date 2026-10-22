@@ -249,3 +249,73 @@ vectorised over posterior draws.
 - The pilot suggests 3 threads per chain costs about a fifth of the
   core-hours of 12. This measures the curve, in isolation, before any
   model simplification.
+
+## Divergence diagnostic: results (23 October)
+
+`pilot/diag_VARIANT_SEED.json`. The screen and receipts are those of the
+pilot.
+
+| Variant | Divergences (38001 / 38005) | Max R-hat | Min bulk ESS | Min tail ESS | Wall (h) |
+| --- | --- | --- | --- | --- | --- |
+| pilot (model.stan, 0.80) | 50 / 119 | 1.053 / 1.024 | 119 / 153 | 405 / 38 | 3.2 / 3.1 |
+| ad95 (model.stan, 0.95) | 10 / 12 | 1.019 / 1.009 | 342 / 345 | 475 / 617 | 3.4 / 3.4 |
+| stz95 (model_stz.stan, 0.95) | **3 / 6** | **1.007 / 1.007** | **515 / 508** | **1044 / 859** | 3.5 / 4.0 |
+
+- **Step size alone (ad95)** cuts divergences about tenfold, but gd0 still
+  fails R-hat (1.019) and bulk ESS stays below 400.
+- **Sum-to-zero plus 0.95 (stz95)** passes R-hat and both ESS gates on both
+  seeds. **Only the zero-divergence rule fails**, on 3 and 6.
+- **β̄_e is stable across all six fits:** Rhynchonellata 0.73 ± 0.16 and
+  Bivalvia 0.46 ± 0.16 on 38001; 0.47–0.49 ± 0.24 and 0.71–0.72 ± 0.24 on
+  38005. The parameterisation moves mixing, not the estimand.
+- **Where the remaining divergences sit:**
+  - **In the chain that adapted the largest step**, as in the pilot: 5 of 6
+    (step 0.060 against 0.036–0.038), 2 of 3 (0.054 against 0.036–0.041),
+    8 of 10 in ad95 38001 (0.063 against 0.032–0.044), and all 12 in the
+    two large-step chains of ad95 38005 (0.060 and 0.057 against
+    0.034–0.037).
+  - **In the Bivalvia baseline-walk scale s_α[2]** (truth 0): its upper
+    tail, at the 0.8–1.0 quantile, in 25 of 31 divergent transitions. No
+    other scale shows a pattern. These are saved states, so this is
+    indicative only.
+- **Cost:** median 127 leapfrog steps (tree depth 7), against 63 in the
+  pilot, but only about 10–25% more wall time with four fits running
+  concurrently instead of five.
+
+**Next diagnostic, declared before launch: `stz99`.** model_stz.stan at
+adapt_delta 0.99, on seeds 38001 and 38005, under the same pilot design
+and screen.
+- It tests whether a sampler-level change removes the residual
+  divergences that come from one chain's larger step.
+- **Ceiling:** 12 h per fit; both fits run concurrently on deep-server.
+- **If it fails,** the remaining lever is s_α (the Bivalvia baseline walk
+  when its truth is 0). That would be a model or prior choice for Codex,
+  not a sampler setting.
+
+## Per-gradient benchmark: results (23 October)
+
+`pilot/tbench_tT_gG.json`: deep-server, one chain alone on the idle
+machine, seed 38001.
+
+| Threads | 1 | 2 | 3 | 4 | 6 | 8 | 12 | 16 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| s/gradient, grain 1 | 0.078 | 0.041 | 0.028 | 0.022 | 0.015 | 0.012 | 0.0081 | 0.0063 |
+| efficiency, grain 1 | 1.00 | 0.95 | 0.93 | 0.90 | 0.86 | 0.84 | 0.80 | 0.77 |
+| efficiency, grain 50 | 1.00 | 0.92 | 0.91 | 0.86 | 0.80 | 0.76 | 0.68 | 0.61 |
+| efficiency, grain 250 | 1.00 | 0.91 | 0.85 | 0.74 | 0.67 | 0.55 | 0.37 | 0.21 |
+
+**Correction (to 76/2225 and this README's earlier cost note).**
+- `reduce_sum` does **not** scale poorly to 12 threads. With grain 1 it
+  keeps 80% efficiency at 12 threads and 77% at 16. Grain 50, the pilot's
+  setting, drops to 68% at 12; grain 250 collapses.
+- The "178 core-hours per fit at 12 threads" figure was an artefact. It
+  linearly extrapolated a 200-iteration benchmark dominated by early
+  warmup, where trees run up to 1,023 leapfrog steps (about 725 per
+  iteration implied, against 63 in sampling).
+- **Use grain size 1.**
+- **Load matters more than thread count.** Under the four-fit load, stz95
+  took about 0.047 s per gradient per chain at 3 threads, against 0.028 in
+  isolation, so contention costs about 1.7×.
+- **For the redesign, use measured fits per day,** not per-fit core-hours
+  extrapolated from a short run. With four concurrent fits deep-server
+  completes about one stz95 fit per hour.

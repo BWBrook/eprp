@@ -77,7 +77,7 @@ def model(stan_file="model.stan"):
     return CmdStanModel(stan_file=str(HERE / stan_file), cpp_options={"STAN_THREADS": True})
 
 
-DIAG = {"ad95": ("model.stan", 0.95), "stz95": ("model_stz.stan", 0.95)}     # pilot divergence diagnosis (README)
+DIAG = {"ad95": ("model.stan", 0.95), "stz95": ("model_stz.stan", 0.95), "stz99": ("model_stz.stan", 0.99)}     # pilot divergence diagnosis (README)
 
 
 def fit(seed, threads=12, warmup=None, sampling=None, tag="fit", stan_file="model.stan", adapt_delta=None):

@@ -1,0 +1,16 @@
+{
+ "seed": 38001,
+ "threads": 12,
+ "grainsize": 50,
+ "walls": [
+  2.5437774658203125,
+  8.040489196777344
+ ],
+ "gradients": [
+  15,
+  615
+ ],
+ "seconds_per_gradient": 0.00916118621826172,
+ "core_seconds_per_gradient": 0.10993423461914063,
+ "host": "deep-server"
+}
