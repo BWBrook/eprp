@@ -1,7 +1,10 @@
--- NSB occurrences with synonymy resolved and the portal's default filters
--- (Renaudie et al. 2020, Fig. 3; NSBcompanion 2.1 getNeptuneData), plus the
--- portal's exclusion of undated samples. Runs on the SQLite snapshots.
--- Ages are GTS2012 point estimates from each hole's current age model.
+-- NSB occurrences with synonymy resolved and the default filters: published-name
+-- status V, S or B; no occurrence qualifier; sample_status not c or w (the
+-- getNeptuneData defaults in NSBcompanion >= 2.2, matching the portal options in
+-- Renaudie et al. 2020, Fig. 3), plus the portal's exclusion of undated samples
+-- (ibid., p. 9). Runs on the SQLite snapshots. Ages are GTS2012 point estimates
+-- from each hole's current age model. Synonym chains reach depth 4 at most in the
+-- snapshots checked (2014-2023); the depth cap of 20 only guards against cycles.
 with recursive resolve(taxon_id, current_id, depth) as (
     select taxon_id, taxon_id, 0 from neptune_taxonomy
     union all

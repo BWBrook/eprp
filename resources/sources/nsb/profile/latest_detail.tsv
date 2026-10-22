@@ -3,8 +3,8 @@ version	metric	key	value
 2023-06-05_10063218	occ_by_group_epoch	D|Miocene	46273
 2023-06-05_10063218	occ_by_group_epoch	D|Oligocene	9725
 2023-06-05_10063218	occ_by_group_epoch	D|Paleocene	2637
-2023-06-05_10063218	occ_by_group_epoch	D|Pleistocene-Holocene	40759
-2023-06-05_10063218	occ_by_group_epoch	D|Pliocene	24203
+2023-06-05_10063218	occ_by_group_epoch	D|Pleistocene-Holocene	40866
+2023-06-05_10063218	occ_by_group_epoch	D|Pliocene	24096
 2023-06-05_10063218	occ_by_group_epoch	D|no age	5649
 2023-06-05_10063218	occ_by_group_epoch	DN|Eocene	3153
 2023-06-05_10063218	occ_by_group_epoch	DN|Miocene	864
@@ -18,8 +18,8 @@ version	metric	key	value
 2023-06-05_10063218	occ_by_group_epoch	F|Miocene	50028
 2023-06-05_10063218	occ_by_group_epoch	F|Oligocene	11389
 2023-06-05_10063218	occ_by_group_epoch	F|Paleocene	7265
-2023-06-05_10063218	occ_by_group_epoch	F|Pleistocene-Holocene	28329
-2023-06-05_10063218	occ_by_group_epoch	F|Pliocene	24949
+2023-06-05_10063218	occ_by_group_epoch	F|Pleistocene-Holocene	28450
+2023-06-05_10063218	occ_by_group_epoch	F|Pliocene	24828
 2023-06-05_10063218	occ_by_group_epoch	F|no age	13988
 2023-06-05_10063218	occ_by_group_epoch	N|Early Cretaceous	22114
 2023-06-05_10063218	occ_by_group_epoch	N|Eocene	46137
@@ -27,8 +27,8 @@ version	metric	key	value
 2023-06-05_10063218	occ_by_group_epoch	N|Miocene	70172
 2023-06-05_10063218	occ_by_group_epoch	N|Oligocene	20186
 2023-06-05_10063218	occ_by_group_epoch	N|Paleocene	14968
-2023-06-05_10063218	occ_by_group_epoch	N|Pleistocene-Holocene	39358
-2023-06-05_10063218	occ_by_group_epoch	N|Pliocene	28923
+2023-06-05_10063218	occ_by_group_epoch	N|Pleistocene-Holocene	39556
+2023-06-05_10063218	occ_by_group_epoch	N|Pliocene	28725
 2023-06-05_10063218	occ_by_group_epoch	N|no age	25662
 2023-06-05_10063218	occ_by_group_epoch	N|pre-Cretaceous	913
 2023-06-05_10063218	occ_by_group_epoch	R|Early Cretaceous	1643
@@ -37,8 +37,8 @@ version	metric	key	value
 2023-06-05_10063218	occ_by_group_epoch	R|Miocene	47161
 2023-06-05_10063218	occ_by_group_epoch	R|Oligocene	22749
 2023-06-05_10063218	occ_by_group_epoch	R|Paleocene	3149
-2023-06-05_10063218	occ_by_group_epoch	R|Pleistocene-Holocene	18528
-2023-06-05_10063218	occ_by_group_epoch	R|Pliocene	12034
+2023-06-05_10063218	occ_by_group_epoch	R|Pleistocene-Holocene	18574
+2023-06-05_10063218	occ_by_group_epoch	R|Pliocene	11988
 2023-06-05_10063218	occ_by_group_epoch	R|no age	7966
 2023-06-05_10063218	occ_by_group_ocean	D|ANT	5996
 2023-06-05_10063218	occ_by_group_ocean	D|ATL	58014
@@ -143,37 +143,16 @@ version	metric	key	value
 2023-06-05_10063218	current_age_models_by_quality	P	86
 2023-06-05_10063218	current_age_models_by_quality	VG	82
 2023-06-05_10063218	current_age_models_by_quality	VP	25
-2023-06-05_10063218	age_model_revisions		794
-2023-06-05_10063218	holes_with_any_age_model		484
-2023-06-05_10063218	current_age_models		483
 2023-06-05_10063218	dated_samples_by_current_age_quality	E	5698
 2023-06-05_10063218	dated_samples_by_current_age_quality	G	13696
 2023-06-05_10063218	dated_samples_by_current_age_quality	M	17030
 2023-06-05_10063218	dated_samples_by_current_age_quality	P	8877
 2023-06-05_10063218	dated_samples_by_current_age_quality	VG	9185
 2023-06-05_10063218	dated_samples_by_current_age_quality	VP	2195
+2023-06-05_10063218	holes_with_any_age_model		484
 2023-06-05_10063218	holes_with_samples_and_current_age_model		449
-2023-06-05_10063218	holes_with_samples		506
 2023-06-05_10063218	datasets		976
 2023-06-05_10063218	distinct_source_citations		396
-2023-06-05_10063218	denorm_full_rows		783987
-2023-06-05_10063218	denorm_filtered_rows		675078
-2023-06-05_10063218	portal_filter_agrees	D|kept	109336
-2023-06-05_10063218	portal_filter_agrees	D|removed	25541
-2023-06-05_10063218	portal_filter_agrees	DN|kept	2572
-2023-06-05_10063218	portal_filter_agrees	DN|removed	5016
-2023-06-05_10063218	portal_filter_agrees	F|kept	145734
-2023-06-05_10063218	portal_filter_agrees	F|removed	18808
-2023-06-05_10063218	portal_filter_agrees	N|kept	257865
-2023-06-05_10063218	portal_filter_agrees	N|removed	32179
-2023-06-05_10063218	portal_filter_agrees	R|kept	114155
-2023-06-05_10063218	portal_filter_agrees	R|removed	27365
-2023-06-05_10063218	portal_filter_disagrees	D|in csv, predicted removed: no age	4196
-2023-06-05_10063218	portal_filter_disagrees	DN|in csv, predicted removed: no age	941
-2023-06-05_10063218	portal_filter_disagrees	F|in csv, predicted removed: no age	11975
-2023-06-05_10063218	portal_filter_disagrees	N|in csv, predicted removed: no age	22941
-2023-06-05_10063218	portal_filter_disagrees	R|in csv, predicted removed: no age	5363
-2023-06-05_10063218	filtered_csv_rows_not_in_db		0
 2023-06-05_10063218	samples_by_status		60799
 2023-06-05_10063218	samples_by_status	c	358
 2023-06-05_10063218	samples_by_status	w	705
@@ -188,3 +167,36 @@ version	metric	key	value
 2023-06-05_10063218	occurrences_by_taxon_qualifier	pr	39
 2023-06-05_10063218	occurrences_by_taxon_qualifier	re	588
 2023-06-05_10063218	occurrences_by_taxon_qualifier	rw	1
+2023-06-05_10063218	denorm_full_rows		783987
+2023-06-05_10063218	denorm_filtered_rows		675078
+2023-06-05_10063218	default_filter_agrees	D|kept	109336
+2023-06-05_10063218	default_filter_agrees	D|removed	25541
+2023-06-05_10063218	default_filter_agrees	DN|kept	2572
+2023-06-05_10063218	default_filter_agrees	DN|removed	5016
+2023-06-05_10063218	default_filter_agrees	F|kept	145734
+2023-06-05_10063218	default_filter_agrees	F|removed	18808
+2023-06-05_10063218	default_filter_agrees	N|kept	257865
+2023-06-05_10063218	default_filter_agrees	N|removed	32179
+2023-06-05_10063218	default_filter_agrees	R|kept	114155
+2023-06-05_10063218	default_filter_agrees	R|removed	27365
+2023-06-05_10063218	default_filter_disagrees	D|in csv, predicted removed: no age	4196
+2023-06-05_10063218	default_filter_disagrees	DN|in csv, predicted removed: no age	941
+2023-06-05_10063218	default_filter_disagrees	F|in csv, predicted removed: no age	11975
+2023-06-05_10063218	default_filter_disagrees	N|in csv, predicted removed: no age	22941
+2023-06-05_10063218	default_filter_disagrees	R|in csv, predicted removed: no age	5363
+2023-06-05_10063218	filtered_csv_rows_not_in_db		0
+2023-06-05_10063218	recipe_rows		629662
+2023-06-05_10063218	recipe_keys_equal_dated_filtered_csv_keys		1
+2023-06-05_10063218	recipe_keys_not_in_dated_filtered_csv		0
+2023-06-05_10063218	dated_filtered_csv_keys_not_in_recipe		0
+2023-06-05_10063218	recipe_resolved_id_disagrees_with_csv		0
+2023-06-05_10063218	recipe_samples		54678
+2023-06-05_10063218	recipe_holes		430
+2023-06-05_10063218	recipe_resolved_taxa		3824
+2023-06-05_10063218	recipe_duplicate_sample_resolved_taxon_rows		13868
+2023-06-05_10063218	recipe_renamed_by_resolution		180081
+2023-06-05_10063218	recipe_rows_by_resolved_status	V	622120
+2023-06-05_10063218	recipe_rows_by_resolved_status	Q	330
+2023-06-05_10063218	recipe_rows_by_resolved_status	G	156
+2023-06-05_10063218	recipe_rows_by_resolved_status	U	1047
+2023-06-05_10063218	recipe_rows_by_resolved_status	B	6009

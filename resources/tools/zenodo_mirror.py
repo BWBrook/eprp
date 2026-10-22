@@ -1,16 +1,21 @@
+#!/usr/bin/env python3
 """Mirror every version of a Zenodo record into a read-only local archive.
 
-Usage: python3 zenodo_mirror.py RECORD_ID DEST [--only VERSION_DIR ...] [--index-only]
+Usage: python3 zenodo_mirror.py RECORD_ID DEST [--only VERSION_DIR ...] [--index-only | --verify]
 
 Writes DEST/versions.tsv (all versions) and DEST/raw/<version>_<record>/ holding
-the unchanged files plus MANIFEST.json. Files are verified against Zenodo's md5,
-hashed with sha256, then made read-only. Completed versions are skipped, so an
-interrupted run resumes. Standard library only.
+the unchanged files plus MANIFEST.json. Files are verified against Zenodo's size
+and md5, hashed with sha256, then made read-only. Interrupted downloads resume
+from their .part files and completed versions are skipped. --verify re-hashes
+mirrored files against their manifests. Standard library only.
 """
 
 import argparse
 import datetime as dt
+import email.utils
+import fcntl
 import hashlib
+import http.client
 import json
 import os
 import re
@@ -20,7 +25,19 @@ import urllib.error
 import urllib.request
 
 API = "https://zenodo.org/api/records"
-UA = "eprp-zenodo-mirror/1 (research data archive)"
+UA = "eprp-zenodo-mirror/2 (research data archive)"
+RETRYABLE = (429, 500, 502, 503, 504)
+TRANSIENT = (urllib.error.URLError, http.client.HTTPException, TimeoutError, ConnectionError)
+
+
+def retry_wait(err, attempt):
+    after = getattr(err, "headers", None) and err.headers.get("Retry-After")
+    if after:
+        if after.isdigit():
+            return int(after)
+        when = email.utils.parsedate_to_datetime(after)
+        return max(0, (when - dt.datetime.now(dt.timezone.utc)).total_seconds())
+    return 2 ** attempt * 5
 
 
 def get_json(url):
@@ -29,26 +46,26 @@ def get_json(url):
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
             with urllib.request.urlopen(req, timeout=120) as r:
                 return json.load(r)
-        except urllib.error.HTTPError as e:
-            if e.code not in (429, 500, 502, 503, 504) or attempt == 5:
+        except TRANSIENT as e:
+            if attempt == 5 or (isinstance(e, urllib.error.HTTPError) and e.code not in RETRYABLE):
                 raise
-            time.sleep(int(e.headers.get("Retry-After", 0)) or 2 ** attempt * 5)
-        except urllib.error.URLError:
-            if attempt == 5:
-                raise
-            time.sleep(2 ** attempt * 5)
+            time.sleep(retry_wait(e, attempt))
 
 
 def all_versions(record_id):
-    hits, page = [], 1
+    hits, page = {}, 1
     while True:
         data = get_json(f"{API}/{record_id}/versions?size=25&page={page}")
+        total = data["hits"]["total"]
         batch = data["hits"]["hits"]
-        hits.extend(batch)
-        if not batch or len(hits) >= data["hits"]["total"]:
-            return sorted({h["id"]: h for h in hits}.values(), key=lambda h: (h["metadata"].get("publication_date", ""), h["id"]))
+        hits.update((h["id"], h) for h in batch)
+        if len(hits) >= total or not batch:
+            break
         page += 1
         time.sleep(1)
+    if len(hits) != total:
+        raise RuntimeError(f"index incomplete: {len(hits)} of {total} versions")
+    return sorted(hits.values(), key=lambda h: (h["metadata"].get("publication_date", ""), h["id"]))
 
 
 def version_dir(hit):
@@ -70,28 +87,46 @@ def write_index(hits, path):
     os.replace(tmp, path)
 
 
+def hash_file(path, *algos):
+    hs = [hashlib.new(a) for a in algos]
+    with open(path, "rb") as f:
+        while chunk := f.read(1 << 20):
+            for h in hs:
+                h.update(chunk)
+    return [h.hexdigest() for h in hs]
+
+
 def download(url, dest, size, md5_expected):
-    for attempt in range(6):
+    part = dest + ".part"
+    for attempt in range(8):
+        have = os.path.getsize(part) if os.path.exists(part) else 0
+        if have > size:
+            os.remove(part)
+            have = 0
         try:
-            md5, sha = hashlib.md5(), hashlib.sha256()
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=300) as r, open(dest + ".part", "wb") as out:
-                while chunk := r.read(1 << 20):
-                    md5.update(chunk)
-                    sha.update(chunk)
-                    out.write(chunk)
-            got = os.path.getsize(dest + ".part")
-            if got != size or md5.hexdigest() != md5_expected:
-                raise IOError(f"verification failed for {url}: size {got}/{size}, md5 {md5.hexdigest()}/{md5_expected}")
-            os.replace(dest + ".part", dest)
-            return sha.hexdigest()
-        except (urllib.error.URLError, IOError, TimeoutError) as e:
-            code = getattr(e, "code", None)
-            if attempt == 5 or (code is not None and code not in (429, 500, 502, 503, 504)):
+            if have < size:
+                headers = {"User-Agent": UA}
+                if have:
+                    headers["Range"] = f"bytes={have}-"
+                with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=300) as r:
+                    mode = "ab" if have and r.status == 206 else "wb"
+                    with open(part, mode) as out:
+                        while chunk := r.read(1 << 20):
+                            out.write(chunk)
+            md5, sha = hash_file(part, "md5", "sha256")
+            got = os.path.getsize(part)
+            if got == size and md5 == md5_expected:
+                os.replace(part, dest)
+                return sha
+            if got >= size:
+                os.remove(part)
+            print(f"  incomplete or mismatched ({got}/{size} bytes); attempt {attempt + 1}", flush=True)
+        except TRANSIENT as e:
+            if attempt == 7 or (isinstance(e, urllib.error.HTTPError) and e.code not in RETRYABLE):
                 raise
-            wait = int(getattr(e, "headers", {}).get("Retry-After", 0) or 0) if code == 429 else 0
-            print(f"  retry {attempt + 1} after {e}", flush=True)
-            time.sleep(wait or 2 ** attempt * 10)
+            print(f"  retry {attempt + 1} after {e!r}", flush=True)
+            time.sleep(retry_wait(e, attempt))
+    raise IOError(f"could not fetch {url} intact")
 
 
 def mirror_version(hit, raw_root, tool_sha):
@@ -105,7 +140,12 @@ def mirror_version(hit, raw_root, tool_sha):
         algo, md5 = x["checksum"].split(":", 1)
         assert algo == "md5", x["checksum"]
         dest = os.path.join(vdir, x["key"])
-        sha = download(x["links"]["self"], dest, x["size"], md5)
+        if os.path.exists(dest):
+            got_md5, sha = hash_file(dest, "md5", "sha256")
+            if got_md5 != md5:
+                raise IOError(f"{dest} exists with wrong md5")
+        else:
+            sha = download(x["links"]["self"], dest, x["size"], md5)
         os.chmod(dest, 0o444)
         files.append({"key": x["key"], "size": x["size"], "md5": md5, "sha256": sha, "url": x["links"]["self"]})
         time.sleep(1)
@@ -125,28 +165,56 @@ def mirror_version(hit, raw_root, tool_sha):
     return True
 
 
+def verify(raw_root, only):
+    bad = 0
+    for v in sorted(os.listdir(raw_root)):
+        manifest = os.path.join(raw_root, v, "MANIFEST.json")
+        if (only and v not in only) or not os.path.exists(manifest):
+            continue
+        for f in json.load(open(manifest))["files"]:
+            ok = hash_file(os.path.join(raw_root, v, f["key"]), "sha256")[0] == f["sha256"]
+            bad += not ok
+            print(f"{'ok ' if ok else 'BAD'} {v}/{f['key']}", flush=True)
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("record_id")
     ap.add_argument("dest")
-    ap.add_argument("--only", nargs="*", default=None, help="version_dir names to fetch (default: all)")
-    ap.add_argument("--index-only", action="store_true")
+    ap.add_argument("--only", nargs="*", default=None, help="version_dir names to fetch or verify (default: all)")
+    mode = ap.add_mutually_exclusive_group()
+    mode.add_argument("--index-only", action="store_true")
+    mode.add_argument("--verify", action="store_true")
     a = ap.parse_args()
+    raw_root = os.path.join(a.dest, "raw")
+    if a.verify:
+        bad = verify(raw_root, a.only)
+        print(f"{bad} files failed verification", flush=True)
+        return 1 if bad else 0
     with open(__file__, "rb") as f:
         tool_sha = hashlib.sha256(f.read()).hexdigest()
-    os.makedirs(a.dest, exist_ok=True)
+    os.makedirs(raw_root, exist_ok=True)
+    lock = open(os.path.join(a.dest, ".mirror.lock"), "w")
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        sys.exit(f"another mirror run holds {a.dest}/.mirror.lock")
     hits = all_versions(a.record_id)
     write_index(hits, os.path.join(a.dest, "versions.tsv"))
     print(f"{len(hits)} versions indexed", flush=True)
     if a.index_only:
-        return
+        return 0
+    if a.only is not None:
+        unknown = set(a.only) - {version_dir(h) for h in hits}
+        if unknown:
+            sys.exit(f"unknown version_dir: {' '.join(sorted(unknown))}")
     wanted = [h for h in hits if a.only is None or version_dir(h) in a.only]
-    raw_root = os.path.join(a.dest, "raw")
-    os.makedirs(raw_root, exist_ok=True)
     for i, h in enumerate(wanted, 1):
         done = mirror_version(h, raw_root, tool_sha)
         print(f"[{i}/{len(wanted)}] {version_dir(h)} {'fetched' if done else 'present'}", flush=True)
     print("complete", flush=True)
+    return 0
 
 
 if __name__ == "__main__":

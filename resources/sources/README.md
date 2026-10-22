@@ -16,11 +16,12 @@ fitness-for-purpose verdict. Suitability is always relative to a question.
 ```text
 resources/sources/
   README.md                 this file: conventions, template, lessons
+  paleodata-README.md       the README installed at /data/paleodata/
   <id>/README.md            the entry: YAML front matter + guide
-  <id>/<versions>.tsv       full version index, where the source is versioned
-  <id>/profile.py           our profiling code for that source
-  <id>/profile/*.tsv        profiling outputs quoted by the entry
-  <id>/*.sql, *.py, *.R     tested extraction recipes
+  <id>/<provider>-versions.tsv  full version index, where the source is versioned
+  <id>/<id>_profile.py      our profiling code for that source
+  <id>/profile/             profiling outputs quoted by the entry
+  <id>/*.sql, *.py, *.R     tested extraction recipes and checks
 resources/tools/            source-independent tools (e.g. zenodo_mirror.py)
 ```
 
@@ -29,17 +30,23 @@ The mirror on `deep-server` uses the same `<id>`:
 ```text
 /data/paleodata/
   README.md
-  _tools/                   read-only copies of the tools that wrote the mirror
+  _tools/                   read-only copies of the committed tools used there,
+                            named <id>_<script> for source-specific ones
   <id>/versions.tsv         index written by the mirror tool
-  <id>/raw/<version>/       unchanged source files + MANIFEST.json; read-only
-  <id>/derived/<version>/   reproducible conversions (e.g. unzipped SQLite); deletable
+  <id>/raw/<version_dir>/   unchanged source files + MANIFEST.json; read-only;
+                            zenodo_mirror.py names these <version>_<record>
+  <id>/derived/<version_dir>/  conversions rebuilt by committed code; deletable
   <id>/mirror.log
 ```
 
 `raw/` is immutable once written. Each `MANIFEST.json` records the source
 identifier and DOI, version, licence, retrieval time, every file's size, the
 provider's checksum, our sha256, and the sha256 of the tool that fetched it.
-Anything under `derived/` must be rebuildable from `raw/` by committed code.
+Verify with `python3 resources/tools/zenodo_mirror.py <record> <dest> --verify`.
+Anything under `derived/` must be rebuildable from `raw/` by committed code,
+and its entry says which script writes it (for NSB, `nsb_profile.py` unzips
+the SQLite and `age_check.py` writes recomputed ages). Deploy a tool to
+`_tools/` only from a committed version, and check its sha256 matches.
 
 ## Entry kinds
 
@@ -73,7 +80,7 @@ Keep values factual and dated. Use `unknown` rather than guessing.
 
 ```yaml
 ---
-id: nsb
+id: short-lowercase-id                  # also the mirror directory name
 name: Full name (ACRONYM)
 kind: database | compilation | deposit
 status: active | frozen | retired       # frozen = no updates since last_update
@@ -108,9 +115,12 @@ entry:
   created: YYYY-MM-DD
   updated: YYYY-MM-DD
   by: participant (model)
-  reviewed: text or no
+  reviewed: "who and when, or not yet"
 ---
 ```
+
+Quote any YAML value or list item that contains a comma or colon; the front
+matter must parse (`yaml.safe_load`) to the intended structure.
 
 Body sections, in order:
 
@@ -127,8 +137,8 @@ Body sections, in order:
 9. **EPRP relevance**: questions it serves, and what it cannot support.
 10. **Citation and terms**.
 11. **Verification log**: dated checks, each labelled `checked` (we ran or read
-    it), `source claim` (the provider or a paper says so) or `recall`
-    (known but not checked here).
+    it), `source claim` (the provider or a paper says so), `inferred` (our
+    reasoning from checked facts) or `recall` (known but not checked here).
 
 ## Adding a source
 
@@ -150,21 +160,36 @@ the workflow when they generalise.
 
 **NSB (pilot, 22 October 2026; [entry](nsb/README.md)).**
 
-- *Index every version first.* The version history was itself evidence: it
-  dated the paper's counts, showed growth stalling after 2019, and let us
-  measure age drift (17% of samples moved more than 1 Myr, 2014 to 2023).
+- *Index every version, and profile a series, not a pair.* The year-end
+  series separated three causes of age drift (time-scale change, model
+  revision, batch recomputation) that a two-snapshot comparison blurred, and
+  exposed stale stored ages in the final snapshot (4,111 samples in 56 holes).
+  Profile the snapshot a paper's counts match, too.
+- *Recompute derived fields from their inputs.* NSB's sample ages are a cache
+  of its age models; checking the cache against the models found the
+  staleness. Any stored derived value (ages, palaeocoordinates, resolved
+  names) deserves the same test.
 - *Rebuild the provider's convenience exports from the raw tables.* NSB's
   "filtered" file silently keeps undated samples, and its full file carries
   recorded absences that look like presences. Neither is documented. Every
-  database entry now ships a tested extraction query that reproduces the
-  provider's defaults record by record.
+  database entry should ship an extraction recipe whose agreement with the
+  provider's export is checked by committed code on each profile run, with
+  any intended differences stated.
+- *Check which file is the whole database.* NSB's SQLite copy omits 14 of
+  the PostgreSQL dump's 35 tables, including one that links NSB to Triton
+  record by record.
 - *Enumerate every code column.* Five qualifier codes, one taxon status and
   both sample-status codes were undefined in the description paper.
-- *Reconcile our counts with the provider's.* Matching the 2014 snapshot to the
-  paper's pre-renovation counts validated the mirror and the profiler at once.
+- *Reconcile our counts with the provider's, with like-for-like definitions.*
+  The 2019-08-30 snapshot reproduces the paper's counts exactly, validating
+  the mirror and profiler at once. Comparing "sourced" coverage under two
+  different definitions nearly produced a false improvement.
 - *Measure overlap at site level first.* It is cheap and decisive (NSB
-  foraminifera are 95% inside Triton's sites); record-level matching needs
-  harmonised taxonomy and can wait for a question that needs it.
+  foraminifera are 95% inside Triton's sites). Look for linking keys before
+  attempting record-level matching by taxonomy.
+- *Commission an independent review before calling an entry settled.* The
+  adversarial pass on NSB found five major problems in a carefully built
+  entry, and supplied the evidence for the stale-ages finding.
 - *Live services die; deposits survive.* NSB's website went down with a
   museum cyberattack in October 2023 and never returned; its Chronos
   predecessor vanished earlier. The Zenodo snapshots, uploaded weeks after the

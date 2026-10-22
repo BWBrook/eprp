@@ -1,4 +1,884 @@
 version	metric	key	value
+2014-08-16_8238614	table_rows	neptune_age_model	2591
+2014-08-16_8238614	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,datum_id,age_comment
+2014-08-16_8238614	table_rows	neptune_age_model_history	298
+2014-08-16_8238614	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark
+2014-08-16_8238614	table_rows	neptune_core	38915
+2014-08-16_8238614	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2014-08-16_8238614	table_rows	neptune_datum_def	1049
+2014-08-16_8238614	table_columns	neptune_datum_def	datum_id,datum_scale_id,fossil_group,plot_code,datum_type,datum_name,taxon_id,datum_age_min_ma,datum_age_max_ma,datum_qualifier,datum_descript
+2014-08-16_8238614	table_rows	neptune_datum_scale	15
+2014-08-16_8238614	table_columns	neptune_datum_scale	datum_scale_id,scale_source,scale_descript
+2014-08-16_8238614	table_rows	neptune_hole_summary	2922
+2014-08-16_8238614	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag
+2014-08-16_8238614	table_rows	neptune_old_taxonomy	11777
+2014-08-16_8238614	table_columns	neptune_old_taxonomy	taxon_id,taxon_status,fossil_group,genus,species,subspecies,taxon_synon_to,species_author,species_year,entered_by,date_entered,taxon_comment,higher_taxon
+2014-08-16_8238614	table_rows	neptune_sample	42029
+2014-08-16_8238614	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude,paleo_longitude,dataset_id
+2014-08-16_8238614	table_rows	neptune_sample_taxa	500756
+2014-08-16_8238614	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2014-08-16_8238614	table_rows	neptune_sod_off	1
+2014-08-16_8238614	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2014-08-16_8238614	table_rows	neptune_sod_off_fmt	86
+2014-08-16_8238614	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2014-08-16_8238614	table_rows	neptune_taxonomy	17962
+2014-08-16_8238614	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year
+2014-08-16_8238614	table_rows	neptune_user_age_model	840
+2014-08-16_8238614	table_columns	neptune_user_age_model	age_model_id,age_point_no,age_ma,depth_mbsf,datum_id,age_point_descript
+2014-08-16_8238614	table_rows	neptune_user_age_model_hdr	152
+2014-08-16_8238614	table_columns	neptune_user_age_model_hdr	age_model_id,hole_id,interpreted_by,date_entered,age_model_descript
+2014-08-16_8238614	table_rows	pacman	1155
+2014-08-16_8238614	table_columns	pacman	index,age
+2014-08-16_8238614	occurrences_by_group	D	78797
+2014-08-16_8238614	occurrences_by_group	F	141246
+2014-08-16_8238614	occurrences_by_group	N	202184
+2014-08-16_8238614	occurrences_by_group	R	78529
+2014-08-16_8238614	samples_by_group	D	5449
+2014-08-16_8238614	samples_by_group	F	11906
+2014-08-16_8238614	samples_by_group	N	16862
+2014-08-16_8238614	samples_by_group	R	7812
+2014-08-16_8238614	samples_without_age		5645
+2014-08-16_8238614	occurrences_without_age		61134
+2014-08-16_8238614	samples_without_occurrences		598
+2014-08-16_8238614	holes_with_samples		325
+2014-08-16_8238614	taxa_by_status	B	288
+2014-08-16_8238614	taxa_by_status	G	3115
+2014-08-16_8238614	taxa_by_status	H	30
+2014-08-16_8238614	taxa_by_status	I	122
+2014-08-16_8238614	taxa_by_status	O	33
+2014-08-16_8238614	taxa_by_status	Q	1597
+2014-08-16_8238614	taxa_by_status	S	5159
+2014-08-16_8238614	taxa_by_status	U	837
+2014-08-16_8238614	taxa_by_status	V	6781
+2014-08-16_8238614	age_model_revisions		298
+2014-08-16_8238614	current_age_models		289
+2014-08-16_8238614	age_quality_distinct_values	all revisions	27
+2014-08-16_8238614	age_quality_distinct_values	current	27
+2014-08-16_8238614	samples_with_dataset_id		11444
+2014-08-16_8238614	samples_with_source_citation		0
+2014-08-16_8238614	occurrences_with_dataset_id		128447
+2014-08-16_8238614	occurrences_with_source_citation		0
+2014-08-16_8238614	occurrences_south_of	50S	56212
+2014-08-16_8238614	occurrences_south_of	60S	13779
+2014-08-16_8238614	occurrences_sample_group_ne_taxon_group		24
+2014-12-12_10057316	table_rows	neptune_age_model	2591
+2014-12-12_10057316	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,datum_id,age_comment
+2014-12-12_10057316	table_rows	neptune_age_model_history	298
+2014-12-12_10057316	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark
+2014-12-12_10057316	table_rows	neptune_core	38915
+2014-12-12_10057316	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2014-12-12_10057316	table_rows	neptune_datum_def	1049
+2014-12-12_10057316	table_columns	neptune_datum_def	datum_id,datum_scale_id,fossil_group,plot_code,datum_type,datum_name,taxon_id,datum_age_min_ma,datum_age_max_ma,datum_qualifier,datum_descript
+2014-12-12_10057316	table_rows	neptune_datum_scale	15
+2014-12-12_10057316	table_columns	neptune_datum_scale	datum_scale_id,scale_source,scale_descript
+2014-12-12_10057316	table_rows	neptune_event	0
+2014-12-12_10057316	table_columns	neptune_event	event_id,sample_top,sample_bottom,comments,quality_flag,source
+2014-12-12_10057316	table_rows	neptune_event_def	0
+2014-12-12_10057316	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,age_ma,calibration_year,calibration_source,calibration_type,calibration_sites,plotcode
+2014-12-12_10057316	table_rows	neptune_hole_summary	2922
+2014-12-12_10057316	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag
+2014-12-12_10057316	table_rows	neptune_old_taxonomy	11777
+2014-12-12_10057316	table_columns	neptune_old_taxonomy	taxon_id,taxon_status,fossil_group,genus,species,subspecies,taxon_synon_to,species_author,species_year,entered_by,date_entered,taxon_comment,higher_taxon
+2014-12-12_10057316	table_rows	neptune_sample	42011
+2014-12-12_10057316	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude,paleo_longitude,dataset_id
+2014-12-12_10057316	table_rows	neptune_sample_taxa	500622
+2014-12-12_10057316	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2014-12-12_10057316	table_rows	neptune_sod_off	1
+2014-12-12_10057316	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2014-12-12_10057316	table_rows	neptune_sod_off_fmt	86
+2014-12-12_10057316	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2014-12-12_10057316	table_rows	neptune_taxonomy	18014
+2014-12-12_10057316	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2014-12-12_10057316	table_rows	neptune_user_age_model	840
+2014-12-12_10057316	table_columns	neptune_user_age_model	age_model_id,age_point_no,age_ma,depth_mbsf,datum_id,age_point_descript
+2014-12-12_10057316	table_rows	neptune_user_age_model_hdr	152
+2014-12-12_10057316	table_columns	neptune_user_age_model_hdr	age_model_id,hole_id,interpreted_by,date_entered,age_model_descript
+2014-12-12_10057316	table_rows	pacman	1155
+2014-12-12_10057316	table_columns	pacman	index,age
+2014-12-12_10057316	occurrences_by_group	D	78797
+2014-12-12_10057316	occurrences_by_group	F	141112
+2014-12-12_10057316	occurrences_by_group	N	202184
+2014-12-12_10057316	occurrences_by_group	R	78529
+2014-12-12_10057316	samples_by_group	D	5449
+2014-12-12_10057316	samples_by_group	F	11888
+2014-12-12_10057316	samples_by_group	N	16862
+2014-12-12_10057316	samples_by_group	R	7812
+2014-12-12_10057316	samples_without_age		5659
+2014-12-12_10057316	occurrences_without_age		61288
+2014-12-12_10057316	samples_without_occurrences		598
+2014-12-12_10057316	holes_with_samples		325
+2014-12-12_10057316	taxa_by_status	B	343
+2014-12-12_10057316	taxa_by_status	G	3115
+2014-12-12_10057316	taxa_by_status	H	30
+2014-12-12_10057316	taxa_by_status	I	122
+2014-12-12_10057316	taxa_by_status	O	33
+2014-12-12_10057316	taxa_by_status	Q	1597
+2014-12-12_10057316	taxa_by_status	S	5217
+2014-12-12_10057316	taxa_by_status	U	837
+2014-12-12_10057316	taxa_by_status	V	6720
+2014-12-12_10057316	age_model_revisions		298
+2014-12-12_10057316	current_age_models		289
+2014-12-12_10057316	age_quality_distinct_values	all revisions	27
+2014-12-12_10057316	age_quality_distinct_values	current	27
+2014-12-12_10057316	samples_with_dataset_id		11444
+2014-12-12_10057316	samples_with_source_citation		0
+2014-12-12_10057316	occurrences_with_dataset_id		128447
+2014-12-12_10057316	occurrences_with_source_citation		0
+2014-12-12_10057316	occurrences_south_of	50S	56078
+2014-12-12_10057316	occurrences_south_of	60S	13779
+2014-12-12_10057316	occurrences_sample_group_ne_taxon_group		24
+2015-12-03_10057531	table_rows	neptune_age_model	6001
+2015-12-03_10057531	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2015-12-03_10057531	table_rows	neptune_age_model_history	448
+2015-12-03_10057531	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark
+2015-12-03_10057531	table_rows	neptune_calibration_sites	406
+2015-12-03_10057531	table_columns	neptune_calibration_sites	calibration_id,es_id
+2015-12-03_10057531	table_rows	neptune_core	57430
+2015-12-03_10057531	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2015-12-03_10057531	table_rows	neptune_event	26652
+2015-12-03_10057531	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2015-12-03_10057531	table_rows	neptune_event_calibration	1683
+2015-12-03_10057531	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2015-12-03_10057531	table_rows	neptune_event_def	1765
+2015-12-03_10057531	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2015-12-03_10057531	table_rows	neptune_gpts	849
+2015-12-03_10057531	table_columns	neptune_gpts	event_id,scale,age_ma
+2015-12-03_10057531	table_rows	neptune_gpts_def	6
+2015-12-03_10057531	table_columns	neptune_gpts_def	scale,long_name,comments
+2015-12-03_10057531	table_rows	neptune_hole_summary	3046
+2015-12-03_10057531	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag
+2015-12-03_10057531	table_rows	neptune_paleomag_interval	54
+2015-12-03_10057531	table_columns	neptune_paleomag_interval	site_hole,top_depth,bottom_depth,color,pattern,width
+2015-12-03_10057531	table_rows	neptune_paleomag_scale	847
+2015-12-03_10057531	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2015-12-03_10057531	table_rows	neptune_sample	63339
+2015-12-03_10057531	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude,paleo_longitude,dataset_id
+2015-12-03_10057531	table_rows	neptune_sample_taxa	769153
+2015-12-03_10057531	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2015-12-03_10057531	table_rows	neptune_sod_off_fmt	86
+2015-12-03_10057531	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2015-12-03_10057531	table_rows	neptune_taxonomy	18859
+2015-12-03_10057531	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2015-12-03_10057531	table_rows	pacman	1155
+2015-12-03_10057531	table_columns	pacman	index,age
+2015-12-03_10057531	occurrences_by_group		698
+2015-12-03_10057531	occurrences_by_group	D	141103
+2015-12-03_10057531	occurrences_by_group	DN	1491
+2015-12-03_10057531	occurrences_by_group	F	175970
+2015-12-03_10057531	occurrences_by_group	N	312903
+2015-12-03_10057531	occurrences_by_group	R	136988
+2015-12-03_10057531	samples_by_group		103
+2015-12-03_10057531	samples_by_group	D	9657
+2015-12-03_10057531	samples_by_group	DN	118
+2015-12-03_10057531	samples_by_group	F	16523
+2015-12-03_10057531	samples_by_group	N	25294
+2015-12-03_10057531	samples_by_group	R	11644
+2015-12-03_10057531	samples_without_age		8689
+2015-12-03_10057531	occurrences_without_age		81541
+2015-12-03_10057531	samples_without_occurrences		2527
+2015-12-03_10057531	holes_with_samples		497
+2015-12-03_10057531	taxa_by_status	B	470
+2015-12-03_10057531	taxa_by_status	G	3499
+2015-12-03_10057531	taxa_by_status	H	40
+2015-12-03_10057531	taxa_by_status	I	166
+2015-12-03_10057531	taxa_by_status	O	33
+2015-12-03_10057531	taxa_by_status	Q	1608
+2015-12-03_10057531	taxa_by_status	S	5314
+2015-12-03_10057531	taxa_by_status	U	852
+2015-12-03_10057531	taxa_by_status	V	6877
+2015-12-03_10057531	age_model_revisions		448
+2015-12-03_10057531	current_age_models		434
+2015-12-03_10057531	age_quality_distinct_values	all revisions	28
+2015-12-03_10057531	age_quality_distinct_values	current	28
+2015-12-03_10057531	samples_with_dataset_id		33182
+2015-12-03_10057531	samples_with_source_citation		NA
+2015-12-03_10057531	occurrences_with_dataset_id		407545
+2015-12-03_10057531	occurrences_with_source_citation		NA
+2015-12-03_10057531	occurrences_south_of	50S	68452
+2015-12-03_10057531	occurrences_south_of	60S	16003
+2015-12-03_10057531	occurrences_sample_group_ne_taxon_group		3344
+2016-12-13_10058206	table_rows	age_model_info	3061
+2016-12-13_10058206	table_columns	age_model_info	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,meters_penetrated,meters_recovered,pmag_flag,revision_no,age_quality,interpreted_by,date_worked,current_flag,remark
+2016-12-13_10058206	table_rows	longhurst_name	53
+2016-12-13_10058206	table_columns	longhurst_name	provcode,provname
+2016-12-13_10058206	table_rows	neptune_age_model	6290
+2016-12-13_10058206	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2016-12-13_10058206	table_rows	neptune_age_model_history	478
+2016-12-13_10058206	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark
+2016-12-13_10058206	table_rows	neptune_calibration_sites	587
+2016-12-13_10058206	table_columns	neptune_calibration_sites	calibration_id,es_id
+2016-12-13_10058206	table_rows	neptune_core	57542
+2016-12-13_10058206	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2016-12-13_10058206	table_rows	neptune_event	26542
+2016-12-13_10058206	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2016-12-13_10058206	table_rows	neptune_event_calibration	2372
+2016-12-13_10058206	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2016-12-13_10058206	table_rows	neptune_event_def	2434
+2016-12-13_10058206	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2016-12-13_10058206	table_rows	neptune_gpts	849
+2016-12-13_10058206	table_columns	neptune_gpts	event_id,scale,age_ma
+2016-12-13_10058206	table_rows	neptune_gpts_def	6
+2016-12-13_10058206	table_columns	neptune_gpts_def	scale,long_name,comments
+2016-12-13_10058206	table_rows	neptune_hole_summary	3478
+2016-12-13_10058206	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2016-12-13_10058206	table_rows	neptune_paleogeography	582770
+2016-12-13_10058206	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2016-12-13_10058206	table_rows	neptune_paleomag_interval	54
+2016-12-13_10058206	table_columns	neptune_paleomag_interval	site_hole,top_depth,bottom_depth,color,pattern,width
+2016-12-13_10058206	table_rows	neptune_paleomag_scale	847
+2016-12-13_10058206	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2016-12-13_10058206	table_rows	neptune_sample	61453
+2016-12-13_10058206	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2016-12-13_10058206	table_rows	neptune_sample_taxa	768979
+2016-12-13_10058206	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2016-12-13_10058206	table_rows	neptune_sod_off	924
+2016-12-13_10058206	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2016-12-13_10058206	table_rows	neptune_sod_off_fmt	86
+2016-12-13_10058206	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2016-12-13_10058206	table_rows	neptune_taxonomy	18861
+2016-12-13_10058206	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2016-12-13_10058206	table_rows	pacman	1155
+2016-12-13_10058206	table_columns	pacman	index,age
+2016-12-13_10058206	occurrences_by_group	D	140936
+2016-12-13_10058206	occurrences_by_group	DN	1491
+2016-12-13_10058206	occurrences_by_group	F	176657
+2016-12-13_10058206	occurrences_by_group	N	314719
+2016-12-13_10058206	occurrences_by_group	R	135176
+2016-12-13_10058206	samples_by_group	D	9309
+2016-12-13_10058206	samples_by_group	DN	118
+2016-12-13_10058206	samples_by_group	F	16059
+2016-12-13_10058206	samples_by_group	N	24582
+2016-12-13_10058206	samples_by_group	R	11385
+2016-12-13_10058206	samples_without_age		6534
+2016-12-13_10058206	occurrences_without_age		66214
+2016-12-13_10058206	samples_without_occurrences		678
+2016-12-13_10058206	holes_with_samples		497
+2016-12-13_10058206	taxa_by_status	B	471
+2016-12-13_10058206	taxa_by_status	G	3499
+2016-12-13_10058206	taxa_by_status	H	40
+2016-12-13_10058206	taxa_by_status	I	166
+2016-12-13_10058206	taxa_by_status	O	33
+2016-12-13_10058206	taxa_by_status	Q	1608
+2016-12-13_10058206	taxa_by_status	S	5310
+2016-12-13_10058206	taxa_by_status	U	851
+2016-12-13_10058206	taxa_by_status	V	6883
+2016-12-13_10058206	age_model_revisions		478
+2016-12-13_10058206	current_age_models		459
+2016-12-13_10058206	age_quality_distinct_values	all revisions	11
+2016-12-13_10058206	age_quality_distinct_values	current	11
+2016-12-13_10058206	samples_with_dataset_id		51850
+2016-12-13_10058206	samples_with_source_citation		46502
+2016-12-13_10058206	occurrences_with_dataset_id		645892
+2016-12-13_10058206	occurrences_with_source_citation		569571
+2016-12-13_10058206	occurrences_south_of	50S	68452
+2016-12-13_10058206	occurrences_south_of	60S	16003
+2016-12-13_10058206	occurrences_sample_group_ne_taxon_group		614
+2017-12-20_10058576	table_rows	longhurst_name	53
+2017-12-20_10058576	table_columns	longhurst_name	provcode,provname
+2017-12-20_10058576	table_rows	neptune_age_model	9002
+2017-12-20_10058576	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2017-12-20_10058576	table_rows	neptune_age_model_history	704
+2017-12-20_10058576	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2017-12-20_10058576	table_rows	neptune_calibration_sites	587
+2017-12-20_10058576	table_columns	neptune_calibration_sites	calibration_id,es_id
+2017-12-20_10058576	table_rows	neptune_core	57541
+2017-12-20_10058576	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2017-12-20_10058576	table_rows	neptune_event	27549
+2017-12-20_10058576	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2017-12-20_10058576	table_rows	neptune_event_calibration	2746
+2017-12-20_10058576	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2017-12-20_10058576	table_rows	neptune_event_def	2910
+2017-12-20_10058576	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2017-12-20_10058576	table_rows	neptune_gpts	945
+2017-12-20_10058576	table_columns	neptune_gpts	event_id,scale,age_ma
+2017-12-20_10058576	table_rows	neptune_gpts_def	6
+2017-12-20_10058576	table_columns	neptune_gpts_def	scale,long_name,comments
+2017-12-20_10058576	table_rows	neptune_hole_summary	3478
+2017-12-20_10058576	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2017-12-20_10058576	table_rows	neptune_paleogeography	582770
+2017-12-20_10058576	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2017-12-20_10058576	table_rows	neptune_paleomag_interval	54
+2017-12-20_10058576	table_columns	neptune_paleomag_interval	site_hole,top_depth,bottom_depth,color,pattern,width
+2017-12-20_10058576	table_rows	neptune_paleomag_scale	847
+2017-12-20_10058576	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2017-12-20_10058576	table_rows	neptune_sample	61299
+2017-12-20_10058576	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2017-12-20_10058576	table_rows	neptune_sample_taxa	767600
+2017-12-20_10058576	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2017-12-20_10058576	table_rows	neptune_sod_off	924
+2017-12-20_10058576	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2017-12-20_10058576	table_rows	neptune_sod_off_fmt	86
+2017-12-20_10058576	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2017-12-20_10058576	table_rows	neptune_taxonomy	18863
+2017-12-20_10058576	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2017-12-20_10058576	table_rows	pacman	1155
+2017-12-20_10058576	table_columns	pacman	index,age
+2017-12-20_10058576	occurrences_by_group	D	139995
+2017-12-20_10058576	occurrences_by_group	DN	1491
+2017-12-20_10058576	occurrences_by_group	F	176517
+2017-12-20_10058576	occurrences_by_group	N	314719
+2017-12-20_10058576	occurrences_by_group	R	134878
+2017-12-20_10058576	samples_by_group	D	9234
+2017-12-20_10058576	samples_by_group	DN	118
+2017-12-20_10058576	samples_by_group	F	16023
+2017-12-20_10058576	samples_by_group	N	24582
+2017-12-20_10058576	samples_by_group	R	11342
+2017-12-20_10058576	samples_without_age		6677
+2017-12-20_10058576	occurrences_without_age		68633
+2017-12-20_10058576	samples_without_occurrences		676
+2017-12-20_10058576	holes_with_samples		495
+2017-12-20_10058576	taxa_by_status	B	471
+2017-12-20_10058576	taxa_by_status	G	3499
+2017-12-20_10058576	taxa_by_status	H	40
+2017-12-20_10058576	taxa_by_status	I	166
+2017-12-20_10058576	taxa_by_status	O	33
+2017-12-20_10058576	taxa_by_status	Q	1608
+2017-12-20_10058576	taxa_by_status	S	5312
+2017-12-20_10058576	taxa_by_status	U	851
+2017-12-20_10058576	taxa_by_status	V	6883
+2017-12-20_10058576	age_model_revisions		704
+2017-12-20_10058576	current_age_models		458
+2017-12-20_10058576	age_quality_distinct_values	all revisions	11
+2017-12-20_10058576	age_quality_distinct_values	current	10
+2017-12-20_10058576	samples_with_dataset_id		51696
+2017-12-20_10058576	samples_with_source_citation		46353
+2017-12-20_10058576	occurrences_with_dataset_id		644513
+2017-12-20_10058576	occurrences_with_source_citation		568197
+2017-12-20_10058576	occurrences_south_of	50S	68452
+2017-12-20_10058576	occurrences_south_of	60S	16003
+2017-12-20_10058576	occurrences_sample_group_ne_taxon_group		614
+2018-10-27_10059720	table_rows	core_new	57416
+2018-10-27_10059720	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2018-10-27_10059720	table_rows	longhurst_name	53
+2018-10-27_10059720	table_columns	longhurst_name	provcode,provname
+2018-10-27_10059720	table_rows	neptune_age_model	7946
+2018-10-27_10059720	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2018-10-27_10059720	table_rows	neptune_age_model_history	610
+2018-10-27_10059720	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2018-10-27_10059720	table_rows	neptune_calibration_sites	587
+2018-10-27_10059720	table_columns	neptune_calibration_sites	calibration_id,es_id
+2018-10-27_10059720	table_rows	neptune_core	57541
+2018-10-27_10059720	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2018-10-27_10059720	table_rows	neptune_event	27806
+2018-10-27_10059720	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2018-10-27_10059720	table_rows	neptune_event_calibration	2746
+2018-10-27_10059720	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2018-10-27_10059720	table_rows	neptune_event_def	2920
+2018-10-27_10059720	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2018-10-27_10059720	table_rows	neptune_gpts	945
+2018-10-27_10059720	table_columns	neptune_gpts	event_id,scale,age_ma
+2018-10-27_10059720	table_rows	neptune_gpts_def	6
+2018-10-27_10059720	table_columns	neptune_gpts_def	scale,long_name,comments
+2018-10-27_10059720	table_rows	neptune_hole_summary	3478
+2018-10-27_10059720	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2018-10-27_10059720	table_rows	neptune_paleogeography	582770
+2018-10-27_10059720	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2018-10-27_10059720	table_rows	neptune_paleomag_interval	54
+2018-10-27_10059720	table_columns	neptune_paleomag_interval	site_hole,top_depth,bottom_depth,color,pattern,width
+2018-10-27_10059720	table_rows	neptune_paleomag_scale	847
+2018-10-27_10059720	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2018-10-27_10059720	table_rows	neptune_sample	61306
+2018-10-27_10059720	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2018-10-27_10059720	table_rows	neptune_sample_taxa	768057
+2018-10-27_10059720	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2018-10-27_10059720	table_rows	neptune_sod_off	950
+2018-10-27_10059720	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2018-10-27_10059720	table_rows	neptune_sod_off_fmt	86
+2018-10-27_10059720	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2018-10-27_10059720	table_rows	neptune_taxonomy	18915
+2018-10-27_10059720	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2018-10-27_10059720	table_rows	pacman	1155
+2018-10-27_10059720	table_columns	pacman	index,age
+2018-10-27_10059720	occurrences_by_group	D	142173
+2018-10-27_10059720	occurrences_by_group	DN	1491
+2018-10-27_10059720	occurrences_by_group	F	176517
+2018-10-27_10059720	occurrences_by_group	N	312998
+2018-10-27_10059720	occurrences_by_group	R	134878
+2018-10-27_10059720	samples_by_group	D	9352
+2018-10-27_10059720	samples_by_group	DN	118
+2018-10-27_10059720	samples_by_group	F	16023
+2018-10-27_10059720	samples_by_group	N	24471
+2018-10-27_10059720	samples_by_group	R	11342
+2018-10-27_10059720	samples_without_age		6495
+2018-10-27_10059720	occurrences_without_age		65861
+2018-10-27_10059720	samples_without_occurrences		680
+2018-10-27_10059720	holes_with_samples		502
+2018-10-27_10059720	taxa_by_status	B	471
+2018-10-27_10059720	taxa_by_status	G	3539
+2018-10-27_10059720	taxa_by_status	H	40
+2018-10-27_10059720	taxa_by_status	I	166
+2018-10-27_10059720	taxa_by_status	O	33
+2018-10-27_10059720	taxa_by_status	Q	1608
+2018-10-27_10059720	taxa_by_status	S	5316
+2018-10-27_10059720	taxa_by_status	U	850
+2018-10-27_10059720	taxa_by_status	V	6892
+2018-10-27_10059720	age_model_revisions		610
+2018-10-27_10059720	current_age_models		463
+2018-10-27_10059720	age_quality_distinct_values	all revisions	11
+2018-10-27_10059720	age_quality_distinct_values	current	9
+2018-10-27_10059720	samples_with_dataset_id		52806
+2018-10-27_10059720	samples_with_source_citation		48368
+2018-10-27_10059720	occurrences_with_dataset_id		657999
+2018-10-27_10059720	occurrences_with_source_citation		592204
+2018-10-27_10059720	occurrences_south_of	50S	69236
+2018-10-27_10059720	occurrences_south_of	60S	16003
+2018-10-27_10059720	occurrences_sample_group_ne_taxon_group		614
+2019-08-30_10059743	table_rows	core_new	57416
+2019-08-30_10059743	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2019-08-30_10059743	table_rows	longhurst_name	53
+2019-08-30_10059743	table_columns	longhurst_name	provcode,provname
+2019-08-30_10059743	table_rows	neptune_age_model	7974
+2019-08-30_10059743	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2019-08-30_10059743	table_rows	neptune_age_model_history	611
+2019-08-30_10059743	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2019-08-30_10059743	table_rows	neptune_calibration_sites	587
+2019-08-30_10059743	table_columns	neptune_calibration_sites	calibration_id,es_id
+2019-08-30_10059743	table_rows	neptune_core	57541
+2019-08-30_10059743	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2019-08-30_10059743	table_rows	neptune_event	27793
+2019-08-30_10059743	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2019-08-30_10059743	table_rows	neptune_event_calibration	2746
+2019-08-30_10059743	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2019-08-30_10059743	table_rows	neptune_event_def	2920
+2019-08-30_10059743	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2019-08-30_10059743	table_rows	neptune_gpts	945
+2019-08-30_10059743	table_columns	neptune_gpts	event_id,scale,age_ma
+2019-08-30_10059743	table_rows	neptune_gpts_def	6
+2019-08-30_10059743	table_columns	neptune_gpts_def	scale,long_name,comments
+2019-08-30_10059743	table_rows	neptune_hole_summary	3797
+2019-08-30_10059743	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2019-08-30_10059743	table_rows	neptune_paleogeography	582770
+2019-08-30_10059743	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2019-08-30_10059743	table_rows	neptune_paleomag_interval	54
+2019-08-30_10059743	table_columns	neptune_paleomag_interval	site_hole,top_depth,bottom_depth,color,pattern,width
+2019-08-30_10059743	table_rows	neptune_paleomag_scale	847
+2019-08-30_10059743	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2019-08-30_10059743	table_rows	neptune_sample	61139
+2019-08-30_10059743	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2019-08-30_10059743	table_rows	neptune_sample_taxa	768057
+2019-08-30_10059743	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2019-08-30_10059743	table_rows	neptune_sod_off	952
+2019-08-30_10059743	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2019-08-30_10059743	table_rows	neptune_sod_off_fmt	86
+2019-08-30_10059743	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2019-08-30_10059743	table_rows	neptune_taxonomy	18915
+2019-08-30_10059743	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2019-08-30_10059743	table_rows	pacman	1155
+2019-08-30_10059743	table_columns	pacman	index,age
+2019-08-30_10059743	occurrences_by_group	D	142173
+2019-08-30_10059743	occurrences_by_group	DN	1491
+2019-08-30_10059743	occurrences_by_group	F	176517
+2019-08-30_10059743	occurrences_by_group	N	312998
+2019-08-30_10059743	occurrences_by_group	R	134878
+2019-08-30_10059743	samples_by_group	D	9352
+2019-08-30_10059743	samples_by_group	DN	118
+2019-08-30_10059743	samples_by_group	F	16023
+2019-08-30_10059743	samples_by_group	N	24304
+2019-08-30_10059743	samples_by_group	R	11342
+2019-08-30_10059743	samples_without_age		6468
+2019-08-30_10059743	occurrences_without_age		65308
+2019-08-30_10059743	samples_without_occurrences		680
+2019-08-30_10059743	holes_with_samples		502
+2019-08-30_10059743	taxa_by_status	B	471
+2019-08-30_10059743	taxa_by_status	G	3539
+2019-08-30_10059743	taxa_by_status	H	40
+2019-08-30_10059743	taxa_by_status	I	166
+2019-08-30_10059743	taxa_by_status	O	33
+2019-08-30_10059743	taxa_by_status	Q	1608
+2019-08-30_10059743	taxa_by_status	S	5316
+2019-08-30_10059743	taxa_by_status	U	850
+2019-08-30_10059743	taxa_by_status	V	6892
+2019-08-30_10059743	age_model_revisions		611
+2019-08-30_10059743	current_age_models		464
+2019-08-30_10059743	age_quality_distinct_values	all revisions	10
+2019-08-30_10059743	age_quality_distinct_values	current	6
+2019-08-30_10059743	samples_with_dataset_id		53002
+2019-08-30_10059743	samples_with_source_citation		48862
+2019-08-30_10059743	occurrences_with_dataset_id		660678
+2019-08-30_10059743	occurrences_with_source_citation		598536
+2019-08-30_10059743	occurrences_south_of	50S	69236
+2019-08-30_10059743	occurrences_south_of	60S	16003
+2019-08-30_10059743	occurrences_sample_group_ne_taxon_group		614
+2019-10-07_10059748	table_rows	core_new	57416
+2019-10-07_10059748	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2019-10-07_10059748	table_rows	longhurst_name	53
+2019-10-07_10059748	table_columns	longhurst_name	provcode,provname
+2019-10-07_10059748	table_rows	neptune_age_model	7974
+2019-10-07_10059748	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2019-10-07_10059748	table_rows	neptune_age_model_history	611
+2019-10-07_10059748	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2019-10-07_10059748	table_rows	neptune_calibration_sites	587
+2019-10-07_10059748	table_columns	neptune_calibration_sites	calibration_id,es_id
+2019-10-07_10059748	table_rows	neptune_core	57541
+2019-10-07_10059748	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2019-10-07_10059748	table_rows	neptune_event	27793
+2019-10-07_10059748	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2019-10-07_10059748	table_rows	neptune_event_calibration	2746
+2019-10-07_10059748	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2019-10-07_10059748	table_rows	neptune_event_def	2920
+2019-10-07_10059748	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2019-10-07_10059748	table_rows	neptune_gpts	945
+2019-10-07_10059748	table_columns	neptune_gpts	event_id,scale,age_ma
+2019-10-07_10059748	table_rows	neptune_gpts_def	6
+2019-10-07_10059748	table_columns	neptune_gpts_def	scale,long_name,comments
+2019-10-07_10059748	table_rows	neptune_hole_summary	3797
+2019-10-07_10059748	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2019-10-07_10059748	table_rows	neptune_paleogeography	582770
+2019-10-07_10059748	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2019-10-07_10059748	table_rows	neptune_paleomag_interval	54
+2019-10-07_10059748	table_columns	neptune_paleomag_interval	site_hole,top_depth,bottom_depth,color,pattern,width
+2019-10-07_10059748	table_rows	neptune_paleomag_scale	847
+2019-10-07_10059748	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2019-10-07_10059748	table_rows	neptune_sample	61903
+2019-10-07_10059748	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2019-10-07_10059748	table_rows	neptune_sample_taxa	780844
+2019-10-07_10059748	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2019-10-07_10059748	table_rows	neptune_sod_off	961
+2019-10-07_10059748	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2019-10-07_10059748	table_rows	neptune_sod_off_fmt	86
+2019-10-07_10059748	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2019-10-07_10059748	table_rows	neptune_taxonomy	19066
+2019-10-07_10059748	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group
+2019-10-07_10059748	table_rows	pacman	1155
+2019-10-07_10059748	table_columns	pacman	index,age
+2019-10-07_10059748	occurrences_by_group	D	142173
+2019-10-07_10059748	occurrences_by_group	DN	8353
+2019-10-07_10059748	occurrences_by_group	F	176517
+2019-10-07_10059748	occurrences_by_group	N	312998
+2019-10-07_10059748	occurrences_by_group	R	140803
+2019-10-07_10059748	samples_by_group	D	9352
+2019-10-07_10059748	samples_by_group	DN	604
+2019-10-07_10059748	samples_by_group	F	16023
+2019-10-07_10059748	samples_by_group	N	24304
+2019-10-07_10059748	samples_by_group	R	11620
+2019-10-07_10059748	samples_without_age		6591
+2019-10-07_10059748	occurrences_without_age		67205
+2019-10-07_10059748	samples_without_occurrences		716
+2019-10-07_10059748	holes_with_samples		502
+2019-10-07_10059748	taxa_by_status	B	476
+2019-10-07_10059748	taxa_by_status	G	3619
+2019-10-07_10059748	taxa_by_status	H	53
+2019-10-07_10059748	taxa_by_status	I	166
+2019-10-07_10059748	taxa_by_status	O	33
+2019-10-07_10059748	taxa_by_status	Q	1609
+2019-10-07_10059748	taxa_by_status	S	5327
+2019-10-07_10059748	taxa_by_status	U	852
+2019-10-07_10059748	taxa_by_status	V	6931
+2019-10-07_10059748	age_model_revisions		611
+2019-10-07_10059748	current_age_models		464
+2019-10-07_10059748	age_quality_distinct_values	all revisions	10
+2019-10-07_10059748	age_quality_distinct_values	current	6
+2019-10-07_10059748	samples_with_dataset_id		53766
+2019-10-07_10059748	samples_with_source_citation		49626
+2019-10-07_10059748	occurrences_with_dataset_id		673465
+2019-10-07_10059748	occurrences_with_source_citation		611323
+2019-10-07_10059748	occurrences_south_of	50S	70006
+2019-10-07_10059748	occurrences_south_of	60S	16003
+2019-10-07_10059748	occurrences_sample_group_ne_taxon_group		614
+2019-11-27_10061258	table_rows	core_new	57416
+2019-11-27_10061258	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2019-11-27_10061258	table_rows	longhurst_name	53
+2019-11-27_10061258	table_columns	longhurst_name	provcode,provname
+2019-11-27_10061258	table_rows	neptune_age_model	8161
+2019-11-27_10061258	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2019-11-27_10061258	table_rows	neptune_age_model_history	614
+2019-11-27_10061258	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2019-11-27_10061258	table_rows	neptune_calibration_sites	619
+2019-11-27_10061258	table_columns	neptune_calibration_sites	calibration_id,es_id
+2019-11-27_10061258	table_rows	neptune_core	57541
+2019-11-27_10061258	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2019-11-27_10061258	table_rows	neptune_event	27872
+2019-11-27_10061258	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf
+2019-11-27_10061258	table_rows	neptune_event_calibration	2765
+2019-11-27_10061258	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma
+2019-11-27_10061258	table_rows	neptune_event_def	2939
+2019-11-27_10061258	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2019-11-27_10061258	table_rows	neptune_gpts	945
+2019-11-27_10061258	table_columns	neptune_gpts	event_id,scale,age_ma
+2019-11-27_10061258	table_rows	neptune_gpts_def	6
+2019-11-27_10061258	table_columns	neptune_gpts_def	scale,long_name,comments
+2019-11-27_10061258	table_rows	neptune_hole_summary	3797
+2019-11-27_10061258	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2019-11-27_10061258	table_rows	neptune_paleogeography	582770
+2019-11-27_10061258	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2019-11-27_10061258	table_rows	neptune_paleomag_interval	88
+2019-11-27_10061258	table_columns	neptune_paleomag_interval	hole_id,top_depth,bottom_depth,color,pattern,width,source,site_hole
+2019-11-27_10061258	table_rows	neptune_paleomag_scale	847
+2019-11-27_10061258	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2019-11-27_10061258	table_rows	neptune_sample	61963
+2019-11-27_10061258	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2019-11-27_10061258	table_rows	neptune_sample_taxa	782618
+2019-11-27_10061258	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2019-11-27_10061258	table_rows	neptune_sod_off	966
+2019-11-27_10061258	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2019-11-27_10061258	table_rows	neptune_sod_off_fmt	86
+2019-11-27_10061258	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2019-11-27_10061258	table_rows	neptune_taxonomy	19121
+2019-11-27_10061258	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group,mtax_id
+2019-11-27_10061258	table_rows	pacman	1155
+2019-11-27_10061258	table_columns	pacman	index,age
+2019-11-27_10061258	occurrences_by_group	D	142173
+2019-11-27_10061258	occurrences_by_group	DN	8529
+2019-11-27_10061258	occurrences_by_group	F	176517
+2019-11-27_10061258	occurrences_by_group	N	312998
+2019-11-27_10061258	occurrences_by_group	R	142401
+2019-11-27_10061258	samples_by_group	D	9352
+2019-11-27_10061258	samples_by_group	DN	619
+2019-11-27_10061258	samples_by_group	F	16023
+2019-11-27_10061258	samples_by_group	N	24304
+2019-11-27_10061258	samples_by_group	R	11665
+2019-11-27_10061258	samples_without_age		6608
+2019-11-27_10061258	occurrences_without_age		68072
+2019-11-27_10061258	samples_without_occurrences		724
+2019-11-27_10061258	holes_with_samples		505
+2019-11-27_10061258	taxa_by_status	B	477
+2019-11-27_10061258	taxa_by_status	G	3636
+2019-11-27_10061258	taxa_by_status	H	59
+2019-11-27_10061258	taxa_by_status	I	166
+2019-11-27_10061258	taxa_by_status	O	33
+2019-11-27_10061258	taxa_by_status	Q	1609
+2019-11-27_10061258	taxa_by_status	S	5342
+2019-11-27_10061258	taxa_by_status	U	852
+2019-11-27_10061258	taxa_by_status	V	6947
+2019-11-27_10061258	age_model_revisions		614
+2019-11-27_10061258	current_age_models		464
+2019-11-27_10061258	age_quality_distinct_values	all revisions	10
+2019-11-27_10061258	age_quality_distinct_values	current	6
+2019-11-27_10061258	samples_with_dataset_id		53826
+2019-11-27_10061258	samples_with_source_citation		49686
+2019-11-27_10061258	occurrences_with_dataset_id		675239
+2019-11-27_10061258	occurrences_with_source_citation		613097
+2019-11-27_10061258	occurrences_south_of	50S	70737
+2019-11-27_10061258	occurrences_south_of	60S	16003
+2019-11-27_10061258	occurrences_sample_group_ne_taxon_group		614
+2020-12-15_10062080	table_rows	core_new	57416
+2020-12-15_10062080	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2020-12-15_10062080	table_rows	longhurst_name	53
+2020-12-15_10062080	table_columns	longhurst_name	provcode,provname
+2020-12-15_10062080	table_rows	neptune_age_model	9363
+2020-12-15_10062080	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2020-12-15_10062080	table_rows	neptune_age_model_history	648
+2020-12-15_10062080	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2020-12-15_10062080	table_rows	neptune_calibration_sites	619
+2020-12-15_10062080	table_columns	neptune_calibration_sites	calibration_id,es_id
+2020-12-15_10062080	table_rows	neptune_core	57541
+2020-12-15_10062080	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2020-12-15_10062080	table_rows	neptune_event	28140
+2020-12-15_10062080	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf,source_id
+2020-12-15_10062080	table_rows	neptune_event_calibration	3455
+2020-12-15_10062080	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma,source_id
+2020-12-15_10062080	table_rows	neptune_event_def	3524
+2020-12-15_10062080	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2020-12-15_10062080	table_rows	neptune_gpts	945
+2020-12-15_10062080	table_columns	neptune_gpts	event_id,scale,age_ma
+2020-12-15_10062080	table_rows	neptune_gpts_def	6
+2020-12-15_10062080	table_columns	neptune_gpts_def	scale,long_name,comments
+2020-12-15_10062080	table_rows	neptune_hole_summary	3797
+2020-12-15_10062080	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2020-12-15_10062080	table_rows	neptune_paleogeography	582770
+2020-12-15_10062080	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2020-12-15_10062080	table_rows	neptune_paleomag_interval	206
+2020-12-15_10062080	table_columns	neptune_paleomag_interval	hole_id,top_depth,bottom_depth,color,pattern,width,source,site_hole,source_id
+2020-12-15_10062080	table_rows	neptune_paleomag_scale	847
+2020-12-15_10062080	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2020-12-15_10062080	table_rows	neptune_sample	61963
+2020-12-15_10062080	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2020-12-15_10062080	table_rows	neptune_sample_taxa	782618
+2020-12-15_10062080	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2020-12-15_10062080	table_rows	neptune_sod_off	966
+2020-12-15_10062080	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,metanuts_source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2020-12-15_10062080	table_rows	neptune_sod_off_fmt	86
+2020-12-15_10062080	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2020-12-15_10062080	table_rows	neptune_strat_sources	897
+2020-12-15_10062080	table_columns	neptune_strat_sources	source_id,full_citation,short_name,comment
+2020-12-15_10062080	table_rows	neptune_taxonomy	19121
+2020-12-15_10062080	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group,mtax_id
+2020-12-15_10062080	occurrences_by_group	D	142173
+2020-12-15_10062080	occurrences_by_group	DN	8529
+2020-12-15_10062080	occurrences_by_group	F	176517
+2020-12-15_10062080	occurrences_by_group	N	312998
+2020-12-15_10062080	occurrences_by_group	R	142401
+2020-12-15_10062080	samples_by_group	D	9352
+2020-12-15_10062080	samples_by_group	DN	619
+2020-12-15_10062080	samples_by_group	F	16023
+2020-12-15_10062080	samples_by_group	N	24304
+2020-12-15_10062080	samples_by_group	R	11665
+2020-12-15_10062080	samples_without_age		6608
+2020-12-15_10062080	occurrences_without_age		68072
+2020-12-15_10062080	samples_without_occurrences		724
+2020-12-15_10062080	holes_with_samples		505
+2020-12-15_10062080	taxa_by_status	B	477
+2020-12-15_10062080	taxa_by_status	G	3636
+2020-12-15_10062080	taxa_by_status	H	59
+2020-12-15_10062080	taxa_by_status	I	166
+2020-12-15_10062080	taxa_by_status	O	33
+2020-12-15_10062080	taxa_by_status	Q	1609
+2020-12-15_10062080	taxa_by_status	S	5342
+2020-12-15_10062080	taxa_by_status	U	852
+2020-12-15_10062080	taxa_by_status	V	6947
+2020-12-15_10062080	age_model_revisions		648
+2020-12-15_10062080	current_age_models		468
+2020-12-15_10062080	age_quality_distinct_values	all revisions	9
+2020-12-15_10062080	age_quality_distinct_values	current	6
+2020-12-15_10062080	samples_with_dataset_id		53826
+2020-12-15_10062080	samples_with_source_citation		49686
+2020-12-15_10062080	occurrences_with_dataset_id		675239
+2020-12-15_10062080	occurrences_with_source_citation		613097
+2020-12-15_10062080	occurrences_south_of	50S	70737
+2020-12-15_10062080	occurrences_south_of	60S	16003
+2020-12-15_10062080	occurrences_sample_group_ne_taxon_group		614
+2021-12-16_10062700	table_rows	core_new	57416
+2021-12-16_10062700	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2021-12-16_10062700	table_rows	longhurst_name	53
+2021-12-16_10062700	table_columns	longhurst_name	provcode,provname
+2021-12-16_10062700	table_rows	neptune_age_model	10516
+2021-12-16_10062700	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2021-12-16_10062700	table_rows	neptune_age_model_history	718
+2021-12-16_10062700	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2021-12-16_10062700	table_rows	neptune_calibration_sites	619
+2021-12-16_10062700	table_columns	neptune_calibration_sites	calibration_id,es_id
+2021-12-16_10062700	table_rows	neptune_core	57541
+2021-12-16_10062700	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2021-12-16_10062700	table_rows	neptune_event	28534
+2021-12-16_10062700	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf,source_id
+2021-12-16_10062700	table_rows	neptune_event_calibration	4847
+2021-12-16_10062700	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma,source_id
+2021-12-16_10062700	table_rows	neptune_event_def	4916
+2021-12-16_10062700	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2021-12-16_10062700	table_rows	neptune_gpts	1231
+2021-12-16_10062700	table_columns	neptune_gpts	event_id,scale,age_ma
+2021-12-16_10062700	table_rows	neptune_gpts_def	7
+2021-12-16_10062700	table_columns	neptune_gpts_def	scale,long_name,comments
+2021-12-16_10062700	table_rows	neptune_hole_summary	3797
+2021-12-16_10062700	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2021-12-16_10062700	table_rows	neptune_paleogeography	582770
+2021-12-16_10062700	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2021-12-16_10062700	table_rows	neptune_paleomag_interval	206
+2021-12-16_10062700	table_columns	neptune_paleomag_interval	hole_id,top_depth,bottom_depth,color,pattern,width,source,site_hole,source_id
+2021-12-16_10062700	table_rows	neptune_paleomag_scale	847
+2021-12-16_10062700	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2021-12-16_10062700	table_rows	neptune_sample	61963
+2021-12-16_10062700	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2021-12-16_10062700	table_rows	neptune_sample_taxa	782618
+2021-12-16_10062700	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2021-12-16_10062700	table_rows	neptune_sod_off	967
+2021-12-16_10062700	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,metanuts_source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2021-12-16_10062700	table_rows	neptune_sod_off_fmt	86
+2021-12-16_10062700	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2021-12-16_10062700	table_rows	neptune_strat_sources	912
+2021-12-16_10062700	table_columns	neptune_strat_sources	source_id,full_citation,short_name,comment
+2021-12-16_10062700	table_rows	neptune_taxonomy	19121
+2021-12-16_10062700	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group,mtax_id
+2021-12-16_10062700	occurrences_by_group	D	142173
+2021-12-16_10062700	occurrences_by_group	DN	8529
+2021-12-16_10062700	occurrences_by_group	F	176517
+2021-12-16_10062700	occurrences_by_group	N	312998
+2021-12-16_10062700	occurrences_by_group	R	142401
+2021-12-16_10062700	samples_by_group	D	9352
+2021-12-16_10062700	samples_by_group	DN	619
+2021-12-16_10062700	samples_by_group	F	16023
+2021-12-16_10062700	samples_by_group	N	24304
+2021-12-16_10062700	samples_by_group	R	11665
+2021-12-16_10062700	samples_without_age		6608
+2021-12-16_10062700	occurrences_without_age		68072
+2021-12-16_10062700	samples_without_occurrences		724
+2021-12-16_10062700	holes_with_samples		505
+2021-12-16_10062700	taxa_by_status	B	477
+2021-12-16_10062700	taxa_by_status	G	3636
+2021-12-16_10062700	taxa_by_status	H	59
+2021-12-16_10062700	taxa_by_status	I	166
+2021-12-16_10062700	taxa_by_status	O	33
+2021-12-16_10062700	taxa_by_status	Q	1609
+2021-12-16_10062700	taxa_by_status	S	5342
+2021-12-16_10062700	taxa_by_status	U	852
+2021-12-16_10062700	taxa_by_status	V	6947
+2021-12-16_10062700	age_model_revisions		718
+2021-12-16_10062700	current_age_models		468
+2021-12-16_10062700	age_quality_distinct_values	all revisions	9
+2021-12-16_10062700	age_quality_distinct_values	current	7
+2021-12-16_10062700	samples_with_dataset_id		53932
+2021-12-16_10062700	samples_with_source_citation		49832
+2021-12-16_10062700	occurrences_with_dataset_id		676712
+2021-12-16_10062700	occurrences_with_source_citation		615669
+2021-12-16_10062700	occurrences_south_of	50S	70737
+2021-12-16_10062700	occurrences_south_of	60S	16003
+2021-12-16_10062700	occurrences_sample_group_ne_taxon_group		614
+2022-10-06_10063084	table_rows	core_new	57416
+2022-10-06_10063084	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
+2022-10-06_10063084	table_rows	longhurst_name	53
+2022-10-06_10063084	table_columns	longhurst_name	provcode,provname
+2022-10-06_10063084	table_rows	neptune_age_model	12184
+2022-10-06_10063084	table_columns	neptune_age_model	site_hole,revision_no,age_ma,depth_mbsf,age_comment
+2022-10-06_10063084	table_rows	neptune_age_model_history	749
+2022-10-06_10063084	table_columns	neptune_age_model_history	site_hole,revision_no,age_quality,f_priority,n_priority,d_priority,r_priority,interpreted_by,date_worked,current_flag,remark,hole_id_n,leg,adp_filename
+2022-10-06_10063084	table_rows	neptune_calibration_sites	628
+2022-10-06_10063084	table_columns	neptune_calibration_sites	calibration_id,es_id
+2022-10-06_10063084	table_rows	neptune_core	58883
+2022-10-06_10063084	table_columns	neptune_core	hole_id,core,core_top_mbsf,core_length
+2022-10-06_10063084	table_rows	neptune_event	29002
+2022-10-06_10063084	table_columns	neptune_event	es_id,event_id,sample_top,sample_bottom,comments,quality_flag,source,sample_top_id,sample_bottom_id,top_hole_id,top_depth_mbsf,bottom_hole_id,bottom_depth_mbsf,source_id
+2022-10-06_10063084	table_rows	neptune_event_calibration	5094
+2022-10-06_10063084	table_columns	neptune_event_calibration	calibration_id,event_id,young_age_ma,calibration_source,calibration_year,calibration_type,calibration_scale,comments,old_age_ma,source_id
+2022-10-06_10063084	table_rows	neptune_event_def	5080
+2022-10-06_10063084	table_columns	neptune_event_def	event_id,event_type,event_name,event_group,taxon_id,plotcode,comments,event_extent,event_synon_to
+2022-10-06_10063084	table_rows	neptune_gpts	1231
+2022-10-06_10063084	table_columns	neptune_gpts	event_id,scale,age_ma
+2022-10-06_10063084	table_rows	neptune_gpts_def	7
+2022-10-06_10063084	table_columns	neptune_gpts_def	scale,long_name,comments
+2022-10-06_10063084	table_rows	neptune_hole_summary	3818
+2022-10-06_10063084	table_columns	neptune_hole_summary	hole_id,site_hole,leg,site,hole,latitude,longitude,ocean_code,water_depth,meters_penetrated,meters_recovered,pmag_flag,hole_id_n,paleo_value,comments,samples_in_nsb,leg_name,site_name,longhurst_code,program
+2022-10-06_10063084	table_rows	neptune_paleogeography	582770
+2022-10-06_10063084	table_columns	neptune_paleogeography	hole_id,reconstructed_age_ma,paleo_longitude,paleo_latitude,rotation_source,assigned_plate_id,comment
+2022-10-06_10063084	table_rows	neptune_paleomag_interval	206
+2022-10-06_10063084	table_columns	neptune_paleomag_interval	hole_id,top_depth,bottom_depth,color,pattern,width,source,site_hole,source_id
+2022-10-06_10063084	table_rows	neptune_paleomag_scale	847
+2022-10-06_10063084	table_columns	neptune_paleomag_scale	chron_id,chron_name,chron_alias,age_min_ma,age_max_ma,chron_polarity_dir,paleomag_scale_name,parent_chron_id
+2022-10-06_10063084	table_rows	neptune_sample	61790
+2022-10-06_10063084	table_columns	neptune_sample	sample_id,hole_id,core,section_number,sect_interval_top,sample_depth_mbsf,sample_age_ma,fossil_group,sample_group_abundance,sample_preservation,sample_status,paleo_latitude_old,paleo_longitude_old,dataset_id,paleo_latitude,paleo_longitude
+2022-10-06_10063084	table_rows	neptune_sample_taxa	780717
+2022-10-06_10063084	table_columns	neptune_sample_taxa	sample_id,nsb_taxon_id,taxon_abundance,taxon_qualifier,taxon_id
+2022-10-06_10063084	table_rows	neptune_sod_off	974
+2022-10-06_10063084	table_columns	neptune_sod_off	dataset_id,sod_off_version,file_type,file_name,fossil_group,occurrence_data_type,entered_by,entered_date,checked_by,checked_date,upload_by,upload_date,metanuts_source_id,source_citation,source_name,leg,leg_qualifier,geographic_id,geographic_name,geographic_source,latitude,longitude,occurrence_key,comment
+2022-10-06_10063084	table_rows	neptune_sod_off_fmt	86
+2022-10-06_10063084	table_columns	neptune_sod_off_fmt	sod_off_version,file_type,row,col,required,label_or_data,value,data_type,data_constraint,comment
+2022-10-06_10063084	table_rows	neptune_strat_sources	929
+2022-10-06_10063084	table_columns	neptune_strat_sources	source_id,full_citation,short_name,comment
+2022-10-06_10063084	table_rows	neptune_taxonomy	19136
+2022-10-06_10063084	table_columns	neptune_taxonomy	taxon_id,fossil_group,taxon_status,taxon_name,genus,species,subspecies,genus_qualifier,species_qualifier,taxon_comment,taxon_synon_to,synonymy_type_code,nsb_taxon_id,janus_taxon_id,reference_type,higher_taxon,species_author,species_year,age_group,mtax_id
+2022-10-06_10063084	occurrences_by_group	D	139073
+2022-10-06_10063084	occurrences_by_group	DN	8529
+2022-10-06_10063084	occurrences_by_group	F	176517
+2022-10-06_10063084	occurrences_by_group	N	312985
+2022-10-06_10063084	occurrences_by_group	R	143613
+2022-10-06_10063084	samples_by_group	D	9127
+2022-10-06_10063084	samples_by_group	DN	619
+2022-10-06_10063084	samples_by_group	F	16023
+2022-10-06_10063084	samples_by_group	N	24301
+2022-10-06_10063084	samples_by_group	R	11720
+2022-10-06_10063084	samples_without_age		5151
+2022-10-06_10063084	occurrences_without_age		54612
+2022-10-06_10063084	samples_without_occurrences		724
+2022-10-06_10063084	holes_with_samples		505
+2022-10-06_10063084	taxa_by_status	B	477
+2022-10-06_10063084	taxa_by_status	G	3642
+2022-10-06_10063084	taxa_by_status	H	59
+2022-10-06_10063084	taxa_by_status	I	164
+2022-10-06_10063084	taxa_by_status	O	33
+2022-10-06_10063084	taxa_by_status	Q	1610
+2022-10-06_10063084	taxa_by_status	S	5345
+2022-10-06_10063084	taxa_by_status	U	852
+2022-10-06_10063084	taxa_by_status	V	6954
+2022-10-06_10063084	age_model_revisions		749
+2022-10-06_10063084	current_age_models		479
+2022-10-06_10063084	age_quality_distinct_values	all revisions	9
+2022-10-06_10063084	age_quality_distinct_values	current	6
+2022-10-06_10063084	samples_with_dataset_id		53759
+2022-10-06_10063084	samples_with_source_citation		49424
+2022-10-06_10063084	occurrences_with_dataset_id		674811
+2022-10-06_10063084	occurrences_with_source_citation		611745
+2022-10-06_10063084	occurrences_south_of	50S	70270
+2022-10-06_10063084	occurrences_south_of	60S	16003
+2022-10-06_10063084	occurrences_sample_group_ne_taxon_group		539
 2023-06-05_10063218	table_rows	core_new	57416
 2023-06-05_10063218	table_columns	core_new	leg,site,hole,core,type,top_mbsf,top_mcd,cum_offset,diff_offset,cored,curated,recovered,rec_percent,time,comment,hole_id
 2023-06-05_10063218	table_rows	longhurst_name	53
@@ -52,6 +932,8 @@ version	metric	key	value
 2023-06-05_10063218	samples_by_group	N	24301
 2023-06-05_10063218	samples_by_group	R	11792
 2023-06-05_10063218	samples_without_age		5181
+2023-06-05_10063218	occurrences_without_age		55840
+2023-06-05_10063218	samples_without_occurrences		724
 2023-06-05_10063218	holes_with_samples		506
 2023-06-05_10063218	taxa_by_status	B	479
 2023-06-05_10063218	taxa_by_status	G	3665
@@ -62,3 +944,14 @@ version	metric	key	value
 2023-06-05_10063218	taxa_by_status	S	5347
 2023-06-05_10063218	taxa_by_status	U	852
 2023-06-05_10063218	taxa_by_status	V	6960
+2023-06-05_10063218	age_model_revisions		794
+2023-06-05_10063218	current_age_models		483
+2023-06-05_10063218	age_quality_distinct_values	all revisions	9
+2023-06-05_10063218	age_quality_distinct_values	current	6
+2023-06-05_10063218	samples_with_dataset_id		53831
+2023-06-05_10063218	samples_with_source_citation		49496
+2023-06-05_10063218	occurrences_with_dataset_id		678081
+2023-06-05_10063218	occurrences_with_source_citation		615015
+2023-06-05_10063218	occurrences_south_of	50S	70270
+2023-06-05_10063218	occurrences_south_of	60S	16003
+2023-06-05_10063218	occurrences_sample_group_ne_taxon_group		539
