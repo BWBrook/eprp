@@ -1,0 +1,123 @@
+question	date	stage	event_type	label	source
+Q-012	2026-10-09	Seed	entered	seeded: 'Is extinction risk age-dependent?' (tier 1)	commit 2cc0148 (ideas/register.md as created); entry now ideas/register.md:655
+Q-012	2026-10-09	Prior check	entered	round-1 scout of the age-dependence literature	literature/2026-10-09-register-checks-round1.md:67-96 (commit 148c4a1)
+Q-012	2026-10-09	Identification design	entered	Weibull hazard plus nulls proposed as 'decisive design'	literature/2026-10-09-register-checks-round1.md:90-98 (commit 148c4a1)
+Q-012	2026-10-09	Identification design	repair	gamma frailty = ageing hazard; design not decisive	DC-014; literature/2026-10-09-register-checks-round2.md:82-84 (commit 0ff2875); Codex: literature/2026-10-09-feedback-on-register-round1.md:133-172
+Q-012	2026-10-11	Ranking	artefact	first-pass band B; prior check next (recorded)	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:96 (commit 16be1b9)
+Q-012	2026-10-13	Disposition	disposition	checkpoint pass: hold, with prior check (Claude)	ideas/2026-10-13-phase2-checkpoint-claude.md:44 (commit 81a7347)
+Q-012	2026-10-13	Disposition	disposition	checkpoint pass: develop (Codex); reconciled to develop	ideas/2026-10-13-phase2-checkpoint-codex.md:83; ideas/2026-10-13-phase2-checkpoint-reconciliation.md:46 (commit 4694c4d); DC-096
+Q-012	2026-10-14	Disposition	disposition	Barry approves tranche; Q-012 first, two active at most	STATUS.md:696-704 (Barry, Claude chat, 14 Oct)
+Q-012	2026-10-14	Prior check	artefact	prior check: residual survives; develop	literature/2026-10-14-q012-prior-check.md:1-8 (commit b93c29e); STATUS.md:1087-1090
+Q-012	2026-10-14	Contract	entered	contract: held-out relatives' survival against rivals	ideas/register.md:659-681 (commit b93c29e)
+Q-012	2026-10-15	Support audit	entered	268 lineages, 257 links, 234 sister pairs counted	literature/2026-10-15-q012-support-identification-design.md:33-38 (commit 0f0cd35)
+Q-012	2026-10-15	Identification design	artefact	support and identification design delivered (D1 folded in)	literature/2026-10-15-q012-support-identification-design.md (commit 0f0cd35); STATUS.md:750-752; ideas/register.md:682-709
+Q-012	2026-10-15	Support audit	outcome	Codex source replay: counts reproduce; extancy gap kept	data/q012-source-support/README.md:1-10 (commit 9a4e23f); STATUS.md:753-759
+Q-012	2026-10-15	Support audit	repair	Nexus bifurcating; only 9 of 18 boundary links share lineage	DC-132; literature/2026-10-15-q012-support-identification-design.md:296; ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md:78-112
+Q-012	2026-10-15	Identification design	repair	clade-tied exposure = inherited frailty (R3b)	DC-133; literature/2026-10-15-q012-support-identification-design.md:297; ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md:114-148
+Q-012	2026-10-15	Identification design	repair	truncation rule withdrawn; selected-sample normaliser fixed	DC-134, DC-135, DC-138; ideas/2026-10-15-blue-sky-route-amendment-and-q012-review-codex.md:150-192; ideas/2026-10-15-b004-contract-and-q012-amendment-closure-codex.md:58-59
+Q-012	2026-10-15	Support audit	artefact	event dictionary built; lineage unit confirmed in article	data/q012-event-dictionary/README.md (commits 4e993a9, d972c53; 76/1678, 76/1680); STATUS.md:760-763
+Q-012	2026-10-15	Support audit	artefact	Triton joint exposure audit: 190 of 268 lineages covered	data/q012-exposure-support/README.md (commit 9551bc0); ideas/register.md:710-715
+Q-012	2026-10-15	Finite contract	entered	input freeze proposed before the cost pilot	literature/2026-10-15-q012-freeze-proposal.md (commit 5899a4a; 76/1682-1684)
+Q-012	2026-10-15	Finite contract	repair	freeze refused: event definition, counts, jitter rule	DC-139; ideas/2026-10-15-b004-response-and-q012-freeze-check-codex.md:7-8 (76/1686)
+Q-012	2026-10-16	Support audit	artefact	events 191/52/24; 379 species map to 213 lineages	literature/2026-10-16-q012-events-exposure-addendum.md:11-80 (commit 4b48ddf; 76/1691); ideas/register.md:716-730
+Q-012	2026-10-16	Support audit	repair	chronology rule reversed; 105 contrasts corrected to 98	DC-142, DC-143; ideas/2026-10-16-b004-analytic-close-and-q012-addendum-check-codex.md:55-56,100-101
+Q-012	2026-10-16	Finite contract	artefact	finite contract: generator, likelihood, prediction rule	literature/2026-10-16-q012-finite-contract.md (commit a71e39d; 76/1701); STATUS.md:800-812
+Q-012	2026-10-16	Finite contract	repair	unsupported no-budding penalty removed (factor 0.549)	DC-144; ideas/2026-10-16-q012-finite-contract-check-codex.md:39-40 (76/1709)
+Q-012	2026-10-16	Finite contract	outcome	component check: 176 divergences in 19 of 20 fits	data/q012-component-check/README.md (commit 2c46b14; 76/1715); STATUS.md:813-825; ideas/register.md:746-775
+Q-012	2026-10-16	Finite contract	repair	funnel claim withdrawn; controls, rounding, quadrature fixed	DC-145 to DC-149; ideas/2026-10-16-q012-component-evidence-check-codex.md:49-92; ideas/2026-10-16-q012-full-prototype-check-codex.md:30-146 (76/1715, 76/1724, 76/1728)
+Q-012	2026-10-16	Finite contract	outcome	full prototype: 793 s, 4 divergences; trees 94 vs 268	data/q012-prototype/README.md (commit b683c74); STATUS.md:826-844; ideas/register.md:776-799
+Q-012	2026-10-16	Finite contract	outcome	v3 solver fit times out; v4 Powell fit completes in 891 s	DC-150; ideas/2026-10-16-q012-v3-robustness-ruling-codex.md:14-15 (76/1743); commits e2c863d, ba0b131; ideas/register.md:800-826
+Q-012	2026-10-16	Finite contract	repair	64-node rule; coverage at eta = 0 restricted to eta > 0	DC-151, DC-152; ideas/2026-10-16-q012-v4-check-and-pilot-codex.md:58,92-93 (76/1746)
+Q-012	2026-10-16	Technical pilot	entered	kunanyi pilot package: seeds frozen, payload hash-bound	commits c93ea58, a47eabe (76/1758); data/q012-pilot/README.md:1-40; STATUS.md:877-886
+Q-012	2026-10-16	Technical pilot	repair	false screening passes and provenance gaps closed	DC-153; ideas/2026-10-16-q012-pilot-prelaunch-check-codex.md:23; commit 0df3504 (76/1771)
+Q-012	2026-10-16	Disposition	disposition	kunanyi approved by Barry; Codex GO for pilot, not campaign	STATUS.md:887-895, 1122-1127 (Barry via 76/1733-1734; Codex 76/1771)
+Q-012	2026-10-17	Technical pilot	outcome	R00 replay: only E-BFMI fails (3 of 4 chains)	data/q012-pilot/README.md:260-310 (commit 9cb5c16; 76/1807); STATUS.md:896-904
+Q-012	2026-10-17	Technical pilot	repair	dense_e remedy withdrawn; fractional scaling adopted	DC-154; data/q012-pilot/README.md:305; ideas/2026-10-17-q012-r00-review-codex.md:74-78,100-106
+Q-012	2026-10-17	Technical pilot	outcome	v6 passes every screen (E-BFMI 0.73-0.78)	data/q012-pilot/README.md:324-409 (commit 542da62; 76/1849); STATUS.md:905-914
+Q-012	2026-10-17	Technical pilot	repair	marginal-range quadrature claim withdrawn; joint checks	DC-155; data/q012-pilot/README.md:364-365; ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md:62-76,112-116 (76/1849, 76/1855)
+Q-012	2026-10-17	Disposition	disposition	release P11 first, P06 only if pass; ten fits held	DC-156; ideas/2026-10-17-q012-v6-result-and-panel-ruling-codex.md:7-9 (76/1849)
+Q-012	2026-10-18	Technical pilot	outcome	P11 attempt 1 fails qualification (stderr, 1 divergence)	data/q012-pilot/README.md:454-508 (commit 17d129a; 76/1885-1886); STATUS.md:36-39,915-926
+Q-012	2026-10-18	Disposition	disposition	P06 held under the stop rule after P11 failure	data/q012-pilot/README.md:454-508 (commit 17d129a); STATUS.md:915-926
+Q-012	2026-10-18	Technical pilot	repair	failed-proposal inference corrected; f_tol amendment staged	DC-157; ideas/2026-10-18-q012-p11-review-codex.md:79-80 (76/1895); commit ae62360
+Q-012	2026-10-18	Technical pilot	outcome	amended P11 fails: 2 divergences; precision passes	data/q012-pilot/README.md:588-682 (commit bba32b2; 76/2052); STATUS.md:927-936
+Q-012	2026-10-19	Technical pilot	repair	identical-prefix inference withdrawn; capture replay offered	DC-158; data/q012-pilot/README.md:639-640; ideas/2026-10-19-q012-amended-p11-review-codex.md:72-82 (76/2066)
+Q-012	2026-10-19	Technical pilot	outcome	replay captures both divergences; saved prefixes match	data/q012-pilot/README.md:783-931 (commit 1c94d08; 76/2070-2093); STATUS.md:937-948
+Q-012	2026-10-19	Technical pilot	repair	normaliser exclusion corrected (Q64 fails); Q80 remedy	DC-159; data/q012-pilot/README.md:862-893; ideas/2026-10-19-q012-captured-failure-review-codex.md:15-16 (76/2096)
+Q-012	2026-10-19	Disposition	disposition	stopping rule agreed: one remedy, then simpler estimator	STATUS.md:949-960 (Barry steer relayed in 76/2095)
+Q-012	2026-10-20	Technical pilot	repair	'Q80 failures' were a truncated reference; repaired	DC-161, DC-192; data/q012-pilot/README.md:968-1010 (commits a415b2e, 36c47fd; 76/2107, 76/2111); ideas/2026-10-20-q012-reference-and-adaptation-rulings-codex.md:11-13
+Q-012	2026-10-21	Technical pilot	repair	decrement criterion replaces step rule at state 9707	DC-173; ideas/2026-10-21-q012-decrement-and-amendment-closure-codex.md:10-18 (76/2121); commit 2b9bea9
+Q-012	2026-10-21	Technical pilot	outcome	final P11 fails: 2 of 24,000 divergences	data/q012-pilot/README.md:1023-1122 (commit bd84335; 76/2152); STATUS.md:66-75
+Q-012	2026-10-21	Disposition	disposition	sampler tuning ends; P06 and ten others held	STATUS.md:69-75; ideas/2026-10-21-q012-final-screen-review-codex.md (76/2152)
+Q-012	2026-10-21	Technical pilot	repair	half-step, identification-edge, normaliser claims narrowed	DC-189, DC-190, DC-191; ideas/2026-10-21-q012-final-screen-review-codex.md:48-130 (76/2152)
+Q-012	2026-10-21	Disposition	disposition	fallback scoped: common evaluator and oracle, no fit	DC-193; ideas/2026-10-21-q012-final-screen-review-codex.md:132-218 (76/2152, 76/2154)
+Q-012	2026-10-21	Technical pilot	artefact	oracle specification and gates frozen before evaluation	data/q012-pilot/collapsed_oracle.md:1-177 (commits ad09251, 7ecf567)
+Q-012	2026-10-21	Technical pilot	outcome	oracle run 1: 24 pass, 3 fail, 3 unresolved	data/q012-pilot/collapsed_oracle.md:178-219 (commit 9ebc27c)
+Q-012	2026-10-21	Technical pilot	repair	level-set domains, sinh nodes, damped Newton declared	DC-194; data/q012-pilot/collapsed_oracle.md:220-297 (commits 349dd3d, 8962871)
+Q-012	2026-10-22	Technical pilot	outcome	oracle run 2: 33 pass, 4 fail, 8 unresolved	data/q012-pilot/collapsed_oracle.md:298-371 (commit 8930890; 76/2186); STATUS.md:81-84,1038-1049
+Q-012	2026-10-22	Technical pilot	outcome	oracle run 3 (reference repair): 15 of 16 cells pass	data/q012-pilot/collapsed_oracle.md:372-544 (commit 7269c5e); STATUS.md:84-86
+Q-012	2026-10-22	Technical pilot	repair	QUADPACK messages dropped by wrapper; run 4 declared	DC-202, DC-203; data/q012-pilot/collapsed_oracle.md:545-617 (commit f863277; 76/2194); ideas/2026-10-22-q012-run3-review-codex.md
+Q-012	2026-10-22	Technical pilot	outcome	oracle run 4: 14 pass, 2 reference-unresolved	data/q012-pilot/collapsed_oracle.md:618-660 (commit b6be665); STATUS.md:91-97
+Q-012	2026-10-22	Disposition	disposition	adaptive repair ends; bounded P11 fixed-point check opened	DC-204; ideas/2026-10-22-q012-run4-review-codex.md (76/2214); STATUS.md:1066-1071
+Q-012	2026-10-22	Technical pilot	artefact	P11 fixed-point check declared before any evaluation	data/q012-pilot/p11_fixedpoint.md:1-146 (commit 8049b75; 76/2214)
+Q-012	2026-10-22	Technical pilot	repair	two declaration errors amended before the benchmark	DC-205, DC-206; data/q012-pilot/p11_fixedpoint.md:193-244 (commit e1f2b9d)
+Q-012	2026-10-22	Support audit	repair	Triton file not deduplicated; 98 contrasts now historical	DC-207; data/q012-exposure-support/README.md:130-159 (commit 1a8a739; 76/2201, 76/2216)
+Q-012	2026-10-22	Technical pilot	outcome	tree Fisher gradient matches batch FD to <= 2.2e-7	data/q012-pilot/p11_fixedpoint.md:245-297 (commits 6256388, 684f988)
+Q-038	2026-10-10	Seed	entered	posed as a tier-1 four-way variance partition	ideas/register.md:2550-2551; literature/2026-10-10-register-checks-round7.md:176-181 (commit d6e65a5)
+Q-038	2026-10-10	Prior check	entered	legacy map: live, not found posed as an estimand	literature/2026-10-10-register-checks-round7.md:176-181 (commit d6e65a5)
+Q-038	2026-10-10	Identification design	repair	variance partition withdrawn (not identifiable)	DC-030; literature/2026-10-10-register-checks-round8.md:18; literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:8,36 (commit 630bb1c; 76/1380)
+Q-038	2026-10-10	Prior check	repair	Tikhonov 57.3% was not a variance share	DC-031; literature/2026-10-10-register-checks-round8.md:30
+Q-038	2026-10-10	Contract	entered	reformulated: predict which genera die; tier 2	ideas/register.md:2568-2574 (commit a88b379); DC-030
+Q-038	2026-10-11	Contract	artefact	scoring scale declared: log C(N,D) varies with cohort	literature/2026-10-11-register-checks-round9.md:36-38 (commit de6f16d); ideas/register.md:2607-2612 (Codex 76/1404)
+Q-038	2026-10-11	Support audit	entered	data gate: Monarrez deposit inspected, nothing run	literature/2026-10-11-register-checks-round9.md:68-90 (commit de6f16d)
+Q-038	2026-10-11	Disposition	disposition	deferred by Barry (76/1418)	literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:19-20; DC-080; 76/1418
+Q-038	2026-10-11	Disposition	disposition	deferral lifted by Barry: live again (76/1515)	ideas/register.md:2613-2616; STATUS.md:250-253; DC-080; 76/1515
+Q-038	2026-10-11	Ranking	artefact	first-pass band B, marked 'deferred' (recorded)	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:102 (commit 16be1b9)
+Q-038	2026-10-11	Support audit	artefact	deposit rebuilt: 6,562 genera, 86 occasions intact	data/q038-monarrez-contract/README.md (commit b517a0a); ideas/register.md:2613-2640
+Q-038	2026-10-11	Support audit	outcome	Codex audit: deposited flags displaced one occasion	data/q038-flag-audit/README.md:1-14 (commit 4291250); DC-056; STATUS.md:253-258
+Q-038	2026-10-11	Support audit	repair	duplicate and non-zero rules withdrawn (2.8% wrong)	DC-054, DC-055; ideas/2026-10-11-phase2-claude-reply-2.md:21-22 (commit 8543ed7)
+Q-038	2026-10-13	Disposition	disposition	checkpoint: develop in both passes; Q-006 merged in	ideas/2026-10-13-phase2-checkpoint-claude.md:70; ideas/2026-10-13-phase2-checkpoint-codex.md:109; ideas/2026-10-13-phase2-checkpoint-reconciliation.md:28-31
+Q-038	2026-10-14	Disposition	disposition	Barry approves checkpoint; one of ten develop	STATUS.md:679,696-704 (Barry, Claude chat, 14 Oct); ideas/2026-10-14-phase2-checkpoint-final-check-codex.md:76
+Q-038	2026-10-19	Disposition	disposition	restarted after idling (Barry's 19 Oct steer)	STATUS.md:949-955 (relayed in 76/2095)
+Q-038	2026-10-19	Contract	artefact	prospective predictor contract drafted	data/q038-predictor-contract/README.md:111-192 (commit 9bfba9d); ideas/register.md:2654-2669
+Q-038	2026-10-20	Support audit	outcome	Codex reproduces support tables; amendments required	ideas/2026-10-20-q038-and-prior-checks-review-codex.md (commit e6f8801; 76/2112); STATUS.md:971-982
+Q-038	2026-10-20	Contract	repair	detection-only park gate withdrawn (0.3752 nats)	DC-162; ideas/register.md:2671-2672; ideas/2026-10-20-q038-and-prior-checks-review-codex.md:28-55 (76/2112)
+Q-038	2026-10-20	Contract	repair	retrospective cohort leaks; prefix-only target required	DC-163; ideas/register.md:2675; ideas/2026-10-20-q038-and-prior-checks-review-codex.md:67-87 (76/2112)
+Q-038	2026-10-20	Support audit	repair	size rule, unit sensitivity, 4-to-6 cases corrected	DC-164, DC-169, DC-170, DC-171; data/q038-predictor-contract/README.md:100,259,266-267,279; ideas/2026-10-20-q038-and-prior-checks-review-codex.md:99-138
+Q-038	2026-10-20	Contract	artefact	Codex amendments integrated into the contract	commit cd1f8d9; data/q038-predictor-contract/README.md:214-321; ideas/register.md:2670-2680
+Q-038	2026-10-21	Support audit	artefact	attribute-ambiguity export with frozen clade policy	commit 26ebf0a; data/q038-predictor-contract/ambiguity.R; STATUS.md:1004-1006
+Q-038	2026-10-21	Contract	repair	full-archive labels leak; learn labels inside prefix	DC-182; ideas/2026-10-21-outside-consultations-response-codex.md:230-231 (76/2139); commit 13f6ae4
+Q-038	2026-10-21	Finite contract	entered	replacement contract: forecast, CJS likelihood, folds	data/q038-predictor-contract/contract.md:1-42 (commit c523389)
+Q-038	2026-10-21	Finite contract	repair	severity matching has no root; condition after integration	DC-183; ideas/2026-10-21-q038-replacement-contract-review-codex.md:49-85 (76/2153)
+Q-038	2026-10-21	Finite contract	repair	LOEO masking must cut unseen tails (0.1886 vs 0.2413)	DC-184; ideas/2026-10-21-q038-replacement-contract-review-codex.md:87-112 (76/2153)
+Q-038	2026-10-21	Finite contract	repair	O renamed exposure-conditioned hindcast; nuisance laws set	DC-185; ideas/2026-10-21-q038-replacement-contract-review-codex.md:114-137 (76/2153)
+Q-038	2026-10-21	Identification design	repair	toy identification is not a general result	DC-186; ideas/2026-10-21-q038-replacement-contract-review-codex.md:139-170 (76/2153)
+Q-038	2026-10-21	Finite contract	artefact	contract v2 with conditioned law and tail masking	data/q038-predictor-contract/contract.md (commit 394243b; 76/2153); data/q038-predictor-contract/contract_checks_v2.tsv
+Q-038	2026-10-22	Finite contract	repair	v2 review: future counts change predictors; marked history	ideas/2026-10-22-q038-v2-contract-review-codex.md (76/2166); STATUS.md:1027-1034
+Q-038	2026-10-22	Finite contract	artefact	contract v3: marked-history predictive law	data/q038-predictor-contract/contract.md:385-481 (commit 1073cd2; 76/2166)
+Q-038	2026-10-22	Disposition	disposition	v3 accepted: fitter and five S2 datasets released	ideas/2026-10-22-q038-v3-review-codex.md:1-12 (commit 1beea21); STATUS.md:1056-1060
+Q-038	2026-10-22	Finite contract	repair	oracle omitted first-record emission (range .094 to .056)	DC-195, DC-196; data/q038-predictor-contract/contract.md (Correction to the v3 oracle) (commit f06b08f; 76/2195)
+Q-038	2026-10-22	Technical pilot	entered	primary fitter built; C1-C5 pass; five S2 datasets frozen	commits 690756f, 217fa2a; data/q038-probe/README.md:1-35
+Q-038	2026-10-22	Technical pilot	artefact	execution plan declared: five fits, ~11 h forecast	data/q038-probe/README.md:36-70 (commit b0ccd5d)
+Q-038	2026-10-22	Technical pilot	repair	LOEO restarts erased observed history; check C6 added	DC-197; data/q038-probe/README.md:71-99 (commit de8c84c; 76/2213); ideas/2026-10-22-q038-implementation-review-codex.md:73-107
+Q-038	2026-10-22	Technical pilot	repair	benchmark contraction provisional; campaign cost x5.2	DC-198, DC-199; ideas/2026-10-22-q038-implementation-review-codex.md:109-117; ideas/2026-10-22-q038-campaign-cost-and-triton-codex.md:22-105 (76/2215)
+Q-038	2026-10-22	Finite contract	repair	deposit-wide scaling not prefix-admissible (section E)	DC-200; data/q038-predictor-contract/contract.md:548-570; ideas/2026-10-22-q038-campaign-cost-and-triton-codex.md:149-163
+Q-038	2026-10-22	Technical pilot	outcome	0 of 5 fits pass the convergence screen	DC-201; data/q038-probe/README.md:100-146 (commit 4407167; 76/2225)
+Q-038	2026-10-22	Disposition	disposition	campaign blocked on convergence; diagnostic declared	DC-201; data/q038-probe/README.md:147-168; commit ab868bc; STATUS.md:170
+Q-017	2026-10-09	Seed	entered	seeded: 'Dark extinction across scales' (tier 2 sketch)	commit 2cc0148 (ideas/register.md as created); entry now ideas/register.md:120,1049
+Q-017	2026-10-10	Prior check	entered	round-7 scout: both estimator literatures mature	literature/2026-10-10-register-checks-round7.md:64-90 (commit d6e65a5)
+Q-017	2026-10-10	Contract	repair	reframed: are the two estimators the same object?	DC-046; ideas/register.md:1053-1054; literature/2026-10-10-register-checks-round7.md:64-84
+Q-017	2026-10-11	Ranking	artefact	first-pass band A: analytic note, no data needed	ideas/2026-10-11-phase2-portfolio-first-pass-claude.md:93,136 (commit 16be1b9)
+Q-017	2026-10-11	Ranking	artefact	Codex: cheap support work, not an A project	ideas/2026-10-11-phase2-response-codex.md:82 (commit 2827ed7)
+Q-017	2026-10-11	Contract	artefact	equivalence note named as the first gate (queued)	ideas/2026-10-11-phase2-claude-reply-1.md:25 (commit b208a6a)
+Q-017	2026-10-13	Disposition	disposition	checkpoint pass: hold, with prior check (Claude)	ideas/2026-10-13-phase2-checkpoint-claude.md:49 (commit 81a7347)
+Q-017	2026-10-13	Disposition	disposition	checkpoint pass: develop (Codex); reconciled to develop	ideas/2026-10-13-phase2-checkpoint-codex.md:88; ideas/2026-10-13-phase2-checkpoint-reconciliation.md:47 (commit 4694c4d); DC-096
+Q-017	2026-10-14	Disposition	disposition	Barry approves checkpoint; one of ten develop	STATUS.md:696-704 (Barry, Claude chat, 14 Oct); ideas/2026-10-13-phase2-checkpoint-reconciliation.md:70,94
+Q-017	2026-10-19	Disposition	disposition	idle question restarted (Barry's 19 Oct steer)	literature/2026-10-20-q017-prior-check.md:3-6; STATUS.md:949-955 (76/2095)
+Q-017	2026-10-20	Prior check	artefact	target-matched prior check: residual survives	literature/2026-10-20-q017-prior-check.md:1-9 (commit 1296757); STATUS.md:1092-1094
+Q-017	2026-10-20	Disposition	disposition	develop: analytic note, then one dual-record audit	ideas/register.md:1095-1111; literature/2026-10-20-q017-prior-check.md:1-9
+Q-017	2026-10-20	Identification design	repair	two-list calibration withdrawn: cells (340,160,160,340)	DC-166; literature/2026-10-20-q017-prior-check.md:158; ideas/2026-10-20-q038-and-prior-checks-review-codex.md:200-220 (76/2112)
+Q-017	2026-10-20	Contract	repair	identity holds only as a limit; finite-window form	ideas/2026-10-20-q038-and-prior-checks-review-codex.md:180-199 (76/2112); ideas/register.md:1112-1114
+Q-017	2026-10-20	Prior check	repair	Duncan et al. 2013 occupies the generic bridge	ideas/2026-10-20-q038-and-prior-checks-review-codex.md:213-219 (76/2112); ideas/register.md:1114-1116
+Q-017	2026-10-20	Contract	artefact	Codex amendments integrated into register entry	commit cd1f8d9; ideas/register.md:1112-1116
+Q-017	2026-10-21	Contract	outcome	Codex accepts the Q-017 amendments; analytic note next	ideas/2026-10-21-q012-decrement-and-amendment-closure-codex.md:137-150 (row at 148); STATUS.md:983-992
+Q-017	2026-10-22	Disposition	disposition	support audit not started; two-task limit (recorded)	STATUS.md:1092-1094,1103-1108
