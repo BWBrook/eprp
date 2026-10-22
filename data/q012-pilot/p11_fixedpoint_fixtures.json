@@ -1,0 +1,60 @@
+{
+ "regression_max_abs": 0.0,
+ "regression": {
+  "central0/T1_root": 0.0,
+  "central0/T2_pair": 0.0,
+  "central0/T3_root_two_daughters": 0.0,
+  "central1/T1_root": 0.0,
+  "central1/T2_pair": 0.0,
+  "central1/T3_root_two_daughters": 0.0,
+  "high_rho_9707/T1_root": 0.0,
+  "high_rho_9707/T2_pair": 0.0,
+  "high_rho_9707/T3_root_two_daughters": 0.0
+ },
+ "central0": {
+  "I1_unit_max_abs": 4.440892098500626e-15,
+  "I2": {
+   "selection_minus_ref": 1.1102230246251565e-14,
+   "ref_resolution": -2.220446049250313e-16,
+   "ref_domain": -4.440892098500626e-16,
+   "ref_qualified": true,
+   "selection_minus_q80": 1.2878587085651816e-14
+  },
+  "I3_tilt_abs": {
+   "2-5-7-8-10-11-14": 9.992007221626409e-16,
+   "4-9-12": 1.1102230246251565e-15,
+   "15-18": 8.049116928532385e-16
+  }
+ },
+ "stress_s3_r09_kbm15": {
+  "I1_unit_max_abs": 8.881784197001252e-16,
+  "I2": {
+   "selection_minus_ref": 7.105427357601002e-15,
+   "ref_resolution": 0.0,
+   "ref_domain": 0.0,
+   "ref_qualified": true,
+   "selection_minus_q80": -8.295942954816837e-08
+  },
+  "I3_tilt_abs": {
+   "2-5-7-8-10-11-14": 3.268496584496461e-13,
+   "4-9-12": 3.552713678800501e-15,
+   "15-18": 2.220446049250313e-15
+  }
+ },
+ "holdout_9707_sigma8": {
+  "I1_unit_max_abs": 2.6645352591003757e-15,
+  "I2": {
+   "selection_minus_ref": -1.125053188388847e-07,
+   "ref_resolution": 3.11972669919669e-14,
+   "ref_domain": -2.531308496145357e-14,
+   "ref_qualified": true,
+   "selection_minus_q80": -1.9313696870693065e-06
+  },
+  "I3_tilt_abs": {
+   "2-5-7-8-10-11-14": 5.965148375253193e-09,
+   "4-9-12": 2.1372557057475206e-09,
+   "15-18": 1.4281198446042254e-10
+  }
+ },
+ "pass": true
+}

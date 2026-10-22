@@ -62,6 +62,7 @@ Leaves, the root and every setting are as in the frozen evaluator
    - **Material-extrapolation diagnostic:** if any quadrature node outside
      a table carries an integrand within 40 nats of its grid's maximum,
      the evaluation is *unresolved*. It is never silently accepted.
+     **Superseded by Amendment 1** (below), before any benchmark.
 5. **Settings** (n_node, n_cond, n_tab, Δ):
    - primary (200, 200, 400, 50);
    - resolution (400, 400, 800, 50);
@@ -146,3 +147,55 @@ depend on scratch files.
 ## 6. Benchmark, frozen bank and ceiling
 
 (Filled in after the one-value benchmark, before the batch.)
+
+## Amendment 1: table coverage check (before the benchmark)
+
+**What happened.** The first fixture run stopped at I1 (unit factors) at
+stress_s3_r09_kbm15. The section 2.4 diagnostic flagged 36 nodes. A trace
+located every flagged node:
+- All were in **single-row root level-set probes**: at x_p = ±48 (about
+  16σ at σ = 3) and x_p = 36.1 at holdout_9707_sigma8 (ρ = 0.99998).
+- Those probes overshoot the root's Δ-level and do not enter the integral.
+- The regression fixture had already passed before the stop.
+
+The diagnostic was mis-specified: "within 40 nats of its own row's maximum"
+ignores how far down the row itself lies.
+
+**Replacement.** For ρ > 0, both ends of a conditional Δ-level set increase
+with the parent value. With h_t(x) = f(x) + t·x and f concave, each end r
+satisfies r′ = (x* − r) / (f′(r) + t) > 0.
+- So the quadrature nodes of interior node j, over all parent points in
+  the parent's needed range [a, b], lie within
+  [lo_j(a), hi_j(b)] = needed(j).
+- needed(root) is the root's integration range.
+- For an interior parent, [a, b] is widened to its enclosing table nodes,
+  because those are the entries its Hermite interpolant reads.
+- **The check:** every table contains needed(j), evaluated top-down at two
+  points per interior node. Otherwise the evaluation is *unresolved*.
+  The needed and table ranges are recorded.
+- Tangent extrapolation over-estimates a concave log message. Probes and
+  needed ranges can therefore only widen, so the check errs on the strict
+  side.
+
+Nothing else changes.
+
+## Amendment 2: I2 gates against the qualified selection reference (before the benchmark)
+
+**What happened.** The second fixture run gave selection-mode candidate −
+Q80 = −1.93e-6 at holdout_9707_sigma8 (8.3e-8 at the stress point, 1.3e-14
+at central0). This is Q80's own error, not the candidate's.
+- At that point, oracle run 2 recorded −2.4e-7 against Q80 for lineage 1
+  alone, while its qualified post-hoc reference agreed with the evaluator
+  to 1e-16.
+- P11 has five selection factors.
+
+The oracle gated I2 against a qualified reference and only recorded the
+Q80 difference. Section 3's "against Q80" did not follow that.
+
+**Replacement.** I2 compares the selection-mode candidate with
+`pilot.local_reference` on P11's whole normaliser, the oracle post-hoc
+method:
+- the reference is evaluated at n = 1,600, L = 12;
+- it is **qualified** when n = 800 and L = 16 each agree with it to 1e-6;
+- the gate is ≤ 1e-6 when the reference is qualified;
+- the Q80 difference is recorded and not gated.
