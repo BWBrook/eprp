@@ -22,7 +22,7 @@ resources/sources/
   <id>/<id>_profile.py      our profiling code for that source
   <id>/profile/             profiling outputs quoted by the entry
   <id>/*.sql, *.py, *.R     tested extraction recipes and checks
-resources/tools/            source-independent tools (e.g. zenodo_mirror.py)
+resources/tools/            source-independent tools (data_mirror.py: Zenodo, Figshare)
 ```
 
 The mirror on `deep-server` uses the same `<id>`:
@@ -34,7 +34,7 @@ The mirror on `deep-server` uses the same `<id>`:
                             named <id>_<script> for source-specific ones
   <id>/versions.tsv         index written by the mirror tool
   <id>/raw/<version_dir>/   unchanged source files + MANIFEST.json; read-only;
-                            zenodo_mirror.py names these <version>_<record>
+                            data_mirror.py names these per provider
   <id>/derived/<version_dir>/  conversions rebuilt by committed code; deletable
   <id>/mirror.log
 ```
@@ -42,7 +42,7 @@ The mirror on `deep-server` uses the same `<id>`:
 `raw/` is immutable once written. Each `MANIFEST.json` records the source
 identifier and DOI, version, licence, retrieval time, every file's size, the
 provider's checksum, our sha256, and the sha256 of the tool that fetched it.
-Verify with `python3 resources/tools/zenodo_mirror.py <record> <dest> --verify`.
+Verify with `python3 resources/tools/data_mirror.py verify <dest>`.
 Anything under `derived/` must be rebuildable from `raw/` by committed code,
 and its entry says which script writes it (for NSB, `nsb_profile.py` unzips
 the SQLite and `age_check.py` writes recomputed ages). Deploy a tool to
@@ -72,6 +72,16 @@ the SQLite and `age_check.py` writes recomputed ages). Deploy a tool to
 Software or API-documentation licences are not data licences. Record the data
 terms that apply to the records themselves, including constituent-dataset
 terms where a database aggregates contributors.
+
+**Which versions to mirror.** Index every version the provider offers, and
+commit the index with the entry. Mirror the latest version, plus any older
+version that an entry's profile or an EPRP analysis depends on. Fetch other
+versions on demand (`data_mirror.py ... --only <version_dir>`) when a past
+analysis has to be reconstructed. Forward-looking work uses the latest
+version, after the entry's pitfalls are dealt with (for NSB, its stale stored
+ages). Persistent, DOI-versioned repositories such as Zenodo and Figshare
+already preserve the rest; a full local history earns its place only for a
+source that lacks such an archive.
 
 ## Entry template
 
@@ -201,5 +211,8 @@ the workflow when they generalise.
 - *Run a lineage-and-literature scan alongside profiling.* It found the
   outage's cause, the current R access route, documented critiques and four
   downstream compilations; none of these was visible from the data.
-- *Zenodo serves about 0.2–0.3 MB/s per connection.* Fetch the newest version
-  and checkpoints first, then let the full history download unattended.
+- *Profile many versions; mirror few.* The year-end series was worth
+  profiling, but keeping all 372 snapshots locally was not: Zenodo preserves
+  them, and forward-looking work uses the latest (Barry, 22 October). The mirror
+  keeps the 13 snapshots the profile depends on. Zenodo serves about
+  0.2–0.3 MB/s per connection; Figshare about 3 MB/s.

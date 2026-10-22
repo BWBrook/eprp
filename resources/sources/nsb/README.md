@@ -31,8 +31,8 @@ versioning:
   notes: "every snapshot ships the full PostgreSQL dump (35 tables in 2023), a 21-table SQLite subset and denormalised tables"
 mirror:
   path: deep-server:/data/paleodata/nsb
-  policy: all 372 versions (22.5 GB); latest and year-end checkpoints first
-  state: "13 versions complete 2026-10-22 (latest, paper-era 2019 pair, year-ends); full history downloading"
+  policy: "latest plus the 12 older snapshots the profile depends on (year-ends and the paper-era 2019 pair); others on demand from Zenodo"
+  state: "13 versions, 768 MB, complete 2026-10-22"
 lineage:
   upstream:
     - DSDP Initial Reports range charts (DSDP CD-ROM)
@@ -302,7 +302,8 @@ to old data.
 /data/paleodata/nsb/raw/<version>_<record>/nsb_sqlite.zip, nsb_postgresql.zip,
     denormalized_tables.zip, MANIFEST.json
 /data/paleodata/nsb/derived/2023-06-05_10063218/nsb.sqlite    unzipped latest
-/data/paleodata/nsb/versions.tsv                               all 372 versions
+/data/paleodata/nsb/versions.tsv                               index of all 372 versions
+                                                (13 mirrored; see front matter)
 ```
 
 The full version index is also in [zenodo-versions.tsv](zenodo-versions.tsv).
@@ -313,9 +314,9 @@ The full version index is also in [zenodo-versions.tsv](zenodo-versions.tsv).
 curl -sL -o nsb_sqlite.zip https://zenodo.org/api/records/10063218/files/nsb_sqlite.zip/content
 ```
 
-`python3 resources/tools/zenodo_mirror.py 10063218 <dest> --only <version_dir>`
-fetches one version with checksum verification; `--verify` re-hashes a mirror
-against its manifests.
+`python3 resources/tools/data_mirror.py zenodo 10063218 <dest> --only <version_dir>`
+fetches any version with checksum verification, and `--latest` the newest;
+`data_mirror.py verify <dest>` re-hashes a mirror against its manifests.
 
 **Analysis-ready occurrences.** [occurrences.sql](occurrences.sql) resolves
 synonymy recursively, applies the default filters and drops undated samples.

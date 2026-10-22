@@ -1,4 +1,4 @@
-"""Profile NSB snapshots mirrored by zenodo_mirror.py.
+"""Profile NSB snapshots mirrored by data_mirror.py (or its predecessor zenodo_mirror.py).
 
 Usage: python3 nsb_profile.py MIRROR_ROOT OUT_DIR RECIPE_SQL VERSION_DIR [VERSION_DIR ...]
 
