@@ -85,7 +85,7 @@ c14	by:FEATDATED	Rock art	213
 c14	by:FEATDATED	Burial (human)	204
 c14	by:FEATDATED	Mud wasp nest	32
 c14	by:FEATDATED	Burial (animal)	3
-c14	rows_mentioning_supersede	AGE_COMMT	0
+c14	rows_noting_they_supersede_other_ages	AGE_COMMT	0
 c14	columns_by_share_filled	<10%	44
 c14	columns_by_share_filled	10-50%	30
 c14	columns_by_share_filled	50-90%	17
@@ -99,6 +99,10 @@ c14	share_filled	CHEMPREPAB	0.29
 c14	share_filled	PHYSCLEAN	0.157
 c14	share_filled	RECRYST	0.046
 c14	share_filled	SINGULAR	0.261
+c14	share_filled_applicable	SMPDEPTH	5260 of 9256 (0.568)
+c14	share_filled_applicable	F14C	1038 of 3137 (0.331)
+c14	share_filled_applicable	RECRYST	329 of 2861 (0.115)
+c14	share_filled_applicable	C13_VAL	1114 of 4039 (0.276)
 osl	rows		973
 osl	columns		143
 osl	by:DBVERNO	v2.3(2)	973
@@ -168,7 +172,7 @@ osl	by:FEATDATED	no data	210
 osl	by:FEATDATED	Mud wasp nest	11
 osl	by:FEATDATED	Other	3
 osl	by:FEATDATED	Burial (animal)	1
-osl	rows_mentioning_supersede	AGE_COMMT	4
+osl	rows_noting_they_supersede_other_ages	AGE_COMMT	4
 osl	columns_by_share_filled	<10%	32
 osl	columns_by_share_filled	10-50%	32
 osl	columns_by_share_filled	50-90%	40
@@ -181,6 +185,7 @@ osl	share_filled	DOSERATE	0.881
 osl	share_filled	H2O_USED	0.338
 osl	share_filled	AGEMODELAB	0.859
 osl	share_filled	OD	0.419
+osl	share_filled_applicable	SMPDEPTH	834 of 962 (0.867)
 tl	rows		240
 tl	columns		141
 tl	by:DBVERNO	v2.3(2)	240
@@ -242,7 +247,7 @@ tl	by:FEATDATED	not related to a feature	130
 tl	by:FEATDATED	no data	85
 tl	by:FEATDATED	Other	18
 tl	by:FEATDATED	Hearth	7
-tl	rows_mentioning_supersede	AGE_COMMT	10
+tl	rows_noting_they_supersede_other_ages	AGE_COMMT	10
 tl	columns_by_share_filled	<10%	29
 tl	columns_by_share_filled	10-50%	49
 tl	columns_by_share_filled	50-90%	39
@@ -254,6 +259,7 @@ tl	share_filled	EQUIVDOSE	0.662
 tl	share_filled	DOSERATE	0.637
 tl	share_filled	H2O_USED	0.525
 tl	share_filled	AGEMODELAB	0.679
+tl	share_filled_applicable	SMPDEPTH	124 of 240 (0.517)
 c14	v2021_rows		5039
 c14	v2021_ids_still_live		5039
 c14	v2021_ids_gone		0

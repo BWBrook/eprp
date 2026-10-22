@@ -67,7 +67,7 @@ the SQLite and `age_check.py` writes recomputed ages). Deploy a tool to
 | --- | --- | --- |
 | `open` | Licence allows copying and redistribution (CC0, CC-BY, ODbL) | Yes |
 | `open-nc` | Copying allowed with non-commercial or share-alike terms | Yes, terms recorded |
-| `registered` | Free account needed; terms limit use or redistribution | No, unless the terms allow local copies (Barry decides) |
+| `registered` | Free access under terms that limit use or redistribution, accepted by account, click-through or download | No, unless the terms allow local copies (Barry decides) |
 | `restricted` | Request, approval, embargo or paywall | No |
 | `unclear` | No licence stated | No; treat as all rights reserved |
 
@@ -96,7 +96,7 @@ id: short-lowercase-id                  # also the mirror directory name
 name: Full name (ACRONYM)
 kind: database | compilation | deposit
 status: active | frozen | retired       # frozen = no updates since last_update
-last_update: YYYY-MM-DD                 # newest content we can see
+last_update: YYYY-MM-DD                 # newest content we can see (YYYY-MM if that is all that is known)
 scope:
   taxa: [...]
   time: text, with numeric bounds in Ma
@@ -270,10 +270,17 @@ the workflow when they generalise.
   server, and record the version stamp and server time (`data_mirror.py
   wfs`).
 - *Compare every copy in circulation.* The AustArch copy used in Barry's
-  rc-dates work differs from the ADS deposit (251 missing ages, spreadsheet
-  damage to depth ranges, seven limiting ages lost their sign). FosSahul's
+  rc-dates work is close to "numeric age and error only" (it lacks the Modern,
+  most limiting and the asymmetric-error ages), and shows spreadsheet damage:
+  depth ranges turned into dates, and seven qualifiers stripped. FosSahul's
   GitHub, Figshare, TERN and OCTOPUS copies differ in coordinates, schema and
   record count.
+- *Read flags in context before acting on them.* SahulArch's 14
+  "supercedes" notes mark the preferred ages, not the rejected ones.
+- [Detail withheld pending disclosure to the data custodian.]
+- *Use applicable denominators for completeness.* Field coverage measured
+  on all rows understates it for method-specific fields (F14C: 15% of all
+  ages, 33% of AMS ages).
 - *Re-run the provider's own algorithm.* FosSahul's rating script reproduces
   the 2021 ratings exactly but not the 2019 file's, which locates when the
   ratings were corrected.
@@ -284,8 +291,9 @@ the workflow when they generalise.
   entry says so, and records his authorisation of the GitHub copy and of the
   private AustArch copy, quoting him.
 - *Scan before choosing.* The Australian scan found that obvious-looking
-  routes (Atlas of Living Australia fossil records, Macrostrat) are empty for
-  Australian palaeontology, and that PBDB's Australian subset is the real
+  routes add little for Australian palaeontology: Atlas of Living Australia
+  fossil records are almost entirely foreign-museum or NSB specimens, and
+  Macrostrat has no Australian columns. PBDB's Australian subset is the real
   deep-time workhorse ([BACKLOG.md](BACKLOG.md)).
 
 **Both pilots.**

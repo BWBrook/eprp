@@ -18,7 +18,7 @@ size:
   radiocarbon_sites: 2658
 access:
   tier: open-nc
-  licence: "CC-BY-4.0 per OCTOPUS documentation; DataCite lists CC-BY-NC-4.0 for the radiocarbon v.2 DOI (10.25900/gpvr-ay04)"
+  licence: "CC-BY-4.0 per OCTOPUS documentation and Figshare records; DataCite alone lists CC-BY-NC-4.0, for the radiocarbon v.2 DOI only (10.25900/gpvr-ay04)"
   routes:
     - {type: wfs, url: "http://geoserver.octopusdata.org/geoserver/wfs (layers be10-denude:sahularch_c14, _osl, _tl)", state: "live, HTTP only, CSV/GeoJSON/shapefile, no feature cap", checked: 2026-10-22}
     - {type: web-ui, url: "https://octopusdata.org", state: "map viewer; export after choosing an intended use", checked: 2026-10-22}
@@ -47,7 +47,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); lineage and documentation read by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # SahulArch
@@ -55,7 +55,8 @@ entry:
 ## Summary
 
 SahulArch is the current compilation of archaeological ages for Sahul:
-10,714 radiocarbon, OSL and TL determinations from about 2,700 sites, from
+10,714 radiocarbon, OSL and TL determinations from 2,765 sites (2,319
+metasites, the paper's "sites"), from
 publications and grey literature to June 2022 (Saktura et al. 2023). Every
 age carries the context and laboratory detail needed to judge it, rather than
 a quality score. Locations are blurred to 25 km for cultural safety. Reach for
@@ -73,7 +74,7 @@ Counts are our own ([profile](profile/sahularch_profile.tsv)) from the
 
 | Method | Ages | Sites | Metasites | Samples | Region |
 | --- | ---: | ---: | ---: | ---: | --- |
-| Radiocarbon | 9,501 | 2,658 | 2,268 | 9,335 | Australia 6,941; New Guinea 2,117; Torres Strait 339; Indonesia 104 |
+| Radiocarbon | 9,501 | 2,658 | 2,268 | 9,335 | Australia 6,941; Papua New Guinea 2,117; Torres Strait 339; Indonesia 104 (35 of them in Papua, on New Guinea) |
 | OSL | 973 | 118 | 92 | 850 | Australia 969; New Guinea 4 |
 | TL | 240 | 47 | 42 | 233 | Australia 204; New Guinea 36 |
 
@@ -109,17 +110,23 @@ documentation and Zenodo records, read by the documentation scan.
   and 127 TL ages from 1,120 metasites. Now marked obsolete.
 - **2022.** Data entry closed in June 2022; DOIs were minted for the v.2
   collections (metadata only), and the paper followed in January 2023 with
-  9,504 radiocarbon, 973 OSL and 240 TL ages from 2,318 sites.
+  9,504 radiocarbon, 973 OSL and 240 TL ages from 2,318 sites (metasites in
+  the database's terms; 2,319 in today's snapshot).
 - **2024–2025.** OCTOPUS v2.2 and v2.3. The live radiocarbon layer has 9,501
   ages, three fewer than the paper.
 
 **2021 against today** (checked): every 2021 observation ID is still live,
-with its age unchanged. The live layers add 4,462 radiocarbon, 626 OSL and 113
-TL ages. Growth has been additive.
+with its age and error unchanged. The live layers add 4,462 radiocarbon, 626
+OSL and 113 TL ages. Records were also lightly edited (independent review):
+two laboratory codes corrected, one dated feature and two metasite names
+changed, laboratory names expanded, references added, and missing-value
+codes harmonised (`no data` and `NA` to `ND`).
 
 **Relation to AustArch.** AustArch was used to guide the search for sites and
-references; ages were re-extracted from the original sources. No ID
-crosswalk between the two exists that we found.
+references; ages were re-extracted from the original sources. There is no ID
+crosswalk, but laboratory codes link them: 98% of AustArch radiocarbon ages
+with a usable code (4,846 of 4,944) have that code in SahulArch, and 151
+SahulArch rows quote an "AustArch note" (independent review).
 
 **Authors.** Saktura, Rehn, Linnenlucke, Munack, Wood, Petchey, Codilean,
 Jacobs, Cohen, Williams and Ulm (CABAH). Barry W. Brook is not an author.
@@ -130,7 +137,7 @@ Four levels: metasite → site → sample → observation, with IDs `METASITEID`
 `SITEID`, `SMPID` and `OBSID1` (e.g. `ARCH0001C14001`). Replicate analyses of
 one sample share `SMPID`, and letter suffixes mark reports that differ in
 context or depth. Layers have 120 (radiocarbon), 143 (OSL) and 141 (TL)
-columns.
+attribute columns, plus `FID` and `geom` in the WFS CSVs.
 
 - **Common fields.** Site names and aliases; country, region, state;
   bioregion (IBRA); open or closed site; up to four references with DOIs;
@@ -146,9 +153,11 @@ columns.
   random and total error, fading correction.
 - **Missing values.** Numbers use −9999.99; text uses `ND` (no data), `NA`
   (not applicable) or "no data".
-- **Location.** Polygons (15-sided, about 1,275 km²) in Web Mercator, made by
-  random displacement within 25 km. True coordinates are held by OCTOPUS and
-  not released.
+- **Location.** 15-sided polygons of radius 25 km in Web Mercator, centred
+  on a randomly displaced point (the paper quotes about 1,275 km²; in ground
+  terms they cover roughly 1,000 km² in Tasmania to 1,900 km² in the tropics).
+  Rows share polygons: the 9,501 radiocarbon rows use 2,020. True coordinates
+  are held by OCTOPUS and not released.
 
 ## Access
 
@@ -186,7 +195,8 @@ there.
   double AustArch's size.
 - **Cultural safety by design.** Blurred locations protect sites while
   keeping regional analysis possible.
-- **Additive history.** Every 2021 age persists unchanged in today's data.
+- **Additive history.** Every 2021 age persists unchanged in today's data,
+  with only light corrections to other fields.
 - **Programmatic access.** An open WFS with filtering and full exports.
 
 ## Weaknesses and pitfalls
@@ -194,46 +204,56 @@ there.
 1. **No downloadable current release.** The 2022 DOIs hold no files, the
    2021 files are obsolete, and the live layers can change. Cite the DOI, the
    DBVERNO and the retrieval date, and keep the snapshot.
-2. **Licence conflict.** OCTOPUS says CC BY 4.0; DataCite says CC BY-NC 4.0
-   for the radiocarbon v.2 DOI. Treat it as non-commercial until resolved.
+2. **Licence conflict, radiocarbon only.** OCTOPUS and Figshare say CC BY
+   4.0; DataCite says CC BY-NC 4.0 for the radiocarbon v.2 DOI (the OSL and
+   TL DOIs say CC BY 4.0). Treat the radiocarbon layer as non-commercial until
+   resolved.
 3. **Replicates are kept.** 129 radiocarbon samples have more than one
    observation (295 rows), 162 laboratory codes appear on more than one row,
-   and 96 rows have no laboratory code. Only 14 luminescence ages note that
-   they were superseded, spelled "superceded". Choose one observation per
-   sample before any frequency analysis.
+   and 96 rows have no laboratory code. Choose one observation per sample
+   before any frequency analysis. Fourteen luminescence ages (4 OSL, 10 TL,
+   Madjedbebe) note that they supersede the other ages for their sample
+   ("supercedes"): keep these and drop their siblings. The superseded ages
+   themselves carry no flag.
 4. **Conventional ages only.** No calibrated ages, curves or reservoir
    offsets are stored. With 30% shell and other carbonates, choose
    calibration curves and ΔR per record (the Australian ΔR atlas, Ulm et al.
    2023). Remove sentinel values first.
-5. **Auxiliary fields are sparse.** Radiocarbon: sample depth 55%,
-   pretreatment 29%, physical cleaning 16%, F14C 15%, recrystallisation check
-   5%; δ13C method recorded for 14%. Luminescence is better documented
-   (equivalent dose 90%, dose rate 88%, water content 34%).
+5. **Auxiliary fields are sparse.** On applicable rows
+   ([profile](profile/sahularch_profile.tsv), as in Saktura et al. Fig. 6):
+   sample depth 57% (excluding rock art and wasp nests); F14C 33% of AMS ages;
+   recrystallisation check 11.5% of carbonate ages; δ13C method 28% of rows
+   with a δ13C value. On all rows: chemical pretreatment 29%, physical
+   cleaning 16%. OSL is better documented (equivalent dose 90%, dose rate
+   88%, water content 34%); TL less so (66%, 64%, 52%).
 6. **Spatial resolution is 25 km.** Do not analyse below that scale. Region
    fields were presumably assigned from true locations, so they may disagree
    with polygon centroids near boundaries (unverified).
 7. **Dates as data.** Frequency analyses inherit taphonomic loss,
    site-focused sampling and research effort (Attenbrow & Hiscock 2015 and
-   replies; Ward & Larcombe 2021). Seven sites carry more than 100 ages
-   (Saktura et al. 2023).
+   replies; Ward & Larcombe 2021). Seven metasites carry more than 100 ages.
 8. **Completeness is self-assessed.** The paper estimates about 98%
    (radiocarbon); entry was prioritised for ages over 30 ka, recent
    publications, and northern and south-eastern Australia.
 9. **Grey literature is restricted.** 77 source documents in the Zenodo
    community are restricted-access copies.
+10. [Detail withheld pending disclosure to the data custodian.]
 
 ## Overlap with other sources
 
-- **AustArch.** Most AustArch ages should be in SahulArch, re-extracted, but
-  without a crosswalk. Do not pool them.
-- **p3k14c** (global radiocarbon compilation) holds 3,657 Australian dates,
-  all from AustArch and none older than 10,000 BP. Do not pool with
-  SahulArch.
-- **FosSahul.** 372 radiocarbon laboratory codes occur in both (382
-  SahulArch rows; 4,233 FosSahul records, mostly indirect charcoal and shell
-  ages), and about 33 site names are shared (Cuddie Springs, Warratyi,
-  Kutikina and others). These are the sites where human and faunal
-  chronologies meet; the same date can enter both databases.
+- **AustArch.** 98% of AustArch radiocarbon ages with a usable laboratory
+  code appear in SahulArch by code (re-extracted, so values can differ). Do
+  not pool them.
+- **p3k14c** (global radiocarbon compilation) holds 3,624 Australian dates in
+  its 2025.07 release, all from AustArch and none older than 10,000 BP. Do not
+  pool with SahulArch.
+- **FosSahul.** 372 normalised radiocarbon laboratory codes occur in both
+  (382 SahulArch rows; 4,233 FosSahul records, mostly indirect charcoal and
+  shell ages), and 50 site names match exactly (Cuddie Springs and others;
+  FosSahul writes "Warratyi Rock Shelter", "Kutikina Cave (Fraser Cave)").
+  These are the sites where human and faunal chronologies meet; the same date
+  can enter both databases, though 447 FosSahul records differ by more than
+  1% in age from the SahulArch row with their code.
 - [Detail withheld pending disclosure to the data custodian.]
 
 ## EPRP relevance
@@ -256,7 +276,10 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | WFS snapshot of three layers; row counts equal server counts; DBVERNO v2.3(2) on every row | checked |
 | 2026-10-22 | Profile: counts, regions, materials, ages, replicates, field completeness | checked |
 | 2026-10-22 | 2021 Zenodo deposits mirrored (md5 verified); all 2021 IDs live with unchanged ages | checked |
-| 2026-10-22 | Superseded notes (14, spelled "superceded") | checked |
+| 2026-10-22 | 14 luminescence ages note that they supersede their siblings | checked |
+| 2026-10-22 | Applicable-denominator completeness | checked |
+| 2026-10-22 | AustArch lab-code link (98%); [Detail withheld pending disclosure to the data custodian.] | checked (independent review) |
+| 2026-10-22 | Entry reviewed adversarially: 7 major and 17 minor findings across the Sahul entries, applied | checked (Claude Sonnet subagent) |
 | 2026-10-22 | 2022 DOIs metadata-only; licence conflict; authorship | checked (documentation scan: Figshare, DataCite, JCU record) |
 | 2026-10-22 | Structure, QA approach, obfuscation, lineage, uses, critiques | source claim (Saktura et al. 2023, Codilean et al. 2022, OCTOPUS docs) |
 | 2026-10-22 | p3k14c Australian rows are AustArch only; FosSahul site-name overlap | checked (documentation scan) |

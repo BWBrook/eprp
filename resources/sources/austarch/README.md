@@ -16,11 +16,11 @@ size:
   other_methods: 478
   sites: 1784
 access:
-  tier: restricted
+  tier: registered
   licence: "ADS Terms of Use and Access (custom): non-commercial research and teaching, acknowledge depositors and ADS; sharing of data or derivatives limited"
   routes:
     - {type: ads, url: "https://doi.org/10.5284/1027216 (ADS collection 1661)", state: "CSV download without login; use implies acceptance of ADS terms; landing page blocked to scripts", checked: 2026-10-22}
-    - {type: p3k14c, url: "doi:10.5281/zenodo.16394072", state: "Holocene subset only (3,657 dates, to 10,000 BP)", checked: 2026-10-22}
+    - {type: p3k14c, url: "doi:10.5281/zenodo.16394072", state: "Holocene subset only (3,624 dates in release 2025.07, to 10,000 BP)", checked: 2026-10-22}
   api: none
 versioning:
   replay: exact
@@ -45,7 +45,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); documentation read by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # AustArch
@@ -76,8 +76,14 @@ Counts are our own ([profile](profile/austarch_profile.tsv)).
 - **Date issues.** 190 ages flagged erroneous and 185 not associated with
   human activity.
 - **Ages.** Radiocarbon ages are uncalibrated BP. 45 values carry an
-  inequality or qualifier (e.g. ">55000", "<1000", "c. 450"), and 55 are
-  "Modern".
+  inequality or qualifier (e.g. ">55000", "<1000", "c. 450"), and 76 begin
+  with "Modern".
+- **Against the data paper.** The file's 5,044 radiocarbon and 478 other ages
+  match the paper. The paper's 1,748 radiocarbon sites compare with 1,743 in
+  the file. Its "853 ages at 50–10 ka" compares with 929 radiocarbon ages of
+  10,000–50,000 BP in the file (1,143 across methods). Its "52 of 89
+  bioregions with fewer than 50 ages" compares with 45 of the 75 bioregions
+  present (independent review).
 
 ## Provenance and lineage
 
@@ -123,31 +129,43 @@ scripted access.
 
 1. **Copies in circulation differ.** The copy used in the rc-dates project
    (an author-supplied file of the same name) differs from the ADS deposit
-   ([comparison](profile/compare_ads_vs_rcdates_copy.txt), checked):
-   - it has 5,288 rows against ADS's 5,522; 251 ADS ages are absent
-     (216 radiocarbon, 35 other), not a simple filter by method or date
-     issue;
-   - of 5,271 shared ages, 239 differ. 105 depth ranges were converted to
-     dates ("11-17" became "Nov-17"), seven ages lost their inequality or
-     qualifier (">13930" became "13930"), and "Not given" became "NA";
-   - it uses LF line endings where ADS uses CRLF.
+   ([comparison](profile/compare_ads_vs_rcdates_copy.txt), checked; finer
+   breakdown by the independent review):
+   - *Rows.* It has 5,288 rows, 17 of them empty, so 5,271 ages; 251 ADS ages
+     are absent (216 radiocarbon, 35 other).
+   - *What is missing.* The copy is almost exactly the ADS rows with a
+     numeric age and a numeric error: of the 251 absent ages, 149 have a
+     non-numeric age (Modern 76, inequality 33, blank 9, `na` 6, "c." 5,
+     infinite 2, others) and 75 a non-numeric error such as "+900/-800".
+     The copy therefore lacks all "Modern" ages, 33 of 39 limiting ages and
+     the asymmetric-error ages.
+   - *What changed.* Of 5,271 shared ages, 239 differ: 104 only in number
+     formatting, and 135 in substance. 104 depth ranges and one context value
+     were turned into dates ("11-17" became "Nov-17"); six limiting ages and
+     one approximate age lost their qualifier (">13930" became "13930"); and
+     missing coordinates changed from "Not given" to "NA".
+   - *Format.* LF line endings where ADS uses CRLF.
 
-   Analyses built on that copy should be checked against the ADS file,
-   especially for the seven limiting ages.
+   Analyses built on that copy should be checked against the ADS file: the
+   missing Modern, limiting and asymmetric-error ages, and the seven ages
+   kept with their qualifier stripped.
 2. **Superseded.** Frozen at November 2013; SahulArch adds a decade of ages
    and re-extracts the old ones.
-3. **Thin Pleistocene coverage.** Only 853 ages are 50–10 ka (data paper);
-   more than half of sites have a single age, and 52 of 89 bioregions have
-   fewer than 50 ages.
+3. **Thin Pleistocene coverage.** 929 radiocarbon ages fall in 10,000–50,000
+   BP; more than half of sites have a single age (data paper), and 45 of the
+   75 bioregions present have fewer than 50 ages.
 4. **Restrictive terms.** The ADS agreement limits use to non-commercial
-   research and teaching and restricts passing on data or derivatives.
+   research and teaching and restricts passing on data or derivatives. The
+   catalogue classes it `registered`: no account, but downloading accepts
+   the terms.
 
 ## Overlap with other sources
 
-- **SahulArch** re-extracted most AustArch ages without an ID crosswalk; do
-  not pool them.
-- **p3k14c** carries 3,657 AustArch dates (Holocene only) with AustArch's
-  exact locations.
+- **SahulArch** re-extracted AustArch's ages without an ID crosswalk, but 98%
+  of AustArch radiocarbon ages with a usable laboratory code (4,846 of 4,944)
+  appear in SahulArch by code (independent review). Do not pool them.
+- **p3k14c** carries 3,624 AustArch dates in release 2025.07 (Holocene only),
+  with AustArch's exact locations.
 
 ## EPRP relevance
 
@@ -169,6 +187,7 @@ Labels as in the [catalogue conventions](../README.md).
 | --- | --- | --- |
 | 2026-10-22 | ADS CSVs downloaded (sha256 in manifest); 5,522 rows = paper's 5,044 + 478 | checked |
 | 2026-10-22 | Profile of methods, classes, issues, qualifiers | checked |
-| 2026-10-22 | ADS file against the rc-dates copy | checked |
+| 2026-10-22 | ADS file against the rc-dates copy | checked (breakdown by the independent review) |
+| 2026-10-22 | Paper counts reconciled with the file; SahulArch lab-code link; p3k14c release count | checked (independent review) |
 | 2026-10-22 | ADS terms, authorship, lineage, p3k14c subset | source claim (Wayback copies of ADS pages; data paper; documentation scan) |
 | 2026-10-22 | Barry's authorisation of a private copy | checked (side-session chat, 22 Oct 2026) |

@@ -44,7 +44,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); documentation read by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # OCTOPUS
@@ -53,7 +53,8 @@ entry:
 
 OCTOPUS, run from the University of Wollongong, is a PostGIS database and map
 service for Quaternary geochronology, built to hold Sahul-wide compilations
-under one schema with blurred locations where sites are culturally sensitive.
+under shared conventions (one schema per collection type), with blurred
+locations for the culturally sensitive collections.
 It is the only current route to [SahulArch](../sahularch/README.md), and it
 also serves SahulSed (luminescence ages of aeolian, coastal, fluvial and lake
 sediments), SahulChar (charcoal), the Indo-Pacific Pollen Database baseline,
@@ -61,7 +62,8 @@ global cosmogenic-nuclide denudation rates, and partner copies of
 [FosSahul](../fossahul/README.md) and the ExpAge exposure-age compilation.
 Every collection is reachable through one open WFS, which makes OCTOPUS a
 high-value programmatic route for Sahul palaeoenvironmental work. This entry
-describes the platform; collections get their own entries.
+describes the platform; profiles and extraction recipes live with each
+collection's own entry.
 
 ## Contents
 
@@ -92,9 +94,10 @@ Each row carries a `DBVERNO` stamp, e.g. `v2.3(2)` for SahulArch and
 
 One schema per collection type with shared conventions: hierarchical IDs
 (metasite, site, sample, observation), up to four references per record,
-missing values coded −9999.99, `ND` or `NA`, and a version stamp. Culturally
-sensitive collections are served as 25 km random-displacement polygons, with
-true coordinates held back. Field descriptions and the database schema are
+missing values coded −9999.99, `ND` or `NA`, and a version stamp. Only the
+SahulArch and FosSahul layers are blurred, served as 25 km random-displacement
+polygons with true coordinates held back. SahulSed, SahulChar, IPPD, ExpAge and
+the cosmogenic layers carry point coordinates (`X_WGS84`, `Y_WGS84`). Field descriptions and the database schema are
 archived on Zenodo (records 7352827 and 7352807, marked obsolete).
 
 ## Access
@@ -114,7 +117,8 @@ cosmogenic "Download Collection" asks for name, email and intended use.
 - **One open, programmatic door** to several Sahul compilations that are not
   downloadable elsewhere.
 - **Consistent schema and missing-value coding** across collections.
-- [Detail withheld pending disclosure to the data custodian.]
+- **Cultural safety intended** for the archaeological and fossil
+  collections, which are blurred to 25 km (but see Pitfall 4).
 
 ## Weaknesses and pitfalls
 
@@ -122,8 +126,9 @@ cosmogenic "Download Collection" asks for name, email and intended use.
    marked obsolete; snapshot what you use and record `DBVERNO` and the
    server timestamp.
 2. **Partner copies diverge from their sources.** The FosSahul layer has
-   11,858 records against 11,873 in its Figshare release, restructured into
-   OCTOPUS fields and blurred to 25 km.
+   11,858 records against 11,872 in its March 2021 release: it carries the
+   2021 ratings but lacks the 6 records added in 2021 and 8 older ones. It is
+   restructured into OCTOPUS fields and blurred to 25 km.
 3. **Fragile transport.** HTTP only for the WFS subdomain; DOIs for some
    collections are metadata-only or "TBA".
 4. [Detail withheld pending disclosure to the data custodian.]
@@ -157,3 +162,4 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | WFS capabilities, 25 layers, hit counts | checked (documentation scan) |
 | 2026-10-22 | SahulArch and FosSahul layer snapshots | checked |
 | 2026-10-22 | Platform history, schema, licence statements | source claim (Codilean et al. 2022; OCTOPUS documentation) |
+| 2026-10-22 | Which layers are blurred; [Detail withheld pending disclosure to the data custodian.] | checked (independent review) |

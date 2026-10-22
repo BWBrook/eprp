@@ -12,12 +12,12 @@ scope:
 size:
   as_of: "FosSahul_updated_March2021.csv (Figshare v3)"
   records: 11872
-  distinct_lab_codes: 1967
-  genus_species_strings: 516
-  site_names: 601
+  distinct_lab_codes_normalised: 1755
+  genus_species_strings: 515
+  site_names: 600
 access:
   tier: open
-  licence: "CC0 (Figshare); CC BY 4.0 (FosSahul 1 on TERN); GitHub copy has no licence file, intended as public domain (Barry W. Brook, 2026-10-22)"
+  licence: "CC0 (Figshare, byte-identical to the GitHub CSV); CC BY 4.0 (FosSahul 1 on TERN); GitHub has no licence file"
   routes:
     - {type: figshare, url: "https://doi.org/10.6084/m9.figshare.8796944 (v1-v3)", state: "v3 (2021-04-12) holds the 2019 and March 2021 CSVs and rating code", checked: 2026-10-22}
     - {type: tern, url: "https://doi.org/10.4227/05/56F077B3054E9 (FosSahul 1)", state: "2016 workbook, 9,302 records, CC BY 4.0", checked: 2026-10-22}
@@ -48,7 +48,7 @@ entry:
   created: 2026-10-22
   updated: 2026-10-22
   by: Claude (Opus 5.5, side session); papers and deposit read by a Claude Sonnet subagent
-  reviewed: "not yet"
+  reviewed: "independent adversarial review by a Claude Sonnet subagent, 2026-10-22; findings applied"
 ---
 
 # FosSahul
@@ -76,27 +76,30 @@ March 2021 CSV unless stated.
 
 | Measure | Value |
 | --- | ---: |
-| Records (rows with data) | 11,872 (+1 stray all-`na` row) |
-| Distinct lab codes (`AgeID`) | 1,967; 268 rows have none |
-| Distinct determinations, lab code × age × site (papers scan) | about 2,577 |
-| Genus and species strings / genera | 516 / 220 (217 excluding "indet") |
-| Deposit names | 601 |
+| Records (rows with data) | 11,872 (+1 stray all-`na` row, excluded throughout) |
+| Distinct lab codes (`AgeID`, trimmed, case-folded) | 1,755; 268 rows carry a placeholder (`?`, `Not given`, `na`) |
+| Distinct determinations (lab code, age, precision, age type, site, technique; placeholders lumped) | 2,577 (2,508 on lab code × age × site) |
+| Genus and species strings / genera | 515 / 219 (217 excluding "indet") |
+| Deposit names | 600 |
 | Megafauna records (flag "Yes") | 3,196 |
 | Quality A* / A / B / C | 228 / 1,398 / 4,182 / 6,064 |
 | Publication years | 1955–2018 |
 
 - **Taxa.** Mammals 9,441, birds 1,733, reptiles 593, amphibians 97.
-  Extinct 2,480, extant 6,060, unknown 3,035, both 280. Humans are excluded.
+  Extinct 2,497 (2,480 plus 17 spelled "Exinct"), extant 6,060, unknown
+  3,035, both 280. Humans are excluded.
 - **Dating.**
-  - Radiocarbon 7,571: conventional 4,754, AMS 2,611, ABOX 142.
-  - U-series 1,912, OSL 1,344, amino-acid racemisation 710, ESR 319,
-    stratigraphic correlation 10.
+  - Radiocarbon 7,571: conventional 4,754, AMS 2,611, ABOX 142,
+    δ13C-adjusted 53, ABA 11.
+  - U-series 1,912, OSL 1,344 (plus TT-OSL 1), TL 2, amino-acid racemisation
+    710, ESR 319, stratigraphic correlation 10, not stated 3.
   - Association: indirect 9,941 (the dated material is not the fossil itself),
     direct 1,787.
 - **Ages.**
   - Ages are in ka: under 12 ka 3,960; 12–30 ka 3,127; 30–50 ka 1,637; 50–130 ka 1,732; 130–500 ka 1,286;
     500 ka or more 130 (maximum 897 ka, Cuddie Springs ESR).
-  - Age type: exact 9,345, minimum (`>`) 1,266, maximum (`<`) 1,157.
+  - Age type: exact 9,345, minimum (`>`) 1,266, maximum (`<`) 1,157, `<=` 7,
+    not stated 97.
 - **Regions.** Mainland Australia 8,315, Australian islands 1,792, New Guinea
   1,757. All A*/A records are on the mainland, Tasmania or Kangaroo Island,
   concentrated in South Australia (868) and Western Australia (505).
@@ -127,11 +130,21 @@ March 2021 CSV unless stated.
 
 **2019 against March 2021** ([comparison](profile/fossahul_compare.txt),
 checked):
-- *Records.* 7 records added and 1 removed.
-- *Ratings.* 232 changed, all upward from C: 172 to B and 60 to A*. Ages and
-  techniques are unchanged.
-- *Coordinates.* Re-rounding 2021 to 0.1° reproduces 2019 for nearly all
-  records.
+- *Records.* The 2019 file has 11,866 populated rows plus 5 empty rows; Peters
+  et al.'s "11,871 records" counts the empty rows. The 2021 file adds 6 records
+  (IDs 11924–11929) and removes none.
+- *Ratings.* 232 changed, all upward from C: 172 to B and 60 to A*. Ages,
+  precisions and techniques are unchanged.
+- *Coordinates.* Rounding the 2021 coordinates to 0.1° (half away from zero)
+  reproduces the 2019 values for all 11,829 records with numeric coordinates.
+  The 2021 values equal FosSahul 1's rounded to four decimals (9,222 of
+  9,270), except 27 Tea Tree Cave records whose FosSahul 1 position was wrong
+  and was corrected in 2019. Uncertainty radii exist for 9,268 of the 9,302
+  FosSahul 1 records but only 57 of the 2,570 records added since.
+- *Codes and other fields* (independent review): `na` became `?` in Status
+  (3,035 rows) and Megafauna (1,175); 7 age types changed from `=` to `<=`;
+  contamination and extraction fields changed in 251 rows; the family typo
+  "Scindidae" appeared (188 rows); `Uncertainty` was added.
 
 ## Structure
 
@@ -173,13 +186,17 @@ become A, B or C by stratigraphic association. Only direct ages can be A*.
 /data/paleodata/fossahul/octopus-wfs/raw/<stamp>_wfs/                                OCTOPUS copy (blurred)
 ```
 
-Barry authorised mirroring the GitHub copy on 22 October 2026 ("the intention
-was public domain, as an update to FosSahul ... even if the repo License
-doesn't specify that").
+The GitHub CSV is byte-identical to the CC0 Figshare v3 file, which settles
+the data licence. Barry, a FosSahul 1 author, authorised mirroring the GitHub
+copy on 22 October 2026 ("the intention was public domain, as an update to
+FosSahul ... even if the repo License doesn't specify that").
 
 **Rating check.** [rating_check.R](rating_check.R) re-runs the authors' rating
-script on their CSV ([2021](profile/fossahul_rating_check_2021.txt),
-[2019](profile/fossahul_rating_check_2019.txt)).
+script on their CSV: the 2021 CSV with `FosSahul_Rating_updated_March2021.R`
+([result](profile/fossahul_rating_check_2021.txt)) and the 2019 CSV with
+`FosSahul_Rating.R` ([result](profile/fossahul_rating_check_2019.txt)).
+Crossing them (2019 CSV with the 2021 script) gives 230 disagreements, so name
+the script with the result.
 
 ## Strengths
 
@@ -195,8 +212,9 @@ script on their CSV ([2021](profile/fossahul_rating_check_2021.txt),
 ## Weaknesses and pitfalls
 
 1. **Records are not dates.** About 2,577 determinations sit behind 11,872
-   records, and about 330 behind the 1,626 A*/A records. One lab code
-   (ANU-1221) supports 170 records. Deduplicate before date-level statistics.
+   records, and about 330 behind the 1,626 A*/A records (key in Contents;
+   2,441–2,786 across plausible keys). One lab code (ANU-1221) supports 170
+   records. Deduplicate before date-level statistics.
 2. **Use the March 2021 file.** The 2019 CSV disagrees with its own
    algorithm on 61 records (60 ESR ages stored C that the script rates A*),
    and its ratings do not match the published paper's totals. The 2021 file
@@ -217,7 +235,11 @@ script on their CSV ([2021](profile/fossahul_rating_check_2021.txt),
    complete small-vertebrate record.
 7. **Data cleaning needed.**
    - *Coordinates.* Three Outer Arumpo Lake records have longitude 14.877
-     (should be about 142.9), and 38 records have non-numeric coordinates.
+     (should be about 142.9), and 37 records have non-numeric coordinates.
+   - *Same name, different site.* "Cathedral Cave" is both Wellington Caves,
+     NSW (224 rows, all C; redated by Fusco et al. 2023) and Naracoorte, SA
+     (479 rows; 376 A and 3 A*, which carry 379 of the 568 A*/A ages older
+     than 120 ka). Filter by region, not name.
    - *Spelling variants.* "Exinct" (17), "Austrlian Islands", and the family
      "Scindidae" (188 rows, new in 2021).
    - *Unknown codes.* Status "?" covers 3,035 rows.
@@ -230,8 +252,9 @@ script on their CSV ([2021](profile/fossahul_rating_check_2021.txt),
    and Cuddie Springs.
 9. **Coordinate precision differs by release.** FosSahul 1 and the 2021 file
    give precise coordinates with an uncertainty radius; the 2019 file rounds to
-   0.1°; OCTOPUS blurs to 25 km. Respect the authors' caution about site
-   disturbance.
+   0.1°; OCTOPUS blurs to 25 km. The 2,513 records added since FosSahul 1
+   mostly lack a radius, so their precision is unstated. Respect the authors'
+   caution about site disturbance.
 
 **What the literature says.** Price et al. (2018, *Nature*) criticised
 megafauna extinction meta-analyses built on poorly understood dates.
@@ -244,14 +267,19 @@ sites' dates C.
 
 ## Overlap with other sources
 
-- **SahulArch.** 372 radiocarbon lab codes occur in both. 4,233 FosSahul
-  records (36%) carry one, overwhelmingly indirect charcoal and shell ages
-  from archaeological contexts. About 33 deposit names are shared. These are
-  the sites where faunal and human chronologies meet.
+- **SahulArch.** 372 normalised radiocarbon lab codes occur in both. 4,233
+  FosSahul records (36%) carry one, overwhelmingly indirect charcoal and shell
+  ages from archaeological contexts, and 50 deposit names match exactly
+  (53 after normalisation). These are the sites where faunal and human
+  chronologies meet. A shared code is not proof of the same determination:
+  447 of the 4,233 records differ by more than 1% in age from the SahulArch
+  row with that code.
 - **PBDB.** 2,253 Quaternary vertebrate occurrences in Sahul, with interval
   ages, not dates; only 9 shared references. Complementary, not overlapping.
 - **Neotoma** has no vertebrate datasets for Australia or New Guinea.
-- **OCTOPUS** holds a blurred, restructured copy lacking 14 records.
+- **OCTOPUS** holds a blurred, restructured copy of 11,858 records with the
+  March 2021 ratings but without its 6 additions and 8 older records (5 of
+  them lacking coordinates).
 
 ## EPRP relevance
 
@@ -278,3 +306,4 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | [Detail withheld pending disclosure to the data custodian.] | checked (documentation scan, from the same files) |
 | 2026-10-22 | Lineage, authorship, rating scheme, coordinate treatments, uses and critiques | source claim (FS1, FS2, addendum, OCTOPUS paper) |
 | 2026-10-22 | Barry's authorisation of the GitHub copy | checked (side-session chat, 22 Oct 2026) |
+| 2026-10-22 | Entry reviewed adversarially (with SahulArch, AustArch, OCTOPUS): findings applied, incl. record and lab-code counts, coordinate lineage, name collisions | checked (Claude Sonnet subagent) |

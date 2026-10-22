@@ -21,8 +21,10 @@ def load(path):
 
 old, new = load(sys.argv[1]), load(sys.argv[2])
 octo = list(csv.DictReader(open(sys.argv[3], newline="", encoding="utf-8", errors="replace")))
-print(f"rows_2019\t{len(old)}")
-print(f"rows_2021\t{len(new)}")
+old = {k: v for k, v in old.items() if k.strip().isdigit()}
+new = {k: v for k, v in new.items() if k.strip().isdigit()}
+print(f"rows_2019_numeric_ids\t{len(old)}")
+print(f"rows_2021_numeric_ids\t{len(new)}")
 print(f"ids_added_2021\t{len(new.keys() - old.keys())}")
 print(f"ids_removed_2021\t{len(old.keys() - new.keys())}")
 shared = old.keys() & new.keys()

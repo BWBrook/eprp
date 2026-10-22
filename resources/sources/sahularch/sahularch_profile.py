@@ -93,7 +93,7 @@ def profile(layer, rows):
     if "FEATDATED" in rows[0]:
         for k, v in Counter(r["FEATDATED"] for r in rows).most_common(8):
             add(layer, "by:FEATDATED", k, v)
-    add(layer, "rows_mentioning_supersede", "AGE_COMMT", sum(("supersed" in r.get("AGE_COMMT", "").lower()) or ("superced" in r.get("AGE_COMMT", "").lower()) for r in rows))
+    add(layer, "rows_noting_they_supersede_other_ages", "AGE_COMMT", sum(("supersed" in r.get("AGE_COMMT", "").lower()) or ("superced" in r.get("AGE_COMMT", "").lower()) for r in rows))
     filled = {col: sum(r[col] not in MISSING for r in rows) / len(rows) for col in rows[0] if col not in ("FID", "geom")}
     for band, lo, hi in (("<10%", 0, 0.1), ("10-50%", 0.1, 0.5), ("50-90%", 0.5, 0.9), (">=90%", 0.9, 1.01)):
         add(layer, "columns_by_share_filled", band, sum(lo <= v < hi for v in filled.values()))
@@ -101,6 +101,19 @@ def profile(layer, rows):
                 "EQUIVDOSE", "DOSERATE", "H2O_USED", "AGEMODELAB", "OD"]:
         if col in filled:
             add(layer, "share_filled", col, round(filled[col], 3))
+    # Completeness on applicable denominators, as in Saktura et al. (2023), Fig. 6.
+    applicable = [
+        ("SMPDEPTH", lambda r: r.get("FEATDATED") not in ("Rock art", "Mud wasp nest")),
+        ("F14C", lambda r: r.get("AGEMTD") == "AMS"),
+        ("RECRYST", lambda r: r.get("MATERIAL1") == "CarbBio"),
+        ("C13_VAL", lambda r: num(r.get("C13")) is not None),
+    ]
+    for col, keep in applicable:
+        if col in rows[0]:
+            base = [r for r in rows if keep(r)]
+            if base:
+                n = sum(r[col] not in MISSING for r in base)
+                add(layer, "share_filled_applicable", col, f"{n} of {len(base)} ({n / len(base):.3f})")
 
 
 def main():
