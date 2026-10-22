@@ -85,7 +85,10 @@ the question.*
   - framework notepad §3.
 - **Gaps:**
   - how often the *same* agent caught its own error, compared with the
-    other agent;
+    other agent. **Partly addressed on 22 October:** an `initial_owner`
+    column and a who-changed-whose table in the summary (Claude 23
+    self-corrections of 176; Codex 8 of 17). These are records shaped by
+    role design, with no denominator of unchanged judgments;
   - whether any correction was later reversed.
 - **Threats:**
   - The agents are not independent: shared training-data eras, and each
