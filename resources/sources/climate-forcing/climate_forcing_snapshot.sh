@@ -18,8 +18,8 @@ if want phansst; then $M github EJJudd/PhanSST "$D/phansst" --latest || echo "ph
 if want priors; then $M zenodo 8237751 "$D/phanda-hadcm3l-priors" --index-only || echo "priors FAILED"; fi
 if want song; then $M zenodo 5027293 "$D/song2021-temperature-thresholds" --latest || echo "song FAILED"; fi
 if want scotese; then $M zenodo 8238875 "$D/scotese2021-gmst" --latest || echo "scotese FAILED"; fi
-if want cenogrid; then
-  $M url "$D/cenogrid" "CENOGRID_PANGAEA.917503.tab::https://doi.pangaea.de/10.1594/PANGAEA.917503?format=textfile" \
+if want cenogrid; then  # a PANGAEA collection: zip of its member datasets (no text format)
+  $M url "$D/cenogrid" "Westerhold-etal_2020.zip::https://doi.pangaea.de/10.1594/PANGAEA.917503?format=zip" \
     --license "CC BY 4.0 (PANGAEA dataset metadata)" || echo "cenogrid FAILED"
 fi
 if want lr04; then
