@@ -1,8 +1,10 @@
 """Profile a PBDB regional extract written by pbdb_snapshot.sh (data_mirror.py url).
 
-Usage: python3 pbdb_profile.py SNAPSHOT_DIR SUFFIX OUT_TSV
-SUFFIX is "" for the core extract or "_idng" for the Indonesian box (New Guinea,
-Raja Ampat, Misool and Seram).
+Usage: python3 pbdb_profile.py JOINED_DIR SUFFIX OUT_TSV
+JOINED_DIR is pbdb_region.py's output (occurrences with collection fields
+appended; tables cut from the global public snapshot). SUFFIX is "" for the core
+extract or "_idng" for the Indonesian box (New Guinea, Raja Ampat, Misool and
+Seram).
 
 Writes long-format counts (table, metric, key, value). Checks every CSV row count
 against the provider count file, checks duplicated CSV columns are identical, then
@@ -26,7 +28,7 @@ PERIODS = [(0, 2.58, "Quaternary"), (2.58, 23.04, "Neogene"), (23.04, 66.0, "Pal
            (443.1, 486.85, "Ordovician"), (486.85, 538.8, "Cambrian"), (538.8, 635.0, "Ediacaran"),
            (635.0, 4600.0, "pre-Ediacaran")]
 COUNT_FILES = {"collections": "colls-list", "specimens": "specs-list", "measurements": "specs-measurements",
-               "references": "occs-refs", "taxa": "occs-taxa", "strata": "occs-strata"}
+               "references": "occs-refs", "taxa": "occs-taxa"}
 out = []
 
 
@@ -97,10 +99,16 @@ def models(table, rows):
 
 
 snap, sfx = sys.argv[1], sys.argv[2]
-tables = {n: load(n) for n in ("occurrences", "collections", "specimens", "measurements", "references", "taxa", "strata")}
-add("check", "occurrences_rows_vs_datainfo", provider_count(f"datainfo{sfx}.json"), len(tables["occurrences"]))
-for n, c in COUNT_FILES.items():
-    add("check", f"{n}_rows_vs_count", provider_count(f"count{sfx}-{c}.json"), len(tables[n]))
+tables = {n: load(n) for n in ("occurrences", "collections", "specimens", "measurements", "references", "taxa")}
+if os.path.exists(os.path.join(snap, "region_counts.json")):
+    with open(os.path.join(snap, "region_counts.json")) as f:
+        rc = json.load(f)[sfx or "core"]
+    for n in ("occurrences", "collections", "specimens", "measurements", "references", "taxa"):
+        add("check", f"{n}_rows_vs_region_count", rc[n], len(tables[n]))
+else:
+    add("check", "occurrences_rows_vs_datainfo", provider_count(f"datainfo{sfx}.json"), len(tables["occurrences"]))
+    for n, c in COUNT_FILES.items():
+        add("check", f"{n}_rows_vs_count", provider_count(f"count{sfx}-{c}.json"), len(tables[n]))
 
 occ, col = tables["occurrences"], tables["collections"]
 t = "occurrences"
@@ -184,14 +192,14 @@ add(t, "rows", "", len(tax))
 tab(t, "by:taxon_rank", [r["taxon_rank"] for r in tax])
 tab(t, "by:is_extant", [r["is_extant"] for r in tax])
 
-t = "strata"
-stra = tables["strata"]
+t = "strata"  # from the occurrences' collection fields; occs/strata aggregates over restricted occurrences too
+stra = Counter((r["geological_group"], r["formation"], r["member"]) for r in occ)
 add(t, "rows", "", len(stra))
-add(t, "with_formation", "", sum(bool(r["formation"]) for r in stra))
-add(t, "distinct_formations", "", len({r["formation"] for r in stra if r["formation"]}))
-add(t, "distinct_groups", "", len({r["group"] for r in stra if r["group"]}))
-for r in sorted(stra, key=lambda r: -int(r["n_occs"] or 0))[:15]:
-    add(t, "top_strata_by_occs", f'{r["group"]} | {r["formation"]} | {r["member"]}', r["n_occs"])
+add(t, "with_formation", "", sum(bool(k[1]) for k in stra))
+add(t, "distinct_formations", "", len({k[1] for k in stra if k[1]}))
+add(t, "distinct_groups", "", len({k[0] for k in stra if k[0]}))
+for k, n in stra.most_common(15):
+    add(t, "top_strata_by_occs", f"{k[0]} | {k[1]} | {k[2]}", n)
 
 with open(sys.argv[3], "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")

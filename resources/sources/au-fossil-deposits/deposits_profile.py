@@ -153,7 +153,12 @@ for dep in deposits:
                 with zipfile.ZipFile(path) as z:
                     members = [i for i in z.infolist() if not i.is_dir()]
                     out.append((dep, name, "zip_members", len(members)))
+                    forks = [i for i in members if "__MACOSX/" in i.filename or os.path.basename(i.filename).startswith("._")]
+                    if forks:
+                        out.append((dep, name, "zip_mac_resource_forks_skipped", len(forks)))
                     for i in members:
+                        if i in forks:
+                            continue
                         out.append((dep, name, "zip_member", f"{i.filename} {i.file_size}"))
                         if i.filename.lower().endswith(".xlsx"):
                             xlsx_sheets(dep, f"{name}::{i.filename}", io.BytesIO(z.read(i.filename)))
