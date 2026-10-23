@@ -345,3 +345,29 @@ for Rhynchonellata and 0.0035 for Bivalvia. Most of it was the class
 severity difference that Codex's counterexample isolates. None of these
 stand-in scores is inferential, and a score Monte Carlo precision target
 still has to be declared before any campaign uses the scores.
+
+## Exact prior-preserving centring: model_ctr.stan (23 October; Codex 76/2249)
+
+**What it is.** [model_ctr.stan](model_ctr.stan) keeps model.stan's
+likelihood and every other prior. The four effect vectors become zero-sum
+deviations with an *unscaled* standard-normal density, covariance
+s²(I − J/N). Their independent Gaussian means are integrated into the
+effective intercepts:
+- α₁,c ~ N(logit 0.1, √(1.5² + s_fam²/40 + s_ord²/8));
+- gd0,c ~ N(log 0.01, √(2² + s_b²/40 + s_ν²/T)).
+
+**Pre-fit checks** ([ctr_checks.py](ctr_checks.py),
+[ctr_checks.json](ctr_checks.json)):
+- **V1:** Stan's `sum_to_zero_vector` with `std_normal` has covariance
+  I − J/N. Sampled at N = 8 (40,000 draws), the largest deviation is 0.025
+  (Monte Carlo noise) and the marginal variance 0.877 against 0.875.
+- **V2:** the joint prior on likelihood predictors equals the original's to
+  4.4e-16 for N = 8, 40 and 87.
+- **V3:** at a fixed truth state, mapped across representations, the
+  likelihood is identical (difference 0.0) on the full and LOEO folds. All
+  208 shared-parameter gradients agree to 2.3e-13.
+
+So **model_ctr is the original model, reparameterised, not a new prior.**
+The stz95/stz99 candidate did change the prior: by Codex's arithmetic it
+inflates contrast variance by 14.3% for 8 orders and drops the random-mean
+variance from the intercepts.

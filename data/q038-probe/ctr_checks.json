@@ -1,0 +1,24 @@
+{
+ "V1_max_abs_cov_minus_P": 0.02496963650097081,
+ "V1_mean_marginal_var": 0.8768484507704191,
+ "V1_expected_marginal_var": 0.875,
+ "V1_max_abs_row_sum": 2.300000001564939e-07,
+ "V2_max_abs_cov_difference": 4.440892098500626e-16,
+ "V3": {
+  "full": {
+   "loglik_orig": -2750.7430803545053,
+   "loglik_ctr": -2750.7430803545053,
+   "loglik_abs_diff": 0.0,
+   "shared_gradients": 208,
+   "max_abs_shared_gradient_diff": 2.2737367544323206e-13
+  },
+  "loeo": {
+   "loglik_orig": -2735.226231722863,
+   "loglik_ctr": -2735.226231722863,
+   "loglik_abs_diff": 0.0,
+   "shared_gradients": 208,
+   "max_abs_shared_gradient_diff": 2.3447910280083306e-13
+  }
+ },
+ "ok": true
+}
