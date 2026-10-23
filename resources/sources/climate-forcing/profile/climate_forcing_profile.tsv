@@ -1,0 +1,64 @@
+table	metric	key	value
+phanda	sha256 vs main-project pin	5_Outputs/PhanDA_GMSTandCO2_percentiles.csv	match
+phanda	sha256 vs main-project pin	5_Outputs/PhanDA_GMST_ensemble.mat	match
+phanda	files		1218 files, 517264781 bytes; commit 2026-03-09_9f06c0d976
+phanda	GMSTandCO2_percentiles	rows	85 stage slices; ages 0-486.85 Ma
+phanda	GMSTandCO2_percentiles	GMST_50 range (degC)	11.4 (Upper Pleistocene) to 35.6 (Turonian)
+phanda	GMSTandCO2_percentiles	CO2_50 range (ppm)	239 (Chibanian) to 3326 (Floian)
+phanda	GMSTandCO2_percentiles	merged slices ('&' in stage name)	0
+phanda	SAT gradient percentiles	stage files	85
+phansst	PhanSST_v001	rows	151259
+phansst	PhanSST_v001	ProxyType	d18c 81709; uk 35360; tex 14091; mg 13249; d18p 6379; d18a 471
+phansst	PhanSST_v001	ValueType	pa 131977; im 12411; (blank) 5438; ia 1433
+phansst	PhanSST_v001	Period	Quaternary 63089; Neogene 41721; Paleogene 13622; Cretaceous 11532; Jurassic 5554; Carboniferous 4232; Permian 3365; Ordovician 2683; Devonian 2271; Triassic 1744; Silurian 1354; Cambrian 92
+phansst	PhanSST_v001	Age (Ma)	151259 rows with an age; -6.05e-05-522.291; median 3.554
+phansst	PhanSST_v001	sites; publications (LeadAuthor+Year)	1247; 635
+phansst	PhanSST_v001_RefList.xlsx	rows	663
+song2021-temperature-thresholds	file	Database S1.xlsx	1330137 bytes
+song2021-temperature-thresholds	file	R code for Thresholds of temperature change for mass extinctions.R	8533 bytes
+song2021-temperature-thresholds	file	R code for extinction rate.R	7886 bytes; sha256 matches the main-project pin
+scotese2021-gmst	file	PhanerozoicPTempMapsv22021.pdf	7131624 bytes
+scotese2021-gmst	file	gmst_scotese02a_v21321_csv-grid.zip	23349715 bytes; 100 members (.csv 100)
+scotese2021-gmst	file	gmst_scotese02a_v21321_csv-list.zip	38386078 bytes; 100 members (.csv 100)
+scotese2021-gmst	file	gmst_scotese02a_v21321_nc.zip	21931257 bytes; 100 members (.nc 100)
+scotese2021-gmst	file	readme.md	1785 bytes
+cenogrid	zip	member tables	27
+cenogrid	table	TableS8.tab	1998 rows x 10 columns; Tuned time [Ma] 35.6052-48.1422; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Foram benth δ13C [‰ PDB], Foram benth δ18O [‰ PDB], Foram benth, Reference
+cenogrid	table	TableS9.tab	719 rows x 11 columns; Tuned time [Ma] 3.95172-6.103; columns: Sample label, Depth sed [m] (mbsf), Depth comp r [rmcd], Tuned time [Ma], Foram benth δ13C [‰ PDB] (vs. , Foram benth δ18O [‰ PDB] (vs. , Foram benth, Reference
+cenogrid	table	TableS10.tab	217 rows x 10 columns; Tuned time [Ma] 38.0548-49.7723; columns: Sample label, Depth sed [m], Depth comp [mcd], Tuned time [Ma], Foram benth δ13C [‰ PDB], Foram benth δ18O [‰ PDB], Foram benth, Reference
+cenogrid	table	TableS11.tab	3886 rows x 7 columns; Tuned time [Ma] 32.7691-55.9394; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], δ13C [‰ PDB], δ18O [‰], Reference
+cenogrid	table	TableS12.tab	93 rows x 7 columns; columns: Sample label, Offset [m] (Offset Ship), Offset [m] (Revised Offset), Offset [m] (D Ship Revised), Depth sed [m] (mbsf), Depth comp r [rmcd], Reference
+cenogrid	table	TableS13.tab	63 rows x 8 columns; columns: Sample label, Depth sed [m] (mbsf), Depth comp r [rmcd], Tie point type, Sample label, Depth sed [m] (mbsf), Depth comp r [rmcd], Reference
+cenogrid	table	TableS14.tab	303 rows x 15 columns; columns: Sample label, Depth comp [mcd] (outside spli, Depth comp [mcd] (of splice), ID, Reference, Sample label, Depth comp [mcd] (outside spli, Depth comp [mcd] (of splice)
+cenogrid	table	TableS15.tab	249 rows x 9 columns; columns: Sample label, Depth sed [m] (mbsf), Depth comp [mcd], Tie point, Sample label, Depth sed [m] (mbsf), Depth comp r [rmcd], Depth comp r [rmcd] (correctde
+cenogrid	table	TableS16.tab	242 rows x 9 columns; columns: Sample label, Depth sed [m] (mbsf), Depth comp [mcd], Tie point, Sample label, Depth sed [m] (mbsf), Depth comp r [rmcd], Depth comp r [rmcd] (corrected
+cenogrid	table	TableS17.tab	177 rows x 9 columns; columns: Sample label, Depth sed [m] (mbsf), Depth comp [mcd], Tie point, Sample label, Depth sed [m] (mbsf), Depth comp r [rmcd], Depth comp r [rmcd] (corrected
+cenogrid	table	TableS18.tab	31 rows x 11 columns; Tuned time [Ma] 42.13-55.55; columns: Nannos e, Tuned time [Ma], Std dev [±], Sample label (Top), Sample label (Bottom), Depth top [m] (mbsf), Depth bot [m] (mbsf), Depth comp r top [rmcd]
+cenogrid	table	TableS19.tab	537 rows x 8 columns; columns: Sample label, Half, Depth sed [m], Depth comp r [rmcd], Decl [deg], Incl [deg], MAD [deg], Lab
+cenogrid	table	TableS20.tab	822 rows x 9 columns; columns: Sample label, Reference, Depth sed [m], Depth comp r [rmcd], Depth adj mcd [amcd], Incl [deg], Decl [deg], MAD [deg]
+cenogrid	table	TableS21.tab	30 rows x 12 columns; Tuned time [Ma] (Top) 33.118-51.736; columns: Chronozone, Sample label (Top), Sample label (Bottom), Depth comp r top [rmcd], Depth comp r bot [rmcd], Depth comp r mean [rmcd], Depth comp r e [rmcd], Reference
+cenogrid	table	TableS22.tab	91 rows x 13 columns; Tuned time [Ma] (tuned age Bot) 30.659-66.389; columns: Event, Chronozone, Sample label (Top), Sample label (Bot), Depth comp r top [rmcd], Depth comp r bot [rmcd], Depth comp r [rmcd] (Average), Depth comp r e [rmcd]
+cenogrid	table	TableS23.tab	177 rows x 8 columns; Age model [ka] (CK95) 0-65578; columns: Chronozone, Age model [ka] (CK95), Age model [ka] (GPTS2004), Age model [ka] (GPTS2012), Age model [ka] (Age this study, Reference, Age model [ka] (D GPTS2012 - t, Expedition
+cenogrid	table	TableS24.tab	625 rows x 5 columns; Tuned time [Ma] 0-14.374; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference
+cenogrid	table	TableS25.tab	66 rows x 6 columns; Tuned time [Ma] 5.12-12.96; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference, Comment
+cenogrid	table	TableS26.tab	157 rows x 6 columns; Tuned time [Ma] 18.65-41.2462; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference, Comment
+cenogrid	table	TableS27.tab	55 rows x 6 columns; Tuned time [Ma] 47.05-56.145; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference, Comment
+cenogrid	table	TableS28.tab	130 rows x 6 columns; Tuned time [Ma] 52.3613-67.04; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference, Comment
+cenogrid	table	TableS29.tab	126 rows x 6 columns; Tuned time [Ma] 32.768-56.129; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference, Comment
+cenogrid	table	TableS30.tab	235 rows x 6 columns; Tuned time [Ma] 0-30.736; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference, Comment
+cenogrid	table	TableS31.tab	98 rows x 5 columns; Tuned time [Ma] 5.939-20.008; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference
+cenogrid	table	TableS32.tab	55 rows x 5 columns; Tuned time [Ma] 12.724-15.968; columns: Sample label, Depth sed [m], Depth comp r [rmcd], Tuned time [Ma], Reference
+cenogrid	table	TableS33.tab	24321 rows x 19 columns; Tuned time [Ma] 0.000564-67.1011; columns: Event, Comment (Record), Sample label, Depth sed [m] (mbsf), Tuned time [Ma], Comment (tuning target), Reference (age model source), Foram benth δ13C [‰ PDB] (VPDB
+cenogrid	table	TableS34.tab	23629 rows x 13 columns; Tuned time [Ma] 0-67.1; columns: Tuned time [Ma], Foram benth [#] (ISOBENbinned_, Foram benth δ13C [‰ PDB] (ISOB, Foram benth δ13C [‰ PDB] (ISOB, Foram benth [#] (ISOBENbinned_, Foram benth δ18O [‰ PDB] (ISOB, Foram benth δ18O [‰ PDB] (ISOB, Foram benth δ13C [‰ PDB] (ISOB
+lr04	LR04stack.txt	rows	2115; 0-5320 ka
+lr04	lisiecki2005.txt (NOAA)	first data block	2115 rows; identical to the author's file in 2115
+rothman2017	Table 1	events	31; dates 0.02-541 Ma
+rothman2017	licence		by-nc/4.0
+green2022	SI appendix	pnas.2120441119.sapp.pdf	872 text lines
+green2022	Table S1	rows; columns	102; #, Period, Stage below boundary, Stage above boundary, Age [Ma], Age 1σ [Ma], Mean corrected sampled within bin diversity (11), Mean extinction rate (11), Max extinction rate (11), Min extinction rate (11), Age reference and comments, if different from GTS2012
+green2022	Table S2	rows; columns	35; #, Name, Start Age [Ma], Start Age 1σ [Ma], End Age [Ma], End Age 1σ [Ma], Duration [Ma], Volume [km3], Eruption rate [km3/yr], Volume reference, Age reference
+green2022	Table S3	rows; columns	24; Name, Location, Diameter from (59), Age Reference from (60), Age [Ma], Age 1σ [Ma]
+green2022	Table S2	LIPs with unreadable ages or start younger than end	none
+green2022	Table S2	rows with an eruption rate	25
+green2022	Table S2	Australian LIPs	Whitsunday, Bunbury, Gascoyne Margin, Kalkarindji (Antrim Plateau Volcanics), Kalkarindji (sills)
+checks	summary		ok
