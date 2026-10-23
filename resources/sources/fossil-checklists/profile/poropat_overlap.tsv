@@ -1,0 +1,48 @@
+table	metric	key	value
+pbdb	australian_non_fish_chordate_occurrences_midpoint_66_256		760
+pbdb	australian_non_fish_chordate_occurrences_permian_aware_window	66-259.857	763
+poropat	rows		299
+poropat	body_fossil_rows		238
+poropat	distinct_binomials		90
+taxa	binomials_exact_original_window		85
+taxa	binomials_exact_permian_aware_window		86
+taxa	binomials_exact_or_variant_permian_aware_window		89
+pbdb	distinct_binomials_in_au_ng_extract_any_taxon_any_age		10659
+taxa	spelling_variant_in_pbdb	Cratochelone byrnei	Cratochelone berneyi; 1 occurrences, 106.3-100.5 Ma
+taxa	no_exact_or_variant_in_window	Eiectus longmani	exact in au-ng extract: False; variant anywhere in au-ng extract: False
+taxa	spelling_variant_in_pbdb	Eomurunna yurrgensis	Eomurruna yurrgensis; 2 occurrences, 251.902-250.8 Ma
+taxa	spelling_variant_in_pbdb	Minmi paravertebra	Minmi paravertebrata; 1 occurrences, 132.6-119.57 Ma
+taxa	exact_only_in_permian_aware_window	Trucheosaurus major	1 occurrences, 259.857-254.14 Ma
+spelling	Cratochelone	7 in main text and references; 1 in appendix
+spelling	berneyi	8 in main text and references; 0 in appendix
+spelling	byrnei	0 in main text and references; 1 in appendix
+spelling	Eomurruna	5 in main text and references; 0 in appendix
+spelling	Eomurunna	3 in main text and references; 1 in appendix
+spelling	yurrgensis	7 in main text and references; 1 in appendix
+spelling	Minmi	15 in main text and references; 1 in appendix
+spelling	paravertebra	8 in main text and references; 1 in appendix
+spelling	paravertebrata	0 in main text and references; 0 in appendix
+taxa	distinct_genera_in_binomials		86
+taxa	genera_in_binomials_in_pbdb_exact		84
+taxa	genera_in_binomials_in_pbdb_exact_or_variant		85
+taxa	genus_not_exact_in_pbdb	Eiectus	none
+taxa	genus_not_exact_in_pbdb	Eomurunna	variant: Eomurruna
+taxa	distinct_first_words_of_taxon_cells	genera plus higher taxa named in indet. rows	144
+taxa	first_words_in_pbdb_names_of_any_rank	genus, family, order, class, first words of names	126
+units	poropat_distinct_unit_strings		55
+units	poropat_distinct_normalised		50
+units	in_pbdb_formation_chordates_original_window		28
+units	in_pbdb_formation_chordates_permian_aware_window		29
+units	in_pbdb_formation_member_group_chordates_permian_aware_window		38
+units	in_pbdb_formation_member_group_any_taxon_permian_aware_window		45
+units	not_in_pbdb_any_taxon_permian_aware_window	alinga	
+units	not_in_pbdb_any_taxon_permian_aware_window	frazer beach	
+units	not_in_pbdb_any_taxon_permian_aware_window	marburg	
+units	not_in_pbdb_any_taxon_permian_aware_window	patonga claystone	
+units	not_in_pbdb_any_taxon_permian_aware_window	tuggerah	
+units	in_asud_names		49
+units	not_in_asud	windalia	ASUD names that start with it: windalia radiolarite, windalia sand
+units	asud_same_name_age_overlap		47
+units	asud_same_name_age_within_5_myr		47
+units	asud_age_gap_myr	allaru	55.5; Poropat 100.5-113.2 Ma
+units	asud_age_gap_myr	purlawaugh	10.5; Poropat 143.1-154.8 Ma

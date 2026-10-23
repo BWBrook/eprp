@@ -1,0 +1,81 @@
+table	metric	key	value
+tables	rows	basin_size	7
+tables	rows	charcoal_methods	13
+tables	rows	charcoal_units	169
+tables	rows	date	4904
+tables	rows	date_type	31
+tables	rows	depo_context	17
+tables	rows	lands_desc	20
+tables	rows	mat_dated	23
+tables	rows	paleofiredata	174980
+tables	rows	paleofiresites	935
+tables	rows	pub	714
+tables	rows	pub_key	1041
+tables	rows	release	14
+tables	rows	site_type	53
+global	sites		935
+global	samples		174980
+global	sites_by:gcd_version	GCD1	384
+global	sites_by:gcd_version	GCD2	278
+global	sites_by:gcd_version	GCD4	205
+global	sites_by:gcd_version	GCD3	68
+sahul	sites		184
+sahul	sites_by:region	australia	151
+sahul	sites_by:region	new_guinea	24
+sahul	sites_by:region	torres_strait	9
+sahul	sites_by:gcd_version	GCD2	103
+sahul	sites_by:gcd_version	GCD1	43
+sahul	sites_by:gcd_version	GCD3	25
+sahul	sites_by:gcd_version	GCD4	13
+sahul	sites_by:country	Australia	148
+sahul	sites_by:country	NA	13
+sahul	sites_by:country	Indonesia	12
+sahul	sites_by:country	Papua New Guinea	11
+sahul	samples		15197
+sahul	samples_by:METHOD	SIEV	8558
+sahul	samples_by:METHOD	POLS	6639
+sahul	samples_by:METHOD	ACID	0
+sahul	samples_by:METHOD	CPRO	0
+sahul	samples_by:METHOD	GRAV	0
+sahul	samples_by:METHOD	HNPK	0
+sahul	samples_by:METHOD	HVLQ	0
+sahul	samples_by:METHOD	IMAG	0
+sahul	samples_by:METHOD	NOTK	0
+sahul	samples_by:METHOD	OTHE	0
+sahul	sites_by:methods_present	POLS	137
+sahul	sites_by:methods_present	SIEV	39
+sahul	sites_by:methods_present	POLS+SIEV	8
+sahul	samples_by:TYPE	CONC	9627
+sahul	samples_by:TYPE	INFL	3507
+sahul	samples_by:TYPE	C0P0	1571
+sahul	samples_by:TYPE	OTHE	492
+sahul	samples_by:TYPE	NOTK	0
+sahul	samples_by:TYPE	SOIL	0
+sahul	samples_by:UNIT	C125	3356
+sahul	samples_by:UNIT	XCM3	1879
+sahul	samples_by:UNIT	XARE	1845
+sahul	samples_by:UNIT	CARE	1320
+sahul	samples_by:UNIT	X125	755
+sahul	samples_by:UNIT	MMML	734
+sahul	samples_by:UNIT	SQC0	562
+sahul	samples_by:UNIT	SQCU	510
+sahul	samples_by:UNIT	SQCY	349
+sahul	samples_by:UNIT	CPRA	318
+sahul	samples_est_age_missing		0
+sahul	site_max_est_age_median		9221
+sahul	sites_max_est_age_ge	20000	37
+sahul	sites_max_est_age_ge	50000	17
+release	row	1	GCD_3.0.0 | 300 | 16024
+release	row	2	GCD_3.0.1 | 301 | 16142
+release	row	3	GCD_3.0.2 | 302 | 16169
+release	row	4	GCD_3.0.3 | 303 | 16191
+release	row	5	GCD_3.0.4 | 304 | 16212
+release	row	6	GCD_3.0.5 | 305 | 16547
+release	row	7	GCD_4.0.0 | 400 | 17591
+release	row	8	GCD_4.0.1 | 401 | 17617
+release	row	9	GCD_4.0.2 | 402 | 17653
+release	row	10	GCD_4.0.3 | 403 | 17763
+release	row	11	GCD_4.0.4 | 404 | 17863
+release	row	12	GCD_4.0.5 | 405 | 18241
+release	row	13	GCD_4.0.6 | 406 | 18320
+release	row	14	GCD_4.0.7 | 407 | 18561

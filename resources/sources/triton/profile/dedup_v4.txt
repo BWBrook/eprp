@@ -1,0 +1,7 @@
+rows_in	541846
+rows_dropped	16260
+rows_dropped:Fentonetal2016	2282
+rows_dropped:Neptune	120
+rows_dropped:Pangaea	13858
+rows_out	525586
+samples_rel_abun_sum_lt_99.9_after	794 of 45465

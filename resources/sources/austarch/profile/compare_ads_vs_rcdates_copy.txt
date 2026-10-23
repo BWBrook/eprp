@@ -1,0 +1,15 @@
+A {'bytes': 2683153, 'bom': False, 'crlf': 5523, 'lf_only': 0, 'decodes_as': 'utf-8-sig'} rows 5522 cols 27
+B {'bytes': 2525297, 'bom': False, 'crlf': 0, 'lf_only': 5289, 'decodes_as': 'utf-8-sig'} rows 5288 cols 26
+header_only_in_A ['']
+header_only_in_B []
+ADSID_only_in_A 251 ['10011', '10015', '10050', '10051', '10062', '10083', '10093', '10094', '10114', '10157']
+ADSID_only_in_B 1 ['']
+column_differs DEPTH_FROM_SURFACE_CM 105 e.g. ('10552', '11-17', 'Nov-17')
+column_differs LATITUDE 104 e.g. ('20215', 'Not given', 'NA')
+column_differs LONGITUDE 18 e.g. ('20215', 'Not given', 'NA')
+column_differs ERROR 14 e.g. ('11310', '122.06555616', '122.0655562')
+column_differs C13_AGE 9 e.g. ('10332', '-23.0', '-23')
+column_differs AGE 7 e.g. ('20014', '<440', '440')
+column_differs C13_ERROR 2 e.g. ('13188', '2.0', '2')
+column_differs CONTEXT 1 e.g. ('13402', '5-1', '5-Jan')
+shared_ADSIDs 5271 with_any_difference 239

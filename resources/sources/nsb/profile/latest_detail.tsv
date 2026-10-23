@@ -1,0 +1,202 @@
+version	metric	key	value
+2023-06-05_10063218	occ_by_group_epoch	D|Eocene	9827
+2023-06-05_10063218	occ_by_group_epoch	D|Miocene	46273
+2023-06-05_10063218	occ_by_group_epoch	D|Oligocene	9725
+2023-06-05_10063218	occ_by_group_epoch	D|Paleocene	2637
+2023-06-05_10063218	occ_by_group_epoch	D|Pleistocene-Holocene	40866
+2023-06-05_10063218	occ_by_group_epoch	D|Pliocene	24096
+2023-06-05_10063218	occ_by_group_epoch	D|no age	5649
+2023-06-05_10063218	occ_by_group_epoch	DN|Eocene	3153
+2023-06-05_10063218	occ_by_group_epoch	DN|Miocene	864
+2023-06-05_10063218	occ_by_group_epoch	DN|Oligocene	818
+2023-06-05_10063218	occ_by_group_epoch	DN|Pleistocene-Holocene	798
+2023-06-05_10063218	occ_by_group_epoch	DN|Pliocene	321
+2023-06-05_10063218	occ_by_group_epoch	DN|no age	2575
+2023-06-05_10063218	occ_by_group_epoch	F|Early Cretaceous	3078
+2023-06-05_10063218	occ_by_group_epoch	F|Eocene	16747
+2023-06-05_10063218	occ_by_group_epoch	F|Late Cretaceous	20744
+2023-06-05_10063218	occ_by_group_epoch	F|Miocene	50028
+2023-06-05_10063218	occ_by_group_epoch	F|Oligocene	11389
+2023-06-05_10063218	occ_by_group_epoch	F|Paleocene	7265
+2023-06-05_10063218	occ_by_group_epoch	F|Pleistocene-Holocene	28450
+2023-06-05_10063218	occ_by_group_epoch	F|Pliocene	24828
+2023-06-05_10063218	occ_by_group_epoch	F|no age	13988
+2023-06-05_10063218	occ_by_group_epoch	N|Early Cretaceous	22114
+2023-06-05_10063218	occ_by_group_epoch	N|Eocene	46137
+2023-06-05_10063218	occ_by_group_epoch	N|Late Cretaceous	44552
+2023-06-05_10063218	occ_by_group_epoch	N|Miocene	70172
+2023-06-05_10063218	occ_by_group_epoch	N|Oligocene	20186
+2023-06-05_10063218	occ_by_group_epoch	N|Paleocene	14968
+2023-06-05_10063218	occ_by_group_epoch	N|Pleistocene-Holocene	39556
+2023-06-05_10063218	occ_by_group_epoch	N|Pliocene	28725
+2023-06-05_10063218	occ_by_group_epoch	N|no age	25662
+2023-06-05_10063218	occ_by_group_epoch	N|pre-Cretaceous	913
+2023-06-05_10063218	occ_by_group_epoch	R|Early Cretaceous	1643
+2023-06-05_10063218	occ_by_group_epoch	R|Eocene	33490
+2023-06-05_10063218	occ_by_group_epoch	R|Late Cretaceous	163
+2023-06-05_10063218	occ_by_group_epoch	R|Miocene	47161
+2023-06-05_10063218	occ_by_group_epoch	R|Oligocene	22749
+2023-06-05_10063218	occ_by_group_epoch	R|Paleocene	3149
+2023-06-05_10063218	occ_by_group_epoch	R|Pleistocene-Holocene	18574
+2023-06-05_10063218	occ_by_group_epoch	R|Pliocene	11988
+2023-06-05_10063218	occ_by_group_epoch	R|no age	7966
+2023-06-05_10063218	occ_by_group_ocean	D|ANT	5996
+2023-06-05_10063218	occ_by_group_ocean	D|ATL	58014
+2023-06-05_10063218	occ_by_group_ocean	D|IND	16484
+2023-06-05_10063218	occ_by_group_ocean	D|PAC	58579
+2023-06-05_10063218	occ_by_group_ocean	DN|ATL	916
+2023-06-05_10063218	occ_by_group_ocean	DN|IND	2883
+2023-06-05_10063218	occ_by_group_ocean	DN|PAC	4730
+2023-06-05_10063218	occ_by_group_ocean	F|ANT	2585
+2023-06-05_10063218	occ_by_group_ocean	F|ATL	76237
+2023-06-05_10063218	occ_by_group_ocean	F|IND	22379
+2023-06-05_10063218	occ_by_group_ocean	F|MED	7691
+2023-06-05_10063218	occ_by_group_ocean	F|PAC	67625
+2023-06-05_10063218	occ_by_group_ocean	N|ANT	2402
+2023-06-05_10063218	occ_by_group_ocean	N|ATL	134889
+2023-06-05_10063218	occ_by_group_ocean	N|IND	67311
+2023-06-05_10063218	occ_by_group_ocean	N|MED	2109
+2023-06-05_10063218	occ_by_group_ocean	N|PAC	106274
+2023-06-05_10063218	occ_by_group_ocean	R|ANT	5621
+2023-06-05_10063218	occ_by_group_ocean	R|ATL	29382
+2023-06-05_10063218	occ_by_group_ocean	R|IND	15919
+2023-06-05_10063218	occ_by_group_ocean	R|PAC	95961
+2023-06-05_10063218	occ_by_group_programme	D|DSDP	53084
+2023-06-05_10063218	occ_by_group_programme	D|IODP	19411
+2023-06-05_10063218	occ_by_group_programme	D|ODP	66578
+2023-06-05_10063218	occ_by_group_programme	DN|IODP	607
+2023-06-05_10063218	occ_by_group_programme	DN|ODP	7922
+2023-06-05_10063218	occ_by_group_programme	F|DSDP	83233
+2023-06-05_10063218	occ_by_group_programme	F|IODP	13938
+2023-06-05_10063218	occ_by_group_programme	F|ODP	79346
+2023-06-05_10063218	occ_by_group_programme	N|DSDP	116314
+2023-06-05_10063218	occ_by_group_programme	N|IODP	18691
+2023-06-05_10063218	occ_by_group_programme	N|ODP	177980
+2023-06-05_10063218	occ_by_group_programme	R|DSDP	54404
+2023-06-05_10063218	occ_by_group_programme	R|IODP	21791
+2023-06-05_10063218	occ_by_group_programme	R|ODP	70688
+2023-06-05_10063218	occ_by_group_abs_latitude	D|0-30 abs lat	36613
+2023-06-05_10063218	occ_by_group_abs_latitude	D|30-60 abs lat	91668
+2023-06-05_10063218	occ_by_group_abs_latitude	D|60-90 abs lat	10792
+2023-06-05_10063218	occ_by_group_abs_latitude	DN|0-30 abs lat	884
+2023-06-05_10063218	occ_by_group_abs_latitude	DN|30-60 abs lat	7645
+2023-06-05_10063218	occ_by_group_abs_latitude	F|0-30 abs lat	97597
+2023-06-05_10063218	occ_by_group_abs_latitude	F|30-60 abs lat	73393
+2023-06-05_10063218	occ_by_group_abs_latitude	F|60-90 abs lat	5527
+2023-06-05_10063218	occ_by_group_abs_latitude	N|0-30 abs lat	139558
+2023-06-05_10063218	occ_by_group_abs_latitude	N|30-60 abs lat	165533
+2023-06-05_10063218	occ_by_group_abs_latitude	N|60-90 abs lat	7894
+2023-06-05_10063218	occ_by_group_abs_latitude	R|0-30 abs lat	92689
+2023-06-05_10063218	occ_by_group_abs_latitude	R|30-60 abs lat	47405
+2023-06-05_10063218	occ_by_group_abs_latitude	R|60-90 abs lat	6789
+2023-06-05_10063218	occ_by_group_nomenclature	D|open nomenclature	12810
+2023-06-05_10063218	occ_by_group_nomenclature	D|plain	126263
+2023-06-05_10063218	occ_by_group_nomenclature	DN|open nomenclature	2214
+2023-06-05_10063218	occ_by_group_nomenclature	DN|plain	6315
+2023-06-05_10063218	occ_by_group_nomenclature	F|open nomenclature	18039
+2023-06-05_10063218	occ_by_group_nomenclature	F|plain	158478
+2023-06-05_10063218	occ_by_group_nomenclature	N|open nomenclature	27326
+2023-06-05_10063218	occ_by_group_nomenclature	N|plain	285659
+2023-06-05_10063218	occ_by_group_nomenclature	R|open nomenclature	13530
+2023-06-05_10063218	occ_by_group_nomenclature	R|plain	133353
+2023-06-05_10063218	occ_by_group_taxon_status	D|B	7595
+2023-06-05_10063218	occ_by_group_taxon_status	D|G	21907
+2023-06-05_10063218	occ_by_group_taxon_status	D|H	12
+2023-06-05_10063218	occ_by_group_taxon_status	D|I	581
+2023-06-05_10063218	occ_by_group_taxon_status	D|O	39
+2023-06-05_10063218	occ_by_group_taxon_status	D|Q	1780
+2023-06-05_10063218	occ_by_group_taxon_status	D|S	33920
+2023-06-05_10063218	occ_by_group_taxon_status	D|U	196
+2023-06-05_10063218	occ_by_group_taxon_status	D|V	73043
+2023-06-05_10063218	occ_by_group_taxon_status	DN|B	33
+2023-06-05_10063218	occ_by_group_taxon_status	DN|G	4955
+2023-06-05_10063218	occ_by_group_taxon_status	DN|I	4
+2023-06-05_10063218	occ_by_group_taxon_status	DN|Q	20
+2023-06-05_10063218	occ_by_group_taxon_status	DN|S	520
+2023-06-05_10063218	occ_by_group_taxon_status	DN|U	30
+2023-06-05_10063218	occ_by_group_taxon_status	DN|V	2967
+2023-06-05_10063218	occ_by_group_taxon_status	F|B	711
+2023-06-05_10063218	occ_by_group_taxon_status	F|G	9942
+2023-06-05_10063218	occ_by_group_taxon_status	F|I	165
+2023-06-05_10063218	occ_by_group_taxon_status	F|Q	2395
+2023-06-05_10063218	occ_by_group_taxon_status	F|S	61816
+2023-06-05_10063218	occ_by_group_taxon_status	F|U	3169
+2023-06-05_10063218	occ_by_group_taxon_status	F|V	98319
+2023-06-05_10063218	occ_by_group_taxon_status	N|B	3441
+2023-06-05_10063218	occ_by_group_taxon_status	N|G	21612
+2023-06-05_10063218	occ_by_group_taxon_status	N|I	56
+2023-06-05_10063218	occ_by_group_taxon_status	N|Q	4978
+2023-06-05_10063218	occ_by_group_taxon_status	N|S	70320
+2023-06-05_10063218	occ_by_group_taxon_status	N|U	1277
+2023-06-05_10063218	occ_by_group_taxon_status	N|V	211301
+2023-06-05_10063218	occ_by_group_taxon_status	R|B	3325
+2023-06-05_10063218	occ_by_group_taxon_status	R|G	14905
+2023-06-05_10063218	occ_by_group_taxon_status	R|H	728
+2023-06-05_10063218	occ_by_group_taxon_status	R|I	34
+2023-06-05_10063218	occ_by_group_taxon_status	R|Q	5142
+2023-06-05_10063218	occ_by_group_taxon_status	R|S	22187
+2023-06-05_10063218	occ_by_group_taxon_status	R|U	2162
+2023-06-05_10063218	occ_by_group_taxon_status	R|V	98400
+2023-06-05_10063218	current_age_models_by_quality	E	56
+2023-06-05_10063218	current_age_models_by_quality	G	108
+2023-06-05_10063218	current_age_models_by_quality	M	126
+2023-06-05_10063218	current_age_models_by_quality	P	86
+2023-06-05_10063218	current_age_models_by_quality	VG	82
+2023-06-05_10063218	current_age_models_by_quality	VP	25
+2023-06-05_10063218	dated_samples_by_current_age_quality	E	5698
+2023-06-05_10063218	dated_samples_by_current_age_quality	G	13696
+2023-06-05_10063218	dated_samples_by_current_age_quality	M	17030
+2023-06-05_10063218	dated_samples_by_current_age_quality	P	8877
+2023-06-05_10063218	dated_samples_by_current_age_quality	VG	9185
+2023-06-05_10063218	dated_samples_by_current_age_quality	VP	2195
+2023-06-05_10063218	holes_with_any_age_model		484
+2023-06-05_10063218	holes_with_samples_and_current_age_model		449
+2023-06-05_10063218	datasets		976
+2023-06-05_10063218	distinct_source_citations		396
+2023-06-05_10063218	samples_by_status		60799
+2023-06-05_10063218	samples_by_status	c	358
+2023-06-05_10063218	samples_by_status	w	705
+2023-06-05_10063218	occurrences_by_taxon_qualifier		780268
+2023-06-05_10063218	occurrences_by_taxon_qualifier	?	1083
+2023-06-05_10063218	occurrences_by_taxon_qualifier	abs	1027
+2023-06-05_10063218	occurrences_by_taxon_qualifier	aff	69
+2023-06-05_10063218	occurrences_by_taxon_qualifier	cf	428
+2023-06-05_10063218	occurrences_by_taxon_qualifier	frg	411
+2023-06-05_10063218	occurrences_by_taxon_qualifier	gr	17
+2023-06-05_10063218	occurrences_by_taxon_qualifier	mis	56
+2023-06-05_10063218	occurrences_by_taxon_qualifier	pr	39
+2023-06-05_10063218	occurrences_by_taxon_qualifier	re	588
+2023-06-05_10063218	occurrences_by_taxon_qualifier	rw	1
+2023-06-05_10063218	denorm_full_rows		783987
+2023-06-05_10063218	denorm_filtered_rows		675078
+2023-06-05_10063218	default_filter_agrees	D|kept	109336
+2023-06-05_10063218	default_filter_agrees	D|removed	25541
+2023-06-05_10063218	default_filter_agrees	DN|kept	2572
+2023-06-05_10063218	default_filter_agrees	DN|removed	5016
+2023-06-05_10063218	default_filter_agrees	F|kept	145734
+2023-06-05_10063218	default_filter_agrees	F|removed	18808
+2023-06-05_10063218	default_filter_agrees	N|kept	257865
+2023-06-05_10063218	default_filter_agrees	N|removed	32179
+2023-06-05_10063218	default_filter_agrees	R|kept	114155
+2023-06-05_10063218	default_filter_agrees	R|removed	27365
+2023-06-05_10063218	default_filter_disagrees	D|in csv, predicted removed: no age	4196
+2023-06-05_10063218	default_filter_disagrees	DN|in csv, predicted removed: no age	941
+2023-06-05_10063218	default_filter_disagrees	F|in csv, predicted removed: no age	11975
+2023-06-05_10063218	default_filter_disagrees	N|in csv, predicted removed: no age	22941
+2023-06-05_10063218	default_filter_disagrees	R|in csv, predicted removed: no age	5363
+2023-06-05_10063218	filtered_csv_rows_not_in_db		0
+2023-06-05_10063218	recipe_rows		629662
+2023-06-05_10063218	recipe_keys_equal_dated_filtered_csv_keys		1
+2023-06-05_10063218	recipe_keys_not_in_dated_filtered_csv		0
+2023-06-05_10063218	dated_filtered_csv_keys_not_in_recipe		0
+2023-06-05_10063218	recipe_resolved_id_disagrees_with_csv		0
+2023-06-05_10063218	recipe_samples		54678
+2023-06-05_10063218	recipe_holes		430
+2023-06-05_10063218	recipe_resolved_taxa		3824
+2023-06-05_10063218	recipe_duplicate_sample_resolved_taxon_rows		13868
+2023-06-05_10063218	recipe_renamed_by_resolution		180081
+2023-06-05_10063218	recipe_rows_by_resolved_status	V	622120
+2023-06-05_10063218	recipe_rows_by_resolved_status	Q	330
+2023-06-05_10063218	recipe_rows_by_resolved_status	G	156
+2023-06-05_10063218	recipe_rows_by_resolved_status	U	1047
+2023-06-05_10063218	recipe_rows_by_resolved_status	B	6009

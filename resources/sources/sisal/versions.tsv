@@ -1,0 +1,9 @@
+version	doi	date	repository	mirrored	note
+v1.0	10.17864/1947.139	2018-02-12	Reading	no	
+v1.0	10.17864/1947.147	2018-06-04	Reading	no	re-deposit
+v1b	10.17864/1947.189	2019-02-13	Reading	no	
+v2.0	10.17864/1947.242	2020-02-20	Reading	no	
+v2.0	10.17864/1947.256	2020-07-20	Reading	no	re-deposit
+v3 (first deposit)	10.5287/ora-mzy8pozvk	2023-08-29	Oxford ORA	no	superseded by ora-2nanwp4rk
+v3	10.5287/ora-2nanwp4rk	2024-02-21	Oxford ORA	yes (CSV/SQL bundle, codes, README, entry workbook, trace elements)	current; images (712 MB) and whole package (1.6 GB) not mirrored
+v3 age ensembles	10.5281/zenodo.10726619	2024-02-29	Zenodo	yes	supersedes zenodo.10570754; concept 10.5281/zenodo.3591196

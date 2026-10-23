@@ -1,0 +1,473 @@
+table	metric	key	value
+AU	reported_count		66252
+AU	neptune_skipped		25799
+AU	pages		241
+AU	rows_fetched		40453
+AU	unique_records		40453
+AU	reconciled		yes
+AU	datasets		126
+AU	by:dataset	Natural History Museum (London) Collection Specimens [7e380070-f762-11e1-a439-00145eb45e9a]	9018
+AU	by:dataset	University of California Museum of Paleontology [58d0f326-2e85-4d0a-a744-571461220f00]	7987
+AU	by:dataset	Palaeobotanical Collections (PB), Swedish Museum of Natural History (NRM) [43fb301d-0354-45bc-94d2-dd50f3142a50]	7527
+AU	by:dataset	NMNH Paleobiology Specimen Records (USNM) [c8681cc2-9d0a-4c5f-b620-5c753abfe2bc]	2359
+AU	by:dataset	Non-vertebrate Paleontology, Jackson School Museum of Earth History, University of Texas at Austin [1f2cfb6f-c91b-498e-80f3-8eeeec688292]	1496
+AU	by:dataset	Condon Fossil Collection - Oregon Museum of Natural and Cultural History [083a4342-39f7-4fe0-a03c-d14ab3b9c5e2]	1437
+AU	by:dataset	University of Florida Invertebrate Paleontology [989f6285-841c-47a4-991b-3d3396427f02]	1250
+AU	by:dataset	The fossil collection (F) of the Muséum national d'Histoire naturelle (MNHN - Paris) [b275a4c1-9859-4f3c-8ead-d86dde820fbc]	1232
+AU	by:dataset	International Fossil Shell Museum (NL) - Mollusca Collection [fa87d03e-4959-451d-865f-ff03bb798339]	1010
+AU	by:dataset	Palaeozoological Collections (PZ), Swedish Museum of Natural History (NRM) [20ab8294-5253-46ca-bdb2-eab1b5e75657]	826
+AU	by:dataset	KUBI Paleobotany Collection [1953be92-e2b9-4b70-a1e5-893bc8d051f7]	544
+AU	by:dataset	Invertebrate Paleontology Division, Yale Peabody Museum [854bc2fc-f762-11e1-a439-00145eb45e9a]	526
+AU	by:dataset	KUBI Invertebrate Paleontology Collection [9654e4d4-f762-11e1-a439-00145eb45e9a]	477
+AU	by:dataset	Museum of Comparative Zoology, Harvard University [4bfac3ea-8763-4f4b-a71a-76a6f5f243d3]	385
+AU	by:dataset	Naturalis Biodiversity Center (NL) - Paleontology [ea233ece-c4fb-4fb8-bf98-f16235c4144c]	316
+AU	by:publishingCountry	US	17768
+AU	by:publishingCountry	GB	9018
+AU	by:publishingCountry	SE	8353
+AU	by:publishingCountry	DE	1618
+AU	by:publishingCountry	NL	1451
+AU	by:publishingCountry	FR	1276
+AU	by:publishingCountry	JP	345
+AU	by:publishingCountry	AU	278
+AU	by:publishingCountry	NO	161
+AU	by:publishingCountry	CA	138
+AU	by:publishingCountry	EE	19
+AU	by:publishingCountry	AR	17
+AU	by:license	http://creativecommons.org/licenses/by/4.0/legalcode	22354
+AU	by:license	http://creativecommons.org/publicdomain/zero/1.0/legalcode	15749
+AU	by:license	http://creativecommons.org/licenses/by-nc/4.0/legalcode	2350
+AU	by:kingdom	Animalia	22668
+AU	by:kingdom	(none)	6106
+AU	by:kingdom	Chromista	5991
+AU	by:kingdom	Plantae	5535
+AU	by:kingdom	Bacteria	69
+AU	by:kingdom	Fungi	30
+AU	by:kingdom	incertae sedis	30
+AU	by:kingdom	Protozoa	24
+AU	by:phylum	Chordata	10434
+AU	by:phylum	(none)	7018
+AU	by:phylum	Tracheophyta	5236
+AU	by:phylum	Foraminifera	5129
+AU	by:phylum	Mollusca	4175
+AU	by:phylum	Arthropoda	2261
+AU	by:phylum	Echinodermata	1773
+AU	by:phylum	Brachiopoda	1318
+AU	by:phylum	Porifera	1026
+AU	by:phylum	Ochrophyta	807
+AU	by:phylum	Cnidaria	511
+AU	by:phylum	Bryozoa	238
+AU	by:taxonRank	SPECIES	15413
+AU	by:taxonRank	GENUS	11511
+AU	by:taxonRank	(none)	6106
+AU	by:taxonRank	FAMILY	3276
+AU	by:taxonRank	CLASS	2089
+AU	by:taxonRank	PHYLUM	929
+AU	by:taxonRank	ORDER	537
+AU	by:taxonRank	KINGDOM	465
+AU	by:taxonRank	SUBSPECIES	63
+AU	by:taxonRank	VARIETY	63
+AU	by:taxonRank	FORM	1
+AU	by:institutionCode	NHMUK	9018
+AU	by:institutionCode	NRM	8353
+AU	by:institutionCode	UCMP	7987
+AU	by:institutionCode	USNM	2359
+AU	by:institutionCode	(none)	1927
+AU	by:institutionCode	UOMNH	1437
+AU	by:institutionCode	UF	1356
+AU	by:institutionCode	MNHN	1232
+AU	by:institutionCode	Pangaea	1189
+AU	by:institutionCode	KU	1043
+AU	by:institutionCode	IFSM	1010
+AU	by:institutionCode	YPM	797
+AU	by:earliestEraOrLowestErathem	(none)	25134
+AU	by:earliestEraOrLowestErathem	Cenozoic	11759
+AU	by:earliestEraOrLowestErathem	Paleozoic	2099
+AU	by:earliestEraOrLowestErathem	Mesozoic	1408
+AU	by:earliestEraOrLowestErathem	Neoproterozoic	50
+AU	by:earliestEraOrLowestErathem	Paleoproterozoic	2
+AU	by:earliestEraOrLowestErathem	Paleoarchean	1
+AU	by:earliestPeriodOrLowestSystem	(none)	15440
+AU	by:earliestPeriodOrLowestSystem	Neogene	5364
+AU	by:earliestPeriodOrLowestSystem	Quaternary	5242
+AU	by:earliestPeriodOrLowestSystem	Permian	3633
+AU	by:earliestPeriodOrLowestSystem	Triassic	2653
+AU	by:earliestPeriodOrLowestSystem	Cretaceous	2250
+AU	by:earliestPeriodOrLowestSystem	Paleogene	1567
+AU	by:earliestPeriodOrLowestSystem	Cambrian	1187
+AU	by:earliestPeriodOrLowestSystem	Devonian	1057
+AU	by:earliestPeriodOrLowestSystem	Ordovician	772
+AU	by:earliestPeriodOrLowestSystem	Jurassic	728
+AU	by:earliestPeriodOrLowestSystem	Silurian	307
+AU	by:earliestEpochOrLowestSeries	(none)	21176
+AU	by:earliestEpochOrLowestSeries	Miocene	5072
+AU	by:earliestEpochOrLowestSeries	Pleistocene	4202
+AU	by:earliestEpochOrLowestSeries	Lopingian	1847
+AU	by:earliestEpochOrLowestSeries	Oligocene	1199
+AU	by:earliestEpochOrLowestSeries	UpperTriassic	965
+AU	by:earliestEpochOrLowestSeries	Holocene	882
+AU	by:earliestEpochOrLowestSeries	Pliocene	814
+AU	by:earliestEpochOrLowestSeries	LowerCretaceous	776
+AU	by:earliestEpochOrLowestSeries	LowerTriassic	661
+AU	by:earliestEpochOrLowestSeries	Eocene	625
+AU	by:earliestEpochOrLowestSeries	LowerJurassic	487
+AU	by:class	(none)	13542
+AU	by:class	Mammalia	7139
+AU	by:class	Globothalamea	3335
+AU	by:class	Gastropoda	2354
+AU	by:class	Echinoidea	1234
+AU	by:class	Ostracoda	1217
+AU	by:class	Bivalvia	1087
+AU	by:class	Tubothalamea	900
+AU	by:class	Rhynchonellata	895
+AU	by:class	Aves	875
+AU	by:class	Pinopsida	855
+AU	by:class	Bacillariophyceae	807
+AU	by:class	Polypodiopsida	626
+AU	by:class	Cycadopsida	612
+AU	by:class	Cephalopoda	566
+AU	by:class	Trilobita	557
+AU	by:class	Magnoliopsida	449
+AU	by:class	Lycopodiopsida	352
+AU	by:class	Amphibia	300
+AU	by:class	Arachnida	266
+AU	pangaea_records		1189
+AU	pangaea_datasets		33
+AU	pangaea_by:class	Bacillariophyceae	697
+AU	pangaea_by:class	Arachnida	259
+AU	pangaea_by:class	(none)	196
+AU	pangaea_by:class	Globothalamea	36
+AU	pangaea_by:class	Jungermanniopsida	1
+AU	individualCount_sum		3607796
+AU	with_coordinates		14096
+AU	placeholder_coordinates_-9_-9		30
+AU	coordinates_outside_sahul_au_region		953
+AU	outside_with_COUNTRY_DERIVED_FROM_COORDINATES		883
+AU	outside_by:dataset	Natural History Museum (London) Collection Specimens	646
+AU	outside_by:dataset	NMNH Paleobiology Specimen Records (USNM)	186
+AU	outside_by:dataset	(Table 4) Principal component analysis, paleotemperatures and distribution of infaunal benthic foraminifera in Late Quaternary sediments of ODP Hole 122-760A in the southeast Indian Ocean	62
+AU	outside_by:dataset	Palaeontological collection (PMO) at UiO NHM, Oslo	30
+AU	outside_by:dataset	Invertebrate Paleontology Division, Yale Peabody Museum	10
+AU	outside_by:dataset	Palaeobotanical Collections (PB), Swedish Museum of Natural History (NRM)	5
+AU	with_earliest_chronostratigraphy		30575
+AU	with_any_chronostratigraphy		31977
+AU	with_formation_group_member_bed		13022
+AU	with_lithostratigraphy_incl_terms		18728
+AU	with_collection_year		10866
+AU	species_or_lower		15540
+AU	by:issue	INSTITUTION_MATCH_FUZZY	30959
+AU	by:issue	INSTITUTION_COLLECTION_MISMATCH	20879
+AU	by:issue	OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT	11573
+AU	by:issue	TAXON_MATCH_HIGHERRANK	11284
+AU	by:issue	GEODETIC_DATUM_ASSUMED_WGS84	10545
+AU	by:issue	COLLECTION_MATCH_FUZZY	9596
+AU	by:issue	CONTINENT_DERIVED_FROM_COORDINATES	7416
+AU	by:issue	TAXON_MATCH_NONE	6355
+AU	by:issue	CONTINENT_DERIVED_FROM_COUNTRY	3993
+AU	by:issue	COUNTRY_DERIVED_FROM_COORDINATES	3606
+AU	by:issue	INSTITUTION_MATCH_NONE	2280
+AU	by:issue	COLLECTION_MATCH_NONE	1324
+AU	by:issue	CONTINENT_INVALID	1253
+AU	by:issue	TYPE_STATUS_INVALID	1155
+AU	by:issue	MODIFIED_DATE_INVALID	1095
+AU	homo_sapiens_records		11
+AU	quaternary_mammals		3318
+AU	quaternary_mammals_with_coordinates		25
+AU	quaternary_mammals_with_formation		950
+AU	quaternary_mammals_with_genus		2148
+AU	quaternary_mammals_individualCount_sum		4591
+AU	quaternary_mammals_without_individualCount		893
+AU	quaternary_mammals_homo_sapiens		4
+AU	quaternary_mammals_by:taxonRank	GENUS	1134
+AU	quaternary_mammals_by:taxonRank	SPECIES	1014
+AU	quaternary_mammals_by:taxonRank	FAMILY	967
+AU	quaternary_mammals_by:taxonRank	ORDER	136
+AU	quaternary_mammals_by:taxonRank	CLASS	67
+AU	quaternary_mammals_by:stateProvince	New South Wales	1481
+AU	quaternary_mammals_by:stateProvince	South Australia	1100
+AU	quaternary_mammals_by:stateProvince	Queensland	370
+AU	quaternary_mammals_by:stateProvince	Victoria	204
+AU	quaternary_mammals_by:stateProvince	Western Australia	87
+AU	quaternary_mammals_by:stateProvince	(none)	70
+AU	quaternary_mammals_by:stateProvince	Tasmania	5
+AU	quaternary_mammals_by:stateProvince	Victoria?	1
+AU	quaternary_mammals_by:formation	(none)	2368
+AU	quaternary_mammals_by:formation	Mampuwordu Sands	444
+AU	quaternary_mammals_by:formation	Katipiri Sands	441
+AU	quaternary_mammals_by:formation	Katipiri Sands ?	49
+AU	quaternary_mammals_by:formation	Chinchilla Sands	12
+AU	quaternary_mammals_by:formation	Kutjitara	2
+AU	quaternary_mammals_by:formation	swamp deposit	1
+AU	quaternary_mammals_by:formation	NO DATA	1
+AU	quaternary_mammals_ucmp		2862
+AU	quaternary_mammals_ucmp_with_coordinates		0
+AU	quaternary_mammals_ucmp_with_formation		948
+AU	quaternary_mammals_ucmp_with_genus		1711
+AU	quaternary_mammals_ucmp_individualCount_sum		4461
+AU	quaternary_mammals_ucmp_without_individualCount		542
+AU	quaternary_mammals_ucmp_homo_sapiens		2
+AU	quaternary_mammals_ucmp_by:taxonRank	GENUS	1013
+AU	quaternary_mammals_ucmp_by:taxonRank	FAMILY	952
+AU	quaternary_mammals_ucmp_by:taxonRank	SPECIES	698
+AU	quaternary_mammals_ucmp_by:taxonRank	ORDER	133
+AU	quaternary_mammals_ucmp_by:taxonRank	CLASS	66
+AU	quaternary_mammals_ucmp_by:stateProvince	New South Wales	1392
+AU	quaternary_mammals_ucmp_by:stateProvince	South Australia	1078
+AU	quaternary_mammals_ucmp_by:stateProvince	Queensland	191
+AU	quaternary_mammals_ucmp_by:stateProvince	Victoria	139
+AU	quaternary_mammals_ucmp_by:stateProvince	Western Australia	62
+AU	quaternary_mammals_ucmp_by:formation	(none)	1914
+AU	quaternary_mammals_ucmp_by:formation	Mampuwordu Sands	444
+AU	quaternary_mammals_ucmp_by:formation	Katipiri Sands	441
+AU	quaternary_mammals_ucmp_by:formation	Katipiri Sands ?	49
+AU	quaternary_mammals_ucmp_by:formation	Chinchilla Sands	12
+AU	quaternary_mammals_ucmp_by:formation	Kutjitara	2
+AU	quaternary_mammals_only_via_latestEpoch		52
+AU	quaternary_mammals_by:dataset	University of California Museum of Paleontology	2862
+AU	quaternary_mammals_by:dataset	Natural History Museum (London) Collection Specimens	214
+AU	quaternary_mammals_by:dataset	Palaeobiology - Vertebrate Fossils Collection - Mammalia - Royal Ontario Museum	93
+AU	quaternary_mammals_by:dataset	Museum of Comparative Zoology, Harvard University	58
+AU	quaternary_mammals_by:dataset	Condon Fossil Collection - Oregon Museum of Natural and Cultural History	34
+AU	quaternary_mammals_by:dataset	NMNH Paleobiology Specimen Records (USNM)	24
+AU	mammals_without_chronostratigraphy		1074
+AU	mammals_without_chronostratigraphy_by:dataset	Natural History Museum (London) Collection Specimens	738
+AU	mammals_without_chronostratigraphy_by:dataset	Australian National Wildlife Collection provider for OZCAM	205
+AU	mammals_without_chronostratigraphy_by:dataset	Museum of Comparative Zoology, Harvard University	44
+AU	mammals_without_chronostratigraphy_by:dataset	MfN - Fossil vertebrates IV	36
+AU	mammals_without_chronostratigraphy_by:dataset	University of California Museum of Paleontology	23
+AU	mammals_without_chronostratigraphy_by:dataset	Field Museum of Natural History (Geology) Fossil Invertebrates Collection	10
+AU	ucmp_by:stateProvince	South Australia	4159
+AU	ucmp_by:stateProvince	New South Wales	1602
+AU	ucmp_by:stateProvince	Northern Territory	1182
+AU	ucmp_by:stateProvince	Western Australia	426
+AU	ucmp_by:stateProvince	Victoria	316
+AU	ucmp_by:stateProvince	Queensland	251
+AU	ucmp_by:stateProvince	(none)	38
+AU	ucmp_by:stateProvince	Tasmania	13
+AU	ucmp_by:formation	(none)	2356
+AU	ucmp_by:formation	Katipiri Sands	1208
+AU	ucmp_by:formation	Waite	1179
+AU	ucmp_by:formation	Wipajiri	1015
+AU	ucmp_by:formation	Etadunna	965
+AU	ucmp_by:formation	Mampuwordu Sands	485
+AU	ucmp_by:formation	Blina Shale	264
+AU	ucmp_by:formation	Katipiri Sands ?	103
+AU	ucmp_by:formation	Namba	84
+AU	ucmp_by:formation	Chinchilla Sands	41
+AU	ucmp_by:formation	Tirari	38
+AU	ucmp_by:formation	Korojon Calcarenite	30
+PG	reported_count		6176
+PG	neptune_skipped		3847
+PG	pages		24
+PG	rows_fetched		2329
+PG	unique_records		2329
+PG	reconciled		yes
+PG	datasets		18
+PG	by:dataset	Natural History Museum (London) Collection Specimens [7e380070-f762-11e1-a439-00145eb45e9a]	1071
+PG	by:dataset	Palaeozoological Collections (PZ), Swedish Museum of Natural History (NRM) [20ab8294-5253-46ca-bdb2-eab1b5e75657]	715
+PG	by:dataset	University of California Museum of Paleontology [58d0f326-2e85-4d0a-a744-571461220f00]	333
+PG	by:dataset	Non-vertebrate Paleontology, Jackson School Museum of Earth History, University of Texas at Austin [1f2cfb6f-c91b-498e-80f3-8eeeec688292]	89
+PG	by:dataset	NMNH Paleobiology Specimen Records (USNM) [c8681cc2-9d0a-4c5f-b620-5c753abfe2bc]	41
+PG	by:dataset	Museum of Comparative Zoology, Harvard University [4bfac3ea-8763-4f4b-a71a-76a6f5f243d3]	27
+PG	by:dataset	Palaeontological collection (PMO) at UiO NHM, Oslo [b2522b78-18ec-4ba6-ba16-9c9e215ce9e6]	22
+PG	by:dataset	Naturalis Biodiversity Center (NL) - Paleontology [ea233ece-c4fb-4fb8-bf98-f16235c4144c]	8
+PG	by:dataset	Condon Fossil Collection - Oregon Museum of Natural and Cultural History [083a4342-39f7-4fe0-a03c-d14ab3b9c5e2]	5
+PG	by:dataset	UCBG TAPIR Provider [51b92d4e-556f-4a05-bc5c-bfe982ee1156]	5
+PG	by:dataset	Palaeobotanical Collections (PB), Swedish Museum of Natural History (NRM) [43fb301d-0354-45bc-94d2-dd50f3142a50]	4
+PG	by:dataset	University of Florida Invertebrate Paleontology [989f6285-841c-47a4-991b-3d3396427f02]	3
+PG	by:dataset	CMC Cincinnati Museum Center Invertebrate Paleontology [361d98ca-ba9d-4b85-a64f-7db8fb35c6a9]	1
+PG	by:dataset	Collections paléontologiques de l'Université Rennes 1 [68e364c7-2e11-4fbd-9417-bbc4ce2d188a]	1
+PG	by:dataset	Invertebrate Paleontology Division, Yale Peabody Museum [854bc2fc-f762-11e1-a439-00145eb45e9a]	1
+PG	by:publishingCountry	GB	1071
+PG	by:publishingCountry	SE	719
+PG	by:publishingCountry	US	507
+PG	by:publishingCountry	NO	22
+PG	by:publishingCountry	NL	8
+PG	by:publishingCountry	FR	2
+PG	by:license	http://creativecommons.org/publicdomain/zero/1.0/legalcode	1215
+PG	by:license	http://creativecommons.org/licenses/by/4.0/legalcode	1081
+PG	by:license	http://creativecommons.org/licenses/by-nc/4.0/legalcode	33
+PG	by:kingdom	Animalia	1605
+PG	by:kingdom	Chromista	533
+PG	by:kingdom	(none)	175
+PG	by:kingdom	Plantae	11
+PG	by:kingdom	Protozoa	3
+PG	by:kingdom	Fungi	2
+PG	by:phylum	Mollusca	801
+PG	by:phylum	Foraminifera	533
+PG	by:phylum	Cnidaria	444
+PG	by:phylum	Chordata	333
+PG	by:phylum	(none)	180
+PG	by:phylum	Arthropoda	21
+PG	by:phylum	Tracheophyta	9
+PG	by:phylum	Sarcomastigophora	3
+PG	by:phylum	Ascomycota	2
+PG	by:phylum	Echinodermata	1
+PG	by:phylum	Brachiopoda	1
+PG	by:phylum	Chlorophyta	1
+PG	by:taxonRank	SPECIES	1003
+PG	by:taxonRank	GENUS	515
+PG	by:taxonRank	ORDER	446
+PG	by:taxonRank	(none)	175
+PG	by:taxonRank	CLASS	83
+PG	by:taxonRank	FAMILY	80
+PG	by:taxonRank	VARIETY	12
+PG	by:taxonRank	PHYLUM	10
+PG	by:taxonRank	SUBSPECIES	3
+PG	by:taxonRank	KINGDOM	2
+PG	by:institutionCode	NHMUK	1071
+PG	by:institutionCode	NRM	719
+PG	by:institutionCode	UCMP	333
+PG	by:institutionCode	(none)	97
+PG	by:institutionCode	USNM	41
+PG	by:institutionCode	MCZ	27
+PG	by:institutionCode	UiO	22
+PG	by:institutionCode	UOMNH	5
+PG	by:institutionCode	UCBG	5
+PG	by:institutionCode	UF	3
+PG	by:institutionCode	CMC	1
+PG	by:institutionCode	Université Rennes 1	1
+PG	by:earliestEraOrLowestErathem	(none)	1391
+PG	by:earliestEraOrLowestErathem	Cenozoic	929
+PG	by:earliestEraOrLowestErathem	Mesozoic	9
+PG	by:earliestPeriodOrLowestSystem	Neogene	1135
+PG	by:earliestPeriodOrLowestSystem	(none)	659
+PG	by:earliestPeriodOrLowestSystem	Quaternary	395
+PG	by:earliestPeriodOrLowestSystem	Paleogene	130
+PG	by:earliestPeriodOrLowestSystem	Jurassic	6
+PG	by:earliestPeriodOrLowestSystem	Cretaceous	4
+PG	by:earliestEpochOrLowestSeries	Pliocene	727
+PG	by:earliestEpochOrLowestSeries	(none)	695
+PG	by:earliestEpochOrLowestSeries	Miocene	394
+PG	by:earliestEpochOrLowestSeries	Pleistocene	334
+PG	by:earliestEpochOrLowestSeries	Oligocene	117
+PG	by:earliestEpochOrLowestSeries	Holocene	49
+PG	by:earliestEpochOrLowestSeries	Eocene	13
+PG	by:class	Gastropoda	739
+PG	by:class	Anthozoa	444
+PG	by:class	Globothalamea	428
+PG	by:class	Mammalia	313
+PG	by:class	(none)	227
+PG	by:class	Tubothalamea	65
+PG	by:class	Bivalvia	26
+PG	by:class	Cephalopoda	21
+PG	by:class	Scaphopoda	15
+PG	by:class	Crocodylia	13
+PG	by:class	Insecta	12
+PG	by:class	Ostracoda	9
+PG	by:class	Pinopsida	4
+PG	by:class	Magnoliopsida	4
+PG	by:class	Aves	2
+PG	by:class	Dothideomycetes	2
+PG	by:class	Echinoidea	1
+PG	by:class	Polypodiopsida	1
+PG	by:class	Squamata	1
+PG	by:class	Lingulata	1
+PG	pangaea_records		0
+PG	pangaea_datasets		0
+PG	individualCount_sum		539
+PG	with_coordinates		1082
+PG	placeholder_coordinates_-9_-9		12
+PG	with_earliest_chronostratigraphy		1680
+PG	with_any_chronostratigraphy		1729
+PG	with_formation_group_member_bed		799
+PG	with_lithostratigraphy_incl_terms		1536
+PG	with_collection_year		1394
+PG	species_or_lower		1018
+PG	by:issue	INSTITUTION_MATCH_FUZZY	2161
+PG	by:issue	INSTITUTION_COLLECTION_MISMATCH	1841
+PG	by:issue	GEODETIC_DATUM_ASSUMED_WGS84	1075
+PG	by:issue	CONTINENT_COUNTRY_MISMATCH	878
+PG	by:issue	TYPE_STATUS_INVALID	728
+PG	by:issue	CONTINENT_DERIVED_FROM_COORDINATES	724
+PG	by:issue	COLLECTION_MATCH_FUZZY	362
+PG	by:issue	OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT	312
+PG	by:issue	COUNTRY_DERIVED_FROM_COORDINATES	212
+PG	by:issue	TAXON_MATCH_NONE	178
+PG	by:issue	CONTINENT_DERIVED_FROM_COUNTRY	156
+PG	by:issue	CONTINENT_COORDINATE_MISMATCH	133
+PG	by:issue	TAXON_MATCH_HIGHERRANK	107
+PG	by:issue	COUNTRY_COORDINATE_MISMATCH	53
+PG	by:issue	TAXON_MATCH_FUZZY	45
+PG	homo_sapiens_records		0
+PG	quaternary_mammals		313
+PG	quaternary_mammals_with_coordinates		0
+PG	quaternary_mammals_with_formation		312
+PG	quaternary_mammals_with_genus		246
+PG	quaternary_mammals_individualCount_sum		277
+PG	quaternary_mammals_without_individualCount		51
+PG	quaternary_mammals_homo_sapiens		0
+PG	quaternary_mammals_by:taxonRank	GENUS	233
+PG	quaternary_mammals_by:taxonRank	FAMILY	65
+PG	quaternary_mammals_by:taxonRank	SPECIES	13
+PG	quaternary_mammals_by:taxonRank	ORDER	1
+PG	quaternary_mammals_by:taxonRank	CLASS	1
+PG	quaternary_mammals_by:stateProvince	(none)	313
+PG	quaternary_mammals_by:formation	Otibanda	312
+PG	quaternary_mammals_by:formation	(none)	1
+PG	quaternary_mammals_ucmp		312
+PG	quaternary_mammals_ucmp_with_coordinates		0
+PG	quaternary_mammals_ucmp_with_formation		312
+PG	quaternary_mammals_ucmp_with_genus		245
+PG	quaternary_mammals_ucmp_individualCount_sum		271
+PG	quaternary_mammals_ucmp_without_individualCount		51
+PG	quaternary_mammals_ucmp_homo_sapiens		0
+PG	quaternary_mammals_ucmp_by:taxonRank	GENUS	233
+PG	quaternary_mammals_ucmp_by:taxonRank	FAMILY	65
+PG	quaternary_mammals_ucmp_by:taxonRank	SPECIES	12
+PG	quaternary_mammals_ucmp_by:taxonRank	ORDER	1
+PG	quaternary_mammals_ucmp_by:taxonRank	CLASS	1
+PG	quaternary_mammals_ucmp_by:stateProvince	(none)	312
+PG	quaternary_mammals_ucmp_by:formation	Otibanda	312
+PG	quaternary_mammals_only_via_latestEpoch		0
+PG	quaternary_mammals_by:dataset	University of California Museum of Paleontology	312
+PG	quaternary_mammals_by:dataset	NMNH Paleobiology Specimen Records (USNM)	1
+PG	mammals_without_chronostratigraphy		0
+PG	ucmp_by:stateProvince	(none)	333
+PG	ucmp_by:formation	Otibanda	332
+PG	ucmp_by:formation	(none)	1
+basis_check	count	fossil__Mammalia	7139
+basis_check	count	preserved__Cambrian	4
+basis_check	count	preserved__Carboniferous	0
+basis_check	count	preserved__Cretaceous	1
+basis_check	count	preserved__Devonian	2
+basis_check	count	preserved__Jurassic	7
+basis_check	count	preserved__Neogene	0
+basis_check	count	preserved__Ordovician	0
+basis_check	count	preserved__Paleogene	0
+basis_check	count	preserved__Permian	0
+basis_check	count	preserved__Quaternary	3018
+basis_check	preserved__Quaternary_by:DATASET_KEY	University of California Museum of Paleontology	1344
+basis_check	preserved__Quaternary_by:DATASET_KEY	Paleontological Research Institution Collections	1291
+basis_check	preserved__Quaternary_by:DATASET_KEY	International Fossil Shell Museum (NL) - Mollusca Collection	382
+basis_check	preserved__Quaternary_by:DATASET_KEY	Museum of Comparative Zoology, Harvard University	1
+basis_check	preserved__Quaternary_by:CLASS_KEY	225	2203
+basis_check	preserved__Quaternary_by:CLASS_KEY	137	613
+basis_check	preserved__Quaternary_by:CLASS_KEY	346	118
+basis_check	preserved__Quaternary_by:CLASS_KEY	206	58
+basis_check	preserved__Quaternary_by:CLASS_KEY	7434778	5
+basis_check	preserved__Quaternary_by:CLASS_KEY	136	4
+basis_check	preserved__Quaternary_by:CLASS_KEY	276	3
+basis_check	preserved__Quaternary_by:CLASS_KEY	205	2
+basis_check	preserved__Quaternary_by:CLASS_KEY	210	1
+basis_check	count	preserved__Quaternary__Mammalia	0
+basis_check	count	preserved__Silurian	2
+basis_check	count	preserved__Triassic	5
+cross	genera_gbif	AU	3026
+cross	genera_pbdb	AU	5778
+cross	genera_shared	AU	1320
+cross	genera_gbif_only	AU	1706
+cross	names_gbif_widened	AU	3560
+cross	names_shared_widened	AU	1626
+cross	genera_gbif	PG	271
+cross	genera_pbdb	PG	295
+cross	genera_shared	PG	29
+cross	genera_gbif_only	PG	242
+cross	names_gbif_widened	PG	326
+cross	names_shared_widened	PG	39
+cross	fossahul_mammal_genera_single_name		123
+cross	fossahul_mammal_genera_au_region		97
+cross	gbif_au_mammal_genera		143
+cross	gbif_au_quaternary_mammal_genera		71
+cross	fossahul_au_genera_in_gbif_au_mammals		63
+cross	fossahul_au_genera_in_gbif_au_quaternary_mammals		53
+cross	fossahul_au_genera_without_gbif_specimen	Arctocephalus; Baringa; Bohra; Borungaboodie; Congruus; Dactylopsila; Dasyuroides; Dugong; Invictokoala; Lagostrophus; Leggadina; Melomys; Mesembriomys; Metasthenurus; Micromurexia; Mirounga; Ningaui; Nyctophilus; Ovis; Parantechinus; Petauroides; Petropseudes; Phalanger; Planigale; Pogonomys; Pseudocheirops; Pseudochirulus; Pseudokoala; Pteropus; Rhinolophus; Tarsipes; Uromys; Warendja; Zyzomys	34

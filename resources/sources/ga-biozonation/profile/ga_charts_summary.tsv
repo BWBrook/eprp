@@ -1,0 +1,148 @@
+table	metric	key	value
+mirror	files		39
+mirror	bytes		120369345
+mirror	files_failing_size_or_sha256_check		0
+mirror	files_not_in_manifest		0
+mirror	manifest_entries_without_file		0
+mirror	pdfs		38
+mirror	pdfs_inside_64962_Data.zip		7
+mirror	files_by_ecat	23332	1
+mirror	files_by_ecat	23334	1
+mirror	files_by_ecat	23346	1
+mirror	files_by_ecat	23350	1
+mirror	files_by_ecat	23352	1
+mirror	files_by_ecat	23354	1
+mirror	files_by_ecat	23356	1
+mirror	files_by_ecat	24220	1
+mirror	files_by_ecat	24222	1
+mirror	files_by_ecat	24225	1
+mirror	files_by_ecat	31035	2
+mirror	files_by_ecat	61127	1
+mirror	files_by_ecat	64962	2
+mirror	files_by_ecat	76687	24
+mirror	largest_file	76687__Chart_33_Bonaparte_Basin_2014.pdf	44054627
+mirror	pdfs_with_raster_images		6 17 18 22 26 31 32 33 34 35 36 38 39 40 41 61127.pdf Data/Chart 1/Chart 1_PDF.pdf Data/Chart 2/Chart 2_PDF.pdf Data/Chart 3/Chart 3_PDF.pdf Data/Chart 4/Chart 4_PDF.pdf Data/splashscreen.pdf Data/title_page.pdf Rec2006_023.pdf
+charts	chart_pdfs		36
+charts	chart_pdfs_with_one_page		36
+charts	chart_pdfs_in_ecat_76687		24
+charts	chart_pdfs_in_other_ecat_records		12
+charts	group:charts_printed_1996_2001		25
+charts	group:charts_printed_1996_2001: ecat 76687		13
+charts	group:charts_printed_1996_2001: members		1 2 3 4 5 7 8a 8b 9 10 11 12 13 14 15 16 17 18 19 20 21 22 26 28a 28b
+charts	group:charts_printed_1996_2001: printed_year	1996	1
+charts	group:charts_printed_1996_2001: printed_year	1997	3
+charts	group:charts_printed_1996_2001: printed_year	1998	17
+charts	group:charts_printed_1996_2001: printed_year	1999	3
+charts	group:charts_printed_1996_2001: printed_year	2001	1
+charts	group:charts_printed_2013_2017		11
+charts	group:charts_printed_2013_2017: ecat 76687		11
+charts	group:charts_printed_2013_2017: members		6 31 32 33 34 35 36 38 39 40 41
+charts	group:charts_printed_2013_2017: printed_year	2013	4
+charts	group:charts_printed_2013_2017: printed_year	2014	2
+charts	group:charts_printed_2013_2017: printed_year	2015	3
+charts	group:charts_printed_2013_2017: printed_year	2017	2
+charts	group:charts_without_printed_year		0
+charts	group:charts_without_printed_year: ecat 76687		0
+charts	group:charts_without_printed_year: members		none
+charts	group:61127		1
+charts	group:61127: ecat 76687		0
+charts	group:61127: members		61127.pdf
+charts	group:61127: printed_year	2004	1
+charts	group:record_2006_23_and_zip_pdfs		8
+charts	group:record_2006_23_and_zip_pdfs: ecat 76687		0
+charts	group:record_2006_23_and_zip_pdfs: members		Data/Chart 1/Chart 1_PDF.pdf Data/Chart 2/Chart 2_PDF.pdf Data/Chart 3/Chart 3_PDF.pdf Data/Chart 4/Chart 4_PDF.pdf Data/Preface.pdf Data/splashscreen.pdf Data/title_page.pdf Rec2006_023.pdf
+charts	group:record_2006_23_and_zip_pdfs: printed_year	2006	6
+charts	group:record_2006_23_and_zip_pdfs: printed_year	none	2
+charts	distinct_chart_numbers (8a/8b and 28a/28b count once)		34
+charts	chart_numbers_present		1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 26 28 31 32 33 34 35 36 38 39 40 41
+charts	chart_numbers_missing_below_max		23 24 25 27 29 30 37
+charts	chart_pdfs_without_printed_chart_number (number taken from file name)		35 41
+charts	printed_catalogue_numbers (chart: number)		6:76687 7:36593 32:76687 34:83216 39:83216 40:83216 41:83216 Data/Preface.pdf:64962 Data/title_page.pdf:64962 Rec2006_023.pdf:64962
+charts_printed_1996_2001	by:licence_printed	all rights reserved (written permission required)	1
+charts_printed_1996_2001	by:licence_printed	copyright line only	21
+charts_printed_1996_2001	by:licence_printed	none printed	3
+charts_printed_2013_2017	by:licence_printed	CC BY 3.0 AU	1
+charts_printed_2013_2017	by:licence_printed	CC BY 4.0	4
+charts_printed_2013_2017	by:licence_printed	copyright line only	6
+61127	by:licence_printed	copyright line only	1
+record_2006_23_and_zip_pdfs	by:licence_printed	all rights reserved (written permission required)	6
+record_2006_23_and_zip_pdfs	by:licence_printed	none printed	2
+charts_printed_1996_2001	by:copyright_line	none in text layer	3
+charts_printed_1996_2001	by:copyright_line	year line, (c) not in text layer	22
+charts_printed_2013_2017	by:copyright_line	(c) in text layer	11
+61127	by:copyright_line	(c) in text layer	1
+record_2006_23_and_zip_pdfs	by:copyright_line	(c) in text layer	6
+record_2006_23_and_zip_pdfs	by:copyright_line	none in text layer	2
+charts_printed_1996_2001	by:published_with_permission_of_ceo	no	25
+charts_printed_2013_2017	by:published_with_permission_of_ceo	yes	11
+61127	by:published_with_permission_of_ceo	no	1
+record_2006_23_and_zip_pdfs	by:published_with_permission_of_ceo	no	8
+charts_printed_1996_2001	by:names_timescale_creator	no	25
+charts_printed_2013_2017	by:names_timescale_creator	yes	11
+61127	by:names_timescale_creator	no	1
+record_2006_23_and_zip_pdfs	by:names_timescale_creator	no	8
+charts_printed_1996_2001	by:revises_previous	no	25
+charts_printed_2013_2017	by:revises_previous	no	1
+charts_printed_2013_2017	by:revises_previous	yes	10
+61127	by:revises_previous	no	1
+record_2006_23_and_zip_pdfs	by:revises_previous	no	8
+charts_printed_1996_2001	by:revision_scales_named	none	25
+charts_printed_2013_2017	by:revision_scales_named	GTS2004,AGSO 1996	6
+charts_printed_2013_2017	by:revision_scales_named	GTS2004,GTS2008	4
+charts_printed_2013_2017	by:revision_scales_named	none	1
+61127	by:revision_scales_named	none	1
+record_2006_23_and_zip_pdfs	by:revision_scales_named	none	8
+charts_printed_1996_2001	by:timescales_named_own	AGSO timescale	12
+charts_printed_1996_2001	by:timescales_named_own	Gradstein et al 1995	2
+charts_printed_1996_2001	by:timescales_named_own	none	11
+charts_printed_2013_2017	by:timescales_named_own	GTS2008,GTS2012	4
+charts_printed_2013_2017	by:timescales_named_own	GTS2012	5
+charts_printed_2013_2017	by:timescales_named_own	GTS2016	2
+61127	by:timescales_named_own	Young & Laurie 1996	1
+record_2006_23_and_zip_pdfs	by:timescales_named_own	GTS2004	6
+record_2006_23_and_zip_pdfs	by:timescales_named_own	none	2
+charts_printed_1996_2001	by:states_preferred_agso_ages	no	6
+charts_printed_1996_2001	by:states_preferred_agso_ages	yes	19
+charts_printed_2013_2017	by:states_preferred_agso_ages	no	11
+61127	by:states_preferred_agso_ages	no	1
+record_2006_23_and_zip_pdfs	by:states_preferred_agso_ages	no	8
+charts_printed_1996_2001	by:names_stratdat	yes	25
+charts_printed_2013_2017	by:names_stratdat	no	11
+61127	by:names_stratdat	yes	1
+record_2006_23_and_zip_pdfs	by:names_stratdat	no	8
+charts_printed_1996_2001	by:says_zonations_from_stratdat	no	1
+charts_printed_1996_2001	by:says_zonations_from_stratdat	yes	24
+charts_printed_2013_2017	by:says_zonations_from_stratdat	no	11
+61127	by:says_zonations_from_stratdat	no	1
+record_2006_23_and_zip_pdfs	by:says_zonations_from_stratdat	no	8
+charts_printed_1996_2001	by:status_flag	DRAFT	3
+charts_printed_1996_2001	by:status_flag	Preliminary version	1
+charts_printed_1996_2001	by:status_flag	none	21
+charts_printed_2013_2017	by:status_flag	none	11
+61127	by:status_flag	none	1
+record_2006_23_and_zip_pdfs	by:status_flag	none	8
+members	licence_printed = CC BY 3.0 AU		38
+members	licence_printed = CC BY 4.0		34 39 40 41
+members	licence_printed = all rights reserved (written permission required)		9 Data/Chart 1/Chart 1_PDF.pdf Data/Chart 2/Chart 2_PDF.pdf Data/Chart 3/Chart 3_PDF.pdf Data/Chart 4/Chart 4_PDF.pdf Data/title_page.pdf Rec2006_023.pdf
+members	licence_printed = copyright line only		1 2 3 4 6 7 8a 8b 11 12 13 14 15 16 17 18 19 20 22 26 28a 28b 31 32 33 35 36 61127.pdf
+members	licence_printed = none printed		5 10 21 Data/Preface.pdf Data/splashscreen.pdf
+members	timescales_named_own = AGSO timescale		1 2 3 4 5 7 8a 8b 10 12 14 16
+members	timescales_named_own = GTS2004		Data/Chart 1/Chart 1_PDF.pdf Data/Chart 2/Chart 2_PDF.pdf Data/Chart 3/Chart 3_PDF.pdf Data/Chart 4/Chart 4_PDF.pdf Data/Preface.pdf Rec2006_023.pdf
+members	timescales_named_own = GTS2008,GTS2012		34 38 39 40
+members	timescales_named_own = GTS2012		31 33 35 36 41
+members	timescales_named_own = GTS2016		6 32
+members	timescales_named_own = Gradstein et al 1995		20 21
+members	timescales_named_own = Young & Laurie 1996		61127.pdf
+members	timescales_named_own = (none)		9 11 13 15 17 18 19 22 26 28a 28b Data/splashscreen.pdf Data/title_page.pdf
+members	revises_previous = yes		6 31 32 33 34 35 36 38 39 40
+members	revises_previous = no (chart pdfs)		1 2 3 4 5 7 8a 8b 9 10 11 12 13 14 15 16 17 18 19 20 21 22 26 28a 28b 41
+members	names_timescale_creator = yes		6 31 32 33 34 35 36 38 39 40 41
+members	names_stratdat = yes		1 2 3 4 5 7 8a 8b 9 10 11 12 13 14 15 16 17 18 19 20 21 22 26 28a 28b 61127.pdf
+members	says_zonations_from_stratdat = yes		1 2 3 4 5 8a 8b 9 10 11 12 13 14 15 16 17 18 19 20 21 22 26 28a 28b
+members	names_stratdat = no		6 31 32 33 34 35 36 38 39 40 41 Data/Chart 1/Chart 1_PDF.pdf Data/Chart 2/Chart 2_PDF.pdf Data/Chart 3/Chart 3_PDF.pdf Data/Chart 4/Chart 4_PDF.pdf Data/Preface.pdf Data/splashscreen.pdf Data/title_page.pdf Rec2006_023.pdf
+members	states_preferred_agso_ages = yes		1 2 3 4 5 7 9 10 11 12 13 14 15 16 17 18 19 22 26
+members	states_preferred_agso_ages = no (1996-2001 charts)		8a 8b 20 21 28a 28b
+members	status_flag set		5:Preliminary version 19:DRAFT 22:DRAFT 26:DRAFT
+members	own_revision_note set		4 10 28a
+members	copyright_line = none in text layer		5 10 21 Data/Preface.pdf Data/splashscreen.pdf
+members	copyright_line = year line, (c) not in text layer		1 2 3 4 7 8a 8b 9 11 12 13 14 15 16 17 18 19 20 22 26 28a 28b

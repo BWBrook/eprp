@@ -1,0 +1,112 @@
+table	metric	key	value
+units	rows		535
+units	by:DBVERNO	v2.3(1)	535
+observations	rows		48234
+observations	by:DBVERNO	v2.3(1)	48234
+units	n_char_rec_sum		687
+units	metasites		425
+units	by:region	australia	340
+units	by:region	outside	142
+units	by:region	new_guinea	42
+units	by:region	torres_strait	11
+units	by:CNTRY	AUS	354
+units	by:CNTRY	NZL	142
+units	by:CNTRY	PNG	25
+units	by:CNTRY	IDN	13
+units	by:CNTRY	NA	1
+units	by:UNITTYPE	Core	501
+units	by:UNITTYPE	Excavation	21
+units	by:UNITTYPE	Other	13
+units	by:DEPOSIT	Lake sediment	201
+units	by:DEPOSIT	Bog sediment	195
+units	by:DEPOSIT	ND	65
+units	by:DEPOSIT	Estuarine sediment (non-specific)	16
+units	by:DEPOSIT	Alluvial (non-specific)	13
+units	by:DEPOSIT	Other	11
+units	by:DEPOSIT	Buried organic sediment	9
+units	by:DEPOSIT	Fluvial origin (non-specific)	8
+units	by:DEPOSIT	Marine origin (non-specific)	7
+units	by:DEPOSIT	Archaeological (non-specific)	5
+units	by:COL_MTD	ND	134
+units	by:COL_MTD	Russian corer	97
+units	by:COL_MTD	Piston corer	94
+units	by:COL_MTD	D-section corer	92
+units	by:COL_MTD	Other	38
+units	by:COL_MTD	Excavated	21
+units	by:COL_MTD	Vibro corer	16
+units	by:COL_MTD	Percussion corer	16
+units	by:COL_MTD	Monolith	13
+units	by:COL_MTD	Hydraulic corer	6
+sahul_units	rows		393
+sahul_units	n_char_rec_sum		510
+sahul_units	with_neotoma_site_id		65
+sahul_units	with_n_char_rec_zero		9
+sahul_units	with_maxage_oldest_dated_horizon		367
+sahul_units	maxage_median		6991
+sahul_units	maxage_ge	20000	61
+sahul_units	maxage_ge	50000	18
+sahul_units	maxage_ge	130000	10
+sahul_units	by:UNITTYPE	Core	366
+sahul_units	by:UNITTYPE	Excavation	15
+sahul_units	by:UNITTYPE	Other	12
+sahul_units	pubyear_range		0 to 2023
+sahul_observations	rows		40392
+sahul_observations	by:WHATAMI	particles counted	37899
+sahul_observations	by:WHATAMI	age	2493
+sahul_char	by:CHARMETHOD	Sieved	21236
+sahul_char	by:CHARMETHOD	Pollen slide	13397
+sahul_char	by:CHARMETHOD	Sieved, imaging software	2865
+sahul_char	by:CHARMETHOD	Hydrogen pyrolysis	290
+sahul_char	by:CHARMETHOD	Heavy liquid separation	40
+sahul_char	by:CHARMETHOD	ND	39
+sahul_char	by:CHARMETHOD	Winkler method	32
+sahul_char	by:CHARMEAS	frags/cm^3	17644
+sahul_char	by:CHARMEAS	frags/cm^2/yr	5002
+sahul_char	by:CHARMEAS	mm^2/cm^3	2003
+sahul_char	by:CHARMEAS	mm^2/cm^2/yr	1883
+sahul_char	by:CHARMEAS	other	1759
+sahul_char	by:CHARMEAS	frags/ml	1263
+sahul_char	by:CHARMEAS	cm^2/cm^3	1222
+sahul_char	by:CHARMEAS	mm^2/g	955
+sahul_char	by:CHARMEAS	mm^2/ml	796
+sahul_char	by:CHARMEAS	frags/g/yr	768
+sahul_char	by:DATASOURCE	Author	17170
+sahul_char	by:DATASOURCE	Digitised	9280
+sahul_char	by:DATASOURCE	Paleofire database (author)	6143
+sahul_char	by:DATASOURCE	Paleofire database	4499
+sahul_char	by:DATASOURCE	Neotoma	807
+sahul_char	charvalue_missing		236
+sahul_char	est_age_missing		9674
+sahul_char	units_with_charcoal_rows		384
+sahul_char	units_with_no_charcoal_est_age		116
+sahul_char	units_with_any_digitised_rows		136
+sahul_char	units_with_charcoal_est_age		268
+sahul_char	oldest_charcoal_est_age_median		8208
+sahul_char	units_oldest_charcoal_est_age_ge	20000	54
+sahul_char	units_oldest_charcoal_est_age_ge	50000	26
+sahul_char	units_oldest_charcoal_est_age_ge	130000	16
+sahul_units	maxage_ge_130000	Alexandra Cave ALEX	MAXAGE 1338000; oldest charcoal EST_AGE 305700.0; deposit Other
+sahul_units	maxage_ge_130000	Dead Sheep Cave DS	MAXAGE 1204000; oldest charcoal EST_AGE 1204000.0; deposit Other
+sahul_units	maxage_ge_130000	Blanche Cave BC	MAXAGE 506000; oldest charcoal EST_AGE 506000.0; deposit Other
+sahul_units	maxage_ge_130000	Specimen Cave SP	MAXAGE 421000; oldest charcoal EST_AGE 421000.0; deposit Other
+sahul_units	maxage_ge_130000	Victoria Fossil Cave VFC	MAXAGE 370000; oldest charcoal EST_AGE 370000.0; deposit Other
+sahul_units	maxage_ge_130000	Caledonia Fen 1997 2001 composite	MAXAGE 350000; oldest charcoal EST_AGE 140722.78; deposit ND
+sahul_units	maxage_ge_130000	Lake Coomboo_core1	MAXAGE 350000; oldest charcoal EST_AGE 202308.17; deposit Lake sediment
+sahul_units	maxage_ge_130000	Robertson Cave RC	MAXAGE 238000; oldest charcoal EST_AGE 238000.0; deposit Other
+sahul_units	maxage_ge_130000	Lake Wangoom LW87 core	MAXAGE 200000; oldest charcoal EST_AGE 196604.19; deposit Lake sediment
+sahul_units	maxage_ge_130000	LC2	MAXAGE 146300; oldest charcoal EST_AGE 138301.0; deposit Lake sediment
+sahul_ages	by:AGETYPE	Radiocarbon years BP	1876
+sahul_ages	by:AGETYPE	Years BP	586
+sahul_ages	by:AGETYPE	Other	15
+sahul_ages	by:AGETYPE	Calibrated years BP	9
+sahul_ages	by:AGETYPE	Calibrated by synth. coord.	5
+sahul_ages	by:AGETYPE	ND	2
+sahul_ages	by:METHOD	C14	1019
+sahul_ages	by:METHOD	AMS	853
+sahul_ages	by:METHOD	210Pb	226
+sahul_ages	by:METHOD	OSL	107
+sahul_ages	by:METHOD	Core-hi	67
+sahul_ages	by:METHOD	U/Th/Pb	60
+sahul_ages	by:METHOD	Th/U	50
+sahul_ages	by:METHOD	Pollen	41
+sahul_ages	by:CALCURVE		2493

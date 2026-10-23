@@ -1,0 +1,34 @@
+table	metric	key	value
+octopus	datasets		311
+octopus	datasets_by:type	pollen	120
+octopus	datasets_by:type	geochronologic	120
+octopus	datasets_by:type	charcoal	33
+octopus	datasets_by:type	plant macrofossil	9
+octopus	datasets_by:type	paleomagnetic	5
+octopus	datasets_by:type	insect	4
+octopus	datasets_without_neo_siteid		5
+octopus	neo_siteids_not_in_neotoma_snapshot		0
+neotoma_sahul_pollen	sites		144
+neotoma_sahul_pollen	sites_in_octopus		84
+neotoma_sahul_pollen	sites_not_in_octopus		60
+neotoma_sahul	surface_sample_datasets		141
+octopus	surface_sample_datasets		2
+octopus_baseline	rows		155952
+octopus_baseline	rows_by:AGETYPE	Calibrated radiocarbon years BP	111583
+octopus_baseline	rows_by:AGETYPE	Radiocarbon years BP	25313
+octopus_baseline	rows_by:AGETYPE		9832
+octopus_baseline	rows_by:AGETYPE	Calendar years BP	6221
+octopus_baseline	rows_by:AGETYPE	Calendar years AD/BC	3003
+octopus_baseline	rows_by:AGEMODEL	Bacon	74535
+octopus_baseline	rows_by:AGEMODEL	LERP	27927
+octopus_baseline	rows_by:AGEMODEL	Bacon SHCal13	16806
+octopus_baseline	rows_by:AGEMODEL	clam	13330
+octopus_baseline	rows_by:AGEMODEL		9832
+octopus_baseline	rows_by:AGEMODEL	OxCal Poisson Depositional Model	4344
+octopus_baseline	rows_by:AGEMODEL	SHCal13 Bacon	2598
+octopus_baseline	rows_by:AGEMODEL	OxCal P_Sequence deposition model	1833
+pbdb_quaternary_plants	collections		68
+pbdb_quaternary_plants	occurrences		4044
+pbdb_quaternary_plants	collections_within_5km_of_neotoma_pollen_site		22
+pbdb_quaternary_plants	occurrences_within_5km_of_neotoma_pollen_site		1863
+pbdb_quaternary_plants	near_collections_by_first_word	Lynch's	22

@@ -1,0 +1,59 @@
+arman-kangaroo-microwear ok  v4_337315/README.md
+arman-kangaroo-microwear ok  v4_337315/S1_data.xlsx
+arman-kangaroo-microwear ok  v4_337315/S2_data.xlsx
+arman-kangaroo-microwear 0 files failed verification
+cloggs-cave-mammals ok  7225693/Cloggs_XU_and_SU_data.xlsx
+cloggs-cave-mammals ok  7225693/README.md
+cloggs-cave-mammals 0 files failed verification
+couzens-kangaroo-enamel ok  v7_442234/Couzens_et_al_dryad_v2_(2).zip
+couzens-kangaroo-enamel ok  v7_442234/README.md
+couzens-kangaroo-enamel 0 files failed verification
+craffey-ediacaran-cooccurrence ok  v8_331096/Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip
+craffey-ediacaran-cooccurrence ok  v8_331096/README.md
+craffey-ediacaran-cooccurrence 0 files failed verification
+dickinsonia-growth ok  5214230/Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx
+dickinsonia-growth ok  5214230/README_Evans_EdiacaraGrowingPains_2021_Paleobiology.xlsx
+dickinsonia-growth 0 files failed verification
+dickinsonia-species ok  7521622/EvansetalSupplementaryData.xlsx
+dickinsonia-species ok  7521622/README_EvansetalSupplementaryData.xlsx
+dickinsonia-species 0 files failed verification
+eoandromeda ok  10124355/Arms.csv
+eoandromeda ok  10124355/Collections_7armlmk.tps
+eoandromeda ok  10124355/Eo___Float_7armlmk.tps
+eoandromeda ok  10124355/Parv_Bed_7armlmk.tps
+eoandromeda ok  10124355/README.md
+eoandromeda ok  10124355/Sub_Bed_7armlmk.tps
+eoandromeda ok  10124355/coEo.txt
+eoandromeda 0 files failed verification
+estaingia-growth ok  Dataset-from-Complex-axial-growth-patterns-in-an-Early-Cambrian-trilobite-from-South-Australia_v1_17113370/rspb20212131_si_002.csv
+estaingia-growth 0 files failed verification
+gutarra-simulated-communities ok  2026-10-22T0924Z_url/Gutarra_et_al_Simulated_Communities.zip
+gutarra-simulated-communities 0 files failed verification
+naracoorte-charcoal-pollen ok  Cave-opening-and-fossil-accumulation-in-Naracoorte-Australia-through-charcoal-and-pollen-in-dated-speleothems---Supplementary-Data-1_v1_20495136/Weij et al 2022_Supplementary Data 1.xlsx
+naracoorte-charcoal-pollen 0 files failed verification
+permian-bryozoan-traits ok  4765268/ReidTamberg2021bryozoaPermiandata.csv
+permian-bryozoan-traits ok  4765268/ReidTamberg2021bryozoaREFERENCELIST.txt
+permian-bryozoan-traits ok  4765268/ReidTamberg2021bryozoaReadmeupdated.txt
+permian-bryozoan-traits ok  4765268/ReidTamberg2021bryozoamoderndata.csv
+permian-bryozoan-traits 0 files failed verification
+reichgelt-eocene-dryad ok  6511559/README_Reichgelt_et_al_fossil_eocene_australia.txt
+reichgelt-eocene-dryad ok  6511559/supplementary_tables.xlsx
+reichgelt-eocene-dryad 0 files failed verification
+reichgelt-eocene-revised ok  6462287/supplementary_tables_revised.xlsx
+reichgelt-eocene-revised 0 files failed verification
+riversleigh-richness ok  5018450/Appendix 1.xls
+riversleigh-richness ok  5018450/Appendix 2.xlsx
+riversleigh-richness ok  5018450/Appendix 3.doc
+riversleigh-richness 0 files failed verification
+tasmania-pollen-fire ok  4936251/CP13_10A_pollen_16_11_10.csv
+tasmania-pollen-fire ok  4936251/CP13_SS_analysis.m
+tasmania-pollen-fire ok  4936251/CP13_SS_discrimAnalysis.R
+tasmania-pollen-fire ok  4936251/README.txt
+tasmania-pollen-fire ok  4936251/TAS_SS_16_11_11.csv
+tasmania-pollen-fire 0 files failed verification
+thylacine-devil-dates ok  Supplementary-Table-1-from-High-quality-fossil-dates-support-a-synchronous-Late-Holocene-extinction-of-devils-and-thylacines-in-mainland-Australia_v1_5746797/rsbl20170642_si_001.xlsx
+thylacine-devil-dates 0 files failed verification
+tribrachidium ok  A-new-species-of-the-iconic-triradial-Ediacaran-genus-i-Tribrachidium-i-from-Nilpena-Ediacara-National-Park-Flinders-Ranges-South-Australia_v1_25341625/Gehlingi Measurements.csv
+tribrachidium ok  A-new-species-of-the-iconic-triradial-Ediacaran-genus-i-Tribrachidium-i-from-Nilpena-Ediacara-National-Park-Flinders-Ranges-South-Australia_v1_25341625/Heraldicum Measurements.csv
+tribrachidium ok  A-new-species-of-the-iconic-triradial-Ediacaran-genus-i-Tribrachidium-i-from-Nilpena-Ediacara-National-Park-Flinders-Ranges-South-Australia_v1_25341625/ReadME.docx
+tribrachidium 0 files failed verification

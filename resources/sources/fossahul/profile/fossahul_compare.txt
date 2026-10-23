@@ -1,0 +1,23 @@
+rows_2019_numeric_ids	11866
+rows_2021_numeric_ids	11872
+ids_added_2021	6
+ids_removed_2021	0
+shared_ids_changed:Age	0
+shared_ids_changed:Precision	0
+shared_ids_changed:Quality	232
+shared_ids_changed:preQuality	232
+shared_ids_changed:Latitude	11444
+shared_ids_changed:Longitude	10857
+shared_ids_changed:Genus	0
+shared_ids_changed:Species	0
+shared_ids_changed:Status	3053
+shared_ids_changed:Association	0
+shared_ids_changed:DatingTechnique	0
+quality_change	C->B	172
+quality_change	C->A*	60
+octopus_rows	11858
+octopus_ids_matching_2021	11858
+2021_ids_missing_from_octopus	14
+2021_ids_missing_from_octopus_list	1815,1973,1978,1985,2040,3329,9308,9336,11924,11925,11926,11927,11928,11929
+missing_from_octopus_with_nonnumeric_coords	5
+octopus_by:DBVERNO	{'v2.3(1)': 11858}

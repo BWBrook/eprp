@@ -1,0 +1,442 @@
+table	metric	key	value
+attrs	global	Title	Late Quaternary Environment v1.0
+attrs	global	Source	https://figshare.com/articles/Late_Pleistocene_and_Holocene_climate_bioclimate_and_vegetation/8327081
+attrs	global	Citation	"Beyer R, Krapp M, Manica A (2020): ""High-resolution terrestrial climate, bioclimate and vegetation for the last 120,000 years"""
+attrs	global	Date	23-Apr-2020 12:43:11
+dims	longitude		720
+dims	latitude		300
+dims	time		72
+dims	month		12
+variables	longitude	('longitude',)	degrees_north | 
+variables	latitude	('latitude',)	degrees_east | 
+variables	time	('time',)	years since present | 
+variables	month	('month',)	 | 
+variables	temperature	('time', 'month', 'latitude', 'longitude')	degrees celsius | monthly mean temperature
+variables	precipitation	('time', 'month', 'latitude', 'longitude')	millimetres per month | monthly precipitation
+variables	cloudiness	('time', 'month', 'latitude', 'longitude')	percent | monthly mean cloudiness
+variables	relative_humidity	('time', 'month', 'latitude', 'longitude')	percent | monthly mean relative humidity
+variables	wind_speed	('time', 'month', 'latitude', 'longitude')	metres per second | monthly mean (absolute) wind speed
+variables	min_temperature	('time', 'latitude', 'longitude')	degrees celsius | annual minimum temperature
+variables	max_temperature	('time', 'latitude', 'longitude')	degrees celsius | annual maximum temperature
+variables	biome	('time', 'latitude', 'longitude')	categorical | biome
+variables	npp	('time', 'latitude', 'longitude')	grams carbon per metre^2 | annual net primary production
+variables	lai	('time', 'latitude', 'longitude')	metre^2 per metre^2 | leaf area index
+variables	BIO1	('time', 'latitude', 'longitude')	 | Annual Mean Temperature
+variables	BIO4	('time', 'latitude', 'longitude')	 | Temperature Seasonality (standard deviation *100)
+variables	BIO5	('time', 'latitude', 'longitude')	 | Max Temperature of Warmest Month
+variables	BIO6	('time', 'latitude', 'longitude')	 | Min Temperature of Coldest Month
+variables	BIO7	('time', 'latitude', 'longitude')	 | Temperature Annual Range (BIO5-BIO6)
+variables	BIO8	('time', 'latitude', 'longitude')	 | Mean Temperature of Wettest Quarter
+variables	BIO9	('time', 'latitude', 'longitude')	 | Mean Temperature of Driest Quarter
+variables	BIO10	('time', 'latitude', 'longitude')	 | Mean Temperature of Warmest Quarter
+variables	BIO11	('time', 'latitude', 'longitude')	 | Mean Temperature of Coldest Quarter
+variables	BIO12	('time', 'latitude', 'longitude')	 | Annual Precipitation
+variables	BIO13	('time', 'latitude', 'longitude')	 | Precipitation of Wettest Month
+variables	BIO14	('time', 'latitude', 'longitude')	 | Precipitation of Driest Month
+variables	BIO15	('time', 'latitude', 'longitude')	 | Precipitation Seasonality (Coefficient of Variation)
+variables	BIO16	('time', 'latitude', 'longitude')	 | Precipitation of Wettest Quarter
+variables	BIO17	('time', 'latitude', 'longitude')	 | Precipitation of Driest Quarter
+variables	BIO18	('time', 'latitude', 'longitude')	 | Precipitation of Warmest Quarter
+variables	BIO19	('time', 'latitude', 'longitude')	 | Precipitation of Coldest Quarter
+time	steps		72
+time	range		-120000 to 0
+land_area_km2	sahul_boxes	0	8738770
+land_gain_vs_0ka_km2	sahul_boxes	0	0
+land_area_km2	australia_box	0	7826551
+land_gain_vs_0ka_km2	australia_box	0	0
+land_area_km2	new_guinea_box	0	948653
+land_gain_vs_0ka_km2	new_guinea_box	0	0
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	0	1903526
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	0	0
+land_area_km2	northern_shelf_129-146E_17-8S	0	729635
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	0	0
+land_area_km2	northwest_shelf_112-129E_24-10S	0	1050653
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	0	0
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	0	80969
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	0	0
+land_area_km2	sunda_98-118E_8S-8N	0	1496599
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	0	0
+sahul_boxes_area_weighted	bio1_c	0	21.85
+sahul_boxes_area_weighted	bio12_mm	0	734.9
+connectivity	new_guinea_joined_to_australia	0	False
+main_file_land_coded_water	cells_global	0	18
+main_file_land_coded_water	cells_sahul_boxes	0	0 of 3116
+main_file_land_coded_water	of_which_ocean_at_0ka_global	0	0
+files_compared_window	biome_cells_differing	0	195
+files_compared_window	biome_cells_differing_excluding_water_coded	0	194
+files_compared_window	npp_correlation	0	0.962
+files_compared_window	npp_correlation_excluding_water_coded	0	0.964
+files_compared_window	same_land_mask	0	True
+sahul_boxes_biome_cells	0	13	1175
+sahul_boxes_biome_cells	0	21	1087
+sahul_boxes_biome_cells	0	1	273
+sahul_boxes_biome_cells	0	15	202
+sahul_boxes_biome_cells	0	12	119
+sahul_boxes_biome_cells	0	6	95
+sahul_boxes_biome_cells	0	5	71
+sahul_boxes_biome_cells	0	3	38
+land_area_km2	sahul_boxes	-1000	8765840
+land_gain_vs_0ka_km2	sahul_boxes	-1000	27069
+land_area_km2	australia_box	-1000	7847459
+land_gain_vs_0ka_km2	australia_box	-1000	20908
+land_area_km2	new_guinea_box	-1000	957848
+land_gain_vs_0ka_km2	new_guinea_box	-1000	9194
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-1000	1927500
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-1000	23974
+land_area_km2	northern_shelf_129-146E_17-8S	-1000	744689
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-1000	15053
+land_area_km2	northwest_shelf_112-129E_24-10S	-1000	1053655
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-1000	3002
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-1000	80969
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-1000	0
+land_area_km2	sunda_98-118E_8S-8N	-1000	1515132
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-1000	18533
+sahul_boxes_area_weighted	bio1_c	-1000	21.77
+sahul_boxes_area_weighted	bio12_mm	-1000	729.2
+connectivity	new_guinea_joined_to_australia	-1000	False
+main_file_land_coded_water	cells_global	-1000	29
+main_file_land_coded_water	cells_sahul_boxes	-1000	0 of 3125
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-1000	11
+land_area_km2	sahul_boxes	-2000	8841077
+land_gain_vs_0ka_km2	sahul_boxes	-2000	102306
+land_area_km2	australia_box	-2000	7907339
+land_gain_vs_0ka_km2	australia_box	-2000	80787
+land_area_km2	new_guinea_box	-2000	982305
+land_gain_vs_0ka_km2	new_guinea_box	-2000	33651
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-2000	1987832
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-2000	84305
+land_area_km2	northern_shelf_129-146E_17-8S	-2000	783882
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-2000	54246
+land_area_km2	northwest_shelf_112-129E_24-10S	-2000	1059647
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-2000	8994
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-2000	85732
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-2000	4763
+land_area_km2	sunda_98-118E_8S-8N	-2000	1552223
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-2000	55624
+sahul_boxes_area_weighted	bio1_c	-2000	21.86
+sahul_boxes_area_weighted	bio12_mm	-2000	710.1
+connectivity	new_guinea_joined_to_australia	-2000	False
+main_file_land_coded_water	cells_global	-2000	54
+main_file_land_coded_water	cells_sahul_boxes	-2000	0 of 3151
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-2000	36
+land_area_km2	sahul_boxes	-3000	8966064
+land_gain_vs_0ka_km2	sahul_boxes	-3000	227294
+land_area_km2	australia_box	-3000	7989447
+land_gain_vs_0ka_km2	australia_box	-3000	162895
+land_area_km2	new_guinea_box	-3000	1052536
+land_gain_vs_0ka_km2	new_guinea_box	-3000	103882
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-3000	2066846
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-3000	163319
+land_area_km2	northern_shelf_129-146E_17-8S	-3000	847655
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-3000	118020
+land_area_km2	northwest_shelf_112-129E_24-10S	-3000	1071409
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-3000	20756
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-3000	85732
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-3000	4763
+land_area_km2	sunda_98-118E_8S-8N	-3000	1570795
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-3000	74196
+sahul_boxes_area_weighted	bio1_c	-3000	21.86
+sahul_boxes_area_weighted	bio12_mm	-3000	695.7
+connectivity	new_guinea_joined_to_australia	-3000	True
+main_file_land_coded_water	cells_global	-3000	90
+main_file_land_coded_water	cells_sahul_boxes	-3000	14 of 3193
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-3000	72
+land_area_km2	sahul_boxes	-6000	9139637
+land_gain_vs_0ka_km2	sahul_boxes	-6000	400867
+land_area_km2	australia_box	-6000	8107849
+land_gain_vs_0ka_km2	australia_box	-6000	281297
+land_area_km2	new_guinea_box	-6000	1125921
+land_gain_vs_0ka_km2	new_guinea_box	-6000	177267
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-6000	2181837
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-6000	278311
+land_area_km2	northern_shelf_129-146E_17-8S	-6000	944305
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-6000	214670
+land_area_km2	northwest_shelf_112-129E_24-10S	-6000	1088868
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-6000	38215
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-6000	90461
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-6000	9491
+land_area_km2	sunda_98-118E_8S-8N	-6000	1682059
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-6000	185459
+sahul_boxes_area_weighted	bio1_c	-6000	21.74
+sahul_boxes_area_weighted	bio12_mm	-6000	696.3
+connectivity	new_guinea_joined_to_australia	-6000	True
+main_file_land_coded_water	cells_global	-6000	156
+main_file_land_coded_water	cells_sahul_boxes	-6000	32 of 3252
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-6000	138
+land_area_km2	sahul_boxes	-8000	9306885
+land_gain_vs_0ka_km2	sahul_boxes	-8000	568114
+land_area_km2	australia_box	-8000	8247558
+land_gain_vs_0ka_km2	australia_box	-8000	421006
+land_area_km2	new_guinea_box	-8000	1174718
+land_gain_vs_0ka_km2	new_guinea_box	-8000	226064
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-8000	2278749
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-8000	375222
+land_area_km2	northern_shelf_129-146E_17-8S	-8000	1035096
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-8000	305461
+land_area_km2	northwest_shelf_112-129E_24-10S	-8000	1109621
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-8000	58968
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-8000	90461
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-8000	9491
+land_area_km2	sunda_98-118E_8S-8N	-8000	1777853
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-8000	281254
+sahul_boxes_area_weighted	bio1_c	-8000	21.72
+sahul_boxes_area_weighted	bio12_mm	-8000	750.0
+connectivity	new_guinea_joined_to_australia	-8000	True
+main_file_land_coded_water	cells_global	-8000	256
+main_file_land_coded_water	cells_sahul_boxes	-8000	53 of 3310
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-8000	238
+land_area_km2	sahul_boxes	-10000	9731901
+land_gain_vs_0ka_km2	sahul_boxes	-10000	993130
+land_area_km2	australia_box	-10000	8580510
+land_gain_vs_0ka_km2	australia_box	-10000	753958
+land_area_km2	new_guinea_box	-10000	1312360
+land_gain_vs_0ka_km2	new_guinea_box	-10000	363706
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-10000	2500068
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-10000	596541
+land_area_km2	northern_shelf_129-146E_17-8S	-10000	1213469
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-10000	483833
+land_area_km2	northwest_shelf_112-129E_24-10S	-10000	1156770
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-10000	106117
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-10000	118882
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-10000	37912
+land_area_km2	sunda_98-118E_8S-8N	-10000	2080531
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-10000	583931
+sahul_boxes_area_weighted	bio1_c	-10000	21.77
+sahul_boxes_area_weighted	bio12_mm	-10000	745.2
+connectivity	new_guinea_joined_to_australia	-10000	True
+main_file_land_coded_water	cells_global	-10000	836
+main_file_land_coded_water	cells_sahul_boxes	-10000	120 of 3457
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-10000	822
+land_area_km2	sahul_boxes	-12000	10423143
+land_gain_vs_0ka_km2	sahul_boxes	-12000	1684372
+land_area_km2	australia_box	-12000	9096938
+land_gain_vs_0ka_km2	australia_box	-12000	1270386
+land_area_km2	new_guinea_box	-12000	1563193
+land_gain_vs_0ka_km2	new_guinea_box	-12000	614539
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-12000	2898294
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-12000	994768
+land_area_km2	northern_shelf_129-146E_17-8S	-12000	1501784
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-12000	772149
+land_area_km2	northwest_shelf_112-129E_24-10S	-12000	1296604
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-12000	245950
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-12000	142644
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-12000	61674
+land_area_km2	sunda_98-118E_8S-8N	-12000	2704213
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-12000	1207614
+sahul_boxes_area_weighted	bio1_c	-12000	21.33
+sahul_boxes_area_weighted	bio12_mm	-12000	745.6
+connectivity	new_guinea_joined_to_australia	-12000	True
+main_file_land_coded_water	cells_global	-12000	2469
+main_file_land_coded_water	cells_sahul_boxes	-12000	279 of 3694
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-12000	2458
+land_area_km2	sahul_boxes	-14000	10779607
+land_gain_vs_0ka_km2	sahul_boxes	-14000	2040837
+land_area_km2	australia_box	-14000	9373664
+land_gain_vs_0ka_km2	australia_box	-14000	1547112
+land_area_km2	new_guinea_box	-14000	1655105
+land_gain_vs_0ka_km2	new_guinea_box	-14000	706451
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-14000	3050431
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-14000	1146904
+land_area_km2	northern_shelf_129-146E_17-8S	-14000	1559742
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-14000	830106
+land_area_km2	northwest_shelf_112-129E_24-10S	-14000	1407967
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-14000	357314
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-14000	171204
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-14000	90234
+land_area_km2	sunda_98-118E_8S-8N	-14000	2994292
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-14000	1497692
+sahul_boxes_area_weighted	bio1_c	-14000	21.02
+sahul_boxes_area_weighted	bio12_mm	-14000	725.3
+connectivity	new_guinea_joined_to_australia	-14000	True
+main_file_land_coded_water	cells_global	-14000	3614
+main_file_land_coded_water	cells_sahul_boxes	-14000	383 of 3820
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-14000	3603
+land_area_km2	sahul_boxes	-21000	11102187
+land_gain_vs_0ka_km2	sahul_boxes	-21000	2363416
+land_area_km2	australia_box	-21000	9619458
+land_gain_vs_0ka_km2	australia_box	-21000	1792906
+land_area_km2	new_guinea_box	-21000	1731890
+land_gain_vs_0ka_km2	new_guinea_box	-21000	783236
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-21000	3157048
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-21000	1253521
+land_area_km2	northern_shelf_129-146E_17-8S	-21000	1608666
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-21000	879031
+land_area_km2	northwest_shelf_112-129E_24-10S	-21000	1530649
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-21000	479996
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-21000	201811
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-21000	120841
+land_area_km2	sunda_98-118E_8S-8N	-21000	3170112
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-21000	1673513
+sahul_boxes_area_weighted	bio1_c	-21000	19.16
+sahul_boxes_area_weighted	bio12_mm	-21000	651.9
+connectivity	new_guinea_joined_to_australia	-21000	True
+main_file_land_coded_water	cells_global	-21000	4429
+main_file_land_coded_water	cells_sahul_boxes	-21000	473 of 3934
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-21000	4418
+files_compared_window	biome_cells_differing	-21000	577
+files_compared_window	biome_cells_differing_excluding_water_coded	-21000	1
+files_compared_window	npp_correlation	-21000	0.732
+files_compared_window	npp_correlation_excluding_water_coded	-21000	0.947
+files_compared_window	same_land_mask	-21000	True
+sahul_boxes_biome_cells	-21000	21	1642
+sahul_boxes_biome_cells	-21000	13	1050
+sahul_boxes_biome_cells	-21000	0	473
+sahul_boxes_biome_cells	-21000	1	219
+sahul_boxes_biome_cells	-21000	14	202
+sahul_boxes_biome_cells	-21000	15	188
+sahul_boxes_biome_cells	-21000	5	47
+sahul_boxes_biome_cells	-21000	19	27
+land_area_km2	sahul_boxes	-30000	11008764
+land_gain_vs_0ka_km2	sahul_boxes	-30000	2269993
+land_area_km2	australia_box	-30000	9553657
+land_gain_vs_0ka_km2	australia_box	-30000	1727105
+land_area_km2	new_guinea_box	-30000	1704269
+land_gain_vs_0ka_km2	new_guinea_box	-30000	755615
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-30000	3129542
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-30000	1226016
+land_area_km2	northern_shelf_129-146E_17-8S	-30000	1587238
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-30000	857602
+land_area_km2	northwest_shelf_112-129E_24-10S	-30000	1500697
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-30000	450043
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-30000	190134
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-30000	109164
+land_area_km2	sunda_98-118E_8S-8N	-30000	3123873
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-30000	1627274
+sahul_boxes_area_weighted	bio1_c	-30000	19.74
+sahul_boxes_area_weighted	bio12_mm	-30000	735.7
+connectivity	new_guinea_joined_to_australia	-30000	True
+main_file_land_coded_water	cells_global	-30000	4223
+main_file_land_coded_water	cells_sahul_boxes	-30000	446 of 3901
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-30000	4212
+land_area_km2	sahul_boxes	-40000	10840526
+land_gain_vs_0ka_km2	sahul_boxes	-40000	2101755
+land_area_km2	australia_box	-40000	9419220
+land_gain_vs_0ka_km2	australia_box	-40000	1592668
+land_area_km2	new_guinea_box	-40000	1670467
+land_gain_vs_0ka_km2	new_guinea_box	-40000	721813
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-40000	3074749
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-40000	1171222
+land_area_km2	northern_shelf_129-146E_17-8S	-40000	1565861
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-40000	836225
+land_area_km2	northwest_shelf_112-129E_24-10S	-40000	1437849
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-40000	387196
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-40000	175933
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-40000	94963
+land_area_km2	sunda_98-118E_8S-8N	-40000	3040579
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-40000	1543979
+sahul_boxes_area_weighted	bio1_c	-40000	19.86
+sahul_boxes_area_weighted	bio12_mm	-40000	690.0
+connectivity	new_guinea_joined_to_australia	-40000	True
+main_file_land_coded_water	cells_global	-40000	3664
+main_file_land_coded_water	cells_sahul_boxes	-40000	404 of 3841
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-40000	3653
+land_area_km2	sahul_boxes	-50000	10652579
+land_gain_vs_0ka_km2	sahul_boxes	-50000	1913808
+land_area_km2	australia_box	-50000	9283367
+land_gain_vs_0ka_km2	australia_box	-50000	1456815
+land_area_km2	new_guinea_box	-50000	1615329
+land_gain_vs_0ka_km2	new_guinea_box	-50000	666675
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-50000	3001622
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-50000	1098095
+land_area_km2	northern_shelf_129-146E_17-8S	-50000	1538375
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-50000	808739
+land_area_km2	northwest_shelf_112-129E_24-10S	-50000	1380887
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-50000	330234
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-50000	157003
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-50000	76033
+land_area_km2	sunda_98-118E_8S-8N	-50000	2910929
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-50000	1414329
+sahul_boxes_area_weighted	bio1_c	-50000	20.66
+sahul_boxes_area_weighted	bio12_mm	-50000	600.9
+connectivity	new_guinea_joined_to_australia	-50000	True
+main_file_land_coded_water	cells_global	-50000	3085
+main_file_land_coded_water	cells_sahul_boxes	-50000	347 of 3775
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-50000	3074
+land_area_km2	sahul_boxes	-60000	10802228
+land_gain_vs_0ka_km2	sahul_boxes	-60000	2063457
+land_area_km2	australia_box	-60000	9390103
+land_gain_vs_0ka_km2	australia_box	-60000	1563552
+land_area_km2	new_guinea_box	-60000	1661286
+land_gain_vs_0ka_km2	new_guinea_box	-60000	712632
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-60000	3059559
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-60000	1156033
+land_area_km2	northern_shelf_129-146E_17-8S	-60000	1559742
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-60000	830106
+land_area_km2	northwest_shelf_112-129E_24-10S	-60000	1416846
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-60000	366193
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-60000	173568
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-60000	92599
+land_area_km2	sunda_98-118E_8S-8N	-60000	3003545
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-60000	1506946
+sahul_boxes_area_weighted	bio1_c	-60000	20.32
+sahul_boxes_area_weighted	bio12_mm	-60000	686.9
+connectivity	new_guinea_joined_to_australia	-60000	True
+main_file_land_coded_water	cells_global	-60000	3500
+main_file_land_coded_water	cells_sahul_boxes	-60000	391 of 3828
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-60000	3489
+land_area_km2	sahul_boxes	-80000	10037868
+land_gain_vs_0ka_km2	sahul_boxes	-80000	1299097
+land_area_km2	australia_box	-80000	8828047
+land_gain_vs_0ka_km2	australia_box	-80000	1001495
+land_area_km2	new_guinea_box	-80000	1413337
+land_gain_vs_0ka_km2	new_guinea_box	-80000	464683
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-80000	2706323
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-80000	802797
+land_area_km2	northern_shelf_129-146E_17-8S	-80000	1370789
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-80000	641154
+land_area_km2	northwest_shelf_112-129E_24-10S	-80000	1201344
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-80000	150691
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-80000	123538
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-80000	42568
+land_area_km2	sunda_98-118E_8S-8N	-80000	2299843
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-80000	803244
+sahul_boxes_area_weighted	bio1_c	-80000	21.36
+sahul_boxes_area_weighted	bio12_mm	-80000	631.3
+connectivity	new_guinea_joined_to_australia	-80000	True
+main_file_land_coded_water	cells_global	-80000	1345
+main_file_land_coded_water	cells_sahul_boxes	-80000	172 of 3561
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-80000	1334
+land_area_km2	sahul_boxes	-100000	9575133
+land_gain_vs_0ka_km2	sahul_boxes	-100000	836362
+land_area_km2	australia_box	-100000	8457515
+land_gain_vs_0ka_km2	australia_box	-100000	630964
+land_area_km2	new_guinea_box	-100000	1254283
+land_gain_vs_0ka_km2	new_guinea_box	-100000	305629
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-100000	2409060
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-100000	505534
+land_area_km2	northern_shelf_129-146E_17-8S	-100000	1137846
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-100000	408211
+land_area_km2	northwest_shelf_112-129E_24-10S	-100000	1144942
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-100000	94289
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-100000	111845
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-100000	30875
+land_area_km2	sunda_98-118E_8S-8N	-100000	1953919
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-100000	457319
+sahul_boxes_area_weighted	bio1_c	-100000	21.57
+sahul_boxes_area_weighted	bio12_mm	-100000	618.5
+connectivity	new_guinea_joined_to_australia	-100000	True
+main_file_land_coded_water	cells_global	-100000	565
+main_file_land_coded_water	cells_sahul_boxes	-100000	93 of 3403
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-100000	554
+land_area_km2	sahul_boxes	-120000	9099111
+land_gain_vs_0ka_km2	sahul_boxes	-120000	360341
+land_area_km2	australia_box	-120000	8076483
+land_gain_vs_0ka_km2	australia_box	-120000	249931
+land_area_km2	new_guinea_box	-120000	1110684
+land_gain_vs_0ka_km2	new_guinea_box	-120000	162031
+land_area_km2	arafura_carpentaria_torres_125-146E_20-5S	-120000	2163683
+land_gain_vs_0ka_km2	arafura_carpentaria_torres_125-146E_20-5S	-120000	260156
+land_area_km2	northern_shelf_129-146E_17-8S	-120000	926151
+land_gain_vs_0ka_km2	northern_shelf_129-146E_17-8S	-120000	196516
+land_area_km2	northwest_shelf_112-129E_24-10S	-120000	1085952
+land_gain_vs_0ka_km2	northwest_shelf_112-129E_24-10S	-120000	35299
+land_area_km2	bass_strait_tasmania_143-149E_44-38.5S	-120000	85732
+land_gain_vs_0ka_km2	bass_strait_tasmania_143-149E_44-38.5S	-120000	4763
+land_area_km2	sunda_98-118E_8S-8N	-120000	1648055
+land_gain_vs_0ka_km2	sunda_98-118E_8S-8N	-120000	151455
+sahul_boxes_area_weighted	bio1_c	-120000	21.91
+sahul_boxes_area_weighted	bio12_mm	-120000	723.8
+connectivity	new_guinea_joined_to_australia	-120000	True
+main_file_land_coded_water	cells_global	-120000	139
+main_file_land_coded_water	cells_sahul_boxes	-120000	28 of 3238
+main_file_land_coded_water	of_which_ocean_at_0ka_global	-120000	124

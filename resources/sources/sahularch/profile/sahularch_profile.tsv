@@ -1,0 +1,277 @@
+layer	metric	key	value
+c14	rows		9501
+c14	columns		120
+c14	by:DBVERNO	v2.3(2)	9501
+c14	by:DBDOI	10.25900/gpvr-ay04	9501
+c14	by:REGION_REG	AUS	6941
+c14	by:REGION_REG	PNG	2117
+c14	by:REGION_REG	TSI	339
+c14	by:REGION_REG	IDN	104
+c14	by:CNTRY	AUS	7280
+c14	by:CNTRY	PNG	2117
+c14	by:CNTRY	IDN	104
+c14	by:DIV_ADMIN	AU-QLD	1902
+c14	by:DIV_ADMIN	AU-WA	1478
+c14	by:DIV_ADMIN	AU-NSW	1326
+c14	by:DIV_ADMIN	AU-NT	1031
+c14	by:DIV_ADMIN	AU-VIC	780
+c14	by:DIV_ADMIN	AU-SA	386
+c14	by:DIV_ADMIN	PG-CPM	385
+c14	by:DIV_ADMIN	AU-TAS	333
+c14	by:DIV_ADMIN	PG-GPK	283
+c14	by:DIV_ADMIN	PG-WBK	216
+c14	by:DIV_ADMIN	PG-NIK	195
+c14	by:DIV_ADMIN	PG-SAN	176
+c14	by:DIV_ADMIN	PG-WHM	140
+c14	by:DIV_ADMIN	PG-MPM	109
+c14	by:DIV_ADMIN	PG-MRL	89
+c14	by:OPENCLOSED	Open	5217
+c14	by:OPENCLOSED	Closed	4204
+c14	by:OPENCLOSED	ND	80
+c14	by:OCCUPATION	ND	3827
+c14	by:OCCUPATION	Yes	3506
+c14	by:OCCUPATION	No	2168
+c14	by:CONTEXT	Occupation	7736
+c14	by:CONTEXT	ND	1639
+c14	by:CONTEXT	Sterile	126
+c14	by:AGEMTD	ND	3852
+c14	by:AGEMTD	AMS	3137
+c14	by:AGEMTD	CONV	2512
+c14	by:MATERIAL1	Charred	5383
+c14	by:MATERIAL1	CarbBio	2861
+c14	by:MATERIAL1	Plant	339
+c14	by:MATERIAL1	Faunal	257
+c14	by:MATERIAL1	ND	221
+c14	by:MATERIAL1	Other	141
+c14	by:MATERIAL1	Sediment	109
+c14	by:MATERIAL1	Oxalate	63
+c14	by:MATERIAL1	CarbInorg	54
+c14	by:MATERIAL1	Paint	44
+c14	by:MATERIAL1	Bulk	29
+c14	by:COL_MTD	InSitu	4920
+c14	by:COL_MTD	ND	3677
+c14	by:COL_MTD	Sieve	748
+c14	by:COL_MTD	Other	113
+c14	by:COL_MTD	Auger	18
+c14	by:COL_MTD	Core	17
+c14	by:COL_MTD	Block	8
+c14	distinct:SITEID		2658
+c14	distinct:METASITEID		2268
+c14	distinct:SMPID		9335
+c14	distinct:OBSID1		9501
+c14	distinct:LABID		9242
+c14	samples_with_replicate_observations		129
+c14	rows_in_replicated_samples		295
+c14	lab_codes_on_more_than_one_row		162
+c14	rows_without_lab_code		96
+c14	rows_without_age	C14_AGE	179
+c14	age_range	C14_AGE	0.0 to 55000.0
+c14	ages_older_than_10000_years	C14_AGE	1713
+c14	ages_older_than_30000_years	C14_AGE	392
+c14	ages_older_than_40000_years	C14_AGE	97
+c14	ages_older_than_50000_years	C14_AGE	9
+c14	rows_C14_INF_flagged		113
+c14	rows_without_first_reference_year		62
+c14	first_reference_year_range		1955 to 2022
+c14	by:C13_VAL (d13C method)	no data	8194
+c14	by:C13_VAL (d13C method)	Assumed	598
+c14	by:C13_VAL (d13C method)	Measured by AMS	587
+c14	by:C13_VAL (d13C method)	Measured by IRMS or CRDS	122
+c14	by:FEATDATED	no data	4043
+c14	by:FEATDATED	not related to a feature	3683
+c14	by:FEATDATED	Hearth	772
+c14	by:FEATDATED	Other	551
+c14	by:FEATDATED	Rock art	213
+c14	by:FEATDATED	Burial (human)	204
+c14	by:FEATDATED	Mud wasp nest	32
+c14	by:FEATDATED	Burial (animal)	3
+c14	rows_noting_they_supersede_other_ages	AGE_COMMT	0
+c14	columns_by_share_filled	<10%	44
+c14	columns_by_share_filled	10-50%	30
+c14	columns_by_share_filled	50-90%	17
+c14	columns_by_share_filled	>=90%	29
+c14	share_filled	SMPDEPTH	0.554
+c14	share_filled	LABID	0.99
+c14	share_filled	FEATDATED	0.574
+c14	share_filled	C13_VAL	0.138
+c14	share_filled	F14C	0.152
+c14	share_filled	CHEMPREPAB	0.29
+c14	share_filled	PHYSCLEAN	0.157
+c14	share_filled	RECRYST	0.046
+c14	share_filled	SINGULAR	0.261
+c14	share_filled_applicable	SMPDEPTH	5260 of 9256 (0.568)
+c14	share_filled_applicable	F14C	1038 of 3137 (0.331)
+c14	share_filled_applicable	RECRYST	329 of 2861 (0.115)
+c14	share_filled_applicable	C13_VAL	1114 of 4039 (0.276)
+osl	rows		973
+osl	columns		143
+osl	by:DBVERNO	v2.3(2)	973
+osl	by:DBDOI	10.25900/9y07-4j77	973
+osl	by:REGION_REG	AUS	969
+osl	by:REGION_REG	PNG	4
+osl	by:CNTRY	AUS	969
+osl	by:CNTRY	PNG	4
+osl	by:DIV_ADMIN	AU-NSW	564
+osl	by:DIV_ADMIN	AU-NT	136
+osl	by:DIV_ADMIN	AU-WA	101
+osl	by:DIV_ADMIN	AU-SA	94
+osl	by:DIV_ADMIN	AU-VIC	64
+osl	by:DIV_ADMIN	AU-QLD	10
+osl	by:DIV_ADMIN	PG-WBK	4
+osl	by:OPENCLOSED	Open	734
+osl	by:OPENCLOSED	Closed	239
+osl	by:OCCUPATION	Yes	380
+osl	by:OCCUPATION	ND	366
+osl	by:OCCUPATION	No	227
+osl	by:CONTEXT	Occupation	478
+osl	by:CONTEXT	ND	402
+osl	by:CONTEXT	Sterile	93
+osl	by:LUM_MAT	Sediment	682
+osl	by:LUM_MAT	no data	99
+osl	by:LUM_MAT	Cobbles	98
+osl	by:LUM_MAT	Other	80
+osl	by:LUM_MAT	Mud wasp nest	14
+osl	by:MINERAL	Quartz	957
+osl	by:MINERAL	no data	14
+osl	by:MINERAL	Polymineral	2
+osl	by:AGEMODELAB	CAM	408
+osl	by:AGEMODELAB	FMM	240
+osl	by:AGEMODELAB	ND	137
+osl	by:AGEMODELAB	nMAD_CAM	100
+osl	by:AGEMODELAB	MAM	45
+osl	by:AGEMODELAB	AVG	35
+osl	by:AGEMODELAB	MAM_UL	5
+osl	by:AGEMODELAB	MAX	2
+osl	by:AGEMODELAB	CAM_UL	1
+osl	by:COL_MTD	Tube	581
+osl	by:COL_MTD	Excavated	271
+osl	by:COL_MTD	InSitu	109
+osl	by:COL_MTD	Auger	8
+osl	by:COL_MTD	Core	3
+osl	by:COL_MTD	Block	1
+osl	distinct:SITEID		118
+osl	distinct:METASITEID		92
+osl	distinct:SMPID		850
+osl	distinct:OBSID1		973
+osl	distinct:LABID		618
+osl	samples_with_replicate_observations		71
+osl	rows_in_replicated_samples		194
+osl	lab_codes_on_more_than_one_row		99
+osl	rows_without_lab_code		90
+osl	rows_without_age	OSL_AGE	28
+osl	age_range	OSL_AGE	-0.05 to 239.0
+osl	ages_older_than_10000_years	OSL_AGE	507
+osl	ages_older_than_30000_years	OSL_AGE	258
+osl	ages_older_than_40000_years	OSL_AGE	193
+osl	ages_older_than_50000_years	OSL_AGE	102
+osl	rows_without_first_reference_year		8
+osl	first_reference_year_range		1990 to 2022
+osl	by:FEATDATED	not related to a feature	420
+osl	by:FEATDATED	Hearth	328
+osl	by:FEATDATED	no data	210
+osl	by:FEATDATED	Mud wasp nest	11
+osl	by:FEATDATED	Other	3
+osl	by:FEATDATED	Burial (animal)	1
+osl	rows_noting_they_supersede_other_ages	AGE_COMMT	4
+osl	columns_by_share_filled	<10%	32
+osl	columns_by_share_filled	10-50%	32
+osl	columns_by_share_filled	50-90%	40
+osl	columns_by_share_filled	>=90%	39
+osl	share_filled	SMPDEPTH	0.857
+osl	share_filled	LABID	0.908
+osl	share_filled	FEATDATED	0.784
+osl	share_filled	EQUIVDOSE	0.903
+osl	share_filled	DOSERATE	0.881
+osl	share_filled	H2O_USED	0.338
+osl	share_filled	AGEMODELAB	0.859
+osl	share_filled	OD	0.419
+osl	share_filled_applicable	SMPDEPTH	834 of 962 (0.867)
+tl	rows		240
+tl	columns		141
+tl	by:DBVERNO	v2.3(2)	240
+tl	by:DBDOI	10.25900/af67-kh16	240
+tl	by:REGION_REG	AUS	204
+tl	by:REGION_REG	PNG	36
+tl	by:CNTRY	AUS	204
+tl	by:CNTRY	PNG	36
+tl	by:DIV_ADMIN	AU-NT	91
+tl	by:DIV_ADMIN	AU-NSW	73
+tl	by:DIV_ADMIN	AU-QLD	28
+tl	by:DIV_ADMIN	PG-CPM	26
+tl	by:DIV_ADMIN	AU-VIC	8
+tl	by:DIV_ADMIN	PG-MPM	6
+tl	by:DIV_ADMIN	PG-WHM	4
+tl	by:DIV_ADMIN	AU-SA	4
+tl	by:OPENCLOSED	Open	143
+tl	by:OPENCLOSED	Closed	97
+tl	by:OCCUPATION	No	120
+tl	by:OCCUPATION	ND	60
+tl	by:OCCUPATION	Yes	60
+tl	by:CONTEXT	Occupation	110
+tl	by:CONTEXT	ND	86
+tl	by:CONTEXT	Sterile	44
+tl	by:LUM_MAT	Sediment	170
+tl	by:LUM_MAT	no data	36
+tl	by:LUM_MAT	Other	26
+tl	by:LUM_MAT	Burnt stone	4
+tl	by:LUM_MAT	Cobbles	4
+tl	by:MINERAL	Quartz	171
+tl	by:MINERAL	no data	65
+tl	by:MINERAL	Polymineral	4
+tl	by:AGEMODELAB	AVG	163
+tl	by:AGEMODELAB	ND	77
+tl	by:COL_MTD	Excavated	87
+tl	by:COL_MTD	Tube	61
+tl	by:COL_MTD	Auger	54
+tl	by:COL_MTD	ND	17
+tl	by:COL_MTD	Other	14
+tl	by:COL_MTD	Block	7
+tl	distinct:SITEID		47
+tl	distinct:METASITEID		42
+tl	distinct:SMPID		233
+tl	distinct:OBSID1		240
+tl	distinct:LABID		181
+tl	samples_with_replicate_observations		7
+tl	rows_in_replicated_samples		14
+tl	lab_codes_on_more_than_one_row		16
+tl	rows_without_lab_code		44
+tl	rows_without_age	TL_AGE	7
+tl	age_range	TL_AGE	0.0 to 270.0
+tl	ages_older_than_10000_years	TL_AGE	149
+tl	ages_older_than_30000_years	TL_AGE	91
+tl	ages_older_than_40000_years	TL_AGE	66
+tl	ages_older_than_50000_years	TL_AGE	45
+tl	rows_without_first_reference_year		0
+tl	first_reference_year_range		1976 to 2021
+tl	by:FEATDATED	not related to a feature	130
+tl	by:FEATDATED	no data	85
+tl	by:FEATDATED	Other	18
+tl	by:FEATDATED	Hearth	7
+tl	rows_noting_they_supersede_other_ages	AGE_COMMT	10
+tl	columns_by_share_filled	<10%	29
+tl	columns_by_share_filled	10-50%	49
+tl	columns_by_share_filled	50-90%	39
+tl	columns_by_share_filled	>=90%	24
+tl	share_filled	SMPDEPTH	0.517
+tl	share_filled	LABID	0.817
+tl	share_filled	FEATDATED	0.646
+tl	share_filled	EQUIVDOSE	0.662
+tl	share_filled	DOSERATE	0.637
+tl	share_filled	H2O_USED	0.525
+tl	share_filled	AGEMODELAB	0.679
+tl	share_filled_applicable	SMPDEPTH	124 of 240 (0.517)
+c14	v2021_rows		5039
+c14	v2021_ids_still_live		5039
+c14	v2021_ids_gone		0
+c14	live_ids_new_since_2021		4462
+c14	v2021_shared_ids_age_changed		0
+osl	v2021_rows		347
+osl	v2021_ids_still_live		347
+osl	v2021_ids_gone		0
+osl	live_ids_new_since_2021		626
+osl	v2021_shared_ids_age_changed		0
+tl	v2021_rows		127
+tl	v2021_ids_still_live		127
+tl	v2021_ids_gone		0
+tl	live_ids_new_since_2021		113
+tl	v2021_shared_ids_age_changed		0

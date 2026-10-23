@@ -1,0 +1,89 @@
+table	metric	key	value
+bundle	members		24
+bundle	macos_or_ds_store_members		13
+global	rows	site	1480
+global	rows	entity	1676
+global	rows	sample	254763
+global	rows	date_info	16432
+global	rows	chronology	254017
+global	rows	age_model	121720
+global	rows	unit	202
+sahul	entities		181
+sahul	sites		158
+sahul	entities_by_region	australia	143
+sahul	entities_by_region	new_guinea	24
+sahul	entities_by_region	torres_strait	14
+sahul	entities_by:depositional_context	bog sediment	105
+sahul	entities_by:depositional_context	lake sediment	52
+sahul	entities_by:depositional_context	estuarine sediment	7
+sahul	entities_by:depositional_context	fluvial/alluvial sediment	5
+sahul	entities_by:depositional_context	soil	4
+sahul	entities_by:depositional_context	-777777	4
+sahul	entities_by:depositional_context	marine sediment	2
+sahul	entities_by:depositional_context	archaeological	2
+sahul	entities_by:measurement_method	Pollen slide	146
+sahul	entities_by:measurement_method	Sieved	35
+sahul	entities_by:TYPE	concentration	112
+sahul	entities_by:TYPE	pollen concentration	33
+sahul	entities_by:TYPE	influx	25
+sahul	entities_by:TYPE	other	11
+sahul	entities_by:source	Global Charcoal Database Version 4	177
+sahul	entities_by:source	Global Charcoal Database Version 3	2
+sahul	entities_by:source	Neotoma	1
+sahul	entities_by:source	PANGAEA	1
+sahul	entities_by:unit	mm-2 cm-3	23
+sahul	entities_by:unit	point count cm-2 cm-3	14
+sahul	entities_by:unit	fragments cm-3	14
+sahul	entities_by:unit	mm-2 ml-1	10
+sahul	entities_by:unit	cm-2 cm-3	10
+sahul	entities_by:unit	fragments >125µm cm-3	10
+sahul	entities_by:unit	fragments	9
+sahul	entities_by:unit	mm-2 cm-2 yr-1	9
+sahul	entities_by:unit	point count cm-3 yr-1	8
+sahul	entities_by:unit	fragments:pollen (C:P ratio)	7
+sahul	entities_by:last_updated_year	2021	91
+sahul	entities_by:last_updated_year	2020	89
+sahul	entities_by:last_updated_year	2022	1
+sahul	entities_by:site_type	terrestrial, bog	48
+sahul	entities_by:site_type	lacustrine	30
+sahul	entities_by:site_type	terrestrial, fen	29
+sahul	entities_by:site_type	terrestrial	11
+sahul	entities_by:site_type	coastal, estuarine	10
+sahul	entities_by:site_type	coastal	10
+sahul	entities_by:site_type	terrestrial, mire	8
+sahul	entities_by:site_type	lacustrine, drained lake	7
+sahul	entities_by:site_type	terrestrial, marsh	5
+sahul	entities_by:site_type	lacustrine, salt lake, permanent	5
+sahul	samples		12814
+sahul	samples_charcoal_missing_code		0
+global	entities_with_new_age_model		829
+sahul	entities_with_new_age_model		46
+global	age_model_rows_by:model_name	BACON_INTCAL20	119174
+global	age_model_rows_by:model_name	BACON_INTCAL13	2546
+sahul	age_model_rows_by:model_name	BACON_INTCAL20	3850
+sahul	distinct_entity_coordinates		151
+sahul	entities_with_original_ages		181
+sahul	original_max_age_median_yr		8664
+sahul	entities_original_max_age_ge	2000	156
+sahul	entities_original_max_age_ge	20000	37
+sahul	entities_original_max_age_ge	50000	17
+sahul	entities_reaching_20ka_with_new_age_model		31 of 37
+sahul	dates		995
+sahul	dates_by:date_type	Radiocarbon date	415
+sahul	dates_by:date_type	AMS	315
+sahul	dates_by:date_type	-777777	56
+sahul	dates_by:date_type	Publication date used as estimate of top of core age (1950 AD = 0)	54
+sahul	dates_by:date_type	Pb	45
+sahul	dates_by:date_type	Pollen correlation	37
+sahul	dates_by:date_type	Top of core known	27
+sahul	dates_by:date_type	Uranium Thorium dating	19
+sahul	dates_by:age_used	-777777	445
+sahul	dates_by:age_used	yes	357
+sahul	dates_by:age_used	no	193
+global	date_info_cells_with_code	-777777	2537
+global	reason_age_not_used_equal_code	-777777	2024
+global	date_info_cells_with_code	-888888	13868
+global	reason_age_not_used_equal_code	-888888	12887
+global	date_info_cells_with_code	-999999	2032
+global	reason_age_not_used_equal_code	-999999	42
+sahul	entities_with_no_age_used_value_on_any_date		68

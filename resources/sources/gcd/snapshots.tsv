@@ -1,0 +1,2 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+gcd/cran	2026-10-22T0634Z_url	2026-10-22T06:34:15+00:00	R package GPL (>= 2) on CRAN; the data fall under the Global Paleofire Database terms of use, CC BY-NC-ND (paleofire.org/terms_of_use)	1	1388024	c02158bc6217	https://cran.r-project.org/src/contrib/GCD_4.0.7.tar.gz

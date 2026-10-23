@@ -1,0 +1,2 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+sahulchar/octopus-wfs	2026-10-22T0634Z_wfs	2026-10-22T06:34:28+00:00	CC-BY-4.0 per OCTOPUS documentation; the SahulCHAR DataCite record (doi:10.25900/KKDX-XH23) states no rights	4	39441206	c02158bc6217	http://geoserver.octopusdata.org/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=be10-denude%3Asahulchar&outputFormat=csv

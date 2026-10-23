@@ -1,0 +1,37 @@
+table	metric	key	value
+pico	columns		time (ka) | Waelbroeck Sahul increase in continental shelf area relative to today (km^2) | Waelbroeck Sunda increase in continental shelf area relative to today (km^2) | ICEPC2 Sahul increase in continental shelf area relative to today (km^2) | ICEPC2 Sunda increase in continental shelf area relative to today (km^2)
+pico	rows		95
+pico	duplicate_rows		0
+pico	time_range_ka		0.1 to 122.0
+pico	peak_km2_at_ka	Waelbroeck Sahul	1.1e+06 at 26.0
+pico	value_at_ka_21	Waelbroeck Sahul	1.08E+06
+pico	value_at_ka_50	Waelbroeck Sahul	7.58E+05
+pico	peak_km2_at_ka	Waelbroeck Sunda	1.96e+06 at 26.0
+pico	value_at_ka_21	Waelbroeck Sunda	1.94E+06
+pico	value_at_ka_50	Waelbroeck Sunda	1.54E+06
+pico	peak_km2_at_ka	ICEPC2 Sahul	1.09e+06 at 26.0
+pico	value_at_ka_21	ICEPC2 Sahul	1.08E+06
+pico	value_at_ka_50	ICEPC2 Sahul	5.61E+05
+pico	peak_km2_at_ka	ICEPC2 Sunda	1.95e+06 at 26.0
+pico	value_at_ka_21	ICEPC2 Sunda	1.93E+06
+pico	value_at_ka_50	ICEPC2 Sunda	8.54E+05
+spratt	columns		age_calkaBP | SeaLev_shortPC1 | SeaLev_shortPC1_err_sig | SeaLev_shortPC1_err_lo | SeaLev_shortPC1_err_up | SeaLev_longPC1 | SeaLev_longPC1_err_sig | SeaLev_longPC1_err_lo | SeaLev_longPC1_err_up
+spratt	rows		799
+spratt	age_range_ka		0.0 to 798.0
+spratt	age_steps_ka		1.0:798
+spratt	short_pc1_m_at_ka	0	8.49 (1 sigma 5.23)
+spratt	short_pc1_m_at_ka	5	0 (1 sigma 4.57)
+spratt	short_pc1_m_at_ka	14	-76.64 (1 sigma 12.35)
+spratt	short_pc1_m_at_ka	18	-113.01 (1 sigma 11.16)
+spratt	short_pc1_m_at_ka	21	-120.01 (1 sigma 9.14)
+spratt	short_pc1_m_at_ka	22	-125.82 (1 sigma 7.66)
+spratt	short_pc1_m_at_ka	24	-130 (1 sigma 4.38)
+spratt	short_pc1_m_at_ka	30	-105.78 (1 sigma 5.72)
+spratt	short_pc1_m_at_ka	40	-85.9 (1 sigma 5.74)
+spratt	short_pc1_m_at_ka	50	-68.3 (1 sigma 6.49)
+spratt	short_pc1_m_at_ka	60	-84.73 (1 sigma 8.89)
+spratt	short_pc1_m_at_ka	65	-82.72 (1 sigma 6.97)
+spratt	short_pc1_m_at_ka	80	-30.85 (1 sigma 6.98)
+spratt	short_pc1_m_at_ka	100	-19.49 (1 sigma 7.09)
+spratt	short_pc1_m_at_ka	120	2.68 (1 sigma 8.61)
+spratt	lowest_short_pc1		-130 m at 24 ka

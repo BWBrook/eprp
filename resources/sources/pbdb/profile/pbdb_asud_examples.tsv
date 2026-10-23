@@ -1,0 +1,61 @@
+field	collection_no	pbdb_name	pbdb_max_min_ma	asud_name	asud_state	asud_older_younger_ma	gap_myr
+formation	35273	Allaru Mudstone	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	47058	Allaru Mudstone	106.3-93.9	Allaru Mudstone	NSW, NT, QLD, SA	45-44	48.9
+formation	60757	Allaru Mudstone	113.2-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	62551	Allaru Mudstone	106.3-93.9	Allaru Mudstone	NSW, NT, QLD, SA	45-44	48.9
+formation	64636	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	64808	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	64809	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	64810	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	75265	Elcho Island	508-504.5	Elcho Island Formation	NT	790-538.8	30.8
+formation	83750	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83751	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83752	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83753	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83754	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83755	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83756	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83767	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	83768	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	118316	Allaru Mudstone	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	122701	Allaru Mudstone	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	123006	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	135746	Chillagoe	2.58-0.0117	Chillagoe Formation	QLD	429.8-393.47	390.9
+formation	212876	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	212877	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+formation	219161	Rouge	56-48.07	Rouge Mudstone Member	SA	538.8-511.48	455.5
+formation	227642	Frere	1800-1600	Frere Formation	WA	1946-1891	91.0
+formation	241525	Allaru Mudstone	113.2-93.9	Allaru Mudstone	NSW, NT, QLD, SA	45-44	48.9
+formation	276132	Allaru	106.3-100.5	Allaru Mudstone	NSW, NT, QLD, SA	45-44	55.5
+geological_group	8476	Drummond	399.5-385.9	Drummond Formation	NT, QLD	1715-1662	1262.5
+geological_group	75265	Wessel	508-504.5	Wessel Group	NT	800-550	42.0
+geological_group	173502	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173503	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173504	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173505	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173506	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173507	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173508	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173509	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173510	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173511	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173512	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173513	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173514	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173515	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173516	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173517	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173518	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173519	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173520	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173521	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173522	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173523	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173524	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173525	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173526	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173527	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+geological_group	173528	Glenelg	33.9-5.333	Glenelg Suite	VIC	520-480	446.1
+member	56811	First Discovery	511.2-508	First Discovery Limestone Member	NSW	303.7-298.9	204.3
+member	197348	First Discovery Limestone	511.2-508	First Discovery Limestone Member	NSW	303.7-298.9	204.3
+member	236493	Taemas Limestone	2.58-0.774	Taemas Limestone	NSW	419.62-393.47	390.9

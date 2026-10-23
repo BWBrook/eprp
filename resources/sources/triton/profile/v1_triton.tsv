@@ -1,0 +1,188 @@
+label	metric	key	value
+v1:triton	objects		triton,triton.pres
+v1:triton	rows	triton (incl. zero abundance)	1716250
+v1:triton	rows	triton.pres	512941
+v1:triton	columns		species,rowID,orig.species,abundance,orig.abundance,abun.units,sample.depth,segment,age,age.err,age.calc,zone,zon.age,age.st,age.en,rng.age,int.age,err.int.age,mag.zone,mag.age.st,mag.age.en,mag.age,int.mag.age,err.int.mag.age,mod.age,r2,n.pts,age.model,AM.type,latitude,longitude,pal.lat,pal.long,water.depth,db.source,dbID,holeID,sampleID,reason,leg,site,hole,core,section,sample.top,sample.type,total.IDd,preservation,processing,person,date,year,source,num.ind,rel.abun,round.age,round.lat,round.pal.lat,Macro/micro,orig.st,orig.en,Zone.st,Zone.en,Zone.st.ref,Zone.en.ref,orig.ts,St.Date.reference,En.Date.reference,Speciation,Extinction,trim
+v1:triton	inc:presence_rows		503955
+v1:triton	inc:species		392
+v1:triton	inc:orig_species_names		3404
+v1:triton	inc:samples		49650
+v1:triton	inc:holes		4995
+v1:triton	inc:sites_with_numeric_site		586
+v1:triton	inc:age_min		-5.9e-05
+v1:triton	inc:age_max		65.9969416006151
+v1:triton	inc:age_na		0
+v1:triton	inc:pal_lat_na		0
+v1:triton	inc:rows_by_epoch	Pleistocene-Holocene	274823
+v1:triton	inc:rows_by_epoch	Pliocene	70555
+v1:triton	inc:rows_by_epoch	Miocene	91563
+v1:triton	inc:rows_by_epoch	Oligocene	21431
+v1:triton	inc:rows_by_epoch	Eocene	34971
+v1:triton	inc:rows_by_epoch	Paleocene	10612
+v1:triton	inc:rows_by_epoch	pre-Cenozoic	0
+v1:triton	inc:rows_by_db_source	Fentonetal2016	5094
+v1:triton	inc:rows_by_db_source	ForCenS	63983
+v1:triton	inc:rows_by_db_source	IODP	134407
+v1:triton	inc:rows_by_db_source	Lloydetal2012	1501
+v1:triton	inc:rows_by_db_source	Neptune	105239
+v1:triton	inc:rows_by_db_source	Pangaea	193731
+v1:triton	inc:samples_by_db_source	Neptune	10989
+v1:triton	inc:holes_by_db_source	Neptune	240
+v1:triton	inc:samples_by_db_source	Fentonetal2016	846
+v1:triton	inc:holes_by_db_source	Fentonetal2016	59
+v1:triton	inc:samples_by_db_source	Pangaea	19182
+v1:triton	inc:holes_by_db_source	Pangaea	406
+v1:triton	inc:samples_by_db_source	IODP	14195
+v1:triton	inc:holes_by_db_source	IODP	544
+v1:triton	inc:samples_by_db_source	Lloydetal2012	233
+v1:triton	inc:holes_by_db_source	Lloydetal2012	82
+v1:triton	inc:samples_by_db_source	ForCenS	4205
+v1:triton	inc:holes_by_db_source	ForCenS	3664
+v1:triton	inc:rows_by_age_calc	Interp	43785
+v1:triton	inc:rows_by_age_calc	Magneto	22528
+v1:triton	inc:rows_by_age_calc	Model	99305
+v1:triton	inc:rows_by_age_calc	Orig	307847
+v1:triton	inc:rows_by_age_calc	Zone	30490
+v1:triton	inc:rows_by_abun_units	Relative abundance	178076
+v1:triton	inc:rows_by_abun_units	Count	47759
+v1:triton	inc:rows_by_abun_units	Number per gram	2519
+v1:triton	inc:rows_by_abun_units	Binned	222471
+v1:triton	inc:rows_by_abun_units	P/A	53130
+v1:triton	inc:rows_by_abun_units	Mixed	0
+v1:triton	inc:rows_by_sample_type	Box	6230
+v1:triton	inc:rows_by_sample_type	Box corer (BC) (URI: http://en.wikipedia.org/wiki/Box_corer)	405
+v1:triton	inc:rows_by_sample_type	Box corer (Reineck) (BCR) (URI: http://en.wikipedia.org/wiki/Box_corer)	1551
+v1:triton	inc:rows_by_sample_type	Calypso Corer (CALYPSO)	16426
+v1:triton	inc:rows_by_sample_type	Calypso Square Core System (CASQS)	2289
+v1:triton	inc:rows_by_sample_type	Composite Core (COMPCORE)	32559
+v1:triton	inc:rows_by_sample_type	CTD	24
+v1:triton	inc:rows_by_sample_type	Drill	183
+v1:triton	inc:rows_by_sample_type	Drill core	1602
+v1:triton	inc:rows_by_sample_type	Drilling Depth Method (DSF)	149
+v1:triton	inc:rows_by_sample_type	Drilling/drill rig (DRILL)	95997
+v1:triton	inc:rows_by_sample_type	Giant Box	2745
+v1:triton	inc:rows_by_sample_type	Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)	1564
+v1:triton	inc:rows_by_sample_type	Giant piston corer (Calypso) (GPC-C)	93
+v1:triton	inc:rows_by_sample_type	Giant piston corer (GPC)	1716
+v1:triton	inc:rows_by_sample_type	Grab	3778
+v1:triton	inc:rows_by_sample_type	Gravity	8568
+v1:triton	inc:rows_by_sample_type	Gravity core	2375
+v1:triton	inc:rows_by_sample_type	Gravity corer (GC)	3286
+v1:triton	inc:rows_by_sample_type	Gravity corer (Kiel type) (SL)	7932
+v1:triton	inc:rows_by_sample_type	Hydraulic piston corer	59
+v1:triton	inc:rows_by_sample_type	Kasten corer (KAL)	5349
+v1:triton	inc:rows_by_sample_type	Kasten corer RUS (KAL_R)	29
+v1:triton	inc:rows_by_sample_type	Multi	3677
+v1:triton	inc:rows_by_sample_type	MultiCorer (MUC)	2232
+v1:triton	inc:rows_by_sample_type	ODP	243353
+v1:triton	inc:rows_by_sample_type	Piston	13527
+v1:triton	inc:rows_by_sample_type	Piston corer (BGR type) (KL)	2978
+v1:triton	inc:rows_by_sample_type	Piston corer (Kiel type) (KOL)	7935
+v1:triton	inc:rows_by_sample_type	Piston corer (PC)	6891
+v1:triton	inc:rows_by_sample_type	Sediment core	314
+v1:triton	inc:rows_by_sample_type	Terrestrial	2888
+v1:triton	inc:rows_by_sample_type	Trigger	14373
+v1:triton	inc:rows_by_sample_type	NA	10878
+v1:triton	inc:rows_by_abs_latitude_band	[0,30]	284064
+v1:triton	inc:rows_by_abs_latitude_band	(30,60]	199323
+v1:triton	inc:rows_by_abs_latitude_band	(60,90]	20568
+v1:triton	inc:rows_by_hemisphere	N	333847
+v1:triton	inc:rows_by_hemisphere	S	170108
+v1:triton	inc:rows_age_zero		74199
+v1:triton	inc:rows_renamed_by_synonymy		291370
+v1:triton	all:presence_rows		512941
+v1:triton	all:species		395
+v1:triton	all:orig_species_names		3529
+v1:triton	all:samples		49820
+v1:triton	all:holes		5000
+v1:triton	all:sites_with_numeric_site		587
+v1:triton	all:age_min		-5.9e-05
+v1:triton	all:age_max		65.9969416006151
+v1:triton	all:age_na		0
+v1:triton	all:pal_lat_na		0
+v1:triton	all:rows_by_epoch	Pleistocene-Holocene	275516
+v1:triton	all:rows_by_epoch	Pliocene	71164
+v1:triton	all:rows_by_epoch	Miocene	95987
+v1:triton	all:rows_by_epoch	Oligocene	22078
+v1:triton	all:rows_by_epoch	Eocene	37238
+v1:triton	all:rows_by_epoch	Paleocene	10958
+v1:triton	all:rows_by_epoch	pre-Cenozoic	0
+v1:triton	all:rows_by_db_source	Fentonetal2016	5520
+v1:triton	all:rows_by_db_source	ForCenS	63983
+v1:triton	all:rows_by_db_source	IODP	138075
+v1:triton	all:rows_by_db_source	Lloydetal2012	1655
+v1:triton	all:rows_by_db_source	Neptune	108045
+v1:triton	all:rows_by_db_source	Pangaea	195663
+v1:triton	all:samples_by_db_source	Neptune	11073
+v1:triton	all:holes_by_db_source	Neptune	240
+v1:triton	all:samples_by_db_source	Fentonetal2016	859
+v1:triton	all:holes_by_db_source	Fentonetal2016	62
+v1:triton	all:samples_by_db_source	Pangaea	19191
+v1:triton	all:holes_by_db_source	Pangaea	406
+v1:triton	all:samples_by_db_source	IODP	14256
+v1:triton	all:holes_by_db_source	IODP	544
+v1:triton	all:samples_by_db_source	Lloydetal2012	236
+v1:triton	all:holes_by_db_source	Lloydetal2012	84
+v1:triton	all:samples_by_db_source	ForCenS	4205
+v1:triton	all:holes_by_db_source	ForCenS	3664
+v1:triton	all:rows_by_age_calc	Interp	45135
+v1:triton	all:rows_by_age_calc	Magneto	22812
+v1:triton	all:rows_by_age_calc	Model	102287
+v1:triton	all:rows_by_age_calc	Orig	311532
+v1:triton	all:rows_by_age_calc	Zone	31175
+v1:triton	all:rows_by_abun_units	Relative abundance	178380
+v1:triton	all:rows_by_abun_units	Count	48161
+v1:triton	all:rows_by_abun_units	Number per gram	2519
+v1:triton	all:rows_by_abun_units	Binned	228806
+v1:triton	all:rows_by_abun_units	P/A	55075
+v1:triton	all:rows_by_abun_units	Mixed	0
+v1:triton	all:rows_by_sample_type	Box	6230
+v1:triton	all:rows_by_sample_type	Box corer (BC) (URI: http://en.wikipedia.org/wiki/Box_corer)	405
+v1:triton	all:rows_by_sample_type	Box corer (Reineck) (BCR) (URI: http://en.wikipedia.org/wiki/Box_corer)	1551
+v1:triton	all:rows_by_sample_type	Calypso Corer (CALYPSO)	16426
+v1:triton	all:rows_by_sample_type	Calypso Square Core System (CASQS)	2289
+v1:triton	all:rows_by_sample_type	Composite Core (COMPCORE)	32564
+v1:triton	all:rows_by_sample_type	CTD	24
+v1:triton	all:rows_by_sample_type	Drill	183
+v1:triton	all:rows_by_sample_type	Drill core	1602
+v1:triton	all:rows_by_sample_type	Drilling Depth Method (DSF)	163
+v1:triton	all:rows_by_sample_type	Drilling/drill rig (DRILL)	97910
+v1:triton	all:rows_by_sample_type	Giant Box	2745
+v1:triton	all:rows_by_sample_type	Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)	1564
+v1:triton	all:rows_by_sample_type	Giant piston corer (Calypso) (GPC-C)	93
+v1:triton	all:rows_by_sample_type	Giant piston corer (GPC)	1716
+v1:triton	all:rows_by_sample_type	Grab	3778
+v1:triton	all:rows_by_sample_type	Gravity	8568
+v1:triton	all:rows_by_sample_type	Gravity core	2375
+v1:triton	all:rows_by_sample_type	Gravity corer (GC)	3286
+v1:triton	all:rows_by_sample_type	Gravity corer (Kiel type) (SL)	7932
+v1:triton	all:rows_by_sample_type	Hydraulic piston corer	59
+v1:triton	all:rows_by_sample_type	Kasten corer (KAL)	5349
+v1:triton	all:rows_by_sample_type	Kasten corer RUS (KAL_R)	29
+v1:triton	all:rows_by_sample_type	Multi	3677
+v1:triton	all:rows_by_sample_type	MultiCorer (MUC)	2232
+v1:triton	all:rows_by_sample_type	ODP	250206
+v1:triton	all:rows_by_sample_type	Piston	13527
+v1:triton	all:rows_by_sample_type	Piston corer (BGR type) (KL)	2978
+v1:triton	all:rows_by_sample_type	Piston corer (Kiel type) (KOL)	7935
+v1:triton	all:rows_by_sample_type	Piston corer (PC)	6891
+v1:triton	all:rows_by_sample_type	Sediment core	314
+v1:triton	all:rows_by_sample_type	Terrestrial	3089
+v1:triton	all:rows_by_sample_type	Trigger	14373
+v1:triton	all:rows_by_sample_type	NA	10878
+v1:triton	all:rows_by_abs_latitude_band	[0,30]	288547
+v1:triton	all:rows_by_abs_latitude_band	(30,60]	203183
+v1:triton	all:rows_by_abs_latitude_band	(60,90]	21211
+v1:triton	all:rows_by_hemisphere	N	339256
+v1:triton	all:rows_by_hemisphere	S	173685
+v1:triton	all:rows_age_zero		74237
+v1:triton	all:rows_renamed_by_synonymy		298600
+v1:triton	trim	exc	8986
+v1:triton	trim	inc	503955
+v1:triton	reason	Community analysis	208207
+v1:triton	reason	Selected species	19290
+v1:triton	reason	Proxies	0
+v1:triton	reason	Extreme event	5486
+v1:triton	reason	Biostratigraphy	151403
+v1:triton	reason	Unspecified	128555
+v1:triton	zero_abundance_rows	triton minus triton.pres	1203309

@@ -1,0 +1,6 @@
+route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
+names-status/apc	2026-10-22T0958Z_url	2026-10-22T09:59:45+00:00	CC BY 3.0 (per-row licence column of the NSL export)	1	100096139	b1e235e6497c	https://biodiversity.org.au/nsl/services/export/taxonCsv
+names-status/epbc	2026-10-22T0959Z_url	2026-10-22T09:59:46+00:00	CC BY 3.0 AU (data.gov.au package ae652011-f39e-4c6c-91b8-1dc2d2dfee8f)	3	724127	b1e235e6497c	https://data.gov.au/data/api/3/action/package_show?id=ae652011-f39e-4c6c-91b8-1dc2d2dfee8f
+names-status/avonet	AVONET-morphological-ecological-and-geographical-data-for-all-birds-Tobias-et-al-2022-Ecology-Letters-doi-https-doi.org-10.111-ele.13898_v7_16586228	2026-10-22T10:00:24+00:00	CC BY 4.0	4	40563721	b1e235e6497c	https://ndownloader.figshare.com/files/34480856
+names-status/combine	COMBINE-a-Coalesced-Mammal-Database-of-Intrinsic-and-extrinsic-traits_v4_13028255	2026-10-22T10:02:00+00:00	CC BY 4.0	18	23670406	b1e235e6497c	https://ndownloader.figshare.com/files/24886946
+names-status/phylacine	4954990	2026-10-22T10:08:58+00:00	cc-zero	11	252605672	b1e235e6497c	https://zenodo.org/api/records/4954990/files/Complete_phylogeny.nex/content

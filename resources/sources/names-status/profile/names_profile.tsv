@@ -1,0 +1,372 @@
+table	metric	key	value
+apc	rows		113869
+apc	by:taxonomicStatus	taxonomic synonym	36202
+apc	by:taxonomicStatus	accepted	34577
+apc	by:taxonomicStatus	nomenclatural synonym	24754
+apc	by:taxonomicStatus	misapplied	5254
+apc	by:taxonomicStatus	excluded	3759
+apc	by:taxonomicStatus	orthographic variant	3650
+apc	by:taxonomicStatus	pro parte misapplied	2679
+apc	by:taxonomicStatus	basionym	1284
+apc	by:taxonomicStatus	pro parte taxonomic synonym	965
+apc	by:taxonomicStatus	doubtful taxonomic synonym	546
+apc	by:taxonomicStatus	replaced synonym	65
+apc	by:taxonomicStatus	pro parte nomenclatural synonym	55
+apc	by:taxonomicStatus	doubtful misapplied	49
+apc	by:taxonomicStatus	doubtful pro parte misapplied	12
+apc	by:taxonomicStatus	doubtful pro parte taxonomic synonym	9
+apc	by:taxonomicStatus	alternative name	4
+apc	by:taxonomicStatus	unsourced pro parte misapplied	2
+apc	by:taxonomicStatus	unsourced misapplied	2
+apc	by:taxonomicStatus	doubtful nomenclatural synonym	1
+apc	by:nameType	scientific	95507
+apc	by:nameType	phrase name	11040
+apc	by:nameType	autonym	6133
+apc	by:nameType	named hybrid	614
+apc	by:nameType	hybrid formula parents known	517
+apc	by:nameType	intergrade	53
+apc	by:nameType	named hybrid autonym	4
+apc	by:nameType	cultivar	1
+apc	by:license	http://creativecommons.org/licenses/by/3.0/	113869
+apc	accepted		34577
+apc	accepted_by:taxonRank	Species	26726
+apc	accepted_by:taxonRank	Genus	3114
+apc	accepted_by:taxonRank	Subspecies	2968
+apc	accepted_by:taxonRank	Variety	1280
+apc	accepted_by:taxonRank	Family	309
+apc	accepted_by:taxonRank	Form	81
+apc	accepted_by:taxonRank	Order	65
+apc	accepted_by:taxonRank	Superorder	13
+apc	accepted_by:taxonRank	Subclass	9
+apc	accepted_by:taxonRank	Section	5
+apc	accepted_by:taxonRank	Nothovariety	4
+apc	accepted_by:taxonRank	Class	1
+apc	accepted_by:taxonRank	Kingdom	1
+apc	accepted_by:taxonRank	Division	1
+apc	accepted_species_by:nameType	scientific	24523
+apc	accepted_species_by:nameType	phrase name	1683
+apc	accepted_species_by:nameType	hybrid formula parents known	284
+apc	accepted_species_by:nameType	named hybrid	213
+apc	accepted_species_by:nameType	intergrade	23
+apc	accepted_with_taxonDistribution		34487
+apc	max_modified		2026-10-21 17:47:19.038338+11
+epbc	species_rows		2222
+epbc	by:status	Endangered	870
+epbc	by:status	Vulnerable	784
+epbc	by:status	Critically Endangered	458
+epbc	by:status	Extinct	102
+epbc	by:status	Conservation Dependent	7
+epbc	by:status	Extinct in the wild	1
+epbc	extinct_by:class	Mammalia	39
+epbc	extinct_by:class	Aves	22
+epbc	extinct_by:class	Magnoliopsida	19
+epbc	extinct_by:class	Liliopsida	7
+epbc	extinct_by:class	Polypodiatae	5
+epbc	extinct_by:class	Amphibia	4
+epbc	extinct_by:class	Lycopodopiatae	2
+epbc	extinct_by:class	Reptilia	1
+epbc	extinct_by:class	Oligochaeta	1
+epbc	extinct_by:class	Psilotatae	1
+epbc	extinct_by:class	Rhodophyceae	1
+epbc	date_extracted		2026-Aug-28
+epbc	rows_with_different_current_name		117
+epbc	place_columns		ACT;NSW;NT;QLD;SA;TAS;VIC;WA;ACI;CKI;CI;CSI;JBT;NFI;HMI;AAT;CMA
+epbc	place_column_values	-	34236
+epbc	place_column_values	Yes	3538
+epbc	status_of	Pseudomys fieldi	Vulnerable
+epbc	status_of	Pseudomys gouldii	Extinct
+epbc	community_rows		111
+epbc	extinct_mammal_entries_by_words		2 words 34; 3 words 5
+avonet	sheet_rows_below_header	Metadata	81
+avonet	sheet_rows_below_header	AVONET1_BirdLife	11009
+avonet	sheet_rows_below_header	AVONET2_eBird	10661
+avonet	sheet_rows_below_header	AVONET3_BirdTree	9993
+avonet	sheet_rows_below_header	Pigot2020_BirdTree	9993
+avonet	sheet_rows_below_header	AVONET_Raw_Data	90371
+avonet	sheet_rows_below_header	Mass_Sources	42
+avonet	sheet_rows_below_header	Data_Sources	83
+avonet	sheet_rows_below_header	Measurers	154
+avonet	sheet_rows_below_header	BirdLife-eBird crosswalk	11352
+avonet	sheet_rows_below_header	BirdLife–BirdTree crosswalk	11291
+avonet	raw_rows		90371
+avonet	raw_by:Data.type	1	75843
+avonet	raw_by:Data.type	2	14177
+avonet	raw_by:Data.type	None	351
+avonet	raw_gapspecies_rows		351
+avonet	raw_with_Country_WRI		77245
+avonet	raw_Country_WRI_Australia		4343
+avonet	raw_with_Country		0
+combine	rows		6263
+combine	columns		60
+combine	iucn2020_not_recognised		273
+combine	phylacine_not_recognised		160
+combine	distinct_phylacine_binomials		5831
+combine	phylacine_species_in_several_rows		163
+combine	max_rows_per_phylacine_species		10
+combine	by:biogeographical_realm	Neotropical	1544
+combine	by:biogeographical_realm	Afrotropical	1282
+combine	by:biogeographical_realm	Indomalayan	799
+combine	by:biogeographical_realm	Australasian	712
+combine	by:biogeographical_realm	Palearctic	592
+combine	by:biogeographical_realm	NA	514
+combine	by:biogeographical_realm	Nearctic	303
+combine	by:biogeographical_realm	Indomalayan, Palearctic	159
+combine	by:biogeographical_realm	Nearctic, Neotropical	124
+combine	by:biogeographical_realm	Afrotropical, Palearctic	54
+combine	by:biogeographical_realm	Nearctic, Palearctic	42
+combine	by:biogeographical_realm	Australasian, Indomalayan	38
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan, Nearctic, Neotropical, Oceanian, Palearctic	15
+combine	by:biogeographical_realm	Afrotropical, Indomalayan, Palearctic	12
+combine	by:biogeographical_realm	Oceanian	11
+combine	by:biogeographical_realm	Afrotropical, Antarctic, Australasian, Neotropical	9
+combine	by:biogeographical_realm	Afrotropical, Antarctic, Australasian, Indomalayan, Nearctic, Neotropical, Oceanian, Palearctic	6
+combine	by:biogeographical_realm	Indomalayan, Nearctic, Neotropical, Palearctic	3
+combine	by:biogeographical_realm	Australasian, Oceanian	3
+combine	by:biogeographical_realm	Afrotropical, Australasian, Neotropical	3
+combine	by:biogeographical_realm	Antarctic, Australasian	2
+combine	by:biogeographical_realm	Antarctic	2
+combine	by:biogeographical_realm	Afrotropical, Antarctic, Australasian, Nearctic, Neotropical, Oceanian, Palearctic	2
+combine	by:biogeographical_realm	Australasian, Indomalayan, Palearctic	2
+combine	by:biogeographical_realm	Antarctic, Neotropical	2
+combine	by:biogeographical_realm	Afrotropical, Antarctic, Australasian, Neotropical, Oceanian	2
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan	2
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan, Nearctic, Neotropical, Oceanian	2
+combine	by:biogeographical_realm	Antarctic, Australasian, Neotropical	2
+combine	by:biogeographical_realm	Afrotropical, Nearctic, Neotropical, Palearctic	2
+combine	by:biogeographical_realm	Afrotropical, Indomalayan	2
+combine	by:biogeographical_realm	Afrotropical, Australasian	1
+combine	by:biogeographical_realm	Afrotropical, Antarctic, Australasian, Neotropical, Oceanian, Palearctic	1
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan, Oceanian, Palearctic	1
+combine	by:biogeographical_realm	Afrotropical, Australasian, Neotropical, Oceanian	1
+combine	by:biogeographical_realm	Afrotropical, Neotropical, Oceanian	1
+combine	by:biogeographical_realm	Afrotropical, Australasian, Nearctic, Neotropical, Palearctic	1
+combine	by:biogeographical_realm	Australasian, Neotropical, Oceanian	1
+combine	by:biogeographical_realm	Nearctic, Oceanian	1
+combine	by:biogeographical_realm	Afrotropical, Nearctic, Palearctic	1
+combine	by:biogeographical_realm	Afrotropical, Indomalayan, Oceanian, Palearctic	1
+combine	by:biogeographical_realm	Indomalayan, Oceanian	1
+combine	by:biogeographical_realm	Afrotropical, Nearctic, Neotropical	1
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan, Palearctic	1
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan, Neotropical, Oceanian	1
+combine	by:biogeographical_realm	Indomalayan, Nearctic, Palearctic	1
+combine	by:biogeographical_realm	Afrotropical, Australasian, Indomalayan, Nearctic, Palearctic	1
+phylacine	rows		5831
+phylacine	by:IUCN.Status.1.2	LC	3157
+phylacine	by:IUCN.Status.1.2	DD	777
+phylacine	by:IUCN.Status.1.2	VU	525
+phylacine	by:IUCN.Status.1.2	EN	464
+phylacine	by:IUCN.Status.1.2	NT	350
+phylacine	by:IUCN.Status.1.2	EP	270
+phylacine	by:IUCN.Status.1.2	CR	204
+phylacine	by:IUCN.Status.1.2	EX	82
+phylacine	by:IUCN.Status.1.2	EW	2
+phylacine	names_not_accepted		48
+combine	australasian_rows		809
+combine	australasian_iucn2020_species		808
+combine	australasian_phylacine_species		785
+combine	australasian_phylacine_species_in_phylacine		785
+combine	australasian_no_phylacine_name	Coccymys kirrhos	
+combine	australasian_no_phylacine_name	Gracilimus radix	
+combine	australasian_no_phylacine_name	Halmaheramys bokimekot	
+combine	australasian_no_phylacine_name	Hyorhinomys stuempkei	
+combine	australasian_no_phylacine_name	Leptomys arfakensis	
+combine	australasian_no_phylacine_name	Leptomys paulus	
+combine	australasian_no_phylacine_name	Margaretamys christinae	
+combine	australasian_no_phylacine_name	Mirzamys norahae	
+combine	australasian_no_phylacine_name	Pseudomys auritus	
+combine	australasian_no_phylacine_name	Rattus detentus	
+combine	australasian_no_phylacine_name	Waiomys mamasae	
+combine	iucn2020_not_recognised_that_are_phylacine_EP		268
+combine	iucn2020_not_recognised_not_EP	Cheirogaleus minusculus	
+combine	iucn2020_not_recognised_not_EP	Chelemys delfini	
+combine	iucn2020_not_recognised_not_EP	Homo sapiens	
+combine	iucn2020_not_recognised_not_EP	Mus orangiae	
+combine	iucn2020_not_recognised_not_EP	Sorex arunchi	
+combine	phylacine_EP_rows		270
+combine	phylacine_EP_rows_realm_NA		270
+combine	phylacine_EP_rows_with_adult_mass		257
+combine	phylacine_EP_rows_by:nonmissing_traits	4	215
+combine	phylacine_EP_rows_by:nonmissing_traits	1	24
+combine	phylacine_EP_rows_by:nonmissing_traits	3	12
+combine	phylacine_EP_rows_by:nonmissing_traits	8	7
+combine	phylacine_EP_rows_by:nonmissing_traits	16	3
+combine	phylacine_EP_rows_by:nonmissing_traits	5	2
+combine	phylacine_EP_rows_by:nonmissing_traits	10	2
+combine	phylacine_EP_rows_by:nonmissing_traits	6	2
+combine	phylacine_EP_rows_by:nonmissing_traits	38	1
+combine	phylacine_EP_rows_by:nonmissing_traits	9	1
+combine	phylacine_EP_rows_by:nonmissing_traits	25	1
+cross	epbc_extinct_mammal_binomials		34
+cross	epbc_extinct_mammal_unmatched	Chaeropus yirratji	no similar name
+cross	epbc_extinct_mammal_unmatched_genus_in_phylacine	Chaeropus yirratji	yes
+cross	epbc_extinct_mammal_unmatched	Notamacropus greyi	Macropus_greyi EX
+cross	epbc_extinct_mammal_unmatched_genus_in_phylacine	Notamacropus greyi	no
+cross	epbc_extinct_mammal_living_in_phylacine	Nyctophilus howensis	Nyctophilus_howensis CR
+cross	epbc_extinct_mammal_unmatched	Perameles fasciata	no similar name
+cross	epbc_extinct_mammal_unmatched_genus_in_phylacine	Perameles fasciata	yes
+cross	epbc_extinct_mammal_unmatched	Perameles myosuros	no similar name
+cross	epbc_extinct_mammal_unmatched_genus_in_phylacine	Perameles myosuros	yes
+cross	epbc_extinct_mammal_unmatched	Perameles notina	no similar name
+cross	epbc_extinct_mammal_unmatched_genus_in_phylacine	Perameles notina	yes
+cross	epbc_extinct_mammal_unmatched	Perameles papillon	no similar name
+cross	epbc_extinct_mammal_unmatched_genus_in_phylacine	Perameles papillon	yes
+cross	epbc_extinct_mammal_living_in_phylacine	Pipistrellus murrayi	Pipistrellus_murrayi CR
+cross	epbc_extinct_mammal_not_accepted_by_phylacine	Pseudomys auritus	
+cross	epbc_extinct_mammal_by:match	exact	27
+cross	epbc_extinct_mammal_by:match	unmatched	6
+cross	epbc_extinct_mammal_by:match	listed as not accepted	1
+cross	epbc_extinct_mammal_matched_by:IUCN.Status.1.2	EX	25
+cross	epbc_extinct_mammal_matched_by:IUCN.Status.1.2	CR	2
+cross	fossahul_rows_by_status		Extant 6060; ? 3035; Extinct 2480; Extinct/Extant 280; Exinct 17; (blank) 1
+cross	fossahul_extinct_mammal_rows		1970
+cross	fossahul_extinct_mammal_rows_excluded_by_name_filter		439
+cross	fossahul_extinct_mammal_excluded_names	Diprotodon species indet.	180
+cross	fossahul_extinct_mammal_excluded_names	Protemnodon species indet.	50
+cross	fossahul_extinct_mammal_excluded_names	gen indet sp indet	34
+cross	fossahul_extinct_mammal_excluded_names	Protemnodon sp indet	29
+cross	fossahul_extinct_mammal_excluded_names	Macropus giganteus titan	17
+cross	fossahul_extinct_mammal_excluded_names	Sthenurus sp indet	17
+cross	fossahul_extinct_mammal_excluded_names	Procoptodon species indet.	12
+cross	fossahul_extinct_mammal_excluded_names	Thylacinus species indet.	12
+cross	fossahul_extinct_mammal_excluded_names	Simosthenurus species indet.	11
+cross	fossahul_extinct_mammal_excluded_names	Genus indet. species indet.	10
+cross	fossahul_extinct_mammal_excluded_names	Palorchestes species indet.	10
+cross	fossahul_extinct_mammal_excluded_names	Zygomaturus species indet.	10
+cross	fossahul_extinct_mammal_excluded_names	Thylacoleo species indet.	8
+cross	fossahul_extinct_mammal_excluded_names	Macropus sp nov	5
+cross	fossahul_extinct_mammal_excluded_names	Nototherium species indet.	5
+cross	fossahul_extinct_mammal_excluded_names	Propleopus sp indet	5
+cross	fossahul_extinct_mammal_excluded_names	Congruus species indet.	4
+cross	fossahul_extinct_mammal_excluded_names	Propleopus species indet.	4
+cross	fossahul_extinct_mammal_excluded_names	Bohra species indet.	3
+cross	fossahul_extinct_mammal_excluded_names	Phascolarctos species indet.	2
+cross	fossahul_extinct_mammal_excluded_names	Pseudokoala species indet.	2
+cross	fossahul_extinct_mammal_excluded_names	Sthenurus species indet.	2
+cross	fossahul_extinct_mammal_excluded_names	Potorous sp indet	2
+cross	fossahul_extinct_mammal_excluded_names	Procoptodon sp indet	2
+cross	fossahul_extinct_mammal_excluded_names	Baringa species indet.	1
+cross	fossahul_extinct_mammal_excluded_names	Megalibgwilia species indet.	1
+cross	fossahul_extinct_mammal_excluded_names	Prionotemnus species indet.	1
+cross	fossahul_extinct_mammal_mixed_status	Dasyurus viverrinus	Extant 89; Extinct 5
+cross	fossahul_extinct_mammal_mixed_status	Dendrolagus goodfellowi	Extinct 18; Extant 10
+cross	fossahul_extinct_mammal_mixed_status	Macropus dorsalis	Extant 7; Extinct 2
+cross	fossahul_extinct_mammal_mixed_status	Onychogalea lunata	Extinct 12; Extant 1
+cross	fossahul_extinct_mammal_mixed_status	Protemnodon anak	Extinct 64; Extant 2
+cross	fossahul_extinct_mammal_mixed_status	Protemnodon brehus	Extinct 54; Extant 1
+cross	fossahul_extinct_mammal_mixed_status	Pseudomys auritus	Extinct 19; ? 18
+cross	fossahul_extinct_mammal_mixed_status	Pseudomys gouldii	Extinct 19; ? 3
+cross	fossahul_extinct_mammal_mixed_status	Sarcophilus laniarius	Extinct 38; Extant 2
+cross	fossahul_extinct_mammal_binomials		64
+cross	fossahul_extinct_mammal_unmatched	Antechinus puteus	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Antechinus puteus	yes
+cross	fossahul_extinct_mammal_unmatched	Bohra illuminata	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Bohra illuminata	no
+cross	fossahul_extinct_mammal_unmatched	Bohra nullarbora	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Bohra nullarbora	no
+cross	fossahul_extinct_mammal_unmatched	Congruus kitcheneri	Wallabia_kitcheneri EP
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Congruus kitcheneri	no
+cross	fossahul_extinct_mammal_living_in_phylacine	Dasyurus viverrinus	Dasyurus_viverrinus EN
+cross	fossahul_extinct_mammal_living_in_phylacine	Dendrolagus goodfellowi	Dendrolagus_goodfellowi EN
+cross	fossahul_extinct_mammal_unmatched	Dendrolagus noibano	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Dendrolagus noibano	yes
+cross	fossahul_extinct_mammal_living_in_phylacine	Macropus dorsalis	Macropus_dorsalis LC
+cross	fossahul_extinct_mammal_unmatched	Macropus siva	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Macropus siva	yes
+cross	fossahul_extinct_mammal_unmatched	Macropus thor	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Macropus thor	yes
+cross	fossahul_extinct_mammal_unmatched	Nototherium inerme	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Nototherium inerme	no
+cross	fossahul_extinct_mammal_unmatched	Nototherium trilobus	Zygomaturus_trilobus EP
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Nototherium trilobus	no
+cross	fossahul_extinct_mammal_unmatched	Palorchestes azael	Palorchestes_azeal EP
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Palorchestes azael	yes
+cross	fossahul_extinct_mammal_unmatched	Palorchestes parvus	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Palorchestes parvus	yes
+cross	fossahul_extinct_mammal_unmatched	Palorchestes pickeringi	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Palorchestes pickeringi	yes
+cross	fossahul_extinct_mammal_unmatched	Perameles sobbei	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Perameles sobbei	yes
+cross	fossahul_extinct_mammal_unmatched	Phascolarctos stirtoni	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Phascolarctos stirtoni	yes
+cross	fossahul_extinct_mammal_unmatched	Protemnodon devisi	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Protemnodon devisi	yes
+cross	fossahul_extinct_mammal_not_accepted_by_phylacine	Pseudomys auritus	
+cross	fossahul_extinct_mammal_unmatched	Ramsayia magna	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Ramsayia magna	no
+cross	fossahul_extinct_mammal_unmatched	Sarcophilus laniarius	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Sarcophilus laniarius	yes
+cross	fossahul_extinct_mammal_unmatched	Simosthenurus baileyi	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Simosthenurus baileyi	yes
+cross	fossahul_extinct_mammal_unmatched	Thylacoleo hilli	no similar name
+cross	fossahul_extinct_mammal_unmatched_genus_in_phylacine	Thylacoleo hilli	yes
+cross	fossahul_extinct_mammal_by:match	exact	44
+cross	fossahul_extinct_mammal_by:match	unmatched	19
+cross	fossahul_extinct_mammal_by:match	listed as not accepted	1
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	EP	33
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	EX	8
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	EN	2
+cross	fossahul_extinct_mammal_matched_by:IUCN.Status.1.2	LC	1
+cross	fossahul_extinct_mammal_dated_within_130ka	Antechinus puteus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Bohra illuminata	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Bohra nullarbora	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Borungaboodie hatcheri	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Congruus kitcheneri	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Conilurus albipes	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Dasyurus viverrinus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Dendrolagus goodfellowi	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Dendrolagus noibano	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Diprotodon optatum	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Lagorchestes leporides	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Macropus dorsalis	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Macropus ferragus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Macropus greyi	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Macropus pearsoni	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Macropus siva	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Macropus thor	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Maokopia ronaldi	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Megalibgwilia ramsayi	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Metasthenurus newtonae	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Nototherium inerme	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Nototherium trilobus	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Onychogalea lunata	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Palorchestes azael	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Palorchestes parvus	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Palorchestes pickeringi	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Perameles eremiana	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Perameles sobbei	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Phascolarctos stirtoni	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Phascolonus gigas	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Potorous platyops	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Procoptodon browneorum	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Procoptodon gilli	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Procoptodon goliah	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Procoptodon oreas	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Procoptodon rapha	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Propleopus oscillans	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon anak	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon brehus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon devisi	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon hopei	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon nombe	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon roechus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Protemnodon tumbuna	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Pseudomys auritus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Pseudomys gouldii	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Ramsayia magna	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Sarcophilus laniarius	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Simosthenurus baileyi	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Simosthenurus maddocki	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Simosthenurus occidentalis	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Simosthenurus pales	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Sthenurus andersoni	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Sthenurus atlas	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Sthenurus stirlingi	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Sthenurus tindalei	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Thylacinus cynocephalus	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Thylacoleo carnifex	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Thylacoleo hilli	no
+cross	fossahul_extinct_mammal_dated_within_130ka	Thylogale christenseni	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Troposodon minor	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Warendja wakefieldi	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Zaglossus hacketti	yes
+cross	fossahul_extinct_mammal_dated_within_130ka	Zygomaturus trilobus	yes

@@ -1,0 +1,48 @@
+label	metric	key	value
+v4:no_dup	objects		triton.no.dup,triton.no.dup.pres
+v4:no_dup	rows	triton (incl. zero abundance)	1730637
+v4:no_dup	rows	triton.pres	514243
+v4:no_dup	columns		species,abundance,abun.units,triton.SID,sample.depth,age,latitude,longitude,pal.lat,pal.long,water.depth,reason,total.IDd,preservation,processing,num.ind,Macro/micro,Speciation,Extinction,no.samples,sep.sampleID,sep.abun.units,round.age,sep.abun,rel.abun
+v4:no_dup	all:presence_rows		514243
+v4:no_dup	all:species		395
+v4:no_dup	all:orig_species_names		0
+v4:no_dup	all:samples		47900
+v4:no_dup	all:holes		0
+v4:no_dup	all:sites_with_numeric_site		0
+v4:no_dup	all:age_min		-5.9e-05
+v4:no_dup	all:age_max		65.997
+v4:no_dup	all:age_na		0
+v4:no_dup	all:pal_lat_na		0
+v4:no_dup	all:rows_by_epoch	Pleistocene-Holocene	269002
+v4:no_dup	all:rows_by_epoch	Pliocene	71974
+v4:no_dup	all:rows_by_epoch	Miocene	98806
+v4:no_dup	all:rows_by_epoch	Oligocene	22788
+v4:no_dup	all:rows_by_epoch	Eocene	39739
+v4:no_dup	all:rows_by_epoch	Paleocene	11934
+v4:no_dup	all:rows_by_epoch	pre-Cenozoic	0
+v4:no_dup	all:rows_by_age_calc	NA	514243
+v4:no_dup	all:rows_by_abun_units	Binned	235381
+v4:no_dup	all:rows_by_abun_units	Count	42157
+v4:no_dup	all:rows_by_abun_units	Number per gram	3411
+v4:no_dup	all:rows_by_abun_units	P/A	56258
+v4:no_dup	all:rows_by_abun_units	Relative abundance	177036
+v4:no_dup	all:rows_by_sample_type	NA	514243
+v4:no_dup	all:rows_by_abs_latitude_band	[0,30]	288713
+v4:no_dup	all:rows_by_abs_latitude_band	(30,60]	204111
+v4:no_dup	all:rows_by_abs_latitude_band	(60,90]	21419
+v4:no_dup	all:rows_by_hemisphere	N	343683
+v4:no_dup	all:rows_by_hemisphere	S	170560
+v4:no_dup	all:rows_age_zero		62101
+v4:no_dup	all:rows_renamed_by_synonymy		0
+v4:no_dup	trim	NA	514243
+v4:no_dup	reason	Biostratigraphy	153774
+v4:no_dup	reason	Biostratigraphy, Unspecified	6996
+v4:no_dup	reason	Community analysis	201661
+v4:no_dup	reason	Community analysis, Unspecified	43
+v4:no_dup	reason	Extreme event	5486
+v4:no_dup	reason	Selected species	20127
+v4:no_dup	reason	Selected species, Biostratigraphy	360
+v4:no_dup	reason	Selected species, Biostratigraphy, Unspecified	324
+v4:no_dup	reason	Selected species, Unspecified	2443
+v4:no_dup	reason	Unspecified	123029
+v4:no_dup	zero_abundance_rows	triton minus triton.pres	1216394

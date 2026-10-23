@@ -1,0 +1,438 @@
+table	metric	key	value
+inputs	stratdat_snapshot		2026-10-22T0856Z_wfs
+inputs	asud_snapshot		2026-10-22T0604Z_wfs
+inputs	asud_rows		18357
+inputs	asud_names_shared_by_several_units		17
+picks	rows		50128
+picks	distinct_stratdat_no		50128
+picks	boreholes		1636
+picks	distinct_zone_names_nonblank		1373
+picks	picks_with_blank_zone_name		5722 of 50128 (11.4%)
+picks	blank_zone_name_picks_with_an_age		0
+picks	named_zone_picks_without_an_age		0
+picks	by:ONSHORE_OFFSHORE	offshore	45528
+picks	by:ONSHORE_OFFSHORE	onshore	4600
+picks	by:STATE	Western Australia	27651
+picks	by:STATE	Ashmore and Cartier Islands	8869
+picks	by:STATE	Victoria	7332
+picks	by:STATE	Northern Territory	2480
+picks	by:STATE	South Australia	1556
+picks	by:STATE	Tasmania	1238
+picks	by:STATE	Queensland	997
+picks	by:STATE	New South Wales	5
+picks	by:CLASS	dinocyst	11916
+picks	by:CLASS	planktonic foraminifera	7828
+picks	by:CLASS	spore pollen	5221
+picks	by:CLASS	spore pollen subzone	4507
+picks	by:CLASS	nannoplankton	3962
+picks	by:CLASS		3309
+picks	by:CLASS	time slice	2936
+picks	by:CLASS	dinocyst subzone	2894
+picks	by:CLASS	sequence	2738
+picks	by:CLASS	stage/age	826
+picks	by:CLASS	benthic foraminifera	672
+picks	by:CLASS	series/epoch	657
+picks	by:CLASS	nannoplankton subzone	524
+picks	by:CLASS	system/period	370
+picks	by:CLASS	sequence boundary	271
+picks	by:HIGH_LOW	H	20966
+picks	by:HIGH_LOW	L	19964
+picks	by:HIGH_LOW	M	9071
+picks	by:HIGH_LOW	B	65
+picks	by:HIGH_LOW	T	56
+picks	by:HIGH_LOW		6
+picks	by:PICK_DESC	PALAEO	26823
+picks	by:PICK_DESC	SNGL DEPTH	9441
+picks	by:PICK_DESC	SEQ BD/INT	3115
+picks	by:PICK_DESC	TIMESLICE	2999
+picks	by:PICK_DESC	MIN AGE	2255
+picks	by:PICK_DESC	MAX AGE	1646
+picks	by:PICK_DESC	UNCON FLT	1522
+picks	by:PICK_DESC	FORMATION	1377
+picks	by:PICK_DESC	WELL	417
+picks	by:PICK_DESC	LOG PICK	325
+picks	by:PICK_DESC	LOG PALAEO	104
+picks	by:PICK_DESC	ALL DATA	92
+picks	by:PICK_DESC		6
+picks	by:PICK_DESC	CONDENSED	3
+picks	by:PICK_DESC	KEY HORIZ	2
+picks	by:PREFERRED_ALTERNATE	P	49045
+picks	by:PREFERRED_ALTERNATE	A	1082
+picks	by:PREFERRED_ALTERNATE		1
+picks	by:SOURCE_REF	Original Esso data set	8152
+picks	by:SOURCE_REF	Ryan, D.J. et al., 2002, Browse Basin Composite Well Log Plots. (GeoCat No.40115)	1070
+picks	by:SOURCE_REF	Kennard, J.M., Colwell, J.B. and others (in prep 1998/99). Vulcan Sub-Basin Well Folio. AGSO Canberra.	1037
+picks	by:SOURCE_REF	AGSO Record No. 1993/31 - Dampier Sub-basin Module, Spencer.L., et al 1993	894
+picks	by:SOURCE_REF	AGSO Record No. 1994/19 Barrow Exmouth Sub-basins Module, Spencer.L., et al 1994	876
+picks	by:SOURCE_REF	Spencer, L.K., et al 1995 Beagle, Bedout, Offshore Canning and Rowley Sub-basins Module. AGSO Record 1995/03.	757
+picks	by:SOURCE_REF	Spencer et al.,1996, Exmouth and Outer Rankin Platform Module. AGSO record 1995/80.	514
+picks	by:SOURCE_REF	Kennard, J.M. 1996. AGSO Petrel Sub-basin Study 1995-1996 Well Folio, AGSO, Canberra.	445
+picks	by:SOURCE_REF	Kennard, J.M., Deighton, I., Edwards, D.S., Boreham, C.J., 2002. Petrel Sub-basin geohistory modelling CD-ROM. AGSO-Geoscience Australia, Record.	309
+picks	by:SOURCE_REF	McConachie, B., et al (1995) AGSO Record No. 1995/7.	249
+picks	by:SOURCE_REF	Morgan data sheet	234
+picks	by:SOURCE_REF	Morgan, R., 1985.  Palynology review of previous oil drilling, Bass Basin, Australia.	198
+picks	by:SOURCE_REF	Partridge, A.D., 1996 (May). New interpretations of STRATDAT datums from palaeontological range charts available as Basic Data on open file.	192
+picks	by:SOURCE_REF	Partridge, A.D., 1996b. Interpretation of STRATDAT datums from palaeontological range charts available as Basic Data on open file.	171
+picks	by:SOURCE_REF	Morgan, R., July 1999. Palynology Review of the Pre-Tertiary of the Bight-Duntroon Basins for Primary Industries and Resources South Australia.	167
+picks	by:BOREHOLE_TYPE	Petroleum	49841
+picks	by:BOREHOLE_TYPE	Stratigraphic	284
+picks	by:BOREHOLE_TYPE	Groundwater	3
+picks	by:ACTIVE	A	50128
+picks	by:OVERALL_ACCESS	O	50128
+picks	by:DEPTH_REF_TYPE	rotary table	28516
+picks	by:DEPTH_REF_TYPE	kelly bushing	19218
+picks	by:DEPTH_REF_TYPE	drill floor	1381
+picks	by:DEPTH_REF_TYPE	rig floor	516
+picks	by:DEPTH_REF_TYPE	ground surface	358
+picks	by:DEPTH_REF_TYPE	unknown	102
+picks	by:DEPTH_REF_TYPE	seafloor guide base	37
+picks	by:DEPTH_REF_POINT_ELEV_UOM	m	50113
+picks	by:DEPTH_REF_POINT_ELEV_UOM	ft	15
+picks	picks_with_collar_coordinates		50128 of 50128 (100.0%)
+picks	picks_with_sample_depth		50128 of 50128 (100.0%)
+picks	picks_with_SOURCE_REF		50079 of 50128 (99.9%)
+picks	picks_with_CONFIDENCE_CODE		48932 of 50128 (97.6%)
+picks	picks_with_SAMPLENO		0 of 50128 (0.0%)
+picks	BOREHOLE_PID_ends_in_a_number		50128 of 50128 (100.0%)
+picks	SAMPLE_PID_ends_in_a_number		0 of 50128 (0.0%)
+picks	SAMPLE_PID_distinct_values		{'http://pid.geoscience.gov.au/sample/AU': 50128}
+picks	high_or_low_datums_H_plus_L		40930 of 50128 (81.7%)
+picks	by:CONFIDENCE_SAMPLE_TYPE	Side Wall Core	27519
+picks	by:CONFIDENCE_SAMPLE_TYPE	Ditch Cut	10358
+picks	by:CONFIDENCE_SAMPLE_TYPE	Horizon	8957
+picks	by:CONFIDENCE_SAMPLE_TYPE	(blank)	1209
+picks	by:CONFIDENCE_SAMPLE_TYPE	Core	1097
+picks	by:CONFIDENCE_SAMPLE_TYPE	Misc	699
+picks	by:CONFIDENCE_SAMPLE_TYPE	C/SWC	244
+picks	by:CONFIDENCE_SAMPLE_TYPE	Side Wall Core?	24
+picks	by:CONFIDENCE_SAMPLE_TYPE	Junk	13
+picks	by:CONFIDENCE_SAMPLE_TYPE	Coal	5
+picks	by:CONFIDENCE_SAMPLE_TYPE	?	2
+picks	by:CONFIDENCE_SAMPLE_TYPE	Ditch CutD	1
+picks	by:CONFIDENCE_GRADE	3	20150
+picks	by:CONFIDENCE_GRADE	2	13934
+picks	by:CONFIDENCE_GRADE	4	6316
+picks	by:CONFIDENCE_GRADE	1	5364
+picks	by:CONFIDENCE_GRADE	5	2324
+picks	by:CONFIDENCE_GRADE	(none)	1614
+picks	by:CONFIDENCE_GRADE	9	232
+picks	by:CONFIDENCE_GRADE	6	128
+picks	by:CONFIDENCE_GRADE	7	61
+picks	by:CONFIDENCE_GRADE	8	5
+basins	boreholes_with_several_province_strings		0
+basins	picks_by_basin	Northern Carnarvon Basin	18192
+basins	picks_by_basin	Bonaparte Basin	11602
+basins	picks_by_basin	Gippsland Basin	5913
+basins	picks_by_basin	Browse Basin	5530
+basins	picks_by_basin	Otway Basin	1952
+basins	picks_by_basin	Eromanga Basin	1500
+basins	picks_by_basin	Bass Basin	995
+basins	picks_by_basin	Perth Basin	894
+basins	picks_by_basin	Roebuck Basin	775
+basins	picks_by_basin	Eucla Basin	765
+basins	picks_by_basin	Canning Basin	710
+basins	picks_by_basin	Money Shoal Basin	444
+basins	picks_by_basin	Amadeus Basin	267
+basins	picks_by_basin	Torquay Sub-basin	101
+basins	picks_by_basin	Pedirka Basin	66
+basins	picks_by_basin	McArthur Basin	63
+basins	picks_by_basin	Dulcie Syncline	57
+basins	picks_by_basin	Southern Carnarvon Basin	48
+basins	picks_by_basin	Adavale Basin	39
+basins	picks_by_basin	Toko Syncline	32
+basins	boreholes_by_basin	Northern Carnarvon Basin	448
+basins	boreholes_by_basin	Bonaparte Basin	308
+basins	boreholes_by_basin	Gippsland Basin	244
+basins	boreholes_by_basin	Eromanga Basin	190
+basins	boreholes_by_basin	Browse Basin	106
+basins	boreholes_by_basin	Otway Basin	63
+basins	boreholes_by_basin	Canning Basin	63
+basins	boreholes_by_basin	Perth Basin	48
+basins	boreholes_by_basin	Amadeus Basin	35
+basins	boreholes_by_basin	Bass Basin	30
+basins	boreholes_by_basin	McArthur Basin	19
+basins	boreholes_by_basin	Eucla Basin	16
+basins	boreholes_by_basin	Roebuck Basin	10
+basins	boreholes_by_basin	Money Shoal Basin	9
+basins	boreholes_by_basin	Southern Carnarvon Basin	6
+basins	boreholes_by_basin	Pedirka Basin	5
+basins	boreholes_by_basin	Georgina Basin	5
+basins	boreholes_by_basin	Dulcie Syncline	4
+basins	boreholes_by_basin	Carpentaria Basin	4
+basins	boreholes_by_basin	Toko Syncline	4
+basins	picks_by_basin|second_token	Northern Carnarvon Basin | Dampier Sub-basin	5633
+basins	picks_by_basin|second_token	Bonaparte Basin | Vulcan Sub-basin	5499
+basins	picks_by_basin|second_token	Browse Basin | Caswell Sub-basin	4248
+basins	picks_by_basin|second_token	Northern Carnarvon Basin | Barrow Sub-basin	3936
+basins	picks_by_basin|second_token	Gippsland Basin | (none)	2554
+basins	picks_by_basin|second_token	Northern Carnarvon Basin | Rankin Platform	2514
+basins	picks_by_basin|second_token	Northern Carnarvon Basin | Exmouth Plateau	2352
+basins	picks_by_basin|second_token	Bonaparte Basin | Petrel Sub-basin	2121
+basins	picks_by_basin|second_token	Northern Carnarvon Basin | Exmouth Sub-basin	1990
+basins	picks_by_basin|second_token	Otway Basin | Inner Otway Basin	1952
+basins	picks_by_basin|second_token	Gippsland Basin | Central Deep	1932
+basins	picks_by_basin|second_token	Northern Carnarvon Basin | Beagle Sub-basin	1624
+basins	picks_by_basin|second_token	Eromanga Basin | Cooper Basin	1392
+basins	picks_by_basin|second_token	Bonaparte Basin | Londonderry High	1318
+basins	picks_by_basin|second_token	Bass Basin | Cape Wickham Sub-basin	914
+basins	picks_by_basin|second_token	Bonaparte Basin | Ashmore Platform	899
+basins	picks_by_basin|second_token	Browse Basin | Barcoo Sub-basin	882
+basins	picks_by_basin|second_token	Bonaparte Basin | Laminaria High	594
+basins	picks_by_basin|second_token	Roebuck Basin | Bedout Sub-basin	582
+basins	picks_by_basin|second_token	Perth Basin | Vlaming Sub-basin	476
+basins	picks_by_basin|second_token	Gippsland Basin | Southern Terrace	458
+basins	picks_by_basin|second_token	Money Shoal Basin | Arafura Basin	444
+basins	picks_by_basin|second_token	Eucla Basin | Duntroon Sub-basin	438
+basins	picks_by_basin|second_token	Gippsland Basin | Northern Terrace	426
+basins	picks_by_basin|second_token	Canning Basin | Fitzroy Trough	395
+basins	picks_by_basin|second_token	Gippsland Basin | Seaspray Depression	368
+basins	picks_by_basin|second_token	Bonaparte Basin | Nancar Trough	349
+basins	picks_by_basin|second_token	Bonaparte Basin | Calder Graben	292
+basins	picks_by_basin|second_token	Browse Basin | Yampi Shelf	290
+basins	picks_by_basin|second_token	Eucla Basin | (none)	285
+basins	boreholes_by_basin|second_token	Eromanga Basin | Cooper Basin	179
+basins	boreholes_by_basin|second_token	Bonaparte Basin | Vulcan Sub-basin	159
+basins	boreholes_by_basin|second_token	Northern Carnarvon Basin | Dampier Sub-basin	137
+basins	boreholes_by_basin|second_token	Northern Carnarvon Basin | Barrow Sub-basin	121
+basins	boreholes_by_basin|second_token	Gippsland Basin | (none)	102
+basins	boreholes_by_basin|second_token	Gippsland Basin | Central Deep	72
+basins	boreholes_by_basin|second_token	Browse Basin | Caswell Sub-basin	70
+basins	boreholes_by_basin|second_token	Otway Basin | Inner Otway Basin	63
+basins	boreholes_by_basin|second_token	Northern Carnarvon Basin | Exmouth Sub-basin	62
+basins	boreholes_by_basin|second_token	Bonaparte Basin | Petrel Sub-basin	62
+basins	boreholes_by_basin|second_token	Northern Carnarvon Basin | Rankin Platform	50
+basins	boreholes_by_basin|second_token	Northern Carnarvon Basin | Exmouth Plateau	41
+basins	boreholes_by_basin|second_token	Bonaparte Basin | Londonderry High	38
+basins	boreholes_by_basin|second_token	Amadeus Basin | Arunta Orogen	33
+basins	boreholes_by_basin|second_token	Bass Basin | Cape Wickham Sub-basin	28
+basins	boreholes_by_basin|second_token	Northern Carnarvon Basin | Beagle Sub-basin	26
+basins	boreholes_by_basin|second_token	Gippsland Basin | Seaspray Depression	22
+basins	boreholes_by_basin|second_token	Canning Basin | Fitzroy Trough	22
+basins	boreholes_by_basin|second_token	Browse Basin | Yampi Shelf	21
+basins	boreholes_by_basin|second_token	Canning Basin | Broome Platform	20
+basins	boreholes_by_basin|second_token	Gippsland Basin | Northern Terrace	19
+basins	boreholes_by_basin|second_token	Gippsland Basin | Southern Terrace	19
+basins	boreholes_by_basin|second_token	Perth Basin | Vlaming Sub-basin	16
+basins	boreholes_by_basin|second_token	Bonaparte Basin | Ashmore Platform	14
+basins	boreholes_by_basin|second_token	Perth Basin | Abrolhos Sub-basin	13
+basins	boreholes_by_basin|second_token	Browse Basin | Barcoo Sub-basin	12
+basins	boreholes_by_basin|second_token	McArthur Basin | (none)	10
+basins	boreholes_by_basin|second_token	Bonaparte Basin | Laminaria High	10
+basins	boreholes_by_basin|second_token	Money Shoal Basin | Arafura Basin	9
+basins	boreholes_by_basin|second_token	McArthur Basin | Carpentaria Basin	9
+basins	picks_with_Cooper_Basin_token		1392
+basins	boreholes_with_Cooper_Basin_token		179
+boreholes	distinct_borehole_release_date_pairs		1636
+boreholes	rig_release_decade	1910s	1
+boreholes	rig_release_decade	1930s	3
+boreholes	rig_release_decade	1940s	1
+boreholes	rig_release_decade	1950s	16
+boreholes	rig_release_decade	1960s	177
+boreholes	rig_release_decade	1970s	264
+boreholes	rig_release_decade	1980s	552
+boreholes	rig_release_decade	1990s	419
+boreholes	rig_release_decade	2000s	191
+boreholes	rig_release_decade	2010s	9
+boreholes	rig_release_decade	undated	3
+boreholes	boreholes_released_before_2000		1433 of 1636 (87.6%)
+ages	picks_with_top_and_base_age		44406
+ages	placeholder_0_0_ages		172
+ages	placeholder_0_0_zone_names		{'unknown': 172}
+ages	picks_with_real_ages		44234 of 50128 (88.2%)
+ages	real_ages_base_younger_than_top		103
+ages	real_zone_span_myr_median		3.04
+ages	real_zone_span_myr_deciles_10_to_90		0.6 1.2 1.6 2.4 3.0 3.9 5.2 8.2 11.9
+ages	real_zone_span_zero		314
+ages	real_zone_span_over_20_myr		1633 of 44131 (3.7%)
+ages	real_base_age_bins:gts2012_edges_23.03_66.0_145.0_252.17_541.0	Neogene+Quaternary	3555
+ages	real_base_age_bins:gts2012_edges_23.03_66.0_145.0_252.17_541.0	Paleogene	7780
+ages	real_base_age_bins:gts2012_edges_23.03_66.0_145.0_252.17_541.0	Cretaceous	20668
+ages	real_base_age_bins:gts2012_edges_23.03_66.0_145.0_252.17_541.0	Jurassic-Triassic	9159
+ages	real_base_age_bins:gts2012_edges_23.03_66.0_145.0_252.17_541.0	Palaeozoic	2972
+ages	real_base_age_bins:gts2012_edges_23.03_66.0_145.0_252.17_541.0	Precambrian	100
+ages	real_base_age_bins:layer_system_edges_23.03_66.04_145.7_251.9_541	Neogene+Quaternary	3555
+ages	real_base_age_bins:layer_system_edges_23.03_66.04_145.7_251.9_541	Paleogene	8314
+ages	real_base_age_bins:layer_system_edges_23.03_66.04_145.7_251.9_541	Cretaceous	20865
+ages	real_base_age_bins:layer_system_edges_23.03_66.04_145.7_251.9_541	Jurassic-Triassic	8428
+ages	real_base_age_bins:layer_system_edges_23.03_66.04_145.7_251.9_541	Palaeozoic	2972
+ages	real_base_age_bins:layer_system_edges_23.03_66.04_145.7_251.9_541	Precambrian	100
+ages	real_base_age_in_145.0_to_145.7_window		731
+ages	real_base_age_in_65.9_to_66.04_window		534
+chronostrat_ages	modal_top-base_ma:system/period	Quaternary	0-2.58 (18 of 18 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Cretaceous	66.04-145.7 (52 of 52 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Jurassic	145.7-201.36 (41 of 41 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Triassic	201.36-251.9 (66 of 66 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Permian	251.9-298.88 (28 of 28 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Carboniferous	298.88-358.94 (22 of 22 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Devonian	358.94-419.2 (27 of 27 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Silurian	419.2-443.83 (11 of 11 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Ordovician	443.83-485.37 (42 of 42 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Cambrian	485.37-541 (59 of 59 picks)
+chronostrat_ages	modal_top-base_ma:system/period	Adelaidean	541-1400 (4 of 4 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Holocene	0-0.01 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Pleistocene	0.01-2.58 (4 of 4 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Pliocene	2.58-5.33 (19 of 19 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Miocene	5.33-23.03 (19 of 19 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Oligocene	23.03-33.89 (23 of 23 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Eocene	33.89-55.96 (25 of 25 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Paleocene	55.96-66.04 (36 of 36 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Upper Cretaceous	66.04-100.5 (52 of 52 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Lower Cretaceous	100.5-145.7 (39 of 39 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Upper Jurassic	145.7-163.1 (37 of 37 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Middle Jurassic	163.1-174.15 (41 of 41 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Lower Jurassic	174.15-201.36 (41 of 41 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Upper Triassic	201.36-237 (41 of 41 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Middle Triassic	237-246.8 (16 of 16 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Lower Triassic	246.8-251.9 (21 of 21 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Scythian	246.8-251.9 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Lopingian	251.9-259.81 (16 of 16 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Upper Devonian	358.94-382.69 (13 of 13 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Middle Devonian	382.69-393.25 (19 of 19 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Lower Devonian	393.25-419.2 (17 of 17 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Late Silurian	419.2-427.36 (2 of 2 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Upper Ordovician	443.83-458.36 (10 of 10 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Llanvirn	458.36-465.32 (4 of 4 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Middle Ordovician	458.36-469.96 (20 of 20 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Lower Ordovician	469.96-485.37 (42 of 42 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Furongian	485.37-497 (52 of 52 picks)
+chronostrat_ages	modal_top-base_ma:series/epoch	Terreneuvian	521-541 (36 of 36 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Burdigalian	15.97-20.44 (8 of 8 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Aquitanian	20.44-23.03 (11 of 11 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Bartonian	37.97-41.03 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Ypresian	47.84-55.96 (3 of 3 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Thanetian	55.96-59.24 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Danian	61.61-66.04 (4 of 4 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Maastrichtian	66.04-72.05 (43 of 43 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Campanian	72.05-84.19 (45 of 45 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Santonian	84.19-86.49 (33 of 33 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Coniacian	86.49-89.75 (8 of 8 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Turonian	89.75-93.9 (27 of 27 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Cenomanian	93.9-100.5 (50 of 50 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Albian	100.5-113.14 (84 of 84 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Aptian	113.14-126.3 (89 of 89 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Barremian	126.3-130.77 (23 of 23 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Hauterivian	130.77-134.7 (14 of 14 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Neocomian	130.77-145.01 (113 of 113 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Valanginian	134.7-139.39 (11 of 11 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Berriasian	139.39-145.7 (6 of 6 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Tithonian	145.7-152.06 (23 of 23 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Kimmeridgian	152.06-157.25 (16 of 16 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Oxfordian	157.25-163.1 (25 of 25 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Callovian	163.1-166.07 (22 of 22 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Bathonian	166.07-168.28 (20 of 20 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Bajocian	168.28-170.3 (17 of 17 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Aalenian	170.3-174.15 (2 of 2 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Toarcian	174.15-183.7 (11 of 11 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Pliensbachian	183.7-191.36 (2 of 2 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Sinemurian	191.36-199.4 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Hettangian	199.4-201.36 (3 of 3 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Rhaetian	201.36-209.46 (10 of 10 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Norian	209.46-228.35 (8 of 8 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Carnian	228.35-237 (9 of 9 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Anisian	241.5-246.8 (2 of 2 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Kazanian	259.81-265.86 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Artinskian	282-290.06 (7 of 7 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Sakmarian	290.06-295.53 (8 of 8 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Asselian	295.53-298.88 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Stephanian	302.12-307.6 (7 of 7 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Westphalian	307.6-318.65 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Namurian	318.65-329.06 (6 of 6 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Visean	330.92-346.73 (14 of 14 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Tournaisian	346.73-358.94 (7 of 7 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Famennian	358.94-372.24 (3 of 3 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Frasnian	372.24-382.69 (7 of 7 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Givetian	382.69-387.72 (4 of 4 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Caradoc	448.84-458.36 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Arenig	465.32-477.72 (2 of 2 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Mindyallan	497-499.1 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Florian	502.98-504.5 (1 of 1 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Templetonian	504.5-507.96 (4 of 4 picks)
+chronostrat_ages	modal_top-base_ma:stage/age	Cambrian Stage 2	520-530 (1 of 1 picks)
+depth	sample_depth_m_median		1951
+depth	sample_depth_m_max		14900
+depth	picks_with_depth_le_0		3
+depth	picks_deeper_than_5000_m		65
+depth	boreholes_with_picks_deeper_than_5000_m		15
+depth	deeper_than_5000_m_picks_with_elevation_unit_ft		0
+depth	deepest_pick_by_borehole_m	Petrel 1A	14900
+depth	deepest_pick_by_borehole_m	Poeppels Corner 1	14033
+depth	deepest_pick_by_borehole_m	Tern 1	9150
+depth	deepest_pick_by_borehole_m	Fishburn 1	8200
+depth	deepest_pick_by_borehole_m	Erabena 1	7590
+depth	deepest_pick_by_borehole_m	Petrel 2	7400
+depth	deepest_pick_by_borehole_m	Penguin 1	7200
+depth	deepest_pick_by_borehole_m	Yardie East 1	5594
+depth	picks_with_elevation_unit_ft		15
+depth	boreholes_with_elevation_unit_ft		{'COOK 1': 12, 'Palm Valley 1': 3}
+asud_link_coverage	picks_with_STRAT_UNIT_TOP		6911 of 50128 (13.8%)
+asud_link_coverage	boreholes_with_STRAT_UNIT_TOP		369 of 1636 (22.6%)
+asud_link_coverage	picks_with_STATE_STRAT_UNIT_TOP		11751 of 50128 (23.4%)
+asud_link_coverage	boreholes_with_STATE_STRAT_UNIT_TOP		547 of 1636 (33.4%)
+asud_link_coverage	picks_with_either_unit_field		15785 of 50128 (31.5%)
+asud_link_coverage	picks_with_STATE_STRAT_UNIT_TOP_and_no_STRAT_UNIT_TOP		8874
+asud_link_coverage	picks_with_STRAT_UNIT_TOP_resolving_to_an_ASUD_unit_by_name		6911 of 6911 (100.0%)
+asud_link_coverage	picks_with_STRAT_UNIT_TOP_whose_last_name_is_unique_in_ASUD		6904 of 6911 (99.9%)
+asud_link_coverage	picks_with_a_STATE_STRAT_UNIT_TOP_string_equal_to_a_unique_ASUD_name		6162 of 11751 (52.4%)
+asud_link_coverage	picks_with_STRATNO_MIDPOINT_the_only_ASUD_identifier		5579 of 50128 (11.1%)
+stratno_midpoint	picks_with_several_ids		4006
+stratno_midpoint	several_ids_in_ascending_numeric_order		2968 of 4006 (74.1%)
+stratno_midpoint	several_ids_single_unit_list	most_specific_unit_id_absent	0
+stratno_midpoint	several_ids_single_unit_list	most_specific_unit_id_first	2592
+stratno_midpoint	several_ids_single_unit_list	most_specific_unit_id_in_the_middle	14
+stratno_midpoint	several_ids_single_unit_list	most_specific_unit_id_last	1263
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	picks_with_STRAT_UNIT_TOP		6911
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	not_checked	no_real_zone_age	631
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	checked_picks		6280
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	picks	overlap	4836
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	picks	gap_le_5myr	698
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	picks	gap_5_20myr	489
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	picks	gap_gt_20myr	257
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap		4836 of 6280 (77.0%)
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	boreholes_checked		366
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	dinocyst	1141 of 1485
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	spore pollen	786 of 961
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	sequence	716 of 930
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	nannoplankton	512 of 684
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	planktonic foraminifera	398 of 556
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	dinocyst subzone	256 of 303
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	series/epoch	178 of 226
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	system/period	136 of 188
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	spore pollen subzone	150 of 183
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	stage/age	150 of 176
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	conodont	116 of 143
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	overlap_by:CLASS	benthic foraminifera	61 of 108
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	per_borehole_overlap_rate_deciles_10_to_90		0.50 0.60 0.74 0.80 0.86 0.95 1.00 1.00 1.00
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	boreholes_with_all_picks_overlapping		146 of 366 (39.9%)
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	boreholes_with_under_half_overlapping		29 of 366 (7.9%)
+age_check_top_unit_vs_asud:lenient_most_specific_unique_name	boreholes_with_5_or_fewer_checked_picks		171 of 366 (46.7%)
+age_check_top_unit_vs_asud:strict_last_name_only	picks_with_STRAT_UNIT_TOP		6911
+age_check_top_unit_vs_asud:strict_last_name_only	not_checked	no_real_zone_age	631
+age_check_top_unit_vs_asud:strict_last_name_only	not_checked	top_unit_not_matched_uniquely	6
+age_check_top_unit_vs_asud:strict_last_name_only	checked_picks		6274
+age_check_top_unit_vs_asud:strict_last_name_only	picks	overlap	4830
+age_check_top_unit_vs_asud:strict_last_name_only	picks	gap_le_5myr	698
+age_check_top_unit_vs_asud:strict_last_name_only	picks	gap_5_20myr	489
+age_check_top_unit_vs_asud:strict_last_name_only	picks	gap_gt_20myr	257
+age_check_top_unit_vs_asud:strict_last_name_only	overlap		4830 of 6274 (77.0%)
+age_check_null_reassigned_units	observed_overlap	all checked picks	4836 of 6280 (77.0%)
+age_check_null_reassigned_units	reassigned_within:all picks	picks | observed | null mean (min-max over 20 shuffles)	6280 | 77.0% | 10.5% (9.6-11.1)
+age_check_null_reassigned_units	reassigned_within:same state	picks | observed | null mean (min-max over 20 shuffles)	6280 | 77.0% | 15.8% (14.9-16.8)
+age_check_null_reassigned_units	reassigned_within:same basin	picks | observed | null mean (min-max over 20 shuffles)	6280 | 77.0% | 19.0% (18.2-19.8)
+age_check_null_reassigned_units	reassigned_within:same borehole	picks | observed | null mean (min-max over 20 shuffles)	6280 | 77.0% | 32.2% (31.5-32.8)
+age_check_null_reassigned_units	reassigned_within:same borehole, groups with 2+ distinct units only	picks | observed | null mean (min-max over 20 shuffles)	6040 | 76.9% | 30.1% (29.3-31.2)
+age_check_top_vs_midpoint_unit	picks_with_both_unit_fields		5383
+age_check_top_vs_midpoint_unit	excluded	a_unit_field_lists_several_units	122
+age_check_top_vs_midpoint_unit	excluded	no_real_zone_age	503
+age_check_top_vs_midpoint_unit	checked_picks		4758
+age_check_top_vs_midpoint_unit	overlap_through_STRAT_UNIT_TOP		3683 of 4758 (77.4%)
+age_check_top_vs_midpoint_unit	overlap_through_STRAT_UNIT_MIDPOINT		554 of 4758 (11.6%)
+age_check_top_vs_midpoint_unit	midpoint_unit_is_the_top_unit		243 of 4758 (5.1%)
+example_yampi_1_1863m	3459	zone | HIGH_LOW | class	Diconodinium davidii 2biii 113.14-122.25 Ma | H | dinocyst
+example_yampi_1_1863m	3459	STRAT_UNIT_TOP | ASUD age	Bathurst Island Group,Jamieson Formation | Jamieson Formation 125-95 Ma
+example_yampi_1_1863m	3459	STRAT_UNIT_MIDPOINT | ASUD age	Woodbine Group,Hibernia Formation | Hibernia Formation 50-42 Ma
+example_yampi_1_1863m	18014	zone | HIGH_LOW | class	Muderongia tetracantha 2bii 109.88-113.14 Ma | L | dinocyst
+example_yampi_1_1863m	18014	STRAT_UNIT_TOP | ASUD age	Bathurst Island Group,Jamieson Formation | Jamieson Formation 125-95 Ma
+example_yampi_1_1863m	18014	STRAT_UNIT_MIDPOINT | ASUD age	Woodbine Group,Hibernia Formation | Hibernia Formation 50-42 Ma
+example_yampi_1_1863m	3460	zone | HIGH_LOW | class	Diconodinium davidii 2biii 113.14-122.25 Ma | H | dinocyst
+example_yampi_1_1863m	3460	STRAT_UNIT_TOP | ASUD age	Bathurst Island Group,Jamieson Formation | Jamieson Formation 125-95 Ma
+example_yampi_1_1863m	3460	STRAT_UNIT_MIDPOINT | ASUD age	Woodbine Group,Hibernia Formation | Hibernia Formation 50-42 Ma

@@ -1,0 +1,139 @@
+v1	rows_all	1716250
+v1	rows_pres	512941
+v1	trim_exc_pres	8986
+v1	dup_rows_v1_key_exact	0
+v1	dup_groups	0
+v1	dup_groups_cross_source	0
+v1	dup_excess_rows_cross_source	0
+v1	dup_groups_within_source	0
+v1	dup_excess_rows_within_source	0
+v1	dup_excess_rows_with_na_depth	0
+v1	dup_groups_na_depth	0
+v1	dup_groups_na_depth_age_spread_gt_0.5	0
+v1	dup_excess_rows_cross_source_with_depth	0
+v1	samples_with_depth	46606
+v1	samples_sharing_position_depth_with_other_source	2491
+v1	orig_species_strings	3529
+v1	orig_species_strings_joined	1198
+v1	orig_names_after_split	2742
+v1	rows_negative_age	682
+v1	ages_gt0	438022
+v1	share_ages_more_than_2dp	0.4215
+v1	share_ages_on_5kyr_grid	0.6122
+v1	share_on_5kyr_grid:Interp	0.0885
+v1	share_on_2dp_grid:Interp	0.0877
+v1	age_err_zero_share:Interp	1
+v1	share_on_5kyr_grid:Magneto	7e-04
+v1	share_on_2dp_grid:Magneto	0
+v1	age_err_zero_share:Magneto	1
+v1	share_on_5kyr_grid:Model	0.0049
+v1	share_on_2dp_grid:Model	0.0046
+v1	age_err_zero_share:Model	1
+v1	share_on_5kyr_grid:Orig	0.9832
+v1	share_on_2dp_grid:Orig	0.9832
+v1	age_err_zero_share:Orig	NA
+v1	share_on_5kyr_grid:Zone	0.9911
+v1	share_on_2dp_grid:Zone	0.5208
+v1	age_err_zero_share:Zone	0.0628
+v1	max_age_err	5
+v1	age_err_zero_share_nonorig	0.8549
+v1	distinct_values:trim	2
+v1	distinct_values:Macro/micro	2
+v1	distinct_values:AM.type	79
+v1	distinct_values:age.model	22
+v1	distinct_values:segment	4
+v1	distinct_values:sample.type	34
+v1	distinct_values:preservation	1043
+v1	distinct_values:processing	31
+v1	rows_species:Globoconella triangula	6
+v1	rows_species:Globoconella sphericomiozea	0
+v1	rows_species:Globoconella conoidea	0
+v1	units_4holes:Relative abundance	0
+v1	units_4holes:Count	1520
+v1	units_4holes:Number per gram	0
+v1	units_4holes:Binned	0
+v1	units_4holes:P/A	0
+v1	units_4holes:Mixed	0
+v1	share_pal_lat_eq_lat_at_round_age_0	0.9202
+v1	round_age_is_integer	TRUE
+v1	total_IDd_nonmissing_share	0.3567
+v4_update	rows_all	1806905
+v4_update	rows_pres	541846
+v4_update	trim_exc_pres	9780
+v4_update	dup_rows_v1_key_exact	28832
+v4_update	dup_groups	22342
+v4_update	dup_groups_cross_source	16256
+v4_update	dup_excess_rows_cross_source	16267
+v4_update	dup_groups_within_source	6086
+v4_update	dup_excess_rows_within_source	12565
+v4_update	dup_excess_rows_with_na_depth	8450
+v4_update	dup_groups_na_depth	1991
+v4_update	dup_groups_na_depth_age_spread_gt_0.5	1249
+v4_update	dup_cross_source_groups:Neptune+Pangaea	12608
+v4_update	dup_cross_source_groups:Fentonetal2016+Pangaea	2006
+v4_update	dup_cross_source_groups:IODP+Pangaea	1249
+v4_update	dup_cross_source_groups:Fentonetal2016+Neptune	237
+v4_update	dup_cross_source_groups:IODP+Neptune	120
+v4_update	dup_cross_source_groups:Fentonetal2016+IODP	36
+v4_update	dup_excess_rows_cross_source_with_depth	16267
+v4_update	samples_with_depth	47415
+v4_update	samples_sharing_position_depth_with_other_source	3435
+v4_update	orig_species_strings	3608
+v4_update	orig_species_strings_joined	1259
+v4_update	orig_names_after_split	2770
+v4_update	rows_negative_age	682
+v4_update	ages_gt0	476439
+v4_update	share_ages_more_than_2dp	0.609
+v4_update	share_ages_on_5kyr_grid	0.4327
+v4_update	share_on_5kyr_grid:Interp	0.3674
+v4_update	share_on_2dp_grid:Interp	0.3285
+v4_update	age_err_zero_share:Interp	1
+v4_update	share_on_5kyr_grid:Magneto	0.558
+v4_update	share_on_2dp_grid:Magneto	0.5136
+v4_update	age_err_zero_share:Magneto	1
+v4_update	share_on_5kyr_grid:Model	0.5398
+v4_update	share_on_2dp_grid:Model	0.5028
+v4_update	age_err_zero_share:Model	1
+v4_update	share_on_5kyr_grid:Orig	0.2978
+v4_update	share_on_2dp_grid:Orig	0.2677
+v4_update	age_err_zero_share:Orig	NA
+v4_update	share_on_5kyr_grid:Zone	0.9972
+v4_update	share_on_2dp_grid:Zone	0.868
+v4_update	age_err_zero_share:Zone	0.0559
+v4_update	max_age_err	5
+v4_update	age_err_zero_share_nonorig	0.8263
+v4_update	distinct_values:trim	2
+v4_update	distinct_values:Macro/micro	2
+v4_update	distinct_values:AM.type	79
+v4_update	distinct_values:age.model	23
+v4_update	distinct_values:segment	4
+v4_update	distinct_values:sample.type	34
+v4_update	distinct_values:preservation	1043
+v4_update	distinct_values:processing	31
+v4_update	rows_species:Globoconella triangula	6
+v4_update	rows_species:Globoconella sphericomiozea	0
+v4_update	rows_species:Globoconella conoidea	0
+v4_update	units_4holes:Relative abundance	0
+v4_update	units_4holes:Count	0
+v4_update	units_4holes:Number per gram	1520
+v4_update	units_4holes:Binned	0
+v4_update	units_4holes:P/A	0
+v4_update	units_4holes:Mixed	0
+v4_update	share_pal_lat_eq_lat_at_round_age_0	0.9211
+v4_update	round_age_is_integer	TRUE
+v4_update	total_IDd_nonmissing_share	0.3447
+v4_no_dup	rows_all	1730637
+v4_no_dup	rows_pres	514243
+v4_no_dup	rows_negative_age	632
+v4_no_dup	ages_gt0	451510
+v4_no_dup	share_ages_more_than_2dp	0.6202
+v4_no_dup	share_ages_on_5kyr_grid	0.423
+v4_no_dup	distinct_values:Macro/micro	2
+v4_no_dup	distinct_values:preservation	1112
+v4_no_dup	distinct_values:processing	36
+v4_no_dup	rows_species:Globoconella triangula	6
+v4_no_dup	rows_species:Globoconella sphericomiozea	0
+v4_no_dup	rows_species:Globoconella conoidea	0
+v4_no_dup	share_pal_lat_eq_lat_at_round_age_0	0.9234
+v4_no_dup	round_age_is_integer	TRUE
+v4_no_dup	total_IDd_nonmissing_share	0.3567

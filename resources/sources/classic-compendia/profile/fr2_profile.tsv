@@ -1,0 +1,119 @@
+table	metric	key	value
+bristol	chapters	files	45
+bristol	media_listing	data_files_listed	50; absent from snapshot: none
+bristol	FR2.zip	workbooks	46; byte-identical to the chapter downloads 45; same cells 45
+bristol	FR2.zip	Basal.xlsx (not on the downloads page)	179 rows; identical to chapters 1-3 (179 rows): True
+bristol	All-Life.xlsx	rows_vs_chapters	All-Life 7109; chapters 7109; only in All-Life 221; only in chapters 221
+bristol	time_divisions	columns_6_to_91	86: Hadean ... Holocene
+bristol	All-Life.xlsx	order	same families in the same order as the chapters: True
+bristol	All-Life.xlsx	rows_differing_from_chapters	family name differs only in spacing 1; shifted one column left: NFR moved into the Holocene column 106; shifted one column left: habitat in column 4 and range one division older 2; shifted one column left: range one division older 112
+bristol	All-Life.xlsx	shifted_rows_by_chapter	6: 1 (rows 1-1); 25: 56 (rows 1-56); 26: 6 (rows 1-6); 28: 1 (rows 1-1); 29: 4 (rows 1-4); 43: 1 (rows 1-1); 44: 45 (rows 1-45); 45: 106 (rows 1-260)
+chapters	rows	1-Monera.xlsx	14
+chapters	rows	2-Fungi.xlsx	26
+chapters	rows	3-Algae.xlsx	139
+chapters	rows	4-Protozoa.xlsx	333
+chapters	rows	5-Porifera.xlsx	307
+chapters	rows	6-Coelenterata.xlsx	263
+chapters	rows	7-Mollusca-1.xlsx	33
+chapters	rows	8-Mollusca-2.xlsx	315
+chapters	rows	9-Mollusca-3.xlsx	134
+chapters	rows	10-Mollusca-4.xlsx	174
+chapters	rows	11-Mollusca-5.xlsx	97
+chapters	rows	12-Mollusca-6.xlsx	46
+chapters	rows	13-Mollusca-7.xlsx	226
+chapters	rows	14-Mollusca-8.xlsx	40
+chapters	rows	15-Annelida.xlsx	57
+chapters	rows	16-Trilobita.xlsx	162
+chapters	rows	17-Aglaspidida.xlsx	220
+chapters	rows	18-Crustacea.xlsx	185
+chapters	rows	19-Ostracoda.xlsx	113
+chapters	rows	20-Myriapoda.xlsx	41
+chapters	rows	21-Hexapoda.xlsx	1085
+chapters	rows	22-Brachiopoda.xlsx	279
+chapters	rows	23-Phoronida.xlsx	1
+chapters	rows	24-Bryozoa.xlsx	215
+chapters	rows	25-Echinodermata.xlsx	299
+chapters	rows	26-Deuterostomes.xlsx	42
+chapters	rows	27-Graptolithina.xlsx	26
+chapters	rows	28-Problematica.xlsx	90
+chapters	rows	29-Miscellania.xlsx	35
+chapters	rows	30-Conodonta.xlsx	52
+chapters	rows	31-Agnatha.xlsx	81
+chapters	rows	32-Placodermi.xlsx	49
+chapters	rows	33-Acanthodii.xlsx	9
+chapters	rows	34-Chondrichthyes.xlsx	96
+chapters	rows	35-Osteichthyes.xlsx	79
+chapters	rows	36-Teleostei.xlsx	296
+chapters	rows	37-Sarcopterygii.xlsx	33
+chapters	rows	38-Amphibia.xlsx	111
+chapters	rows	39-Reptilia.xlsx	323
+chapters	rows	40-Aves.xlsx	214
+chapters	rows	41-Mammalia.xlsx	380
+chapters	rows	42-Bryophyta.xlsx	9
+chapters	rows	43-Pteridophyta.xlsx	74
+chapters	rows	44-Gymnospermophyta.xlsx	45
+chapters	rows	45-Magnoliophyta.xlsx	261
+codes	cells	all	1 62017; ? 6007; F1 4161; L1 2319; ?F 1832; F2 1233; FL 1161; ?L 945; L2 441; ?FL 4; 1L1 2; ) 1
+codes	anomaly	code outside the key	3: 8:88 Ampullariidae ')'; 22:216 Kayseriidae '1L1'; 25:8 Schuchertocystidae '1L1'
+codes	anomaly	column 92 holds a value other than NFR	10: 10:137 Longobarditidae '1'; 10:141 Thanamitidae '1'; 16:28 Agnostidae '1'; 16:32 Diplagnostidae '1'; 21:339 Pachytylopsidae '1'; 21:343 Phenopteridae '1'; 21:841 Bethylidae '1'; 21:845 Cephidae '1'; 38:51 Metoposauridae '1'; 38:55 Zatrachyidae '1'
+codes	anomaly	first coded cell not F1, ?F, FL or ?FL	5: 2:8 Glomaeceae '?'; 3:28 Cretarhabdaceae '1'; 3:74 Spinidinium Complex '1'; 4:35 Lituotubidae '1'; 45:35 Cabombaceae 'F2'
+codes	anomaly	gap inside the range	7: 6:42 ? Scenellidae; 8:55 ? Pseudophoridae; 8:88 Ampullariidae; 8:222 Hydatinidae; 21:140 Archaemegaptilidae; 21:253 Pyrgomorphidae; 24:114 Crownoporidae
+codes	anomaly	last coded cell not L1, ?L or FL and not Holocene	11: 2:12 Micropeltaceae '?F'; 3:28 Cretarhabdaceae '1'; 4:63 Marieitidae '1'; 8:15 Metopomatidae 'L2'; 10:70 Thalassoceratidae '1'; 12:38 Groenlandibelidae 'F2'; 21:581 Cleridae '1'; 22:216 Kayseriidae '1L1'; 24:114 Crownoporidae '1'; 25:8 Schuchertocystidae '1L1'; 32:20 Wuttagoonaspidae 'F1'
+codes	anomaly	more than one F1/F2	11: 2:12 Micropeltaceae; 6:42 ? Scenellidae; 6:111 Intersmiliidae; 8:55 ? Pseudophoridae; 8:155 Lamelliphoridae; 12:38 Groenlandibelidae; 18:62 Diaulacidae; 21:168 Archimylachridae; 21:442 Lygaeidae; 35:49 Scanilepididae; 45:35 Cabombaceae
+codes	anomaly	more than one L1/L2	3: 5:6 Dystactospongiidae; 13:28 Kalenteridae; 13:181 Caprotinidae
+codes	anomaly	no coded cell (NFR)	106: 45:1 Acanthaceae; 45:5 Akaniaceae; 45:8 Amaranthaceae; 45:13 Aponogetonaceae; 45:21 Balanophoraceae; 45:30 Brunelliaceae; 45:31 Burmanniaceae; 45:34 Buxaceae; 45:38 Callitrichaceae; 45:39 Calycanthaceae; 45:40 Campanulaceae; 45:41 Canellaceae ...
+codes	anomaly	no coded cell, no NFR	2: 45:111 Heliconiaceae; 45:176 Paeoniaceae
+families	rows	total	7109
+families	rows	by_kingdom	Animalia 6541; Plantae 389; Algae 139; Fungi 26; Monera 14
+families	names	distinct	7059
+families	names	repeated	15 names on 65 rows: Unnamed, Uncertain, Incertae sedis, Incertae Sedis, Buliminidae, Plasmoporellidae, Kaolishaniidae, Loganellidae, Caeciliidae, Scatophagidae, Davidsoniidae, Quadricellariidae, Hemicidaridae, Acrosaleniidae, p. Mitrocystella
+families	names	questioned ('?' in name)	51
+families	names	ending -idae or -aceae	6840
+families	ranges	with a range	7001
+families	ranges	with a minimum range	6458
+families	ranges	with a range but no minimum range, by reason	uncertain codes only (?F, ?, ?L, ?FL) 474; other coding without F1/F2 50; F1/F2 but no L1/L2 and not extant 11; FL in several divisions (a range given only to a longer interval) 8
+families	ranges	coded in the Holocene division	2630
+families	ranges	Holocene cell codes	1 2597; ? 11; F1 6; L1 4; ?L 4; F2 4; FL 4
+families	ranges	extant (Holocene cell 1, F1 or F2, no L code)	2605
+families	ranges	single division (maximum)	1111
+families	habitat	codes	M 3894; T 2534; F 288; MF 168; B 41; TF 38; FT 26; MB 20; V 15; ML 13; FB 10; M ?F 9; SM 7; ST 6; SF 5
+wayback	chapter_captures	decoded	128 captures of 45 chapters; Macintosh type/creator after decoding: TEXT/XCEL 128; BinHex inside BinHex: 20000601 ch4, 20000522 ch20, 20000531 ch28, 20000605 ch39, 20000709 ch40
+wayback	earliest_capture_vs_2019	earliest capture year (chapters)	1998 31; 1999 13; 2005 1; chapters first captured after 1998: 1 (19990302), 2 (19990422), 6 (19990219), 8 (19990423), 13 (19990422), 14 (19990422), 15 (19990210), 17 (19990210), 20 (19990210), 21 (20051103), 27 (19990218), 35 (19990222), 44 (19990423), 45 (19991006)
+wayback	earliest_capture_vs_2019	all_chapters	7109 rows then, 7109 in 2019; 7107 identical; family names only then 0, only in 2019 0
+wayback	earliest_capture_vs_2019	chapters_with_differences	45 (19991006: 261 rows, 259 identical in 2019; 2019 261 rows; names only then 0, only now 0; changed: Orchidaceae, Vitaceae)
+wayback	later_captures_vs_earliest	chapters_revised	none
+wayback	All-Life_shifted_rows	vs_earliest_capture	earliest capture agrees with the chapter file 220
+wayback	column_92	earliest captures: values other than NFR	10
+wayback	archive	20000916154555__chapters.sit	StuffIt archive, 88067 bytes, 45 top-level entries (names read, not unpacked); angiosperm entries: Magnoliophyta
+wayback	archive	20010602231432__chapters.sit	StuffIt archive, 88067 bytes, 45 top-level entries (names read, not unpacked); angiosperm entries: Magnoliophyta
+wayback	xls_2004	20040212062842__Fungi.xls	26 rows; 26 identical to 2019 chapter(s) [2] (26 rows)
+wayback	xls_2004	20040612131216__basal.xls	179 rows; 179 identical to 2019 chapter(s) [1, 2, 3] (179 rows)
+wayback	xls_2004	20040612160721__Algae.xls	139 rows; 139 identical to 2019 chapter(s) [3] (139 rows)
+wayback	xls_2004	20040612162634__Monera.xls	14 rows; 14 identical to 2019 chapter(s) [1] (14 rows)
+wayback	archive	20051103165203__chapters.hqx	StuffIt archive, 223801 bytes, 43 top-level entries (names read, not unpacked); angiosperm entries: Magnoliophyta.sit.hqx
+wayback	data95_html	captures	19980212 78 stages x 44 values, 0 values differ from the first; 19990220 78 stages x 44 values, 0 values differ from the first; 19991006 78 stages x 44 values, 0 values differ from the first; 20001206 78 stages x 44 values, 0 values differ from the first; 20010605 78 stages x 44 values, 3 values differ from the first; 20030422 78 stages x 44 values, 3 values differ from the first; 20030803 78 stages x 44 values, 3 values differ from the first; 20051103 78 stages x 44 values, 3 values differ from the first; 20051228 78 stages x 44 values, 3 values differ from the first
+wayback	data95_html	values revised after 2000	HOLOCENE column 29: 0.091075 -> 0.09108; LUDLOW column 34: 0.076923 -> 0.07692; PLEISTOCENE column 30: 0.085397 -> 0.0854
+wayback	data95_html	1998 stage names vs workbook columns (by position, Vendian on)	SERPUKHOV. / Serpukhovian; PLIENSBACH. / Pliensbachian; KIMMERIDG. / Kimmeridgian; TITHONIAN / Portlandian; MAASTRICHT. / Maastrichtian; L.MIOCENE / Lower Miocene; M.MIOCENE / Middle Miocene; U.MIOCENE / Upper Miocene
+diversity95	xlsx_2019	shape	78 stages; non-empty value columns 38 of 42 labelled
+diversity95	xlsx_2019_vs_1998	stage names in the same order	74 of 78
+diversity95	xlsx_2019_vs_1998	xlsx data column -> 1998 column (stages equal)	1->19(78) 2->1(78) 3->2(78) 4->20(78) 5->23(31) 6->23(78) 7->21(11) 8->21(78) 9->5(2) 10->5(78) 11->4(12) 12->3(78) 13->6(78) 14->1(1) 15->4(78) 16->3(12) 17->24(78) 18->24(16) 19->22(78) 20->21(31) 21->26(78) 22->25(78) 23->28(78) 24->27(78) 25->30(78) 26->29(78) 27->32(78) 28->31(78) 29->34(78) 30->33(78) 31->36(78) 32->35(78) 33->38(78) 34->37(78) 35->40(78) 36->39(78) 37->42(78) 38->41(78) 39->-(0) 40->-(0) 41->-(0) 42->-(0)
+diversity95	1998_table	all: column labelled min larger than column labelled max	42 of 78 stages
+diversity95	1998_table	continental: column labelled min larger than column labelled max	0 of 78 stages
+diversity95	1998_table	marine: column labelled min larger than column labelled max	19 of 78 stages
+diversity95	recount_from_chapters_vs_1998	all	recounted minimum within the 1998 pair at 20 of 78 stages; recounted maximum within it at 0; median recounted minimum / smaller 1998 value 1.100
+diversity95	recount_from_chapters_vs_1998	continental	recounted minimum within the 1998 pair at 78 of 78 stages; recounted maximum within it at 78; median recounted minimum / smaller 1998 value 1.172
+diversity95	recount_from_chapters_vs_1998	marine	recounted minimum within the 1998 pair at 26 of 78 stages; recounted maximum within it at 0; median recounted minimum / smaller 1998 value 1.062
+diversity95	recount_from_chapters_vs_1998	all, names ending -idae or -aceae only	recounted minimum within the 1998 pair at 24 of 78 stages; recounted maximum within it at 0; median recounted minimum / smaller 1998 value 1.043
+diversity95	recount_from_chapters_vs_1998	continental, names ending -idae or -aceae only	recounted minimum within the 1998 pair at 78 of 78 stages; recounted maximum within it at 78; median recounted minimum / smaller 1998 value 1.086
+diversity95	recount_from_chapters_vs_1998	marine, names ending -idae or -aceae only	recounted minimum within the 1998 pair at 39 of 78 stages; recounted maximum within it at 9; median recounted minimum / smaller 1998 value 1.022
+holman	families_1998_html_vs_2019_xlsx	intervals equal	79 of 79 (79 in the workbook)
+holman	recount_from_chapters_vs_1998	DIV	equal in 0 of 79 intervals; mean difference recount minus Holman +86.1, mean absolute 86.1; recount larger in 79 intervals
+holman	recount_from_chapters_vs_1998	ORI	equal in 2 of 79 intervals; mean difference recount minus Holman +7.9, mean absolute 10.3; recount larger in 67 intervals
+holman	recount_from_chapters_vs_1998	EXT	equal in 5 of 79 intervals; mean difference recount minus Holman +5.9, mean absolute 9.2; recount larger in 60 intervals
+tetrapods	benton_1996_tables	fossil-amphibian-families	92 rows
+tetrapods	benton_1996_tables	fossil-reptile-families	248 rows
+tetrapods	benton_1996_tables	fossil-bird-families	178 rows
+tetrapods	benton_1996_tables	fossil-mammal-families-1	162 rows
+tetrapods	benton_1996_tables	fossil-mammal-families-2	177 rows
+tetrapods	fountaine_2005_birds	Birds.xlsx	124 species rows
+checks	summary		ok

@@ -1,0 +1,516 @@
+table	metric	key	value
+zip	member_bytes	austraits-7.0.0/	0
+zip	member_bytes	austraits-7.0.0/build_info.md	1845
+zip	member_bytes	austraits-7.0.0/contexts.csv	293428
+zip	member_bytes	austraits-7.0.0/contributors.csv	92139
+zip	member_bytes	austraits-7.0.0/definitions.yml	625910
+zip	member_bytes	austraits-7.0.0/excluded_data.csv	1098228
+zip	member_bytes	austraits-7.0.0/locations.csv	3179356
+zip	member_bytes	austraits-7.0.0/metadata.yml	61778
+zip	member_bytes	austraits-7.0.0/methods.csv	13154277
+zip	member_bytes	austraits-7.0.0/schema.yml	54458
+zip	member_bytes	austraits-7.0.0/sources.bib	206765
+zip	member_bytes	austraits-7.0.0/taxa.csv	11450609
+zip	member_bytes	austraits-7.0.0/taxonomic_updates.csv	42946441
+zip	member_bytes	austraits-7.0.0/traits.csv	339437936
+definitions	traits_defined		532
+definitions	by:type	numeric	418
+definitions	by:type	categorical	114
+definitions	allowed_values	resprouting_capacity	fire_killed | partial_resprouting | resprouts
+metadata	version		7.0.0
+metadata	doi		10.5281/zenodo.3568417
+metadata	publication_date		20 Jun 2025
+metadata	license_rights		CC-BY-4.0
+metadata	related_identifier	Compiles	https://github.com/traitecoevo/austraits.build/
+metadata	related_identifier	isCompiledBy	https://github.com/traitecoevo/traits.build/releases/tag/v2.1.0
+metadata	related_identifier	Sources	https://github.com/traitecoevo/APCalign/releases/tag/2025-04-15
+metadata	related_identifier	isCompiledBy	https://github.com/traitecoevo/traits.build
+metadata	mentions_of_cc_by_3_0	metadata.yml	0
+metadata	mentions_of_cc_by_3_0	schema.yml	0
+metadata	mentions_of_cc_by_3_0	definitions.yml	0
+metadata	mentions_of_cc_by_3_0	build_info.md	0
+tables	bibtex_entries	sources.bib	603
+encoding	lines_with_invalid_utf8	traits.csv	898
+traits	columns		dataset_id | taxon_name | observation_id | trait_name | value | unit | entity_type | value_type | basis_of_value | replicates | basis_of_record | life_stage | population_id | individual_id | repeat_measurements_id | temporal_context_id | source_id | location_id | entity_context_id | plot_context_id | treatment_context_id | collection_date | measurement_remarks | method_id | method_context_id | original_name
+traits	rows		1798215
+traits	rows_with_wrong_field_count		0
+traits	distinct_traits		530
+traits	distinct_datasets		410
+traits	distinct_taxa		33370
+definitions	traits_defined_and_present		530
+definitions	traits_present_not_defined		0
+definitions	defined_not_in_data	leaf_specific_hydraulic_conductance	numeric
+definitions	defined_not_in_data	stem_sapwood_capacitance	numeric
+traits	by:value_type	mode	1018686
+traits	pct_of_rows:value_type	mode	56.6
+traits	by:value_type	raw	242058
+traits	pct_of_rows:value_type	raw	13.5
+traits	by:value_type	maximum	209300
+traits	pct_of_rows:value_type	maximum	11.6
+traits	by:value_type	minimum	158761
+traits	pct_of_rows:value_type	minimum	8.8
+traits	by:value_type	mean	137851
+traits	pct_of_rows:value_type	mean	7.7
+traits	by:value_type	bin	31286
+traits	pct_of_rows:value_type	bin	1.7
+traits	by:value_type	median	273
+traits	pct_of_rows:value_type	median	0.0
+traits	pct_of_rows:trait_type	categorical	56.0
+traits	pct_of_rows:trait_type	numeric	44.0
+value_type_by_trait_type	rows:categorical	all	1007335
+value_type_by_trait_type	rows:categorical	mode	1006362
+value_type_by_trait_type	pct_of_categorical_rows	mode	99.9
+value_type_by_trait_type	rows:categorical	raw	936
+value_type_by_trait_type	pct_of_categorical_rows	raw	0.1
+value_type_by_trait_type	rows:categorical	mean	36
+value_type_by_trait_type	pct_of_categorical_rows	mean	0.0
+value_type_by_trait_type	rows:categorical	maximum	1
+value_type_by_trait_type	pct_of_categorical_rows	maximum	0.0
+value_type_by_trait_type	rows:numeric	all	790880
+value_type_by_trait_type	rows:numeric	raw	241122
+value_type_by_trait_type	pct_of_numeric_rows	raw	30.5
+value_type_by_trait_type	rows:numeric	maximum	209299
+value_type_by_trait_type	pct_of_numeric_rows	maximum	26.5
+value_type_by_trait_type	rows:numeric	minimum	158761
+value_type_by_trait_type	pct_of_numeric_rows	minimum	20.1
+value_type_by_trait_type	rows:numeric	mean	137815
+value_type_by_trait_type	pct_of_numeric_rows	mean	17.4
+value_type_by_trait_type	rows:numeric	bin	31286
+value_type_by_trait_type	pct_of_numeric_rows	bin	4.0
+value_type_by_trait_type	rows:numeric	mode	12324
+value_type_by_trait_type	pct_of_numeric_rows	mode	1.6
+value_type_by_trait_type	rows:numeric	median	273
+value_type_by_trait_type	pct_of_numeric_rows	median	0.0
+value_type_by_trait_type	pct_of_numeric_rows	minimum_or_maximum	46.5
+value_type_by_trait_type	mode_rows_by_trait_type	categorical	1006362
+value_type_by_trait_type	pct_of_mode_rows	categorical	98.8
+value_type_by_trait_type	mode_rows_by_trait_type	numeric	12324
+value_type_by_trait_type	pct_of_mode_rows	numeric	1.2
+entity_type_by_trait_type	rows:categorical	species	946222
+entity_type_by_trait_type	pct_of_categorical_rows	species	93.9
+entity_type_by_trait_type	rows:categorical	population	56895
+entity_type_by_trait_type	pct_of_categorical_rows	population	5.6
+entity_type_by_trait_type	rows:categorical	individual	3982
+entity_type_by_trait_type	pct_of_categorical_rows	individual	0.4
+entity_type_by_trait_type	rows:categorical	metapopulation	236
+entity_type_by_trait_type	pct_of_categorical_rows	metapopulation	0.0
+entity_type_by_trait_type	rows:numeric	species	409709
+entity_type_by_trait_type	pct_of_numeric_rows	species	51.8
+entity_type_by_trait_type	rows:numeric	individual	318649
+entity_type_by_trait_type	pct_of_numeric_rows	individual	40.3
+entity_type_by_trait_type	rows:numeric	population	61275
+entity_type_by_trait_type	pct_of_numeric_rows	population	7.7
+entity_type_by_trait_type	rows:numeric	metapopulation	697
+entity_type_by_trait_type	pct_of_numeric_rows	metapopulation	0.1
+entity_type_by_trait_type	rows:numeric	unknown	550
+entity_type_by_trait_type	pct_of_numeric_rows	unknown	0.1
+basis_of_record	rows_with_token	literature	744099
+basis_of_record	pct_of_rows_with_token	literature	41.4
+basis_of_record	rows_with_token	field	611515
+basis_of_record	pct_of_rows_with_token	field	34.0
+basis_of_record	rows_with_token	preserved_specimen	561142
+basis_of_record	pct_of_rows_with_token	preserved_specimen	31.2
+basis_of_record	rows_with_token	lab	61561
+basis_of_record	pct_of_rows_with_token	lab	3.4
+basis_of_record	rows_with_token	field_experiment	18482
+basis_of_record	pct_of_rows_with_token	field_experiment	1.0
+basis_of_record	rows_with_token	captive_cultivated	11235
+basis_of_record	pct_of_rows_with_token	captive_cultivated	0.6
+basis_of_record	rows_with_token	unknown	3823
+basis_of_record	pct_of_rows_with_token	unknown	0.2
+basis_of_record	rows_by_token_count	0	3
+basis_of_record	rows_by_token_count	1	1586882
+basis_of_record	rows_by_token_count	2	209015
+basis_of_record	rows_by_token_count	3	2315
+basis_of_record	rows_with_2_or_3_tokens		211330
+basis_of_record	pct_of_rows_with_2_or_3_tokens		11.8
+basis_of_record	rows_by_combination	preserved_specimen	561105
+basis_of_record	pct_of_rows_by_combination	preserved_specimen	31.2
+basis_of_record	rows_by_combination	literature	534276
+basis_of_record	pct_of_rows_by_combination	literature	29.7
+basis_of_record	rows_by_combination	field	400185
+basis_of_record	pct_of_rows_by_combination	field	22.3
+basis_of_record	rows_by_combination	field literature	207508
+basis_of_record	pct_of_rows_by_combination	field literature	11.5
+basis_of_record	rows_by_combination	lab	60550
+basis_of_record	pct_of_rows_by_combination	lab	3.4
+basis_of_record	rows_by_combination	field_experiment	15711
+basis_of_record	pct_of_rows_by_combination	field_experiment	0.9
+basis_of_record	rows_by_combination	captive_cultivated	11232
+basis_of_record	pct_of_rows_by_combination	captive_cultivated	0.6
+basis_of_record	rows_by_combination	unknown	3823
+basis_of_record	pct_of_rows_by_combination	unknown	0.2
+basis_of_record	rows_by_combination	field field_experiment literature	2315
+basis_of_record	pct_of_rows_by_combination	field field_experiment literature	0.1
+basis_of_record	rows_by_combination	field lab	1011
+basis_of_record	pct_of_rows_by_combination	field lab	0.1
+basis_of_record	rows_by_combination	field field_experiment	456
+basis_of_record	pct_of_rows_by_combination	field field_experiment	0.0
+basis_of_record	rows_by_combination	field preserved_specimen	37
+basis_of_record	pct_of_rows_by_combination	field preserved_specimen	0.0
+basis_of_record	rows_by_combination		3
+basis_of_record	pct_of_rows_by_combination		0.0
+basis_of_record	rows_by_combination	captive_cultivated field	3
+basis_of_record	pct_of_rows_by_combination	captive_cultivated field	0.0
+selected_traits	label	resprouting_capacity	Post-fire resprouting capacity
+selected_traits	type	resprouting_capacity	categorical
+selected_traits	records	resprouting_capacity	35395
+selected_traits	taxa	resprouting_capacity	13785
+selected_traits	datasets	resprouting_capacity	66
+selected_traits	value_types	resprouting_capacity	mode 34459; raw 936
+selected_traits	label	post_fire_recruitment	Post-fire recruitment
+selected_traits	type	post_fire_recruitment	categorical
+selected_traits	records	post_fire_recruitment	9446
+selected_traits	taxa	post_fire_recruitment	5085
+selected_traits	datasets	post_fire_recruitment	21
+selected_traits	value_types	post_fire_recruitment	mode 9446
+selected_traits	label	serotiny	Serotiny
+selected_traits	type	serotiny	categorical
+selected_traits	records	serotiny	1632
+selected_traits	taxa	serotiny	1356
+selected_traits	datasets	serotiny	18
+selected_traits	value_types	serotiny	mode 1632
+selected_traits	label	bud_bank_location	Bud bank location
+selected_traits	type	bud_bank_location	categorical
+selected_traits	records	bud_bank_location	13234
+selected_traits	taxa	bud_bank_location	7113
+selected_traits	datasets	bud_bank_location	29
+selected_traits	value_types	bud_bank_location	mode 13234
+selected_traits	label	seedbank_longevity_class	Seedbank longevity class
+selected_traits	type	seedbank_longevity_class	categorical
+selected_traits	records	seedbank_longevity_class	12806
+selected_traits	taxa	seedbank_longevity_class	8546
+selected_traits	datasets	seedbank_longevity_class	9
+selected_traits	value_types	seedbank_longevity_class	mode 12806
+selected_traits	label	bark_thickness	Bark thickness
+selected_traits	type	bark_thickness	numeric
+selected_traits	records	bark_thickness	3203
+selected_traits	taxa	bark_thickness	371
+selected_traits	datasets	bark_thickness	13
+selected_traits	value_types	bark_thickness	raw 2175; mean 1028
+selected_traits	pct_minimum_or_maximum	bark_thickness	0.0
+selected_traits	label	fire_exposure_level	Fire exposure level
+selected_traits	type	fire_exposure_level	categorical
+selected_traits	records	fire_exposure_level	61
+selected_traits	taxa	fire_exposure_level	53
+selected_traits	datasets	fire_exposure_level	3
+selected_traits	value_types	fire_exposure_level	mode 61
+selected_traits	label	fire_flame_duration	Leaf flame duration
+selected_traits	type	fire_flame_duration	numeric
+selected_traits	records	fire_flame_duration	1061
+selected_traits	taxa	fire_flame_duration	39
+selected_traits	datasets	fire_flame_duration	2
+selected_traits	value_types	fire_flame_duration	raw 1061
+selected_traits	pct_minimum_or_maximum	fire_flame_duration	0.0
+selected_traits	label	fire_fuel_bed_bulk_density	Fuel bed bulk density
+selected_traits	type	fire_fuel_bed_bulk_density	numeric
+selected_traits	records	fire_fuel_bed_bulk_density	145
+selected_traits	taxa	fire_fuel_bed_bulk_density	25
+selected_traits	datasets	fire_fuel_bed_bulk_density	1
+selected_traits	value_types	fire_fuel_bed_bulk_density	raw 145
+selected_traits	pct_minimum_or_maximum	fire_fuel_bed_bulk_density	0.0
+selected_traits	label	fire_fuel_consumption	Fuel consumption by fire
+selected_traits	type	fire_fuel_consumption	numeric
+selected_traits	records	fire_fuel_consumption	98
+selected_traits	taxa	fire_fuel_consumption	25
+selected_traits	datasets	fire_fuel_consumption	1
+selected_traits	value_types	fire_fuel_consumption	raw 98
+selected_traits	pct_minimum_or_maximum	fire_fuel_consumption	0.0
+selected_traits	label	fire_rate_of_spread	Fire rate of spread
+selected_traits	type	fire_rate_of_spread	numeric
+selected_traits	records	fire_rate_of_spread	145
+selected_traits	taxa	fire_rate_of_spread	25
+selected_traits	datasets	fire_rate_of_spread	1
+selected_traits	value_types	fire_rate_of_spread	raw 145
+selected_traits	pct_minimum_or_maximum	fire_rate_of_spread	0.0
+selected_traits	label	fire_smoulder_duration	Leaf smoulder duration
+selected_traits	type	fire_smoulder_duration	numeric
+selected_traits	records	fire_smoulder_duration	1063
+selected_traits	taxa	fire_smoulder_duration	39
+selected_traits	datasets	fire_smoulder_duration	2
+selected_traits	value_types	fire_smoulder_duration	raw 1063
+selected_traits	pct_minimum_or_maximum	fire_smoulder_duration	0.0
+selected_traits	label	fire_time_from_fire_to_50_percent_flowering	Time from fire until 50% of individuals are flowering
+selected_traits	type	fire_time_from_fire_to_50_percent_flowering	numeric
+selected_traits	records	fire_time_from_fire_to_50_percent_flowering	845
+selected_traits	taxa	fire_time_from_fire_to_50_percent_flowering	424
+selected_traits	datasets	fire_time_from_fire_to_50_percent_flowering	5
+selected_traits	value_types	fire_time_from_fire_to_50_percent_flowering	bin 537; median 103; minimum 75; maximum 65; mean 65
+selected_traits	pct_minimum_or_maximum	fire_time_from_fire_to_50_percent_flowering	16.6
+selected_traits	label	fire_time_from_fire_to_50_percent_fruiting	Time from fire until 50% of individuals are fruiting
+selected_traits	type	fire_time_from_fire_to_50_percent_fruiting	numeric
+selected_traits	records	fire_time_from_fire_to_50_percent_fruiting	7
+selected_traits	taxa	fire_time_from_fire_to_50_percent_fruiting	7
+selected_traits	datasets	fire_time_from_fire_to_50_percent_fruiting	2
+selected_traits	value_types	fire_time_from_fire_to_50_percent_fruiting	mean 4; minimum 3
+selected_traits	pct_minimum_or_maximum	fire_time_from_fire_to_50_percent_fruiting	42.9
+selected_traits	label	fire_time_from_fire_to_flowering	Time from fire to first flowering
+selected_traits	type	fire_time_from_fire_to_flowering	numeric
+selected_traits	records	fire_time_from_fire_to_flowering	4241
+selected_traits	taxa	fire_time_from_fire_to_flowering	2214
+selected_traits	datasets	fire_time_from_fire_to_flowering	13
+selected_traits	value_types	fire_time_from_fire_to_flowering	minimum 2110; mean 1501; maximum 276; mode 180; bin 174
+selected_traits	pct_minimum_or_maximum	fire_time_from_fire_to_flowering	56.3
+selected_traits	label	fire_time_from_fire_to_flowering_decline	Time from fire until flowering declines
+selected_traits	type	fire_time_from_fire_to_flowering_decline	numeric
+selected_traits	records	fire_time_from_fire_to_flowering_decline	36
+selected_traits	taxa	fire_time_from_fire_to_flowering_decline	18
+selected_traits	datasets	fire_time_from_fire_to_flowering_decline	2
+selected_traits	value_types	fire_time_from_fire_to_flowering_decline	mode 36
+selected_traits	pct_minimum_or_maximum	fire_time_from_fire_to_flowering_decline	0.0
+selected_traits	label	fire_time_from_fire_to_fruiting	Time from fire to fruiting
+selected_traits	type	fire_time_from_fire_to_fruiting	numeric
+selected_traits	records	fire_time_from_fire_to_fruiting	635
+selected_traits	taxa	fire_time_from_fire_to_fruiting	583
+selected_traits	datasets	fire_time_from_fire_to_fruiting	10
+selected_traits	value_types	fire_time_from_fire_to_fruiting	minimum 603; mean 27; maximum 4; mode 1
+selected_traits	pct_minimum_or_maximum	fire_time_from_fire_to_fruiting	95.6
+selected_traits	label	fire_time_from_fire_to_peak_flowering	Time from fire to peak flowering
+selected_traits	type	fire_time_from_fire_to_peak_flowering	numeric
+selected_traits	records	fire_time_from_fire_to_peak_flowering	206
+selected_traits	taxa	fire_time_from_fire_to_peak_flowering	124
+selected_traits	datasets	fire_time_from_fire_to_peak_flowering	4
+selected_traits	value_types	fire_time_from_fire_to_peak_flowering	minimum 82; maximum 58; mean 41; mode 25
+selected_traits	pct_minimum_or_maximum	fire_time_from_fire_to_peak_flowering	68.0
+selected_traits	label	fire_time_to_ignition	Fire time to ignition
+selected_traits	type	fire_time_to_ignition	numeric
+selected_traits	records	fire_time_to_ignition	1058
+selected_traits	taxa	fire_time_to_ignition	39
+selected_traits	datasets	fire_time_to_ignition	2
+selected_traits	value_types	fire_time_to_ignition	raw 1058
+selected_traits	pct_minimum_or_maximum	fire_time_to_ignition	0.0
+selected_traits	label	fire_total_burn_duration	Leaf flame and smoulder duration
+selected_traits	type	fire_total_burn_duration	numeric
+selected_traits	records	fire_total_burn_duration	1063
+selected_traits	taxa	fire_total_burn_duration	39
+selected_traits	datasets	fire_total_burn_duration	2
+selected_traits	value_types	fire_total_burn_duration	raw 1063
+selected_traits	pct_minimum_or_maximum	fire_total_burn_duration	0.0
+selected_traits	label	post_fire_flowering	Post-fire flowering
+selected_traits	type	post_fire_flowering	categorical
+selected_traits	records	post_fire_flowering	431
+selected_traits	taxa	post_fire_flowering	387
+selected_traits	datasets	post_fire_flowering	2
+selected_traits	value_types	post_fire_flowering	mode 431
+selected_traits	label	resprouting_capacity_juvenile	Post-fire resprouting capacity of juvenile plants
+selected_traits	type	resprouting_capacity_juvenile	categorical
+selected_traits	records	resprouting_capacity_juvenile	1326
+selected_traits	taxa	resprouting_capacity_juvenile	1294
+selected_traits	datasets	resprouting_capacity_juvenile	3
+selected_traits	value_types	resprouting_capacity_juvenile	mode 1326
+selected_traits	label	resprouting_capacity_non_fire_disturbance	Plant vegetative response to disturbances other than fire
+selected_traits	type	resprouting_capacity_non_fire_disturbance	categorical
+selected_traits	records	resprouting_capacity_non_fire_disturbance	3704
+selected_traits	taxa	resprouting_capacity_non_fire_disturbance	3016
+selected_traits	datasets	resprouting_capacity_non_fire_disturbance	2
+selected_traits	value_types	resprouting_capacity_non_fire_disturbance	mode 3704
+selected_traits	label	resprouting_capacity_proportion_individuals	Post-fire proportion resprouting individuals
+selected_traits	type	resprouting_capacity_proportion_individuals	numeric
+selected_traits	records	resprouting_capacity_proportion_individuals	438
+selected_traits	taxa	resprouting_capacity_proportion_individuals	110
+selected_traits	datasets	resprouting_capacity_proportion_individuals	5
+selected_traits	value_types	resprouting_capacity_proportion_individuals	mean 438
+selected_traits	pct_minimum_or_maximum	resprouting_capacity_proportion_individuals	0.0
+selected_traits	label	resprouting_capacity_stem_ratio	Post-fire to pre-fire stem ratio
+selected_traits	type	resprouting_capacity_stem_ratio	numeric
+selected_traits	records	resprouting_capacity_stem_ratio	780
+selected_traits	taxa	resprouting_capacity_stem_ratio	52
+selected_traits	datasets	resprouting_capacity_stem_ratio	1
+selected_traits	value_types	resprouting_capacity_stem_ratio	mean 780
+selected_traits	pct_minimum_or_maximum	resprouting_capacity_stem_ratio	0.0
+selected_traits	label	plant_growth_form	Plant growth form
+selected_traits	type	plant_growth_form	categorical
+selected_traits	records	plant_growth_form	112992
+selected_traits	taxa	plant_growth_form	31557
+selected_traits	datasets	plant_growth_form	104
+selected_traits	value_types	plant_growth_form	mode 112992
+selected_traits	label	plant_height	Plant vegetative height
+selected_traits	type	plant_height	numeric
+selected_traits	records	plant_height	69716
+selected_traits	taxa	plant_height	22855
+selected_traits	datasets	plant_height	83
+selected_traits	value_types	plant_height	maximum 52096; minimum 17505; mean 115
+selected_traits	pct_minimum_or_maximum	plant_height	99.8
+selected_traits	label	wood_density	Wood density
+selected_traits	type	wood_density	numeric
+selected_traits	records	wood_density	13080
+selected_traits	taxa	wood_density	2160
+selected_traits	datasets	wood_density	58
+selected_traits	value_types	wood_density	raw 10290; mean 2790
+selected_traits	pct_minimum_or_maximum	wood_density	0.0
+selected_traits	label	leaf_mass_per_area	Leaf mass per area
+selected_traits	type	leaf_mass_per_area	numeric
+selected_traits	records	leaf_mass_per_area	32937
+selected_traits	taxa	leaf_mass_per_area	4089
+selected_traits	datasets	leaf_mass_per_area	154
+selected_traits	value_types	leaf_mass_per_area	raw 20426; mean 12511
+selected_traits	pct_minimum_or_maximum	leaf_mass_per_area	0.0
+selected_traits	label	seed_dry_mass	Seed dry mass
+selected_traits	type	seed_dry_mass	numeric
+selected_traits	records	seed_dry_mass	40423
+selected_traits	taxa	seed_dry_mass	9971
+selected_traits	datasets	seed_dry_mass	58
+selected_traits	value_types	seed_dry_mass	mean 22104; raw 18319
+selected_traits	pct_minimum_or_maximum	seed_dry_mass	0.0
+selected_traits	label	photosynthetic_pathway	Plant photosynthetic pathway
+selected_traits	type	photosynthetic_pathway	categorical
+selected_traits	records	photosynthetic_pathway	15018
+selected_traits	taxa	photosynthetic_pathway	9738
+selected_traits	datasets	photosynthetic_pathway	26
+selected_traits	value_types	photosynthetic_pathway	mode 15018
+encoding	lines_with_invalid_utf8	taxa.csv	0
+tables	rows	taxa.csv	33370
+encoding	lines_with_invalid_utf8	locations.csv	0
+tables	rows	locations.csv	39652
+encoding	lines_with_invalid_utf8	contexts.csv	0
+tables	rows	contexts.csv	2584
+encoding	lines_with_invalid_utf8	methods.csv	0
+tables	rows	methods.csv	3996
+encoding	lines_with_invalid_utf8	contributors.csv	0
+tables	rows	contributors.csv	794
+encoding	lines_with_invalid_utf8	excluded_data.csv	0
+tables	rows	excluded_data.csv	5246
+encoding	lines_with_invalid_utf8	taxonomic_updates.csv	0
+tables	rows	taxonomic_updates.csv	309795
+taxa	by:taxon_rank	species	26807
+taxa	by:taxon_rank	subspecies	2970
+taxa	by:taxon_rank	genus	2022
+taxa	by:taxon_rank	variety	1326
+taxa	by:taxon_rank	form	86
+taxa	by:taxon_rank		71
+taxa	by:taxon_rank	family	68
+taxa	by:taxon_rank	series	20
+taxa	by:taxonomic_status	accepted	30453
+taxa	by:taxonomic_status	genus accepted	2001
+taxa	by:taxonomic_status	unplaced	547
+taxa	by:taxonomic_status	excluded	117
+taxa	by:taxonomic_status	unknown	77
+taxa	by:taxonomic_status		68
+taxa	by:taxonomic_status	family accepted	68
+taxa	by:taxonomic_status	genus unplaced by APC	12
+taxa	by:taxonomic_status	nomenclatural synonym	9
+taxa	by:taxonomic_status	genus excluded	9
+taxa	by:taxonomic_status	taxonomic synonym	8
+taxa	by:taxonomic_status	misapplied	1
+taxa	by:taxonomic_dataset	APC	32668
+taxa	by:taxonomic_dataset	APNI	560
+taxa	by:taxonomic_dataset		142
+taxa	by:establishment_means	native	26472
+taxa	by:establishment_means	naturalised	3428
+taxa	by:establishment_means		2918
+taxa	by:establishment_means	native and naturalised	552
+taxa	not_species		6563
+resprouting	records		35395
+resprouting	records_by_entity_type_value_type	species mode	21924
+resprouting	records_by_entity_type_value_type	population mode	12400
+resprouting	records_by_entity_type_value_type	individual raw	936
+resprouting	records_by_entity_type_value_type	metapopulation mode	135
+resprouting	records_single_valued		35027
+resprouting	records_multi_valued		368
+resprouting	records_by_value	resprouts	18972
+resprouting	records_by_value	fire_killed	13795
+resprouting	records_by_value	partial_resprouting	2260
+resprouting	records_by_value	fire_killed resprouts	288
+resprouting	records_by_value	fire_killed partial_resprouting	47
+resprouting	records_by_value	partial_resprouting resprouts	30
+resprouting	records_by_value	fire_killed partial_resprouting resprouts	3
+resprouting	token_count	resprouts	19293
+resprouting	token_count	fire_killed	14133
+resprouting	token_count	partial_resprouting	2340
+resprouting	token_count_total		35766
+resprouting	tokens_outside_dictionary		0
+resprouting	taxa		13785
+resprouting	taxa_by_rank	species	10930
+resprouting	taxa_by_rank	subspecies	1214
+resprouting	taxa_by_rank	genus	1109
+resprouting	taxa_by_rank	variety	460
+resprouting	taxa_by_rank	family	30
+resprouting	taxa_by_rank	form	27
+resprouting	taxa_by_rank	blank	15
+resprouting	taxa_not_species		2855
+resprouting	all_ranks:taxa		13785
+resprouting	all_ranks:datasets_1		6559
+resprouting	all_ranks:pct_of_taxa:datasets_1		47.6
+resprouting	all_ranks:datasets_2plus		7226
+resprouting	all_ranks:pct_of_taxa:datasets_2plus		52.4
+resprouting	all_ranks:one_distinct_value		11556
+resprouting	all_ranks:pct_of_taxa:one_distinct_value		83.8
+resprouting	all_ranks:two_plus_distinct_values		2229
+resprouting	all_ranks:pct_of_taxa:two_plus_distinct_values		16.2
+resprouting	all_ranks:any_mixed_code_record		357
+resprouting	all_ranks:pct_of_taxa:any_mixed_code_record		2.6
+resprouting	all_ranks:two_plus_distinct_tokens		2261
+resprouting	all_ranks:pct_of_taxa:two_plus_distinct_tokens		16.4
+resprouting	all_ranks:tokens_resprouts_and_fire_killed		1700
+resprouting	all_ranks:pct_of_taxa:tokens_resprouts_and_fire_killed		12.3
+resprouting	all_ranks:both_tokens_without_separate_single_records		204
+resprouting	all_ranks:pct_of_taxa:both_tokens_without_separate_single_records		1.5
+resprouting	all_ranks:one_distinct_value_but_multi_valued		32
+resprouting	all_ranks:pct_of_taxa:one_distinct_value_but_multi_valued		0.2
+resprouting	all_ranks:records_resprouts_vs_fire_killed		1496
+resprouting	all_ranks:pct_of_taxa:records_resprouts_vs_fire_killed		10.9
+resprouting	all_ranks:vote:all_records_agree		11556
+resprouting	all_ranks:pct_of_taxa:vote:all_records_agree		83.8
+resprouting	all_ranks:hard_conflict_within_a_dataset		170
+resprouting	all_ranks:pct_of_taxa:hard_conflict_within_a_dataset		1.2
+resprouting	all_ranks:hard_conflict_between_datasets_only		1326
+resprouting	all_ranks:pct_of_taxa:hard_conflict_between_datasets_only		9.6
+resprouting	all_ranks:vote:no_majority		937
+resprouting	all_ranks:pct_of_taxa:vote:no_majority		6.8
+resprouting	all_ranks:vote:strict_majority_of_datasets		1267
+resprouting	all_ranks:pct_of_taxa:vote:strict_majority_of_datasets		9.2
+resprouting	all_ranks:vote:datasets_agree_on_modal_value		25
+resprouting	all_ranks:pct_of_taxa:vote:datasets_agree_on_modal_value		0.2
+resprouting	species:taxa		10930
+resprouting	species:datasets_1		4437
+resprouting	species:pct_of_taxa:datasets_1		40.6
+resprouting	species:datasets_2plus		6493
+resprouting	species:pct_of_taxa:datasets_2plus		59.4
+resprouting	species:one_distinct_value		8908
+resprouting	species:pct_of_taxa:one_distinct_value		81.5
+resprouting	species:two_plus_distinct_values		2022
+resprouting	species:pct_of_taxa:two_plus_distinct_values		18.5
+resprouting	species:any_mixed_code_record		313
+resprouting	species:pct_of_taxa:any_mixed_code_record		2.9
+resprouting	species:two_plus_distinct_tokens		2031
+resprouting	species:pct_of_taxa:two_plus_distinct_tokens		18.6
+resprouting	species:tokens_resprouts_and_fire_killed		1515
+resprouting	species:pct_of_taxa:tokens_resprouts_and_fire_killed		13.9
+resprouting	species:both_tokens_without_separate_single_records		170
+resprouting	species:pct_of_taxa:both_tokens_without_separate_single_records		1.6
+resprouting	species:one_distinct_value_but_multi_valued		9
+resprouting	species:pct_of_taxa:one_distinct_value_but_multi_valued		0.1
+resprouting	species:records_resprouts_vs_fire_killed		1345
+resprouting	species:pct_of_taxa:records_resprouts_vs_fire_killed		12.3
+resprouting	species:vote:all_records_agree		8908
+resprouting	species:pct_of_taxa:vote:all_records_agree		81.5
+resprouting	species:hard_conflict_within_a_dataset		139
+resprouting	species:pct_of_taxa:hard_conflict_within_a_dataset		1.3
+resprouting	species:hard_conflict_between_datasets_only		1206
+resprouting	species:pct_of_taxa:hard_conflict_between_datasets_only		11.0
+resprouting	species:vote:no_majority		832
+resprouting	species:pct_of_taxa:vote:no_majority		7.6
+resprouting	species:vote:strict_majority_of_datasets		1167
+resprouting	species:pct_of_taxa:vote:strict_majority_of_datasets		10.7
+resprouting	species:vote:datasets_agree_on_modal_value		23
+resprouting	species:pct_of_taxa:vote:datasets_agree_on_modal_value		0.2
+encoding	rows_with_invalid_utf8	Wenk_2022	898
+encoding	dataset_rows	Wenk_2022	60257
+encoding	invalid_rows_also_holding_valid_nonascii_utf8	Wenk_2022	0
+encoding	rows_with_invalid_utf8	all datasets	898
+encoding	datasets_with_invalid_utf8		1
+encoding	rows_with_valid_nonascii_utf8_only	all datasets	71826
+encoding	valid_nonascii_utf8_rows	Wenk_2022	2
+encoding	invalid_byte_occurrences	Wenk_2022 0x92	6 -> cp1252 '’' RIGHT SINGLE QUOTATION MARK
+encoding	invalid_byte_occurrences	Wenk_2022 0x96	900 -> cp1252 '–' EN DASH
+encoding	cells_with_invalid_utf8	Wenk_2022 measurement_remarks	898
+encoding	cells_with_valid_nonascii_utf8	Wenk_2022 taxon_name	2
+encoding	example_cp1252_context	Wenk_2022	54 cells: ny 20: 187–251
+encoding	example_cp1252_context	Wenk_2022	46 cells: ia 18: 295–329
+encoding	example_cp1252_context	Wenk_2022	32 cells: 10(3): 321–382
+encoding	parquet_rows		1798215
+encoding	parquet_to_pylist_raises	measurement_remarks	UnicodeDecodeError: invalid start byte
+encoding	parquet_nonascii_cells	Wenk_2022 measurement_remarks	898
+encoding	csv_nonascii_cells	Wenk_2022 measurement_remarks	898
+encoding	parquet_cells_invalid_utf8	Wenk_2022 measurement_remarks	898
+encoding	parquet_bytes_equal_traits_csv_bytes	Wenk_2022 measurement_remarks	True

@@ -1,0 +1,17 @@
+agree (<=0.01 Myr)	52276
+both undated	4712
+differ 0.01-0.5 Myr	2475
+differ 0.5-1 Myr	683
+differ >1 Myr	953
+stored dated, model cannot	294
+stored undated, model dates it	469
+holes with any sample differing >0.01 Myr	56
+61863 /data/paleodata/nsb/derived/2023-06-05_10063218/sample_ages_recomputed.tsv
+    183 369A
+    117 911A
+     93 516F
+     89 354
+     81 910C
+     72 258
+     59 592
+     41 540

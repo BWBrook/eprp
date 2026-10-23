@@ -1,0 +1,1359 @@
+deposit	file	metric	value
+arman-kangaroo-microwear		version_dir	v4_337315
+arman-kangaroo-microwear		title	Dietary breadth in kangaroos facilitated resilience to Quaternary climatic variations
+arman-kangaroo-microwear		doi	doi:10.5061/dryad.4j0zpc8nf
+arman-kangaroo-microwear		published	2025-01-02
+arman-kangaroo-microwear		licence	https://spdx.org/licenses/CC0-1.0.html
+arman-kangaroo-microwear	README.md	bytes	7820
+arman-kangaroo-microwear	README.md	lines	28
+arman-kangaroo-microwear	README.md	first_line	# Dietary breadth in kangaroos facilitated resilience to Quaternary climatic variations
+arman-kangaroo-microwear	S1_data.xlsx	bytes	987459
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data LME:data_rows	2650
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data LME:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data LME:columns	27
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data LME:numeric_columns	18
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data LME:distinct[Specimen]	960 of 2650 filled
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data LME:header	Specimen; Genus; Species; G_sp; Tooth Facet; Tooth Position; Element; Macrowear Stage; Ecoregion; Island; Age; Smrk1
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data ANOVA:data_rows	937
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data ANOVA:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data ANOVA:columns	27
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data ANOVA:numeric_columns	17
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data ANOVA:distinct[Specimen]	934 of 937 filled
+arman-kangaroo-microwear	S1_data.xlsx	sheet:Raw Data ANOVA:header	Specimen; Genus; Species; G_sp; Tooth Tooth Facet; Tooth Position; Element; Macrowear Stage stage; Ecoregion; Island; Age; VFC Depth
+arman-kangaroo-microwear	S1_data.xlsx	sheet:How Normalised:data_rows	32
+arman-kangaroo-microwear	S1_data.xlsx	sheet:How Normalised:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:How Normalised:columns	5
+arman-kangaroo-microwear	S1_data.xlsx	sheet:How Normalised:numeric_columns	2
+arman-kangaroo-microwear	S1_data.xlsx	sheet:How Normalised:header	Analysis; Parameter; Transformation used; Lambda; Pearson's P by DF
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary interspecific:data_rows	71
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary interspecific:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary interspecific:columns	3
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary interspecific:numeric_columns	0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary interspecific:header	Species-only; Species and interspecific factors (based on LME models); Species and interspecific factors (based on LME models; non-significant factors removed)
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC interspecific:data_rows	464
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC interspecific:dropped_rows	before header 0; totals 0; short 1
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC interspecific:columns	32
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC interspecific:numeric_columns	30
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC interspecific:header	Asfc; De. lumholtzi; De. PNG; Do. atrata; Dor. vanheurni; Se. brachyurus; W. bicolor; N. rufogriseus; T. stigmatica; T. thetis; On. fraenata; On. unguifera
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary depth analysis:data_rows	17
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary depth analysis:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary depth analysis:columns	3
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary depth analysis:numeric_columns	3
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA summary depth analysis:header	Single Species Depth Analysis; Subfamily Depth Analysis; Whole dataset analysis
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC depth:data_rows	74
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC depth:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC depth:columns	3
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC depth:numeric_columns	0
+arman-kangaroo-microwear	S1_data.xlsx	sheet:ANOVA PHC depth:header	Independent species analyses; Subfamily Analysis; All taxa analysis (significant variables only)
+arman-kangaroo-microwear	S2_data.xlsx	bytes	2367707
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Asfc:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Asfc:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Asfc:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Asfc:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Asfc:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:epLsar:data_rows	1287
+arman-kangaroo-microwear	S2_data.xlsx	sheet:epLsar:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:epLsar:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:epLsar:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:epLsar:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Hasfc9:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Hasfc9:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Hasfc9:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Hasfc9:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Hasfc9:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Lsfc:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Lsfc:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Lsfc:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Lsfc:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Lsfc:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:NepLsar:data_rows	198
+arman-kangaroo-microwear	S2_data.xlsx	sheet:NepLsar:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:NepLsar:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:NepLsar:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:NepLsar:header	modelName (N.B. >2 singular removed); Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sda:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sda:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sda:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sda:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sda:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdax:data_rows	387
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdax:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdax:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdax:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdax:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdq:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdq:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdq:columns	21
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdq:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Sdq:header	#; modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhq:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhq:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhq:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhq:numeric_columns	17
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhq:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhx:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhx:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhx:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhx:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Shhx:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spc:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spc:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spc:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spc:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spc:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spd:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spd:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spd:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spd:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Spd:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Svd:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Svd:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Svd:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Svd:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Svd:header	modelName; Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Metf:data_rows	1302
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Metf:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Metf:columns	20
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Metf:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Metf:header	modelName; Model; R2_conditional; R2_marginal; ICC; RMSE; Sigma; AIC_wt; BIC_wt; Performance_Score; nPar; D
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Pc:data_rows	198
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Pc:dropped_rows	before header 0; totals 0; short 0
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Pc:columns	21
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Pc:numeric_columns	18
+arman-kangaroo-microwear	S2_data.xlsx	sheet:Pc:header	#; modelName (N.B. >2 singular removed); Model; R2_conditional; R2_marginal; RMSE; Sigma; ICC; AIC_wt; BIC_wt; Performance_Score; nPar
+cloggs-cave-mammals		version_dir	7225693
+cloggs-cave-mammals		title	Interpreting the mammal deposits of Cloggs Cave (SE Australia), GunaiKurnai Aboriginal Country, through community-led partnership research
+cloggs-cave-mammals		doi	10.5061/dryad.kh1893298
+cloggs-cave-mammals		published	2022-10-19
+cloggs-cave-mammals		licence	cc-zero
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	bytes	24095
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in XUs:data_rows	38
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in XUs:dropped_rows	before header 0; totals 1; short 1
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in XUs:columns	58
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in XUs:numeric_columns	56
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in XUs:distinct[Scientific name]	38 of 38 filled
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in XUs:header	Common name; Scientific name; XU1; XU2; XU3; XU4; XU5; XU6; XU7; XU8; XU9; XU11a
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in SUs:data_rows	38
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in SUs:dropped_rows	before header 0; totals 1; short 1
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in SUs:columns	24
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in SUs:numeric_columns	22
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in SUs:distinct[Scientific name]	38 of 38 filled
+cloggs-cave-mammals	Cloggs_XU_and_SU_data.xlsx	sheet:Cloggs Cave data in SUs:header	Common name; Scientific name; SU1; SU2; SU4A; SU4B; SU4C; SU4D; SU4E; SU4F; SU4G; SU4H
+cloggs-cave-mammals	README.md	bytes	1223
+cloggs-cave-mammals	README.md	lines	13
+cloggs-cave-mammals	README.md	first_line	# README
+couzens-kangaroo-enamel		version_dir	v7_442234
+couzens-kangaroo-enamel		title	Data and script from: Contingent evolution of thick enamel by kangaroos to resist dietary abrasion
+couzens-kangaroo-enamel		doi	doi:10.5061/dryad.4b8gthtmd
+couzens-kangaroo-enamel		published	2026-05-15
+couzens-kangaroo-enamel		licence	https://spdx.org/licenses/CC0-1.0.html
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	bytes	795279
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_members	99
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/Butler_etal_2017_bmass_max.csv 1144
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Butler_etal_2017_bmass_max.csv	data_rows	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Butler_etal_2017_bmass_max.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Butler_etal_2017_bmass_max.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Butler_etal_2017_bmass_max.csv	numeric_columns	1
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Butler_etal_2017_bmass_max.csv	header	Species; Clade; Bmass_g
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv 25659
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv	data_rows	163
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv	columns	18
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv	numeric_columns	6
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv	distinct[ID]	28 of 30 filled
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EVOL_primate_bmass.csv	header	Genus; Species; Order; Family; Clade; ID; Side; Tooth_identity; Status; Locality; Wt_g; Wt_source
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/EXP_Bmass_taxa.csv 168168
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_Bmass_taxa.csv	text_rows	5773
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv 4498
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv	data_rows	68
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv	columns	7
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv	numeric_columns	5
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv	distinct[Taxon]	68 of 68 filled
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/EXP_summary_enamel_data.csv	header	Taxon; Clade; mean_EVOL; mean_EI; mean_RET3D; mean_HCA; mass_g
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/fam_data.csv 902
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/fam_data.csv	data_rows	20
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/fam_data.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/fam_data.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/fam_data.csv	numeric_columns	0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/fam_data.csv	header	family; suborder; guild
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/Helgen_etal_2006_bmass.csv 463
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Helgen_etal_2006_bmass.csv	data_rows	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Helgen_etal_2006_bmass.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Helgen_etal_2006_bmass.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Helgen_etal_2006_bmass.csv	numeric_columns	1
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/Helgen_etal_2006_bmass.csv	header	Species; Clade; Bmass_g
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/main_data_file.csv 48808
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/main_data_file.csv	data_rows	282
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/main_data_file.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/main_data_file.csv	columns	29
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/main_data_file.csv	numeric_columns	15
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/main_data_file.csv	distinct[Taxon]	76 of 282 filled
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/main_data_file.csv	header	Specimen_number; Taxon; Est_age_Ma; Side; TI; Subclade; Clade; Status; Assemblage; Prtld_Wmax_mm; Prtld_Wcervix_mm; Lmax_mm
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/AMF30626A_Simosthenurus_pales_Sthenurinae_NA_Bil_LMX.csv 1248
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/AMF30626A_Simosthenurus_pales_Sthenurinae_NA_Bil_LMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/AMF30626A_Simosthenurus_pales_Sthenurinae_NA_Bil_LMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/AMF30626A_Simosthenurus_pales_Sthenurinae_NA_Bil_LMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/AMF30626A_Simosthenurus_pales_Sthenurinae_NA_Bil_LMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/AMF30626A_Simosthenurus_pales_Sthenurinae_NA_Bil_LMX.csv	header	0.05; 0.806899; 0.806899
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv 1296
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	header	0.05; 0.959849; 0.959849
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv 1294
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM12696_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	header	0.05; 1.11431; 1.11431
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv 1307
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM3.csv	header	0.05; 0.483068; 0.483068
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv 1294
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/ANWCCM13430_Hypsiprymnodon_moschatus_Hypsiprymnodontidae_Fr_Bun_LRM4.csv	header	0.05; 0.633171; 0.633171
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/FU2001.9.23.47_Osphranter_rufus_Macropodini_G_Bil_LLMX.csv 1272
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FU2001.9.23.47_Osphranter_rufus_Macropodini_G_Bil_LLMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FU2001.9.23.47_Osphranter_rufus_Macropodini_G_Bil_LLMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FU2001.9.23.47_Osphranter_rufus_Macropodini_G_Bil_LLMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FU2001.9.23.47_Osphranter_rufus_Macropodini_G_Bil_LLMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FU2001.9.23.47_Osphranter_rufus_Macropodini_G_Bil_LLMX.csv	header	0.05; 0.618877; 0.618877
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/FUR078_Pseudocheirus_peregrinnus_Pseuocheiridae_B_Bunsel_LMX.csv 1291
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR078_Pseudocheirus_peregrinnus_Pseuocheiridae_B_Bunsel_LMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR078_Pseudocheirus_peregrinnus_Pseuocheiridae_B_Bunsel_LMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR078_Pseudocheirus_peregrinnus_Pseuocheiridae_B_Bunsel_LMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR078_Pseudocheirus_peregrinnus_Pseuocheiridae_B_Bunsel_LMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR078_Pseudocheirus_peregrinnus_Pseuocheiridae_B_Bunsel_LMX.csv	header	0.05; 1.17916; 1.17916
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/FUR224_Trichosurus_vulpecula_Phalangeridae_OM_Bunl_LRMX.csv 1303
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR224_Trichosurus_vulpecula_Phalangeridae_OM_Bunl_LRMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR224_Trichosurus_vulpecula_Phalangeridae_OM_Bunl_LRMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR224_Trichosurus_vulpecula_Phalangeridae_OM_Bunl_LRMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR224_Trichosurus_vulpecula_Phalangeridae_OM_Bunl_LRMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/FUR224_Trichosurus_vulpecula_Phalangeridae_OM_Bunl_LRMX.csv	header	0.05; 0.361255; 0.361255
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/QMF57500_Wanburoo_hilarus_Sthenurinae_NA_Bil_MX.csv 1287
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMF57500_Wanburoo_hilarus_Sthenurinae_NA_Bil_MX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMF57500_Wanburoo_hilarus_Sthenurinae_NA_Bil_MX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMF57500_Wanburoo_hilarus_Sthenurinae_NA_Bil_MX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMF57500_Wanburoo_hilarus_Sthenurinae_NA_Bil_MX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMF57500_Wanburoo_hilarus_Sthenurinae_NA_Bil_MX.csv	header	0.05; 0.792132; 0.792132
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/QMJ20860_Osphranter_robustus_Macropodini_G_Bil_LRM3.csv 1262
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMJ20860_Osphranter_robustus_Macropodini_G_Bil_LRM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMJ20860_Osphranter_robustus_Macropodini_G_Bil_LRM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMJ20860_Osphranter_robustus_Macropodini_G_Bil_LRM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMJ20860_Osphranter_robustus_Macropodini_G_Bil_LRM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/QMJ20860_Osphranter_robustus_Macropodini_G_Bil_LRM3.csv	header	0.05; 0.835383; 0.835383
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM15918_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LRM4.csv 1297
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15918_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LRM4.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15918_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LRM4.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15918_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LRM4.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15918_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LRM4.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15918_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LRM4.csv	header	0.05; 0.432148; 0.432148
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM15919_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LLM3.csv 1313
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15919_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LLM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15919_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LLM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15919_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LLM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15919_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LLM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM15919_Aepyprymnus_rufescens_Potoroinae_Fu_Bunl_LLM3.csv	header	0.05; 0.349424; 0.349424
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM1901_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LRM3.csv 1285
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1901_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LRM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1901_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LRM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1901_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LRM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1901_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LRM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1901_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LRM3.csv	header	0.05; 0.64528; 0.64528
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM1904_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LLM3.csv 1291
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1904_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LLM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1904_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LLM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1904_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LLM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1904_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LLM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM1904_Dendrolagus_lumholtzi_Dendrolagini_B_Bil_LLM3.csv	header	0.05; 0.591759; 0.591759
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM5149_Onychogalea_unguifera_Macropodini_MF_Bil_LRM3.csv 1283
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM5149_Onychogalea_unguifera_Macropodini_MF_Bil_LRM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM5149_Onychogalea_unguifera_Macropodini_MF_Bil_LRM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM5149_Onychogalea_unguifera_Macropodini_MF_Bil_LRM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM5149_Onychogalea_unguifera_Macropodini_MF_Bil_LRM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM5149_Onychogalea_unguifera_Macropodini_MF_Bil_LRM3.csv	header	0.05; 0.613501; 0.613501
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM55_Setonix_brachyurus_Macropodini_B_Bil_LRM3.csv 1295
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM55_Setonix_brachyurus_Macropodini_B_Bil_LRM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM55_Setonix_brachyurus_Macropodini_B_Bil_LRM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM55_Setonix_brachyurus_Macropodini_B_Bil_LRM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM55_Setonix_brachyurus_Macropodini_B_Bil_LRM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM55_Setonix_brachyurus_Macropodini_B_Bil_LRM3.csv	header	0.05; 0.81478; 0.81478
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM7493_Potorous_tridactylus_Potoroinae_Fu_Bunl_LRM4.csv 1298
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM7493_Potorous_tridactylus_Potoroinae_Fu_Bunl_LRM4.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM7493_Potorous_tridactylus_Potoroinae_Fu_Bunl_LRM4.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM7493_Potorous_tridactylus_Potoroinae_Fu_Bunl_LRM4.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM7493_Potorous_tridactylus_Potoroinae_Fu_Bunl_LRM4.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM7493_Potorous_tridactylus_Potoroinae_Fu_Bunl_LRM4.csv	header	0.05; 0.343026; 0.343026
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM3.csv 1300
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM3.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM3.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM3.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM3.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM3.csv	header	0.05; 0.419232; 0.419232
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM4.csv 1304
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM4.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM4.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM4.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM4.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMM8658_Potorous_tridactylus_Potoroinae_Fu_Bunl_LLM4.csv	header	0.05; 0.453904; 0.453904
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMP27068_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv 1256
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP27068_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP27068_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP27068_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP27068_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP27068_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	header	0.05; 3.06985; 3.06985
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMP28663_Simosthenurus_occidentalis_Sthenurinae_NA_Bil_LLMX.csv 1274
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP28663_Simosthenurus_occidentalis_Sthenurinae_NA_Bil_LLMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP28663_Simosthenurus_occidentalis_Sthenurinae_NA_Bil_LLMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP28663_Simosthenurus_occidentalis_Sthenurinae_NA_Bil_LLMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP28663_Simosthenurus_occidentalis_Sthenurinae_NA_Bil_LLMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP28663_Simosthenurus_occidentalis_Sthenurinae_NA_Bil_LLMX.csv	header	0.05; 0.951704; 0.951704
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/SAMP47109_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv 1268
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP47109_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP47109_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP47109_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP47109_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/SAMP47109_Procoptodon_goliah_Sthenurinae_NA_Bil_LMX.csv	header	0.05; 0.864493; 0.864493
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/UCMP65961_Hadronomas_puckridgi_Sthenurinae_NA_Bil_LLM2.csv 1291
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/UCMP65961_Hadronomas_puckridgi_Sthenurinae_NA_Bil_LLM2.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/UCMP65961_Hadronomas_puckridgi_Sthenurinae_NA_Bil_LLM2.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/UCMP65961_Hadronomas_puckridgi_Sthenurinae_NA_Bil_LLM2.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/UCMP65961_Hadronomas_puckridgi_Sthenurinae_NA_Bil_LLM2.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/UCMP65961_Hadronomas_puckridgi_Sthenurinae_NA_Bil_LLM2.csv	header	0.05; 0.780708; 0.780708
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/maps/WAMM5669_Lagostrophus_fasciatus_Lagostrophinae_MF_Bil_LLMX.csv 1285
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/WAMM5669_Lagostrophus_fasciatus_Lagostrophinae_MF_Bil_LLMX.csv	data_rows	49
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/WAMM5669_Lagostrophus_fasciatus_Lagostrophinae_MF_Bil_LLMX.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/WAMM5669_Lagostrophus_fasciatus_Lagostrophinae_MF_Bil_LLMX.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/WAMM5669_Lagostrophus_fasciatus_Lagostrophinae_MF_Bil_LLMX.csv	numeric_columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/maps/WAMM5669_Lagostrophus_fasciatus_Lagostrophinae_MF_Bil_LLMX.csv	header	0.05; 1.06652; 1.06652
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/mars_herb_data.csv 287033
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/mars_herb_data.csv	data_rows	2408
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/mars_herb_data.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/mars_herb_data.csv	columns	10
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/mars_herb_data.csv	numeric_columns	0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/mars_herb_data.csv	header	Genus; Species; Class; Subclass; Order; Family; Molar Type; Gazetted locality Informal locality name; Formation; Subepoch_Epoch
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/merged_tree_poly.tre 1890
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/merged_tree_poly.tre	not_parsed	.tre
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/aplodontidae.csv 62374
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/aplodontidae.csv	data_rows	285
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/aplodontidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/aplodontidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/aplodontidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/aplodontidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; late_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/arctostylopidae.csv 11065
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/arctostylopidae.csv	data_rows	39
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/arctostylopidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/arctostylopidae.csv	columns	25
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/arctostylopidae.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/arctostylopidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/astrapotheriidae.csv 37583
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/astrapotheriidae.csv	data_rows	131
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/astrapotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/astrapotheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/astrapotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/astrapotheriidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/brontotheriidae.csv 112759
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/brontotheriidae.csv	data_rows	406
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/brontotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/brontotheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/brontotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/brontotheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; late_interval
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/carodniidae.csv 2418
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/carodniidae.csv	data_rows	8
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/carodniidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/carodniidae.csv	columns	26
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/carodniidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/carodniidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/cercopithecoidea.csv 200302
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/cercopithecoidea.csv	data_rows	742
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/cercopithecoidea.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/cercopithecoidea.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/cercopithecoidea.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/cercopithecoidea.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; late_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/chlamyphoridae.csv 36742
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/chlamyphoridae.csv	data_rows	137
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/chlamyphoridae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/chlamyphoridae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/chlamyphoridae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/chlamyphoridae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/coryphodontidae.csv 131703
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/coryphodontidae.csv	data_rows	523
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/coryphodontidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/coryphodontidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/coryphodontidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/coryphodontidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/deinotheriidae.csv 67425
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/deinotheriidae.csv	data_rows	244
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/deinotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/deinotheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/deinotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/deinotheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/embrithopoda.csv 10026
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/embrithopoda.csv	data_rows	35
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/embrithopoda.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/embrithopoda.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/embrithopoda.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/embrithopoda.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/equidae.csv 1513961
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/equidae.csv	data_rows	5792
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/equidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/equidae.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/equidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/equidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/hegetotheriidae.csv 74573
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hegetotheriidae.csv	data_rows	272
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hegetotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hegetotheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hegetotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hegetotheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/henricosborniidae.csv 17767
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/henricosborniidae.csv	data_rows	60
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/henricosborniidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/henricosborniidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/henricosborniidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/henricosborniidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/hippopotamidae.csv 182741
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hippopotamidae.csv	data_rows	657
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hippopotamidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hippopotamidae.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hippopotamidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hippopotamidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/hyopsodontidae.csv 316202
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyopsodontidae.csv	data_rows	1227
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyopsodontidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyopsodontidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyopsodontidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyopsodontidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/hyracoidea.csv 57054
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyracoidea.csv	data_rows	218
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyracoidea.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyracoidea.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyracoidea.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/hyracoidea.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/interatheriidae.csv 66992
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/interatheriidae.csv	data_rows	236
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/interatheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/interatheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/interatheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/interatheriidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/leontiniidae.csv 19115
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leontiniidae.csv	data_rows	70
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leontiniidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leontiniidae.csv	columns	26
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leontiniidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leontiniidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/leporidae.csv 470903
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leporidae.csv	data_rows	1869
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leporidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leporidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leporidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/leporidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/lophiodontidae.csv 34597
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/lophiodontidae.csv	data_rows	124
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/lophiodontidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/lophiodontidae.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/lophiodontidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/lophiodontidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; late_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/macraucheniidae.csv 55054
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/macraucheniidae.csv	data_rows	194
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/macraucheniidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/macraucheniidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/macraucheniidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/macraucheniidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/mammutidae.csv 193264
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mammutidae.csv	data_rows	726
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mammutidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mammutidae.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mammutidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mammutidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/megatheriidae.csv 84672
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/megatheriidae.csv	data_rows	301
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/megatheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/megatheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/megatheriidae.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/megatheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/mesotheriidae.csv 35149
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mesotheriidae.csv	data_rows	124
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mesotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mesotheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mesotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mesotheriidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/mioclaenidae.csv 316202
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mioclaenidae.csv	data_rows	1227
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mioclaenidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mioclaenidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mioclaenidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/mioclaenidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/notohippidae.csv 9556
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/notohippidae.csv	data_rows	35
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/notohippidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/notohippidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/notohippidae.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/notohippidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/numidotheriidae.csv 1441
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/numidotheriidae.csv	data_rows	4
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/numidotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/numidotheriidae.csv	columns	26
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/numidotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/numidotheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/ochotonidae.csv 191581
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ochotonidae.csv	data_rows	736
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ochotonidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ochotonidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ochotonidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ochotonidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/pampatheriidae.csv 60662
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pampatheriidae.csv	data_rows	224
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pampatheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pampatheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pampatheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pampatheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/pantodonta.csv 183483
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pantodonta.csv	data_rows	715
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pantodonta.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pantodonta.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pantodonta.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pantodonta.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/paraceratheriidae.csv 27395
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/paraceratheriidae.csv	data_rows	92
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/paraceratheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/paraceratheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/paraceratheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/paraceratheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/periptychidae.csv 79611
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/periptychidae.csv	data_rows	301
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/periptychidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/periptychidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/periptychidae.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/periptychidae.csv	header	occurrence_no; record_type; reid_no; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/phenacodontidae.csv 339985
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/phenacodontidae.csv	data_rows	1273
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/phenacodontidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/phenacodontidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/phenacodontidae.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/phenacodontidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/procaviidae.csv 27670
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/procaviidae.csv	data_rows	110
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/procaviidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/procaviidae.csv	columns	26
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/procaviidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/procaviidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/proterotheriidae.csv 67567
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/proterotheriidae.csv	data_rows	235
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/proterotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/proterotheriidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/proterotheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/proterotheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; difference; accepted_name; accepted_rank; accepted_no; early_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/pyrotheriidae.csv 3626
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pyrotheriidae.csv	data_rows	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pyrotheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pyrotheriidae.csv	columns	25
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pyrotheriidae.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/pyrotheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/rhinocerotidae.csv 613499
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/rhinocerotidae.csv	data_rows	2224
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/rhinocerotidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/rhinocerotidae.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/rhinocerotidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/rhinocerotidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/ruminantia.csv 2567612
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ruminantia.csv	data_rows	9867
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ruminantia.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ruminantia.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ruminantia.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/ruminantia.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/taeniodonta.csv 42443
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/taeniodonta.csv	data_rows	157
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/taeniodonta.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/taeniodonta.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/taeniodonta.csv	numeric_columns	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/taeniodonta.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/tapiridae.csv 130483
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tapiridae.csv	data_rows	481
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tapiridae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tapiridae.csv	columns	28
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tapiridae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tapiridae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/tillodontia.csv 113312
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tillodontia.csv	data_rows	441
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tillodontia.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tillodontia.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tillodontia.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/tillodontia.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; late_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/toxodontidae.csv 83518
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/toxodontidae.csv	data_rows	316
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/toxodontidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/toxodontidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/toxodontidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/toxodontidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; late_interval; max_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/trichechidae.csv 10199
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/trichechidae.csv	data_rows	38
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/trichechidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/trichechidae.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/trichechidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/trichechidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/uintatheriidae.csv 17796
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/uintatheriidae.csv	data_rows	67
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/uintatheriidae.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/uintatheriidae.csv	columns	26
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/uintatheriidae.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/uintatheriidae.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/pbdb_genera/xenungulata.csv 3292
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/xenungulata.csv	data_rows	11
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/xenungulata.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/xenungulata.csv	columns	27
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/xenungulata.csv	numeric_columns	12
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/pbdb_genera/xenungulata.csv	header	occurrence_no; record_type; collection_no; identified_name; identified_rank; identified_no; accepted_name; accepted_rank; accepted_no; early_interval; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/species_diet.csv 697
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/species_diet.csv	text_rows	29
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/data/stage_list.csv 481
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/stage_list.csv	data_rows	21
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/stage_list.csv	dropped_rows	before header 0; totals 0; short 0
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/stage_list.csv	columns	3
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/stage_list.csv	numeric_columns	2
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/data/stage_list.csv	header	Stage; max_ma; min_ma
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/READ_ME.txt 17309
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/READ_ME.txt	not_parsed	.txt
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/bmass.R 1788
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/bmass.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig2A_Genera_Richness_PBDB_5myr_bins.R 7677
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig2A_Genera_Richness_PBDB_5myr_bins.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig2B_Genus_Richness_ALL_MARS_HERB_subepoch.R 7371
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig2B_Genus_Richness_ALL_MARS_HERB_subepoch.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig3A-D_ENAM_by_clade_BoxWhskr_Species.R 3454
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig3A-D_ENAM_by_clade_BoxWhskr_Species.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig3E-H_ENAM_by_diet_BoxWhskr.R 4389
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig3E-H_ENAM_by_diet_BoxWhskr.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig3I_PCA.R 4033
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig3I_PCA.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig3J_macro_primate_3d_bmass.R 12621
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig3J_macro_primate_3d_bmass.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig4A_ASR_EVOL_bmass.r 2364
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig4A_ASR_EVOL_bmass.r	not_parsed	.r
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig4B_RET3D_time_points_lines.R 5648
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig4B_RET3D_time_points_lines.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig4C_EVOL_v_time_points_lines.R 5800
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig4C_EVOL_v_time_points_lines.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig4D_Linear_enamel_thickness_v_time_points_lines.R 4389
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig4D_Linear_enamel_thickness_v_time_points_lines.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig4E_Blade_depth_v_time_points_lines.R 5999
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig4E_Blade_depth_v_time_points_lines.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/fig4F_Relief_angle_v_time_points_lines.R 6308
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/fig4F_Relief_angle_v_time_points_lines.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/figS2_PCA_correlation.R 3301
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/figS2_PCA_correlation.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/figS4E-F_ET_dist_Sthenurine.R 2854
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/figS4E-F_ET_dist_Sthenurine.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/figS9_Tooth_dim_bmass.R 4912
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/figS9_Tooth_dim_bmass.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/table_exp.R 2522
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/table_exp.R	not_parsed	.R
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip	zip_member	Couzens_et_al_dryad_v2/R_scripts/tree_construct_poly.r 6361
+couzens-kangaroo-enamel	Couzens_et_al_dryad_v2_(2).zip::Couzens_et_al_dryad_v2/R_scripts/tree_construct_poly.r	not_parsed	.r
+couzens-kangaroo-enamel	README.md	bytes	17625
+couzens-kangaroo-enamel	README.md	lines	220
+couzens-kangaroo-enamel	README.md	first_line	# Data and script from: Contingent evolution of thick enamel by kangaroos to resist dietary abrasion
+craffey-ediacaran-cooccurrence		version_dir	v8_331096
+craffey-ediacaran-cooccurrence		title	Co‑occurrence structure of late Ediacaran communities and influence of emerging ecosystem engineers
+craffey-ediacaran-cooccurrence		doi	doi:10.5061/dryad.69p8cz9cc
+craffey-ediacaran-cooccurrence		published	2024-11-26
+craffey-ediacaran-cooccurrence		licence	https://spdx.org/licenses/CC0-1.0.html
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	bytes	232987
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_members	50
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/R Poject File.Rproj 218
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/R Poject File.Rproj	not_parsed	.Rproj
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Bioturbation List.csv 2454
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Bioturbation List.csv	data_rows	74
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Bioturbation List.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Bioturbation List.csv	columns	3
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Bioturbation List.csv	numeric_columns	0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Bioturbation List.csv	header	genus; time_bins; EE.Behavior
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Data Summary.csv 200
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Data Summary.csv	data_rows	3
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Data Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Data Summary.csv	columns	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Data Summary.csv	numeric_columns	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Data Summary.csv	header	MatrixFill; Genera; Sites; PropAgg
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/WS ret.csv 8950
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS ret.csv	data_rows	32
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS ret.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS ret.csv	columns	91
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS ret.csv	numeric_columns	88
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS ret.csv	header	site_ID; Albumares; Andiva; Anfesta; Arborea; Archaeaspinus; Archaeocyatha; Archangelia; Arkarua; Armillifera; Aspidella; Aulozoon
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/Combined Pairs Summary.csv 58150
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Combined Pairs Summary.csv	data_rows	465
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Combined Pairs Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Combined Pairs Summary.csv	columns	9
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Combined Pairs Summary.csv	numeric_columns	2
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Combined Pairs Summary.csv	header	sp1_name; sp2_name; sp_ID; Base.FETmP; Mean.FETmP; Pair.Type; Zone; Pair.Veech; Freq
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/AV C.Data - Output 1.csv 4851
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV C.Data - Output 1.csv	data_rows	32
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV C.Data - Output 1.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV C.Data - Output 1.csv	columns	39
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV C.Data - Output 1.csv	numeric_columns	36
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV C.Data - Output 1.csv	header	site_ID; Arborea; Aspidella; Avalofractus; Beothukis; Bradgatia; Charnia; Charniodiscus; Culmofrons; Cyclomedusa; Eoporpita; Fractofusus
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/NM C.Data - Output 1.csv 20542
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM C.Data - Output 1.csv	data_rows	90
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM C.Data - Output 1.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM C.Data - Output 1.csv	columns	78
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM C.Data - Output 1.csv	numeric_columns	75
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM C.Data - Output 1.csv	header	site_ID; Anabarites; Anabylia; Annulatubus; Arborea; Aspidella; Bradgatia; Brooksella; Buchholzbrunnichnus; Cambrotubulus; Catellichnus; Charnia
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/Data Check-NFF3 Genera.csv 3035
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Genera.csv	data_rows	31
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Genera.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Genera.csv	columns	33
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Genera.csv	numeric_columns	33
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Genera.csv	header	WS206_Raw-12-1; WS23_Con-3-1; WS241_Raw-12-12; WS28_Dou-4-6; WS296_Raw-12-12; WS298_Raw-12-12; WS313_Raw-12-12; WS331_Raw-12-12; WS35_Dou-4-7; WS383_Raw-12-1; WS383_Raw-12-12; WS386_Erg-5-1
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/AV ret.csv 2837
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV ret.csv	data_rows	17
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV ret.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV ret.csv	columns	39
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV ret.csv	numeric_columns	36
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV ret.csv	header	site_ID; Arborea; Aspidella; Avalofractus; Beothukis; Bradgatia; Charnia; Charniodiscus; Culmofrons; Cyclomedusa; Eoporpita; Fractofusus
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/100 Cooccurence Summary.csv 1779
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/100 Cooccurence Summary.csv	data_rows	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/100 Cooccurence Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/100 Cooccurence Summary.csv	columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/100 Cooccurence Summary.csv	numeric_columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/100 Cooccurence Summary.csv	header	V1; V2; V3; V4; V5; V6; V7; V8; V9; V10; V11; V12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/Data Check-NFF3 Sites.csv 2644
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Sites.csv	data_rows	33
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Sites.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Sites.csv	columns	9
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Sites.csv	numeric_columns	7
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Data Check-NFF3 Sites.csv	header	LONG; LAT; environ; Bio.T; T.bin; eng; algae; delta; Lith.Type
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/NM ret.csv 8622
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM ret.csv	data_rows	35
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM ret.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM ret.csv	columns	78
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM ret.csv	numeric_columns	75
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM ret.csv	header	site_ID; Anabarites; Anabylia; Annulatubus; Arborea; Aspidella; Bradgatia; Brooksella; Buchholzbrunnichnus; Cambrotubulus; Catellichnus; Charnia
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/NM cut.csv 12928
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM cut.csv	data_rows	55
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM cut.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM cut.csv	columns	78
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM cut.csv	numeric_columns	75
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM cut.csv	header	site_ID; Anabarites; Anabylia; Annulatubus; Arborea; Aspidella; Bradgatia; Brooksella; Buchholzbrunnichnus; Cambrotubulus; Catellichnus; Charnia
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/Species Summary White Sea.csv 6837
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Species Summary White Sea.csv	data_rows	90
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Species Summary White Sea.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Species Summary White Sea.csv	columns	5
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Species Summary White Sea.csv	numeric_columns	1
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/Species Summary White Sea.csv	header	sp_ID; Freq; Pair.Veech; sp1_name; sp2_name
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/WS cut.csv 7423
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS cut.csv	data_rows	26
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS cut.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS cut.csv	columns	91
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS cut.csv	numeric_columns	88
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS cut.csv	header	site_ID; Albumares; Andiva; Anfesta; Arborea; Archaeaspinus; Archaeocyatha; Archangelia; Arkarua; Armillifera; Aspidella; Aulozoon
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/R_output-finalSummary.csv 402
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-finalSummary.csv	data_rows	2
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-finalSummary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-finalSummary.csv	columns	21
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-finalSummary.csv	numeric_columns	21
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-finalSummary.csv	header	Frequency; algae-ns; algae-sig; Bio.T-ns; Bio.T-sig; delta-ns; delta-sig; distance-ns; distance-sig; eng-ns; eng-sig; environ-ns
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/WS check.csv 147684
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS check.csv	data_rows	557
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS check.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS check.csv	columns	29
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS check.csv	numeric_columns	15
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS check.csv	header	collection_no; paleolng; paleolat; Bio.T; T.bin; eng; algae; delta; environ; formation; stratgroup; member
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/WS C.Data - Output 1.csv 15257
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS C.Data - Output 1.csv	data_rows	58
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS C.Data - Output 1.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS C.Data - Output 1.csv	columns	91
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS C.Data - Output 1.csv	numeric_columns	88
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/WS C.Data - Output 1.csv	header	site_ID; Albumares; Andiva; Anfesta; Arborea; Archaeaspinus; Archaeocyatha; Archangelia; Arkarua; Armillifera; Aspidella; Aulozoon
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/R_output-allPairs.csv 2018
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-allPairs.csv	data_rows	16
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-allPairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-allPairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-allPairs.csv	numeric_columns	12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-allPairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/Species Summary Avalon.csv 144
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Species Summary Avalon.csv	data_rows	1
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Species Summary Avalon.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Species Summary Avalon.csv	columns	5
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Species Summary Avalon.csv	numeric_columns	1
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Species Summary Avalon.csv	header	sp_ID; Freq; Pair.Veech; sp1_name; sp2_name
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/ANOVAResults-segregated.txt 17717
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/ANOVAResults-segregated.txt	not_parsed	.txt
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/Combined Pairs Summary.csv 8085
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Combined Pairs Summary.csv	data_rows	66
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Combined Pairs Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Combined Pairs Summary.csv	columns	9
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Combined Pairs Summary.csv	numeric_columns	2
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Combined Pairs Summary.csv	header	sp1_name; sp2_name; sp_ID; Base.FETmP; Mean.FETmP; Pair.Type; Zone; Pair.Veech; Freq
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/ANOVAResults-aggregated.txt 289542
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/ANOVAResults-aggregated.txt	not_parsed	.txt
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/R_output-segregated_pairs.csv 4677
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-segregated_pairs.csv	data_rows	37
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-segregated_pairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-segregated_pairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-segregated_pairs.csv	numeric_columns	11
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-segregated_pairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/AV check.csv 59744
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV check.csv	data_rows	252
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV check.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV check.csv	columns	29
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV check.csv	numeric_columns	15
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV check.csv	header	collection_no; paleolng; paleolat; Bio.T; T.bin; eng; algae; delta; environ; formation; stratgroup; member
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/R_output-allPairs.csv 2620
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-allPairs.csv	data_rows	19
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-allPairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-allPairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-allPairs.csv	numeric_columns	14
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-allPairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/NM check.csv 64286
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM check.csv	data_rows	269
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM check.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM check.csv	columns	29
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM check.csv	numeric_columns	15
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/NM check.csv	header	collection_no; paleolng; paleolat; Bio.T; T.bin; eng; algae; delta; environ; formation; stratgroup; member
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/Diversity Table - Avalon.csv 5931
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Diversity Table - Avalon.csv	data_rows	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Diversity Table - Avalon.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Diversity Table - Avalon.csv	columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Diversity Table - Avalon.csv	numeric_columns	93
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Diversity Table - Avalon.csv	header	V1; V2; V3; V4; V5; V6; V7; V8; V9; V10; V11; V12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/R_output-finalSummary.csv 405
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-finalSummary.csv	data_rows	2
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-finalSummary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-finalSummary.csv	columns	21
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-finalSummary.csv	numeric_columns	21
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-finalSummary.csv	header	Frequency; algae-ns; algae-sig; Bio.T-ns; Bio.T-sig; delta-ns; delta-sig; distance-ns; distance-sig; eng-ns; eng-sig; environ-ns
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/R_output-segregated_pairs.csv 1973
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-segregated_pairs.csv	data_rows	14
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-segregated_pairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-segregated_pairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-segregated_pairs.csv	numeric_columns	14
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-segregated_pairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/R_output-segregated_pairs.csv 736
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-segregated_pairs.csv	data_rows	5
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-segregated_pairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-segregated_pairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-segregated_pairs.csv	numeric_columns	12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-segregated_pairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/ANOVAResults-segregated.txt 53230
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/ANOVAResults-segregated.txt	not_parsed	.txt
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Craffey et al 2024 Occurrence Data.csv 390712
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Craffey et al 2024 Occurrence Data.csv	data_rows	1540
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Craffey et al 2024 Occurrence Data.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Craffey et al 2024 Occurrence Data.csv	columns	29
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Craffey et al 2024 Occurrence Data.csv	numeric_columns	13
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Craffey et al 2024 Occurrence Data.csv	header	collection_no; genus; lng; lat; environ; formation; stratgroup; member; localbed; lithology1; lithology2; lithadj1
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Project Functions.R 115537
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Project Functions.R	not_parsed	.R
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/ANOVAResults-aggregated.txt 19022
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/ANOVAResults-aggregated.txt	not_parsed	.txt
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/R_output-allPairs.csv 14378
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-allPairs.csv	data_rows	116
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-allPairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-allPairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-allPairs.csv	numeric_columns	14
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-allPairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/R_output-aggregated_pairs.csv 9879
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-aggregated_pairs.csv	data_rows	79
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-aggregated_pairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-aggregated_pairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-aggregated_pairs.csv	numeric_columns	14
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-aggregated_pairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/100 Cooccurence Summary.csv 1554
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/100 Cooccurence Summary.csv	data_rows	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/100 Cooccurence Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/100 Cooccurence Summary.csv	columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/100 Cooccurence Summary.csv	numeric_columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/100 Cooccurence Summary.csv	header	V1; V2; V3; V4; V5; V6; V7; V8; V9; V10; V11; V12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Data/Phase 1/AV cut.csv 2502
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV cut.csv	data_rows	15
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV cut.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV cut.csv	columns	39
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV cut.csv	numeric_columns	36
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Data/Phase 1/AV cut.csv	header	site_ID; Arborea; Aspidella; Avalofractus; Beothukis; Bradgatia; Charnia; Charniodiscus; Culmofrons; Cyclomedusa; Eoporpita; Fractofusus
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Preservation Tests.csv 812
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Preservation Tests.csv	data_rows	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Preservation Tests.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Preservation Tests.csv	columns	24
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Preservation Tests.csv	numeric_columns	19
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Preservation Tests.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/Combined Pairs Summary.csv 9513
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Combined Pairs Summary.csv	data_rows	78
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Combined Pairs Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Combined Pairs Summary.csv	columns	9
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Combined Pairs Summary.csv	numeric_columns	2
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Combined Pairs Summary.csv	header	sp1_name; sp2_name; sp_ID; Base.FETmP; Mean.FETmP; Pair.Type; Zone; Pair.Veech; Freq
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/R_output-aggregated_pairs.csv 825
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-aggregated_pairs.csv	data_rows	5
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-aggregated_pairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-aggregated_pairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-aggregated_pairs.csv	numeric_columns	15
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/R_output-aggregated_pairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/ANOVAResults-segregated.txt 127874
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/ANOVAResults-segregated.txt	not_parsed	.txt
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Nama/Species Summary Nama.csv 717
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Species Summary Nama.csv	data_rows	10
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Species Summary Nama.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Species Summary Nama.csv	columns	5
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Species Summary Nama.csv	numeric_columns	1
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Nama/Species Summary Nama.csv	header	sp_ID; Freq; Pair.Veech; sp1_name; sp2_name
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/100 Cooccurence Summary.csv 1645
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/100 Cooccurence Summary.csv	data_rows	4
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/100 Cooccurence Summary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/100 Cooccurence Summary.csv	columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/100 Cooccurence Summary.csv	numeric_columns	100
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/100 Cooccurence Summary.csv	header	V1; V2; V3; V4; V5; V6; V7; V8; V9; V10; V11; V12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/ANOVAResults-aggregated.txt 37771
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/ANOVAResults-aggregated.txt	not_parsed	.txt
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/Diversity List - Avalon.csv 100985
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/Diversity List - Avalon.csv	text_rows	4331
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Craffey et al 2024 - Main Code.R 76355
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Craffey et al 2024 - Main Code.R	not_parsed	.R
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/Avalon/R_output-aggregated_pairs.csv 1460
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-aggregated_pairs.csv	data_rows	11
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-aggregated_pairs.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-aggregated_pairs.csv	columns	18
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-aggregated_pairs.csv	numeric_columns	12
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/Avalon/R_output-aggregated_pairs.csv	header	sp1_name; sp2_name; prob_cooccur; pairsType; nSites10; nSites01; nSites11; nSites00; distance; LONG; LAT; environ
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip	zip_member	Data and Code/Results/White Sea/R_output-finalSummary.csv 420
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-finalSummary.csv	data_rows	2
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-finalSummary.csv	dropped_rows	before header 0; totals 0; short 0
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-finalSummary.csv	columns	21
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-finalSummary.csv	numeric_columns	21
+craffey-ediacaran-cooccurrence	Craffey_et_al_-_Proc_B_-_2024_Data_and_Code.zip::Data and Code/Results/White Sea/R_output-finalSummary.csv	header	Frequency; algae-ns; algae-sig; Bio.T-ns; Bio.T-sig; delta-ns; delta-sig; distance-ns; distance-sig; eng-ns; eng-sig; environ-ns
+craffey-ediacaran-cooccurrence	README.md	bytes	5019
+craffey-ediacaran-cooccurrence	README.md	lines	52
+craffey-ediacaran-cooccurrence	README.md	first_line	# Co‑occurrence structure of late Ediacaran communities and influence of emerging ecosystem engineers
+dickinsonia-growth		version_dir	5214230
+dickinsonia-growth		title	Ediacara growing pains: Modular addition and development in Dickinsonia costata
+dickinsonia-growth		doi	10.5061/dryad.j9kd51cd4
+dickinsonia-growth		published	2021-08-17
+dickinsonia-growth		licence	cc-zero
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	bytes	62698
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:ReadMe:text_rows	52
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBgeneral:data_rows	55
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBgeneral:dropped_rows	before header 0; totals 0; short 1
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBgeneral:columns	7
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBgeneral:numeric_columns	5
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBgeneral:distinct[Specimen]	55 of 55 filled
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBgeneral:header	Specimen; Total Length; Total Width; AMU Length; AMU Width; # mods; Quality
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBmod:data_rows	41
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBmod:dropped_rows	before header 0; totals 0; short 0
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBmod:columns	106
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBmod:numeric_columns	106
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:TB-ARBmod:header	240s 26e; MLM; MLOM T; MLOM B; MW T; MW B; 259s 131e; MLM; MLOM T; MLOM B; MW T; MW B
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017general:data_rows	11
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017general:dropped_rows	before header 0; totals 0; short 0
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017general:columns	7
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017general:numeric_columns	5
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017general:distinct[Specimen]	11 of 11 filled
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017general:header	Specimen; Hoekzema et al designation; Total Length; Total Width; AMU Length; AMU Width; Number of modules
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017mod:data_rows	61
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017mod:dropped_rows	before header 0; totals 0; short 0
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017mod:columns	49
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017mod:numeric_columns	47
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Hoekzema_etal.2017mod:header	P49275; MLOM L; MLOM R; MLM; MW L; MW R; P49282; MLOM L; MLOM R; MLM; MW L; MW R
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Evans_etal.2017AMU:data_rows	60
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Evans_etal.2017AMU:dropped_rows	before header 0; totals 0; short 0
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Evans_etal.2017AMU:columns	3
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Evans_etal.2017AMU:numeric_columns	2
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Evans_etal.2017AMU:distinct[Specimen]	60 of 60 filled
+dickinsonia-growth	Evans_EdiacaraGrowingPains_2021_Paleobiology_SI.xlsx	sheet:Evans_etal.2017AMU:header	Specimen; AMU Length; AMU Width
+dickinsonia-growth	README_Evans_EdiacaraGrowingPains_2021_Paleobiology.xlsx	bytes	11710
+dickinsonia-growth	README_Evans_EdiacaraGrowingPains_2021_Paleobiology.xlsx	sheet:Sheet1:text_rows	52
+dickinsonia-species		version_dir	7521622
+dickinsonia-species		title	Data from: Species of Dickinsonia Sprigg from the Ediacaran of South Australia
+dickinsonia-species		doi	10.5061/dryad.4j0zpc8ft
+dickinsonia-species		published	2023-01-10
+dickinsonia-species		licence	cc-zero
+dickinsonia-species	EvansetalSupplementaryData.xlsx	bytes	64894
+dickinsonia-species	EvansetalSupplementaryData.xlsx	sheet:Raw Data:data_rows	304
+dickinsonia-species	EvansetalSupplementaryData.xlsx	sheet:Raw Data:dropped_rows	before header 0; totals 0; short 0
+dickinsonia-species	EvansetalSupplementaryData.xlsx	sheet:Raw Data:columns	27
+dickinsonia-species	EvansetalSupplementaryData.xlsx	sheet:Raw Data:numeric_columns	22
+dickinsonia-species	EvansetalSupplementaryData.xlsx	sheet:Raw Data:distinct[Specimen]	303 of 304 filled
+dickinsonia-species	EvansetalSupplementaryData.xlsx	sheet:Raw Data:header	Specimen; Total length; Total width; AMU length; Length of the first anterior module at the outer margin; Length of the widest module at the outer margin; Number of modules; Number of tranverse module
+dickinsonia-species	README_EvansetalSupplementaryData.xlsx	bytes	11707
+dickinsonia-species	README_EvansetalSupplementaryData.xlsx	sheet:Sheet1:text_rows	38
+eoandromeda		version_dir	10124355
+eoandromeda		title	Data from: Elucidating the morphology and ecology of Eoandromeda octobrachiata from the Ediacaran of South Australia
+eoandromeda		doi	10.5061/dryad.2jm63xsvg
+eoandromeda		published	2023-11-14
+eoandromeda		licence	cc-zero
+eoandromeda	Arms.csv	bytes	3942
+eoandromeda	Arms.csv	data_rows	95
+eoandromeda	Arms.csv	dropped_rows	before header 0; totals 0; short 0
+eoandromeda	Arms.csv	columns	4
+eoandromeda	Arms.csv	numeric_columns	3
+eoandromeda	Arms.csv	distinct[Specimen]	95 of 95 filled
+eoandromeda	Arms.csv	header	Specimen; Arm Width; Arm Length; Centroid.Size
+eoandromeda	Collections_7armlmk.tps	bytes	18694
+eoandromeda	Collections_7armlmk.tps	tps_specimens	7
+eoandromeda	Collections_7armlmk.tps	tps_landmark_blocks	7
+eoandromeda	Eo___Float_7armlmk.tps	bytes	196795
+eoandromeda	Eo___Float_7armlmk.tps	tps_specimens	74
+eoandromeda	Eo___Float_7armlmk.tps	tps_landmark_blocks	74
+eoandromeda	Parv_Bed_7armlmk.tps	bytes	26699
+eoandromeda	Parv_Bed_7armlmk.tps	tps_specimens	10
+eoandromeda	Parv_Bed_7armlmk.tps	tps_landmark_blocks	10
+eoandromeda	README.md	bytes	2322
+eoandromeda	README.md	lines	41
+eoandromeda	README.md	first_line	# Elucidating the morphology and ecology of Eoandromeda octobrachiata from the Ediacaran of South Australia
+eoandromeda	Sub_Bed_7armlmk.tps	bytes	10683
+eoandromeda	Sub_Bed_7armlmk.tps	tps_specimens	4
+eoandromeda	Sub_Bed_7armlmk.tps	tps_landmark_blocks	4
+eoandromeda	coEo.txt	bytes	1184
+eoandromeda	coEo.txt	lines	57
+eoandromeda	coEo.txt	first_line	"0	0	0	0	0	0	0"
+estaingia-growth		version_dir	Dataset-from-Complex-axial-growth-patterns-in-an-Early-Cambrian-trilobite-from-South-Australia_v1_17113370
+estaingia-growth		title	Dataset from Complex axial growth patterns in an Early Cambrian trilobite from South Australia
+estaingia-growth		doi	10.6084/m9.figshare.17113370.v1
+estaingia-growth		published	2021-12-02
+estaingia-growth		licence	CC BY 4.0
+estaingia-growth	rspb20212131_si_002.csv	bytes	48866
+estaingia-growth	rspb20212131_si_002.csv	data_rows	234
+estaingia-growth	rspb20212131_si_002.csv	dropped_rows	before header 0; totals 0; short 0
+estaingia-growth	rspb20212131_si_002.csv	columns	21
+estaingia-growth	rspb20212131_si_002.csv	numeric_columns	21
+estaingia-growth	rspb20212131_si_002.csv	distinct[id]	234 of 234 filled
+estaingia-growth	rspb20212131_si_002.csv	header	id; CEL; TRL; PYL; FAL; PGL; ORL; LTS1; LTS2; LTS3; LTS4; LTS5
+gutarra-simulated-communities		version_dir	2026-10-22T0924Z_url
+gutarra-simulated-communities		title	none
+gutarra-simulated-communities		doi	none
+gutarra-simulated-communities		published	none
+gutarra-simulated-communities		licence	CC BY 4.0 (Zenodo 17035672; communities zip only, the 38.5 GB CFD zip not mirrored)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip	bytes	300730
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip	zip_members	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip	zip_member	DS_Simulated_Communities.xlsx 24048
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim1:data_rows	6
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim1:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim1:columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim1:numeric_columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim1:header	Number; x; y; Length (cm); Adjust factor; Width (cm); Adjust factor; Orientation (°)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim2:data_rows	6
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim2:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim2:columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim2:numeric_columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim2:header	Number; x; y; Length (cm); Adjust factor; Width (cm); Adjust factor; Orientation (°)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim3:data_rows	5
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim3:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim3:columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim3:numeric_columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::DS_Simulated_Communities.xlsx	sheet:DS_Sim3:header	Number; x; y; Length (cm); Adjust factor; Width (cm); Adjust factor; Orientation (°)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip	zip_member	FUN5_Simulated_Communities.xlsx 238065
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1:data_rows	1604
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2:data_rows	1604
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2:columns	5
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2:numeric_columns	5
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2:header	Number; x; y; Diameter (cm); Height (cm) used for sensitivity test of model height (randomly varying between 12 and 18 cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3:data_rows	1604
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1_Density900:data_rows	240
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1_Density900:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1_Density900:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1_Density900:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim1_Density900:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2_Density900:data_rows	240
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2_Density900:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2_Density900:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2_Density900:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim2_Density900:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3_Density900:data_rows	240
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3_Density900:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3_Density900:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3_Density900:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::FUN5_Simulated_Communities.xlsx	sheet:Fun5_Sim3_Density900:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip	zip_member	Funisia_Clusters_Simulated_Communities.xlsx 23748
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim1:data_rows	24
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim1:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim1:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim1:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim1:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 2:data_rows	25
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 2:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 2:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 2:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 2:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 3:data_rows	50
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 3:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 3:columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 3:numeric_columns	4
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::Funisia_Clusters_Simulated_Communities.xlsx	sheet:FunC_Sim 3:header	Number; x; y; Diameter (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip	zip_member	KS_Simulated_Communities.xlsx 35948
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim1:data_rows	19
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim1:dropped_rows	before header 0; totals 0; short 1
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim1:columns	9
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim1:numeric_columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim1:distinct[Taxon]	7 of 19 filled
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim1:header	Number; x; y; Taxon; Length (cm); Width (cm); Adjust factor; Orientation (°); Height (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim2:data_rows	17
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim2:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim2:columns	9
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim2:numeric_columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim2:distinct[Taxon]	7 of 17 filled
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim2:header	Number; x; y; Taxon; Length (cm); Width (cm); Adjust factor; Orientation (°); Height (cm)
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim3:data_rows	19
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim3:dropped_rows	before header 0; totals 0; short 0
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim3:columns	9
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim3:numeric_columns	8
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim3:distinct[Taxon]	6 of 19 filled
+gutarra-simulated-communities	Gutarra_et_al_Simulated_Communities.zip::KS_Simulated_Communities.xlsx	sheet:KS_Sim3:header	Number; x; y; Taxon; Length (cm); Width (cm); Adjust factor; Orientation (°); Height (cm)
+naracoorte-charcoal-pollen		version_dir	Cave-opening-and-fossil-accumulation-in-Naracoorte-Australia-through-charcoal-and-pollen-in-dated-speleothems---Supplementary-Data-1_v1_20495136
+naracoorte-charcoal-pollen		title	Cave opening and fossil accumulation in Naracoorte, Australia, through charcoal and pollen in dated speleothems - Supplementary Data 1
+naracoorte-charcoal-pollen		doi	10.25375/uct.20495136.v1
+naracoorte-charcoal-pollen		published	2024-01-15
+naracoorte-charcoal-pollen		licence	CC BY 4.0
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	bytes	56789
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:first_row	Supplementary Data 1 Table 1 | Naracoorte speleothem U-Th data.
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:data_rows	70
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:dropped_rows	before header 11; totals 0; short 19
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:columns	16
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:numeric_columns	14
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:distinct[Sample ID]	70 of 70 filled
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 1:header	Sample ID; Lab number; 238 (ng/g); [230Th/238U]; ±2σ; [234U/238U]; ±2σ; [234U/238U]ia; ±2σ; [230Th/232Th]; [234U/238U]i; ±2σ
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:first_row	Supplementary Data 1 Table 2 | Naracoorte speleothem U-Pb data for isochron construction.
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:data_rows	155
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:dropped_rows	before header 11; totals 0; short 15
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:columns	14
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:numeric_columns	10
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:distinct[Sample]	14 of 14 filled
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 2:header	Cave; Sample; Lab ID; U ppm; Pb ppm; 206Pb/238U; 2s%; 207Pb/206Pb; 2s%; correlation coefficient; Age (ka)a; 2seb
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:first_row	Supplementary Data 1 Table 3 | Speleothem U-Th and U-Pb ages, and pollen and charcoal concentrations used in Figure 4.
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:data_rows	70
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:dropped_rows	before header 11; totals 0; short 1
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:columns	10
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:numeric_columns	6
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:distinct[Sample ID]	70 of 70 filled
+naracoorte-charcoal-pollen	Weij et al 2022_Supplementary Data 1.xlsx	sheet:Supplementary Data 1 Table 3:header	Site; Sample ID; U-Th age (ka); ± 2σ; U-Pb age (ka); ± 2σ; charcoal conc.; log charcoal; pollen conc.; log pollen
+permian-bryozoan-traits		version_dir	4765268
+permian-bryozoan-traits		title	Data from: Trophic partitioning and feeding capacity in Permian bryozoan faunas of Gondwana
+permian-bryozoan-traits		doi	10.5061/dryad.fttdz08rt
+permian-bryozoan-traits		published	2021-05-15
+permian-bryozoan-traits		licence	cc-zero
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	bytes	16730
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	data_rows	204
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	dropped_rows	before header 0; totals 0; short 0
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	columns	6
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	numeric_columns	2
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	distinct[Taxon]	199 of 203 filled
+permian-bryozoan-traits	ReidTamberg2021bryozoaPermiandata.csv	header	Order; Location; Taxon; Source of skeletal parameters; Mouth diameter (mm); Lophophore diameter (mm)
+permian-bryozoan-traits	ReidTamberg2021bryozoaREFERENCELIST.txt	bytes	6263
+permian-bryozoan-traits	ReidTamberg2021bryozoaREFERENCELIST.txt	lines	41
+permian-bryozoan-traits	ReidTamberg2021bryozoaREFERENCELIST.txt	first_line	REFERENCE LIST
+permian-bryozoan-traits	ReidTamberg2021bryozoaReadmeupdated.txt	bytes	6049
+permian-bryozoan-traits	ReidTamberg2021bryozoaReadmeupdated.txt	lines	69
+permian-bryozoan-traits	ReidTamberg2021bryozoaReadmeupdated.txt	first_line	This ReidTamberg2021bryozoa readme.txt file was generated on 2021-01-20 by Catherine Reid
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	bytes	4732
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	data_rows	67
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	dropped_rows	before header 0; totals 0; short 0
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	columns	5
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	numeric_columns	2
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	distinct[Taxon]	66 of 67 filled
+permian-bryozoan-traits	ReidTamberg2021bryozoamoderndata.csv	header	Order; Taxon; Source of measurements; Tentacle crown diameter (mm); Mouth diameter (mm)
+reichgelt-eocene-dryad		version_dir	6511559
+reichgelt-eocene-dryad		title	Data supplement to: Plant proxy evidence for high rainfall and productivity in the eocene of Australia
+reichgelt-eocene-dryad		doi	10.5061/dryad.59zw3r294
+reichgelt-eocene-dryad		published	2022-05-02
+reichgelt-eocene-dryad		licence	cc-zero
+reichgelt-eocene-dryad	README_Reichgelt_et_al_fossil_eocene_australia.txt	bytes	7174
+reichgelt-eocene-dryad	README_Reichgelt_et_al_fossil_eocene_australia.txt	lines	101
+reichgelt-eocene-dryad	README_Reichgelt_et_al_fossil_eocene_australia.txt	first_line	This file README_Reichgelt_et_al_fossil_eocene_australia.txt was generated on April 29th 2022 by Tammo Reichgelt ([email removed]
+reichgelt-eocene-dryad	supplementary_tables.xlsx	bytes	175730
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:README:text_rows	8
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:first_row	TABLE S1: Physiognomic information of modern floral calibration sites and Australian Eocene fossil sites
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:data_rows	111
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:columns	25
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:numeric_columns	22
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:distinct[Sample]	111 of 111 filled
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S1:header	Sample; Reference; geographic area; Lobed; No Teeth; Compound teeth; Leptophyll 1; Leptophyll 2; Microphyll 1; Microphyll 2; Microphyll 3; Mesophyll 1
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S2:first_row	TABLE S2: Modern calibration CCA scores; vector scores and climate; used to calculate regression equations to calculate paleoclimate of fossil sites.
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S2:data_rows	112
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S2:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S2:columns	30
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S2:numeric_columns	28
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S2:header	Modern calibration site name; Reference; CCA1; CCA2; CCA3; CCA4; MAT °C; MDR °C; SUMT °C; WINT °C; MAP log mm; WETM log mm
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S3:first_row	TABLE S3: Modern calibration sites in northern Australia for LAA Eqn 4
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S3:data_rows	110
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S3:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S3:columns	8
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S3:numeric_columns	6
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S3:header	BIOCLIM site #; Plot; source; site name; lat (°S); long (°E); MLn(MAP); MLnA
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S4:first_row	TABLE S4: Average of natural log of leaf sizes at each locality used in Leaf Area Analysis
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S4:data_rows	8
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S4:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S4:columns	3
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S4:numeric_columns	2
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S4:header	Site; average lnA; stdev lnA
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S5:first_row	TABLE S5: Leaf margin percentage and number of leaf types per site used in Leaf Margin Analysis
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S5:data_rows	10
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S5:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S5:columns	3
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S5:numeric_columns	2
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S5:header	Site; Leaf types with entire margins (%); Number of leaf types
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:first_row	TABLE S6: Taxa recorded at fossil site; their modern climatic niche and raw distribution data link (GBIF DOI)
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:data_rows	90
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:columns	13
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:numeric_columns	10
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:distinct[Taxon]	90 of 90 filled
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S6:header	Taxon; Present at fossil sites; GBIF DOI; µ Mean Annual Temperature; σ Mean Annual Temperature; µ Warm Quarter Mean Temperature; σ Warm Quarter Mean Temperature; µ Cold Quarter Mean Temperature; σ Col
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S7:first_row	TABLE S7: Raw climatic output from point extractions of DeepMIP Global Circulation Models at different CO2 levels
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S7:data_rows	108
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S7:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S7:columns	26
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S7:numeric_columns	21
+reichgelt-eocene-dryad	supplementary_tables.xlsx	sheet:S7:header	model; experiment; site; lat; lon; var; unit; annualMean; monthlyMin; monthlyMax; DJF; MAM
+reichgelt-eocene-revised		version_dir	6462287
+reichgelt-eocene-revised		title	Data supplement to: Plant proxy evidence for high rainfall and productivity in the eocene of Australia
+reichgelt-eocene-revised		doi	10.5281/zenodo.6462287
+reichgelt-eocene-revised		published	2022-05-02
+reichgelt-eocene-revised		licence	cc-by-4.0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	bytes	175464
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:README:text_rows	8
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:first_row	TABLE S1: Physiognomic information of modern floral calibration sites and Australian Eocene fossil sites
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:data_rows	111
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:columns	25
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:numeric_columns	22
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:distinct[Sample]	111 of 111 filled
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S1:header	Sample; Reference; geographic area; Lobed; No Teeth; Compound teeth; Leptophyll 1; Leptophyll 2; Microphyll 1; Microphyll 2; Microphyll 3; Mesophyll 1
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S2:first_row	TABLE S2: Modern calibration CCA scores; vector scores and climate; used to calculate regression equations to calculate paleoclimate of fossil sites.
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S2:data_rows	112
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S2:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S2:columns	30
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S2:numeric_columns	28
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S2:header	Modern calibration site name; Reference; CCA1; CCA2; CCA3; CCA4; MAT °C; MDR °C; SUMT °C; WINT °C; MAP log mm; WETM log mm
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S3:first_row	TABLE S3: Modern calibration sites in northern Australia for LAA Eqn 4
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S3:data_rows	110
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S3:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S3:columns	8
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S3:numeric_columns	6
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S3:header	BIOCLIM site #; Plot; source; site name; lat (°S); long (°E); MLn(MAP); MLnA
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S4:first_row	TABLE S4: Average of natural log of leaf sizes at each locality used in Leaf Area Analysis
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S4:data_rows	8
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S4:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S4:columns	3
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S4:numeric_columns	2
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S4:header	Site; average lnA; stdev lnA
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S5:first_row	TABLE S5: Leaf margin percentage and number of leaf types per site used in Leaf Margin Analysis
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S5:data_rows	10
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S5:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S5:columns	3
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S5:numeric_columns	2
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S5:header	Site; Leaf types with entire margins (%); Number of leaf types
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:first_row	TABLE S6: Taxa recorded at fossil site; their modern climatic niche and raw distribution data link (GBIF DOI)
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:data_rows	90
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:columns	13
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:numeric_columns	10
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:distinct[Taxon]	90 of 90 filled
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S6:header	Taxon; Present at fossil sites; GBIF DOI; µ Mean Annual Temperature; σ Mean Annual Temperature; µ Warm Quarter Mean Temperature; σ Warm Quarter Mean Temperature; µ Cold Quarter Mean Temperature; σ Col
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S7:first_row	TABLE S7: Raw climatic output from point extractions of DeepMIP Global Circulation Models at different CO2 levels
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S7:data_rows	108
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S7:dropped_rows	before header 1; totals 0; short 0
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S7:columns	26
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S7:numeric_columns	21
+reichgelt-eocene-revised	supplementary_tables_revised.xlsx	sheet:S7:header	model; experiment; site; lat; lon; var; unit; annualMean; monthlyMin; monthlyMax; DJF; MAM
+riversleigh-richness		version_dir	5018450
+riversleigh-richness		title	Data from: The use of MSR (Minimum Sample Richness) for sample assemblage comparisons
+riversleigh-richness		doi	10.5061/dryad.p1b6b
+riversleigh-richness		published	2011-05-20
+riversleigh-richness		licence	cc-zero
+riversleigh-richness	Appendix 1.xls	bytes	38912
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:first_row	TABLE 1. List of the 167 Quercy and Limagne Area fossil-bearing localities, ordered by biochronological unit (MP16 to MN02a), with Site I.D. (biochronological unit number + site number) used in the an
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:data_rows	167
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:dropped_rows	before header 1; totals 0; short 0
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:columns	3
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:numeric_columns	1
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:distinct[Site I.D.]	167 of 167 filled
+riversleigh-richness	Appendix 1.xls	sheet:Table 1:header	Site I.D.; Site name; S.R.
+riversleigh-richness	Appendix 2.xlsx	bytes	23308
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:first_row	TABLE 2. List of Riversleigh fossil-bearing localities, ordered by biochronological unit (Faunal Zones A, B, C, and D), with Site I.D. (biochronological unit number + site number) used in the analysis
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:data_rows	84
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:dropped_rows	before header 1; totals 0; short 0
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:columns	3
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:numeric_columns	1
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:distinct[Site I.D.]	84 of 84 filled
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet1:header	Site I.D.; Site name; S.R.
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet2:text_rows	0
+riversleigh-richness	Appendix 2.xlsx	sheet:Sheet3:text_rows	0
+riversleigh-richness	Appendix 3.doc	bytes	105472
+riversleigh-richness	Appendix 3.doc	not_parsed	.doc
+tasmania-pollen-fire		version_dir	4936251
+tasmania-pollen-fire		title	Data from: Modern pollen from small hollows reflects Athrotaxis cupressoides density across a wildfire gradient in subalpine forests of the Central Plateau, Tasmania, Australia
+tasmania-pollen-fire		doi	10.5061/dryad.1bp06
+tasmania-pollen-fire		published	2018-05-31
+tasmania-pollen-fire		licence	cc-zero
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	bytes	9084
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	data_rows	49
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	dropped_rows	before header 0; totals 0; short 0
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	columns	66
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	numeric_columns	66
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	distinct[sample]	49 of 49 filled
+tasmania-pollen-fire	CP13_10A_pollen_16_11_10.csv	header	sample; top_depth; bottom_depth; age; blank; blank; Apium_spp.; Apteroptis; Astelia_alpina; Asteraceae; Athrosperma; Athrotaxis-Diselma Type
+tasmania-pollen-fire	CP13_SS_analysis.m	bytes	4233
+tasmania-pollen-fire	CP13_SS_analysis.m	lines	110
+tasmania-pollen-fire	CP13_SS_discrimAnalysis.R	bytes	13780
+tasmania-pollen-fire	CP13_SS_discrimAnalysis.R	lines	328
+tasmania-pollen-fire	README.txt	bytes	4405
+tasmania-pollen-fire	README.txt	lines	61
+tasmania-pollen-fire	README.txt	first_line	Morris, J.L., Higuera, P.E., Haberle, S., and C. Whitlock. Modern pollen from small hollows 
+tasmania-pollen-fire	TAS_SS_16_11_11.csv	bytes	9107
+tasmania-pollen-fire	TAS_SS_16_11_11.csv	data_rows	50
+tasmania-pollen-fire	TAS_SS_16_11_11.csv	dropped_rows	before header 0; totals 0; short 0
+tasmania-pollen-fire	TAS_SS_16_11_11.csv	columns	66
+tasmania-pollen-fire	TAS_SS_16_11_11.csv	numeric_columns	64
+tasmania-pollen-fire	TAS_SS_16_11_11.csv	header	site_num; site_ID; burn_code; burn_index; west; closest; Apium_spp.; Apteroptis; Astelia_alpina; Asteraceae; Athrosperma; Athrotaxis-Diselma Type
+thylacine-devil-dates		version_dir	Supplementary-Table-1-from-High-quality-fossil-dates-support-a-synchronous-Late-Holocene-extinction-of-devils-and-thylacines-in-mainland-Australia_v1_5746797
+thylacine-devil-dates		title	Supplementary Table 1 from High-quality fossil dates support a synchronous, Late Holocene extinction of devils and thylacines in mainland Australia
+thylacine-devil-dates		doi	10.6084/m9.figshare.5746797.v1
+thylacine-devil-dates		published	2018-01-02
+thylacine-devil-dates		licence	CC BY
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	bytes	63818
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	sheet:Sheet1:data_rows	277
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	sheet:Sheet1:dropped_rows	before header 0; totals 0; short 0
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	sheet:Sheet1:columns	29
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	sheet:Sheet1:numeric_columns	8
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	sheet:Sheet1:distinct[Fossahul_ID]	234 of 234 filled
+thylacine-devil-dates	rsbl20170642_si_001.xlsx	sheet:Sheet1:header	Fossahul_ID; Accepted/Rejected; New Date; Latitude; Longitude; State; Genus; Species; AgeID; DatedMaterial; DatedRemain; Pretreatment
+tribrachidium		version_dir	A-new-species-of-the-iconic-triradial-Ediacaran-genus-i-Tribrachidium-i-from-Nilpena-Ediacara-National-Park-Flinders-Ranges-South-Australia_v1_25341625
+tribrachidium		title	A new species of the iconic triradial Ediacaran genus <i>Tribrachidium</i>, from Nilpena Ediacara National Park, Flinders Ranges (South Australia)
+tribrachidium		doi	10.25909/25341625.v1
+tribrachidium		published	2024-03-05
+tribrachidium		licence	CC BY 4.0
+tribrachidium	Gehlingi Measurements.csv	bytes	4882
+tribrachidium	Gehlingi Measurements.csv	data_rows	46
+tribrachidium	Gehlingi Measurements.csv	dropped_rows	before header 0; totals 0; short 0
+tribrachidium	Gehlingi Measurements.csv	columns	10
+tribrachidium	Gehlingi Measurements.csv	numeric_columns	9
+tribrachidium	Gehlingi Measurements.csv	distinct[Specimen]	46 of 46 filled
+tribrachidium	Gehlingi Measurements.csv	header	Specimen; Diameters; Arm.Length; Arm.Width; Arm.Dist; Groove.Length; Groove.Width; Curvature; Height; Height.Ratio
+tribrachidium	Heraldicum Measurements.csv	bytes	5299
+tribrachidium	Heraldicum Measurements.csv	data_rows	57
+tribrachidium	Heraldicum Measurements.csv	dropped_rows	before header 0; totals 0; short 0
+tribrachidium	Heraldicum Measurements.csv	columns	10
+tribrachidium	Heraldicum Measurements.csv	numeric_columns	9
+tribrachidium	Heraldicum Measurements.csv	distinct[Specimen]	57 of 57 filled
+tribrachidium	Heraldicum Measurements.csv	header	Specimen; Diameters; Arm.Length; Arm.Width; Arm.Dist; Groove.Length; Groove.Width; Curvature; Height; Height.Ratio
+tribrachidium	ReadME.docx	bytes	13724
+tribrachidium	ReadME.docx	not_parsed	.docx
+(all)		deposit_directories	17
+(all)		files	42
+(all)		bytes	5945093
+(all)		not_parsed_types	.doc 1; .docx 1; .r 20; .rproj 1; .tre 1; .txt 7

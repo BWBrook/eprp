@@ -1,0 +1,32 @@
+script lines dropped: 4 
+Warning messages:
+1: In eval(parse(text = code[!drop])) : NAs introduced by coercion
+2: In eval(parse(text = code[!drop])) : NAs introduced by coercion
+records	11871
+preQuality_agrees	11810
+Quality_agrees	11805
+      recomputed
+stored    A   A*    B    C   NA
+  A    1398    0    0    0    0
+  A*      0  168    0    0    0
+  B       0    0 4004    0    0
+  C       0   60    1 6235    0
+  <NA>    0    0    0    0    5
+
+first disagreements (ID, technique, stored, recomputed, recomputed reason):
+     ID     tech stored recomputed     reason
+1  1163 EU-ESR        C         A* Direct age
+2  1168 EU-ESR        C         A* Direct age
+3  1169 EU-ESR        C         A* Direct age
+4  1170 EU-ESR        C         A* Direct age
+5  1171 EU-ESR        C         A* Direct age
+6  1172 EU-ESR        C         A* Direct age
+7  1173 EU-ESR        C         A* Direct age
+8  2238 US-ESR        C         A* Direct age
+9  2243 US-ESR        C         A* Direct age
+10 2291 EU-ESR        C         A* Direct age
+11 2292 EU-ESR        C         A* Direct age
+12 2293 EU-ESR        C         A* Direct age
+13 2294 EU-ESR        C         A* Direct age
+14 2295 EU-ESR        C         A* Direct age
+15 2296 EU-ESR        C         A* Direct age
