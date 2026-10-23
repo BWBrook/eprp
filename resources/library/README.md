@@ -96,6 +96,8 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
   - the PubMed Central open-access subset, through its public AWS bucket;
   - PDF links on those locations' landing pages (`citation_pdf_url`, or a file
     link on the same host);
+  - CORE's copies, which it aggregates from open repositories (used once a
+    CORE key is installed; paced at 10 requests a minute);
   - Semantic Scholar's open-access link.
 
   Copies are private to EPRP and are not redistributed.
@@ -103,8 +105,8 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
   from public university repositories (White Rose, UCL, HAL, Caltech,
   Southampton, NOAA and others) at locations OpenAlex does not flag open. They
   are kept because those repositories serve them to anyone. The fetcher no
-  longer takes unflagged locations; CORE will reach such copies once its key
-  is in place. One copy that came from cambridge.org through an unflagged
+  longer takes unflagged locations; CORE reaches such repository copies
+  instead. One copy that came from cambridge.org through an unflagged
   location was withdrawn on 23 October 2026.
 - **Requests are polite and honest.** The tool identifies itself, waits 3 s
   between downloads or Semantic Scholar lookups on the same host, follows

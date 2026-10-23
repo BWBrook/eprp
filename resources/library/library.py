@@ -21,7 +21,8 @@ works), keeps seed-key aliases in STORE/aliases.tsv, and records keys it cannot
 resolve in STORE/unresolved-keys.tsv. expand writes the neighbours tier from the
 stored reference lists. fetch downloads PDFs from open copies only (OpenAlex
 open-access locations, the PubMed Central open-access bucket, repository landing
-pages, Semantic Scholar's open-access link), accepts one only when its first pages
+pages, CORE's repository copies when ~/.config/core/api_key exists, Semantic
+Scholar's open-access link), accepts one only when its first pages
 contain the work's title, stores it read-only as STORE/pdf/<W>.pdf with text in
 STORE/text/<W>.txt, and appends to STORE/manifest.tsv; every attempt goes to
 STORE/attempts.tsv. withdraw removes held copies with a recorded reason. index
@@ -255,8 +256,14 @@ def safe_url(url):
     return urllib.parse.quote(url, safe=":/?&=%#+,;@~!$'()*[]")
 
 
-def http_get(url, accept="application/json", timeout=60, max_bytes=None):
-    req = urllib.request.Request(safe_url(url), headers={"User-Agent": UA, "Accept": accept})
+def key_file(name):
+    """A credential from ~/.config/<name>, or '' if absent."""
+    p = Path.home() / ".config" / name
+    return p.read_text().strip() if p.exists() else ""
+
+
+def http_get(url, accept="application/json", timeout=60, max_bytes=None, headers=None):
+    req = urllib.request.Request(safe_url(url), headers={"User-Agent": UA, "Accept": accept, **(headers or {})})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         data = r.read(max_bytes + 1) if max_bytes else r.read()
         if max_bytes and len(data) > max_bytes:
@@ -276,11 +283,11 @@ def retry_after(headers, default):
     return min(float(value), 60.0) if value.replace(".", "", 1).isdigit() else default
 
 
-def get_json(url, tries=5):
+def get_json(url, tries=5, headers=None):
     for attempt in range(tries):
         try:
-            _, _, headers, data = http_get(url)
-            return json.loads(data), headers
+            _, _, response_headers, data = http_get(url, headers=headers)
+            return json.loads(data), response_headers
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 504) and attempt < tries - 1:
                 time.sleep(retry_after(e.headers, 2 ** attempt * 5))
@@ -519,6 +526,9 @@ def expand(store, k, out):
 
 # ---------------------------------------------------------------- fetch
 
+HOST_INTERVAL = {"api.core.ac.uk": 6.5}  # CORE allows registered academic users 10 requests a minute
+
+
 class HostPacer:
     def __init__(self, interval):
         self.interval = interval
@@ -529,7 +539,7 @@ class HostPacer:
         host = urllib.parse.urlsplit(url).hostname or ""
         with self.lock:
             t = max(time.monotonic(), self.next_ok[host])
-            self.next_ok[host] = t + self.interval
+            self.next_ok[host] = t + HOST_INTERVAL.get(host, self.interval)
         time.sleep(max(0.0, t - time.monotonic()))
 
 
@@ -549,7 +559,11 @@ class FetchFail(Exception):
 
 
 def transient(outcome):
-    return outcome == "error" or outcome in ("http_408", "http_429") or outcome.startswith("http_5")
+    return outcome.endswith("error") or outcome in ("http_408", "http_429") or outcome.startswith("http_5")
+
+
+def is_lookup(outcome):
+    return outcome.startswith(("s2_", "core_"))
 
 
 def candidates(rec):
@@ -709,45 +723,70 @@ def try_candidate(rec, cand, store, pacer, lock, tool_sha):
             os.remove(tmp)
 
 
-def s2_lookup(rec, pacer):
-    """Semantic Scholar's open-access PDF link for the work's DOI: (outcome, url)."""
-    doi = norm_doi(rec.get("doi"))
+def s2_lookup(doi, pacer):
+    """Semantic Scholar's open-access PDF link for a DOI: (outcome, [url])."""
     url = S2_API + urllib.parse.quote(doi, safe="/") + "?fields=openAccessPdf"
     pacer.wait(url)
     try:
         data, _ = get_json(url, tries=3)
     except urllib.error.HTTPError as e:
-        return ("s2_none" if e.code == 404 else "error"), ""
+        return ("none" if e.code == 404 else "error"), []
     except TRANSIENT_ERRORS:
-        return "error", ""
+        return "error", []
     pdf = (data.get("openAccessPdf") or {}).get("url") or ""
-    return ("s2_found" if pdf else "s2_none"), pdf
+    return ("found" if pdf else "none"), [pdf] if pdf else []
+
+
+def core_lookup(doi, pacer):
+    """CORE's copies of a DOI, which it aggregates from open repositories: (outcome, [url, ...])."""
+    url = CORE_API + "?" + urllib.parse.urlencode({"q": f'doi:"{doi}"', "limit": "5"})
+    pacer.wait(url)
+    try:
+        data, _ = get_json(url, tries=3, headers={"Authorization": f"Bearer {key_file('core/api_key')}"})
+    except urllib.error.HTTPError as e:
+        return ("none" if e.code == 404 else "error"), []
+    except TRANSIENT_ERRORS:
+        return "error", []
+    urls = []
+    for r in data.get("results") or []:
+        if norm_doi(r.get("doi")) == doi:
+            urls += [r.get("downloadUrl") or ""] + list(r.get("sourceFulltextUrls") or [])
+    urls = [u for u in dict.fromkeys(urls) if u]
+    return ("found" if urls else "none"), urls
+
+
+CORE_API = "https://api.core.ac.uk/v3/search/works/"
+LOOKUPS = [("core", "CORE", core_lookup, lambda: bool(key_file("core/api_key"))),
+           ("s2", "Semantic Scholar", s2_lookup, lambda: True)]
 
 
 def fetch_one(rec, store, pacer, tried, lock, tool_sha):
+    """Try the work's open-access locations, then CORE (with a key) and Semantic Scholar by DOI."""
     wid = short_wid(rec["id"])
 
     def record(url, host, outcome, detail=""):
         append_tsv(store / "attempts.tsv", {"openalex_id": wid, "url": url, "host": host, "outcome": outcome,
                                             "detail": detail, "when": now()}, ATTEMPT_FIELDS, lock)
 
-    cands = [c for c in candidates(rec) if c[1] not in tried]
-    for cand in cands:
+    def attempt(cand):
         outcome, detail = try_candidate(rec, cand, store, pacer, lock, tool_sha)
         record(cand[1], cand[2], outcome, detail)
-        if outcome in ("ok", "no_text"):
-            return outcome
+        return outcome in ("ok", "no_text") and outcome
+
+    cands = [c for c in candidates(rec) if c[1] not in tried]
+    for cand in cands:
+        if result := attempt(cand):
+            return result
     doi = norm_doi(rec.get("doi"))
-    s2_key = f"s2:{doi}"
-    if doi and s2_key not in tried:
-        outcome, pdf = s2_lookup(rec, pacer)
-        record(s2_key, "Semantic Scholar", outcome, pdf)
-        if pdf and pdf not in tried:
-            cands.append(("landing", pdf, "Semantic Scholar", "", ""))
-            outcome, detail = try_candidate(rec, cands[-1], store, pacer, lock, tool_sha)
-            record(pdf, "Semantic Scholar", outcome, detail)
-            if outcome in ("ok", "no_text"):
-                return outcome
+    for prefix, host, lookup, enabled in LOOKUPS:
+        if not doi or f"{prefix}:{doi}" in tried or not enabled():
+            continue
+        outcome, urls = lookup(doi, pacer)
+        record(f"{prefix}:{doi}", host, f"{prefix}_{outcome}", " ".join(urls)[:300])
+        for u in [u for u in urls if u not in tried]:
+            cands.append(("landing", u, host, "", ""))
+            if result := attempt(cands[-1]):
+                return result
     return "failed" if cands else "no_copy"
 
 
@@ -864,7 +903,7 @@ def index(store, out):
             ft = m["status"]
         elif rec.get("type") in SKIP_TYPES:
             ft = "skipped_type"
-        elif attempts[wid] - {"s2_none", "s2_found"}:
+        elif any(not is_lookup(o) for o in attempts[wid]):
             ft = "failed"
         elif attempts[wid]:
             ft = "no_copy"
