@@ -16,12 +16,15 @@ chapter files as BinHex-encoded tab-delimited text, four 2004 .xls files, the
 StuffIt archives, and the HTML pages.
 
 Checks: every media file is in the snapshot; FR2.zip and All-Life.xlsx against
-the chapter files; the range codes (F1, F2, ?F, 1, ?, L1, L2, ?L, FL) and their
-order within each row. Builds each family's maximum range (every coded cell)
-and minimum range (Benton 1995: from the confident first code F1/F2 to the
-confident last code L1/L2, or to the Holocene for a range to the Recent; a
-single-stage FL; none for a range given only to an interval longer than a
-stage), and stage-by-stage counts, written to OUT_DIR. Dates the divisions
+the chapter files; the range codes (F1, F2, ?F, 1, ?, L1, L2, ?L, FL, ?FL) and
+their order within each row. Builds each family's maximum range (every coded
+cell) and minimum range (Benton 1995: from the confident first code F1/F2 to
+the confident last code L1/L2, or to the Holocene when the family is extant,
+i.e. its Holocene cell is a confident presence with no L code; a single-division
+FL; otherwise none, with the reason counted), and division-by-division counts
+(extant families are not counted as extinctions), written to OUT_DIR. Marine
+and continental are our reading of the habitat codes (M; F, T or V), not
+Benton's stated definitions. Dates the divisions
 from the Vendian on with the Harland et al. (1990) durations and midpoints in
 the 1998 stage table (fr2_divisions.csv). Compares those counts
 with Diversitydata95 and Holman's family tallies, and every Wayback capture of
@@ -36,6 +39,7 @@ import io
 import json
 import os
 import re
+import struct
 import sys
 import zipfile
 from collections import Counter, defaultdict
@@ -77,6 +81,19 @@ def text_rows(data):
 
 def key_of(r):
     return tuple(r[:92])
+
+
+def sit_names(raw):
+    names, pos = [], 22
+    while pos + 112 <= len(raw):
+        rmeth, dmeth, nlen = raw[pos], raw[pos + 1], raw[pos + 2]
+        crlen, cdlen = struct.unpack(">II", raw[pos + 92:pos + 100])
+        if rmeth in (32, 33) or dmeth in (32, 33):
+            pos += 112
+            continue
+        names.append(raw[pos + 3:pos + 3 + nlen].decode("mac_roman"))
+        pos += 112 + crlen + cdlen
+    return names
 
 
 # --- Bristol files ------------------------------------------------------------
@@ -141,7 +158,7 @@ put("bristol", "All-Life.xlsx", "shifted_rows_by_chapter", "; ".join(
 
 # --- Codes, ranges and anomalies -------------------------------------------
 families = []
-code_count, anomalies = Counter(), defaultdict(list)
+code_count, anomalies, no_min = Counter(), defaultdict(list), Counter()
 for ch, (fname, rows) in chapters.items():
     put("chapters", "rows", fname, len(rows))
     for i, r in enumerate(rows, 1):
@@ -156,7 +173,7 @@ for ch, (fname, rows) in chapters.items():
         if not cells:
             (anomalies["no coded cell (NFR)"] if r[91] == "NFR" else anomalies["no coded cell, no NFR"]).append(tag)
             families.append(dict(chapter=ch, row=i, name=r[0], kingdom=r[1], phylum=r[2], other=r[3], habitat=r[4],
-                                 max_first=None, max_last=None, min_first=None, min_last=None, extant=False))
+                                 max_first=None, max_last=None, min_first=None, min_last=None, extant=False, holocene=""))
             continue
         idx = [j for j, _ in cells]
         if idx[-1] - idx[0] + 1 != len(idx):
@@ -171,19 +188,27 @@ for ch, (fname, rows) in chapters.items():
             anomalies["more than one L1/L2"].append(tag)
         if codes[0] not in ("F1", "?F", "FL", "?FL"):
             anomalies["first coded cell not F1, ?F, FL or ?FL"].append(f"{tag} '{codes[0]}'")
-        extant = idx[-1] == 85
-        if codes[-1] not in ("L1", "?L", "FL", "?FL") and not extant:
+        holocene = r[90]
+        extant = holocene in ("1", "F1", "F2") and not lcodes
+        if codes[-1] not in ("L1", "?L", "FL", "?FL") and idx[-1] != 85:
             anomalies["last coded cell not L1, ?L or FL and not Holocene"].append(f"{tag} '{codes[-1]}'")
         if fcodes and lcodes and lcodes[0] < fcodes[0]:
             anomalies["L code before F code"].append(tag)
         if len(fl) == 1 and len(cells) == 1:
             mn = (fl[0], fl[0])
-        elif fcodes and (lcodes or extant):
-            mn = (fcodes[0], lcodes[-1] if lcodes else 85)
+        elif fcodes and lcodes:
+            mn = (fcodes[0], lcodes[-1])
+        elif fcodes and extant:
+            mn = (fcodes[0], 85)
         else:
             mn = (None, None)
+            no_min[("FL in several divisions (a range given only to a longer interval)" if len(fl) > 1 and not fcodes
+                     else "uncertain codes only (?F, ?, ?L, ?FL)" if all(c.startswith("?") for c in codes)
+                     else "F1/F2 but no L1/L2 and not extant" if fcodes
+                     else "other coding without F1/F2")] += 1
         families.append(dict(chapter=ch, row=i, name=r[0], kingdom=r[1], phylum=r[2], other=r[3], habitat=r[4],
-                             max_first=idx[0], max_last=idx[-1], min_first=mn[0], min_last=mn[1], extant=extant))
+                             max_first=idx[0], max_last=idx[-1], min_first=mn[0], min_last=mn[1], extant=extant,
+                             holocene=holocene))
 put("codes", "cells", "all", "; ".join(f"{k} {v}" for k, v in code_count.most_common()))
 for k, v in sorted(anomalies.items()):
     put("codes", "anomaly", k, f"{len(v)}: " + "; ".join(v[:12]) + (" ..." if len(v) > 12 else ""))
@@ -198,18 +223,22 @@ put("families", "names", "questioned ('?' in name)", sum("?" in f["name"] for f 
 put("families", "names", "ending -idae or -aceae", sum(bool(re.search(r"(idae|aceae)$", f["name"])) for f in families))
 put("families", "ranges", "with a range", sum(f["max_first"] is not None for f in families))
 put("families", "ranges", "with a minimum range", sum(f["min_first"] is not None for f in families))
-put("families", "ranges", "to the Holocene", sum(f["extant"] for f in families))
+put("families", "ranges", "with a range but no minimum range, by reason", "; ".join(f"{k} {v}" for k, v in no_min.most_common()))
+put("families", "ranges", "coded in the Holocene division", sum(bool(f["holocene"]) for f in families))
+put("families", "ranges", "Holocene cell codes", "; ".join(f"{k} {v}" for k, v in Counter(f["holocene"] for f in families if f["holocene"]).most_common()))
+put("families", "ranges", "extant (Holocene cell 1, F1 or F2, no L code)", sum(f["extant"] for f in families))
 put("families", "ranges", "single division (maximum)", sum(f["max_first"] is not None and f["max_first"] == f["max_last"] for f in families))
 put("families", "habitat", "codes", "; ".join(f"{k or '(blank)'} {v}" for k, v in Counter(f["habitat"] for f in families).most_common(15)))
 
 os.makedirs(out_dir, exist_ok=True)
 with open(os.path.join(out_dir, "fr2_families.csv"), "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh, lineterminator="\n")
-    w.writerow(["chapter", "row", "family", "kingdom", "phylum", "other", "habitat", "max_first", "max_last", "min_first", "min_last", "to_holocene"])
+    w.writerow(["chapter", "row", "family", "kingdom", "phylum", "other", "habitat", "max_first", "max_last", "min_first", "min_last",
+                "holocene_code", "extant"])
     for f in families:
         st = lambda j: "" if j is None else stages[j]
         w.writerow([f["chapter"], f["row"], f["name"], f["kingdom"], f["phylum"], f["other"], f["habitat"],
-                    st(f["max_first"]), st(f["max_last"]), st(f["min_first"]), st(f["min_last"]), int(f["extant"])])
+                    st(f["max_first"]), st(f["max_last"]), st(f["min_first"]), st(f["min_last"]), f["holocene"], int(f["extant"])])
 
 
 def marine(h):
@@ -229,7 +258,8 @@ def counts(fams, which):
         groups = ["all"] + (["marine"] if marine(f["habitat"]) else []) + (["continental"] if continental(f["habitat"]) else [])
         for g in groups:
             n[a][g + "_orig"] += 1
-            n[b][g + "_ext"] += 1
+            if not f["extant"]:
+                n[b][g + "_ext"] += 1
             for j in range(a, b + 1):
                 n[j][g] += 1
     return n
@@ -292,6 +322,10 @@ for ch in sorted(captures):
         d = compare(first[4], later[4])
         if d["same"] != d["old"] or d["old"] != d["new"]:
             revisions.append(f"{ch} {first[0][:8]}->{later[0][:8]}: {d['old']}->{d['new']} rows, {d['same']} unchanged")
+first_year = Counter(min(c[0] for c in caps)[:4] for caps in captures.values())
+put("wayback", "earliest_capture_vs_2019", "earliest capture year (chapters)", "; ".join(f"{k} {v}" for k, v in sorted(first_year.items()))
+    + "; chapters first captured after 1998: " + ", ".join(f"{ch} ({min(c[0] for c in caps)[:8]})" for ch, caps in sorted(captures.items())
+                                                           if min(c[0] for c in caps)[:4] != "1998"))
 put("wayback", "earliest_capture_vs_2019", "all_chapters",
     f"{tot['old']} rows then, {tot['new']} in 2019; {tot['same']} identical; family names only then {tot['only_old_names']}, only in 2019 {tot['only_new_names']}")
 put("wayback", "earliest_capture_vs_2019", "chapters_with_differences", "; ".join(changed_chapters) or "none")
@@ -302,8 +336,8 @@ agree = Counter()
 for (ch, i, r), lr in zip(sequence, life):
     if ch in shifted and i in shifted[ch] and ch in earliest:
         old = Counter(map(key_of, earliest[ch]))
-        agree["1998 agrees with the chapter file" if old[key_of(r)] else
-              "1998 agrees with All-Life" if old[key_of(lr)] else "1998 agrees with neither"] += 1
+        agree["earliest capture agrees with the chapter file" if old[key_of(r)] else
+              "earliest capture agrees with All-Life" if old[key_of(lr)] else "earliest capture agrees with neither"] += 1
 put("wayback", "All-Life_shifted_rows", "vs_earliest_capture", "; ".join(f"{k} {v}" for k, v in agree.most_common()))
 stray = sum(1 for rows in earliest.values() for r in rows if r[91] and r[91] != "NFR")
 put("wayback", "column_92", "earliest captures: values other than NFR", stray)
@@ -321,8 +355,12 @@ for n in sorted(os.listdir(wayback)):
         put("wayback", "xls_2004", n, f"{c['old']} rows; {c['same']} identical to 2019 chapter(s) {target} ({c['new']} rows)")
     elif re.search(r"chapters\.(sit|hqx)$", n):
         raw = open(p, "rb").read()
-        put("wayback", "archive", n, f"{len(raw)} bytes; starts {raw[:4]!r}"
-            + ("; a StuffIt archive (not unpacked; the chapter captures cover its contents)" if raw[:4] == b"SIT!" else ""))
+        if raw[:4] == b"SIT!":
+            entries = sit_names(raw)
+            put("wayback", "archive", n, f"StuffIt archive, {len(raw)} bytes, {len(entries)} top-level entries (names read, not unpacked); "
+                f"angiosperm entries: {', '.join(e for e in entries if 'Magnol' in e or 'ngiosperm' in e) or 'none'}")
+        else:
+            put("wayback", "archive", n, f"{len(raw)} bytes; starts {raw[:4]!r}")
 
 
 def html_table(path, pre):
@@ -358,6 +396,9 @@ with open(os.path.join(out_dir, "fr2_divisions.csv"), "w", newline="", encoding=
     for j, s in enumerate(stages):
         a = base[j - 8] if j >= 8 else None
         w.writerow([s, a[0] if a else "", round(a[2] + a[1] / 2, 3) if a else "", round(max(a[2] - a[1] / 2, 0), 3) if a else ""])
+norm_stage = lambda x: " ".join(x.replace(".", "").replace("\u2019", "'").split()).upper()
+put("wayback", "data95_html", "1998 stage names vs workbook columns (by position, Vendian on)",
+    "; ".join(f"{a[0]} / {stages[j + 8]}" for j, a in enumerate(base) if norm_stage(a[0]) != norm_stage(stages[j + 8])) or "all equal")
 d95_new = xlsx_rows(os.path.join(bristol, "Diversitydata95.xlsx"))[2:]
 num = lambda v: float(v) if re.fullmatch(r"-?[\d.]+(e-?\d+)?", v) else None
 new = [[r[0]] + [num(v) for v in r[1:45]] for r in d95_new]
@@ -387,8 +428,9 @@ for pair, label in ((3, "all"), (5, "continental"), (7, "marine")):
     put("diversity95", "1998_table", f"{label}: column labelled min larger than column labelled max",
         f"{first_larger} of {len(base)} stages")
 groups = (("all", lambda f: True, 3), ("continental", lambda f: continental(f["habitat"]), 5), ("marine", lambda f: marine(f["habitat"]), 7))
-for g, test, k in groups:
-    sub = [f for f in families if test(f)]
+named = [f for f in families if re.search(r"(idae|aceae)$", f["name"])]
+for g, test, k in groups + tuple((g + ", names ending -idae or -aceae only", t, k) for g, t, k in groups):
+    sub = [f for f in (named if "only" in g else families) if test(f)]
     ours_min, ours_max = window_counts(sub, "min", 8), window_counts(sub, "max", 8)
     lo = [min(a[k], a[k + 1]) for a in base]
     hi = [max(a[k], a[k + 1]) for a in base]
@@ -418,8 +460,9 @@ for f in conservative:
 for label, ours, k in (("DIV", div, 4), ("ORI", ori, 2), ("EXT", ext, 3)):
     eq = sum(1 for j, a in enumerate(hol) if ours[j] == a[k])
     mad = sum(abs(ours[j] - a[k]) for j, a in enumerate(hol)) / len(hol)
-    put("holman", "recount_from_chapters_vs_1998", label, f"equal in {eq} of {len(hol)} intervals; mean absolute difference {mad:.1f} "
-        "(Holman also tallied orders, which the chapter files do not record)")
+    msd = sum(ours[j] - a[k] for j, a in enumerate(hol)) / len(hol)
+    put("holman", "recount_from_chapters_vs_1998", label, f"equal in {eq} of {len(hol)} intervals; mean difference recount minus Holman "
+        f"{msd:+.1f}, mean absolute {mad:.1f}; recount larger in {sum(1 for j, a in enumerate(hol) if ours[j] > a[k])} intervals")
 
 pages = {p["slug"]: p for p in json.load(open(os.path.join(bristol, "wp_pages.json")))}
 for slug in ("fossil-amphibian-families", "fossil-reptile-families", "fossil-bird-families", "fossil-mammal-families-1", "fossil-mammal-families-2"):

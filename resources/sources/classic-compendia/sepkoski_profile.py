@@ -136,7 +136,7 @@ pool = defaultdict(list)
 for i, r in enumerate(phylum_rows):
     pool[r[1:]].append(i)
 klass = [None] * len(phylum_rows)
-class_phylum, unmatched = {}, 0
+class_phylum, unmatched, ambiguous = {}, 0, []
 for k in sorted(k for k in pages if k[0] == "class"):
     cname, _, rows = pages[k]
     phyla = Counter()
@@ -146,10 +146,15 @@ for k in sorted(k for k in pages if k[0] == "class"):
             unmatched += 1
             continue
         klass[free[0]] = cname
-        phyla[phylum_rows[free[0]][0]] += 1
+        candidates = {phylum_rows[i][0] for i in pool[r]}
+        if len(candidates) > 1:
+            ambiguous.append(f"{cname} {r[1]} (identical rows on {', '.join(sorted(candidates))}; assigned to {phylum_rows[free[0]][0]})")
+        else:
+            phyla[phylum_rows[free[0]][0]] += 1
     class_phylum[cname] = phyla
 put("peters", "class_matching", "class_rows_without_phylum_row", unmatched)
-put("peters", "class_matching", "classes_spanning_several_phyla",
+put("peters", "class_matching", "class_rows_matching_identical_rows_in_several_phyla", f"{len(ambiguous)}: " + "; ".join(ambiguous))
+put("peters", "class_matching", "classes_spanning_several_phyla (unambiguous rows)",
     "; ".join(f"{c}: {dict(p)}" for c, p in sorted(class_phylum.items()) if len(p) > 1) or "none")
 dups = {key: ix for key, ix in pool.items() if len(ix) > 1}
 put("peters", "class_matching", "identical_phylum_rows", f"{sum(len(ix) for ix in dups.values())} rows in {len(dups)} groups")
@@ -179,7 +184,9 @@ def low7(name):
     return "".join(chr(ord(ch) & 0x7F) for ch in name)
 
 
-put("genera", "names", "non_ascii (bit 7 set on one letter or more; bit cleared)", ", ".join(f"{n} -> {low7(n)}" for n in nonascii))
+put("genera", "names", "non_ascii (letters with bit 7 set; bit cleared)", ", ".join(f"{n} -> {low7(n)}" for n in nonascii))
+put("genera", "names", "non_ascii: letters with bit 7 set per name",
+    "; ".join(f"{k} letter(s): {v} names" for k, v in sorted(Counter(sum(ord(ch) > 127 for ch in n) for n in nonascii).items())))
 put("genera", "orders", "uncertain_or_incertae_sedis", sum(r[1].lower() in ("uncertain", "incertae sedis") for r in genera))
 for col, i in (("FOP", 3), ("LOP", 5)):
     put("genera", "periods", col, "; ".join(f"{k or '(blank)'} {v}" for k, v in Counter(r[i] for r in genera).most_common()))
@@ -187,9 +194,11 @@ for col, i in (("FOS", 4), ("LOS", 6)):
     c = Counter(r[i] for r in genera)
     put("genera", "stages", col, f"{len(c)} codes; blank {c.get('', 0)}; '?' {c.get('?', 0)}; top: "
         + ", ".join(f"{k} {v}" for k, v in c.most_common(12)))
+put("genera", "stages", "distinct codes, FOS and LOS together", len(({r[4] for r in genera} | {r[6] for r in genera}) - {""}))
 put("genera", "stages", "codes spelling Maastrichtian 'Maes'", sum(("Maes" in r[4]) + ("Maes" in r[6]) for r in genera))
 put("genera", "ranges", "extant (LOP R)", sum(r[5] == "R" for r in genera))
-put("genera", "ranges", "single_interval (same FOP/FOS as LOP/LOS)", sum(r[3:5] == r[5:7] for r in genera))
+put("genera", "ranges", "single_interval (same FOP/FOS as LOP/LOS)",
+    f"{sum(r[3:5] == r[5:7] for r in genera)}, of which stage '?' (period only) {sum(r[3:5] == r[5:7] and r[4] == '?' for r in genera)}")
 put("genera", "by_phylum", "rows", "; ".join(f"{p} {n}" for p, n in Counter(r[0] for r in genera).most_common()))
 
 # --- R package -------------------------------------------------------------
@@ -229,7 +238,14 @@ def compare_raw(label, objs):
         cls = {pkg_key(r): c for r, c in zip(genera, klass)}
         put("rpackage", "github_sepkoski_raw", "capture_rows_absent_with_no_class_page",
             sum(n for k, n in absent.items() if cls.get(k) is None))
-    put("rpackage", f"{label}_sepkoski_raw", "rows_not_in_capture", sum((rk - ours_keys).values()))
+    extra = rk - ours_keys
+    dup = sum(n for k, n in extra.items() if ours_keys[k])
+    other = [k[0] for k, n in extra.items() if not ours_keys[k] for _ in range(n)]
+    put("rpackage", f"{label}_sepkoski_raw", "rows_not_in_capture",
+        f"{sum(extra.values())}: duplicates of a capture row {dup}; other {len(other)} ({', '.join(other) or 'none'})")
+    if label == "github":
+        with_class = sorted(k[0] for k, n in absent.items() if cls.get(k) is not None)
+        put("rpackage", "github_sepkoski_raw", "capture_rows_absent_with_a_class_page", ", ".join(with_class) or "none")
     sep = objs["sepkoski"]
     na = sum(1 for x in sep["max_ma"] if x != x) + sum(1 for x in sep["min_ma"] if x != x)
     put("rpackage", f"{label}_sepkoski", "rows; missing ages", f"{len(sep['genus'])}; {na}")
@@ -262,8 +278,10 @@ changed = sum(1 for i, k in enumerate(cran_keys)
               if k in gh_ages and gh_ages[k] != (cran_sep["max_ma"][i], cran_sep["min_ma"][i]))
 put("rpackage", "cran_vs_github_sepkoski", "rows_with_changed_ages",
     f"{changed} of {len(cran_keys)}; keys (genus, intervals) not in GitHub head {sum(k not in gh_ages for k in cran_keys)}")
-pkg_names = sorted({g for g in gh_objs["sepkoski_raw"]["genus"] if any(ord(ch) > 127 for ch in g)})
-put("rpackage", "github_sepkoski_raw", "non_ascii_genus_names", ", ".join(pkg_names))
+pkg_names = Counter(g for g in gh_objs["sepkoski_raw"]["genus"] if any(ord(ch) > 127 for ch in g))
+put("rpackage", "github_sepkoski_raw", "non_ascii_genus_names", ", ".join(f"{n} x{c}" if c > 1 else n for n, c in sorted(pkg_names.items())))
+put("rpackage", "github_sepkoski_raw", "capture's corrupted names not in the package",
+    ", ".join(n for n in nonascii if n.lower() not in {g.lower() for g in pkg_names}) or "none")
 
 # --- BHL scan ---------------------------------------------------------------
 meta = json.load(open(os.path.join(bhl_raw, "ia_metadata.json")))
@@ -286,6 +304,15 @@ fixed_found = sum(words[low7(n).lower()] > 0 for n in nonascii)
 put("bhl", "ocr_lookup_non_ascii", "names with bit 7 cleared found in the OCR text",
     f"{fixed_found} of {len(nonascii)}; as captured {sum(words[n.lower()] > 0 for n in nonascii)}; missing: "
     + (", ".join(low7(n) for n in nonascii if not words[low7(n).lower()]) or "none"))
+garbled = []
+for n in nonascii:
+    pat = re.compile("".join("." if ord(ch) > 127 else re.escape(ch) for ch in n))
+    hits_n = sorted({m.group(0) for m in pat.finditer(ocr) if m.group(0) != low7(n)})
+    if hits_n:
+        garbled.append(f"{n}: {'/'.join(hits_n)}")
+put("bhl", "ocr_lookup_non_ascii", "names printed garbled in the volume (OCR, odd letters as any character)",
+    f"{len(garbled)} of {len(nonascii)}: " + "; ".join(garbled))
+put("bhl", "ocr_lookup", "'Maes' in the OCR text", len(re.findall(r"Maes", ocr)))
 missed = [n for n in pool_names if not words[n.lower()]]
 put("bhl", "ocr_lookup", "plain names not found", ", ".join(missed[:60]))
 
