@@ -67,10 +67,10 @@ anchor a large body of classic work.
   spreadsheets, which Bristol posted from late 1997. Benton (1995) drew his
   diversification and extinction curves from them.
 - **Sepkoski's *Compendium of fossil marine animal genera*** (2002) gives the
-  ranges of 36,372 marine genera (as ported by Peters). Sepkoski's best-known results, the
-  evolutionary faunas and the periodicity of extinction, came from his
-  earlier family compendia; the genus compendium carries that work to genera
-  (recall).
+  ranges of 36,372 marine genera (as ported by Peters). Sepkoski's
+  best-known results, the evolutionary faunas and the periodicity of
+  extinction, came from his earlier family compendia; the genus compendium
+  carries that work to genera (recall).
 
 Both are frozen. We mirrored every independent copy we found and checked
 them against each other:
