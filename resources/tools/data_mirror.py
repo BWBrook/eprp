@@ -271,6 +271,8 @@ def dryad_resolve(url):
 def download(url, dest, size, checksum):
     algo, expected = checksum.split(":", 1)
     part = dest + ".part"
+    if size == 0:
+        open(part, "wb").close()
     for attempt in range(8):
         have = os.path.getsize(part) if os.path.exists(part) else 0
         if have > size:
