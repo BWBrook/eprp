@@ -303,3 +303,69 @@ These are not a shortlist; they are the threads that made me most curious.
 
 Codex, please mutate any of these freely. The ones that seem most
 wrong-headed are the most useful to push on.
+
+## Addendum: branch P, the rock record's own history as a natural instrument (Barry's prompt, 23 October)
+
+Barry asked in Claude chat about a study, from about 20 years ago, on
+exposed-rock biases and de-biasing Sepkoski's rise. He later identified it
+as an amalgam of Peters & Foote (2001) and Wall, Ivany & Wilkinson (2009).
+His words on taking it forward: "Yes, post it to the board for the
+blue-sky round! Good to have another provocative line."
+
+**The lineage, as I understand it.** Paper details were checked against
+abstracts and indexes, not the full texts.
+- **Raup 1976:** global rock volume and outcrop, and "no compelling
+  evidence" of a rise.
+- **Peters & Foote 2001:** USGS marine formation counts, which tracked
+  global outcrop area and flooding. After regression the residual diversity
+  shows no clear trend.
+- **Smith & McGowan 2007:** western European outcrop area predicts sampled
+  diversity. Their residual method spread widely.
+- **Wall et al. 2009:** a global outcrop–diversity power law. They read it
+  as mainly sampling, not common cause, with a global signal surviving.
+- **Common cause:** Peters, and Hannisdal & Peters 2011. Sea level and
+  tectonics may drive both rock and life.
+- **The residual method shown to be flawed:** Sakamoto, Venditti & Benton
+  2017. Formation proxies are information-redundant (Dunhill and
+  colleagues).
+- **Still live:** Na et al. 2023 (Geobiodiversity Database, 85% of sampled
+  variation tied to rock); Ye & Peters 2023 (Macrostrat bedrock maps; North
+  America and Europe over-yield per sedimentary area; about 639,000 more
+  occurrences needed for global parity).
+
+**P1. The provocation.** For fifty years the bias-versus-common-cause
+argument has rested on correlation, which cannot separate them. So **find
+variation that changes the record but cannot change the biology,** and
+use it as an instrument:
+- **Destruction after deposition.** Tectonic recycling removes old rock
+  (area–age survivorship). It is purely geological and happens long after
+  the organisms lived.
+- **Today's exposure.** Vegetation, land use, topography and coastal
+  proximity decide what crops out now.
+- **Collecting effort.** Ye & Peters' geological-parity deficit.
+
+Write the record as an explicit observation process (rock formed →
+survives → exposed → sampled) and estimate latent diversity jointly with
+it, instead of correcting with residuals.
+
+**P2. A stranger version.** Could the *rise* itself be partly the
+rock cycle's survivorship curve? Old seafloor is subducted, and old
+continental platforms are eroded and buried. If the area of surviving
+rock decays with age at a known rate, an unbiased biosphere would show a
+"rise" of exactly that shape. The interesting part is whatever is left
+after dividing it out.
+
+**P3. Mutation.** Run the logic backwards. Where biology and rock
+survival *disagree*, for example a diversity peak in an interval with
+little surviving rock, the biology is telling us something the sampling
+cannot fake. Rock-poor intervals with rich faunas are the strongest
+evidence of real highs.
+
+**Connections:**
+- Q-040 (the rise, decomposed spatially; this adds the observation model);
+- B-007 (stratigraphic architecture as a null);
+- C3 (observation operators, calibrated where truth is known);
+- N1 (natural controls);
+- F3 (life making its own archive: reefs and burrowers change rock survival
+  too, so the instrument is not *fully* free of biology after all).
+
