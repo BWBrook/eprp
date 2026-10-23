@@ -17,9 +17,11 @@ Reads the newest raw version of each route under CLIMATE_FORCING_DIR:
 - rothman2017-carbon-events: Table 1 of the article (31 carbon-isotope events),
   from the Europe PMC full-text XML;
 - green2022-lips: Tables S1 (stage boundaries and extinction magnitudes), S2
-  (LIPs; its two column blocks joined on the row number) and S3 (impacts) of the
-  SI appendix, parsed by column position from pdftotext -layout. Rows must be
-  numbered consecutively; S2 start ages must not be younger than end ages.
+  (LIPs), S3 (impacts), S4 (Rothman-method calculations) and S5 (predicted
+  extinction magnitudes) of the SI appendix, parsed by column position from
+  pdftotext -layout; tables in two column blocks are joined on the row number.
+  Numbered rows must be consecutive; S2 start ages must not be younger than end
+  ages. S1-S3 are compared with the authors' repository tables (green2022-code).
 The parsed tables are written to OUT_DIR. Exit status 1 if a check fails.
 """
 
@@ -95,7 +97,10 @@ if v:
         f"{max(fnum(r['LowerAge']) for r in rows):g} Ma")
     put("phanda", "GMSTandCO2_percentiles", "GMST_50 range (degC)", f"{min(g)[0]:.1f} ({min(g)[1]}) to {max(g)[0]:.1f} ({max(g)[1]})")
     put("phanda", "GMSTandCO2_percentiles", "CO2_50 range (ppm)", f"{min(c)[0]:.0f} ({min(c)[1]}) to {max(c)[0]:.0f} ({max(c)[1]})")
-    put("phanda", "GMSTandCO2_percentiles", "merged slices ('&' in stage name)", sum("&" in r["Stage"] for r in rows))
+    merged = [r["Stage"] for r in rows if "/" in r["Stage"]]
+    other = [r["Stage"] for r in rows if "petm" in r["Stage"].lower()]
+    put("phanda", "GMSTandCO2_percentiles", "slices: single stages; merged pairs ('/'); PETM",
+        f"{len(rows) - len(merged) - len(other)}; {len(merged)} ({', '.join(merged)}); {len(other)} ({', '.join(other)})")
     ltg = glob.glob(os.path.join(v, "5_Outputs", "PhanDA_LTG_percentiles", "PhanDA_SATgradient_percentiles_bystage", "*.csv"))
     put("phanda", "SAT gradient percentiles", "stage files", len(ltg))
 
@@ -108,10 +113,23 @@ if v:
         put("phansst", "PhanSST_v001", col, "; ".join(f"{k or '(blank)'} {n}" for k, n in Counter(r[col] for r in rows).most_common(12)))
     ages = [a for a in (fnum(r["Age"]) for r in rows) if a is not None and a == a]
     put("phansst", "PhanSST_v001", "Age (Ma)", f"{len(ages)} rows with an age; {min(ages):g}-{max(ages):g}; median {statistics.median(ages):g}")
-    put("phansst", "PhanSST_v001", "sites; publications (LeadAuthor+Year)",
-        f"{len({r['SiteName'] for r in rows})}; {len({(r['LeadAuthor'], r['Year']) for r in rows})}")
+    put("phansst", "PhanSST_v001", "site names; site name + hole; lead author + year; publication DOIs (rows without a DOI)",
+        f"{len({r['SiteName'] for r in rows})}; {len({(r['SiteName'], r['SiteHole']) for r in rows})}; "
+        f"{len({(r['LeadAuthor'], r['Year']) for r in rows})}; {len({r['PublicationDOI'] for r in rows if r['PublicationDOI']})} "
+        f"({sum(1 for r in rows if not r['PublicationDOI'])}); DOI or author-year {len({r['PublicationDOI'] or (r['LeadAuthor'], r['Year']) for r in rows})}")
+    put("phansst", "PhanSST_v001", "negative ages; AgeFlag; DiagenesisFlag NaN",
+        f"{sum(1 for a in ages if a < 0)}; " + ", ".join(f"{k} {n}" for k, n in sorted(Counter(r['AgeFlag'] for r in rows).items()))
+        + f"; {sum(1 for r in rows if r['DiagenesisFlag'] in ('', 'NaN'))}")
+    gh_rows = len(rows)
     wb = openpyxl.load_workbook(os.path.join(v, "PhanSST_v001_RefList.xlsx"), read_only=True)
     put("phansst", "PhanSST_v001_RefList.xlsx", "rows", sum(1 for _ in wb.worksheets[0].iter_rows(values_only=True)) - 1)
+    z = latest("phansst-zenodo")
+    if z:
+        with zipfile.ZipFile(glob.glob(os.path.join(z, "**", "*.zip"), recursive=True)[0]) as zf:
+            names = [n for n in zf.namelist() if n.endswith("PhanSST_v001.csv")]
+            zrows = sum(1 for _ in csv.DictReader(io.TextIOWrapper(zf.open(names[0]), encoding="utf-8", errors="replace"))) if names else None
+        put("phansst", "Zenodo release v0.0.1-beta vs GitHub head", "PhanSST_v001.csv rows",
+            f"release {zrows}; head {gh_rows}" if zrows is not None else "no PhanSST_v001.csv in the release zip")
 
 # --- Song 2021, Scotese 2021 ------------------------------------------------------------
 for route in ("song2021-temperature-thresholds", "scotese2021-gmst"):
@@ -175,7 +193,8 @@ if v:
     t = re.search(r'<table-wrap id="T1".*?</table-wrap>', x, re.S).group(0)
     cell = lambda c: " ".join(html.unescape(re.sub(r"<[^>]+>", " ", c)).split()).replace("−", "-")
     rows = [[cell(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", r, re.S)] for r in re.findall(r"<tr>(.*?)</tr>", t, re.S)]
-    header, data = rows[0], rows[1:]
+    header = [h.replace("δ 1", "δ1").replace("τ env", "τ_env").replace(" )", ")").replace("Date[Ma]", "Date [Ma]") for h in rows[0]]
+    data = rows[1:]
     write("rothman2017_events.tsv", header, data)
     put("rothman2017", "Table 1", "events", f"{len(data)}; dates {min(fnum(r[2]) for r in data):g}-{max(fnum(r[2]) for r in data):g} Ma")
     if len(data) != 31:
@@ -220,11 +239,11 @@ if v:
         lines = subprocess.run(["pdftotext", "-layout", p, "-"], capture_output=True, text=True).stdout.splitlines()
     put("green2022", "SI appendix", pdf, f"{len(lines)} text lines")
     tables = {}
-    for name in ("S1", "S2", "S3"):
+    for name in ("S1", "S2", "S3", "S4", "S5"):
         i = next(k for k, l in enumerate(lines) if f"Table {name}." in l)
         h = next(k for k in range(i + 1, len(lines)) if lines[k].strip())
         cols, rows, j = layout_block(lines, h)
-        if name == "S2":
+        if "..." in cols:
             h2 = next(k for k in range(j, len(lines)) if lines[k].strip().startswith("..."))
             cols2, rows2, _ = layout_block(lines, h2)
             extra = {r.get("#"): r for r in rows2}
@@ -233,10 +252,15 @@ if v:
             cols = [c for c in cols if c != "..."] + [c for c in cols2 if c not in ("#", "...")]
         tables[name] = (cols, rows)
         nums = [r.get("#") for r in rows]
-        if name != "S3" and nums != [str(k) for k in range(1, len(rows) + 1)]:
+        if "#" in cols and nums != [str(k) for k in range(1, len(rows) + 1)]:
             failures.append(f"green {name}: row numbers not consecutive")
         put("green2022", f"Table {name}", "rows; columns", f"{len(rows)}; {', '.join(cols)}")
         write(f"green2022_table_{name}.tsv", cols, [[r.get(c, "") for c in cols] for r in rows])
+    s1 = tables["S1"]
+    comment = s1[0][-1]
+    lsd = [r["#"] for r in s1[1] if "least significant digit" in r.get(comment, "")]
+    put("green2022", "Table S1", "rows whose 1-sigma is the least significant digit (rounding, not an uncertainty)",
+        f"{len(lsd)}: rows {', '.join(lsd)}")
     lips = tables["S2"][1]
     bad = [r["Name"] for r in lips if fnum(r.get("Start Age [Ma]")) is None or fnum(r.get("End Age [Ma]")) is None
            or fnum(r["Start Age [Ma]"]) < fnum(r["End Age [Ma]"])]
@@ -245,8 +269,32 @@ if v:
         failures.append("green S2 ages")
     rates = [fnum(r.get("Eruption rate [km3/yr]")) for r in lips]
     put("green2022", "Table S2", "rows with an eruption rate", sum(x is not None for x in rates))
-    aus = [r["Name"] for r in lips if re.search(r"Kalkarindji|Bunbury|Whitsunday|Gascoyne", r["Name"])]
-    put("green2022", "Table S2", "Australian LIPs", ", ".join(aus))
+    aus = [r["Name"] for r in lips if re.search(r"Kalkarindji|Bunbury|Whitsunday|Gascoyne|Kennedy", r["Name"])]
+    put("green2022", "Table S2", "Australian LIPs (by name)", ", ".join(aus))
+
+    code = latest("green2022-code")
+    if code:
+        def repo_table(name):
+            with open(os.path.join(code, "data", name), encoding="utf-8", errors="replace", newline="") as fh:
+                return list(csv.DictReader(fh, delimiter="\t"))
+        same = lambda a, b: fnum(a) is not None and fnum(b) is not None and abs(fnum(a) - fnum(b)) < 1e-6
+        rl = {r["Name"].strip(): r for r in repo_table("LIPs.tsv")}
+        ok = [r["Name"] for r in lips if r["Name"] in rl and all(same(r.get(a), rl[r["Name"]].get(b)) for a, b in
+              (("Start Age [Ma]", "Start Age [Ma]"), ("Start Age 1σ [Ma]", "Start Age sigma [Ma]"), ("End Age [Ma]", "End Age [Ma]"),
+               ("End Age 1σ [Ma]", "End Age sigma [Ma]")))]
+        put("green2022", "S2 vs repository data/LIPs.tsv", "LIPs with equal start and end ages and sigmas",
+            f"{len(ok)} of {len(lips)}; repository rows {len(rl)}; names not in the repository: "
+            + (", ".join(r["Name"] for r in lips if r["Name"] not in rl) or "none"))
+        rb = {r["Number"]: r for r in repo_table("boundaries.tsv")}
+        okb = sum(1 for r in tables["S1"][1] if r["#"] in rb and same(r["Age [Ma]"], rb[r["#"]]["Age [Ma]"])
+                  and (same(r["Age 1σ [Ma]"], rb[r["#"]]["Age sigma [Ma]"]) or not r["Age 1σ [Ma]"]))
+        put("green2022", "S1 vs repository data/boundaries.tsv", "boundaries with equal age and sigma",
+            f"{okb} of {len(tables['S1'][1])}; repository rows {len(rb)}")
+        ri = {r["Name"].strip(): r for r in repo_table("impacts.tsv")}
+        oki = sum(1 for r in tables["S3"][1] if r["Name"] in ri and same(r["Age [Ma]"], ri[r["Name"]]["Age [Ma]"])
+                  and same(r["Age 1σ [Ma]"], ri[r["Name"]]["Age_sigma [Ma]"]))
+        put("green2022", "S3 vs repository data/impacts.tsv", "impacts with equal age and sigma",
+            f"{oki} of {len(tables['S3'][1])}; repository rows {len(ri)}")
 
 for f in failures:
     put("checks", "failure", "", f)

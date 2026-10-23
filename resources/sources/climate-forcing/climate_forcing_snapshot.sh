@@ -4,7 +4,7 @@
 # isotopes (CENOGRID, LR04), and the event tables (Green, Renne & Keller 2022 LIPs;
 # Rothman 2017 carbon-isotope events).
 # Usage: climate_forcing_snapshot.sh [ROUTE ...]
-#   ROUTE: phanda phansst priors song scotese cenogrid lr04 rothman green (default: all)
+#   ROUTE: phanda phansst phansst-zenodo greencode priors song scotese cenogrid lr04 rothman green (default: all)
 set -uo pipefail
 cd /data/paleodata
 M="python3 _tools/data_mirror.py"
@@ -14,6 +14,10 @@ want() { [ "$ROUTES" = "  " ] || [[ "$ROUTES" == *" $1 "* ]]; }
 
 if want phanda; then $M github EJJudd/PhanDA "$D/phanda" --latest || echo "phanda FAILED"; fi
 if want phansst; then $M github EJJudd/PhanSST "$D/phansst" --latest || echo "phansst FAILED"; fi
+# PhanSST's DOI release (Zenodo concept 7049233), older than the GitHub head
+if want phansst-zenodo; then $M zenodo 7275402 "$D/phansst-zenodo" --latest || echo "phansst-zenodo FAILED"; fi
+# Green, Renne & Keller's code and data repository (the paper's data availability statement)
+if want greencode; then $M github Theodore-Green/LIP-Extinction-Correlations "$D/green2022-code" --latest || echo "greencode FAILED"; fi
 # The HadCM3L priors are 11.4 GB at about 0.3 MB/s: index only, fetch on demand.
 if want priors; then $M zenodo 8237751 "$D/phanda-hadcm3l-priors" --index-only || echo "priors FAILED"; fi
 if want song; then $M zenodo 5027293 "$D/song2021-temperature-thresholds" --latest || echo "song FAILED"; fi
