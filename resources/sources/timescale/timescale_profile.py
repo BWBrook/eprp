@@ -7,21 +7,28 @@
 Usage: uv run timescale_profile.py ISC_RAW ICS_RAW MACROSTRAT_RAW PBDB_INTERVALS_CSV FARRELL_RAW OUT_DIR OUT_TSV
 (needs pdftotext from poppler)
 
-ISC_RAW is the CGI-IUGS timescale-data repository (one RDF file per ICS chart
-release, 2004-2020). Each release's boundaries are read in either vocabulary:
-the older one (tm:temporalPosition, tm:value, thors:positionalUncertainty with
-basic:value) or the newer one (time:inTemporalPosition, time:numericPosition,
-gts:positionalUncertainty with time:numericDuration). OUT_DIR receives
-isc_boundaries_by_version.tsv: one row per boundary, the age and uncertainty in
-every release. The profile counts boundaries and uncertainties per release and
-the age changes between releases, and flags ages over 4,600 Ma (late
-Quaternary boundaries recorded in years). The RDF releases follow the ICS chart,
-not the GTS2020 book: the release labelled 2020 is the 2020/03 chart. It is
-compared by name with PBDB's scale-1 intervals and Macrostrat's "international
-intervals". The numbers printed on the ICS 2024/12 chart (pdftotext) are matched
-to PBDB's base ages, which follow the current chart, to give
-ics2024_pbdb_bases.tsv: each PBDB base with the chart's printed value and its
-uncertainty where the chart gives one.
+ISC_RAW is the CGI-IUGS timescale-data repository: one RDF (Turtle) file per
+ICS chart release, 2004 to the chart of 2020/01, and copies of the chart PDFs
+2014-10 to 2020-01 with the ICS change logs.
+
+RDF. Boundaries are keyed by URI. A boundary's age is read from its position in
+either vocabulary (tm:temporalPosition with tm:value and tm:frame, or
+time:inTemporalPosition with time:numericPosition and time:hasTRS); positions
+in the years-before-present system (.../geologicage/bp) are converted to Ma, and
+where a boundary has both, the Ma position is used. Uncertainties are read the
+same way (basic:value or time:numericDuration, converted from years where the
+unit is years). Every "Base of ..." label (rdfs:label, skos:prefLabel,
+skos:altLabel) and the labels of owl:sameAs aliases name the boundary.
+OUT_DIR/isc_boundaries_by_version.tsv gives each boundary's labels and its age
+and uncertainty in every release, sorted by age then URI.
+
+Comparisons. The 2020 release is compared by name with PBDB's scale-1 intervals
+and Macrostrat's "international intervals" (by PBDB interval type); PBDB with
+Macrostrat. Each chart PDF's printed ages (decimals, integers of three or four
+digits, optional "~" and "± u") are read with pdftotext, and successive charts
+compared by age. The 2024/12 chart's ages are matched to PBDB base ages by value:
+OUT_DIR/ics2024_pbdb_bases.tsv gives each PBDB base with the chart's printed
+value and uncertainty where they match.
 """
 
 import csv
@@ -31,10 +38,10 @@ import os
 import re
 import subprocess
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 
 from rdflib import Graph, Namespace
-from rdflib.namespace import RDFS, SKOS
+from rdflib.namespace import OWL, RDFS, SKOS
 
 isc_raw, ics_raw, ms_raw, pbdb_csv, farrell_raw, out_dir, out_tsv = sys.argv[1:8]
 TM = Namespace("http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#")
@@ -49,119 +56,174 @@ def put(table, metric, key, value):
     out.append([table, metric, key, value])
 
 
-def num(v):
-    return None if v is None else float(str(v))
+def norm(label):
+    return " ".join(str(label).replace("Base of", "").split()).lower()
 
 
 def boundaries(path):
     g = Graph().parse(path, format="turtle")
-    res = {}
+    res, frames = {}, Counter()
     for pred in (TM.temporalPosition, TIME.inTemporalPosition):
         for b, pos in g.subject_objects(pred):
-            label = g.value(b, RDFS.label) or g.value(b, SKOS.prefLabel)
-            if label is None or not str(label).startswith("Base of"):
+            val = g.value(pos, TM.value) if g.value(pos, TM.value) is not None else g.value(pos, TIME.numericPosition)
+            try:
+                val = float(str(val))
+            except (TypeError, ValueError):  # e.g. the Present, given as a date
                 continue
-            age = num(g.value(pos, TM.value)) if g.value(pos, TM.value) is not None else num(g.value(pos, TIME.numericPosition))
+            if not any(str(x).startswith("Base of") for p in (RDFS.label, SKOS.prefLabel) for x in g.objects(b, p)):
+                continue
+            trs = str(g.value(pos, TM.frame) or g.value(pos, TIME.hasTRS) or "")
+            bp = trs.endswith("/bp")
+            frames["bp" if bp else trs.rsplit("/", 1)[-1] or "none"] += 1
+            age = val / (1e6 if bp else 1)
             un = g.value(pos, THORS.positionalUncertainty) or g.value(pos, GTS.positionalUncertainty)
             unc = None
             if un is not None:
-                unc = num(g.value(un, BASIC.value)) if g.value(un, BASIC.value) is not None else num(g.value(un, TIME.numericDuration))
-            res[str(label)[8:].strip()] = (age, unc)
-    return res
+                u = g.value(un, BASIC.value) if g.value(un, BASIC.value) is not None else g.value(un, TIME.numericDuration)
+                unit = str(g.value(un, TIME.unitType) or g.value(un, BASIC.uom) or "")
+                if u is not None:
+                    unc = float(str(u)) / (1e6 if unit.endswith("/a") else 1)
+            prev = res.get(b)
+            if prev is None or (prev["bp"] and not bp):
+                res[b] = {"age": age, "unc": unc, "bp": bp}
+    labels = defaultdict(set)
+    for b in res:
+        for p in (RDFS.label, SKOS.prefLabel, SKOS.altLabel):
+            labels[b].update(str(x) for x in g.objects(b, p) if str(x).startswith("Base of"))
+        for alias in set(g.objects(b, OWL.sameAs)) | set(g.subjects(OWL.sameAs, b)):
+            for p in (RDFS.label, SKOS.prefLabel, SKOS.altLabel):
+                labels[b].update(str(x) for x in g.objects(alias, p) if str(x).startswith("Base of"))
+    return {str(b).rsplit("/", 1)[-1]: dict(v, labels=sorted(labels[b])) for b, v in res.items()}, frames
 
 
 rdf_dir = os.path.join(isc_raw, "rdf")
-files = sorted(f for f in os.listdir(rdf_dir) if re.fullmatch(r"isc\d{4}(-1)?\.ttl|isc2016-12-time\.ttl", f))
+files = sorted(f for f in os.listdir(rdf_dir) if re.fullmatch(r"isc\d{4}(-1)?\.ttl|isc2016-1[02]-t(m|ime)\.ttl", f))
 releases = {}
 for f in files:
-    rel = re.sub(r"-time$", "", f[3:-4])
-    releases[rel] = boundaries(os.path.join(rdf_dir, f))
+    rel = re.sub(r"-(tm|time)$", "", f[3:-4])
+    releases[rel], frames = boundaries(os.path.join(rdf_dir, f))
+    put("isc", "position reference systems", rel, "; ".join(f"{k} {v}" for k, v in frames.most_common()))
 put("isc", "files_used", "", ", ".join(files))
 order = sorted(releases)
 prev = None
 for rel in order:
     b = releases[rel]
-    ages = [a for a, _ in b.values() if a is not None]
-    put("isc", "release", rel, f"{len(b)} boundaries; with an age {len(ages)}; with an uncertainty {sum(u is not None for _, u in b.values())}; "
-        f"oldest {max(ages) if ages else ''} Ma")
+    ages = [x["age"] for x in b.values()]
+    uncs = [x["unc"] for x in b.values() if x["unc"] is not None]
+    put("isc", "release", rel, f"{len(b)} boundaries ({len(set(ages))} distinct ages); with an uncertainty {len(uncs)} "
+        f"({sum(u == 0 for u in uncs)} of them 0); oldest {max(ages):g} Ma; from years before present {sum(x['bp'] for x in b.values())}")
     if prev:
         p = releases[prev]
-        common = [k for k in b if k in p and b[k][0] is not None and p[k][0] is not None]
-        changed = sorted(((abs(b[k][0] - p[k][0]), k) for k in common if abs(b[k][0] - p[k][0]) > 1e-6), reverse=True)
-        put("isc", "changes_from_previous", f"{prev} -> {rel}",
+        common = [k for k in b if k in p]
+        changed = sorted(((abs(b[k]["age"] - p[k]["age"]), k) for k in common if abs(b[k]["age"] - p[k]["age"]) > 1e-9), reverse=True)
+        put("isc", "changes_from_previous (by URI)", f"{prev} -> {rel}",
             f"{len(changed)} of {len(common)} shared boundaries moved; added {len(set(b) - set(p))}, dropped {len(set(p) - set(b))}; largest: "
-            + ", ".join(f"{k} {p[k][0]:g}->{b[k][0]:g}" for _, k in changed[:5]))
+            + ", ".join(f"{k} {p[k]['age']:g}->{b[k]['age']:g}" for _, k in changed[:6]))
     prev = rel
+meta = open(os.path.join(rdf_dir, "isc2020.ttl"), encoding="utf-8").read()
+vi = re.search(r'owl:versionInfo "([^"]+)"', meta)
+put("isc", "isc2020.ttl", "owl:versionInfo", vi.group(1) if vi else "none")
+logs = sorted(glob.glob(os.path.join(isc_raw, "stratigraphy.org", "ChangeLog*.txt")), key=lambda p: (len(p), p))
+if logs:
+    line = next((l.strip() for l in open(logs[-1], encoding="utf-8", errors="replace") if "actual version" in l), "")
+    put("isc", "newest change log", os.path.basename(logs[-1]), line[:160])
+
 os.makedirs(out_dir, exist_ok=True)
-names = sorted({k for b in releases.values() for k in b}, key=lambda k: min((releases[r][k][0] or 1e9) for r in order if k in releases[r]))
+uris = sorted({k for b in releases.values() for k in b},
+              key=lambda k: (min(releases[r][k]["age"] for r in order if k in releases[r]), k))
 with open(os.path.join(out_dir, "isc_boundaries_by_version.tsv"), "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh, delimiter="\t", lineterminator="\n")
-    w.writerow(["boundary"] + [f"{r}_{x}" for r in order for x in ("ma", "uncertainty")])
-    for k in names:
-        w.writerow([k] + [("" if v is None else v) for r in order for v in releases[r].get(k, (None, None))])
+    w.writerow(["boundary_uri", "labels"] + [f"{r}_{x}" for r in order for x in ("ma", "uncertainty")])
+    for k in uris:
+        labs = sorted({l for r in order if k in releases[r] for l in releases[r][k]["labels"]})
+        row = [k, " | ".join(labs)]
+        for r in order:
+            x = releases[r].get(k)
+            row += ["", ""] if x is None else [round(x["age"], 9), "" if x["unc"] is None else round(x["unc"], 9)]
+        w.writerow(row)
 
-for rel in order:
-    years = sorted(k for k, (a, _) in releases[rel].items() if a is not None and a > 4600)
-    if years:
-        put("isc", "ages_above_4600_ma (recorded in years, not Ma)", rel, ", ".join(f"{k} {releases[rel][k][0]:g}" for k in years))
-
-ics2020 = releases.get("2020", {})
-ms = json.load(open(os.path.join(ms_raw, "intervals_all.json")))["success"]["data"]
+# --- PBDB and Macrostrat by name --------------------------------------------------
+ms_doc = json.load(open(os.path.join(ms_raw, "intervals_all.json")))
+ms = ms_doc["success"]["data"]
+put("macrostrat", "intervals", "all; licence field", f"{len(ms)}; {ms_doc['success'].get('license')}")
 in_scale = lambda d, i: any(t.get("timescale_id") == i for t in (d.get("timescales") or []))
 intl = {d["name"]: float(d["b_age"]) for d in ms if in_scale(d, 11)}
-put("macrostrat", "intervals", "all", len(ms))
-put("macrostrat", "timescales", "international intervals (id 11); New Zealand ages (id 6)",
-    f"{len(intl)}; {sum(in_scale(d, 6) for d in ms)}")
-pbdb = {}
+nz = [d for d in ms if in_scale(d, 6)]
+put("macrostrat", "timescales", "international intervals (id 11); New Zealand (id 6) by interval type",
+    f"{len(intl)}; " + ", ".join(f"{k} {v}" for k, v in Counter(d["int_type"] for d in nz).most_common()))
+pbdb, ptype = {}, {}
 with open(pbdb_csv, newline="", encoding="utf-8") as fh:
     for r in csv.DictReader(fh):
-        if r["scale_no"] == "1" and r["b_age"]:
-            pbdb.setdefault(r["interval_name"], float(r["b_age"]))
-put("pbdb", "intervals", "scale 1 with a base age", len(pbdb))
+        if r["scale_no"] == "1" and r["b_age"] and r["interval_name"] not in pbdb:
+            pbdb[r["interval_name"]] = float(r["b_age"])
+            ptype[r["interval_name"]] = r["type"]
+put("pbdb", "intervals", "scale 1 with a base age, by type", f"{len(pbdb)}: " + ", ".join(f"{k} {v}" for k, v in Counter(ptype.values()).most_common()))
+
+by_name = {}
+for k, x in releases["2020"].items():
+    for l in x["labels"]:
+        by_name[norm(l)] = x["age"]
 
 
-def compare(label, a, b):
-    shared = [k for k in a if k in b and a[k] is not None]
-    diff = sorted(((abs(b[k] - a[k]), k) for k in shared if abs(b[k] - a[k]) > 0.005), reverse=True)
-    put("bases_compared", label, "same names", f"{len(shared)} shared; equal within 0.005 Myr {len(shared) - len(diff)}; differing {len(diff)}"
-        + (": " + "; ".join(f"{k} {a[k]:g} vs {b[k]:g}" for _, k in diff[:20]) if diff else ""))
+def compare(label, a, b, types=None):
+    shared = [k for k in a if norm(k) in b] if types is not None else [k for k in a if k in b]
+    get = (lambda k: b[norm(k)]) if types is not None else (lambda k: b[k])
+    diff = sorted(((abs(get(k) - a[k]), k) for k in shared if abs(get(k) - a[k]) > 0.005), reverse=True)
+    detail = ""
+    if types is not None:
+        detail = "; by PBDB type, shared/differing: " + ", ".join(
+            f"{t} {sum(types[k] == t for k in shared)}/{sum(types[k] == t for _, k in diff)}" for t in sorted({types[k] for k in shared}))
+        unmatched = sorted(k for k in a if norm(k) not in b)
+        detail += f"; PBDB names with no RDF label: {len(unmatched)} ({', '.join(unmatched)})"
+    put("bases_compared", label, "by name", f"{len(shared)} shared; equal within 0.005 Myr {len(shared) - len(diff)}; differing {len(diff)}"
+        + detail + ("; largest: " + "; ".join(f"{k} {a[k]:g} vs {get(k):g}" for _, k in diff[:12]) if diff else ""))
 
 
-rdf2020 = {k: v[0] for k, v in ics2020.items()}
-compare("ICS 2020/03 (RDF) vs PBDB", rdf2020, pbdb)
-compare("ICS 2020/03 (RDF) vs Macrostrat international intervals", rdf2020, intl)
+compare("PBDB vs RDF 2020 (chart 2020/01)", pbdb, by_name, ptype)
 compare("PBDB vs Macrostrat international intervals", pbdb, intl)
 
+# --- Chart PDFs ------------------------------------------------------------------------
+NUM = re.compile(r"(~\s?)?(\d{1,4}\.\d+|\d{3,4})(?:\s*±\s*(\d+(?:\.\d+)?))?")
 charts = {}
-for f in sorted(glob.glob(os.path.join(ics_raw, "ChronostratChart*.pdf"))):
+pdfs = glob.glob(os.path.join(isc_raw, "stratigraphy.org", "ChronostratChart*.pdf")) + glob.glob(os.path.join(ics_raw, "ChronostratChart*.pdf"))
+for f in sorted(set(pdfs), key=os.path.basename):
+    name = re.search(r"ChronostratChart(\d{4}-\d{2})", f).group(1)
+    if name in charts:
+        continue
     text = subprocess.run(["pdftotext", "-layout", f, "-"], capture_output=True, text=True).stdout
-    vals = [v.replace(" ", "") for v in re.findall(r"~?\s?\d{1,4}\.\d+(?:\s*±\s*\d+(?:\.\d+)?)?", text)]
-    charts[os.path.basename(f)] = vals
-    put("ics_chart", "numbers_printed", os.path.basename(f), f"{len(vals)} ({len(set(vals))} distinct)")
-age_of = lambda v: float(v.lstrip("~").split("±")[0])
-if "ChronostratChart2024-12.pdf" in charts:
+    toks = [(m.group(0).replace(" ", ""), float(m.group(2)), m.group(3), bool(m.group(1))) for m in NUM.finditer(text)]
+    charts[name] = toks
+names = sorted(charts)
+for i, n in enumerate(names):
+    ages = {round(t[1], 4) for t in charts[n]}
+    line = f"{len(charts[n])} tokens, {len(ages)} distinct values"
+    if i:
+        prev_ages = {round(t[1], 4) for t in charts[names[i - 1]]}
+        line += f"; vs {names[i - 1]}: new values {len(ages - prev_ages)}, gone {len(prev_ages - ages)}"
+    put("ics_chart", "printed numbers", n, line)
+
+if "2024-12" in charts:
     printed = {}
-    for v in charts["ChronostratChart2024-12.pdf"]:
-        printed.setdefault(round(age_of(v), 4), v)
-    rows, matched = [], 0
-    for name, b in sorted(pbdb.items(), key=lambda kv: kv[1]):
-        v = printed.get(round(b, 4))
-        unc = v.split("±")[1] if v and "±" in v else ""
-        approx = bool(v and v.startswith("~"))
-        matched += v is not None
-        rows.append([name, b, v or "", unc, int(approx)])
+    for tok, age, unc, approx in charts["2024-12"]:
+        key = round(age, 4)
+        if key not in printed or (unc and not printed[key][2]):
+            printed[key] = (tok, age, unc, approx)
+    rows = []
+    for name, b in sorted(pbdb.items(), key=lambda kv: (kv[1], kv[0])):
+        t = printed.get(round(b, 4))
+        rows.append([name, ptype[name], b, t[0] if t else "", (t[2] or "") if t else "", int(bool(t and t[3])), int(bool(t and "." not in t[0].split("±")[0]))])
     with open(os.path.join(out_dir, "ics2024_pbdb_bases.tsv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
-        w.writerow(["pbdb_interval", "pbdb_base_ma", "ics_2024_12_printed", "uncertainty_ma", "approximate"])
+        w.writerow(["pbdb_interval", "pbdb_type", "pbdb_base_ma", "ics_2024_12_printed", "uncertainty_ma", "approximate", "integer_token"])
         w.writerows(rows)
-    with_unc = sum(1 for r in rows if r[3])
-    unmatched_chart = sorted({v for v in printed.values() if round(age_of(v), 4) not in {round(b, 4) for b in pbdb.values()}}, key=age_of)
-    put("ics_chart", "2024/12 values matched to PBDB scale-1 bases", "",
-        f"{matched} of {len(pbdb)} PBDB bases appear on the chart ({with_unc} with ±, {sum(r[4] for r in rows)} approximate); "
-        f"chart values with no PBDB base: {', '.join(unmatched_chart)}")
-if len(charts) == 2:
-    old, new = (set(charts[k]) for k in sorted(charts))
-    put("ics_chart", "values on 2024/12, not on 2020/03", "", f"{len(new - old)}; on 2020/03, not on 2024/12: {len(old - new)}")
+    hit = [r for r in rows if r[3]]
+    put("ics_chart", "2024-12 values matched to PBDB scale-1 bases", "rows",
+        f"{len(hit)} of {len(rows)} rows ({len({r[2] for r in hit})} distinct ages); with ± {sum(1 for r in hit if r[4])} rows "
+        f"({len({r[2] for r in hit if r[4]})} distinct ages); approximate {sum(r[5] for r in hit)} rows "
+        f"({len({r[2] for r in hit if r[5]})} distinct); matched through an integer token {sum(r[6] for r in hit)}")
+    put("ics_chart", "PBDB bases not printed on 2024-12", "", "; ".join(f"{r[0]} ({r[1]}) {r[2]:g}" for r in rows if not r[3]) or "none")
+    approx = sorted({t[0] for t in charts["2024-12"] if t[3]}, key=lambda s: float(re.sub(r"[^\d.].*$", "", s.lstrip("~"))))
+    put("ics_chart", "2024-12 approximate (~) values", "", f"{len(approx)}: " + ", ".join(approx))
 
 fr = sorted(os.listdir(farrell_raw))
 put("farrell2025", "files", "", ", ".join(f for f in fr if f != "MANIFEST.json"))
