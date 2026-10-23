@@ -1,0 +1,61 @@
+# Canon tier: method, judgment calls and data-quality notes
+
+Compiled 23 October 2026 by a Claude Sonnet 5.5 subagent, delegated by the Claude Opus 5.5 library session (Claude Code). The selection is `seeds/canon.tsv`, with its topic tree in `topics.md`; the reserve and unverified lists are in `review/`. The scout's working files, scripts and API cache are archived read-only at `deep-server:/data/paleodata/library/_provenance/canon-20261023/`. Paths below are relative to that directory.
+
+## Result
+
+- `canon.tsv`: **428 works**, each confirmed in OpenAlex by its W id. Zero are confirmed only in Crossref.
+- `unverified.tsv`: **13 works** that I am confident exist but that OpenAlex does not hold as a usable record (reasons in the file). Title, author and year in this file come from my memory, not from a database, except where the reason says Semantic Scholar confirmed them (Foote 1991, Alroy 2004).
+- `reserve.tsv` (extra): **340 further works** that were verified in OpenAlex but not selected. This is a ready second tier if the canon needs to grow in some topic.
+- Per top-level topic: extinction 55, diversity 32, theory 32, climate 30, rates 30, origination 26, biogeography 25, conservation 24, crisis 23, ecology 23, roots 23, morpho 22, phylo 22, tempo 22, taphonomy 16, data 13, time 10.
+- This is above the 250-400 target (about 7%) and extinction is above 40 on its own. I kept it that way on purpose, because extinction selectivity, ageing and recovery are the core EPRP questions. Trimming order, if wanted: lowest `cited_by` within a subtopic first, then entries whose `why` begins "Review of".
+- Era split by OpenAlex year: pre-1900: 3; 1900-1949: 6; 1950-1974: 18; 1975-1999: 114; 2000 onwards: 287.
+
+## Method
+
+1. **Candidate drafting.** I drafted about 780 candidates from domain knowledge (author, year, remembered title, one-line reason), topic by topic, then added gaps (below). Nothing was recorded from memory except the `why` sentence and the unverified file.
+2. **DOI discovery.** Crossref `works?query.bibliographic=<title author>&rows=5` (no `mailto`, public pool), best match scored on title similarity, year and first-author surname. Semantic Scholar `paper/search/match` for the ~20 that Crossref missed.
+3. **OpenAlex verification.** Batches of 50 with `filter=doi:A|B|...` (1 credit each). Auto-accept only if OpenAlex title similarity was at least 0.9, year within 3 and first-author surname matched. Everything else (about 100 candidates) was reviewed by hand. 34 JSTOR-alias DOIs (10.2307/...) were missed by the batch filter and recovered with single-DOI lookups, which resolve aliases.
+4. **Works with no DOI** (old books, pre-DOI papers, about 60 titles): OpenAlex `title.search` with several quoted titles joined by `OR` in one request (10 credits each), usually restricted with `type:book|book-chapter`, then matched by title similarity, year and author.
+5. **Final pass.** Every one of the 428 W ids was re-fetched with `filter=openalex:W1|W2|...`. All were returned, none changed, none retracted. `doi`, `year`, `title`, `type` and `cited_by` in `canon.tsv` are the values from that pass (23 October 2026). `first_author` is the surname part of OpenAlex's first-author display name.
+6. **Independent review.** After the draft was built I gave the list to a separate Sonnet agent with instructions to use its own knowledge only (no web, no OpenAlex, no personal identifiers). It proposed 35 missing works and flagged 9 problem entries. I checked each against OpenAlex or Crossref. It was right that Penn 2018 pointed to a junk record, that Martin 1967 was really the 1984 chapter, and that two entries were misfiled; those are fixed. About a third of its proposed additions were works I had already verified and then pruned for space; I restored the ones that served EPRP questions (Peters 2008, Jablonski 2005, Raup 1975, Foote 2018, Miller and Foote 2009, Blackburn 2013, Dietl 2015, the PBDB API paper, Goswami 2014, Benton and Emerson 2007, Hopkins 2018, Foote 2003). Of its genuinely new suggestions I added McKinney 1997, Stanley 2007, Louca 2021, Connolly and Miller 2001, Hull 2015, Jablonski 2002 and 1993 and 1998, Huey and Ward 2005, Finnegan 2011, Thomas 2004, Hutchinson 1959, Mayr 1942, Stuart 1991. It could not be found in OpenAlex: Sepkoski 1996 (double wedge).
+7. **Gap probing** with OpenAlex list queries (`title_and_abstract.search` for fossil-record extinction and diversity papers 2015-2026, and the top-cited papers in the Paleontology subfield since 2019) added Penn and Deutsch 2022, Henehan 2019, Lau 2016, Alfaro 2018, Wood 2019 and a few others. Nothing else of canon weight turned up, which is some evidence the list is not missing any well-cited recent landmark.
+
+**Budget and privacy.** OpenAlex without a key shares a $0.10/day budget per IP (about 1,000 credits; list requests cost 1, searches 10). The meter is shared across the IP, so the drop from about 850 to about 134 credits includes other users; my own use was roughly 500-600. I stopped well above the 100-credit floor. I did not request an API key and sent no email address, `mailto`, contact header or personal identifier to OpenAlex, Crossref or Semantic Scholar. I did not use Unpaywall.
+
+## Judgment calls
+
+- **Record the OpenAlex value, annotate the real one.** Where OpenAlex holds only a reissue of a classic, I kept the OpenAlex year and put the original citation in square brackets at the end of `why`. Affected: Cuvier (2015 for 1812), Lyell (1837 for 1830), Darwin (2004 for 1859), Wallace (2011 for 1876), Simpson (1984 for 1944), MacArthur (2001 for 1967), Hubbell (2011 for 2001), Mayr (1965 for 1942), Hammer (2024 for 2006), Martin (2022 for 1984), the Geologic Time Scale volumes. Sort by the bracketed year if chronology matters.
+- **Book records that are only Choice review stubs** (type `book-review`, blank or reviewer-style author): Raup 1991 and Gould 1989 are kept and flagged, because the books are canonical and OpenAlex has no better record. Erwin 1993, Erwin 2013 and Allison and Briggs 1991 were left out of the canon for the same reason (stub only, no referenced works to expand from); they are in `reserve.tsv`.
+- **Hennig:** OpenAlex holds the 1965 Annual Review of Entomology paper (4,239 citations), not the 1966 book. I kept the article and said so.
+- **Simpson 1944:** I chose the type-`book` reissue record (W2046000037). A `book-chapter` record dated 2005 (W1991130603) carries 1,644 citations and looks like the same work under a Springer reprint; use it if citation-network expansion is wanted.
+- **Old-vs-new concept papers.** For each concept I kept the originating paper plus at most one or two later reviews, even where a review is more cited.
+- **Borderline topic fit.** Neontological diversification methods (BAMM, SSE, RPANDA) are included only where they bear on the fossils-versus-phylogenies question (identifiability, extinction from trees, diversity dependence, fossils in trees). Metabolic theory (Allen 2002 and 2006) stays only because of EPRP B-018. Neutral theory is kept to Hubbell plus one review.
+- **Fabricated or misremembered candidates are dropped, not forced.** "Kiessling 2010, Sampling-standardized estimates of reef diversity" was my error; the only matching OpenAlex record is Kiessling 2008, which is in the reserve.
+
+## OpenAlex data-quality problems seen
+
+1. **Wrong DOI on a duplicate record.** Penn et al. (Science 362, 2018) exists twice: W2903416363 (DOI 10.1126/science.aat1327, 358 citations) and W2972668271 (DOI 10.1530/ey.16.14.8, 14 citations). The Crossref-first route landed on the junk record; only the independent review caught it. I audited all kept records with fewer than 60 citations and found no other case, but the failure mode is real.
+2. **Reissues dated by the reissue** (see above), sometimes with the original author list truncated (MacArthur without Wilson) or missing entirely (Gradstein, Ogg and colleagues; Martin and Klein, eds).
+3. **Reviews and encyclopedia entries sharing a book's title**: Hennig (Rieppel 2016), Gradstein 1985 (Springer entries 2014-2023), Hubbell 2001 (many reviews), Steadman 2006, McGhee 1999, Valentine 1973 and 2004, Shaw 1964 (Sparks review), Fossil Record 2 (Choice and reviewer records). Crossref's top hit for Alroy 2008 was a Faculty Opinions recommendation typed `dataset`.
+4. **Later editions as top Crossref hit** for old books (BHL scans: Lyell 1837, Darwin 1910).
+5. **Title and author quirks**: author display names such as "Valentí Rull A" and "Allison, PA"; all-caps titles for JSTOR-sourced records; Schlanger and Jenkyns 1976 dated 2007 with Jenkyns missing; Valentine 1969 carried by a Zenodo DOI (10.5281/zenodo.16226412); Eldredge and Gould 1972 appears as a 1989 `paratext` reprint plus two `dataset` records alongside the real article (W3135630760, used).
+6. **JSTOR alias DOIs**: batch `filter=doi:` returns the work under its canonical (often Wiley) DOI, so a naive join on the requested DOI drops it. Single-DOI queries work.
+7. **`search=` is full-text search and costs 10 credits.** It is noisy for short titles. `filter=title.search:"a" OR "b"` is cheaper per title and precise, but very popular phrases ("principles of paleontology") crowd the first 100 results.
+8. **Citation counts** differ from Google Scholar and Web of Science (PAST is 552 here). They were used as a signal only.
+
+## Coverage gaps I am aware of
+
+- **Pre-1975 is thin by construction** (27 works, counted by OpenAlex year). Much of that literature has no DOI, and OpenAlex often holds only reviews or reissues. Not found or unusable: Newell 1952, Valentine 1973 (book), Raup 1979 (carnegie bulletin), Sepkoski 1982 compendium (the 1992 and 2002 editions are in). Not attempted: Wright 1932, Dobzhansky 1937, Huxley 1942, Williams 1966, Kurtén's work, Fischer and Arthur 1977, Schopf's Models in Paleobiology volume as a whole.
+- **Non-English and non-Anglo-American literature** is under-represented (one German-language book, Schindewolf; no Chinese, Russian or Latin American macroevolution literature, e.g. Chinese Lagerstätten and end-Permian stratigraphy beyond Shen 2011 and Burgess 2014).
+- **Events**: Late Devonian (Bond and Wignall 2008) and end-Guadalupian (Clapham 2009) have one entry each; end-Triassic (Blackburn 2013) and end-Ordovician (Sheehan was dropped, Finnegan 2011 and Harper 2005 kept) are thin; no entry for the Ediacaran-Cambrian extinction beyond Darroch 2018.
+- **Terrestrial and non-marine records** (insects: Labandeira 1993, Nicholson 2015, Condamine 2016; plants: five works; non-marine vertebrate sampling: Benson 2016, Close 2020) are lighter than marine.
+- **2025-2026 literature**: my knowledge cutoff is June 2026 and the OpenAlex gap queries were capped by budget. Only Judd 2024 and a few 2022-2023 papers represent the newest work. A keyed OpenAlex session (the user's decision, not requested here) would let a later pass run topic-filtered top-cited queries for 2024-2026 cheaply.
+- **Time and correlation** is the thinnest topic (10). The CONOP original (Kemple, Sadler and Strauss 1995) and graphic-correlation papers have no OpenAlex record I could find; Shaw 1964 and Gradstein 1985 are in the unverified file.
+- **Tools** are lightly covered by design: PAST, divDyn, palaeoverse, geomorph (Adams 2013) is in the reserve, MorphoJ and paleoTS/PyRate software papers are not in the canon (the PyRate software paper is in the reserve).
+- **Hominin evolution, molecular clocks outside fossil calibration, and microbial/Precambrian palaeobiology** are outside the scope as set.
+- **Topic placement is a single choice per work**; the `why` sentence names the second topic where relevant.
+
+## Reproducibility
+
+The pipeline is in `work/` (Python 3, standard library only): candidate files `cands_*.txt`, resolver `resolve.py`, classification `build.py`, manual decisions `decisions.py`, prune list `prune.txt`, assembly `final.py` and `prune.py`, final re-fetch `finalize.py`. `work/cache.json` holds every Crossref, OpenAlex and Semantic Scholar response used, so the whole pipeline can be rerun at zero API cost. `work/master.tsv` is the full verified candidate list (768 rows) before pruning.
