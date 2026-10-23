@@ -1,0 +1,30 @@
+{
+  "reps": 1000,
+  "missing_logs": 0,
+  "usable": 1000,
+  "burn_in": 0.2,
+  "coverage_mapped": {
+    "lambda1": 0.932,
+    "lambda2": 0.945,
+    "lambda3": 0.954,
+    "mu1": 0.945,
+    "mu2": 0.938,
+    "mu3": 0.948,
+    "psi1": 0.941,
+    "psi2": 0.903,
+    "psi3": 0.944
+  },
+  "coverage_unmapped": {
+    "lambda1": 0.896,
+    "lambda2": 0.945,
+    "lambda3": 0.873,
+    "mu1": 0.87,
+    "mu2": 0.938,
+    "mu3": 0.928,
+    "psi1": 0.865,
+    "psi2": 0.903,
+    "psi3": 0.932
+  },
+  "binomial_2.5pct_count_for_1000": 936,
+  "mapping": "RevBayes rate[k] (k = 1 youngest) compared with true value index 4 - k (index 1 oldest)"
+}
