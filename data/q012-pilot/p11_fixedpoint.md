@@ -371,3 +371,44 @@ c1_failing and holdout_9707_sigma8:
   including σ = 20 and ρ ≈ 1.
 - This earns the fixed-point check, and only that. **No estimator,
   optimiser or fit has been chosen or run.**
+
+## Full-target bridge (declared 23 October, before execution; Codex 76/2248 and [review](../../ideas/2026-10-23-q012-fixedpoint-review-codex.md))
+
+**Target.** The complete collapsed log target on Stan's unconstrained
+coordinates u (35 coordinates):
+
+F(u) = Σ_trees log numerator(θ) − log π_Q80(θ) + log prior(θ) + log J(u),
+
+where:
+- **log prior:** the model_v6 non-frailty priors (lines 205–215) for log h₀₁,
+  z_rw, τ (half-normal, scale 0.5), log k, log λ₀, κ, log b₀, κ_b, β, γ and
+  σ (half-normal, scale 1). ρ is uniform. Normalising constants are
+  omitted.
+- **log J:** log τ + log σ + log ρ + log(1 − ρ).
+- **Not added again:** the frailty density is integrated in each numerator.
+- **Q80 stays explicit** as the denominator. It is not replaced.
+
+**Gradient assembly:** ∇F = Fisher numerator (`fisher_tree.py`, summed
+over trees) − central-difference ∇ log π_Q80 (h = 1e-4) + analytic
+∇(log prior + log J). Each piece is kept as its own signed 35-vector.
+
+**Bank:** central0, high_rho_9707 and holdout_c4f_sigma15.
+
+**Checks** (the existing tolerances, applied prospectively; no absolute
+1e-9 criterion):
+
+| Check | Content | Tolerance |
+| --- | --- | --- |
+| B1 | Assembled ∇F against archived FD numerator − archived `log_pi_grad` + the same analytic prior/Jacobian vector, all 35 coordinates, per point | 1e-5 (self-derivative; the archived FD carries h² truncation ≲ 6e-6 at these points) |
+| B2 | Fisher numerator vectors at primary, resolution and domain settings (nine evaluations); maximum difference from primary | 1e-5 |
+| B3 | Directional checks on whole-forest F values: d₁ is the τ/z_rw ridge direction (u_τ +1, z_rw −z_rw, normalised); d₂ is (u_σ, u_ρ, κ) equally weighted; central differences at ε = 1e-3 and 5e-4 (24 values). The gate uses their Richardson combination (4D(ε/2) − D(ε))/3 against ∇F·d; both raw values are reported. Along d₁ the numerator and log π are invariant, so ∇(numerator)·d₁ ≈ 0 is reported too | relative 1e-4, or 1e-5 absolute |
+| B4 | Coefficient-level ridge identity: `coefs` and log π_Q80 unchanged under τ → cτ, z_rw → z_rw/c for c = 0.5 and 2 | 1e-12 |
+| B5 | Fresh FD log π against archived `log_pi_grad` (same h) | 1e-10 |
+
+- **Recorded:** full vectors, signed discrepancies, per-piece timings, and
+  source and environment hashes.
+- **Host:** mac-mini, one process.
+- **Ceiling:** about 9 Fisher evaluations and 30 whole-forest values per
+  run, plus cheap log π and coefficient work. Frozen after a one-value
+  benchmark: no more than 45 min wall.
+- **Not in scope:** any fit, optimiser or sampler.
