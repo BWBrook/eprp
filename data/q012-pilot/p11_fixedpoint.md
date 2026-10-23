@@ -412,3 +412,50 @@ over trees) − central-difference ∇ log π_Q80 (h = 1e-4) + analytic
   run, plus cheap log π and coefficient work. Frozen after a one-value
   benchmark: no more than 45 min wall.
 - **Not in scope:** any fit, optimiser or sampler.
+
+### Bridge results (23 October; mac-mini, 75 s wall against a 45-minute ceiling)
+
+Files: [p11_bridge_results.json](p11_bridge_results.json),
+[p11_bridge_benchmark.json](p11_bridge_benchmark.json) and the post-hoc
+[p11_bridge_posthoc.json](p11_bridge_posthoc.json). Full signed vectors and
+source hashes are inside.
+
+| Check | central0 | high_rho_9707 | holdout_c4f_sigma15 | Tolerance |
+| --- | --- | --- | --- | --- |
+| B1: assembled ∇F against archived FD reference (max over 35) | 7.3e-7 pass | 6.7e-7 pass | **1.106e-5 FAIL** | 1e-5 |
+| B2: Fisher, resolution and domain against primary | 1.1e-12 | 3.0e-10 | 1.4e-11 | 1e-5 |
+| B3, d₁ (τ/z_rw ridge): Richardson FD of F against ∇F·d₁ | 2.8e-10 | 8.1e-10 | 1.9e-9 | relative 1e-4 / absolute 1e-5 |
+| B3, d₂ (σ, ρ, κ) | 5.6e-10 (∇F·d = −0.642) | 7.2e-9 (0.415) | 3.3e-10 (−543.9) | same |
+| B4: ridge identity (coefficients, log π) | 0.0 | 9.8e-16 | 1.0e-15 | 1e-12 |
+| B5: fresh FD log π against archived | 0.0 | 0.0 | 0.0 | 1e-10 |
+
+**Under the declared rule the bridge does not pass:** B1 fails at
+holdout_c4f_sigma15. The label stands.
+
+**Post-hoc attribution (labelled post hoc; not a re-run of the gate):**
+- At that point the archived FD numerator (h = 1e-4) differs from the
+  Fisher numerator by 1.106e-5. A fresh FD at h = 5e-5 differs by 2.77e-6,
+  a ratio of 4.0006, the h² truncation law.
+- **The Richardson-corrected reference agrees with the Fisher numerator to
+  8.7e-9.**
+- The B1 tolerance was mis-set by me. I sized it to the largest single
+  tree's FD truncation (5.5e-6), but the reference is a sum over ten trees.
+  The independent B3 check at the same point agrees to 3.3e-10 on a
+  directional derivative of −543.9.
+- **So the evidence locates the B1 discrepancy in the reference, not the
+  assembled gradient.** That reading is post hoc, and Codex should judge
+  it.
+
+**Other findings:**
+- **The ridge holds exactly:** along d₁ the numerator's directional
+  derivative is 3e-10 to 1.8e-9, and the coefficients and log π are
+  invariant to 1e-15 (B4).
+- **The prior/Jacobian gradient matches its own central difference** to
+  ≤ 1.5e-7, the largest at ρ ≈ 0.99998 (where log(1 − ρ) has steep
+  curvature).
+- **Cost of the complete target gradient** (corrects the numerator-only
+  figure): Fisher numerator 2.1–2.4 s (primary setting; 2.7–3.0 s at
+  resolution) plus 0.03 s for the 70-call FD log π, plus the analytic prior.
+  That is about 2.2–2.5 s per point on one mac-mini core. One whole-forest
+  value costs 1.9 s.
+- **Not in scope:** no fit, optimiser or sampler was run or selected.

@@ -1,0 +1,7 @@
+{
+ "fd_h1e4_vs_fisher": 1.106400662820306e-05,
+ "fd_h5e5_vs_fisher": 2.765595780829244e-06,
+ "richardson_vs_fisher": 8.672074613969016e-09,
+ "ratio": 4.000587036217418,
+ "worst": "kappa"
+}
