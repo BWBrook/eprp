@@ -1,0 +1,47 @@
+###
+# EPRP rerun of brpetrucci/skyfbdr_simstudy analysis/coverage/master.Rev.
+# Model, priors and moves unchanged; changed: seed, chain length, sampling
+# interval, output paths, no matrix or screen monitors. In v1.4.1 the
+# matrix-valued range process the study called dnFBDRMatrix is
+# dnFossilizedBirthDeathRange (same arguments; dnFBDRMatrix is not registered).
+# Run from the study's root: rb e3_skyfbdr.Rev --args <rep> <generations> <outdir>
+
+rep <- args[1]
+gens <- args[2]
+outdir <- args[3]
+seed(1000 + int(rep))
+
+taxa <- readTaxonData("simulation/coverage/specimens/taxa_" + rep + ".tsv")
+timeline <- readDataDelimitedFile("simulation/coverage/times/times_" + rep + ".tsv")[1]
+
+moves = VectorMoves()
+
+for (i in 1:(timeline.size() + 1)) {
+  lambda[i] ~ dnLognormal(-2, 0.5)
+  moves.append( mvSlice(lambda[i], window = 0.1, weight = 1, search_method = "stepping_out") )
+  mu[i] ~ dnLognormal(-2, 0.5)
+  moves.append( mvSlice(mu[i], window = 0.1, weight = 1, search_method = "stepping_out") )
+  psi[i] ~ dnLognormal(-0.125, 0.5)
+  moves.append( mvSlice(psi[i], window = 0.1, weight = 1, search_method = "stepping_out") )
+}
+
+rho <- 0
+
+bd ~ dnFossilizedBirthDeathRange(taxa = taxa, lambda = lambda, mu = mu, psi = psi, rho = rho, timeline = timeline, condition = "time", complete = false)
+
+moves.append( mvMatrixElementScale(bd, lambda = 0.01, weight=taxa.size()/10))
+moves.append( mvMatrixElementScale(bd, lambda = 0.1, weight=taxa.size()/10))
+moves.append( mvMatrixElementScale(bd, lambda = 1, weight=taxa.size()/10))
+moves.append( mvMatrixElementSlide(bd, delta = 0.01, weight=taxa.size()/10))
+moves.append( mvMatrixElementSlide(bd, delta = 0.1, weight=taxa.size()/10))
+moves.append( mvMatrixElementSlide(bd, delta = 1, weight=taxa.size()/10))
+
+mymodel = model(bd)
+
+monitors = VectorMonitors()
+monitors.append( mnModel(filename = outdir + "/skyfbdr_" + rep + ".log", printgen = 1000) )
+
+mymcmc = mcmc(mymodel, monitors, moves)
+mymcmc.run(generations = int(gens))
+
+q()

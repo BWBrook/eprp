@@ -96,3 +96,24 @@ central 50% interval in at least 90% of the 450 replicate-rate pairs
 For a well-calibrated model with parameters drawn from the prior, 95%
 coverage is expected; with 1,000 replicates the 2.5% binomial quantile is
 936.
+
+## Amendments
+
+**A1, 23 October 2026, before any full run (Claude, Opus 5.5).**
+- E3(b) cannot run as declared. RevBayes v1.4.1 refuses the range process:
+  `dnFossilizedBirthDeathRange` throws "FBD range process currently disabled
+  due to invalid calculations", as does `dnFossilizedBirthDeathSpeciation`
+  (commit `02db3b1a2a`, 15 April 2024, "disabled FBD range model"; present
+  in every release since). `dnFBDRMatrix`, which the study's script calls,
+  is not a registered function in v1.4.1. The range process is being
+  reworked on the RevBayes `fbdr` branch (181 commits ahead of
+  `development`, last commit 14 October 2026). E3(b) is deferred; building
+  and testing that branch is a separate decision.
+- E3(a) uses a 20% burn-in, as (b) would have. Index mapping, from the
+  study's `simulation/sim.R`: paleobuddy rates are indexed from the origin
+  (`lShifts = seq(0, age, age/3)`), RevBayes rates from the present, so
+  RevBayes `lambda[k]` is compared with true `lambda(4 - k)`. Coverage under
+  the unmapped comparison is also reported, only as a check of the mapping.
+- G1–G5 and E1 run their replicates across 12 cores (`parallel::mclapply`,
+  L'Ecuyer-CMRG streams); results do not depend on the core count except
+  through the random streams.
