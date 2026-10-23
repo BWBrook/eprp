@@ -2,6 +2,25 @@
 
 Updated: 23 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
+**Current focus: reopen exploratory blue-sky ideation.** Barry's new Codex-chat
+steer on 23 October asks for a shared mind-mapping round with self-censorship
+discouraged, followed later by interest and feasibility scrutiny. His exact
+prompt and Codex's first speculative contribution are in the
+[opening map](ideas/2026-10-23-blue-sky-open-map-codex.md). Prior-work checks,
+resource matching and formal tests remain requirements for development, not
+entry conditions for this exploratory round. Existing register entries and
+the applied-register pause are unchanged.
+
+Codex owns that opening note. Claude is invited in 76/2340 to add a separate
+dated contribution, extend/invert/connect ideas, and defer feasibility
+criticism until after the generative exchange; acceptance is pending.
+Claude has accepted Q-012's bounded engineering scope in 76/2338; Codex
+proposes queuing it behind this exchange. Q-038 is jointly parked. Claude
+reports the scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and
+preceding commits; this ideation turn does not independently re-audit them.
+The separately authorised Databases, Packages/Sims and References/Literature
+support sessions continue in their own scopes, as relayed in 76/2338.
+
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
   expansion remains paused.
@@ -142,7 +161,7 @@ the list, and identifying the contextual and data-availability work for phase 2
 questions for other teams, with particular interest in deep time. No primary
 investigation has been selected.
 
-**Current objective:** hold the [question register](ideas/register.md) for
+**Applied-register checkpoint (unchanged):** hold the [question register](ideas/register.md) for
 review of the whole first tranche. Barry's instruction in Codex chat,
 11 October 2026, quoted exactly:
 
@@ -1168,10 +1187,12 @@ and the Q-044 vintage check. Q-038's current estimator and campaign are
 parked after 0/13 qualifying full fits; the next useful scientific work would
 require a new finite model/design contract, not another tuning attempt.
 Q-012's three-point full-target bridge is closed using combined evidence;
-A bounded deterministic engineering proposal is requested from Claude,
-with acceptance pending and no fit selected. PBDB-derived empirical products remain held as described above.
-Codex's Q-018 queue remains separate. Keep two orientation tasks at most.
-Expansion stays paused and no primary investigation is selected.
+Claude accepts the bounded engineering scope in 76/2338, with no fit selected.
+Codex proposes queuing that work behind the fresh blue-sky exchange above.
+PBDB-derived empirical products remain held as described above. Codex's Q-018
+queue remains separate. Keep two main orientation tasks at most.
+Applied-register expansion stays paused; exploratory blue-sky generation is
+open again. No primary investigation is selected.
 
 ## Shared checkout and decisions
 

@@ -36,6 +36,11 @@ literature checks, source audits and bounded feasibility probes.
 - A separate [blue-sky register](ideas/register-blue-sky.md) of pure
   deep-time questions opened for ideation on 14 October. See [Claude's first pass](ideas/2026-10-11-phase2-portfolio-first-pass-claude.md)
 and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-codex.md).
+- **Fresh blue-sky exploration, 23 October:** Barry asks for an open
+  mind-mapping exchange with self-censorship discouraged. Start with
+  [Codex's opening map](ideas/2026-10-23-blue-sky-open-map-codex.md).
+  Generate and connect possibilities before interest and feasibility scrutiny;
+  these sketches do not change the existing register entries.
 No primary investigation has been selected; question rankings and feasibility
 remain provisional. Barry's selection comes later.
 
