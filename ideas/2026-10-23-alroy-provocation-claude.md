@@ -90,6 +90,42 @@ origination and extinction, diversity and body-size trends does it carry?
   - If the hazard is flat and small, the question collapses into a
     correction factor and goes to park.
   - If it is large and structured by clade or trait, develop.
+- **Prior missed in the first pass:**
+  - Benton 2008 (*Paleobiology* 34: 516–533) estimated about 40% error at
+    genus level and 50% at species level across the history of dinosaur
+    naming.
+  - There is an Alroy–Benton methods exchange on the "flux ratio" estimate
+    of eventual valid names (Alroy 2002; Alroy 2011 *Paleobiology*).
+  - So this is occupied clade by clade. The novelty has to be the
+    cross-clade model, its propagation into rates and curves, and the
+    forecast.
+- **Cheapest check, run 23 October** (`data/c1-name-survival-check/`;
+  public PBDB API, genus names, recorded opinions):
+
+  | Clade | Genus names | Invalid now | Median years to invalidation (invalid names) | Still valid after 50 y | After 100 y | Invalid share by description era (pre-1900 / 1900–49 / 1950–89 / 1990+) |
+  | --- | ---: | ---: | ---: | ---: | ---: | --- |
+  | Bivalvia | 3,823 | 10.9% | 74 | 0.96 | 0.90 | 14 / 12 / 9 / 5% |
+  | Brachiopoda | 3,551 | 10.9% | 25 | 0.90 | 0.85 | 13 / 13 / 12 / 6% |
+  | Trilobita | 4,021 | 15.1% | 37 | 0.89 | 0.81 | 21 / 18 / 15 / 8% |
+  | Mammalia | 8,900 | 20.0% | 48 | 0.88 | 0.78 | 34 / 25 / 14 / 4% |
+  | non-avian Dinosauria | 2,313 | 19.8% | 19 | 0.76 | 0.63 | 45 / 37 / 33 / 9% |
+
+  **What this means:**
+  - **The hazard is not flat or small.** A century after description,
+    between 10% (bivalves) and 37% (non-avian dinosaurs) of genus names
+    are invalid. The timescale also differs by clade: a median of 19 years
+    to invalidation in dinosaurs against 74 in bivalves.
+  - **Recently described names have had less time to fail,** and recent
+    description is concentrated in some clades and intervals. So a
+    time-varying "taxonomic maturity" bias in diversity and rates is
+    plausible. **That is the question, not yet a result.**
+  - **The PBDB's recorded opinions under-record revisions.** Non-avian
+    dinosaur genera are 20% invalid here against Benton's 40%. Any model
+    would need a correction for recording lag.
+  - **An artefact excluded:** for a synonym, the API's `n_occs` is the
+    senior taxon's count, so occurrence-based breakdowns are not used.
+  - **Disposition implication:** the stated collapse criterion (flat and
+    small) is not met. My recommendation is develop, subject to Codex.
 - **Provisional:** I = M–H, T = H (data in hand), V = M–H (it touches every
   PBDB-based estimate).
 
@@ -223,6 +259,7 @@ crises and interchanges?
 - [Coverage-based rarefaction fails to quantify relative species richness (Dryad)](https://datadryad.org/dataset/doi:10.5061/dryad.pg4f4qs50)
 - [Wagner and colleagues, effects of taxonomic standardisation (PMC1702387)](https://pmc.ncbi.nlm.nih.gov/articles/PMC1702387)
 - [Cyprideidae taxonomic-inflation test, Palaeontologia Electronica 2025](https://palaeo-electronica.org/content/2025/5732-evolutionary-dynamics-of-cyprideidae)
+- [Benton 2008, How to find a dinosaur, and the role of synonymy in biodiversity studies](https://www.cambridge.org/core/journals/paleobiology/article/abs/how-to-find-a-dinosaur-and-the-role-of-synonymy-in-biodiversity-studies/BD633A34515CF0FC4E4ED9F540A43CD0)
 - [PBDB occurrence and opinion API documentation](https://dev.paleobiodb.org/data1.2/occs_doc.html)
 - [Probable Datum Method (Schueth et al. 2014)](https://www.clima.psu.edu/bib-items/Schueth2014-ps.html)
 - [Models of historical biogeography and continental biochronology](https://ojs.uv.es/index.php/sjpalaeontology/article/view/17847)

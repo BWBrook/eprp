@@ -1,0 +1,87 @@
+{
+ "Bivalvia": {
+  "genus_names": 3823,
+  "invalid_now": 415,
+  "invalid_share": 0.10855349202197227,
+  "median_years_to_invalidation_among_invalid": 74.0,
+  "km_validity": {
+   "10y": 0.988,
+   "25y": 0.978,
+   "50y": 0.958,
+   "100y": 0.901
+  },
+  "opinions": 12844,
+  "invalid_share_described_<1900": 0.14167294649585532,
+  "invalid_share_described_1900-49": 0.11776859504132231,
+  "invalid_share_described_1950-89": 0.08937960042060988,
+  "invalid_share_described_1990+": 0.04852686308492201
+ },
+ "Brachiopoda": {
+  "genus_names": 3551,
+  "invalid_now": 386,
+  "invalid_share": 0.10870177414812729,
+  "median_years_to_invalidation_among_invalid": 25.0,
+  "km_validity": {
+   "10y": 0.982,
+   "25y": 0.942,
+   "50y": 0.9,
+   "100y": 0.845
+  },
+  "opinions": 12425,
+  "invalid_share_described_<1900": 0.1296928327645051,
+  "invalid_share_described_1900-49": 0.12998266897746968,
+  "invalid_share_described_1950-89": 0.1231841952353283,
+  "invalid_share_described_1990+": 0.06354166666666666
+ },
+ "Trilobita": {
+  "genus_names": 4021,
+  "invalid_now": 606,
+  "invalid_share": 0.15070877891071874,
+  "median_years_to_invalidation_among_invalid": 37.0,
+  "km_validity": {
+   "10y": 0.981,
+   "25y": 0.945,
+   "50y": 0.886,
+   "100y": 0.807
+  },
+  "opinions": 9449,
+  "invalid_share_described_<1900": 0.2066869300911854,
+  "invalid_share_described_1900-49": 0.18045112781954886,
+  "invalid_share_described_1950-89": 0.1476234003656307,
+  "invalid_share_described_1990+": 0.08202443280977312
+ },
+ "Mammalia": {
+  "genus_names": 8900,
+  "invalid_now": 1780,
+  "invalid_share": 0.2,
+  "median_years_to_invalidation_among_invalid": 48.0,
+  "km_validity": {
+   "10y": 0.964,
+   "25y": 0.933,
+   "50y": 0.876,
+   "100y": 0.782
+  },
+  "opinions": 37265,
+  "invalid_share_described_<1900": 0.3407295975930801,
+  "invalid_share_described_1900-49": 0.25084910237748664,
+  "invalid_share_described_1950-89": 0.13922710428798307,
+  "invalid_share_described_1990+": 0.04103011785246617
+ },
+ "Dinosauria^Aves": {
+  "genus_names": 2313,
+  "invalid_now": 459,
+  "invalid_share": 0.19844357976653695,
+  "median_years_to_invalidation_among_invalid": 19.0,
+  "km_validity": {
+   "10y": 0.922,
+   "25y": 0.858,
+   "50y": 0.761,
+   "100y": 0.634
+  },
+  "opinions": 25840,
+  "invalid_share_described_<1900": 0.4528985507246377,
+  "invalid_share_described_1900-49": 0.3665158371040724,
+  "invalid_share_described_1950-89": 0.3263707571801567,
+  "invalid_share_described_1990+": 0.08932309839497557
+ }
+}
