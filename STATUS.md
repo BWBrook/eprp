@@ -121,6 +121,20 @@ Updated: 23 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
   check are complete. B-004 is **hold (support)**: invasion invariance and
   conditional fold responses do not supply a consequential oxygen scale;
   Claude accepts the hold.
+  The [evening bridge review](ideas/2026-10-23-q012-bridge-review-codex.md)
+  closes Q-012's finite three-point bridge using combined evidence: preserve
+  B1 FAIL at sigma15; the other 34 coordinates pass and an independent
+  half-step check closes kappa. The full target, priors and one joint
+  selection normalizer agree. Next is a bounded deterministic engineering
+  contract for same-prior collapsed Bayes, with no fit selected.
+  The [terminal Q-038 review](ideas/2026-10-23-q038-terminal-review-codex.md)
+  accepts the per-class/log-space scorer and exact-prior centring repairs.
+  STZ99 fails mixing/ESS; CTR99 has 1/6 divergences. All 13 full-fit attempts
+  fail their declared screen (660.91 allocated core-hours, excluding
+  preparation). **Park this estimator and campaign under the stopping rule.**
+  The scientific question and scoring toolkit remain; another failed
+  reparameterisation would not identify a baseline-boundary cause.
+- [Detail withheld pending disclosure to the data custodian.]
 - Dated records keep their historical phase labels.
 **Phase 2 has begun.** Codex and Claude are categorising, ranking and deepening
 the list, and identifying the contextual and data-availability work for phase 2
@@ -1110,6 +1124,24 @@ next phase of ideation whilst those final checks are done."
   verifies counts and selected corrections, with three remaining semantic
   repairs. Claude is the next responder. Codex's Q-018 queue remains separate.
 
+- **Evening response and terminal review, 23 October:** Codex closes the
+  [Q-012 finite bridge](ideas/2026-10-23-q012-bridge-review-codex.md) with its
+  original B1 failure retained and an independently reproduced kappa
+  supplement. Codex proposes that Claude prepare the next finite
+  value/gradient and deterministic trajectory contract; acceptance is pending.
+  No fit or optimiser is released. The
+  [Q-038 terminal review](ideas/2026-10-23-q038-terminal-review-codex.md)
+  records 0/13 qualifying full fits and parks the estimator/campaign. Its
+  exact-prior and scoring repairs qualify, with empty/impossible strata
+  guards still needed before reuse. The
+  [response closure](ideas/2026-10-23-response-closure-and-data-holds-codex.md)
+  accepts all three paper repairs and the substantive Alroy corrections;
+  Claude has small owned-document corrections in 76/2328 and legacy PBDB
+  fetch guards in 76/2327. The source catalogue is merged at `e6adbea`;
+  affected empirical quantities remain held until a public-data rebuild.
+  This review did not independently audit the whole catalogue or mirror.
+  Claude is next responder; no new fit, contact, primary promotion or release.
+
 **Q-010's prior check is done** (Codex,
 [note](literature/2026-10-14-q010-prior-check.md)). Generic engineer-associated
 diversity is occupied; a specific causal support/design contrast remains worth
@@ -1132,12 +1164,14 @@ checks did not commission a piecewise likelihood, empirical fit or model
 adapter. Q-012's separately authorised prototype is recorded above.
 
 Proposed but not allocated: the estimator-specific Q-027 support contract
-and the Q-044 vintage check. Q-038's failed pilot, restart repair and costed
-redesign are reviewed; scorer qualification and a target-preserving centring
-decision are next. Q-012's bounded interior-node/fixed-point cost check is
-complete; the three-point full-target bridge is next, with no fit selected.
-Keep two orientation tasks at most. Expansion stays paused and no primary
-investigation is selected.
+and the Q-044 vintage check. Q-038's current estimator and campaign are
+parked after 0/13 qualifying full fits; the next useful scientific work would
+require a new finite model/design contract, not another tuning attempt.
+Q-012's three-point full-target bridge is closed using combined evidence;
+A bounded deterministic engineering proposal is requested from Claude,
+with acceptance pending and no fit selected. PBDB-derived empirical products remain held as described above.
+Codex's Q-018 queue remains separate. Keep two orientation tasks at most.
+Expansion stays paused and no primary investigation is selected.
 
 ## Shared checkout and decisions
 
