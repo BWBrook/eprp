@@ -3,7 +3,8 @@ peters	start_page	taxa_listed	phyla 26; classes 96
 peters	pages	phylum	26 pages; 36372 genus rows; headings, rows and start-page counts agree on 26
 peters	pages	class	96 pages; 35813 genus rows; headings, rows and start-page counts agree on 96
 peters	class_matching	class_rows_without_phylum_row	0
-peters	class_matching	classes_spanning_several_phyla	MYRIAPODA: {'ARTHROPODA': 1, 'LOBOPODA': 1}
+peters	class_matching	class_rows_matching_identical_rows_in_several_phyla	1: MYRIAPODA incertae sedis (identical rows on ARTHROPODA, LOBOPODA; assigned to LOBOPODA)
+peters	class_matching	classes_spanning_several_phyla (unambiguous rows)	none
 peters	class_matching	identical_phylum_rows	14 rows in 7 groups
 peters	class_matching	genera_without_class_page	559
 peters	class_matching	genera_without_class_page_by_phylum	PROBLEMATICA 200; MOLLUSCA 142; ARTHROPODA 56; BRACHIOPODA 40; CNIDARIA 31; PORIFERA 14; TRILOBOZOA 14; HYOLITHA 11; CHAETOGNATHA 11; LOBOPODA 10; PRIAPULIDA 9; CILIOPHORA 8; CTENOPHORA 3; PENTASTOMIDA 3; NEMERTINA 2; POGONOPHORA 2; NEMATODA 1; ECHIURIDA 1; ENTOPROCTA 1
@@ -11,15 +12,17 @@ genera	rows	total	36372
 genera	names	distinct	36197
 genera	names	repeated_names	144 names on 319 rows
 genera	names	not_a_plain_capitalised_word	44: Austrocolomiá, Cályxhydra, Còyptoporocyathus, Drevoôella, Heliocïenia, Hexaheliocïenia, Hindeastraeá, Holocùsôió, Hydnophorareá, Incertae sedis, Isástraea, Isïphyllastrea, Jyxiålla, Kángilacùathus, Káratchasôraea, Microw5omiceras, Mikrocidarió, Mussisíilia, Oppelisíilia, Parapleurosmélia, Parastraeoíorpha, Parasôraeopora, Paãhythecalis, Smiloôrochus, Stenocùathus, Stephanasôrea, Såkwia, Sïlenocoenia, Truncátoconus, Veluíbrella, aelaenoteuthis, arachnidid, asterometrid, flabelligerid, germanicum, gorgonocephalid, gorgonoid, inc. sedis, incertae sedis, name
-genera	names	non_ascii (bit 7 set on one letter or more; bit cleared)	Austrocolomiá -> Austrocolomia, Cályxhydra -> Calyxhydra, Còyptoporocyathus -> Cryptoporocyathus, Drevoôella -> Drevotella, Heliocïenia -> Heliocoenia, Hexaheliocïenia -> Hexaheliocoenia, Hindeastraeá -> Hindeastraea, Holocùsôió -> Holocystis, Hydnophorareá -> Hydnophorarea, Isástraea -> Isastraea, Isïphyllastrea -> Isophyllastrea, Jyxiålla -> Jyxiella, Kángilacùathus -> Kangilacyathus, Káratchasôraea -> Karatchastraea, Mikrocidarió -> Mikrocidaris, Mussisíilia -> Mussismilia, Oppelisíilia -> Oppelismilia, Parapleurosmélia -> Parapleurosmilia, Parastraeoíorpha -> Parastraeomorpha, Parasôraeopora -> Parastraeopora, Paãhythecalis -> Pachythecalis, Smiloôrochus -> Smilotrochus, Stenocùathus -> Stenocyathus, Stephanasôrea -> Stephanastrea, Såkwia -> Sekwia, Sïlenocoenia -> Solenocoenia, Truncátoconus -> Truncatoconus, Veluíbrella -> Velumbrella
+genera	names	non_ascii (letters with bit 7 set; bit cleared)	Austrocolomiá -> Austrocolomia, Cályxhydra -> Calyxhydra, Còyptoporocyathus -> Cryptoporocyathus, Drevoôella -> Drevotella, Heliocïenia -> Heliocoenia, Hexaheliocïenia -> Hexaheliocoenia, Hindeastraeá -> Hindeastraea, Holocùsôió -> Holocystis, Hydnophorareá -> Hydnophorarea, Isástraea -> Isastraea, Isïphyllastrea -> Isophyllastrea, Jyxiålla -> Jyxiella, Kángilacùathus -> Kangilacyathus, Káratchasôraea -> Karatchastraea, Mikrocidarió -> Mikrocidaris, Mussisíilia -> Mussismilia, Oppelisíilia -> Oppelismilia, Parapleurosmélia -> Parapleurosmilia, Parastraeoíorpha -> Parastraeomorpha, Parasôraeopora -> Parastraeopora, Paãhythecalis -> Pachythecalis, Smiloôrochus -> Smilotrochus, Stenocùathus -> Stenocyathus, Stephanasôrea -> Stephanastrea, Såkwia -> Sekwia, Sïlenocoenia -> Solenocoenia, Truncátoconus -> Truncatoconus, Veluíbrella -> Velumbrella
+genera	names	non_ascii: letters with bit 7 set per name	1 letter(s): 25 names; 2 letter(s): 2 names; 3 letter(s): 1 names
 genera	orders	uncertain_or_incertae_sedis	1534
 genera	periods	FOP	T 7469; K 4927; O 4211; D 4038; J 3370; Cm 3144; C 2806; S 2208; Tr 2084; P 1677; Q 268; V 129; R 41
 genera	periods	LOP	R 5232; K 4457; D 4296; T 4111; O 3681; Cm 2997; J 2662; C 2588; P 2322; S 1978; Tr 1876; Q 91; V 81
 genera	stages	FOS	262 codes; blank 0; '?' 661; top: u 1308, l 898, Eo-l 702, ? 661, Mi 639, m 605, Plio 513, Eo 478, Eo-u 477, Eo-m-l 454, Than 442, Mi-m 435
 genera	stages	LOS	262 codes; blank 5232; '?' 546; top:  5232, u 1164, l 855, Maes 709, ? 546, Eo-u 533, m 531, Eife 503, Ashg-m 454, Guad-u 438, Maes-u 403, Give 371
+genera	stages	distinct codes, FOS and LOS together	264
 genera	stages	codes spelling Maastrichtian 'Maes'	1765
 genera	ranges	extant (LOP R)	5232
-genera	ranges	single_interval (same FOP/FOS as LOP/LOS)	15824
+genera	ranges	single_interval (same FOP/FOS as LOP/LOS)	15824, of which stage '?' (period only) 484
 genera	by_phylum	rows	MOLLUSCA 10974; ARTHROPODA 5816; BRACHIOPODA 4383; CHORDATA 2996; ECHINODERMATA 2680; CNIDARIA 2437; RHIZOPODEA 2138; PORIFERA 1580; BRYOZOA 1540; ACTINOPODA 711; PROBLEMATICA 322; HEMICHORDATA 288; ANNELIDA 253; HYOLITHA 165; CILIOPHORA 31; TRILOBOZOA 14; LOBOPODA 11; CHAETOGNATHA 11; PRIAPULIDA 9; CTENOPHORA 3; PENTASTOMIDA 3; NEMERTINA 2; POGONOPHORA 2; NEMATODA 1; ECHIURIDA 1; ENTOPROCTA 1
 rpackage	scrape_2022_vs_capture	rows	scrape 72185; capture 72185
 rpackage	scrape_2022_vs_capture	rows_only_in_scrape	0
@@ -28,23 +31,27 @@ rpackage	scrape_2022_vs_capture	examples	none
 rpackage	github_sepkoski_raw	rows	35826
 rpackage	github_sepkoski_raw	capture_rows_absent	559
 rpackage	github_sepkoski_raw	capture_rows_absent_with_no_class_page	558
-rpackage	github_sepkoski_raw	rows_not_in_capture	13
+rpackage	github_sepkoski_raw	rows_not_in_capture	13: duplicates of a capture row 12; other 1 (cályxhydra)
+rpackage	github_sepkoski_raw	capture_rows_absent_with_a_class_page	austrocolomiá
 rpackage	github_sepkoski	rows; missing ages	35826; 0
 rpackage	github_sepkoski	fauna	Paleozoic 14190; Modern 11316; NA 6996; Cambrian 3324
 rpackage	github_interval_table	rows	302
 rpackage	cran_release	data_objects	interval_table, sepkoski, sepkoski_raw
 rpackage	cran_sepkoski_raw	rows	35826
 rpackage	cran_sepkoski_raw	capture_rows_absent	559
-rpackage	cran_sepkoski_raw	rows_not_in_capture	13
+rpackage	cran_sepkoski_raw	rows_not_in_capture	13: duplicates of a capture row 12; other 1 (cályxhydra)
 rpackage	cran_sepkoski	rows; missing ages	35826; 0
 rpackage	cran_sepkoski	fauna	Paleozoic 14190; Modern 11316; NA 6996; Cambrian 3324
 rpackage	cran_vs_github_sepkoski	rows_with_changed_ages	0 of 35826; keys (genus, intervals) not in GitHub head 0
-rpackage	github_sepkoski_raw	non_ascii_genus_names	Cályxhydra, Còyptoporocyathus, Drevoôella, Heliocïenia, Hexaheliocïenia, Hindeastraeá, Holocùsôió, Hydnophorareá, Isástraea, Isïphyllastrea, Kángilacùathus, Káratchasôraea, Mikrocidarió, Mussisíilia, Oppelisíilia, Parapleurosmélia, Parastraeoíorpha, Parasôraeopora, Paãhythecalis, Smiloôrochus, Stenocùathus, Stephanasôrea, Såkwia, Sïlenocoenia, Veluíbrella
+rpackage	github_sepkoski_raw	non_ascii_genus_names	Cályxhydra x2, Còyptoporocyathus, Drevoôella, Heliocïenia, Hexaheliocïenia, Hindeastraeá, Holocùsôió, Hydnophorareá, Isástraea, Isïphyllastrea, Kángilacùathus, Káratchasôraea, Mikrocidarió, Mussisíilia, Oppelisíilia, Parapleurosmélia, Parastraeoíorpha, Parasôraeopora, Paãhythecalis, Smiloôrochus, Stenocùathus, Stephanasôrea, Såkwia, Sïlenocoenia, Veluíbrella
+rpackage	github_sepkoski_raw	capture's corrupted names not in the package	Austrocolomiá, Jyxiålla, Truncátoconus
 bhl	md5_vs_archive	bulletinsofameri363pale.pdf	ok
 bhl	md5_vs_archive	bulletinsofameri363pale_djvu.txt	ok
 bhl	metadata	rights	In copyright. Digitized with the permission of the Paleontological Research Institution.
 bhl	ocr_lookup	seeded_sample_of_500_plain_names	499 found as words in the OCR text (99.8%)
 bhl	ocr_lookup	all_plain_names	36106 of 36153
 bhl	ocr_lookup_non_ascii	names with bit 7 cleared found in the OCR text	13 of 28; as captured 1; missing: Drevotella, Heliocoenia, Hexaheliocoenia, Holocystis, Jyxiella, Mikrocidaris, Mussismilia, Oppelismilia, Parapleurosmilia, Parastraeomorpha, Parastraeopora, Smilotrochus, Stenocyathus, Stephanastrea, Velumbrella
+bhl	ocr_lookup_non_ascii	names printed garbled in the volume (OCR, odd letters as any character)	22 of 28: Còyptoporocyathus: Coyptoporocyathus; Drevoôella: Drevooella; Heliocïenia: Heliocienia; Hexaheliocïenia: Hexaheliocienia; Holocùsôió: Holocts6i6/Holoctsdi6/Holocystit; Isïphyllastrea: Isiphyllastrea; Jyxiålla: Jyxialla; Kángilacùathus: Kangilactathus; Káratchasôraea: Karatchasoraea; Mikrocidarió: Mikrocidari6/Mikrocidarié; Mussisíilia: Mussisfilia/Mussisiilia; Oppelisíilia: Oppelistilia; Parapleurosmélia: Parapleurosmélia; Parastraeoíorpha: Parastraeoiorpha; Parasôraeopora: ParasGraeopora/ParasOraeopora; Paãhythecalis: Paahythecalis; Smiloôrochus: Smilo6rochus; Stenocùathus: Stenociathus/Stenocuathus; Stephanasôrea: Stephanas6rea/Stephanasorea; Såkwia: Sakwia; Sïlenocoenia: Silenocoenia; Veluíbrella: Veluibrella
+bhl	ocr_lookup	'Maes' in the OCR text	1492
 bhl	ocr_lookup	plain names not found	Adamczakia, Adamczakites, Arqoviella, Dceruska, Elymospirifer, Hefriga, Iacra, Iheringiella, Ilanga, Ilariosmilia, Iliella, Ilisha, Illiniichthys, Illusioluidia, Ilmocrinus, Ilowaiskya, Iocrinus, Iolgia, Iothia, Iotina, Iotrigonia, Iowaspongia, Iowoceras, Iuliusina, Iyouella, Loczyceras, Mcmurdodus, Mcnamaraspis, Mjandymoceras, Mojczalepas, Mojczatheca, Mojczatrypa, Mojczella, Nitidotellina, Stichtostega, Stilla, Stillicidocyathus, Stilpnotreta, Stiphrothyris, Teiichispira, Tulongcardium, Utia, Vltavina, Xiaoshuisulcna, Zeravschania, Zygastrocarcinus, Zygograptus
 checks	summary		ok

@@ -3,7 +3,7 @@ id: classic-compendia
 name: Classic range compendia — Benton's The Fossil Record 2 (families) and Sepkoski's compendium of fossil marine animal genera
 kind: compilation
 status: frozen
-last_update: "FR2 files 1998 (re-posted 2019-08); Sepkoski 2002 (online port undated; R package head 2026-07-21)"
+last_update: "FR2 files 1998-1999 (re-posted 2019-08); Sepkoski 2002 (online port undated; R package head 2026-07-21)"
 scope:
   taxa: ["FR2: all life, families and family-surrogates (animals, plants, algae, fungi, bacteria)", "Sepkoski: marine animal genera (26 phyla)"]
   time: "FR2: Hadean to Holocene in 86 divisions (dated from the Vendian, about 610 Ma); Sepkoski: Vendian to Recent"
@@ -21,14 +21,14 @@ access:
   licence: "none stated for FR2 (Bristol) or Peters' port (use with citation of Sepkoski 2002); the R package is GPL (>= 3); BHL's scan is in copyright, digitised with the Paleontological Research Institution's permission"
   routes:
     - {type: web, url: "https://palaeoresources.blogs.bristol.ac.uk/fr2-downloads/", state: "45 chapter workbooks, FR2.zip and summaries, posted 2019-08-04 to 2019-08-10", checked: 2026-10-23}
-    - {type: web-archive, url: "https://web.archive.org/web/*/palaeo.gly.bris.ac.uk/frwhole/*", state: "original Bristol host dead; 1,015 captures 1997-12-24 to 2006-12-05; list in wayback_captures.tsv", checked: 2026-10-23}
+    - {type: web-archive, url: "https://web.archive.org/web/*/palaeo.gly.bris.ac.uk/frwhole/*", state: "original Bristol host dead; captures 1997-12-24 to 2006-12-05; 204 distinct payloads in wayback_captures.tsv", checked: 2026-10-23}
     - {type: web, url: "https://strata.geology.wisc.edu/jack/", state: "Peters' online port of Sepkoski (2002): one page per phylum and class", checked: 2026-10-23}
-    - {type: r-package, url: "https://github.com/palaeoverse/sepkoski", state: "CRAN 0.0.1 (2022-11-23); GitHub head 2026-07-21 (61 commits, sepkoski-package-versions.tsv)", checked: 2026-10-23}
+    - {type: r-package, url: "https://github.com/palaeoverse/sepkoski", state: "CRAN 0.0.1; GitHub head 2026-07-21 (61 commits, sepkoski-package-versions.tsv)", checked: 2026-10-23}
     - {type: scan, url: "https://archive.org/details/bulletinsofameri363pale", state: "BHL scan of Bulletins of American Paleontology 363 (PDF and OCR text)", checked: 2026-10-23}
   api: none
 versioning:
   replay: exact
-  notes: "both compendia are frozen. FR2's chapter files are unchanged from the 1998 originals except two angiosperm rows; every Wayback capture is kept. Sepkoski's port matches the R package's 2022 scrape row for row"
+  notes: "both compendia are frozen. FR2's chapter files match the earliest captures (1998 for 31 chapters, 1999 for 13, 2005 for one) except two angiosperm rows; every distinct Wayback payload is kept. Sepkoski's port matches the R package's 2022 scrape row for row"
 mirror:
   path: deep-server:/data/paleodata/classic-compendia
   policy: "every independent copy found, mirrored at Barry's instruction although no licence is stated (see Access)"
@@ -39,7 +39,7 @@ lineage:
     - "Sepkoski: Sepkoski 2002, A compendium of fossil marine animal genera (Bulletins of American Paleontology 363); its family-level predecessors, Sepkoski 1982 and 1992 (Milwaukee Public Museum Contributions in Biology and Geology 51 and 83), are not online"
   downstream:
     - "Benton 1995 (Science 268:52-58) and Holman's tallies (Bristol); Benton 1996 tetrapod family analyses"
-    - "the Sepkoski curve and evolutionary faunas; Raup and Sepkoski's periodicity; much of PBDB's genus classification (36,832 opinions and 27,556 taxon records cite Sepkoski 2002)"
+    - "genus-level work after Sepkoski's family-level classics (recall); in PBDB, 24% of genus taxon records and 12% of genus opinions cite Sepkoski 2002"
 eprp_questions: [Q-023, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045]
 citation:
   - "Benton, M. J. (ed.) 1993. The Fossil Record 2. Chapman & Hall, London, 845 pp."
@@ -51,7 +51,7 @@ entry:
   created: 2026-10-23
   updated: 2026-10-23
   by: Claude (Opus 5.5, side session)
-  reviewed: pending
+  reviewed: "2026-10-23, independent Claude Sonnet subagent; findings applied"
 ---
 
 # Classic range compendia: The Fossil Record 2 and Sepkoski's genera
@@ -60,16 +60,20 @@ entry:
 
 Before occurrence databases, the history of diversity was read from range
 compendia: lists of taxa with their first and last appearances. Two of them
-anchor most classic results. *The Fossil Record 2* (FR2; Benton, ed., 1993)
-gives the range of every family of every kind of organism. Mary Benton
-compiled it into spreadsheets, Bristol posted them in the 1990s, and Benton
-(1995) drew his diversification and extinction curves from them. Sepkoski's
-*Compendium of fossil marine animal genera* (2002) gives about 36,000 marine
-genera; it underlies the Sepkoski curve, the three evolutionary faunas, and
-Raup and Sepkoski's periodicity.
+anchor a large body of classic work.
+
+- ***The Fossil Record 2*** (FR2; Benton, ed., 1993) gives the range of every
+  family of every kind of organism. Mary Benton compiled it into
+  spreadsheets, which Bristol posted from late 1997. Benton (1995) drew his
+  diversification and extinction curves from them.
+- **Sepkoski's *Compendium of fossil marine animal genera*** (2002) gives the
+  ranges of 36,372 marine genera (as ported by Peters). Sepkoski's best-known results, the
+  evolutionary faunas and the periodicity of extinction, came from his
+  earlier family compendia; the genus compendium carries that work to genera
+  (recall).
 
 Both are frozen. We mirrored every independent copy we found and checked
-the copies against each other:
+them against each other:
 
 - **FR2.** Bristol's 2019 re-posting, and the original 1997–2006 Bristol
   files recovered from the Wayback Machine.
@@ -79,16 +83,16 @@ the copies against each other:
 The copies are mostly faithful. Some convenient forms are not:
 
 - **FR2 chapter workbooks: faithful.** 7,107 of their 7,109 rows match the
-  1998 originals.
+  earliest captures (1998 for 31 chapters).
 - **`All-Life.xlsx`, the one-file version: wrong.** It shifts 220 rows by a
   column.
 - **`Diversitydata95.xlsx`, the 2019 file behind Benton's 1995 curves:
   scrambled.** Use the 1998 table from the Wayback capture instead.
-- **Peters' port of Sepkoski: corrupted letters.** 28 genus names have one
-  corrupted letter (bit 7 set). It is otherwise complete, and identical to
-  the R package's 2022 scrape.
+- **Peters' port of Sepkoski: complete,** and identical to the R package's
+  2022 scrape. 28 genus names carry one to three letters with bit 7 set,
+  and at least 22 of them are garbled the same way in the printed volume.
 - **The R package's main table: incomplete.** It drops the 558 genera that
-  lack a class page.
+  lack a class page, doubles six rows, and renames one genus.
 
 ## Contents
 
@@ -117,19 +121,26 @@ The copies are mostly faithful. Some convenient forms are not:
   combinations. Columns 6–91 are the 86 FR2 divisions, Hadean to Holocene.
   Column 92 holds NFR (no fossil record) for 106 angiosperm families.
 - **Range codes.** F1 marks the first appearance, 1 presence, and L1 the last
-  appearance; a range to the Recent has no L code. ?F, ? and ?L mark
+  appearance; a range to the Recent has no L code. ?F, ?, ?L and ?FL mark
   uncertain parts. F2 and L2 mark the confident end of a range stated to
   lower resolution, and FL a range confined to one division (or, repeated,
   to one of several).
-- **Range counts.** 7,001 rows have a range and 2,630 reach the Holocene. By
-  Benton's (1995) definitions:
+- **Range counts.** 7,001 rows have a range.
+  - **Holocene.** 2,630 are coded in the Holocene. 2,605 of them are extant
+    by our reading: the Holocene cell is 1, F1 or F2, with no L code.
   - **Maximum range:** every coded cell.
-  - **Minimum range:** from F1 or F2 to L1 or L2 (or to the Holocene), or a
-    single FL. Ranges stated only to an interval longer than a division have
-    none.
+  - **Minimum range:** from F1 or F2 to L1 or L2 (or to the Holocene when
+    extant), or a single FL, following Benton's (1995) definitions. 6,458
+    rows have one. The other 543 do not:
 
-  6,458 rows have a minimum range. Per-family and per-division tables are in
-  `fr2/derived/`.
+    | Coding | Rows |
+    | --- | ---: |
+    | Uncertain codes only | 474 |
+    | Other coding without F1/F2 | 50 |
+    | F1/F2 without an L code, and not extant | 11 |
+    | FL in several divisions (a range known only to a longer interval) | 8 |
+
+  Per-family and per-division tables are in `fr2/derived/`.
 - **Summaries.**
   - `Diversitydata95.xlsx`: Benton (1995)'s stage table, 78 stages from the
     Vendian.
@@ -147,18 +158,23 @@ The copies are mostly faithful. Some convenient forms are not:
 
 ### The Fossil Record 2 (Wayback Machine, 1997–2006)
 
-The original host, `palaeo.gly.bris.ac.uk/frwhole`, now times out. The Wayback
-Machine holds 1,015 captures of 65 URLs; we mirrored the 204 distinct
-payloads. They cover four kinds of file:
+The original host, `palaeo.gly.bris.ac.uk/frwhole`, now times out. A CDX
+listing on 23 October 2026 gave 1,015 captures of 65 URLs (source claim);
+we mirrored the 204 distinct payloads. They cover four kinds of file:
 
-- **Chapter files (1998–2005).** Every chapter, 45 in all, as BinHex-encoded
-  Mac files. Decoded, they are tab-delimited Excel text exports (type
-  TEXT/XCEL, Mac Roman). Five of the 2000 captures are BinHex wrapped inside
-  BinHex. [binhex4.py](binhex4.py) decodes them and checks every CRC, without
+- **Chapter files.** Every chapter as a BinHex-encoded Mac file, first
+  captured in 1998 (31 chapters), 1999 (13) or, for Hexapoda only, 2005.
+  Decoded, they are tab-delimited Excel text exports (type TEXT/XCEL, Mac
+  Roman). Five of the 2000 captures are BinHex wrapped inside BinHex.
+  [binhex4.py](binhex4.py) decodes them and checks every CRC, without
   dependencies.
 - **Spreadsheets and archives.** Four 2004 `.xls` files (Monera, Fungi,
-  Algae, basal), and two StuffIt archives of the chapters, which we did not
-  unpack.
+  Algae, basal), and three StuffIt archives of the chapters:
+  - two `chapters.sit` from 2000–01, each with 45 entries;
+  - `chapters.hqx` from 2005, which is StuffIt despite its name, with 43
+    entries.
+
+  We read their entry names but did not unpack them.
 - **Stage table (1998).** `FR2.data95` is the 1998 stage table behind Benton
   (1995), with all 42 value columns. Four captures, from February 1998 to
   December 2000, hold identical values. From June 2001 three values are
@@ -168,8 +184,7 @@ payloads. They cover four kinds of file:
 
 ### Sepkoski's compendium
 
-- **Peters' port.** Shanan Peters' port of the compendium at Wisconsin is
-  complete:
+- **Peters' port.** Shanan Peters' port of the compendium at Wisconsin:
   - **Pages.** The start page, plus one page per phylum (26) and per class
     (96).
   - **Rows.** The phylum pages list 36,372 genus rows, the class pages 35,813.
@@ -178,24 +193,29 @@ payloads. They cover four kinds of file:
     and stage.
   - **Simplifications.** As the site states, the port omits Sepkoski's "+"
     designations and references, and ignores question marks on first and
-    last appearances.
+    last appearances. Names and ranges are kept "even when they are clearly
+    incorrect".
   - **Class.** We recover class by matching class-page rows to phylum-page
     rows on all six fields. 559 genera have no class page (200 of them in
-    Problematica, 142 in Mollusca), and Myriapoda spans two phyla.
+    Problematica, 142 in Mollusca). One class row is ambiguous: Myriapoda's
+    *incertae sedis* (Silurian, Llandovery) matches identical rows on the
+    Arthropoda and Lobopoda pages.
 - **Derived table and counts.** The derived table
   (`sepkoski/derived/.../sepkoski_genera.csv`) has 36,197 distinct names:
   - 144 names repeat on 319 rows.
   - 1,534 genera have order "uncertain" or "incertae sedis".
   - 5,232 genera are extant (last period R).
-  - 15,824 are confined to one interval.
-  - The stage codes number 262, with 661 first and 546 last stages given as
-    "?".
+  - 15,824 are confined to one interval; 484 of these are dated to period
+    only (stage "?").
+  - There are 262 first-stage and 262 last-stage codes, 264 distinct in all,
+    with 661 first and 546 last stages given as "?".
 - **R package (palaeoverse `sepkoski`, Lewis A. Jones).** It holds:
   - the 2022 scrape of the same pages (`inst/extdata`);
   - `sepkoski_raw`: the scrape joined into genus rows;
-  - `sepkoski`: genus ranges mapped to GTS stages with ages, and Sepkoski's
-    evolutionary fauna for each genus (Paleozoic 14,190, Modern 11,316,
-    Cambrian 3,324, none 6,996);
+  - `sepkoski`: genus ranges mapped to GTS stages with ages, and a fauna for
+    each genus. The package assigns faunas by class, from lists in its
+    cleaning script (Paleozoic 14,190, Modern 11,316, Cambrian 3,324, none
+    6,996).
   - the interval table: 302 rows.
 
   We mirror the GitHub head (2026-07-21) and the CRAN release 0.0.1.
@@ -206,30 +226,28 @@ payloads. They cover four kinds of file:
 
 - **FR2.** Benton (ed.) 1993 updated Harland et al.'s (1967) *The Fossil
   Record*. Mary Benton compiled the family ranges in Excel, and Bristol
-  posted them as BinHex files from late 1997 (first capture 1997-12-24). The
-  site moved to a University of Bristol WordPress blog in August 2019, when
-  the chapters were re-posted as `.xlsx` (media dated 2019-08-04). Benton
-  (1995) and Holman's tallies derive from the spreadsheets. A biography
-  describes the compilation as a forerunner of PBDB (source claim, Cambridge
-  core-reader biography).
+  posted them as BinHex files from late 1997 (the site's first capture is
+  1997-12-24). The site moved to a University of Bristol WordPress blog in
+  August 2019, when the chapters were re-posted as `.xlsx` (media dated
+  2019-08-04). Benton (1995) and Holman's tallies derive from the
+  spreadsheets. A biography describes the compilation as a forerunner of
+  PBDB (source claim, Cambridge core-reader biography).
 - **Sepkoski.** Sepkoski compiled genus ranges until his death in 1999, and
-  the 2002 volume was published after it (recall: edited by D. Jablonski and
-  M. Foote, with a CD-ROM). Peters ported it to the web (date not stated).
-  Jones scraped Peters' pages for the R package in 2022.
+  the 2002 volume was published after it (recall: edited by D. Jablonski
+  and M. Foote, with a CD-ROM). Peters ported it to the web (date not
+  stated). Jones scraped Peters' pages for the R package in 2022.
 - **Family predecessors.** Sepkoski's family compendia of 1982 and 1992 were
   distributed on paper and, by one library record seen in a search, on
-  diskette (not verified). We found no digital copy: the
-  NASA technical report record of the 1992 edition (NTRS 20040120307) has no
-  file, and the Internet Archive has neither edition. Stanley (2016), cited in
-  Q-042, used them.
-- **PBDB.** PBDB took much of its genus classification from Sepkoski
-  (checked in our PBDB snapshot):
-  - Reference 6930 (Sepkoski 2002) is cited by 36,832 opinions and 27,556
-    taxon records.
-  - Reference 26158 (Benton 1993) is cited by 99 opinions.
+  diskette (not verified). We found no digital copy: the NASA technical
+  report record of the 1992 edition (NTRS 20040120307) has no file, and the
+  Internet Archive has neither edition. Stanley (2016), cited in Q-042,
+  used them.
+- **PBDB.** In our PBDB snapshot, Sepkoski (2002) is the reference for:
+  - 26,813 of 109,750 genus taxon records (24%);
+  - 36,097 of 297,106 genus-rank opinions (12%).
 
-  PBDB and Sepkoski are therefore not independent at the level of names and
-  classification.
+  Benton (1993) is the reference for 99 opinions. PBDB and Sepkoski are
+  therefore not independent at the level of names and classification.
 
 ## Structure
 
@@ -245,10 +263,15 @@ classic-compendia/
   sepkoski/derived/2026-10-23T0520Z_url/      sepkoski_genera.csv, sepkoski_vs_pbdb.csv
 ```
 
-`fr2_divisions.csv` dates the FR2 divisions from the Vendian on, using the
-Harland et al. (1990) durations and midpoints in the 1998 table. The stages
-match the workbook columns one for one; the 1998 table abbreviates four
-names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
+- **`fr2_families.csv`** gives each family's maximum and minimum ranges,
+  its Holocene code and whether it is extant.
+- **`fr2_divisions.csv`** dates the divisions from the Vendian on, using the
+  Harland et al. (1990) durations and midpoints of the 1998 table. The
+  table's rows match the workbook columns by position. Seven of its names
+  are abbreviations (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`,
+  `L.MIOCENE`, `M.MIOCENE`, `U.MIOCENE`). One is a different name for the
+  same division: TITHONIAN for FR2's Portlandian.
+- **`fr2_stage_counts.csv`** counts families per division.
 
 ## Access
 
@@ -256,8 +279,9 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
   "You are welcome to use these data with proper citation of Sepkoski's
   work. It would also be appropriate to acknowledge this online database and
   its creator/maintainer." The R package is GPL (>= 3); its authors' right
-  to license Sepkoski's data is not discussed. The BHL scan is "In copyright.
-  Digitized with the permission of the Paleontological Research
+  to license Sepkoski's data is not discussed. CRAN lists release 0.0.1 as
+  published on 2022-11-23 (source claim, CRAN page). The BHL scan is "In
+  copyright. Digitized with the permission of the Paleontological Research
   Institution."
 - **Why mirrored.** By the catalogue's tier rules an `unclear` source is not
   mirrored. Barry approved this mirror in chat on 23 October 2026: "Approved
@@ -290,10 +314,10 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
 ## Strengths
 
 - **Complete, citable, frozen.** Each is a complete expert compilation in a
-  fixed state, the basis of a large body of published work. FR2 is the only
-  whole-of-life, family-level range list; nothing in PBDB replaces it.
-- **Exact replay.** We hold FR2's original 1998 files as well as the 2019
-  re-posting, and can show where they agree.
+  fixed state, the basis of a large body of published work. No other
+  expert-compiled, whole-of-life family list is mirrored here.
+- **Exact replay.** We hold FR2's original 1998–1999 files as well as the
+  2019 re-posting, and can show where they agree.
 - **Primary source for Sepkoski.** The printed text is in the mirror (OCR finds
   36,106 of 36,153 plain genus names), so the port's simplifications ("+",
   "?", references) can be recovered from the volume when needed.
@@ -303,13 +327,14 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
 - **Do not use `All-Life.xlsx`.** It follows the chapters row for row, but
   220 rows are shifted one column left:
   - **Ranges one division too old:** 112 families, among them Helicoplacidae
-    and Erniettidae.
-  - **Range shifted and habitat in the wrong column:** 2 more, whose habitat
-    lands in column 4.
+    and Lepidocystidae.
+  - **Range shifted and habitat in the wrong column:** 2 more (among them
+    Erniettidae), whose habitat lands in column 4.
   - **NFR in the Holocene column:** 106 angiosperm families. A parser would
     read them as Holocene presences.
 
-  The 1998 originals agree with the chapter workbooks for all 220. The
+  For all 220, the earliest captured original agrees with the chapter
+  workbook (152 of the rows are in chapters first captured in 1999). The
   shifted rows are blocks in chapters 6, 25, 26, 28, 29, 43, 44 and 45.
 - **Do not use `Diversitydata95.xlsx`.** Its header promises 42 columns in
   seven labelled blocks, but it holds 38 values per stage:
@@ -322,28 +347,39 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
   - **Swapped pairs.** In the percent-extinction and rate blocks the min/max
     pairs are swapped.
 
-  The 1998 table (`fr2/wayback/.../19980212044602__FR2.data95.html`) is the
-  record of Benton (1995). Its own labels are inconsistent: the column
-  labelled "min" exceeds "max" for all organisms at 42 of 78 stages, and for
-  marine at 19 (never for continental).
-- **Benton's counts can't be rebuilt exactly.** Recounted from the chapters
-  by the stated rules (marine: habitat containing M; continental: F, T or V):
-  - **Continental:** the recount falls inside Benton's 1998 min–max pair at
-    all 78 stages.
-  - **All organisms and marine:** the recounted minimum runs 10% and 6% above
-    the smaller 1998 value (medians).
+  The 1998 table (`fr2/wayback/.../19980212044602__FR2.data95.html`) holds
+  the series Benton (1995) analysed. Its own labels are inconsistent: the
+  column labelled "min" exceeds "max" for all organisms at 42 of 78 stages,
+  and for marine at 19 (never for continental).
+- **Benton's and Holman's counts can't be rebuilt exactly from the chapters.**
+  For the recount, marine means a habitat containing M, and continental F, T
+  or V. This is our reading (inferred); Bristol says the definitions are
+  "given in Benton (1995)", which is not in the mirror. Against Benton's
+  1998 table:
 
-  Benton evidently excluded rows that the pages do not describe (inferred).
-  Holman's tallies also count orders, which the chapter files lack, so he
-  worked from fuller data: a recount under his stated rules misses his
-  family counts by 86 a stage on average. His tallies are identical in the
-  1998 HTML and the 2019 workbook (79 of 79 intervals).
-- **"Angiosperms 2" is missing.** Bristol describes two angiosperm files:
-  one from macroplant records, one adding palynomorph ages from Muller.
-  Chapter 45 is the first (column 4 holds the plant part). We found no
-  second file in the 2019 posting or among the individually captured 1997–2006
-  files. The two StuffIt archives, not unpacked, might hold it.
-- **Coding errors in the chapter files** (all present in 1998 too):
+  | Recount | Median, recounted minimum ÷ smaller 1998 value | Stages where the recounted minimum falls inside Benton's pair |
+  | --- | ---: | ---: |
+  | All organisms | 1.100 | 20 of 78 |
+  | All, names ending -idae or -aceae only | 1.043 | 24 of 78 |
+  | Marine | 1.062 | 26 of 78 |
+  | Marine, -idae/-aceae names only | 1.022 | 39 of 78 |
+  | Continental (either way) | — | 78 of 78 |
+
+  So Benton probably left out family-surrogates and something more
+  (inferred).
+
+  Holman's family richness is lower than the recount in every interval,
+  by 86 on average (the recount follows his stated rules only in part). He
+  also tallied orders, which the chapter files do not record, so he
+  probably worked from fuller data (inferred). His tallies are identical in
+  the 1998 HTML and the 2019 workbook (79 of 79 intervals).
+- **No "Angiosperms 2".** Bristol describes two angiosperm files: one from
+  macroplant records, one adding palynomorph ages from Muller. Chapter 45 is
+  the first (column 4 holds the plant part). The second is not in the 2019
+  posting or among the captured 1997–2006 files, and the entry names in the
+  three StuffIt archives show a single Magnoliophyta file.
+- **Coding errors in the chapter files** (all present in the earliest
+  captures too):
   - **Codes outside the key:** 3 (`)`, and `1L1` twice).
   - **Stray "1" in column 92:** 10 rows, in pairs four rows apart in chapters
     10, 16, 21 and 38.
@@ -352,34 +388,45 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
   - **Neither a range nor NFR:** 2 angiosperms (Heliconiaceae, Paeoniaceae).
 
   The full list is in the profile.
-- **Changes since 1999.** Two angiosperm rows changed between the October
-  1999 capture and 2019 (Orchidaceae and Vitaceae). Nothing else changed.
-- **Sepkoski genus names with a corrupted letter.** 28 names in Peters' port
-  have one letter with bit 7 set:
+- **Holocene cells.** These are not all presences: the Holocene cell is `?`
+  for 11 families, an L code for 8, and FL for 4.
+- **Changes since the earliest captures.** Two angiosperm rows changed
+  between the October 1999 capture and 2019 (Orchidaceae and Vitaceae); no
+  later capture differs from the earliest of its chapter.
+- **Sepkoski genus names with corrupted letters.** 28 names carry letters
+  with bit 7 set: one letter in 25 names, two in 2, three in 1.
 
-  | Captured | With bit 7 cleared |
+  | As captured | With bit 7 cleared |
   | --- | --- |
   | `Còyptoporocyathus` | *Cryptoporocyathus* |
   | `Såkwia` | *Sekwia* |
   | `Holocùsôió` | *Holocystis* |
 
+  - **The corruption is in the volume too.** The OCR of its taxon listing
+    shows at least 22 of the 28 garbled the same way, e.g.
+    "+Parapleurosmélia", "Smilo6rochus" and "Coyptoporocyathus". Clean
+    spellings appear in its index. So the corruption predates Peters' port,
+    which keeps names as printed.
   - **Clearing the bit recovers the names.** 23 of the 28 cleared names are
     accepted PBDB genera; none are as captured. The other five
     (*Hexaheliocoenia*, *Hydnophorarea*, *Isastraea*, *Jyxiella*,
-    *Kangilacyathus*) are not PBDB genus names, perhaps through spelling.
-  - **The R package keeps the corrupted spellings.**
-  - **The OCR finds only some.** It finds 13 of the 28 cleared names, and 1
-    as captured.
-- **Sepkoski's 'Maes'.** The port spells Maastrichtian "Maes" in 1,765
-  stage codes; the R package replaces it with "Maas".
-- **The package's `sepkoski_raw` and `sepkoski` lack 559 genera.** They join
-  class pages to phylum pages with an inner join, which:
-  - drops 558 genera without a class page (and one more);
-  - adds 13 duplicate rows where identical rows repeat.
+    *Kangilacyathus*) are not PBDB genus names; PBDB spells *Isastrea*.
+- **"Maes" means Maastrichtian.** It is Sepkoski's own code: the OCR has it
+  1,492 times, and the port uses it in 1,765 stage codes. The R package
+  rewrites it to "Maas".
+- **The package's `sepkoski_raw` and `sepkoski` differ from the source.**
+  Against the capture, they:
+  - **drop 558 genera** that have no class page, through an inner join of
+    class rows to phylum rows;
+  - **double six rows,** where identical rows repeat (12 extra rows);
+  - **rename one genus.** `data-raw/02_clean_data.R` replaces every name
+    matching a byte pattern with one fixed string. The pattern meant for
+    `Cályxhydra` also matches the foraminifer *Austrocolomiá*, which becomes
+    a second `Cályxhydra`;
+  - **keep the corrupted spellings** for 25 of the 28 names.
 
-  Its time-scale update to GTS 2023, listed in NEWS, changes no age: the
-  GitHub head's ages equal CRAN 0.0.1's for all 35,826 rows. Use the
-  capture-derived table for counts.
+  Its ages are identical in the GitHub head and CRAN 0.0.1 for all 35,826
+  rows. Use the capture-derived table for counts.
 - **Port simplifications.** Peters' port drops Sepkoski's "+" designations,
   his question marks on first and last appearances, and his references
   (source claim, site); the scan holds them.
@@ -389,7 +436,8 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
 ## Overlap with other sources
 
 **PBDB public snapshot, 23 October 2026** (checked;
-[profile](profile/compendia_vs_pbdb.tsv)).
+[profile](profile/compendia_vs_pbdb.tsv)). Names are matched without "?" to
+PBDB names of the same accepted rank, then to any rank.
 
 - **Names.**
   - **Sepkoski.** Of 36,372 captured genus rows:
@@ -397,23 +445,28 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
     - 1,721 are subjective synonyms, 129 replaced names and 73 objective
       synonyms.
     - 23 are nomina nuda, vana, dubia or oblita.
-    - 2,442 are not PBDB names.
+    - 219 are PBDB names at another rank, mostly order, family, class or
+      suborder.
+    - 2,223 are not PBDB names at all.
   - **FR2.** Of 7,109 family rows:
-    - 5,603 are accepted PBDB family names.
-    - 228 are synonyms or invalid subgroups.
-    - 1,278 are not PBDB names (among them surrogates such as "Unnamed").
-- **Ranges.** First and last appearances from public PBDB occurrences, with
-  junior synonyms looked up under their senior name. PBDB occurrences are
-  dated by interval bounds and the time scales differ, so "within 5 Myr"
-  counts as agreement.
-  - **Sepkoski** (package ages; 35,517 genera with unique names). 11,245
+    - 5,630 are accepted PBDB family names.
+    - 230 are synonyms or invalid subgroups.
+    - 175 are PBDB names at another rank (94 as genera).
+    - 1,074 are not PBDB names (among them surrogates such as "Unnamed").
+- **Ranges.** First and last appearances from public PBDB occurrences.
+  Junior synonyms are looked up under their senior name, and an occurrence
+  filed as "Genus (Subgenus)" counts for both names. PBDB dates occurrences
+  by interval bounds and the time scales differ, so "within 5 Myr" counts
+  as agreement.
+  - **Sepkoski** (package ages; 35,517 genera with unique names). 10,295
     have no public PBDB occurrences.
 
     | Sepkoski genera | Within 5 Myr | PBDB older | PBDB younger | Median, PBDB minus Sepkoski |
     | --- | ---: | ---: | ---: | ---: |
-    | First appearance (24,272) | 10,565 | 8,216 | 5,491 | 0.0 Myr |
-    | Last appearance (20,643 extinct) | 9,337 | 3,752 | 7,554 | −0.6 Myr |
+    | First appearance (25,222) | 10,970 | 8,571 | 5,681 | 0.0 Myr |
+    | Last appearance (21,214 extinct) | 9,626 | 3,826 | 7,762 | −0.6 Myr |
 
+    The median stays between 0.0 and +0.3 Myr at every age.
   - **FR2** (maximum ranges, Harland 1990 ages; 6,712 non-angiosperm
     families with unique names from the Vendian). 1,611 have no public
     occurrences.
@@ -421,10 +474,15 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
     | FR2 families | Within 5 Myr | PBDB older | PBDB younger | Median, PBDB minus FR2 |
     | --- | ---: | ---: | ---: | ---: |
     | First appearance (5,101) | 1,248 | 2,297 | 1,556 | +2.8 Myr |
-    | Last appearance (3,185 extinct) | 870 | 995 | 1,320 | −1.6 Myr |
+    | Last appearance (3,200 extinct) | 882 | 998 | 1,320 | −1.6 Myr |
 
-    Thirty years on, PBDB often extends a family's range further back than
-    FR2, though coarse occurrence dating inflates "older" too (inferred).
+    The first-appearance difference depends on age:
+    - **Older than 485 Ma** (537 families): median −23.6 Myr. This is
+      dominated by Harland's 1990 time scale, which puts the early
+      Palaeozoic much older, so the 5 Myr tolerance means little there.
+    - **Younger brackets:** +4.0 to +5.1 Myr. PBDB more often places a
+      family's first appearance earlier than FR2 did, though coarse
+      occurrence dating inflates "older" (inferred).
 
   Per-genus and per-family tables are in the derived directories.
 - **Other entries.** FosSahul, PBDB (AU+NG) and the Australian deposits
@@ -433,14 +491,14 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
 
 ## EPRP relevance
 
-- **Q-039 (evolutionary faunas).** The package assigns each genus to
-  Sepkoski's Cambrian, Paleozoic or Modern fauna; the capture adds the 559
-  genera the package drops.
-- **Q-040 (did marine diversity rise?).** Sepkoski's curve is the classic
-  baseline against PBDB.
+- **Q-039 (evolutionary faunas).** The R package assigns faunas by class.
+  The 559 genera without a class page can't be assigned that way.
+- **Q-040 (did marine diversity rise?).** Sepkoski's genus ranges are the
+  classic comparison for PBDB.
 - **Q-041 (periodicity).** The register asks for "the Sepkoski compendium as
-  a second series". Benton (1995), which found "no support" for
-  periodicity, is reproducible from the 1998 table.
+  a second series". The 1998 table holds the FR2 series behind Benton
+  (1995), who found "no support" for periodicity. We did not reproduce his
+  analysis.
 - **Q-042 (species loss).** Stanley (2016) worked from Sepkoski's genus and
   family compendia; the genus compendium is here, the family compendia are
   not.
@@ -476,9 +534,22 @@ names (`SERPUKHOV.`, `PLIENSBACH.`, `KIMMERIDG.`, `MAASTRICHT.`).
   ([output](profile/sepkoski_profile.tsv)) and
   [compendia_vs_pbdb.py](compendia_vs_pbdb.py)
   ([output](profile/compendia_vs_pbdb.tsv)), run on deep-server against the
-  mirror. [binhex4.py](binhex4.py) matches Python 3.10's `binhex` on a 1998
-  chapter file.
+  mirror. [binhex4.py](binhex4.py) matches Python 3.10's `binhex`.
 - 2026-10-23, source claim: Bristol's and Peters' descriptions of their data
-  (pages mirrored); the dates of the WordPress pages and media; the NTRS
-  record of the 1992 family compendium.
-- 2026-10-23, recall: the editors and CD-ROM of the posthumous 2002 volume.
+  (pages mirrored); the dates of the WordPress pages and media; the CDX
+  capture count; the CRAN publication date; the NTRS record of the 1992
+  family compendium.
+- 2026-10-23, recall: the editors and CD-ROM of the posthumous 2002 volume;
+  which of Sepkoski's results rest on his family compendia.
+- 2026-10-23, reviewed by an independent Claude Sonnet subagent. It
+  reproduced both profiles byte for byte and every PBDB count, and found
+  several problems. All are applied above:
+  - the corrupted names are in the volume too;
+  - the package renames one genus;
+  - "Genus (Subgenus)" keys were missed;
+  - the Myriapoda row is ambiguous;
+  - the capture dates were overstated;
+  - "Maes" is Sepkoski's own code;
+  - the habitat rules are ours;
+  - several interpretations were overstated;
+  - the extant and minimum-range edge cases needed stating.

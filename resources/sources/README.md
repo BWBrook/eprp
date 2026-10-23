@@ -430,20 +430,22 @@ the workflow when they generalise.
   division too old, NFR flags read as Holocene presences); the 45 chapter
   files are right.
 - *Web archives can recover the original vintage.* The Wayback Machine kept
-  Bristol's 1998 BinHex files. Decoded and CRC-checked (five were BinHex
-  inside BinHex), they show the chapters unchanged in 21 years and the 2019
-  summary table scrambled. Capture every distinct payload, not only the
-  first.
-- *A high bit on one letter is corruption, not an accent.* 28 Sepkoski genus
-  names carry one byte with bit 7 set; clearing it turns 23 of them into
-  accepted PBDB genera. Guessing accents, as the R package does, keeps the
-  error.
-- *A join in a convenience package can drop records silently.* The sepkoski
-  package's inner join loses the 558 genera that have no class page. Profile
+  Bristol's BinHex files from 1998–1999. Decoded and CRC-checked (five were
+  BinHex inside BinHex), they show the chapters unchanged since, apart from
+  two rows, and the 2019 summary table scrambled. Capture every distinct
+  payload, not only the first, and state each file's earliest capture date.
+- *A set high bit is corruption, not an accent.* 28 Sepkoski genus names
+  carry one to three letters with bit 7 set, garbled the same way in the
+  printed volume. Clearing the bit turns 23 of them into accepted PBDB
+  genera. Guessing accents, as the R package does, keeps the error; check
+  the printed source before blaming a port.
+- *A convenience package can drop or rename records silently.* The sepkoski
+  package's inner join loses the 558 genera that have no class page, doubles
+  six rows, and a one-string replacement renames *Austrocolomiá*. Profile
   the package against the source it scraped.
 - *An aggregator may not be independent of the compendium it is tested
-  against.* PBDB cites Sepkoski (2002) in 36,832 opinions and 27,556 taxon
-  records.
+  against.* Sepkoski (2002) is the reference for 24% of PBDB's genus taxon
+  records and 12% of its genus opinions.
 - *Record an approval to mirror an unlicensed source in its entry, verbatim.*
   Barry approved this mirror on 23 October; the entry quotes him.
 

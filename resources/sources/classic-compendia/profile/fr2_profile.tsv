@@ -71,24 +71,29 @@ families	names	questioned ('?' in name)	51
 families	names	ending -idae or -aceae	6840
 families	ranges	with a range	7001
 families	ranges	with a minimum range	6458
-families	ranges	to the Holocene	2630
+families	ranges	with a range but no minimum range, by reason	uncertain codes only (?F, ?, ?L, ?FL) 474; other coding without F1/F2 50; F1/F2 but no L1/L2 and not extant 11; FL in several divisions (a range given only to a longer interval) 8
+families	ranges	coded in the Holocene division	2630
+families	ranges	Holocene cell codes	1 2597; ? 11; F1 6; L1 4; ?L 4; F2 4; FL 4
+families	ranges	extant (Holocene cell 1, F1 or F2, no L code)	2605
 families	ranges	single division (maximum)	1111
 families	habitat	codes	M 3894; T 2534; F 288; MF 168; B 41; TF 38; FT 26; MB 20; V 15; ML 13; FB 10; M ?F 9; SM 7; ST 6; SF 5
 wayback	chapter_captures	decoded	128 captures of 45 chapters; Macintosh type/creator after decoding: TEXT/XCEL 128; BinHex inside BinHex: 20000601 ch4, 20000522 ch20, 20000531 ch28, 20000605 ch39, 20000709 ch40
+wayback	earliest_capture_vs_2019	earliest capture year (chapters)	1998 31; 1999 13; 2005 1; chapters first captured after 1998: 1 (19990302), 2 (19990422), 6 (19990219), 8 (19990423), 13 (19990422), 14 (19990422), 15 (19990210), 17 (19990210), 20 (19990210), 21 (20051103), 27 (19990218), 35 (19990222), 44 (19990423), 45 (19991006)
 wayback	earliest_capture_vs_2019	all_chapters	7109 rows then, 7109 in 2019; 7107 identical; family names only then 0, only in 2019 0
 wayback	earliest_capture_vs_2019	chapters_with_differences	45 (19991006: 261 rows, 259 identical in 2019; 2019 261 rows; names only then 0, only now 0; changed: Orchidaceae, Vitaceae)
 wayback	later_captures_vs_earliest	chapters_revised	none
-wayback	All-Life_shifted_rows	vs_earliest_capture	1998 agrees with the chapter file 220
+wayback	All-Life_shifted_rows	vs_earliest_capture	earliest capture agrees with the chapter file 220
 wayback	column_92	earliest captures: values other than NFR	10
-wayback	archive	20000916154555__chapters.sit	88067 bytes; starts b'SIT!'; a StuffIt archive (not unpacked; the chapter captures cover its contents)
-wayback	archive	20010602231432__chapters.sit	88067 bytes; starts b'SIT!'; a StuffIt archive (not unpacked; the chapter captures cover its contents)
+wayback	archive	20000916154555__chapters.sit	StuffIt archive, 88067 bytes, 45 top-level entries (names read, not unpacked); angiosperm entries: Magnoliophyta
+wayback	archive	20010602231432__chapters.sit	StuffIt archive, 88067 bytes, 45 top-level entries (names read, not unpacked); angiosperm entries: Magnoliophyta
 wayback	xls_2004	20040212062842__Fungi.xls	26 rows; 26 identical to 2019 chapter(s) [2] (26 rows)
 wayback	xls_2004	20040612131216__basal.xls	179 rows; 179 identical to 2019 chapter(s) [1, 2, 3] (179 rows)
 wayback	xls_2004	20040612160721__Algae.xls	139 rows; 139 identical to 2019 chapter(s) [3] (139 rows)
 wayback	xls_2004	20040612162634__Monera.xls	14 rows; 14 identical to 2019 chapter(s) [1] (14 rows)
-wayback	archive	20051103165203__chapters.hqx	223801 bytes; starts b'SIT!'; a StuffIt archive (not unpacked; the chapter captures cover its contents)
+wayback	archive	20051103165203__chapters.hqx	StuffIt archive, 223801 bytes, 43 top-level entries (names read, not unpacked); angiosperm entries: Magnoliophyta.sit.hqx
 wayback	data95_html	captures	19980212 78 stages x 44 values, 0 values differ from the first; 19990220 78 stages x 44 values, 0 values differ from the first; 19991006 78 stages x 44 values, 0 values differ from the first; 20001206 78 stages x 44 values, 0 values differ from the first; 20010605 78 stages x 44 values, 3 values differ from the first; 20030422 78 stages x 44 values, 3 values differ from the first; 20030803 78 stages x 44 values, 3 values differ from the first; 20051103 78 stages x 44 values, 3 values differ from the first; 20051228 78 stages x 44 values, 3 values differ from the first
 wayback	data95_html	values revised after 2000	HOLOCENE column 29: 0.091075 -> 0.09108; LUDLOW column 34: 0.076923 -> 0.07692; PLEISTOCENE column 30: 0.085397 -> 0.0854
+wayback	data95_html	1998 stage names vs workbook columns (by position, Vendian on)	SERPUKHOV. / Serpukhovian; PLIENSBACH. / Pliensbachian; KIMMERIDG. / Kimmeridgian; TITHONIAN / Portlandian; MAASTRICHT. / Maastrichtian; L.MIOCENE / Lower Miocene; M.MIOCENE / Middle Miocene; U.MIOCENE / Upper Miocene
 diversity95	xlsx_2019	shape	78 stages; non-empty value columns 38 of 42 labelled
 diversity95	xlsx_2019_vs_1998	stage names in the same order	74 of 78
 diversity95	xlsx_2019_vs_1998	xlsx data column -> 1998 column (stages equal)	1->19(78) 2->1(78) 3->2(78) 4->20(78) 5->23(31) 6->23(78) 7->21(11) 8->21(78) 9->5(2) 10->5(78) 11->4(12) 12->3(78) 13->6(78) 14->1(1) 15->4(78) 16->3(12) 17->24(78) 18->24(16) 19->22(78) 20->21(31) 21->26(78) 22->25(78) 23->28(78) 24->27(78) 25->30(78) 26->29(78) 27->32(78) 28->31(78) 29->34(78) 30->33(78) 31->36(78) 32->35(78) 33->38(78) 34->37(78) 35->40(78) 36->39(78) 37->42(78) 38->41(78) 39->-(0) 40->-(0) 41->-(0) 42->-(0)
@@ -98,10 +103,13 @@ diversity95	1998_table	marine: column labelled min larger than column labelled m
 diversity95	recount_from_chapters_vs_1998	all	recounted minimum within the 1998 pair at 20 of 78 stages; recounted maximum within it at 0; median recounted minimum / smaller 1998 value 1.100
 diversity95	recount_from_chapters_vs_1998	continental	recounted minimum within the 1998 pair at 78 of 78 stages; recounted maximum within it at 78; median recounted minimum / smaller 1998 value 1.172
 diversity95	recount_from_chapters_vs_1998	marine	recounted minimum within the 1998 pair at 26 of 78 stages; recounted maximum within it at 0; median recounted minimum / smaller 1998 value 1.062
+diversity95	recount_from_chapters_vs_1998	all, names ending -idae or -aceae only	recounted minimum within the 1998 pair at 24 of 78 stages; recounted maximum within it at 0; median recounted minimum / smaller 1998 value 1.043
+diversity95	recount_from_chapters_vs_1998	continental, names ending -idae or -aceae only	recounted minimum within the 1998 pair at 78 of 78 stages; recounted maximum within it at 78; median recounted minimum / smaller 1998 value 1.086
+diversity95	recount_from_chapters_vs_1998	marine, names ending -idae or -aceae only	recounted minimum within the 1998 pair at 39 of 78 stages; recounted maximum within it at 9; median recounted minimum / smaller 1998 value 1.022
 holman	families_1998_html_vs_2019_xlsx	intervals equal	79 of 79 (79 in the workbook)
-holman	recount_from_chapters_vs_1998	DIV	equal in 0 of 79 intervals; mean absolute difference 86.1 (Holman also tallied orders, which the chapter files do not record)
-holman	recount_from_chapters_vs_1998	ORI	equal in 2 of 79 intervals; mean absolute difference 10.3 (Holman also tallied orders, which the chapter files do not record)
-holman	recount_from_chapters_vs_1998	EXT	equal in 5 of 79 intervals; mean absolute difference 9.2 (Holman also tallied orders, which the chapter files do not record)
+holman	recount_from_chapters_vs_1998	DIV	equal in 0 of 79 intervals; mean difference recount minus Holman +86.1, mean absolute 86.1; recount larger in 79 intervals
+holman	recount_from_chapters_vs_1998	ORI	equal in 2 of 79 intervals; mean difference recount minus Holman +7.9, mean absolute 10.3; recount larger in 67 intervals
+holman	recount_from_chapters_vs_1998	EXT	equal in 5 of 79 intervals; mean difference recount minus Holman +5.9, mean absolute 9.2; recount larger in 60 intervals
 tetrapods	benton_1996_tables	fossil-amphibian-families	92 rows
 tetrapods	benton_1996_tables	fossil-reptile-families	248 rows
 tetrapods	benton_1996_tables	fossil-bird-families	178 rows

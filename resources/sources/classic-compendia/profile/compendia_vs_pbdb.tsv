@@ -1,16 +1,20 @@
 table	metric	key	value
 pbdb	taxa	names	genus 107698; family 17073
 pbdb	occurrences	public rows read	1782649
-pbdb	occurrences	ranges	genera 73452; families 10213
+pbdb	occurrences	ranges	genera 72331; families 10213
 pbdb	records citing a compendium	reference 6930 (Sepkoski 2002: A compendium of fossil marine animal genera)	occurrences 1; opinions 36832; taxa 27556
+pbdb	genus-rank records citing it	reference 6930	opinions 36097 of 297106 (12.1%); taxa 26813 of 109750 (24.4%)
 pbdb	records citing a compendium	reference 26158 (Benton 1993: The Fossil Record 2)	opinions 99; taxa 1
-sepkoski	names	captured genus rows in PBDB	accepted PBDB name 31984; not a PBDB name 2442; PBDB name, subjective synonym of 1721; PBDB name, replaced by 129; PBDB name, objective synonym of 73; PBDB name, nomen nudum 14; PBDB name, nomen vanum 4; PBDB name, nomen dubium 4; PBDB name, nomen oblitum 1
-sepkoski	names	28 corrupted names as captured	not a PBDB name 28
-sepkoski	names	28 corrupted names with bit 7 cleared	accepted PBDB name 23; not a PBDB name 5; not found: Hexaheliocoenia, Hydnophorarea, Isastraea, Jyxiella, Kangilacyathus
+pbdb	genus-rank records citing it	reference 26158	opinions 70 of 297106 (0.0%); taxa 0 of 109750 (0.0%)
+sepkoski	names	captured genus rows in PBDB	accepted PBDB genus name 31984; not a PBDB name 2223; PBDB genus name, subjective synonym of 1721; PBDB genus name, replaced by 129; PBDB genus name, objective synonym of 73; PBDB genus name, nomen nudum 14; PBDB genus name, nomen vanum 4; PBDB genus name, nomen dubium 4; PBDB genus name, nomen oblitum 1; PBDB name at another rank 219 (order 54, family 35, class 32, suborder 31, subgenus 26, subclass 13, superfamily 12, phylum 3, unranked clade 3, kingdom 3, subfamily 3, infraorder 2, subtribe 1, infraclass 1)
+sepkoski	names	28 corrupted names as captured	not a PBDB name 28; PBDB name at another rank 0 ()
+sepkoski	names	28 corrupted names with bit 7 cleared	accepted PBDB genus name 23; not a PBDB name 5; PBDB name at another rank 0 (); not found: Hexaheliocoenia, Hydnophorarea, Isastraea, Jyxiella, Kangilacyathus
 sepkoski	input	package genus rows; with a unique name and ages	35826; 35517
-sepkoski	ranges_vs_pbdb_occurrences	classes	first: PBDB older by >5 Myr 8216; first: PBDB younger by >5 Myr 5491; first: within 5 Myr 10565; last: PBDB older by >5 Myr 3752; last: PBDB younger by >5 Myr 7554; last: within 5 Myr 9337; looked up under the PBDB senior name 1889; no public occurrences 11245
-sepkoski	ranges_vs_pbdb_occurrences	median PBDB minus Sepkoski (Myr)	first +0.0 (n 24272); last -0.6 (n 20643, extinct genera)
-fr2	names	family rows in PBDB (all chapters)	accepted PBDB name 5603; not a PBDB name 1278; PBDB name, subjective synonym of 198; PBDB name, invalid subgroup of 16; PBDB name, replaced by 12; PBDB name, objective synonym of 2
+sepkoski	ranges_vs_pbdb_occurrences	classes	first: PBDB older by >5 Myr 8571; first: PBDB younger by >5 Myr 5681; first: within 5 Myr 10970; last: PBDB older by >5 Myr 3826; last: PBDB younger by >5 Myr 7762; last: within 5 Myr 9626; looked up under the PBDB senior name 1889; no public occurrences 10295
+sepkoski	ranges_vs_pbdb_occurrences	median PBDB minus Sepkoski (Myr)	first +0.0 (n 25222); last -0.6 (n 21214, extinct genera)
+sepkoski	ranges_vs_pbdb_occurrences	first appearance, PBDB minus Sepkoski, by age of the Sepkoski first appearance	first appearance older than 485 Ma: n 2293, median +0.0 Myr, within 5 Myr 1239; 485-252 Ma: n 10045, median +0.3 Myr, within 5 Myr 4252; 252-66 Ma: n 7608, median +0.0 Myr, within 5 Myr 3694; younger than 66 Ma: n 5276, median +0.3 Myr, within 5 Myr 1785
+fr2	names	family rows in PBDB (all chapters)	accepted PBDB family name 5630; not a PBDB name 1074; PBDB family name, subjective synonym of 200; PBDB family name, invalid subgroup of 16; PBDB family name, replaced by 12; PBDB family name, objective synonym of 2; PBDB name at another rank 175 (genus 94, unranked clade 32, order 17, subfamily 14, subclass 6, suborder 5, superfamily 3, phylum 2, class 1, infraorder 1)
 fr2	input	families with a unique name, a maximum range from the Vendian on, not angiosperms or questioned	6712
-fr2	ranges_vs_pbdb_occurrences	classes	first: PBDB older by >5 Myr 2297; first: PBDB younger by >5 Myr 1556; first: within 5 Myr 1248; last: PBDB older by >5 Myr 995; last: PBDB younger by >5 Myr 1320; last: within 5 Myr 870; looked up under the PBDB senior name 221; no public occurrences 1611
-fr2	ranges_vs_pbdb_occurrences	median PBDB minus FR2 (Myr)	first +2.8 (n 5101); last -1.6 (n 3185, extinct families)
+fr2	ranges_vs_pbdb_occurrences	classes	first: PBDB older by >5 Myr 2297; first: PBDB younger by >5 Myr 1556; first: within 5 Myr 1248; last: PBDB older by >5 Myr 998; last: PBDB younger by >5 Myr 1320; last: within 5 Myr 882; looked up under the PBDB senior name 221; no public occurrences 1611
+fr2	ranges_vs_pbdb_occurrences	median PBDB minus FR2 (Myr)	first +2.8 (n 5101); last -1.6 (n 3200, extinct families)
+fr2	ranges_vs_pbdb_occurrences	first appearance, PBDB minus FR2, by age of the FR2 first appearance	first appearance older than 485 Ma: n 537, median -23.6 Myr, within 5 Myr 29; 485-252 Ma: n 1442, median +5.1 Myr, within 5 Myr 355; 252-66 Ma: n 1794, median +4.3 Myr, within 5 Myr 396; younger than 66 Ma: n 1328, median +4.0 Myr, within 5 Myr 468
