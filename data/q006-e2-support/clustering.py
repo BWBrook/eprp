@@ -19,7 +19,12 @@ URL = ("https://paleobiodb.org/data1.2/occs/list.csv?base_name=Animalia&interval
 SHA = "d9081350fdad36a86e0ba6da7bcc9fe13b6eeb918155e3ab9d7b5922d79ff267"
 
 
+HOLD = ("PBDB data hold (76/2259, 76/2327): this legacy rebuild is disabled; the extracts were deleted at Barry's instruction on 23 October 2026. Rebuild "
+        "only from public record-level data (resources/sources/pbdb/).")
+
+
 def main():
+    raise SystemExit(HOLD)                # legacy fetch disabled; see HOLD
     if not RAW.exists():
         RAW.parent.mkdir(parents=True, exist_ok=True)
         urllib.request.urlretrieve(URL, RAW)

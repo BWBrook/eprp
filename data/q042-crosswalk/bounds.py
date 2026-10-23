@@ -38,7 +38,12 @@ M_VALUES = [3.0, 5.0, 9.5]  # plus the sampled mean, added at run time
 TARGETS = [0.90, 0.96]
 
 
+HOLD = ("PBDB data hold (76/2259, 76/2327): this legacy rebuild is disabled; the extracts were deleted at Barry's instruction on 23 October 2026. Rebuild "
+        "only from public record-level data (resources/sources/pbdb/).")
+
+
 def sampled_cohort():
+    raise SystemExit(HOLD)                # legacy fetch disabled; see HOLD
     if not RAW.exists():
         RAW.parent.mkdir(parents=True, exist_ok=True)
         urllib.request.urlretrieve(URL, RAW)
@@ -54,6 +59,7 @@ def sampled_cohort():
 
 
 def fates(genera, phylum):
+    raise SystemExit(HOLD)                # legacy fetch disabled; see HOLD
     """lost / survived / ambiguous across the end-Permian, from each genus's PBDB last appearance."""
     if not TAXA.exists():
         names, lines = sorted(genera), []

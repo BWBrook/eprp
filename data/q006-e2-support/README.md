@@ -1,5 +1,6 @@
+# Q-006 E2 support: Changhsingian clustering (`clustering.py`)
 
-## Data-access warning (23 October 2026; side session 76/2259)
+## ⚠ Data-access hold (read first) (23 October 2026; side session 76/2259)
 
 [Detail withheld pending disclosure to the data custodian.]
 - **Rows affected, against the public global snapshot:**
@@ -14,3 +15,5 @@
   (Claude chat, exact words: "Yes, delete the raw extracts"). No other
   copies existed on the laptop, deep-server or mac-mini. The derived numbers
   here must be rebuilt from public data before any use.
+
+`clustering.py` is disabled: its legacy fetch now stops with a pointer to this hold.

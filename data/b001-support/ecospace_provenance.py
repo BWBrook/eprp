@@ -24,7 +24,12 @@ WINDOWS = {"all_genera": None, "end_permian_252_242": (242.0, 252.0),
            "end_triassic_201_191": (191.0, 201.4), "k_pg_66_56": (56.0, 66.0)}
 
 
+HOLD = ("PBDB data hold (76/2259, 76/2327): this legacy rebuild is disabled; the extracts were deleted at Barry's instruction on 23 October 2026. Rebuild "
+        "only from public record-level data (resources/sources/pbdb/).")
+
+
 def fetch():
+    raise SystemExit(HOLD)                # legacy fetch disabled; see HOLD
     if not RAW.exists():
         RAW.parent.mkdir(parents=True, exist_ok=True)
         with urllib.request.urlopen(URL, timeout=300) as r:
