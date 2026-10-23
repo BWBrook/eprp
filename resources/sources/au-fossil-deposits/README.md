@@ -214,6 +214,7 @@ Riversleigh Appendix 1 (.xls) is read with xlrd.
   Quercy and Limagne (French) localities (checked). The source scan reports that
   the Gutarra simulations include Russian surfaces; the mirrored files carry
   only coordinates and sizes, so this cannot be checked from them (source claim).
+- [Detail withheld pending disclosure to the data custodian.]
 
 ## Overlap with other sources
 

@@ -6,7 +6,7 @@
 #   zenodo    Zenodo records up to 5 GB, four at a time (Zenodo serves about 0.3 MB/s per connection)
 #   figshare  Figshare articles
 #   pangaea   PANGAEA datasets as tab-delimited text (the IODP U1313 series of the Q-050 crosswalk)
-#   index     version indexes only, for the Zenodo records over 5 GB (fetch on demand)
+#   index     version indexes only, for the Zenodo and Dryad records over 5 GB (fetch on demand)
 set -uo pipefail
 cd /data/paleodata
 M="python3 _tools/data_mirror.py"
@@ -33,6 +33,18 @@ zpc866t6s liow2021-cheilostome-cyclostome
 tx95x69vr hunt2020-ostracod-dimorphism
 vx0k6dk71 crampton2026-extinction-spectrum
 1ns1rn91g malanoski2024-climate-extinction-risk
+0k6djhb6h freitas2026-patch-biogeography-simulations
+1mg27 holland2016-stratigraphy-mass-extinction
+4j0zpc8hx holstad2024-evolvability-macroevolution
+63xsj3tzv kontopoulos2020-phytoplankton-thermal
+8w9ghx3w6 tang2024-proterozoic-eukaryotes-dryad
+9ghx3ffts malanoski2026-paleogeography-extinction-risk
+bg30k dunhill2018-late-triassic-functional-diversity
+mgqnk992f xiong2022-hybrid-incompatibilities
+p5hqbzm03 kerr2025-regional-databases
+pg4f4qs50 alroy2026-coverage-rarefaction
+s7576 syverson2017-crinoid-spinosity
+vd80g8n saupe2019-range-size-niche-breadth
 EOF
 fi
 
@@ -50,7 +62,7 @@ cat <<'EOF' | xargs -P 4 -L 1 bash -c 'echo "== zenodo $0 $1"; python3 _tools/da
 12187757 rogger2024-lip-climate-sensitivity
 12735901 tang2024-proterozoic-eukaryotes
 1285673 padfield2016-metabolic-traits
-14918283 leventhal2025-bryozoan-brooding-code
+14918283 leventhal2025-bryozoan-brooding-supplement
 15079899 wang2025-trace-fossil-trajectories
 15096088 natscher2025-ectotherm-body-size
 15269137 close2025-marine-latitudinal-diversity-code
@@ -72,18 +84,28 @@ cat <<'EOF' | xargs -P 4 -L 1 bash -c 'echo "== zenodo $0 $1"; python3 _tools/da
 8398420 cribb2023-ete-ecospace
 5394385 liow2021-cheilostome-cyclostome-code
 10541354 malanoski2024-climate-extinction-risk-code
-14104269 leventhal2025-bryozoan-brooding-supplement
+14104269 leventhal2025-bryozoan-brooding-code
+10610771 pohl2024-late-ordovician-foam
+10979237 cooper2024-deepdive
+18217914 liu2026-phanerozoic-productivity-oxygen
+7545805 ridgwell-cgenie-muffin
+7545809 ridgwell-muffingen
 EOF
+# the releases the transfer-inputs note names, besides the newest
+$M zenodo 7545805 register-deposits/ridgwell-cgenie-muffin --only v0.9.35_7545805 || echo "cgenie.muffin v0.9.35 FAILED"
+$M zenodo 7545809 register-deposits/ridgwell-muffingen --only v0.9.24_7545809 || echo "muffingen v0.9.24 FAILED"
 fi
 
 if want index; then
-while read -r rec slug; do
-  echo "== zenodo index-only $rec $slug"
-  $M zenodo "$rec" "register-deposits/$slug" --index-only || echo "$rec FAILED"
+while read -r prov rec slug; do
+  echo "== $prov index-only $rec $slug"
+  $M "$prov" "$rec" "register-deposits/$slug" --index-only || echo "$rec FAILED"
 done <<'EOF'
-11001479 rahman2024-ediacaran-animal-forests
-17035672 rahman2025-ediacaran-hydrodynamics
-17252973 rogger2025-petm-vegetation
+zenodo 11001479 rahman2024-ediacaran-animal-forests
+zenodo 17035672 rahman2025-ediacaran-hydrodynamics
+zenodo 17252973 rogger2025-petm-vegetation
+dryad 10.5061/dryad.nzs7h44pv kagawa2020-admixture-radiation
+dryad 10.5061/dryad.5hqbzkhcf shum2026-dark-land-refugia
 EOF
 fi
 
@@ -97,6 +119,7 @@ done <<'EOF'
 27909116 craffey2024-ediacaran-cooccurrence-figshare
 5046964 klompmaker2017-external-database-2
 7357193 penn2018-end-permian-climate
+28046414 edie2025-kpg-functional-diversity
 EOF
 fi
 
