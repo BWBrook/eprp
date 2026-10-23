@@ -1,17 +1,14 @@
-"""Profile a PBDB regional extract written by pbdb_snapshot.sh (data_mirror.py url).
+"""Profile a PBDB region cut from the global public snapshot by pbdb_region.py.
 
-Usage: python3 pbdb_profile.py JOINED_DIR SUFFIX OUT_TSV
-JOINED_DIR is pbdb_region.py's output (occurrences with collection fields
-appended; tables cut from the global public snapshot). SUFFIX is "" for the core
-extract or "_idng" for the Indonesian box (New Guinea, Raja Ampat, Misool and
-Seram).
+Usage: python3 pbdb_profile.py REGION_DIR SUFFIX OUT_TSV
+SUFFIX is "" for the core region or "_idng" for the Indonesian box.
 
-Writes long-format counts (table, metric, key, value). Checks every CSV row count
-against the provider count file, checks duplicated CSV columns are identical, then
-profiles geography, time (period of the interval midpoint, on the GTS2020-era
-boundaries PBDB's ages use), age resolution,
-taxonomy, plate models, entry history, specimens, references and strata.
-Standard library only.
+Writes long-format counts (table, metric, key, value). Checks each table's row
+count against region_counts.json, checks duplicated CSV columns are identical,
+then profiles
+geography, time (period of the interval midpoint, on the GTS2020-era
+boundaries PBDB's ages use), age resolution, taxonomy, plate models, entry
+history, specimens, references and strata. Standard library only.
 """
 
 import csv
@@ -27,8 +24,6 @@ PERIODS = [(0, 2.58, "Quaternary"), (2.58, 23.04, "Neogene"), (23.04, 66.0, "Pal
            (298.9, 358.86, "Carboniferous"), (358.86, 419.62, "Devonian"), (419.62, 443.1, "Silurian"),
            (443.1, 486.85, "Ordovician"), (486.85, 538.8, "Cambrian"), (538.8, 635.0, "Ediacaran"),
            (635.0, 4600.0, "pre-Ediacaran")]
-COUNT_FILES = {"collections": "colls-list", "specimens": "specs-list", "measurements": "specs-measurements",
-               "references": "occs-refs", "taxa": "occs-taxa"}
 out = []
 
 
@@ -73,10 +68,6 @@ def load(name):
     return [{h: r[i] for h, i in first.items()} for r in rows]
 
 
-def provider_count(fname):
-    with open(os.path.join(snap, fname)) as f:
-        return json.load(f)["records_found"]
-
 
 def history(table, rows):
     tab(table, "created_year", [r["created"][:4] for r in rows], 40)
@@ -100,15 +91,10 @@ def models(table, rows):
 
 snap, sfx = sys.argv[1], sys.argv[2]
 tables = {n: load(n) for n in ("occurrences", "collections", "specimens", "measurements", "references", "taxa")}
-if os.path.exists(os.path.join(snap, "region_counts.json")):
-    with open(os.path.join(snap, "region_counts.json")) as f:
-        rc = json.load(f)[sfx or "core"]
-    for n in ("occurrences", "collections", "specimens", "measurements", "references", "taxa"):
-        add("check", f"{n}_rows_vs_region_count", rc[n], len(tables[n]))
-else:
-    add("check", "occurrences_rows_vs_datainfo", provider_count(f"datainfo{sfx}.json"), len(tables["occurrences"]))
-    for n, c in COUNT_FILES.items():
-        add("check", f"{n}_rows_vs_count", provider_count(f"count{sfx}-{c}.json"), len(tables[n]))
+with open(os.path.join(snap, "region_counts.json")) as f:
+    rc = json.load(f)[sfx or "core"]
+for n in ("occurrences", "collections", "specimens", "measurements", "references", "taxa"):
+    add("check", f"{n}_rows_vs_region_count", rc[n], len(tables[n]))
 
 occ, col = tables["occurrences"], tables["collections"]
 t = "occurrences"
@@ -155,9 +141,8 @@ add(t, "with_formation", "", sum(bool(r["formation"]) for r in col))
 add(t, "with_geological_group", "", sum(bool(r["geological_group"]) for r in col))
 add(t, "with_member", "", sum(bool(r["member"]) for r in col))
 add(t, "with_zone", "", sum(bool(r["zone"]) for r in col))
-for k in ("collection_type", "environment", "lithology1", "stratscale", "temporal_resolution", "access_level"):
-    if k in col[0]:
-        tab(t, f"by:{k}", [r[k] for r in col], 15)
+for k in ("collection_type", "environment", "lithology1", "stratscale", "temporal_resolution"):
+    tab(t, f"by:{k}", [r[k] for r in col], 15)
 tab(t, "by:period_of_interval_midpoint", [period(r) for r in col], 20)
 models(t, col)
 history(t, col)

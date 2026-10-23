@@ -16,14 +16,16 @@ occurrences	partition	p08	rows 162103; rowcount 162103; created outside window 0
 occurrences	partition	p09	rows 173554; rowcount 173554; created outside window 0; duplicates 0; ok
 occurrences	partition	p10	rows 119057; rowcount 119057; created outside window 0; duplicates 0; ok
 occurrences	partition	p11	rows 306489; rowcount 306489; created outside window 0; duplicates 0; ok
-occurrences	partition	p12	rows 39700; rowcount 39700; created outside window 0; duplicates 0; ok
-occurrences	rows		1782648
+occurrences	partition	p12	rows 39701; rowcount 39701; created outside window 0; duplicates 0; ok
+occurrences	rows		1782649
 occurrences	without_collection_row		0
-occurrences	rowcount_before		1782648
-occurrences	rowcount_after		1782648
+collections	with_a_public_occurrence		248432
+collections	n_occs_zero		2873
+occurrences	rowcount_before		1782649
+occurrences	rowcount_after		1782652
 occurrences	by:accepted_rank	species	854985
 occurrences	by:accepted_rank	genus	736507
-occurrences	by:accepted_rank	(none)	44802
+occurrences	by:accepted_rank	(none)	44803
 occurrences	by:accepted_rank	family	40679
 occurrences	by:accepted_rank	class	21469
 occurrences	by:accepted_rank	subgenus	15813
@@ -49,7 +51,7 @@ occurrences	by:phylum	Mollusca	418562
 occurrences	by:phylum	Chordata	291410
 occurrences	by:phylum	Foraminifera	188578
 occurrences	by:phylum	Brachiopoda	178841
-occurrences	by:phylum	Arthropoda	152474
+occurrences	by:phylum	Arthropoda	152475
 occurrences	by:phylum	Haptophyta	110422
 occurrences	by:phylum	Radiozoa	57487
 occurrences	by:phylum	Cnidaria	47736
@@ -72,7 +74,7 @@ occurrences	by:class	Mammalia	124850
 occurrences	by:class	Rhynchonellata	109432
 occurrences	by:class	Cephalopoda	104462
 occurrences	by:class	Coccolithophyceae	81812
-occurrences	by:class	(none)	61101
+occurrences	by:class	(none)	61102
 occurrences	by:class	Polycystinea	57487
 occurrences	by:class	Strophomenata	57110
 occurrences	by:class	Insecta	52159
@@ -94,7 +96,7 @@ occurrences	by:period	Neogene	298491
 occurrences	by:period	Paleogene	247676
 occurrences	by:period	Quaternary	233121
 occurrences	by:period	Cretaceous	232839
-occurrences	by:period	Jurassic	154825
+occurrences	by:period	Jurassic	154826
 occurrences	by:period	Permian	145999
 occurrences	by:period	Ordovician	112925
 occurrences	by:period	Triassic	100372
@@ -114,7 +116,7 @@ occurrences	by:period	(outside table)	26
 occurrences	by:continent	NOA	542595
 occurrences	by:continent	EUR	462554
 occurrences	by:continent	(none)	309407
-occurrences	by:continent	ASI	240893
+occurrences	by:continent	ASI	240894
 occurrences	by:continent	SOA	72550
 occurrences	by:continent	AFR	71753
 occurrences	by:continent	AUS	45186
@@ -170,21 +172,22 @@ occurrences	by:created_year	2022	30738
 occurrences	by:created_year	2023	25069
 occurrences	by:created_year	2024	34613
 occurrences	by:created_year	2025	344556
-occurrences	by:created_year	2026	30270
-occurrences	by:has_reid	no	1750539
+occurrences	by:created_year	2026	30271
+occurrences	by:has_reid	no	1750540
 occurrences	by:has_reid	yes	32109
-occurrences	by:collection_has_coordinates	yes	1782648
-occurrences	by:palaeolatitude_model_1	yes	1479437
+occurrences	by:collection_has_coordinates	yes	1782649
+occurrences	by:palaeolatitude_model_1	yes	1479438
 occurrences	by:palaeolatitude_model_1	no	303211
-occurrences	by:palaeolatitude_model_2	yes	1400042
+occurrences	by:palaeolatitude_model_2	yes	1400043
 occurrences	by:palaeolatitude_model_2	no	382606
-occurrences	by:palaeolatitude_model_3	yes	913560
+occurrences	by:palaeolatitude_model_3	yes	913561
 occurrences	by:palaeolatitude_model_3	no	869088
-occurrences	by:collection_has_formation	yes	1083152
+occurrences	by:collection_has_formation	yes	1083153
 occurrences	by:collection_has_formation	no	699496
-occurrences	by:modified_before_created	no	1575940
-occurrences	by:modified_before_created	yes	206708
-occurrences	by:in_au_ng_codes	no	1736657
+occurrences	by:modified_before_created	no	1575844
+occurrences	by:modified_before_created	yes	204301
+occurrences	by:modified_before_created	zero date	2504
+occurrences	by:in_au_ng_codes	no	1736658
 occurrences	by:in_au_ng_codes	yes	45991
 occurrences	age_span_ma_deciles		1.10; 2.24; 2.75; 3.81; 4.47; 6.20; 6.60; 8.70; 11.40
 occurrences	age_span_ma_median		4.47
@@ -228,12 +231,16 @@ bulk_2025_09_21	by:reference	95485 2013 Site U1387	5201
 bulk_2025_09_21	by:reference	95462 2011 Site U1344	5019
 bulk_2025_09_21	references		162
 specimens	rows		162604; rowcount 162604; ok
-measurements	rows		366107; rowcount 366107; ok
-references	rows		95905; rowcount 95905; ok
-taxa	rows		409314; rowcount 409314; ok
-opinions	rows		1016149
+references	rows		95907; rowcount 95907; ok
+taxa	rows		409321; rowcount 409321; ok
+opinions	rows		1016157; rowcount 1016157; ok
+specimens	with_an_occurrence_outside_the_public_set		0
+measurements	rows		356698
+measurements	chunks_not_matching_rowcount		0
+measurements	with_a_specimen_outside_the_public_set		0
 intervals	rows		1909
-taxa	taxon_rank_blank		409314
+taxa	taxon_rank_blank		409321
+taxa	taxon_no_values_on_several_rows		385
 taxa	accepted_taxa_by:accepted_rank	species	166595
 taxa	accepted_taxa_by:accepted_rank	genus	95771
 taxa	accepted_taxa_by:accepted_rank	family	12974

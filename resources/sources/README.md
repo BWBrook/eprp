@@ -416,9 +416,10 @@ the workflow when they generalise.
   mirror at once and made owner-only; deleting them is Barry's call.
 - *Created dates can be import dates.* 17% of PBDB was created in one minute
   of 2025; a creation-date filter is not a history.
-- *Shared keys are not duplicates.* PBDB's IODP import shares all its holes
-  with NSB but mostly not its cores; reconcile at the sample level before
-  merging.
+- *Catalogue membership is not data.* NSB's hole catalogue lists every hole
+  in PBDB's IODP import, but NSB holds samples in only 30 of the 358, and in
+  those the two cover nearly the same cores. Test overlap against the records,
+  not the catalogue, and reconcile at the sample level before merging.
 
 **Outreach (Barry, 22 October 2026).**
 

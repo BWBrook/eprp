@@ -1,13 +1,24 @@
 table	metric	key	value
-pbdb_drilling_collections	collections	bulk_2025_09_21	31676
-pbdb_drilling_collections	collections_core_in_nsb	bulk_2025_09_21	5008
-pbdb_drilling_collections	collections_hole_in_nsb	bulk_2025_09_21	31676
-pbdb_drilling_collections	occurrences	bulk_2025_09_21	306358
-pbdb_drilling_collections	occurrences_core_in_nsb	bulk_2025_09_21	59024
-pbdb_drilling_collections	occurrences_hole_in_nsb	bulk_2025_09_21	306358
+pbdb	collections_parsed		31700
+pbdb	occurrences_in_parsed_collections		306483
 holes	pbdb_holes		358
-holes	nsb_holes		3818
-holes	shared		358
-holes	pbdb_only		0
-holes	nsb_only		3460
-holes	nsb_samples_in_shared_holes		4294
+holes	pbdb_holes_in_nsb_catalogue		358
+holes	pbdb_holes_nsb_sampled		30
+holes	nsb_samples_in_those_holes		4294
+collections	in_nsb_sampled_holes		5065
+collections	at_nsb_sampled_cores		5008
+occurrences	in_nsb_sampled_holes		59334
+occurrences	at_nsb_sampled_cores		59024
+cores_in_shared_holes	pbdb		770
+cores_in_shared_holes	nsb		772
+cores_in_shared_holes	shared		730
+holes	pbdb_holes_not_nsb_sampled_by:expedition	323	27
+holes	pbdb_holes_not_nsb_sampled_by:expedition	339	23
+holes	pbdb_holes_not_nsb_sampled_by:expedition	346	21
+holes	pbdb_holes_not_nsb_sampled_by:expedition	356	19
+holes	pbdb_holes_not_nsb_sampled_by:expedition	340	19
+holes	pbdb_holes_not_nsb_sampled_by:expedition	341	18
+holes	pbdb_holes_not_nsb_sampled_by:expedition	363	16
+holes	pbdb_holes_not_nsb_sampled_by:expedition	354	15
+holes	pbdb_holes_not_nsb_sampled_by:expedition	318	12
+holes	pbdb_holes_not_nsb_sampled_by:expedition	317	11

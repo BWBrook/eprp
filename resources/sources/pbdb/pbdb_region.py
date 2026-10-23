@@ -2,15 +2,16 @@
 
 Usage: python3 pbdb_region.py GLOBAL_RAW OUT_DIR
 
-Regions are cut from the
-global snapshot instead (pbdb_global_snapshot.sh: all records, record-level
-show blocks only). Two regions, as before:
+Regions are cut from the global snapshot of
+public records instead (pbdb_global_snapshot.sh). Two regions, as before:
   core   collections with country code AU, PG, NF, CX, CC or HM;
   _idng  collections coded ID with longitude 129.5 to 141.1 and latitude -11 to 0
-         (Indonesian New Guinea, Raja Ampat, Misool and Seram).
-For each region, writes occurrences{sfx}.csv (the occurrence row with every
-collection column it lacks appended, except personal-name columns),
-collections{sfx}.csv, specimens{sfx}.csv (specimens of the region's
+         (Indonesian New Guinea, Raja Ampat, Misool, Aru and the eastern part of
+         Seram; the 129.5 E edge cuts Seram).
+For each region, writes occurrences{sfx}.csv (the occurrence row, as PBDB
+publishes it, with every collection column it lacks appended, except the
+collection's collector and entry-history names), collections{sfx}.csv (as
+published), specimens{sfx}.csv (specimens of the region's
 occurrences or collections), measurements{sfx}.csv (of those specimens),
 references{sfx}.csv (cited by any of those records), taxa{sfx}.csv (taxa
 identified or accepted for the region's occurrences), and region_counts.json.
@@ -106,8 +107,8 @@ for reg in ("", "_idng"):
         w.writerows(cols[reg])
 
 
-def subset(name, keep, reg, note=None):
-    rows = read([os.path.join(raw, f"{name}.csv")])
+def subset(name, keep, reg, pattern=None):
+    rows = read(sorted(glob.glob(os.path.join(raw, pattern or f"{name}.csv"))))
     head = next(rows)
     idx = first_index(head)
     kept = [r for r in rows if keep(r, idx)]
@@ -123,7 +124,7 @@ for reg in ("", "_idng"):
     spm, si = subset("specimens", lambda r, i: r[i["occurrence_no"]] in occ_ids[reg] or coll_region.get(r[i["collection_no"]]) == reg, reg)
     spec_ids = {r[si["specimen_no"]] for r in spm}
     refs[reg] |= {r[si["reference_no"]] for r in spm}
-    mea, _ = subset("measurements", lambda r, i: r[i["specimen_no"]] in spec_ids, reg)
+    mea, _ = subset("measurements", lambda r, i: r[i["specimen_no"]] in spec_ids, reg, "measurements__c*.csv")
     ref, _ = subset("references", lambda r, i: r[i["reference_no"]] in refs[reg], reg)
     tax, _ = subset("taxa", lambda r, i: r[i["taxon_no"]] in taxa_ids[reg] or r[i["orig_no"]] in taxa_ids[reg], reg)
     counts[reg or "core"] = {"occurrences": len(occ_ids[reg]), "collections": len(cols[reg]), "specimens": len(spm),
