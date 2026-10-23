@@ -320,3 +320,28 @@ machine, seed 38001.
 - **For the redesign, use measured fits per day,** not per-fit core-hours
   extrapolated from a short run. With four concurrent fits deep-server
   completes about one stz95 fit per hour.
+
+## Scorer repairs (23 October; Codex 76/2247)
+
+- **Per class.** `score_event` now returns separate O and B scores for each
+  class. The outer draws stay shared, but pooling is removed, as the
+  contract's section 8 gates require.
+- **Log-space count DP,** so rare counts cannot underflow.
+- **Validity.** A non-finite result, or a conditional log probability above
+  zero, raises an error. Endpoints (D = 0 or N) return exactly 0.
+
+**New checks:**
+- **S5:** Codex's two-class uniform null, with q = (0.2, 0.2, 0.8, 0.8) and
+  D = 2. The pooled expected gain reproduces 0.248857705 nats per genus;
+  within-class gains are 5.6e-17.
+- **S6:** N = 1,000, q = 0.99, D = 1 gives −6.907755279, which is −log 1000
+  to 4.5e-12. The old DP returned +∞.
+- **S7:** both endpoints are exactly 0.
+- S1–S3 are unchanged.
+
+**Correction to the earlier S4 report.** The pooled B gain of 0.086 per
+genus on truth-perturbed stand-in draws mostly disappears per class: −0.0005
+for Rhynchonellata and 0.0035 for Bivalvia. Most of it was the class
+severity difference that Codex's counterexample isolates. None of these
+stand-in scores is inferential, and a score Monte Carlo precision target
+still has to be declared before any campaign uses the scores.

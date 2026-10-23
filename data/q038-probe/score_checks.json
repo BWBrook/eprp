@@ -4,30 +4,62 @@
   "comparisons": 216
  },
  "S2_complement_max_abs": 0.0,
- "S3_conditional_set_law_total_by_D_max_abs_minus_1": 3.552713678800501e-15,
+ "S3_conditional_set_law_total_by_D_max_abs_minus_1": 2.9976021664879227e-15,
  "S3_count_dp_vs_brute_max_abs": 2.7755575615628914e-16,
- "S4_event38_scores_400_draws": {
-  "seconds": 7.079762651999772,
-  "O": {
-   "N": 331,
-   "D": 219,
-   "informative": true,
-   "conditional": -180.66695155849246,
-   "conditional_se": 0.4278377448161437,
-   "gain_per_genus": 0.08484323513521848,
-   "uncond": -184.39491778031106,
-   "uncond_se": 0.4271805363812365
+ "S4_event38_scores_400_draws_per_class": {
+  "seconds": 7.521680120999008,
+  "Rhynchonellata": {
+   "O": {
+    "N": 191,
+    "D": 157,
+    "informative": true,
+    "conditional": -83.62306269403727,
+    "conditional_se": 0.27863791828632245,
+    "gain_per_genus": 0.017003468100874945,
+    "uncond": -87.13840733867349,
+    "uncond_se": 0.2826386388205804
+   },
+   "B": {
+    "N": 131,
+    "D": 97,
+    "informative": true,
+    "conditional": -72.53270656609692,
+    "conditional_se": 0.11222394231928763,
+    "gain_per_genus": -0.00045518689945714164,
+    "uncond": -75.75060895229076,
+    "uncond_se": 0.10718560633308014
+   }
   },
-  "B": {
-   "N": 250,
-   "D": 137,
-   "informative": true,
-   "conditional": -147.69365725180856,
-   "conditional_se": 0.4009688996653262,
-   "gain_per_genus": 0.08582582805915842,
-   "uncond": -151.56848153881302,
-   "uncond_se": 0.3858530435178656
+  "Bivalvia": {
+   "O": {
+    "N": 140,
+    "D": 62,
+    "informative": true,
+    "conditional": -94.25411122577381,
+    "conditional_se": 0.2122195938934032,
+    "gain_per_genus": -0.005868918216582942,
+    "uncond": -97.26142557306063,
+    "uncond_se": 0.2168620835902149
+   },
+   "B": {
+    "N": 119,
+    "D": 40,
+    "informative": true,
+    "conditional": -72.99720385454671,
+    "conditional_se": 0.2423253969512742,
+    "gain_per_genus": 0.0034954203207756113,
+    "uncond": -76.07690265670354,
+    "uncond_se": 0.2430346122272606
+   }
   }
  },
+ "S5_pooled_expected_gain": 0.24885770491244902,
+ "S5_within_class_max_abs_gain": 5.551115123125783e-17,
+ "S6_N1000_q099_D1": -6.907755278977675,
+ "S6_expected": -6.907755278982137,
+ "S7_endpoints": [
+  0.0,
+  0.0
+ ],
  "ok": true
 }

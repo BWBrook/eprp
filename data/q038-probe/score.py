@@ -109,16 +109,17 @@ def log_q(h, k, cls, fam, ordr, P, D, M=M_WINDOW):
 
 # ---------------------------------------------------------------- set and count laws, conditioned after integration
 def log_count_pmf(lq, l1mq, D_):
-    """log P(D | theta) per draw: Poisson-binomial dynamic programme in probability space (rows are genera)."""
-    q, p0 = np.exp(lq), np.exp(l1mq)
-    n = q.shape[0]
-    f = np.zeros((n + 1,) + q.shape[1:])
-    f[0] = 1.0
+    """log P(D | theta) per draw: Poisson-binomial dynamic programme in log space, so rare counts cannot underflow
+    (Codex 76/2247: the probability-space version returned +inf for N = 1000, q = 0.99, D = 1)."""
+    n = lq.shape[0]
+    f = np.full((n + 1,) + lq.shape[1:], -np.inf)
+    f[0] = 0.0
     for i in range(n):
-        f[1:i + 2] = f[1:i + 2] * p0[i] + f[0:i + 1] * q[i]
-        f[0] = f[0] * p0[i]
-    with np.errstate(divide="ignore"):
-        return np.log(f[D_])
+        new = np.full_like(f, -np.inf)
+        new[0] = f[0] + l1mq[i]
+        new[1:i + 2] = np.logaddexp(f[1:i + 2] + l1mq[i], f[0:i + 1] + lq[i])
+        f = new
+    return f[D_]
 
 
 def batch_se(x, nb=20):
@@ -142,7 +143,9 @@ def set_scores(lq, l1mq, S):
     ab = np.array([[x.mean(), y.mean()] for x, y in zip(np.array_split(a, nb), np.array_split(b, nb))])
     cv = np.cov(ab.T) / nb
     se_cond = math.sqrt(max(cv[0, 0] / am ** 2 + cv[1, 1] / bm ** 2 - 2 * cv[0, 1] / (am * bm), 0.0))
-    cond = special.logsumexp(lPS) - special.logsumexp(lPD)
+    cond = 0.0 if D_ in (0, n) else float(special.logsumexp(lPS) - special.logsumexp(lPD))   # endpoints: exactly 0
+    if not math.isfinite(cond) or cond > 1e-9:
+        raise ValueError(f"conditional log probability {cond} is not a valid log probability")
     base = -(special.gammaln(n + 1) - special.gammaln(D_ + 1) - special.gammaln(n - D_ + 1))
     return dict(N=n, D=D_, informative=bool(0 < D_ < n), conditional=float(cond), conditional_se=se_cond,
                 gain_per_genus=float((cond - base) / n), uncond=float(special.logsumexp(lPS) - math.log(m)),
@@ -160,8 +163,14 @@ def risk_set(genera, k):
 
 
 def score_event(genera, k, P, D, M=M_WINDOW):
-    """O (records) and B (true members' deaths at k) set scores for forward event k, given draws P."""
-    R = risk_set(genera, k)
+    """Per-class O (records) and B (true members' deaths at k) set scores for forward event k, given draws P that are
+    shared across classes (contract section 8 gates are per class; pooling rewards class severity differences,
+    Codex 76/2247)."""
+    return {c: _score_class(genera, k, P, D, M, c) for c in core.CLASSES}
+
+
+def _score_class(genera, k, P, D, M, cls):
+    R = [i for i in risk_set(genera, k) if genera[i]["cls"] == cls]
     lq, l1mq = zip(*[log_q(core.history_from_counts(genera[i]["counts"], genera[i]["f"], k - 1), k, genera[i]["cls"],
                            genera[i]["fam"], genera[i]["ord"], P, D, M) for i in R])
     S_O = [not any(genera[i]["counts"][k + 1:k + M + 1] > 0) for i in R]
@@ -221,8 +230,31 @@ def checks():
     p400 = stack([core.truth_params(np.random.default_rng(1000 + j), D, man["omega_calibrated"]) for j in range(400)])
     t0 = time.perf_counter()
     sc = score_event(gen, 38, p400, D)
-    out["S4_event38_scores_400_draws"] = dict(seconds=time.perf_counter() - t0, **{k: v for k, v in sc.items()})
+    out["S4_event38_scores_400_draws_per_class"] = dict(seconds=time.perf_counter() - t0, **sc)
+    # S5: two-class uniform null (Codex 76/2247): pooled scoring earns gain without within-class selectivity
+    q4 = np.array([0.2, 0.2, 0.8, 0.8]); lq4, l1q4 = np.log(q4)[:, None], np.log1p(-q4)[:, None]
+    pooled, within = 0.0, 0.0
+    for S in itertools.combinations(range(4), 2):
+        m_ = np.zeros(4, bool); m_[list(S)] = True
+        wS = float(np.prod(np.where(m_, q4, 1 - q4)))
+        pooled += wS * set_scores(lq4, l1q4, m_)["gain_per_genus"]
+    norm = sum(float(np.prod(np.where(np.isin(range(4), S), q4, 1 - q4))) for S in itertools.combinations(range(4), 2))
+    pooled /= norm
+    for cls_idx in ((0, 1), (2, 3)):                    # within class, every set has the same probability: gain 0
+        for S in itertools.combinations(range(2), 1):
+            m_ = np.zeros(2, bool); m_[list(S)] = True
+            within = max(within, abs(set_scores(lq4[list(cls_idx)], l1q4[list(cls_idx)], m_)["gain_per_genus"]))
+    out["S5_pooled_expected_gain"] = pooled
+    out["S5_within_class_max_abs_gain"] = within
+    # S6: rare counts in log space; S7: endpoints are exactly zero
+    lq6, l1q6 = np.full((1000, 3), math.log(0.99)), np.full((1000, 3), math.log1p(-0.99))
+    m6 = np.zeros(1000, bool); m6[0] = True
+    out["S6_N1000_q099_D1"] = set_scores(lq6, l1q6, m6)["conditional"]
+    out["S6_expected"] = -math.log(1000)
+    out["S7_endpoints"] = [set_scores(lq4, l1q4, np.zeros(4, bool))["conditional"], set_scores(lq4, l1q4, np.ones(4, bool))["conditional"]]
     out["ok"] = bool(worst < 1e-12 and out["S2_complement_max_abs"] < 1e-12
+                     and abs(pooled - 0.248857705) < 1e-8 and within < 1e-12
+                     and abs(out["S6_N1000_q099_D1"] - out["S6_expected"]) < 1e-9 and out["S7_endpoints"] == [0.0, 0.0]
                      and out["S3_conditional_set_law_total_by_D_max_abs_minus_1"] < 1e-12 and dp_err < 1e-14)
     (HERE / "score_checks.json").write_text(json.dumps(out, indent=1, default=float) + "\n")
     print(json.dumps(out, indent=1, default=float))
