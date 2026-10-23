@@ -7,7 +7,7 @@ Usage:
   python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py dryad DOI DEST [--latest] [--only VERSION_DIR ...] [--index-only]
   python3 data_mirror.py wfs WFS_URL LAYER[,LAYER...] DEST --license TEXT
-  python3 data_mirror.py url DEST --license TEXT [NAME::]URL [[NAME::]URL ...]
+  python3 data_mirror.py url DEST --license TEXT [--specs-file FILE] [--pause SECONDS] [NAME::]URL [[NAME::]URL ...]
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
 
 Writes DEST/versions.tsv (every version the provider offers) and
@@ -26,7 +26,8 @@ hashed with sha256, then made read-only. A live WFS has no versions: each `wfs`
 run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
 (GeoServer outputFormat=csv) and its schema; the row count must equal the
 server's numberMatched, and DEST/versions.tsv lists all snapshots. `url` does the
-same for plain files with no provider checksum (raw/<UTC timestamp>_url/). A live
+same for plain files with no provider checksum (raw/<UTC timestamp>_url/), waiting
+--pause seconds between requests to small servers and web archives. A live
 snapshot cannot resume, so a failed wfs or url run removes its partial directory.
 `url` refuses an HTML response for a file not named .html or .htm (a login or
 bot-check page served in place of the file).
@@ -372,9 +373,11 @@ def wfs_snapshot(url, layers, dest, vdir, stamp, licence, tool_sha):
     finish_snapshot(vdir, manifest, dest)
 
 
-def url_snapshot(urls, dest, vdir, stamp, licence, tool_sha):
+def url_snapshot(urls, dest, vdir, stamp, licence, tool_sha, pause):
     files = []
-    for spec in urls:
+    for i, spec in enumerate(urls):
+        if i and pause:
+            time.sleep(pause)
         name, sep, u = spec.partition("::")
         if not sep:
             name, u = urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(spec).path)) or "download", spec
@@ -455,6 +458,7 @@ def main():
     p.add_argument("urls", nargs="*")
     p.add_argument("--specs-file", help="file of further NAME::URL lines (for lists too long for the command line)")
     p.add_argument("--license", required=True, help="licence or terms as stated by the provider")
+    p.add_argument("--pause", type=float, default=0, help="seconds to wait between requests")
     p = sub.add_parser("verify")
     p.add_argument("dest")
     p.add_argument("--only", nargs="*", default=None)
@@ -480,7 +484,7 @@ def main():
                         urls += [line.strip() for line in f if line.strip()]
                 if not urls:
                     sys.exit("url: no URLs given")
-                url_snapshot(urls, a.dest, vdir, stamp, a.license, tool_sha)
+                url_snapshot(urls, a.dest, vdir, stamp, a.license, tool_sha, a.pause)
         except BaseException:
             for name in os.listdir(vdir):
                 os.chmod(os.path.join(vdir, name), 0o644)
