@@ -187,7 +187,7 @@ def dryad_versions(doi):
             "creators": [f"{x.get('firstName', '')} {x.get('lastName', '')}".strip() for x in meta.get("authors", [])],
             "license": meta.get("license", ""), "files": files,
         })
-    return sorted(out, key=lambda r: (r["publication_date"], r["version"]))
+    return sorted(out, key=lambda r: r["version"])  # Dryad publication dates are not monotonic in version
 
 
 def github_versions(repo):
@@ -452,7 +452,8 @@ def main():
     p.add_argument("--license", required=True, help="licence as stated by the provider (a WFS carries none)")
     p = sub.add_parser("url")
     p.add_argument("dest")
-    p.add_argument("urls", nargs="+")
+    p.add_argument("urls", nargs="*")
+    p.add_argument("--specs-file", help="file of further NAME::URL lines (for lists too long for the command line)")
     p.add_argument("--license", required=True, help="licence or terms as stated by the provider")
     p = sub.add_parser("verify")
     p.add_argument("dest")
@@ -473,7 +474,13 @@ def main():
             if a.command == "wfs":
                 wfs_snapshot(a.wfs_url, a.layers.split(","), a.dest, vdir, stamp, a.license, tool_sha)
             else:
-                url_snapshot(a.urls, a.dest, vdir, stamp, a.license, tool_sha)
+                urls = list(a.urls)
+                if a.specs_file:
+                    with open(a.specs_file) as f:
+                        urls += [line.strip() for line in f if line.strip()]
+                if not urls:
+                    sys.exit("url: no URLs given")
+                url_snapshot(urls, a.dest, vdir, stamp, a.license, tool_sha)
         except BaseException:
             for name in os.listdir(vdir):
                 os.chmod(os.path.join(vdir, name), 0o644)

@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
-# Global PBDB snapshot. Occurrences and collections are partitioned by record
-# creation time (exhaustive and non-overlapping), with a rowcount request
-# beside every partition so the profile can reconcile each one. The 306,489
-# occurrences stamped 2025-09-21 22:25 share one minute, so that partition is
-# paged by occurrence number (order=id, limit and offset). Opinions are fetched
-# whole: any rowcount request on opinions returns HTTP 500, so they are checked
-# by row count only. Same show blocks, plate models and vocabulary as
-# pbdb_snapshot.sh.
+# Global PBDB snapshot of public records. Occurrences and collections are
+# partitioned by record creation time (exhaustive and non-overlapping), with a
+# rowcount request beside every partition so the profile can reconcile each
+# one. The 306,489 occurrences stamped 2025-09-21 22:25 share one minute, so
+# that partition is paged by occurrence number (order=id, limit and offset).
+#
+# [Detail withheld pending disclosure to the data custodian.]
 set -euo pipefail
 cd /data/paleodata
-# [Detail withheld pending disclosure to the data custodian.]
 B="https://paleobiodb.org/data1.2"
 PGM="pgm=gplates,scotese,seton"
 OCC="show=class,classext,ident,plant,ecospace,taphonomy,ttaph,etbasis,pres,abund,timebins,timecompare,paleoloc,prot,rem,ref,refattr,crmod,ent,entname,attr&$PGM&vocab=pbdb"
@@ -42,17 +40,31 @@ part collections__p02 colls/list colls 2010-01-01 "$BULK_A" "$COL"
 part collections__p03 colls/list colls "$BULK_A" "$BULK_B" "$COL"
 part collections__p04 colls/list colls "$BULK_B" "" "$COL"
 
-for t in "specimens specs/list all_records show=class,abund,crmod,ent,entname,refattr" "measurements specs/measurements all_records show=full" \
+for t in "specimens specs/list all_records show=class,abund,crmod,ent,entname,refattr" \
          "references refs/list all_records show=counts,both" "taxa taxa/list all_taxa show=full,app,crmod"; do
   set -- $t
   args+=("count__$1.json::$B/$2.json?$3&limit=0&rowcount")
   args+=("$1.csv::$B/$2.csv?$3&$4&vocab=pbdb")
 done
+ids=$(mktemp)
+curl -sf "$B/specs/list.txt?all_records&vocab=pbdb" | tail -n +2 | cut -d, -f1 | tr -d '"' > "$ids"
+split -l 1000 -d -a 3 "$ids" "$ids.c"
+for c in "$ids".c*; do
+  n=${c##*.c}
+  s=$(paste -sd, "$c")
+  args+=("count__measurements__c$n.json::$B/specs/measurements.json?spec_id=$s&limit=0&rowcount")
+  args+=("measurements__c$n.csv::$B/specs/measurements.csv?spec_id=$s&show=full&vocab=pbdb")
+done
+rm -f "$ids" "$ids".c*
+args+=("count__opinions.json::$B/taxa/opinions.json?all_taxa&limit=1&rowcount")
 args+=("opinions.csv::$B/taxa/opinions.csv?all_taxa&show=basis,ref,ent,entname,crmod&vocab=pbdb")
 args+=("intervals.csv::$B/intervals/list.csv?all_records&vocab=pbdb")
 args+=("config.json::$B/config.json?show=all")
 args+=("datainfo_end.json::$B/occs/list.json?all_records&limit=0&rowcount&datainfo")
 
-python3 _tools/data_mirror.py url pbdb/global \
-  --license "CC0 (stated in PBDB API datainfo: data_license Creative Commons CC0)" "${args[@]}"
+specs=$(mktemp)
+printf '%s\n' "${args[@]}" > "$specs"
+python3 _tools/data_mirror.py url pbdb/global --specs-file "$specs" \
+  --license "CC0 (stated in PBDB API datainfo: data_license Creative Commons CC0)"
+rm -f "$specs"
 echo DONE
