@@ -401,7 +401,7 @@ over trees) − central-difference ∇ log π_Q80 (h = 1e-4) + analytic
 | --- | --- | --- |
 | B1 | Assembled ∇F against archived FD numerator − archived `log_pi_grad` + the same analytic prior/Jacobian vector, all 35 coordinates, per point | 1e-5 (self-derivative; the archived FD carries h² truncation ≲ 6e-6 at these points) |
 | B2 | Fisher numerator vectors at primary, resolution and domain settings (nine evaluations); maximum difference from primary | 1e-5 |
-| B3 | Directional checks on whole-forest F values: d₁ is the τ/z_rw ridge direction (u_τ +1, z_rw −z_rw, normalised); d₂ is (u_σ, u_ρ, κ) equally weighted; central differences at ε = 1e-3 and 5e-4 (24 values). The gate uses their Richardson combination (4D(ε/2) − D(ε))/3 against ∇F·d; both raw values are reported. Along d₁ the numerator and log π are invariant, so ∇(numerator)·d₁ ≈ 0 is reported too | relative 1e-4, or 1e-5 absolute |
+| B3 | Directional checks on whole-forest F values: d₁ is the τ/z_rw ridge direction (u_τ +1, z_rw −z_rw, normalised); d₂ is (u_σ, u_ρ, κ) equally weighted; central differences at ε = 1e-3 and 5e-4 (24 values). The gate uses their Richardson combination (4D(ε/2) − D(ε))/3 against ∇F·d; both raw values are reported. d₁ is tangent to the curved τ/z_rw ridge, so the numerator and log π are invariant to first order along it, and ∇(numerator)·d₁ ≈ 0 is reported too (wording corrected, Codex 76/2329) | relative 1e-4, or 1e-5 absolute |
 | B4 | Coefficient-level ridge identity: `coefs` and log π_Q80 unchanged under τ → cτ, z_rw → z_rw/c for c = 0.5 and 2 | 1e-12 |
 | B5 | Fresh FD log π against archived `log_pi_grad` (same h) | 1e-10 |
 
@@ -447,12 +447,15 @@ holdout_c4f_sigma15. The label stands.
   it.
 
 **Other findings:**
-- **The ridge holds exactly:** along d₁ the numerator's directional
-  derivative is 3e-10 to 1.8e-9, and the coefficients and log π are
+- **The ridge holds:** along d₁, which is *tangent* to the curved ridge,
+  the numerator's directional derivative is 3e-10 to 1.8e-9. The exact
+  finite scaling τ → cτ, z_rw → z_rw/c leaves the coefficients and log π
   invariant to 1e-15 (B4).
 - **The prior/Jacobian gradient matches its own central difference** to
-  ≤ 1.5e-7, the largest at ρ ≈ 0.99998 (where log(1 − ρ) has steep
-  curvature).
+  ≤ 1.5e-7, the largest at ρ ≈ 0.99998. That gap comes from rounding in the
+  constrained subtraction 1 − ρ, not from curvature (Codex 76/2329). A future
+  callable should use the stable unconstrained form
+  log ρ + log(1 − ρ) = −softplus(−u) − softplus(u).
 - **Cost of the complete target gradient** (corrects the numerator-only
   figure): Fisher numerator 2.1–2.4 s (primary setting; 2.7–3.0 s at
   resolution) plus 0.03 s for the 70-call FD log π, plus the analytic prior.
