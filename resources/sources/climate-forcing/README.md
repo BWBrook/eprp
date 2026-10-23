@@ -189,14 +189,12 @@ From [profile/climate_forcing_profile.tsv](profile/climate_forcing_profile.tsv).
   - LR04 comes from NOAA's World Data Service, with no restriction stated.
   - PhanSST's Zenodo releases say "other-open", without naming the licence.
   - **The PhanDA, PhanSST and Green et al. GitHub repositories state no
-    licence.** No approval of Barry's names them.
-    - We hold private copies, as the main project does for PhanDA, by
-      analogy with his 23 October approval for FR2 and Sepkoski: "Approved to
-      mirror both on `deep-server` irrespective of lack of stated licence.
-      We're not making this public, although we might publish a public
-      registry at some point, but that would point everything back to
-      original locations."
-    - Barry to confirm. The licence question is queued as CONTACTS C29.
+    licence.** We hold private copies under Barry's universal approval of 23
+    October 2026: "Licence overrides confirmed, universally for the EPRP.
+    Mirroring locally is always okay for us: we're not hosting anything here
+    for public use, except perhaps later for the frameworks, but not the
+    actual source files." The licence questions for reuse are queued as
+    CONTACTS C29 and C30.
 - **PMC.** It now answers scripted requests with a reCAPTCHA. Europe PMC's
   REST API (`fullTextXML`, `supplementaryFiles`) serves the same files openly.
 - **Rebuild.** On deep-server, in a login shell. The tools are deployed as
@@ -317,7 +315,7 @@ no-derivatives. Use the derived TSVs for analysis, not for redistribution.
   - Green et al.'s repository, and Tables S4 and S5;
   - the Q-030 wording;
   - the time scales;
-  - the scope of the approval;
+  - the scope of the approval (since made universal by Barry);
   - smaller points.
 
   It also re-ran the parses and found every Green and Rothman row correct.

@@ -77,9 +77,15 @@ runs it. Credentials never enter the repository.
 | --- | --- | --- |
 | `open` | Licence allows copying and redistribution (CC0, CC-BY, ODbL) | Yes |
 | `open-nc` | Copying allowed with non-commercial or share-alike terms | Yes, terms recorded |
-| `registered` | Free access under terms that limit use or redistribution, accepted by account, click-through or download | No, unless the terms allow local copies (Barry decides) |
-| `restricted` | Request, approval, embargo or paywall | No |
-| `unclear` | No licence stated | No; treat as all rights reserved |
+| `registered` | Free access under terms that limit use or redistribution, accepted by account, click-through or download | Yes, as a private copy, once the terms are accepted; accepting terms that bind the project (a contribute-data clause, for example) is Barry's call |
+| `restricted` | Request, approval, embargo or paywall | No (we lack the access) |
+| `unclear` | No licence stated | Yes, as a private copy; record "none stated" |
+
+**Licences do not limit private mirroring.** Barry, 23 October 2026: "Licence overrides confirmed, universally for the EPRP. Mirroring locally is always okay for us: we're not hosting anything here for public use, except perhaps later for the frameworks, but not the actual source files." Every tier
+can be held on deep-server as a private research copy. What a licence
+governs is reuse and redistribution: record the terms in the entry and the
+manifest, and never publish source files. A public registry, if one comes,
+points to the original locations.
 
 Software or API-documentation licences are not data licences. Record the data
 terms that apply to the records themselves, including constituent-dataset

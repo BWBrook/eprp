@@ -464,7 +464,12 @@ def main():
     p = sub.add_parser("verify")
     p.add_argument("dest")
     p.add_argument("--only", nargs="*", default=None)
-    a = ap.parse_args()
+    a, extra = ap.parse_known_args()
+    if extra:  # url takes its URLs before or after the options
+        if a.command == "url" and not any(x.startswith("-") for x in extra):
+            a.urls += extra
+        else:
+            ap.error("unrecognized arguments: " + " ".join(extra))
     raw_root = os.path.join(a.dest, "raw")
     if a.command == "verify":
         bad = verify(raw_root, a.only)

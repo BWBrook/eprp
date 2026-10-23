@@ -26,6 +26,7 @@ def _six_bit(raw):
         if bits >= 8:
             bits -= 8
             out.append((acc >> bits) & 0xFF)
+            acc &= (1 << bits) - 1
     raise ValueError("no closing colon")
 
 

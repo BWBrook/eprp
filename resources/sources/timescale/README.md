@@ -179,9 +179,10 @@ All from [profile/timescale_profile.tsv](profile/timescale_profile.tsv).
   - Farrell et al.'s supplement is CC BY-NC 4.0.
   - The ICS chart PDFs print "(c) International Commission on Stratigraphy"
     and a citation, with no licence. By the catalogue's tier rules they are
-    `unclear`, and no approval of Barry's names them. We hold them as a
-    private copy by analogy with his 23 October approval for FR2 and Sepkoski,
-    for him to confirm. Derived values stay on deep-server.
+    `unclear`; we hold them as a private copy under Barry's universal
+    approval of 23 October 2026 ("Licence overrides confirmed, universally
+    for the EPRP. Mirroring locally is always okay for us"). Derived values
+    stay on deep-server.
 - **Rebuild.** On deep-server, in a login shell, with `$P` =
   `/data/paleodata/timescale`:
 

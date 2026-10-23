@@ -283,12 +283,13 @@ classic-compendia/
   published on 2022-11-23 (source claim, CRAN page). The BHL scan is "In
   copyright. Digitized with the permission of the Paleontological Research
   Institution."
-- **Why mirrored.** By the catalogue's tier rules an `unclear` source is not
-  mirrored. Barry approved this mirror in chat on 23 October 2026: "Approved
-  to mirror both on `deep-server` irrespective of lack of stated licence.
-  We're not making this public, although we might publish a public registry
-  at some point, but that would point everything back to original
-  locations."
+- **Why mirrored.** Barry approved this mirror in chat on 23 October 2026:
+  "Approved to mirror both on `deep-server` irrespective of lack of stated
+  licence. We're not making this public, although we might publish a public
+  registry at some point, but that would point everything back to original
+  locations." He made it universal the same evening: "Licence overrides
+  confirmed, universally for the EPRP. Mirroring locally is always okay for
+  us"
 - **Rebuild.** Copies of the tools are on deep-server, under
   `/data/paleodata/_tools/` and `_tools/classic-compendia/`.
 
