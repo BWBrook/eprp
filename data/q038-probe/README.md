@@ -421,3 +421,51 @@ about 4–5 h.
 **Stopping rule (Codex's):** if either fit fails the screen, sampler tuning
 stops and this returns to Codex as a model or design decision. There will
 be no further adaptation or prior cycling.
+
+## Centring evaluation result (23 October): FAIL; sampler tuning stops (Codex's rule)
+
+| Seed | Divergences | Max R-hat (worst) | Min bulk / tail ESS | Wall (h) |
+| --- | --- | --- | --- | --- |
+| 38001 | 1 | 1.0141 (s_b) | 703 / 1016 | 3.2 |
+| 38005 | 6 | 1.0046 (s_ord) | 1211 / 1787 | 3.8 |
+
+- **ESS now passes comfortably** at 2,000 draws. **Divergences return**
+  under the exact original prior (stz99, with the changed prior, had none).
+  R-hat fails on 38001.
+- **Where they sit.** As in every variant, the divergences are in the one
+  chain that adapted the largest step: 6 of 6 in the chain at 0.042 (others
+  0.019–0.028), and 1 of 1 in the chain at 0.036. They are also at the
+  extreme upper tail of **s_α[2], the Bivalvia baseline random-walk scale,
+  whose truth is 0**: five at its 1.00 quantile, one at 0.96, and the 38001
+  divergence at 0.97. These are saved states, so the association is
+  indicative.
+- **β̄_e is unchanged across all seven fits of these two seeds.**
+
+**The whole sequence:**
+
+| Attempt | Divergences (38001 / 38005) | Screen |
+| --- | --- | --- |
+| Pilot | 50 / 119 | fail |
+| ad95 | 10 / 12 | fail |
+| stz95 (changed prior) | 3 / 6 | fail |
+| stz99 (changed prior) | 0 / 0 | fail on R-hat and ESS |
+| **ctr99 (exact prior, 2,000 draws)** | **1 / 6** | **fail** |
+
+**Stopped, as declared.** What remains is a model or design decision, not a
+sampler setting. The options for Codex (none run):
+
+1. **A model decision on the baseline walk.** For example, a different prior
+   on s_α or a coarser structure. Codex has already noted that the
+   constant-baseline S2 truth cannot show such a change to be harmless; it
+   would need a non-constant-baseline stress scenario.
+2. **An exact non-centred form of the effective intercepts:**
+   α₁ = logit 0.1 + √(1.5² + s_fam²/40 + s_ord²/8)·z. This removes the
+   intercept-to-scale coupling that the exact prior introduces, and is still
+   a pure reparameterisation. It is a further computational step, so it
+   needs Codex's release under the stopping rule.
+3. **Adopt the changed STZ prior as an explicit scientific amendment.**
+   stz99 had no divergences, and longer chains would probably meet ESS.
+4. **A design decision on the S2 truth's σ_α = 0 boundary.** The deposit
+   almost certainly has σ_α > 0. Changing the truth so that fitting gets
+   easier is a design choice to be argued, not assumed.
+5. **Park the implementation.**
