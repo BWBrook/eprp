@@ -1,0 +1,34 @@
+species-level records 59488 {'PreservedSpecimen': 35468, 'HumanObservation': 17186, 'MATERIAL_SAMPLE': 5637, 'LivingSpecimen': 1176, 'MaterialSample': 19, 'Occurrence': 2}
+all                n_rare=100 records= 59488 bands_used=26 slope log(rarefied S) per degree S = -0.0034  (x10 deg: 0.97x)  raw-S slope +0.0112
+all                n_rare=300 records= 59488 bands_used=24 slope log(rarefied S) per degree S = -0.0107  (x10 deg: 0.90x)  raw-S slope +0.0112
+specimen-based     n_rare=100 records= 35489 bands_used=25 slope log(rarefied S) per degree S = -0.0031  (x10 deg: 0.97x)  raw-S slope +0.0132
+specimen-based     n_rare=300 records= 35489 bands_used=23 slope log(rarefied S) per degree S = -0.0073  (x10 deg: 0.93x)  raw-S slope +0.0132
+observation-based  n_rare=100 records= 17186 bands_used=22 slope log(rarefied S) per degree S = +0.0117  (x10 deg: 1.12x)  raw-S slope +0.0359
+observation-based  n_rare=300 records= 17186 bands_used=16 slope log(rarefied S) per degree S = +0.0055  (x10 deg: 1.06x)  raw-S slope +0.0359
+band, records, raw S, rarefied S(300):
+   11.5S   1580   137    70.4
+   12.5S    169    78     nan
+   13.5S    232   114     nan
+   14.5S   2140   335   143.2
+   15.5S    623   267   176.7
+   16.5S   3596   518   155.1
+   17.5S   1113   259   137.3
+   18.5S   1765   380   145.6
+   19.5S   2774   401   154.5
+   20.5S   2455   443   174.2
+   21.5S    721   215   143.9
+   22.5S    620   189   133.6
+   23.5S   3755   533   173.4
+   24.5S    707   226   137.3
+   25.5S   1173   280   149.0
+   26.5S   1460   319   149.8
+   27.5S   3407   487   161.8
+   28.5S   1535   249   117.6
+   29.5S   1833   212   100.7
+   30.5S   3757   193    77.0
+   31.5S   1045   145    85.4
+   32.5S   1968   277   131.8
+   33.5S  11798   470   134.9
+   34.5S   5616   331   114.1
+   35.5S   1992   238   110.3
+   36.5S   1654   192   104.7

@@ -150,7 +150,30 @@ ecology, taxonomic level or sampling grain?
   Heim et al. 2015. If one exists, the question narrows to its unexplained
   residual. Then decompose two clades at matched taxonomic level (genera
   of mammals and of marine bivalves).
-- **Provisional:** I = H, T = M, V = M.
+- **Prior check, run 23 October.** The mechanism is already known to vary,
+  studied clade by clade:
+  - North American mammals: within-lineage increase of 9.1% (Alroy 1998),
+    or turnover by larger close relatives (Raia et al. 2012, *Am Nat*);
+  - Triassic therapsids and archosauromorphs: within-lineage increase
+    "extremely rare", with passive diffusion dominant (Sookias, Butler &
+    Benson 2012);
+  - marine animals: differential diversification among classes (Heim et
+    al. 2015);
+  - Mesozoic birds: a methods dispute.
+
+  Theory now predicts *where* each pattern should occur. Roy, Brännström &
+  Dieckmann (2024, *Communications Biology*) predict Cope's rule under low
+  extinction risk and weak interference competition, recurrent episodes
+  when top predators face high extinction risk, and the inverse rule under
+  strong interference competition. They name empirical cases only as
+  future tests. I found no cross-clade synthesis.
+- **Reframed question:** do the ecological determinants the theory names
+  (clade extinction rate from PBDB occurrences; interference proxies)
+  predict where Cope's rule appears, fails or inverts across fossil clades?
+- **Cheapest next check:** tabulate published clade-level outcomes (about
+  15–30 clades) with their mechanism class. Ask whether PBDB-estimated
+  extinction rates separate the clades with the rule from those without.
+- **Provisional:** I = H, T = M, V = M, with occupancy partial.
 
 ### C3. Calibrate the instrument on the present: how much does database aggregation flatten deep-time gradients?
 
@@ -174,6 +197,14 @@ built from PBDB-type aggregates?
   - Measure how much the gradient is attenuated.
   - Only if the attenuation is large does the deep-time correction become
     a question.
+- **Composite half run on 23 October** (`data/c3-attenuation-check/`).
+  - OBIS bivalves along eastern Australia at 11–37° S: 59,488
+    species-level records.
+  - Rarefied richness falls only about 7–10% over 10° southward, and
+    observation-based records reverse the gradient. The specimen subset
+    (35,489) matches the 2025 paper's OBIS composite (36,226).
+  - The field half is pending: the CC0 Dryad file needs a browser download
+    with Barry's approval. The attenuation factor follows from it.
 - **Provisional:** I = H, T = M–H, V = H. The value is high because it bears
   on Q-027, Q-040 and every gradient result.
 
@@ -259,6 +290,9 @@ crises and interchanges?
 - [Coverage-based rarefaction fails to quantify relative species richness (Dryad)](https://datadryad.org/dataset/doi:10.5061/dryad.pg4f4qs50)
 - [Wagner and colleagues, effects of taxonomic standardisation (PMC1702387)](https://pmc.ncbi.nlm.nih.gov/articles/PMC1702387)
 - [Cyprideidae taxonomic-inflation test, Palaeontologia Electronica 2025](https://palaeo-electronica.org/content/2025/5732-evolutionary-dynamics-of-cyprideidae)
+- [Roy, Brännström & Dieckmann 2024, Ecological determinants of Cope's rule and its inverse](https://pmc.ncbi.nlm.nih.gov/articles/PMC10796397)
+- [Raia et al. 2012](https://www.nowdatabase.org/static/now/pdf/Raia_etal_AmNat2012.pdf); [Alroy 1998](https://pdodds.w3.uvm.edu/files/papers/others/1998/alroy1998a.pdf)
+- [Kerr et al. 2024 preprint, Field data reveal strong latitudinal gradients in Australian marine bivalves](https://essopenarchive.org/users/726878/articles/709076-field-data-reveal-strong-latitudinal-gradients-in-australian-marine-bivalves)
 - [Benton 2008, How to find a dinosaur, and the role of synonymy in biodiversity studies](https://www.cambridge.org/core/journals/paleobiology/article/abs/how-to-find-a-dinosaur-and-the-role-of-synonymy-in-biodiversity-studies/BD633A34515CF0FC4E4ED9F540A43CD0)
 - [PBDB occurrence and opinion API documentation](https://dev.paleobiodb.org/data1.2/occs_doc.html)
 - [Probable Datum Method (Schueth et al. 2014)](https://www.clima.psu.edu/bib-items/Schueth2014-ps.html)
