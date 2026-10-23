@@ -134,22 +134,35 @@ def set_scores(lq, l1mq, S):
     unconditional score log mean_m P(S|m); delta-method batch-means SEs."""
     S = np.asarray(S, bool)
     n, D_ = len(S), int(S.sum())
+    if n == 0:                                    # empty stratum: no score, excluded from gains (Codex 76/2330)
+        return dict(N=0, D=0, informative=False, status="empty stratum", conditional=None, conditional_se=None,
+                    gain_per_genus=None, uncond=None, uncond_se=None)
     lPS = np.sum(np.where(S[:, None], lq, l1mq), axis=0)
+    if not np.isfinite(special.logsumexp(lPS)):   # observed set impossible under every draw: label, never score
+        return dict(N=n, D=D_, informative=False, status="zero-mass observation", conditional=None,
+                    conditional_se=None, gain_per_genus=None, uncond=None, uncond_se=None)
     lPD = log_count_pmf(lq, l1mq, D_)
     m = lPS.size
     a, b = np.exp(lPS - lPS.max()), np.exp(lPD - lPD.max())
     am, bm = a.mean(), b.mean()
-    nb = min(20, m)
-    ab = np.array([[x.mean(), y.mean()] for x, y in zip(np.array_split(a, nb), np.array_split(b, nb))])
-    cv = np.cov(ab.T) / nb
-    se_cond = math.sqrt(max(cv[0, 0] / am ** 2 + cv[1, 1] / bm ** 2 - 2 * cv[0, 1] / (am * bm), 0.0))
+    se_cond, se_uncond = None, None               # a Monte Carlo SE needs at least two draws
+    if m >= 2:
+        nb = min(20, m)
+        ab = np.array([[x.mean(), y.mean()] for x, y in zip(np.array_split(a, nb), np.array_split(b, nb))])
+        cv = np.cov(ab.T) / nb
+        se_cond = math.sqrt(max(cv[0, 0] / am ** 2 + cv[1, 1] / bm ** 2 - 2 * cv[0, 1] / (am * bm), 0.0))
+        se_uncond = batch_se(a) / am
     cond = 0.0 if D_ in (0, n) else float(special.logsumexp(lPS) - special.logsumexp(lPD))   # endpoints: exactly 0
     if not math.isfinite(cond) or cond > 1e-9:
         raise ValueError(f"conditional log probability {cond} is not a valid log probability")
     base = -(special.gammaln(n + 1) - special.gammaln(D_ + 1) - special.gammaln(n - D_ + 1))
-    return dict(N=n, D=D_, informative=bool(0 < D_ < n), conditional=float(cond), conditional_se=se_cond,
-                gain_per_genus=float((cond - base) / n), uncond=float(special.logsumexp(lPS) - math.log(m)),
-                uncond_se=batch_se(a) / am)
+    out = dict(N=n, D=D_, informative=bool(0 < D_ < n), status="scored" if 0 < D_ < n else "endpoint (uninformative)",
+               conditional=float(cond), conditional_se=se_cond, gain_per_genus=float((cond - base) / n),
+               uncond=float(special.logsumexp(lPS) - math.log(m)), uncond_se=se_uncond)
+    bad = [k for k in ("conditional_se", "uncond", "uncond_se") if out[k] is not None and not math.isfinite(out[k])]
+    if bad:
+        raise ValueError(f"non-finite score fields {bad}")
+    return out
 
 
 def risk_set(genera, k):
@@ -171,15 +184,17 @@ def score_event(genera, k, P, D, M=M_WINDOW):
 
 def _score_class(genera, k, P, D, M, cls):
     R = [i for i in risk_set(genera, k) if genera[i]["cls"] == cls]
+    m_draws = len(np.atleast_1d(P["beta_e"][cls]))
     lq, l1mq = zip(*[log_q(core.history_from_counts(genera[i]["counts"], genera[i]["f"], k - 1), k, genera[i]["cls"],
-                           genera[i]["fam"], genera[i]["ord"], P, D, M) for i in R])
+                           genera[i]["fam"], genera[i]["ord"], P, D, M) for i in R]) if R else (np.zeros((0, m_draws)),) * 2
     S_O = [not any(genera[i]["counts"][k + 1:k + M + 1] > 0) for i in R]
     out = dict(O=set_scores(np.array(lq), np.array(l1mq), S_O))
     mem = [i for i in R if genera[i]["death"] >= k]
     lb = [log_phi(core.eta(P, genera[i]["cls"], genera[i]["fam"], genera[i]["ord"], k,
                            core.history_from_counts(genera[i]["counts"], genera[i]["f"], k - 1).hazard_features(k, D)))
           for i in mem]
-    out["B"] = set_scores(np.array([x[1] for x in lb]), np.array([x[0] for x in lb]), [genera[i]["death"] == k for i in mem])
+    out["B"] = set_scores(np.array([x[1] for x in lb]).reshape(len(lb), -1), np.array([x[0] for x in lb]).reshape(len(lb), -1),
+                          [genera[i]["death"] == k for i in mem])
     return out
 
 
@@ -252,7 +267,15 @@ def checks():
     out["S6_N1000_q099_D1"] = set_scores(lq6, l1q6, m6)["conditional"]
     out["S6_expected"] = -math.log(1000)
     out["S7_endpoints"] = [set_scores(lq4, l1q4, np.zeros(4, bool))["conditional"], set_scores(lq4, l1q4, np.ones(4, bool))["conditional"]]
-    out["ok"] = bool(worst < 1e-12 and out["S2_complement_max_abs"] < 1e-12
+    # S8: an empty stratum is labelled, not an error; S9: a zero-mass observation is labelled, not scored as 0
+    e8 = set_scores(np.zeros((0, 3)), np.zeros((0, 3)), np.zeros(0, bool))
+    q9 = np.array([0.5, 1.0]); lq9 = np.log(q9)[:, None].repeat(3, 1); l1q9 = np.log1p(-q9)[:, None].repeat(3, 1)
+    with np.errstate(divide="ignore"):
+        e9 = set_scores(lq9, l1q9, np.array([True, False]))       # genus 2 loses with certainty but is observed kept
+    out["S8_empty_status"], out["S9_zero_mass_status"] = e8["status"], e9["status"]
+    out["ok"] = bool(e8["status"] == "empty stratum" and e8["gain_per_genus"] is None
+                     and e9["status"] == "zero-mass observation" and e9["gain_per_genus"] is None
+                     and worst < 1e-12 and out["S2_complement_max_abs"] < 1e-12
                      and abs(pooled - 0.248857705) < 1e-8 and within < 1e-12
                      and abs(out["S6_N1000_q099_D1"] - out["S6_expected"]) < 1e-9 and out["S7_endpoints"] == [0.0, 0.0]
                      and out["S3_conditional_set_law_total_by_D_max_abs_minus_1"] < 1e-12 and dp_err < 1e-14)

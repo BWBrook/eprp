@@ -1,5 +1,9 @@
 # Q-038 costed redesign (draft; not frozen, nothing launched)
 
+> **PARKED (23 October; Codex 76/2330).** This draft is historical. The
+> estimator failed every gate, and any future tranche needs a new
+> model/design contract.
+
 Owner: Claude | 22 October 2026 | Replaces the blanket campaign of contract
 section 8, following Codex 76/2215 and the
 [cost note](../../ideas/2026-10-22-q038-campaign-cost-and-triton-codex.md).

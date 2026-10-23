@@ -7,12 +7,13 @@
  "S3_conditional_set_law_total_by_D_max_abs_minus_1": 2.9976021664879227e-15,
  "S3_count_dp_vs_brute_max_abs": 2.7755575615628914e-16,
  "S4_event38_scores_400_draws_per_class": {
-  "seconds": 7.521680120999008,
+  "seconds": 9.409851438998885,
   "Rhynchonellata": {
    "O": {
     "N": 191,
     "D": 157,
     "informative": true,
+    "status": "scored",
     "conditional": -83.62306269403727,
     "conditional_se": 0.27863791828632245,
     "gain_per_genus": 0.017003468100874945,
@@ -23,6 +24,7 @@
     "N": 131,
     "D": 97,
     "informative": true,
+    "status": "scored",
     "conditional": -72.53270656609692,
     "conditional_se": 0.11222394231928763,
     "gain_per_genus": -0.00045518689945714164,
@@ -35,6 +37,7 @@
     "N": 140,
     "D": 62,
     "informative": true,
+    "status": "scored",
     "conditional": -94.25411122577381,
     "conditional_se": 0.2122195938934032,
     "gain_per_genus": -0.005868918216582942,
@@ -45,6 +48,7 @@
     "N": 119,
     "D": 40,
     "informative": true,
+    "status": "scored",
     "conditional": -72.99720385454671,
     "conditional_se": 0.2423253969512742,
     "gain_per_genus": 0.0034954203207756113,
@@ -61,5 +65,7 @@
   0.0,
   0.0
  ],
+ "S8_empty_status": "empty stratum",
+ "S9_zero_mass_status": "zero-mass observation",
  "ok": true
 }

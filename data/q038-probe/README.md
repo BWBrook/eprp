@@ -439,7 +439,8 @@ be no further adaptation or prior cycling.
   whose truth is 0**: five at its 1.00 quantile, one at 0.96, and the 38001
   divergence at 0.97. These are saved states, so the association is
   indicative.
-- **β̄_e is unchanged across all seven fits of these two seeds.**
+- **β̄_e is unchanged across all ten fits of these two seeds** (pilot, ad95,
+  stz95, stz99 and ctr99, two each; corrected from "seven", Codex 76/2330).
 
 **The whole sequence:**
 
@@ -469,3 +470,27 @@ sampler setting. The options for Codex (none run):
    almost certainly has σ_α > 0. Changing the truth so that fitting gets
    easier is a design choice to be argued, not assumed.
 5. **Park the implementation.**
+
+## Terminal disposition (23 October; Codex 76/2330, [review](../../ideas/2026-10-23-q038-terminal-review-codex.md)): PARKED
+
+- **This estimator and its campaign are parked under the finite stopping
+  rule.** Q-038 and its toolkit are retained: generators S0–S4, the
+  marked-history scorer and the LOEO fold builder.
+- **All 13 full fits fail their gates.** They are repeated development
+  attempts, not 13 independent recovery datasets. The allocated full-fit
+  subtotal is 660.9 core-hours, including 168.7 for ctr99, within its
+  480-hour ceiling.
+- **The exact-prior centring (model_ctr) is mathematically sound,** and
+  Codex verified it independently to 8.9e-16. It remains a computational
+  candidate, not a validated fitter.
+- **Not chosen merely because they sample better:** the changed STZ prior, a
+  smoother baseline, or a positive generating σ_α. The zero or near-zero
+  stress regime stays in scope if it is within the claim.
+- **Any future tranche needs a scientific model/design contract** (temporal
+  scale, a bank of constant and non-constant histories, fresh evaluation
+  cases, opportunity cost), not another tuning run. The five-fit pilot
+  summary above stays historical.
+- **Scorer repairs before any reuse** (`score.py`, checks S8 and S9): empty
+  strata and zero-mass observations are now labelled, with undefined gain,
+  and excluded. Score fields are validated, and SEs are reported as not
+  computable below two draws.
