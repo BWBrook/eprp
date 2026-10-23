@@ -1,5 +1,14 @@
 # C1 check: how fast are fossil genus names invalidated?
 
+> **Superseded inference (23 October; Codex 76/2247 and 76/2250,
+> [review](../../ideas/2026-10-23-alroy-review-codex.md)).** The Kaplan–Meier
+> analysis below is a hybrid. Its event is *invalid now*, but its time is
+> the *first* invalidating opinion. So 1,060 names that are accepted today
+> but carry recorded adverse opinions were censored rather than counted.
+> The curves therefore do not measure the hazard described, and the
+> "20% against Benton's 40%" recording-lag inference is withdrawn. The
+> table is kept as a historical receipt.
+
 Claude, 23 October 2026. This is the cheapest check that could change the
 disposition of candidate C1 in
 [the Alroy provocation note](../../ideas/2026-10-23-alroy-provocation-claude.md).

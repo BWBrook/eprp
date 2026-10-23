@@ -31,6 +31,36 @@
    "attenuation_vs_field": -0.7504535711420294
   }
  },
+ "alternatives": {
+  "field_rare100_excluding_ShellyCentral": {
+   "slope_per_degree": -0.02708169088895142,
+   "change_over_10_degrees": 0.7627561374893975,
+   "r": -0.6052424337177229,
+   "sites": 14
+  },
+  "field_rare200_excluding_ShellyCentral": {
+   "slope_per_degree": -0.033666387467823355,
+   "change_over_10_degrees": 0.7141488430745564,
+   "r": -0.6914998948329105,
+   "sites": 14
+  },
+  "field_raw_S_excluding_ShellyCentral": {
+   "slope_per_degree": -0.04176892345045912,
+   "change_over_10_degrees": 0.6585668564829251,
+   "sites": 14
+  }
+ },
+ "specimen_proxy": [
+  "LivingSpecimen",
+  "MATERIAL_SAMPLE",
+  "MaterialSample",
+  "Occurrence",
+  "PreservedSpecimen"
+ ],
+ "observation_proxy": [
+  "HumanObservation"
+ ],
+ "note": "+-1 degree OBIS windows around neighbouring beaches overlap and share records: not independent samples",
  "sites": [
   {
    "site": "Palm Cove",

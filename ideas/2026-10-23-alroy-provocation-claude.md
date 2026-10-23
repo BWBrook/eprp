@@ -8,6 +8,18 @@ colleague John Alroy … See what you think!"
 **Status: proposals for Codex's antagonistic review.** Nothing is registered
 yet. 
 
+## Current disposition (23 October, after Codex's review; supersedes conflicting statements below)
+
+| Candidate | Current status |
+| --- | --- |
+| **C1** (taxonomic practice) | **Not established.** The name-survival check used a hybrid Kaplan–Meier analysis that censored 1,060 names with recorded adverse opinions, so its develop inference and its recording-lag claim are **withdrawn**. The prior is close (Alroy 2002; Poulin & Presswell 2024; Guedes et al. 2025). Next: an event-history and recording-process audit, if anything. |
+| **C2** (Cope's rule) | **Strongest scientific lead.** Reframed as a test of Roy et al. 2024's determinants. Their extinction parameter is a density threshold, *not* a PBDB extinction rate. Next: a finite clade evidence table with regime recurrence, units and grain, independent proxies and shared-data dependencies. |
+| **C3** (aggregation attenuation) | **Hold, as support for Q-027.** The field-against-OBIS comparison is **descriptive only.** Valves against records, a filtered death-assemblage comparator and overlapping windows mean there is no portable 1.5–2.5× correction. Next: a paired observation-operator test on the same eligible units. |
+| **C4** (diachrony) | Hold. |
+| Amendments | Q-047 (overkill signature) and Q-040/Q-045 (estimator challenge) proceed as hypotheses with matched estimands. The benchmark infrastructure is deferred. **Nothing is registered.** |
+
+Statements below marked *(superseded)* are kept as the historical record.
+
 ## Sources read
 
 - **John Alroy's Google Scholar profile** (Professor, Macquarie University;
@@ -119,12 +131,12 @@ origination and extinction, diversity and body-size trends does it carry?
     description is concentrated in some clades and intervals. So a
     time-varying "taxonomic maturity" bias in diversity and rates is
     plausible. **That is the question, not yet a result.**
-  - **The PBDB's recorded opinions under-record revisions.** Non-avian
+  - *(superseded: withdrawn, as the cohorts are not comparable)* **The PBDB's recorded opinions under-record revisions.** Non-avian
     dinosaur genera are 20% invalid here against Benton's 40%. Any model
     would need a correction for recording lag.
   - **An artefact excluded:** for a synonym, the API's `n_occs` is the
     senior taxon's count, so occurrence-based breakdowns are not used.
-  - **Disposition implication:** the stated collapse criterion (flat and
+  - *(superseded: the hybrid KM flaw invalidates this; see Current disposition)* **Disposition implication:** the stated collapse criterion (flat and
     small) is not met. My recommendation is develop, subject to Codex.
 - **Provisional:** I = M–H, T = H (data in hand), V = M–H (it touches every
   PBDB-based estimate).
@@ -207,10 +219,10 @@ built from PBDB-type aggregates?
     beaches at 16.7–37.2° S. Rarefied to 200 valves, richness changes ×0.71
     per 10° southward, against ×0.86 for the OBIS specimen composite and
     ×1.16 for the observation records (reversed).
-  - **So aggregation keeps about 40–45% of this gradient's slope.** That is
+  - *(superseded: descriptive only, not a portable factor)* **So aggregation keeps about 40–45% of this gradient's slope.** That is
     material attenuation (1.5–2.5×) but not erasure. One system only; see
     `data/c3-attenuation-check/README.md` for the limits.
-  - **Implication for C3:** worth a hold with a clear next step, namely
+  - *(superseded in part: hold as Q-027 support; see Current disposition)* **Implication for C3:** worth a hold with a clear next step, namely
     several modern calibrations plus a simulation of the PBDB filter. An
     attenuation of this size could weaken a deep-time gradient, but cannot
     create a flat one from a strong one.

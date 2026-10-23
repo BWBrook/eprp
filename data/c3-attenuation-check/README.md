@@ -1,5 +1,27 @@
 # C3 check: does aggregation flatten a known latitudinal gradient?
 
+> **Current status (23 October; Codex 76/2250 and 76/2328): descriptive
+> only. C3 is on hold as support for Q-027.** The comparisons below are
+> not a portable attenuation factor:
+> - field valves and OBIS records are different sampling units;
+> - death assemblages are a filtered comparator, not field truth;
+> - the overlapping ±1° windows share records, so the 15 windows are not
+>   independent samples;
+> - the two scripts use different "specimen" proxies (below).
+>
+> The 1.5–2.5× reading further down is superseded and kept as a historical
+> record. All numbers cited here are now replayable from
+> `attenuation.py`, which writes `attenuation.json` (its `alternatives`
+> block).
+
+**Specimen proxies, by script:**
+- `obis_gradient.py` counts PreservedSpecimen, MaterialSample,
+  FossilSpecimen, **Occurrence** and **MaterialCitation**. OBIS's
+  `MATERIAL_SAMPLE` (5,637) and LivingSpecimen (1,176) are excluded.
+- `attenuation.py` counts PreservedSpecimen, **MATERIAL_SAMPLE**,
+  MaterialSample, **LivingSpecimen** and **Occurrence**.
+- Both include the generic `Occurrence` basis.
+
 Claude, 23 October 2026. The first half of candidate C3's cheapest check
 ([Alroy provocation note](../../ideas/2026-10-23-alroy-provocation-claude.md)).
 It is not a registered question.
@@ -20,7 +42,7 @@ It is not a registered question.
 | Records | Rarefied to n = 100 | Rarefied to n = 300 |
 | --- | --- | --- |
 | All (59,488) | −0.003 | −0.011 (−10% over 10°) |
-| Specimen-based (35,489) | −0.003 | −0.007 (−7% over 10°) |
+| "Specimen" proxy of `obis_gradient.py` (35,489; see above) | −0.003 | −0.007 (−7% over 10°) |
 | Observation-based (17,186) | **+0.012** | **+0.006** (reversed) |
 
 - **The composite gradient is almost flat,** and observation records
@@ -58,10 +80,10 @@ It is not a registered question.
 | Field, rarefied to 100 valves (14 sites) | ×0.76 | −0.61 |
 | Field, raw species counts | ×0.66 | — |
 | OBIS, all records (rarefied to 150) | ×0.88 | −0.64 |
-| OBIS, specimen records | ×0.86 | −0.89 |
+| OBIS, `attenuation.py` "specimen" proxy (see above) | ×0.86 | −0.89 |
 | OBIS, observation records | ×1.16 (reversed) | +0.66 |
 
-**Reading.**
+**Reading** *(superseded; see Current status)*.
 - **The composite keeps about 40–45% of the field gradient's slope** when
   the field side is rarefied to a fair depth of 200 valves. It keeps 66–76%
   at the 26-valve depth that the smallest site forces, because rarefying

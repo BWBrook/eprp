@@ -54,6 +54,21 @@ for key in ("field_rare", "obis_all_rare", "obis_spec_rare", "obis_obs_rare"):
 for key in ("obis_all_rare", "obis_spec_rare", "obis_obs_rare"):
     res[key]["attenuation_vs_field"] = res[key]["slope_per_degree"] / res["field_rare"]["slope_per_degree"]
     print(f"attenuation {key}: {res[key]['attenuation_vs_field']:+.2f} of the field slope")
-json.dump(dict(rarefaction_field=min(nf, nr), rarefaction_obis=nr, window_deg=1.0, results=res,
+alt = {}
+keep = [o for o in out if o["site"] != "Shelly Central"]          # only 26 valves: forces a shallow common depth
+latk = np.array([abs(o["lat"]) for o in keep])
+for n in (100, 200):
+    y = np.array([hurlbert(list(field[o["site"]].values()), n) for o in keep])
+    b = float(np.polyfit(latk, np.log(y), 1)[0])
+    alt[f"field_rare{n}_excluding_ShellyCentral"] = dict(slope_per_degree=b, change_over_10_degrees=math.exp(10 * b),
+                                                        r=float(np.corrcoef(latk, np.log(y))[0, 1]), sites=len(keep))
+y = np.array([float(o["field_S"]) for o in keep])
+b = float(np.polyfit(latk, np.log(y), 1)[0])
+alt["field_raw_S_excluding_ShellyCentral"] = dict(slope_per_degree=b, change_over_10_degrees=math.exp(10 * b), sites=len(keep))
+for k, v in alt.items():
+    print(f"{k:42s} slope {v['slope_per_degree']:+.4f}/deg x{v['change_over_10_degrees']:.2f} per 10 deg")
+json.dump(dict(rarefaction_field=min(nf, nr), rarefaction_obis=nr, window_deg=1.0, results=res, alternatives=alt,
+               specimen_proxy=sorted(spec), observation_proxy=sorted(obs),
+               note="+-1 degree OBIS windows around neighbouring beaches overlap and share records: not independent samples",
                sites=[{k: v for k, v in o.items() if not isinstance(v, list)} for o in out]),
           open(sys.argv[3] if len(sys.argv) > 3 else "attenuation.json", "w"), indent=1)
