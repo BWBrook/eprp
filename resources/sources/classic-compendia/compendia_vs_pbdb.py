@@ -17,7 +17,8 @@ Names: each compendium name is looked up among PBDB taxon names of the same rank
 (accepted or not), including the 28 Sepkoski names with a corrupted letter,
 as captured and with bit 7 cleared. Ranges: first and last appearances from PBDB's public
 occurrences (oldest max_ma, youngest min_ma, over occurrences identified to the
-genus or below for genera, the family or below for families), against
+genus or below for genera, the family or below for families; a name that
+PBDB treats as a junior synonym is looked up under its senior name), against
 Sepkoski's genus ranges and FR2's maximum family ranges. Timescales differ
 (GTS 2023, PBDB's own, Harland 1990), so differences within 5 Myr are treated as
 agreement. Also counts PBDB opinions, taxa and occurrences that cite the two
@@ -61,7 +62,7 @@ def r_frame(path):
 
 
 # --- PBDB ---------------------------------------------------------------------
-taxa_rank = defaultdict(dict)
+taxa_rank, senior = defaultdict(dict), defaultdict(dict)
 with open(os.path.join(pbdb, "taxa.csv"), newline="", encoding="utf-8") as f:
     for r in csv.DictReader(f):
         rank = r["taxon_rank"] or r["accepted_rank"]
@@ -70,6 +71,10 @@ with open(os.path.join(pbdb, "taxa.csv"), newline="", encoding="utf-8") as f:
             status = "accepted" if not r["difference"] else r["difference"]
             if prev != "accepted":
                 taxa_rank[rank][r["taxon_name"]] = status
+                if status != "accepted" and r["accepted_rank"] == rank and r["accepted_name"] != r["taxon_name"]:
+                    senior[rank][r["taxon_name"]] = r["accepted_name"]
+                else:
+                    senior[rank].pop(r["taxon_name"], None)
 put("pbdb", "taxa", "names", f"genus {len(taxa_rank['genus'])}; family {len(taxa_rank['family'])}")
 
 GENUS_OR_BELOW = {"genus", "subgenus", "species", "subspecies"}
@@ -123,15 +128,18 @@ def name_status(names, rank):
     return "; ".join(f"{k} {v}" for k, v in found.most_common())
 
 
-def compare(rows, store):
+def compare(rows, store, rank):
     fad, lad = [], []
     bins = Counter()
     detail = []
     for name, first, last, extant in rows:
-        occ = store.get(name)
+        used = senior[rank].get(name, name)
+        if used != name:
+            bins["looked up under the PBDB senior name"] += 1
+        occ = store.get(used)
         if not occ:
             bins["no public occurrences"] += 1
-            detail.append([name, first, last, int(extant), "", "", 0])
+            detail.append([name, used, first, last, int(extant), "", "", 0])
             continue
         d1 = occ[0] - first
         fad.append(d1)
@@ -140,7 +148,7 @@ def compare(rows, store):
             d2 = occ[1] - last
             lad.append(d2)
             bins["last: PBDB younger by >5 Myr" if d2 < -TOL else "last: PBDB older by >5 Myr" if d2 > TOL else "last: within 5 Myr"] += 1
-        detail.append([name, first, last, int(extant), occ[0], occ[1], occ[2]])
+        detail.append([name, used, first, last, int(extant), occ[0], occ[1], occ[2]])
     return bins, fad, lad, detail
 
 
@@ -157,13 +165,13 @@ counts = Counter(sep["genus"])
 srows = [(g, sep["max_ma"][i], sep["min_ma"][i], sep["min_ma"][i] == 0)
          for i, g in enumerate(sep["genus"]) if counts[g] == 1 and sep["max_ma"][i] == sep["max_ma"][i]]
 put("sepkoski", "input", "package genus rows; with a unique name and ages", f"{len(sep['genus'])}; {len(srows)}")
-bins, fad, lad, detail = compare(srows, grange)
+bins, fad, lad, detail = compare(srows, grange, "genus")
 put("sepkoski", "ranges_vs_pbdb_occurrences", "classes", "; ".join(f"{k} {v}" for k, v in sorted(bins.items())))
 put("sepkoski", "ranges_vs_pbdb_occurrences", "median PBDB minus Sepkoski (Myr)",
     f"first {statistics.median(fad):+.1f} (n {len(fad)}); last {statistics.median(lad):+.1f} (n {len(lad)}, extinct genera)")
 with open(os.path.join(sep_dir, "sepkoski_vs_pbdb.csv"), "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f, lineterminator="\n")
-    w.writerow(["genus", "sepkoski_max_ma", "sepkoski_min_ma", "extant", "pbdb_first_max_ma", "pbdb_last_min_ma", "pbdb_public_occurrences"])
+    w.writerow(["genus", "pbdb_name_used", "sepkoski_max_ma", "sepkoski_min_ma", "extant", "pbdb_first_max_ma", "pbdb_last_min_ma", "pbdb_public_occurrences"])
     w.writerows(detail)
 
 # --- FR2 -------------------------------------------------------------------------
@@ -178,13 +186,13 @@ for f in fam:
     if fcount[f["family"]] == 1 and a and b and f["chapter"] != "45" and "?" not in f["family"]:
         frows.append((f["family"], a[0], b[1], f["to_holocene"] == "1"))
 put("fr2", "input", "families with a unique name, a maximum range from the Vendian on, not angiosperms or questioned", len(frows))
-bins, fad, lad, detail = compare(frows, frange)
+bins, fad, lad, detail = compare(frows, frange, "family")
 put("fr2", "ranges_vs_pbdb_occurrences", "classes", "; ".join(f"{k} {v}" for k, v in sorted(bins.items())))
 put("fr2", "ranges_vs_pbdb_occurrences", "median PBDB minus FR2 (Myr)",
     f"first {statistics.median(fad):+.1f} (n {len(fad)}); last {statistics.median(lad):+.1f} (n {len(lad)}, extinct families)")
 with open(os.path.join(fr2_dir, "fr2_vs_pbdb.csv"), "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f, lineterminator="\n")
-    w.writerow(["family", "fr2_max_first_base_ma", "fr2_max_last_top_ma", "to_holocene", "pbdb_first_max_ma", "pbdb_last_min_ma", "pbdb_public_occurrences"])
+    w.writerow(["family", "pbdb_name_used", "fr2_max_first_base_ma", "fr2_max_last_top_ma", "to_holocene", "pbdb_first_max_ma", "pbdb_last_min_ma", "pbdb_public_occurrences"])
     w.writerows(detail)
 
 with open(out_tsv, "w", newline="", encoding="utf-8") as f:
