@@ -9,9 +9,10 @@
 # pbdb_snapshot.sh.
 set -euo pipefail
 cd /data/paleodata
+# [Detail withheld pending disclosure to the data custodian.]
 B="https://paleobiodb.org/data1.2"
 PGM="pgm=gplates,scotese,seton"
-OCC="show=full,ecospace,taphonomy,abund,pres,timebins,strat,lith,env,paleoloc,crmod,ent,entname&$PGM&vocab=pbdb"
+OCC="show=class,classext,ident,ecospace,taphonomy,etbasis,pres,abund,timebins,timecompare,paleoloc,prot,rem,ref,crmod,ent,entname,attr&$PGM&vocab=pbdb"
 COL="show=full,paleoloc,crmod,ent,entname&$PGM&vocab=pbdb"
 BULK_A="2025-09-21T22:25:00"
 BULK_B="2025-09-21T22:26:00"
@@ -41,7 +42,7 @@ part collections__p02 colls/list colls 2010-01-01 "$BULK_A" "$COL"
 part collections__p03 colls/list colls "$BULK_A" "$BULK_B" "$COL"
 part collections__p04 colls/list colls "$BULK_B" "" "$COL"
 
-for t in "specimens specs/list all_records show=full" "measurements specs/measurements all_records show=full" \
+for t in "specimens specs/list all_records show=class,abund,crmod,ent,entname,refattr" "measurements specs/measurements all_records show=full" \
          "references refs/list all_records show=counts,both" "taxa taxa/list all_taxa show=full,app,crmod"; do
   set -- $t
   args+=("count__$1.json::$B/$2.json?$3&limit=0&rowcount")
