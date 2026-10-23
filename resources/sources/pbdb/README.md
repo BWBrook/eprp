@@ -297,9 +297,10 @@ Vocabularies and traps (counts for the region unless stated):
 - **Ages are coarse.** Median span 4.5 Myr globally; time-binning choices drive
   results. Flannery-Sutherland et al. (2022) find stratigraphically suspect
   occurrences in often more than 30% of genera in major groups.
-- **Interval ages lag the current chart at three boundaries.** The Olenekian
-  (250.8), Anisian (247) and Wuchiapingian (259.857) bases differ from the
-  ICS chart v2024/12 (249.9, 246.7, 259.51), which Macrostrat follows
+- **Interval ages differ from the ICS chart at three boundaries.** The
+  Olenekian (250.8), Anisian (247) and Wuchiapingian (259.857) bases differ
+  from the chart v2024/12 (249.9, 246.7, 259.51), which Macrostrat prints;
+  PBDB's values appear on no chart release from 2014-10 on
   ([timescale](../timescale/README.md); C10 i).
 - **Accepted names hide species.** In the region, for 6,219 occurrences
   identified at species rank (21% of species identifications; 6,476 counting

@@ -32,6 +32,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [shape-index](shape-index/README.md): Palaeoarchive index for the SHAPE 6 ka and OZ-INTIMATE comp… | deposit | open | not taxonomic; palaeoclimate archives | Holocene and last glacial records; free-text end … | 37 records | yes | – |
 | [sisal](sisal/README.md): SISAL, the Speleothem Isotopes Synthesis and AnaLysis datab… | compilation | open | not taxonomic; speleothem stable isotopes and trace elements | global records to 565 ka; Australian records from… | 365 sites | yes | – |
 | [stratdat](stratdat/README.md): STRATDAT, Geoscience Australia's borehole biostratigraphy (… | database | open | microfossil biozones: dinocysts, spore-pollen, planktonic a… | Proterozoic to Quaternary; most picks with ages h… | 50,128 picks | yes | – |
+| [timescale](timescale/README.md): Geological time scale — ICS chart releases 2004 to 2020/01 … | compilation | unclear | not taxonomic: chronostratigraphic boundaries and intervals | Hadean to Holocene (the RDF to 4,000 Ma; the 2024… | 16 rdf releases | yes | Q-005, Q-035, Q-041, Q-045 |
 | [triton](triton/README.md): Triton, a species-level database of Cenozoic planktonic for… | compilation | open | planktonic foraminifera | Cenozoic; ages 0-66.0 Ma (GTS2020) | 541,846 presence rows | yes | Q-005, Q-007, Q-012, Q-020, Q-027 |
 
 ## By EPRP question
@@ -52,7 +53,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **B-018**: pbdb
 - **Q-002**: pbdb, register-deposits
 - **Q-004**: pbdb
-- **Q-005**: register-deposits, triton
+- **Q-005**: register-deposits, timescale, triton
 - **Q-006**: pbdb
 - **Q-007**: nsb, triton
 - **Q-010**: pbdb
@@ -73,15 +74,16 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-030**: pbdb
 - **Q-033**: pbdb
 - **Q-034**: fred
+- **Q-035**: timescale
 - **Q-036**: register-deposits
 - **Q-037**: pbdb
 - **Q-038**: pbdb, register-deposits
 - **Q-039**: classic-compendia, pbdb
 - **Q-040**: classic-compendia, pbdb
-- **Q-041**: classic-compendia, pbdb
+- **Q-041**: classic-compendia, pbdb, timescale
 - **Q-042**: classic-compendia, pbdb
 - **Q-044**: classic-compendia, pbdb, register-deposits
-- **Q-045**: classic-compendia, pbdb, register-deposits
+- **Q-045**: classic-compendia, pbdb, register-deposits, timescale
 - **Q-047**: pbdb
 - **Q-049**: pbdb
 - **Q-050**: register-deposits

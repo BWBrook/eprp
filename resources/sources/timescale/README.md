@@ -1,35 +1,36 @@
 ---
 id: timescale
-name: Geological time scale — ICS chart releases 2004-2020 as RDF, the current ICS chart, Macrostrat and PBDB interval tables
+name: Geological time scale — ICS chart releases 2004 to 2020/01 as RDF, ICS chart PDFs 2014-10 to 2024/12, Macrostrat and PBDB interval tables
 kind: compilation
 status: active
-last_update: "ICS chart v2024/12; RDF series to the 2020/03 chart (repository last pushed 2021-10-11)"
+last_update: "ICS chart v2024/12; the RDF series ends at chart v2020/01 (repository last pushed 2021-10-11)"
 scope:
   taxa: ["not taxonomic: chronostratigraphic boundaries and intervals"]
-  time: "Hadean to Holocene (the RDF to 4,000 Ma; the chart's Phanerozoic base 538.8 Ma)"
-  space: "global (Macrostrat adds regional scales, among them 89 New Zealand stages)"
+  time: "Hadean to Holocene (the RDF to 4,000 Ma; the 2024/12 chart's Phanerozoic base 538.8 Ma)"
+  space: "global (Macrostrat adds regional scales, among them 88 New Zealand stages and one epoch)"
   record_unit: "one boundary (base of a stage, series, system or higher unit) with its age and, where given, its uncertainty"
 size:
   as_of: "2026-10-23"
-  rdf_releases: 15
-  current_bases_with_uncertainty: 94
+  rdf_releases: 16
+  chart_pdfs: 12
+  pbdb_bases_with_chart_uncertainty: 96
   raw_files: 73
   mirrored_bytes: 43168466
 access:
-  tier: open
-  licence: "RDF series CC0 1.0 (CGI-IUGS); Macrostrat CC BY 4.0; Farrell et al. 2025 CC BY-NC 4.0; the ICS chart PDFs state no licence (cite Cohen et al. 2013, updated)"
+  tier: unclear
+  licence: "RDF series and its chart copies: CC0 1.0 (CGI-IUGS repository licence); Macrostrat CC BY 4.0 (the API's licence field); Farrell et al. 2025 CC BY-NC 4.0; the ICS chart PDFs print a copyright line ((c) ICS) and a citation, no licence"
   routes:
-    - {type: github, url: "https://github.com/CGI-IUGS/timescale-data", state: "head 2020-10-21 (e7f62800e7); 72 commits indexed", checked: 2026-10-23}
-    - {type: web, url: "https://stratigraphy.org/ICSchart/", state: "ChronostratChart2024-12.pdf (current) and ChronostratChart2020-03.pdf", checked: 2026-10-23}
+    - {type: github, url: "https://github.com/CGI-IUGS/timescale-data", state: "default branch head 2020-10-21 (e7f62800e7), 72 commits indexed; two other branches not mirrored", checked: 2026-10-23}
+    - {type: web, url: "https://stratigraphy.org/ICSchart/", state: "ChronostratChart2024-12.pdf and ChronostratChart2020-03.pdf; the repository holds 2014-10 to 2020-01", checked: 2026-10-23}
     - {type: api, url: "https://macrostrat.org/api/v2/defs/intervals?all", state: "1,716 intervals, with the timescales list (timescales?all)", checked: 2026-10-23}
     - {type: figshare, url: "https://doi.org/10.1130/GSAB.S.28207634.v1", state: "Farrell et al. 2025 late Cambrian revision, supplement", checked: 2026-10-23}
   api: "Macrostrat API v2; PBDB intervals (pbdb entry)"
 versioning:
   replay: exact
-  notes: "each ICS chart release is a fixed document; the RDF series keeps fifteen of them (2004-2020). Macrostrat and PBDB are live tables, snapshotted"
+  notes: "each ICS chart release is a fixed document; the RDF keeps sixteen releases (2004 to chart v2020/01) and the PDFs twelve charts (2014-10 to 2024/12). Macrostrat and PBDB are live tables, snapshotted"
 mirror:
   path: deep-server:/data/paleodata/timescale
-  policy: "every machine-readable ICS release, the current and GTS2020-era charts, live interval tables as dated snapshots"
+  policy: "every machine-readable ICS release, the 2020/03 and 2024/12 chart PDFs, live interval tables as dated snapshots"
   state: "four routes, 73 files (43.2 MB), each with a manifest; all verify. Derived: timescale/derived/2026-10-23T0844Z/"
 lineage:
   upstream:
@@ -47,7 +48,7 @@ entry:
   created: 2026-10-23
   updated: 2026-10-23
   by: Claude (Opus 5.5, side session)
-  reviewed: pending
+  reviewed: "2026-10-23, independent Claude Sonnet subagent; findings applied"
 ---
 
 # Geological time scale
@@ -58,47 +59,61 @@ Every dated record in this catalogue rests on a time scale. Q-041
 (periodicity) needs boundary ages with their uncertainties, and Q-045 needs
 to know how far the ages themselves have moved.
 
-The ICS chart is published only as a PDF. The GTS books and the
-TimeScale Creator datapack are not open (CONTACTS C9 f). We therefore
-assembled the open, machine-readable pieces and checked them against each
-other:
+The ICS chart is published as a PDF. The GTS books and the TimeScale Creator
+datapack are not open (CONTACTS C9 f). We therefore assembled the open,
+machine-readable pieces and checked them against each other:
 
-- **CGI-IUGS RDF.** The CGI-IUGS RDF encoding of fifteen ICS chart releases,
-  2004 to 2020, under CC0, with ages and uncertainties.
-- **ICS chart PDFs.** The current ICS chart (v2024/12) and the 2020/03 chart.
+- **CGI-IUGS RDF.** The CGI-IUGS RDF encoding of sixteen ICS chart releases,
+  from 2004 to chart v2020/01, under CC0, with the PDFs of the charts from
+  2014-10 to 2020-01.
+- **Recent chart PDFs.** The ICS chart PDFs of 2020/03 and 2024/12.
 - **Interval tables.** Macrostrat's and PBDB's interval tables.
 - **Late Cambrian revision.** The supplement to Farrell et al.'s 2025 revision
   of the late Cambrian.
 
 **Findings:**
-- **The RDF release labelled 2020 is the ICS 2020/03 chart, not GTS2020.** Its
-  Phanerozoic base is 541 Ma, and 62 of the 106 stage bases it shares with
-  PBDB differ from the current values.
-- **A current boundary table with uncertainties.** Matching the numbers
-  printed on the 2024/12 chart to PBDB's current stage bases gives
-  `ics2024_pbdb_bases.tsv`: 144 of PBDB's 171 bases, 94 of them with a ±
-  uncertainty.
-- **PBDB lags the current chart at three boundaries,** where Macrostrat
-  follows it: the Olenekian, Anisian and Wuchiapingian bases.
+- **The RDF's last release is chart v2020/01, a pre-GTS2020 chart.** Its
+  Phanerozoic base is 541 Ma. Of 156 boundaries it shares by name with PBDB,
+  90 differ from PBDB's values.
+- **A boundary table with uncertainties.** Matching the ages printed on the
+  2024/12 chart to PBDB's stage bases gives `ics2024_pbdb_bases.tsv`.
+  - 166 of PBDB's 171 interval rows match (114 distinct ages).
+  - 96 rows carry a ± uncertainty (63 distinct ages).
+- **PBDB differs from the 2024/12 chart at three boundaries,** which
+  Macrostrat prints as the chart does.
 
 ## Contents
 
-- **RDF series** (`isc-rdf`, the repository at its last commit).
-  - We read one Turtle file per release, in two vocabularies (the older
-    `tm:`/`thors:` and the newer `time:`/`gts:`).
-  - The releases are 2004, 2005, 2006, 2008, 2009, 2010, 2012, 2013, 2014,
-    2016-12, 2017, 2018, a second 2018 file (`isc2018-1`), 2019 and 2020.
-  - They hold 106–125 boundaries each, with uncertainties for 55–80.
-  - `isc_boundaries_by_version.tsv` (derived) gives every boundary's age and
-    uncertainty in every release.
-- **ICS charts** (`ics-chart`). The current v2024/12 chart and the 2020/03
-  chart, as PDFs.
+- **RDF series** (`isc-rdf`, the repository at its last commit on the default
+  branch).
+  - We read one Turtle file per release: 2004, 2005, 2006, 2008, 2009, 2010,
+    2012, 2013, 2014, 2016-10, 2016-12, 2017, 2018, a second 2018 file
+    (`isc2018-1`), 2019 and 2020.
+  - Boundaries are keyed by URI, and named by every "Base of" label and
+    alias. Ages come in both vocabularies (the older `tm:`/`thors:` and the
+    newer `time:`/`gts:`).
+  - Positions in years before present are converted to Ma. These are the late
+    Quaternary boundaries from `isc2018-1` on, where the RDF gives each one
+    position in each system.
+  - The releases hold 106–125 boundaries (116 distinct ages in the last
+    three, which carry synonym pairs such as Upper and Late Pleistocene).
+    55–80 of them have uncertainties, and the 2006–2010 releases include four
+    uncertainties of 0.
+  - The `isc2020` file's version tag is `gts2020:2020-01-13`, and the
+    repository's newest change log calls v2020/01 the actual chart. So this
+    release is chart v2020/01, not the GTS2020 book.
+  - The repository also holds the chart PDFs for 2014-10, 2015-01, 2016-04,
+    2016-10, 2016-12, 2017-02, 2018-08, 2019-05 and 2020-01, with the ICS
+    change logs.
+  - `isc_boundaries_by_version.tsv` (derived) gives each boundary's labels,
+    and its age and uncertainty in every release.
+- **ICS charts** (`ics-chart`). The 2024/12 and 2020/03 charts, as PDFs.
 - **Macrostrat** (`macrostrat`). `intervals?all` holds 1,716 intervals,
-  among them 170 "international intervals" and 89 New Zealand stages;
-  `timescales?all` lists the scales.
+  among them 170 "international intervals" and the New Zealand scale (88
+  stages, one epoch); `timescales?all` lists the scales.
 - **Farrell et al. 2025** (`farrell2025-late-cambrian`). The GSA Bulletin
-  supplement: a 4.1 MB PDF, and a zip of R files with the SPICE carbon-isotope
-  data of Cothren et al. 2022.
+  supplement: a 4.1 MB PDF, and a zip of R files with the SPICE data of
+  Cothren et al. 2022.
 - **PBDB intervals** are in the [pbdb](../pbdb/README.md) entry
   (`pbdb/intervals/raw/2026-10-22T0611Z_url/intervals.csv`).
 
@@ -106,39 +121,46 @@ other:
 
 All from [profile/timescale_profile.tsv](profile/timescale_profile.tsv).
 
-- **How the chart has moved, release to release.**
-  - 2010 → 2012 (GTS2012) moved 85 of 110 shared boundaries, by up to 11.5
+- **How the chart has moved** (RDF, boundaries matched by URI).
+  - 2010 → 2012 (GTS2012) moved 87 of 112 shared boundaries, by up to 11.5
     Myr (Norian 216.5 → 228).
   - 2008 settled the Ediacaran base at 635 Ma; it was 600 in 2004 and 630 in
     2005.
   - 2009 moved the Quaternary base from 1.806 to 2.588 Ma.
-  - 2016-12 moved the Cryogenian base from 850 to 720 Ma.
-  - Smaller moves in most other releases are listed in the profile.
-- **The "2020" release is the 2020/03 chart.**
-  - The GTS2020 book's ages (538.8 Ma for the base of the Cambrian, 125.77 for
-    the Barremian, and so on) entered the chart after 2020.
-  - Against PBDB's current bases, 62 of 106 shared names differ. The same 62
-    differ against Macrostrat.
-  - Seventy-four values printed on the 2024/12 chart are not on the 2020/03
-    chart, and 66 on 2020/03 are gone.
-- **Unit errors in the RDF.**
-  - The second 2018 file (`isc2018-1`) and the 2019 release give four late
-    Quaternary boundaries in years, not Ma: Holocene 11,700, Northgrippian 8,276, and Late and Upper
-    Pleistocene 126,000.
-  - The 2020 release repairs three of them but keeps "Upper Pleistocene" at
-    129,000 beside a correct "Late Pleistocene" 0.129.
-  - Filter ages over 4,600 Ma before use; the profile lists them.
-- **The current boundaries with uncertainties** (`ics2024_pbdb_bases.tsv`,
-  derived). For each of PBDB's 171 scale-1 intervals, the table gives:
-  - its base age;
-  - the chart's printed value at that age, where there is one (144);
-  - the chart's ± uncertainty (94) or its "~" approximation flag (14).
+  - Between the 2014 and 2016-10 files the Cryogenian base moved from 850 to
+    720 Ma (the change log dates it to chart 2015/01).
+  - Smaller moves in most releases are listed in the profile.
+- **Chart to chart** (PDF text, by printed value).
+  - From 2014-10 to 2020-03 each release changed one to four printed values.
+  - 2020-03 to 2024-12 changed 68 of about 122 (new 68, gone 68).
+- **Chart v2020/01 against PBDB** (by name, aliases included).
+  - 156 boundaries are shared and 90 differ:
 
-  Three chart values have no PBDB base: 246.7, 249.9 and 259.51 ± 0.21 (see
-  the next point).
-- **PBDB vs Macrostrat.** They agree on 165 of 170 shared bases. The five
-  that differ are three boundaries, where the 2024/12 chart prints
-  Macrostrat's value:
+    | PBDB type | Shared | Differing |
+    | --- | ---: | ---: |
+    | Ages | 94 | 61 |
+    | Epochs | 28 | 18 |
+    | Periods | 22 | 8 |
+    | Eras | 9 | 1 |
+    | Eons | 3 | 2 |
+
+  - 15 PBDB names have no RDF label, among them Wuliuan, Stage 2–4 and 10,
+    Series 2, Greenlandian and Ludfordian.
+  - So any analysis on the RDF's last release is on pre-GTS2020 ages.
+    Inferred: the chart took most GTS2020 ages after 2020/03. The 2024/12
+    chart says most of its ages are from GTS2020.
+- **The boundary table with uncertainties** (`ics2024_pbdb_bases.tsv`,
+  derived). For each of PBDB's 171 scale-1 interval rows, it gives:
+  - the base age;
+  - the 2024/12 chart's printed value at that age, where there is one (166
+    rows, 22 of them matched through integer ages such as 635 and 720);
+  - the chart's ± uncertainty (96 rows, 63 distinct ages) or its "~" flag (18
+    rows, 14 distinct ages).
+  - A PBDB age is its own base, so a stage and the epoch or period it starts
+    share a row value. The row counts therefore exceed the boundary counts.
+- **PBDB vs Macrostrat and the 2024/12 chart.** They agree on 165 of 170
+  shared names. The five that differ are three boundaries, where the 2024/12
+  chart prints Macrostrat's value:
 
   | Boundary | PBDB | Macrostrat and the 2024/12 chart |
   | --- | ---: | ---: |
@@ -146,13 +168,19 @@ All from [profile/timescale_profile.tsv](profile/timescale_profile.tsv).
   | Anisian (Middle Triassic) base | 247 | 246.7 |
   | Wuchiapingian (Lopingian) base | 259.857 | 259.51 ± 0.21 |
 
-  PBDB's interval table lags the chart here (queued as CONTACTS C10 i).
+  PBDB's three values appear on no chart release we hold, so we cannot say
+  where they come from (queued as CONTACTS C10 i).
 
 ## Access
 
-- **Terms.** The RDF is CC0 and Macrostrat CC BY 4.0. Farrell et al.'s
-  supplement is CC BY-NC 4.0. The ICS chart PDFs print a citation but no
-  licence, so derived values stay on deep-server.
+- **Terms.**
+  - The RDF repository is CC0, and Macrostrat CC BY 4.0 (the API's own
+    licence field).
+  - Farrell et al.'s supplement is CC BY-NC 4.0.
+  - The ICS chart PDFs print "(c) International Commission on Stratigraphy"
+    and a citation, with no licence. By the catalogue's tier rules they are
+    `unclear`. We hold them as a private copy, and derived values stay on
+    deep-server.
 - **Rebuild.** On deep-server, in a login shell, with `$P` =
   `/data/paleodata/timescale`:
 
@@ -167,42 +195,52 @@ All from [profile/timescale_profile.tsv](profile/timescale_profile.tsv).
 
 ## Strengths
 
-- **Open and versioned.** Fifteen releases of the chart are machine-readable
+- **Open and versioned.** Sixteen releases of the chart are machine-readable
   under CC0, so analyses can be rerun on the time scale of their day.
-- **Uncertainties.** The current chart's printed uncertainties, attached to
-  PBDB's interval names, are the uncertainties Q-041's age model needs for 94
+- **Uncertainties.** The 2024/12 chart's printed uncertainties, attached to
+  PBDB's interval names, give Q-041's age model uncertainties for 63 distinct
   boundaries.
 
 ## Weaknesses and pitfalls
 
-- **No machine-readable current chart.** The RDF stops at 2020/03, and the
-  ICS site's interactive chart loads its data from a script bundle we did not
-  reverse-engineer. The 2024/12 values here come from the PDF's text layer,
-  matched to PBDB names by value. A boundary whose chart value matches no
-  PBDB base stays unlabelled (three, all named above).
+- **No machine-readable recent chart.**
+  - The RDF stops at v2020/01. The 2024/12 values come from the PDF's text
+    layer, matched to PBDB names by value.
+  - A printed number that equals a PBDB base by chance would be mislabelled.
+    An independent check of the 144 decimal matches against the chart's
+    geometry found none.
+- **Approximate ages.**
+  - The 2024/12 chart prints 14 values as "~": nine Cambrian boundaries, the
+    Rhaetian, Norian and Carnian, and the Ediacaran and Cryogenian bases.
+  - Treat them as undefined in uncertainty, not as exact.
+- **Boundary names change.**
+  - Labels drift between releases. Examples: "Cambrian Stage 9" became
+    Jiangshanian, "Middle Pleistocene" became Chibanian, and there are
+    misspellings ("Creataceous", "Darriwillian").
+  - Join releases by URI, as the derived table does, and match names through
+    all labels.
 - **GTS2020 itself is not open.** The book's tables (and their uncertainty
   models) are under copyright. The TimeScale Creator datapack's licence
   conflicts with its record (C9 f).
-- **Approximate ages.** Fourteen current boundaries are printed as "~"
-  (mostly Cambrian and early Ordovician): treat them as undefined in
-  uncertainty, not as exact.
-- **Units.** See the RDF unit errors above.
 
 ## Overlap with other sources
 
-- **PBDB.** PBDB's intervals follow the current chart, except at the three
-  boundaries above. PBDB occurrence ages (`max_ma`, `min_ma`) inherit them.
-- **Other entries' time scales.** The classic compendia use Harland et al.
-  (1990) ages (FR2) and the package's stage ages (Sepkoski). Green et al.'s
-  (2022) LIP and extinction tables use GTS2012 unless noted. NSB and Triton
-  use their own age models.
+- **PBDB.** PBDB's intervals agree with the 2024/12 chart except at the three
+  boundaries above. Its occurrence ages (`max_ma`, `min_ma`) inherit them.
+- **Other entries' time scales:**
+  - **NSB and Triton:** GTS2012 ([nsb](../nsb/README.md),
+    [triton](../triton/README.md)).
+  - **Classic compendia:** FR2 uses Harland et al. (1990), and the Sepkoski
+    package uses its own stage ages.
+  - **Green et al.'s (2022) event tables:** GTS2012 unless noted (their Table
+    S1's comment column; [climate-forcing](../climate-forcing/README.md)).
 
 ## EPRP relevance
 
 - **Q-041 (periodicity).** The boundary uncertainties for its age model, and
   the release series to test how much a claimed period depends on the time
   scale's vintage.
-- **Q-045 (data vintage).** The time scale is itself a vintage; fifteen are
+- **Q-045 (data vintage).** The time scale is itself a vintage; sixteen are
   here.
 - **Q-005 and Q-035 (inferred).** Precursors and land–sea lags turn on
   stage-level timing.
@@ -220,8 +258,19 @@ Farrell et al. (2025).
   `data_mirror.py` fix for zero-length files, commit 3757575). All 73 files
   re-verify. Index: [snapshots.tsv](snapshots.tsv).
 - 2026-10-23, checked: [timescale_profile.py](timescale_profile.py)
-  ([output](profile/timescale_profile.tsv)), run on deep-server; identical
-  to a local run.
-- 2026-10-23, source claim: the ICS chart's citation line; that the GTS books
-  are not openly licensed; that the site's interactive chart is built from
-  ICS OWL data (search result, not verified).
+  ([output](profile/timescale_profile.tsv)), run on deep-server.
+- 2026-10-23, source claim: the chart's citation and copyright lines; that the
+  GTS books are not openly licensed; the change logs' dating of releases.
+- 2026-10-23, reviewed by an independent Claude Sonnet subagent, and all its
+  findings are applied above:
+  - **The "unit errors" were a profiler bug.** The late Quaternary positions
+    are declared years before present.
+  - **Release labels:** the last release is chart v2020/01, and the 2016-10
+    release had been skipped.
+  - **Matching:** boundaries are now keyed by URI with all labels, and
+    integer chart ages are parsed.
+  - **Counts** are now given by rows and by distinct ages.
+  - **Cross-entry time scales and licence statements** are corrected.
+
+  The reviewer's geometry check confirmed every ± and "~" assignment and the
+  three-boundary difference.
