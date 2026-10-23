@@ -70,6 +70,9 @@ cat <<'EOF' | xargs -P 4 -L 1 bash -c 'echo "== zenodo $0 $1"; python3 _tools/da
 8154672 smith2023-biodeeptime
 8341743 monarrez2023-selectivity-zenodo
 8398420 cribb2023-ete-ecospace
+5394385 liow2021-cheilostome-cyclostome-code
+10541354 malanoski2024-climate-extinction-risk-code
+14104269 leventhal2025-bryozoan-brooding-supplement
 EOF
 fi
 
