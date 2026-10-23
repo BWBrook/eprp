@@ -1,12 +1,13 @@
-"""Targeted checks behind the PBDB entry's claims, on the au-ng extract.
+"""Targeted checks behind the PBDB entry's claims, on the Australia and New Guinea region.
 
-Usage: python3 pbdb_checks.py AU_NG_SNAPSHOT AU_PNG_SNAPSHOT INTERVALS_CSV OUT_TSV
+Usage: python3 pbdb_checks.py REGION_DIR INTERVALS_CSV OUT_TSV
 
-Covers: Australian state labels; Quaternary composition; plate-model coverage and
-GPlates-Scotese palaeolatitude differences by period; which time-scale boundary
-values the ages use; timestamps; direct ages; qualifiers and `species not
-entered`; difference codes; ocean-drilling collections; the Indonesian box;
-coordinate sanity; and the two snapshots compared. Writes long-format counts
+REGION_DIR is pbdb_region.py's output. Covers: Australian state labels;
+Quaternary composition; plate-model coverage and GPlates-Scotese palaeolatitude
+differences by period; which time-scale boundary values the ages use;
+timestamps; direct ages; qualifiers and `species not entered`; difference
+codes; ocean-drilling collections; the Indonesian box; and coordinate sanity.
+Writes long-format counts
 (table, metric, key, value). Standard library only.
 """
 
@@ -63,7 +64,7 @@ def load(path):
         return [{k: r[i] for k, i in first.items()} for r in rd]
 
 
-snap, snap0 = sys.argv[1], sys.argv[2]
+snap = sys.argv[1]
 occ, col = load(f"{snap}/occurrences.csv"), load(f"{snap}/collections.csv")
 occ_id, col_id = load(f"{snap}/occurrences_idng.csv"), load(f"{snap}/collections_idng.csv")
 
@@ -128,7 +129,7 @@ bounds = Counter(v for r in occ for v in (r["max_ma"], r["min_ma"]))
 for v in ("11.63", "11.608", "143.1", "145", "419.62", "419.2", "358.86", "358.9", "443.1", "443.8", "486.85", "485.4",
           "538.8", "541", "251.902", "252.17", "23.04", "23.03"):
     add(t, "count_in_max_or_min_ma", v, bounds[v])
-with open(sys.argv[3], newline="", encoding="utf-8") as f:
+with open(sys.argv[2], newline="", encoding="utf-8") as f:
     scale1 = set()
     for r in csv.DictReader(f):
         if r["scale_no"] == "1":
@@ -203,15 +204,7 @@ add(t, "seram_occurrences", "", sum(r["collection_no"] in seram for r in occ_id)
 add(t, "other_occurrences", "", sum(r["collection_no"] not in seram for r in occ_id))
 tab(t, "occurrences_by:state", [r["state"] for r in occ_id])
 
-t = "two_snapshots"
-o0 = {r["occurrence_no"]: r for r in load(f"{snap0}/occurrences.csv")}
-o1 = {r["occurrence_no"]: r for r in occ if r["cc"] in ("AU", "PG")}
-cols_common = sorted(set(next(iter(o0.values()))) & set(next(iter(o1.values()))))
-add(t, "occurrences_first_second_shared", "", f"{len(o0)} {len(o1)} {len(o0.keys() & o1.keys())}")
-add(t, "shared_columns", "", len(cols_common))
-add(t, "differing_cells", "", sum(o0[k][c] != o1[k][c] for k in o0.keys() & o1.keys() for c in cols_common))
-
-with open(sys.argv[4], "w", newline="") as f:
+with open(sys.argv[3], "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")
     w.writerow(["table", "metric", "key", "value"])
     w.writerows(out)

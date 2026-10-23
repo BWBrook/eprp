@@ -12,7 +12,7 @@ cd /data/paleodata
 # [Detail withheld pending disclosure to the data custodian.]
 B="https://paleobiodb.org/data1.2"
 PGM="pgm=gplates,scotese,seton"
-OCC="show=class,classext,ident,ecospace,taphonomy,etbasis,pres,abund,timebins,timecompare,paleoloc,prot,rem,ref,crmod,ent,entname,attr&$PGM&vocab=pbdb"
+OCC="show=class,classext,ident,plant,ecospace,taphonomy,ttaph,etbasis,pres,abund,timebins,timecompare,paleoloc,prot,rem,ref,refattr,crmod,ent,entname,attr&$PGM&vocab=pbdb"
 COL="show=full,paleoloc,crmod,ent,entname&$PGM&vocab=pbdb"
 BULK_A="2025-09-21T22:25:00"
 BULK_B="2025-09-21T22:26:00"
