@@ -1,0 +1,428 @@
+id	registry	key	state	version	date	licence	archived	note	pushed	stars	checked_utc
+chronosphere	cran	chronosphere	ok	0.6.1	2023-08-17	CC BY 4.0	no				2026-10-23T10:43Z
+chronosphere	github	chronosphere-info/r_client	ok	0.4.1	2021-05-10	GPL-3.0	no		2026-09-18	6	2026-10-23T10:43Z
+coordinatecleaner	cran	CoordinateCleaner	ok	3.0.1	2023-10-24	GPL-3	no				2026-10-23T10:43Z
+coordinatecleaner	github	ropensci/CoordinateCleaner	ok	v2.0-4	2019-01-14	none	no		2025-05-27	87	2026-10-23T10:43Z
+dggrid4py	pypi	dggrid4py	ok	0.6.0	2026-10-06	AGPL-3.0-or-later	no	a Python library to run highlevel functions of DGGRIDv7 and v8			2026-10-23T10:43Z
+dggridr	cran	dggridR	ok	3.1.1	2026-01-20	AGPL (>= 3)	no				2026-10-23T10:43Z
+dggridr	github	r-barnes/dggridR	ok	v3.1.1	2026-01-18	AGPL-3.0	no		2026-04-26	189	2026-10-23T10:43Z
+earthlife	github	EarthLifeConsortium/earthlife	ok			MIT	no		2016-10-08	0	2026-10-23T10:43Z
+fossilbrush	cran	fossilbrush	ok	1.0.6	2025-06-05	GPL (>= 3)	no				2026-10-23T10:43Z
+fossilbrush	github	jf15558/fossilbrush	ok			GPL-3.0	no		2025-06-03	0	2026-10-23T10:43Z
+fossilx	github	adamkocsis/fossilx	ok			none	no		2026-08-21	0	2026-10-23T10:43Z
+gnparser	pypi	gnparser	ok	0.1.3	2025-03-11		no	Python wrapper for the gnparser Go library			2026-10-23T10:43Z
+gnverifier	github	gnames/gnverifier	ok	v1.3.7	2026-06-06	MIT	no		2026-06-06	40	2026-10-23T10:43Z
+h3-py	pypi	h3	ok	4.5.0	2026-05-30	Apache Software License	no	Uber's hierarchical hexagonal geospatial indexing system			2026-10-23T10:43Z
+h3-py	github	uber/h3-py	ok	v4.5.0	2026-05-30	Apache-2.0	no		2026-10-19	1045	2026-10-23T10:43Z
+h3jsr	cran	h3jsr	ok	1.3.1	2023-01-21	Apache License (>= 2)	no				2026-10-23T10:43Z
+healpy	pypi	healpy	ok	1.20.1	2026-10-03	GPL-2.0-only	no	Healpix tools package for Python			2026-10-23T10:43Z
+icosa	cran	icosa	ok	0.12.0	2025-08-28	GPL-3	no				2026-10-23T10:43Z
+icosa	github	icosa-grid/R-icosa	ok	0.11.0	2023-04-04	GPL-3.0	no		2025-08-29	7	2026-10-23T10:43Z
+macrostrat-mcp	github	blake365/macrostrat-mcp	ok			MIT	no		2026-08-09	8	2026-10-23T10:43Z
+macrostrat-platform	github	UW-Macrostrat/macrostrat	ok			Apache-2.0	no		2026-10-23	10	2026-10-23T10:43Z
+neotoma	cran	neotoma	ok		2022-10-03		yes	as check issues were not corrected despite reminders			2026-10-23T10:43Z
+neotoma2	cran	neotoma2	ok	1.1.0	2026-09-15	MIT + file LICENSE	no				2026-10-23T10:43Z
+neotoma2	github	NeotomaDB/neotoma2	ok	CRANv1.1.0	2026-09-15	NOASSERTION	no		2026-10-22	12	2026-10-23T10:43Z
+nsbcompanion	github	plannapus/NSBcompanion	ok	v3.1	2025-05-22	MIT	no		2025-05-22	4	2026-10-23T10:43Z
+palaeoverse	cran	palaeoverse	ok	1.5.0	2026-06-11	GPL (>= 3)	no				2026-10-23T10:43Z
+palaeoverse	github	palaeoverse/palaeoverse	ok	v.1.5.0	2026-06-11	GPL-3.0	no		2026-10-23	29	2026-10-23T10:43Z
+paleobiodb	cran	paleobioDB	ok	1.0.1	2025-08-27	GPL-2	no				2026-10-23T10:43Z
+paleobiodb	github	ropensci/paleobioDB	ok	v1.0.1	2025-09-02	none	no		2025-09-02	46	2026-10-23T10:43Z
+paleobiology-mcp-server	github	cyanheads/paleobiology-mcp-server	ok	v0.4.0	2026-10-15	Apache-2.0	no		2026-10-17	2	2026-10-23T10:43Z
+paleobiologydb-jl	github	jeetsukumaran/PaleobiologyDB.jl	ok	v2.0.0	2026-09-21	NOASSERTION	no		2026-09-21	5	2026-10-23T10:43Z
+pangaeapy	pypi	pangaeapy	ok	1.1.3	2026-09-16	GPL-3.0-only	no	Download and analyse (meta-)data of PANGAEA datasets			2026-10-23T10:43Z
+pangaeapy	github	pangaea-data-publisher/pangaeapy	ok	v1.1.3	2026-09-16	GPL-3.0	no		2026-10-20	42	2026-10-23T10:43Z
+pangaear	cran	pangaear	ok	1.1.0	2021-05-14	MIT + file LICENSE	no				2026-10-23T10:43Z
+pangaear	github	ropensci/pangaear	ok	v1.1.0	2021-05-14	NOASSERTION	no		2026-01-17	25	2026-10-23T10:43Z
+pbdb-mcp-lsj210001	github	lsj210001/pbdb-mcp	ok	v0.6.0	2026-06-02	MIT	no		2026-06-02	0	2026-10-23T10:43Z
+pbdb-mcp-pipeworx	github	pipeworx-io/mcp-paleobiodb	ok			MIT	no		2026-09-26	0	2026-10-23T10:43Z
+pygbif	pypi	pygbif	ok	0.7.0	2026-10-07	MIT License	no	Python client for GBIF			2026-10-23T10:43Z
+pygbif	github	gbif/pygbif	ok	v0.7.0	2026-10-07	MIT	no		2026-10-13	158	2026-10-23T10:43Z
+pyobis	pypi	pyobis	ok	1.6.2	2026-09-23	MIT License	no	Python client for OBIS			2026-10-23T10:43Z
+pyobis	github	iobis/pyobis	ok	v1.6.2	2026-09-23	MIT	no		2026-10-19	24	2026-10-23T10:43Z
+rgbif	cran	rgbif	ok	3.9.0	2026-10-05	MIT + file LICENSE	no				2026-10-23T10:43Z
+rgbif	github	ropensci/rgbif	ok	v3.9.0	2026-10-07	NOASSERTION	no		2026-10-13	184	2026-10-23T10:43Z
+rgnparser	cran	rgnparser	ok	0.3.0	2023-12-12	MIT + file LICENSE	no				2026-10-23T10:43Z
+rhealpixdggs	pypi	rhealpixdggs	ok	0.11.0	2026-09-29		no	An implementation of the rHEALPix discrete global grid system			2026-10-23T10:43Z
+rmacrostrat	cran	rmacrostrat	ok	1.0.0	2024-10-18	GPL (>= 3)	no				2026-10-23T10:43Z
+rmacrostrat	github	palaeoverse/rmacrostrat	ok	v1.0.0	2024-10-31	GPL-3.0	no		2026-07-22	2	2026-10-23T10:43Z
+robis	cran	robis	ok	2.12.0	2026-07-24	MIT + file LICENSE	no				2026-10-23T10:43Z
+robis	github	iobis/robis	ok	2.12.1	2026-10-22	NOASSERTION	no		2026-10-22	49	2026-10-23T10:43Z
+rotl	cran	rotl	ok	3.1.1	2026-01-15	BSD_2_clause + file LICENSE	no				2026-10-23T10:43Z
+taxadb	cran	taxadb	ok	0.3.0	2026-08-31	MIT + file LICENSE	no				2026-10-23T10:43Z
+taxize	cran	taxize	ok	0.10.1	2026-02-14	MIT + file LICENSE	no				2026-10-23T10:43Z
+taxize	github	ropensci/taxize	ok	v0.10.1	2026-02-17	NOASSERTION	no		2026-05-12	303	2026-10-23T10:43Z
+ten-rules	github	palaeoverse/ten-rules	ok	v0.0.5	2025-11-04	GPL-3.0	no		2025-11-04	1	2026-10-23T10:43Z
+velociraptr	cran	velociraptr	ok	1.1.0	2019-07-31	GPL-3	no				2026-10-23T10:43Z
+worrms	cran	worrms	ok	0.4.3	2023-06-20	MIT + file LICENSE	no				2026-10-23T10:43Z
+xdggs	pypi	xdggs	ok	0.7.0	2026-09-29	Apache-2.0	no	Xarray extension for DGGS			2026-10-23T10:43Z
+xdggs	github	xarray-contrib/xdggs	ok	0.7.0	2026-09-29	Apache-2.0	no		2026-10-22	138	2026-10-23T10:43Z
+acycle	github	mingsongli/acycle	ok	v3.1.1	2026-08-14	none	no		2026-08-14	109	2026-10-23T10:43Z
+acyclepy	pypi	acycle	ok	0.7.1	2026-07-23	MIT	no	AcyclePy: Advanced cyclostratigraphy, time series analysis, and paleoclimate toolkit			2026-10-23T10:43Z
+admtools	cran	admtools	ok	0.7.0	2026-10-08	GPL (>= 3)	no				2026-10-23T10:43Z
+admtools	github	MindTheGap-ERC/admtools	ok	v0.6.0	2025-05-21	GPL-3.0	no		2026-10-08	4	2026-10-23T10:43Z
+astrochron	cran	astrochron	ok	1.8	2026-07-17	GPL-3	no				2026-10-23T10:43Z
+bchron	cran	Bchron	ok	4.7.8	2025-12-12	GPL (>= 2)	no				2026-10-23T10:43Z
+bchron	github	andrewcparnell/Bchron	ok	4.7.6	2021-06-10	none	no		2025-12-12	38	2026-10-23T10:43Z
+chron-jl	github	brenhinkeller/Chron.jl	ok	v0.7.1	2026-01-28	MIT	no		2026-03-21	15	2026-10-23T10:43Z
+clam	cran	clam	ok	2.6.3	2025-07-26	GPL (>= 2)	no				2026-10-23T10:43Z
+decomposer	cran	DecomposeR	ok	1.0.7	2025-07-28	GPL-3	no				2026-10-23T10:43Z
+deeptime	cran	deeptime	ok	2.4.0	2026-07-10	GPL (>= 3)	no				2026-10-23T10:43Z
+deeptime	github	willgearty/deeptime	ok	v2.4.0	2026-07-10	GPL-3.0	no		2026-10-14	108	2026-10-23T10:43Z
+era	cran	era	ok	0.6.0	2026-07-30	MIT + file LICENSE	no				2026-10-23T10:43Z
+era	github	joeroe/era	ok	v0.6.0	2026-07-30	NOASSERTION	no		2026-07-30	15	2026-10-23T10:43Z
+geochronr	github	nickmckay/GeoChronR	ok			MIT	no		2026-10-12	35	2026-10-23T10:43Z
+geoscale	cran	geoscale	ok	2.0.1	2022-06-24	GPL (>= 2)	no				2026-10-23T10:43Z
+isoplotr	cran	IsoplotR	ok	7.1	2026-10-17	GPL-3	no				2026-10-23T10:43Z
+isoplotr	github	pvermees/IsoplotR	ok			none	no		2026-10-11	77	2026-10-23T10:43Z
+modifiedbchron	github	robintrayler/modifiedBChron	ok			none	no		2024-07-11	5	2026-10-23T10:43Z
+orbitn	github	rezeebe/orbitN	ok	v1.0.1	2025-05-15	GPL-3.0	no		2025-05-16	4	2026-10-23T10:43Z
+oxcaar	cran	oxcAAR	ok	1.1.2	2025-12-12	GPL-2 | file LICENSE	no				2026-10-23T10:43Z
+oxcaar	github	ISAAKiel/oxcAAR	ok	v1.1.2	2025-12-12	GPL-2.0	no		2026-10-04	23	2026-10-23T10:43Z
+rbacon	cran	rbacon	ok	4.0.2	2026-10-22	GPL (>= 2)	no				2026-10-23T10:43Z
+rbacon	github	Maarten14C/rbacon	ok	3.4.2	2025-05-05	none	no		2026-10-22	8	2026-10-23T10:43Z
+rintcal	cran	rintcal	ok	1.4.2	2026-09-08	GPL (>= 2)	no				2026-10-23T10:43Z
+rplum	cran	rplum	ok	1.0.0	2025-05-20	GPL (>= 2)	no				2026-10-23T10:43Z
+snvecr	cran	snvecR	ok		2026-04-02		yes	for policy violation			2026-10-23T10:43Z
+snvecr	github	japhir/snvecR	ok	v3.10.1	2025-03-06	GPL-3.0	no		2025-03-10	4	2026-10-23T10:43Z
+stratcols	cran	stratcols	ok	1.0.0	2025-08-28	Apache License (>= 2)	no				2026-10-23T10:43Z
+stratcols	github	MindTheGap-ERC/stratcols	ok	v1.0.0	2025-08-29	Apache-2.0	no		2026-10-07	2	2026-10-23T10:43Z
+stratigrapher	cran	StratigrapheR	ok	1.3.1	2023-07-06	GPL-3	no				2026-10-23T10:43Z
+stratorder	github	MindTheGap-ERC/stratorder	ok			Apache-2.0	no		2025-05-15	0	2026-10-23T10:43Z
+waverider	cran	WaverideR	ok	0.5.1	2026-04-06	GPL (>= 2)	no				2026-10-23T10:43Z
+waverider	github	stratigraphy/WaverideR	ok			none	no		2026-10-19	3	2026-10-23T10:43Z
+gplately	pypi	gplately	ok	2.0.0	2025-07-14	GNU General Public License v2 (GPLv2)	no	Object-orientated Python interface to pyGPlates for plate tectonic reconstruction			2026-10-23T10:43Z
+gplately	github	GPlates/gplately	ok	v2.0.0	2025-07-14	GPL-2.0	no		2026-10-02	99	2026-10-23T10:43Z
+gplates	github	GPlates/GPlates	ok	PyGPlates-1.0.0	2025-03-28	NOASSERTION	no		2026-10-22	155	2026-10-23T10:43Z
+gplates-web-service	github	GPlates/gplates-web-service	ok	v1.0.0	2024-12-21	GPL-2.0	no		2026-10-14	16	2026-10-23T10:43Z
+gtrack	github	g-adopt/gtrack	ok	v0.7.1	2026-10-13	MIT	no		2026-10-13	1	2026-10-23T10:43Z
+gwspy	github	michaelchin/gwspy	ok	v0.1.2	2024-07-22	MIT	no		2025-01-16	3	2026-10-23T10:43Z
+mapast	github	macroecology/mapast	ok			none	no		2020-02-24	17	2026-10-23T10:43Z
+paleolatitude	github	sj/paleolatitude	ok	v2.1	2017-02-22	LGPL-3.0	no		2021-05-08	4	2026-10-23T10:43Z
+paleotopo-data-assimilation	github	EarthByte/paleotopo-data-assimilation	ok			MIT	no		2026-09-29	1	2026-10-23T10:43Z
+plate-model-manager	pypi	plate-model-manager	ok	1.3.2	2026-05-24	GNU General Public License v2 (GPLv2)	no	Plate Model Manager			2026-10-23T10:43Z
+plate-model-manager	github	GPlates/plate-model-manager	ok	v1.3.1	2025-10-24	GPL-2.0	no		2026-10-10	7	2026-10-23T10:43Z
+pseudogplates	github	adamkocsis/pseudogplates	ok			none	no		2026-06-11	0	2026-10-23T10:43Z
+pygplates	pypi	pygplates	ok	1.0.0	2025-03-26	GNU General Public License v2 (GPLv2)	no	Python library for fine-grained access to GPlates functionality.			2026-10-23T10:43Z
+rgplates	cran	rgplates	ok	0.6.1	2025-09-11	CC BY 4.0	no				2026-10-23T10:43Z
+rgplates	github	GPlates/rgplates	ok			GPL-3.0	no		2026-06-05	6	2026-10-23T10:43Z
+topochronia	github	florianfranz/topo_chronia	ok	v1.0.1	2026-01-14	NOASSERTION	no		2026-02-16	11	2026-10-23T10:43Z
+crestr	cran	crestr	ok		2023-01-10		yes	for policy violation			2026-10-23T10:43Z
+crestr	github	mchevalier2/crestr	ok	v1.4.8	2026-02-23	NOASSERTION	no		2026-02-23	14	2026-10-23T10:43Z
+paleopal	github	LinkedEarth/paleopal	ok	v0.1.0	2026-03-30	none	no		2026-10-02	0	2026-10-23T10:43Z
+pastclim	cran	pastclim	ok	2.2.0	2025-02-23	CC BY 4.0	no				2026-10-23T10:43Z
+pastclim	github	EvolEcolGroup/pastclim	ok	v2.2.0	2025-02-23	CC-BY-4.0	no		2026-10-22	41	2026-10-23T10:43Z
+pyleoclim	pypi	pyleoclim	ok	1.3.0	2026-02-12	GPL-3.0	no	Python Package for the Analysis of Paleoclimate Data			2026-10-23T10:43Z
+pyleoclim	github	LinkedEarth/Pyleoclim_util	ok	v1.3.0	2026-02-12	GPL-3.0	no		2026-10-17	104	2026-10-23T10:43Z
+pylipd	pypi	pylipd	ok	1.5.3	2026-02-11	Apache-2.0	no	Python utilities for handling LiPD data			2026-10-23T10:43Z
+pylipd	github	LinkedEarth/pylipd	ok	v1.5.3	2026-02-11	Apache-2.0	no		2026-02-11	4	2026-10-23T10:43Z
+rpaleoclim	cran	rpaleoclim	ok	1.1.0	2025-09-30	MIT + file LICENSE	no				2026-10-23T10:43Z
+rpaleoclim	github	joeroe/rpaleoclim	ok	v1.1.0	2025-09-30	NOASSERTION	no		2026-07-23	15	2026-10-23T10:43Z
+rratepol	github	HOPE-UIB-BIO/R-Ratepol-package	ok	v1.3.0	2026-03-27	NOASSERTION	no		2026-05-04	11	2026-10-23T10:43Z
+tidypaleo	cran	tidypaleo	ok	0.1.4	2025-10-19	MIT + file LICENSE	no				2026-10-23T10:43Z
+tidypaleo	github	paleolimbot/tidypaleo	ok	v0.1.4	2025-10-20	NOASSERTION	no		2025-10-20	37	2026-10-23T10:43Z
+bdnn	github	dsilvestro/PyRate	ok	v3.1.1	2022-03-09	AGPL-3.0	no		2026-10-22	97	2026-10-23T10:43Z
+breakaway	cran	breakaway	ok	4.8.4	2022-11-22	GPL-2	no				2026-10-23T10:43Z
+compadre	github	josteist/Compadre	ok	v0.5.0	2019-07-11	none	no		2021-05-29	0	2026-10-23T10:43Z
+deepdive	github	DeepDive-project/deepdive	ok	v.1.0.28	2026-02-01	LGPL-2.1	no		2026-08-23	7	2026-10-23T10:43Z
+deepdiver	github	DeepDive-project/DeepDiveR	ok	v.1.0	2025-05-02	LGPL-2.1	no		2026-09-07	0	2026-10-23T10:43Z
+divdyn	cran	divDyn	ok	0.8.3	2024-11-21	CC BY 4.0	no				2026-10-23T10:43Z
+divdyn	github	divDyn/r-package	ok	v0.8.2	2022-09-07	GPL-3.0	no		2025-12-01	12	2026-10-23T10:43Z
+divent	cran	divent	ok	0.5-4	2026-05-06	GPL (>= 3)	no				2026-10-23T10:43Z
+divvy	cran	divvy	ok	1.0.1	2025-04-14	GPL (>= 3)	no				2026-10-23T10:43Z
+divvy	github	GawainAntell/divvy	ok	v1.0.1	2025-04-14	GPL-3.0	no		2025-04-15	0	2026-10-23T10:43Z
+ecodive	cran	ecodive	ok	2.2.6	2026-04-14	MIT + file LICENSE	no				2026-10-23T10:43Z
+ecodive	github	cmmr/ecodive	ok	v2.2.6	2026-03-23	NOASSERTION	no		2026-10-02	9	2026-10-23T10:43Z
+entropart	cran	entropart	ok	1.6-16	2025-02-07	GNU General Public License	no				2026-10-23T10:43Z
+fossil-pkg	cran	fossil	ok	0.4.0	2020-03-23	GPL (>= 2)	no				2026-10-23T10:43Z
+inext	cran	iNEXT	ok	3.0.2	2025-07-30	GPL (>= 3)	no				2026-10-23T10:43Z
+inext	github	JohnsonHsieh/iNEXT	ok			none	no		2025-07-30	75	2026-10-23T10:43Z
+inext-3d	cran	iNEXT.3D	ok	1.0.12	2025-10-31	GPL (>= 3)	no				2026-10-23T10:43Z
+inext-4steps	cran	iNEXT.4steps	ok	1.0.1	2024-06-18	GPL (>= 3)	no				2026-10-23T10:43Z
+inext-beta3d	cran	iNEXT.beta3D	ok	1.0.2	2024-04-17	GPL (>= 3)	no				2026-10-23T10:43Z
+literate	github	dsilvestro/LiteRate	ok			none	no		2026-07-29	14	2026-10-23T10:43Z
+marked	cran	marked	ok	1.2.8	2023-10-19	GPL (>= 2)	no				2026-10-23T10:43Z
+marked	github	jlaake/marked	ok			none	no		2026-04-13	11	2026-10-23T10:43Z
+mcmcdive	github	dsilvestro/PyRate	ok	v3.1.1	2022-03-09	AGPL-3.0	no		2026-10-22	97	2026-10-23T10:43Z
+npbnn	github	dsilvestro/npBNN	ok	v.0.1.23	2025-11-21	AGPL-3.0	no		2025-11-24	12	2026-10-23T10:43Z
+nt-surv	github	jgsaulsbury/nt-surv	ok			none	no		2023-12-14	1	2026-10-23T10:43Z
+opencr	cran	openCR	ok	2.2.8	2026-09-30	GPL (>= 2)	no				2026-10-23T10:43Z
+opencr	github	MurrayEfford/openCR	ok			none	no		2026-09-30	6	2026-10-23T10:43Z
+pyrate	github	dsilvestro/PyRate	ok	v3.1.1	2022-03-09	AGPL-3.0	no		2026-10-22	97	2026-10-23T10:43Z
+ramu-msom	github	trondreitan/RAMU-MSOM	ok			GPL-3.0	no		2023-03-31	0	2026-10-23T10:43Z
+rarenmtests	cran	rareNMtests	ok	1.2	2022-06-07	GPL (>= 2)	no				2026-10-23T10:43Z
+rmark	cran	RMark	ok	3.1.0	2026-07-27	GPL (>= 2)	no				2026-10-23T10:43Z
+rmark	github	sjbonner/RMark	ok			none	no		2026-10-13	0	2026-10-23T10:43Z
+selectivity-workflows	github	GawainAntell/ExtSelectivity2020	ok	v1.0.1	2020-04-24	GPL-3.0	no		2023-07-12	0	2026-10-23T10:43Z
+spader	cran	SpadeR	ok	0.1.1	2016-09-06	GPL (>= 3)	no				2026-10-23T10:43Z
+species-pkg	cran	SPECIES	ok	1.2.0	2024-09-23	GPL-2	no				2026-10-23T10:43Z
+spoccupancy	cran	spOccupancy	ok	0.8.2	2026-10-07	GPL (>= 3)	no				2026-10-23T10:43Z
+spoccupancy	github	ecoverseR/spOccupancy	ok	v0.7.3	2024-03-28	GPL-3.0	no		2026-10-07	77	2026-10-23T10:43Z
+ssdcs	github	rclose/SSDCs	ok	v1.0	2018-02-06	none	no		2018-02-06	4	2026-10-23T10:43Z
+tabula	cran	tabula	ok	3.3.2	2025-09-04	GPL (>= 3)	no				2026-10-23T10:43Z
+tabula	github	tesselle/tabula	ok	v3.2.0	2025-01-11	GPL-3.0	no		2025-12-15	33	2026-10-23T10:43Z
+trampoline	github	trondreitan/TRAMPOline	ok			LGPL-2.1	no		2022-10-14	1	2026-10-23T10:43Z
+unmarked	cran	unmarked	ok	1.5.2	2026-08-20	GPL (>= 3)	no				2026-10-23T10:43Z
+unmarked	github	ecoverseR/unmarked	ok	v1.5.2	2026-08-20	none	no		2026-10-16	11	2026-10-23T10:43Z
+vegan	cran	vegan	ok	2.7-6	2026-08-31	GPL-2	no				2026-10-23T10:43Z
+datefbd	github	gilles-didier/DateFBD	ok			none	no		2022-10-12	1	2026-10-23T10:43Z
+ede	cran	EDE	ok	0.2.0	2026-09-21	GPL (>= 3)	no				2026-10-23T10:43Z
+ede	github	rodrigosqrt3/EDE	ok	v0.2.0	2026-09-23	GPL-3.0	no		2026-09-23	0	2026-10-23T10:43Z
+extinct-shiny	github	hcliedtke/extinct	ok			MIT	no		2024-10-29	0	2026-10-23T10:43Z
+rextinct	github	FredSaltre/CRIWM	ok			MIT	no		2023-12-04	2	2026-10-23T10:43Z
+rootbbb	github	dsilvestro/rootBBB	ok	0.2	2020-12-29	none	no		2025-09-03	15	2026-10-23T10:43Z
+seoz-megafauna	github	FredSaltre/SEOZ_megafauna_extirpation	ok			none	no		2022-04-20	2	2026-10-23T10:43Z
+sextinct	cran	sExtinct	ok		2019-01-26		yes	as check problems were not corrected despite reminders			2026-10-23T10:43Z
+spacolext	github	Clara-Casabona/SpaColExt	ok			NOASSERTION	no		2026-05-20	1	2026-10-23T10:43Z
+tbea	cran	tbea	ok	1.8.0	2026-09-06	GPL-3	no				2026-10-23T10:43Z
+tbea	github	gaballench/tbea	ok	v1.8.0	2026-09-06	GPL-3.0	no		2026-09-06	3	2026-10-23T10:43Z
+wang-extinction-ci	github	stevewang251/Duration	ok			none	no		2022-07-05	0	2026-10-23T10:43Z
+conop4j	github	joshareed/conop4j	ok	0.12.2	2014-10-01	none	no		2014-10-01	3	2026-10-23T10:43Z
+conop9-penalty-validation	github	Starfie1d1272/conop9-penalty-validation	ok			MIT	no		2026-08-18	1	2026-10-23T10:43Z
+conop9companion	github	plannapus/CONOP9companion	ok			MIT	no		2021-03-16	3	2026-10-23T10:43Z
+gogc	github	recophin/GOGC	ok			MIT	no		2025-05-29	0	2026-10-23T10:43Z
+stratigraph	cran	stratigraph	ok		2017-07-29		yes	as check problems were not corrected despite reminders			2026-10-23T10:43Z
+ape	cran	ape	ok	5.8-1	2024-12-16	GPL-2 | GPL-3	no				2026-10-23T10:43Z
+ape	github	emmanuelparadis/ape	ok			GPL-2.0	no		2026-10-20	75	2026-10-23T10:43Z
+aptreeshape	cran	apTreeshape	ok		2023-09-28		yes	as issues were not corrected despite reminders			2026-10-23T10:43Z
+bamm	github	macroevolution/bamm	ok			GPL-2.0	no		2017-09-04	36	2026-10-23T10:43Z
+bammtools	cran	BAMMtools	ok	2.1.12	2024-09-12	GPL (>= 2)	no				2026-10-23T10:43Z
+beast-x	github	beast-dev/beast-mcmc	ok	v10.5.0	2025-07-02	LGPL-2.1	no		2026-10-23	249	2026-10-23T10:43Z
+beast2	github	CompEvol/beast2	ok	v2.7.8	2025-06-17	LGPL-2.1	no		2026-07-13	285	2026-10-23T10:43Z
+beast2-mm	github	CompEvol/morph-models	ok	v1.3.1-beta1	2026-10-14	LGPL-2.1	no		2026-10-20	7	2026-10-23T10:43Z
+beast2-sa	github	CompEvol/sampled-ancestors	ok	v2.3.0-beta2	2026-03-25	GPL-3.0	no		2026-08-17	8	2026-10-23T10:43Z
+beastmaster	github	nmatzke/BEASTmasteR	ok			GPL-3.0	no		2026-10-15	11	2026-10-23T10:43Z
+bite	cran	bite	ok		2024-08-23		yes	as issues were not corrected in time			2026-10-23T10:43Z
+castor	cran	castor	ok	1.8.7	2026-08-04	GPL (>= 2)	no				2026-10-23T10:43Z
+cladeage	github	BEAST2-Dev/cladeage	ok	v.2.0.0	2019-07-09	none	no		2023-01-03	0	2026-10-23T10:43Z
+clads-jl	github	hmorlon/PANDA.jl	ok	v0.0.8	2024-07-13	MIT	no		2024-07-13	12	2026-10-23T10:43Z
+comet	github	hoehna/CoMET	ok			none	no		2016-03-03	1	2026-10-23T10:43Z
+contraband	github	mendeslab/contraband	ok	v1.0.2	2025-07-15	LGPL-3.0	no		2026-10-22	7	2026-10-23T10:43Z
+crabs	cran	CRABS	ok	1.2.0	2023-10-24	GPL-3	no				2026-10-23T10:43Z
+crabs	github	afmagee/CRABS	ok	CRABS_v1.2	2023-10-24	GPL-3.0	no		2025-10-07	7	2026-10-23T10:43Z
+datelife	cran	datelife	ok		2024-08-25		yes	for repeated policy violation			2026-10-23T10:43Z
+datelife	github	phylotastic/datelife	ok	v0.6.7	2023-05-09	none	no		2026-09-06	15	2026-10-23T10:43Z
+ddd	cran	DDD	ok	5.2.5	2026-05-04	GPL-3	no				2026-10-23T10:43Z
+ddd	github	rsetienne/DDD	ok			none	no		2026-10-22	4	2026-10-23T10:43Z
+deep-birth-death	github	pablogpena/deep_birth_death	ok			none	no		2026-06-03	0	2026-10-23T10:43Z
+deepstrapp	cran	deepSTRAPP	ok	1.1.0	2026-09-28	MIT + file LICENSE	no				2026-10-23T10:43Z
+deepstrapp	github	MaelDore/deepSTRAPP	ok	v1.1.0	2026-09-28	NOASSERTION	no		2026-10-23	2	2026-10-23T10:43Z
+dendropy	pypi	DendroPy	ok	5.1.1	2026-10-14	BSD License	no	A Python library for phylogenetics and phylogenetic computing: reading, writing, simulation, process			2026-10-23T10:43Z
+dendropy	github	jeetsukumaran/DendroPy	ok			BSD-3-Clause	no		2026-10-22	237	2026-10-23T10:43Z
+diversitree	cran	diversitree	ok	0.10-1	2024-10-02	GPL (>= 2)	no				2026-10-23T10:43Z
+diversitree	github	richfitz/diversitree	ok			none	no		2024-10-02	33	2026-10-23T10:43Z
+ete4	pypi	ete4	ok	4.4.0	2025-09-03	GPL-3.0-or-later	no	A Python Environment for (phylogenetic) Tree Exploration			2026-10-23T10:43Z
+evegnn	github	EvoLandEco/eveGNN	ok	v1.0.0	2026-01-09	MIT	no		2026-06-09	2	2026-10-23T10:43Z
+evophylo	cran	EvoPhylo	ok	0.3.5	2025-08-27	GPL (>= 2)	no				2026-10-23T10:43Z
+evophylo	github	tiago-simoes/EvoPhylo	ok	v.0.3.5	2025-08-27	none	no		2025-08-27	4	2026-10-23T10:43Z
+gammaspike	github	jordandouglas/GammaSpikeModel	ok	v1.3.0	2026-04-02	GPL-3.0	no		2026-04-02	7	2026-10-23T10:43Z
+hisse	cran	hisse	ok	2.1.11	2023-02-11	GPL (>= 2)	no				2026-10-23T10:43Z
+hisse	github	thej022214/hisse	ok	2026viii13	2026-08-13	none	no		2026-10-21	7	2026-10-23T10:43Z
+iqtree3	github	iqtree/iqtree3	ok	v3.1.4	2026-09-10	GPL-2.0	no		2026-10-19	173	2026-10-23T10:43Z
+mcmc3r	github	dosreislab/mcmc3r	ok			MIT	no		2026-03-13	7	2026-10-23T10:43Z
+mcmctreer	cran	MCMCtreeR	ok		2026-05-08		yes	as email to the maintainer is undeliverable			2026-10-23T10:43Z
+mesquite	github	MesquiteProject/MesquiteCore	ok	v4.03-build1133	2026-04-09	LGPL-3.0	no		2026-10-23	113	2026-10-23T10:43Z
+mrbayes	github	NBISweden/MrBayes	ok	v3.2.9	2026-10-09	GPL-3.0	no		2026-10-22	280	2026-10-23T10:43Z
+orc	github	jordandouglas/ORC	ok	v1.3.1	2026-05-13	NOASSERTION	no		2026-05-13	7	2026-10-23T10:43Z
+paml	github	abacus-gene/paml	ok	v4.10.10	2026-01-29	GPL-3.0	no		2026-01-29	208	2026-10-23T10:43Z
+pbd	cran	PBD	ok	1.6	2026-09-04	GPL-2	no				2026-10-23T10:43Z
+pbd	github	rsetienne/PBD	ok			none	no		2026-09-04	2	2026-10-23T10:43Z
+phylodeep	pypi	phylodeep	ok	0.9	2024-09-20		no	Phylodynamic paramater and model inference using pretrained deep neural networks.			2026-10-23T10:43Z
+phylodeep	github	evolbioinfo/phylodeep	ok	0.9	2024-09-20	NOASSERTION	no		2026-07-21	31	2026-10-23T10:43Z
+phylosim	cran	phylosim	ok		2020-02-16		yes	as it requires archived package 'compoisson'			2026-10-23T10:43Z
+quartet	cran	Quartet	ok	1.4.0	2026-09-22	GPL (>= 2)	no				2026-10-23T10:43Z
+rboretum	github	BobLiterman/Rboretum	ok			GPL-3.0	no		2023-06-26	0	2026-10-23T10:43Z
+revbayes	github	revbayes/revbayes	ok	v1.4.1	2026-07-17	GPL-3.0	no		2026-10-22	91	2026-10-23T10:43Z
+revgadgets	cran	RevGadgets	ok	1.2.1	2023-11-29	GPL-3	no				2026-10-23T10:43Z
+revgadgets	github	revbayes/RevGadgets	ok	v1.2.1	2023-11-29	none	no		2026-03-20	14	2026-10-23T10:43Z
+rogue	cran	Rogue	ok	2.2.1	2026-06-24	GPL (>= 3)	no				2026-10-23T10:43Z
+rpanda	cran	RPANDA	ok		2025-12-04		yes	as requires archived package 'TESS'			2026-10-23T10:43Z
+rpanda	github	hmorlon/PANDA	ok			none	no		2026-09-21	27	2026-10-23T10:43Z
+rpesto	cran	RPesto	ok	0.1.5	2026-08-04	MIT + file LICENSE	no				2026-10-23T10:43Z
+rpesto	github	kopperud/RPesto	ok			NOASSERTION	no		2026-10-21	2	2026-10-23T10:43Z
+rphylip	cran	Rphylip	ok		2022-06-14		yes	as check problems were not corrected despite reminders			2026-10-23T10:43Z
+secsse	cran	secsse	ok	3.7.0	2026-05-15	GPL (>= 3) | file LICENSE	no				2026-10-23T10:43Z
+secsse	github	rsetienne/secsse	ok	v3.0.1	2023-09-29	GPL-3.0	no		2026-10-22	1	2026-10-23T10:43Z
+sensiphy	cran	sensiPhy	ok		2026-10-12		yes	as issues were not corrected despite reminders			2026-10-23T10:43Z
+simfbdr	github	milliescient/simfbdr	ok			none	no		2026-10-14	0	2026-10-23T10:43Z
+sranges	github	jugne/stratigraphic-ranges	ok	v.0.1.3	2026-10-02	none	no		2026-10-22	6	2026-10-23T10:43Z
+ssranges	github	bioDS/skyline-stratigraphic-ranges	ok	v0.0.3	2026-06-12	none	no		2026-09-29	2	2026-10-23T10:43Z
+strap	cran	strap	ok	1.6-1	2024-05-06	GPL (>= 2)	no				2026-10-23T10:43Z
+strap	github	graemetlloyd/strap	ok			none	no		2024-09-12	2	2026-10-23T10:43Z
+taming-the-beast	github	Taming-the-BEAST/FBD-tutorial	ok			none	no		2026-08-27	6	2026-10-23T10:43Z
+tapestree-jl	github	ignacioq/Tapestree.jl	ok	v0.4.5	2025-10-02	NOASSERTION	no		2026-10-16	28	2026-10-23T10:43Z
+tess	cran	TESS	ok		2025-12-04		yes	as issues were not corrected despite reminders			2026-10-23T10:43Z
+tess	github	hoehna/TESS	ok			none	no		2022-01-31	3	2026-10-23T10:43Z
+toytree	pypi	toytree	ok	3.0.11	2025-11-26	GNU General Public License v3 (GPLv3)	no	tree manipulation, plotting, and evolutionary analysis library			2026-10-23T10:43Z
+treedist	cran	TreeDist	ok	2.15.0	2026-09-11	GPL (>= 3)	no				2026-10-23T10:43Z
+treedist	github	ms609/TreeDist	ok	2.15.0	2026-09-11	none	no		2026-10-23	40	2026-10-23T10:43Z
+treeducken	cran	treeducken	ok		2023-09-28		yes	as requires archived package 'apTreeshape'			2026-10-23T10:43Z
+treepar	cran	TreePar	ok		2022-04-27		yes	as check issues were not corrected in time			2026-10-23T10:43Z
+treepl	github	blackrim/treePL	ok	1.0	2014-03-18	GPL-3.0	no		2026-09-08	59	2026-10-23T10:43Z
+treeplyr	cran	treeplyr	ok		2023-03-01		yes	as issues were not corrected despite reminders			2026-10-23T10:43Z
+treesearch	cran	TreeSearch	ok	1.7.0	2025-08-23	GPL (>= 3)	no				2026-10-23T10:43Z
+treesearch	github	ms609/TreeSearch	ok	1.7.0	2025-10-25	GPL-3.0	no		2026-09-24	9	2026-10-23T10:43Z
+treesim	cran	TreeSim	ok	2.4	2019-04-08	GPL-2	no				2026-10-23T10:43Z
+treesimgm	cran	TreeSimGM	ok	2.5	2020-03-05	GPL-2	no				2026-10-23T10:43Z
+treeswift	pypi	TreeSwift	ok	1.1.51	2026-09-25	see PyPI	no	TreeSwift: Fast tree module for Python 2 and 3			2026-10-23T10:43Z
+treetools	cran	TreeTools	ok	2.5.0	2026-10-16	GPL (>= 3)	no				2026-10-23T10:43Z
+treetools	github	ms609/TreeTools	ok	2.5.0	2026-10-16	none	no		2026-10-16	24	2026-10-23T10:43Z
+ufbd	github	wnsplim/UFBD	ok	v0.1.5	2026-09-03	MIT	no		2026-09-29	0	2026-10-23T10:43Z
+adepem	github	klvoje/adePEM	ok	v1.0.0	2018-08-21	none	no		2023-08-22	2	2026-10-23T10:43Z
+bayestraits	github	AndrewPMeade/BayesTraits-Release	ok			none	no		2025-10-20	2	2026-10-23T10:43Z
+bayou	cran	bayou	ok	2.3.2	2026-02-13	GPL (>= 2)	no				2026-10-23T10:43Z
+bayou	github	uyedaj/bayou	ok			none	no		2026-02-11	25	2026-10-23T10:43Z
+cauphy	cran	cauphy	ok	1.0.3	2024-10-01	GPL (>= 3)	no				2026-10-23T10:43Z
+cauphy	github	gilles-didier/cauphy	ok	v1.0.3	2024-10-01	GPL-3.0	no		2025-05-15	1	2026-10-23T10:43Z
+claddis	cran	Claddis	ok	0.7.0	2024-09-03	GPL (>= 2)	no				2026-10-23T10:43Z
+claddis	github	graemetlloyd/Claddis	ok	CRAN	2020-08-27	none	no		2026-02-05	15	2026-10-23T10:43Z
+corhmm	cran	corHMM	ok	2.8	2022-06-13	GPL (>= 2)	no				2026-10-23T10:43Z
+disprity	cran	dispRity	ok	1.9.12	2026-07-26	GPL-3 | file LICENSE	no				2026-10-23T10:43Z
+disprity	github	TGuillerme/dispRity	ok	v1.8	2023-12-11	GPL-3.0	no		2026-10-20	29	2026-10-23T10:43Z
+evots	cran	evoTS	ok	1.0.3	2024-06-20	GPL (>= 2)	no				2026-10-23T10:43Z
+evots	github	klvoje/evoTS	ok			none	no		2026-09-27	2	2026-10-23T10:43Z
+fossilbm	github	dsilvestro/fossilBM	ok	v0.2	2023-01-22	none	no		2025-06-01	8	2026-10-23T10:43Z
+geiger	cran	geiger	ok	2.0.12	2026-08-31	GPL (>= 2)	no				2026-10-23T10:43Z
+geiger	github	mwpennell/geiger-v2	ok			none	no		2026-08-31	26	2026-10-23T10:43Z
+geomorph	cran	geomorph	ok	4.1.1	2026-07-05	GPL (>= 3)	no				2026-10-23T10:43Z
+geomorph	github	geomorphR/geomorph	ok			none	no		2026-09-25	92	2026-10-23T10:43Z
+l1ou	github	khabbazian/l1ou	ok			GPL-2.0	no		2022-08-05	19	2026-10-23T10:43Z
+layeranalyzer	github	trondreitan/layeranalyzer	ok			none	no		2026-09-18	7	2026-10-23T10:43Z
+matrixcurator	github	tair/matrixcurator	ok			GPL-3.0	no		2026-04-08	0	2026-10-23T10:43Z
+momocs	cran	Momocs	ok		2026-03-18		yes	as issues were not corrected despite reminders			2026-10-23T10:43Z
+momocs	github	MomX/Momocs	ok	v1.4.1	2023-11-13	GPL-3.0	no		2026-01-12	53	2026-10-23T10:43Z
+morpho	cran	Morpho	ok	2.13	2025-09-04	GPL-2	no				2026-10-23T10:43Z
+morpho	github	zarquon42b/Morpho	ok	2.0.3-1	2014-06-05	none	no		2026-04-24	54	2026-10-23T10:43Z
+morphops	pypi	morphops	ok	0.2.0	2026-07-19	MIT	no	Geometric Morphometrics operations in Python			2026-10-23T10:43Z
+morphops	github	vaipatel/morphops	ok	v0.2.0	2026-07-19	MIT	no		2026-07-19	30	2026-10-23T10:43Z
+motmot	cran	motmot	ok	2.1.4	2026-04-16	GPL (>= 2)	no				2026-10-23T10:43Z
+mvmorph	cran	mvMORPH	ok	1.2.3	2026-10-01	GPL (>= 2.0)	no				2026-10-23T10:43Z
+mvmorph	github	JClavel/mvMORPH	ok	stable	2015-07-27	none	no		2026-10-01	20	2026-10-23T10:43Z
+mvslouch	cran	mvSLOUCH	ok	2.7.7	2025-07-24	GPL (>= 2) | file LICENCE	no				2026-10-23T10:43Z
+ontophylo	cran	ontophylo	ok	1.1.3	2024-01-10	MIT + file LICENSE	no				2026-10-23T10:43Z
+ontophylo	github	diegosasso/ontophylo	ok	v1.1.3	2024-01-17	NOASSERTION	no		2024-01-17	2	2026-10-23T10:43Z
+ouch	cran	ouch	ok	2.20	2024-07-04	GPL-3	no				2026-10-23T10:43Z
+ouwie	cran	OUwie	ok	3.0.3	2026-09-16	GPL (>= 2)	no				2026-10-23T10:43Z
+ouwie	github	thej022214/OUwie	ok			none	no		2026-09-30	11	2026-10-23T10:43Z
+paleots	cran	paleoTS	ok	0.6.2	2024-09-10	GPL-3	no				2026-10-23T10:43Z
+paleotsalt	cran	paleoTSalt	ok				yes	removed; no archive date stated			2026-10-23T10:43Z
+pcmbase	cran	PCMBase	ok	1.2.15	2025-09-01	GPL (>= 3.0)	no				2026-10-23T10:43Z
+phylogeneticem	cran	PhylogeneticEM	ok	1.8.1	2025-09-23	GPL (>= 2) | file LICENSE	no				2026-10-23T10:43Z
+phylogeneticem	github	pbastide/PhylogeneticEM	ok	v1.8.1	2025-09-24	GPL-2.0	no		2025-09-24	19	2026-10-23T10:43Z
+phylolm	cran	phylolm	ok	2.6.5	2024-09-30	GPL (>= 2) | file LICENSE	no				2026-10-23T10:43Z
+phytools	cran	phytools	ok	2.5-2	2025-09-19	GPL (>= 2)	no				2026-10-23T10:43Z
+phytools	github	liamrevell/phytools	ok	1.0	2023-11-02	GPL-3.0	no		2026-10-21	234	2026-10-23T10:43Z
+ratematrix	cran	ratematrix	ok	1.2.5	2025-12-06	GPL (>= 2.0)	no				2026-10-23T10:43Z
+rphylopars	cran	Rphylopars	ok	0.3.10	2024-01-18	GPL (>= 2)	no				2026-10-23T10:43Z
+rrphylo	cran	RRphylo	ok	3.0.2	2026-01-10	GPL-2	no				2026-10-23T10:43Z
+rrphylo	github	pasraia/RRphylo	ok			none	no		2026-01-09	11	2026-10-23T10:43Z
+rrpp	cran	RRPP	ok	2.2.0	2026-07-03	GPL (>= 3)	no				2026-10-23T10:43Z
+rvcg	cran	Rvcg	ok	0.25	2025-03-14	GPL (>= 2) | file LICENSE	no				2026-10-23T10:43Z
+slicermorph	github	SlicerMorph/SlicerMorph	ok			BSD-2-Clause	no		2026-10-16	121	2026-10-23T10:43Z
+slouch	cran	slouch	ok	2.1.5	2024-02-15	GPL-2	no				2026-10-23T10:43Z
+biogeobears	cran	BioGeoBEARS	ok		2019-01-28		yes	as check issues were not corrected despite reminder			2026-10-23T10:43Z
+biogeobears	github	nmatzke/BioGeoBEARS	ok	v1.1.1	2018-11-06	none	no		2026-10-12	77	2026-10-23T10:43Z
+daisie	cran	DAISIE	ok	5.0.2	2026-07-31	GPL (>= 3) | file LICENSE	no				2026-10-23T10:43Z
+daisie	github	rsetienne/DAISIE	ok	v5.0.0	2026-07-25	GPL-3.0	no		2026-10-22	10	2026-10-23T10:43Z
+daisieprep	cran	DAISIEprep	ok	1.0.1	2025-10-30	GPL (>= 3)	no				2026-10-23T10:43Z
+hespdiv	cran	hespdiv	ok	1.2.10	2026-05-21	GPL-3	no				2026-10-23T10:43Z
+hespdiv	github	Liudas-Dau/hespdiv	ok	v1.2.10	2026-05-18	GPL-3.0	no		2026-08-31	3	2026-10-23T10:43Z
+island-pkg	cran	island	ok	0.2.11	2026-06-03	GPL-3	no				2026-10-23T10:43Z
+lagrange-ng	github	computations/lagrange-ng	ok	v0.7.2-7	2026-02-24	GPL-2.0	no		2026-09-03	8	2026-10-23T10:43Z
+avida	github	devosoft/avida	ok	2.14.0	2021-07-03	none	no		2025-01-27	669	2026-10-23T10:43Z
+ecolottery	cran	ecolottery	ok	1.0.2	2025-08-22	GPL (>= 2)	no				2026-10-23T10:43Z
+ecolottery	github	frmunoz/ecolottery	ok	1.0.2	2026-03-14	GPL-3.0	no		2026-03-14	15	2026-10-23T10:43Z
+ecosimr	cran	EcoSimR	ok		2021-03-15		yes	as check problems were not corrected in time			2026-10-23T10:43Z
+gen3sis	cran	gen3sis	ok	1.6.0	2025-09-01	GPL-3	no				2026-10-23T10:43Z
+gen3sis	github	project-Gen3sis/R-package	ok			GPL-3.0	no		2025-09-01	37	2026-10-23T10:43Z
+ginkgo	github	jeetsukumaran/Ginkgo	ok			GPL-3.0	no		2023-05-11	1	2026-10-23T10:43Z
+inditek-1	github	CarmenGarciaComas/INDITEK	ok	v.1.1	2022-05-10	none	no		2022-05-10	2	2026-10-23T10:43Z
+inditek-2	github	INDITEK-eco-evo-Model/INDITEK-2.0	ok			none	no		2026-09-17	0	2026-10-23T10:43Z
+mcomsimr	github	plthompson/mcomsimr	ok			none	no		2023-02-03	17	2026-10-23T10:43Z
+mesa	pypi	mesa	ok	3.5.1	2026-03-15	Apache Software License	no	Agent-based modeling (ABM) in Python			2026-10-23T10:43Z
+mesa	github	mesa/mesa	ok	v3.5.1	2026-03-15	Apache-2.0	no		2026-10-22	3910	2026-10-23T10:43Z
+mess	github	messDiv/MESS	ok	v0.0.99	2019-08-06	none	no		2023-11-17	6	2026-10-23T10:43Z
+metaibm	github	JianhaoLin1228/MetaIBM	ok	v3.4.0	2026-07-09	NOASSERTION	no		2026-08-11	8	2026-10-23T10:43Z
+migclim	cran	MigClim	ok		2020-02-25		yes	as no maintainer to correct check issues			2026-10-23T10:43Z
+mobsim	cran	mobsim	ok	0.3.2	2024-12-05	GPL (>= 3)	no				2026-10-23T10:43Z
+mobsim	github	MoBiodiv/mobsim	ok	v0.3.1	2024-05-22	GPL-3.0	no		2026-10-07	21	2026-10-23T10:43Z
+msprime	pypi	msprime	ok	1.4.4	2026-09-01	GPL-3.0-or-later	no	Simulate genealogical trees and genomic sequence data using population genetic models			2026-10-23T10:43Z
+netlogo	github	NetLogo/NetLogo	ok	v7.0.4	2026-05-01	GPL-2.0	no		2026-10-22	1187	2026-10-23T10:43Z
+nlrx	cran	nlrx	ok	0.4.6	2025-11-25	GPL-3	no				2026-10-23T10:43Z
+nlrx	github	ropensci/nlrx	ok	v0.4.6	2026-10-16	GPL-3.0	no		2026-10-18	80	2026-10-23T10:43Z
+pycoalescence	pypi	pycoalescence	ok	1.2.9.post3	2021-12-09	MIT License	no	A spatially explicit neutral ecology simulator using coalescence methods			2026-10-23T10:43Z
+pycoalescence	github	thompsonsed/pycoalescence	ok	v1.2.7	2020-06-30	NOASSERTION	no		2023-10-03	0	2026-10-23T10:43Z
+pyslim	pypi	pyslim	ok	1.1.1	2026-03-06	MIT License	no	Manipulate tree sequences produced by SLiM.			2026-10-23T10:43Z
+rangeshiftr	github	RangeShifter/RangeShiftR-pkg	ok	v3.0.2	2026-03-30	GPL-3.0	no		2026-10-21	11	2026-10-23T10:43Z
+rangeshiftr-package-old	github	RangeShifter/RangeShiftR-package	ok	v1.0.3	2021-08-04	GPL-3.0	yes		2023-11-16	17	2026-10-23T10:43Z
+rangr	cran	rangr	ok	1.0.10	2026-08-20	MIT + file LICENSE	no				2026-10-23T10:43Z
+rangr	github	ropensci/rangr	ok	v1.0.10	2026-08-24	NOASSERTION	no		2026-08-24	3	2026-10-23T10:43Z
+roler	github	role-model/roleR	ok			GPL-3.0	no		2026-10-23	1	2026-10-23T10:43Z
+rscore	github	RangeShifter/RScore	ok	v3.0.0	2026-03-30	GPL-3.0	no		2026-10-21	0	2026-10-23T10:43Z
+slim	github	MesserLab/SLiM	ok	v5.2	2026-04-12	GPL-3.0	no		2026-10-23	234	2026-10-23T10:43Z
+steps	cran	steps	ok		2026-01-15		yes	as issues were not addressed in time			2026-10-23T10:43Z
+steps	github	steps-dev/steps	ok			none	no		2026-10-10	21	2026-10-23T10:43Z
+tskit	pypi	tskit	ok	1.0.3	2026-05-14	MIT	no	The tree sequence toolkit.			2026-10-23T10:43Z
+untb	cran	untb	ok	1.7-7-1	2024-09-11	GPL	no				2026-10-23T10:43Z
+untb	github	RobinHankin/untb	ok			none	no		2026-03-20	4	2026-10-23T10:43Z
+virtualspecies	cran	virtualspecies	ok	1.6.1	2025-10-13	GPL (>= 2.0)	no				2026-10-23T10:43Z
+atnr	cran	ATNr	ok	1.1.2	2025-11-15	GPL (>= 2)	no				2026-10-23T10:43Z
+ceg-python-port	github	Yuchen-Yu/CEG-python-version	ok			none	no		2025-10-21	0	2026-10-23T10:43Z
+cheddar	cran	cheddar	ok	0.1-640	2026-08-20	BSD_2_clause + file LICENSE	no				2026-10-23T10:43Z
+cheddar	github	quicklizard99/cheddar	ok	release-0.1-630	2016-04-17	NOASSERTION	no		2026-02-25	20	2026-10-23T10:43Z
+econetwork	cran	econetwork	ok		2026-03-19		yes	as email to the maintainer is undeliverable			2026-10-23T10:43Z
+ewe	github	Official-EwE/Eii.Ecopath	ok	v6.7.133	2026-10-17	EUPL-1.2	no		2026-10-19	3	2026-10-23T10:43Z
+madingley	github	MadingleyR/MadingleyR	ok	v1.0.6	2024-06-26	none	no		2024-06-26	6	2026-10-23T10:43Z
+mizer	cran	mizer	ok	3.4.0	2026-08-31	GPL-3	no				2026-10-23T10:43Z
+mizer	github	sizespectrum/mizer	ok	v3.4.0	2026-09-02	none	no		2026-09-29	42	2026-10-23T10:43Z
+networkextinction	cran	NetworkExtinction	ok	1.0.3	2023-03-31	GPL (>= 2)	no				2026-10-23T10:43Z
+networkextinction	github	derek-corcoran-barrios/NetworkExtinction	ok	v1.0.3	2023-04-29	none	no		2024-11-11	6	2026-10-23T10:43Z
+rpath	github	NOAA-EDAB/Rpath	ok	v1.1.0	2025-09-05	NOASSERTION	no		2026-10-22	43	2026-10-23T10:43Z
+cgenie-metabolic-index-pohl	github	alexpohl/cGENIE_based_metabolic_index	ok	v0.0	2022-10-19	GPL-3.0	no		2022-10-19	0	2026-10-23T10:43Z
+cgenie-metabolic-index-stockey	github	richardstockey/cGENIE-metabolic_index.extinction	ok	v1.2	2021-09-21	none	no		2021-09-21	2	2026-10-23T10:43Z
+cgenie-muffin	github	derpycode/cgenie.muffin	ok	v0.9.78	2026-10-16	MIT	no		2026-10-16	57	2026-10-23T10:43Z
+climber-x	github	cxesmc/climber-x	ok	v1.5	2026-07-08	GPL-3.0	no		2026-10-14	26	2026-10-23T10:43Z
+copse	github	bjwmills/COPSE	ok			Apache-2.0	no		2022-04-26	10	2026-10-23T10:43Z
+geocarbsulf-app	github	RKOpTris/geocarbsulf-app	ok			none	no		2024-05-06	3	2026-10-23T10:43Z
+geocarbsulf-matlab	github	emittelstaedt/GEOCARBSULF_Matlab	ok			GPL-3.0	no		2023-05-31	4	2026-10-23T10:43Z
+geocarbsulfor	github	Alexjkrause/GEOCARBSULFOR	ok			none	no		2024-03-14	9	2026-10-23T10:43Z
+geoclim7	github	piermafrost/GEOCLIM	ok	v7.0.1	2025-07-04	none	no		2026-03-04	7	2026-10-23T10:43Z
+gospl	pypi	gospl	ok	2026.7.14	2026-07-10	see PyPI	no	Global Landscape Evolution Model			2026-10-23T10:43Z
+gospl	github	Geodels/gospl	ok	v2026.7.14	2026-07-10	GPL-3.0	no		2026-10-13	89	2026-10-23T10:43Z
+iloscar	pypi	iloscar	ok	0.3.0b0	2023-05-18	MIT	no	iLOSCAR			2026-10-23T10:43Z
+iloscar	github	Shihan150/iloscar	ok	0.0.1-alpha	2023-04-04	MIT	no		2025-09-18	22	2026-10-23T10:43Z
+metabolic-index-extinction	github	jlpenn/Metabolic-Index-Extinction	ok	v1.0.0	2022-01-25	none	no		2022-01-25	1	2026-10-23T10:43Z
+muffingen	github	derpycode/muffingen	ok	v0.9.24	2023-01-17	GPL-3.0	no		2026-09-17	5	2026-10-23T10:43Z
+paleocopse-jl	github	PALEOtoolkit/PALEOcopse.jl	ok	v0.4.11	2024-12-30	MIT	no		2025-05-15	4	2026-10-23T10:43Z
+pyscion	github	amer7632/pySCION	ok	v1.0.0	2025-01-16	Apache-2.0	no		2025-04-28	1	2026-10-23T10:43Z
+scion	github	bjwmills/SCION	ok	v1.3.0	2025-10-22	none	no		2026-01-12	35	2026-10-23T10:43Z
+treed	github	julrogger/TREED	ok	v1.0	2026-03-09	Apache-2.0	no		2026-03-09	0	2026-10-23T10:43Z
+carbocat	github	LivUniQuest/CarboCAT	ok			Apache-2.0	no		2025-10-16	3	2026-10-23T10:43Z
+carbocatlite	github	MindTheGap-ERC/CarboCATLite	ok	v1.0.1	2023-10-03	Apache-2.0	no		2024-05-01	4	2026-10-23T10:43Z
+carbokitten-jl	github	MindTheGap-ERC/CarboKitten.jl	ok	v0.7.1	2026-10-01	GPL-3.0	no		2026-10-20	13	2026-10-23T10:43Z
+daime	cran	DAIME	ok	2.1.3	2020-03-10	CC BY 4.0	no				2026-10-23T10:43Z
+darwincat	github	MindTheGap-ERC/DarwinCAT	ok	1.2.1	2024-08-26	Apache-2.0	no		2025-03-03	2	2026-10-23T10:43Z
+ecospace	cran	ecospace	ok	1.4.2	2020-06-13	CC0	no				2026-10-23T10:43Z
+ecospace	github	pnovack-gottshall/ecospace	ok	v1.2.1	2017-11-05	none	no		2020-06-13	5	2026-10-23T10:43Z
+fossilsim	cran	FossilSim	ok	2.4.4	2026-02-26	GPL-3	no				2026-10-23T10:43Z
+fossilsim	github	fossilsim/fossilsim	ok	v2.3.3	2024-04-29	none	no		2026-10-06	12	2026-10-23T10:43Z
+fossilsimshiny	cran	FossilSimShiny	ok	1.1.2	2024-04-29	GPL (>= 3)	no				2026-10-23T10:43Z
+memoria	cran	memoria	ok	1.1.0	2026-02-10	MIT + file LICENSE	no				2026-10-23T10:43Z
+morphsim	cran	MorphSim	ok	1.2.1	2026-09-22	GPL-3	no				2026-10-23T10:43Z
+morphsim	github	fossilsim/morphsim	ok	v1.2.0	2026-05-04	none	no		2026-09-30	1	2026-10-23T10:43Z
+paleoam	cran	paleoAM	ok	1.0.1	2024-09-17	CC0	no				2026-10-23T10:43Z
+paleoam	github	dwbapst/paleoAM	ok			none	no		2025-10-16	3	2026-10-23T10:43Z
+paleobuddy	cran	paleobuddy	ok	1.1.0	2025-02-05	GPL-3	no				2026-10-23T10:43Z
+paleobuddy	github	brpetrucci/paleobuddy	ok	v1.1.0	2025-06-11	GPL-3.0	no		2026-09-04	9	2026-10-23T10:43Z
+paleotree	cran	paleotree	ok	3.4.7	2024-07-06	CC0	no				2026-10-23T10:43Z
+paleotree	github	dwbapst/paleotree	ok	v3.4.4-CRAN-release	2022-05-06	CC0-1.0	no		2026-07-22	23	2026-10-23T10:43Z
+partimode	github	MindTheGap-ERC/PartiMoDe	ok	v1.0.0	2024-08-02	Apache-2.0	no		2024-08-04	0	2026-10-23T10:43Z
+stratpal	cran	StratPal	ok	0.7.1	2025-12-06	Apache License (>= 2)	no				2026-10-23T10:43Z
+stratpal	github	MindTheGap-ERC/StratPal	ok	v0.7.0	2025-12-04	Apache-2.0	no		2026-10-08	2	2026-10-23T10:43Z
+treats	cran	treats	ok	1.1.6	2025-05-15	GPL-3	no				2026-10-23T10:43Z
+treats	github	TGuillerme/treats	ok	v1.0	2023-11-26	none	no		2026-05-07	3	2026-10-23T10:43Z
+evolved	cran	evolved	ok	1.0.0	2024-11-27	GPL (>= 3)	no				2026-10-23T10:43Z
+evolved	github	mjanuario/evolved	ok	v1.0.23_zenodo	2026-01-24	GPL-3.0	no		2026-04-01	13	2026-10-23T10:43Z
+muffindoc	github	derpycode/muffindoc	ok	v0.9.35	2023-01-17	GPL-3.0	no		2024-10-25	15	2026-10-23T10:43Z
+palaeobiology-with-r-2024	github	LewisAJones/2024-TS-palaeobiology-with-r	ok			CC0-1.0	no		2024-10-16	0	2026-10-23T10:43Z
+palaeoverse-workshops	github	palaeoverse/2025-GSA-workshop	ok	v1.0.0	2025-11-04	GPL-3.0	no		2025-11-04	0	2026-10-23T10:43Z
