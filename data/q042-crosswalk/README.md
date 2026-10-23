@@ -207,5 +207,7 @@ Neither is a bound on biological loss.
 - **`genera.csv` and `genus_appearances.csv` are untested.** They may
   inherit the problem through the same query paths.
 - [Detail withheld pending disclosure to the data custodian.]
-- **The raw files are retained, not deleted,** and are no longer used.
-  Deleting them is Barry's decision.
+- **The raw files were deleted on 23 October 2026** at Barry's instruction
+  (Claude chat, exact words: "Yes, delete the raw extracts"). No other
+  copies existed on the laptop, deep-server or mac-mini. The derived numbers
+  here must be rebuilt from public data before any use.
