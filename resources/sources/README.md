@@ -413,7 +413,8 @@ the workflow when they generalise.
 
 - [Detail withheld pending disclosure to the data custodian.]
 - *Quarantine first, then ask.* Records obtained in error are moved out of the
-  mirror at once and made owner-only; deleting them is Barry's call.
+  mirror at once and made owner-only; deleting them is Barry's call (he
+  approved deleting the PBDB quarantine the same day).
 - *Created dates can be import dates.* 17% of PBDB was created in one minute
   of 2025; a creation-date filter is not a history.
 - *Catalogue membership is not data.* NSB's hole catalogue lists every hole
