@@ -453,17 +453,17 @@ basis_check	count	preserved__Quaternary__Mammalia	0
 basis_check	count	preserved__Silurian	2
 basis_check	count	preserved__Triassic	5
 cross	genera_gbif	AU	3026
-cross	genera_pbdb	AU	6161
-cross	genera_shared	AU	1439
-cross	genera_gbif_only	AU	1587
+cross	genera_pbdb	AU	5778
+cross	genera_shared	AU	1320
+cross	genera_gbif_only	AU	1706
 cross	names_gbif_widened	AU	3560
-cross	names_shared_widened	AU	1777
+cross	names_shared_widened	AU	1626
 cross	genera_gbif	PG	271
-cross	genera_pbdb	PG	362
-cross	genera_shared	PG	45
-cross	genera_gbif_only	PG	226
+cross	genera_pbdb	PG	295
+cross	genera_shared	PG	29
+cross	genera_gbif_only	PG	242
 cross	names_gbif_widened	PG	326
-cross	names_shared_widened	PG	64
+cross	names_shared_widened	PG	39
 cross	fossahul_mammal_genera_single_name		123
 cross	fossahul_mammal_genera_au_region		97
 cross	gbif_au_mammal_genera		143

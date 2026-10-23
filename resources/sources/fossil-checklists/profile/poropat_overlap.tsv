@@ -7,7 +7,7 @@ poropat	distinct_binomials		90
 taxa	binomials_exact_original_window		85
 taxa	binomials_exact_permian_aware_window		86
 taxa	binomials_exact_or_variant_permian_aware_window		89
-pbdb	distinct_binomials_in_au_ng_extract_any_taxon_any_age		12197
+pbdb	distinct_binomials_in_au_ng_extract_any_taxon_any_age		10659
 taxa	spelling_variant_in_pbdb	Cratochelone byrnei	Cratochelone berneyi; 1 occurrences, 106.3-100.5 Ma
 taxa	no_exact_or_variant_in_window	Eiectus longmani	exact in au-ng extract: False; variant anywhere in au-ng extract: False
 taxa	spelling_variant_in_pbdb	Eomurunna yurrgensis	Eomurruna yurrgensis; 2 occurrences, 251.902-250.8 Ma

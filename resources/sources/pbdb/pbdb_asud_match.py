@@ -73,6 +73,12 @@ with open(f"{pbdb}/collections.csv", newline="", encoding="utf-8") as f:
     cols = [{k: r[i] for k, i in first.items()} for r in rd]
 cols = [c for c in cols if c["cc"] == "AU"]
 out.append(("collections", "AU_rows", "", len(cols)))
+public = Counter()
+with open(f"{pbdb}/occurrences.csv", newline="", encoding="utf-8") as f:
+    rd = csv.reader(f)
+    ci = next(rd).index("collection_no")
+    for r in rd:
+        public[r[ci]] += 1
 
 dated = defaultdict(list)
 for u in units:
@@ -86,7 +92,7 @@ for field, rank in RANK_FIELD.items():
     unmatched = Counter()
     null_pool = []
     for c in cols:
-        name, n_occs = c[field].strip(), int(c["n_occs"] or 0)
+        name, n_occs = c[field].strip(), public[c["collection_no"]]
         if not name:
             tiers["blank"] += 1
             occ_tiers["blank"] += n_occs

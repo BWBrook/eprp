@@ -189,7 +189,8 @@ tab(t, "by:language", [r["language"] for r in ref], 5)
 t = "taxa"
 tax = tables["taxa"]
 add(t, "rows", "", len(tax))
-tab(t, "by:taxon_rank", [r["taxon_rank"] for r in tax])
+add(t, "taxon_rank_blank", "", sum(not r["taxon_rank"] for r in tax))
+tab(t, "accepted_by:accepted_rank", [r["accepted_rank"] for r in tax if r["taxon_no"] == r["accepted_no"]])
 tab(t, "by:is_extant", [r["is_extant"] for r in tax])
 
 t = "strata"  # from the occurrences' collection fields; occs/strata aggregates over restricted occurrences too

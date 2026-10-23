@@ -1,18 +1,16 @@
 table	metric	key	value
-state_labels_au	occurrences		51243
-state_labels_au	by:class	canonical	50500
-state_labels_au	by:class	variant of a state or territory name	681
+state_labels_au	occurrences		45186
+state_labels_au	by:class	canonical	44474
+state_labels_au	by:class	variant of a state or territory name	662
 state_labels_au	by:class	Macquarie Island	31
-state_labels_au	by:class	sub-state place name	26
+state_labels_au	by:class	sub-state place name	14
 state_labels_au	by:class	blank	5
 state_labels_au	non_canonical_labels	New south wales	544
 state_labels_au	non_canonical_labels	Australian Capital Territories	32
 state_labels_au	non_canonical_labels	Macquarie Island	31
 state_labels_au	non_canonical_labels	 New South Wales	26
 state_labels_au	non_canonical_labels	Queenslandd	23
-state_labels_au	non_canonical_labels	Northern Teritorry	19
 state_labels_au	non_canonical_labels	Northwest Territory	12
-state_labels_au	non_canonical_labels	Yorke Peninsula	12
 state_labels_au	non_canonical_labels	Goldifelds-Esperance	8
 state_labels_au	non_canonical_labels	Australian Capital Terriories	5
 state_labels_au	non_canonical_labels		5
@@ -29,37 +27,37 @@ state_labels_au	non_canonical_labels	New South Whales	1
 state_labels_au	non_canonical_labels	South Asutralia	1
 state_labels_au	non_canonical_labels	New South	1
 state_labels_au	non_canonical_labels	Ghan	1
-state_labels_all	blank_by:cc	PG	933
+state_labels_all	blank_by:cc	PG	517
 state_labels_all	blank_by:cc	NF	56
 state_labels_all	blank_by:cc	CX	33
 state_labels_all	blank_by:cc	AU	5
 state_labels_all	blank_by:cc	CC	5
 state_labels_all	blank_by:cc	HM	3
-quaternary	occurrences		8898
+quaternary	occurrences		7694
 quaternary	occurrences_max_ma_gt_2.58		78
 quaternary	by:enterer	C. Jaramillo	4149
-quaternary	by:enterer	U. Merkel	1177
 quaternary	by:enterer	A. Hendy	633
 quaternary	by:enterer	M. Uhen	532
 quaternary	by:enterer	A. Garcia Selles	397
 quaternary	by:enterer	T. Liebrecht	372
 quaternary	by:enterer	M. Clapham	306
-quaternary	by:enterer	M. Krause	202
+quaternary	by:enterer	U. Merkel	265
+quaternary	by:enterer	A. Graur	114
 quaternary	by:reference	Sniderman 2011	1972
 quaternary	by:reference	Kershaw et al. 2007	1274
 quaternary	by:reference	Kershaw 1976	608
-quaternary	by:reference	Greenstein and Pandolfi 2008	561
 quaternary	by:reference	Prideaux 2004	366
-quaternary	by:reference	Pandolfi 1996	326
 quaternary	by:reference	Reed and Bourne 2000	169
 quaternary	by:reference	Kendrick 1960	144
 quaternary	by:reference	McNamara and Kendrick 1994	139
 quaternary	by:reference	Reed and Bourne 2009	137
 quaternary	by:reference	Kendrick et al. 1991	121
 quaternary	by:reference	Macken and Reed 2013	113
-quaternary	by:reference	Webster and Davies 2003	97
 quaternary	by:reference	Kendrick 1990	95
 quaternary	by:reference	Steadman et al. 1999	83
+quaternary	by:reference	Hill and Macphail 1985	81
+quaternary	by:reference	Semeniuk 1995	73
+quaternary	by:reference	Ludbrook 1983	69
 quaternary	jaramillo_by:phylum	Angiospermae	2999
 quaternary	jaramillo_by:phylum	Pteridophyta	542
 quaternary	jaramillo_by:phylum	Gymnospermae	258
@@ -81,12 +79,13 @@ quaternary	chordata_by:class	Reptilia	213
 quaternary	chordata_by:class	Osteichthyes	19
 quaternary	chordata_by:class	Amphibia	12
 quaternary	chordata_by:class	Chondrichthyes	4
-quaternary	anthozoa_by:reference	Greenstein and Pandolfi 2008	560
-quaternary	anthozoa_by:reference	Pandolfi 1996	326
-quaternary	anthozoa_by:reference	Webster and Davies 2003	83
-quaternary	anthozoa_by:reference	Dechnik et al. 2017	44
+quaternary	anthozoa_occurrences		195
 quaternary	anthozoa_by:reference	Pickett et al. 1985	39
-quaternary	anthozoa_by:reference	Roche et al. 2011	38
+quaternary	anthozoa_by:reference	Ota and Chappell 1999	35
+quaternary	anthozoa_by:reference	Pandolfi 1996	34
+quaternary	anthozoa_by:reference	Pandolfi et al. 2006	17
+quaternary	anthozoa_by:reference	McNamara and Kendrick 1994	13
+quaternary	anthozoa_by:reference	Hopley et al. 1983	9
 quaternary	cave_like_by:formation_blank	False	1159
 quaternary	cave_like_by:formation_blank	True	1
 plate_models	computed	gplates	8492
@@ -119,101 +118,100 @@ plate_models	abs_dlat_gplates_scotese_median_by_period	Ordovician	8.7
 plate_models	abs_dlat_gt_10_by_period	Ordovician	173 of 502
 plate_models	abs_dlat_gplates_scotese_median_by_period	Cambrian	15.5
 plate_models	abs_dlat_gt_10_by_period	Cambrian	967 of 968
-plate_models	quaternary_occurrences_without_gplates		4274 of 8898
-plate_models	occurrences_midpoint_lt_0.39_without_gplates		3885 of 3885
-time_scale_values	count_in_max_or_min_ma	11.63	2330
+plate_models	quaternary_occurrences_without_gplates		3070 of 7694
+plate_models	occurrences_midpoint_lt_0.39_without_gplates		2725 of 2725
+time_scale_values	count_in_max_or_min_ma	11.63	1659
 time_scale_values	count_in_max_or_min_ma	11.608	0
 time_scale_values	count_in_max_or_min_ma	143.1	291
 time_scale_values	count_in_max_or_min_ma	145	0
-time_scale_values	count_in_max_or_min_ma	419.62	2540
+time_scale_values	count_in_max_or_min_ma	419.62	2270
 time_scale_values	count_in_max_or_min_ma	419.2	0
-time_scale_values	count_in_max_or_min_ma	358.86	1074
+time_scale_values	count_in_max_or_min_ma	358.86	1002
 time_scale_values	count_in_max_or_min_ma	358.9	0
-time_scale_values	count_in_max_or_min_ma	443.1	380
+time_scale_values	count_in_max_or_min_ma	443.1	261
 time_scale_values	count_in_max_or_min_ma	443.8	0
 time_scale_values	count_in_max_or_min_ma	486.85	231
 time_scale_values	count_in_max_or_min_ma	485.4	0
-time_scale_values	count_in_max_or_min_ma	538.8	849
+time_scale_values	count_in_max_or_min_ma	538.8	847
 time_scale_values	count_in_max_or_min_ma	541	0
 time_scale_values	count_in_max_or_min_ma	251.902	479
 time_scale_values	count_in_max_or_min_ma	252.17	0
-time_scale_values	count_in_max_or_min_ma	23.04	1256
+time_scale_values	count_in_max_or_min_ma	23.04	845
 time_scale_values	count_in_max_or_min_ma	23.03	0
-time_scale_values	max_ma_equal_to_a_scale1_boundary		47274 of 52541
-time_scale_values	min_ma_equal_to_a_scale1_boundary		45728 of 52541
+time_scale_values	max_ma_equal_to_a_scale1_boundary		41105 of 45991
+time_scale_values	min_ma_equal_to_a_scale1_boundary		39658 of 45991
 timestamps	collections_modified_top	2025-02-22 15:12:02	8369
 timestamps	collections_modified_top	2025-06-07 08:20:47	1
 timestamps	collections_modified_top	2026-05-31 15:46:50	1
 timestamps	occurrences_with_collection_bulk_modified_date		0
-timestamps	occurrences_modified_before_created		8993 of 52541
-timestamps	occurrences_modified_before_created_by:created_year	2011	6033
-timestamps	occurrences_modified_before_created_by:created_year	2012	1796
-timestamps	occurrences_modified_before_created_by:created_year	2013	857
+timestamps	occurrences_modified_before_created		7651 of 45991
+timestamps	occurrences_modified_before_created_by:created_year	2011	5067
+timestamps	occurrences_modified_before_created_by:created_year	2012	1697
+timestamps	occurrences_modified_before_created_by:created_year	2013	580
 timestamps	occurrences_modified_before_created_by:created_year	2010	287
 timestamps	occurrences_modified_before_created_by:created_year	2020	14
 timestamps	occurrences_modified_before_created_by:created_year	2026	4
-timestamps	occurrences_zero_dates		4
+timestamps	occurrences_zero_dates		3
 timestamps	collections_modified_before_created		3
 timestamps	occurrences_created_top_days	2015-08-27	1972
 timestamps	occurrences_created_top_days	1999-07-21	706
 timestamps	occurrences_created_top_days	2010-04-11	641
 timestamps	updated_or_updater_nonblank		0
-period_binning	occurrences_spanning_a_period_boundary		1917 of 52541
-period_binning	spanning_by:midpoint_period	Neogene	966
+period_binning	occurrences_spanning_a_period_boundary		1638 of 45991
+period_binning	spanning_by:midpoint_period	Neogene	900
 period_binning	spanning_by:midpoint_period	Paleogene	496
-period_binning	spanning_by:midpoint_period	Devonian	247
 period_binning	spanning_by:midpoint_period	Carboniferous	104
 period_binning	spanning_by:midpoint_period	Quaternary	78
+period_binning	spanning_by:midpoint_period	Devonian	34
 period_binning	spanning_by:midpoint_period	Triassic	13
 period_binning	spanning_by:midpoint_period	Cretaceous	11
 period_binning	spanning_by:midpoint_period	Permian	2
 misc_counts	pseudofossil_occurrences		9
-misc_counts	specimens_permian_brachiopods		3024 of 5310
+misc_counts	specimens_permian_brachiopods		3024 of 5309
 misc_counts	quaternary_tetrapod_collections_by:cc	AU	389
 misc_counts	quaternary_tetrapod_collections_by:cc	PG	13
 misc_counts	quaternary_tetrapod_collections_by:cc	NF	10
-direct_ages	occurrences		1139
-direct_ages	collections		53
+direct_ages	occurrences		837
+direct_ages	collections		30
 direct_ages	occurrences_by:reference	Kershaw 1976	608
-direct_ages	occurrences_by:reference	Pandolfi 1996	184
 direct_ages	occurrences_by:reference	Pole et al. 1993	85
+direct_ages	occurrences_by:reference	Hocknull et al. 2020	44
 direct_ages	occurrences_and_collections_by:method	14C	677 in 13
 direct_ages	occurrences_and_collections_by:method	K-Ar	103 in 5
-direct_ages	occurrences_and_collections_by:method	Sr isotope	78 in 8
+direct_ages	occurrences_and_collections_by:method	Sr isotope	1 in 1
 direct_ages	occurrences_and_collections_by:method	U/Pb	2 in 2
-direct_ages	occurrences_and_collections_by:method	U/Th	225 in 16
 direct_ages	occurrences_and_collections_by:method	other	44 in 4
 direct_ages	occurrences_and_collections_by:method	paleomagnetic	3 in 1
 direct_ages	occurrences_and_collections_by:method	unknown	7 in 4
-identification	species_rank_identifications		35238
-identification	species_rank_with_species_not_entered		7606
-identification	species_not_entered_exact_code_by:identified_rank	species	7283
-identification	species_not_entered_exact_code_by:identified_rank	genus	219
-identification	species_not_entered_exact_code_by:identified_rank	subgenus	71
+identification	species_rank_identifications		29996
+identification	species_rank_with_species_not_entered		6476
+identification	species_not_entered_exact_code_by:identified_rank	species	6219
+identification	species_not_entered_exact_code_by:identified_rank	genus	215
 identification	species_not_entered_exact_code_by:identified_rank	class	65
+identification	species_not_entered_exact_code_by:identified_rank	subgenus	63
 identification	species_not_entered_exact_code_by:identified_rank	family	49
 identification	species_not_entered_exact_code_by:identified_rank	order	44
 identification	species_not_entered_exact_code_by:identified_rank	superfamily	8
 identification	species_not_entered_exact_code_by:identified_rank	subkingdom	6
-identification	identified_name_partition	none	29576
-identification	identified_name_partition	sp./indet.	14056
-identification	identified_name_partition	n. sp.	4439
-identification	identified_name_partition	cf/aff/?	2964
-identification	identified_name_partition	cf/aff/?+sp./indet.	1369
-identification	identified_name_partition	cf/aff/?+n. sp.	137
-identification	difference_codes_all		37915
-identification	difference_codes_all	species not entered	7760
-identification	difference_codes_all	recombined as	4237
-identification	difference_codes_all	taxon not entered	1689
-identification	difference_codes_all	rank change, species not entered	366
-identification	difference_codes_all	variant of	324
-identification	difference_codes_all	misspelling of, species not entered	86
-identification	difference_codes_all	corrected to, species not entered	62
+identification	identified_name_partition	none	24670
+identification	identified_name_partition	sp./indet.	13074
+identification	identified_name_partition	n. sp.	4199
+identification	identified_name_partition	cf/aff/?	2634
+identification	identified_name_partition	cf/aff/?+sp./indet.	1288
+identification	identified_name_partition	cf/aff/?+n. sp.	126
+identification	difference_codes_all		33462
+identification	difference_codes_all	species not entered	6684
+identification	difference_codes_all	recombined as	3571
+identification	difference_codes_all	taxon not entered	1438
+identification	difference_codes_all	rank change, species not entered	325
+identification	difference_codes_all	variant of	316
+identification	difference_codes_all	corrected to, species not entered	59
+identification	difference_codes_all	misspelling of, species not entered	52
 identification	difference_codes_all	misspelling of, recombined as	26
 identification	difference_codes_all	corrected to	25
-identification	difference_codes_all	misspelling of	22
-identification	difference_codes_all	recombined as, subspecies not entered	21
-identification	difference_codes_all	reassigned as, species not entered	8
+identification	difference_codes_all	misspelling of	20
+identification	difference_codes_all	reassigned as, species not entered	7
+identification	difference_codes_all	recombined as, subspecies not entered	6
 collections_misc	ocean_drilling_named		5
 collections_misc	ocean_drilling_example	71260	Southern Marion Platform, ODP Leg 194, Sites 1196 and 1199 | 11 occs
 collections_misc	ocean_drilling_example	111680	Pincombe's Outcrop, Site 205, Violet Town Road, Belmont | 2 occs
@@ -225,14 +223,10 @@ collections_misc	pg_lat_positive		2
 collections_misc	extant_distribution_pseudo_collections		11
 indonesian_box	collections		70
 indonesian_box	seram_collections		12
-indonesian_box	seram_occurrences		69
-indonesian_box	other_occurrences		260
+indonesian_box	seram_occurrences		35
+indonesian_box	other_occurrences		204
 indonesian_box	occurrences_by:state		130
 indonesian_box	occurrences_by:state	New Guinea	57
-indonesian_box	occurrences_by:state	Paupa	56
-indonesian_box	occurrences_by:state	Maluku	43
 indonesian_box	occurrences_by:state	Irian Jaya	42
+indonesian_box	occurrences_by:state	Maluku	9
 indonesian_box	occurrences_by:state	unknown	1
-two_snapshots	occurrences_first_second_shared		52443 52443 52443
-two_snapshots	shared_columns		135
-two_snapshots	differing_cells		0

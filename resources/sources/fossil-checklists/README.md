@@ -164,7 +164,7 @@ the font's separate accent glyphs (read by pdfplumber as `(cid:2)`, grave, and
   PDF=$RAW/poropat2023_mesozoic_tetrapods.pdf
   uv run poropat_tables.py $PDF $DER/poropat2023_appendix_tables.tsv profile/poropat_tables_check.tsv
   python3 poropat_overlap.py $PDF $DER/poropat2023_appendix_tables.tsv \
-      $P/pbdb/au-ng/raw/2026-10-22T0602Z_url $P/pbdb/intervals/raw/2026-10-22T0611Z_url/intervals.csv \
+      $P/pbdb/au-ng/derived/2026-10-23T0133Z_url $P/pbdb/intervals/raw/2026-10-22T0611Z_url/intervals.csv \
       $P/asud/raw/2026-10-22T0604Z_wfs/StratigraphicUnit.csv profile/poropat_overlap.tsv
   ```
 
@@ -219,8 +219,9 @@ All figures in this section are checked
 
 - **PBDB, taxa.** Poropat's body-fossil tables (A1-A11, 238 rows) name 90
   distinct binomials. Names are compared with those of Australian non-fish
-  chordate occurrences in the 2026-10-22 `au-ng` snapshot, by interval
-  midpoint:
+  chordate occurrences in PBDB's Australia and New Guinea region (public
+  records, cut from the 2026-10-23 global snapshot; see the pbdb entry), by
+  interval midpoint:
   - exact, midpoint 66-256 Ma (760 occurrences, the original window): 85;
   - exact, window widened to the base of the Wuchiapingian, 259.9 Ma (763
     occurrences; Mesozoic plus Lopingian): 86, adding *Trucheosaurus major*,
@@ -233,7 +234,7 @@ All figures in this section are checked
     Ma) and *Minmi paravertebra* (PBDB: *M. paravertebrata*, one occurrence,
     132.6-119.6 Ma);
   - absent: *Eiectus longmani*, with no exact or variant name anywhere in the
-    extract (12,197 distinct binomials across all taxa, ages and
+    region (10,659 distinct binomials across all taxa, ages and
     occurrence and taxon tables). The earlier account, that four of the five
     "absent" names were species described in 2021-2023, was wrong: only
     *Eiectus* is recent and absent.
@@ -299,10 +300,7 @@ not redistribute).
   *Diamantinasaurus* reference and the three accent cells. Page images of
   Table A5 (the *Eiectus* reference and the 'Plesiosaurus' rows) read at
   220-300 dpi.
-- 2026-10-22, checked: overlap of the Poropat tables with the PBDB `au-ng`
-  snapshot (2026-10-22T0602Z), PBDB's interval table (2026-10-22T0611Z) and
-  ASUD (2026-10-22T0604Z) ([poropat_overlap.py](poropat_overlap.py)): the
-  figures in the Overlap section; spelling counts in the paper's text.
+- [Detail withheld pending disclosure to the data custodian.]
 - 2026-10-22, source claim (independent review, not rerun): the review
   compared the page images of pp. 71-78 with the extracted rows and found
   cell contents to match for all 299 rows apart from the defects fixed here.

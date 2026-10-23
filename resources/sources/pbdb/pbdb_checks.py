@@ -101,6 +101,7 @@ tab(t, "jaramillo_by:phylum", [r["phylum"] for r in jar], 8)
 tab(t, "jaramillo_by:plant_organ", [r["plant_organ"] for r in jar], 6)
 add(t, "plant_phyla_other_enterers", "", sum(r["phylum"] in PLANTS for r in q if r["enterer"] != "C. Jaramillo"))
 tab(t, "chordata_by:class", [r["class"] for r in q if r["phylum"] == "Chordata"])
+add(t, "anthozoa_occurrences", "", sum(r["class"] == "Anthozoa" for r in q))
 tab(t, "anthozoa_by:reference", [f'{r["ref_author"]} {r["ref_pubyr"]}' for r in q if r["class"] == "Anthozoa"], 6)
 tab(t, "cave_like_by:formation_blank", [bool(r["formation"].strip()) for r in q if r["environment"] in ("cave", "fissure fill", "sinkhole", "karst indet.")])
 

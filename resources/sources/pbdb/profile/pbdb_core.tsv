@@ -1,56 +1,50 @@
 table	metric	key	value
-occurrences	duplicated_column_names		44
+occurrences	duplicated_column_names		0
 occurrences	duplicated_column_value_mismatches		0
 collections	duplicated_column_names		17
 collections	duplicated_column_value_mismatches		0
-specimens	duplicated_column_names		1
+specimens	duplicated_column_names		0
 specimens	duplicated_column_value_mismatches		0
 measurements	duplicated_column_names		1
 measurements	duplicated_column_value_mismatches		0
 references	duplicated_column_names		0
 references	duplicated_column_value_mismatches		0
-taxa	duplicated_column_names		0
+taxa	duplicated_column_names		6
 taxa	duplicated_column_value_mismatches		0
-strata	duplicated_column_names		0
-strata	duplicated_column_value_mismatches		0
-check	occurrences_rows_vs_datainfo	52541	52541
-check	collections_rows_vs_count	9048	9048
-check	specimens_rows_vs_count	5310	5310
-check	measurements_rows_vs_count	11897	11897
-check	references_rows_vs_count	2038	2038
-check	taxa_rows_vs_count	16447	16447
-check	strata_rows_vs_count	1139	1139
-occurrences	rows		52541
-occurrences	distinct_occurrence_no		52541
-occurrences	rows_with_reid_no		750
-occurrences	distinct_collections		8947
-occurrences	by:cc	AU	51243
-occurrences	by:cc	PG	1200
+check	occurrences_rows_vs_region_count	45991	45991
+check	collections_rows_vs_region_count	9048	9048
+check	specimens_rows_vs_region_count	5309	5309
+check	measurements_rows_vs_region_count	11895	11895
+check	references_rows_vs_region_count	2103	2103
+check	taxa_rows_vs_region_count	10986	10986
+occurrences	rows		45991
+occurrences	distinct_occurrence_no		45991
+occurrences	rows_with_reid_no		740
+occurrences	distinct_collections		8117
+occurrences	by:cc	AU	45186
+occurrences	by:cc	PG	707
 occurrences	by:cc	NF	56
 occurrences	by:cc	CX	33
 occurrences	by:cc	CC	6
 occurrences	by:cc	HM	3
-occurrences	by:state	Queensland	11191
-occurrences	by:state	New South Wales	9656
-occurrences	by:state	Victoria	8975
-occurrences	by:state	Western Australia	8771
-occurrences	by:state	South Australia	7089
-occurrences	by:state	Tasmania	2517
-occurrences	by:state	Northern Territory	2001
-occurrences	by:state		1035
+occurrences	by:state	Queensland	10353
+occurrences	by:state	New South Wales	8550
+occurrences	by:state	Western Australia	7803
+occurrences	by:state	Victoria	7780
+occurrences	by:state	South Australia	5962
+occurrences	by:state	Tasmania	2446
+occurrences	by:state	Northern Territory	1280
+occurrences	by:state		619
 occurrences	by:state	New south wales	544
 occurrences	by:state	Australian Capital Territory	300
 occurrences	by:state	Morobe	120
-occurrences	by:state	East New Britain	77
 occurrences	by:state	Western Highland	38
 occurrences	by:state	Australian Capital Territories	32
 occurrences	by:state	Macquarie Island	31
 occurrences	by:state	 New South Wales	26
 occurrences	by:state	Queenslandd	23
-occurrences	by:state	Northern Teritorry	19
 occurrences	by:state	Bougainville	16
 occurrences	by:state	Northwest Territory	12
-occurrences	by:state	Yorke Peninsula	12
 occurrences	by:state	Western Highlands	8
 occurrences	by:state	Goldifelds-Esperance	8
 occurrences	by:state	Australian Capital Terriories	5
@@ -60,245 +54,247 @@ occurrences	by:state	Queeland	4
 occurrences	by:state	Milne Bay	3
 occurrences	by:state	new south wales	3
 occurrences	by:state	Irian Jaya	2
-occurrences	by:period_of_interval_midpoint	Permian	9822
-occurrences	by:period_of_interval_midpoint	Quaternary	8898
-occurrences	by:period_of_interval_midpoint	Devonian	6835
-occurrences	by:period_of_interval_midpoint	Cambrian	5522
-occurrences	by:period_of_interval_midpoint	Neogene	5452
-occurrences	by:period_of_interval_midpoint	Cretaceous	4017
-occurrences	by:period_of_interval_midpoint	Paleogene	3519
-occurrences	by:period_of_interval_midpoint	Ordovician	2444
-occurrences	by:period_of_interval_midpoint	Carboniferous	2305
-occurrences	by:period_of_interval_midpoint	Silurian	1689
+occurrences	by:state	Kimberley	2
+occurrences	by:state	Queeensland	1
+occurrences	by:state	Manus	1
+occurrences	by:period_of_interval_midpoint	Permian	9819
+occurrences	by:period_of_interval_midpoint	Quaternary	7694
+occurrences	by:period_of_interval_midpoint	Devonian	5654
+occurrences	by:period_of_interval_midpoint	Cambrian	5136
+occurrences	by:period_of_interval_midpoint	Neogene	4047
+occurrences	by:period_of_interval_midpoint	Paleogene	3188
+occurrences	by:period_of_interval_midpoint	Cretaceous	2578
+occurrences	by:period_of_interval_midpoint	Ordovician	2325
+occurrences	by:period_of_interval_midpoint	Carboniferous	2267
+occurrences	by:period_of_interval_midpoint	Silurian	1245
 occurrences	by:period_of_interval_midpoint	Triassic	1004
 occurrences	by:period_of_interval_midpoint	pre-Ediacaran	442
 occurrences	by:period_of_interval_midpoint	Jurassic	305
 occurrences	by:period_of_interval_midpoint	Ediacaran	287
-occurrences	age_span_myr_median		5.0
-occurrences	age_span_gt_myr	1	48048
-occurrences	age_span_gt_myr	5	25445
-occurrences	age_span_gt_myr	10	9787
-occurrences	age_span_gt_myr	20	3421
-occurrences	with_direct_ma_value		1139
+occurrences	age_span_myr_median		4.8
+occurrences	age_span_gt_myr	1	42702
+occurrences	age_span_gt_myr	5	22172
+occurrences	age_span_gt_myr	10	8520
+occurrences	age_span_gt_myr	20	3363
+occurrences	with_direct_ma_value		837
 occurrences	by:direct_ma_method	14C	677
-occurrences	by:direct_ma_method	U/Th	225
 occurrences	by:direct_ma_method	K-Ar	103
-occurrences	by:direct_ma_method	Sr isotope	78
 occurrences	by:direct_ma_method	other	44
 occurrences	by:direct_ma_method	unknown	7
 occurrences	by:direct_ma_method	paleomagnetic	3
 occurrences	by:direct_ma_method	U/Pb	2
-occurrences	by:phylum	Brachiopoda	9791
-occurrences	by:phylum	Mollusca	9237
-occurrences	by:phylum	Chordata	7242
-occurrences	by:phylum	Arthropoda	4361
-occurrences	by:phylum	Angiospermae	4197
-occurrences	by:phylum	Cnidaria	3577
-occurrences	by:phylum	Bryozoa	2102
-occurrences	by:phylum		1771
-occurrences	by:phylum	Pteridophyta	1634
-occurrences	by:phylum	NO_PHYLUM_SPECIFIED	1138
-occurrences	by:phylum	Gymnospermae	937
-occurrences	by:phylum	Echinodermata	853
-occurrences	by:phylum	Porifera	768
-occurrences	by:phylum	Foraminifera	704
+occurrences	by:direct_ma_method	Sr isotope	1
+occurrences	by:phylum	Brachiopoda	9618
+occurrences	by:phylum	Mollusca	8129
+occurrences	by:phylum	Chordata	6037
+occurrences	by:phylum	Arthropoda	4261
+occurrences	by:phylum	Angiospermae	4124
+occurrences	by:phylum	Cnidaria	1990
+occurrences	by:phylum	Bryozoa	1988
+occurrences	by:phylum		1518
+occurrences	by:phylum	Pteridophyta	1169
+occurrences	by:phylum	NO_PHYLUM_SPECIFIED	1092
+occurrences	by:phylum	Echinodermata	816
+occurrences	by:phylum	Gymnospermae	804
+occurrences	by:phylum	Foraminifera	578
+occurrences	by:phylum	Porifera	484
 occurrences	by:phylum	Hyolitha	471
-occurrences	by:phylum	Problematica	454
-occurrences	by:phylum	Equisetophyta	441
-occurrences	by:phylum	Lycopodiophyta	365
+occurrences	by:phylum	Problematica	439
 occurrences	by:phylum	Peltaspermophyta	299
-occurrences	by:phylum	Spermatophyta	286
-occurrences	by:class	NO_CLASS_SPECIFIED	8127
-occurrences	by:class	Rhynchonellata	4506
+occurrences	by:phylum	Equisetophyta	275
+occurrences	by:phylum	Spermatophyta	246
+occurrences	by:phylum	Cyanobacteria	215
+occurrences	by:class	NO_CLASS_SPECIFIED	7510
+occurrences	by:class	Rhynchonellata	4433
 occurrences	by:class	Strophomenata	3658
-occurrences	by:class	Bivalvia	3589
-occurrences	by:class	Anthozoa	3463
-occurrences	by:class	Gastropoda	3190
-occurrences	by:class	Mammalia	2479
-occurrences	by:class		2160
-occurrences	by:class	Conodonta	1904
-occurrences	by:class	Trilobita	1865
-occurrences	by:class	Cephalopoda	1465
-occurrences	by:class	Polypodiopsida	1141
-occurrences	by:class	Gymnolaemata	1108
-occurrences	by:class	Stenolaemata	965
-occurrences	by:class	Ostracoda	841
+occurrences	by:class	Bivalvia	3102
+occurrences	by:class	Gastropoda	2611
+occurrences	by:class	Mammalia	2468
+occurrences	by:class	Anthozoa	1884
+occurrences	by:class		1881
+occurrences	by:class	Trilobita	1862
+occurrences	by:class	Cephalopoda	1463
+occurrences	by:class	Gymnolaemata	1026
+occurrences	by:class	Stenolaemata	940
+occurrences	by:class	Polypodiopsida	858
 occurrences	by:class	Reptilia	815
+occurrences	by:class	Ostracoda	809
 occurrences	by:class	Insecta	808
-occurrences	by:class	Lingulata	712
-occurrences	by:class	Dicotyledoneae	678
-occurrences	by:class	Crinoidea	567
-occurrences	by:class	Helcionelloida	556
+occurrences	by:class	Conodonta	799
+occurrences	by:class	Dicotyledoneae	675
+occurrences	by:class	Lingulata	674
+occurrences	by:class	Crinoidea	563
+occurrences	by:class	Helcionelloida	539
 occurrences	by:class	Aves	526
-occurrences	by:class	Osteichthyes	456
 occurrences	by:class	Artiopoda	447
-occurrences	by:class	Equisetopsida	441
-occurrences	by:class	Chondrichthyes	434
-occurrences	by:class	Lycopodiopsida	365
-occurrences	by:class	Coeloscleritophora	281
-occurrences	by:class	Pteridopsida	281
-occurrences	by:class	Stromatoporoidea	261
-occurrences	by:accepted_rank	species	26799
-occurrences	by:accepted_rank	genus	19022
-occurrences	by:accepted_rank	family	2347
-occurrences	by:accepted_rank		1692
-occurrences	by:accepted_rank	class	491
-occurrences	by:accepted_rank	order	414
-occurrences	by:accepted_rank	subgenus	369
+occurrences	by:class	Osteichthyes	440
+occurrences	by:class	Chondrichthyes	387
+occurrences	by:class	Equisetopsida	275
+occurrences	by:class	Coeloscleritophora	274
+occurrences	by:class	Arberiopsida	249
+occurrences	by:class	Stromatoporoidea	242
+occurrences	by:class	Magnoliopsida	226
+occurrences	by:accepted_rank	species	22722
+occurrences	by:accepted_rank	genus	16984
+occurrences	by:accepted_rank	family	2313
+occurrences	by:accepted_rank		1438
+occurrences	by:accepted_rank	class	465
+occurrences	by:accepted_rank	order	400
 occurrences	by:accepted_rank	unranked clade	345
-occurrences	by:accepted_rank	phylum	343
-occurrences	by:accepted_rank	subspecies	138
-occurrences	by:accepted_rank	subclass	127
+occurrences	by:accepted_rank	subgenus	338
+occurrences	by:accepted_rank	phylum	318
+occurrences	by:accepted_rank	subclass	124
+occurrences	by:accepted_rank	subspecies	101
 occurrences	by:accepted_rank	subfamily	89
-occurrences	by:accepted_rank	superfamily	89
-occurrences	by:accepted_rank	suborder	87
+occurrences	by:accepted_rank	superfamily	87
+occurrences	by:accepted_rank	suborder	80
 occurrences	by:accepted_rank	kingdom	42
-occurrences	by:accepted_rank	subphylum	38
-occurrences	by:accepted_rank	infraorder	38
+occurrences	by:accepted_rank	subphylum	37
+occurrences	by:accepted_rank	infraorder	37
 occurrences	by:accepted_rank	superorder	28
 occurrences	by:accepted_rank	infraclass	25
 occurrences	by:accepted_rank	informal	9
 occurrences	by:accepted_rank	tribe	5
 occurrences	by:accepted_rank	superclass	4
-occurrences	by:identified_rank	species	35238
-occurrences	by:identified_rank	genus	11549
-occurrences	by:identified_rank	family	2320
-occurrences	by:identified_rank		617
-occurrences	by:identified_rank	class	485
-occurrences	by:identified_rank	subspecies	438
-occurrences	by:identified_rank	order	428
+occurrences	by:identified_rank	species	29996
+occurrences	by:identified_rank	genus	10620
+occurrences	by:identified_rank	family	2286
+occurrences	by:identified_rank		601
+occurrences	by:identified_rank	class	459
+occurrences	by:identified_rank	order	415
 occurrences	by:identified_rank	unranked clade	324
-occurrences	by:identified_rank	phylum	310
-occurrences	by:identified_rank	subgenus	272
-occurrences	by:identified_rank	subclass	124
+occurrences	by:identified_rank	phylum	285
+occurrences	by:identified_rank	subgenus	259
+occurrences	by:identified_rank	subspecies	196
+occurrences	by:identified_rank	subclass	121
 occurrences	by:identified_rank	subfamily	87
-occurrences	by:identified_rank	superfamily	87
-occurrences	by:identified_rank	suborder	77
-occurrences	by:identified_rank	subphylum	38
-occurrences	by:identified_rank	infraorder	36
+occurrences	by:identified_rank	superfamily	86
+occurrences	by:identified_rank	suborder	73
+occurrences	by:identified_rank	subphylum	37
 occurrences	by:identified_rank	kingdom	35
+occurrences	by:identified_rank	infraorder	35
 occurrences	by:identified_rank	superorder	28
 occurrences	by:identified_rank	infraclass	25
 occurrences	by:identified_rank	informal	9
 occurrences	by:identified_rank	subkingdom	7
 occurrences	by:identified_rank	tribe	5
 occurrences	by:identified_rank	superclass	2
-occurrences	identified_name_open_nomenclature		20349
-occurrences	accepted_name_blank		1689
-occurrences	by:difference		37915
-occurrences	by:difference	species not entered	7760
-occurrences	by:difference	recombined as	4237
-occurrences	by:difference	taxon not entered	1689
-occurrences	by:difference	rank change, species not entered	366
-occurrences	by:difference	variant of	324
-occurrences	by:difference	misspelling of, species not entered	86
-occurrences	by:difference	corrected to, species not entered	62
+occurrences	identified_name_open_nomenclature		18842
+occurrences	accepted_name_blank		1438
+occurrences	by:difference		33462
+occurrences	by:difference	species not entered	6684
+occurrences	by:difference	recombined as	3571
+occurrences	by:difference	taxon not entered	1438
+occurrences	by:difference	rank change, species not entered	325
+occurrences	by:difference	variant of	316
+occurrences	by:difference	corrected to, species not entered	59
+occurrences	by:difference	misspelling of, species not entered	52
 occurrences	by:difference	misspelling of, recombined as	26
 occurrences	by:difference	corrected to	25
-occurrences	by:environment	marine indet.	13685
-occurrences	by:environment	coastal indet.	5425
-occurrences	by:environment	terrestrial indet.	3640
-occurrences	by:environment	carbonate indet.	3618
-occurrences	by:environment	shallow subtidal indet.	3395
-occurrences	by:environment	lacustrine indet.	3098
-occurrences	by:environment	reef, buildup or bioherm	2968
-occurrences	by:environment	open shallow subtidal	2258
+occurrences	by:environment	marine indet.	12842
+occurrences	by:environment	coastal indet.	4807
+occurrences	by:environment	lacustrine indet.	3096
+occurrences	by:environment	carbonate indet.	2892
+occurrences	by:environment	shallow subtidal indet.	2716
+occurrences	by:environment	terrestrial indet.	2585
 occurrences	by:environment	crater lake	1882
+occurrences	by:environment	open shallow subtidal	1801
+occurrences	by:environment	reef, buildup or bioherm	1453
 occurrences	by:environment		1425
-occurrences	by:environment	offshore	1424
+occurrences	by:environment	offshore	1421
 occurrences	by:environment	cave	1109
-occurrences	by:environment	transition zone/lower shoreface	940
+occurrences	by:environment	transition zone/lower shoreface	920
 occurrences	by:environment	pond	888
 occurrences	by:environment	fluvial indet.	528
-occurrences	by:environment	platform/shelf-margin reef	494
-occurrences	by:environment	shoreface	492
+occurrences	by:environment	shoreface	456
+occurrences	by:environment	platform/shelf-margin reef	399
 occurrences	by:environment	estuary/bay	375
 occurrences	by:environment	deep subtidal shelf	357
-occurrences	by:environment	perireef or subreef	341
-occurrences	rows_with_abundance		8808
-occurrences	by:abund_unit	specimens	6866
-occurrences	by:abund_unit	elements	599
-occurrences	by:abund_unit	%-area	511
+occurrences	by:environment	fluvial-lacustrine indet.	336
+occurrences	rows_with_abundance		6924
+occurrences	by:abund_unit	specimens	6104
 occurrences	by:abund_unit	individuals	280
-occurrences	by:abund_unit	category	234
 occurrences	by:abund_unit	%-individuals	221
+occurrences	by:abund_unit	category	155
 occurrences	by:abund_unit	%-specimens	71
+occurrences	by:abund_unit	elements	44
 occurrences	by:abund_unit	fragments	26
-occurrences	distinct_accepted_names		11482
-occurrences	with_formation		37203
-occurrences	quaternary_by:class	NO_CLASS_SPECIFIED	2824
+occurrences	by:abund_unit	%-area	23
+occurrences	distinct_accepted_names		10470
+occurrences	with_formation		32686
+occurrences	quaternary_by:class	NO_CLASS_SPECIFIED	2820
 occurrences	quaternary_by:class	Mammalia	1684
-occurrences	quaternary_by:class	Anthozoa	1307
 occurrences	quaternary_by:class	Dicotyledoneae	540
 occurrences	quaternary_by:class	Polypodiopsida	409
 occurrences	quaternary_by:class	Aves	407
-occurrences	quaternary_by:class	Gastropoda	399
-occurrences	quaternary_by:class	Bivalvia	327
-occurrences	quaternary_by:class		253
+occurrences	quaternary_by:class	Gastropoda	386
+occurrences	quaternary_by:class	Bivalvia	309
+occurrences	quaternary_by:class		233
 occurrences	quaternary_by:class	Reptilia	213
-occurrences	quaternary_by:class	Florideophyceae	115
+occurrences	quaternary_by:class	Anthozoa	195
 occurrences	quaternary_by:class	Equisetopsida	106
+occurrences	quaternary_by:class	Florideophyceae	89
 occurrences	quaternary_by:class	Lycopodiopsida	59
 occurrences	quaternary_by:class	Rhynchonellata	46
 occurrences	quaternary_by:class	Magnoliopsida	39
 occurrences	quaternary_by:environment	lacustrine indet.	2268
 occurrences	quaternary_by:environment	crater lake	1882
-occurrences	quaternary_by:environment	reef, buildup or bioherm	1341
 occurrences	quaternary_by:environment	cave	1066
 occurrences	quaternary_by:environment	terrestrial indet.	951
-occurrences	quaternary_by:environment	coastal indet.	404
-occurrences	quaternary_by:environment	shallow subtidal indet.	230
+occurrences	quaternary_by:environment	coastal indet.	373
+occurrences	quaternary_by:environment	reef, buildup or bioherm	257
+occurrences	quaternary_by:environment	shallow subtidal indet.	212
 occurrences	quaternary_by:environment	shoreface	105
-occurrences	quaternary_by:environment	platform/shelf-margin reef	71
 occurrences	quaternary_by:environment	estuary/bay	66
+occurrences	quaternary_by:environment	foreshore	65
 occurrences	quaternary_chordate_genera		289
-occurrences	created_year	2015	8643
-occurrences	created_year	2011	6387
-occurrences	created_year	2006	3420
-occurrences	created_year	2010	3064
-occurrences	created_year	2016	2653
-occurrences	created_year	2014	2345
+occurrences	created_year	2015	8177
+occurrences	created_year	2011	5415
+occurrences	created_year	2006	3416
+occurrences	created_year	2010	3044
+occurrences	created_year	2016	2322
 occurrences	created_year	2002	2099
 occurrences	created_year	2004	2083
-occurrences	created_year	2007	2015
-occurrences	created_year	2008	1886
-occurrences	created_year	2012	1858
-occurrences	created_year	2025	1621
-occurrences	created_year	2013	1469
-occurrences	created_year	2005	1416
-occurrences	created_year	2018	1213
+occurrences	created_year	2012	1752
+occurrences	created_year	2025	1529
+occurrences	created_year	2005	1401
+occurrences	created_year	2008	1207
+occurrences	created_year	2013	1127
 occurrences	created_year	2022	1122
-occurrences	created_year	2026	1106
 occurrences	created_year	2000	1106
-occurrences	created_year	2003	1011
+occurrences	created_year	2026	1105
+occurrences	created_year	2007	1089
+occurrences	created_year	2003	1009
 occurrences	created_year	1999	1001
-occurrences	created_year	2009	967
-occurrences	created_year	2020	780
-occurrences	created_year	2024	689
-occurrences	created_year	2017	634
-occurrences	created_year	2021	537
-occurrences	created_year	2019	487
+occurrences	created_year	2014	855
+occurrences	created_year	2020	777
+occurrences	created_year	2009	753
+occurrences	created_year	2018	679
+occurrences	created_year	2024	678
+occurrences	created_year	2021	506
+occurrences	created_year	2019	465
 occurrences	created_year	2001	442
-occurrences	created_year	2023	405
+occurrences	created_year	2017	378
+occurrences	created_year	2023	373
 occurrences	created_year	1995	43
 occurrences	created_year	1998	35
-occurrences	created_year	0000	3
+occurrences	created_year	0000	2
 occurrences	created_year	1991	1
 occurrences	modified_date_top	2015-08-27	1970
 occurrences	modified_date_top	2010-04-11	642
 occurrences	modified_date_top	2015-04-28	629
 occurrences	modified_date_top	2003-04-22	568
 occurrences	modified_date_top	2011-11-19	559
-occurrences	enterer_top	M. Clapham	11485
-occurrences	enterer_top	C. Jaramillo	6486
-occurrences	enterer_top	P. Wagner	4138
-occurrences	enterer_top	A. Hendy	3129
+occurrences	enterer_top	M. Clapham	11484
+occurrences	enterer_top	C. Jaramillo	6477
+occurrences	enterer_top	P. Wagner	4088
 occurrences	enterer_top	M. Foote	2677
-occurrences	enterer_top	U. Merkel	2372
-occurrences	enterer_top	M. Krause	1697
-occurrences	enterer_top	M. Uhen	1660
-occurrences	enterer_top	P. Santamarina	1397
+occurrences	enterer_top	A. Hendy	2109
+occurrences	enterer_top	M. Uhen	1599
 occurrences	enterer_top	K. Layou	1373
+occurrences	enterer_top	N. Heim	1050
+occurrences	enterer_top	M. Hopkins	974
+occurrences	enterer_top	P. Novack-Gottshall	952
 collections	rows		9048
 collections	with_zero_occurrences		101
 collections	by:cc	AU	8850
@@ -319,24 +315,24 @@ collections	by:state	Morobe	20
 collections	by:state	New south wales	15
 collections	by:state	Australian Capital Territory	13
 collections	by:state	Macquarie Island	8
-collections	by:state	Northwest Territory	7
 collections	by:state	East New Britain	7
+collections	by:state	Northwest Territory	7
 collections	by:state	Western Highland	6
 collections	by:state	Yorke Peninsula	4
 collections	by:state	Australian Capital Territories	3
 collections	by:state	Northern Territories	3
-collections	by:state	Kimberley	2
 collections	by:state	Irian Jaya	2
+collections	by:state	Kimberley	2
 collections	by:state	Australian Capital Terriories	1
+collections	by:state	Western Highlands	1
 collections	by:state	Queeensland	1
+collections	by:state	Manus	1
+collections	by:state	Southern Highlands	1
+collections	by:state	Milne Bay	1
+collections	by:state	Western	1
 collections	by:state	Northern Teritorry	1
 collections	by:state	new south wales	1
 collections	by:state	 New South Wales	1
-collections	by:state	Eildon	1
-collections	by:state	Gippsland	1
-collections	by:state	West Australia	1
-collections	by:state	New South Whales	1
-collections	by:state	Goldifelds-Esperance	1
 collections	by:latlng_precision	minutes	2420
 collections	by:latlng_precision	seconds	2339
 collections	by:latlng_precision	3	1516
@@ -493,7 +489,7 @@ collections	top_references_by_collections	58566	123
 collections	top_references_by_collections	36711	115
 collections	top_references_by_collections	26800	115
 collections	top_references_by_collections	10555	112
-specimens	rows		5310
+specimens	rows		5309
 specimens	by:class	Rhynchonellata	1800
 specimens	by:class	Strophomenata	1728
 specimens	by:class	Bivalvia	643
@@ -505,7 +501,7 @@ specimens	by:class	Lingulata	16
 specimens	by:class	Reptilia	12
 specimens	by:class	Trilobita	12
 specimens	by:is_type		3903
-specimens	by:is_type	holotype	962
+specimens	by:is_type	holotype	961
 specimens	by:is_type	paratype	445
 specimens	by:specimen_part	valve	2897
 specimens	by:specimen_part	shell	1692
@@ -517,10 +513,10 @@ specimens	by:specimen_part	wing	43
 specimens	by:specimen_part	hindwing	36
 specimens	by:specimen_part		29
 specimens	by:specimen_part	carapace	10
-specimens	distinct_occurrences		2389
-measurements	rows		11897
-measurements	by:measurement_type	length	4814
-measurements	by:measurement_type	width	4602
+specimens	distinct_occurrences		2388
+measurements	rows		11895
+measurements	by:measurement_type	length	4813
+measurements	by:measurement_type	width	4601
 measurements	by:measurement_type	height	1994
 measurements	by:measurement_type	diameter	266
 measurements	by:measurement_type	inflation	219
@@ -535,72 +531,87 @@ measurements	by:class		85
 measurements	by:class	Lingulata	40
 measurements	by:class	Ostracoda	34
 measurements	by:class	Trilobita	24
-references	rows		2038
-references	by:publication_type	journal article	1817
-references	by:publication_type	serial monograph	97
-references	by:publication_type	book/book chapter	43
+references	rows		2103
+references	by:publication_type	journal article	1870
+references	by:publication_type	serial monograph	99
+references	by:publication_type	book/book chapter	49
 references	by:publication_type	book chapter	33
 references	by:publication_type		15
-references	by:publication_type	book	8
-references	by:publication_type	Ph.D. thesis	6
+references	by:publication_type	book	10
 references	by:publication_type	unpublished	6
+references	by:publication_type	abstract	6
 references	by:publication_type	compendium	6
-references	by:publication_type	abstract	5
+references	by:publication_type	Ph.D. thesis	6
 references	by:publication_type	guidebook	2
-references	with_doi		1084
-references	pubyr_range		1820 to 2026
-references	by:decade	1990s	349
-references	by:decade	2000s	332
-references	by:decade	1980s	305
-references	by:decade	2010s	284
-references	by:decade	1970s	209
-references	by:decade	2020s	137
-references	by:decade	1960s	124
-references	by:decade	1950s	59
+references	by:publication_type	news article	1
+references	with_doi		1112
+references	pubyr_range		1825 to 2026
+references	by:decade	1990s	359
+references	by:decade	2000s	337
+references	by:decade	1980s	315
+references	by:decade	2010s	292
+references	by:decade	1970s	216
+references	by:decade	2020s	140
+references	by:decade	1960s	133
+references	by:decade	1950s	67
 references	by:decade	1940s	46
-references	by:decade	1910s	34
-references	by:decade	1930s	31
-references	by:decade	1890s	31
-references	by:decade	1900s	28
+references	by:decade	1930s	36
+references	by:decade	1910s	35
+references	by:decade	1890s	30
+references	by:decade	1900s	29
 references	by:decade	1920s	27
-references	by:decade	1880s	20
-references	by:decade	1840s	8
-references	by:decade	1870s	8
-references	by:decade	1860s	2
-references	by:decade	1820s	2
-references	by:decade	1850s	1
+references	by:decade	1880s	16
+references	by:decade	1870s	9
+references	by:decade	1840s	9
+references	by:decade	1860s	4
+references	by:decade	1820s	1
 references	by:decade	1830s	1
-references	by:language	English	1855
-references	by:language		165
+references	by:decade	1850s	1
+references	by:language	English	1912
+references	by:language		172
 references	by:language	German	10
 references	by:language	Russian	5
-references	by:language	French	2
-taxa	rows		16447
-taxa	by:taxon_rank	species	6911
-taxa	by:taxon_rank	genus	6135
-taxa	by:taxon_rank	family	2481
-taxa	by:taxon_rank	order	694
-taxa	by:taxon_rank	class	172
-taxa	by:taxon_rank	phylum	54
-taxa	by:is_extant	extinct	12148
-taxa	by:is_extant	extant	3701
-taxa	by:is_extant		598
-strata	rows		1139
-strata	with_formation		1083
-strata	distinct_formations		807
-strata	distinct_groups		119
-strata	top_strata_by_occs	 |  | 	14005
-strata	top_strata_by_occs	 | Callytharra | 	1126
-strata	top_strata_by_occs	 | Garra | 	875
+references	by:language	French	3
+taxa	rows		10986
+taxa	taxon_rank_blank		10986
+taxa	accepted_by:accepted_rank	species	4379
+taxa	accepted_by:accepted_rank	genus	3294
+taxa	accepted_by:accepted_rank	family	367
+taxa	accepted_by:accepted_rank	order	86
+taxa	accepted_by:accepted_rank	subgenus	60
+taxa	accepted_by:accepted_rank	class	35
+taxa	accepted_by:accepted_rank	superfamily	34
+taxa	accepted_by:accepted_rank	subfamily	29
+taxa	accepted_by:accepted_rank	unranked clade	20
+taxa	accepted_by:accepted_rank	phylum	18
+taxa	accepted_by:accepted_rank	suborder	16
+taxa	accepted_by:accepted_rank	subspecies	13
+taxa	accepted_by:accepted_rank	subclass	8
+taxa	accepted_by:accepted_rank	infraorder	6
+taxa	accepted_by:accepted_rank	subphylum	6
+taxa	accepted_by:accepted_rank	tribe	2
+taxa	accepted_by:accepted_rank	kingdom	1
+taxa	accepted_by:accepted_rank	superclass	1
+taxa	accepted_by:accepted_rank	informal	1
+taxa	by:is_extant	extinct	8680
+taxa	by:is_extant	extant	2152
+taxa	by:is_extant		154
+strata	rows		1103
+strata	with_formation		1047
+strata	distinct_formations		782
+strata	distinct_groups		117
+strata	top_strata_by_occs	 |  | 	11973
+strata	top_strata_by_occs	 | Callytharra | 	1125
+strata	top_strata_by_occs	 | Garra | 	874
 strata	top_strata_by_occs	 | Holmwood | Fossil Cliff	772
-strata	top_strata_by_occs	 | Bathurst Island | 	703
 strata	top_strata_by_occs	 | Parara | 	691
-strata	top_strata_by_occs	 | Ajax Limestone | 	665
-strata	top_strata_by_occs	 | Dry Creek Sands | 	602
-strata	top_strata_by_occs	 | Virgin Hills | 	602
-strata	top_strata_by_occs	 | Mernmerna | 	466
+strata	top_strata_by_occs	 | Dry Creek Sands | 	593
+strata	top_strata_by_occs	 | Virgin Hills | 	564
+strata	top_strata_by_occs	 | Ajax Limestone | 	545
 strata	top_strata_by_occs	Glenelg |  | 	417
 strata	top_strata_by_occs	 | Parara Limestone | 	409
 strata	top_strata_by_occs	 | Buffel | Elvinia	408
 strata	top_strata_by_occs	 | Chatsworth | 	399
 strata	top_strata_by_occs	 | Flat Top | 	380
+strata	top_strata_by_occs	 | Buffel | Fairyland	370
+strata	top_strata_by_occs	 | Gogo | 	312

@@ -408,6 +408,18 @@ the workflow when they generalise.
 - *Quality screens can share an author with what they screen.* The
   thylacine and devil "screen" of FosSahul applies FosSahul's own rating.
 
+**Global PBDB and the register deposits (23 October 2026; [pbdb](pbdb/README.md),
+[register-deposits](register-deposits/README.md)).**
+
+- [Detail withheld pending disclosure to the data custodian.]
+- *Quarantine first, then ask.* Records obtained in error are moved out of the
+  mirror at once and made owner-only; deleting them is Barry's call.
+- *Created dates can be import dates.* 17% of PBDB was created in one minute
+  of 2025; a creation-date filter is not a history.
+- *Shared keys are not duplicates.* PBDB's IODP import shares all its holes
+  with NSB but mostly not its cores; reconcile at the sample level before
+  merging.
+
 **Outreach (Barry, 22 October 2026).**
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up

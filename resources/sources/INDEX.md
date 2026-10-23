@@ -22,7 +22,8 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [neotoma](neotoma/README.md): Neotoma Paleoecology Database, with the Indo-Pacific Pollen… | database | open | pollen and spores, charcoal, plant macrofossils, other prox… | Quaternary; Sahul pollen records mostly Holocene … | 611 datasets | yes | – |
 | [nsb](nsb/README.md): Neptune Sandbox Berlin (NSB) | database | open | calcareous nannofossils, planktonic foraminifera, radiolari… | Late Jurassic to Recent; occurrence ages 0-151.08… | 783,987 occurrences | yes | Q-007, Q-016 |
 | [octopus](octopus/README.md): OCTOPUS, an open geochronology and environmental database f… | database | open | not taxonomic; hosts age and proxy collections | Quaternary (cosmogenic nuclides to Pleistocene; l… | 25 layers | yes | – |
-| [pbdb](pbdb/README.md): Paleobiology Database (PBDB) | database | open | all fossil groups: invertebrates, vertebrates, plants, micr… | Archean to Holocene; the extract runs from the Pa… | 52,541 occurrences | yes | Q-006, Q-042, Q-044, Q-045, Q-049 |
+| [pbdb](pbdb/README.md): Paleobiology Database (PBDB) | database | open | all fossil groups: invertebrates, vertebrates, plants, micr… | Archean to Holocene; 99.9% of occurrences Ediacar… | 1,782,648 occurrences | yes | Q-002, Q-004, Q-006, Q-010, Q-013, Q-016, Q-018, Q-019, Q-020, Q-023, Q-025, Q-026, Q-027, Q-028, Q-029, Q-030, Q-033, Q-037, Q-038, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045, Q-047, Q-049, B-001, B-003, B-005, B-007, B-008, B-009, B-010, B-013, B-014, B-015, B-018 |
+| [register-deposits](register-deposits/README.md): Dryad deposits named by the EPRP question registers (global… | deposit | open | marine invertebrates (molluscs, brachiopods, bryozoans, ost… | Cambrian to Recent | 15 deposits | yes | Q-002, Q-005, Q-011, Q-012, Q-022, Q-027, Q-036, Q-038, Q-044, Q-045, Q-050, B-002, B-009, B-012, B-014, B-016 |
 | [rpd](rpd/README.md): Reading Palaeofire Database (RPD) | compilation | open | not taxonomic; sedimentary charcoal records | Late Quaternary; Sahul records mostly Holocene (m… | 1,676 entities | yes | – |
 | [sahul-sealevel](sahul-sealevel/README.md): Sahul sea-level and palaeogeography pack (Pico et al. 2020;… | deposit | open | not taxonomic; sea level, shelf exposure and palaeotopograp… | global sea level 0-798 ka; Sahul and Sunda shelf … | 95 pico rows | yes | – |
 | [sahularch](sahularch/README.md): SahulArch, a geochronological database for the archaeology … | compilation | open-nc | not taxonomic; archaeological age determinations | radiocarbon 0-55,000 BP; OSL to 239 ka; TL to 270… | 10,714 ages | yes | – |
@@ -34,15 +35,52 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 
 ## By EPRP question
 
-- **Q-005**: triton
+- **B-001**: pbdb
+- **B-002**: register-deposits
+- **B-003**: pbdb
+- **B-005**: pbdb
+- **B-007**: pbdb
+- **B-008**: pbdb
+- **B-009**: pbdb, register-deposits
+- **B-010**: pbdb
+- **B-012**: register-deposits
+- **B-013**: pbdb
+- **B-014**: pbdb, register-deposits
+- **B-015**: pbdb
+- **B-016**: register-deposits
+- **B-018**: pbdb
+- **Q-002**: pbdb, register-deposits
+- **Q-004**: pbdb
+- **Q-005**: register-deposits, triton
 - **Q-006**: pbdb
 - **Q-007**: nsb, triton
-- **Q-012**: triton
-- **Q-016**: nsb
-- **Q-020**: triton
-- **Q-027**: triton
+- **Q-010**: pbdb
+- **Q-011**: register-deposits
+- **Q-012**: register-deposits, triton
+- **Q-013**: pbdb
+- **Q-016**: nsb, pbdb
+- **Q-018**: pbdb
+- **Q-019**: pbdb
+- **Q-020**: pbdb, triton
+- **Q-022**: register-deposits
+- **Q-023**: pbdb
+- **Q-025**: pbdb
+- **Q-026**: pbdb
+- **Q-027**: pbdb, register-deposits, triton
+- **Q-028**: pbdb
+- **Q-029**: pbdb
+- **Q-030**: pbdb
+- **Q-033**: pbdb
 - **Q-034**: fred
+- **Q-036**: register-deposits
+- **Q-037**: pbdb
+- **Q-038**: pbdb, register-deposits
+- **Q-039**: pbdb
+- **Q-040**: pbdb
+- **Q-041**: pbdb
 - **Q-042**: pbdb
-- **Q-044**: pbdb
-- **Q-045**: pbdb
+- **Q-044**: pbdb, register-deposits
+- **Q-045**: pbdb, register-deposits
+- **Q-047**: pbdb
 - **Q-049**: pbdb
+- **Q-050**: register-deposits

@@ -178,9 +178,16 @@ for t in ("specimens", "measurements", "references", "taxa"):
     add(t, "rows", "", f"{n}; rowcount {found(f'count__{t}.json')}; {'ok' if ok else 'MISMATCH'}")
 add("opinions", "rows", "", sum(1 for _ in rows(os.path.join(snap, "opinions.csv"))))
 add("intervals", "rows", "", sum(1 for _ in rows(os.path.join(snap, "intervals.csv"))))
-taxa = Counter(r[idx["taxon_rank"]] for idx, r in rows(os.path.join(snap, "taxa.csv")))
-for v, n in taxa.most_common(10):
-    add("taxa", "by:taxon_rank", v, n)
+taxa, blank, n_occs = Counter(), 0, {}
+for idx, r in rows(os.path.join(snap, "taxa.csv")):
+    blank += not r[idx["taxon_rank"]]
+    if r[idx["taxon_no"]] == r[idx["accepted_no"]]:
+        taxa[r[idx["accepted_rank"]]] += 1
+        if r[idx["taxon_name"]] in ("Mammalia", "Brachiopoda"):
+            n_occs[r[idx["taxon_name"]]] = r[idx["n_occs"]]
+add("taxa", "taxon_rank_blank", "", blank)
+for v, n in taxa.most_common(12):
+    add("taxa", "accepted_taxa_by:accepted_rank", v, n)
 
 with open(sys.argv[2], "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")

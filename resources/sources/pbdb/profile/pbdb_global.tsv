@@ -1,0 +1,248 @@
+table	metric	key	value
+collections	partition	p01	rows 92875; rowcount 92875; created outside window 0; duplicates 0; ok
+collections	partition	p02	rows 148267; rowcount 148267; created outside window 0; duplicates 0; ok
+collections	partition	p03	rows 31701; rowcount 31701; created outside window 0; duplicates 0; ok
+collections	partition	p04	rows 5750; rowcount 5750; created outside window 0; duplicates 0; ok
+collections	rows		278593
+collections	by:continent	AU, PG, NF, CX, CC, HM codes	9048
+occurrences	partition	p01	rows 14324; rowcount 14324; created outside window 0; duplicates 0; ok
+occurrences	partition	p02	rows 104686; rowcount 104686; created outside window 0; duplicates 0; ok
+occurrences	partition	p03	rows 149564; rowcount 149564; created outside window 0; duplicates 0; ok
+occurrences	partition	p04	rows 157617; rowcount 157617; created outside window 0; duplicates 0; ok
+occurrences	partition	p05	rows 213000; rowcount 213000; created outside window 0; duplicates 0; ok
+occurrences	partition	p06	rows 127053; rowcount 127053; created outside window 0; duplicates 0; ok
+occurrences	partition	p07	rows 215501; rowcount 215501; created outside window 0; duplicates 0; ok
+occurrences	partition	p08	rows 162103; rowcount 162103; created outside window 0; duplicates 0; ok
+occurrences	partition	p09	rows 173554; rowcount 173554; created outside window 0; duplicates 0; ok
+occurrences	partition	p10	rows 119057; rowcount 119057; created outside window 0; duplicates 0; ok
+occurrences	partition	p11	rows 306489; rowcount 306489; created outside window 0; duplicates 0; ok
+occurrences	partition	p12	rows 39700; rowcount 39700; created outside window 0; duplicates 0; ok
+occurrences	rows		1782648
+occurrences	without_collection_row		0
+occurrences	rowcount_before		1782648
+occurrences	rowcount_after		1782648
+occurrences	by:accepted_rank	species	854985
+occurrences	by:accepted_rank	genus	736507
+occurrences	by:accepted_rank	(none)	44802
+occurrences	by:accepted_rank	family	40679
+occurrences	by:accepted_rank	class	21469
+occurrences	by:accepted_rank	subgenus	15813
+occurrences	by:accepted_rank	order	14468
+occurrences	by:accepted_rank	unranked clade	14045
+occurrences	by:accepted_rank	phylum	10730
+occurrences	by:accepted_rank	subfamily	5490
+occurrences	by:accepted_rank	subspecies	4885
+occurrences	by:accepted_rank	suborder	3915
+occurrences	by:accepted_rank	subclass	3813
+occurrences	by:accepted_rank	superfamily	3085
+occurrences	by:accepted_rank	subphylum	2211
+occurrences	by:accepted_rank	superclass	1564
+occurrences	by:accepted_rank	tribe	1547
+occurrences	by:accepted_rank	kingdom	1135
+occurrences	by:accepted_rank	infraorder	645
+occurrences	by:accepted_rank	infraclass	453
+occurrences	by:accepted_rank	superorder	339
+occurrences	by:accepted_rank	subtribe	43
+occurrences	by:accepted_rank	informal	24
+occurrences	by:accepted_rank	superphylum	1
+occurrences	by:phylum	Mollusca	418562
+occurrences	by:phylum	Chordata	291410
+occurrences	by:phylum	Foraminifera	188578
+occurrences	by:phylum	Brachiopoda	178841
+occurrences	by:phylum	Arthropoda	152474
+occurrences	by:phylum	Haptophyta	110422
+occurrences	by:phylum	Radiozoa	57487
+occurrences	by:phylum	Cnidaria	47736
+occurrences	by:phylum	(none)	46394
+occurrences	by:phylum	Ochrophyta	34457
+occurrences	by:phylum	Angiospermae	34199
+occurrences	by:phylum	Echinodermata	32359
+occurrences	by:phylum	Bryozoa	28377
+occurrences	by:phylum	Pteridophyta	24654
+occurrences	by:phylum	NO_PHYLUM_SPECIFIED	23536
+occurrences	by:phylum	Porifera	17858
+occurrences	by:phylum	Radiolaria	11877
+occurrences	by:phylum	Gymnospermae	11526
+occurrences	by:phylum	Hemichordata	6831
+occurrences	by:phylum	Rhodophyta	5937
+occurrences	by:class	NO_CLASS_SPECIFIED	260741
+occurrences	by:class	Bivalvia	173202
+occurrences	by:class	Gastropoda	131560
+occurrences	by:class	Mammalia	124850
+occurrences	by:class	Rhynchonellata	109432
+occurrences	by:class	Cephalopoda	104462
+occurrences	by:class	Coccolithophyceae	81812
+occurrences	by:class	(none)	61101
+occurrences	by:class	Polycystinea	57487
+occurrences	by:class	Strophomenata	57110
+occurrences	by:class	Insecta	52159
+occurrences	by:class	Trilobita	50114
+occurrences	by:class	Anthozoa	45617
+occurrences	by:class	Reptilia	45309
+occurrences	by:class	Bacillariophyceae	33307
+occurrences	by:class	Osteichthyes	29756
+occurrences	by:class	Ostracoda	29013
+occurrences	by:class	Globothalamea	27319
+occurrences	by:class	Chondrichthyes	26584
+occurrences	by:class	Conodonta	25187
+occurrences	by:class	Stenolaemata	20253
+occurrences	by:class	Polypodiopsida	17195
+occurrences	by:class	Aves	15054
+occurrences	by:class	Nodosariata	13731
+occurrences	by:class	Crinoidea	13625
+occurrences	by:period	Neogene	298491
+occurrences	by:period	Paleogene	247676
+occurrences	by:period	Quaternary	233121
+occurrences	by:period	Cretaceous	232839
+occurrences	by:period	Jurassic	154825
+occurrences	by:period	Permian	145999
+occurrences	by:period	Ordovician	112925
+occurrences	by:period	Triassic	100372
+occurrences	by:period	Devonian	83641
+occurrences	by:period	Carboniferous	76700
+occurrences	by:period	Silurian	54412
+occurrences	by:period	Cambrian	37722
+occurrences	by:period	Ediacaran	2162
+occurrences	by:period	Tonian	903
+occurrences	by:period	Statherian	288
+occurrences	by:period	Calymmian	185
+occurrences	by:period	Orosirian	134
+occurrences	by:period	Stenian	112
+occurrences	by:period	Cryogenian	59
+occurrences	by:period	Ectasian	56
+occurrences	by:period	(outside table)	26
+occurrences	by:continent	NOA	542595
+occurrences	by:continent	EUR	462554
+occurrences	by:continent	(none)	309407
+occurrences	by:continent	ASI	240893
+occurrences	by:continent	SOA	72550
+occurrences	by:continent	AFR	71753
+occurrences	by:continent	AUS	45186
+occurrences	by:continent	OCE	22219
+occurrences	by:continent	ATA	10105
+occurrences	by:continent	IOC	5386
+occurrences	by:environment	marine indet.	365148
+occurrences	by:environment	basinal (carbonate)	323460
+occurrences	by:environment	carbonate indet.	151379
+occurrences	by:environment	terrestrial indet.	144811
+occurrences	by:environment	shallow subtidal indet.	70264
+occurrences	by:environment	coastal indet.	68373
+occurrences	by:environment	reef, buildup or bioherm	63977
+occurrences	by:environment	(none)	59481
+occurrences	by:environment	offshore	58546
+occurrences	by:environment	open shallow subtidal	44976
+occurrences	by:environment	fluvial indet.	26554
+occurrences	by:environment	transition zone/lower shoreface	24785
+occurrences	by:environment	fluvial-lacustrine indet.	19956
+occurrences	by:environment	lagoonal/restricted shallow subtidal	19236
+occurrences	by:environment	lacustrine indet.	18912
+occurrences	by:created_year	0000	97
+occurrences	by:created_year	1991	3124
+occurrences	by:created_year	1992	692
+occurrences	by:created_year	1993	290
+occurrences	by:created_year	1994	507
+occurrences	by:created_year	1995	1678
+occurrences	by:created_year	1998	7936
+occurrences	by:created_year	1999	67988
+occurrences	by:created_year	2000	36698
+occurrences	by:created_year	2001	29006
+occurrences	by:created_year	2002	120558
+occurrences	by:created_year	2003	77005
+occurrences	by:created_year	2004	80612
+occurrences	by:created_year	2005	86078
+occurrences	by:created_year	2006	63572
+occurrences	by:created_year	2007	63350
+occurrences	by:created_year	2008	37858
+occurrences	by:created_year	2009	36663
+occurrences	by:created_year	2010	52532
+occurrences	by:created_year	2011	86669
+occurrences	by:created_year	2012	64216
+occurrences	by:created_year	2013	64616
+occurrences	by:created_year	2014	47256
+occurrences	by:created_year	2015	52221
+occurrences	by:created_year	2016	33218
+occurrences	by:created_year	2017	29408
+occurrences	by:created_year	2018	33457
+occurrences	by:created_year	2019	50135
+occurrences	by:created_year	2020	48735
+occurrences	by:created_year	2021	41227
+occurrences	by:created_year	2022	30738
+occurrences	by:created_year	2023	25069
+occurrences	by:created_year	2024	34613
+occurrences	by:created_year	2025	344556
+occurrences	by:created_year	2026	30270
+occurrences	by:has_reid	no	1750539
+occurrences	by:has_reid	yes	32109
+occurrences	by:collection_has_coordinates	yes	1782648
+occurrences	by:palaeolatitude_model_1	yes	1479437
+occurrences	by:palaeolatitude_model_1	no	303211
+occurrences	by:palaeolatitude_model_2	yes	1400042
+occurrences	by:palaeolatitude_model_2	no	382606
+occurrences	by:palaeolatitude_model_3	yes	913560
+occurrences	by:palaeolatitude_model_3	no	869088
+occurrences	by:collection_has_formation	yes	1083152
+occurrences	by:collection_has_formation	no	699496
+occurrences	by:modified_before_created	no	1575940
+occurrences	by:modified_before_created	yes	206708
+occurrences	by:in_au_ng_codes	no	1736657
+occurrences	by:in_au_ng_codes	yes	45991
+occurrences	age_span_ma_deciles		1.10; 2.24; 2.75; 3.81; 4.47; 6.20; 6.60; 8.70; 11.40
+occurrences	age_span_ma_median		4.47
+bulk_2025_09_21	occurrences		306489
+bulk_2025_09_21	collections		31701
+bulk_2025_09_21	by:class	NO_CLASS_SPECIFIED	132919
+bulk_2025_09_21	by:class	Coccolithophyceae	79508
+bulk_2025_09_21	by:class	Bacillariophyceae	30353
+bulk_2025_09_21	by:class	Polycystinea	21577
+bulk_2025_09_21	by:class	Globothalamea	19323
+bulk_2025_09_21	by:class	Nodosariata	7468
+bulk_2025_09_21	by:class	(none)	6834
+bulk_2025_09_21	by:class	Tubothalamea	3439
+bulk_2025_09_21	by:class	Dinophyceae	1883
+bulk_2025_09_21	by:class	Ostracoda	1036
+bulk_2025_09_21	by:cc	O4	115693
+bulk_2025_09_21	by:cc	O6	86228
+bulk_2025_09_21	by:cc	O2	44884
+bulk_2025_09_21	by:cc	O5	43550
+bulk_2025_09_21	by:cc	O7	11870
+bulk_2025_09_21	by:cc	O3	4264
+bulk_2025_09_21	by:early_interval	Pleistocene	48411
+bulk_2025_09_21	by:early_interval	Pliocene	23639
+bulk_2025_09_21	by:early_interval	Late Miocene	18581
+bulk_2025_09_21	by:early_interval	NN19	18320
+bulk_2025_09_21	by:early_interval	Miocene	13198
+bulk_2025_09_21	by:early_interval	Calabrian	11259
+bulk_2025_09_21	by:early_interval	NN11	8024
+bulk_2025_09_21	by:early_interval	NN21	7849
+bulk_2025_09_21	by:early_interval	Quaternary	7621
+bulk_2025_09_21	by:early_interval	NN16	6854
+bulk_2025_09_21	by:reference	95457 2010 Site U1338	9244
+bulk_2025_09_21	by:reference	95456 2010 Site U1337	8345
+bulk_2025_09_21	by:reference	92417 2011 Site U1352	7770
+bulk_2025_09_21	by:reference	92402 2010 Site U1335	7257
+bulk_2025_09_21	by:reference	95558 2017 Site U1474	6093
+bulk_2025_09_21	by:reference	95454 2010 Site U1334	6039
+bulk_2025_09_21	by:reference	95560 2017 Site U1476	5420
+bulk_2025_09_21	by:reference	95487 2013 Site U1389	5376
+bulk_2025_09_21	by:reference	95485 2013 Site U1387	5201
+bulk_2025_09_21	by:reference	95462 2011 Site U1344	5019
+bulk_2025_09_21	references		162
+specimens	rows		162604; rowcount 162604; ok
+measurements	rows		366107; rowcount 366107; ok
+references	rows		95905; rowcount 95905; ok
+taxa	rows		409314; rowcount 409314; ok
+opinions	rows		1016149
+intervals	rows		1909
+taxa	taxon_rank_blank		409314
+taxa	accepted_taxa_by:accepted_rank	species	166595
+taxa	accepted_taxa_by:accepted_rank	genus	95771
+taxa	accepted_taxa_by:accepted_rank	family	12974
+taxa	accepted_taxa_by:accepted_rank	subfamily	6491
+taxa	accepted_taxa_by:accepted_rank	subgenus	3614
+taxa	accepted_taxa_by:accepted_rank	subspecies	2414
+taxa	accepted_taxa_by:accepted_rank	superfamily	2252
+taxa	accepted_taxa_by:accepted_rank	tribe	2232
+taxa	accepted_taxa_by:accepted_rank	order	1963
+taxa	accepted_taxa_by:accepted_rank	unranked clade	1604
+taxa	accepted_taxa_by:accepted_rank	suborder	1296
+taxa	accepted_taxa_by:accepted_rank	class	341

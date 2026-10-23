@@ -1,4 +1,4 @@
 route	version_dir	retrieved_utc	licence	files	total_bytes	tool_sha256	first_query
-pbdb/au-png	2026-10-22T0556Z_url	2026-10-22T05:57:20+00:00	CC0 (stated in PBDB API datainfo: data_license Creative Commons CC0)	6	106743206	11dea7fc959c	https://paleobiodb.org/data1.2/occs/list.json?cc=AU,PG&limit=0&rowcount&datainfo
-pbdb/au-ng	2026-10-22T0602Z_url	2026-10-22T06:03:57+00:00	CC0 (stated in PBDB API datainfo: data_license Creative Commons CC0)	28	149657162	11dea7fc959c	https://paleobiodb.org/data1.2/occs/list.json?cc=AU,PG,NF,CX,CC,HM&limit=0&rowcount&datainfo
+pbdb/global	2026-10-23T0100Z_url	2026-10-23T01:26:17+00:00	CC0 (stated in PBDB API datainfo: data_license Creative Commons CC0)	48	3412042635	cdde7424d810	https://paleobiodb.org/data1.2/occs/list.json?all_records&limit=0&rowcount&datainfo
+pbdb/global	2026-10-23T0133Z_url	2026-10-23T01:59:50+00:00	CC0 (stated in PBDB API datainfo: data_license Creative Commons CC0)	48	3461003523	cdde7424d810	https://paleobiodb.org/data1.2/occs/list.json?all_records&limit=0&rowcount&datainfo
 pbdb/intervals	2026-10-22T0611Z_url	2026-10-22T06:11:47+00:00	CC0 (PBDB API data_license Creative Commons CC0)	1	143788	c02158bc6217	https://paleobiodb.org/data1.2/intervals/list.csv?all_records&vocab=pbdb

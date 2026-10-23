@@ -7,13 +7,13 @@ formation	collections_by_tier	core_other_state	9
 formation	collections_by_tier	exact	5573
 formation	collections_by_tier	exact_other_state	39
 formation	collections_by_tier	unmatched	385
-formation	occurrences_by_tier	blank	14515
-formation	occurrences_by_tier	core	6706
+formation	occurrences_by_tier	blank	12898
+formation	occurrences_by_tier	core	5741
 formation	occurrences_by_tier	core_ambiguous	109
-formation	occurrences_by_tier	core_other_state	126
-formation	occurrences_by_tier	exact	26992
-formation	occurrences_by_tier	exact_other_state	156
-formation	occurrences_by_tier	unmatched	2639
+formation	occurrences_by_tier	core_other_state	107
+formation	occurrences_by_tier	exact	24542
+formation	occurrences_by_tier	exact_other_state	146
+formation	occurrences_by_tier	unmatched	1643
 formation	age_check_unique_matches	asud_no_age	25
 formation	age_check_unique_matches	gap_5_20myr	120
 formation	age_check_unique_matches	gap_gt_20myr	28
@@ -22,31 +22,31 @@ formation	age_check_unique_matches	overlap	6414
 formation	age_overlap_share_by_tier	core	1095 of 1188
 formation	age_overlap_share_by_tier	exact	5319 of 5552
 formation	age_overlap_share_random_same_state_unit_20_draws		0.12
-formation	top_unmatched_by_occs	Tambo	347
-formation	top_unmatched_by_occs	Muddy Creek	239
-formation	top_unmatched_by_occs	Fyansford	140
-formation	top_unmatched_by_occs	Lockup Well limestone	110
 formation	top_unmatched_by_occs	Gola Beds	103
 formation	top_unmatched_by_occs	"""Dolodrook River Limestone"""	99
-formation	top_unmatched_by_occs	Jessey Springs Limestone	96
-formation	top_unmatched_by_occs	Glen Aire Clay	81
 formation	top_unmatched_by_occs	Wataepoolan limestone	78
 formation	top_unmatched_by_occs	Tims Thicket/Kooallup Limestone	73
 formation	top_unmatched_by_occs	Westfield Sandstone	71
+formation	top_unmatched_by_occs	Muddy Creek	71
 formation	top_unmatched_by_occs	Point Allen	59
 formation	top_unmatched_by_occs	Mandagery Park	51
-formation	top_unmatched_by_occs	Unknown	46
 formation	top_unmatched_by_occs	Illawara Coal Measures	42
+formation	top_unmatched_by_occs	Balbirini Dolomite	41
+formation	top_unmatched_by_occs	Fyansford	37
+formation	top_unmatched_by_occs	Jimba Jimba	37
+formation	top_unmatched_by_occs	Modder River Siltstone	35
+formation	top_unmatched_by_occs	Enstone Park	32
+formation	top_unmatched_by_occs	Whaler's Bluff	31
 geological_group	collections_by_tier	blank	7554
 geological_group	collections_by_tier	core	13
 geological_group	collections_by_tier	exact	1174
 geological_group	collections_by_tier	exact_other_state	6
 geological_group	collections_by_tier	unmatched	103
-geological_group	occurrences_by_tier	blank	44747
+geological_group	occurrences_by_tier	blank	39245
 geological_group	occurrences_by_tier	core	106
-geological_group	occurrences_by_tier	exact	5942
-geological_group	occurrences_by_tier	exact_other_state	10
-geological_group	occurrences_by_tier	unmatched	438
+geological_group	occurrences_by_tier	exact	5471
+geological_group	occurrences_by_tier	exact_other_state	8
+geological_group	occurrences_by_tier	unmatched	356
 geological_group	age_check_unique_matches	gap_5_20myr	20
 geological_group	age_check_unique_matches	gap_gt_20myr	29
 geological_group	age_check_unique_matches	gap_le_5myr	36
@@ -55,7 +55,6 @@ geological_group	age_overlap_share_by_tier	core	13 of 13
 geological_group	age_overlap_share_by_tier	exact	1089 of 1174
 geological_group	age_overlap_share_random_same_state_unit_20_draws		0.108
 geological_group	top_unmatched_by_occs	Burindi	93
-geological_group	top_unmatched_by_occs	Taralga	82
 geological_group	top_unmatched_by_occs	Junee	56
 geological_group	top_unmatched_by_occs	New Town Coal Measures	48
 geological_group	top_unmatched_by_occs	Port Keats	48
@@ -69,18 +68,19 @@ geological_group	top_unmatched_by_occs	Merimbula	4
 geological_group	top_unmatched_by_occs	Upper Parmeener	2
 geological_group	top_unmatched_by_occs	BleBack Creek	1
 geological_group	top_unmatched_by_occs	Romo	1
+geological_group	top_unmatched_by_occs	Merino	1
 member	collections_by_tier	blank	7487
 member	collections_by_tier	core	148
 member	collections_by_tier	core_other_state	2
 member	collections_by_tier	exact	781
 member	collections_by_tier	exact_other_state	8
 member	collections_by_tier	unmatched	424
-member	occurrences_by_tier	blank	43363
-member	occurrences_by_tier	core	925
+member	occurrences_by_tier	blank	37787
+member	occurrences_by_tier	core	865
 member	occurrences_by_tier	core_other_state	20
-member	occurrences_by_tier	exact	4709
+member	occurrences_by_tier	exact	4604
 member	occurrences_by_tier	exact_other_state	109
-member	occurrences_by_tier	unmatched	2117
+member	occurrences_by_tier	unmatched	1801
 member	age_check_unique_matches	asud_no_age	61
 member	age_check_unique_matches	gap_5_20myr	19
 member	age_check_unique_matches	gap_gt_20myr	3
@@ -89,9 +89,9 @@ member	age_check_unique_matches	overlap	838
 member	age_overlap_share_by_tier	core	92 of 93
 member	age_overlap_share_by_tier	exact	746 of 775
 member	age_overlap_share_random_same_state_unit_20_draws		0.124
-member	top_unmatched_by_occs	Upper	484
 member	top_unmatched_by_occs	Lower	305
 member	top_unmatched_by_occs	Unit 3	184
+member	top_unmatched_by_occs	Upper	181
 member	top_unmatched_by_occs	Unit 2	97
 member	top_unmatched_by_occs	Rose's Pride	96
 member	top_unmatched_by_occs	Lower beds	84

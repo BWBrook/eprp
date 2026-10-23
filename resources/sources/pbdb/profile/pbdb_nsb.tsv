@@ -1,0 +1,13 @@
+table	metric	key	value
+pbdb_drilling_collections	collections	bulk_2025_09_21	31676
+pbdb_drilling_collections	collections_core_in_nsb	bulk_2025_09_21	5008
+pbdb_drilling_collections	collections_hole_in_nsb	bulk_2025_09_21	31676
+pbdb_drilling_collections	occurrences	bulk_2025_09_21	306358
+pbdb_drilling_collections	occurrences_core_in_nsb	bulk_2025_09_21	59024
+pbdb_drilling_collections	occurrences_hole_in_nsb	bulk_2025_09_21	306358
+holes	pbdb_holes		358
+holes	nsb_holes		3818
+holes	shared		358
+holes	pbdb_only		0
+holes	nsb_only		3460
+holes	nsb_samples_in_shared_holes		4294

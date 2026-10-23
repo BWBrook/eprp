@@ -240,14 +240,15 @@ names, which our profile does not read.
 
 ## Overlap with other sources
 
-- **PBDB** (snapshot au-ng 2026-10-22T0602Z). PBDB's GBIF dataset is typed
+- **PBDB** (Australia and New Guinea region of the 2026-10-23 global
+  snapshot, public records; see the pbdb entry). PBDB's GBIF dataset is typed
   MATERIAL_CITATION (42,333 Australian records; source scan, confirmed by the
   review), so a FOSSIL_SPECIMEN filter does not double count it. By genus
-  name: GBIF's Australian set has 3,026 genera and PBDB's Australian
-  occurrences 6,161; they share 1,439. Widening both sides to all name first
+  name: GBIF's Australian set has 3,026 genera and PBDB's public Australian
+  occurrences 5,778; they share 1,320. Widening both sides to all name first
   words (GBIF `genericName` and scientific names; PBDB accepted and
-  identified names) gives 1,777 of 3,560, so the strict figure is a lower
-  bound at name level. Papua New Guinea: 271 and 362 genera, 45 shared.
+  identified names) gives 1,626 of 3,560, so the strict figure is a lower
+  bound at name level. Papua New Guinea: 271 and 295 genera, 29 shared.
 - **FosSahul** (March 2021 file). FosSahul mammal genera with rows in the
   Australian region number 97 (single names only); 63 have GBIF Australian
   specimens and 53 have Quaternary-labelled ones. The 34 without include
