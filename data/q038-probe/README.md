@@ -371,3 +371,53 @@ So **model_ctr is the original model, reparameterised, not a new prior.**
 The stz95/stz99 candidate did change the prior: by Codex's arithmetic it
 inflates contrast variance by 14.3% for 8 orders and drops the random-mean
 variance from the intercepts.
+
+## stz99 result (23 October): no divergences, but both fail the screen narrowly
+
+| Seed | Divergences | Max R-hat (worst) | Min bulk / tail ESS | Wall (h, 6 threads per chain) |
+| --- | --- | --- | --- | --- |
+| 38001 | **0** | 1.0104 (s_b) | 371 / 516 | 2.76 |
+| 38005 | **0** | 1.0138 (s_ord; then s_b and g_ord) | 470 / 342 | 2.83 |
+
+**Every declared attempt, so far:**
+
+| Attempt | Divergences (38001 / 38005) | Screen |
+| --- | --- | --- |
+| Pilot (0.80) | 50 / 119 | fail |
+| ad95 | 10 / 12 | fail |
+| stz95 | 3 / 6 | fail on divergences |
+| stz99 | 0 / 0 | fail on R-hat and ESS |
+
+**Reading.**
+- adapt_delta 0.99 removes the divergences.
+- The slowest-mixing quantities are now the hierarchical scales (s_b; s_ord,
+  with only 8 orders; s_fam).
+- The adapted steps were 0.019–0.035, with median trees of 127–255 leapfrog
+  steps.
+- β̄_e is unchanged again: 0.74 ± 0.16 and 0.46 ± 0.16 on 38001; 0.49 and
+  0.72 ± 0.24 on 38005.
+- stz99 used the *changed* prior, so it is evidence about that candidate
+  only.
+
+## The one finite centring evaluation (declared 23 October, before launch; Codex 76/2249 stopping rule)
+
+**Design:**
+- model_ctr.stan (the exact original prior), seeds 38001 and 38005,
+  adapt_delta 0.99, 4 chains × 6 threads, 1,000 warmup iterations.
+- **2,000 post-warmup draws per chain** (`run.py diag SEED ctr99 6`).
+- **The screen is unchanged:** zero divergences, R-hat ≤ 1.01, and bulk and
+  tail ESS ≥ 400.
+
+**Why the longer chain.** stz99 removed the divergences but left the
+slow-mixing scales just short at 1,000 draws. Doubling the draws is a
+declared resource choice, not a relaxed gate. If adopted, it roughly
+doubles the per-fit sampling cost of any campaign; the redesign's cost
+would be re-measured.
+
+**Resource allowance:** two concurrent fits on deep-server (48 threads), at
+most 10 h wall each, so at most 480 allocated core-hours. The forecast is
+about 4–5 h.
+
+**Stopping rule (Codex's):** if either fit fails the screen, sampler tuning
+stops and this returns to Codex as a model or design decision. There will
+be no further adaptation or prior cycling.

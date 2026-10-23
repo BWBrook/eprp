@@ -1,0 +1,49 @@
+{
+ "seed": 38005,
+ "tag": "diag_stz99",
+ "stan_file": "model_stz.stan",
+ "adapt_delta": 0.99,
+ "wall_seconds": 10193.271845817566,
+ "components": 2786,
+ "rows": 126322,
+ "threads_per_chain": 6,
+ "warmup": 1000,
+ "sampling": 1000,
+ "divergences": 0,
+ "treedepth_hits": 0,
+ "rhat_max": 1.01378,
+ "ess_bulk_min": 470.432,
+ "ess_tail_min": 342.23,
+ "success": false,
+ "beta_e": {
+  "Rhynchonellata": {
+   "mean": 0.4879626891679575,
+   "sd": 0.24413107638839032,
+   "q025": 0.010353019000000001,
+   "q975": 0.9867459745,
+   "truth": 0.5,
+   "contraction_vs_prior_sd1": 0.24413107638839032
+  },
+  "Bivalvia": {
+   "mean": 0.7227035970091751,
+   "sd": 0.24515579142459906,
+   "q025": 0.22500582175,
+   "q975": 1.1982578700000002,
+   "truth": 0.5,
+   "contraction_vs_prior_sd1": 0.24515579142459906
+  }
+ },
+ "tau": {
+  "mean": 0.43325464212875,
+  "q975": 0.9140498397500002,
+  "truth": 0.3
+ },
+ "worst_rhat": {
+  "s_ord": 1.01378,
+  "s_b": 1.01171,
+  "g_ord[2,8]": 1.01106,
+  "s_fam": 1.00742,
+  "g_ord[2,2]": 1.00659
+ },
+ "grad_seconds_hint": null
+}

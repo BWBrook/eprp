@@ -77,7 +77,8 @@ def model(stan_file="model.stan"):
     return CmdStanModel(stan_file=str(HERE / stan_file), cpp_options={"STAN_THREADS": True})
 
 
-DIAG = {"ad95": ("model.stan", 0.95), "stz95": ("model_stz.stan", 0.95), "stz99": ("model_stz.stan", 0.99)}     # pilot divergence diagnosis (README)
+DIAG = {"ad95": ("model.stan", 0.95, None), "stz95": ("model_stz.stan", 0.95, None), "stz99": ("model_stz.stan", 0.99, None),
+        "ctr99": ("model_ctr.stan", 0.99, 2000)}     # stan file, adapt_delta, post-warmup draws (None = FIT's 1,000)     # pilot divergence diagnosis (README)
 
 
 def fit(seed, threads=12, warmup=None, sampling=None, tag="fit", stan_file="model.stan", adapt_delta=None):
@@ -174,7 +175,7 @@ if __name__ == "__main__":
     elif cmd == "fit":
         fit(int(a[1]), int(a[2]) if len(a) > 2 else 12)
     elif cmd == "diag":
-        fit(int(a[1]), int(a[3]), tag=f"diag_{a[2]}", stan_file=DIAG[a[2]][0], adapt_delta=DIAG[a[2]][1])
+        fit(int(a[1]), int(a[3]), sampling=DIAG[a[2]][2], tag=f"diag_{a[2]}", stan_file=DIAG[a[2]][0], adapt_delta=DIAG[a[2]][1])
     elif cmd == "tbench":
         tbench(int(a[1]), int(a[2]), int(a[3]))
     elif cmd == "summarise":
