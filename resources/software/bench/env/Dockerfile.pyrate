@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+ARG PYRATE_COMMIT=6a27efb78c487a9d284d727558b7bd26ff674592
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/* \
+ && git clone https://github.com/dsilvestro/PyRate.git /opt/PyRate && git -C /opt/PyRate checkout ${PYRATE_COMMIT} \
+ && pip install --no-cache-dir -r /opt/PyRate/requirements.txt \
+ && pip freeze > /opt/pip-freeze.txt && git -C /opt/PyRate rev-parse HEAD > /opt/pyrate-commit.txt
+WORKDIR /work

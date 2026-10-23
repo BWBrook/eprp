@@ -1,0 +1,8 @@
+FROM ubuntu:24.04
+ARG RB_VERSION=v1.4.1
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl && rm -rf /var/lib/apt/lists/* \
+ && curl -fsSL -o /tmp/rb.tar.gz https://github.com/revbayes/revbayes/releases/download/${RB_VERSION}/revbayes-${RB_VERSION}-linux64.tar.gz \
+ && sha256sum /tmp/rb.tar.gz > /opt/revbayes-tarball.sha256 \
+ && mkdir -p /opt/revbayes && tar -xzf /tmp/rb.tar.gz -C /opt/revbayes \
+ && rm /tmp/rb.tar.gz && find /opt/revbayes -maxdepth 3 > /opt/revbayes-contents.txt
+WORKDIR /work
