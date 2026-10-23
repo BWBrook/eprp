@@ -39,7 +39,7 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "axes.edgecol
                      "xtick.color": MUTED, "ytick.color": MUTED})
 fig, axes = plt.subplots(2, 1, figsize=(8.8, 5.4), sharex=True, constrained_layout=True)
 x = np.arange(len(days))
-for ax, m, groups, title in ((axes[0], A, WHO, "A  Who changed the judgment"), (axes[1], B, KIND, "B  What evidence changed it")):
+for ax, m, groups, title in ((axes[0], A, WHO, "A  Who changed the judgment (all 207 records)"), (axes[1], B, KIND, "B  What evidence changed it (all 207 records)")):
     base = np.zeros(len(days))
     for i, (name, _) in enumerate(groups):
         ax.bar(x, m[i], 0.62, bottom=base, color=SLOTS[i], edgecolor="#ffffff", linewidth=1.0, label=f"{name} ({m[i].sum()})", zorder=3)
@@ -48,13 +48,13 @@ for ax, m, groups, title in ((axes[0], A, WHO, "A  Who changed the judgment"), (
         if tot >= 15:
             ax.text(xi, tot + 0.8, str(int(tot)), ha="center", va="bottom", fontsize=8, color=MUTED)
     ax.set_title(title, loc="left", fontsize=10, color=INK, fontweight="bold")
-    ax.set_ylabel("Decision changes")
+    ax.set_ylabel("Ledger records")
     ax.grid(axis="y", color=GRID, linewidth=0.6, zorder=0)
     ax.spines[["top", "right"]].set_visible(False)
     ax.set_ylim(0, max(A.sum(0).max(), B.sum(0).max()) * 1.12)
     ax.legend(frameon=False, fontsize=8, loc="upper left", bbox_to_anchor=(1.01, 1.0), labelcolor=INK)
 axes[1].set_xticks(x, [d.strftime("%-d") for d in days])
-axes[1].set_xlabel(f"October 2026 (n = {len(rows)} ledger rows; WIP, not yet fully verified)")
+axes[1].set_xlabel(f"October 2026  ·  {len(rows)} records (1 duplicate, 2 confirmations)\nsources re-read; episodes not yet coded")
 for ext in ("png", "pdf"):
     fig.savefig(HERE / f"decision_changes_by_day.{ext}", dpi=200, facecolor="#ffffff")
 with open(HERE / "decision_changes_by_day.tsv", "w") as fh:

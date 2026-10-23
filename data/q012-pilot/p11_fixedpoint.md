@@ -288,8 +288,11 @@ c1_failing and holdout_9707_sigma8:
 - **The residual is the finite-difference error.** On the big tree, halving
   h gives ratios of 4.00 and 4.02 at central0, and 4.03 and 4.11 at
   high_rho_9707 (ρ ≈ 1). The drift at h = 5e-5 is the roundoff floor of
-  the difference quotient, so the Fisher gradient's own error is below
-  about 1e-9 there.
+  the difference quotient. **Corrected 23 October (Codex 76/2248):** this
+  shows that the residual follows h² truncation, with Codex's independent
+  Richardson agreement at or below 1.81e-10. It does not establish the
+  absolute integral error, so the earlier "below about 1e-9" claim is
+  withdrawn.
 - **Cost:** about 9 s for the whole P11 gradient on the laptop, about 1.5
   value-equivalents, against about 440 s for finite differences on the same
   machine.
@@ -331,8 +334,14 @@ c1_failing and holdout_9707_sigma8:
 - **One 35-coordinate finite-difference gradient** (71 values): 191–253 s
   under load.
 - **One Fisher-identity gradient** (cost addendum, 15-point check below):
-  2.1–2.4 s under the same load, about 100× cheaper.
-- **Implied arithmetic, not a fit:**
+  2.1–2.4 s under the same load, about 100× cheaper. **This covers the
+  numerator gradient only.** The selection normaliser, priors and Jacobians
+  are excluded (Codex 76/2248).
+- **Implied arithmetic, not a fit.** Corrected 23 October: these figures
+  are numerator-only. Pure maximum marginal likelihood over the current 35
+  coordinates also has an exact τ → cτ, z_rw → z_rw/c baseline ridge,
+  so dropping the regularising priors would be a different model. Codex
+  prefers same-prior collapsed Bayes (76/2248).
   - Maximum marginal likelihood with about 100–300 gradients would take
     roughly 4–12 min of one core with Fisher gradients, against 5–21 h with
     finite differences.

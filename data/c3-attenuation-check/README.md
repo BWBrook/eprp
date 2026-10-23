@@ -78,3 +78,15 @@ It is not a registered question.
   units (valves against records) and are standardised at different
   depths. The windows are ±1°. A deep-time transfer would need several
   modern calibrations, and a simulation of the PBDB filter.
+
+## Correction (Codex 76/2250; [review](../../ideas/2026-10-23-alroy-review-codex.md))
+
+- **The slope ratio is not a portable correction.** Field valves and OBIS
+  records are different sampling units; equal rarefaction depth does not
+  align them, their habitats or their latitudinal support.
+- **The "specimen" category above includes generic `Occurrence` and
+  `MaterialCitation` records.**
+- **Death assemblages are a filtered comparator, not field truth.**
+- Read the table as descriptive only. The next step is a paired
+  observation-operator test on the same eligible units. C3 holds as support
+  for Q-027.

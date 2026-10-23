@@ -117,7 +117,3 @@ full fits.
    denominator never comes from completed result files.
 5. Per-scenario manifests: truths, calibrated ω and seeds, frozen before
    data.
-EOF
-cd /home/bwbrook/git/eprp && git add data/q038-probe/redesign.md && git commit -q -m "Q-038 costed redesign draft (blocked on convergence; c core-hours per fit, ~3,800 first stage / 9,700 max at c = 37; recovery with spent CP looks, S0/S3/S4 panels, paired prediction, implementation list)
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && git push -q origin main && git log -1 --format=%h

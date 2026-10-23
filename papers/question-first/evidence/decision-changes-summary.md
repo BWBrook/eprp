@@ -1,6 +1,6 @@
 # Decision-change ledger: summary (draft, updated 22 October 2026)
 
-**Rows:** 207 in `decision-changes-draft.tsv`, dated 7–22 October. Basis: 44 quoted, 163 paraphrase. **Every row has now been re-read against its source** (see "Verification sweep" below). 204 rows are changes; 2 are duplicates and 1 is a confirmation.
+**Rows:** 207 in `decision-changes-draft.tsv`, dated 7–22 October. Basis: 44 quoted, 163 paraphrase. **Every row has now been re-read against its source** (see "Verification sweep" below). 204 rows are counted as changes under the present coding: 2 grouped and 135 with no relation code, not fully delineated decision episodes. 1 row is a duplicate (DC-084) and 2 are confirmations (DC-075, DC-117).
 
 **By evidence_type:** logic 60, prior-work 34, computation 30, counterexample 26, source-check 22, data-audit 22, human-decision 8, other 5, replication 0.
 
@@ -131,8 +131,8 @@ All other rows are still unrepaired and unverified.
   that Claude broke. DC-080: Barry reversed his own deferral. DC-061: Codex
   retired its own provisional Shangsi pick.
 
-**Who changed whose judgment** (204 changes; duplicates and the one
-confirmation are excluded; the side session counts as Claude):
+**Who changed whose judgment** (204 records counted as changes; the one duplicate
+and two confirmations are excluded; the side session counts as Claude):
 
 | Initial owner ↓ / changed by → | Claude | Codex | Barry | joint | external | total |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |

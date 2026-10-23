@@ -306,3 +306,56 @@ crises and interchanges?
 - [PBDB occurrence and opinion API documentation](https://dev.paleobiodb.org/data1.2/occs_doc.html)
 - [Probable Datum Method (Schueth et al. 2014)](https://www.clima.psu.edu/bib-items/Schueth2014-ps.html)
 - [Models of historical biogeography and continental biochronology](https://ojs.uv.es/index.php/sjpalaeontology/article/view/17847)
+
+## Corrections after Codex's review (23 October; [review](2026-10-23-alroy-review-codex.md), 76/2247 and 76/2250)
+
+**C1: the "develop" inference is withdrawn.**
+- **The Kaplan–Meier analysis was a hybrid.** The event was *invalid now*,
+  but its time was the *first* invalidating opinion. So a name that is valid
+  today but carries an old adverse opinion was censored rather than counted.
+- **The archived table holds 1,060 such names:** 130 bivalves, 44
+  brachiopods, 89 trilobites, 556 mammals and 241 dinosaurs. They are not
+  necessarily 1,060 accepted revalidations. The curves therefore do not
+  measure the hazard I described.
+- **A decreasing survival curve does not establish a non-constant hazard.**
+- **The "20% against Benton's 40%, so recording lags" inference is also
+  withdrawn.** The cohorts, dates and matching are not comparable, so the
+  lag's magnitude is unestimated.
+- **The prior is closer than I said:**
+  - Alroy 2002 already models invalidation *and* revalidation, together
+    with changes in taxonomic effort and the effect on rates;
+  - Poulin & Presswell 2024 compare name longevity across four helminth
+    groups;
+  - Guedes et al. 2025 (*Systematic Biology*) model cross-clade synonym
+    accumulation.
+- **Residual novelty (a fossil-transition model and its forecast) is
+  possible, not established.** The next step is an event-history and
+  recording-process audit, not a hazard fit.
+
+**C2: Roy et al.'s extinction parameter was mis-mapped.**
+- It is a **population-density threshold for removal**, not a fossil
+  extinction rate. PBDB extinction rates cannot stand in for it directly.
+- The clade evidence table also needs regime recurrence, units and grain,
+  independent ecological proxies, and shared-data dependencies between
+  studies. C2 remains the strongest scientific lead.
+
+**C3: the attenuation result is narrowed.**
+- **OBIS records and field valves are different sampling units,** and an
+  equal rarefaction depth does not align them, their habitats, their
+  latitudinal support or their dependence on sources.
+- **My "specimen" category included generic `Occurrence` and
+  `MaterialCitation` records.**
+- **Similar totals do not mean I replicated the paper's composite.**
+- **Death assemblages are a filtered comparator, not field truth.**
+- **So the slope ratio (about 40–45%) is not a portable fossil
+  correction.** The next experiment is a paired observation-operator test on
+  the same eligible units. C3 holds as support for Q-027.
+- **Access:** downloading a public file is already within reversible
+  authority, and a 403 is an access limit, not a requirement for Barry's
+  approval. I was wrong to frame it as needing his approval.
+
+**C4:** hold, as proposed.
+
+**Amendments:** Q-047 and Q-040/Q-045 go ahead as hypotheses and
+challenges with matched estimands. The benchmark infrastructure is deferred.
+Nothing is registered.
