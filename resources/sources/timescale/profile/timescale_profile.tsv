@@ -32,6 +32,7 @@ isc	changes_from_previous	2019 -> 2020	6 of 124 shared boundaries moved; added 1
 isc	ages_above_4600_ma (recorded in years, not Ma)	2018-1	Holocene 11700, Late Pleistocene 126000, Northgrippian 8276, Upper Pleistocene 126000
 isc	ages_above_4600_ma (recorded in years, not Ma)	2019	Holocene 11700, Late Pleistocene 126000, Northgrippian 8276, Upper Pleistocene 126000
 isc	ages_above_4600_ma (recorded in years, not Ma)	2020	Upper Pleistocene 129000
+macrostrat	intervals	all	1716
 macrostrat	timescales	international intervals (id 11); New Zealand ages (id 6)	170; 89
 pbdb	intervals	scale 1 with a base age	171
 bases_compared	ICS 2020/03 (RDF) vs PBDB	same names	106 shared; equal within 0.005 Myr 44; differing 62: Archean 4000 vs 4031; Barremian 129.4 vs 125.77; Aptian 125 vs 121.4; Emsian 407.6 vs 410.62; Tithonian 152.1 vs 149.2; Rhaetian 208.5 vs 205.7; Valanginian 139.8 vs 137.05; Miaolingian 509 vs 506.5; Kimmeridgian 157.3 vs 154.8; Pragian 410.8 vs 413.02; Phanerozoic 541 vs 538.8; Pliensbachian 190.8 vs 192.9; Late Jurassic 163.5 vs 161.5; Wordian 268.8 vs 266.9; Cretaceous 145 vs 143.1; Toarcian 182.7 vs 184.2; Ordovician 485.4 vs 486.85; Guadalupian 272.95 vs 274.4; Middle Ordovician 470 vs 471.3; Capitanian 265.1 vs 264.28
