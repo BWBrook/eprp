@@ -164,7 +164,7 @@ the font's separate accent glyphs (read by pdfplumber as `(cid:2)`, grave, and
   PDF=$RAW/poropat2023_mesozoic_tetrapods.pdf
   uv run poropat_tables.py $PDF $DER/poropat2023_appendix_tables.tsv profile/poropat_tables_check.tsv
   python3 poropat_overlap.py $PDF $DER/poropat2023_appendix_tables.tsv \
-      $P/pbdb/au-ng/derived/2026-10-23T0133Z_url $P/pbdb/intervals/raw/2026-10-22T0611Z_url/intervals.csv \
+      $P/pbdb/au-ng/derived/2026-10-23T0329Z_url $P/pbdb/intervals/raw/2026-10-22T0611Z_url/intervals.csv \
       $P/asud/raw/2026-10-22T0604Z_wfs/StratigraphicUnit.csv profile/poropat_overlap.tsv
   ```
 
@@ -300,7 +300,14 @@ not redistribute).
   *Diamantinasaurus* reference and the three accent cells. Page images of
   Table A5 (the *Eiectus* reference and the 'Plesiosaurus' rows) read at
   220-300 dpi.
-- [Detail withheld pending disclosure to the data custodian.]
+- 2026-10-23, checked (rerun): overlap of the Poropat tables with PBDB's
+  Australia and New Guinea region (public records, cut from the global
+  snapshot 2026-10-23T0329Z), PBDB's interval table (2026-10-22T0611Z) and
+  ASUD (2026-10-22T0604Z) ([poropat_overlap.py](poropat_overlap.py)): the
+  figures in the Overlap section; spelling counts in the paper's text. [Detail
+  withheld pending disclosure to the data custodian.] The final rerun against
+  2026-10-23T0329Z, on the evening of 23 October, reproduced the committed
+  profile byte for byte.
 - 2026-10-22, source claim (independent review, not rerun): the review
   compared the page images of pp. 71-78 with the extracted rows and found
   cell contents to match for all 299 rows apart from the defects fixed here.
