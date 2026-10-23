@@ -43,6 +43,11 @@ readiness:
 | 9 | **Modern-bridge time series and invasions** | Q-025 (develop), Q-028, Q-047 | BioTIME, GRIIS, SInAS 3.1.1, Seebens first records, GloNAF | Hosting to confirm |
 | 10 | **LegacyPollen and LegacyAge 1.0** | Q-024 | ESSD data papers (PANGAEA; recall) | Neotoma covers the Sahul slice only |
 
+Also done, 23 October at Barry's request: the classic range compendia,
+Benton's *The Fossil Record 2* and Sepkoski's genus compendium
+([classic-compendia](classic-compendia/README.md)), serving Q-023 and Q-039 to
+Q-045. Sepkoski's family compendia (1982, 1992) were not found online (C25 d).
+
 Also: document the main agents' local holdings (`data/raw/`, 2.9 GB on the
 laptop) as catalogue entries or archived extracts, so nothing is fetched
 twice; their Triton v4 files match this mirror's manifest.

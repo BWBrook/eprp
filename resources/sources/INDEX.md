@@ -11,6 +11,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [austarch](austarch/README.md): AustArch, radiocarbon and other ages from Australian archae… | compilation | registered | not taxonomic; archaeological age determinations | radiocarbon to about 55 ka; luminescence and othe… | 5,522 ages | yes | – |
 | [austraits](austraits/README.md): AusTraits, a curated plant trait database for the Australia… | compilation | open | Australian vascular plants (native and naturalised) | modern | 1,798,215 trait rows | yes | – |
 | [beyer2020](beyer2020/README.md): Beyer, Krapp and Manica (2020) high-resolution terrestrial … | deposit | open | not taxonomic: climate, bioclimate and potential vegetation… | 120 ka to present: 2 kyr steps to 22 ka, then 1 k… | 72 time slices | yes | – |
+| [classic-compendia](classic-compendia/README.md): Classic range compendia — Benton's The Fossil Record 2 (fam… | compilation | unclear | FR2: all life, families and family-surrogates (animals, pla… | FR2: Hadean to Holocene in 86 divisions (dated fr… | 7,109 fr2 family rows | yes | Q-023, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045 |
 | [fossahul](fossahul/README.md): FosSahul, quality-rated fossil ages for Sahul's Late Quater… | compilation | open | non-human vertebrates (mammals, birds, reptiles, amphibians) | Late Quaternary, mostly the last 130 kyr (ages to… | 11,872 records | yes | – |
 | [fossil-checklists](fossil-checklists/README.md): Australasian fossil species checklists (AAP National Fossil… | compilation | open | mammals, birds, reptiles and amphibians, Mesozoic tetrapods… | Cambrian to Holocene, by list | 299 mirrored occurrence rows | yes | – |
 | [fred](fred/README.md): FRED, the Fossil Record Electronic Database (New Zealand Fo… | database | registered | all fossil groups: a controlled list of 51 groups; foramini… | Cambrian to Recent, mostly Late Cretaceous–Cenozo… | 105,492 localities | no | Q-034 |
@@ -63,7 +64,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-019**: pbdb
 - **Q-020**: pbdb, triton
 - **Q-022**: register-deposits
-- **Q-023**: pbdb
+- **Q-023**: classic-compendia, pbdb
 - **Q-025**: pbdb
 - **Q-026**: pbdb
 - **Q-027**: pbdb, register-deposits, triton
@@ -75,12 +76,12 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-036**: register-deposits
 - **Q-037**: pbdb
 - **Q-038**: pbdb, register-deposits
-- **Q-039**: pbdb
-- **Q-040**: pbdb
-- **Q-041**: pbdb
-- **Q-042**: pbdb
-- **Q-044**: pbdb, register-deposits
-- **Q-045**: pbdb, register-deposits
+- **Q-039**: classic-compendia, pbdb
+- **Q-040**: classic-compendia, pbdb
+- **Q-041**: classic-compendia, pbdb
+- **Q-042**: classic-compendia, pbdb
+- **Q-044**: classic-compendia, pbdb, register-deposits
+- **Q-045**: classic-compendia, pbdb, register-deposits
 - **Q-047**: pbdb
 - **Q-049**: pbdb
 - **Q-050**: register-deposits

@@ -1,0 +1,7 @@
+route	version_dir	files	bytes	retrieved_utc	script_commit	licence
+fr2/bristol	2026-10-23T0505Z_url	52	4115106	2026-10-23T05:07:42+00:00	c98b594	none stated; University of Bristol pages (palaeoresources.blogs.bristol.ac.uk); cite Benton (ed.) 1993 The Fossil Record 2 and Benton 1995 Science 268:52-58
+fr2/wayback	2026-10-23T0507Z_url	204	2957471	2026-10-23T05:20:33+00:00	c98b594	none stated; Internet Archive Wayback Machine captures of palaeo.gly.bris.ac.uk/frwhole (University of Bristol, 1997-2006)
+sepkoski/peters	2026-10-23T0520Z_url	125	7607325	2026-10-23T05:26:54+00:00	c98b594	site terms: 'You are welcome to use these data with proper citation of Sepkoski's work. It would also be appropriate to acknowledge this online database and its creator/maintainer.' (S. E. Peters, University of Wisconsin-Madison)
+sepkoski/r-package-github	2026-07-21_3d0c62507e	63	3542238	2026-10-23T05:28:19+00:00	c98b594	GPL-3.0
+sepkoski/r-package-cran	2026-10-23T0536Z_url	1	1220612	2026-10-23T05:36:45+00:00	32d42fe	GPL (>= 3) (CRAN)
+sepkoski/bhl-scan	2026-10-23T0536Z_url	6	45523299	2026-10-23T05:37:10+00:00	32d42fe	In copyright. Digitized with the permission of the Paleontological Research Institution (BHL; https://www.biodiversitylibrary.org/permissions/)

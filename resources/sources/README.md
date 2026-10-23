@@ -36,7 +36,8 @@ The mirror on `deep-server` uses the same `<id>`:
 /data/paleodata/
   README.md
   _tools/                   read-only copies of the committed tools used there,
-                            named <id>_<script> for source-specific ones
+                            named <id>_<script> for source-specific ones, or in
+                            _tools/<id>/ when the scripts import each other
   <id>/versions.tsv         index written by the mirror tool
   <id>/raw/<version_dir>/   unchanged source files + MANIFEST.json; read-only;
                             data_mirror.py names these per provider
@@ -421,6 +422,30 @@ the workflow when they generalise.
   in PBDB's IODP import, but NSB holds samples in only 30 of the 358, and in
   those the two cover nearly the same cores. Test overlap against the records,
   not the catalogue, and reconcile at the sample level before merging.
+
+**Classic compendia (23 October 2026; [classic-compendia](classic-compendia/README.md)).**
+
+- *Check a convenience file against its parts.* Bristol's one-file FR2,
+  `All-Life.xlsx`, shifts 220 of 7,109 rows one column left (ranges a
+  division too old, NFR flags read as Holocene presences); the 45 chapter
+  files are right.
+- *Web archives can recover the original vintage.* The Wayback Machine kept
+  Bristol's 1998 BinHex files. Decoded and CRC-checked (five were BinHex
+  inside BinHex), they show the chapters unchanged in 21 years and the 2019
+  summary table scrambled. Capture every distinct payload, not only the
+  first.
+- *A high bit on one letter is corruption, not an accent.* 28 Sepkoski genus
+  names carry one byte with bit 7 set; clearing it turns 23 of them into
+  accepted PBDB genera. Guessing accents, as the R package does, keeps the
+  error.
+- *A join in a convenience package can drop records silently.* The sepkoski
+  package's inner join loses the 558 genera that have no class page. Profile
+  the package against the source it scraped.
+- *An aggregator may not be independent of the compendium it is tested
+  against.* PBDB cites Sepkoski (2002) in 36,832 opinions and 27,556 taxon
+  records.
+- *Record an approval to mirror an unlicensed source in its entry, verbatim.*
+  Barry approved this mirror on 23 October; the entry quotes him.
 
 **Outreach (Barry, 22 October 2026).**
 
