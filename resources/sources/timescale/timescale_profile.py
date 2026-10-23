@@ -74,8 +74,7 @@ rdf_dir = os.path.join(isc_raw, "rdf")
 files = sorted(f for f in os.listdir(rdf_dir) if re.fullmatch(r"isc\d{4}(-1)?\.ttl|isc2016-12-time\.ttl", f))
 releases = {}
 for f in files:
-    m = re.match(r"isc(\d{4})(-1)?", f)
-    rel = m.group(1) + ("-08" if m.group(2) else "")
+    rel = re.sub(r"-time$", "", f[3:-4])
     releases[rel] = boundaries(os.path.join(rdf_dir, f))
 put("isc", "files_used", "", ", ".join(files))
 order = sorted(releases)
