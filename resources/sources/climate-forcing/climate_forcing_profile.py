@@ -278,23 +278,40 @@ if v:
             with open(os.path.join(code, "data", name), encoding="utf-8", errors="replace", newline="") as fh:
                 return list(csv.DictReader(fh, delimiter="\t"))
         same = lambda a, b: fnum(a) is not None and fnum(b) is not None and abs(fnum(a) - fnum(b)) < 1e-6
-        rl = {r["Name"].strip(): r for r in repo_table("LIPs.tsv")}
-        ok = [r["Name"] for r in lips if r["Name"] in rl and all(same(r.get(a), rl[r["Name"]].get(b)) for a, b in
-              (("Start Age [Ma]", "Start Age [Ma]"), ("Start Age 1σ [Ma]", "Start Age sigma [Ma]"), ("End Age [Ma]", "End Age [Ma]"),
-               ("End Age 1σ [Ma]", "End Age sigma [Ma]")))]
-        put("green2022", "S2 vs repository data/LIPs.tsv", "LIPs with equal start and end ages and sigmas",
-            f"{len(ok)} of {len(lips)}; repository rows {len(rl)}; names not in the repository: "
-            + (", ".join(r["Name"] for r in lips if r["Name"] not in rl) or "none"))
+        full = lambda n: re.sub(r"[\s'\u2019]", "", n.replace("\u2013", "-")).lower()
+        key = lambda n: full(re.sub(r"\s*\(.*?\)", "", n))
+        rl = {}
+        for t in ("LIPs.tsv", "LIPs Including Oceanic.tsv"):
+            for r in repo_table(t):
+                rl.setdefault(full(r["Name"]), r)
+                rl.setdefault(key(r["Name"]), r)
+        fields = (("Start Age [Ma]", "Start Age [Ma]"), ("Start Age 1σ [Ma]", "Start Age sigma [Ma]"), ("End Age [Ma]", "End Age [Ma]"),
+                  ("End Age 1σ [Ma]", "End Age sigma [Ma]"))
+        ok, unmatched, differ = [], [], []
+        for r in lips:
+            q = rl.get(full(r["Name"])) or rl.get(key(r["Name"]))
+            if q is None:
+                unmatched.append(r["Name"])
+            elif all(same(r.get(a), q.get(b)) for a, b in fields):
+                ok.append(r["Name"])
+            else:
+                differ.append(f"{r['Name']} (" + "; ".join(f"{a} {r.get(a)} vs {q.get(b)}" for a, b in fields if not same(r.get(a), q.get(b))) + ")")
+        put("green2022", "S2 vs repository LIPs.tsv and LIPs Including Oceanic.tsv (names normalised)",
+            "LIPs with equal start and end ages and sigmas",
+            f"{len(ok)} of {len(lips)}; differing: {'; '.join(differ) or 'none'}; not found: {', '.join(unmatched) or 'none'}")
         rb = {r["Number"]: r for r in repo_table("boundaries.tsv")}
-        okb = sum(1 for r in tables["S1"][1] if r["#"] in rb and same(r["Age [Ma]"], rb[r["#"]]["Age [Ma]"])
-                  and (same(r["Age 1σ [Ma]"], rb[r["#"]]["Age sigma [Ma]"]) or not r["Age 1σ [Ma]"]))
+        okb = sum(1 for r in tables["S1"][1] if r["#"] in rb and same(r.get("Age [Ma]"), rb[r["#"]]["Age [Ma]"])
+                  and (same(r.get("Age 1σ [Ma]"), rb[r["#"]]["Age sigma [Ma]"]) or not r.get("Age 1σ [Ma]")))
         put("green2022", "S1 vs repository data/boundaries.tsv", "boundaries with equal age and sigma",
             f"{okb} of {len(tables['S1'][1])}; repository rows {len(rb)}")
-        ri = {r["Name"].strip(): r for r in repo_table("impacts.tsv")}
-        oki = sum(1 for r in tables["S3"][1] if r["Name"] in ri and same(r["Age [Ma]"], ri[r["Name"]]["Age [Ma]"])
-                  and same(r["Age 1σ [Ma]"], ri[r["Name"]]["Age_sigma [Ma]"]))
+        ri = {key(r["Name"]): r for r in repo_table("impacts.tsv")}
+        s3 = tables["S3"][1]
+        bad = [f"{r['Name']} ({r.get('Age [Ma]')} ± {r.get('Age 1σ [Ma]')} vs "
+               + (f"{ri[key(r['Name'])]['Age [Ma]']} ± {ri[key(r['Name'])]['Age_sigma [Ma]']})" if key(r["Name"]) in ri else "not found)")
+               for r in s3 if not (key(r["Name"]) in ri and same(r.get("Age [Ma]"), ri[key(r["Name"])]["Age [Ma]"])
+                                   and same(r.get("Age 1σ [Ma]"), ri[key(r["Name"])]["Age_sigma [Ma]"]))]
         put("green2022", "S3 vs repository data/impacts.tsv", "impacts with equal age and sigma",
-            f"{oki} of {len(tables['S3'][1])}; repository rows {len(ri)}")
+            f"{len(s3) - len(bad)} of {len(s3)}; repository rows {len(ri)}; differing: {'; '.join(bad) or 'none'}")
 
 for f in failures:
     put("checks", "failure", "", f)

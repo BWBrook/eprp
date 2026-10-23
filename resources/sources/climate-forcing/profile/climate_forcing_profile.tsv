@@ -5,15 +5,17 @@ phanda	files		1218 files, 517264781 bytes; commit 2026-03-09_9f06c0d976
 phanda	GMSTandCO2_percentiles	rows	85 stage slices; ages 0-486.85 Ma
 phanda	GMSTandCO2_percentiles	GMST_50 range (degC)	11.4 (Upper Pleistocene) to 35.6 (Turonian)
 phanda	GMSTandCO2_percentiles	CO2_50 range (ppm)	239 (Chibanian) to 3326 (Floian)
-phanda	GMSTandCO2_percentiles	merged slices ('&' in stage name)	0
+phanda	GMSTandCO2_percentiles	slices: single stages; merged pairs ('/'); PETM	78; 6 (Selandian/Danian, Sinemurian/Hettangian, Anisian/Olenekian, Capitanian/Wordian, Pragian/Lochkovian, Aeronian/Rhuddanian); 1 (PETM)
 phanda	SAT gradient percentiles	stage files	85
 phansst	PhanSST_v001	rows	151259
 phansst	PhanSST_v001	ProxyType	d18c 81709; uk 35360; tex 14091; mg 13249; d18p 6379; d18a 471
 phansst	PhanSST_v001	ValueType	pa 131977; im 12411; (blank) 5438; ia 1433
 phansst	PhanSST_v001	Period	Quaternary 63089; Neogene 41721; Paleogene 13622; Cretaceous 11532; Jurassic 5554; Carboniferous 4232; Permian 3365; Ordovician 2683; Devonian 2271; Triassic 1744; Silurian 1354; Cambrian 92
 phansst	PhanSST_v001	Age (Ma)	151259 rows with an age; -6.05e-05-522.291; median 3.554
-phansst	PhanSST_v001	sites; publications (LeadAuthor+Year)	1247; 635
+phansst	PhanSST_v001	site names; site name + hole; lead author + year; publication DOIs (rows without a DOI)	1247; 1396; 635; 662 (469); DOI or author-year 663
+phansst	PhanSST_v001	negative ages; AgeFlag; DiagenesisFlag NaN	4; 0 112425, 1 19323, 2 19511; 52358
 phansst	PhanSST_v001_RefList.xlsx	rows	663
+phansst	Zenodo release v0.0.1-beta vs GitHub head	PhanSST_v001.csv rows	release 150691; head 151259
 song2021-temperature-thresholds	file	Database S1.xlsx	1330137 bytes
 song2021-temperature-thresholds	file	R code for Thresholds of temperature change for mass extinctions.R	8533 bytes
 song2021-temperature-thresholds	file	R code for extinction rate.R	7886 bytes; sha256 matches the main-project pin
@@ -58,7 +60,13 @@ green2022	SI appendix	pnas.2120441119.sapp.pdf	872 text lines
 green2022	Table S1	rows; columns	102; #, Period, Stage below boundary, Stage above boundary, Age [Ma], Age 1σ [Ma], Mean corrected sampled within bin diversity (11), Mean extinction rate (11), Max extinction rate (11), Min extinction rate (11), Age reference and comments, if different from GTS2012
 green2022	Table S2	rows; columns	35; #, Name, Start Age [Ma], Start Age 1σ [Ma], End Age [Ma], End Age 1σ [Ma], Duration [Ma], Volume [km3], Eruption rate [km3/yr], Volume reference, Age reference
 green2022	Table S3	rows; columns	24; Name, Location, Diameter from (59), Age Reference from (60), Age [Ma], Age 1σ [Ma]
+green2022	Table S4	rows; columns	26; #, Name, τenv (duration in [ky]), τenv 1σ [ky], Age reference, Dimensionless duration T, T minimum, T maximum, LIP Volume [km3], Volume refernce, ∆ m (0.5 wt% CO2 ) [g], Dimensionless mass change M (0.5 wt% CO2 ) [g], ∆ m (0.2 wt% CO2 )[g], Dimensionless mass change M (0.2 wt% CO2 ), Extinction magnitude (%) (11)
+green2022	Table S5	rows; columns	13; LIP name, Eruption rate [km3/yr], Linear predicted extinction magnitude (1σ ), Boundary name, Boundary extinction magnitude (11)
+green2022	Table S1	rows whose 1-sigma is the least significant digit (rounding, not an uncertainty)	18: rows 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 20, 21, 22
 green2022	Table S2	LIPs with unreadable ages or start younger than end	none
 green2022	Table S2	rows with an eruption rate	25
-green2022	Table S2	Australian LIPs	Whitsunday, Bunbury, Gascoyne Margin, Kalkarindji (Antrim Plateau Volcanics), Kalkarindji (sills)
+green2022	Table S2	Australian LIPs (by name)	Whitsunday, Bunbury, Gascoyne Margin, Kennedy-Connors-Auburn, Kalkarindji (Antrim Plateau Volcanics), Kalkarindji (sills)
+green2022	S2 vs repository LIPs.tsv and LIPs Including Oceanic.tsv (names normalised)	LIPs with equal start and end ages and sigmas	33 of 35; differing: none; not found: Viluy (Yakutsk), Central Iapetus- Baltoscandian, Egersund
+green2022	S1 vs repository data/boundaries.tsv	boundaries with equal age and sigma	102 of 102; repository rows 102
+green2022	S3 vs repository data/impacts.tsv	impacts with equal age and sigma	24 of 24; repository rows 65; differing: none
 checks	summary		ok
