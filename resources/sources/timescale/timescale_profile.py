@@ -109,6 +109,7 @@ ics2020 = releases.get("2020", {})
 ms = json.load(open(os.path.join(ms_raw, "intervals_all.json")))["success"]["data"]
 in_scale = lambda d, i: any(t.get("timescale_id") == i for t in (d.get("timescales") or []))
 intl = {d["name"]: float(d["b_age"]) for d in ms if in_scale(d, 11)}
+put("macrostrat", "intervals", "all", len(ms))
 put("macrostrat", "timescales", "international intervals (id 11); New Zealand ages (id 6)",
     f"{len(intl)}; {sum(in_scale(d, 6) for d in ms)}")
 pbdb = {}

@@ -1,0 +1,5 @@
+route	version_dir	files	bytes	retrieved_utc	licence
+timescale/isc-rdf	2020-10-21_e7f62800e7	67	37245304	2026-10-23T08:46:28+00:00	CC0-1.0
+timescale/ics-chart	2026-10-23T0844Z_url	2	1029286	2026-10-23T08:44:14+00:00	ICS chart; terms as printed on the chart (International Commission on Stratigraphy)
+timescale/macrostrat	2026-10-23T0844Z_url	2	644042	2026-10-23T08:44:19+00:00	CC BY 4.0 (Macrostrat API)
+timescale/farrell2025-late-cambrian	Supplemental-Material-Revising-the-late-Cambrian-time-scale-and-the-duration-of-the-SPICE-event-using-a-novel-Bayesian-age-modeling-approach_v1_28207634	2	4249834	2026-10-23T08:44:32+00:00	CC BY-NC 4.0
