@@ -203,8 +203,17 @@ built from PBDB-type aggregates?
   - Rarefied richness falls only about 7–10% over 10° southward, and
     observation-based records reverse the gradient. The specimen subset
     (35,489) matches the 2025 paper's OBIS composite (36,226).
-  - The field half is pending: the CC0 Dryad file needs a browser download
-    with Barry's approval. The attenuation factor follows from it.
+  - **Field half, the same day,** with Barry's Dryad API account: 15
+    beaches at 16.7–37.2° S. Rarefied to 200 valves, richness changes ×0.71
+    per 10° southward, against ×0.86 for the OBIS specimen composite and
+    ×1.16 for the observation records (reversed).
+  - **So aggregation keeps about 40–45% of this gradient's slope.** That is
+    material attenuation (1.5–2.5×) but not erasure. One system only; see
+    `data/c3-attenuation-check/README.md` for the limits.
+  - **Implication for C3:** worth a hold with a clear next step, namely
+    several modern calibrations plus a simulation of the PBDB filter. An
+    attenuation of this size could weaken a deep-time gradient, but cannot
+    create a flat one from a strong one.
 - **Provisional:** I = H, T = M–H, V = H. The value is high because it bears
   on Q-027, Q-040 and every gradient result.
 

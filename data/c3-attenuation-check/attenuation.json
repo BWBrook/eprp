@@ -1,0 +1,186 @@
+{
+ "rarefaction_field": 26,
+ "rarefaction_obis": 150,
+ "window_deg": 1.0,
+ "results": {
+  "field_rare": {
+   "slope_per_degree": -0.020113690286493045,
+   "change_over_10_degrees": 0.8178004646631863,
+   "r": -0.517688226580492,
+   "sites": 15
+  },
+  "obis_all_rare": {
+   "slope_per_degree": -0.013338886495271292,
+   "change_over_10_degrees": 0.8751247206006908,
+   "r": -0.638550219601613,
+   "sites": 15,
+   "attenuation_vs_field": 0.6631744998195961
+  },
+  "obis_spec_rare": {
+   "slope_per_degree": -0.015199302831113815,
+   "change_over_10_degrees": 0.8589942693610282,
+   "r": -0.8856435937800461,
+   "sites": 15,
+   "attenuation_vs_field": 0.7556695273030335
+  },
+  "obis_obs_rare": {
+   "slope_per_degree": 0.015094390704343453,
+   "change_over_10_degrees": 1.1629314239903963,
+   "r": 0.6556367832660306,
+   "sites": 15,
+   "attenuation_vs_field": -0.7504535711420294
+  }
+ },
+ "sites": [
+  {
+   "site": "Palm Cove",
+   "lat": -16.7,
+   "field_valves": 280,
+   "field_S": 38,
+   "field_rare": 12.929628785539004,
+   "obis_all_rare": 95.18883620120172,
+   "obis_spec_rare": 113.44881027608237,
+   "obis_obs_rare": 31.60607918344681
+  },
+  {
+   "site": "Tully",
+   "lat": -18.0,
+   "field_valves": 299,
+   "field_S": 27,
+   "field_rare": 8.308857768332231,
+   "obis_all_rare": 91.99968341982671,
+   "obis_spec_rare": 113.53719378535203,
+   "obis_obs_rare": 33.93110690864391
+  },
+  {
+   "site": "Lucinda",
+   "lat": -18.5,
+   "field_valves": 1465,
+   "field_S": 49,
+   "field_rare": 9.22641680380466,
+   "obis_all_rare": 99.87340882283641,
+   "obis_spec_rare": 107.8113173394646,
+   "obis_obs_rare": 37.365213525705585
+  },
+  {
+   "site": "Cape Pall",
+   "lat": -19.18,
+   "field_valves": 314,
+   "field_S": 52,
+   "field_rare": 14.124980122723489,
+   "obis_all_rare": 105.23124944241097,
+   "obis_spec_rare": 110.43066798621722,
+   "obis_obs_rare": 41.63537459423269
+  },
+  {
+   "site": "Cannonvale",
+   "lat": -20.3,
+   "field_valves": 240,
+   "field_S": 41,
+   "field_rare": 15.529070733456615,
+   "obis_all_rare": 107.17327383131045,
+   "obis_spec_rare": 108.17747662430742,
+   "obis_obs_rare": 53.41100521188723
+  },
+  {
+   "site": "Tannum",
+   "lat": -23.95,
+   "field_valves": 236,
+   "field_S": 43,
+   "field_rare": 13.828675062403896,
+   "obis_all_rare": 105.23077202997099,
+   "obis_spec_rare": 112.94587975508817,
+   "obis_obs_rare": 42.70669853674452
+  },
+  {
+   "site": "Shelly Sunshine",
+   "lat": -26.8,
+   "field_valves": 265,
+   "field_S": 30,
+   "field_rare": 10.385476774106515,
+   "obis_all_rare": 105.82055304114883,
+   "obis_spec_rare": 111.19361444858741,
+   "obis_obs_rare": 52.625989968560354
+  },
+  {
+   "site": "Rainbow",
+   "lat": -28.16,
+   "field_valves": 367,
+   "field_S": 32,
+   "field_rare": 9.361439353691628,
+   "obis_all_rare": 98.74918567555447,
+   "obis_spec_rare": 109.58943575313499,
+   "obis_obs_rare": 47.10402802708263
+  },
+  {
+   "site": "Hat Head",
+   "lat": -31.05,
+   "field_valves": 526,
+   "field_S": 26,
+   "field_rare": 6.9774075269725095,
+   "obis_all_rare": 61.55054065554385,
+   "obis_spec_rare": 86.23688984498561,
+   "obis_obs_rare": 51.46736518362606
+  },
+  {
+   "site": "One Mile",
+   "lat": -32.8,
+   "field_valves": 477,
+   "field_S": 26,
+   "field_rare": 9.608450976208994,
+   "obis_all_rare": 86.99761999740589,
+   "obis_spec_rare": 95.051641289264,
+   "obis_obs_rare": 45.708244028028496
+  },
+  {
+   "site": "Shelly Central",
+   "lat": -33.37,
+   "field_valves": 26,
+   "field_S": 7,
+   "field_rare": 7.0,
+   "obis_all_rare": 85.94456235844997,
+   "obis_spec_rare": 87.47100586847327,
+   "obis_obs_rare": 44.127875834289384
+  },
+  {
+   "site": "Palm Beach",
+   "lat": -33.6,
+   "field_valves": 380,
+   "field_S": 20,
+   "field_rare": 8.266243175055429,
+   "obis_all_rare": 86.07823952801516,
+   "obis_spec_rare": 87.61730635313211,
+   "obis_obs_rare": 44.038076574070786
+  },
+  {
+   "site": "Shellharbour",
+   "lat": -34.6,
+   "field_valves": 286,
+   "field_S": 28,
+   "field_rare": 12.551510755570334,
+   "obis_all_rare": 84.97965259476483,
+   "obis_spec_rare": 86.27853130320582,
+   "obis_obs_rare": 44.779881586271095
+  },
+  {
+   "site": "Tab North",
+   "lat": -35.44,
+   "field_valves": 296,
+   "field_S": 14,
+   "field_rare": 6.101961105095253,
+   "obis_all_rare": 82.24991504452277,
+   "obis_spec_rare": 89.59407033301639,
+   "obis_obs_rare": 55.593957893479406
+  },
+  {
+   "site": "Saltwater",
+   "lat": -37.2,
+   "field_valves": 213,
+   "field_S": 18,
+   "field_rare": 9.713162607526211,
+   "obis_all_rare": 74.74286200679909,
+   "obis_spec_rare": 82.48174059540003,
+   "obis_obs_rare": 52.90573847950487
+  }
+ ]
+}

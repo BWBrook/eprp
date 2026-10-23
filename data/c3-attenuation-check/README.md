@@ -36,3 +36,45 @@ It is not a registered question.
 - The attenuation factor is the composite slope divided by the field slope
   on the same bands and the same standardisation. It can be computed once
   the file is here.
+
+## Field half and the attenuation factor (23 October, after Barry set up the Dryad API account)
+
+**Data.**
+- The Kerr et al. deposit (CC0) was mirrored on deep-server with the side
+  session's `data_mirror.py`, copied read-only from its branch, using
+  Barry's Dryad API account. Checksums were verified.
+- **Field data:** 15 beaches between 16.7° S and 37.2° S, with species valve
+  counts per quadrat.
+- **Matching OBIS data:** a window of ±1° around each beach.
+- Script: [attenuation.py](attenuation.py); output in
+  [attenuation.json](attenuation.json).
+
+**Change in rarefied richness per 10° southward.**
+
+| Data | Change per 10° | r |
+| --- | --- | --- |
+| Field, rarefied to 26 valves (all 15 sites; Shelly Central has only 26 valves) | ×0.82 | −0.52 |
+| **Field, rarefied to 200 valves (14 sites, Shelly Central excluded)** | **×0.71** | −0.69 |
+| Field, rarefied to 100 valves (14 sites) | ×0.76 | −0.61 |
+| Field, raw species counts | ×0.66 | — |
+| OBIS, all records (rarefied to 150) | ×0.88 | −0.64 |
+| OBIS, specimen records | ×0.86 | −0.89 |
+| OBIS, observation records | ×1.16 (reversed) | +0.66 |
+
+**Reading.**
+- **The composite keeps about 40–45% of the field gradient's slope** when
+  the field side is rarefied to a fair depth of 200 valves. It keeps 66–76%
+  at the 26-valve depth that the smallest site forces, because rarefying
+  that shallowly compresses the field slope itself.
+- **Observation-based records reverse the gradient.**
+- So aggregation attenuates this gradient by roughly 1.5–2.5×. That is
+  material. It is a partial flattening, not an erasure: the specimen
+  composite still correlates strongly with latitude (r = −0.89).
+- **For deep time:** PBDB-type data are specimen- and literature-based,
+  closer to the specimen composite than to observation records. An
+  attenuation of about 0.4–0.75 could weaken an apparent deep-time
+  gradient. It cannot by itself turn a strong gradient into none.
+- **Limits:** one system and one clade. The two sides count different
+  units (valves against records) and are standardised at different
+  depths. The windows are ±1°. A deep-time transfer would need several
+  modern calibrations, and a simulation of the PBDB filter.
