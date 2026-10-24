@@ -143,3 +143,18 @@ inspected for format only and never compared with the truth. It found:
    extrapolation runs beyond the observed collections (t/T), since Chao et
    al. (2014) advise against extrapolating beyond about twice the
    reference sample.
+
+## Amendment A3 (24 October 2026, while DeepDive trains, before any DeepDive prediction)
+
+DeepDive's training label is not the declared truth. `calculate_global_trajectory`
+sums, over species, min(1, number of regions occupied × fraction of the
+bin the species was alive); our global richness counts every species alive
+at any time in the bin. The label therefore discounts species that live
+for part of a bin in one region. Post hoc, DeepDive's absolute error is
+also reported against that label computed from our generator
+(`dd_label`, the same quantity from our species' ranges and lifetimes),
+and the ratio of `dd_label` to global richness is reported per scenario.
+The generator gains the `dd_label` column; it is rerun into a separate
+directory, and its occurrence files must be byte-identical to the run's
+(no random draw changes). The declared comparison against global richness
+stays the primary one.

@@ -43,7 +43,9 @@ mass <- c(list(truth_global = summ(m_truth), truth_sampled_area = summ(drop_m(D$
 spearman <- lapply(D, function(d) lapply(setNames(estimators, estimators), function(e) { v <- spear(d, e); list(median = median(v), min = min(v)) }))
 abs_err <- lapply(D, function(d) lapply(setNames(absolute, absolute), function(e)
   list(global = male(d, e, "global"), sampled_area = male(d, e, "sampled_area"),
-       mean_log_ratio_global = mean(log(d[[e]] / d$global), na.rm = TRUE))))
+       mean_log_ratio_global = mean(log(d[[e]] / d$global), na.rm = TRUE),
+       dd_label = if ("dd_label" %in% names(d)) male(d, e, "dd_label") else NA,
+       mean_log_ratio_dd_label = if ("dd_label" %in% names(d)) mean(log(d[[e]] / d$dd_label), na.rm = TRUE) else NA)))
 
 # K3: both Chao2 variants against independent re-implementations, and their difference
 k3_ref <- with(all_bins, {
@@ -62,7 +64,8 @@ dd_test <- lapply(c(S = "S", E = "E", M = "M"), function(s) {
 diag <- lapply(D, function(d) list(good_u_min = min(d$good_u), sample_coverage_min = min(d$sample_coverage),
                                    inext_cov_extrapolated = sum(d$inext_cov_t > d$collections, na.rm = TRUE),
                                    sqs_na = sum(is.na(d$sqs)), inext_cov_na = sum(is.na(d$inext_cov)),
-                                   global_mean = mean(d$global), sampled_area_mean = mean(d$sampled_area)))
+                                   global_mean = mean(d$global), sampled_area_mean = mean(d$sampled_area),
+                                   dd_label_over_global = if ("dd_label" %in% names(d)) mean(d$dd_label / d$global) else NA))
 
 out <- list(K1 = k1, K2 = k2, K3 = k3_ref, bias_half = bias, truth_half_log_ratio = truth_half,
             mass_extinction = mass, spearman = spearman, abs_log_error = abs_err,
