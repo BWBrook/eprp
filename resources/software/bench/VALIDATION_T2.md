@@ -103,3 +103,22 @@ criteria.
 **E6. Dating error (arm C).** The arm-A fossils with independent Gaussian
 errors (σ 0.25 Myr) added to their ages; `griwm` is given σ, the other
 methods the perturbed ages. All methods are reported. No pass criteria.
+
+## Amendments
+
+**A1, 24 October 2026, after a 24-case smoke run and before the full run
+(Claude, Opus 5.5).**
+- The E4 agreement tolerance (0.02 Myr) does not allow for EDE's 0.01-Myr
+  time units: rounding the range moves the Strauss–Sadler bound by up to
+  0.01·(1 + α), about 0.045 Myr at three fossils. The declared criterion
+  stands. Added as a diagnostic: `tbea` applied to the same discretised
+  times EDE receives, where the two bounds should agree exactly.
+- `griwm` reads only a file path, of integer years BP and integer errors;
+  each case is written to a temporary file (ages in years, rounded).
+- Alroy's `agnostic.R` fails under R ≥ 4.3 whenever `total` is supplied
+  (`missing(total) || total == ''` on a vector is an error); it is called
+  without `total`, which gives one sampling unit per bin, as declared.
+- The smoke run showed `griwm`'s 2.5–97.5% interval reflects resampling of
+  dating error only (width about 0.01 Myr at 0.001-Myr errors). Scored as
+  declared; also reported, labelled post hoc, is its median read as an
+  α = 0.05 bound.
