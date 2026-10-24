@@ -44,6 +44,9 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   [Claude's contrasting worlds](ideas/2026-10-24-blue-sky-worlds-claude.md),
   [the first interest assessment](ideas/2026-10-24-blue-sky-interest-codex.md),
   and [Claude's challenge to it](ideas/2026-10-24-blue-sky-interest-response-claude.md).
+  Barry's [2003 papers-of-interest list](literature/2003-brook-papers-of-interest.md)
+  is mined for his interests and new seeds in
+  [Claude's 2003-list note](ideas/2026-10-24-barry-2003-list-claude.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal
   interpretation and radiations. A narrower question about which causes
