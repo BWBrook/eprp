@@ -498,7 +498,16 @@ PANGAEA.892803 and 892804).
   found the 19 deposits the first survey missed; all are now held. Every
   other match is held here, held by another entry, or listed in the
   backlog.
-- [Detail withheld pending disclosure to the data custodian.]
+- 2026-10-23, checked: every Zenodo and Dryad mirror in the catalogue audited
+  against the provider's own latest version. Cooke et al. had been mirrored at
+  v1.1.1 instead of v.1.1.2 (a date tie broken by string comparison). It was
+  re-mirrored, and `data_mirror.py` fixed. The wrongly picked
+  `raw/v1.1.1_10014459` was deleted, against the mirror's rule for `raw/` (it
+  is re-fetchable from Zenodo, and nothing depended on it). The two Leventhal
+  and Samuels-Fair Zenodo deposit directories had each other's names (`-code`
+  held the supplement) and were swapped back; their `raw/` contents are
+  unchanged. Monarrez et al.'s Dryad v10 and v11 files compared by sha256:
+  identical. [Detail withheld pending disclosure to the data custodian.]
 - 2026-10-23, checked: profiled with the deposits profiler
   ([../au-fossil-deposits/deposits_profile.py](../au-fossil-deposits/deposits_profile.py),
   [output](profile/register_deposits_profile.tsv)).
