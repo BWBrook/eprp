@@ -1,0 +1,27 @@
+model	zenodo_record	licence	published	title_or_source
+muller2025	17142287	CC BY 4.0	2025-09-17	Muller2025 Mantle Reference Frame Plate Model based on Cao et al. (2024)
+alfonso2024	21446885	CC BY 4.0	2026-07-20	A Modified Global Plate Model Including Quantitative Tomotectonic Plate Reconstruction of Western North America
+cao2024	13628813	CC BY 4.0	2024-09-02	Earth's tectonic and plate boundary evolution over 1.8 billion years
+muller2022	13636799	CC BY 4.0	2022-07-07	A tectonic-rules-based mantle reference frame since 1 billion years ago
+zahirovic2022	13899315	CC BY 4.0	2022	Subduction kinematics and carbonate platform interactions
+merdith2021	13635864	CC BY 4.0	2022-07-07	Extending full-plate tectonic models into deep time (Merdith et al. 2021)
+clennett2020_m2019	20569021	CC BY 4.0	2026-06-06	A Quantitative Tomotectonic Plate Reconstruction of Western North America
+clennett2020_s2013	20569021	CC BY 4.0	2026-06-06	A Quantitative Tomotectonic Plate Reconstruction of Western North America
+muller2019	11601026	CC BY 4.0	2019-05-05	A Global Plate Model Including Lithospheric Deformation Along Major Rifts
+scotese_and_wright2018	5460860	CC BY 4.0	2018-08-01	PALEOMAP Paleodigital Elevation Models (PaleoDEMS) for the Phanerozoic
+young2018	10525370	CC BY 4.0	2018-06-27	Global kinematics of tectonic plates and subduction zones since the late Paleozoic
+torsvikcocks2017		not stated		https://www.earthdynamics.org/earthhistory/data_info.html
+matthews2016_mantle_ref	10526157	CC BY 4.0	2016-10-06	Global plate boundary evolution and kinematics since the late Paleozoic
+matthews2016_pmag_ref		not stated		https://gwsdoc.gplates.org/models#matthews2016_pmag_ref
+muller2016	11607841	CC BY 4.0	2016-04-29	Ocean Basin Evolution and Global-Scale Plate Reorganization Events Since Pangea Breakup
+zahirovic2016	10531297	CC BY 4.0	2016-09-13	Tectonic evolution and deep mantle structure of the eastern Tethys since the latest Jurassic
+gibbons2015	10595659	CC BY 4.0	2014-04-29	A tectonic model reconciling evidence for the collisions between India, Eurasia and intra-oceanic arcs
+domeier2014		not stated		unknown (the index gives no source)
+zahirovic2014	10595659	CC BY 4.0	2014-04-29	Zahirovic et al. 2014, bundled in the Zenodo record of Gibbons et al. 2015
+shephard2013	10595889	CC BY 4.0	2013-06-16	The tectonic evolution of the Arctic since Pangea breakup
+gurnis2012	10596350	CC BY 4.0	2012-01	Plate tectonic reconstructions with continuously closing plates
+seton2012	10596050	CC BY 4.0	2012-03-15	Global continental and ocean basin reconstructions since 200 Ma
+muller2008		not stated		https://earthbyte.org/webdav/ftp/incoming/mchin/plate-models
+golonka		not stated		https://gwsdoc.gplates.org/models#golonka
+paleomap	10596610	CC BY 4.0	2016-02-16	PALEOMAP PaleoAtlas for GPlates
+rodinia		not stated		https://gwsdoc.gplates.org/models#rodinia

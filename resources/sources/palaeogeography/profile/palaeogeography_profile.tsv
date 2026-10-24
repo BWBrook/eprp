@@ -1,0 +1,260 @@
+table	metric	key	value
+inputs	models		/data/paleodata/palaeogeography/gplates-models/raw
+inputs	wright2013		/data/paleodata/palaeogeography/wright2013-supplement/raw
+inputs	paleodem		/data/paleodata/palaeogeography/paleomap-paleodem/raw
+inputs	nsb		/data/paleodata/nsb/derived/2023-06-05_10063218/nsb.sqlite
+inputs	triton		/data/paleodata/triton/derived/Triton_v4_13517414/triton_update_2023_pres.tsv.gz
+inputs	pbdb		/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url
+models	snapshot		2026-10-24T0301Z_url
+models	models with rotations		26
+models	alfonso2024	rotation files; poles; moving plates; oldest pole (Ma); static polygons	14; 35336; 5023; 3000; 2067
+models	cao2024	rotation files; poles; moving plates; oldest pole (Ma); static polygons	2; 6297; 1213; 2100; 2417
+models	clennett2020_m2019	rotation files; poles; moving plates; oldest pole (Ma); static polygons	13; 34786; 4922; 3000; 2178
+models	clennett2020_s2013	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 5679; 925; 800; 2178
+models	domeier2014	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 3621; 604; 2000; 2366
+models	gibbons2015	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 6457; 1159; 1190; 1502
+models	golonka	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 1665; 331; 850; 127
+models	gurnis2012	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 3902; 551; 800; 1480
+models	matthews2016_mantle_ref	rotation files; poles; moving plates; oldest pole (Ma); static polygons	2; 5568; 1016; 1100; 2048
+models	matthews2016_pmag_ref	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 5500; 1013; 1100; 2048
+models	merdith2021	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 5943; 1184; 1140; 2391
+models	muller2008	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 2331; 452; 800; 1480
+models	muller2016	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 4195; 977; 600; 2048
+models	muller2019	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 34162; 4774; 3000; 2067
+models	muller2022	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 7381; 1178; 1140; 2391
+models	muller2025	rotation files; poles; moving plates; oldest pole (Ma); static polygons	2; 10234; 1211; 2100; 2417
+models	paleomap	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 1487; 257; 1100; 471
+models	rodinia	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 410; 32; 2000; 53
+models	scotese_and_wright2018	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 1487; 257; 1100; 240
+models	seton2012	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 4763; 695; 800; 1576
+models	shephard2013	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 5002; 771; 800; 1648
+models	torsvikcocks2017	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 4737; 748; 2000; 517
+models	young2018	rotation files; poles; moving plates; oldest pole (Ma); static polygons	2; 5548; 1024; 1100; 2048
+models	zahirovic2014	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 6418; 1150; 1190; 1558
+models	zahirovic2016	rotation files; poles; moving plates; oldest pole (Ma); static polygons	11; 39706; 3377; 3000; 2142
+models	zahirovic2022	rotation files; poles; moving plates; oldest pole (Ma); static polygons	1; 36258; 4934; 3000; 2471
+paleodem	version		5460860
+paleodem	PALEOMAP_PaleoAtlases.zip	members; by extension; ages from file names (Ma)	18; pdf 17, txt 1; none
+paleodem	PaleoDEMS_long_lat_elev_csv_v2.zip	members; by extension; ages from file names (Ma)	110; csv 109, txt 1; 109 ages, 0-540
+paleodem	Scotese_PaleoAtlas_v3.zip	members; by extension; ages from file names (Ma)	162; jpg 90, strings 31, tiff 22, csv 4, gpml 2, plist 2; none
+paleodem	Scotese_Wright_2018_Maps_1-88_1degX1deg_PaleoDEMS_nc.zip	members; by extension; ages from file names (Ma)	330; cache 218, nc 109, gpml 1, csv 1, txt 1; 109 ages, 0-540
+paleodem	Scotese_Wright_2018_Maps_1-88_6minX6min_PaleoDEMS_nc.zip	members; by extension; ages from file names (Ma)	111; nc 109, csv 1, ds_store 1; 109 ages, 0-540
+wright2013	supplement files (rotations, polygons)		SupplementaryMaterial/1_Phanerozoic_Plate_Motions_GPlates/Phanerozoic_EarthByte.rot; SupplementaryMaterial/1_Phanerozoic_Plate_Motions_GPlates/Phanerozoic_EarthByte_Coastlines.gpml; SupplementaryMaterial/1_Phanerozoic_Plate_Motions_GPlates/Phanerozoic_EarthByte_ContinentalRegions.gpml; SupplementaryMaterial/2_Paleobiology/2_SampleShapefiles/11_100Ma_0Ma_collections_carbonate_marine.shp; SupplementaryMaterial/2_Paleobiology/2_SampleShapefiles/11_100Ma_0Ma_collections_siliclastic_marine.shp; SupplementaryMaterial/2_Paleobiology/2_SampleShapefiles/11_100Ma_0Ma_collections_terrestrial.shp; SupplementaryMaterial/2_Paleobiology/2_SampleShapefiles/17_100Ma_0Ma_collections_general.shp; SupplementaryMaterial/3_Paleogeography/Paleogeography_GTS04.shp
+wright2013	rotation files; static polygon files used		Phanerozoic_EarthByte.rot | Phanerozoic_EarthByte_ContinentalRegions.gpml
+nsb	palaeogeography rows with hole coordinates (a grid of holes x 0.5 Myr, not samples)		582770
+nsb	holes		2526
+nsb	ages (Ma)		0-145
+nsb vs seton2012	seton2012	distance (deg)	n 582746; median 0.00; 95th 0.01; max 1.64; within 0.5 99.9%; within 1 99.9%; over 10: 0
+nsb vs seton2012	seton2012	abs palaeolatitude difference (deg)	n 582746; median 0.00; 95th 0.00; max 1.07; within 0.5 99.9%; within 1 100.0%; over 10: 0
+nsb vs seton2012	seton2012	not reconstructable here	24
+nsb vs seton2012	seton2012	plate ID agrees	582746 of 582746 (100.0%)
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	distance (deg)	n 550124; median 3.62; 95th 13.74; max 29.94; within 0.5 4.9%; within 1 10.2%; over 10: 40591
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	abs palaeolatitude difference (deg)	n 550124; median 2.16; 95th 4.80; max 29.47; within 0.5 13.4%; within 1 24.6%; over 10: 1045
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	not reconstructable here	32646
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	0-23.03 Ma: distance (deg)	n 134893; median 1.44; 95th 3.15; max 17.92; within 0.5 18.6%; within 1 35.4%; over 10: 293
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	0-23.03 Ma: abs palaeolatitude difference (deg)	n 134893; median 1.04; 95th 2.86; max 17.86; within 0.5 29.0%; within 1 48.8%; over 10: 199
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	0-23.03 Ma: not reconstructable here	200
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	23.03-66 Ma: distance (deg)	n 185072; median 3.86; 95th 6.11; max 29.94; within 0.5 0.2%; within 1 1.5%; over 10: 2451
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	23.03-66 Ma: abs palaeolatitude difference (deg)	n 185072; median 2.97; 95th 4.59; max 29.47; within 0.5 6.8%; within 1 14.0%; over 10: 634
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	23.03-66 Ma: not reconstructable here	10604
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	66-100 Ma: distance (deg)	n 110502; median 3.56; 95th 15.12; max 17.44; within 0.5 1.3%; within 1 4.5%; over 10: 19024
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	66-100 Ma: abs palaeolatitude difference (deg)	n 110502; median 1.84; 95th 3.16; max 12.91; within 0.5 13.7%; within 1 27.4%; over 10: 39
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	66-100 Ma: not reconstructable here	10522
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	100-146 Ma: distance (deg)	n 119657; median 6.17; 95th 19.60; max 26.67; within 0.5 0.1%; within 1 0.4%; over 10: 18823
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	100-146 Ma: abs palaeolatitude difference (deg)	n 119657; median 3.11; 95th 6.02; max 11.28; within 0.5 5.6%; within 1 10.8%; over 10: 173
+nsb holes, Seton (NSB) vs	matthews2016_mantle_ref	100-146 Ma: not reconstructable here	11320
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	distance (deg)	n 550124; median 6.34; 95th 12.26; max 23.14; within 0.5 3.2%; within 1 6.2%; over 10: 72609
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	abs palaeolatitude difference (deg)	n 550124; median 3.17; 95th 9.16; max 21.30; within 0.5 9.9%; within 1 17.2%; over 10: 14711
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	not reconstructable here	32646
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	0-23.03 Ma: distance (deg)	n 134893; median 2.16; 95th 4.31; max 16.58; within 0.5 12.9%; within 1 24.2%; over 10: 637
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	0-23.03 Ma: abs palaeolatitude difference (deg)	n 134893; median 1.35; 95th 3.10; max 13.41; within 0.5 25.0%; within 1 40.7%; over 10: 180
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	0-23.03 Ma: not reconstructable here	200
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	23.03-66 Ma: distance (deg)	n 185072; median 6.56; 95th 8.47; max 23.14; within 0.5 0.0%; within 1 0.1%; over 10: 2022
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	23.03-66 Ma: abs palaeolatitude difference (deg)	n 185072; median 3.67; 95th 7.53; max 21.30; within 0.5 3.8%; within 1 7.2%; over 10: 580
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	23.03-66 Ma: not reconstructable here	10604
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	66-100 Ma: distance (deg)	n 110502; median 6.65; 95th 8.54; max 10.25; within 0.5 0.2%; within 1 0.9%; over 10: 113
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	66-100 Ma: abs palaeolatitude difference (deg)	n 110502; median 3.28; 95th 6.64; max 8.49; within 0.5 7.7%; within 1 15.1%; over 10: 0
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	66-100 Ma: not reconstructable here	10522
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	100-146 Ma: distance (deg)	n 119657; median 10.52; 95th 14.13; max 17.95; within 0.5 0.0%; within 1 0.2%; over 10: 69837
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	100-146 Ma: abs palaeolatitude difference (deg)	n 119657; median 6.94; 95th 10.65; max 17.38; within 0.5 4.3%; within 1 8.0%; over 10: 13951
+nsb holes, Seton (NSB) vs	matthews2016_pmag_ref	100-146 Ma: not reconstructable here	11320
+triton	rows: non-Neptune; Neptune		433507; 108339
+triton	distinct (place, round.age, palaeoposition): non-Neptune; Neptune		9106; 8984
+triton	non-Neptune rows at round.age 0 (present positions, the same in every model)		182835
+triton	non-Neptune keys with pal.long equal to pal.lat (rows)		0 (0)
+triton non-Neptune (round.age > 0) vs	matthews2016_mantle_ref	rows: distance (deg)	n 249912; median 0.00; 95th 1.65; max 102.44; within 0.5 88.9%; within 1 93.4%; over 10: 2748
+triton non-Neptune (round.age > 0) vs	matthews2016_mantle_ref	rows: abs palaeolatitude difference (deg)	n 249912; median 0.00; 95th 0.94; max 4.71; within 0.5 90.8%; within 1 95.3%; over 10: 0
+triton non-Neptune (round.age > 0) vs	matthews2016_mantle_ref	rows: not reconstructable here	760
+triton Neptune (Seton, from NSB) vs	matthews2016_mantle_ref	rows, at round.age: distance (deg)	n 108062; median 0.88; 95th 4.53; max 174.42; within 0.5 34.0%; within 1 53.5%; over 10: 1447
+triton Neptune (Seton, from NSB) vs	matthews2016_mantle_ref	rows, at round.age: abs palaeolatitude difference (deg)	n 108062; median 0.65; 95th 3.66; max 5.60; within 0.5 43.1%; within 1 59.8%; over 10: 0
+triton Neptune (Seton, from NSB) vs	matthews2016_mantle_ref	rows, at round.age: not reconstructable here	277
+triton non-Neptune (round.age > 0) vs	matthews2016_pmag_ref	rows: distance (deg)	n 249912; median 1.42; 95th 10.83; max 102.62; within 0.5 23.7%; within 1 38.4%; over 10: 17180
+triton non-Neptune (round.age > 0) vs	matthews2016_pmag_ref	rows: abs palaeolatitude difference (deg)	n 249912; median 1.06; 95th 8.75; max 11.50; within 0.5 31.9%; within 1 48.4%; over 10: 3225
+triton non-Neptune (round.age > 0) vs	matthews2016_pmag_ref	rows: not reconstructable here	760
+triton Neptune (Seton, from NSB) vs	matthews2016_pmag_ref	rows, at round.age: distance (deg)	n 108062; median 1.74; 95th 7.81; max 171.91; within 0.5 19.0%; within 1 35.9%; over 10: 530
+triton Neptune (Seton, from NSB) vs	matthews2016_pmag_ref	rows, at round.age: abs palaeolatitude difference (deg)	n 108062; median 1.02; 95th 6.43; max 8.83; within 0.5 33.3%; within 1 49.4%; over 10: 0
+triton Neptune (Seton, from NSB) vs	matthews2016_pmag_ref	rows, at round.age: not reconstructable here	277
+pbdb	collections with gplates palaeocoordinates		242973
+pbdb	gplates: share of collections 100 Ma or older		63.6%
+pbdb	gplates: age bases (paleoage)		mid 242973
+pbdb gplates vs	wright2013	every 12th collection, age as given: distance (deg)	n 20241; median 0.22; 95th 2.09; max 80.48; within 0.5 70.6%; within 1 84.2%; over 10: 70
+pbdb gplates vs	wright2013	every 12th collection, age as given: abs palaeolatitude difference (deg)	n 20241; median 0.10; 95th 1.64; max 66.81; within 0.5 80.1%; within 1 90.2%; over 10: 35
+pbdb gplates vs	wright2013	every 12th collection, age as given: not reconstructable here	7
+pbdb gplates vs	wright2013	every 12th collection, age as given: plate ID agrees	20222 of 20241 (99.9%)
+pbdb gplates vs	wright2013	every 12th collection, age rounded to 1 Ma: distance (deg)	n 20241; median 0.07; 95th 2.18; max 80.37; within 0.5 69.6%; within 1 83.3%; over 10: 69
+pbdb gplates vs	wright2013	every 12th collection, age rounded to 1 Ma: abs palaeolatitude difference (deg)	n 20241; median 0.01; 95th 1.67; max 66.73; within 0.5 79.1%; within 1 89.8%; over 10: 35
+pbdb gplates vs	wright2013	every 12th collection, age rounded to 1 Ma: not reconstructable here	7
+pbdb gplates vs	wright2013	every 12th collection, age rounded to 1 Ma: plate ID agrees	20222 of 20241 (99.9%)
+pbdb gplates vs	wright2013	rounded, 0-66 Ma: distance (deg)	n 5246; median 0.00; 95th 0.49; max 72.75; within 0.5 96.8%; within 1 99.1%; over 10: 5
+pbdb gplates vs	wright2013	rounded, 0-66 Ma: abs palaeolatitude difference (deg)	n 5246; median 0.00; 95th 0.19; max 66.73; within 0.5 99.0%; within 1 99.4%; over 10: 2
+pbdb gplates vs	wright2013	rounded, 0-66 Ma: not reconstructable here	6
+pbdb gplates vs	wright2013	rounded, 0-66 Ma: plate ID agrees	5244 of 5246 (100.0%)
+pbdb gplates vs	wright2013	rounded, 66-100 Ma: distance (deg)	n 2159; median 0.00; 95th 0.61; max 43.55; within 0.5 92.0%; within 1 97.6%; over 10: 5
+pbdb gplates vs	wright2013	rounded, 66-100 Ma: abs palaeolatitude difference (deg)	n 2159; median 0.00; 95th 0.48; max 43.42; within 0.5 96.4%; within 1 98.6%; over 10: 3
+pbdb gplates vs	wright2013	rounded, 66-100 Ma: not reconstructable here	0
+pbdb gplates vs	wright2013	rounded, 66-100 Ma: plate ID agrees	2153 of 2159 (99.7%)
+pbdb gplates vs	wright2013	rounded, 100-145 Ma: distance (deg)	n 1264; median 0.76; 95th 2.25; max 16.09; within 0.5 32.6%; within 1 59.5%; over 10: 3
+pbdb gplates vs	wright2013	rounded, 100-145 Ma: abs palaeolatitude difference (deg)	n 1264; median 0.47; 95th 1.92; max 13.65; within 0.5 52.2%; within 1 74.7%; over 10: 2
+pbdb gplates vs	wright2013	rounded, 100-145 Ma: not reconstructable here	0
+pbdb gplates vs	wright2013	rounded, 100-145 Ma: plate ID agrees	1261 of 1264 (99.8%)
+pbdb gplates vs	wright2013	rounded, 145-252 Ma: distance (deg)	n 4078; median 0.43; 95th 1.59; max 64.80; within 0.5 55.3%; within 1 82.0%; over 10: 5
+pbdb gplates vs	wright2013	rounded, 145-252 Ma: abs palaeolatitude difference (deg)	n 4078; median 0.27; 95th 1.16; max 62.99; within 0.5 72.8%; within 1 91.8%; over 10: 5
+pbdb gplates vs	wright2013	rounded, 145-252 Ma: not reconstructable here	1
+pbdb gplates vs	wright2013	rounded, 145-252 Ma: plate ID agrees	4074 of 4078 (99.9%)
+pbdb gplates vs	wright2013	rounded, 252-541 Ma: distance (deg)	n 7493; median 0.10; 95th 3.54; max 80.37; within 0.5 58.2%; within 1 72.8%; over 10: 50
+pbdb gplates vs	wright2013	rounded, 252-541 Ma: abs palaeolatitude difference (deg)	n 7493; median 0.07; 95th 2.56; max 38.81; within 0.5 68.1%; within 1 81.9%; over 10: 22
+pbdb gplates vs	wright2013	rounded, 252-541 Ma: not reconstructable here	0
+pbdb gplates vs	wright2013	rounded, 252-541 Ma: plate ID agrees	7489 of 7493 (99.9%)
+pbdb gplates vs	wright2013	rounded, 541-5000 Ma: distance (deg)	n 1; median 55.32; 95th 55.32; max 55.32; within 0.5 0.0%; within 1 0.0%; over 10: 1
+pbdb gplates vs	wright2013	rounded, 541-5000 Ma: abs palaeolatitude difference (deg)	n 1; median 29.50; 95th 29.50; max 29.50; within 0.5 0.0%; within 1 0.0%; over 10: 1
+pbdb gplates vs	wright2013	rounded, 541-5000 Ma: not reconstructable here	0
+pbdb gplates vs	wright2013	rounded, 541-5000 Ma: plate ID agrees	1 of 1 (100.0%)
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age as given: distance (deg)	n 16599; median 8.37; 95th 38.49; max 91.04; within 0.5 8.1%; within 1 11.6%; over 10: 6412
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age as given: abs palaeolatitude difference (deg)	n 16599; median 3.16; 95th 19.64; max 75.48; within 0.5 16.0%; within 1 22.8%; over 10: 2323
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age as given: not reconstructable here	3649
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age as given: plate ID agrees	10004 of 16599 (60.3%)
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age rounded to 1 Ma: distance (deg)	n 16601; median 8.34; 95th 38.51; max 91.30; within 0.5 8.1%; within 1 11.7%; over 10: 6395
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age rounded to 1 Ma: abs palaeolatitude difference (deg)	n 16601; median 3.19; 95th 19.62; max 75.49; within 0.5 16.2%; within 1 23.0%; over 10: 2330
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age rounded to 1 Ma: not reconstructable here	3647
+pbdb gplates vs	matthews2016_mantle_ref	every 12th collection, age rounded to 1 Ma: plate ID agrees	10004 of 16601 (60.3%)
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 0-66 Ma: distance (deg)	n 5208; median 2.53; 95th 10.88; max 79.59; within 0.5 25.3%; within 1 35.2%; over 10: 404
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 0-66 Ma: abs palaeolatitude difference (deg)	n 5208; median 0.90; 95th 6.76; max 75.49; within 0.5 41.7%; within 1 52.6%; over 10: 46
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 0-66 Ma: not reconstructable here	44
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 0-66 Ma: plate ID agrees	3039 of 5208 (58.4%)
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 66-100 Ma: distance (deg)	n 2106; median 9.62; 95th 12.53; max 51.81; within 0.5 0.1%; within 1 0.8%; over 10: 805
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 66-100 Ma: abs palaeolatitude difference (deg)	n 2106; median 3.25; 95th 9.76; max 51.46; within 0.5 7.0%; within 1 13.2%; over 10: 84
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 66-100 Ma: not reconstructable here	53
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 66-100 Ma: plate ID agrees	1476 of 2106 (70.1%)
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 100-145 Ma: distance (deg)	n 1242; median 10.21; 95th 14.03; max 24.30; within 0.5 0.0%; within 1 0.2%; over 10: 636
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 100-145 Ma: abs palaeolatitude difference (deg)	n 1242; median 4.25; 95th 11.74; max 24.25; within 0.5 4.2%; within 1 8.5%; over 10: 174
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 100-145 Ma: not reconstructable here	22
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 100-145 Ma: plate ID agrees	764 of 1242 (61.5%)
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 145-252 Ma: distance (deg)	n 3949; median 8.22; 95th 22.74; max 65.34; within 0.5 0.6%; within 1 2.2%; over 10: 1421
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 145-252 Ma: abs palaeolatitude difference (deg)	n 3949; median 3.89; 95th 19.56; max 61.72; within 0.5 4.9%; within 1 11.3%; over 10: 607
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 145-252 Ma: not reconstructable here	130
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 145-252 Ma: plate ID agrees	2117 of 3949 (53.6%)
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 252-541 Ma: distance (deg)	n 4096; median 20.18; 95th 57.52; max 91.30; within 0.5 0.0%; within 1 0.1%; over 10: 3129
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 252-541 Ma: abs palaeolatitude difference (deg)	n 4096; median 7.41; 95th 24.96; max 53.58; within 0.5 2.9%; within 1 6.2%; over 10: 1419
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 252-541 Ma: not reconstructable here	3397
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 252-541 Ma: plate ID agrees	2608 of 4096 (63.7%)
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 541-5000 Ma: distance (deg)	none
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 541-5000 Ma: abs palaeolatitude difference (deg)	none
+pbdb gplates vs	matthews2016_mantle_ref	rounded, 541-5000 Ma: not reconstructable here	1
+pbdb	collections with scotese palaeocoordinates		231636
+pbdb	scotese: share of collections 100 Ma or older		64.5%
+pbdb	scotese: age bases (paleoage)		mid 231636
+pbdb scotese vs	paleomap	every 11th collection, age as given: distance (deg)	n 21055; median 0.18; 95th 2.04; max 76.91; within 0.5 73.7%; within 1 88.7%; over 10: 529
+pbdb scotese vs	paleomap	every 11th collection, age as given: abs palaeolatitude difference (deg)	n 21055; median 0.09; 95th 1.32; max 60.04; within 0.5 84.0%; within 1 92.4%; over 10: 463
+pbdb scotese vs	paleomap	every 11th collection, age as given: not reconstructable here	3
+pbdb scotese vs	paleomap	every 11th collection, age as given: plate ID agrees	21027 of 21055 (99.9%)
+pbdb scotese vs	paleomap	every 11th collection, age rounded to 1 Ma: distance (deg)	n 21055; median 0.10; 95th 1.97; max 76.85; within 0.5 72.7%; within 1 88.3%; over 10: 529
+pbdb scotese vs	paleomap	every 11th collection, age rounded to 1 Ma: abs palaeolatitude difference (deg)	n 21055; median 0.02; 95th 1.39; max 60.03; within 0.5 83.3%; within 1 92.9%; over 10: 463
+pbdb scotese vs	paleomap	every 11th collection, age rounded to 1 Ma: not reconstructable here	3
+pbdb scotese vs	paleomap	every 11th collection, age rounded to 1 Ma: plate ID agrees	21027 of 21055 (99.9%)
+pbdb scotese vs	paleomap	rounded, 0-66 Ma: distance (deg)	n 5179; median 0.00; 95th 0.40; max 38.12; within 0.5 97.9%; within 1 99.1%; over 10: 7
+pbdb scotese vs	paleomap	rounded, 0-66 Ma: abs palaeolatitude difference (deg)	n 5179; median 0.00; 95th 0.18; max 34.49; within 0.5 98.9%; within 1 99.5%; over 10: 4
+pbdb scotese vs	paleomap	rounded, 0-66 Ma: not reconstructable here	3
+pbdb scotese vs	paleomap	rounded, 0-66 Ma: plate ID agrees	5155 of 5179 (99.5%)
+pbdb scotese vs	paleomap	rounded, 66-100 Ma: distance (deg)	n 2278; median 0.01; 95th 0.62; max 24.74; within 0.5 82.7%; within 1 97.5%; over 10: 3
+pbdb scotese vs	paleomap	rounded, 66-100 Ma: abs palaeolatitude difference (deg)	n 2278; median 0.00; 95th 0.45; max 7.48; within 0.5 97.3%; within 1 98.2%; over 10: 0
+pbdb scotese vs	paleomap	rounded, 66-100 Ma: not reconstructable here	0
+pbdb scotese vs	paleomap	rounded, 66-100 Ma: plate ID agrees	2277 of 2278 (100.0%)
+pbdb scotese vs	paleomap	rounded, 100-145 Ma: distance (deg)	n 1385; median 0.42; 95th 0.95; max 8.80; within 0.5 68.7%; within 1 95.7%; over 10: 0
+pbdb scotese vs	paleomap	rounded, 100-145 Ma: abs palaeolatitude difference (deg)	n 1385; median 0.14; 95th 0.73; max 6.51; within 0.5 90.9%; within 1 96.8%; over 10: 0
+pbdb scotese vs	paleomap	rounded, 100-145 Ma: not reconstructable here	0
+pbdb scotese vs	paleomap	rounded, 100-145 Ma: plate ID agrees	1382 of 1385 (99.8%)
+pbdb scotese vs	paleomap	rounded, 145-252 Ma: distance (deg)	n 4225; median 0.36; 95th 1.42; max 24.66; within 0.5 58.4%; within 1 85.3%; over 10: 5
+pbdb scotese vs	paleomap	rounded, 145-252 Ma: abs palaeolatitude difference (deg)	n 4225; median 0.18; 95th 1.16; max 24.42; within 0.5 75.1%; within 1 93.5%; over 10: 5
+pbdb scotese vs	paleomap	rounded, 145-252 Ma: not reconstructable here	0
+pbdb scotese vs	paleomap	rounded, 145-252 Ma: plate ID agrees	4225 of 4225 (100.0%)
+pbdb scotese vs	paleomap	rounded, 252-541 Ma: distance (deg)	n 7988; median 0.28; 95th 22.10; max 76.85; within 0.5 61.7%; within 1 79.0%; over 10: 514
+pbdb scotese vs	paleomap	rounded, 252-541 Ma: abs palaeolatitude difference (deg)	n 7988; median 0.11; 95th 17.83; max 60.03; within 0.5 72.2%; within 1 86.2%; over 10: 454
+pbdb scotese vs	paleomap	rounded, 252-541 Ma: not reconstructable here	0
+pbdb scotese vs	paleomap	rounded, 252-541 Ma: plate ID agrees	7988 of 7988 (100.0%)
+pbdb scotese vs	paleomap	rounded, 541-5000 Ma: distance (deg)	none
+pbdb scotese vs	paleomap	rounded, 541-5000 Ma: abs palaeolatitude difference (deg)	none
+pbdb scotese vs	paleomap	rounded, 541-5000 Ma: not reconstructable here	0
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age as given: distance (deg)	n 20951; median 0.17; 95th 2.03; max 76.91; within 0.5 73.9%; within 1 88.8%; over 10: 529
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age as given: abs palaeolatitude difference (deg)	n 20951; median 0.09; 95th 1.29; max 60.04; within 0.5 84.3%; within 1 92.6%; over 10: 463
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age as given: not reconstructable here	107
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age as given: plate ID agrees	20945 of 20951 (100.0%)
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age rounded to 1 Ma: distance (deg)	n 20951; median 0.09; 95th 1.93; max 76.85; within 0.5 72.9%; within 1 88.5%; over 10: 529
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age rounded to 1 Ma: abs palaeolatitude difference (deg)	n 20951; median 0.02; 95th 1.38; max 60.03; within 0.5 83.5%; within 1 93.1%; over 10: 463
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age rounded to 1 Ma: not reconstructable here	107
+pbdb scotese vs	scotese_and_wright2018	every 11th collection, age rounded to 1 Ma: plate ID agrees	20945 of 20951 (100.0%)
+pbdb scotese vs	scotese_and_wright2018	rounded, 0-66 Ma: distance (deg)	n 5180; median 0.00; 95th 0.40; max 38.12; within 0.5 97.9%; within 1 99.1%; over 10: 7
+pbdb scotese vs	scotese_and_wright2018	rounded, 0-66 Ma: abs palaeolatitude difference (deg)	n 5180; median 0.00; 95th 0.18; max 34.49; within 0.5 98.9%; within 1 99.5%; over 10: 4
+pbdb scotese vs	scotese_and_wright2018	rounded, 0-66 Ma: not reconstructable here	2
+pbdb scotese vs	scotese_and_wright2018	rounded, 0-66 Ma: plate ID agrees	5178 of 5180 (100.0%)
+pbdb scotese vs	scotese_and_wright2018	rounded, 66-100 Ma: distance (deg)	n 2278; median 0.01; 95th 0.62; max 24.74; within 0.5 82.7%; within 1 97.5%; over 10: 3
+pbdb scotese vs	scotese_and_wright2018	rounded, 66-100 Ma: abs palaeolatitude difference (deg)	n 2278; median 0.00; 95th 0.45; max 7.48; within 0.5 97.3%; within 1 98.2%; over 10: 0
+pbdb scotese vs	scotese_and_wright2018	rounded, 66-100 Ma: not reconstructable here	0
+pbdb scotese vs	scotese_and_wright2018	rounded, 66-100 Ma: plate ID agrees	2277 of 2278 (100.0%)
+pbdb scotese vs	scotese_and_wright2018	rounded, 100-145 Ma: distance (deg)	n 1385; median 0.42; 95th 0.95; max 8.80; within 0.5 68.7%; within 1 95.7%; over 10: 0
+pbdb scotese vs	scotese_and_wright2018	rounded, 100-145 Ma: abs palaeolatitude difference (deg)	n 1385; median 0.14; 95th 0.73; max 6.51; within 0.5 90.9%; within 1 96.8%; over 10: 0
+pbdb scotese vs	scotese_and_wright2018	rounded, 100-145 Ma: not reconstructable here	0
+pbdb scotese vs	scotese_and_wright2018	rounded, 100-145 Ma: plate ID agrees	1382 of 1385 (99.8%)
+pbdb scotese vs	scotese_and_wright2018	rounded, 145-252 Ma: distance (deg)	n 4120; median 0.35; 95th 1.24; max 24.66; within 0.5 59.0%; within 1 86.0%; over 10: 5
+pbdb scotese vs	scotese_and_wright2018	rounded, 145-252 Ma: abs palaeolatitude difference (deg)	n 4120; median 0.18; 95th 1.12; max 24.42; within 0.5 76.1%; within 1 94.3%; over 10: 5
+pbdb scotese vs	scotese_and_wright2018	rounded, 145-252 Ma: not reconstructable here	105
+pbdb scotese vs	scotese_and_wright2018	rounded, 145-252 Ma: plate ID agrees	4120 of 4120 (100.0%)
+pbdb scotese vs	scotese_and_wright2018	rounded, 252-541 Ma: distance (deg)	n 7988; median 0.28; 95th 22.10; max 76.85; within 0.5 61.7%; within 1 79.0%; over 10: 514
+pbdb scotese vs	scotese_and_wright2018	rounded, 252-541 Ma: abs palaeolatitude difference (deg)	n 7988; median 0.11; 95th 17.83; max 60.03; within 0.5 72.2%; within 1 86.2%; over 10: 454
+pbdb scotese vs	scotese_and_wright2018	rounded, 252-541 Ma: not reconstructable here	0
+pbdb scotese vs	scotese_and_wright2018	rounded, 252-541 Ma: plate ID agrees	7988 of 7988 (100.0%)
+pbdb scotese vs	scotese_and_wright2018	rounded, 541-5000 Ma: distance (deg)	none
+pbdb scotese vs	scotese_and_wright2018	rounded, 541-5000 Ma: abs palaeolatitude difference (deg)	none
+pbdb scotese vs	scotese_and_wright2018	rounded, 541-5000 Ma: not reconstructable here	0
+pbdb	collections with seton palaeocoordinates		137825
+pbdb	seton: share of collections 100 Ma or older		32.6%
+pbdb	seton: age bases (paleoage)		mid 137825
+pbdb seton vs	seton2012	every 6th collection, age as given: distance (deg)	n 22753; median 0.09; 95th 1.27; max 30.78; within 0.5 85.0%; within 1 91.5%; over 10: 18
+pbdb seton vs	seton2012	every 6th collection, age as given: abs palaeolatitude difference (deg)	n 22753; median 0.05; 95th 0.98; max 14.51; within 0.5 90.3%; within 1 95.1%; over 10: 5
+pbdb seton vs	seton2012	every 6th collection, age as given: not reconstructable here	218
+pbdb seton vs	seton2012	every 6th collection, age as given: plate ID agrees	22742 of 22753 (100.0%)
+pbdb seton vs	seton2012	every 6th collection, age rounded to 1 Ma: distance (deg)	n 22962; median 0.00; 95th 1.38; max 30.74; within 0.5 82.7%; within 1 91.5%; over 10: 19
+pbdb seton vs	seton2012	every 6th collection, age rounded to 1 Ma: abs palaeolatitude difference (deg)	n 22962; median 0.00; 95th 1.02; max 14.48; within 0.5 89.3%; within 1 94.9%; over 10: 5
+pbdb seton vs	seton2012	every 6th collection, age rounded to 1 Ma: not reconstructable here	9
+pbdb seton vs	seton2012	every 6th collection, age rounded to 1 Ma: plate ID agrees	22951 of 22962 (100.0%)
+pbdb seton vs	seton2012	rounded, 0-66 Ma: distance (deg)	n 11198; median 0.00; 95th 0.43; max 30.74; within 0.5 95.8%; within 1 99.4%; over 10: 8
+pbdb seton vs	seton2012	rounded, 0-66 Ma: abs palaeolatitude difference (deg)	n 11198; median 0.00; 95th 0.18; max 14.48; within 0.5 97.2%; within 1 99.7%; over 10: 3
+pbdb seton vs	seton2012	rounded, 0-66 Ma: not reconstructable here	0
+pbdb seton vs	seton2012	rounded, 0-66 Ma: plate ID agrees	11198 of 11198 (100.0%)
+pbdb seton vs	seton2012	rounded, 66-100 Ma: distance (deg)	n 4269; median 0.00; 95th 0.43; max 23.96; within 0.5 97.3%; within 1 97.9%; over 10: 6
+pbdb seton vs	seton2012	rounded, 66-100 Ma: abs palaeolatitude difference (deg)	n 4269; median 0.00; 95th 0.19; max 8.86; within 0.5 98.3%; within 1 98.9%; over 10: 0
+pbdb seton vs	seton2012	rounded, 66-100 Ma: not reconstructable here	0
+pbdb seton vs	seton2012	rounded, 66-100 Ma: plate ID agrees	4260 of 4269 (99.8%)
+pbdb seton vs	seton2012	rounded, 100-145 Ma: distance (deg)	n 2658; median 0.54; 95th 1.45; max 12.80; within 0.5 46.7%; within 1 76.3%; over 10: 3
+pbdb seton vs	seton2012	rounded, 100-145 Ma: abs palaeolatitude difference (deg)	n 2658; median 0.28; 95th 1.42; max 10.24; within 0.5 65.7%; within 1 80.8%; over 10: 1
+pbdb seton vs	seton2012	rounded, 100-145 Ma: not reconstructable here	0
+pbdb seton vs	seton2012	rounded, 100-145 Ma: plate ID agrees	2658 of 2658 (100.0%)
+pbdb seton vs	seton2012	rounded, 145-252 Ma: distance (deg)	n 4837; median 0.41; 95th 1.98; max 25.26; within 0.5 59.1%; within 1 76.0%; over 10: 2
+pbdb seton vs	seton2012	rounded, 145-252 Ma: abs palaeolatitude difference (deg)	n 4837; median 0.23; 95th 1.57; max 14.08; within 0.5 76.2%; within 1 87.9%; over 10: 1
+pbdb seton vs	seton2012	rounded, 145-252 Ma: not reconstructable here	0
+pbdb seton vs	seton2012	rounded, 145-252 Ma: plate ID agrees	4835 of 4837 (100.0%)
+pbdb seton vs	seton2012	rounded, 252-541 Ma: distance (deg)	none
+pbdb seton vs	seton2012	rounded, 252-541 Ma: abs palaeolatitude difference (deg)	none
+pbdb seton vs	seton2012	rounded, 252-541 Ma: not reconstructable here	9
+pbdb seton vs	seton2012	rounded, 541-5000 Ma: distance (deg)	none
+pbdb seton vs	seton2012	rounded, 541-5000 Ma: abs palaeolatitude difference (deg)	none
+pbdb seton vs	seton2012	rounded, 541-5000 Ma: not reconstructable here	0

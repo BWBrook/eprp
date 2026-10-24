@@ -130,7 +130,7 @@ for dep in deposits:
         manifest = json.load(f)
     for metric, field in (("title", "title"), ("doi", "doi"), ("published", "publication_date"), ("licence", "license")):
         out.append((dep, "", metric, manifest.get(field) or "none"))
-    for path in sorted(p for p in glob.glob(os.path.join(v, "**"), recursive=True) if os.path.isfile(p)):
+    for path in sorted(os.path.join(d, f) for d, _, fs in os.walk(v) for f in fs):  # os.walk keeps dotfiles
         name = os.path.relpath(path, v)
         if name == "MANIFEST.json":
             continue
