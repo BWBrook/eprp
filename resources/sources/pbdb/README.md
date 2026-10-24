@@ -204,8 +204,9 @@ Guide (Uhen et al. 2023; version 2.0, 2026). Entry peaked in 2002–2013
 In the Australian region, entry peaked in 2015 (8,177 occurrences, 1,970 of
 them modified on one day, 27 August 2015: the Stony Creek Basin pollen), and
 continues: 1,529 occurrences were created in 2025 and 1,105 so far in 2026.
-Ten enterers account for 32,783 occurrences (71%); M. Clapham alone entered
-11,484 (25%, mostly Permian brachiopods), and C. Jaramillo 6,477 (including
+Ten enterers account for 32,783 of the region's occurrences (71%); M. Clapham
+alone entered 11,484 of them (25% of the Australian region, not of PBDB;
+mostly Permian brachiopods), and C. Jaramillo 6,477 (including
 the 4,149 Quaternary plant records). Australian coverage reflects those
 projects, not the Australian fossil record (inferred).
 
@@ -372,10 +373,7 @@ Vocabularies and traps (counts for the region unless stated):
   Lynch's Crater ([Neotoma](../neotoma/README.md)).
 - **Macrostrat.** No Australian columns; its name lexicon holds 12,279 names
   imported from ASUD (2015).
-- **Archived PBDB vintages.** Close et al. 2019, Benson et al. 2025 and
-  Monarrez et al. 2023 deposit PBDB downloads of 2017, 2022 and about 2023
-  ([register-deposits](../register-deposits/README.md)); with our dated
-  snapshots they support data-vintage work (Q-045).
+- [Detail withheld pending disclosure to the data custodian.]
 
 ## EPRP relevance
 

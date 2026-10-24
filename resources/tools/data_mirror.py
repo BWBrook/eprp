@@ -2,10 +2,10 @@
 """Mirror versions of a Zenodo record, Figshare collection or GitHub repository into a read-only local archive.
 
 Usage:
-  python3 data_mirror.py zenodo RECORD_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
-  python3 data_mirror.py figshare COLLECTION_ID|article/ARTICLE_ID DEST [--latest] [--only VERSION_DIR ...] [--index-only]
-  python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--index-only]
-  python3 data_mirror.py dryad DOI DEST [--latest] [--only VERSION_DIR ...] [--index-only]
+  python3 data_mirror.py zenodo RECORD_ID DEST [--latest] [--only VERSION_DIR ...] [--files GLOB ...] [--jobs N] [--index-only]
+  python3 data_mirror.py figshare COLLECTION_ID|article/ARTICLE_ID DEST [--latest] [--only VERSION_DIR ...] [--files GLOB ...] [--jobs N] [--index-only]
+  python3 data_mirror.py github OWNER/REPO DEST [--latest] [--only VERSION_DIR ...] [--files GLOB ...] [--jobs N] [--index-only]
+  python3 data_mirror.py dryad DOI DEST [--latest] [--only VERSION_DIR ...] [--files GLOB ...] [--jobs N] [--index-only]
   python3 data_mirror.py wfs WFS_URL LAYER[,LAYER...] DEST --license TEXT
   python3 data_mirror.py url DEST --license TEXT [--specs-file FILE] [--pause SECONDS] [NAME::]URL [[NAME::]URL ...]
   python3 data_mirror.py verify DEST [--only VERSION_DIR ...]
@@ -15,8 +15,12 @@ DEST/raw/<version_dir>/ holding the unchanged files plus MANIFEST.json for the
 selected versions: --latest takes the newest version of each record (Figshare:
 of each article; Zenodo, Dryad and Figshare: by the provider's own version
 order, not the publication dates, which depositors set and which need not
-increase),
---only names version_dirs, and both may be combined. Zenodo
+increase; a tie at the newest version is an error),
+--only names version_dirs, and both may be combined. --files keeps only the
+files whose names match the glob patterns; the manifest records the patterns,
+and a version once mirrored is skipped, so a different selection of the same
+versions needs its own DEST. --jobs fetches that many versions at once
+(Zenodo serves each connection slowly). Zenodo
 version_dirs are <version>_<record>; Figshare ones are <article-title>_v<N>_<article>,
 one per version of every article in the collection; GitHub ones are
 <commit-date>_<sha10>, one per commit on the default branch; Dryad ones are
@@ -41,9 +45,11 @@ library only.
 """
 
 import argparse
+import concurrent.futures
 import datetime as dt
 import email.utils
 import fcntl
+import fnmatch
 import hashlib
 import http.client
 import json
@@ -316,16 +322,19 @@ def download(url, dest, size, checksum):
     raise IOError(f"could not fetch {url} intact")
 
 
-def mirror_version(r, raw_root, tool_sha):
+def mirror_version(r, raw_root, tool_sha, patterns=None):
     vdir = os.path.join(raw_root, r["dir"])
     manifest_path = os.path.join(vdir, "MANIFEST.json")
     if os.path.exists(manifest_path):
         return False
-    os.makedirs(vdir, exist_ok=True)
     if r["files"] is None:
         r["files"] = github_files(r["repo"], r["record"])
+    selected = [x for x in r["files"] if not patterns or any(fnmatch.fnmatchcase(x["key"], p) for p in patterns)]
+    if patterns and not selected:
+        raise RuntimeError(f"{r['dir']}: no file matches {' '.join(patterns)}")
+    os.makedirs(vdir, exist_ok=True)
     files = []
-    for x in sorted(r["files"], key=lambda x: x["key"]):
+    for x in sorted(selected, key=lambda x: x["key"]):
         dest = os.path.join(vdir, x["key"])
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         algo, expected = x["checksum"].split(":", 1)
@@ -342,6 +351,8 @@ def mirror_version(r, raw_root, tool_sha):
                                   "title", "creators", "license")}
     manifest.update(files=files, retrieved_utc=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
                     tool={"name": "data_mirror.py", "sha256": tool_sha})
+    if patterns:
+        manifest["files_selected"] = patterns
     with open(manifest_path + ".part", "w") as f:
         json.dump(manifest, f, indent=2)
     os.replace(manifest_path + ".part", manifest_path)
@@ -457,6 +468,8 @@ def main():
         p.add_argument("dest")
         p.add_argument("--only", nargs="*", default=None, help="version_dir names to fetch")
         p.add_argument("--latest", action="store_true", help="fetch the newest version of each record")
+        p.add_argument("--files", nargs="+", default=None, help="fetch only files whose names match these glob patterns")
+        p.add_argument("--jobs", type=int, default=1, help="versions fetched at once")
         p.add_argument("--index-only", action="store_true")
     p = sub.add_parser("wfs")
     p.add_argument("wfs_url")
@@ -530,16 +543,26 @@ def main():
         order = {"zenodo": lambda r: r["index"], "dryad": lambda r: r["version"],
                  "figshare": lambda r: r["version"]}.get(
             a.command, lambda r: (r["publication_date"], str(r["version"])))
-        newest = {}
+        newest, tied = {}, set()
         for r in versions:
             key = group(r)
             if key not in newest or order(r) > order(newest[key]):
                 newest[key] = r
+                tied.discard(key)
+            elif order(r) == order(newest[key]):
+                tied.add(key)
+        if tied:
+            sys.exit(f"--latest: the provider's order ties at the newest version of {' '.join(map(str, tied))}; use --only")
         chosen |= {r["dir"] for r in newest.values()}
     wanted = [r for r in versions if r["dir"] in chosen] if (a.only is not None or a.latest) else versions
-    for i, r in enumerate(wanted, 1):
-        done = mirror_version(r, raw_root, tool_sha)
+
+    def run(item):
+        i, r = item
+        done = mirror_version(r, raw_root, tool_sha, a.files)
         print(f"[{i}/{len(wanted)}] {r['dir']} {'fetched' if done else 'present'}", flush=True)
+
+    with concurrent.futures.ThreadPoolExecutor(a.jobs) as ex:
+        list(ex.map(run, enumerate(wanted, 1)))
     print("complete", flush=True)
     return 0
 

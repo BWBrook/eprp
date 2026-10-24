@@ -1,0 +1,943 @@
+doi	pmid	mentions	files	questions
+10.1002/2017jg004135		2	ideas/register.md:1549;literature/2026-10-10-register-checks-round6.md:191	Q-024
+10.1002/9781119507444.ch2		1	literature/2026-10-09-register-checks-round1.md:153	Q-014
+10.1002/ece3.3507		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:997	
+10.1002/ecs2.2438		2	ideas/register.md:1546;literature/2026-10-10-register-checks-round6.md:190	Q-024
+10.1002/ecy.2443		4	ideas/2026-10-07-claude-first-framing.md:104;ideas/register.md:1445;resources/sources/names-status/README.md:52	Q-022;src:names-status
+10.1002/ecy.2787		2	ideas/2026-10-07-claude-first-framing.md:111	
+10.1002/ecy.3344		1	resources/sources/names-status/README.md:51	src:names-status
+10.1002/evl3.205		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1001	
+10.1002/gdj3.189		1	ideas/2026-10-14-blue-sky-cross-critique-codex.md:77	
+10.1002/gj.877		1	literature/2026-10-10-register-checks-round8.md:142	
+10.1002/jez.b.21337		8	ideas/register-blue-sky.md:227;literature/2026-10-14-ammonoid-developmental-route-contract.md:61;literature/2026-10-15-b002-generator-and-physical-priors.md:29	B-002
+10.1002/jez.b.22716		2	ideas/2026-10-14-blue-sky-ideation-codex.md:122	
+10.1002/jgrg.20086		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:761	
+10.1002/mmng.200600001		1	data/ammonoid-growth-support/source-pilot-20261015.md:71	
+10.1002/mmng.200800004		1	data/ammonoid-growth-support/source-pilot-20261015.md:78	
+10.1002/palo.20029		1	data/q050-sample-crosswalk/README.md:130	Q-050
+10.1002/ppp3.10546		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:999	
+10.1002/sim.2712		2	literature/2026-10-10-prediction-units-and-priority.md:93	
+10.1006/jtbi.1997.0508		2	ideas/register.md:630;literature/2026-10-09-register-checks-round1.md:32	Q-011
+10.1007/978-94-017-9630-9_16		3	ideas/2026-10-15-blue-sky-support-reply-claude.md:109;literature/2026-10-15-b002-generator-and-physical-priors.md:33	B-002
+10.1007/s00382-007-0334-x		1	resources/sources/gcd/README.md:40	src:gcd
+10.1007/s10750-009-9764-2		1	ideas/2026-10-15-b004-critique-claude.md:32	B-004
+10.1007/s11230-024-10161-4		1	ideas/2026-10-23-alroy-review-codex.md:81	
+10.1007/s12080-011-0149-6		1	ideas/2026-10-15-b004-critique-claude.md:61	B-004
+10.1016/0022-0981(96)00010-x		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:775	
+10.1016/0033-5894(91)90021-v		2	ideas/register.md:2345;literature/2026-10-10-register-checks-round6.md:139	Q-034
+10.1016/0077-7579(80)90022-8		1	literature/2026-10-15-b004-modern-source-table.md:48	B-004
+10.1016/b978-0-12-824360-2.00014-0		2	literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:288	
+10.1016/j.cub.2013.12.017		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:38	
+10.1016/j.cub.2019.10.065		1	ideas/register.md:1634	Q-025
+10.1016/j.cub.2020.01.052		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:86	
+10.1016/j.cub.2021.04.021		2	ideas/register.md:1778;literature/2026-10-10-register-checks-round3.md:173	Q-027
+10.1016/j.cub.2021.07.012		1	ideas/register.md:413	Q-006
+10.1016/j.cub.2023.02.007		2	ideas/register.md:272;literature/2026-10-10-register-checks-round7.md:56	Q-005
+10.1016/j.cub.2024.04.059		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:38	
+10.1016/j.cub.2024.12.038		1	literature/2026-10-disruption-susceptibility.md:404	
+10.1016/j.cub.2025.03.025		3	ideas/register.md:1040;literature/2026-10-10-register-checks-round3.md:152;literature/2026-10-disruption-susceptibility.md:400	Q-016
+10.1016/j.cub.2025.11.065		2	literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:245	
+10.1016/j.dib.2024.111258		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:118	
+10.1016/j.earscirev.2018.10.013		5	ideas/register.md:1986;literature/2026-10-10-prediction-units-and-priority.md:171;literature/2026-10-10-register-checks-round3.md:127	Q-029
+10.1016/j.earscirev.2019.02.020		2	ideas/2026-10-14-blue-sky-ideation-claude.md:325;literature/2026-10-15-b003-escalation-evidence-contract.md:180	B-003
+10.1016/j.earscirev.2020.103123		1	literature/2026-10-08-transfer-inputs.md:132	
+10.1016/j.earscirev.2020.103442		7	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:54;literature/2026-10-21-chronology-dependency-prior-codex.md:81	
+10.1016/j.earscirev.2025.105100		2	ideas/register.md:2807;literature/2026-10-11-register-checks-round9.md:175	Q-041
+10.1016/j.epsl.2007.02.018		1	literature/2026-10-14-b001-reassembly-contract.md:233	B-001
+10.1016/j.epsl.2022.117861		3	ideas/2026-10-12-phase2-claude-reply-7.md:120;literature/2026-10-13-q021-route-review.md:72	Q-021
+10.1016/j.gca.2020.02.021		6	ideas/2026-10-14-blue-sky-ideation-codex.md:159;ideas/register-blue-sky.md:333;literature/2026-10-14-q010-prior-check.md:62;literature/2026-10-15-b004-theory-contract.md:45	B-004;Q-010
+10.1016/j.gca.2020.02.035		3	ideas/2026-10-12-phase2-claude-reply-7.md:116;literature/2026-10-13-q021-route-review.md:64	Q-021
+10.1016/j.gloplacha.2022.103877		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:868	
+10.1016/j.gsf.2021.101245		2	ideas/register.md:2820;literature/2026-10-11-register-checks-round9.md:174	Q-041
+10.1016/j.jeconom.2020.12.001		1	literature/2026-10-09-feedback-on-register-round1.md:125	Q-010
+10.1016/j.jembe.2009.02.001		1	literature/2026-10-15-b004-modern-source-table.md:44	B-004
+10.1016/j.jtbi.2018.03.005		6	docs/review/2026-10-11-gpt6pro-review/review.md:448;ideas/register.md:395;literature/2026-10-11-q006-information-table.md:35;literature/2026-10-12-q006-target-challenge-codex.md:64	Q-006
+10.1016/j.jtbi.2024.111849		1	literature/2026-10-14-q012-prior-check.md:37	Q-012
+10.1016/j.marenvres.2026.108411		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:767	
+10.1016/j.neuroimage.2014.01.060		2	literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:287	
+10.1016/j.palaeo.2005.11.012		2	literature/2026-10-15-b003-escalation-evidence-contract.md:246;literature/2026-10-15-b003-source-inventory.md:36	B-003
+10.1016/j.palaeo.2007.03.031		1	literature/2026-10-10-register-checks-round3.md:131	Q-029
+10.1016/j.palaeo.2016.11.005		1	literature/2026-10-10-register-checks-round6.md:170	Q-035
+10.1016/j.palaeo.2016.12.025		3	ideas/register.md:2381;literature/2026-10-10-register-checks-round5.md:112;literature/2026-10-10-register-checks-round6.md:168	Q-035
+10.1016/j.palaeo.2018.03.009		4	ideas/register.md:3419;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:294	Q-048
+10.1016/j.palaeo.2021.110636		2	ideas/register.md:2199;literature/2026-10-10-register-checks-round5.md:148	Q-032
+10.1016/j.palaeo.2026.113973		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:70	
+10.1016/j.palaeo.2026.114134		1	resources/sources/register-deposits/README.md:173	src:register-deposits
+10.1016/j.quascirev.2011.11.021		1	literature/2026-10-20-q017-prior-check.md:51	Q-017
+10.1016/j.quascirev.2015.01.022		2	ideas/2026-10-07-claude-first-framing.md:108	
+10.1016/j.quascirev.2026.109950		1	resources/sources/sahul-sealevel/README.md:42	src:sahul-sealevel
+10.1016/j.revpalbo.2021.104564		4	docs/review/2026-10-11-gpt6pro-review/review.md:466;ideas/register.md:2208;literature/2026-10-10-register-checks-round5.md:152	Q-032
+10.1016/j.tree.2007.09.003		1	ideas/register.md:1149	Q-018
+10.1016/j.tree.2022.02.004		2	ideas/register.md:368;literature/2026-10-10-register-checks-round7.md:157	Q-006
+10.1016/j.tree.2025.01.002		1	literature/2026-10-disruption-susceptibility.md:406	
+10.1016/s0031-0182(00)00207-8		2	literature/2026-10-15-b003-escalation-evidence-contract.md:245;literature/2026-10-15-b003-source-inventory.md:35	B-003
+10.1016/s0169-5347(98)01436-0		2	ideas/register.md:1875;literature/2026-10-10-register-checks-round3.md:200	Q-028
+10.1016/s0169-5347(99)01679-1		1	ideas/register.md:1868	Q-028
+10.1016/s0377-8398(03)00031-8		2	literature/2026-10-10-boundary-counts-and-incumbency.md:182	Q-036
+10.1017/ext.2022.4		3	ideas/register.md:639;literature/2026-10-10-register-checks-round7.md:187;literature/2026-10-disruption-susceptibility.md:382	Q-011
+10.1017/ext.2023.10		2	literature/2026-10-09-b-selectivity-prior-work.md:31;literature/2026-10-disruption-susceptibility.md:384	
+10.1017/ext.2023.13		4	ideas/register.md:1141;literature/2026-10-10-register-checks-round5.md:127;literature/2026-10-10-register-checks-round7.md:95	Q-018;Q-025
+10.1017/ext.2023.22		1	literature/2026-10-09-register-checks-round1.md:125	Q-013
+10.1017/ext.2024.18		1	literature/2026-10-20-q017-prior-check.md:62	Q-017
+10.1017/ext.2024.4		2	ideas/register.md:2510;literature/2026-10-10-register-checks-round7.md:27	Q-037
+10.1017/jpa.2023.75		3	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:475;ideas/2026-10-21-outside-consultations-response-codex.md:121	
+10.1017/pab.2015.10		1	ideas/2026-10-14-blue-sky-ideation-claude.md:350	
+10.1017/pab.2015.36		1	literature/2026-10-10-register-checks-round4.md:27	Q-031
+10.1017/pab.2015.38		4	ideas/register.md:3416;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:293	Q-048
+10.1017/pab.2015.39		5	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:805;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:276;resources/README.md:18;resources/sources/pbdb/README.md:49	src:pbdb
+10.1017/pab.2015.47		2	ideas/register.md:1879;literature/2026-10-10-register-checks-round3.md:201	Q-028
+10.1017/pab.2016.20		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:102	
+10.1017/pab.2016.33		1	literature/2026-10-disruption-susceptibility.md:399	
+10.1017/pab.2016.36		1	ideas/2026-10-14-blue-sky-ideation-claude.md:238	
+10.1017/pab.2017.28		1	ideas/2026-10-14-blue-sky-ideation-claude.md:58	
+10.1017/pab.2017.38		2	literature/2026-10-15-b003-escalation-evidence-contract.md:248;literature/2026-10-15-b003-source-inventory.md:38	B-003
+10.1017/pab.2018.17		1	literature/2026-10-20-q023-q031-prior-checks.md:55	Q-023;Q-031
+10.1017/pab.2019.11		2	ideas/register.md:265;literature/2026-10-10-register-checks-round7.md:53	Q-005
+10.1017/pab.2019.23		3	literature/2026-10-11-q006-information-table.md:37;literature/2026-10-12-q006-target-challenge-codex.md:87	Q-006
+10.1017/pab.2019.35		1	literature/2026-10-09-b-selectivity-prior-work.md:29	
+10.1017/pab.2019.4		1	resources/sources/register-deposits/README.md:172	src:register-deposits
+10.1017/pab.2020.12		6	ideas/register.md:358;literature/2026-10-10-boundary-counts-and-incumbency.md:23;literature/2026-10-11-q006-information-table.md:36;literature/2026-10-12-q006-target-challenge-codex.md:76	Q-006
+10.1017/pab.2020.52		2	ideas/register.md:1004;literature/2026-10-10-register-checks-round3.md:146	Q-016
+10.1017/pab.2020.60		2	ideas/2026-10-14-blue-sky-ideation-codex.md:287	
+10.1017/pab.2023.1		2	ideas/register.md:1611;literature/2026-10-10-register-checks-round5.md:124	Q-025
+10.1017/pab.2023.34		4	ideas/register.md:892;literature/2026-10-09-register-checks-round1.md:119;literature/2026-10-10-register-checks-round7.md:76	Q-013;Q-017
+10.1017/pab.2024.13		4	ideas/register.md:1410;literature/2026-10-09-register-checks-round2.md:21;literature/2026-10-10-register-checks-round3.md:202	Q-022;Q-028
+10.1017/pab.2024.20		3	ideas/register.md:3463;literature/2026-10-11-register-checks-round10.md:145;literature/2026-10-disruption-susceptibility.md:376	Q-049
+10.1017/pab.2024.26		1	ideas/2026-10-14-blue-sky-ideation-claude.md:57	
+10.1017/pab.2024.63		5	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:789;ideas/2026-10-14-blue-sky-ideation-codex.md:289;resources/sources/register-deposits/README.md:174	src:register-deposits
+10.1017/pab.2025.10041		1	literature/2026-10-disruption-susceptibility.md:396	
+10.1017/pab.2025.10046		5	ideas/register.md:2462;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:240;resources/sources/register-deposits/README.md:170	Q-036;src:register-deposits
+10.1017/pab.2026.10094		1	resources/sources/triton/README.md:232	src:triton
+10.1017/pab.2026.10107		5	ideas/register.md:276;literature/2026-10-10-register-checks-round7.md:52;literature/2026-10-disruption-susceptibility.md:383;resources/sources/register-deposits/README.md:177	Q-005;Q-011;src:register-deposits
+10.1017/qua.2017.105		1	resources/sources/neotoma/README.md:42	src:neotoma
+10.1017/s0016756820000734		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:138	
+10.1017/s0022336000020801		2	literature/2026-10-15-b003-escalation-evidence-contract.md:41;literature/2026-10-15-b003-source-inventory.md:31	B-003
+10.1017/s0094837300000336		6	ideas/register.md:3281;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:279;literature/2026-10-15-b003-escalation-evidence-contract.md:29	B-003;Q-046
+10.1017/s0094837300002980		3	ideas/2026-10-15-blue-sky-support-reply-2-claude.md:65;literature/2026-10-15-b002-paper-specification.md:251	B-002
+10.1017/s0094837300003778		1	literature/2026-10-10-register-checks-round7.md:185	
+10.1017/s0094837300004929		2	ideas/register.md:2747;literature/2026-10-10-register-checks-round7.md:184	Q-040
+10.1017/s009483730000508x		1	literature/2026-10-10-register-checks-round7.md:188	
+10.1017/s0094837300007533		2	ideas/2026-10-12-phase2-claude-reply-7.md:34;literature/2026-10-13-q006-cmr-scope-check.md:23	Q-006
+10.1017/s0094837300008174		2	literature/2026-10-15-b003-escalation-evidence-contract.md:44;literature/2026-10-15-b003-source-inventory.md:37	B-003
+10.1017/s0094837300008186		2	ideas/register.md:2692;literature/2026-10-10-register-checks-round7.md:185	Q-039
+10.1017/s0094837300010332		2	ideas/register.md:642;literature/2026-10-10-register-checks-round7.md:186	Q-011
+10.1017/s0094837300010563		5	ideas/register.md:2260;literature/2026-10-10-boundary-counts-and-incumbency.md:25;literature/2026-10-10-register-checks-round5.md:84	Q-033
+10.1017/s0094837300010721		5	ideas/register.md:3053;literature/2026-10-10-register-checks-round8.md:75;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:270	Q-043
+10.1017/s0094837300011969		1	literature/2026-10-11-register-checks-round9.md:147	Q-044
+10.1017/s0094837300012227		2	ideas/register.md:643;literature/2026-10-10-register-checks-round7.md:186	Q-011
+10.1017/s0094837300012288		2	ideas/register.md:228;literature/2026-10-10-register-checks-round7.md:135	Q-004
+10.1017/s0094837300012306		1	ideas/register.md:3259	Q-045
+10.1017/s0094837300012926		2	ideas/register.md:2046;literature/2026-10-10-register-checks-round4.md:71	Q-030
+10.1017/s0094837300013051		5	ideas/register.md:2459;literature/2026-10-10-register-checks-round6.md:91;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:238	Q-036
+10.1017/s0094837300013312		3	data/q042-crosswalk/README.md:58;ideas/register.md:2947;literature/2026-10-11-register-checks-round10.md:120	Q-042
+10.1017/s0094837300016134		3	ideas/register.md:1059;literature/2026-10-10-register-checks-round7.md:72;literature/2026-10-20-q017-prior-check.md:46	Q-017
+10.1017/s0094837300019680		1	literature/2026-10-20-q017-prior-check.md:47	Q-017
+10.1017/s0094837300020133		1	literature/2026-10-10-register-checks-round8.md:77	Q-043
+10.1017/s0094837300020303		1	literature/2026-10-09-register-checks-round1.md:33	Q-011
+10.1017/s1089332600001030		1	literature/2026-10-11-register-checks-round10.md:83	Q-048
+10.1017/s1089332600001820		2	ideas/2026-10-12-phase2-claude-reply-7.md:36;literature/2026-10-13-q006-cmr-scope-check.md:25	Q-006
+10.1017/s2475262200012156		2	literature/2026-10-15-b003-escalation-evidence-contract.md:239;literature/2026-10-15-b003-source-inventory.md:32	B-003
+10.1029/2010pa001951		1	data/q050-sample-crosswalk/README.md:69	Q-050
+10.1029/2012pa002351		1	literature/2026-10-08-transfer-inputs.md:133	
+10.1029/2020gl089183		2	ideas/register.md:1553;literature/2026-10-10-register-checks-round6.md:192	Q-024
+10.1029/2020pa003998		1	resources/sources/sahul-sealevel/README.md:40	src:sahul-sealevel
+10.1029/2020pa004205		3	docs/review/2026-10-11-gpt6pro-review/review.md:464;literature/2026-10-10-register-checks-round7.md:57	Q-005
+10.1029/2022gc010655		2	resources/sources/nsb/README.md:504;resources/sources/triton/README.md:459	src:nsb;src:triton
+10.1029/2022pa004534		1	literature/2026-10-20-q015-prior-check.md:46	Q-015
+10.1029/2023pa004766		3	ideas/2026-10-14-blue-sky-ideation-claude.md:142;literature/2026-10-13-q021-route-review.md:80	Q-021
+10.1029/2023pa004834		1	literature/2026-10-20-q015-prior-check.md:44	Q-015
+10.1029/2025jd044833		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:858	
+10.1029/94pa01456		2	literature/2026-10-21-chronology-dependency-prior-codex.md:82	
+10.1034/j.1600-0706.2003.12770.x		4	ideas/register.md:1221;literature/2026-10-09-register-expansion.md:48	Q-020
+10.1038/227520a0		1	literature/2026-10-15-b003-escalation-evidence-contract.md:128	B-003
+10.1038/26384		1	literature/2026-10-09-register-checks-round1.md:34	Q-011
+10.1038/32155		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:755	
+10.1038/35000558		2	ideas/register.md:3258;literature/2026-10-10-register-checks-round8.md:144	Q-045
+10.1038/35004564		4	ideas/2026-10-07-claude-first-framing.md:89;literature/2026-10-08-recovery-contracts-and-response.md:124	
+10.1038/426245a		1	literature/2026-10-10-register-checks-round6.md:46	Q-026
+10.1038/nature09678		7	data/q042-crosswalk/README.md:48;ideas/2026-10-07-claude-first-framing.md:87;ideas/register.md:214;literature/2026-10-10-register-checks-round7.md:138;literature/2026-10-11-register-checks-round10.md:119	Q-004;Q-042
+10.1038/nature10824		1	literature/2026-10-10-register-checks-round3.md:113	Q-029
+10.1038/nature12272		2	ideas/register.md:1543;literature/2026-10-10-register-checks-round6.md:189	Q-024
+10.1038/nature12273		1	literature/2026-10-10-register-checks-round6.md:189	Q-024
+10.1038/nature14419		2	ideas/2026-10-14-blue-sky-cross-critique-claude.md:111;ideas/register-blue-sky.md:487	B-016
+10.1038/nature14646		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:86	
+10.1038/ncomms10511		2	ideas/2026-10-07-claude-first-framing.md:109	
+10.1038/ncomms14435		3	ideas/register.md:1916;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:280	Q-028
+10.1038/ncomms15381		4	ideas/register.md:3102;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:285;literature/2026-10-11-register-checks-round9.md:141	Q-044
+10.1038/ncomms4544		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:102	
+10.1038/ncomms5818		2	ideas/register.md:3260;literature/2026-10-10-register-checks-round8.md:144	Q-045
+10.1038/ncomms7455		4	ideas/2026-10-14-blue-sky-ideation-codex.md:202;literature/2026-10-14-b001-reassembly-contract.md:358	B-001
+10.1038/ncomms9890		4	ideas/2026-10-07-claude-first-framing.md:41;ideas/register.md:199;literature/2026-10-disruption-susceptibility.md:371	Q-003
+10.1038/ngeo1475		3	ideas/2026-10-14-blue-sky-ideation-claude.md:168;ideas/register-blue-sky.md:142;literature/2026-10-14-b001-reassembly-contract.md:27	B-001
+10.1038/ngeo1649		2	data/q042-crosswalk/README.md:54;ideas/register.md:2972	Q-042
+10.1038/ngeo2079		1	ideas/2026-10-14-blue-sky-ideation-claude.md:175	
+10.1038/ngeo525		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:838	
+10.1038/s41467-017-00083-9		1	literature/2026-10-09-register-checks-round1.md:145	Q-014
+10.1038/s41467-017-00827-7		3	ideas/register.md:3161;literature/2026-10-09-register-checks-round2.md:50;literature/2026-10-11-register-checks-round9.md:145	Q-023;Q-044
+10.1038/s41467-018-04973-4		3	ideas/2026-10-14-blue-sky-cross-critique-claude.md:66;ideas/register-blue-sky.md:328;literature/2026-10-15-b004-theory-contract.md:47	B-004
+10.1038/s41467-018-05419-7		4	ideas/register.md:1954;literature/2026-10-10-clade-futures-and-geographic-cycles.md:215	Q-029
+10.1038/s41467-018-07622-y		9	docs/review/2026-10-11-gpt6pro-review/review.md:460;ideas/register.md:225;literature/2026-10-10-prediction-units-and-priority.md:18;literature/2026-10-10-register-checks-round7.md:134;literature/2026-10-disruption-susceptibility.md:403	Q-004;Q-026
+10.1038/s41467-018-07934-z		4	ideas/2026-10-11-phase2-claude-reply-2.md:97;ideas/register.md:2383;literature/2026-10-10-register-checks-round5.md:110;literature/2026-10-10-register-checks-round6.md:163	Q-021;Q-035
+10.1038/s41467-018-07945-w		2	ideas/register.md:1138;literature/2026-10-10-register-checks-round7.md:94	Q-018
+10.1038/s41467-020-15243-7		2	literature/2026-10-10-register-checks-round5.md:111;literature/2026-10-10-register-checks-round6.md:164	Q-035
+10.1038/s41467-020-16725-4		2	ideas/register.md:2386;literature/2026-10-10-register-checks-round6.md:166	Q-035
+10.1038/s41467-020-18879-7		1	resources/sources/nsb/README.md:371	src:nsb
+10.1038/s41467-021-21263-8		1	literature/2026-10-09-register-checks-round1.md:184	Q-015
+10.1038/s41467-021-23754-0		2	ideas/register.md:1180;literature/2026-10-10-register-checks-round7.md:116	Q-019
+10.1038/s41467-021-25019-2		7	ideas/2026-10-07-claude-first-framing.md:68;ideas/2026-10-07-codex-deep-time-response.md:52;ideas/register.md:197;literature/2026-10-10-register-checks-round4.md:70;literature/2026-10-disruption-susceptibility.md:370	Q-003;Q-030
+10.1038/s41467-022-30507-0		4	ideas/register.md:1614;literature/2026-10-09-register-checks-round2.md:51;literature/2026-10-10-register-checks-round5.md:125;literature/2026-10-10-register-checks-round8.md:147	Q-023;Q-025
+10.1038/s41467-022-31128-3		11	ideas/register.md:1311;literature/2026-10-09-register-expansion.md:52;literature/2026-10-11-q021-lithium-and-model-capability.md:75;literature/2026-10-11-q021-lithium-observation-contract.md:227;literature/2026-10-11-q021-predictions-and-calibration.md:46	Q-021
+10.1038/s41467-023-41358-8		2	ideas/register.md:1182;literature/2026-10-10-register-checks-round7.md:117	Q-019
+10.1038/s41467-023-41685-w		3	ideas/2026-10-14-blue-sky-ideation-claude.md:376;ideas/register.md:1793;literature/2026-10-10-register-checks-round3.md:177	Q-027
+10.1038/s41467-023-43445-2		6	ideas/register.md:1072;literature/2026-10-10-register-checks-round5.md:105;literature/2026-10-10-register-checks-round6.md:136;literature/2026-10-10-register-checks-round7.md:73;literature/2026-10-20-q017-prior-check.md:49	Q-017;Q-034
+10.1038/s41467-023-43744-8		2	ideas/register.md:1540;literature/2026-10-10-register-checks-round6.md:188	Q-024
+10.1038/s41467-024-46171-5		1	resources/sources/nsb/README.md:375	src:nsb
+10.1038/s41467-024-48434-7		7	data/q042-crosswalk/README.md:50;ideas/2026-10-07-claude-first-framing.md:27;ideas/2026-10-14-blue-sky-cross-critique-codex.md:38;ideas/2026-10-14-blue-sky-ideation-claude.md:54;ideas/register.md:2966;literature/2026-10-disruption-susceptibility.md:409	Q-042
+10.1038/s41467-024-53000-2		13	ideas/2026-10-07-codex-deep-time-response.md:107;ideas/2026-10-14-blue-sky-ideation-claude.md:178;ideas/2026-10-14-blue-sky-merge-review-codex.md:190;ideas/register.md:531;literature/2026-10-09-register-expansion.md:43;literature/2026-10-10-register-checks-round6.md:122;literature/2026-10-10-register-checks-round7.md:28;literature/2026-10-14-b001-reassembly-contract.md:29;literature/2026-10-recovery-contingency.md:107	B-001;Q-009;Q-037
+10.1038/s41467-025-56589-0		3	literature/2026-10-08-codex-review-disruption.md:90;literature/2026-10-20-q015-prior-check.md:41;literature/2026-10-disruption-susceptibility.md:44	Q-015
+10.1038/s41467-025-60362-8		1	resources/sources/triton/README.md:226	src:triton
+10.1038/s41467-025-60396-y		10	ideas/register.md:1308;literature/2026-10-09-register-expansion.md:51;literature/2026-10-11-q021-predictions-and-calibration.md:45;literature/2026-10-13-q021-route-review.md:87	Q-021
+10.1038/s41467-025-60700-w		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:830	
+10.1038/s41467-025-63428-9		7	ideas/2026-10-07-codex-deep-time-response.md:99;ideas/2026-10-14-blue-sky-ideation-claude.md:70;ideas/register-blue-sky.md:376;ideas/register.md:1792;literature/2026-10-10-register-checks-round3.md:177;literature/2026-10-recovery-contingency.md:30	B-005;Q-027
+10.1038/s41467-025-65455-y		3	ideas/register.md:3374;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:282	Q-047
+10.1038/s41467-025-65816-7		1	literature/2026-10-09-register-expansion.md:51	
+10.1038/s41467-025-66390-8		4	literature/2026-10-09-register-expansion.md:53;literature/2026-10-11-q021-predictions-and-calibration.md:47	Q-021
+10.1038/s41467-026-73628-6		8	ideas/2026-10-14-blue-sky-ideation-codex.md:162;ideas/register.md:574;literature/2026-10-09-register-expansion.md:46;literature/2026-10-14-q010-prior-check.md:17	Q-010
+10.1038/s41467-026-74132-7		2	ideas/register.md:1606;literature/2026-10-10-register-checks-round5.md:123	Q-025
+10.1038/s41467-026-74636-2		2	ideas/register.md:2387;literature/2026-10-10-register-checks-round6.md:167	Q-035
+10.1038/s41467-026-75655-9		4	ideas/register.md:275;literature/2026-10-10-register-checks-round4.md:73;literature/2026-10-10-register-checks-round7.md:51;literature/2026-10-disruption-susceptibility.md:408	Q-005;Q-030
+10.1038/s41559-017-0094		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:864	
+10.1038/s41559-019-0811-8		4	data/q044-joint-support/README.md:40;ideas/register.md:3106;literature/2026-10-11-register-checks-round9.md:142;resources/sources/register-deposits/README.md:167	Q-044;src:register-deposits
+10.1038/s41559-019-0835-0		1	literature/2026-10-10-register-checks-round8.md:77	Q-043
+10.1038/s41559-019-1035-7		1	literature/2026-10-11-register-checks-round9.md:147	Q-044
+10.1038/s41559-020-1256-9		2	ideas/register.md:199;literature/2026-10-disruption-susceptibility.md:378	Q-003
+10.1038/s41559-021-01624-8		2	ideas/register.md:1894;literature/2026-10-10-register-checks-round3.md:206	Q-028
+10.1038/s41559-022-01665-7		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1009	
+10.1038/s41559-023-02128-3		1	ideas/2026-10-14-blue-sky-ideation-claude.md:56	
+10.1038/s41559-023-02172-z		4	ideas/register.md:3343;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:281;literature/2026-10-11-register-checks-round9.md:124	Q-047
+10.1038/s41559-025-02873-7		4	ideas/register.md:665;literature/2026-10-09-register-checks-round1.md:78;literature/2026-10-14-q012-prior-check.md:34	Q-012
+10.1038/s41559-026-02985-8		1	resources/sources/nsb/README.md:219	src:nsb
+10.1038/s41559-026-03094-2		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:86	
+10.1038/s41559-026-03134-x		10	ideas/2026-10-14-blue-sky-ideation-claude.md:211;ideas/register.md:1670;literature/2026-10-09-pd-loss-and-clade-recovery.md:174;literature/2026-10-10-clade-futures-and-geographic-cycles.md:31	Q-026
+10.1038/s41561-019-0504-6		2	literature/2026-10-09-register-expansion.md:126	Q-015
+10.1038/s41561-020-00646-4		1	ideas/2026-10-13-phase2-claude-reply-9.md:46	
+10.1038/s41561-020-0622-1		2	literature/2026-10-12-q021-formation-timing-and-new-prior.md:123	Q-021
+10.1038/s41561-022-01009-x		13	data/q021-recovery-support/README.md:163;data/q021-recovery-support/build.py:18;data/q021-shangsi-support/README.md:15;docs/review/2026-10-11-gpt6pro-review/review.md:452;ideas/2026-10-11-phase2-claude-reply-2.md:109;ideas/register.md:1314;literature/2026-10-11-q021-lithium-and-model-capability.md:49	Q-021
+10.1038/s41561-023-01290-4		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:799	
+10.1038/s41586-018-0020-7		3	ideas/2026-10-14-blue-sky-ideation-codex.md:325;literature/2026-10-11-evolvability-and-first-tranche-close.md:155	
+10.1038/s41586-019-1590-8		4	ideas/register.md:533;literature/2026-10-09-register-expansion.md:42	Q-009
+10.1038/s41586-020-2176-1		5	ideas/register.md:218;literature/2026-10-10-register-checks-round7.md:156;literature/2026-10-11-q006-information-table.md:28;literature/2026-10-disruption-susceptibility.md:401	Q-004;Q-006
+10.1038/s41586-020-2721-y		1	literature/2026-10-08-transfer-inputs.md:46	
+10.1038/s41586-022-04867-y		2	ideas/register.md:1187;literature/2026-10-10-register-checks-round8.md:143	Q-019
+10.1038/s41586-022-04932-6		9	ideas/2026-10-07-codex-deep-time-response.md:93;ideas/2026-10-14-blue-sky-ideation-claude.md:72;ideas/register-blue-sky.md:377;ideas/register.md:2742;literature/2026-10-08-recovery-contracts-and-response.md:128;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:241;literature/2026-10-recovery-contingency.md:28	B-005;Q-040
+10.1038/s41586-023-05694-5		1	resources/sources/triton/README.md:222	src:triton
+10.1038/s41586-023-05712-6		3	ideas/register.md:1786;literature/2026-10-10-register-checks-round3.md:175;resources/sources/triton/README.md:221	Q-027;src:triton
+10.1038/s41586-024-07337-9		3	ideas/register.md:259;literature/2026-10-10-register-checks-round7.md:50;resources/sources/triton/README.md:223	Q-005;src:triton
+10.1038/s41586-024-08029-0		3	ideas/register.md:931;literature/2026-10-09-register-checks-round1.md:176;literature/2026-10-20-q015-prior-check.md:40	Q-015
+10.1038/s41586-024-08265-4		2	ideas/2026-10-14-blue-sky-ideation-codex.md:244	
+10.1038/s41586-026-10541-4		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:763;literature/2026-10-disruption-susceptibility.md:397	
+10.1038/s41597-019-0267-3		3	ideas/2026-10-07-claude-first-framing.md:105;resources/sources/fossahul/README.md:44	src:fossahul
+10.1038/s41597-020-0552-1		1	resources/sources/beyer2020/README.md:38	src:beyer2020
+10.1038/s41597-021-00942-7		7	data/q012-exposure-support/README.md:25;data/triton-event-support/README.md:22;ideas/2026-10-07-claude-first-framing.md:128;ideas/register.md:1817;literature/2026-10-09-register-expansion.md:72;resources/sources/triton/README.md:50	Q-012;Q-027;src:triton
+10.1038/s41597-021-01006-6		1	resources/sources/austraits/README.md:45	src:austraits
+10.1038/s41597-021-01009-3		1	resources/sources/krapp2021/README.md:37	src:krapp2021
+10.1038/s41597-021-01051-1		1	resources/sources/beyer2020/README.md:38	src:beyer2020
+10.1038/s41597-022-01826-0		1	data/triton-event-support/README.md:23	
+10.1038/s41597-024-03557-w		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:118	
+10.1038/s41597-025-06379-6		3	ideas/register.md:3371;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:283	Q-047
+10.1038/s41598-017-05263-7		2	ideas/register.md:1178;literature/2026-10-10-register-checks-round7.md:115	Q-019
+10.1038/s41598-019-42538-7		1	literature/2026-10-11-register-checks-round9.md:176	Q-041
+10.1038/s41598-020-61393-5		2	ideas/register.md:2124;literature/2026-10-10-register-checks-round4.md:30	Q-031
+10.1038/s41598-026-38183-6		2	ideas/2026-10-14-blue-sky-ideation-codex.md:241	
+10.1038/s42003-020-01428-9		3	docs/review/2026-10-11-gpt6pro-review/review.md:454;ideas/register.md:2213	Q-032
+10.1038/s42003-020-0779-6		1	literature/2026-10-10-register-checks-round8.md:78	Q-043
+10.1038/s42003-021-01805-y		2	ideas/register.md:2699;literature/2026-10-10-register-checks-round7.md:185	Q-039
+10.1038/s42003-023-05375-z		1	ideas/2026-10-23-alroy-provocation-claude.md:307	
+10.1038/s43017-021-00259-4		2	ideas/register.md:2385;literature/2026-10-10-register-checks-round6.md:166	Q-035
+10.1038/s43247-021-00167-x		2	ideas/register.md:1629;literature/2026-10-10-register-checks-round5.md:128	Q-025
+10.1038/s43247-022-00538-y		2	resources/sources/au-fossil-deposits/README.md:258;resources/sources/au-fossil-deposits/deposits_overlap.py:177	src:au-fossil-deposits
+10.1038/s43247-026-03563-3		1	literature/2026-10-11-evolvability-and-first-tranche-close.md:153	
+10.1038/s44185-025-00117-2		1	literature/2026-10-14-b001-reassembly-contract.md:30	B-001
+10.1038/sdata.2016.53		1	resources/sources/fossahul/README.md:45	src:fossahul
+10.1038/sdata.2017.202		4	ideas/register.md:1915;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:279	Q-028;Q-047
+10.1038/srep15455		4	ideas/register.md:1223;literature/2026-10-09-register-expansion.md:49	Q-020
+10.1038/srep28372		1	ideas/2026-10-11-phase2-claude-reply-2.md:68	Q-021
+10.1046/j.1095-8312.2003.00255.x		2	literature/2026-10-15-b003-escalation-evidence-contract.md:43;literature/2026-10-15-b003-source-inventory.md:34	B-003
+10.1073/pnas.042492999		2	ideas/register.md:2198;literature/2026-10-10-register-checks-round5.md:147	Q-032
+10.1073/pnas.0502616102		2	ideas/2026-10-14-blue-sky-cross-critique-codex.md:57;ideas/2026-10-14-blue-sky-ideation-claude.md:109	
+10.1073/pnas.0509480103		1	literature/2026-10-20-q017-prior-check.md:51	Q-017
+10.1073/pnas.0510550103		2	literature/2026-10-10-register-checks-round4.md:32;literature/2026-10-20-q023-q031-prior-checks.md:133	Q-023;Q-031
+10.1073/pnas.0511083103		2	literature/2026-10-08-recovery-contracts-and-response.md:125	
+10.1073/pnas.0511296103		2	ideas/register.md:3485;literature/2026-10-11-register-checks-round10.md:147	Q-049
+10.1073/pnas.0535132100		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:787	
+10.1073/pnas.0601264103		2	ideas/register.md:1077;literature/2026-10-10-register-checks-round7.md:75	Q-017
+10.1073/pnas.0603587103		1	ideas/2026-10-14-blue-sky-ideation-claude.md:264	
+10.1073/pnas.0610947104		1	literature/2026-10-09-register-checks-round1.md:152	Q-014
+10.1073/pnas.062691099		1	ideas/2026-10-23-alroy-review-codex.md:77	
+10.1073/pnas.0701257104		6	ideas/register.md:1218;literature/2026-10-09-b-selectivity-prior-work.md:28;literature/2026-10-09-register-expansion.md:47	Q-020;Q-038
+10.1073/pnas.0704088104		5	ideas/register.md:2444;literature/2026-10-10-boundary-counts-and-incumbency.md:167	Q-036
+10.1073/pnas.0704960104		2	ideas/2026-10-14-blue-sky-ideation-claude.md:319;literature/2026-10-15-b003-escalation-evidence-contract.md:46	B-003
+10.1073/pnas.0712002105		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:985	
+10.1073/pnas.0801913105		2	ideas/register.md:1409;literature/2026-10-09-register-checks-round2.md:19	Q-022
+10.1073/pnas.0802430105		2	ideas/register.md:1551;literature/2026-10-10-register-checks-round6.md:192	Q-024
+10.1073/pnas.0802597105		6	ideas/register.md:1479;literature/2026-10-08-recovery-contracts-and-response.md:126;literature/2026-10-09-register-checks-round2.md:46;literature/2026-10-20-q023-q031-prior-checks.md:36	Q-023;Q-031
+10.1073/pnas.0803833105		3	ideas/2026-10-15-b004-critique-claude.md:83;literature/2026-10-15-b004-modern-source-table.md:100	B-004
+10.1073/pnas.091092498		2	ideas/register.md:1498;literature/2026-10-09-register-checks-round2.md:52	Q-023
+10.1073/pnas.092150999		4	ideas/register.md:572;literature/2026-10-09-register-expansion.md:45	Q-010
+10.1073/pnas.101092798		1	literature/2026-10-09-register-checks-round2.md:52	Q-023
+10.1073/pnas.1018959108		1	literature/2026-10-10-register-checks-round8.md:78	Q-043
+10.1073/pnas.102163299		6	ideas/register.md:1666;literature/2026-10-09-pd-loss-and-clade-recovery.md:164;literature/2026-10-10-register-checks-round3.md:202	Q-026;Q-028
+10.1073/pnas.1113870109		5	ideas/register.md:3055;literature/2026-10-10-register-checks-round8.md:73;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:272	Q-043
+10.1073/pnas.1208302110		2	ideas/register.md:231;literature/2026-10-10-register-checks-round7.md:136	Q-004
+10.1073/pnas.1209901109		5	ideas/register.md:2447;literature/2026-10-10-boundary-counts-and-incumbency.md:168	Q-036
+10.1073/pnas.1210460109		3	ideas/register.md:2129;literature/2026-10-10-register-checks-round4.md:33;ideas/2026-10-20-q038-and-prior-checks-review-codex.md:263	Q-031;Q-038
+10.1073/pnas.1216511110		4	ideas/register.md:1074;literature/2026-10-10-register-checks-round6.md:138;literature/2026-10-10-register-checks-round7.md:74	Q-017;Q-034
+10.1073/pnas.1218633110		2	ideas/2026-10-14-blue-sky-ideation-codex.md:375	
+10.1073/pnas.1302642110		1	ideas/2026-10-14-blue-sky-ideation-claude.md:292	
+10.1073/pnas.1403662111		6	ideas/register.md:2454;literature/2026-10-10-boundary-counts-and-incumbency.md:170;resources/sources/register-deposits/README.md:168	Q-036;src:register-deposits
+10.1073/pnas.1409886112		4	ideas/register.md:1393;literature/2026-10-09-pd-loss-and-clade-recovery.md:18;literature/2026-10-09-register-checks-round2.md:20	Q-022
+10.1073/pnas.1422248112		1	literature/2026-10-10-register-checks-round7.md:32	Q-037
+10.1073/pnas.1502803112		1	ideas/2026-10-14-blue-sky-ideation-claude.md:207	
+10.1073/pnas.1506516112		1	literature/2026-10-10-register-checks-round6.md:77	Q-033
+10.1073/pnas.1508681112		2	ideas/register.md:1083;literature/2026-10-10-register-checks-round7.md:77	Q-017
+10.1073/pnas.1510482112		1	literature/2026-10-14-q012-prior-check.md:36	Q-012
+10.1073/pnas.1524750113		2	ideas/register.md:1783;literature/2026-10-10-register-checks-round3.md:174	Q-027
+10.1073/pnas.1600318113		3	literature/2026-10-21-chronology-dependency-prior-codex.md:79	
+10.1073/pnas.1608242113		2	ideas/register.md:1539;literature/2026-10-10-register-checks-round6.md:188	Q-024
+10.1073/pnas.1613094113		5	data/q042-crosswalk/README.md:45;docs/review/2026-10-11-gpt6pro-review/review.md:442;ideas/register.md:2920;literature/2026-10-11-register-checks-round10.md:117	Q-042
+10.1073/pnas.1702297114		4	ideas/register.md:1951;literature/2026-10-10-clade-futures-and-geographic-cycles.md:214	Q-029
+10.1073/pnas.1707660114		2	ideas/register.md:2343;literature/2026-10-10-register-checks-round6.md:139	Q-034
+10.1073/pnas.1711862115		1	ideas/2026-10-11-phase2-claude-reply-2.md:118	Q-021
+10.1073/pnas.1717636115		1	ideas/2026-10-14-blue-sky-ideation-claude.md:176	
+10.1073/pnas.1719976115		1	ideas/register.md:2702	Q-039
+10.1073/pnas.1804906115		2	ideas/register.md:1385;literature/2026-10-09-register-checks-round2.md:22	Q-022
+10.1073/pnas.1821123116		1	ideas/2026-10-14-blue-sky-ideation-claude.md:379	
+10.1073/pnas.1905164116		3	ideas/register.md:636;literature/2026-10-09-register-checks-round1.md:44	Q-011;Q-030
+10.1073/pnas.1916923117		2	ideas/register.md:1759;literature/2026-10-10-register-checks-round3.md:179	Q-027
+10.1073/pnas.1934576100		2	ideas/register.md:2342;literature/2026-10-10-register-checks-round6.md:139	Q-034
+10.1073/pnas.2005571117		2	ideas/register.md:1179;literature/2026-10-10-register-checks-round7.md:116	Q-019
+10.1073/pnas.2008235117		3	ideas/register-blue-sky.md:334;literature/2026-10-15-b004-theory-contract.md:46	B-004
+10.1073/pnas.2009397117		9	ideas/register.md:2267;literature/2026-10-10-boundary-counts-and-incumbency.md:26;literature/2026-10-10-register-checks-round5.md:86;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:278;literature/2026-10-11-register-checks-round9.md:119	Q-033;Q-047
+10.1073/pnas.2013368117		2	ideas/register.md:2344;literature/2026-10-10-register-checks-round6.md:139	Q-034
+10.1073/pnas.2015094118		1	ideas/register.md:1757	Q-027
+10.1073/pnas.2017105118		5	ideas/register.md:930;literature/2026-10-09-register-checks-round1.md:173;literature/2026-10-11-register-checks-round10.md:146;literature/2026-10-20-q015-prior-check.md:39	Q-015;Q-049
+10.1073/pnas.2019208118		4	ideas/register.md:1668;literature/2026-10-09-pd-loss-and-clade-recovery.md:167	Q-026
+10.1073/pnas.2023005118		1	literature/2026-10-10-register-checks-round5.md:106	
+10.1073/pnas.2101900118		5	ideas/register.md:2052;literature/2026-10-08-codex-review-disruption.md:80;literature/2026-10-09-a-mi-transfer-prior-work.md:33;literature/2026-10-10-register-checks-round4.md:67;literature/2026-10-disruption-susceptibility.md:380	Q-030
+10.1073/pnas.2106140118		2	ideas/register.md:1554;literature/2026-10-10-register-checks-round6.md:192	Q-024
+10.1073/pnas.2119513119		4	literature/2026-10-10-register-checks-round7.md:159;literature/2026-10-11-q006-information-table.md:29;literature/2026-10-12-q006-target-challenge-codex.md:32	Q-006
+10.1073/pnas.2120441119		5	ideas/register.md:633;literature/2026-10-09-register-checks-round1.md:39;literature/2026-10-10-register-checks-round4.md:63;literature/2026-10-10-register-checks-round7.md:186	Q-011;Q-030
+10.1073/pnas.2201345119		2	ideas/register.md:2132;literature/2026-10-10-register-checks-round4.md:33	Q-031
+10.1073/pnas.2201926119		3	data/q042-crosswalk/README.md:57;ideas/register.md:2927;literature/2026-10-11-register-checks-round10.md:124	Q-042
+10.1073/pnas.2202852119		5	ideas/register.md:2184;literature/2026-10-10-boundary-counts-and-incumbency.md:135;literature/2026-10-10-register-checks-round5.md:146	Q-032
+10.1073/pnas.2205326119		1	ideas/register.md:3491	Q-049
+10.1073/pnas.2207475119		2	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:445	
+10.1073/pnas.2208851120		3	literature/2026-10-11-q006-information-table.md:30;literature/2026-10-12-q006-target-challenge-codex.md:41	Q-006
+10.1073/pnas.2221149120		2	ideas/register.md:2816;literature/2026-10-11-register-checks-round9.md:173	Q-041
+10.1073/pnas.2303700120		2	ideas/register.md:2039;literature/2026-10-10-register-checks-round4.md:64	Q-030
+10.1073/pnas.2304194120		1	literature/2026-10-10-register-checks-round4.md:64	Q-030
+10.1073/pnas.2307629121		3	ideas/register.md:863;literature/2026-10-09-register-checks-round1.md:84;literature/2026-10-14-q012-prior-check.md:35	Q-012
+10.1073/pnas.2318860121		13	data/q021-recovery-support/README.md:165;docs/review/2026-10-11-gpt6pro-review/review.md:468;ideas/2026-10-11-phase2-claude-reply-2.md:112;ideas/register.md:1316;literature/2026-10-11-q021-lithium-and-model-capability.md:33;data/q021-recovery-support/build.py:19;ideas/2026-10-11-phase2-codex-reply-5.md:56	Q-021
+10.1073/pnas.2412036122		2	ideas/register.md:2211;literature/2026-10-10-register-checks-round5.md:154	Q-032
+10.1073/pnas.2412160122		1	literature/2026-10-09-register-checks-round1.md:86	Q-012
+10.1073/pnas.2414059122		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:820	
+10.1073/pnas.2414752122		7	ideas/2026-10-14-blue-sky-ideation-codex.md:154;literature/2026-10-14-q010-prior-check.md:58;literature/2026-10-15-b004-theory-contract.md:48	B-004;Q-010
+10.1073/pnas.2419052122		7	ideas/register.md:492;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:284;literature/2026-10-11-register-checks-round10.md:32	Q-008;Q-044
+10.1073/pnas.2501342122		3	ideas/2026-10-14-blue-sky-ideation-codex.md:156;literature/2026-10-15-b004-theory-contract.md:49	B-004
+10.1073/pnas.2505564123		3	ideas/register.md:2101;literature/2026-10-10-register-checks-round4.md:23;literature/2026-10-20-q023-q031-prior-checks.md:96	Q-023;Q-031
+10.1073/pnas.2525919123		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:824	
+10.1073/pnas.2533086123		4	literature/2026-10-08-codex-review-disruption.md:108;literature/2026-10-09-a-mi-transfer-prior-work.md:34;literature/2026-10-disruption-susceptibility.md:393	
+10.1073/pnas.81.3.801		2	ideas/register.md:2772;literature/2026-10-10-register-checks-round7.md:182	Q-041
+10.1073/pnas.83.18.6912		5	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:753;literature/2026-10-21-recruitment-analytic-check-codex.md:91	
+10.1073/pnas.91.15.6758		2	ideas/register.md:2578;literature/2026-10-10-register-checks-round7.md:181	Q-038
+10.1073/pnas.96.18.10272		2	ideas/2026-10-14-blue-sky-ideation-codex.md:283	
+10.1080/00288306.2020.1799827		1	resources/sources/fred/README.md:45	src:fred
+10.1080/03014223.2001.9518262		2	ideas/register.md:2346;literature/2026-10-10-register-checks-round6.md:140	Q-034
+10.1080/03115518.2023.2228367		2	resources/sources/fossil-checklists/README.md:22	src:fossil-checklists
+10.1080/03115518.2024.2434062		2	resources/sources/fossil-checklists/README.md:23	src:fossil-checklists
+10.1080/03115518.2025.2457423		1	resources/sources/fossil-checklists/README.md:24	src:fossil-checklists
+10.1080/03115518.2025.2508434		3	resources/sources/fossil-checklists/README.md:22	src:fossil-checklists
+10.1080/03115518.2025.2605684		2	ideas/register.md:2348;literature/2026-10-10-register-checks-round6.md:140	Q-034
+10.1080/03122417.2022.2159751		1	resources/sources/sahularch/README.md:43	src:sahularch
+10.1080/03721426.2020.1756560		1	resources/sources/fossil-checklists/README.md:25	src:fossil-checklists
+10.1080/08912963.2013.872097		3	ideas/2026-10-15-blue-sky-support-reply-claude.md:108;literature/2026-10-15-b002-generator-and-physical-priors.md:32	B-002
+10.1080/08912968909386497		3	ideas/2026-10-15-blue-sky-specification-and-escalation-review-codex.md:84;literature/2026-10-15-b003-escalation-evidence-contract.md:40;literature/2026-10-15-b003-source-inventory.md:30	B-003
+10.1080/14772019.2026.2669255		6	data/q012-source-support/README.md:19;ideas/2026-10-14-blue-sky-ideation-codex.md:72;ideas/register.md:672;literature/2026-10-14-q012-prior-check.md:59;resources/sources/triton/README.md:230	Q-012;src:triton
+10.1086/345841		2	literature/2026-10-09-register-checks-round2.md:47;literature/2026-10-20-q023-q031-prior-checks.md:67	Q-023;Q-031
+10.1086/507994		4	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:759;ideas/2026-10-14-blue-sky-ideation-codex.md:285	
+10.1086/627905		1	literature/2026-10-10-register-checks-round7.md:188	
+10.1086/692570		6	data/q050-sample-crosswalk/README.md:18;ideas/register.md:3531;literature/2026-10-11-evolvability-and-first-tranche-close.md:48;resources/sources/register-deposits/README.md:168	Q-050;src:register-deposits
+10.1086/710176		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:793;ideas/2026-10-14-blue-sky-ideation-claude.md:353	
+10.1086/716634		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:870	
+10.1086/723626		1	ideas/register.md:2705	Q-039
+10.1088/0004-637x/768/2/152		4	ideas/register.md:2793;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:290;literature/2026-10-11-register-checks-round9.md:171	Q-041
+10.1088/1748-9326/6/2/025003		2	ideas/2026-10-15-b004-critique-claude.md:24;literature/2026-10-15-b004-modern-source-table.md:73	B-004
+10.1089/ast.2019.2043		1	ideas/register.md:2803	Q-041
+10.1093/aesa/saaa042		1	ideas/register.md:2181	Q-032
+10.1093/biosci/biaf152		2	ideas/register.md:3324;literature/2026-10-11-register-checks-round9.md:116	Q-047
+10.1093/biosci/biw088		1	literature/2026-10-10-register-checks-round7.md:140	Q-004
+10.1093/evolut/qpad210		6	ideas/register.md:1958;literature/2026-10-10-clade-futures-and-geographic-cycles.md:216;literature/2026-10-10-prediction-units-and-priority.md:170	Q-029
+10.1093/evolut/qpag034		2	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:866;ideas/2026-10-21-outside-consultations-response-codex.md:159	
+10.1093/evolut/qpag116		3	ideas/register.md:1407;literature/2026-10-09-pd-loss-and-clade-recovery.md:46	Q-022
+10.1093/icb/icq078		1	literature/2026-10-11-register-checks-round9.md:150	Q-044
+10.1093/jeb/voae012		2	ideas/2026-10-14-blue-sky-ideation-codex.md:62	
+10.1093/jeb/voae035		8	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1005;ideas/register.md:1962;literature/2026-10-10-clade-futures-and-geographic-cycles.md:217;literature/2026-10-10-prediction-units-and-priority.md:169	Q-029
+10.1093/jeb/voae103		8	data/q050-covariance-support/README.md:79;docs/review/2026-10-11-gpt6pro-review/review.md:462;ideas/register.md:3539;literature/2026-10-11-evolvability-and-first-tranche-close.md:51	Q-050
+10.1093/jeb/voae134		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1027	
+10.1093/molbev/msaf313		3	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1021;docs/review/2026-10-21-gpt6pro-proposals/hybridisation/hybridisation_summary.md:77	
+10.1093/mollus/eyaf016		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:773	
+10.1093/mollus/eyaf036		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:771	
+10.1093/pnasnexus/pgaf215		2	ideas/register.md:2337;literature/2026-10-10-register-checks-round6.md:137	Q-034
+10.1093/pnasnexus/pgaf346		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:38	
+10.1093/sysbio/syac049		5	docs/review/2026-10-11-gpt6pro-review/review.md:446;ideas/register.md:406;literature/2026-10-10-register-checks-round7.md:160;literature/2026-10-11-q006-information-table.md:40	Q-006
+10.1093/sysbio/syae058		8	docs/review/2026-10-11-gpt6pro-review/review.md:444;ideas/register.md:360;literature/2026-10-10-register-checks-round7.md:155;literature/2026-10-11-q006-information-table.md:32;literature/2026-10-12-q006-target-challenge-codex.md:23;literature/2026-10-disruption-susceptibility.md:402	Q-006
+10.1093/sysbio/syaf020		1	ideas/2026-10-14-blue-sky-ideation-claude.md:239	
+10.1093/sysbio/syaf074		3	literature/2026-10-11-q006-information-table.md:32;literature/2026-10-12-q006-target-challenge-codex.md:51	Q-006
+10.1093/sysbio/syu006		3	literature/2026-10-11-q006-information-table.md:37;literature/2026-10-12-q006-target-challenge-codex.md:86	Q-006
+10.1093/sysbio/syx082		4	ideas/register.md:233;literature/2026-10-09-register-checks-round1.md:74;literature/2026-10-10-register-checks-round7.md:137;literature/2026-10-14-q012-prior-check.md:39	Q-004;Q-012
+10.1098/rsbl.2009.0302		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:785	
+10.1098/rsbl.2011.0521		1	literature/2026-10-11-register-checks-round10.md:125	Q-042
+10.1098/rsbl.2011.0613		5	ideas/register.md:2451;literature/2026-10-10-boundary-counts-and-incumbency.md:169	Q-036
+10.1098/rsbl.2011.0699		2	ideas/2026-10-14-blue-sky-ideation-codex.md:59	
+10.1098/rsbl.2013.0343		1	literature/2026-10-09-register-checks-round2.md:25	Q-022
+10.1098/rsbl.2015.0813		4	ideas/register.md:1010;literature/2026-10-10-register-checks-round3.md:148;literature/2026-10-10-register-checks-round5.md:129	Q-016;Q-025
+10.1098/rsbl.2015.0989		1	literature/2026-10-20-q017-prior-check.md:62	Q-017
+10.1098/rsbl.2016.0202		1	literature/2026-10-09-b-selectivity-prior-work.md:27	
+10.1098/rsbl.2016.0528		4	ideas/register.md:3150;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:286;literature/2026-10-11-register-checks-round9.md:143	Q-044
+10.1098/rsbl.2021.0007		1	ideas/register.md:1071	Q-017
+10.1098/rsbl.2023.0314		2	ideas/register.md:1143;literature/2026-10-10-register-checks-round7.md:97	Q-018
+10.1098/rsbl.2025.0348		2	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:479	
+10.1098/rsfs.2019.0106		2	ideas/register.md:2032;literature/2026-10-10-register-checks-round4.md:62	Q-030
+10.1098/rsos.181446		1	literature/2026-10-11-register-checks-round10.md:78	Q-048
+10.1098/rsos.190494		2	ideas/register.md:2114;literature/2026-10-10-register-checks-round4.md:28	Q-031
+10.1098/rsos.221507		5	ideas/register.md:1885;literature/2026-10-09-b-selectivity-prior-work.md:30;literature/2026-10-10-register-checks-round3.md:203	Q-028;Q-030;Q-038
+10.1098/rsos.230400		3	ideas/register.md:1890;literature/2026-10-09-b-selectivity-prior-work.md:30;literature/2026-10-10-register-checks-round3.md:203	Q-028
+10.1098/rsos.230795		11	data/q038-flag-audit/README.md:101;data/q038-monarrez-contract/README.md:12;docs/review/2026-10-11-gpt6pro-review/review.md:458;ideas/register.md:2583;literature/2026-10-09-b-selectivity-prior-work.md:25;literature/2026-10-10-register-checks-round7.md:181;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:236;literature/2026-10-disruption-susceptibility.md:385;resources/sources/register-deposits/README.md:165	Q-038;src:register-deposits
+10.1098/rsos.231601		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:86	
+10.1098/rspb.1996.0096		1	literature/2026-10-10-register-checks-round8.md:145	
+10.1098/rspb.2006.3742		3	ideas/2026-10-23-alroy-provocation-claude.md:86	
+10.1098/rspb.2007.1006		2	ideas/register.md:1015;literature/2026-10-10-register-checks-round3.md:151	Q-016
+10.1098/rspb.2007.1370		1	literature/2026-10-10-register-checks-round8.md:146	
+10.1098/rspb.2011.1496		1	literature/2026-10-11-register-checks-round10.md:81	Q-048
+10.1098/rspb.2011.1922		2	ideas/2026-10-14-blue-sky-cross-critique-claude.md:99;ideas/register-blue-sky.md:453	B-012
+10.1098/rspb.2012.1902		5	ideas/2026-10-07-claude-first-framing.md:116;ideas/register.md:1011;literature/2026-10-10-register-checks-round3.md:150;literature/2026-10-disruption-susceptibility.md:388	Q-016
+10.1098/rspb.2012.2085		2	ideas/register.md:1556;literature/2026-10-10-register-checks-round6.md:193	Q-024
+10.1098/rspb.2013.1071		2	literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:243	
+10.1098/rspb.2013.3254		1	literature/2026-10-11-register-checks-round10.md:148	Q-049
+10.1098/rspb.2015.1097		2	ideas/register.md:2127;literature/2026-10-10-register-checks-round4.md:25	Q-031
+10.1098/rspb.2015.2476		1	literature/2026-10-11-register-checks-round9.md:149	Q-044
+10.1098/rspb.2017.2730		2	ideas/register.md:3159;literature/2026-10-11-register-checks-round9.md:144	Q-044
+10.1098/rspb.2018.0122		2	ideas/register.md:1184;literature/2026-10-10-register-checks-round7.md:118	Q-019
+10.1098/rspb.2018.0232		5	ideas/register.md:487;literature/2026-10-09-register-checks-round2.md:50;literature/2026-10-09-register-expansion.md:40	Q-008;Q-023
+10.1098/rspb.2018.0404		2	ideas/register.md:2523;literature/2026-10-10-register-checks-round7.md:31	Q-037
+10.1098/rspb.2018.0462		4	ideas/register.md:2255;literature/2026-10-10-prediction-units-and-priority.md:226	Q-033
+10.1098/rspb.2018.1191		2	ideas/2026-10-14-blue-sky-ideation-claude.md:107;literature/2026-10-20-q017-prior-check.md:52	Q-017
+10.1098/rspb.2018.2896		6	data/q022-premortem/README.md:22;ideas/register.md:1419;literature/2026-10-09-pd-loss-and-clade-recovery.md:59;literature/2026-10-09-register-checks-round2.md:28;resources/sources/register-deposits/README.md:169	Q-022;src:register-deposits
+10.1098/rspb.2019.2054		2	ideas/register.md:3173;literature/2026-10-11-register-checks-round9.md:149	Q-044
+10.1098/rspb.2020.0372		5	ideas/register.md:3107;literature/2026-10-10-register-checks-round8.md:142;literature/2026-10-11-register-checks-round9.md:142;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:275	Q-044
+10.1098/rspb.2020.0730		3	ideas/2026-10-14-blue-sky-ideation-codex.md:330;resources/sources/register-deposits/README.md:176	src:register-deposits
+10.1098/rspb.2020.0941		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1007	
+10.1098/rspb.2020.2332		4	ideas/2026-10-07-claude-first-framing.md:44;literature/2026-10-disruption-susceptibility.md:372;literature/2026-10-08-codex-review-disruption.md:41	
+10.1098/rspb.2020.2762		2	ideas/register.md:1794;literature/2026-10-10-register-checks-round3.md:176	Q-027
+10.1098/rspb.2021.1632		2	ideas/2026-10-14-blue-sky-ideation-claude.md:210;resources/sources/register-deposits/README.md:175	src:register-deposits
+10.1098/rspb.2023.0770		2	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:852	
+10.1098/rspb.2023.2232		1	ideas/2026-10-14-blue-sky-ideation-claude.md:177	
+10.1098/rspb.2023.2767		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:856	
+10.1098/rspb.2024.0165		1	ideas/2026-10-14-blue-sky-ideation-claude.md:267	
+10.1098/rspb.2024.2029		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:102	
+10.1098/rspb.2025.0889		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:70	
+10.1098/rspb.2025.0968		2	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:467	
+10.1098/rspb.2025.2272		1	literature/2026-10-09-register-checks-round1.md:77	Q-012
+10.1098/rsta.2017.0076		1	literature/2026-10-10-register-checks-round8.md:146	
+10.1098/rstb.1994.0045		1	ideas/register.md:2931	Q-042
+10.1098/rstb.2015.0224		2	ideas/register.md:1787;literature/2026-10-10-register-checks-round3.md:175	Q-027
+10.1098/rstb.2019.0392		6	ideas/register.md:988;literature/2026-10-10-register-checks-round3.md:144;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:237;literature/2026-10-disruption-susceptibility.md:390	Q-016;Q-038
+10.1098/rstb.2022.0487		1	literature/2026-10-08-transfer-inputs.md:47	
+10.1098/rstb.2023.0313		6	STATUS.md:475;ideas/2026-10-11-external-review-response-codex.md:46;ideas/2026-10-11-phase2-claude-reply-4.md:80;literature/2026-10-11-q006-information-table.md:39	Q-006
+10.1101/2025.03.20.644316		1	literature/2026-10-10-register-checks-round7.md:188	
+10.1101/2025.07.25.666730		1	literature/2026-10-20-q023-q031-prior-checks.md:101	Q-023;Q-031
+10.1101/2025.10.24.684258		2	ideas/register.md:1531;literature/2026-10-10-register-checks-round6.md:194	Q-024
+10.1101/523811		2	ideas/register.md:185;literature/2026-10-09-b-selectivity-prior-work.md:24	Q-002
+10.1111/1365-2664.12519		2	ideas/register.md:1536;literature/2026-10-10-register-checks-round6.md:187	Q-024
+10.1111/2041-210x.13161		1	literature/2026-10-20-q023-q031-prior-checks.md:47	Q-023;Q-031
+10.1111/2041-210x.13170		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:795	
+10.1111/2041-210x.14099		1	resources/README.md:34	
+10.1111/2041-210x.14240		6	ideas/register.md:357;literature/2026-10-10-register-checks-round7.md:157;literature/2026-10-11-q006-information-table.md:31;literature/2026-10-12-q006-target-challenge-codex.md:42	Q-006
+10.1111/2041-210x.14507		3	ideas/2026-10-14-blue-sky-cross-critique-codex.md:74;ideas/2026-10-14-blue-sky-ideation-claude.md:102;ideas/register-blue-sky.md:412	B-007
+10.1111/brv.12276		5	ideas/register-blue-sky.md:228;literature/2026-10-14-ammonoid-developmental-route-contract.md:64;literature/2026-10-15-b002-paper-specification.md:253	B-002
+10.1111/brv.12653		2	ideas/register.md:2133;literature/2026-10-10-register-checks-round4.md:33	Q-031
+10.1111/brv.12816		3	ideas/2026-10-07-claude-first-framing.md:88;literature/2026-10-disruption-susceptibility.md:405	
+10.1111/cobi.12380		4	ideas/register.md:216;literature/2026-10-10-register-checks-round6.md:141;literature/2026-10-10-register-checks-round7.md:139	Q-004;Q-034
+10.1111/cobi.12640		3	ideas/register.md:1055;literature/2026-10-10-register-checks-round7.md:71;literature/2026-10-20-q017-prior-check.md:45	Q-017
+10.1111/cobi.13562		1	literature/2026-10-20-q017-prior-check.md:50	Q-017
+10.1111/ecog.05828		2	ideas/register.md:1604;literature/2026-10-10-register-checks-round5.md:122	Q-025
+10.1111/ede.12098		2	ideas/2026-10-14-blue-sky-ideation-codex.md:113	
+10.1111/ele.12110		2	ideas/register.md:3481;literature/2026-10-11-register-checks-round10.md:146	Q-049
+10.1111/ele.12485		1	ideas/2026-10-14-blue-sky-ideation-claude.md:208	
+10.1111/ele.12545		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:846	
+10.1111/ele.12589		2	ideas/2026-10-07-claude-first-framing.md:49	
+10.1111/ele.13152		2	ideas/register.md:3171;literature/2026-10-11-register-checks-round9.md:148	Q-044
+10.1111/ele.13199		2	ideas/register.md:1894;literature/2026-10-10-register-checks-round3.md:206	Q-028
+10.1111/ele.13242		1	literature/2026-10-10-register-checks-round3.md:206	Q-028
+10.1111/ele.13441		3	ideas/register.md:846;literature/2026-10-09-feedback-on-register-round1.md:149;literature/2026-10-09-register-checks-round1.md:72	Q-012
+10.1111/ele.13766		4	ideas/register.md:2251;literature/2026-10-10-prediction-units-and-priority.md:215	Q-033
+10.1111/ele.13898		1	resources/sources/names-status/README.md:50	src:names-status
+10.1111/ele.14448		1	literature/2026-10-10-register-checks-round7.md:33	Q-037
+10.1111/eva.13042		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:987	
+10.1111/evo.13269		1	ideas/2026-10-14-blue-sky-ideation-claude.md:209	
+10.1111/evo.13736		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:993	
+10.1111/evo.13946		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:842	
+10.1111/evo.14078		3	ideas/2026-10-14-blue-sky-ideation-claude.md:294;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:244	
+10.1111/evo.14177		1	literature/2026-10-09-register-checks-round1.md:76	Q-012
+10.1111/evo.14626		3	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:989;docs/review/2026-10-21-gpt6pro-proposals/hybridisation/hybridisation_summary.md:35	
+10.1111/gbi.12550		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:118	
+10.1111/gcb.15434		1	literature/2026-10-disruption-susceptibility.md:398	
+10.1111/gcb.16333		5	ideas/register.md:172;literature/2026-10-09-a-mi-transfer-prior-work.md:32;literature/2026-10-11-register-checks-round10.md:143;literature/2026-10-20-q015-prior-check.md:41	Q-001;Q-015;Q-049
+10.1111/gcb.70239		4	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1003;docs/review/2026-10-21-gpt6pro-proposals/hybridisation/hybridisation_summary.md:37;ideas/2026-10-21-outside-consultations-response-codex.md:154	
+10.1111/gcb.70476		1	literature/2026-10-disruption-susceptibility.md:406	
+10.1111/geb.12156		2	ideas/register.md:3167;literature/2026-10-11-register-checks-round9.md:147	Q-044
+10.1111/geb.12221		2	ideas/register.md:3340;literature/2026-10-11-register-checks-round9.md:118	Q-047
+10.1111/geb.12504		2	ideas/register.md:3333;literature/2026-10-11-register-checks-round9.md:121	Q-047
+10.1111/geb.12669		2	ideas/register.md:1601;literature/2026-10-10-register-checks-round5.md:121	Q-025
+10.1111/geb.12729		1	ideas/register.md:1915	Q-028
+10.1111/geb.12732		2	ideas/register.md:3477;literature/2026-10-11-register-checks-round10.md:144	Q-049
+10.1111/geb.12904		4	ideas/register.md:933;literature/2026-10-09-register-checks-round1.md:180;literature/2026-10-09-register-expansion.md:113	Q-015
+10.1111/geb.13735		4	ideas/2026-10-07-claude-first-framing.md:125;literature/2026-10-disruption-susceptibility.md:410;resources/capability-inventory.md:30	
+10.1111/geb.13905		1	resources/sources/triton/README.md:227	src:triton
+10.1111/geb.70226		4	ideas/register.md:1000;literature/2026-10-10-register-checks-round3.md:145;literature/2026-10-10-register-checks-round5.md:129	Q-016;Q-025
+10.1111/j.0006-341x.2001.01113.x		1	literature/2026-10-13-q006-e2-cmr-match.md:18	Q-006
+10.1111/j.0006-341x.2003.00092.x		2	ideas/register.md:345;literature/2026-10-13-q006-e2-cmr-match.md:20	Q-006
+10.1111/j.0014-3820.2004.tb01647.x		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1015	
+10.1111/j.0014-3820.2004.tb01648.x		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1017	
+10.1111/j.1095-8312.1989.tb00492.x		2	ideas/2026-10-14-blue-sky-ideation-codex.md:370	
+10.1111/j.1365-2966.2011.19112.x		2	ideas/register.md:2805;literature/2026-10-11-register-checks-round9.md:178	Q-041
+10.1111/j.1461-0248.2009.01342.x		2	ideas/2026-10-14-blue-sky-ideation-codex.md:367	
+10.1111/j.1461-0248.2010.01463.x		1	literature/2026-10-10-register-checks-round3.md:109	Q-029
+10.1111/j.1466-8238.2007.00300.x		2	ideas/register.md:1796;literature/2026-10-10-register-checks-round3.md:178	Q-027
+10.1111/j.1467-9469.2006.00529.x		2	literature/2026-10-10-clade-futures-and-geographic-cycles.md:77	
+10.1111/j.1469-185x.2011.00178.x		2	literature/2026-10-09-register-checks-round1.md:95;literature/2026-10-10-register-checks-round8.md:117	Q-012;Q-043
+10.1111/j.1472-4642.2007.00459.x		1	literature/2026-10-20-q017-prior-check.md:53	Q-017
+10.1111/j.1472-4669.2006.00060.x		2	literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:282	
+10.1111/j.1475-4983.2007.00653.x		1	literature/2026-10-10-register-checks-round8.md:95	Q-043
+10.1111/j.1475-4983.2010.01011.x		5	literature/2026-10-08-recovery-contracts-and-response.md:127;literature/2026-10-09-recovery-observation-contract.md:79;literature/2026-10-10-boundary-counts-and-incumbency.md:24	
+10.1111/j.1475-4983.2010.01017.x		1	literature/2026-10-11-register-checks-round9.md:147	Q-044
+10.1111/j.1502-3931.2008.00144.x		6	ideas/register.md:2476;literature/2026-10-10-boundary-counts-and-incumbency.md:179;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:239	Q-036
+10.1111/j.1525-142x.2004.04031.x		1	literature/2026-10-10-register-checks-round8.md:79	Q-043
+10.1111/j.1558-5646.1995.tb05971.x		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:854	
+10.1111/j.1558-5646.2007.00129.x		4	ideas/register.md:3529;literature/2026-10-11-evolvability-and-first-tranche-close.md:47	Q-050
+10.1111/j.1558-5646.2008.00317.x		1	literature/2026-10-10-register-checks-round5.md:87	Q-033
+10.1111/j.1558-5646.2011.01320.x		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:991	
+10.1111/j.1558-5646.2011.01567.x		2	ideas/2026-10-15-blue-sky-support-reply-2-claude.md:76;literature/2026-10-15-b002-paper-specification.md:252	B-002
+10.1111/jbi.12030		2	ideas/register.md:1013;literature/2026-10-10-register-checks-round3.md:149	Q-016
+10.1111/jbi.12336		2	ideas/register.md:2352;literature/2026-10-10-register-checks-round6.md:142	Q-034
+10.1111/jbi.13411		2	ideas/register.md:1923;literature/2026-10-10-register-checks-round3.md:207	Q-028
+10.1111/jbi.13607		1	literature/2026-10-10-register-checks-round3.md:133	Q-029
+10.1111/let.12085		4	ideas/2026-10-15-blue-sky-support-reply-claude.md:106;literature/2026-10-15-b002-generator-and-physical-priors.md:30	B-002
+10.1111/let.12125		4	ideas/2026-10-15-blue-sky-support-reply-claude.md:107;literature/2026-10-15-b002-generator-and-physical-priors.md:31	B-002
+10.1111/nph.13247		2	ideas/register.md:1150;literature/2026-10-10-register-checks-round7.md:99	Q-018
+10.1111/nph.17822		4	ideas/register.md:3099;literature/2026-10-10-register-checks-round8.md:142;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:274	Q-044
+10.1111/oik.05968		2	ideas/register.md:1603;literature/2026-10-10-register-checks-round5.md:122	Q-025
+10.1111/pala.12104		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:757	
+10.1111/pala.12188		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:791;ideas/2026-10-14-blue-sky-ideation-claude.md:106	
+10.1111/pala.12308		8	data/ammonoid-growth-support/README.md:29;data/ammonoid-growth-support/audit_workbook.py:32;data/ammonoid-growth-support/source-pilot-20261015.md:14;ideas/2026-10-14-blue-sky-ideation-codex.md:108;literature/2026-10-14-ammonoid-developmental-route-contract.md:62;resources/sources/register-deposits/README.md:166	src:register-deposits
+10.1111/pala.12331		1	ideas/register.md:3261	Q-045
+10.1111/pala.12332		1	literature/2026-10-14-b001-reassembly-contract.md:44	B-001
+10.1111/pala.12334		1	ideas/register.md:2801	Q-041
+10.1111/pala.12505		1	ideas/2026-10-14-blue-sky-ideation-claude.md:107	
+10.1111/pala.12615		1	resources/sources/nsb/README.md:372	src:nsb
+10.1111/pala.12667		2	ideas/register.md:2123;literature/2026-10-10-register-checks-round4.md:29	Q-031
+10.1111/pala.70006		5	data/q027-support-audit/README.md:58;ideas/register.md:1767;literature/2026-10-10-register-checks-round3.md:172;resources/sources/register-deposits/README.md:171	Q-027;Q-040;src:register-deposits
+10.1111/ter.12086		1	ideas/register.md:1148	Q-018
+10.11141/ia.36.6		1	resources/sources/austarch/README.md:42	src:austarch
+10.1126/sciadv.1400253		3	ideas/register.md:215;literature/2026-10-10-register-checks-round6.md:141	Q-004;Q-034
+10.1126/sciadv.1601430		2	ideas/register.md:2116;literature/2026-10-10-register-checks-round4.md:31	Q-031
+10.1126/sciadv.1602158		7	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:54;literature/2026-10-21-chronology-dependency-prior-codex.md:80	
+10.1126/sciadv.1700906		2	ideas/register.md:2054;literature/2026-10-disruption-susceptibility.md:379	Q-030
+10.1126/sciadv.aaq0500		2	ideas/register.md:2827;literature/2026-10-11-register-checks-round9.md:177	Q-041
+10.1126/sciadv.aat5091		4	ideas/2026-10-14-blue-sky-cross-critique-codex.md:91;ideas/2026-10-14-blue-sky-ideation-claude.md:169;ideas/register-blue-sky.md:143;literature/2026-10-14-b001-reassembly-contract.md:28	B-001
+10.1126/sciadv.abc9123		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:765	
+10.1126/sciadv.abf4072		1	literature/2026-10-10-register-checks-round8.md:74	Q-043
+10.1126/sciadv.abk3511		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:850	
+10.1126/sciadv.add9620		3	ideas/register.md:1166;literature/2026-10-10-register-checks-round7.md:113	Q-019;Q-039
+10.1126/sciadv.adf9999		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:828	
+10.1126/sciadv.adg7679		8	ideas/register.md:1227;literature/2026-10-08-transfer-inputs.md:30;literature/2026-10-09-a-mi-transfer-prior-work.md:33;literature/2026-10-09-feedback-on-register-round1.md:34;literature/2026-10-10-register-checks-round4.md:66;literature/2026-10-disruption-susceptibility.md:395	Q-008;Q-020;Q-030
+10.1126/sciadv.adi7284		2	ideas/register.md:2389;literature/2026-10-10-register-checks-round6.md:162	Q-035
+10.1126/sciadv.adr4199		9	ideas/register.md:489;literature/2026-10-08-codex-review-disruption.md:73;literature/2026-10-09-a-mi-transfer-prior-work.md:34;literature/2026-10-09-register-expansion.md:41;literature/2026-10-disruption-susceptibility.md:394;literature/2026-10-recovery-contingency.md:87	Q-008
+10.1126/sciadv.adv1171		9	ideas/register.md:536;literature/2026-10-09-pd-loss-and-clade-recovery.md:36;literature/2026-10-09-register-expansion.md:44;literature/2026-10-10-register-checks-round3.md:204	Q-009;Q-022;Q-028
+10.1126/sciadv.adv2549		1	ideas/2026-10-14-blue-sky-ideation-claude.md:270	
+10.1126/sciadv.adv9793		1	ideas/register.md:2706	Q-039
+10.1126/science.1083246		1	ideas/register.md:2754	Q-040
+10.1126/science.1116913		2	ideas/register.md:3484;literature/2026-10-11-register-checks-round10.md:147	Q-049
+10.1126/science.1123591		2	ideas/2026-10-14-blue-sky-ideation-claude.md:322;literature/2026-10-15-b003-escalation-evidence-contract.md:36	B-003
+10.1126/science.1133795		1	ideas/2026-10-14-blue-sky-ideation-claude.md:349	
+10.1126/science.1146303		3	ideas/2026-10-14-blue-sky-ideation-claude.md:352;ideas/register.md:1015;literature/2026-10-10-register-checks-round3.md:151	Q-016
+10.1126/science.11537491		2	ideas/register.md:1617;literature/2026-10-10-register-checks-round5.md:126	Q-025
+10.1126/science.1156401		1	ideas/2026-10-15-b004-critique-claude.md:31	B-004
+10.1126/science.1156963		1	ideas/register.md:2748	Q-040
+10.1126/science.1157719		2	ideas/register.md:1190;literature/2026-10-10-register-checks-round8.md:143	Q-019
+10.1126/science.1160852		2	ideas/register.md:3345;literature/2026-10-11-register-checks-round9.md:123	Q-047
+10.1126/science.1161833		5	ideas/register.md:2264;literature/2026-10-10-boundary-counts-and-incumbency.md:27;literature/2026-10-10-register-checks-round5.md:85	Q-033
+10.1126/science.1173073		4	ideas/register.md:1413;literature/2026-10-09-register-checks-round2.md:26;literature/2026-10-14-q012-prior-check.md:38	Q-012;Q-022;Q-038
+10.1126/science.1182241		2	ideas/2026-10-14-blue-sky-ideation-codex.md:200	
+10.1126/science.1189910		1	ideas/register.md:2708	Q-039
+10.1126/science.1203060		2	ideas/register.md:1175;literature/2026-10-10-register-checks-round7.md:114	Q-019
+10.1126/science.1205106		2	ideas/register.md:2512;literature/2026-10-10-register-checks-round6.md:120	Q-037
+10.1126/science.1210173		2	ideas/register.md:3486;literature/2026-10-11-register-checks-round10.md:148	Q-049
+10.1126/science.1210288		2	ideas/register.md:3461;literature/2026-10-11-register-checks-round10.md:149	Q-049
+10.1126/science.1210695		1	literature/2026-10-10-register-checks-round7.md:119	Q-019
+10.1126/science.1213859		2	ideas/register.md:2115;literature/2026-10-10-register-checks-round4.md:31	Q-031
+10.1126/science.1214697		1	ideas/2026-10-11-phase2-claude-reply-2.md:123	Q-021
+10.1126/science.1239431		4	ideas/register.md:1675;literature/2026-10-10-clade-futures-and-geographic-cycles.md:19	Q-026
+10.1126/science.1260065		1	literature/2026-10-15-b003-escalation-evidence-contract.md:80	B-003
+10.1126/science.147.3663.1294		2	literature/2026-10-14-ammonoid-developmental-route-contract.md:58	
+10.1126/science.206.4415.217		4	data/q042-crosswalk/README.md:51;ideas/register.md:2918;literature/2026-10-10-register-checks-round7.md:183;literature/2026-10-11-register-checks-round10.md:118	Q-042
+10.1126/science.215.4539.1501		1	literature/2026-10-10-register-checks-round7.md:187	
+10.1126/science.222.4620.159		2	ideas/2026-10-07-claude-first-framing.md:40	
+10.1126/science.231.4734.129		2	ideas/register.md:2581;literature/2026-10-10-register-checks-round7.md:181	Q-038
+10.1126/science.238.4829.940		1	ideas/register.md:2790	Q-041
+10.1126/science.253.5024.1099		2	ideas/register.md:3321;literature/2026-10-11-register-checks-round9.md:117	Q-047
+10.1126/science.266.5189.1340		2	data/q042-crosswalk/README.md:52;ideas/register.md:2968	Q-042
+10.1126/science.267.5201.1123		1	literature/2026-10-10-register-checks-round5.md:107	
+10.1126/science.278.5338.692		2	ideas/register.md:1383;literature/2026-10-09-register-checks-round2.md:29	Q-022
+10.1126/science.279.5359.2115		1	literature/2026-10-10-register-checks-round6.md:74	Q-033
+10.1126/science.289.5478.432		2	data/q042-crosswalk/README.md:55;ideas/register.md:2974	Q-042
+10.1126/science.7701342		4	ideas/register.md:2792;literature/2026-10-10-register-checks-round8.md:142;resources/sources/classic-compendia/README.md:46	Q-041;src:classic-compendia
+10.1126/science.aaa0193		1	ideas/2026-10-13-phase2-claude-reply-9.md:45	
+10.1126/science.aaa6635		4	ideas/2026-10-07-claude-first-framing.md:115;ideas/register.md:1016;literature/2026-10-disruption-susceptibility.md:387	Q-016
+10.1126/science.aab1371		1	literature/2026-10-10-register-checks-round7.md:34	Q-037
+10.1126/science.aaf2416		9	ideas/register.md:884;literature/2026-10-09-feedback-on-register-round1.md:166;literature/2026-10-09-register-checks-round1.md:114;literature/2026-10-10-register-checks-round3.md:205;literature/2026-10-10-register-checks-round7.md:25;literature/2026-10-disruption-susceptibility.md:389	Q-013;Q-028;Q-037
+10.1126/science.aam7468		4	ideas/2026-10-14-blue-sky-cross-critique-codex.md:116;ideas/2026-10-14-blue-sky-ideation-claude.md:321;ideas/register-blue-sky.md:265;literature/2026-10-15-b003-escalation-evidence-contract.md:39	B-003
+10.1126/science.aao5987		2	ideas/register.md:2506;literature/2026-10-10-register-checks-round7.md:26	Q-037
+10.1126/science.aat1327		7	ideas/2026-10-07-claude-first-framing.md:84;ideas/2026-10-14-blue-sky-ideation-claude.md:143;ideas/register.md:1917;literature/2026-10-09-a-mi-transfer-prior-work.md:31;literature/2026-10-09-penn-calibration-source-correction.md:32;literature/2026-10-disruption-susceptibility.md:391	Q-028
+10.1126/science.aax4953		3	data/q042-crosswalk/README.md:56;ideas/register.md:2753	Q-040;Q-042
+10.1126/science.aay8309		5	ideas/register.md:1633;literature/2026-10-09-recovery-observation-contract.md:94;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:242	Q-025;Q-040
+10.1126/science.aba6853		4	ideas/register.md:442;literature/2026-10-09-register-expansion.md:87;literature/2026-10-10-register-checks-round5.md:19	Q-007;Q-027
+10.1126/science.abb3996		1	resources/sources/nsb/README.md:373	src:nsb
+10.1126/science.abc5654		2	ideas/2026-10-07-claude-first-framing.md:117	
+10.1126/science.abe9039		5	ideas/2026-10-07-claude-first-framing.md:85;literature/2026-10-08-codex-review-disruption.md:194;literature/2026-10-09-penn-calibration-source-correction.md:47;literature/2026-10-disruption-susceptibility.md:392	
+10.1126/science.add8606		2	ideas/register.md:2331;literature/2026-10-10-register-checks-round6.md:135	Q-034
+10.1126/science.ade2833		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1011	
+10.1126/science.adf7122		2	ideas/register.md:3334;literature/2026-10-11-register-checks-round9.md:122	Q-047
+10.1126/science.adi8722		4	ideas/register.md:3536;literature/2026-10-11-evolvability-and-first-tranche-close.md:50	Q-050
+10.1126/science.adj5763		8	ideas/2026-10-07-claude-first-framing.md:79;ideas/register.md:181;literature/2026-10-08-codex-review-disruption.md:85;literature/2026-10-09-b-selectivity-prior-work.md:23;literature/2026-10-disruption-susceptibility.md:373;resources/sources/register-deposits/README.md:178	Q-002;src:register-deposits
+10.1126/science.adk3705		5	ideas/2026-10-07-claude-first-framing.md:82;ideas/register.md:1818;literature/2026-10-disruption-susceptibility.md:375	Q-027;Q-030
+10.1126/science.adk7898		2	ideas/register.md:1387;literature/2026-10-09-register-checks-round2.md:23	Q-022
+10.1126/science.adm9137		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:832	
+10.1126/science.adn3450		4	ideas/register.md:1306;literature/2026-10-09-register-expansion.md:50	Q-021
+10.1126/science.adv2627		7	ideas/register.md:1225;literature/2026-10-09-b-selectivity-prior-work.md:26;literature/2026-10-09-feedback-on-register-round1.md:29;literature/2026-10-11-register-checks-round10.md:142;literature/2026-10-disruption-susceptibility.md:374	Q-008;Q-020;Q-049
+10.1127/njgpa/156/1978/226		3	literature/2026-10-15-b002-generator-and-physical-priors.md:34	B-002
+10.1130/0-8137-2361-2.75		2	literature/2026-10-21-chronology-dependency-prior-codex.md:77	
+10.1130/0091-7613(1975)3<175:sdacre>2.0.co;2		1	ideas/2026-10-14-blue-sky-cross-critique-claude.md:128	
+10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2		1	ideas/register.md:3257	Q-045
+10.1130/0091-7613(2000)28<39:ttemef>2.0.co;2		2	ideas/register.md:2377;literature/2026-10-10-register-checks-round6.md:161	Q-035
+10.1130/2014.2505(02)		1	literature/2026-10-10-register-checks-round4.md:72	Q-030
+10.1130/abs/2021am-369023		3	ideas/register.md:942;literature/2026-10-09-register-checks-round1.md:189;literature/2026-10-20-q015-prior-check.md:38	Q-015
+10.1130/abs/2025am-6184		1	literature/2026-10-09-a-mi-transfer-prior-work.md:29	
+10.1130/b30346.1		2	literature/2026-10-21-chronology-dependency-prior-codex.md:78	
+10.1130/b31197.1		2	literature/2026-10-12-q021-formation-timing-and-new-prior.md:129	Q-021
+10.1130/b35355.1		2	ideas/register.md:2384;literature/2026-10-10-register-checks-round6.md:163	Q-035
+10.1130/b37919.1		7	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:54;literature/2026-10-21-chronology-dependency-prior-codex.md:27	
+10.1130/g128a.1		1	literature/2026-10-09-register-checks-round2.md:48	Q-023
+10.1130/g31203.1		1	ideas/2026-10-11-phase2-claude-reply-2.md:86	Q-021
+10.1130/g35901.1		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:836	
+10.1130/g39866.1		2	ideas/register.md:267;literature/2026-10-10-register-checks-round7.md:54	Q-005
+10.1130/g46631.1		1	literature/2026-10-10-register-checks-round5.md:110	
+10.1130/g47907.1		1	literature/2026-10-09-register-checks-round1.md:123	Q-013
+10.1130/g48928.1		2	literature/2026-10-12-q021-formation-timing-and-new-prior.md:133	Q-021
+10.1130/g49833.1		3	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:319	
+10.1130/g52655.1		2	ideas/register.md:2394;literature/2026-10-10-register-checks-round6.md:165	Q-035
+10.1130/gsab.s.28207634		7	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:58;literature/2026-10-21-chronology-dependency-prior-codex.md:28	
+10.1144/gsjgs.156.3.0453		1	ideas/2026-10-14-blue-sky-ideation-claude.md:140	
+10.1144/gsl.sp.1996.001.01.27		1	literature/2026-10-11-register-checks-round10.md:77	Q-048
+10.1144/jgs2019-061		1	ideas/register.md:1079	Q-017
+10.1146/annurev-earth-042711-105329		3	data/q042-crosswalk/README.md:47;ideas/register.md:2964;literature/2026-10-11-register-checks-round10.md:123	Q-042
+10.1146/annurev-earth-053018-060136		2	ideas/register.md:2027;literature/2026-10-10-register-checks-round4.md:61	Q-030
+10.1146/annurev-ecolsys-110617-062638		3	ideas/register.md:3338;literature/2026-10-09-register-checks-round2.md:48;literature/2026-10-11-register-checks-round9.md:120	Q-023;Q-047
+10.1146/annurev-ento-120120-102849		2	ideas/register.md:2200;literature/2026-10-10-register-checks-round5.md:149	Q-032
+10.1146/annurev-marine-021723-095235		1	literature/2026-10-disruption-susceptibility.md:386	
+10.1146/annurev.earth.33.092203.122654		1	data/q042-crosswalk/README.md:49	Q-042
+10.1146/annurev.ecolsys.38.091206.095525		1	literature/2026-10-11-register-checks-round10.md:80	Q-048
+10.1146/annurev.ecolsys.39.110707.173510		2	ideas/2026-10-14-blue-sky-cross-critique-claude.md:109;ideas/register-blue-sky.md:485	B-016
+10.1186/s12918-015-0149-z		2	ideas/2026-10-14-blue-sky-ideation-codex.md:104	
+10.1242/jeb.203.20.3177		1	literature/2026-10-15-b004-modern-source-table.md:43	B-004
+10.12789/geocanj.2026.53.227		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:822	
+10.1357/002224002762341285		1	literature/2026-10-15-b004-modern-source-table.md:46	B-004
+10.1357/002224010793721406		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:118	
+10.1371/journal.pbio.2000724		2	ideas/register.md:3180;literature/2026-10-11-register-checks-round9.md:150	Q-044
+10.1371/journal.pbio.2006841		2	ideas/register.md:1896;literature/2026-10-10-register-checks-round3.md:206	Q-028
+10.1371/journal.pbio.3001340		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:797;docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:862	
+10.1371/journal.pbio.3002443		1	literature/2026-10-08-transfer-inputs.md:134	
+10.1371/journal.pcbi.1003919		5	ideas/register.md:365;literature/2026-10-10-register-checks-round7.md:158;literature/2026-10-11-q006-information-table.md:34;literature/2026-10-12-q006-target-challenge-codex.md:24	Q-006
+10.1371/journal.pcbi.1006100		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:777	
+10.1371/journal.pone.0000728		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:872	
+10.1371/journal.pone.0004385		5	ideas/register.md:3413;literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:292;literature/2026-10-11-register-checks-round10.md:79	Q-048
+10.1371/journal.pone.0015584		3	ideas/register.md:3336;literature/2026-10-09-register-checks-round2.md:48;literature/2026-10-11-register-checks-round9.md:120	Q-023;Q-047
+10.1371/journal.pone.0023528		2	ideas/register.md:1416;literature/2026-10-09-register-checks-round2.md:24	Q-022
+10.1371/journal.pone.0037233		2	literature/2026-10-09-pd-loss-and-clade-recovery.md:53	
+10.1371/journal.pone.0084857		1	resources/sources/nsb/README.md:463	src:nsb
+10.1371/journal.pone.0086780		2	ideas/2026-10-14-blue-sky-cross-critique-claude.md:100;ideas/register-blue-sky.md:454	B-012
+10.1371/journal.pone.0094950		2	ideas/register.md:2192;literature/2026-10-10-register-checks-round5.md:153	Q-032
+10.1371/journal.pone.0108936		2	ideas/register.md:1549;literature/2026-10-10-register-checks-round6.md:191	Q-024
+10.1371/journal.pone.0116859		2	ideas/2026-10-15-b004-critique-claude.md:57;literature/2026-10-15-b004-modern-source-table.md:85	B-004
+10.1371/journal.pone.0144354		2	ideas/register.md:1414;literature/2026-10-09-register-checks-round2.md:27	Q-022
+10.1371/journal.pone.0165205		2	ideas/register.md:2203;literature/2026-10-10-register-checks-round5.md:150	Q-032
+10.1371/journal.pone.0183848		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:781	
+10.1371/journal.pone.0204625		3	literature/2026-10-10-register-checks-round8.md:118;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:273	Q-043
+10.1371/journal.pone.0235180		4	ideas/2026-10-14-blue-sky-ideation-codex.md:110;literature/2026-10-14-ammonoid-developmental-route-contract.md:63	
+10.15468/bvu6a8		2	resources/sources/nsb/README.md:25	src:nsb
+10.15468/jfqhiu		2	resources/sources/pbdb/README.md:30	src:pbdb
+10.1594/pangaea		2	data/q050-sample-crosswalk/inspect.py:44	Q-050
+10.1594/pangaea.736778		1	data/q050-sample-crosswalk/README.md:105	Q-050
+10.1594/pangaea.761442		1	data/q050-sample-crosswalk/README.md:103	Q-050
+10.1594/pangaea.761443		1	data/q050-sample-crosswalk/README.md:104	Q-050
+10.1594/pangaea.873570		1	resources/sources/triton/README.md:501	src:triton
+10.1594/pangaea.879515		3	resources/sources/BACKLOG.md:63;resources/sources/shape-index/README.md:19	src:shape-index
+10.1594/pangaea.892803		1	data/q050-sample-crosswalk/README.md:106	Q-050
+10.1594/pangaea.892804		1	data/q050-sample-crosswalk/README.md:107	Q-050
+10.1594/pangaea.917503		1	literature/2026-10-09-register-expansion.md:92	Q-007
+10.1666/0094-8373(1999)25[1:mditer]2.0.co;2		1	literature/2026-10-10-register-checks-round8.md:72	Q-043
+10.1666/0094-8373(2000)026<0215:eilcep>2.0.co;2		1	literature/2026-10-15-b003-escalation-evidence-contract.md:42	B-003
+10.1666/0094-8373(2000)026<0578:oaecot>2.0.co;2		2	literature/2026-10-09-register-checks-round2.md:47;literature/2026-10-10-register-checks-round4.md:71	Q-023;Q-030
+10.1666/0094-8373(2000)26[74:oaecot]2.0.co;2		2	literature/2026-10-10-boundary-counts-and-incumbency.md:22;literature/2026-10-10-register-checks-round5.md:35	Q-026
+10.1666/0094-8373(2001)027<0327:eticot>2.0.co;2		1	literature/2026-10-10-register-checks-round8.md:76	Q-043
+10.1666/0094-8373(2001)027<0751:jeosat>2.0.co;2		2	ideas/2026-10-12-phase2-claude-reply-7.md:35;literature/2026-10-13-q006-cmr-scope-check.md:24	Q-006
+10.1666/0094-8373(2002)028<0328:ipiitm>2.0.co;2		1	literature/2026-10-11-register-checks-round10.md:82	Q-048
+10.1666/0094-8373(2003)029<0455:otcoba>2.0.co;2		1	literature/2026-10-disruption-susceptibility.md:381	
+10.1666/0094-8373(2004)030<0369:teotpb>2.0.co;2		1	literature/2026-10-10-register-checks-round8.md:71	Q-043
+10.1666/0094-8373(2004)030<0396:osbahw>2.0.co;2		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1013	
+10.1666/0094-8373(2004)030<0522:oeamdo>2.0.co;2		2	literature/2026-10-09-register-checks-round2.md:45;literature/2026-10-20-q023-q031-prior-checks.md:30	Q-023;Q-031
+10.1666/0094-8373(2005)031[0133:tdoes]2.0.co;2		1	literature/2026-10-10-register-checks-round6.md:103	Q-036
+10.1666/05028.1		2	ideas/2026-10-14-blue-sky-ideation-claude.md:324;literature/2026-10-15-b003-escalation-evidence-contract.md:38	B-003
+10.1666/05078.1		2	ideas/register.md:2949;literature/2026-10-11-register-checks-round10.md:121	Q-042
+10.1666/07034.1		2	ideas/register.md:635;literature/2026-10-09-register-checks-round1.md:42	Q-011
+10.1666/07053.1		5	ideas/register.md:3052;literature/2026-10-10-register-checks-round8.md:70;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:269	Q-043
+10.1666/07060.1		2	ideas/register.md:2042;literature/2026-10-10-register-checks-round4.md:65	Q-030
+10.1666/07074.1		4	ideas/register.md:3283;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:280	Q-046
+10.1666/08033.1		3	ideas/register.md:1485;literature/2026-10-09-register-checks-round2.md:49;literature/2026-10-20-q023-q031-prior-checks.md:54	Q-023;Q-031
+10.1666/09066.1		5	ideas/register.md:3286;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:281;literature/2026-10-15-b003-escalation-evidence-contract.md:146	B-003;Q-046
+10.1666/10022.1		1	literature/2026-10-15-b003-escalation-evidence-contract.md:37	B-003
+10.1666/10027.1		5	ideas/2026-10-14-blue-sky-cross-critique-claude.md:51;ideas/register-blue-sky.md:224;literature/2026-10-14-ammonoid-developmental-route-contract.md:60	B-002
+10.1666/10067.1		1	resources/sources/nsb/README.md:471	src:nsb
+10.1666/11040.1		2	ideas/register.md:2113;literature/2026-10-10-register-checks-round4.md:26	Q-031
+10.1666/11041.1		1	resources/sources/nsb/README.md:469	src:nsb
+10.1666/12016		1	resources/sources/nsb/README.md:466	src:nsb
+10.1666/13022		5	data/q042-crosswalk/README.md:53;ideas/register.md:269;literature/2026-10-10-register-checks-round7.md:55;literature/2026-10-11-register-checks-round10.md:122	Q-005;Q-042
+10.1666/13036		1	literature/2026-10-20-q023-q031-prior-checks.md:69	Q-023;Q-031
+10.1666/13047		2	ideas/register.md:2797;literature/2026-10-11-register-checks-round9.md:172	Q-041
+10.1666/13074		3	ideas/register.md:1083;literature/2026-10-10-register-checks-round7.md:77;literature/2026-10-20-q017-prior-check.md:48	Q-017
+10.1669/0883-1351(2001)016<0095:brftep>2.0.co;2		2	ideas/register.md:1878;literature/2026-10-10-register-checks-round3.md:201	Q-028
+10.17605/osf.io/2cdqg		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:420	
+10.17605/osf.io/8n43x		2	resources/sources/krapp2021/README.md:21	src:krapp2021
+10.17632/g2g74cj4x7.2		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:122	
+10.17632/r2h822zzxp.1		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:417	
+10.17864/1947.000345		2	resources/sources/rpd/README.md:13	src:rpd
+10.18637/jss.v080.i01		1	literature/2026-10-14-b001-reassembly-contract.md:159	B-001
+10.1890/11-1952.1		1	literature/2026-10-14-b001-reassembly-contract.md:321	B-001
+10.2110/palo.2006.p06-055r		2	ideas/2026-10-14-blue-sky-ideation-codex.md:57	
+10.2110/palo.2011.p11-094r		2	ideas/2026-10-14-blue-sky-ideation-codex.md:239	
+10.21203/rs.3.rs-9282628/v1		2	ideas/register.md:1132;literature/2026-10-10-register-checks-round7.md:93	Q-018
+10.21420/0x8y-h306		1	resources/sources/fred/README.md:131	src:fred
+10.21420/jqqb-nk89		2	resources/sources/fred/README.md:24	src:fred
+10.2307/1940821		1	literature/2026-10-10-register-checks-round6.md:45	Q-026
+10.2307/2532908		1	literature/2026-10-13-q006-e2-cmr-match.md:19	Q-006
+10.2307/2533106		1	literature/2026-10-13-q006-e2-cmr-match.md:18	Q-006
+10.2307/2937171		1	ideas/2026-10-12-phase2-claude-reply-7.md:37	
+10.2307/3515266		1	literature/2026-10-11-register-checks-round10.md:77	Q-048
+10.2307/3808568		1	literature/2026-10-13-q006-e2-cmr-match.md:17	Q-006
+10.2475/001c.156171		7	data/q021-taylor-support/README.md:23;data/q021-taylor-support/build.py:15;ideas/register.md:1319;literature/2026-10-12-q021-formation-timing-and-new-prior.md:51	Q-021
+10.2475/06.2017.01		2	ideas/register.md:2057;literature/2026-10-10-register-checks-round4.md:69	Q-030
+10.2517/2021pr004		4	ideas/register.md:1149;literature/2026-10-10-register-checks-round6.md:169;literature/2026-10-10-register-checks-round7.md:98	Q-018;Q-035
+10.25375/uct.20495136.v1		1	resources/sources/au-fossil-deposits/README.md:48	src:au-fossil-deposits
+10.25446/oxford.28303568		1	literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:284	
+10.25573/data.28046414		2	literature/2026-10-09-pd-loss-and-clade-recovery.md:44	
+10.25573/data.28046414.v2		1	literature/2026-10-09-register-expansion.md:69	
+10.25900/2mb4-rr36		1	resources/sources/sahularch/README.md:25	src:sahularch
+10.25900/gpvr-ay04		3	resources/sources/sahularch/README.md:21	src:sahularch
+10.25900/kkdx-xh23		2	resources/sources/sahulchar/README.md:25	src:sahulchar
+10.25900/y4e9-r595		1	resources/sources/sahulchar/README.md:25	src:sahulchar
+10.25909/25341625.v1		1	resources/sources/au-fossil-deposits/README.md:49	src:au-fossil-deposits
+10.25911/5b8df4bfb5ac9		2	literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:273	
+10.25911/5b8df50c1f2bd		2	literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:273	
+10.25921/rd66-5820		1	resources/sources/sahul-sealevel/README.md:21	src:sahul-sealevel
+10.26186/146442		2	resources/sources/stratdat/README.md:25	src:stratdat
+10.26186/151280		1	resources/sources/BACKLOG.md:95	
+10.26207/xah3-3r67		4	data/q021-taylor-support/README.md:28;literature/2026-10-12-q021-formation-timing-and-new-prior.md:143	Q-021
+10.26879/1032		3	literature/2026-10-disruption-susceptibility.md:332;resources/capability-inventory.md:28;resources/sources/nsb/README.md:52	src:nsb
+10.26879/99013		1	resources/sources/nsb/README.md:460	src:nsb
+10.2989/1814232x.2025.2454626		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:769	
+10.3030/896323		2	ideas/register.md:3350;literature/2026-10-11-register-checks-round10.md:54	Q-047
+10.32614/cran.package.sepkoski		2	resources/sources/classic-compendia/README.md:49	src:classic-compendia
+10.32942/x2dd1v		1	ideas/2026-10-14-blue-sky-ideation-claude.md:64	
+10.3354/meps115139		1	literature/2026-10-15-b004-modern-source-table.md:45	B-004
+10.3354/meps122205		1	literature/2026-10-15-b004-modern-source-table.md:47	B-004
+10.3389/feart.2018.00200		2	ideas/register.md:3164;literature/2026-10-11-register-checks-round9.md:146	Q-044
+10.3389/fevo.2021.679722		2	ideas/2026-10-20-q038-and-prior-checks-review-codex.md:161;literature/2026-10-20-q015-prior-check.md:43	Q-015;Q-038
+10.3389/fevo.2023.1165174		4	ideas/register.md:3534;literature/2026-10-11-evolvability-and-first-tranche-close.md:49	Q-050
+10.3389/fevo.2023.1304831		2	ideas/2026-10-14-blue-sky-ideation-codex.md:246	
+10.3389/fevo.2023.1338865		2	ideas/register.md:2205;literature/2026-10-10-register-checks-round5.md:151	Q-032
+10.3389/fgene.2015.00183		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:995	
+10.35535/acpa-2020-0016		2	ideas/register.md:1145;literature/2026-10-10-register-checks-round7.md:96	Q-018
+10.3897/phytokeys.226.99316		3	docs/review/2026-10-11-gpt6pro-review/review.md:456;ideas/register.md:2218	Q-032
+10.4202/app.00220.2015		2	ideas/2026-10-14-blue-sky-ideation-codex.md:106	
+10.4227/05/56f077b3054e9		1	resources/sources/fossahul/README.md:23	src:fossahul
+10.48550/arxiv.1706.10106		3	docs/review/2026-10-11-gpt6pro-review/review.md:448;ideas/2026-10-11-external-review-response-codex.md:38;literature/2026-10-12-q006-target-challenge-codex.md:205	Q-006
+10.48550/arxiv.2004.06514		2	literature/2026-10-10-prediction-units-and-priority.md:95	
+10.48550/arxiv.2604.17926		5	docs/review/2026-10-11-gpt6pro-review/review.md:450;ideas/2026-10-11-external-review-response-codex.md:39;ideas/register.md:400;literature/2026-10-11-q006-information-table.md:41	Q-006
+10.5061/dryad.0k6djhb6h		1	literature/2026-10-10-prediction-units-and-priority.md:173	Q-029
+10.5061/dryad.1bp06		1	resources/sources/au-fossil-deposits/README.md:39	src:au-fossil-deposits
+10.5061/dryad.1mg27		1	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:791	
+10.5061/dryad.1ns1rn91g		1	literature/2026-10-disruption-susceptibility.md:325	
+10.5061/dryad.1vhhmgr44		4	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:423;ideas/2026-10-14-blue-sky-ideation-codex.md:298	
+10.5061/dryad.2jm63xsvg		1	resources/sources/au-fossil-deposits/README.md:47	src:au-fossil-deposits
+10.5061/dryad.3v0p84v		4	data/q044-joint-support/README.md:26;data/q044-joint-support/build.py:8;ideas/2026-10-11-phase2-claude-reply-1.md:33;resources/capability-inventory.md:25	Q-044
+10.5061/dryad.4b8gthtmd		1	resources/sources/au-fossil-deposits/README.md:26	src:au-fossil-deposits
+10.5061/dryad.4j0zpc8ft		1	resources/sources/au-fossil-deposits/README.md:46	src:au-fossil-deposits
+10.5061/dryad.4j0zpc8hx		1	literature/2026-10-11-evolvability-and-first-tranche-close.md:86	
+10.5061/dryad.4j0zpc8nf		1	resources/sources/au-fossil-deposits/README.md:25	src:au-fossil-deposits
+10.5061/dryad.59zw3r294		2	resources/sources/au-fossil-deposits/README.md:45	src:au-fossil-deposits
+10.5061/dryad.5dv41nsmd		1	ideas/2026-10-14-blue-sky-ideation-claude.md:390	
+10.5061/dryad.5hqbzkhcf		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:860	
+10.5061/dryad.63xsj3tzv		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:844	
+10.5061/dryad.69p8cz9cc		5	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:106;resources/sources/au-fossil-deposits/README.md:24	src:au-fossil-deposits
+10.5061/dryad.6djh9w1bx		2	data/q027-joint-support/README.md:35;ideas/register.md:1815	Q-027
+10.5061/dryad.8jf2k		7	data/q050-covariance-support/README.md:53;data/q050-sample-crosswalk/README.md:35;ideas/2026-10-13-phase2-claude-reply-10.md:52;ideas/register.md:3555;literature/2026-10-11-evolvability-and-first-tranche-close.md:81	Q-050
+10.5061/dryad.8w9ghx3w6		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:834	
+10.5061/dryad.931zcrjqw		11	data/q038-monarrez-contract/author-email-draft.md:23;data/q038-monarrez-contract/inspect.R:2;data/q038-predictor-contract/README.md:23;data/q038-predictor-contract/ambiguity.R:2;data/q038-predictor-contract/support.R:2;ideas/2026-10-20-q038-and-prior-checks-review-codex.md:126;ideas/register.md:2616;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:236;literature/2026-10-11-register-checks-round9.md:75;literature/2026-10-disruption-susceptibility.md:327;resources/capability-inventory.md:26	Q-038
+10.5061/dryad.9ghx3ffts		1	literature/2026-10-disruption-susceptibility.md:326	
+10.5061/dryad.bg30k		1	literature/2026-10-14-b001-reassembly-contract.md:384	B-001
+10.5061/dryad.bp26v20		1	resources/sources/names-status/README.md:29	src:names-status
+10.5061/dryad.c17p8		6	data/ammonoid-growth-support/README.md:28;data/ammonoid-growth-support/audit_workbook.py:31;ideas/2026-10-14-blue-sky-ideation-codex.md:119;ideas/register-blue-sky.md:231;literature/2026-10-14-ammonoid-developmental-route-contract.md:62	B-002
+10.5061/dryad.fttdz08rt		1	resources/sources/au-fossil-deposits/README.md:42	src:au-fossil-deposits
+10.5061/dryad.gd8038s		4	data/q022-premortem/README.md:24;ideas/register.md:867;literature/2026-10-09-register-checks-round2.md:28	Q-012;Q-022
+10.5061/dryad.j9kd51cd4		1	resources/sources/au-fossil-deposits/README.md:41	src:au-fossil-deposits
+10.5061/dryad.kh1893298		1	resources/sources/au-fossil-deposits/README.md:44	src:au-fossil-deposits
+10.5061/dryad.m010p		2	ideas/register.md:2466;literature/2026-10-10-boundary-counts-and-incumbency.md:172	Q-036
+10.5061/dryad.mgqnk992f		4	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:698	
+10.5061/dryad.nk218ht		1	ideas/2026-10-14-blue-sky-ideation-claude.md:389	
+10.5061/dryad.nzs7h44pv		2	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/2026-10-20-hybridisation-cascades-proposal.md:1007	
+10.5061/dryad.p1b6b		1	resources/sources/au-fossil-deposits/README.md:38	src:au-fossil-deposits
+10.5061/dryad.p5hqbzm03		4	data/c3-attenuation-check/README.md:33;data/c3-attenuation-check/attenuation.py:1;ideas/2026-10-23-alroy-provocation-claude.md:303;ideas/2026-10-23-alroy-review-codex.md:142	
+10.5061/dryad.pg4f4qs50		2	ideas/2026-10-23-alroy-provocation-claude.md:304;ideas/2026-10-23-alroy-review-codex.md:181	
+10.5061/dryad.s7576		1	literature/2026-10-15-b003-source-inventory.md:38	B-003
+10.5061/dryad.sqv9s4ndb		3	ideas/register.md:2479;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:116	Q-036
+10.5061/dryad.tx95x69vr		1	ideas/2026-10-14-blue-sky-ideation-codex.md:340	
+10.5061/dryad.vd80g8n		1	literature/2026-10-09-register-expansion.md:116	Q-015
+10.5061/dryad.vx0k6dk71		2	literature/2026-10-disruption-susceptibility.md:330;resources/capability-inventory.md:34	
+10.5061/dryad.zpc866t6s		1	ideas/2026-10-14-blue-sky-ideation-claude.md:221	
+10.5070/p9.62178		1	resources/sources/pbdb/README.md:50	src:pbdb
+10.5070/p9401160531		1	resources/sources/pbdb/README.md:50	src:pbdb
+10.5194/bg-13-3225-2016		1	resources/sources/gcd/README.md:41	src:gcd
+10.5194/bg-18-5729-2021		2	ideas/2026-10-14-blue-sky-ideation-codex.md:373	
+10.5194/bg-19-3369-2022		2	ideas/register.md:198;literature/2026-10-disruption-susceptibility.md:377	Q-003
+10.5194/bg-20-121-2023		1	resources/sources/triton/README.md:224	src:triton
+10.5194/bg-22-1095-2025		3	ideas/register.md:938;literature/2026-10-09-register-checks-round1.md:194;literature/2026-10-20-q015-prior-check.md:46	Q-015
+10.5194/bg-22-1929-2025		1	resources/sources/nsb/README.md:474	src:nsb
+10.5194/bg-22-3503-2025		3	ideas/register.md:1007;literature/2026-10-10-register-checks-round3.md:147;resources/sources/triton/README.md:229	Q-016;src:triton
+10.5194/bg-23-1181-2026		2	ideas/register.md:2120;literature/2026-10-10-register-checks-round4.md:24	Q-031
+10.5194/cp-12-1079-2016		1	resources/sources/sahul-sealevel/README.md:41	src:sahul-sealevel
+10.5194/cp-13-1661-2017		1	resources/sources/shape-index/README.md:36	src:shape-index
+10.5194/cp-13-573-2017		1	literature/2026-10-20-q015-prior-check.md:45	Q-015
+10.5194/cp-17-1483-2021		2	ideas/register.md:1819;literature/2026-10-08-transfer-inputs.md:34	Q-027
+10.5194/cp-20-2473-2024		1	resources/sources/neotoma/README.md:43	src:neotoma
+10.5194/essd-14-1109-2022		1	resources/sources/rpd/README.md:39	src:rpd
+10.5194/essd-14-1331-2022		2	ideas/register.md:1559;literature/2026-10-10-register-checks-round6.md:195	Q-024
+10.5194/essd-14-3213-2022		2	ideas/register.md:1558;literature/2026-10-10-register-checks-round6.md:195	Q-024
+10.5194/essd-14-3695-2022		2	resources/sources/octopus/README.md:41;resources/sources/sahularch/README.md:44	src:octopus;src:sahularch
+10.5194/essd-16-1933-2024		1	resources/sources/sisal/README.md:41	src:sisal
+10.5194/essd-17-2681-2025		1	resources/sources/sahulchar/README.md:41	src:sahulchar
+10.5194/gmd-19-4931-2026		1	literature/2026-10-09-register-expansion.md:54	
+10.5194/jm-42-211-2023		1	resources/sources/triton/README.md:437	src:triton
+10.5194/jm-44-1-2025		1	resources/sources/triton/README.md:433	src:triton
+10.5194/wbf2026-770		1	literature/2026-10-20-q015-prior-check.md:42	Q-015
+10.5281/zenodo		1	resources/sources/nsb/README.md:53	src:nsb
+10.5281/zenodo.10014585		1	ideas/register.md:2358	Q-034
+10.5281/zenodo.10063218		1	resources/sources/nsb/README.md:529	src:nsb
+10.5281/zenodo.10149113		1	literature/2026-10-13-q021-route-review.md:84	Q-021
+10.5281/zenodo.10403766		1	literature/2026-10-08-transfer-inputs.md:47	
+10.5281/zenodo.10726619		1	resources/sources/sisal/README.md:24	src:sisal
+10.5281/zenodo.11001479		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:42	
+10.5281/zenodo.11059549		2	literature/2026-10-11-evolvability-and-first-tranche-close.md:66	
+10.5281/zenodo.11321797		1	literature/2026-10-disruption-susceptibility.md:329	
+10.5281/zenodo.11400588		1	literature/2026-10-14-b001-reassembly-contract.md:385	B-001
+10.5281/zenodo.11522106		1	literature/2026-10-disruption-susceptibility.md:329	
+10.5281/zenodo.12187757		1	literature/2026-10-09-register-expansion.md:74	
+10.5281/zenodo.12735901		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:834	
+10.5281/zenodo.13294509		5	data/q050-covariance-support/README.md:78;docs/review/2026-10-11-gpt6pro-review/review.md:462;ideas/register.md:3550;literature/2026-10-11-evolvability-and-first-tranche-close.md:68	Q-050
+10.5281/zenodo.14104270		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:423	
+10.5281/zenodo.15079899		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:74	
+10.5281/zenodo.15096088		3	ideas/register.md:2110;literature/2026-10-10-register-checks-round4.md:23;literature/2026-10-20-q023-q031-prior-checks.md:102	Q-023;Q-031
+10.5281/zenodo.15269136		2	data/q027-joint-support/README.md:34;ideas/register.md:1816	Q-027
+10.5281/zenodo.15269137		3	data/q027-joint-support/build.py:7;data/q027-support-audit/README.md:57;resources/sources/register-deposits/README.md:98	Q-027;src:register-deposits
+10.5281/zenodo.15718081		2	resources/sources/BACKLOG.md:70;resources/sources/austraits/README.md:46	src:austraits
+10.5281/zenodo.16394072		1	resources/sources/austarch/README.md:23	src:austarch
+10.5281/zenodo.16988254		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:826	
+10.5281/zenodo.17035671		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:42	
+10.5281/zenodo.17252973		1	literature/2026-10-09-register-expansion.md:74	
+10.5281/zenodo.17742290		3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:418;literature/2026-10-disruption-susceptibility.md:328	
+10.5281/zenodo.18512912		1	docs/review/2026-10-21-gpt6pro-proposals/snowball/2026-10-20-sturtian-adaptation-extinction-proposal.md:826	
+10.5281/zenodo.18700674		1	literature/2026-10-08-transfer-inputs.md:33	
+10.5281/zenodo.18854730		5	data/q012-source-support/README.md:16;data/q012-source-support/audit_source_support.py:99;ideas/2026-10-14-blue-sky-ideation-codex.md:75;literature/2026-10-15-q012-support-identification-design.md:24	Q-012
+10.5281/zenodo.18854731		1	ideas/2026-10-14-blue-sky-ideation-codex.md:74	
+10.5281/zenodo.18926572		1	literature/2026-10-09-register-expansion.md:74	
+10.5281/zenodo.19824423		2	literature/2026-10-09-register-expansion.md:71;literature/2026-10-14-q010-prior-check.md:41	Q-010
+10.5281/zenodo.21414007		2	data/q012-source-support/README.md:15;data/q012-source-support/audit_source_support.py:99	Q-012
+10.5281/zenodo.21782433		1	resources/sources/austraits/README.md:23	src:austraits
+10.5281/zenodo.3408197		1	resources/sources/nsb/README.md:342	src:nsb
+10.5281/zenodo.3568417		2	resources/sources/austraits/README.md:22	src:austraits
+10.5281/zenodo.3701302		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:419	
+10.5281/zenodo.3770348		2	ideas/register.md:2281;literature/2026-10-10-boundary-counts-and-incumbency.md:98	Q-033
+10.5281/zenodo.3959365		1	resources/sources/sahul-sealevel/README.md:20	src:sahul-sealevel
+10.5281/zenodo.5027293		2	data/interval-crosswalk/README.md:30;literature/2026-10-disruption-susceptibility.md:323	
+10.5281/zenodo.5519730		2	literature/2026-10-08-transfer-inputs.md:40;literature/2026-10-disruption-susceptibility.md:328	
+10.5281/zenodo.5562891		1	literature/2026-10-11-interchange-transfer-and-spatial-temporal-support.md:283	
+10.5281/zenodo.5899743		1	literature/2026-10-08-transfer-inputs.md:48	
+10.5281/zenodo.6462286		1	resources/sources/au-fossil-deposits/README.md:142	src:au-fossil-deposits
+10.5281/zenodo.6462287		1	resources/sources/au-fossil-deposits/README.md:45	src:au-fossil-deposits
+10.5281/zenodo.7242861		2	ideas/register.md:2210;literature/2026-10-10-register-checks-round5.md:148	Q-032
+10.5281/zenodo.7816408		6	data/q038-monarrez-contract/README.md:36;data/q038-monarrez-contract/author-email-draft.md:24;ideas/register.md:2680;literature/2026-10-11-register-checks-round9.md:77;literature/2026-10-disruption-susceptibility.md:327;resources/sources/register-deposits/README.md:98	Q-038;src:register-deposits
+10.5281/zenodo.8154672		1	literature/2026-10-disruption-susceptibility.md:331	
+10.5281/zenodo.8237751		1	literature/2026-10-disruption-susceptibility.md:324	
+10.5281/zenodo.8238613		1	resources/sources/nsb/README.md:23	src:nsb
+10.5281/zenodo.8299571		2	resources/sources/sahul-sealevel/README.md:22	src:sahul-sealevel
+10.5281/zenodo.8341743		1	literature/2026-10-11-register-checks-round9.md:76	Q-038
+10.5281/zenodo.8398420		1	literature/2026-10-14-b001-reassembly-contract.md:384	B-001
+10.5284/1027216		2	resources/sources/austarch/README.md:22	src:austarch
+10.5285/4f68d5c7-45eb-f999-e063-7086abc036fa		1	resources/sources/BACKLOG.md:94	
+10.5287/ora-2nanwp4rk		2	resources/sources/sisal/README.md:13	src:sisal
+10.5522/04/14400947.v1		2	ideas/register.md:2279;literature/2026-10-10-prediction-units-and-priority.md:221	Q-033
+10.6084/m9.figshare.12293345		3	resources/sources/BACKLOG.md:60;resources/sources/beyer2020/README.md:21	src:beyer2020
+10.6084/m9.figshare.13028255		1	resources/sources/names-status/README.md:28	src:names-status
+10.6084/m9.figshare.13517414.v4		3	data/triton-event-support/README.md:22;data/triton-event-support/build.R:5;resources/sources/triton/README.md:51	src:triton
+10.6084/m9.figshare.16586228		1	resources/sources/names-status/README.md:27	src:names-status
+10.6084/m9.figshare.17113370.v1		1	resources/sources/au-fossil-deposits/README.md:43	src:au-fossil-deposits
+10.6084/m9.figshare.26103031		1	ideas/2026-10-14-blue-sky-ideation-codex.md:254	
+10.6084/m9.figshare.27909116.v1		2	ideas/2026-10-21-gpt6pro-blind-ediacaran-assessment-claude.md:190;ideas/2026-10-21-outside-consultations-response-codex.md:90	
+10.6084/m9.figshare.5046964		1	literature/2026-10-15-b003-escalation-evidence-contract.md:164	B-003
+10.6084/m9.figshare.5746797.v1		1	resources/sources/au-fossil-deposits/README.md:40	src:au-fossil-deposits
+10.6084/m9.figshare.7357193		1	literature/2026-10-08-transfer-inputs.md:29	
+10.6084/m9.figshare.7357193.v1		1	literature/2026-10-09-penn-calibration-source-correction.md:13	
+10.6084/m9.figshare.8796944		1	resources/sources/fossahul/README.md:22	src:fossahul
+10.6084/m9.figshare.8796944.v3		1	resources/sources/fossahul/README.md:46	src:fossahul
+10.6084/m9.figshare.c.5082855		1	ideas/2026-10-14-blue-sky-ideation-codex.md:338	
+10.6084/m9.figshare.c.5242154		1	resources/sources/triton/README.md:24	src:triton
+10.6084/m9.figshare.c.7881988		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:74	
+10.64898/2026.02.24.707709		1	literature/2026-10-10-register-checks-round7.md:30	Q-037
+10.64898/2026.04.07.716927		1	literature/2026-10-disruption-susceptibility.md:407	
+10.64898/2026.06.22.733099		2	ideas/register.md:2518;literature/2026-10-10-register-checks-round7.md:29	Q-037
+10.64898/2026.07.21.739780		8	ideas/register.md:861;literature/2026-10-09-register-checks-round1.md:81;literature/2026-10-10-register-checks-round7.md:181;literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:235;literature/2026-10-14-q012-prior-check.md:33	Q-012;Q-038
+10.64898/2026.10.03.756400		1	ideas/2026-10-14-blue-sky-ideation-claude.md:240	
+10.7185/geochemlet.2137		2	ideas/register.md:2059;literature/2026-10-10-register-checks-round4.md:68	Q-030
+10.7185/gold2025.31362		1	literature/2026-10-09-a-mi-transfer-prior-work.md:29	
+10.7554/elife.63870		2	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:783	
+10.7717/peerj.4417		4	ideas/register.md:3247;literature/2026-10-10-register-checks-round8.md:144;literature/2026-10-11-survivors-spatial-richness-and-data-vintages.md:278	Q-045
+10.7910/dvn/3du1vw		4	docs/review/2026-10-21-gpt6pro-blind-ediacaran/ediacaran_cambrian_consultation.md:122	
+	16593761	1	literature/2026-10-21-recruitment-analytic-check-codex.md:91	
+	27698119	1	docs/review/2026-10-11-gpt6pro-review/review.md:442	
+	35210577	1	docs/review/2026-10-21-gpt6pro-proposals/hybridisation/hybridisation_summary.md:25	
+	35861420	1	ideas/2026-10-11-external-review-response-codex.md:33	Q-006
+	37274755	1	docs/review/2026-10-11-gpt6pro-review/review.md:456	
+	39074280	1	docs/review/2026-10-11-gpt6pro-review/review.md:468	
+	39976401	1	ideas/2026-10-11-external-review-response-codex.md:60	Q-006
+	41512851	1	literature/2026-10-10-selectivity-stasis-and-evolutionary-futures.md:245	
+	42406958	1	literature/2026-10-08-codex-review-disruption.md:107	
+	9595617	3	docs/review/2026-10-21-gpt6pro-proposals/recruitment/2026-10-20_recruitment_failure_mass_extinction_proposal.md:807;literature/2026-10-21-recruitment-analytic-check-codex.md:93	

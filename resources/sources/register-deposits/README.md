@@ -367,6 +367,15 @@ and Mallet's simulation zip) is in the mirror at
 ## Weaknesses and pitfalls
 
 - [Detail withheld pending disclosure to the data custodian.]
+- **Monarrez et al. 2023's capture histories in the electronic supplement are
+  corrupted.** In `ESM_Dataset_S1.xlsx` (Zenodo 8341743), the `ch` column of
+  the 6,562 genera is stored as numbers. 5,291 of them have become floating
+  point (`1.1099999999999999E+47`), and every history has lost its leading
+  zeros, so the stage positions cannot be recovered. Use instead the Dryad
+  deposit's `encounter_history_bs_gr_5class_Big5.Rdata` (an R binary, not
+  read here), or rebuild the histories from its `genera_range_through.txt`
+  with the code repository. Flagged by
+  the main Claude session (board 76/2371); checked here 2026-10-24.
 - **Two copies can differ.** Craffey et al.'s journal copy (Figshare) and
   Dryad v8 ([au-fossil-deposits](../au-fossil-deposits/README.md)) hold the
   same 1,540 occurrences (the Figshare file adds one row of three `NA`s). Four

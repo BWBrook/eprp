@@ -26,6 +26,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [octopus](octopus/README.md): OCTOPUS, an open geochronology and environmental database f… | database | open | not taxonomic; hosts age and proxy collections | Quaternary (cosmogenic nuclides to Pleistocene; l… | 25 layers | yes | – |
 | [palaeogeography](palaeogeography/README.md): Palaeogeography — 26 plate models (the GPlates Plate Model … | compilation | open | not taxonomic: plate rotations, plate and coastline polygon… | Proterozoic to present (the index gives each mode… | 26 plate models | yes | Q-012, Q-027, Q-030, Q-035, Q-040, Q-049, B-005, Q-020 |
 | [pbdb](pbdb/README.md): Paleobiology Database (PBDB) | database | open | all fossil groups: invertebrates, vertebrates, plants, micr… | Archean to Holocene; 99.9% of occurrences Ediacar… | 1,782,649 occurrences | yes | Q-002, Q-004, Q-006, Q-010, Q-013, Q-016, Q-018, Q-019, Q-020, Q-023, Q-025, Q-026, Q-027, Q-028, Q-029, Q-030, Q-033, Q-037, Q-038, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045, Q-047, Q-049, B-001, B-003, B-005, B-007, B-008, B-009, B-010, B-013, B-014, B-015, B-018 |
+| [pbdb-chronosphere](pbdb-chronosphere/README.md): PBDB dated downloads archived by chronosphere — 1,178 globa… | deposit | open | all PBDB occurrences returned by the archive's API call (se… | Ediacaran to Holocene until February 2026; all re… | 1,178 versions | yes | Q-045, Q-044, Q-040 |
 | [register-deposits](register-deposits/README.md): Deposits named by the EPRP question registers and notes — D… | deposit | open | marine invertebrates (molluscs, brachiopods, bryozoans, ost… | Proterozoic to Recent | 91 deposits | yes | Q-001, Q-002, Q-005, Q-008, Q-009, Q-010, Q-011, Q-012, Q-020, Q-021, Q-022, Q-027, Q-029, Q-031, Q-032, Q-033, Q-034, Q-036, Q-038, Q-044, Q-045, Q-050, B-001, B-002, B-003, B-009, B-012, B-014, B-016 |
 | [rpd](rpd/README.md): Reading Palaeofire Database (RPD) | compilation | open | not taxonomic; sedimentary charcoal records | Late Quaternary; Sahul records mostly Holocene (m… | 1,676 entities | yes | – |
 | [sahul-sealevel](sahul-sealevel/README.md): Sahul sea-level and palaeogeography pack (Pico et al. 2020;… | deposit | open | not taxonomic; sea level, shelf exposure and palaeotopograp… | global sea level 0-798 ka; Sahul and Sunda shelf … | 95 pico rows | yes | – |
@@ -88,11 +89,11 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-037**: pbdb
 - **Q-038**: pbdb, register-deposits
 - **Q-039**: classic-compendia, pbdb
-- **Q-040**: classic-compendia, palaeogeography, pbdb
+- **Q-040**: classic-compendia, palaeogeography, pbdb, pbdb-chronosphere
 - **Q-041**: classic-compendia, pbdb, timescale
 - **Q-042**: classic-compendia, pbdb
-- **Q-044**: classic-compendia, pbdb, register-deposits
-- **Q-045**: classic-compendia, pbdb, register-deposits, timescale
+- **Q-044**: classic-compendia, pbdb, pbdb-chronosphere, register-deposits
+- **Q-045**: classic-compendia, pbdb, pbdb-chronosphere, register-deposits, timescale
 - **Q-047**: pbdb
 - **Q-049**: palaeogeography, pbdb
 - **Q-050**: climate-forcing, register-deposits
