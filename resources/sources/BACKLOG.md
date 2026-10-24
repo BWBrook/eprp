@@ -33,14 +33,14 @@ readiness:
 | # | Source | Serves | Access | Notes |
 | ---: | --- | --- | --- | --- |
 | 1 | ~~PBDB, global~~ **done 23 Oct** ([pbdb](pbdb/README.md)) | 43 questions (8 develop) | public global snapshot, reconciled by partition | [Detail withheld pending disclosure to the data custodian.] |
-| 2 | ~~Dryad deposits the registers name~~ **done 23 Oct** ([register-deposits](register-deposits/README.md)) | 16 questions incl. Q-038 and B-002 | `data_mirror.py dryad` | 15 deposits, 545 MB |
-| 3 | **Fossil-inclusive dated trees** | Q-012 (active), Q-022, Q-004, Q-043 | Lamyman 2026, Zenodo 18854730 (1.16 GB, CC BY 4.0); Aze 2011; Cantalapiedra 2019 (Figshare) | Only 0.9 MB of Lamyman is held locally |
+| 2 | ~~Deposits the registers and notes name~~ **done 23 Oct** ([register-deposits](register-deposits/README.md)) | 16 questions incl. Q-038 and B-002 (Dryad); Q-001, Q-012, Q-027, Q-029, Q-031 to Q-034, Q-038, Q-050, B-001 and B-003, and the notes and proposals (Zenodo, Figshare, PANGAEA and further Dryad) | `data_mirror.py dryad`, `zenodo`, `figshare`, `url` | [Detail withheld pending disclosure to the data custodian.] |
+| 3 | **Fossil-inclusive dated trees** | Q-012 (active), Q-022, Q-004, Q-043 | ~~Lamyman 2026~~ mirrored (Zenodo 21414007, the newest version of 18854730; 1.16 GB) and ~~Cantalapiedra 2019~~ (Dryad) in [register-deposits](register-deposits/README.md); Aze 2011 to do | Aze et al. 2011 remains |
 | 4 | **Palaeogeography and plate models** | 15 questions; the Triton/NSB plate-model inconsistency blocking Q-012 exposure; B-005, Q-020, Q-040, Q-049 | PaleoDEM (Zenodo 5348492); GPlates rotation models (Seton 2012, Matthews 2016, Merdith 2021; recall) | PBDB already returns three palaeocoordinate models |
-| 5 | **Climate reconstructions and forcing** | Q-030 (develop), Q-027, Q-049, Q-007, Q-011, Q-003 | PhanDA, PhanSST (GitHub, no licence declared; papers CC BY), HadCM3L priors (Zenodo 8237751), Song 2021 (Zenodo 5027293), CENOGRID and LR04; LIP, CO2 and δ13C event tables (Green 2022, Rothman 2017) | 62 MB held locally; licence question for the repositories |
-| 6 | **Time scale** | Q-041, Q-035, Q-005 | GTS2020 and ICS boundary ages with uncertainties | TimeScale Creator datapack blocked (C9 f) |
+| 5 | ~~Climate reconstructions and forcing~~ **done 23 Oct** ([climate-forcing](climate-forcing/README.md)) | Q-030 (develop), Q-027, Q-049, Q-007, Q-011, Q-003 | PhanDA, PhanSST (GitHub, no licence declared; papers CC BY), HadCM3L priors (Zenodo 8237751), Song 2021 (Zenodo 5027293), CENOGRID and LR04; LIP, CO2 and δ13C event tables (Green 2022, Rothman 2017) | 62 MB held locally; licence question for the repositories |
+| 6 | ~~Time scale~~ **done 23 Oct** ([timescale](timescale/README.md)) | Q-041, Q-035, Q-005, Q-045 | ICS chart releases as RDF (to v2020/01) and PDF (to 2024/12), Macrostrat and PBDB interval tables | TimeScale Creator datapack blocked (C9 f) |
 | 7 | **Macrostrat, global** | B-005, B-007, B-008 and inferred others | open API, CC BY 4.0 | Reclassify: the Australian negative does not decide a global need |
-| 8 | **Island-extinction compilations** | Q-034, Q-017, Q-004 | Rozzi 2023 (Figshare, GitHub); Cooke 2023 (Zenodo 10014585) | Joins the Sahul and FRED work |
-| 9 | **Modern-bridge time series and invasions** | Q-025 (develop), Q-028, Q-047 | BioTIME, GRIIS, SInAS 3.1.1, Seebens first records, GloNAF | Hosting to confirm |
+| 8 | **Island-extinction compilations** | Q-034, Q-017, Q-004 | Rozzi 2023 (Figshare, GitHub); ~~Cooke 2023~~ mirrored (Zenodo 10014585) in [register-deposits](register-deposits/README.md) | Rozzi 2023 remains; joins the Sahul and FRED work |
+| 9 | **Modern-bridge time series and invasions** | Q-025 (develop), Q-028, Q-047 | BioTIME, GRIIS, ~~SInAS~~ (3.2 mirrored in [register-deposits](register-deposits/README.md)), Seebens first records, GloNAF | Hosting to confirm |
 | 10 | **LegacyPollen and LegacyAge 1.0** | Q-024 | ESSD data papers (PANGAEA; recall) | Neotoma covers the Sahul slice only |
 
 Also done, 23 October at Barry's request: the classic range compendia,
@@ -115,5 +115,13 @@ twice; their Triton v4 files match this mirror's manifest.
 ## Elsewhere
 
 - **PBDB (global)**: after the Australian pilot.
-- **Deposits already cited in EPRP**: 78 Dryad, Zenodo, Figshare and PANGAEA
-  DOIs (28, 39, 5, 6).
+- **Deposits on other repositories cited in EPRP**: two Mendeley Data
+  deposits (10.17632/g2g74cj4x7.2, 10.17632/r2h822zzxp.1), two OSF projects
+  (10.17605/OSF.IO/2CDQG, osf.io/nuhqx) and one Harvard Dataverse deposit
+  (10.7910/DVN/3DU1VW), cited in the literature notes and the 20–21 October
+  proposals and consultation. PaleoDEM (Zenodo 5348492, cited in the 14 October ideation)
+  belongs with row 4. Every Dryad, Zenodo, Figshare and PANGAEA deposit the
+  repository cites (two surveys, 23 October) is in
+  [register-deposits](register-deposits/README.md), except those other entries
+  hold (Triton, PhanDA priors, Song 2021, CENOGRID, the late Cambrian time
+  scale supplement).

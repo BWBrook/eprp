@@ -7,7 +7,7 @@
 Usage: uv run deposits_profile.py AU_FOSSIL_DEPOSITS_DIR OUT_TSV
 
 For each deposit's latest raw version: the manifest's title, DOI, publication
-date and licence, then every file with its size. Spreadsheets
+date and licence, then every file (in subdirectories too, named by relative path) with its size. Spreadsheets
 (.xlsx, .xls and the .xlsx members of zips) and .csv/.tsv files (and members) are read as
 tables; .txt, .md, .R and .m files give a line count and (for .txt and .md) the
 first line; .tps files give their specimen blocks; other types are listed as
@@ -108,20 +108,30 @@ def xlsx_sheets(dep, name, source):
         table(dep, name, f"sheet:{ws.title}", [list(r) for r in ws.iter_rows(values_only=True)])
 
 
+def newest(dep_dir):
+    """The newest mirrored version: last in data_mirror's versions.tsv (the provider's order), else by name."""
+    raw = glob.glob(os.path.join(dep_dir, "raw", "*"))
+    try:
+        with open(os.path.join(dep_dir, "versions.tsv"), encoding="utf-8") as f:
+            order = [line.split("\t")[0] for line in f.read().splitlines()[1:]]
+    except FileNotFoundError:
+        order = []
+    return max(raw, key=lambda p: (order.index(os.path.basename(p)) if os.path.basename(p) in order else -1, p), default=None)
+
+
 root = sys.argv[1]
 deposits = sorted(d for d in os.listdir(root) if os.path.isdir(os.path.join(root, d)))
 for dep in deposits:
-    versions = sorted(glob.glob(os.path.join(root, dep, "raw", "*")))
-    if not versions:
+    v = newest(os.path.join(root, dep))
+    if v is None:
         continue
-    v = versions[-1]
     out.append((dep, "", "version_dir", os.path.basename(v)))
     with open(os.path.join(v, "MANIFEST.json")) as f:
         manifest = json.load(f)
     for metric, field in (("title", "title"), ("doi", "doi"), ("published", "publication_date"), ("licence", "license")):
         out.append((dep, "", metric, manifest.get(field) or "none"))
-    for path in sorted(glob.glob(os.path.join(v, "*"))):
-        name = os.path.basename(path)
+    for path in sorted(p for p in glob.glob(os.path.join(v, "**"), recursive=True) if os.path.isfile(p)):
+        name = os.path.relpath(path, v)
         if name == "MANIFEST.json":
             continue
         size = os.path.getsize(path)

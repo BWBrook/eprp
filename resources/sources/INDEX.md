@@ -12,6 +12,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [austraits](austraits/README.md): AusTraits, a curated plant trait database for the Australia… | compilation | open | Australian vascular plants (native and naturalised) | modern | 1,798,215 trait rows | yes | – |
 | [beyer2020](beyer2020/README.md): Beyer, Krapp and Manica (2020) high-resolution terrestrial … | deposit | open | not taxonomic: climate, bioclimate and potential vegetation… | 120 ka to present: 2 kyr steps to 22 ka, then 1 k… | 72 time slices | yes | – |
 | [classic-compendia](classic-compendia/README.md): Classic range compendia — Benton's The Fossil Record 2 (fam… | compilation | unclear | FR2: all life, families and family-surrogates (animals, pla… | FR2: Hadean to Holocene in 86 divisions (dated fr… | 7,109 fr2 family rows | yes | Q-023, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045 |
+| [climate-forcing](climate-forcing/README.md): Climate-forcing series and event tables — PhanDA, PhanSST, … | compilation | unclear | not taxonomic: temperature, CO2, benthic isotopes, carbon-c… | Phanerozoic (PhanDA 0-486.85 Ma; Scotese 100 inte… | 85 phanda stage slices | yes | Q-003, Q-007, Q-011, Q-019, Q-027, Q-030, Q-050, B-018 |
 | [fossahul](fossahul/README.md): FosSahul, quality-rated fossil ages for Sahul's Late Quater… | compilation | open | non-human vertebrates (mammals, birds, reptiles, amphibians) | Late Quaternary, mostly the last 130 kyr (ages to… | 11,872 records | yes | – |
 | [fossil-checklists](fossil-checklists/README.md): Australasian fossil species checklists (AAP National Fossil… | compilation | open | mammals, birds, reptiles and amphibians, Mesozoic tetrapods… | Cambrian to Holocene, by list | 299 mirrored occurrence rows | yes | – |
 | [fred](fred/README.md): FRED, the Fossil Record Electronic Database (New Zealand Fo… | database | registered | all fossil groups: a controlled list of 51 groups; foramini… | Cambrian to Recent, mostly Late Cretaceous–Cenozo… | 105,492 localities | no | Q-034 |
@@ -24,7 +25,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [nsb](nsb/README.md): Neptune Sandbox Berlin (NSB) | database | open | calcareous nannofossils, planktonic foraminifera, radiolari… | Late Jurassic to Recent; occurrence ages 0-151.08… | 783,987 occurrences | yes | Q-007, Q-016 |
 | [octopus](octopus/README.md): OCTOPUS, an open geochronology and environmental database f… | database | open | not taxonomic; hosts age and proxy collections | Quaternary (cosmogenic nuclides to Pleistocene; l… | 25 layers | yes | – |
 | [pbdb](pbdb/README.md): Paleobiology Database (PBDB) | database | open | all fossil groups: invertebrates, vertebrates, plants, micr… | Archean to Holocene; 99.9% of occurrences Ediacar… | 1,782,649 occurrences | yes | Q-002, Q-004, Q-006, Q-010, Q-013, Q-016, Q-018, Q-019, Q-020, Q-023, Q-025, Q-026, Q-027, Q-028, Q-029, Q-030, Q-033, Q-037, Q-038, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045, Q-047, Q-049, B-001, B-003, B-005, B-007, B-008, B-009, B-010, B-013, B-014, B-015, B-018 |
-| [register-deposits](register-deposits/README.md): Dryad deposits named by the EPRP question registers (global… | deposit | open | marine invertebrates (molluscs, brachiopods, bryozoans, ost… | Cambrian to Recent | 15 deposits | yes | Q-002, Q-005, Q-011, Q-012, Q-022, Q-027, Q-036, Q-038, Q-044, Q-045, Q-050, B-002, B-009, B-012, B-014, B-016 |
+| [register-deposits](register-deposits/README.md): Deposits named by the EPRP question registers and notes — D… | deposit | open | marine invertebrates (molluscs, brachiopods, bryozoans, ost… | Proterozoic to Recent | 78 deposits | yes | Q-001, Q-002, Q-005, Q-008, Q-009, Q-010, Q-011, Q-012, Q-020, Q-021, Q-022, Q-027, Q-029, Q-031, Q-032, Q-033, Q-034, Q-036, Q-038, Q-044, Q-045, Q-050, B-001, B-002, B-003, B-009, B-012, B-014, B-016 |
 | [rpd](rpd/README.md): Reading Palaeofire Database (RPD) | compilation | open | not taxonomic; sedimentary charcoal records | Late Quaternary; Sahul records mostly Holocene (m… | 1,676 entities | yes | – |
 | [sahul-sealevel](sahul-sealevel/README.md): Sahul sea-level and palaeogeography pack (Pico et al. 2020;… | deposit | open | not taxonomic; sea level, shelf exposure and palaeotopograp… | global sea level 0-798 ka; Sahul and Sunda shelf … | 95 pico rows | yes | – |
 | [sahularch](sahularch/README.md): SahulArch, a geochronological database for the archaeology … | compilation | open-nc | not taxonomic; archaeological age determinations | radiocarbon 0-55,000 BP; OSL to 239 ka; TL to 270… | 10,714 ages | yes | – |
@@ -32,13 +33,14 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [shape-index](shape-index/README.md): Palaeoarchive index for the SHAPE 6 ka and OZ-INTIMATE comp… | deposit | open | not taxonomic; palaeoclimate archives | Holocene and last glacial records; free-text end … | 37 records | yes | – |
 | [sisal](sisal/README.md): SISAL, the Speleothem Isotopes Synthesis and AnaLysis datab… | compilation | open | not taxonomic; speleothem stable isotopes and trace elements | global records to 565 ka; Australian records from… | 365 sites | yes | – |
 | [stratdat](stratdat/README.md): STRATDAT, Geoscience Australia's borehole biostratigraphy (… | database | open | microfossil biozones: dinocysts, spore-pollen, planktonic a… | Proterozoic to Quaternary; most picks with ages h… | 50,128 picks | yes | – |
+| [timescale](timescale/README.md): Geological time scale — ICS chart releases 2004 to 2020/01 … | compilation | unclear | not taxonomic: chronostratigraphic boundaries and intervals | Hadean to Holocene (the RDF to 4,000 Ma; the 2024… | 16 rdf releases | yes | Q-005, Q-035, Q-041, Q-045 |
 | [triton](triton/README.md): Triton, a species-level database of Cenozoic planktonic for… | compilation | open | planktonic foraminifera | Cenozoic; ages 0-66.0 Ma (GTS2020) | 541,846 presence rows | yes | Q-005, Q-007, Q-012, Q-020, Q-027 |
 
 ## By EPRP question
 
-- **B-001**: pbdb
+- **B-001**: pbdb, register-deposits
 - **B-002**: register-deposits
-- **B-003**: pbdb
+- **B-003**: pbdb, register-deposits
 - **B-005**: pbdb
 - **B-007**: pbdb
 - **B-008**: pbdb
@@ -49,39 +51,47 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **B-014**: pbdb, register-deposits
 - **B-015**: pbdb
 - **B-016**: register-deposits
-- **B-018**: pbdb
+- **B-018**: climate-forcing, pbdb
+- **Q-001**: register-deposits
 - **Q-002**: pbdb, register-deposits
+- **Q-003**: climate-forcing
 - **Q-004**: pbdb
-- **Q-005**: register-deposits, triton
+- **Q-005**: register-deposits, timescale, triton
 - **Q-006**: pbdb
-- **Q-007**: nsb, triton
-- **Q-010**: pbdb
-- **Q-011**: register-deposits
+- **Q-007**: climate-forcing, nsb, triton
+- **Q-008**: register-deposits
+- **Q-009**: register-deposits
+- **Q-010**: pbdb, register-deposits
+- **Q-011**: climate-forcing, register-deposits
 - **Q-012**: register-deposits, triton
 - **Q-013**: pbdb
 - **Q-016**: nsb, pbdb
 - **Q-018**: pbdb
-- **Q-019**: pbdb
-- **Q-020**: pbdb, triton
+- **Q-019**: climate-forcing, pbdb
+- **Q-020**: pbdb, register-deposits, triton
+- **Q-021**: register-deposits
 - **Q-022**: register-deposits
 - **Q-023**: classic-compendia, pbdb
 - **Q-025**: pbdb
 - **Q-026**: pbdb
-- **Q-027**: pbdb, register-deposits, triton
+- **Q-027**: climate-forcing, pbdb, register-deposits, triton
 - **Q-028**: pbdb
-- **Q-029**: pbdb
-- **Q-030**: pbdb
-- **Q-033**: pbdb
-- **Q-034**: fred
+- **Q-029**: pbdb, register-deposits
+- **Q-030**: climate-forcing, pbdb
+- **Q-031**: register-deposits
+- **Q-032**: register-deposits
+- **Q-033**: pbdb, register-deposits
+- **Q-034**: fred, register-deposits
+- **Q-035**: timescale
 - **Q-036**: register-deposits
 - **Q-037**: pbdb
 - **Q-038**: pbdb, register-deposits
 - **Q-039**: classic-compendia, pbdb
 - **Q-040**: classic-compendia, pbdb
-- **Q-041**: classic-compendia, pbdb
+- **Q-041**: classic-compendia, pbdb, timescale
 - **Q-042**: classic-compendia, pbdb
 - **Q-044**: classic-compendia, pbdb, register-deposits
-- **Q-045**: classic-compendia, pbdb, register-deposits
+- **Q-045**: classic-compendia, pbdb, register-deposits, timescale
 - **Q-047**: pbdb
 - **Q-049**: pbdb
-- **Q-050**: register-deposits
+- **Q-050**: climate-forcing, register-deposits

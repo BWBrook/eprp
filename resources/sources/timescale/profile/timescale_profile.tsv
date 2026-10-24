@@ -1,0 +1,71 @@
+table	metric	key	value
+isc	position reference systems	2004	ma 105; none 1
+isc	position reference systems	2005	ma 105; none 1
+isc	position reference systems	2006	ma 112; none 1
+isc	position reference systems	2008	ma 113; none 1
+isc	position reference systems	2009	ma 113; none 1
+isc	position reference systems	2010	ma 113; none 1
+isc	position reference systems	2012	ma 113; none 1
+isc	position reference systems	2013	ma 113; none 1
+isc	position reference systems	2014	ma 113; none 1
+isc	position reference systems	2016-10	ma 113; none 1
+isc	position reference systems	2016-12	ma 114
+isc	position reference systems	2017	ma 114
+isc	position reference systems	2018-1	ma 120; bp 5
+isc	position reference systems	2018	ma 117
+isc	position reference systems	2019	ma 120; bp 5
+isc	position reference systems	2020	ma 124; bp 5
+isc	files_used		isc2004.ttl, isc2005.ttl, isc2006.ttl, isc2008.ttl, isc2009.ttl, isc2010.ttl, isc2012.ttl, isc2013.ttl, isc2014.ttl, isc2016-10-tm.ttl, isc2016-12-time.ttl, isc2017.ttl, isc2018-1.ttl, isc2018.ttl, isc2019.ttl, isc2020.ttl
+isc	release	2004	106 boundaries (106 distinct ages); with an uncertainty 77 (0 of them 0); oldest 3600 Ma; from years before present 0
+isc	release	2005	106 boundaries (106 distinct ages); with an uncertainty 76 (0 of them 0); oldest 3600 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2004 -> 2005	2 of 104 shared boundaries moved; added 2, dropped 2; largest: BaseEdiacaran 600->630, BaseHolocene 0.0115->0.0117
+isc	release	2006	113 boundaries (113 distinct ages); with an uncertainty 80 (4 of them 0); oldest 3600 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2005 -> 2006	0 of 106 shared boundaries moved; added 7, dropped 0; largest: 
+isc	release	2008	114 boundaries (114 distinct ages); with an uncertainty 79 (4 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2006 -> 2008	3 of 107 shared boundaries moved; added 7, dropped 6; largest: BaseCambrianStage2 534.6->528, BaseEdiacaran 630->635, BaseFurongian 501->499
+isc	release	2009	114 boundaries (114 distinct ages); with an uncertainty 79 (4 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2008 -> 2009	1 of 113 shared boundaries moved; added 1, dropped 1; largest: BaseQuaternary 1.806->2.588
+isc	release	2010	114 boundaries (114 distinct ages); with an uncertainty 79 (4 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2009 -> 2010	0 of 114 shared boundaries moved; added 0, dropped 0; largest: 
+isc	release	2012	114 boundaries (114 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2010 -> 2012	87 of 112 shared boundaries moved; added 2, dropped 2; largest: BaseNorian 216.5->228, BaseUpperTriassic 228.7->235, BaseArtinskian 284.4->290.1, BaseWenlock 428.2->433.4, BasePennsylvanian 318.1->323.2, BaseLadinian 237->242
+isc	release	2013	114 boundaries (114 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2012 -> 2013	7 of 114 shared boundaries moved; added 0, dropped 0; largest: BaseKungurian 279.3->283.5, BaseUpperTriassic 235->237, BaseNorian 228->227, BaseSakmarian 295.5->295, BaseMesozoic 252.6->252.17, BaseLopingian 259.9->259.8
+isc	release	2014	114 boundaries (114 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2013 -> 2014	2 of 114 shared boundaries moved; added 0, dropped 0; largest: BaseQuaternary 2.588->2.58, BaseCalabrian 1.806->1.8
+isc	release	2016-10	114 boundaries (114 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2014 -> 2016-10	8 of 114 shared boundaries moved; added 0, dropped 0; largest: BaseCryogenian 850->720, BaseLopingian 259.8->259.1, BaseGuadalupian 272.3->272.95, BaseSilurian 443.4->443.8, BaseMesozoic 252.17->251.902, BasePriabonian 38->37.8
+isc	release	2016-12	114 boundaries (114 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2016-10 -> 2016-12	0 of 114 shared boundaries moved; added 0, dropped 0; largest: 
+isc	release	2017	114 boundaries (114 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2016-12 -> 2017	1 of 114 shared boundaries moved; added 0, dropped 0; largest: BaseChattian 28.1->27.82
+isc	release	2018	117 boundaries (116 distinct ages); with an uncertainty 55 (0 of them 0); oldest 4000 Ma; from years before present 0
+isc	changes_from_previous (by URI)	2017 -> 2018	0 of 114 shared boundaries moved; added 3, dropped 0; largest: 
+isc	release	2018-1	125 boundaries (116 distinct ages); with an uncertainty 60 (0 of them 0); oldest 4000 Ma; from years before present 5
+isc	changes_from_previous (by URI)	2018 -> 2018-1	0 of 117 shared boundaries moved; added 8, dropped 0; largest: 
+isc	release	2019	125 boundaries (116 distinct ages); with an uncertainty 60 (0 of them 0); oldest 4000 Ma; from years before present 5
+isc	changes_from_previous (by URI)	2018-1 -> 2019	2 of 125 shared boundaries moved; added 0, dropped 0; largest: BaseSakmarian 295->293.52, BaseMiddlePleistocene 0.781->0.773
+isc	release	2020	125 boundaries (116 distinct ages); with an uncertainty 60 (0 of them 0); oldest 4000 Ma; from years before present 1
+isc	changes_from_previous (by URI)	2019 -> 2020	5 of 125 shared boundaries moved; added 0, dropped 0; largest: BaseHauterivian 132.9->132.6, BaseUpperPleistocene 0.126->0.129, BaseLatePleistocene 0.126->0.129, BaseMiddlePleistocene 0.773->0.774, BaseNorthgrippian 0.008276->0.0082
+isc	isc2020.ttl	owl:versionInfo	gts2020:2020-01-13
+isc	newest change log	ChangeLog2012-2013-2014-2015-2016-2017-2018-2019-2020.txt	Changes ICS chart v.2020/01 = actual version (for distribution at the time of 36th IGC Delhi
+macrostrat	intervals	all; licence field	1716; CC-BY 4.0
+macrostrat	timescales	international intervals (id 11); New Zealand (id 6) by interval type	170; age 88, epoch 1
+pbdb	intervals	scale 1 with a base age, by type	171: age 101, epoch 34, period 22, era 10, eon 4
+bases_compared	PBDB vs RDF 2020 (chart 2020/01)	by name	156 shared; equal within 0.005 Myr 66; differing 90; by PBDB type, shared/differing: age 94/61, eon 3/2, epoch 28/18, era 9/1, period 22/8; PBDB names with no RDF label: 15 (Early Cretaceous, Early Devonian, Early Jurassic, Early Ordovician, Early Triassic, Eoarchean, Greenlandian, Hadean, Ludfordian, Series 2, Stage 10, Stage 2, Stage 3, Stage 4, Wuliuan); largest: Archean 4031 vs 4000; Barremian 125.77 vs 129.4; Aptian 121.4 vs 125; Emsian 410.62 vs 407.6; Tithonian 149.2 vs 152.1; Rhaetian 205.7 vs 208.5; Valanginian 137.05 vs 139.8; Miaolingian 506.5 vs 509; Kimmeridgian 154.8 vs 157.3; Pragian 413.02 vs 410.8; Terreneuvian 538.8 vs 541; Phanerozoic 538.8 vs 541
+bases_compared	PBDB vs Macrostrat international intervals	by name	170 shared; equal within 0.005 Myr 165; differing 5; largest: Olenekian 250.8 vs 249.9; Wuchiapingian 259.857 vs 259.51; Lopingian 259.857 vs 259.51; Middle Triassic 247 vs 246.7; Anisian 247 vs 246.7
+ics_chart	printed numbers	2014-10	126 tokens, 120 distinct values
+ics_chart	printed numbers	2015-01	126 tokens, 120 distinct values; vs 2014-10: new values 2, gone 2
+ics_chart	printed numbers	2016-04	126 tokens, 120 distinct values; vs 2015-01: new values 1, gone 1
+ics_chart	printed numbers	2016-10	126 tokens, 120 distinct values; vs 2016-04: new values 0, gone 0
+ics_chart	printed numbers	2016-12	126 tokens, 120 distinct values; vs 2016-10: new values 3, gone 3
+ics_chart	printed numbers	2017-02	126 tokens, 120 distinct values; vs 2016-12: new values 2, gone 2
+ics_chart	printed numbers	2018-08	128 tokens, 122 distinct values; vs 2017-02: new values 4, gone 2
+ics_chart	printed numbers	2019-05	128 tokens, 122 distinct values; vs 2018-08: new values 2, gone 2
+ics_chart	printed numbers	2020-01	128 tokens, 122 distinct values; vs 2019-05: new values 4, gone 4
+ics_chart	printed numbers	2020-03	128 tokens, 122 distinct values; vs 2020-01: new values 1, gone 1
+ics_chart	printed numbers	2024-12	128 tokens, 122 distinct values; vs 2020-03: new values 68, gone 68
+ics_chart	2024-12 values matched to PBDB scale-1 bases	rows	166 of 171 rows (114 distinct ages); with ± 96 rows (63 distinct ages); approximate 18 rows (14 distinct); matched through an integer token 22
+ics_chart	PBDB bases not printed on 2024-12		Anisian (age) 247; Middle Triassic (epoch) 247; Olenekian (age) 250.8; Lopingian (epoch) 259.857; Wuchiapingian (age) 259.857
+ics_chart	2024-12 approximate (~) values		14: ~205.7, ~227.3, ~237, ~491.0, ~494.2, ~497.0, ~500.5, ~504.5, ~506.5, ~514.5, ~521.0, ~529.0, ~635, ~720
+farrell2025	files		B37919_SuppMat1.pdf, B37919_SuppMat2.zip

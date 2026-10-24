@@ -1,0 +1,12 @@
+route	version_dir	files	bytes	retrieved_utc	licence
+climate-forcing/phanda	2026-03-09_9f06c0d976	1218	517264781	2026-10-23T09:09:18+00:00	none stated
+climate-forcing/phansst	2023-03-09_32cc98ed53	4	42548835	2026-10-23T09:09:29+00:00	none stated
+climate-forcing/song2021-temperature-thresholds	5027293	3	1346556	2026-10-23T09:09:47+00:00	cc-by-4.0
+climate-forcing/scotese2021-gmst	scotese02a_v21321-C1_8238875	5	90800459	2026-10-23T09:14:57+00:00	cc-by-4.0
+climate-forcing/lr04	2026-10-23T0914Z_url	2	447390	2026-10-23T09:15:05+00:00	NOAA NCEI World Data Service for Paleoclimatology (US government, no restriction stated); author's site copy: none stated
+climate-forcing/rothman2017-carbon-events	2026-10-23T0915Z_url	1	242802	2026-10-23T09:15:19+00:00	CC BY-NC 4.0 (article licence, Science Advances 3: e1700906)
+climate-forcing/green2022-lips	2026-10-23T0915Z_url	2	2317879	2026-10-23T09:17:28+00:00	CC BY-NC-ND 4.0 (article licence, PNAS 119: e2120441119)
+climate-forcing/cenogrid	2026-10-23T0926Z_url	1	1814212	2026-10-23T09:26:38+00:00	CC BY 4.0 (PANGAEA dataset metadata)
+climate-forcing/phansst-zenodo	v0.0.1-beta_7275402	1	2629453	2026-10-23T09:46:05+00:00	other-open (Zenodo)
+climate-forcing/green2022-code	2023-03-21_e3038b5c02	34	151080	2026-10-23T09:46:52+00:00	none stated
+climate-forcing/phanda-hadcm3l-priors	(indexed only: 1_8237751, 11418481731 bytes)	0	0		cc-by-4.0

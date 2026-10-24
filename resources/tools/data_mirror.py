@@ -13,7 +13,10 @@ Usage:
 Writes DEST/versions.tsv (every version the provider offers) and
 DEST/raw/<version_dir>/ holding the unchanged files plus MANIFEST.json for the
 selected versions: --latest takes the newest version of each record (Figshare:
-of each article), --only names version_dirs, and both may be combined. Zenodo
+of each article; Zenodo, Dryad and Figshare: by the provider's own version
+order, not the publication dates, which depositors set and which need not
+increase),
+--only names version_dirs, and both may be combined. Zenodo
 version_dirs are <version>_<record>; Figshare ones are <article-title>_v<N>_<article>,
 one per version of every article in the collection; GitHub ones are
 <commit-date>_<sha10>, one per commit on the default branch; Dryad ones are
@@ -21,7 +24,8 @@ v<version>_<version-id>, one per published version (catalogue reads are open,
 but file downloads need a Dryad API account: DRYAD_CLIENT_ID and
 DRYAD_CLIENT_SECRET in the environment or ~/.config/dryad/credentials, mode
 600, exchanged for a bearer token). Files are verified
-against the provider's size and checksum (md5, or the blob hash for GitHub),
+against the provider's size and checksum (md5 for Zenodo and Figshare, md5 or
+sha256 for Dryad, the blob hash for GitHub),
 hashed with sha256, then made read-only. A live WFS has no versions: each `wfs`
 run writes a dated snapshot, raw/<UTC timestamp>_wfs/, with one CSV per layer
 (GeoServer outputFormat=csv) and its schema; the row count must equal the
@@ -102,14 +106,18 @@ def zenodo_versions(record_id):
         v = slug(m.get("version", ""))
         files = [{"key": x["key"], "size": x["size"], "checksum": x["checksum"], "url": x["links"]["self"]}
                  for x in h["files"]]
+        rel = ((m.get("relations") or {}).get("version") or [{}])[0]
+        if "index" not in rel:
+            raise RuntimeError(f"record {h['id']}: Zenodo gives no version index")
         out.append({
             "dir": f"{v}_{h['id']}" if v else str(h["id"]), "provider": "zenodo", "record": h["id"],
+            "index": rel["index"],
             "version": m.get("version"), "doi": h.get("doi"), "concept_doi": h.get("conceptdoi"),
             "publication_date": m.get("publication_date", ""), "title": m.get("title"),
             "creators": [c.get("name") for c in m.get("creators", [])],
             "license": (m.get("license") or {}).get("id", ""), "files": files,
         })
-    return sorted(out, key=lambda r: (r["publication_date"], r["record"]))
+    return sorted(out, key=lambda r: r["index"])  # Zenodo's own order; depositors set publication dates by hand
 
 
 def figshare_versions(record_id):
@@ -271,6 +279,8 @@ def dryad_resolve(url):
 def download(url, dest, size, checksum):
     algo, expected = checksum.split(":", 1)
     part = dest + ".part"
+    if size == 0:
+        open(part, "wb").close()
     for attempt in range(8):
         have = os.path.getsize(part) if os.path.exists(part) else 0
         if have > size:
@@ -462,7 +472,12 @@ def main():
     p = sub.add_parser("verify")
     p.add_argument("dest")
     p.add_argument("--only", nargs="*", default=None)
-    a = ap.parse_args()
+    a, extra = ap.parse_known_args()
+    if extra:  # url takes its URLs before or after the options
+        if a.command == "url" and not any(x.startswith("-") for x in extra):
+            a.urls += extra
+        else:
+            ap.error("unrecognized arguments: " + " ".join(extra))
     raw_root = os.path.join(a.dest, "raw")
     if a.command == "verify":
         bad = verify(raw_root, a.only)
@@ -512,10 +527,13 @@ def main():
     chosen = set(a.only or [])
     if a.latest:
         group = (lambda r: r["record"]) if a.command == "figshare" else (lambda r: "all")
+        order = {"zenodo": lambda r: r["index"], "dryad": lambda r: r["version"],
+                 "figshare": lambda r: r["version"]}.get(
+            a.command, lambda r: (r["publication_date"], str(r["version"])))
         newest = {}
         for r in versions:
             key = group(r)
-            if key not in newest or (r["publication_date"], str(r["version"])) > (newest[key]["publication_date"], str(newest[key]["version"])):
+            if key not in newest or order(r) > order(newest[key]):
                 newest[key] = r
         chosen |= {r["dir"] for r in newest.values()}
     wanted = [r for r in versions if r["dir"] in chosen] if (a.only is not None or a.latest) else versions

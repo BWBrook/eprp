@@ -11,6 +11,7 @@
 # Usage: classic_compendia_snapshot.sh WAYBACK_CAPTURES_TSV [ROUTE ...]
 # ROUTE is any of bristol wayback peters github cran bhl (default: all).
 set -euo pipefail
+CAPTURES=$(realpath "$1")
 cd /data/paleodata
 M="python3 _tools/data_mirror.py"
 D=classic-compendia
@@ -41,7 +42,7 @@ $M url "$D/fr2/bristol" --specs-file "$T/bristol" --pause 1 \
 fi
 
 if want wayback; then
-tail -n +2 "$1" | awk -F'\t' '{print $5 "::https://web.archive.org/web/" $1 "id_/" $6}' > "$T/wayback"
+tail -n +2 "$CAPTURES" | awk -F'\t' '{print $5 "::https://web.archive.org/web/" $1 "id_/" $6}' > "$T/wayback"
 $M url "$D/fr2/wayback" --specs-file "$T/wayback" --pause 2 \
   --license "none stated; Internet Archive Wayback Machine captures of palaeo.gly.bris.ac.uk/frwhole (University of Bristol, 1997-2006)"
 fi
@@ -60,7 +61,6 @@ $M url "$D/sepkoski/peters" --specs-file "$T/peters" --pause 2 \
   --license "site terms: 'You are welcome to use these data with proper citation of Sepkoski's work. It would also be appropriate to acknowledge this online database and its creator/maintainer.' (S. E. Peters, University of Wisconsin-Madison)"
 fi
 
-# url takes its URLs before the options: argparse does not collect positionals given after them.
 if want github; then $M github palaeoverse/sepkoski "$D/sepkoski/r-package-github" --latest; fi
 if want cran; then
 $M url "$D/sepkoski/r-package-cran" "https://cran.r-project.org/src/contrib/sepkoski_0.0.1.tar.gz" \

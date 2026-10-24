@@ -1,16 +1,79 @@
-deposit	version_dir	doi	licence	published	files	bytes
-benson2025-marine-latitudinal-diversity	v4_361737	10.5061/dryad.6djh9w1bx	CC0-1.0	2025-04-29	2	79549455
-brombacher2017-foram-allometry	v1_3046	10.5061/dryad.8jf2k	CC0-1.0	2017-03-17	1	845521
-cantalapiedra2019-phylogenetic-diversity	v1_26492	10.5061/dryad.gd8038s	CC0-1.0	2019-05-16	1	3989279
-close2019-tetrapod-local-richness	v1_23260	10.5061/dryad.3v0p84v	CC0-1.0	2019-02-18	1	72217726
-crampton2026-extinction-spectrum	v3_444094	10.5061/dryad.vx0k6dk71	CC0-1.0	2026-05-26	2	25528098
-franeck2018-ordovician-radiation	v2_27681	10.5061/dryad.nk218ht	CC0-1.0	2018-12-27	2	4386647
-hunt2015-trait-stasis	v1_3164	10.5061/dryad.m010p	CC0-1.0	2015-10-07	10	810147
-hunt2020-ostracod-dimorphism	v2_252227	10.5061/dryad.tx95x69vr	CC0-1.0	2020-08-17	4	488767
-leventhal2025-bryozoan-brooding	v8_348959	10.5061/dryad.1vhhmgr44	CC0-1.0	2025-02-28	21	8262713
-liow2021-cheilostome-cyclostome	v9_137949	10.5061/dryad.zpc866t6s	CC0-1.0	2021-09-02	13	184576013
-malanoski2024-climate-extinction-risk	v3_280275	10.5061/dryad.1ns1rn91g	CC0-1.0	2024-08-01	4	50995872
-monarrez2023-selectivity	v10_255337	10.5061/dryad.931zcrjqw	CC0-1.0	2023-09-15	10	98660508
-slattery2025-nuculid-stasis	v5_367275	10.5061/dryad.sqv9s4ndb	CC0-1.0	2025-05-29	5	159932
-stigall2026-ordovician-species	v5_459741	10.5061/dryad.5dv41nsmd	CC0-1.0	2026-08-25	16	14306523
-walton2018-ammonoid-ontogeny	v1_7242	10.5061/dryad.c17p8	CC0-1.0	2018-05-16	1	215182
+deposit	provider	version_dir	doi_or_record	licence	published	files	bytes
+alaswad2024-end-permian-homogenization	zenodo	Zenodo_14675012	10.5281/zenodo.14675012	apgl-v3	2025-01-16	1	2418957
+alroy2026-coverage-rarefaction	dryad	v2_442996	doi:10.5061/dryad.pg4f4qs50	https://spdx.org/licenses/CC0-1.0.html	2026-05-19	4	280920
+balembois2025-marine-biodiversity-drivers	figshare	Code-and-data-repository-for-b-Unravelling-b-b-the-drivers-of-marine-biodiversity-across-the-Phanerozoic-b-Balembois-et-al.-2025_v2_27201498	10.6084/m9.figshare.27201498.v2	CC BY 4.0	2025-05-27	221	271124844
+beckerman2024-toarcian-secondary-extinction	zenodo	v0.999_12207996	10.5281/zenodo.12207996	cc-by-4.0	2024-06-21	1	210366
+benson2025-marine-latitudinal-diversity	dryad	v4_361737	doi:10.5061/dryad.6djh9w1bx	https://spdx.org/licenses/CC0-1.0.html	2025-04-29	2	79549455
+brombacher2017-foram-allometry	dryad	v1_3046	doi:10.5061/dryad.8jf2k	https://spdx.org/licenses/CC0-1.0.html	2017-03-17	1	845521
+cantalapiedra2019-phylogenetic-diversity	dryad	v1_26492	doi:10.5061/dryad.gd8038s	https://spdx.org/licenses/CC0-1.0.html	2019-05-16	1	3989279
+carrillo2020-south-american-mammals	zenodo	3770348	10.5281/zenodo.3770348	cc-by-4.0	2020-09-18	1	129501193
+close2019-tetrapod-local-richness	dryad	v1_23260	doi:10.5061/dryad.3v0p84v	https://spdx.org/licenses/CC0-1.0.html	2019-02-18	1	72217726
+close2025-marine-latitudinal-diversity-code	zenodo	15269137	10.5281/zenodo.15269137	cc-by-4.0	2025-04-23	1	1549270962
+cooke2023-extinct-birds	zenodo	v.1.1.2_10014585	10.5281/zenodo.10014585	cc-by-4.0	2023-10-17	1	12786090
+cooper2024-deepdive	zenodo	10979237	10.5281/zenodo.10979237	cc-by-4.0	2024-04-18	3	234877009
+craffey2024-ediacaran-cooccurrence-figshare	figshare	Data-and-Code-ZIP-file-from-Co-occurrence-structure-of-late-Ediacaran-communities-and-influence-of-emerging-ecosystem-engineers_v1_27909116	10.6084/m9.figshare.27909116.v1	CC BY 4.0	2024-11-26	1	239095
+crampton2026-extinction-spectrum	dryad	v3_444094	doi:10.5061/dryad.vx0k6dk71	https://spdx.org/licenses/CC0-1.0.html	2026-05-26	2	25528098
+cribb2023-ete-ecospace	zenodo	vR1_8398420	10.5281/zenodo.8398420	other-open	2023-12	1	3719586
+cribb2026-ecosystem-engineers	zenodo	v1.2_19824423	10.5281/zenodo.19824423	cc-by-4.0	2026-04-27	1	100121134
+dunhill2018-late-triassic-functional-diversity	dryad	v1_21635	doi:10.5061/dryad.bg30k	https://spdx.org/licenses/CC0-1.0.html	2018-09-27	2	10204828
+edie2025-kpg-functional-diversity	figshare	The-end-Cretaceous-mass-extinction-restructured-functional-diversity-but-failed-to-configure-the-modern-marine-biota_v2_28046414	10.25573/data.28046414.v2	CC BY 4.0	2025-05-01	3	373547
+foster2023-siliceous-permian-triassic	zenodo	10149114	10.5281/zenodo.10149114	cc-by-4.0	2023-11-17	2	40130
+franeck2018-ordovician-radiation	dryad	v2_27681	doi:10.5061/dryad.nk218ht	https://spdx.org/licenses/CC0-1.0.html	2018-12-27	2	4386647
+freitas2026-patch-biogeography-simulations	dryad	v5_426259	doi:10.5061/dryad.0k6djhb6h	https://spdx.org/licenses/CC0-1.0.html	2026-02-18	2	140131
+garciacomas2022-inditek	zenodo	v.1.1_6535496	10.5281/zenodo.6535496	mit-license	2022-05-10	1	119068668
+gavirneni2025-bivalve-metabolic-rate	zenodo	14903138	10.5281/zenodo.14903138	cc-by-4.0	2025-02-20	8	1168852986
+holland2016-stratigraphy-mass-extinction	dryad	v1_7289	doi:10.5061/dryad.1mg27	https://spdx.org/licenses/CC0-1.0.html	2016-07-02	1	212791
+holstad2024-evolvability-macroevolution	dryad	v6_316819	doi:10.5061/dryad.4j0zpc8hx	https://spdx.org/licenses/CC0-1.0.html	2024-04-25	8	4814114
+hunt2015-trait-stasis	dryad	v1_3164	doi:10.5061/dryad.m010p	https://spdx.org/licenses/CC0-1.0.html	2015-10-07	10	810147
+hunt2020-ostracod-dimorphism	dryad	v2_252227	doi:10.5061/dryad.tx95x69vr	https://spdx.org/licenses/CC0-1.0.html	2020-08-17	4	488767
+kagawa2020-admixture-radiation	dryad (indexed only)					0	0
+kerr2025-regional-databases	dryad	v2_343093	doi:10.5061/dryad.p5hqbzm03	https://spdx.org/licenses/CC0-1.0.html	2025-02-05	3	152585
+klompmaker2017-external-database-2	figshare	Science-paper-External-Database-2_v1_5046964	10.6084/m9.figshare.5046964.v1	CC BY 4.0	2017-05-26	1	86861
+kocsis2018-biogeographic-imprint	zenodo	1.0_1211555	10.5281/zenodo.1211555	cc-by-4.0	2018-04-03	1	185721046
+kontopoulos2020-phytoplankton-thermal	dryad	v4_56464	doi:10.5061/dryad.63xsj3tzv	https://spdx.org/licenses/CC0-1.0.html	2020-03-09	11	1328464
+lamyman2026-pforam-phylogeny	zenodo	21414007	10.5281/zenodo.21414007	cc-by-4.0	2026-07-17	1	1162702765
+leventhal2025-bryozoan-brooding	dryad	v8_348959	doi:10.5061/dryad.1vhhmgr44	https://spdx.org/licenses/CC0-1.0.html	2025-02-28	21	8262713
+leventhal2025-bryozoan-brooding-code	zenodo	14104269	10.5281/zenodo.14104269	cc-by-sa-4.0	2024-12-06	1	53844
+leventhal2025-bryozoan-brooding-supplement	zenodo	14918283	10.5281/zenodo.14918283	cc-by-4.0	2025-02-28	7	6930321
+liow2021-cheilostome-cyclostome	dryad	v9_137949	doi:10.5061/dryad.zpc866t6s	https://spdx.org/licenses/CC0-1.0.html	2021-09-02	13	184576013
+liow2021-cheilostome-cyclostome-code	zenodo	5394385	10.5281/zenodo.5394385	mit-license	2021-09-02	3	158522
+liu2026-phanerozoic-productivity-oxygen	zenodo	18217914	10.5281/zenodo.18217914	cc-by-4.0	2026-01-12	6	7582096
+malanoski2024-climate-extinction-risk	dryad	v3_280275	doi:10.5061/dryad.1ns1rn91g	https://spdx.org/licenses/CC0-1.0.html	2024-08-01	4	50995872
+malanoski2024-climate-extinction-risk-code	zenodo	10541354	10.5281/zenodo.10541354	cc-by-4.0	2024-08-01	4	36110
+malanoski2026-paleogeography-extinction-risk	dryad	v6_424262	doi:10.5061/dryad.9ghx3ffts	https://spdx.org/licenses/CC0-1.0.html	2026-02-09	20	289353081
+minsky2026-snowball-limit-cycle	zenodo	v2.0_18512912	10.5281/zenodo.18512912	cc-by-4.0	2026-02-07	1	4454373
+monarrez2023-selectivity	dryad	v10_255337	doi:10.5061/dryad.931zcrjqw	https://spdx.org/licenses/CC0-1.0.html	2023-09-15	10	98660508
+monarrez2023-selectivity-code	zenodo	7816408	10.5281/zenodo.7816408	mit-license	2023-09-15	36	154619
+monarrez2023-selectivity-zenodo	zenodo	8341743	10.5281/zenodo.8341743	cc-by-4.0	2023-09-15	5	5856344
+natscher2025-ectotherm-body-size	zenodo	15096088	10.5281/zenodo.15096088	cc-by-4.0	2025-07-31	4	6163065
+padfield2016-metabolic-traits	zenodo	v1.0_1285673	10.5281/zenodo.1285673	cc-by-4.0	2018-06-08	3	228991
+pangaea-u1313	url	2026-10-23T1035Z_url	PANGAEA.736778.tab::https://doi.pangaea.de/10.1594/PANGAEA.736778?format=textfile	CC BY 3.0 (PANGAEA dataset metadata, all five)		5	126720
+penn2018-end-permian-climate	figshare	End-Permian-Climate-Change_v1_7357193	10.6084/m9.figshare.7357193.v1	CC0	2018-12-06	1	145590140
+penn2022-metabolic-index-extinction	zenodo	v1.0.0_5899743	10.5281/zenodo.5899743	other-open	2022-01-25	1	378156
+penn2023-mi-traits-obis	zenodo	v1.0.0_10403766	10.5281/zenodo.10403766	cc-by-4.0	2023-12-19	1	32841740
+pohl2024-late-ordovician-foam	zenodo	10610771	10.5281/zenodo.10610771	cc-by-4.0	2024-02-02	3	173499388
+qvarnstrom2024-supplementary-figures	figshare	SupplementaryFigures_Qvarnstrom_etal_2024.pdf_v1_26103031	10.6084/m9.figshare.26103031.v1	CC BY 4.0	2024-11-07	1	11934565
+rahman2024-ediacaran-animal-forests	zenodo (indexed only)					0	0
+rahman2025-ediacaran-hydrodynamics	zenodo (indexed only)					0	0
+ridgwell-cgenie-muffin	zenodo	v0.9.78_23420890	10.5281/zenodo.23420890	mit-license	2026-10-16	1	210771913
+ridgwell-muffingen	zenodo	v0.24-574-NSF_13377220	10.5281/zenodo.13377220	cc-by-4.0	2024-08-26	1	112154346
+rogger2024-lip-climate-sensitivity	zenodo	12187757	10.5281/zenodo.12187757	cc-by-4.0	2024-06-20	3	2815969923
+rogger2025-petm-vegetation	zenodo (indexed only)					0	0
+rogger2026-treed-vegetation-model	zenodo	18926572	10.5281/zenodo.18926572	cc-by-4.0	2026-03-09	8	1389450174
+rui2026-cgenie-kpg	zenodo	18700674	10.5281/zenodo.18700674	cc-by-4.0	2026-02-19	10	926966091
+saupe2019-range-size-niche-breadth	dryad	v1_23489	doi:10.5061/dryad.vd80g8n	https://spdx.org/licenses/CC0-1.0.html	2019-03-12	2	75413245
+seebens2026-sinas	zenodo	3.2_21933976	10.5281/zenodo.21933976	cc-by-4.0	2026-08-14	6	472790887
+shum2026-dark-land-refugia	dryad (indexed only)					0	0
+slattery2025-nuculid-stasis	dryad	v5_367275	doi:10.5061/dryad.sqv9s4ndb	https://spdx.org/licenses/CC0-1.0.html	2025-05-29	5	159932
+smith2023-biodeeptime	zenodo	1.0_8154672	10.5281/zenodo.8154672	cc-by-4.0	2023-07-12	13	1527511914
+stigall2026-ordovician-species	dryad	v5_459741	doi:10.5061/dryad.5dv41nsmd	https://spdx.org/licenses/CC0-1.0.html	2026-08-25	16	14306523
+stockey2021-cgenie-metabolic-index	zenodo	v1.2_5519730	10.5281/zenodo.5519730	other-open	2021-09-21	1	39441418
+swain2022-palaeoherbivory-review	zenodo	1.0_7242861	10.5281/zenodo.7242861	other-open	2022-10-23	1	1855117
+syverson2017-crinoid-spinosity	dryad	v1_8911	doi:10.5061/dryad.s7576	https://spdx.org/licenses/CC0-1.0.html	2017-11-07	2	146688
+tang2024-proterozoic-eukaryotes	zenodo	12735901	10.5281/zenodo.12735901	mit-license	2024-11-04	1	226306
+tang2024-proterozoic-eukaryotes-dryad	dryad	v6_326078	doi:10.5061/dryad.8w9ghx3w6	https://spdx.org/licenses/CC0-1.0.html	2024-11-04	3	3742597
+tsuboi2024-paradox-of-predictability	zenodo	v1.0.1_13294509	10.5281/zenodo.13294509	cc-by-4.0	2024-08-11	1	242575
+walton2018-ammonoid-ontogeny	dryad	v1_7242	doi:10.5061/dryad.c17p8	https://spdx.org/licenses/CC0-1.0.html	2018-05-16	1	215182
+wang2025-trace-fossil-trajectories	zenodo	15079899	10.5281/zenodo.15079899	cc-by-4.0	2025-03-24	5	60799405
+ward2020-mcm-model	zenodo	1.0_3701302	10.5281/zenodo.3701302	other-open	2020-03-09	1	17086
+xiong2022-hybrid-incompatibilities	dryad	v4_191168	doi:10.5061/dryad.mgqnk992f	https://spdx.org/licenses/CC0-1.0.html	2022-08-11	2	3261601961

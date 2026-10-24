@@ -77,9 +77,15 @@ runs it. Credentials never enter the repository.
 | --- | --- | --- |
 | `open` | Licence allows copying and redistribution (CC0, CC-BY, ODbL) | Yes |
 | `open-nc` | Copying allowed with non-commercial or share-alike terms | Yes, terms recorded |
-| `registered` | Free access under terms that limit use or redistribution, accepted by account, click-through or download | No, unless the terms allow local copies (Barry decides) |
-| `restricted` | Request, approval, embargo or paywall | No |
-| `unclear` | No licence stated | No; treat as all rights reserved |
+| `registered` | Free access under terms that limit use or redistribution, accepted by account, click-through or download | Yes, as a private copy, once the terms are accepted; accepting terms that bind the project (a contribute-data clause, for example) is Barry's call |
+| `restricted` | Request, approval, embargo or paywall | No (we lack the access) |
+| `unclear` | No licence stated | Yes, as a private copy; record "none stated" |
+
+**Licences do not limit private mirroring.** Barry, 23 October 2026: "Licence overrides confirmed, universally for the EPRP. Mirroring locally is always okay for us: we're not hosting anything here for public use, except perhaps later for the frameworks, but not the actual source files." Every tier
+can be held on deep-server as a private research copy. What a licence
+governs is reuse and redistribution: record the terms in the entry and the
+manifest, and never publish source files. A public registry, if one comes,
+points to the original locations.
 
 Software or API-documentation licences are not data licences. Record the data
 terms that apply to the records themselves, including constituent-dataset
@@ -448,6 +454,48 @@ the workflow when they generalise.
   records and 12% of its genus opinions.
 - *Record an approval to mirror an unlicensed source in its entry, verbatim.*
   Barry approved this mirror on 23 October; the entry quotes him.
+
+**Time scale, climate forcing and the remaining register deposits (23 October
+2026; [timescale](timescale/README.md), [climate-forcing](climate-forcing/README.md),
+[register-deposits](register-deposits/README.md)).**
+
+- [Detail withheld pending disclosure to the data custodian.]
+- *Take "latest" from the provider's version order, not from dates.*
+  Depositors set Zenodo publication dates by hand. Cooke et al.'s last four
+  versions share one date, and a string tie-break chose "v1.1.1" over
+  "v.1.1.2". Dryad dates are not monotonic either: Monarrez et al.'s v10 is
+  dated a day after v11. `data_mirror.py` now uses Zenodo's version index and
+  Dryad's version number, and an audit of every Zenodo and Dryad mirror found
+  no other case. Version names do not sort either (muffingen's
+  "v0.24-574-NSF" is newer than "v0.9.24"), so the profilers take the newest
+  mirrored version from `versions.tsv`, which lists versions in the
+  provider's order.
+- *Two copies of a supplement are two versions.* Craffey et al.'s journal
+  copy (Figshare) and Dryad v8 hold the same 1,540 occurrences. They differ in
+  the character encoding of four cells, in how blanks are coded, in the
+  analysis script, and by a trait table that only the journal copy has.
+- *Survey citations in every form, then have someone else re-survey.* The
+  first deposit survey missed Edie et al. on the Smithsonian's Figshare
+  portal (10.25573), five Zenodo records cited as "Zenodo 10979237" and the
+  like, and 14 Dryad deposits, most in literature notes and the 20 October
+  proposals. The independent review found most of them; a second survey,
+  matching every citation form, found the rest.
+- *Read the reference system before calling a value wrong.* The apparent
+  unit errors in the ICS RDF were positions in years before present, which
+  the profiler had read as Ma.
+- *Check release labels against content.* The last machine-readable ICS
+  release is chart v2020/01, not 2020/03 (the date of that year's chart PDF),
+  and the first pass had skipped the 2016-10 release.
+- *Some services refuse a format for a collection.* PANGAEA returns HTTP 400
+  for a collection's text format; CENOGRID comes only as a zip of its 27
+  tables.
+- *Use the mirror's API when the original blocks scripts.* PMC answers
+  scripts with a reCAPTCHA; Europe PMC's REST API serves the same full text
+  and supplements.
+- *A zero-length file is still a file.* A GitHub tree held one, and the
+  downloader failed to create it until fixed.
+- *Read the automated review before merging.* Copilot's four findings on
+  the first catalogue PR arrived after the merge; all were valid.
 
 **Outreach (Barry, 22 October 2026).**
 
