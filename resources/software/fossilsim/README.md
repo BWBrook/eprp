@@ -10,13 +10,13 @@ paper: [10.1111/2041-210x.13170]
 licence: GPL-3 (CRAN DESCRIPTION; the GitHub repository declares none)
 release: {version: 2.4.4, date: 2026-02-26, checked: 2026-10-23}
 maintenance: {state: active, last_commit: 2026-10-06, checked: 2026-10-23}
-tier: T3
-validated_uses: ["Poisson fossil sampling on complete trees (sim.fossils.poisson)", "morphotaxonomy and pseudoextinction on complete trees (sim.taxonomy)", "with TreeSim sim.bd.age, constant-rate birth-death histories, cross-checked against paleobuddy"]
+tier: T2
+validated_uses: ["Poisson fossil sampling on complete trees (sim.fossils.poisson)", "morphospecies counts under budding, bifurcating and anagenetic modes (sim.taxonomy; the sum, not each mode separately)", "with TreeSim sim.bd.age, constant-rate birth-death histories"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.r, image: "eprp-sw/bench-r:t1 (sha256:926c0052…)", host: deep-server}
 blockers: []
 related_sources: []
 eprp_questions: [Q-004, Q-006, Q-045]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # FossilSim
@@ -38,7 +38,9 @@ intervals with their own rates. `sim.taxonomy` overlays species on a complete
 tree: at each speciation event, with probability β the parent species ends
 and both daughters are new (bifurcating, "symmetric"), otherwise one daughter
 continues the parent (budding); anagenetic species changes occur at rate λa
-along branches. This follows the FBD-range framework of Stadler et al. (2018).
+along branches. This follows the speciation modes of Stadler et al. (2018,
+*Journal of Theoretical Biology*, doi:10.1016/j.jtbi.2018.03.005; recall,
+DOI from scan C).
 
 ## Install
 
@@ -57,7 +59,19 @@ Tests declared in [bench/VALIDATION.md](../bench/VALIDATION.md); results in
 | G1: TreeSim `sim.bd.age` (λ 0.3, μ 0.2, 15 Myr, 20,000 clades) against e^{(λ−μ)t} and the survival probability | pass (z = 1.95, 1.06) |
 | G2: `sim.fossils.poisson` (ψ 0.5) on 7,895 surviving trees: total count and dispersion against Poisson(ψL) | pass (z = −0.48; dispersion 0.990 ± 0.048) |
 | G4: distributions of extant count, species, total duration and fossils against paleobuddy | pass (KS p 0.25–0.56) |
-| G5: `sim.taxonomy` (β 0.5, λa 0.1) on 2,000 trees: originations and terminations against their tree-conditional expectations | pass (z = −1.27 each) |
+| G5: `sim.taxonomy` (β 0.5, λa 0.1) on 2,000 trees: morphospecies count against its tree-conditional expectation | pass (z = −1.27) |
+
+Limits of these tests, from the independent review:
+- G4's KS tests on tied counts have little power. TreeSim's clades ran
+  1.0–1.4% larger than paleobuddy's on all four summaries (mean species
+  26.83 against 26.47; G1's z = 1.95 against the analytic mean), within the
+  declared tolerance but worth a larger comparison before calling the two
+  interchangeable.
+- The ten single-lineage TreeSim clades have no tree, so they are absent
+  from G2 and from G4's fossil comparison (7,895 of 7,905 survivors used).
+- G5's origination and termination counts are one check: in every tree
+  they differ by the number of extant species minus one. The test
+  constrains βS + λa·L, not β and λa separately.
 
 Under survival conditioning, morphospecies originations and terminations per
 unit species time were 0.571 and 0.439, against the unconditional 0.55 and
@@ -66,15 +80,17 @@ bias of the tree, not of the taxonomy layer.
 
 ## Strengths
 
-- Independent of paleobuddy and agrees with it; both meet analytic truth.
+- Independent of paleobuddy; both meet analytic truth, and the KS tests
+  did not distinguish them (with low power; see above).
 - The only package found that layers budding, bifurcating and anagenetic
   species on a tree, which Q-004 (pseudoextinction) needs.
 - Exports to the main inference tools (BEAST2, PyRate, paleotree).
 
 ## Weaknesses and pitfalls
 
-- Slow per tree: about 0.08 s for `sim.fossils.poisson` and 0.1 s for
-  `sim.taxonomy` on 15-Myr trees, so large studies need parallel workers.
+- Slow per tree: 0.085 s for `sim.fossils.poisson` and 0.11 s for
+  `sim.taxonomy` on 15-Myr trees (`bench/results/generators/g3b_timing.json`),
+  so large studies need parallel workers.
 - `sim.taxonomy` output has one row per species per edge; a species' end is
   the minimum `end` over its rows.
 - TreeSim's `sim.bd.age` returns `0` for an extinct clade and `1` for a

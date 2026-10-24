@@ -6,7 +6,30 @@
       "multi_duration_ratio": 0.9496894460044525,
       "q_from_inferred_durations": 1.1620629081419853,
       "q_from_true_durations": 1.0649404006445669,
-      "q_posterior_median": 1.089503961780971
+      "q_truncated_mle_true_durations": 1.005888051762179,
+      "q_truncated_mle_inferred_durations": 1.0956685515773048,
+      "q_posterior_median": 1.089503961780971,
+      "lambda_interval": {
+        "mean_posterior_sd_over_truth": 0.12723294217687076,
+        "sd_of_medians_over_truth": 0.09360817384094265,
+        "mean_bias_in_posterior_sd": -0.8686572970276619,
+        "misses_truth_below_interval": 0,
+        "misses_truth_above_interval": 5
+      },
+      "mu_interval": {
+        "mean_posterior_sd_over_truth": 0.15531254591836732,
+        "sd_of_medians_over_truth": 0.12739637915008822,
+        "mean_bias_in_posterior_sd": -0.7596241395820398,
+        "misses_truth_below_interval": 0,
+        "misses_truth_above_interval": 5
+      },
+      "q_interval": {
+        "mean_posterior_sd_over_truth": 0.08431093622448982,
+        "sd_of_medians_over_truth": 0.07788095632742736,
+        "mean_bias_in_posterior_sd": 1.033394843316132,
+        "misses_truth_below_interval": 19,
+        "misses_truth_above_interval": 0
+      }
     },
     "low": {
       "total_duration_ratio": 0.6949295147461987,
@@ -14,7 +37,30 @@
       "multi_duration_ratio": 0.7914774097339299,
       "q_from_inferred_durations": 0.5382889608782602,
       "q_from_true_durations": 0.3562678308887011,
-      "q_posterior_median": 0.3644708128505584
+      "q_truncated_mle_true_durations": 0.24577380396966605,
+      "q_truncated_mle_inferred_durations": 0.35809642136207187,
+      "q_posterior_median": 0.3644708128505584,
+      "lambda_interval": {
+        "mean_posterior_sd_over_truth": 0.21849569727891158,
+        "sd_of_medians_over_truth": 0.26800254431560383,
+        "mean_bias_in_posterior_sd": -0.1492321784029169,
+        "misses_truth_below_interval": 2,
+        "misses_truth_above_interval": 4
+      },
+      "mu_interval": {
+        "mean_posterior_sd_over_truth": 0.2571358647959184,
+        "sd_of_medians_over_truth": 0.3823662060584309,
+        "mean_bias_in_posterior_sd": -0.26039057372115354,
+        "misses_truth_below_interval": 4,
+        "misses_truth_above_interval": 6
+      },
+      "q_interval": {
+        "mean_posterior_sd_over_truth": 0.30295914285714287,
+        "sd_of_medians_over_truth": 0.29038149358206106,
+        "mean_bias_in_posterior_sd": 1.408083654855977,
+        "misses_truth_below_interval": 17,
+        "misses_truth_above_interval": 0
+      }
     }
   },
   "reps": [
@@ -27,6 +73,8 @@
       "multi_duration_ratio": 0.9821605813885493,
       "q_from_inferred_durations": 1.24037383695287,
       "q_from_true_durations": 1.1470554735612684,
+      "q_truncated_mle_true_durations": 1.0799378595633637,
+      "q_truncated_mle_inferred_durations": 1.1606026192119248,
       "q_posterior_median": 1.1543144217195525
     },
     {
@@ -38,6 +86,8 @@
       "multi_duration_ratio": 0.9755851406717632,
       "q_from_inferred_durations": 1.1604882743973297,
       "q_from_true_durations": 1.1025306183899939,
+      "q_truncated_mle_true_durations": 1.0651432703494368,
+      "q_truncated_mle_inferred_durations": 1.113903255154279,
       "q_posterior_median": 1.1032459903922647
     },
     {
@@ -49,6 +99,8 @@
       "multi_duration_ratio": 0.9313859123851838,
       "q_from_inferred_durations": 1.1236221711646222,
       "q_from_true_durations": 1.0225091698132833,
+      "q_truncated_mle_true_durations": 0.9648375285297747,
+      "q_truncated_mle_inferred_durations": 1.0580037221048588,
       "q_posterior_median": 1.0501939476234072
     },
     {
@@ -60,6 +112,8 @@
       "multi_duration_ratio": 0.9249551868275683,
       "q_from_inferred_durations": 1.2117164147116377,
       "q_from_true_durations": 1.1181219157761626,
+      "q_truncated_mle_true_durations": 1.064057814634839,
+      "q_truncated_mle_inferred_durations": 1.1568184145050981,
       "q_posterior_median": 1.151080753441455
     },
     {
@@ -71,6 +125,8 @@
       "multi_duration_ratio": 0.9223751830635147,
       "q_from_inferred_durations": 1.2060866488210193,
       "q_from_true_durations": 1.1062742375475232,
+      "q_truncated_mle_true_durations": 1.0610767417570584,
+      "q_truncated_mle_inferred_durations": 1.1566613145751987,
       "q_posterior_median": 1.1446085584942398
     },
     {
@@ -82,6 +138,8 @@
       "multi_duration_ratio": 1.0029098503324463,
       "q_from_inferred_durations": 1.0488071842049986,
       "q_from_true_durations": 1.0210624541079116,
+      "q_truncated_mle_true_durations": 0.9507343448591324,
+      "q_truncated_mle_inferred_durations": 0.9739366878533489,
       "q_posterior_median": 0.9697271998817971
     },
     {
@@ -93,6 +151,8 @@
       "multi_duration_ratio": 0.9569913020051677,
       "q_from_inferred_durations": 1.1622578888214228,
       "q_from_true_durations": 1.0738376964494882,
+      "q_truncated_mle_true_durations": 1.026110089302661,
+      "q_truncated_mle_inferred_durations": 1.1033784042470463,
       "q_posterior_median": 1.099359942675213
     },
     {
@@ -104,6 +164,8 @@
       "multi_duration_ratio": 0.9592273113482568,
       "q_from_inferred_durations": 1.1001385263843337,
       "q_from_true_durations": 0.9993672977729072,
+      "q_truncated_mle_true_durations": 0.9498582552295748,
+      "q_truncated_mle_inferred_durations": 1.0320314256565999,
       "q_posterior_median": 1.028286287914433
     },
     {
@@ -115,6 +177,8 @@
       "multi_duration_ratio": 0.9584574979751137,
       "q_from_inferred_durations": 1.176007053624075,
       "q_from_true_durations": 1.0702009138426873,
+      "q_truncated_mle_true_durations": 1.0216020119285942,
+      "q_truncated_mle_inferred_durations": 1.1176326522451006,
       "q_posterior_median": 1.1066122532636014
     },
     {
@@ -126,6 +190,8 @@
       "multi_duration_ratio": 0.9858322525884342,
       "q_from_inferred_durations": 1.1060699212120004,
       "q_from_true_durations": 1.0666950295600877,
+      "q_truncated_mle_true_durations": 1.020651012430905,
+      "q_truncated_mle_inferred_durations": 1.0550430573140086,
       "q_posterior_median": 1.0512242951466937
     },
     {
@@ -137,6 +203,8 @@
       "multi_duration_ratio": 1.0336289530758997,
       "q_from_inferred_durations": 1.1377328282943093,
       "q_from_true_durations": 1.128529701117429,
+      "q_truncated_mle_true_durations": 1.0872330309096558,
+      "q_truncated_mle_inferred_durations": 1.0926428128150991,
       "q_posterior_median": 1.0837027827849666
     },
     {
@@ -148,6 +216,8 @@
       "multi_duration_ratio": 0.9780713708959031,
       "q_from_inferred_durations": 1.115393524763008,
       "q_from_true_durations": 0.9670670133773044,
+      "q_truncated_mle_true_durations": 0.9014149452611695,
+      "q_truncated_mle_inferred_durations": 1.0201393870269022,
       "q_posterior_median": 1.0108347954943766
     },
     {
@@ -159,6 +229,8 @@
       "multi_duration_ratio": 0.9616277082545961,
       "q_from_inferred_durations": 1.1708553491314095,
       "q_from_true_durations": 1.0955508746439542,
+      "q_truncated_mle_true_durations": 1.0171339438121592,
+      "q_truncated_mle_inferred_durations": 1.0868160551046941,
       "q_posterior_median": 1.0793538181567002
     },
     {
@@ -170,6 +242,8 @@
       "multi_duration_ratio": 0.9756625425541894,
       "q_from_inferred_durations": 1.202334978003186,
       "q_from_true_durations": 1.1197908483197276,
+      "q_truncated_mle_true_durations": 1.0733057421226846,
+      "q_truncated_mle_inferred_durations": 1.1448600670196358,
       "q_posterior_median": 1.1397566243719206
     },
     {
@@ -181,6 +255,8 @@
       "multi_duration_ratio": 0.919188788188651,
       "q_from_inferred_durations": 1.2101107149238142,
       "q_from_true_durations": 1.0925387791686534,
+      "q_truncated_mle_true_durations": 1.0563645856151815,
+      "q_truncated_mle_inferred_durations": 1.1670507554006575,
       "q_posterior_median": 1.165602889226578
     },
     {
@@ -192,6 +268,8 @@
       "multi_duration_ratio": 0.9475235952015331,
       "q_from_inferred_durations": 1.0085981950487295,
       "q_from_true_durations": 0.9599155876888584,
+      "q_truncated_mle_true_durations": 0.9011594662865972,
+      "q_truncated_mle_inferred_durations": 0.9491721793484053,
       "q_posterior_median": 0.9421693079878881
     },
     {
@@ -203,6 +281,8 @@
       "multi_duration_ratio": 0.9540732629277697,
       "q_from_inferred_durations": 1.1845979281362569,
       "q_from_true_durations": 0.9873961896389494,
+      "q_truncated_mle_true_durations": 0.920414774452481,
+      "q_truncated_mle_inferred_durations": 1.079368860460256,
       "q_posterior_median": 1.0770827518702604
     },
     {
@@ -214,6 +294,8 @@
       "multi_duration_ratio": 0.8918034809956431,
       "q_from_inferred_durations": 1.182144937083393,
       "q_from_true_durations": 1.0178097667414876,
+      "q_truncated_mle_true_durations": 0.9472297071195854,
+      "q_truncated_mle_inferred_durations": 1.093940625717254,
       "q_posterior_median": 1.083132287350235
     },
     {
@@ -225,6 +307,8 @@
       "multi_duration_ratio": 0.9690737264526497,
       "q_from_inferred_durations": 1.163023834113393,
       "q_from_true_durations": 1.1177500013008224,
+      "q_truncated_mle_true_durations": 1.061586121738091,
+      "q_truncated_mle_inferred_durations": 1.1073486201315224,
       "q_posterior_median": 1.099914514862527
     },
     {
@@ -236,6 +320,8 @@
       "multi_duration_ratio": 0.9786057065088086,
       "q_from_inferred_durations": 1.1790793238351458,
       "q_from_true_durations": 1.1266651485996928,
+      "q_truncated_mle_true_durations": 1.071474381110006,
+      "q_truncated_mle_inferred_durations": 1.1171823539237369,
       "q_posterior_median": 1.1152664170446978
     },
     {
@@ -247,6 +333,8 @@
       "multi_duration_ratio": 0.989598935472695,
       "q_from_inferred_durations": 1.2475184829159827,
       "q_from_true_durations": 1.2438257433495474,
+      "q_truncated_mle_true_durations": 1.2036120369442453,
+      "q_truncated_mle_inferred_durations": 1.2077404218791044,
       "q_posterior_median": 1.1935683100036751
     },
     {
@@ -258,6 +346,8 @@
       "multi_duration_ratio": 0.9284672847581357,
       "q_from_inferred_durations": 1.2989142726118732,
       "q_from_true_durations": 1.1681118603281684,
+      "q_truncated_mle_true_durations": 1.1009356576896185,
+      "q_truncated_mle_inferred_durations": 1.2179507773257157,
       "q_posterior_median": 1.2094585468735186
     },
     {
@@ -269,6 +359,8 @@
       "multi_duration_ratio": 0.9246508693540355,
       "q_from_inferred_durations": 1.18310843109974,
       "q_from_true_durations": 1.0654921073204753,
+      "q_truncated_mle_true_durations": 1.0051396938708483,
+      "q_truncated_mle_inferred_durations": 1.1120124317920699,
       "q_posterior_median": 1.1026167939750233
     },
     {
@@ -280,6 +372,8 @@
       "multi_duration_ratio": 0.9477044537868943,
       "q_from_inferred_durations": 1.1285934295030993,
       "q_from_true_durations": 1.0537699130910996,
+      "q_truncated_mle_true_durations": 0.9875395031959708,
+      "q_truncated_mle_inferred_durations": 1.0595467819701436,
       "q_posterior_median": 1.0520016175264069
     },
     {
@@ -291,6 +385,8 @@
       "multi_duration_ratio": 0.9349750413608575,
       "q_from_inferred_durations": 1.0899792085385716,
       "q_from_true_durations": 0.9895224927337988,
+      "q_truncated_mle_true_durations": 0.9400842580005276,
+      "q_truncated_mle_inferred_durations": 1.0351652933949385,
       "q_posterior_median": 1.0361230020331567
     },
     {
@@ -302,6 +398,8 @@
       "multi_duration_ratio": 1.0593470981384252,
       "q_from_inferred_durations": 1.0248441602311216,
       "q_from_true_durations": 1.064665968303625,
+      "q_truncated_mle_true_durations": 0.9939098677170807,
+      "q_truncated_mle_inferred_durations": 0.9595632835771457,
       "q_posterior_median": 0.9590807223537516
     },
     {
@@ -313,6 +411,8 @@
       "multi_duration_ratio": 0.9234556190023321,
       "q_from_inferred_durations": 1.2325714082565993,
       "q_from_true_durations": 1.091515591279366,
+      "q_truncated_mle_true_durations": 1.0374247632843494,
+      "q_truncated_mle_inferred_durations": 1.1650692205283342,
       "q_posterior_median": 1.1565321971641551
     },
     {
@@ -324,6 +424,8 @@
       "multi_duration_ratio": 0.9692896440964698,
       "q_from_inferred_durations": 1.081728759940223,
       "q_from_true_durations": 0.988997454043237,
+      "q_truncated_mle_true_durations": 0.9076064483471894,
+      "q_truncated_mle_inferred_durations": 0.9837539598222994,
       "q_posterior_median": 0.9827093103479992
     },
     {
@@ -335,6 +437,8 @@
       "multi_duration_ratio": 0.9057049912442827,
       "q_from_inferred_durations": 1.1445684563935856,
       "q_from_true_durations": 1.0246729640832433,
+      "q_truncated_mle_true_durations": 0.9766925670032789,
+      "q_truncated_mle_inferred_durations": 1.0871658722970605,
       "q_posterior_median": 1.0790870374951627
     },
     {
@@ -346,6 +450,8 @@
       "multi_duration_ratio": 0.9904529714112208,
       "q_from_inferred_durations": 1.163646444177199,
       "q_from_true_durations": 1.152725542577712,
+      "q_truncated_mle_true_durations": 1.0871571882789552,
+      "q_truncated_mle_inferred_durations": 1.101807436922109,
       "q_posterior_median": 1.1054749769831822
     },
     {
@@ -357,6 +463,8 @@
       "multi_duration_ratio": 0.911392409454627,
       "q_from_inferred_durations": 1.0832648148598014,
       "q_from_true_durations": 0.9598460458834438,
+      "q_truncated_mle_true_durations": 0.903785450995985,
+      "q_truncated_mle_inferred_durations": 1.0189833005758304,
       "q_posterior_median": 1.0142945629187967
     },
     {
@@ -368,6 +476,8 @@
       "multi_duration_ratio": 0.9459946629459124,
       "q_from_inferred_durations": 1.0600266970329737,
       "q_from_true_durations": 0.9656710566807073,
+      "q_truncated_mle_true_durations": 0.9069592891492317,
+      "q_truncated_mle_inferred_durations": 0.9927508680831633,
       "q_posterior_median": 0.9893419770153598
     },
     {
@@ -379,6 +489,8 @@
       "multi_duration_ratio": 0.9321604880122735,
       "q_from_inferred_durations": 1.1521064281168654,
       "q_from_true_durations": 1.048943424796667,
+      "q_truncated_mle_true_durations": 1.0055018473057458,
+      "q_truncated_mle_inferred_durations": 1.1017609797658214,
       "q_posterior_median": 1.1028716388254305
     },
     {
@@ -390,6 +502,8 @@
       "multi_duration_ratio": 0.9157732375435172,
       "q_from_inferred_durations": 1.1371859307449768,
       "q_from_true_durations": 1.0028372751743408,
+      "q_truncated_mle_true_durations": 0.9289126157506472,
+      "q_truncated_mle_inferred_durations": 1.0455979121945804,
       "q_posterior_median": 1.041998040417874
     },
     {
@@ -401,6 +515,8 @@
       "multi_duration_ratio": 0.9557711486297005,
       "q_from_inferred_durations": 1.1693039122843785,
       "q_from_true_durations": 1.0852427801182485,
+      "q_truncated_mle_true_durations": 1.037389377962265,
+      "q_truncated_mle_inferred_durations": 1.1140140745761722,
       "q_posterior_median": 1.1055226574203385
     },
     {
@@ -412,6 +528,8 @@
       "multi_duration_ratio": 0.9506047109038385,
       "q_from_inferred_durations": 1.1618679274625476,
       "q_from_true_durations": 1.0595938085792769,
+      "q_truncated_mle_true_durations": 0.996684368703771,
+      "q_truncated_mle_inferred_durations": 1.083135579026779,
       "q_posterior_median": 1.0725904314185317
     },
     {
@@ -423,6 +541,8 @@
       "multi_duration_ratio": 0.914005489358394,
       "q_from_inferred_durations": 1.2121759060608615,
       "q_from_true_durations": 1.0822704126805878,
+      "q_truncated_mle_true_durations": 1.0322481599373736,
+      "q_truncated_mle_inferred_durations": 1.1484344878176302,
       "q_posterior_median": 1.1438839736316813
     },
     {
@@ -434,6 +554,8 @@
       "multi_duration_ratio": 0.9281340740183724,
       "q_from_inferred_durations": 1.1793246391652517,
       "q_from_true_durations": 1.0956176526948846,
+      "q_truncated_mle_true_durations": 1.0447439702561407,
+      "q_truncated_mle_inferred_durations": 1.126816120493943,
       "q_posterior_median": 1.1203918566479734
     },
     {
@@ -445,6 +567,8 @@
       "multi_duration_ratio": 0.891993923033428,
       "q_from_inferred_durations": 1.2011935220949812,
       "q_from_true_durations": 1.0385819385302948,
+      "q_truncated_mle_true_durations": 0.9981185974082528,
+      "q_truncated_mle_inferred_durations": 1.1455905235199588,
       "q_posterior_median": 1.1393204187777688
     },
     {
@@ -456,6 +580,8 @@
       "multi_duration_ratio": 0.9043457302617138,
       "q_from_inferred_durations": 1.1940467284461032,
       "q_from_true_durations": 1.0592007325684434,
+      "q_truncated_mle_true_durations": 1.033550799919722,
+      "q_truncated_mle_inferred_durations": 1.1592015669092066,
       "q_posterior_median": 1.1562457881377048
     },
     {
@@ -467,6 +593,8 @@
       "multi_duration_ratio": 0.9158886207589142,
       "q_from_inferred_durations": 1.194100771558115,
       "q_from_true_durations": 1.0353212654416835,
+      "q_truncated_mle_true_durations": 0.9994789515560136,
+      "q_truncated_mle_inferred_durations": 1.137964806185711,
       "q_posterior_median": 1.134573648114068
     },
     {
@@ -478,6 +606,8 @@
       "multi_duration_ratio": 0.9742463584588958,
       "q_from_inferred_durations": 1.1933046667160987,
       "q_from_true_durations": 1.101548785729127,
+      "q_truncated_mle_true_durations": 1.048491182108302,
+      "q_truncated_mle_inferred_durations": 1.127994595856988,
       "q_posterior_median": 1.1295775079838752
     },
     {
@@ -489,6 +619,8 @@
       "multi_duration_ratio": 0.8237576807096374,
       "q_from_inferred_durations": 1.2783065618040557,
       "q_from_true_durations": 1.0253037972090944,
+      "q_truncated_mle_true_durations": 0.9515520370850346,
+      "q_truncated_mle_inferred_durations": 1.1740177573937303,
       "q_posterior_median": 1.1640975991363756
     },
     {
@@ -500,6 +632,8 @@
       "multi_duration_ratio": 0.929296664258457,
       "q_from_inferred_durations": 1.055873153350141,
       "q_from_true_durations": 0.9618068218477247,
+      "q_truncated_mle_true_durations": 0.9007393383101415,
+      "q_truncated_mle_inferred_durations": 0.9860381782660329,
       "q_posterior_median": 0.9807784871197255
     },
     {
@@ -511,6 +645,8 @@
       "multi_duration_ratio": 0.9519548952617258,
       "q_from_inferred_durations": 1.036661502420754,
       "q_from_true_durations": 0.9716765726972787,
+      "q_truncated_mle_true_durations": 0.9144022054502354,
+      "q_truncated_mle_inferred_durations": 0.9737892698134293,
       "q_posterior_median": 0.9634114937365914
     },
     {
@@ -522,6 +658,8 @@
       "multi_duration_ratio": 0.9300253146762271,
       "q_from_inferred_durations": 1.2575338749632834,
       "q_from_true_durations": 1.140175556244628,
+      "q_truncated_mle_true_durations": 1.086581018506372,
+      "q_truncated_mle_inferred_durations": 1.1938832046226495,
       "q_posterior_median": 1.193027502581968
     },
     {
@@ -533,6 +671,8 @@
       "multi_duration_ratio": 0.9876053049991143,
       "q_from_inferred_durations": 1.1012361080333537,
       "q_from_true_durations": 1.0425534699206584,
+      "q_truncated_mle_true_durations": 0.9837655973657207,
+      "q_truncated_mle_inferred_durations": 1.0334433997895307,
       "q_posterior_median": 1.0319718581635957
     },
     {
@@ -544,6 +684,8 @@
       "multi_duration_ratio": 0.9986610097295296,
       "q_from_inferred_durations": 1.2163763885993346,
       "q_from_true_durations": 1.1672416880869916,
+      "q_truncated_mle_true_durations": 1.123601059587285,
+      "q_truncated_mle_inferred_durations": 1.167056047837137,
       "q_posterior_median": 1.1652791205727788
     },
     {
@@ -555,6 +697,8 @@
       "multi_duration_ratio": 0.9447642544547975,
       "q_from_inferred_durations": 1.1870883334128017,
       "q_from_true_durations": 1.0823073356303043,
+      "q_truncated_mle_true_durations": 1.0335061045333285,
+      "q_truncated_mle_inferred_durations": 1.1282376632299291,
       "q_posterior_median": 1.1222471579323088
     },
     {
@@ -566,6 +710,8 @@
       "multi_duration_ratio": 0.9377610600827448,
       "q_from_inferred_durations": 1.201884891389807,
       "q_from_true_durations": 1.12460832900692,
+      "q_truncated_mle_true_durations": 1.0467370566715861,
+      "q_truncated_mle_inferred_durations": 1.1189434230016169,
       "q_posterior_median": 1.11274354419388
     },
     {
@@ -577,6 +723,8 @@
       "multi_duration_ratio": 0.9570076724273541,
       "q_from_inferred_durations": 1.218963976868827,
       "q_from_true_durations": 1.1444211113677438,
+      "q_truncated_mle_true_durations": 1.0597657271792147,
+      "q_truncated_mle_inferred_durations": 1.1277175771116585,
       "q_posterior_median": 1.1156494695845551
     },
     {
@@ -588,6 +736,8 @@
       "multi_duration_ratio": 0.8760959689786962,
       "q_from_inferred_durations": 1.131359743434647,
       "q_from_true_durations": 0.973384485158509,
+      "q_truncated_mle_true_durations": 0.9292122260603565,
+      "q_truncated_mle_inferred_durations": 1.0753087926051557,
       "q_posterior_median": 1.0688847422594077
     },
     {
@@ -599,6 +749,8 @@
       "multi_duration_ratio": 0.9331273473921627,
       "q_from_inferred_durations": 0.9553936806424802,
       "q_from_true_durations": 0.8845824281379078,
+      "q_truncated_mle_true_durations": 0.8129503361506993,
+      "q_truncated_mle_inferred_durations": 0.8803921833292714,
       "q_posterior_median": 0.8781789200070887
     },
     {
@@ -610,6 +762,8 @@
       "multi_duration_ratio": 0.8966216383767057,
       "q_from_inferred_durations": 1.279946887353358,
       "q_from_true_durations": 1.1375151293868067,
+      "q_truncated_mle_true_durations": 1.0621407910526004,
+      "q_truncated_mle_inferred_durations": 1.1944409903447875,
       "q_posterior_median": 1.1882246689185778
     },
     {
@@ -621,6 +775,8 @@
       "multi_duration_ratio": 0.9705620107640985,
       "q_from_inferred_durations": 1.100371534123405,
       "q_from_true_durations": 1.0426163220836873,
+      "q_truncated_mle_true_durations": 1.0029109033579502,
+      "q_truncated_mle_inferred_durations": 1.0537441677129598,
       "q_posterior_median": 1.0478963351148536
     },
     {
@@ -632,6 +788,8 @@
       "multi_duration_ratio": 0.9672685252602318,
       "q_from_inferred_durations": 1.1123222124990686,
       "q_from_true_durations": 0.992878652491265,
+      "q_truncated_mle_true_durations": 0.9506395277577894,
+      "q_truncated_mle_inferred_durations": 1.0524828731744615,
       "q_posterior_median": 1.0532409614432963
     },
     {
@@ -643,6 +801,8 @@
       "multi_duration_ratio": 0.9349157709269682,
       "q_from_inferred_durations": 1.1624281218435564,
       "q_from_true_durations": 1.0478645542863652,
+      "q_truncated_mle_true_durations": 0.9927299348600197,
+      "q_truncated_mle_inferred_durations": 1.0935296443179796,
       "q_posterior_median": 1.0874072504024488
     },
     {
@@ -654,6 +814,8 @@
       "multi_duration_ratio": 0.9714957774570148,
       "q_from_inferred_durations": 1.319419308952304,
       "q_from_true_durations": 1.2309811216341366,
+      "q_truncated_mle_true_durations": 1.1689608319436344,
+      "q_truncated_mle_inferred_durations": 1.250163946988348,
       "q_posterior_median": 1.2422519003124899
     },
     {
@@ -665,6 +827,8 @@
       "multi_duration_ratio": 0.924214930408499,
       "q_from_inferred_durations": 1.1640324753215512,
       "q_from_true_durations": 1.0563494586504516,
+      "q_truncated_mle_true_durations": 0.990591804888786,
+      "q_truncated_mle_inferred_durations": 1.0871576382497716,
       "q_posterior_median": 1.0809489400957548
     },
     {
@@ -676,6 +840,8 @@
       "multi_duration_ratio": 1.0061860614301603,
       "q_from_inferred_durations": 1.20610943520868,
       "q_from_true_durations": 1.1566844174910855,
+      "q_truncated_mle_true_durations": 1.1074647080247755,
+      "q_truncated_mle_inferred_durations": 1.149940300013725,
       "q_posterior_median": 1.1458364827915442
     },
     {
@@ -687,6 +853,8 @@
       "multi_duration_ratio": 0.9757396240815939,
       "q_from_inferred_durations": 1.0978880601288137,
       "q_from_true_durations": 1.0082144379117086,
+      "q_truncated_mle_true_durations": 0.9326026154000198,
+      "q_truncated_mle_inferred_durations": 1.009759523844058,
       "q_posterior_median": 0.9993604326239085
     },
     {
@@ -698,6 +866,8 @@
       "multi_duration_ratio": 0.9499951631881095,
       "q_from_inferred_durations": 1.1519114126079582,
       "q_from_true_durations": 1.0652148329855087,
+      "q_truncated_mle_true_durations": 1.01707126590198,
+      "q_truncated_mle_inferred_durations": 1.0959089024430408,
       "q_posterior_median": 1.0909664314896519
     },
     {
@@ -709,6 +879,8 @@
       "multi_duration_ratio": 0.9505414783246016,
       "q_from_inferred_durations": 1.079653962981131,
       "q_from_true_durations": 0.9981173361584987,
+      "q_truncated_mle_true_durations": 0.935033664995379,
+      "q_truncated_mle_inferred_durations": 1.0036379496609558,
       "q_posterior_median": 0.9962415907271137
     },
     {
@@ -720,6 +892,8 @@
       "multi_duration_ratio": 0.9292886397295813,
       "q_from_inferred_durations": 1.2857978962099306,
       "q_from_true_durations": 1.0940979043091623,
+      "q_truncated_mle_true_durations": 1.0532137110973017,
+      "q_truncated_mle_inferred_durations": 1.2283997988171507,
       "q_posterior_median": 1.21983788019512
     },
     {
@@ -731,6 +905,8 @@
       "multi_duration_ratio": 0.9948591963673838,
       "q_from_inferred_durations": 1.0114234606149082,
       "q_from_true_durations": 0.9985611130629294,
+      "q_truncated_mle_true_durations": 0.9634944762041929,
+      "q_truncated_mle_inferred_durations": 0.9761572605339564,
       "q_posterior_median": 0.9702360861565722
     },
     {
@@ -742,6 +918,8 @@
       "multi_duration_ratio": 0.9165868323220032,
       "q_from_inferred_durations": 1.3041343654889557,
       "q_from_true_durations": 1.1863829592006647,
+      "q_truncated_mle_true_durations": 1.114068767918407,
+      "q_truncated_mle_inferred_durations": 1.224543636430869,
       "q_posterior_median": 1.2205688709215206
     },
     {
@@ -753,6 +931,8 @@
       "multi_duration_ratio": 0.9180085469090125,
       "q_from_inferred_durations": 1.1389983103765238,
       "q_from_true_durations": 1.009090843318937,
+      "q_truncated_mle_true_durations": 0.9630628960976195,
+      "q_truncated_mle_inferred_durations": 1.079495057665176,
       "q_posterior_median": 1.0743158101061845
     },
     {
@@ -764,6 +944,8 @@
       "multi_duration_ratio": 0.9682101810574392,
       "q_from_inferred_durations": 1.0570811541212113,
       "q_from_true_durations": 0.9878538301333156,
+      "q_truncated_mle_true_durations": 0.9173547370008901,
+      "q_truncated_mle_inferred_durations": 0.980128196135894,
       "q_posterior_median": 0.9750295008223192
     },
     {
@@ -775,6 +957,8 @@
       "multi_duration_ratio": 0.9393484172109517,
       "q_from_inferred_durations": 1.1313949193242037,
       "q_from_true_durations": 1.0239590284356048,
+      "q_truncated_mle_true_durations": 0.9634227536919235,
+      "q_truncated_mle_inferred_durations": 1.0555812957744766,
       "q_posterior_median": 1.051055282744188
     },
     {
@@ -786,6 +970,8 @@
       "multi_duration_ratio": 0.8906900514025207,
       "q_from_inferred_durations": 1.1680943236159904,
       "q_from_true_durations": 1.017188390406961,
+      "q_truncated_mle_true_durations": 0.9756718080706968,
+      "q_truncated_mle_inferred_durations": 1.1167137595793821,
       "q_posterior_median": 1.108753392152651
     },
     {
@@ -797,6 +983,8 @@
       "multi_duration_ratio": 0.947957548097721,
       "q_from_inferred_durations": 1.1141131663902004,
       "q_from_true_durations": 1.0484294000570387,
+      "q_truncated_mle_true_durations": 0.9970230444628846,
+      "q_truncated_mle_inferred_durations": 1.061777688521604,
       "q_posterior_median": 1.0545720097324318
     },
     {
@@ -808,6 +996,8 @@
       "multi_duration_ratio": 0.8485521531681325,
       "q_from_inferred_durations": 1.2891679814081087,
       "q_from_true_durations": 1.0479880803782506,
+      "q_truncated_mle_true_durations": 0.9977372658300625,
+      "q_truncated_mle_inferred_durations": 1.2177887046174465,
       "q_posterior_median": 1.2094007620652434
     },
     {
@@ -819,6 +1009,8 @@
       "multi_duration_ratio": 0.9360558198397494,
       "q_from_inferred_durations": 1.2344760217949842,
       "q_from_true_durations": 1.0827699726733968,
+      "q_truncated_mle_true_durations": 1.024193128308164,
+      "q_truncated_mle_inferred_durations": 1.1592438841681314,
       "q_posterior_median": 1.1502107221202684
     },
     {
@@ -830,6 +1022,8 @@
       "multi_duration_ratio": 0.9606350723670527,
       "q_from_inferred_durations": 1.3079225541195145,
       "q_from_true_durations": 1.1929987676872924,
+      "q_truncated_mle_true_durations": 1.129582961294473,
+      "q_truncated_mle_inferred_durations": 1.2202167827229695,
       "q_posterior_median": 1.2103280551788798
     },
     {
@@ -841,6 +1035,8 @@
       "multi_duration_ratio": 0.9248657745684464,
       "q_from_inferred_durations": 1.0549530580084967,
       "q_from_true_durations": 0.9537864205044256,
+      "q_truncated_mle_true_durations": 0.8897212693007979,
+      "q_truncated_mle_inferred_durations": 0.9797256159873978,
       "q_posterior_median": 0.9721393352024361
     },
     {
@@ -852,6 +1048,8 @@
       "multi_duration_ratio": 0.9493837288207955,
       "q_from_inferred_durations": 1.0847314070190204,
       "q_from_true_durations": 1.0256352991745536,
+      "q_truncated_mle_true_durations": 0.9708206694471776,
+      "q_truncated_mle_inferred_durations": 1.0284445077405577,
       "q_posterior_median": 1.0243276328730138
     },
     {
@@ -863,6 +1061,8 @@
       "multi_duration_ratio": 0.987797563578401,
       "q_from_inferred_durations": 1.1477776233413726,
       "q_from_true_durations": 1.10062568419493,
+      "q_truncated_mle_true_durations": 1.0542206646498224,
+      "q_truncated_mle_inferred_durations": 1.0954282007115688,
       "q_posterior_median": 1.0896751877098863
     },
     {
@@ -874,6 +1074,8 @@
       "multi_duration_ratio": 0.9636429353297311,
       "q_from_inferred_durations": 1.1296533552092274,
       "q_from_true_durations": 1.0266671562270298,
+      "q_truncated_mle_true_durations": 0.9374141587532303,
+      "q_truncated_mle_inferred_durations": 1.023910406754796,
       "q_posterior_median": 1.012677181722636
     },
     {
@@ -885,6 +1087,8 @@
       "multi_duration_ratio": 0.9833009361895553,
       "q_from_inferred_durations": 1.0090759839665624,
       "q_from_true_durations": 0.9883238117871307,
+      "q_truncated_mle_true_durations": 0.9216858444105867,
+      "q_truncated_mle_inferred_durations": 0.9446976924390387,
       "q_posterior_median": 0.9435328675662655
     },
     {
@@ -896,6 +1100,8 @@
       "multi_duration_ratio": 0.9478006590064318,
       "q_from_inferred_durations": 1.2341273322524275,
       "q_from_true_durations": 1.1738022442914033,
+      "q_truncated_mle_true_durations": 1.1171988761018865,
+      "q_truncated_mle_inferred_durations": 1.1773346080257776,
       "q_posterior_median": 1.1660606566095466
     },
     {
@@ -907,6 +1113,8 @@
       "multi_duration_ratio": 0.9610769233439708,
       "q_from_inferred_durations": 1.143081397763019,
       "q_from_true_durations": 1.0372688401865569,
+      "q_truncated_mle_true_durations": 0.9748646873605883,
+      "q_truncated_mle_inferred_durations": 1.0683791961301314,
       "q_posterior_median": 1.0693307829000855
     },
     {
@@ -918,6 +1126,8 @@
       "multi_duration_ratio": 0.9668456072643726,
       "q_from_inferred_durations": 1.1564528502672693,
       "q_from_true_durations": 1.1103477563251087,
+      "q_truncated_mle_true_durations": 1.0474663709235836,
+      "q_truncated_mle_inferred_durations": 1.0922642608117588,
       "q_posterior_median": 1.0857882010270856
     },
     {
@@ -929,6 +1139,8 @@
       "multi_duration_ratio": 0.9624009572839978,
       "q_from_inferred_durations": 1.1484689262907202,
       "q_from_true_durations": 1.0829584651014996,
+      "q_truncated_mle_true_durations": 1.0373412035294591,
+      "q_truncated_mle_inferred_durations": 1.0971867284035524,
       "q_posterior_median": 1.0893327358520555
     },
     {
@@ -940,6 +1152,8 @@
       "multi_duration_ratio": 0.9478328630690346,
       "q_from_inferred_durations": 1.3153070022863447,
       "q_from_true_durations": 1.1968176485638962,
+      "q_truncated_mle_true_durations": 1.1582300607898393,
+      "q_truncated_mle_inferred_durations": 1.2655704336333455,
       "q_posterior_median": 1.2615360772725064
     },
     {
@@ -951,6 +1165,8 @@
       "multi_duration_ratio": 0.9635011644086798,
       "q_from_inferred_durations": 1.143206487305703,
       "q_from_true_durations": 1.0805013211589545,
+      "q_truncated_mle_true_durations": 1.0062742562186124,
+      "q_truncated_mle_inferred_durations": 1.0637723888908115,
       "q_posterior_median": 1.0577107725855688
     },
     {
@@ -962,6 +1178,8 @@
       "multi_duration_ratio": 0.9730910500001192,
       "q_from_inferred_durations": 1.1947611269009877,
       "q_from_true_durations": 1.1711188507806747,
+      "q_truncated_mle_true_durations": 1.1437711292319221,
+      "q_truncated_mle_inferred_durations": 1.1702678484042042,
       "q_posterior_median": 1.1647126299465873
     },
     {
@@ -973,6 +1191,8 @@
       "multi_duration_ratio": 0.984331636914285,
       "q_from_inferred_durations": 1.1451869903577807,
       "q_from_true_durations": 1.0927270811710388,
+      "q_truncated_mle_true_durations": 1.043825163834022,
+      "q_truncated_mle_inferred_durations": 1.0866435556272453,
       "q_posterior_median": 1.0810174028689494
     },
     {
@@ -984,6 +1204,8 @@
       "multi_duration_ratio": 0.9196513005077436,
       "q_from_inferred_durations": 1.1413409973394353,
       "q_from_true_durations": 1.0297524487294811,
+      "q_truncated_mle_true_durations": 0.977472164042883,
+      "q_truncated_mle_inferred_durations": 1.082498141699181,
       "q_posterior_median": 1.0770050415879873
     },
     {
@@ -995,6 +1217,8 @@
       "multi_duration_ratio": 0.9387037120885499,
       "q_from_inferred_durations": 1.230458536931621,
       "q_from_true_durations": 1.1366344022508943,
+      "q_truncated_mle_true_durations": 1.0936152607720915,
+      "q_truncated_mle_inferred_durations": 1.1795465381567884,
       "q_posterior_median": 1.1756221610666953
     },
     {
@@ -1006,6 +1230,8 @@
       "multi_duration_ratio": 1.0226121317865293,
       "q_from_inferred_durations": 1.156362290924199,
       "q_from_true_durations": 1.168968351271895,
+      "q_truncated_mle_true_durations": 1.118040459825181,
+      "q_truncated_mle_inferred_durations": 1.105935447277393,
       "q_posterior_median": 1.0986406942708333
     },
     {
@@ -1017,6 +1243,8 @@
       "multi_duration_ratio": 0.9363989622789038,
       "q_from_inferred_durations": 1.1818012027955602,
       "q_from_true_durations": 1.0866341632517713,
+      "q_truncated_mle_true_durations": 1.026195698113184,
+      "q_truncated_mle_inferred_durations": 1.1112023824115569,
       "q_posterior_median": 1.1093603981972495
     },
     {
@@ -1028,6 +1256,8 @@
       "multi_duration_ratio": 0.9664053315899424,
       "q_from_inferred_durations": 1.1919394326919304,
       "q_from_true_durations": 1.1518119661614188,
+      "q_truncated_mle_true_durations": 1.1104314225915497,
+      "q_truncated_mle_inferred_durations": 1.1498915999379626,
       "q_posterior_median": 1.1454800084893757
     },
     {
@@ -1039,6 +1269,8 @@
       "multi_duration_ratio": 0.9874747118379534,
       "q_from_inferred_durations": 1.0590617658804,
       "q_from_true_durations": 1.023932677595527,
+      "q_truncated_mle_true_durations": 0.960653503131439,
+      "q_truncated_mle_inferred_durations": 0.99197197756338,
       "q_posterior_median": 0.9828279424325269
     },
     {
@@ -1050,6 +1282,8 @@
       "multi_duration_ratio": 0.9635779019179854,
       "q_from_inferred_durations": 1.2260253038338074,
       "q_from_true_durations": 1.1777671579212334,
+      "q_truncated_mle_true_durations": 1.135919302312652,
+      "q_truncated_mle_inferred_durations": 1.1828520117554018,
       "q_posterior_median": 1.1846430791556053
     },
     {
@@ -1061,6 +1295,8 @@
       "multi_duration_ratio": 0.8842462123387865,
       "q_from_inferred_durations": 1.2696978857135275,
       "q_from_true_durations": 1.113358132729919,
+      "q_truncated_mle_true_durations": 1.0715222767587687,
+      "q_truncated_mle_inferred_durations": 1.2178470983626297,
       "q_posterior_median": 1.2146055426481102
     },
     {
@@ -1072,6 +1308,8 @@
       "multi_duration_ratio": 0.9127400088968196,
       "q_from_inferred_durations": 1.1389187456424097,
       "q_from_true_durations": 1.0326682345380862,
+      "q_truncated_mle_true_durations": 0.9802776062332597,
+      "q_truncated_mle_inferred_durations": 1.0836309565730575,
       "q_posterior_median": 1.0807647208084041
     },
     {
@@ -1083,6 +1321,8 @@
       "multi_duration_ratio": 0.9547057825483147,
       "q_from_inferred_durations": 1.000047509626419,
       "q_from_true_durations": 0.8827534263126786,
+      "q_truncated_mle_true_durations": 0.8208950960800936,
+      "q_truncated_mle_inferred_durations": 0.92171432348342,
       "q_posterior_median": 0.9128081485472176
     },
     {
@@ -1094,6 +1334,8 @@
       "multi_duration_ratio": 0.9394294660194429,
       "q_from_inferred_durations": 1.1271959961265896,
       "q_from_true_durations": 1.0418836107818068,
+      "q_truncated_mle_true_durations": 0.9842439495040153,
+      "q_truncated_mle_inferred_durations": 1.0622114378547345,
       "q_posterior_median": 1.058448111947632
     },
     {
@@ -1105,6 +1347,8 @@
       "multi_duration_ratio": 0.9211342768996387,
       "q_from_inferred_durations": 1.2206919260775804,
       "q_from_true_durations": 1.10448486750776,
+      "q_truncated_mle_true_durations": 1.052342548379673,
+      "q_truncated_mle_inferred_durations": 1.1570287740278766,
       "q_posterior_median": 1.15047635548027
     },
     {
@@ -1116,6 +1360,8 @@
       "multi_duration_ratio": 0.9818855096069654,
       "q_from_inferred_durations": 1.0826708355234664,
       "q_from_true_durations": 1.0204132097535121,
+      "q_truncated_mle_true_durations": 0.9442448046799649,
+      "q_truncated_mle_inferred_durations": 1.0018528345644002,
       "q_posterior_median": 0.9931485361892117
     },
     {
@@ -1127,6 +1373,8 @@
       "multi_duration_ratio": 0.7717562415022876,
       "q_from_inferred_durations": 0.5605818320069074,
       "q_from_true_durations": 0.36125596895267215,
+      "q_truncated_mle_true_durations": 0.2727836417695767,
+      "q_truncated_mle_inferred_durations": 0.40831940458594307,
       "q_posterior_median": 0.4073993433916113
     },
     {
@@ -1138,6 +1386,8 @@
       "multi_duration_ratio": 0.9049634308184836,
       "q_from_inferred_durations": 0.46542466129348325,
       "q_from_true_durations": 0.37008682251626873,
+      "q_truncated_mle_true_durations": 0.2691245536944283,
+      "q_truncated_mle_inferred_durations": 0.3329310497466788,
       "q_posterior_median": 0.3342922868272756
     },
     {
@@ -1149,6 +1399,8 @@
       "multi_duration_ratio": 0.6449160943724479,
       "q_from_inferred_durations": 0.5265326105578423,
       "q_from_true_durations": 0.2976461367784387,
+      "q_truncated_mle_true_durations": 0.1789340320562726,
+      "q_truncated_mle_inferred_durations": 0.31170032149125726,
       "q_posterior_median": 0.3169969625022883
     },
     {
@@ -1160,6 +1412,8 @@
       "multi_duration_ratio": 0.5162922757710207,
       "q_from_inferred_durations": 0.6598776378737596,
       "q_from_true_durations": 0.31613449491935314,
+      "q_truncated_mle_true_durations": 0.22093124193493693,
+      "q_truncated_mle_inferred_durations": 0.4584050659644448,
       "q_posterior_median": 0.46316950758332376
     },
     {
@@ -1171,6 +1425,8 @@
       "multi_duration_ratio": 0.9312413075623636,
       "q_from_inferred_durations": 0.47167714572695485,
       "q_from_true_durations": 0.3801300998375355,
+      "q_truncated_mle_true_durations": 0.23254947058647446,
+      "q_truncated_mle_inferred_durations": 0.28361645174359607,
       "q_posterior_median": 0.28065497422520375
     },
     {
@@ -1182,6 +1438,8 @@
       "multi_duration_ratio": 0.672938195783629,
       "q_from_inferred_durations": 0.6714579336052049,
       "q_from_true_durations": 0.34170904154325865,
+      "q_truncated_mle_true_durations": 0.25524578552726457,
+      "q_truncated_mle_inferred_durations": 0.46698414517180625,
       "q_posterior_median": 0.4770935998954183
     },
     {
@@ -1193,6 +1451,8 @@
       "multi_duration_ratio": 0.932957262503387,
       "q_from_inferred_durations": 0.3948793079330694,
       "q_from_true_durations": 0.3584821643142231,
+      "q_truncated_mle_true_durations": 0.2689499809240808,
+      "q_truncated_mle_inferred_durations": 0.29432731024146735,
       "q_posterior_median": 0.2992874800750706
     },
     {
@@ -1204,6 +1464,8 @@
       "multi_duration_ratio": 0.7121403441281043,
       "q_from_inferred_durations": 0.5824362911092188,
       "q_from_true_durations": 0.3510523962433123,
+      "q_truncated_mle_true_durations": 0.22707077691112057,
+      "q_truncated_mle_inferred_durations": 0.36810818793024264,
       "q_posterior_median": 0.36970018185648634
     },
     {
@@ -1215,6 +1477,8 @@
       "multi_duration_ratio": 0.6620357146438263,
       "q_from_inferred_durations": 0.6804969595603192,
       "q_from_true_durations": 0.34915838776660124,
+      "q_truncated_mle_true_durations": 0.2517275849617134,
+      "q_truncated_mle_inferred_durations": 0.4648520258454882,
       "q_posterior_median": 0.47339954393848327
     },
     {
@@ -1226,6 +1490,8 @@
       "multi_duration_ratio": 0.9231801837191053,
       "q_from_inferred_durations": 0.5158445708146674,
       "q_from_true_durations": 0.40521303372847683,
+      "q_truncated_mle_true_durations": 0.30074970942124774,
+      "q_truncated_mle_inferred_durations": 0.37968952957219176,
       "q_posterior_median": 0.38241901066623607
     },
     {
@@ -1237,6 +1503,8 @@
       "multi_duration_ratio": 0.8686916265017801,
       "q_from_inferred_durations": 0.48650630880384105,
       "q_from_true_durations": 0.38681094162850244,
+      "q_truncated_mle_true_durations": 0.27108064920252817,
+      "q_truncated_mle_inferred_durations": 0.3356726179496979,
       "q_posterior_median": 0.33641862654004917
     },
     {
@@ -1248,6 +1516,8 @@
       "multi_duration_ratio": 0.9493740976286915,
       "q_from_inferred_durations": 0.3872116269968398,
       "q_from_true_durations": 0.31776665531903897,
+      "q_truncated_mle_true_durations": 0.24287010456129057,
+      "q_truncated_mle_inferred_durations": 0.2893756006961309,
       "q_posterior_median": 0.29168414177328766
     },
     {
@@ -1259,6 +1529,8 @@
       "multi_duration_ratio": 0.7742121380542518,
       "q_from_inferred_durations": 0.5395351526846619,
       "q_from_true_durations": 0.37091915720864366,
+      "q_truncated_mle_true_durations": 0.2748651338031099,
+      "q_truncated_mle_inferred_durations": 0.3904363467353825,
       "q_posterior_median": 0.3909757707057679
     },
     {
@@ -1270,6 +1542,8 @@
       "multi_duration_ratio": 0.6363409619071471,
       "q_from_inferred_durations": 0.754883297520892,
       "q_from_true_durations": 0.4214213098390857,
+      "q_truncated_mle_true_durations": 0.3096949794034198,
+      "q_truncated_mle_inferred_durations": 0.5437562924403418,
       "q_posterior_median": 0.5463831826832716
     },
     {
@@ -1281,6 +1555,8 @@
       "multi_duration_ratio": 0.7827857065713127,
       "q_from_inferred_durations": 0.5297564036515052,
       "q_from_true_durations": 0.32829922136918926,
+      "q_truncated_mle_true_durations": 0.2121237602210184,
+      "q_truncated_mle_inferred_durations": 0.3362675757535077,
       "q_posterior_median": 0.3434100210109612
     },
     {
@@ -1292,6 +1568,8 @@
       "multi_duration_ratio": 0.889314063225626,
       "q_from_inferred_durations": 0.3879062294169777,
       "q_from_true_durations": 0.3381860991406949,
+      "q_truncated_mle_true_durations": 0.23157635872760876,
+      "q_truncated_mle_inferred_durations": 0.2636920108325495,
       "q_posterior_median": 0.2650080942276159
     },
     {
@@ -1303,6 +1581,8 @@
       "multi_duration_ratio": 0.8468589064144775,
       "q_from_inferred_durations": 0.42059606423073803,
       "q_from_true_durations": 0.3379790539011708,
+      "q_truncated_mle_true_durations": 0.27108701876747276,
+      "q_truncated_mle_inferred_durations": 0.33156734043678676,
       "q_posterior_median": 0.3372030832276842
     },
     {
@@ -1314,6 +1594,8 @@
       "multi_duration_ratio": 0.9074318738273847,
       "q_from_inferred_durations": 0.476391631745791,
       "q_from_true_durations": 0.386014073997197,
+      "q_truncated_mle_true_durations": 0.3011882986741546,
+      "q_truncated_mle_inferred_durations": 0.359126473657635,
       "q_posterior_median": 0.36533612583298924
     },
     {
@@ -1325,6 +1607,8 @@
       "multi_duration_ratio": 0.7036774948597703,
       "q_from_inferred_durations": 0.6180268087839589,
       "q_from_true_durations": 0.378759330563618,
+      "q_truncated_mle_true_durations": 0.24867750337804154,
+      "q_truncated_mle_inferred_durations": 0.4025231678844942,
       "q_posterior_median": 0.4055047852719385
     },
     {
@@ -1336,6 +1620,8 @@
       "multi_duration_ratio": 0.7661915431397317,
       "q_from_inferred_durations": 0.5420379602355213,
       "q_from_true_durations": 0.24982271344799323,
+      "q_truncated_mle_true_durations": 0.10876067016860941,
+      "q_truncated_mle_inferred_durations": 0.2310915578545176,
       "q_posterior_median": 0.2613463757412945
     },
     {
@@ -1347,6 +1633,8 @@
       "multi_duration_ratio": 0.7707371503066608,
       "q_from_inferred_durations": 0.5218886017098049,
       "q_from_true_durations": 0.36875312196633764,
+      "q_truncated_mle_true_durations": 0.25275884596370624,
+      "q_truncated_mle_inferred_durations": 0.3514321230302354,
       "q_posterior_median": 0.36345177101299964
     },
     {
@@ -1358,6 +1646,8 @@
       "multi_duration_ratio": 0.6397081812235259,
       "q_from_inferred_durations": 0.8102054714937766,
       "q_from_true_durations": 0.35728648583745165,
+      "q_truncated_mle_true_durations": 0.21167970429959662,
+      "q_truncated_mle_inferred_durations": 0.46811340131332524,
       "q_posterior_median": 0.47600775359140657
     },
     {
@@ -1369,6 +1659,8 @@
       "multi_duration_ratio": 0.7317722926341337,
       "q_from_inferred_durations": 0.5176710759236762,
       "q_from_true_durations": 0.36661605423143473,
+      "q_truncated_mle_true_durations": 0.20856603638426327,
+      "q_truncated_mle_inferred_durations": 0.2913518221302176,
       "q_posterior_median": 0.3029609537092064
     },
     {
@@ -1380,6 +1672,8 @@
       "multi_duration_ratio": 0.7547666241784061,
       "q_from_inferred_durations": 0.5630535960141023,
       "q_from_true_durations": 0.3805236253917549,
+      "q_truncated_mle_true_durations": 0.2717069518912707,
+      "q_truncated_mle_inferred_durations": 0.39201629606840316,
       "q_posterior_median": 0.4080639149050922
     },
     {
@@ -1391,6 +1685,8 @@
       "multi_duration_ratio": 0.6490572760206886,
       "q_from_inferred_durations": 0.5868351953854658,
       "q_from_true_durations": 0.3533477803686888,
+      "q_truncated_mle_true_durations": 0.25589382791765325,
+      "q_truncated_mle_inferred_durations": 0.403910864782892,
       "q_posterior_median": 0.41592899510401043
     },
     {
@@ -1402,6 +1698,8 @@
       "multi_duration_ratio": 0.70004250118808,
       "q_from_inferred_durations": 0.6361124144448667,
       "q_from_true_durations": 0.3591118158573084,
+      "q_truncated_mle_true_durations": 0.20599032278691662,
+      "q_truncated_mle_inferred_durations": 0.3570663690665088,
       "q_posterior_median": 0.37048416586659705
     },
     {
@@ -1413,6 +1711,8 @@
       "multi_duration_ratio": 0.8835210812979688,
       "q_from_inferred_durations": 0.6445061857683354,
       "q_from_true_durations": 0.3505324125159671,
+      "q_truncated_mle_true_durations": 0.25034136765707937,
+      "q_truncated_mle_inferred_durations": 0.44149002361790374,
       "q_posterior_median": 0.45167896190589457
     },
     {
@@ -1424,6 +1724,8 @@
       "multi_duration_ratio": 0.8249419505323898,
       "q_from_inferred_durations": 0.3771452726462509,
       "q_from_true_durations": 0.28998707021867115,
+      "q_truncated_mle_true_durations": 0.1582911554300685,
+      "q_truncated_mle_inferred_durations": 0.2065406469923391,
       "q_posterior_median": 0.2243342706237022
     },
     {
@@ -1435,6 +1737,8 @@
       "multi_duration_ratio": 0.8168604626532174,
       "q_from_inferred_durations": 0.4407140250640326,
       "q_from_true_durations": 0.32970989351198887,
+      "q_truncated_mle_true_durations": 0.23871562620980258,
+      "q_truncated_mle_inferred_durations": 0.31453282830458634,
       "q_posterior_median": 0.31543137182370984
     },
     {
@@ -1446,6 +1750,8 @@
       "multi_duration_ratio": 0.6675020872703077,
       "q_from_inferred_durations": 0.7431073599258818,
       "q_from_true_durations": 0.38246054906531274,
+      "q_truncated_mle_true_durations": 0.22868930731035997,
+      "q_truncated_mle_inferred_durations": 0.4153659582539205,
       "q_posterior_median": 0.4376855695831798
     },
     {
@@ -1457,6 +1763,8 @@
       "multi_duration_ratio": 0.8370072542661156,
       "q_from_inferred_durations": 0.4700399333716341,
       "q_from_true_durations": 0.33710442069088037,
+      "q_truncated_mle_true_durations": 0.16949600916963797,
+      "q_truncated_mle_inferred_durations": 0.23400237229637974,
       "q_posterior_median": 0.23911571092322553
     },
     {
@@ -1468,6 +1776,8 @@
       "multi_duration_ratio": 0.7523060713133652,
       "q_from_inferred_durations": 0.5478921887035673,
       "q_from_true_durations": 0.400988179918215,
+      "q_truncated_mle_true_durations": 0.2679501394411738,
+      "q_truncated_mle_inferred_durations": 0.3625105039039875,
       "q_posterior_median": 0.36360549986812746
     },
     {
@@ -1479,6 +1789,8 @@
       "multi_duration_ratio": 0.9389766735915649,
       "q_from_inferred_durations": 0.49072815655863283,
       "q_from_true_durations": 0.43683138532745297,
+      "q_truncated_mle_true_durations": 0.32350858661188053,
+      "q_truncated_mle_inferred_durations": 0.3610100548797382,
       "q_posterior_median": 0.3697219133597648
     },
     {
@@ -1490,6 +1802,8 @@
       "multi_duration_ratio": 0.7957285720051954,
       "q_from_inferred_durations": 0.4786072635873168,
       "q_from_true_durations": 0.30224368525481116,
+      "q_truncated_mle_true_durations": 0.2048513463908879,
+      "q_truncated_mle_inferred_durations": 0.31670409789659004,
       "q_posterior_median": 0.3328298663419122
     },
     {
@@ -1501,6 +1815,8 @@
       "multi_duration_ratio": 0.8211955426939392,
       "q_from_inferred_durations": 0.5651469157374817,
       "q_from_true_durations": 0.32191493701866475,
+      "q_truncated_mle_true_durations": 0.22096426977913822,
+      "q_truncated_mle_inferred_durations": 0.37366620938057277,
       "q_posterior_median": 0.3837931102460169
     },
     {
@@ -1512,6 +1828,8 @@
       "multi_duration_ratio": 0.6889350070640708,
       "q_from_inferred_durations": 0.637266998528242,
       "q_from_true_durations": 0.36867042995340626,
+      "q_truncated_mle_true_durations": 0.2554183112573093,
+      "q_truncated_mle_inferred_durations": 0.4254359430048184,
       "q_posterior_median": 0.43158359476313696
     },
     {
@@ -1523,6 +1841,8 @@
       "multi_duration_ratio": 0.8945196158246669,
       "q_from_inferred_durations": 0.37520664349443317,
       "q_from_true_durations": 0.30870225712774396,
+      "q_truncated_mle_true_durations": 0.20140314420868818,
+      "q_truncated_mle_inferred_durations": 0.2436718504198254,
       "q_posterior_median": 0.2490010132639744
     },
     {
@@ -1534,6 +1854,8 @@
       "multi_duration_ratio": 0.6565314617509016,
       "q_from_inferred_durations": 0.618204149964465,
       "q_from_true_durations": 0.3657180674333262,
+      "q_truncated_mle_true_durations": 0.26400591127298323,
+      "q_truncated_mle_inferred_durations": 0.4360049727874035,
       "q_posterior_median": 0.4336363436500744
     },
     {
@@ -1545,6 +1867,8 @@
       "multi_duration_ratio": 0.8683991903097146,
       "q_from_inferred_durations": 0.5653815436584139,
       "q_from_true_durations": 0.395609716995507,
+      "q_truncated_mle_true_durations": 0.2772675691417364,
+      "q_truncated_mle_inferred_durations": 0.38708346150709394,
       "q_posterior_median": 0.3986085420563951
     },
     {
@@ -1556,6 +1880,8 @@
       "multi_duration_ratio": 0.7872262474626643,
       "q_from_inferred_durations": 0.4701264508371719,
       "q_from_true_durations": 0.334553028948565,
+      "q_truncated_mle_true_durations": 0.23972535912887613,
+      "q_truncated_mle_inferred_durations": 0.3271104372976063,
       "q_posterior_median": 0.32925646497090716
     },
     {
@@ -1567,6 +1893,8 @@
       "multi_duration_ratio": 0.7832553756263595,
       "q_from_inferred_durations": 0.5834605431033113,
       "q_from_true_durations": 0.4064961791333067,
+      "q_truncated_mle_true_durations": 0.3054596041515394,
+      "q_truncated_mle_inferred_durations": 0.43285215892330076,
       "q_posterior_median": 0.4308708187718095
     },
     {
@@ -1578,6 +1906,8 @@
       "multi_duration_ratio": 0.8216519345115909,
       "q_from_inferred_durations": 0.5388662715421657,
       "q_from_true_durations": 0.373520743343922,
+      "q_truncated_mle_true_durations": 0.26396461774109814,
+      "q_truncated_mle_inferred_durations": 0.3718620995547898,
       "q_posterior_median": 0.37509446149688835
     },
     {
@@ -1589,6 +1919,8 @@
       "multi_duration_ratio": 0.9469059178938447,
       "q_from_inferred_durations": 0.3379600314593773,
       "q_from_true_durations": 0.32526960233160507,
+      "q_truncated_mle_true_durations": 0.22285822871945984,
+      "q_truncated_mle_inferred_durations": 0.23602451029553972,
       "q_posterior_median": 0.2510302651616504
     },
     {
@@ -1600,6 +1932,8 @@
       "multi_duration_ratio": 0.8512076714933068,
       "q_from_inferred_durations": 0.5377116502143545,
       "q_from_true_durations": 0.37817925035007743,
+      "q_truncated_mle_true_durations": 0.23513694711183286,
+      "q_truncated_mle_inferred_durations": 0.32787512375286465,
       "q_posterior_median": 0.34069122106467864
     },
     {
@@ -1611,6 +1945,8 @@
       "multi_duration_ratio": 0.9239688570636779,
       "q_from_inferred_durations": 0.41619855674761386,
       "q_from_true_durations": 0.34679657122813284,
+      "q_truncated_mle_true_durations": 0.26962435661869927,
+      "q_truncated_mle_inferred_durations": 0.318232680698795,
       "q_posterior_median": 0.32019884687533257
     },
     {
@@ -1622,6 +1958,8 @@
       "multi_duration_ratio": 0.6790989176534885,
       "q_from_inferred_durations": 0.7738709614431154,
       "q_from_true_durations": 0.33400394986473514,
+      "q_truncated_mle_true_durations": 0.18245710321562264,
+      "q_truncated_mle_inferred_durations": 0.39984635000474616,
       "q_posterior_median": 0.42173145666782097
     },
     {
@@ -1633,6 +1971,8 @@
       "multi_duration_ratio": 0.8412646449994162,
       "q_from_inferred_durations": 0.5445860509850662,
       "q_from_true_durations": 0.4041298454212515,
+      "q_truncated_mle_true_durations": 0.30133933317101425,
+      "q_truncated_mle_inferred_durations": 0.39998172498189594,
       "q_posterior_median": 0.4051827320058839
     },
     {
@@ -1644,6 +1984,8 @@
       "multi_duration_ratio": 0.7062460657935752,
       "q_from_inferred_durations": 0.5059409861755894,
       "q_from_true_durations": 0.3177584134823462,
+      "q_truncated_mle_true_durations": 0.18570120534885845,
+      "q_truncated_mle_inferred_durations": 0.29306595585819245,
       "q_posterior_median": 0.29606558548570067
     },
     {
@@ -1655,6 +1997,8 @@
       "multi_duration_ratio": 0.9120956725823467,
       "q_from_inferred_durations": 0.5635316010876745,
       "q_from_true_durations": 0.33591995514939893,
+      "q_truncated_mle_true_durations": 0.1952028211400111,
+      "q_truncated_mle_inferred_durations": 0.319648592068435,
       "q_posterior_median": 0.3242480215942091
     },
     {
@@ -1666,6 +2010,8 @@
       "multi_duration_ratio": 1.067541710305268,
       "q_from_inferred_durations": 0.33063760585705515,
       "q_from_true_durations": 0.3552491759399506,
+      "q_truncated_mle_true_durations": 0.24238578178792583,
+      "q_truncated_mle_inferred_durations": 0.22854207046505087,
       "q_posterior_median": 0.23986835934043754
     }
   ]

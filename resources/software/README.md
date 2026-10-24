@@ -48,10 +48,14 @@ describing the data twice.
 
 | Entry | Tier | Validated uses (see entry) |
 | --- | --- | --- |
-| [FossilSim](fossilsim/README.md) | T3 | Poisson fossil sampling; morphotaxonomy; with TreeSim, birth–death histories |
-| [paleobuddy](paleobuddy/README.md) | T3 | constant and piecewise birth–death; Poisson fossil sampling |
-| [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling; corrected rates under homogeneous sampling |
-| [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation; q not calibrated |
+| [FossilSim](fossilsim/README.md) | T2 | Poisson fossil sampling; morphospecies counts; with TreeSim, birth–death histories |
+| [paleobuddy](paleobuddy/README.md) | T2 | constant and piecewise birth–death; Poisson fossil sampling |
+
+All five were reviewed independently on 24 October 2026 (Claude Sonnet
+subagent) and its findings applied. The two generators stay at T2: their
+cross-check had little power, so T3 waits for a larger comparison.
+| [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling |
+| [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation (biased, no undercoverage detected); q failed |
 | [RevBayes](revbayes/README.md) | T1 | none: FBD range process disabled in releases |
 
 Tranche 1's harness and results: [bench/](bench/README.md).
@@ -169,3 +173,22 @@ Body sections, in order:
 - *CRAN archival is common and recent* (RPANDA, TESS, Momocs, MCMCtreeR,
   sensiPhy in the past year). Pin GitHub commits or CRAN archive tarballs in
   every environment.
+
+**Tranche 1 (23–24 October 2026; [bench](bench/README.md)).**
+
+- *Run a documented function before relying on it.* RevBayes' help page
+  describes the FBD range process; every release since April 2024 refuses
+  to run it.
+- *Check which implementation ran.* PyRate loaded its compiled likelihood,
+  not the Python code we first read; they agree, but the citation must be
+  to what ran.
+- *A test on a mean can miss an ordering error.* E[N(t)] cannot tell rate
+  shifts applied forwards from backwards; G3b's midpoint count can.
+- *Separate width from bias before calling intervals too narrow.* PyRate's
+  q intervals are about the right width and shifted; the fix is in the
+  durations, not the preservation likelihood.
+- *Rejection on observed data with a full parameter redraw keeps
+  simulation-based calibration; rejection at fixed parameters does not.*
+- *The independent review earned its cost again.* It found no wrong
+  number but five wrong or overstated interpretations, including two of
+  ours that had already been written up as mechanisms.

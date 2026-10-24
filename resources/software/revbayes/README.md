@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.revbayes, image: 
 blockers: ["FBD range and FBD speciation processes disabled in every release since 2024-04-15", "dnFBDRMatrix, used by the 2025 skyfbdr study, not registered in v1.4.1"]
 related_sources: []
 eprp_questions: [Q-006, Q-022, Q-003, Q-005]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # RevBayes
@@ -60,11 +60,15 @@ E3 in [bench/VALIDATION.md](../bench/VALIDATION.md) and amendment A1.
 - **E3(a), coverage from the study's deposited runs** (1,000 prior draws,
   50 million generations each, built with an unrecorded RevBayes version):
   λ 0.932 / 0.945 / 0.954, μ 0.945 / 0.938 / 0.948, ψ 0.941 / 0.903 / 0.944,
-  oldest stage first; 936/1,000 is the lower 2.5% binomial bound for
-  calibrated intervals. The middle-stage ψ is clearly below. The study
-  rejected draws by the number of sampled species, which breaks exact
-  simulation-based calibration, so the shortfall need not be the
-  likelihood's. This checks the study's own result, not v1.4.1.
+  oldest stage first (pooled 0.939); 936/1,000 is the lower 2.5% binomial
+  bound for calibrated intervals. The oldest-stage λ and, clearly, the
+  middle-stage ψ fall below it, with misses in the tails of the true
+  values; MCMC length and burn-in are not the cause (details in
+  [bench/README.md](../bench/README.md)). The study's redraw of all
+  parameters on its sampled-species rule preserves calibration; its
+  fixed-parameter loops (at least five total species; resampling fossils
+  until one species is sampled) do not, and are the open candidates. This
+  checks the study's own result, not v1.4.1.
 
 ## Strengths
 

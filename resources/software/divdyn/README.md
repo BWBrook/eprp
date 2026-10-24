@@ -11,12 +11,12 @@ licence: "CC BY 4.0 (CRAN DESCRIPTION); GPL-3.0 (GitHub repository): conflicting
 release: {version: 0.8.3, date: 2024-11-21, checked: 2026-10-23}
 maintenance: {state: slow, last_commit: 2025-12-01, checked: 2026-10-23}
 tier: T2
-validated_uses: ["three-timer, gap-filler and boundary-crosser rates under complete sampling", "corrected three-timer and gap-filler rates under homogeneous Poisson sampling (characterised, no declared tolerance)"]
+validated_uses: ["origination and extinction rates under complete sampling (all rate columns coincide there)"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.r, image: "eprp-sw/bench-r:t1 (sha256:926c0052…)", host: deep-server}
 blockers: []
 related_sources: [pbdb]
 eprp_questions: [Q-040, Q-042, Q-038]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # divDyn
@@ -56,25 +56,34 @@ E1 in [bench/VALIDATION.md](../bench/VALIDATION.md): paleobuddy histories
 | `ext2f3` / `ori2f3` (second-for-third) | same | −36% / −36% |
 
 Under complete sampling every column is within 0.2% of the truth (declared
-tolerance 5%): **pass**. The raw three-timer carries the log of the
-three-timer sampling probability by design (here about log(1/0.39)); the
-corrected form removes it.
+tolerance 5%): **pass**. With no part-timers or gap-fillers, all the
+formulas reduce to the same extinction and origination values, so this is
+one check of each. The sampled-arm figures are a characterisation (no
+tolerance was declared), not a validation. The raw three-timer carries the
+log of the three-timer sampling probability by design (here about
+log(1/0.39)); the corrected form removes it.
 
 ## Strengths
 
-- Exact under complete sampling; the corrected three-timer and gap-filler
-  rates are within 2% under homogeneous sampling at 39% per-bin sampling
-  probability.
+- Exact under complete sampling; in our characterisation the corrected
+  three-timer and gap-filler rates were within 2% under homogeneous
+  sampling at a 39% per-bin sampling probability. With standard errors
+  taken across replicates (adjacent bins share data;
+  `bench/results/e1/e1_divdyn_se.json`), the corrected three-timer is
+  within 1 SE of the truth, while the gap-filler's +1.5% (extinction) and
+  +1.0% (origination) are about 2 SE, so a small bias is possible.
 - One function returns every standard rate, so estimators can be compared
   on identical counts.
 
 ## Weaknesses and pitfalls
 
 - **Second-for-third rates (`ext2f3`, `ori2f3`) were 36% low** under
-  homogeneous Poisson sampling. divDyn always substitutes the middle value
-  of the three subsequent-sampling counts (`sort(y)[2]`), and its source
-  comment notes uncertainty about Alroy's (2015) rule. Not yet checked
-  against the paper; do not rely on these columns until it is.
+  homogeneous Poisson sampling in continuous time. divDyn substitutes the
+  middle value of the three subsequent-sampling counts (`sort(y)[2]`), and
+  its source comment says this follows Alroy's (2015) rule. The cause is
+  open; one untested candidate is that continuous turnover within bins and
+  constant per-time sampling violate the method's assumptions. Treat these
+  columns as unvalidated under such conditions.
 - `ext3t`/`ori3t` are the raw rates; use `extC3t`/`oriC3t` or the
   gap-filler rates for estimates.
 - The boundary-crosser extinction rate was 7.9% high under sampling

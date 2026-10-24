@@ -11,12 +11,12 @@ licence: AGPL-3.0
 release: {version: "master 6a27efb (latest tag v3.1.1, 2022-03-09)", date: 2026-10-22, checked: 2026-10-23}
 maintenance: {state: active, last_commit: 2026-10-22, checked: 2026-10-23}
 tier: T2
-validated_uses: ["constant-rate birth-death with homogeneous Poisson preservation (-A 0 -mHPP): lambda and mu intervals calibrated at high preservation; q intervals not calibrated"]
+validated_uses: ["constant-rate birth-death with homogeneous Poisson preservation (-A 0 -mHPP) at high preservation: no undercoverage detected for lambda and mu (medians about 11% low); q intervals failed"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.pyrate, image: "eprp-sw/bench-pyrate:t1 (sha256:8df17071…)", host: deep-server}
 blockers: ["AGPL-3.0: obligations if a modified version is served to users"]
 related_sources: []
 eprp_questions: [Q-004, Q-006, Q-012, Q-045]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # PyRate
@@ -36,8 +36,11 @@ target and stratigraphic ranges are incomplete.
 The birth–death likelihood is evaluated on the inferred species times; the
 preservation likelihood is Poisson along each species' life (homogeneous,
 time-binned or non-homogeneous), zero-truncated so that every species is
-conditioned on at least one fossil (`PyRate.py` lines 3266–3342 at
-`6a27efb`, checked). The birth–death likelihood runs over the sampled
+conditioned on at least one fossil. Our runs used the compiled likelihood
+(`pyrate_lib/fastPyRateC/ModulePyrateC/FastPyRateC.cpp`, `PyRateC_HOMPP_lik`,
+lines 247–292 at `6a27efb`; the run logs say "Module FastPyRateC was
+loaded"), which matches the Python fallback (`PyRate.py` lines 3313–3342)
+and excludes the zero age that flags an extant species (both checked). The birth–death likelihood runs over the sampled
 species only, so species never sampled are not modelled (recall of the 2014
 paper; consistent with the E2 diagnostics).
 
@@ -46,9 +49,11 @@ paper; consistent with the E2 diagnostics).
 `python:3.12-slim`, PyRate cloned at commit `6a27efb`, `pip install -r
 requirements.txt` (numpy, scipy, dendropy, pandas, tqdm, matplotlib,
 scikit-learn, nlopt); `pip freeze` is stored in the image
-([Dockerfile](../bench/env/Dockerfile.pyrate)). The optional compiled
-`fastPyRateC` was not built. About 2,000 generations per second for 80
-species; 2 million generations took 15–17 minutes.
+([Dockerfile](../bench/env/Dockerfile.pyrate)). The repository ships a
+compiled FastPyRateC module for Python 3.12, which loaded without a build
+step. The smoke test ran at about 2,000 generations per second for 80
+species; the 150 E2 runs of 2 million generations averaged about 18 minutes
+each (3 h 50 min as 12 parallel jobs).
 
 ## Validation
 
@@ -64,33 +69,43 @@ sample size of at least 100 for λ, μ and q.
 | ψ 0.25, 50 replicates | λ 44, μ 40, q 33 | λ +6%, μ −3%, q +46% |
 
 The declared criterion was at least 90 of 100 for each parameter at
-ψ 1.0: **λ and μ pass, q fails.**
+ψ 1.0: **E2 fails, on q; λ and μ meet the criterion.** For λ and μ that
+means no undercoverage detected (95/100 is compatible with roughly 89–98%),
+not calibration: their medians are 11–12% low, about 0.8 posterior sd, and
+all five misses of each lie on one side.
 
-Post hoc diagnostics on the same histories ([bench/README.md](../bench/README.md)):
+The q intervals are about the right width (posterior sd 0.084q against a
+spread of medians of 0.078q) but shifted about one posterior sd high; all
+19 misses have the truth below the interval. Post hoc diagnostics on the
+same histories ([bench/README.md](../bench/README.md)):
 - PyRate's inferred durations of sampled species are 8% short at ψ 1.0
   and 31% short at ψ 0.25; singletons 34% and 50% short.
-- With known durations, sampled species alone give q at +6.5% and +43%;
-  PyRate's posterior median sits at that value (1.089 against 1.065;
-  0.364 against 0.356). The shortening and the zero truncation roughly
-  cancel.
-- Our reading, not yet tested: the birth–death prior on each species'
-  times is not conditioned on that species being sampled, while sampled
-  species are biased towards long durations.
+- PyRate's own zero-truncated preservation likelihood, maximised at the
+  true durations, gives q within 2% of the truth (1.006; 0.246). At
+  PyRate's inferred durations it gives 1.096 and 0.358, matching PyRate's
+  posterior medians (1.090; 0.364). The preservation likelihood is sound;
+  the bias comes from the durations.
+- Our reading, not yet tested: the likelihood divides by the probability
+  of being sampled, (1 − e^{−qD}), while the birth–death prior on species'
+  times has no matching factor, so short durations are favoured.
 
 ## Strengths
 
-- λ and μ intervals calibrated at ψ 1.0 despite a −11% median bias.
+- At ψ 1.0, no undercoverage detected for λ and μ despite a −11% median
+  bias, because the intervals are wide.
 - Active development (commit on 22 October 2026) and a broad model family.
 - Fast enough for coverage studies on a modest server.
 
 ## Weaknesses and pitfalls
 
 - **Preservation-rate intervals undercover** (81% at ψ 1.0, 66% at ψ 0.25)
-  and q is biased high, rising steeply as preservation falls. Any use of q
-  as a quantity of interest, or of preservation-corrected richness, inherits
-  this.
-- λ and μ calibration degrades at low preservation (μ covered 80% at
-  ψ 0.25).
+  because q is biased high, rising steeply as preservation falls. Any use of
+  q as a quantity of interest, or of preservation-corrected richness,
+  inherits this.
+- At low preservation λ and μ intervals are narrower than the spread of the
+  medians and μ is covered only 80% of the time (ψ 0.25).
+- The E2 simulations reject records with fewer than 10 sampled species
+  (disclosed in A2); this may bind at ψ 0.25.
 - The last tagged release (v3.1.1) is from 2022; work from a pinned commit.
 - Input is a generated Python file (`data_1=[array(...)]`); extant species
   need a 0 appended to their ages.
@@ -127,4 +142,6 @@ AGPL-3.0.
   10 s); `alpha` fixed at 1 in all logs (no gamma heterogeneity).
 - 2026-10-23 `checked`: E2, 150 runs on `deep-server`, 3 h 50 min as 12 jobs.
 - 2026-10-24 `checked`: zero-truncated preservation likelihood read in
-  `PyRate.py`; attribution and duration diagnostics run.
+  `PyRate.py` and `FastPyRateC.cpp`; attribution, duration, interval-width
+  and truncated-MLE diagnostics run; ESS recomputed with the standard Geyer
+  pairing (no change to coverage; every run above 100).

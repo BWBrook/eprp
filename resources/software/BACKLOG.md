@@ -14,10 +14,14 @@ analytic expectations and then against the other.
 ## Tranche 1: a known-truth bench for origination, extinction and sampling rates
 
 **Run 23–24 October 2026; results in [bench/README.md](bench/README.md).**
-FossilSim and paleobuddy pass every generator test (T3, cross-checked);
-divDyn passes (T2); PyRate passes for λ and μ and fails for q (T2 for the
-validated use); RevBayes' range process is disabled in releases, so it
-stays at T1 with E3(b) deferred. The plan as proposed:
+FossilSim and paleobuddy pass every generator test (T2; their cross-check
+had little power); divDyn passes under complete sampling (T2); PyRate fails
+E2 on q, with no undercoverage detected for λ and μ (T2 for that use);
+RevBayes' range process is disabled in releases, so it stays at T1 with
+E3(b) deferred. All reviewed independently on 24 October. Follow-ups: a
+higher-power generator comparison; a pinned `fbdr` build for E3(b),
+simulated without fixed-parameter conditioning (L-020); the cause of
+divDyn's second-for-third bias. The plan as proposed:
 
 | Tool | Role | Validation planned | Serves |
 | --- | --- | --- | --- |

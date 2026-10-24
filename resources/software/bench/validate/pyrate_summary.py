@@ -22,13 +22,13 @@ def ess(x):
         return float("nan")
     f = np.fft.rfft(x, 2 * n)
     acf = np.fft.irfft(f * np.conj(f))[:n] / (np.var(x) * n)
-    s = 0.0
-    for k in range(1, n - 1, 2):  # Geyer initial positive sequence
+    tau = -1.0
+    for k in range(0, n - 1, 2):  # Geyer initial positive sequence: pairs (rho_0 + rho_1), (rho_2 + rho_3), ...
         pair = acf[k] + acf[k + 1]
         if pair < 0:
             break
-        s += pair
-    return n / (1 + 2 * s)
+        tau += 2 * pair
+    return n / tau
 
 
 rows, summary = [], {}

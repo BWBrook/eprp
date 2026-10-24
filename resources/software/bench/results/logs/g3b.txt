@@ -1,0 +1,21 @@
+{
+  "G3b": {
+    "n": 2000,
+    "mean_alive_at_7.5": 4.569,
+    "truth": 4.4817,
+    "truth_if_reversed": 0.4724,
+    "z": 0.5545,
+    "pass": true
+  },
+  "timing_seconds": {
+    "bd_sim_constant_15myr_per_run": 0.0004,
+    "bd_sim_one_shift_15myr_per_run": 3.2429,
+    "bd_sim_constant_40myr_n0_100": 0.271,
+    "bd_sim_constant_40myr_species": 4218,
+    "sample_clade_15myr_per_run": 0.0048,
+    "sim_fossils_poisson_per_tree": 0.0851,
+    "sim_taxonomy_per_tree": 0.1109
+  },
+  "cores": 12,
+  "date": "2026-10-24 00:47:02"
+} 
