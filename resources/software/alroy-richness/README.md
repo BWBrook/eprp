@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.r4gw, image: "epr
 blockers: []
 related_sources: [pbdb]
 eprp_questions: [Q-040, Q-042, Q-044, B-015]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: not yet}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # richness (Alroy)
@@ -26,26 +26,29 @@ entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewe
 John Alroy's R package of species-abundance distributions and richness
 estimators: the compound exponential-geometric series (CEGS; `cegsML`,
 `cegsB`, `cegsLD`), Chao 1 and 2, jackknives, the discrete Weibull, the
-Poisson log normal, SQS, rarefaction, Fisher's α and random generators.
-CEGS is, on our reading, the "geometric Weibull" that Alroy (2026) found
-more accurate than coverage-based rarefaction. Reach for `cegsML` on a
-bin's occurrence frequencies when absolute richness, or a trend that
-survives changes in evenness, is the target. On the tranche-4 records it
-was the most accurate estimator we ran.
+Poisson log normal, SQS, rarefaction, Fisher's α and random generators. We
+take its v.3.x CEGS to be the "geometric Weibull" that Alroy (2026) found
+more accurate than coverage-based rarefaction; that is our inference. On
+the tranche-4 records, `cegsML` fitted to a bin's occurrence frequencies
+had the lowest absolute error of the estimators we ran, with a trend
+bias inside ±0.10 except under the strongest evenness change. Use it
+alongside an estimator that fails differently, not alone.
 
 ## Method
 
-Each species' count is geometric with p = 1 / (E^γ / λ + 1), E
-exponential: a geometric series whose mean, E^γ/λ, is a Weibull variate.
-The two parameters are fitted to the observed counts by maximum likelihood
-(`cegsML`, `stats4::mle`, integrating over E), by a Bayesian grid with an
-exponential prior (`cegsB`) or by a likelihood-weighted grid without a
-prior (`cegsLD`). Richness is the observed count divided by the fitted
-probability of being seen at least once, S / (1 − P(X = 0)). The 2024
-preprint parameterises the mean as E/λ raised to 1/γ; v.3.2 uses
-(−ln U)^γ/λ. That this is the 2026 paper's geometric Weibull is our
-inference from the code and the abstract's list of tested distributions;
-the 2026 paper's own code was not seen.
+Each species' count is geometric, and its mean varies among species. In
+the 2024 preprint and in v.3.0 the mean is (E/λ + 1)^(1/γ) − 1 with E
+exponential; v.3.2 uses E^γ/λ, which is a Weibull variate, so v.3.2's
+model is a geometric series with Weibull-distributed means. That fits the
+2026 paper's name, and the paper's abstract lists the geometric Weibull
+beside a separate discretised Weibull, as the package has both; the 2026
+paper's own code was not seen. The two parameters are fitted by maximum
+likelihood (`cegsML`, `stats4::mle`, integrating over E), by a Bayesian
+grid with an exponential prior that weights each grid cell by its
+likelihood (`cegsB`), or by a grid without a prior that weights each cell
+by the product of absolute differences between neighbouring likelihoods,
+a gradient-style weight (`cegsLD`). Richness is the observed count over the
+fitted probability of being seen at least once, S / (1 − P(X = 0)).
 
 ## Install
 
@@ -62,7 +65,8 @@ before running.
 
 **K4: the package under its own model (pass).** 300 species with counts
 from `rcegs`; 100 draws per parameter set
-(`bench/results/t4/t4_gw_k4.json`).
+(`bench/results/t4/t4_gw_k4.json`). The criterion is on the median only,
+and on counts only; there is no occurrence-frequency analogue.
 
 | (λ, γ) | Species observed | `cegsML` median log(R̂/R) (IQR) | `cegsLD` | Failed fits |
 | --- | --- | --- | --- | --- |
@@ -71,47 +75,66 @@ from `rcegs`; 100 draws per parameter set
 
 **On the tranche-4 records (characterisation, no criterion).** Records
 from an independent generator with lognormal abundances, a different
-family from the model's own, in eight areas; 20 replicates per scenario.
-Bias is the error in the log ratio of the late half to the early half (0
-is perfect); the mass-extinction column is the error in the drop at
-50 Ma.
+family from the model's own, in eight areas; 20 replicates per scenario,
+23–100 collections per bin. Bias is the error in the log ratio of the late
+half to the early half (0 is perfect); the mass-extinction column is the
+error in the drop at 50 Ma.
 
-| `cegsML` input | Fewer collections (S) | Smaller collections (C) | Evenness σ 0.5 → 0.75, 1, 1.5, 2 | Mass extinction | Median absolute log error against global richness |
+| `cegsML` input | Fewer collections (S) | Smaller collections (C) | Late evenness σ 0.75, 1, 1.5, 2 (early 0.5) | Mass extinction | Median abs. log error: sampled-area; global richness |
 | --- | --- | --- | --- | --- | --- |
-| occurrence frequencies (collections per species) | +0.03 | +0.09 | −0.01, −0.02, −0.06, −0.12 | −0.02 | 0.06–0.10 |
-| individual counts pooled per bin | +0.06 | +0.11 | +0.03, +0.07, +0.21, +0.46 | −0.05 | 0.06–0.15 |
+| occurrence frequencies (collections per species) | +0.03 | +0.09 | −0.01, −0.02, −0.06, −0.12 | −0.01 | 0.04–0.08; 0.06–0.10 |
+| individual counts pooled per bin | +0.06 | +0.11 | +0.03, +0.07, +0.21, +0.46 | −0.05 | –; 0.06–0.15 |
 
-For comparison, under the same σ steps SQS moved −0.07, −0.17, −0.41,
-−0.70 and Chao2 −0.01, −0.04, −0.16, −0.31; Chao2's absolute error was
-0.14–0.31. `cegsLD` gave the same picture where run (S, E, M).
+For comparison, at the same σ steps SQS moved −0.07, −0.17, −0.41, −0.70
+and Chao2 −0.01, −0.04, −0.16, −0.31; Chao2's errors were 0.06–0.15
+against sampled-area and 0.14–0.31 against global richness. `cegsLD` gave
+the same picture where run (S, E, M).
+
+**Robustness (reviewer's exploratory probe, not a declared test; 8
+replicates per condition, scenario S's effort fall).** Lower absolute
+error than Chao2 in every condition (gamma, log-uniform, Pareto and
+lognormal abundances, heterogeneous collection sizes, about 75 or 31
+collections per bin early), but under log-series-like (gamma 0.25)
+abundances it underestimated sampled-area richness by a third (error
+0.39–0.41), trend bias ranged −0.11 to +0.06 at normal effort and reached
+−0.40 for Pareto abundances at low effort, and with about 9 collections
+per bin a fifth to a third of fits failed.
 
 ## Strengths
 
-- On occurrence frequencies, it was the only estimator within ±0.12 in
-  every scenario, and it recovered 90–98% of global richness (mean log
-  ratio −0.02 to −0.10 across the seven scenarios), where Chao2 and squares
-  recovered 70–85%.
-- It tracked a 54% mass-extinction drop to within 0.02 log units.
-- Fits are fast enough for per-bin use: about 1–2 s per bin for
-  `cegsML`, 8–15 s for `cegsLD` or `cegsB`.
+- Among estimators run in every scenario, the only one whose trend bias
+  stayed within ±0.12; within the declared ±0.10 everywhere except the
+  strongest evenness change (−0.118, SE 0.021).
+- The lowest absolute error against sampled-area richness (0.036–0.077),
+  closer than Chao2 in 49–80% of bins, and it tracked a 54%
+  mass-extinction drop to within 0.015 log units.
+- Fast enough for per-bin use: about 1.6 s per bin for `cegsML`, 13 s for
+  `cegsLD` (`cegsB` not timed on these records).
 
 ## Weaknesses and pitfalls
 
+- **Overshoots the identifiable target.** Its 90–98% recovery of global
+  richness comes partly from overshooting richness in the sampled areas by
+  3–10%; global richness here includes 9–11% of species living only in
+  unsampled areas.
 - **Pooled individual counts overshoot when evenness falls**: +0.46 at
-  σ 2, against −0.12 on occurrence frequencies of the same records. One
-  candidate cause, untested, is that pooling counts across spatially
-  clumped collections violates the single-community model.
+  σ 2 (late-half median ratio 1.38). One candidate cause, untested, is
+  that pooling counts across spatially clumped collections violates the
+  single-community model; it is a stress test, not the method's intended
+  use.
 - **Imprecise when most species are unseen**: in K4, with 38% of species
   observed, the interquartile range of log(R̂/R) was 0.37.
-- `cegsML` returns NA when a sample has fewer than three distinct counts
-  or the fit reaches its parameter bounds, without a warning: 4 of 400
-  bins in scenario S (the thinnest). `cegsLD` failed none.
+- **Fits fail silently in thin bins.** `cegsML` returns NA when a sample
+  has fewer than three distinct counts or the fit reaches its parameter
+  bounds: 4 of the 400 bins of scenario S, all with 14 or fewer
+  collections, and a fifth to a third of bins at about 9 collections in
+  the reviewer's probe. `cegsLD` failed none in our run.
+- Occurrence frequencies are bounded by the number of collections and
+  saturate for common species; using them as counts is a heuristic we have
+  not validated beyond these records.
 - Licence metadata conflict (CC0-1.0 against GPL-2 | GPL-3), and the
   DESCRIPTION version (3.1) lags the tag (v.3.2). Not on CRAN; pin the
   commit.
-- One generator family was tested. The result supports Alroy's (2026)
-  recommendation on known truth, but does not show the method's accuracy
-  on records whose structure differs from ours.
 
 ## Alternatives and overlap
 
@@ -125,10 +148,13 @@ CEGS.
 
 ## EPRP relevance
 
-The strongest single-estimator candidate for per-bin richness in Q-040 and
-Q-042 analyses, used on occurrence frequencies and alongside an estimator
-that fails differently (lead N-002). Lead L-006: the comparison with
-coverage rarefaction now runs both ways on known truth.
+A strong per-bin richness candidate for Q-040 and Q-042 analyses when used
+on occurrence frequencies, beside an estimator that fails differently
+(lead N-002), and with its fit failures reported. These results are not a
+test of Alroy's (2026) method as published: the input that worked is not
+the paper's, and which variant the paper used is unknown (CONTACTS S2).
+Next: an occurrence-frequency analogue of K4 with heterogeneous
+collection sizes and a fit-adequacy check.
 
 ## Citation and licence
 
@@ -143,8 +169,10 @@ DESCRIPTION.
 ## Verification log
 
 - 2026-10-24 `checked`: repository, releases, licence files and
-  DESCRIPTION through the GitHub API; `cegsML.R`, `cegsLD.R`, `rcegs.R` read
-  at tag v.3.2; the 2024 preprint's methods read.
+  DESCRIPTION through the GitHub API; `cegsML.R`, `cegsLD.R`, `cegsB.R` and
+  `rcegs.R` read at tag v.3.2 (and `cegsML.R` at v.3.0 by the reviewer);
+  the 2024 preprint's methods read.
 - 2026-10-24 `checked`: K4 and the tranche-4 characterisation on
-  `deep-server` (`bench/results/t4/`).
+  `deep-server` (`bench/results/t4/`); headline numbers recomputed
+  independently by the reviewer.
 - 2026-10-24 `inferred`: CEGS v.3.x is the 2026 paper's geometric Weibull.

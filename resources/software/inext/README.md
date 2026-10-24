@@ -83,8 +83,10 @@ log ratio.
   flat and only the abundance distribution becoming uneven, the coverage
   estimate fell by 0.76 in log units, more than raw richness (−0.49) or
   Chao2 (−0.31). The dose–response is a slope, not a cliff: −0.08, −0.19,
-  −0.45 and −0.76 as the late-half σ rose from 0.5 to 0.75, 1, 1.5 and 2,
-  so a modest change in dominance already exceeds ±0.10. Equal coverage is not equal completeness of the
+  −0.45 and −0.76 as the late-half σ rose from the early 0.5 to 0.75, 1,
+  1.5 and 2, so a modest change in dominance already exceeds ±0.10. This is
+  at coverage 0.6, a strong rarefaction of samples with native coverage
+  0.85–0.97; higher levels and a no-change control were not run. Equal coverage is not equal completeness of the
   species list when dominance changes. Alroy (2026; [LEADS](../LEADS.md)
   L-006) concludes from different tests (excluding dominants, pooling,
   singleton-matched pairs) that coverage-based rarefaction does not track
@@ -93,7 +95,8 @@ log ratio.
   differ between bins.
 - **The effort correction depends on how effort falls.** Fewer
   collections of the same size: +0.03. The same number of collections,
-  each a third the size: −0.13 (K5 fail). Our reading, untested: smaller
+  each a third the size: −0.13 (K5 fail, about 1.5 SE beyond ±0.10,
+  still removing about 60% of raw richness's −0.33). Our reading, untested: smaller
   collections change the shape of the incidence-frequency distribution,
   not only its total.
   Lower preservation was not tested.
@@ -115,10 +118,11 @@ divDyn's SQS standardises to the same kind of coverage (Good's u, on
 occurrences) by subsampling rather than by interpolation. On these data
 SQS ran 2–5% below iNEXT on average, except in the uneven late bins of
 scenario E (1% above), and the two responded alike to effort (+0.03 each) and to
-evenness (−0.70 against −0.76). Alroy's geometric Weibull, which he
-prefers to both, moved only −0.12 under the strongest evenness change and
-+0.09 under the collection-size fall, fitted to the same occurrence
-frequencies ([alroy-richness](../alroy-richness/README.md)). Squares and Chao2 extrapolate to an asymptote
+evenness (−0.70 against −0.76). Alroy's geometric Weibull (his CEGS
+model, on our inference), which he prefers to both, moved −0.12 under the
+strongest evenness change and +0.09 under the collection-size fall when
+fitted to the same occurrence frequencies, on this generator
+([alroy-richness](../alroy-richness/README.md)). Squares and Chao2 extrapolate to an asymptote
 instead; they were less affected by the evenness change but biased by the
 effort change. DeepDive targets total richness by simulation-based
 inference ([deepdive](../deepdive/README.md)). divvy adds spatial

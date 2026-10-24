@@ -81,7 +81,7 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
 | Squares; Chao2 (`indices`) under the effort fall | −0.15, −0.15 (raw richness −0.37, range-through −0.27) |
 | Squares; Chao2 under the evenness change | −0.31, −0.31 (raw −0.49) |
 | Mass extinction at 50 Ma (true drop −0.78 in log richness, bins 11–12 against 9–10) | squares −0.74, Chao2 −0.74, SQS −0.67, raw −0.68 |
-| Squares and Chao2 against true richness (median absolute log error) | 0.17–0.36 against global richness, 0.09–0.18 against richness in the sampled areas; both underestimate (mean log ratio −0.19 to −0.35) |
+| Squares and Chao2 against true richness (median absolute log error, all seven scenarios) | 0.14–0.36 against global richness, 0.06–0.18 against richness in the sampled areas; both underestimate global richness (mean log ratio −0.17 to −0.35) |
 | K3: `indices` Chao2 against an independent implementation of its formula | equal to 5 × 10⁻¹³; against iNEXT's Chao2, a median −0.2% (range −1.9% to +9.4%) |
 
 ## Strengths
@@ -128,9 +128,11 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
   it halved a flat richness curve (−0.70), as did iNEXT's coverage estimate
   (−0.76), and a modest change (σ 0.5 to 1) already gave −0.17; see
   [inext](../inext/README.md) and lead L-006.
-- **SQS corrects fewer collections but not smaller ones**: +0.03 when
-  collections fell 70% in number, −0.12 (K5 fail) when they kept their
-  number and shrank to a third of their size.
+- **SQS corrects fewer collections fully and smaller ones mostly**: +0.03
+  when collections fell 70% in number; −0.12 (K5 fail, about 1.5 SE beyond
+  ±0.10) when they kept their number and shrank to a third of their size,
+  still removing about 64% of raw richness's −0.33. The evenness results
+  are at q = 0.6 only.
 - Licence metadata conflict: CRAN says CC BY 4.0, the repository GPL-3.0.
 - Rates are per bin; unequal bin durations need explicit handling.
 
@@ -146,9 +148,10 @@ Stage-level rates for Q-040, Q-042 and Q-038 style analyses; the shared
 counting makes it the natural engine for an estimator comparison (lead
 N-002). Its SQS absorbed a fall in collection numbers (+0.03) but not a
 fall in collection size (−0.12) or an evenness change (−0.70; tranche 4,
-lead L-006). Alroy's geometric Weibull did better on all three
-([alroy-richness](../alroy-richness/README.md)). Squares and Chao2
-recovered 70–83% of global richness on these records (partly a matter of
+lead L-006). Alroy's geometric Weibull (his CEGS model, on our inference)
+fitted to occurrence frequencies was less affected by all three, on this
+generator ([alroy-richness](../alroy-richness/README.md)). Squares and
+Chao2 recovered 70–85% of global richness on these records (partly a matter of
 definition: global richness counts every species alive at any time in a
 bin).
 

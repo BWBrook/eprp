@@ -1,9 +1,9 @@
 # Tranche-4 estimators (declared in ../VALIDATION_T4.md): raw, range-through, Chao2 (divDyn, iNEXT), squares, SQS, iNEXT coverage.
-# Usage: Rscript t4_estimate.R <data dir> <tag> <out csv>
+# Usage: Rscript t4_estimate.R <data dir> <tag> <out csv> [quorum, default 0.6]
 suppressPackageStartupMessages({library(divDyn); library(iNEXT)})
 args <- commandArgs(TRUE)
 occ <- read.csv(file.path(args[1], paste0("occ_", args[2], ".csv.gz")))
-q <- 0.6; nb <- 20
+q <- if (length(args) > 3) as.numeric(args[4]) else 0.6; nb <- 20
 
 squares_ref <- function(n) {
   S <- length(n); s1 <- sum(n == 1)
@@ -23,7 +23,9 @@ one_rep <- function(x) {
   info <- DataInfo(inc, datatype = "incidence_freq")
   dd <- divDyn(x, tax = "species", bin = "bin")
   set.seed(7700 + r)
-  sq <- subsample(x, q = q, tax = "species", bin = "bin", iter = 100, type = "sqs", counter = FALSE)
+  # divDyn stops when fewer than 3 bins reach the quorum; SQS is then NA for the whole replicate (amendment A6)
+  sq <- tryCatch(subsample(x, q = q, tax = "species", bin = "bin", iter = 100, type = "sqs", counter = FALSE),
+                 error = function(e) data.frame(bin = seq_len(nb), divSIB = NA_real_))
   est <- data.frame(rep = r, bin = seq_len(nb),
                     raw = by_bin(dd, "divSIB"), range_through = by_bin(dd, "divRT"),
                     sqs = by_bin(sq, "divSIB"))

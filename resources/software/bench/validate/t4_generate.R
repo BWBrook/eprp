@@ -4,7 +4,8 @@ suppressPackageStartupMessages(library(paleobuddy))
 args <- commandArgs(TRUE)
 outdir <- args[1]; scen <- args[2]; reps <- as.integer(args[3]):as.integer(args[4])
 p <- list(n0 = 400, lambda = 0.05, mu = 0.05, lambda_post = 0.07, survive = 0.4, n_area = 8, geom = 0.5,
-          coll_mean = 10, w_sdlog = 0.5, p_empty = 0.15, n_ind = 40, n_late = 12, s_late = 0.3, sd_early = 0.5, sd_late = 2)
+          coll_mean = 10, w_sdlog = 0.5, p_empty = 0.15, n_ind = 40, n_late = 12, s_late = 0.3, sd_early = 0.5, sd_late = 2,
+          fam = 0, size_sdlog = 0)
 for (kv in args[-(1:4)]) { kv <- strsplit(kv, "=")[[1]]; p[[kv[1]]] <- as.numeric(kv[2]) }
 tmax <- 100; edges <- seq(tmax, 0, by = -5); nb <- length(edges) - 1
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
@@ -31,6 +32,8 @@ one_rep <- function(r) {
   start <- sample.int(p$n_area, n, replace = TRUE)
   stop <- pmin(p$n_area, start + rgeom(n, p$geom))
   z <- rnorm(n)
+  # fam 0: lognormal exp(sigma_b z); 1: gamma(0.25); 2: Pareto tail exp(Exp(1)); 3: log-uniform over 300-fold (amendment A6)
+  a_fixed <- switch(as.character(p$fam), "0" = NULL, "1" = rgamma(n, shape = 0.25), "2" = exp(rexp(n)), "3" = exp(-runif(n) * log(300)))
   frac <- sapply(seq_len(nb), function(b) pmax(0, pmin(sp$ts, edges[b]) - pmax(sp$te, edges[b + 1])) / 5)
   s_b <- if (scen == "S") rep(c(1, p$s_late), each = nb / 2) else rep(1, nb)
   sd_b <- if (scen == "E") rep(c(p$sd_early, p$sd_late), each = nb / 2) else rep(1, nb)
@@ -43,9 +46,10 @@ one_rep <- function(r) {
     if (n_coll[a, b] == 0) next
     pool <- which(frac[, b] > 0 & start <= a & stop >= a)
     if (length(pool) == 0) next
-    wt <- exp(sd_b[b] * z[pool]) * frac[pool, b]
+    wt <- (if (is.null(a_fixed)) exp(sd_b[b] * z[pool]) else a_fixed[pool]) * frac[pool, b]
     for (j in seq_len(n_coll[a, b])) {
-      x <- rmultinom(1, n_b[b], wt)[, 1]
+      m <- if (p$size_sdlog > 0) max(2L, as.integer(round(rlnorm(1, log(n_b[b]) - p$size_sdlog^2 / 2, p$size_sdlog)))) else n_b[b]
+      x <- rmultinom(1, m, wt)[, 1]
       k <- k + 1
       occ[[k]] <- data.frame(rep = r, bin = b, area = a, coll = sprintf("%d_%d_%d", b, a, j), species = pool[x > 0], n = x[x > 0])
     }

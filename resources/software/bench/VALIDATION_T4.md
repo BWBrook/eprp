@@ -233,3 +233,42 @@ must equal the run's ([validate/t4_identity.py](validate/t4_identity.py)).
    and each evenness dose; the M drop; Spearman correlation; median
    absolute log error against global and sampled-area richness
    ([validate/t4_ext_summary.R](validate/t4_ext_summary.R)).
+
+## Amendment A6 (24 October 2026, after a second independent review, before running any of it)
+
+The second review (Claude Sonnet subagent) reproduced A5's numbers and
+found its framing too strong; the write-ups were corrected. Two wording
+errors in A5 itself: `rcegs` draws each species' mean and `cegsML`
+integrates over it (A5 item 3's preamble says `cegsML` draws it), and
+"lower variance" for `cegsLD` is the package's description, not something
+we showed (K4: IQR 0.33 against 0.37). The reviewer also ran an
+exploratory probe (8 replicates per condition, not a declared test) that
+prompts the robustness arm below, which uses the probe's families and 20
+replicates.
+
+1. **K6, null control:** scenario E with the late-half σ left at 0.5
+   (`data_dose/E050`, E's seeds), so nothing changes. Pass: |mean bias| ≤
+   0.05 for every estimator in the A5 table (raw, Chao2 from both
+   packages, squares, SQS, iNEXT coverage, `cegsML` on occurrence
+   frequencies and on pooled counts).
+2. **A higher quorum:** SQS and the iNEXT coverage estimate at q = 0.8 on
+   S, C, E050, E075, E100, E150 and E, reported beside q = 0.6. No
+   criterion.
+3. **Abundance-family robustness:** scenario S's effort fall (seeds of S)
+   with species abundances fixed per species from gamma(shape 0.25),
+   exp(Exp(1)) (a Pareto tail with α = 1) or exp(−U · ln 300) (log-uniform
+   over a 300-fold range), or lognormal abundances with collection sizes
+   drawn per collection as max(2, round(lognormal(ln 40 − 0.5, 1))); each
+   at the declared effort (mean 10 collections per area and bin before the
+   fall) and at low effort (mean 4), and lognormal at low effort; the
+   lognormal control at declared effort is scenario S. Estimators: raw,
+   Chao2, squares, SQS and iNEXT at q = 0.6, `cegsML` on occurrence
+   frequencies. Reported, no criterion: trend bias, median absolute log
+   error against sampled-area and global richness, the fraction of bins in
+   which `cegsML` is closer to sampled-area richness than Chao2, and the
+   failed fits of `cegsML` and SQS ([validate/t4_rob_summary.R](validate/t4_rob_summary.R)).
+   A smoke run at low effort (replicates 1–2, Pareto with variable
+   collection sizes; format only) showed that divDyn's `subsample` stops
+   with "cannot run with less than 3 bins" when too few bins reach the
+   quorum; `t4_estimate.R` now records SQS as NA for that whole replicate.
+   Means over bins then skip NA values, as in A2's second variant.
