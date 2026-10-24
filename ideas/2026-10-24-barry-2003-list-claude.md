@@ -25,7 +25,9 @@ Every fate or claim below that is marked [memory] is recalled and unchecked.
 
 ## What the list says Barry cares about
 
-Two thirds of the entries are about extinction. The list is not about
+Extinction dominates: 180 of the 293 entries (61%) have "extinct" in the
+title. That is a keyword rule, not a measured profile. News, replies and reviews
+are not independent votes (Codex, 76/2360). The list is not about
 diversity curves as such. It is about **how and why lineages die, how fast,
 and what that means now**. Seven threads run through it.
 
@@ -104,10 +106,16 @@ surprising, since Barry's prompts seeded both.
   - so are Balmford 1996, Tilman et al. 1994, Kirchner & Weil 2000,
     Flessa & Jablonski 1985 and Crystal-Arens 2002;
   - Burkey 1993, "Living dangerously but independently, or safely and
-    contingently", is almost exactly Codex's partnership world C, in which
-    function recovers but vulnerability becomes synchronised.
+    contingently", has a title that resonates with Codex's partnership world
+    C. **Corrected (76/2360): I had read only the title.** Its full text is
+    not open. Burkey's other work is on fragmented reserves and migration
+    between fragments [memory], so the paper more likely contrasts
+    independent fragments with connected, contingent ones. That would make it
+    closer to Codex's later seed 3 (local resistance against global
+    insurance). This needs the full text.
 
-So the list's value now is in its gaps.
+So the list's value lies partly in its gaps and, as Codex argues, partly in
+recombining questions we have separated.
 
 ## Seeds from the gaps
 

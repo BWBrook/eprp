@@ -43,8 +43,8 @@ The terms follow Brief A:
 | B1a. In ecology, does response depend on disturbance history beyond the current state? | **Occupied** | Ecological memory, compound disturbance and extinction filters are established concepts with empirical support (Jo16, Hu19, Be19, Ba96). It would change only if that support were shown to be artefact. |
 | B1b-i. Deep time: community structure at onset governs vulnerability | **Occupied (state, not history)** | Mi12 and RA15 compare food-web structure across snapshots and model it. "Earlier restructuring" is the inferred origin of the onset state; no sequential history is modelled. |
 | B1b-ii. Deep time: environmental history modifies lineage risk | **Partly occupied** | Ma21: the preceding temperature trend interacts with short-term change in 7 of 8 clades, raising risk by up to 40%. Ma25 is a systematic review: of 207 studies, 20 (10%) include climate legacies and 7 quantify them. History here is the *environment's*, not the lineage's own exposure, and there are no onset biotic covariates. A study adding range, occupancy or abundance at onset would close the gap if the legacy effect survived. |
-| B1b-iii. Range *trajectory* beyond range *state* | **Partly occupied, mixed** | At background timescales trajectory predicts risk (Fo07, KK16). But St26 finds that at a given absolute range the effect of range loss largely disappears, which is the Markov reading. No study conditions on an earlier *shock*. |
-| B1b-iv. Paired shocks: does history through the first predict fate in the second, given onset state? | **Open in this search** | Several studies come close without doing this. CP11 fits each stage separately; CSB09 tests the Guadalupian fauna-shift idea and finds a gradual decline. Pi21 *observes* the filter (55% of Appalachian species lost in Frasnian–Famennian pulse 1, one in pulse 2), whereas pulse 2 was devastating in New Mexico, Europe and South China. Fo23 finds that one functional group became "increasingly resistant" at each successive event. A survival analysis across an event pair with first-event exposure plus onset covariates would close this. Recall is limited: there was no Scopus or Web of Science search, and Kellwasser–Hangenberg, Pliensbachian–Toarcian and the end-Triassic pulses were not read in depth. |
+| B1b-iii. Range *trajectory* beyond range *state* | **Partly occupied, mixed** | At background timescales trajectory predicts risk (Fo07, KK16). St26's conditional curves flatten at a given absolute range, but its range-only model is clearly worse than range × range change (ΔELPD −214, SE 74), and the authors call the predictors complementary. Its range is a minimum occurrence-distance extent, imperfectly measured. **Corrected (Codex, 76/2360): this is not a Markov reading.** No study conditions on an earlier *shock*. |
+| B1b-iv. Paired shocks: does history through the first predict fate in the second, given onset state? | **Open in this search** | Several studies come close without doing this. CP11 fits each stage separately; CSB09 tests the Guadalupian fauna-shift idea and finds a gradual decline. Pi21 reports 55% of Appalachian species lost in Frasnian–Famennian pulse 1 and one (plus one immigrant) in pulse 2, whereas pulse 2 was devastating in New Mexico, Europe and South China. The authors read this as filtering. Selectivity is analysed for pulse 1 only, and the pulses' cooling and anoxia histories differ, so the mechanism is not identified (corrected, Codex 76/2360). Fo23 finds that one functional group became "increasingly resistant" at each successive event. A survival analysis across an event pair with first-event exposure plus onset covariates would close this. Recall is limited: there was no Scopus or Web of Science search, and Kellwasser–Hangenberg, Pliensbachian–Toarcian and the end-Triassic pulses were not read in depth. |
 | B1c. Does Alroy 2008 establish the Markov null? | **No (Codex's caution confirmed)** | Al08 (P) uses 48 global bins of about 11 Myr. Diversity predicts next-bin extinction (ρ = 0.439, P = 0.004), and extinction predicts next-bin origination (ρ = 0.337). Diversity dependence and a filter both predict the lull after a crash. Al08 says composition hypotheses "cannot be tested directly" with these data, and its recovery model needs a pre-extinction-diversity term. **My 76/2353 reading of it as "the Markov null at work" was wrong.** |
 | B2a–c. Did K–Pg specialised associations vanish on surviving host lineages? | **At family level, yes; at species level, not shown; read as the rival** | La02 (P) pools 51 damage types across hosts: 14 of 20 specialised types are lost, and there is no host-matched design. Do14 (P) finds no Cretaceous mine on any Paleocene confamilial species of the surviving Platanaceae and Cercidiphyllaceae, and concludes "a severe regional extinction of leaf-mining insects". Only 29 of 130 non-singleton Cretaceous plant species cross (WJ04). The partners are known only from traces. A species-level host-crossing table plus insect-lineage survival evidence would change this. |
 | B2d. Other interaction systems | **Partly occupied; no case of an association lost while both partners demonstrably persist** | Drilling predation, where both partners are body fossils, *changed intensity* after the K–Pg rather than disappearing (KH96). Its taxonomic-filter explanation failed in 39 of 40 tests (Ha99). Coral photosymbiosis fell about 18% across the K–T through genus-level selectivity (Di20), which favours the rival. |
@@ -61,17 +61,26 @@ The terms follow Brief A:
      Fo23);
    - across event pairs (unlike CP11 and Q-007's aggregate design).
 
-   **Pi21's regional contrast is our world 5 observed once.** The Appalachian
-   fauna was filtered by pulse 1 and spared by pulse 2, while other regions
-   lost heavily in pulse 2. That makes it a reason for interest, not an
+   **Pi21's regional contrast is a pattern consistent with our world 5, not
+   an identified case of it** (corrected after Codex, 76/2360). The
+   Appalachian fauna lost heavily in pulse 1 and little in pulse 2, while
+   other regions lost heavily in pulse 2. The authors' filtering reading fits,
+   but differing forcing between pulses also fits, and there are too few
+   pulse-2 losses to analyse selectivity. It is a reason for interest, not an
    occupation of the question.
 2. **The main methodological threat.** Error in measuring the onset state can
    create an apparent history effect. A noisily measured current range makes
    past range informative about true current range, and Q-007 already flags
    this. Any test must carry an observation model for onset state, such as
    occupancy with detection, or it will find "memory" where there is only
-   measurement error. Straube et al.'s result (St26) is the warning case: with
-   absolute range measured well, trajectory mostly drops out.
+   measurement error. An observation model is necessary but not sufficient:
+   it addresses measurement error, not mediation, selective survival or
+   stable susceptibility (Codex, 76/2360). The design contract in
+   [the next note](2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md)
+   takes these up. (An earlier version cited Straube et al. 2026 here as a
+   case where well-measured range removes trajectory's effect. That overstated
+   it: their range is imperfectly measured, and range change adds predictive
+   information.)
 3. **Partnership loss: interesting, but currently the weakest empirically.**
    The literature has not framed "association lost while both partners
    survive" as a hypothesis distinct from coextinction. Its showcase case is

@@ -87,7 +87,23 @@ causes as the next primary development candidate, without promoting hidden
 state by default. It invites Claude to correct its owned brief and write a
 one-page prediction-versus-causation contract before an event-pair screen,
 and to challenge the broader opportunity/possibility seeds. **Claude is next
-responder; these invitations are not accepted ownership.** Codex owns this
+responder; these invitations are not accepted ownership.**
+Claude corrected Brief B and its 2003-list note in place (Straube, Pier, the
+keyword-rule extinction share, Burkey withdrawn). It wrote a
+[prediction-versus-causation contract](ideas/2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md)
+covering cohort, outcome, the baseline and history predictors (with exposure
+kept separate from response), and the total and residual estimands. It names
+four rivals and the contrast that bears on each: selective survival on stable
+susceptibility, which is Q-012's frailty structure, tested by contrasting
+residents with immigrants; mediation; exposure against response; and
+measurement error. It sets a gate for event pairs, with Capitanian to
+end-Permian as the first candidate and Pier 2021 failing the outcome gate. It
+gives contrary worlds for Codex's seeds 2 and 4, mutating them into
+substitution as dissection and the half-life of lost possibility, and folds
+S1 into Codex's seed 1. Barry decided on 24 October that S3 is a side project
+(exact words in the note); its rubric is fixed in
+[ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md), with
+no codes yet. Codex is next responder. Codex owns this
 handoff's README/STATUS pointers. No empirical acquisition, model runs or
 register changes were made in the historical-list response. The agents'
 different interest preferences remain, and the turnover decline is an optional

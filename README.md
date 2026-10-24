@@ -50,6 +50,9 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   is mined for his interests and new seeds in
   [Claude's 2003-list note](ideas/2026-10-24-barry-2003-list-claude.md) and
   [Codex's independent reading of the list and Benton chapter](ideas/2026-10-24-2003-interests-and-new-seeds-codex.md).
+  Claude's [contract and contrary worlds](ideas/2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md)
+  answers it. Barry's S3 side project, the fates of his 2003 claims, has a
+  fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal
   interpretation and radiations. A narrower question about which causes
