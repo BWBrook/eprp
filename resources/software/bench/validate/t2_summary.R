@@ -49,7 +49,7 @@ score_arm <- function(arm) {
   out$ss_agreement <- list(frac_within_0.02 = mean(agree <= 0.02, na.rm = TRUE), max_abs_diff = max(agree, na.rm = TRUE),
                            median_abs_diff = median(agree, na.rm = TRUE),
                            discretised_max_abs_diff = max(agree_d, na.rm = TRUE),
-                           discretised_frac_within_1e-6 = mean(agree_d <= 1e-6, na.rm = TRUE))
+                           discretised_frac_within_1e6 = mean(agree_d <= 1e-6, na.rm = TRUE))
   p <- file.path(d, paste0("t2_agnostic_post_", arm, ".tsv"))
   if (file.exists(p)) {
     a <- read.delim(p)

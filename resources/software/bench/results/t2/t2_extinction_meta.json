@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "date": "2026-10-24 02:27:55",
+    "n_cases": 2000,
+    "griwm_resample": 1000,
+    "clade_seeds": [50001, 50002],
+    "cores": 12,
+    "packages": {
+      "EDE": "0.2.0",
+      "tbea": "1.8.0",
+      "Rextinct": "1.1.0",
+      "admtools": "0.7.0",
+      "paleobuddy": "1.1.0"
+    },
+    "seconds_A": 140.1643,
+    "seconds_B": 91.3734,
+    "seconds_C": 137.6213
+  }
+}

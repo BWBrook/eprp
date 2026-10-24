@@ -57,6 +57,13 @@ cross-check had little power, so T3 waits for a larger comparison.
 | [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling |
 | [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation (biased, no undercoverage detected); q failed |
 | [RevBayes](revbayes/README.md) | T1 | none: FBD range process disabled in releases |
+| [admtools](admtools/README.md) | T2 | `time_to_strat`, hiatus accounting; `strat_to_time` failed |
+| [StratPal](stratpal/README.md) | T2 | `p3`, `thin` |
+| [paleoAM](paleoam/README.md) | T2 | time-averaged mixture |
+| [tbea](tbea/README.md) | T2 | Strauss–Sadler one-endpoint bound |
+| [EDE](ede/README.md) | T2 | Strauss–Sadler; others characterised |
+| [Rextinct](rextinct/README.md) | T1 | characterised only (GRIWM) |
+| [agnostic.R](agnostic-r/README.md) | T1 | characterised only |
 
 Tranche 1's harness and results: [bench/](bench/README.md).
 

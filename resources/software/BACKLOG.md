@@ -36,7 +36,8 @@ a day on its free cores; nothing long on the laptop.
 
 ## Later tranches (order provisional)
 
-2. **The stratigraphic filter and range ends.** StratPal, admtools, paleoAM;
+2. **Done 24 October 2026 ([bench](bench/README.md), tranche 2).** The
+   stratigraphic filter and range ends. StratPal, admtools, paleoAM;
    then an extinction-date benchmark across EDE, Rextinct (GRIWM, CRIWM),
    `tbea` and Alroy's `agnostic.R`, with tranche 1's generators and the
    stratigraphic filter as truth (L-008, L-011; Q-013, Q-017, Q-034, Q-041,

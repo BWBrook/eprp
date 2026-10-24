@@ -1,0 +1,44 @@
+
+== arm A cases 2000 dropped 0 
+  tbea_ss                        coverage 0.948  (n 2000, NA 0)
+  tbea_marshall                  coverage NaN  (n 0, NA 2000)
+  ede_ss                         coverage 0.950  (n 2000, NA 0)
+  ede_robson                     coverage 0.955  (n 2000, NA 0)
+  ede_ole                        coverage 0.610  (n 1988, NA 12)
+  ede_solow                      coverage 0.933  (n 1494, NA 506)
+  ede_mcinerny                   coverage 0.866  (n 1707, NA 293)
+  ede_burgman                    coverage 0.752  (n 1207, NA 793)
+  griwm_biased_interval          coverage 0.008  (n 2000, NA 0)
+  griwm_unbiased_interval        coverage 0.003  (n 2000, NA 0)
+  griwm_biased_median_as_bound   coverage 0.672  (n 2000, NA 0)
+  agnostic_95                    coverage 0.990  (n 1927, NA 73)
+
+== arm B cases 1272 dropped 728 
+  tbea_ss                        coverage 0.884  (n 1272, NA 0)
+  tbea_marshall                  coverage NaN  (n 0, NA 1272)
+  ede_ss                         coverage 0.886  (n 1272, NA 0)
+  ede_robson                     coverage 0.921  (n 1272, NA 0)
+  ede_ole                        coverage 0.496  (n 1262, NA 10)
+  ede_solow                      coverage 0.831  (n 857, NA 415)
+  ede_mcinerny                   coverage 0.701  (n 990, NA 282)
+  ede_burgman                    coverage 0.523  (n 816, NA 456)
+  griwm_biased_interval          coverage 0.002  (n 1272, NA 0)
+  griwm_unbiased_interval        coverage 0.006  (n 1272, NA 0)
+  griwm_biased_median_as_bound   coverage 0.528  (n 1272, NA 0)
+  agnostic_95                    coverage 0.997  (n 1169, NA 103)
+
+== arm C cases 2000 dropped 0 
+  tbea_ss                        coverage 0.938  (n 2000, NA 0)
+  tbea_marshall                  coverage NaN  (n 0, NA 2000)
+  ede_ss                         coverage 0.939  (n 2000, NA 0)
+  ede_robson                     coverage 0.946  (n 2000, NA 0)
+  ede_ole                        coverage 0.591  (n 1984, NA 16)
+  ede_solow                      coverage 0.918  (n 1493, NA 507)
+  ede_mcinerny                   coverage 0.849  (n 1704, NA 296)
+  ede_burgman                    coverage 0.754  (n 1213, NA 787)
+  griwm_biased_interval          coverage 0.706  (n 2000, NA 0)
+  griwm_unbiased_interval        coverage 0.682  (n 2000, NA 0)
+  griwm_biased_median_as_bound   coverage 0.706  (n 2000, NA 0)
+  agnostic_95                    coverage 0.990  (n 1906, NA 94)
+
+E4 pass: {"tbea_ss_coverage_in_99":true,"ede_ss_coverage_in_99":true,"ss_agreement_99pct":false,"pass":false} 
