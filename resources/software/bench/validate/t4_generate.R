@@ -55,7 +55,7 @@ one_rep <- function(r) {
   })
   truth <- data.frame(rep = r, bin = seq_len(nb), top = edges[-length(edges)], bottom = edges[-1],
                       global = colSums(frac > 0), sampled_area = sampled_area,
-                      collections = colSums(n_coll), s_b = s_b, sd_b = sd_b)
+                      collections = colSums(n_coll), s_b = s_b, sd_b = sd_b, extant = sum(sp$te == 0))
   list(occ = do.call(rbind, occ), truth = truth)
 }
 

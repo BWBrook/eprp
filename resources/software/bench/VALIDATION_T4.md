@@ -94,3 +94,35 @@ separately.
   S + (S − 1)/S · f₁(f₁ − 1)/(2(f₂ + 1)) with S the observed richness,
   where Chao's incidence estimator has (T − 1)/T with T the number of
   sampling units; iNEXT uses (T − 1)/T · f₁²/(2f₂) when f₂ > 0.
+
+## Amendment A1 (24 October 2026, after a smoke test, before the full run)
+
+A smoke test ran every step on replicates 1–2 of scenario M (the run's own
+seeds), with DeepDive trained on 240 simulations. Its estimator output was
+inspected for format only and never compared with the truth. It found:
+
+1. divDyn's `subsample(type = "sqs")` stops with "missing value where
+   TRUE/FALSE needed" when taxa are integer IDs, and `indices()` takes a
+   numeric vector as abundances. Taxa are passed to divDyn as character
+   names.
+2. With no present diversity, DeepDiveR's config leaves `extant_sp = NA`.
+   Autotune fills it only when present diversity is given, and DeepDive
+   1.0.28 then stops trying to parse "NA" as a number. `extant_sp` is set to
+   "0 inf", `bd_simulator`'s own default (no conditioning on extant
+   diversity).
+3. DeepDiveR's default `s_species = 1` starts every training clade from one
+   species at 80–100 Ma. In the smoke run's 240 training simulations the
+   oldest bin never held more than 7.1 species; the generator has about 490
+   there. A model trained on that prior cannot describe a window that opens
+   on a diverse clade, so the DeepDive arm sets `s_species = NA`, the
+   setting DeepDive's autotune notes give for this case (starting richness
+   drawn from U[1, 5 × the maximum range-through richness]). The default's
+   prior is reported as a finding, not benchmarked.
+4. DeepDive simulations take about 21 s each per core under the default
+   prior and about 54 s with `s_species = NA` (a second smoke run of 72
+   training simulations, whose oldest-bin richness reached 0–3,458). Each
+   scenario trains on 16 cores at `nice 10`, about 9.5 h for 10,108
+   simulations (DeepDive rounds the 100 test simulations up to a multiple
+   of the core count).
+5. The generator's truth table gains an `extant` column (species alive at
+   0 Ma). No random draw changes.
