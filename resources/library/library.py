@@ -808,7 +808,9 @@ def core_lookup(doi, pacer):
     for r in data.get("results") or []:
         if norm_doi(r.get("doi")) == doi:
             urls += [r.get("downloadUrl") or ""] + list(r.get("sourceFulltextUrls") or [])
-    urls = [u for u in dict.fromkeys(urls) if u]
+    # CORE's own downloads (core.ac.uk, and the API's /download) sit behind a browser challenge, and some
+    # source "URLs" are reference-list text; keep the repositories' own http(s) links.
+    urls = [u for u in dict.fromkeys(urls) if re.match(r"https?://", u) and "core.ac.uk" not in u]
     return ("found" if urls else "none"), urls
 
 

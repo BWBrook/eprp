@@ -98,8 +98,8 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
   - the PubMed Central open-access subset, through its public AWS bucket;
   - PDF links on those locations' landing pages (`citation_pdf_url`, or a file
     link on the same host);
-  - CORE's copies, which it aggregates from open repositories (used once a
-    CORE key is installed; paced at 10 requests a minute);
+  - the original repository links CORE records for a DOI (used once a CORE
+    key is installed; paced at 10 requests a minute);
   - Semantic Scholar's open-access link.
 
   Copies are private to EPRP and are not redistributed.
@@ -218,6 +218,11 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
 - **NCBI's id converter** maps PMC ids to DOIs without a key. OpenAlex's
   `pmcid` filter returned nothing for valid PMC ids, but its `pmid` filter
   works.
+- **CORE's cached PDFs cannot be fetched by script.** `core.ac.uk/download/…`
+  and even the authenticated `api.core.ac.uk/v3/outputs/<id>/download` answer
+  with a Cloudflare browser challenge (24 October 2026). Some of CORE's
+  `sourceFulltextUrls` are reference-list text, not links. The route keeps
+  only the repositories' own http(s) links.
 - **The 48 held copies whose final host is a publisher** (cambridge.org,
   nature.com, Annual Reviews, Springer, *Science*) all came from locations
   OpenAlex marks open. Re-requesting them from an off-campus host would
