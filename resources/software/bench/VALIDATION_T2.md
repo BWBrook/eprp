@@ -122,3 +122,35 @@ methods the perturbed ages. All methods are reported. No pass criteria.
   dating error only (width about 0.01 Myr at 0.001-Myr errors). Scored as
   declared; also reported, labelled post hoc, is its median read as an
   α = 0.05 bound.
+
+**A2, 24 October 2026, after the full run and an independent review
+(Claude Sonnet subagent), before the reruns below (Claude, Opus 5.5).**
+- **Arm C is rerun.** `griwm` calls `set.seed(i_iter)` inside its
+  resampling loop (`R/griwm.R` line 335), which reset each parallel
+  worker's random stream, so the arm-C dating errors repeated across cases
+  (476 of 2,000 shared one first value). The errors are now drawn in the
+  parent process before the workers start. The first arm-C results are
+  superseded; they remain in the repository history (`382dfed`). Arms A and
+  B draw no random numbers outside `griwm`, and are rerun only to confirm
+  they reproduce exactly.
+- **Added to the scoring, post hoc:**
+  - for `agnostic`, coverage among cases whose posterior reaches 0.95,
+    with the counts that never reach it or return `NA`, and coverage under
+    the declared wording ("at or after the bin of TE") as well as the
+    first-fully-absent bin used so far, which matches agnostic's
+    likelihood;
+  - for the persistence tests, coverage counting a missing estimate as
+    "not inferred extinct";
+  - for point estimates, root-mean-square error, the fraction of cases
+    closer to the truth than the Strauss–Sadler estimate, a median-unbiased
+    Strauss–Sadler point (last + R(2^{1/(n−1)} − 1)), and the split by
+    fossil count that was declared but not delivered;
+  - for arm B, the coverage of the same surviving species in arm A, as a
+    paired baseline.
+- **Corrections:** `tbea`'s Marshall upper bracket needs at least 110 gaps
+  (111 fossils) at quantile 0.95 and confidence 0.95, because its
+  `.upperBound` also rejects the largest gap (`t2_checks.R`); A1's α is the
+  Strauss–Sadler factor, not the confidence level; P1 compares two outputs
+  of the same generator (`simMixedAssemblageSample` calls
+  `getTimestepAbundances`, then subsamples), so it checks only the
+  subsampling step.
