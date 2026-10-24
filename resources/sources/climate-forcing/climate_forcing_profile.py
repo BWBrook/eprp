@@ -56,8 +56,14 @@ def put(table, metric, key, value):
 
 
 def latest(route):
-    vs = sorted(glob.glob(os.path.join(root, route, "raw", "*")))
-    return vs[-1] if vs else None
+    """The newest mirrored version: last in data_mirror's versions.tsv (the provider's order), else by name."""
+    raw = glob.glob(os.path.join(root, route, "raw", "*"))
+    try:
+        with open(os.path.join(root, route, "versions.tsv"), encoding="utf-8") as f:
+            order = [line.split("\t")[0] for line in f.read().splitlines()[1:]]
+    except FileNotFoundError:
+        order = []
+    return max(raw, key=lambda p: (order.index(os.path.basename(p)) if os.path.basename(p) in order else -1, p), default=None)
 
 
 def manifest(v):
@@ -299,11 +305,15 @@ if v:
         put("green2022", "S2 vs repository LIPs.tsv and LIPs Including Oceanic.tsv (names normalised)",
             "LIPs with equal start and end ages and sigmas",
             f"{len(ok)} of {len(lips)}; differing: {'; '.join(differ) or 'none'}; not found: {', '.join(unmatched) or 'none'}")
+        if differ:  # names the repository lacks are reported above, not failed
+            failures.append(f"green S2 vs repository: {len(differ)} LIPs differ")
         rb = {r["Number"]: r for r in repo_table("boundaries.tsv")}
         okb = sum(1 for r in tables["S1"][1] if r["#"] in rb and same(r.get("Age [Ma]"), rb[r["#"]]["Age [Ma]"])
                   and (same(r.get("Age 1σ [Ma]"), rb[r["#"]]["Age sigma [Ma]"]) or not r.get("Age 1σ [Ma]")))
         put("green2022", "S1 vs repository data/boundaries.tsv", "boundaries with equal age and sigma",
             f"{okb} of {len(tables['S1'][1])}; repository rows {len(rb)}")
+        if okb != len(tables["S1"][1]):
+            failures.append(f"green S1 vs repository: {len(tables['S1'][1]) - okb} boundaries missing or differing")
         ri = {key(r["Name"]): r for r in repo_table("impacts.tsv")}
         s3 = tables["S3"][1]
         bad = [f"{r['Name']} ({r.get('Age [Ma]')} ± {r.get('Age 1σ [Ma]')} vs "
@@ -312,6 +322,8 @@ if v:
                                    and same(r.get("Age 1σ [Ma]"), ri[key(r["Name"])]["Age_sigma [Ma]"]))]
         put("green2022", "S3 vs repository data/impacts.tsv", "impacts with equal age and sigma",
             f"{len(s3) - len(bad)} of {len(s3)}; repository rows {len(ri)}; differing: {'; '.join(bad) or 'none'}")
+        if bad:
+            failures.append(f"green S3 vs repository: {len(bad)} impacts missing or differing")
 
 for f in failures:
     put("checks", "failure", "", f)

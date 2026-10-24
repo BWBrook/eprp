@@ -13,8 +13,9 @@ Usage:
 Writes DEST/versions.tsv (every version the provider offers) and
 DEST/raw/<version_dir>/ holding the unchanged files plus MANIFEST.json for the
 selected versions: --latest takes the newest version of each record (Figshare:
-of each article; Zenodo and Dryad: by the provider's own version order, not
-the publication dates, which depositors set and which need not increase),
+of each article; Zenodo, Dryad and Figshare: by the provider's own version
+order, not the publication dates, which depositors set and which need not
+increase),
 --only names version_dirs, and both may be combined. Zenodo
 version_dirs are <version>_<record>; Figshare ones are <article-title>_v<N>_<article>,
 one per version of every article in the collection; GitHub ones are
@@ -527,7 +528,7 @@ def main():
     if a.latest:
         group = (lambda r: r["record"]) if a.command == "figshare" else (lambda r: "all")
         order = {"zenodo": lambda r: r["index"], "dryad": lambda r: r["version"],
-                 "figshare": lambda r: (r["publication_date"], r["version"])}.get(
+                 "figshare": lambda r: r["version"]}.get(
             a.command, lambda r: (r["publication_date"], str(r["version"])))
         newest = {}
         for r in versions:

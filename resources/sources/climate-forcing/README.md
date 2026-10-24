@@ -319,3 +319,9 @@ no-derivatives. Use the derived TSVs for analysis, not for redistribution.
   - smaller points.
 
   It also re-ran the parses and found every Green and Rothman row correct.
+- 2026-10-24, GitHub Copilot's review of BWBrook/eprp#2, applied: the
+  profiler takes each route's newest mirrored version in `versions.tsv`
+  order (a name sort would pick Scotese's superseded release if both were
+  mirrored), and a missing or differing S1 boundary, S2 age or S3 impact
+  against Green et al.'s repository now fails the run. Re-run: profile
+  unchanged, summary ok.
