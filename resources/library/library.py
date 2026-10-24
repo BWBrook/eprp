@@ -257,14 +257,41 @@ def safe_url(url):
 
 
 def key_file(name):
-    """A credential from ~/.config/<name>, or '' if absent."""
+    """A credential from ~/.config/<name>, or '' if absent or not a single printable token."""
     p = Path.home() / ".config" / name
-    return p.read_text().strip() if p.exists() else ""
+    key = p.read_text().strip() if p.exists() else ""
+    if key and not re.fullmatch(r"[\x21-\x7e]+", key):
+        print(f"~/.config/{name}: not a single printable token; ignored", file=sys.stderr)
+        return ""
+    return key
+
+
+def site(host):
+    return ".".join((host or "").lower().split(".")[-2:])
+
+
+class CredentialRedirect(urllib.request.HTTPRedirectHandler):
+    """Follow redirects, but carry credential headers only to https URLs on the same site."""
+
+    def __init__(self, secret_headers):
+        super().__init__()
+        self.secret = {h.lower() for h in secret_headers}
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        new = super().redirect_request(req, fp, code, msg, headers, newurl)
+        if new is not None:
+            old, target = urllib.parse.urlsplit(req.full_url), urllib.parse.urlsplit(newurl)
+            if target.scheme != "https" or site(target.hostname) != site(old.hostname):
+                for h in [h for h in new.headers if h.lower() in self.secret]:
+                    del new.headers[h]
+        return new
 
 
 def http_get(url, accept="application/json", timeout=60, max_bytes=None, headers=None):
+    """GET a URL. headers are credentials: sent with the request and with redirects within the same site only."""
     req = urllib.request.Request(safe_url(url), headers={"User-Agent": UA, "Accept": accept, **(headers or {})})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+    opener = urllib.request.build_opener(CredentialRedirect(headers or {}))
+    with opener.open(req, timeout=timeout) as r:
         data = r.read(max_bytes + 1) if max_bytes else r.read()
         if max_bytes and len(data) > max_bytes:
             raise Truncated(f"larger than {max_bytes} bytes")
@@ -527,7 +554,7 @@ def expand(store, k, out):
 # ---------------------------------------------------------------- fetch
 
 # CORE allows registered academic users 10 requests a minute; Wiley's TDM API 60 per 10 minutes.
-HOST_INTERVAL = {"api.core.ac.uk": 6.5, "api.wiley.com": 10.0}
+HOST_INTERVAL = {"api.core.ac.uk": 6.5, "api.wiley.com": 11.0}
 
 
 class HostPacer:
@@ -546,10 +573,10 @@ class HostPacer:
             self.next_ok[host] = t + HOST_INTERVAL.get(host, self.interval)
         time.sleep(max(0.0, t - time.monotonic()))
 
-    def pause(self, host, seconds):
+    def pause(self, host, seconds, why):
         with self.lock:
-            self.paused_until[host] = time.monotonic() + seconds
-        print(f"  {host} refused with HTTP 429; skipping it for {seconds / 60:.0f} min", flush=True)
+            self.paused_until[host] = max(self.paused_until.get(host, 0.0), time.monotonic() + seconds)
+        print(f"  {host} refused ({why}); skipping it for {seconds / 60:.0f} min", flush=True)
 
     def paused(self, host):
         return time.monotonic() < self.paused_until.get(host, 0.0)
@@ -563,9 +590,11 @@ def pause_seconds(headers, default=3600.0):
         return float(value)
     try:
         reset = datetime.datetime.fromisoformat(headers.get("x-ratelimit-retry-after") or "")
-        return max(60.0, (reset - datetime.datetime.now(datetime.timezone.utc)).total_seconds())
     except ValueError:
         return default
+    if reset.tzinfo is None:
+        reset = reset.replace(tzinfo=datetime.timezone.utc)
+    return max(60.0, (reset - datetime.datetime.now(datetime.timezone.utc)).total_seconds())
 
 
 PMC_RE = re.compile(r"/pmc/articles/(?:PMC)?(\d+)", re.I)
@@ -635,7 +664,7 @@ def get_bytes(url, pacer, accept="application/pdf,*/*;q=0.5", headers=None):
                                                     headers=headers)
     except urllib.error.HTTPError as e:
         if e.code == 429:
-            pacer.pause(parts.hostname, pause_seconds(e.headers, 600.0))
+            pacer.pause(parts.hostname, pause_seconds(e.headers, 600.0), "HTTP 429")
         raise FetchFail(f"http_{e.code}")
     return final, response_headers, data
 
@@ -743,7 +772,9 @@ def try_candidate(rec, cand, store, pacer, lock, tool_sha, area=".", headers=Non
         elif score >= 0.6:
             outcome = "ok"
         else:
-            shutil.move(tmp, store / "quarantine" / f"{wid}__{hashlib.sha256(url.encode()).hexdigest()[:8]}.pdf")
+            quarantine = store / area / "quarantine"
+            quarantine.mkdir(parents=True, exist_ok=True)
+            shutil.move(tmp, quarantine / f"{wid}__{hashlib.sha256(url.encode()).hexdigest()[:8]}.pdf")
             tmp = None
             return "mismatch", f"title_match={score:.2f}"
         full = pdf_text(tmp) or ""
@@ -755,12 +786,20 @@ def try_candidate(rec, cand, store, pacer, lock, tool_sha, area=".", headers=Non
         os.replace(tmp, dest)
         tmp = None
         dest.chmod(0o444)
+        note = TDM_NOTE if tdm else ""
+        if not tdm:  # an open copy supersedes any TDM copy of the work
+            for name in TDM_ROUTES:
+                old = store / "tdm" / name / "pdf" / f"{wid}.pdf"
+                for p in (old, store / text_path(Path("tdm") / name / "pdf" / f"{wid}.pdf")):
+                    if p.exists():
+                        p.unlink()
+                        note = f"superseded TDM copy in tdm/{name} deleted"
         append_tsv(store / "manifest.tsv", {
             "openalex_id": wid, "doi": norm_doi(rec.get("doi")), "status": ("tdm_" if tdm else "") + outcome,
             "url": url if tdm else final, "host": host, "version": version, "license": license_,
             "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "pages": pages, "text_chars": len(full),
             "title_match": f"{score:.2f}", "retrieved": now(), "tool_sha256": tool_sha,
-            "note": TDM_NOTE if tdm else "", "path": str(rel)}, MANIFEST_FIELDS, lock)
+            "note": note, "path": str(rel)}, MANIFEST_FIELDS, lock)
         return outcome, ""
     except FetchFail as e:
         return e.outcome, e.detail
@@ -773,16 +812,18 @@ def try_candidate(rec, cand, store, pacer, lock, tool_sha, area=".", headers=Non
 
 def lookup_json(url, pacer, headers=None):
     """GET JSON for a lookup service: (data, outcome); outcome is None on success, 'skipped' when the
-    host is rate-limited (it is then paused for this run), 'none' for 404 and 'error' otherwise."""
+    host refuses for rate or credentials (it is then paused for this run), 'none' for 404, 'error' otherwise."""
     host = urllib.parse.urlsplit(url).hostname
     if pacer.paused(host):
         return None, "skipped"
     pacer.wait(url)
+    if pacer.paused(host):
+        return None, "skipped"
     try:
         return get_json(url, tries=2, headers=headers)[0], None
     except urllib.error.HTTPError as e:
-        if e.code == 429:
-            pacer.pause(host, pause_seconds(e.headers))
+        if e.code in (401, 403, 429):
+            pacer.pause(host, pause_seconds(e.headers) if e.code == 429 else 86400.0, f"HTTP {e.code}")
             return None, "skipped"
         return None, "none" if e.code == 404 else "error"
     except TRANSIENT_ERRORS:
@@ -810,7 +851,7 @@ def core_lookup(doi, pacer):
             urls += [r.get("downloadUrl") or ""] + list(r.get("sourceFulltextUrls") or [])
     # CORE's own downloads (core.ac.uk, and the API's /download) sit behind a browser challenge, and some
     # source "URLs" are reference-list text; keep the repositories' own http(s) links.
-    urls = [u for u in dict.fromkeys(urls) if re.match(r"https?://", u) and "core.ac.uk" not in u]
+    urls = [u for u in dict.fromkeys(urls) if isinstance(u, str) and re.match(r"https?://", u) and "core.ac.uk" not in u]
     return ("found" if urls else "none"), urls
 
 
@@ -828,9 +869,13 @@ def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha):
         append_tsv(store / "attempts.tsv", {"openalex_id": wid, "url": url, "host": host, "outcome": outcome,
                                             "detail": detail, "when": now()}, ATTEMPT_FIELDS, lock)
 
+    open_exhausted = True  # becomes False if an open route was skipped or failed transiently this run
+
     def attempt(cand, **kw):
+        nonlocal open_exhausted
         outcome, detail = try_candidate(rec, cand, store, pacer, lock, tool_sha, **kw)
         record(cand[1], cand[2], outcome, detail)
+        open_exhausted &= not transient(outcome)
         return outcome in OPEN_HELD and outcome
 
     cands = [c for c in candidates(rec) if c[1] not in tried]
@@ -842,6 +887,8 @@ def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha):
         if not doi or f"{prefix}:{doi}" in tried or not enabled():
             continue
         outcome, urls = lookup(doi, pacer)
+        if outcome in ("skipped", "error"):
+            open_exhausted = False
         if outcome == "skipped":
             continue
         record(f"{prefix}:{doi}", host, f"{prefix}_{outcome}", " ".join(urls)[:300])
@@ -849,6 +896,8 @@ def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha):
             cands.append(("landing", u, host, "", ""))
             if result := attempt(cands[-1]):
                 return result
+    if not open_exhausted:  # TDM only after every open route has been tried
+        return "failed" if cands else "no_copy"
     for name, route in TDM_ROUTES.items():
         url = route["url"].format(urllib.parse.quote(doi, safe=""))
         token = key_file(route["key"])
@@ -890,7 +939,8 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
         latest[r["url"]] = r["outcome"]
     tried = set() if retry_failed else {u for u, o in latest.items() if not transient(o)}
     tried |= {r["url"] for r in manifest.values() if r["status"] == "withdrawn"}
-    todo = [recs[w] for w in sorted(set(order) - done, key=order.get) if recs[w].get("type") not in SKIP_TYPES]
+    skip = done | (set() if retry_failed else tdm_done)  # TDM-held works are revisited only with --retry-failed
+    todo = [recs[w] for w in sorted(set(order) - skip, key=order.get) if recs[w].get("type") not in SKIP_TYPES]
     todo = todo[:limit] if limit else todo
     print(f"{len(order)} works selected; {len(done & set(order))} held open, {len(tdm_done & set(order))} held "
           f"as TDM copies; {len(todo)} to try", flush=True)
@@ -900,7 +950,11 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
     with concurrent.futures.ThreadPoolExecutor(workers) as ex:
         futs = [ex.submit(fetch_one, r, store, pacer, tried, tdm_done, lock, tool_sha) for r in todo]
         for n, f in enumerate(concurrent.futures.as_completed(futs), 1):
-            results[f.result()] += 1
+            try:
+                results[f.result()] += 1
+            except Exception as e:  # one work's unexpected failure must not end an unattended run
+                results["crashed"] += 1
+                print(f"  worker error: {type(e).__name__}: {e}"[:200], file=sys.stderr, flush=True)
             if n % 25 == 0 or n == len(todo):
                 print(f"  {n}/{len(todo)} {dict(results)}", flush=True)
     lock_file.close()
@@ -909,11 +963,10 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
 # ---------------------------------------------------------------- withdraw
 
 def withdraw(store, wids, reason):
-    """Remove held copies: move PDF and text to quarantine/withdrawn/ and append a manifest row."""
+    """Remove held copies: move PDF and text to quarantine/withdrawn/ (a TDM copy to tdm/<publisher>/withdrawn/,
+    so everything obtained under a TDM licence stays under tdm/) and append a manifest row."""
     lock_file = store_lock(store)
     manifest = load_manifest(store)
-    dest = store / "quarantine" / "withdrawn"
-    dest.mkdir(parents=True, exist_ok=True)
     lock = threading.Lock()
     for w in map(short_wid, wids):
         row = manifest.get(w)
@@ -921,11 +974,13 @@ def withdraw(store, wids, reason):
             print(f"{w}: no held copy", file=sys.stderr)
             continue
         pdf = Path(row.get("path") or f"pdf/{w}.pdf")
+        dest = Path(*pdf.parts[:2], "withdrawn") if pdf.parts[0] == "tdm" else Path("quarantine", "withdrawn")
+        (store / dest).mkdir(parents=True, exist_ok=True)
         for src in (store / pdf, store / text_path(pdf)):
             if src.exists():
-                os.replace(src, dest / src.name)
+                os.replace(src, store / dest / src.name)
         append_tsv(store / "manifest.tsv", dict(row, status="withdrawn", retrieved=now(), note=reason,
-                                                path=f"quarantine/withdrawn/{pdf.name}"), MANIFEST_FIELDS, lock)
+                                                path=str(dest / pdf.name)), MANIFEST_FIELDS, lock)
         print(f"{w}: withdrawn")
     lock_file.close()
 
@@ -978,9 +1033,9 @@ def index(store, out):
             ft = m["status"]
         elif rec.get("type") in SKIP_TYPES:
             ft = "skipped_type"
-        elif any(not is_lookup(o) for o in attempts[wid]):
+        elif any(not is_lookup(o) and not transient(o) for o in attempts[wid]):
             ft = "failed"
-        elif attempts[wid] or not (rec.get("doi") or candidates(rec)):
+        elif any(not transient(o) for o in attempts[wid]) or not (rec.get("doi") or candidates(rec)):
             ft = "no_copy"
         else:
             ft = "not_tried"

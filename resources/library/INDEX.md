@@ -19,12 +19,13 @@ Full-text status: `ok` open copy held and title-checked; `no_text` open scan hel
 
 | Status | Works |
 | --- | ---: |
-| no_copy | 1386 |
-| failed | 898 |
+| no_copy | 1505 |
+| failed | 778 |
 | ok | 690 |
 | tdm_ok | 315 |
 | skipped_type | 119 |
 | no_text | 9 |
+| not_tried | 1 |
 | withdrawn | 1 |
 
 ## By type
