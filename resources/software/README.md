@@ -64,6 +64,9 @@ cross-check had little power, so T3 waits for a larger comparison.
 | [EDE](ede/README.md) | T2 | Strauss–Sadler; others characterised |
 | [Rextinct](rextinct/README.md) | T1 | characterised only (GRIWM) |
 | [agnostic.R](agnostic-r/README.md) | T1 | characterised only |
+| [palaeoverse](palaeoverse/README.md) | T2 | `bin_time` (four methods, continuous ages); `tax_range_time`; `palaeorotate` consistent with pyGPlates for three models |
+| [fossilbrush](fossilbrush/README.md) | T2 | `check_taxonomy` conflicts and formatting; `flag_ranges` failed |
+| [chronosphere](chronosphere/README.md) | T1 | [Detail withheld pending disclosure to the data custodian.] |
 
 Tranche 1's harness and results: [bench/](bench/README.md).
 
@@ -218,3 +221,19 @@ Body sections, in order:
 - *Baseline a filter against the same cases without it.* Hiatuses also
   remove fossils, so the right comparison for their effect is the same
   species in the ideal arm, not the nominal 0.95.
+
+**Tranche 3 (24 October 2026; [bench](bench/README.md)).**
+
+- *Fit the structure of a disagreement before naming it.* Two routes for
+  TorsvikCocks2017 looked like different models; a rigid-rotation fit showed
+  identical relative motions in different absolute frames.
+- *Check what a layer file really is.* The mirror's "StaticPolygons" for one
+  model is its terrane file.
+- *Injected errors interact.* Our format-error names were paired with their
+  sources by the spell check, which first looked like false positives.
+- *Test boundaries explicitly.* Continuous synthetic ages never hit a bin
+  edge; the edge cases broke two of `bin_time`'s methods.
+- [Detail withheld pending disclosure to the data custodian.]
+- *Type bugs hide behind plausible output.* `flag_ranges` returns numbers
+  that look right and flags that look sparse; only an injection test with
+  known answers showed the text comparison.

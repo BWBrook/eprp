@@ -240,3 +240,78 @@ the other 53 the inferred sample size is n − 1 (52 cases) or n − 2 (1).
 - **Two tools reset or break the caller's state.** `griwm` calls
   `set.seed()` inside its loop, which invalidated our first arm C; and
   `agnostic.R` fails under R ≥ 4.3 when `total` is supplied.
+
+# Tranche 3: data preparation and palaeogeography
+
+Run on `deep-server` on 24 October 2026 (`run_t3.sh`, tmux, about 40
+minutes, most of it downloading snapshots and pacing PBDB requests). Tests
+declared in [VALIDATION_T3.md](VALIDATION_T3.md) before running (`ec37fab`);
+A1 records the changes made after smoke runs and before the full run, and A2
+the post hoc checks after an independent review (Claude Sonnet subagent),
+whose findings are applied here. Read-only inputs from the data catalogue's
+mirror: the public PBDB snapshot, the plate models and the ICS chart tables.
+Results in `results/t3/`; post hoc checks in `t3_checks.json` and
+`t3_checks_r.json`.
+
+## Results
+
+| Test | Tool | Result | Key numbers |
+| --- | --- | --- | --- |
+| V1 `bin_time` mid, majority | palaeoverse 1.5.0 | **pass** | mid: 20,000 of 20,000 agree with independently computed bins; majority: 19,983 of 19,983 (17 exact two-bin ties excluded) |
+| V2 `bin_time` random | palaeoverse | **pass** | equal draws among overlapped bins, χ² p = 0.40 (10,273 occurrences, 200 replicates) |
+| V3 `bin_time` point | palaeoverse | **pass** | draws in proportion to overlap, χ² p = 0.51 |
+| V4 `tax_range_time` | palaeoverse | **fail** (rounding) | FAD and LAD within 0.0005 of the truth; the function rounds to three decimals |
+| V5 `GTS2020` table | palaeoverse | reported | equals chart v2020/01 at 59 of the 60 stages that table covers (Priabonian 37.71 against 37.8); differs by more than 0.001 Myr from chart v2024/12 at 61 of 97 stages with printed values (including 0.01 rounding cases; largest Barremian 129.4 against 125.77, Fortunian 541 against 538.8) |
+| V6 `palaeorotate` vs pyGPlates | palaeoverse | **pass** for MERDITH2021, PALEOMAP, MATTHEWS2016_pmag_ref; **fail** for TorsvikCocks2017 | point method within 0.00007° of pyGPlates for every point–age of the three models; grid method median 0.37–0.38° (grid snapping), 98% of returned values within 1°, but no value for 40–56 point–ages the Web Service reconstructs (2.6–3.6%); TorsvikCocks2017: a rigid frame offset (below) |
+| F1 `check_taxonomy` | fossilbrush 1.0.6 | **fail** (misspellings) | conflicts 30 of 30 and formatting 10 of 10; misspellings 26 of 30, the four misses all beyond the default Jaro–Winkler threshold (0.104–0.179 against 0.1); one false synonym pair among clean names |
+| F2 `flag_ranges` | fossilbrush | **fail** (bugs) | 24 of 100 injected outliers flagged, no false flags; a numeric reading of its returned differences catches 100 of 100 |
+| [Detail withheld pending disclosure to the data custodian.] | chronosphere 0.6.1 | reported | [Detail withheld pending disclosure to the data custodian.] |
+
+## What tranche 3 found
+
+- **palaeoverse's binning is correct for continuous ages away from bin
+  boundaries**, including the length-weighted "point" draw and the
+  length-blind "random" draw. At boundaries (`t3_checks.R`): `mid` returns
+  `NA` when the midpoint falls exactly on one; a zero-width occurrence on a
+  boundary makes `majority` and `random` stop with an error; an exact
+  two-bin tie goes to the older bin under `majority`.
+- **palaeorotate's Web Service route and pyGPlates agree to 0.0001° for
+  three models**, as they should on the same model files (a consistency
+  check, not independent rotation code). The grid route's error is the
+  present-day distance from a point to its cell centre (median 0.38°), which
+  rotation preserves, except near plate boundaries (up to 56°), and the grid
+  returns nothing for 2.6–3.6% of point–ages.
+- **TorsvikCocks2017 differs between routes only by its absolute frame.** A
+  single rigid rotation per age maps the pyGPlates positions onto the Web
+  Service's with residual at most 0.00007°: rotation angles 3.1°, 9.6°,
+  2.5°, 22.0°, 7.0° and 28.0° at 10, 50, 100, 200, 300 and 400 Ma, with the
+  pole at 0°N 169°W from 200 to 400 Ma. Relative plate motions are
+  identical. Separately, the mirror's TorsvikCocks2017 "StaticPolygons" layer
+  is the terrane file (byte-identical to its Coastlines layer), so 49 of the
+  300 points get no plate. The Web Service and the Jones & Domeier grids
+  share one frame; which frame the Plate Model Manager's rotation file
+  (`Torsvik_Cocks_HybridRotationFile.rot`) is in, and why they differ, is
+  unresolved.
+- **Plate-model choice moves palaeolatitudes by degrees.** Across
+  MERDITH2021, PALEOMAP and MATTHEWS2016_pmag_ref the same collections
+  spread by a median 2.9° at 10 Ma, 4.3–5.7° from 50 to 300 Ma and 13.6° at
+  400 Ma (90th percentiles 5.0–19.5°); holding the 194 points
+  reconstructable at every age fixed changes little (`t3_checks.json`). The
+  four-model figures in `v6_summary.json` include TorsvikCocks2017's frame
+  offset and should not be used.
+- **fossilbrush's `flag_ranges` has two bugs.**
+  - It compares its differences with `flag.diff` as text, because they
+    start as copies of a character vector. At `flag.diff = 5`, a difference
+    is flagged only if its leading digit is 5–9 (5–9.99, 50–99.99,
+    500+); 10–49.99 and 100–499.99 are never flagged. The text-comparison
+    prediction matches all 100 injected flags. The 24% is a property of the
+    injected 10–30 Myr shifts, chosen after the smoke run had shown the bug,
+    not an estimate for real data.
+  - It measures occurrences beyond the LAD from the reference FAD. The
+    returned LAD difference equals the true excess plus the taxon's range.
+- **fossilbrush's spell check is threshold-limited, not broken.** All four
+  missed misspellings exceed the default Jaro–Winkler distance of 0.1, and
+  the check compares only names in the same family with the same first
+  letter; `jw` is tunable. Ten of the eleven extra pairs it reported pair our
+  injected format errors with their source names, which is a correct catch.
+- [Detail withheld pending disclosure to the data custodian.]

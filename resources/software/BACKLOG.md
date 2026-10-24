@@ -42,7 +42,7 @@ a day on its free cores; nothing long on the laptop.
    `tbea` and Alroy's `agnostic.R`, with tranche 1's generators and the
    stratigraphic filter as truth (L-008, L-011; Q-013, Q-017, Q-034, Q-041,
    B-007).
-3. **Preparation and palaeogeography.** palaeoverse, fossilbrush,
+3. **Done 24 October 2026 ([bench](bench/README.md), tranche 3).** **Preparation and palaeogeography.** palaeoverse, fossilbrush,
    `chronosphere` (list its PBDB snapshots, L-005), and a cross-implementation
    check of palaeocoordinates between `palaeorotate` and pyGPlates or
    GPlately (L-010).
