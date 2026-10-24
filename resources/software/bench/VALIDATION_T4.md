@@ -158,3 +158,36 @@ The generator gains the `dd_label` column; it is rerun into a separate
 directory, and its occurrence files must be byte-identical to the run's
 (no random draw changes). The declared comparison against global richness
 stays the primary one.
+
+## Amendment A4 (24 October 2026, after an independent review, before any DeepDive prediction)
+
+The review (Claude Sonnet subagent) found that one model per scenario,
+autotuned to replicate 1, does not fit most replicates. DeepDive confines
+every training simulation to within a factor 1.2 of the autotuned
+occurrence total (`target_n_occs`), and replicate 1 sets it: S, E and M
+have 17, 11 and 2 of 20 replicates inside that window (in M, replicate 1
+is the smallest record). `maximum_localities_per_bin` (22, 26, 23) is
+exceeded in 17, 13 and 15 replicates. Applying one model to all
+replicates also departs from DeepDive's intended use, which tunes and
+trains on the dataset to be predicted. Therefore:
+
+1. **Shared-model arm (as run):** every DeepDive metric is reported
+   separately for replicates inside and outside the occurrence window
+   (total occurrences in [target/1.2, 1.2 × target]); the locality
+   exceedance is reported per replicate.
+2. **Per-dataset arm (added):** replicates 2, 3 and 4 of each scenario
+   (fixed now, by number) each get their own `create_config` with the A1
+   settings, autotuned to and trained on that replicate's own record, and
+   predict it ([run_t4b.sh](run_t4b.sh), after the shared run finishes;
+   16 cores each, three at a time). With replicate 1, whose shared model is
+   its own, that gives four per-dataset fits per scenario. Their metrics
+   (K2-type bias, the M drop, Spearman, error against global richness and
+   `dd_label`) are reported beside every other estimator's on the same four
+   replicates ([validate/t4_deepdive_summary.R](validate/t4_deepdive_summary.R)).
+3. Scenario M tests DeepDive's default prior on mass extinctions
+   (`p_mass_extinction = 0.01`, so about 1% of training simulations
+   contain one), not DeepDive under a prior chosen for a known event.
+4. Corrections to A1: item 4's total is 10,112 simulations (100 test
+   simulations round up to 112 on 16 cores); the 240-simulation smoke files
+   behind item 3's figure were overwritten by the second smoke run, so that
+   figure rests on the run log alone.
