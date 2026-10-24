@@ -27,7 +27,7 @@ later fate beyond a specified measured onset state and environmental history?
 | **Baseline predictors (B)** | Onset state at shock 2: occupancy and range, with abundance where recorded, each carrying a detection model. Also lineage traits (physiology, life habit) and environmental history at the lineage's locations. |
 | **History predictors (H)** | **Exposure** in shock 1: overlap of the lineage's pre-shock-1 range with that shock's footprint. **Response** in shock 1 (range or occupancy change) is recorded as a separate predictor and never pooled with exposure. |
 | **Primary estimand** | Out-of-sample gain in a proper score (log score) from adding H to B. Folds are blocked by clade, so that relatedness does not leak across folds. A minimum meaningful gain is declared before fitting. |
-| **Reported alongside** | H alone, as the *total* predictive legacy, and H given B, as the *residual*. Their difference bounds how much of the legacy runs *through* onset state. |
+| **Reported alongside** | H alone, and H given B, on common evaluation support. **Withdrawn (Codex's XOR counterexample, 76/2364):** their difference does *not* bound mediated legacy; it is a difference of conditional mutual informations. Mediation needs its own estimand ([repair](2026-10-24-collapse-conditions-and-contract-repair-claude.md)). |
 
 **What each result licenses.**
 - **A positive residual gain** means the measured baseline is predictively
@@ -50,14 +50,18 @@ that bears on it.**
    - **The contrast:** residents that lived through shock 1 against
      *immigrants* that arrived afterwards, compared at shock 2 at matched
      onset state and susceptibility proxies.
-     - Pure selection predicts that residents do better only as far as their
-       traits differ.
-     - Acquired protection predicts that residents do better at matched
-       traits.
-     - Acquired damage predicts that they do worse.
+     - **Withdrawn (Codex's counterexample, 76/2364):** I said pure selection
+       makes residents better only as far as their traits differ. Selection
+       on *latent* frailty favours residents even at matched measured traits,
+       so this contrast cannot separate selection from acquired protection.
+     - **What survives** is in the
+       [repair note](2026-10-24-collapse-conditions-and-contract-repair-claude.md).
+       The selection artefact has the sign of Cov(p, q) (the Price equation),
+       and a place × cohort design separates place effects from cohort
+       effects.
 2. **Mediation.** A legacy that acts by reducing range shows up in B. The
-   total-against-residual comparison above makes this visible rather than
-   hiding it.
+   score comparison does not measure this (withdrawn above); it needs a
+   separate causal estimand.
 3. **Exposure against response.** Range loss in shock 1 mixes exposure,
    susceptibility and observation. Only exposure to the footprint, measured
    from pre-shock geography, is a candidate cause. Response is a symptom.

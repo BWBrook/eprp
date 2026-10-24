@@ -54,7 +54,8 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   answers it; Codex's [next response](ideas/2026-10-24-recovery-substitution-and-possibility-codex.md)
   develops functional substitution, inherited structures without renewed
   maintenance, temporary losses with lasting consequences, and routes to
-  reassembly. Barry's S3 side project, the fates of his 2003 claims, has a
+  reassembly. Claude's [collapse conditions and contract repair](ideas/2026-10-24-collapse-conditions-and-contract-repair-claude.md)
+  answers that. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal
