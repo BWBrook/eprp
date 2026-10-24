@@ -23,11 +23,15 @@ resolve in STORE/unresolved-keys.tsv. expand writes the neighbours tier from the
 stored reference lists. fetch downloads PDFs from open copies only (OpenAlex
 open-access locations, the PubMed Central open-access bucket, repository landing
 pages, CORE's repository copies when ~/.config/core/api_key exists, Semantic
-Scholar's open-access link), accepts one only when its first pages
-contain the work's title, stores it read-only as STORE/pdf/<W>.pdf with text in
-STORE/text/<W>.txt, and appends to STORE/manifest.tsv; every attempt goes to
-STORE/attempts.tsv. withdraw removes held copies with a recorded reason. index
-writes works.tsv, unresolved.tsv, INDEX.md and by-question.md to --out.
+Scholar's open-access link, unrestricted Internet Archive scans of US public-domain
+works), then publisher TDM routes whose keys are installed (into STORE/tdm/). It
+accepts a PDF only when its first pages contain the work's title, stores it
+read-only as STORE/pdf/<W>.pdf with text in STORE/text/<W>.txt, and appends to
+STORE/manifest.tsv; every attempt goes to STORE/attempts.tsv. withdraw removes
+held copies with a recorded reason. journal writes a field tier (a journal's
+complete run) from OpenAlex. index merges duplicate records of one work and
+writes works.tsv, duplicates.tsv, unresolved.tsv, INDEX.md and by-question.md
+to --out.
 
 Needs Python 3.9+ and poppler's pdftotext and pdfinfo. The store lives on
 deep-server. No email or personal identifier is sent to any service. An OpenAlex
@@ -408,9 +412,10 @@ TEXT_TYPES = {"article", "review", "book", "book-chapter", "preprint", "report",
 def duplicate_map(recs, wids, prefer=frozenset()):
     """{duplicate: canonical} for records of one work that OpenAlex holds under several ids. Records are
     the same work when both are text works (not a paper's own data or code deposit), their full titles and
-    first-author surnames agree, and they share a publication year or one of them is a book-review or
-    paratext stub. Different editions and same-titled works from other years stay separate. The canonical
-    record is one with a held copy (prefer), then one with a DOI, then the most cited."""
+    first-author surnames agree, and they share a publication year. A book-review or paratext stub joins
+    the same-titled record nearest its year (within two years), or other stubs of its year. Different
+    editions and same-titled works from other years stay separate. The canonical record is one with a held
+    copy (prefer), then a non-stub, then one with a DOI, then the most cited."""
     groups = defaultdict(list)
     for w in wids:
         r = recs.get(w)
@@ -419,18 +424,18 @@ def duplicate_map(recs, wids, prefer=frozenset()):
             groups[(compact(r.get("title")), compact(surname(auths[0])))].append(w)
     out = {}
     for members in groups.values():
-        clusters = []
+        by_year = defaultdict(list)
+        stubs = []
         for w in sorted(members):
-            r = recs[w]
-            for c in clusters:
-                if any(recs[x].get("publication_year") == r.get("publication_year")
-                       or {recs[x].get("type"), r.get("type")} & STUB_TYPES for x in c):
-                    c.append(w)
-                    break
-            else:
-                clusters.append([w])
-        for c in [c for c in clusters if len(c) > 1]:
-            canon = max(c, key=lambda w: (w in prefer, bool(recs[w].get("doi")), recs[w].get("cited_by_count") or 0, w))
+            (stubs if recs[w].get("type") in STUB_TYPES else by_year[recs[w].get("publication_year")]).append(w)
+        for w in stubs:
+            year = recs[w].get("publication_year") or 0
+            near = [y for y in by_year if y is not None and abs(y - year) <= 2 and any(
+                recs[x].get("type") not in STUB_TYPES for x in by_year[y])]
+            by_year[min(near, key=lambda y: (abs(y - year), y)) if near else year].append(w)
+        for c in [c for c in by_year.values() if len(c) > 1]:
+            canon = max(c, key=lambda w: (w in prefer, recs[w].get("type") not in STUB_TYPES,
+                                          bool(recs[w].get("doi")), recs[w].get("cited_by_count") or 0, w))
             out.update({w: canon for w in c if w != canon})
     return out
 
@@ -923,33 +928,47 @@ PD_YEAR = datetime.date.today().year - 96  # in the US, works published 95 or mo
 
 def ia_lookup(rec, pacer):
     """Unrestricted Internet Archive scans of a public-domain work, matched on title words, first author and
-    year (within one): (outcome, [pdf url, ...]). Lending-only items (access-restricted) are excluded."""
+    year (within one, never past PD_YEAR): (outcome, [pdf url, ...]). Lending-only items (access-restricted),
+    items dated after PD_YEAR (in their date or title), items carrying an ISBN (modern reprints, which postdate
+    1970) and LCP-protected lending copies are excluded."""
     year = rec["publication_year"]
     title = re.sub(r"^\s*[IVXLC]+\.\W*", "", (rec.get("title") or "").split(" / ")[0])  # "XVII. On ..." / "by X"
     words = [w for w in re.findall(r"[^\W\d_]{4,}", title)
              if w.casefold() not in STOPWORDS and not re.fullmatch(r"[IVXLC]+", w)][:6]
     if not words:
         return "none", []
-    q = f'title:({" ".join(words)}) AND mediatype:texts AND year:[{year - 1} TO {year + 1}]'
+    q = (f'title:({" ".join(words)}) AND mediatype:texts AND year:[{year - 1} TO {min(year + 1, PD_YEAR)}] '
+         f'AND NOT access-restricted-item:true')
     auths = rec.get("authorships") or []
-    if auths and surname(auths[0]):
-        q += f" AND creator:({surname(auths[0])})"
+    name = "".join(re.findall(r"[^\W\d_]", surname(auths[0]))) if auths else ""
+    if name:
+        q += f" AND creator:({name})"
     data, outcome = lookup_json(IA_SEARCH + "?" + urllib.parse.urlencode(
         {"q": q, "fl[]": "identifier", "rows": "5", "output": "json"}), pacer)
-    if outcome:
-        return outcome, []
-    urls = []
+    if outcome or data.get("error"):  # IA reports query and backend errors inside an HTTP 200
+        return outcome or "error", []
+    urls, failed = [], None
     for doc in ((data.get("response") or {}).get("docs") or [])[:3]:
         ident = doc.get("identifier") or ""
         meta, outcome = lookup_json(f"https://archive.org/metadata/{urllib.parse.quote(ident)}", pacer)
-        if outcome or str((meta.get("metadata") or {}).get("access-restricted-item")).lower() == "true":
+        if outcome or not meta:
+            failed = failed or (outcome if outcome in ("error", "skipped") else None)
+            continue
+        md = meta.get("metadata") or {}
+        dated = re.search(r"\d{4}", str(md.get("date") or md.get("year") or ""))
+        title_years = [int(y) for y in re.findall(r"\b(1[5-9]\d\d|20\d\d)\b", str(md.get("title") or ""))]
+        if (str(md.get("access-restricted-item")).lower() == "true" or md.get("isbn")
+                or "urn:lcp:" in str(md.get("external-identifier") or "")  # DRM lending copy
+                or (dated and int(dated.group()) > PD_YEAR) or any(y > PD_YEAR for y in title_years)):
             continue
         files = meta.get("files") or []
         pdfs = [f["name"] for f in files if f.get("format") == "Text PDF"] or \
                [f["name"] for f in files if str(f.get("name", "")).lower().endswith(".pdf")]
         if pdfs:
             urls.append(f"https://archive.org/download/{urllib.parse.quote(ident)}/{urllib.parse.quote(pdfs[0])}")
-    return ("found" if urls else "none"), urls
+    if urls:
+        return "found", urls
+    return (failed or "none"), []
 
 
 def doi_key(prefix):
@@ -967,10 +986,12 @@ LOOKUPS = [
 ]
 
 
-def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha):
-    """Try the work's open-access locations, then CORE (with a key) and Semantic Scholar by DOI, then
-    any publisher TDM route whose key is installed."""
+def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha, found_urls=None):
+    """Try the work's open-access locations, then CORE (with a key) and Semantic Scholar by DOI and the
+    Internet Archive for public-domain works, then any publisher TDM route whose key is installed.
+    found_urls holds the links earlier lookups found, so a transient download failure is retried."""
     wid = short_wid(rec["id"])
+    found_urls = found_urls or {}
 
     def record(url, host, outcome, detail=""):
         append_tsv(store / "attempts.tsv", {"openalex_id": wid, "url": url, "host": host, "outcome": outcome,
@@ -992,14 +1013,17 @@ def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha):
     doi = norm_doi(rec.get("doi"))
     for prefix, host, lookup, key in LOOKUPS:
         k = key(rec)
-        if not k or k in tried:
+        if not k:
             continue
-        outcome, urls = lookup(rec, pacer)
-        if outcome in ("skipped", "error"):
-            open_exhausted = False
-        if outcome == "skipped":
-            continue
-        record(k, host, f"{prefix}_{outcome}", " ".join(urls)[:300])
+        if k in tried:  # looked up before: retry only the links it found, without asking the service again
+            urls = found_urls.get(k, [])
+        else:
+            outcome, urls = lookup(rec, pacer)
+            if outcome in ("skipped", "error"):
+                open_exhausted = False
+            if outcome == "skipped":
+                continue
+            record(k, host, f"{prefix}_{outcome}", " ".join(urls)[:4000])
         for u in [u for u in urls if u not in tried]:
             cands.append(("landing", u, host, "", ""))
             if result := attempt(cands[-1]):
@@ -1042,14 +1066,16 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
                 order[wid] = min(order.get(wid, key), key)
     manifest = load_manifest(store)
     done, tdm_done = held(store, manifest), held(store, manifest, TDM_HELD)
-    latest = {}
+    latest, found_urls = {}, {}
     for r in load_attempts(store):
         latest[r["url"]] = r["outcome"]
+        if is_lookup(r["outcome"]):
+            found_urls[r["url"]] = r["detail"].split() if r["outcome"].endswith("_found") else []
     tried = set() if retry_failed else {u for u, o in latest.items() if not transient(o)}
     tried |= {r["url"] for r in manifest.values() if r["status"] == "withdrawn"}
     skip = done | (set() if retry_failed else tdm_done)  # TDM-held works are revisited only with --retry-failed
     dups = duplicate_map(recs, set(order) | done | tdm_done, done | tdm_done)
-    skip |= {w for w, canon in dups.items() if canon in done | tdm_done}  # another record of the work is held
+    skip |= {w for w, canon in dups.items() if canon in set(order) | done | tdm_done}  # fetch one record per work
     todo = [recs[w] for w in sorted(set(order) - skip, key=order.get) if recs[w].get("type") not in SKIP_TYPES]
     todo = todo[:limit] if limit else todo
     print(f"{len(order)} works selected; {len(done & set(order))} held open, {len(tdm_done & set(order))} held "
@@ -1058,7 +1084,7 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
     pacer, lock = HostPacer(3.0), threading.Lock()
     results = Counter()
     with concurrent.futures.ThreadPoolExecutor(workers) as ex:
-        futs = [ex.submit(fetch_one, r, store, pacer, tried, tdm_done, lock, tool_sha) for r in todo]
+        futs = [ex.submit(fetch_one, r, store, pacer, tried, tdm_done, lock, tool_sha, found_urls) for r in todo]
         for n, f in enumerate(concurrent.futures.as_completed(futs), 1):
             try:
                 results[f.result()] += 1
@@ -1097,9 +1123,13 @@ def withdraw(store, wids, reason):
 
 # ---------------------------------------------------------------- index
 
+NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv"}
+
+
 def surname(authorship):
     name = (authorship.get("author") or {}).get("display_name") or authorship.get("raw_author_name") or ""
-    return name.split()[-1] if name.split() else ""
+    parts = [p for p in name.split() if p.strip(".,").lower() not in NAME_SUFFIXES]
+    return parts[-1].strip(",") if parts else ""
 
 
 def first_author(rec):

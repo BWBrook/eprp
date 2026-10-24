@@ -82,13 +82,15 @@ its published version under one title. `index` and `fetch` merge records that
 meet three conditions:
 
 - both are text works, so never a paper and its own data or code deposit;
-- their full titles and first-author surnames agree;
-- they share a publication year, or one of them is a book-review or paratext
-  stub.
+- their full titles and first-author surnames agree, ignoring suffixes such
+  as "Jr.";
+- they share a publication year. A book-review or paratext stub instead joins
+  the same-titled record nearest its year, within two years.
 
 Different editions, and same-titled works from different years such as
 Jablonski 1994 and 1995, stay separate. The canonical record is one with a
-held copy, then one with a DOI, then the most cited. `works.tsv` lists the
+held copy, then a non-stub, then one with a DOI, then the most cited. `fetch`
+tries one record per work. `works.tsv` lists the
 merged ids in its `merged` column, and `duplicates.tsv` lists each merge.
 Questions come from the citing context. In the registers, that is the
 enclosing `### Q-NNN` or `### B-NNN` section. Elsewhere, it is a `q012`/`b003`
@@ -123,12 +125,22 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
   - Semantic Scholar's open-access link;
   - for works published 96 or more years ago (1930 or earlier in 2026), which
     are public domain in the US: unrestricted Internet Archive scans.
-    - Scans are matched on title words, first author and year within one.
+    - Scans are matched on title words, first author and year within one,
+      never past that cutoff.
     - The title check reads their first 15 pages, because scans carry front
       matter.
-    - Lending-only items (`access-restricted-item`) are excluded.
+    - Excluded: lending copies (`access-restricted-item`, or an LCP DRM
+      identifier); items with an ISBN, a date or a title year after the
+      cutoff, which are modern reprints.
     - The Biodiversity Heritage Library's own site refuses scripts, but its
       scans are mirrored on the Internet Archive.
+    - The test is US law. Under Australian law some of these works, such as
+      Fisher 1930 (Fisher died in 1962), are still in copyright. They are
+      held as private research copies under Barry's decision of 23 October
+      2026 for the whole programme ([data catalogue](../sources/README.md)):
+      "Licence overrides confirmed, universally for the EPRP. Mirroring
+      locally is always okay for us: we're not hosting anything here for
+      public use".
 
   Copies are private to EPRP and are not redistributed.
 - **One exception, already held.** 34 copies predate this rule. They came
@@ -268,10 +280,19 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   `sourceFulltextUrls` are reference-list text, not links. The route keeps
   only the repositories' own http(s) links.
 - **The Internet Archive holds most pre-1931 classics** as unrestricted
-  scans. The route recovered 11 of the 14 such works the library lacked,
-  including Lyell's *Principles*, Darwin's *Origin*, Thompson's *On Growth
-  and Form*, Fisher's *Genetical Theory* and Moseley's 1838 *Phil. Trans.*
-  paper (from JSTOR's free Early Journal Content).
+  scans. The route recovered 9 of the 12 such works the library lacked (11
+  of 14 OpenAlex records). They include Lyell's *Principles*, Darwin's
+  *Origin*, Thompson's *On Growth and Form*, Fisher's *Genetical Theory* and
+  Moseley's 1838 *Phil. Trans.* paper, from JSTOR's free Early Journal
+  Content.
+- **Not every unrestricted Internet Archive item is a public-domain scan.**
+  Some items carry no access restriction yet are LCP-protected lending copies
+  of modern reprints, such as Cambridge's 2014 Canto edition of *On Growth
+  and Form*, dated 1917 in its metadata. The route excludes LCP items,
+  ISBN-bearing items and titles carrying a later year. One *On Growth and
+  Form* copy taken from a lending item before this check was withdrawn.
+- **The Internet Archive reports search errors inside an HTTP 200.** The
+  route treats them as transient errors, not as "no copy".
   - Catalogue titles need cleaning before search: drop leading numbering
     such as "XVII." and statements of responsibility such as "/ by John
     Phillips".
