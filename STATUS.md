@@ -2,7 +2,7 @@
 
 Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: stress order, shared functions and access to habitats.** Barry's Codex-chat
+**Current focus: dependence, biological information and new ecological opportunities.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -176,31 +176,60 @@ occurrence-data build during this round. Claude replied in its
 [order, dependence and access note](ideas/2026-10-24-order-dependence-and-access-claude.md),
 narrowing its owned notes in place.
 - **The order null holds for expected abundances** whenever every step is a
-  fixed per-type multiplier. That includes regrowth, which is the one kept
-  disagreement with Codex.
-- **Five processes break it:** additive inputs, transitions between types,
+  fixed per-type multiplier. That includes regrowth; Codex has now accepted
+  the correction and amended its earlier note.
+- **Five proposed processes can break it:** additive inputs, transitions between types,
   nonlinear dynamics, doses that depend on state, and the absorbing boundary
   at extinction combined with regrowth.
-- **That last process gives a prediction with no memory involved:** order
-  effects concentrate in rare lineages. Any claim of memory must beat it.
-- **Dependence:** Black Queen protection fails under synchronous loss, so
-  response diversity is the decisive quantity. A proposed "dependence
-  ratchet", the irreversible loss of functions between crises, is a
-  biosphere-ageing mechanism measurable from the asymmetry between gain and
-  loss of a function.
+- **That last process gives a demographic counterexample:** persistence
+  differs despite equal expected abundance. Its proposed rare-lineage
+  prediction depends on independence and other demographic assumptions.
+- **Dependence:** Claude highlights correlated provider losses and proposes
+  a "dependence ratchet", the irreversible loss of functions between crises,
+  as a candidate biosphere-ageing mechanism. Its proposed gain/loss comparison
+  and coral example are qualified in Codex's response below.
 - **Sensory access is partly occupied** (the light switch, the
   visual-interactions hypothesis). Its distinctive piece, sensory against
   mechanical escalation, is proposed for merging with B-003.
 
-**Codex is next responder.** No new coding or empirical task allocation is
-recorded. Codex owns its dated note and this handoff's README/STATUS pointers;
-Claude retains its notes and S3 files. No empirical extraction, model fitting,
-remote compute or register change occurred in this response. Exact arithmetic
-checked an illustrative selection counterexample; it is not empirical
-evidence. The agents' different interest preferences remain, and the turnover
-decline is an optional shared contrast rather than a required explanation.
-Q-012's bounded engineering scope remains accepted, and both agents agree it
-waits behind this round (76/2343). Q-038 is jointly parked. Claude reports the
+Codex's [dependence, information and opportunity response](ideas/2026-10-24-dependence-information-and-new-opportunities-codex.md)
+is complete, following Barry's request to retain both branches and expand further.
+- **Dependence:** distinguish loss of capability from suppressed expression or
+  rare autonomous variants. A primary simulation already demonstrates release
+  of standing autonomous variants after partner removal. Recoverability, rather
+  than provider counts alone, is the sharpened question.
+- **The coral ratchet lead is weakened:** Barbeitos 2010 does not establish
+  rarer gains than losses; Navarro Campoy 2020 reconstructs a conflicting
+  symbiosis history. Neither measures host autonomy. Gain/loss rates act on
+  different eligible populations, so their ratio alone cannot establish decline.
+- **Co-transmission:** dependence among members could accompany greater
+  establishment capacity of an association. This broadens E3/reassembly, with
+  major-transition and symbiosis prior work still to be assessed.
+- **Cue reliability:** a changed cue–outcome association can alter performance
+  at unchanged environmental marginals and tolerances. The illustrative
+  counterexample is exact; the general mechanism has prior theoretical treatment.
+- **Developmental inputs:** adult habitat suitability need not guarantee a
+  viable route to recruitment. Experiments motivate separating informative
+  cues, biochemical induction, settlement and subsequent juvenile performance.
+- **Sensory costs:** active sensing can expose an organism, and simultaneous
+  demands on attention can constrain detection. The broader sensory branch
+  remains open; only its predator-escalation connection overlaps B-003.
+- **Order effects:** the rare-lineage pattern is conditional on independent
+  exposure and demographic assumptions. Nonlinear regrowth can change expected
+  abundance; stochastic survival with regrowth can change persistence at equal
+  expectations. Provider correlation within a stress is distinct from the
+  cross-stress susceptibility covariance.
+
+**Claude is next responder**, invited to challenge cue reliability,
+co-transmission and recoverability. No new coding or empirical task allocation
+is recorded. Codex owns its dated notes and this handoff's README/STATUS
+pointers; Claude retains its notes and S3 files. No empirical extraction,
+model fitting, remote compute or register change occurred in this response.
+Exact arithmetic checked hypothetical constructions, not empirical evidence.
+The agents' different interest preferences remain, and the turnover decline is
+an optional shared contrast rather than a required explanation. Q-012's
+bounded engineering scope remains accepted, and both agents agree it waits
+behind this round (76/2343). Q-038 is jointly parked. Claude reports the
 scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and preceding
 commits; this ideation turn does not independently re-audit them. The
 separately authorised Databases, Packages/Sims and References/Literature

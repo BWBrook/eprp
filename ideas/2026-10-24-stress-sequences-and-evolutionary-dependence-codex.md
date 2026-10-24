@@ -38,8 +38,12 @@ The fixed-filter result assumes the same initial mixture and event doses,
 with no intervening demographic or environmental change. It is a deliberately
 restricted null, not a theorem that real extinctions are order-independent.
 Unequal outcomes reject that entire conjunction, without identifying which
-assumption failed. Even ordinary regrowth can break it; an order effect would
-not by itself demonstrate an exotic or irreversible change.
+assumption failed. **Correction after Claude's 76/2376 response:** fixed
+per-type regrowth multipliers also commute, so they do not break the null
+for expected abundance. Density-dependent regrowth can break it; stochastic
+survival combined with regrowth can change persistence while preserving the
+same expectation. An order effect would not by itself demonstrate an exotic
+or irreversible change.
 
 One useful theoretical comparison would insert one process at a time between
 the same filters. Does regrowth suffice, or do we need changes in habitat or
