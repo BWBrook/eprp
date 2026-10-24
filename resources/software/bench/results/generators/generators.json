@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "date": "2026-10-23 11:12:29",
+    "scale": 1,
+    "n": 20000,
+    "cores": 12,
+    "packages": {
+      "paleobuddy": "1.1.0",
+      "FossilSim": "2.4.4",
+      "TreeSim": "2.4",
+      "ape": "5.8.1"
+    }
+  },
+  "G1": {
+    "truth": {
+      "EN": 4.48168907,
+      "surv": 0.39158259
+    },
+    "paleobuddy": {
+      "mean_extant": 4.52345,
+      "z_mean": 0.65742387,
+      "surv": 0.39335,
+      "z_surv": 0.51208211,
+      "pass": true
+    },
+    "treesim": {
+      "mean_extant": 4.6063,
+      "z_mean": 1.95082535,
+      "surv": 0.39525,
+      "z_surv": 1.06258056,
+      "pass": true
+    }
+  },
+  "G2": {
+    "paleobuddy": {
+      "n": 20000,
+      "z": -0.28912898,
+      "dispersion": 0.9942762,
+      "dispersion_tol": 0.03,
+      "pass": true
+    },
+    "fossilsim": {
+      "n": 7895,
+      "z": -0.48350374,
+      "dispersion": 0.99035917,
+      "dispersion_tol": 0.04774855,
+      "pass": true
+    }
+  },
+  "G3": {
+    "truth": 2.11700002,
+    "mean_extant": 2.115,
+    "z": -0.07715677,
+    "pass": true
+  },
+  "G4": {
+    "n_paleobuddy": 7867,
+    "n_treesim": 7905,
+    "ks_p": {
+      "extant": 0.24952287,
+      "species": 0.54788377,
+      "L": 0.44355669,
+      "K": 0.55593894
+    },
+    "pass": true,
+    "note": "KS on discrete counts is conservative (ties)"
+  },
+  "G5": {
+    "n_trees": 2000,
+    "originations": 95458,
+    "expected_originations": 95677.37774702,
+    "z_orig": -1.26920104,
+    "terminations": 73431,
+    "expected_terminations": 73650.37774702,
+    "z_term": -1.26920104,
+    "rates_per_species_time": {
+      "orig": 0.57106185,
+      "term": 0.43928893
+    },
+    "pass": true
+  },
+  "pass": true
+}

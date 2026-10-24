@@ -44,6 +44,18 @@ catalogued here as software. The data they reach belongs to the
 [data source catalogue](../sources/README.md); link to its entry rather than
 describing the data twice.
 
+## Entries
+
+| Entry | Tier | Validated uses (see entry) |
+| --- | --- | --- |
+| [FossilSim](fossilsim/README.md) | T3 | Poisson fossil sampling; morphotaxonomy; with TreeSim, birth–death histories |
+| [paleobuddy](paleobuddy/README.md) | T3 | constant and piecewise birth–death; Poisson fossil sampling |
+| [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling; corrected rates under homogeneous sampling |
+| [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation; q not calibrated |
+| [RevBayes](revbayes/README.md) | T1 | none: FBD range process disabled in releases |
+
+Tranche 1's harness and results: [bench/](bench/README.md).
+
 ## Tiers
 
 | Tier | Meaning | Evidence required |

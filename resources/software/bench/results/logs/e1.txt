@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "date": "2026-10-23 12:13:27",
+    "n_reps": 200,
+    "bins": [21, 38],
+    "packages": {
+      "divDyn": "0.8.3",
+      "paleobuddy": "1.1.0"
+    }
+  },
+  "complete": [
+    {
+      "rate": "ext3t",
+      "truth": 0.2,
+      "mean": 0.1998,
+      "se": 0.0004,
+      "n": 3600,
+      "rel_bias": -0.0011
+    },
+    {
+      "rate": "ori3t",
+      "truth": 0.25,
+      "mean": 0.2501,
+      "se": 0.0005,
+      "n": 3600,
+      "rel_bias": 0.0002
+    },
+    {
+      "rate": "extGF",
+      "truth": 0.2,
+      "mean": 0.1998,
+      "se": 0.0004,
+      "n": 3600,
+      "rel_bias": -0.0011
+    },
+    {
+      "rate": "oriGF",
+      "truth": 0.25,
+      "mean": 0.2501,
+      "se": 0.0005,
+      "n": 3600,
+      "rel_bias": 0.0002
+    },
+    {
+      "rate": "extPC",
+      "truth": 0.2,
+      "mean": 0.1998,
+      "se": 0.0004,
+      "n": 3600,
+      "rel_bias": -0.0011
+    },
+    {
+      "rate": "oriPC",
+      "truth": 0.25,
+      "mean": 0.2501,
+      "se": 0.0005,
+      "n": 3600,
+      "rel_bias": 0.0002
+    },
+    {
+      "rate": "extC3t",
+      "truth": 0.2,
+      "mean": 0.1998,
+      "se": 0.0004,
+      "n": 3600,
+      "rel_bias": -0.0011
+    },
+    {
+      "rate": "oriC3t",
+      "truth": 0.25,
+      "mean": 0.2501,
+      "se": 0.0005,
+      "n": 3600,
+      "rel_bias": 0.0002
+    },
+    {
+      "rate": "ext2f3",
+      "truth": 0.2,
+      "mean": 0.1998,
+      "se": 0.0004,
+      "n": 3600,
+      "rel_bias": -0.0011
+    },
+    {
+      "rate": "ori2f3",
+      "truth": 0.25,
+      "mean": 0.2501,
+      "se": 0.0005,
+      "n": 3600,
+      "rel_bias": 0.0002
+    }
+  ],
+  "sampled": [
+    {
+      "rate": "ext3t",
+      "truth": 0.2,
+      "mean": 1.1637,
+      "se": 0.0039,
+      "n": 3599,
+      "rel_bias": 4.8186
+    },
+    {
+      "rate": "ori3t",
+      "truth": 0.25,
+      "mean": 1.2136,
+      "se": 0.0039,
+      "n": 3599,
+      "rel_bias": 3.8544
+    },
+    {
+      "rate": "extGF",
+      "truth": 0.2,
+      "mean": 0.203,
+      "se": 0.0016,
+      "n": 3600,
+      "rel_bias": 0.0151
+    },
+    {
+      "rate": "oriGF",
+      "truth": 0.25,
+      "mean": 0.2525,
+      "se": 0.0017,
+      "n": 3600,
+      "rel_bias": 0.01
+    },
+    {
+      "rate": "extPC",
+      "truth": 0.2,
+      "mean": 0.2158,
+      "se": 0.0009,
+      "n": 3600,
+      "rel_bias": 0.0791
+    },
+    {
+      "rate": "oriPC",
+      "truth": 0.25,
+      "mean": 0.2504,
+      "se": 0.0007,
+      "n": 3600,
+      "rel_bias": 0.0015
+    },
+    {
+      "rate": "extC3t",
+      "truth": 0.2,
+      "mean": 0.2024,
+      "se": 0.0045,
+      "n": 3598,
+      "rel_bias": 0.0119
+    },
+    {
+      "rate": "oriC3t",
+      "truth": 0.25,
+      "mean": 0.2494,
+      "se": 0.0047,
+      "n": 3598,
+      "rel_bias": -0.0025
+    },
+    {
+      "rate": "ext2f3",
+      "truth": 0.2,
+      "mean": 0.128,
+      "se": 0.0015,
+      "n": 3600,
+      "rel_bias": -0.3602
+    },
+    {
+      "rate": "ori2f3",
+      "truth": 0.25,
+      "mean": 0.1611,
+      "se": 0.0016,
+      "n": 3600,
+      "rel_bias": -0.3556
+    }
+  ],
+  "declared_rates": ["ext3t", "ori3t", "extGF", "oriGF", "extPC", "oriPC"],
+  "pass": true
+} 

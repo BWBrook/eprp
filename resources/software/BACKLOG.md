@@ -13,6 +13,12 @@ analytic expectations and then against the other.
 
 ## Tranche 1: a known-truth bench for origination, extinction and sampling rates
 
+**Run 23–24 October 2026; results in [bench/README.md](bench/README.md).**
+FossilSim and paleobuddy pass every generator test (T3, cross-checked);
+divDyn passes (T2); PyRate passes for λ and μ and fails for q (T2 for the
+validated use); RevBayes' range process is disabled in releases, so it
+stays at T1 with E3(b) deferred. The plan as proposed:
+
 | Tool | Role | Validation planned | Serves |
 | --- | --- | --- | --- |
 | FossilSim (R) | Generator: trees, taxonomy, fossil sampling | Constant-rate birth–death and Poisson sampling against analytic moments (expected richness, survival probability, fossil counts per unit branch length); pseudoextinction under `sim.taxonomy` | Q-004, Q-006, Q-045 |
