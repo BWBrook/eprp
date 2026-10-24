@@ -11,12 +11,12 @@ licence: "CC BY 4.0 (CRAN DESCRIPTION); GPL-3.0 (GitHub repository): conflicting
 release: {version: 0.8.3, date: 2024-11-21, checked: 2026-10-23}
 maintenance: {state: slow, last_commit: 2025-12-01, checked: 2026-10-23}
 tier: T2
-validated_uses: ["origination and extinction rates under complete sampling (all rate columns coincide there)"]
-environment: {route: docker, lockfile: ../bench/env/Dockerfile.r, image: "eprp-sw/bench-r:t1 (sha256:926c0052…)", host: deep-server}
+validated_uses: ["origination and extinction rates under complete sampling (all rate columns coincide there)", "squares (`indices`) equals Alroy's (2018) formula", "Chao2 (`indices`) equals its own formula, which uses (S - 1)/S where Chao's has (T - 1)/T"]
+environment: {route: docker, lockfile: ../bench/env/Dockerfile.r, image: "eprp-sw/bench-r:t1 (sha256:926c0052…); tranche 4 in eprp-sw/bench-r4:t4 (sha256:d0c1c51a…)", host: deep-server}
 blockers: []
 related_sources: [pbdb]
 eprp_questions: [Q-040, Q-042, Q-038]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026, findings applied; tranche-4 additions not yet reviewed"}
 ---
 
 # divDyn
@@ -63,6 +63,24 @@ tolerance was declared), not a validation. The raw three-timer carries the
 log of the three-timer sampling probability by design (here about
 log(1/0.39)); the corrected form removes it.
 
+**Richness (tranche 4,
+[bench/VALIDATION_T4.md](../bench/VALIDATION_T4.md)).** Spatially
+structured records from an independent generator (8 areas, contiguous
+ranges, lognormal abundances, Poisson collections of 40 individuals; known
+richness per bin), 20 replicates per scenario. Bias is the log ratio of
+mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
+
+| Test | Result |
+| --- | --- |
+| K1: `indices(method = "squares")` against Alroy's (2018) formula, 1,200 bins | identical (difference 0): **pass** |
+| K2: SQS (`subsample(type = "sqs", q = 0.6)`, 100 iterations) when effort falls 70% at constant evenness (scenario S) | **not met as declared**: in one replicate two bins (4 and 7 collections, Good's u 0.16 and 0.54) cannot reach the quorum and return NA, so the declared mean does not exist. Post hoc: **+0.034** (SE 0.014) over the 19 complete replicates, +0.035 using only bins that reach the quorum |
+| SQS when only evenness changes (scenario E; σ of log abundance 0.5 → 2) | **−0.70** (SE 0.025): true richness flat, SQS reports half |
+| Squares; Chao2 (`indices`) under the effort fall | −0.15, −0.15 (raw richness −0.37, range-through −0.27) |
+| Squares; Chao2 under the evenness change | −0.31, −0.31 (raw −0.49) |
+| Mass extinction at 50 Ma (true drop −0.78 in log richness, bins 11–12 against 9–10) | squares −0.74, Chao2 −0.74, SQS −0.67, raw −0.68 |
+| Squares and Chao2 against true richness (median absolute log error) | 0.17–0.36 against global richness, 0.09–0.18 against richness in the sampled areas; both underestimate (mean log ratio −0.19 to −0.35) |
+| K3: `indices` Chao2 against an independent implementation of its formula | equal to 5 × 10⁻¹³ |
+
 ## Strengths
 
 - Exact under complete sampling; in our characterisation the corrected
@@ -89,6 +107,22 @@ log(1/0.39)); the corrected form removes it.
 - The boundary-crosser extinction rate was 7.9% high under sampling
   (origination +0.2%); our reading is that sampled ranges end early (range
   truncation), which boundary-crosser rates do not correct.
+- **SQS stops on integer taxon IDs** with "missing value where TRUE/FALSE
+  needed" (`subsample(type = "sqs")`); character names work. **`indices()`
+  reads a numeric vector as abundances**, so integer taxon IDs passed as
+  the occurrence vector give silently wrong values. Pass taxa as character.
+- `indices()` returns its columns in its own order (squares before
+  chao2) whatever order `method` lists; index the result by name.
+- **Chao2 uses (S − 1)/S where Chao's incidence estimator has (T − 1)/T**
+  (`Chao2Method`; S observed species, T sampling units). The difference
+  from the bias-corrected Chao2 with (T − 1)/T was a median +0.14% here but
+  +25% in a bin with 4 collections (Spearman ρ 0.82 with 1/T). It matters
+  only for thinly sampled bins.
+- SQS returns NA where a bin cannot reach the quorum (`useFailed = FALSE`):
+  the safe behaviour, but downstream means need explicit handling.
+- **SQS responds to evenness.** Under a pure evenness change it halved a
+  flat richness curve (−0.70), as did iNEXT's coverage estimate (−0.76);
+  see [inext](../inext/README.md) and lead L-006.
 - Licence metadata conflict: CRAN says CC BY 4.0, the repository GPL-3.0.
 - Rates are per bin; unequal bin durations need explicit handling.
 
@@ -102,8 +136,9 @@ and SQS implementations elsewhere cover richness, not rates.
 
 Stage-level rates for Q-040, Q-042 and Q-038 style analyses; the shared
 counting makes it the natural engine for an estimator comparison (lead
-N-002). Its SQS subsampling is not yet tested; see lead L-006 on coverage
-rarefaction.
+N-002). Its SQS removes an effort change but not an evenness change
+(tranche 4; lead L-006), and squares and Chao2 recover 70–83% of global
+richness on these records.
 
 ## Citation and licence
 
@@ -119,3 +154,6 @@ package divDyn for quantifying diversity dynamics using fossil sampling data.
 - 2026-10-23 `checked`: E1 run on `deep-server`, 200 replicates.
 - 2026-10-24 `checked`: second-for-third formula read in
   `R/diversityDynamics.r` (lines 536–546 on GitHub `master`).
+- 2026-10-24 `checked`: `Chao2Method` and `squaresMethod` read from the
+  installed 0.8.3 namespace; tranche-4 K1, K2, K3 and characterisation on
+  `deep-server` (`bench/results/t4/`).
