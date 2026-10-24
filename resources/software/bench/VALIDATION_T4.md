@@ -191,3 +191,45 @@ trains on the dataset to be predicted. Therefore:
    simulations round up to 112 on 16 cores); the 240-simulation smoke files
    behind item 3's figure were overwritten by the second smoke run, so that
    figure rests on the run log alone.
+
+## Amendment A5 (24 October 2026, before running any of it): the review's gaps
+
+The review noted that "effort" was tested only as fewer collections, that
+evenness changed in one step, and that Alroy's preferred estimator was not
+run. Its code turned out to be public: Alroy's `richness` R package
+(GitHub `johnalroy/richness`, tag v.3.2, commit `5dd4506`; repository
+licence CC0-1.0, DESCRIPTION GPL-2 | GPL-3), cited by his 2024 preprint
+(10.22541/au.173279215.54394439/v1). Its `cegsML` draws each species'
+geometric-series mean as (−ln U)^γ / λ, a Weibull variate, so we take its
+CEGS functions to be the "geometric Weibull" of Alroy (2026). That is our
+inference from the code; the 2026 paper's own code was not seen. Image
+`eprp-sw/bench-r4gw:t4` ([Dockerfile](env/Dockerfile.r4gw)).
+
+The generator gains individual counts per occurrence (`n`) and a scenario
+C; no draw in S, E or M changes, and the regenerated S, E and M records
+must equal the run's ([validate/t4_identity.py](validate/t4_identity.py)).
+
+1. **Scenario C, collection size:** as S, but the number of collections
+   stays fixed while each collection's individuals fall from 40 to 12 at
+   the bin 10–11 boundary (seed 8000 + replicate).
+2. **Evenness dose–response:** scenario E rerun with the late-half σ at
+   0.75, 1.0 and 1.5 (σ 2.0 is E itself), with E's seeds, so lineages,
+   ranges and collection counts are shared across doses.
+3. **Geometric Weibull arm:** `cegsML` on every bin of S, E, M, C and the
+   three doses; `cegsLD` (lower variance, no prior) on S, E and M; each on
+   the bin's occurrence frequencies (collections per species, the palaeo
+   input) and on its individual counts (the input the method was built
+   for) ([validate/t4_gw.R](validate/t4_gw.R)). `cegsB` is not run.
+4. **K4. The package under its own model:** 300 species with counts from
+   `rcegs` at (λ, γ) = (1, 2) and (0.1, 1), 100 draws each; `cegsML` and
+   `cegsLD` on the observed counts. Pass, for each: |median log(R̂/300)| ≤
+   0.10 and at most 10 failed fits ([validate/t4_gw_k4.R](validate/t4_gw_k4.R)).
+5. **K5. Coverage methods under a collection-size fall (scenario C):** the
+   K2 statistic for SQS and the iNEXT coverage estimate. Pass: |mean bias|
+   ≤ 0.10 for each. If any bin misses the quorum, K5 is undefined and not
+   met for SQS, and A2's two post hoc variants are reported.
+6. Reported without criteria, with the metrics of the declared tests: the
+   bias of every estimator, including both geometric Weibull fits, in S, C
+   and each evenness dose; the M drop; Spearman correlation; median
+   absolute log error against global and sampled-area richness
+   ([validate/t4_ext_summary.R](validate/t4_ext_summary.R)).

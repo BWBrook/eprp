@@ -1,0 +1,6 @@
+FROM eprp-sw/bench-r4:t4
+ARG RICHNESS_COMMIT=5dd45069370378620e6c7843bfe49a8dc91b02ba
+RUN R -q -e "options(repos = c(CRAN = Sys.getenv('PPM'))); install.packages(c('minpack.lm', 'poilog', 'sads'), Ncpus = 8)"
+RUN R -q -e "remotes::install_github('johnalroy/richness', ref = Sys.getenv('RICHNESS_COMMIT'), upgrade = 'never', dependencies = FALSE)"
+RUN R -q -e "library(richness); ip <- installed.packages()[, c('Package', 'Version')]; write.table(ip, '/opt/r-packages.tsv', sep = '\t', quote = FALSE, row.names = FALSE)"
+WORKDIR /work
