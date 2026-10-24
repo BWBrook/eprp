@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 # Mirror the deposits cited by the EPRP question registers, ideation notes,
 # literature notes and data READMEs (latest version each).
-# Usage: register_deposits_snapshot.sh [dryad] [zenodo] [figshare] [pangaea] [index] (default: all)
+# Usage: register_deposits_snapshot.sh [dryad] [zenodo] [figshare] [pangaea] [index] [other] [github] [cran] (default: all)
 #   dryad     Dryad deposits, with the Dryad API account on the host (credentials outside the repository)
 #   zenodo    Zenodo records up to 5 GB, four at a time (Zenodo serves about 0.3 MB/s per connection)
 #   figshare  Figshare articles
 #   pangaea   PANGAEA datasets as tab-delimited text (the IODP U1313 series of the Q-050 crosswalk)
 #   index     version indexes only, for the Zenodo and Dryad records over 5 GB (fetch on demand)
+#   other     Mendeley Data and OSF deposits, as plain-URL snapshots checked against the providers'
+#             sha256 (other_repos.py); the Harvard Dataverse record over 5 GB as a file list only
+#   github    code repositories cited with their data (Rozzi et al. 2023), newest commit
+#   cran      paleotree, the CRAN package carrying Aze et al. 2011's Appendix S5 tables
 set -uo pipefail
 cd /data/paleodata
 M="python3 _tools/data_mirror.py"
@@ -120,6 +124,9 @@ done <<'EOF'
 5046964 klompmaker2017-external-database-2
 7357193 penn2018-end-permian-climate
 28046414 edie2025-kpg-functional-diversity
+19686396 rozzi2023-island-mammals-data
+19686423 rozzi2023-island-mammals-trees
+19779709 rozzi2023-island-mammals-pyrate
 EOF
 fi
 
@@ -130,5 +137,39 @@ $M url register-deposits/pangaea-u1313 \
   "PANGAEA.761443.tab::$P.761443?format=textfile" "PANGAEA.892803.tab::$P.892803?format=textfile" \
   "PANGAEA.892804.tab::$P.892804?format=textfile" --pause 2 \
   --license "CC BY 3.0 (PANGAEA dataset metadata, all five)" || echo "pangaea FAILED"
+fi
+
+if want other; then
+O="python3 _tools/register-deposits_other_repos.py"
+TMP=$(mktemp -d)
+while read -r prov id slug; do
+  echo "== $prov $id $slug"
+  meta=$($O specs "$prov" "$id" "$TMP/$slug.specs" "$TMP/$slug.expected") || { echo "$id FAILED"; continue; }
+  echo "$meta"
+  lic=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["licence"])' "$meta")
+  $M url "register-deposits/$slug" --specs-file "$TMP/$slug.specs" --pause 1 --license "$lic" || { echo "$id FAILED"; continue; }
+  v=$(ls -d register-deposits/$slug/raw/*_url | tail -1)
+  cp "$TMP/$slug.expected" "register-deposits/$slug/provider-checksums-$(basename "$v").tsv"
+  $O check "$v" "$TMP/$slug.expected" | tail -1
+done <<'EOF'
+osf 2cdqg senel2023-chicxulub-dust
+osf nuhqx tennant2018-dinosaur-research-history
+mendeley g2g74cj4x7/2 gougeon2024-chapel-island-ichnology
+mendeley r2h822zzxp/1 sara2026-mussel-disturbance
+EOF
+# Harvard Dataverse, 26.6 GB of CT volumes and video: the provider's file list only
+mkdir -p register-deposits/howman2024-armandia-burrows
+$O specs dataverse doi:10.7910/DVN/3DU1VW "$TMP/howman.specs" register-deposits/howman2024-armandia-burrows/files.tsv
+rm -rf "$TMP"
+fi
+
+if want github; then
+$M github RobRozzi/Island_mammals register-deposits/rozzi2023-island-mammals-code --latest || echo "rozzi github FAILED"
+fi
+
+if want cran; then
+$M url register-deposits/aze2011-paleotree-cran \
+  "paleotree_3.4.7.tar.gz::https://cran.r-project.org/src/contrib/paleotree_3.4.7.tar.gz" \
+  --license "CC0 (paleotree's DESCRIPTION); the tables are Aze et al. 2011, Appendix S5" || echo "paleotree FAILED"
 fi
 echo DONE
