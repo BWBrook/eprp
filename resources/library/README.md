@@ -16,7 +16,7 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | fetch | withdraw | index
+  library.py              harvest | resolve | expand | journal | fetch | withdraw | index
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (how the canon and author-year seeds were built)
@@ -24,6 +24,7 @@ resources/library/
   works.tsv               generated: one row per resolved work, with tiers, questions and full-text status
   INDEX.md                generated: counts by tier, full-text status, type, decade and venue
   by-question.md          generated: cited works grouped by question (Q-, B-) and catalogue entry (src:)
+  duplicates.tsv          generated: OpenAlex records merged as duplicates of one work
   unresolved.tsv          generated: seed rows that did not resolve to an OpenAlex work
   eprp-library-README.md  installed as /data/paleodata/library/README.md
 ```
@@ -66,10 +67,29 @@ rebuilt.
 | `cited-authoryear` | `seeds/cited-authoryear.tsv` | author–year citations in the registers and notes, resolved and graded `exact` or `probable` ([method](notes/authoryear-method.md)) |
 | `canon` | `seeds/canon.tsv` | curated foundational and landmark works, from the 1830s to 2026, under the [topic tree](topics.md) ([method](notes/canon-method.md)) |
 | `neighbours` | `seeds/neighbours.tsv` | works outside the tiers above that at least 5 of their works reference (`library.py expand`), with that count and the questions of the citing works |
-| `field` | (planned) | complete runs of core journals and topic sweeps; citing works of the seeds; metadata only by default |
+| `field-<journal>` | `seeds/field-paleobiology.tsv`, … | a core journal's complete run as OpenAlex lists it (`library.py journal ISSN --name NAME`); *Paleobiology* since 24 October 2026 (2,584 works, 1975–2026) |
 
 A work belongs to every tier that names it. `fetch` tries works in tier order:
-the cited tiers first, then the canon, then neighbours by reference count.
+the cited tiers first, then the canon, then neighbours by reference count, then
+field tiers. Field tiers are fetched only when named (`fetch --tier
+field-paleobiology`), and they do not feed `expand`, so a journal run adds
+metadata without reshaping the neighbours ring. Topic sweeps and the works
+citing the seeds are the next kinds of field tier.
+
+**Duplicate records.** OpenAlex sometimes holds one work under several ids:
+a book and its book-review stub, two scans of one edition, or a preprint and
+its published version under one title. `index` and `fetch` merge records that
+meet three conditions:
+
+- both are text works, so never a paper and its own data or code deposit;
+- their full titles and first-author surnames agree;
+- they share a publication year, or one of them is a book-review or paratext
+  stub.
+
+Different editions, and same-titled works from different years such as
+Jablonski 1994 and 1995, stay separate. The canonical record is one with a
+held copy, then one with a DOI, then the most cited. `works.tsv` lists the
+merged ids in its `merged` column, and `duplicates.tsv` lists each merge.
 Questions come from the citing context. In the registers, that is the
 enclosing `### Q-NNN` or `### B-NNN` section. Elsewhere, it is a `q012`/`b003`
 token in the path or a `resources/sources/<id>/` directory. `works.tsv` and
@@ -100,7 +120,15 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
     link on the same host);
   - the original repository links CORE records for a DOI (used once a CORE
     key is installed; paced at 10 requests a minute);
-  - Semantic Scholar's open-access link.
+  - Semantic Scholar's open-access link;
+  - for works published 96 or more years ago (1930 or earlier in 2026), which
+    are public domain in the US: unrestricted Internet Archive scans.
+    - Scans are matched on title words, first author and year within one.
+    - The title check reads their first 15 pages, because scans carry front
+      matter.
+    - Lending-only items (`access-restricted-item`) are excluded.
+    - The Biodiversity Heritage Library's own site refuses scripts, but its
+      scans are mirrored on the Internet Archive.
 
   Copies are private to EPRP and are not redistributed.
 - **One exception, already held.** 34 copies predate this rule. They came
@@ -239,6 +267,14 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   with a Cloudflare browser challenge (24 October 2026). Some of CORE's
   `sourceFulltextUrls` are reference-list text, not links. The route keeps
   only the repositories' own http(s) links.
+- **The Internet Archive holds most pre-1931 classics** as unrestricted
+  scans. The route recovered 11 of the 14 such works the library lacked,
+  including Lyell's *Principles*, Darwin's *Origin*, Thompson's *On Growth
+  and Form*, Fisher's *Genetical Theory* and Moseley's 1838 *Phil. Trans.*
+  paper (from JSTOR's free Early Journal Content).
+  - Catalogue titles need cleaning before search: drop leading numbering
+    such as "XVII." and statements of responsibility such as "/ by John
+    Phillips".
 - **The 48 held copies whose final host is a publisher** (cambridge.org,
   nature.com, Annual Reviews, Springer, *Science*) all came from locations
   OpenAlex marks open. Re-requesting them from an off-campus host would
