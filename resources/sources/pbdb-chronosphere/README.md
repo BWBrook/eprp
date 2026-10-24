@@ -12,7 +12,7 @@ scope:
 size:
   as_of: "2026-10-24"
   versions: 1178
-  versions_mirrored_tables: 12
+  versions_mirrored_tables: 18
   versions_mirrored_metadata: 1178
   zenodo_bytes_all_versions: 492117258496
 access:
@@ -28,8 +28,8 @@ versioning:
   notes: "[Detail withheld pending disclosure to the data custodian.]"
 mirror:
   path: deep-server:/data/paleodata/pbdb-chronosphere
-  policy: "metadata of every version; the CSV table of a sample of 12 versions (first of each year, each change of API call, one anomalously small archive, the newest); further versions on demand"
-  state: "metadata route: 1,178 versions, 1,194 files (1.2 MB); tables route: 12 versions, 25 files (1.76 GB); each version with a manifest; all verify"
+  policy: "metadata of every version; the CSV table of 18 versions (first of each year, each change of API call, one anomalously small archive, the newest, and the two versions either side of each of PBDB's three interval re-datings); further versions on demand"
+  state: "metadata route: 1,178 versions, 1,194 files (1.2 MB); tables route: 18 versions, 39 files (2.88 GB); each version with a manifest; all verify"
 lineage:
   upstream:
     - "The Paleobiology Database data service (occs/list, taxa/list), downloaded and archived by Ádám T. Kocsis for the chronosphere project"
@@ -75,19 +75,27 @@ compare each one's then-current values with today's:
 | 2025-01-02 | 2.3% | 1.1% | 48.1% |
 | 2026-02-27 | 0.8% | 0.3% | 3.8% |
 
-PBDB re-dated its intervals in at least three steps, each between two
-sampled versions (modal `max_ma` of single-interval rows):
+PBDB re-dated its intervals in three main steps and two small ones, each
+dated to the gap between two consecutive downloads. The measure is the modal
+`max_ma` of single-interval rows: [redating scans](profile/) of every version
+from January 2024, confirmed on the mirrored tables either side of each
+step. No other change in an interval with 50 or more rows shows between any
+two mirrored tables; before 2024 those are four months to a year apart.
 
-| Step | Intervals changed | Examples |
+| Between the downloads of (GMT) | Intervals changed | Examples |
 | --- | ---: | --- |
-| 2024-01-07 to 2025-01-02 | 462 | Kungurian 279.3 → 283.5; Wuchiapingian 259.9 → 259.51; Priabonian 38.0 → 37.71; Late Pleistocene 0.126 → 0.129 |
-| 2025-01-02 to 2026-02-27 | 327 | Kungurian 283.5 → 283.3; Roadian 273.01 → 274.4; Olenekian 251.2 → 249.9; Anisian 247.2 → 246.7; Maastrichtian 72.1 → 72.2 |
-| 2026-02-27 to 2026-10-18 | 17 | Wuchiapingian 259.51 → 259.857; Olenekian 249.9 → 250.8; Anisian 246.7 → 247.0; Middle Oxfordian 161.5 → 159.0 |
+| 2024-02-14 07:55 and 02-15 09:21 | 1 | Paibian 501 → 497 |
+| **2024-03-31 08:00 and 04-01 09:50** | **460** | Kungurian 279.3 → 283.5; Wuchiapingian 259.9 → 259.51; Priabonian 38.0 → 37.71; Late Maastrichtian 70.6 → 72.1; Tithonian 152.1 → 149.2; Late Pleistocene 0.126 → 0.129 |
+| **2025-03-31 08:07 and 04-10 07:41** | **317** | Kungurian 283.5 → 283.3; Roadian 273.01 → 274.4; Olenekian 251.2 → 249.9; Anisian 247.2 → 246.7; Maastrichtian 72.1 → 72.2; Berriasian 145.0 → 143.1 |
+| 2025-09-08 14:09 and 09-18 07:35 | 10 | North American land-mammal ages: Wasatchian 54.9 → 56.0; Clarkforkian 56.2 → 57.5; Torrejonian 63.8 → 63.4; Uintan 46.2 → 45.9 |
+| **2026-08-02 04:09 and 08-09 04:09** | **17** | Wuchiapingian 259.51 → 259.857; Olenekian 249.9 → 250.8; Anisian 246.7 → 247.0; Middle Oxfordian 161.5 → 159.0 |
 
-So the first two steps brought several boundaries onto ICS chart values,
-and the third moved three of them (Olenekian, Anisian, Wuchiapingian) back
-off the chart, to the values queried in [CONTACTS.md](../CONTACTS.md) C10
-(i). A vintage comparison must separate these changes of time scale from
+So the steps of 2024 and 2025 brought several boundaries onto ICS chart
+values. The step of August 2026 moved three of them (Olenekian, Anisian,
+Wuchiapingian) back off the chart, to the values queried in
+[CONTACTS.md](../CONTACTS.md) C10 (i). The interval counts are for
+intervals with 50 or more single-interval rows in the whole tables. A
+vintage comparison must separate these changes of time scale from
 reassignment of occurrences to intervals.
 
 **Verdict for Q-045: usable as public-data vintages, under the rule.**
@@ -104,7 +112,7 @@ Three cautions apply:
 | Route | Content | Files | Size |
 | --- | --- | ---: | ---: |
 | `metadata` | every version's `metadata.txt` (PBDB's `datainfo`: call, access time, records found and returned, stated licence), and `metadata_taxa.txt` for the 16 versions with taxon tables | 1,194 | 1.2 MB |
-| `tables` | `pbdb_csv.zip` and the metadata for 12 versions: the first of each year, each change of API call, the one archive much smaller than its neighbours (2023-12-28), and the newest | 25 | 1.76 GB |
+| `tables` | `pbdb_csv.zip` and the metadata for 18 versions: the first of each year, each change of API call, the one archive much smaller than its neighbours (2023-12-28), the newest, and the two versions either side of each interval re-dating (2024-03-31 and 04-01, 2025-03-31 and 04-10, 2026-08-02 and 08-09) | 39 | 2.88 GB |
 
 [zenodo-versions.tsv](zenodo-versions.tsv) lists all 1,178 versions with
 their files, sizes and checksums. [The series](profile/pbdb_chronosphere_series.tsv)
@@ -160,6 +168,16 @@ from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
   0.1-0.2 GB as CSV alone. Zenodo serves each connection at 0.1-0.3 MB/s, so
   the routes fetch in parallel (`--jobs`).
 - [Detail withheld pending disclosure to the data custodian.]
+- **Date a change without whole tables.** `python3
+  pbdb_chronosphere_redating.py SURVEY_TSV FROM_VERSION TO_VERSION
+  HEAD_BYTES JOBS CACHE_DIR OUT_TSV` reads only the first HEAD_BYTES of each
+  version's zip (an HTTP Range request) and inflates the head of the CSV.
+  The table is in occurrence-number order, so a head of 10 MB holds about
+  107,000 rows and about 195 intervals with 20 or more rows, 40 MB about
+  400,000 rows. It lists the intervals whose modal `max_ma` changed between
+  consecutive versions ([profile/redating_*.tsv](profile/)). Heads cannot
+  be checked against Zenodo's checksums, so confirm a found step on the
+  whole tables either side, as was done here.
 - **Zenodo.** Any version by its record number:
   `python3 data_mirror.py zenodo 7808072 DEST --only <version>_<record>
   --files pbdb_csv.zip 'metadata*.txt'` (the version directories are listed
@@ -179,7 +197,7 @@ from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
   and collection context of its day, so a past analysis can be rerun on the
   data its authors could have seen, or, after the rule, on the part of it
   that is public today.
-- Eleven of the 12 sampled tables hold exactly the records their metadata
+- Seventeen of the 18 sampled tables hold exactly the records their metadata
   reports.
 - [Detail withheld pending disclosure to the data custodian.]
 
@@ -219,13 +237,13 @@ from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
   - In November 2019, 6,589 of the 7,875 missing were created in the six
     weeks before that download (mostly Eocene). The February 2020 version
     has them, and why the November download missed them is unknown.
-- **Ages change with the time scale.** PBDB re-dated its intervals in at
-  least three steps between January 2024 and October 2026 (Summary). Before
-  comparing ages across versions, either re-date each version's intervals
-  on one time scale, or compare interval assignments rather than ages.
-  The 2026 versions are weekly, so dating the third step needs only about
-  four more tables. The first two (daily 2024 versions, 71 in 2025) need
-  about four each.
+- **Ages change with the time scale.** PBDB re-dated its intervals in
+  three main steps and two small ones between January 2024 and August 2026,
+  each now dated to the gap between two downloads (Summary). Before comparing
+  ages across versions, either re-date each version's intervals on one time
+  scale, or compare interval assignments rather than ages. To compare the
+  same records under two time scales, use the mirrored versions either side
+  of a step.
 - **Zenodo's version index is broken for this record.** 157 versions share
   index 741, nine other indices repeat, and in 16 places a later version
   has a lower index ([zenodo-survey.tsv](zenodo-survey.tsv)). The newest
@@ -293,7 +311,8 @@ from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
 - 2026-10-24 (Claude, Opus 5.5):
   - *checked*: indexed all 1,178 Zenodo versions ([zenodo_survey.py](zenodo_survey.py),
     with Zenodo's version index) and mirrored every metadata file (1,194
-    files) and 12 tables (1.76 GB); all verify.
+    files) and 12 tables (1.76 GB), six more in the evening (2.88 GB in
+    all); all verify.
   - [Detail withheld pending disclosure to the data custodian.]
   - *checked*: [pbdb_chronosphere_checks.py](pbdb_chronosphere_checks.py)
     gives the registry comparison, gaps, Zenodo index, interval-age steps,
@@ -313,3 +332,17 @@ from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
     - the contract wording;
     - committed checks for the numbers;
     - a `data_mirror.py` regression when a record has no files.
+- 2026-10-24 evening (Claude, Opus 5.5; Barry: "First date PBDB's three
+  interval re-datings precisely by bisecting the chronosphere versions, then
+  move on.")
+  - *checked*: dated by heads rather than bisection.
+    [pbdb_chronosphere_redating.py](pbdb_chronosphere_redating.py) read
+    every version from 2024-01-07 to 2026-10-18: 10 MB heads, then 40 MB
+    for 2025-04 to 2026-10, and 60 MB for 2024-01 to 2024-03 (where
+    Paibian rows first appear about 30% into the table).
+  - *checked*: the three main steps and two small ones each fall between
+    two consecutive downloads.
+  - *checked*: the six whole tables either side of the main steps were
+    mirrored (all verify). On whole tables the checks show 460, 317 and 17
+    changed intervals across those pairs, and otherwise only the two small
+    changes between mirrored tables.

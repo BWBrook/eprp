@@ -525,7 +525,7 @@ the workflow when they generalise.
 
 **PBDB vintages (chronosphere, 24 October 2026; [entry](pbdb-chronosphere/README.md)).**
 
-- *Check each archived table against its own metadata.* One of 12 sampled
+- *Check each archived table against its own metadata.* One of 18 sampled
   versions is short by 251,172 rows (16%); only rows against the
   metadata's records found showed it.
 - *Separate a change of time scale from a change of data.* 80% of the 2019
@@ -536,6 +536,12 @@ the workflow when they generalise.
   now refuses a tie at the newest version; order by the version strings
   where they are dates.
 - [Detail withheld pending disclosure to the data custodian.]
+- *Read the head, not the whole archive.* A zipped CSV in a known sort order
+  can be sampled with an HTTP Range request: inflate the first few MB of
+  the zip member. Ten-megabyte heads of 344 versions dated PBDB's
+  re-datings to single gaps between downloads in well under an hour (3.4 GB
+  read, against about 60 GB for whole tables). Confirm the result on whole tables, since a head
+  cannot be checksummed.
 - *Fetch Zenodo versions in parallel.* `--jobs 8` brought 12 tables
   (1.76 GB) in about 25 minutes, against an estimated 3 hours one at a time
   at the measured 0.19 MB/s; take only the files needed with `--files`.

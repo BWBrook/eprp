@@ -170,9 +170,9 @@ All from [profile/timescale_profile.tsv](profile/timescale_profile.tsv).
 
   PBDB's three values appear on no chart release we hold, so we cannot say
   where they come from (queued as CONTACTS C10 i). They are recent: PBDB
-  served the chart values until at least its 27 February 2026 download and
-  changed them by 18 October 2026, in the third of three re-datings since
-  2024 ([pbdb-chronosphere](../pbdb-chronosphere/README.md)).
+  served the chart values until its download of 2 August 2026 and the
+  current ones from 9 August 2026, in the third of three main re-datings
+  since 2024 ([pbdb-chronosphere](../pbdb-chronosphere/README.md)).
 
 ## Access
 
