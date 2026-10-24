@@ -37,7 +37,9 @@ The store is on `deep-server`, beside the data-source mirror:
   text/<W>.txt            pdftotext output of pdf/<W>.pdf (derived; rebuildable)
   quarantine/             PDFs whose first pages did not contain the work's title
   quarantine/withdrawn/   copies removed by `withdraw`, with the reason in manifest.tsv
-  manifest.tsv            append-only: one row per stored or withdrawn copy; the latest row per work counts
+  tdm/<publisher>/pdf/    publisher text-and-data-mining copies (local search and mining only; see below)
+  tdm/<publisher>/text/   their extracted text
+  manifest.tsv            append-only: one row per stored or withdrawn copy, with its path; the latest row per work counts
   attempts.tsv            append-only: every download attempt and Semantic Scholar lookup, with its outcome
   aliases.tsv             seed key (doi:…, pmid:… or merged W id) to OpenAlex id
   unresolved-keys.tsv     seed keys OpenAlex lacks: Crossref-only, invalid or deleted
@@ -114,16 +116,35 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
   protection or use shadow libraries. It does not download systematically
   from publisher sites through campus IP authentication; that breaches
   subscription terms and risks a university-wide block.
-- **Publisher text-and-data-mining (TDM) APIs** (Elsevier, Wiley) and CORE
-  need keys registered by Barry. Keys live on `deep-server` in
-  `~/.config/{openalex,core,elsevier}/api_key` and `~/.config/wiley/tdm_token`,
-  mode 600. The publisher terms limit TDM to non-commercial academic research.
-  They also require deleting downloaded copies when the project ends.
-  Elsevier's terms further restrict third-party processing, which covers
-  sending text to an AI service. Copies obtained through these APIs will
-  therefore be kept apart, under `tdm/<publisher>/`, and used for local search
-  and mining only. Agents read them only once UTAS Library confirms that its
-  licences allow processing by AI services that do not train on the content.
+- **Keys.** Barry registered them on 24 October 2026. They live on
+  `deep-server` in `~/.config/{openalex,core,elsevier}/api_key` and
+  `~/.config/wiley/tdm_token`, mode 600, and are never printed or logged.
+  - The OpenAlex key raises the daily budget to 10,000 credits.
+  - The CORE key enables the CORE route.
+- **Publisher text-and-data-mining (TDM) copies** are a separate class.
+  - The publisher terms limit TDM to non-commercial academic research. They
+    also require deleting downloaded copies when the project ends, and
+    Elsevier's restrict third-party processing, which covers sending text to an
+    AI service.
+  - TDM copies are therefore kept apart, under `tdm/<publisher>/`, with
+    manifest status `tdm_ok` and a note, and are used for local search and
+    mining only. Agents read them only once UTAS Library confirms that its
+    licences allow processing by AI services that do not train on the content.
+  - A TDM route is tried only after every open route fails, and only for that
+    publisher's DOIs.
+  - **Wiley** (since 24 October 2026): `api.wiley.com` with the TDM token,
+    from deep-server on the campus network, at most one request per 10 s
+    (Wiley allows 60 per 10 minutes). It covers DOI prefixes 10.1111, 10.1002,
+    10.1029 (AGU), 10.1046, 10.1034 and 10.1890 (ESA), including back files
+    such as *Evolution* 1949.
+  - **Elsevier**: the key works for Scopus abstracts and ScienceDirect search,
+    but Article Retrieval refuses every request, open-access articles included
+    (HTTP 403, "Requestor configuration settings insufficient"). New Elsevier
+    keys carry no content access until Elsevier API Support verifies the
+    institution's entitlement, so there is no Elsevier route yet.
+- **Rate limits.** An HTTP 429 from a lookup service or TDM API pauses that
+  host for the rest of the run, with no failure recorded; the next run
+  continues where it stopped.
 - **No email address or other personal identifier** is sent to any service.
   An OpenAlex key is read from `OPENALEX_API_KEY` or
   `~/.config/openalex/api_key`, if one exists.

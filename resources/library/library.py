@@ -526,14 +526,18 @@ def expand(store, k, out):
 
 # ---------------------------------------------------------------- fetch
 
-HOST_INTERVAL = {"api.core.ac.uk": 6.5}  # CORE allows registered academic users 10 requests a minute
+# CORE allows registered academic users 10 requests a minute; Wiley's TDM API 60 per 10 minutes.
+HOST_INTERVAL = {"api.core.ac.uk": 6.5, "api.wiley.com": 10.0}
 
 
 class HostPacer:
+    """Per-host spacing between requests, and per-host pauses after a rate-limit refusal."""
+
     def __init__(self, interval):
         self.interval = interval
         self.lock = threading.Lock()
         self.next_ok = defaultdict(float)
+        self.paused_until = {}
 
     def wait(self, url):
         host = urllib.parse.urlsplit(url).hostname or ""
@@ -541,6 +545,27 @@ class HostPacer:
             t = max(time.monotonic(), self.next_ok[host])
             self.next_ok[host] = t + HOST_INTERVAL.get(host, self.interval)
         time.sleep(max(0.0, t - time.monotonic()))
+
+    def pause(self, host, seconds):
+        with self.lock:
+            self.paused_until[host] = time.monotonic() + seconds
+        print(f"  {host} refused with HTTP 429; skipping it for {seconds / 60:.0f} min", flush=True)
+
+    def paused(self, host):
+        return time.monotonic() < self.paused_until.get(host, 0.0)
+
+
+def pause_seconds(headers, default=3600.0):
+    """Seconds until a rate-limited host accepts requests again (Retry-After or CORE's reset timestamp)."""
+    headers = headers or {}
+    value = headers.get("Retry-After") or ""
+    if value.replace(".", "", 1).isdigit():
+        return float(value)
+    try:
+        reset = datetime.datetime.fromisoformat(headers.get("x-ratelimit-retry-after") or "")
+        return max(60.0, (reset - datetime.datetime.now(datetime.timezone.utc)).total_seconds())
+    except ValueError:
+        return default
 
 
 PMC_RE = re.compile(r"/pmc/articles/(?:PMC)?(\d+)", re.I)
@@ -600,26 +625,30 @@ def candidates(rec):
     return ordered
 
 
-def get_bytes(url, pacer, accept="application/pdf,*/*;q=0.5"):
-    if urllib.parse.urlsplit(url).scheme not in ("http", "https"):
+def get_bytes(url, pacer, accept="application/pdf,*/*;q=0.5", headers=None):
+    parts = urllib.parse.urlsplit(url)
+    if parts.scheme not in ("http", "https"):
         raise FetchFail("bad_scheme", url[:60])
     pacer.wait(url)
     try:
-        _, final, headers, data = http_get(url, accept=accept, timeout=120, max_bytes=300_000_000)
+        _, final, response_headers, data = http_get(url, accept=accept, timeout=120, max_bytes=300_000_000,
+                                                    headers=headers)
     except urllib.error.HTTPError as e:
+        if e.code == 429:
+            pacer.pause(parts.hostname, pause_seconds(e.headers, 600.0))
         raise FetchFail(f"http_{e.code}")
-    return final, headers, data
+    return final, response_headers, data
 
 
-def download(kind, url, pacer):
-    """Return (final_url, pdf_bytes) or raise FetchFail."""
+def download(kind, url, pacer, headers=None):
+    """Return (final_url, pdf_bytes) or raise FetchFail. headers go only to the first request."""
     if kind == "pmc":
         listing = get_bytes(f"{PMC_BUCKET}?list-type=2&prefix={url}.", pacer, accept="application/xml")[2].decode()
         keys = sorted(re.findall(rf"<Key>({url}\.(\d+)/{url}\.\2\.pdf)</Key>", listing), key=lambda k: int(k[1]))
         if not keys:
             raise FetchFail("pmc_not_oa")
         url, kind = PMC_BUCKET + keys[-1][0], "pdf"
-    final, headers, data = get_bytes(url, pacer, accept="application/pdf,text/html;q=0.9,*/*;q=0.5")
+    final, headers, data = get_bytes(url, pacer, accept="application/pdf,text/html;q=0.9,*/*;q=0.5", headers=headers)
     if data.startswith(b"%PDF-"):
         return final, data
     if kind == "pdf":
@@ -674,17 +703,32 @@ def pdf_pages(path):
 
 
 MANIFEST_FIELDS = ["openalex_id", "doi", "status", "url", "host", "version", "license", "sha256", "bytes",
-                   "pages", "text_chars", "title_match", "retrieved", "tool_sha256", "note"]
+                   "pages", "text_chars", "title_match", "retrieved", "tool_sha256", "note", "path"]
 ATTEMPT_FIELDS = ["openalex_id", "url", "host", "outcome", "detail", "when"]
+OPEN_HELD = ("ok", "no_text")
+TDM_HELD = ("tdm_ok", "tdm_no_text")
+TDM_NOTE = "TDM copy: local search and mining only until UTAS confirms AI-service processing is licensed"
+
+# Publisher text-and-data-mining routes, tried after every open route fails. Copies go to tdm/<name>/.
+TDM_ROUTES = {
+    "wiley": {"host": "Wiley TDM", "key": "wiley/tdm_token", "header": "Wiley-TDM-Client-Token",
+              "url": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/{}",
+              "prefixes": ("10.1111/", "10.1002/", "10.1029/", "10.1046/", "10.1034/", "10.1890/")},
+}
 
 
-def try_candidate(rec, cand, store, pacer, lock, tool_sha):
-    """Download, check and store one candidate; return (outcome, detail)."""
+def text_path(pdf_path):
+    return pdf_path.parent.parent / "text" / f"{pdf_path.stem}.txt"
+
+
+def try_candidate(rec, cand, store, pacer, lock, tool_sha, area=".", headers=None, tdm=False):
+    """Download, check and store one candidate under STORE/<area>/pdf and text; return (outcome, detail).
+    A TDM copy is recorded with status tdm_<outcome> and its API request URL rather than the signed link."""
     kind, url, host, version, license_ = cand
     wid = short_wid(rec["id"])
     tmp = None
     try:
-        final, data = download(kind, url, pacer)
+        final, data = download(kind, url, pacer, headers)
         fd, tmp = tempfile.mkstemp(suffix=".pdf", dir=store / "tmp")
         os.close(fd)
         with open(tmp, "wb") as f:
@@ -703,16 +747,20 @@ def try_candidate(rec, cand, store, pacer, lock, tool_sha):
             tmp = None
             return "mismatch", f"title_match={score:.2f}"
         full = pdf_text(tmp) or ""
-        (store / "text" / f"{wid}.txt").write_text(full, encoding="utf-8")
-        dest = store / "pdf" / f"{wid}.pdf"
+        rel = Path(area) / "pdf" / f"{wid}.pdf"
+        dest = store / rel
+        (store / text_path(rel)).parent.mkdir(parents=True, exist_ok=True)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        (store / text_path(rel)).write_text(full, encoding="utf-8")
         os.replace(tmp, dest)
         tmp = None
         dest.chmod(0o444)
         append_tsv(store / "manifest.tsv", {
-            "openalex_id": wid, "doi": norm_doi(rec.get("doi")), "status": outcome, "url": final, "host": host,
-            "version": version, "license": license_, "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data),
-            "pages": pages, "text_chars": len(full), "title_match": f"{score:.2f}", "retrieved": now(),
-            "tool_sha256": tool_sha, "note": ""}, MANIFEST_FIELDS, lock)
+            "openalex_id": wid, "doi": norm_doi(rec.get("doi")), "status": ("tdm_" if tdm else "") + outcome,
+            "url": url if tdm else final, "host": host, "version": version, "license": license_,
+            "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "pages": pages, "text_chars": len(full),
+            "title_match": f"{score:.2f}", "retrieved": now(), "tool_sha256": tool_sha,
+            "note": TDM_NOTE if tdm else "", "path": str(rel)}, MANIFEST_FIELDS, lock)
         return outcome, ""
     except FetchFail as e:
         return e.outcome, e.detail
@@ -723,16 +771,29 @@ def try_candidate(rec, cand, store, pacer, lock, tool_sha):
             os.remove(tmp)
 
 
-def s2_lookup(doi, pacer):
-    """Semantic Scholar's open-access PDF link for a DOI: (outcome, [url])."""
-    url = S2_API + urllib.parse.quote(doi, safe="/") + "?fields=openAccessPdf"
+def lookup_json(url, pacer, headers=None):
+    """GET JSON for a lookup service: (data, outcome); outcome is None on success, 'skipped' when the
+    host is rate-limited (it is then paused for this run), 'none' for 404 and 'error' otherwise."""
+    host = urllib.parse.urlsplit(url).hostname
+    if pacer.paused(host):
+        return None, "skipped"
     pacer.wait(url)
     try:
-        data, _ = get_json(url, tries=3)
+        return get_json(url, tries=2, headers=headers)[0], None
     except urllib.error.HTTPError as e:
-        return ("none" if e.code == 404 else "error"), []
+        if e.code == 429:
+            pacer.pause(host, pause_seconds(e.headers))
+            return None, "skipped"
+        return None, "none" if e.code == 404 else "error"
     except TRANSIENT_ERRORS:
-        return "error", []
+        return None, "error"
+
+
+def s2_lookup(doi, pacer):
+    """Semantic Scholar's open-access PDF link for a DOI: (outcome, [url])."""
+    data, outcome = lookup_json(S2_API + urllib.parse.quote(doi, safe="/") + "?fields=openAccessPdf", pacer)
+    if outcome:
+        return outcome, []
     pdf = (data.get("openAccessPdf") or {}).get("url") or ""
     return ("found" if pdf else "none"), [pdf] if pdf else []
 
@@ -740,13 +801,9 @@ def s2_lookup(doi, pacer):
 def core_lookup(doi, pacer):
     """CORE's copies of a DOI, which it aggregates from open repositories: (outcome, [url, ...])."""
     url = CORE_API + "?" + urllib.parse.urlencode({"q": f'doi:"{doi}"', "limit": "5"})
-    pacer.wait(url)
-    try:
-        data, _ = get_json(url, tries=3, headers={"Authorization": f"Bearer {key_file('core/api_key')}"})
-    except urllib.error.HTTPError as e:
-        return ("none" if e.code == 404 else "error"), []
-    except TRANSIENT_ERRORS:
-        return "error", []
+    data, outcome = lookup_json(url, pacer, {"Authorization": f"Bearer {key_file('core/api_key')}"})
+    if outcome:
+        return outcome, []
     urls = []
     for r in data.get("results") or []:
         if norm_doi(r.get("doi")) == doi:
@@ -760,18 +817,19 @@ LOOKUPS = [("core", "CORE", core_lookup, lambda: bool(key_file("core/api_key")))
            ("s2", "Semantic Scholar", s2_lookup, lambda: True)]
 
 
-def fetch_one(rec, store, pacer, tried, lock, tool_sha):
-    """Try the work's open-access locations, then CORE (with a key) and Semantic Scholar by DOI."""
+def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha):
+    """Try the work's open-access locations, then CORE (with a key) and Semantic Scholar by DOI, then
+    any publisher TDM route whose key is installed."""
     wid = short_wid(rec["id"])
 
     def record(url, host, outcome, detail=""):
         append_tsv(store / "attempts.tsv", {"openalex_id": wid, "url": url, "host": host, "outcome": outcome,
                                             "detail": detail, "when": now()}, ATTEMPT_FIELDS, lock)
 
-    def attempt(cand):
-        outcome, detail = try_candidate(rec, cand, store, pacer, lock, tool_sha)
+    def attempt(cand, **kw):
+        outcome, detail = try_candidate(rec, cand, store, pacer, lock, tool_sha, **kw)
         record(cand[1], cand[2], outcome, detail)
-        return outcome in ("ok", "no_text") and outcome
+        return outcome in OPEN_HELD and outcome
 
     cands = [c for c in candidates(rec) if c[1] not in tried]
     for cand in cands:
@@ -782,16 +840,29 @@ def fetch_one(rec, store, pacer, tried, lock, tool_sha):
         if not doi or f"{prefix}:{doi}" in tried or not enabled():
             continue
         outcome, urls = lookup(doi, pacer)
+        if outcome == "skipped":
+            continue
         record(f"{prefix}:{doi}", host, f"{prefix}_{outcome}", " ".join(urls)[:300])
         for u in [u for u in urls if u not in tried]:
             cands.append(("landing", u, host, "", ""))
             if result := attempt(cands[-1]):
                 return result
+    for name, route in TDM_ROUTES.items():
+        url = route["url"].format(urllib.parse.quote(doi, safe=""))
+        token = key_file(route["key"])
+        if (wid in tdm_done or not doi.startswith(route["prefixes"]) or url in tried or not token
+                or pacer.paused(urllib.parse.urlsplit(url).hostname)):
+            continue
+        cands.append(("pdf", url, route["host"], "publishedVersion", ""))
+        if result := attempt(cands[-1], area=f"tdm/{name}", headers={route["header"]: token}, tdm=True):
+            return f"tdm_{result}"
     return "failed" if cands else "no_copy"
 
 
-def held(store, manifest):
-    return {w for w, r in manifest.items() if r["status"] in ("ok", "no_text") and (store / "pdf" / f"{w}.pdf").exists()}
+def held(store, manifest, statuses=OPEN_HELD):
+    """Works whose latest manifest row has one of these statuses and whose file is present."""
+    return {w for w, r in manifest.items()
+            if r["status"] in statuses and (store / (r.get("path") or f"pdf/{w}.pdf")).exists()}
 
 
 def fetch(store, tiers, workers, retry_failed, limit=None):
@@ -810,20 +881,22 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
             if wid in recs:
                 key = (rank, -int(r.get("ref_count") or 0), wid)
                 order[wid] = min(order.get(wid, key), key)
-    done = held(store, load_manifest(store))
+    manifest = load_manifest(store)
+    done, tdm_done = held(store, manifest), held(store, manifest, TDM_HELD)
     latest = {}
     for r in load_attempts(store):
         latest[r["url"]] = r["outcome"]
     tried = set() if retry_failed else {u for u, o in latest.items() if not transient(o)}
-    tried |= {r["url"] for r in load_manifest(store).values() if r["status"] == "withdrawn"}
+    tried |= {r["url"] for r in manifest.values() if r["status"] == "withdrawn"}
     todo = [recs[w] for w in sorted(set(order) - done, key=order.get) if recs[w].get("type") not in SKIP_TYPES]
     todo = todo[:limit] if limit else todo
-    print(f"{len(order)} works selected; {len(done & set(order))} already held; {len(todo)} to try", flush=True)
+    print(f"{len(order)} works selected; {len(done & set(order))} held open, {len(tdm_done & set(order))} held "
+          f"as TDM copies; {len(todo)} to try", flush=True)
     tool_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     pacer, lock = HostPacer(3.0), threading.Lock()
     results = Counter()
     with concurrent.futures.ThreadPoolExecutor(workers) as ex:
-        futs = [ex.submit(fetch_one, r, store, pacer, tried, lock, tool_sha) for r in todo]
+        futs = [ex.submit(fetch_one, r, store, pacer, tried, tdm_done, lock, tool_sha) for r in todo]
         for n, f in enumerate(concurrent.futures.as_completed(futs), 1):
             results[f.result()] += 1
             if n % 25 == 0 or n == len(todo):
@@ -842,15 +915,15 @@ def withdraw(store, wids, reason):
     lock = threading.Lock()
     for w in map(short_wid, wids):
         row = manifest.get(w)
-        if not row or row["status"] not in ("ok", "no_text"):
+        if not row or row["status"] not in OPEN_HELD + TDM_HELD:
             print(f"{w}: no held copy", file=sys.stderr)
             continue
-        for sub, ext in (("pdf", ".pdf"), ("text", ".txt")):
-            src = store / sub / f"{w}{ext}"
+        pdf = Path(row.get("path") or f"pdf/{w}.pdf")
+        for src in (store / pdf, store / text_path(pdf)):
             if src.exists():
-                os.replace(src, dest / f"{w}{ext}")
-        append_tsv(store / "manifest.tsv", dict(row, status="withdrawn", retrieved=now(), note=reason),
-                   MANIFEST_FIELDS, lock)
+                os.replace(src, dest / src.name)
+        append_tsv(store / "manifest.tsv", dict(row, status="withdrawn", retrieved=now(), note=reason,
+                                                path=f"quarantine/withdrawn/{pdf.name}"), MANIFEST_FIELDS, lock)
         print(f"{w}: withdrawn")
     lock_file.close()
 
@@ -935,25 +1008,27 @@ def table(counter, head, keyorder=None):
 def write_index_md(out, rows, unresolved):
     tiers = Counter(t for r in rows for t in r["tiers"].split(";"))
     ft = Counter(r["fulltext"] for r in rows)
-    held_by_tier = Counter(t for r in rows if r["fulltext"] in ("ok", "no_text") for t in r["tiers"].split(";"))
+    held_by_tier = Counter(t for r in rows if r["fulltext"] in OPEN_HELD for t in r["tiers"].split(";"))
+    tdm_by_tier = Counter(t for r in rows if r["fulltext"] in TDM_HELD for t in r["tiers"].split(";"))
     types = Counter(r["type"] for r in rows)
     decades = Counter((f"{(int(r['year']) // 10) * 10}s" if r["year"] else "") for r in rows)
     venues = Counter(r["venue"] for r in rows if r["venue"])
-    held_n = ft["ok"] + ft["no_text"]
-    tier_lines = ["| Tier | Works | Full text held |", "| --- | ---: | ---: |"]
-    tier_lines += [f"| {t} | {n} | {held_by_tier[t]} |" for t, n in sorted(tiers.items())]
+    held_n, tdm_n = ft["ok"] + ft["no_text"], ft["tdm_ok"] + ft["tdm_no_text"]
+    tier_lines = ["| Tier | Works | Open copy held | TDM copy held |", "| --- | ---: | ---: | ---: |"]
+    tier_lines += [f"| {t} | {n} | {held_by_tier[t]} | {tdm_by_tier[t]} |" for t, n in sorted(tiers.items())]
     text = [
         "# Library index",
         "",
         f"Generated by `library.py index` on {now()[:10]}. Do not edit by hand.",
         "",
-        f"**{len(rows)} works**; full text held for **{held_n}** ({ft['ok']} with a text layer checked "
-        f"against the title, {ft['no_text']} scans without one). {len(unresolved)} seed rows are unresolved "
-        "(see `unresolved.tsv`).",
+        f"**{len(rows)} works**; open full text held for **{held_n}** ({ft['ok']} with a text layer checked "
+        f"against the title, {ft['no_text']} scans without one), and publisher TDM copies for **{tdm_n}** more "
+        f"(local search and mining only). {len(unresolved)} seed rows are unresolved (see `unresolved.tsv`).",
         "",
-        "Full-text status: `ok` held and title-checked; `no_text` held scan, title unchecked; `failed` open "
-        "copies tried, none usable; `no_copy` no open copy known; `not_tried` not yet attempted; "
-        "`withdrawn` removed with a recorded reason; `skipped_type` datasets, errata and similar.",
+        "Full-text status: `ok` open copy held and title-checked; `no_text` open scan held, title unchecked; "
+        "`tdm_ok`, `tdm_no_text` the same for a publisher TDM copy; `failed` copies tried, none usable; "
+        "`no_copy` no copy known; `not_tried` not yet attempted; `withdrawn` removed with a recorded reason; "
+        "`skipped_type` datasets, errata and similar.",
         "",
         "## By tier", "", "\n".join(tier_lines), "",
         "## Full-text status", "", table(ft, "Status"), "",
@@ -979,11 +1054,12 @@ def write_by_question(out, rows):
             "Works the repository cites (tiers `cited-ids` and `cited-authoryear`), grouped by the questions "
             "(Q-, B-) and catalogue entries (src:) whose sections or files cite them. Generated by "
             "`library.py index`; do not edit by hand.",
-            "Full text: **T** held and title-checked, **S** held as a scan, blank not held.", ""]
+            "Full text: **T** open copy held and title-checked, **S** open scan held, **M** publisher TDM copy "
+            "(local search and mining only), blank not held.", ""]
     for q in sorted(byq, key=order):
         text += [f"## {q} ({len(byq[q])})", ""]
         for r in sorted(byq[q], key=lambda r: (r["year"] or 0, r["first_author"])):
-            mark = {"ok": "**T** ", "no_text": "**S** "}.get(r["fulltext"], "")
+            mark = {"ok": "**T** ", "no_text": "**S** ", "tdm_ok": "**M** ", "tdm_no_text": "**M** "}.get(r["fulltext"], "")
             doi = f" [doi](https://doi.org/{r['doi']})" if r["doi"] else ""
             text.append(f"- {mark}{r['first_author']} {r['year']}. {r['title']}. *{r['venue']}*.{doi}")
         text.append("")
