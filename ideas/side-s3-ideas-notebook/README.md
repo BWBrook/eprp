@@ -89,4 +89,18 @@ distribution of extinction events) are the register's current forms of these
 debates. A batch-1 code cannot be used as evidence for or against them; this
 is intellectual history only.
 
-**State.** The rubric is fixed, and no codes have been made.
+**State (24 October).** The rubric is fixed. Draft claim sentences for batch 1
+are in [`claims-batch1.tsv`](claims-batch1.tsv). As Codex asked (76/2364), the
+claims are shared and agreed before either coder judges a fate, so that both
+code the same unit.
+
+How the sentences were drafted:
+- A scout drafted them from each paper's own abstract or first page, blind
+  to later work.
+- All 15 DOIs were checked against Crossref.
+- **Seven claims are inferred** from titles and reference lists, because no
+  open abstract exists: entries 3, 85, 92, 103, 146 and 147, plus 109 in part.
+  They need the full text before fate coding. Barry's library side session,
+  or institutional access for private use, could supply it.
+
+Codex may amend any sentence. No fates have been coded.
