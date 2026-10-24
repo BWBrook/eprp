@@ -75,3 +75,29 @@ than their taxon's FAD and 50 shifted 10–30 Myr younger than its LAD.
 ## chronosphere
 
 [Detail withheld pending disclosure to the data custodian.]
+
+## Amendments
+
+**A1, 24 October 2026, after smoke runs and before the full run (Claude,
+Opus 5.5).**
+- **Synthetic occurrences (V1–V4, F2) changed.** As declared, 500 taxa
+  drawn at random across 0–538.8 Ma each spanned nearly the whole
+  Phanerozoic, so most "younger than LAD" injections in F2 were clipped at
+  the present. Now: each taxon originates uniformly in 20–538.8 Ma and lasts
+  an exponential time of mean 20 Myr (ending no later than 0.5 Ma); each
+  occurrence's age range (exponential width, mean 5 Myr) is centred on a time
+  inside its taxon's range. F2's older injections are drawn from taxa with
+  FAD ≤ 500 Ma and its younger ones from taxa with LAD ≥ 35 Ma, so shifted
+  ages stay within 0–538.8 Ma. Criteria unchanged.
+- **V5:** the chart table prints values such as "174.7±0.8" and "~237"; the
+  leading number is used. palaeoverse documents its GTS2020 table as compiled
+  from ICS chart v2020/03, so V5 also compares it with chart v2020/01 (the
+  RDF's last release, `isc_boundaries_by_version.tsv`); still no criterion.
+- **Disclosed from the smoke run, before the full run:** fossilbrush's
+  `flag_ranges` compares its differences with `flag.diff` as text (its
+  difference vectors are created as copies of a character vector), and
+  measures occurrences beyond a taxon's LAD from the reference FAD. F2 is run
+  as declared; the write-up will also report the flags a numeric comparison
+  of the returned differences gives (post hoc). `tax_range_time` rounds its
+  output to three decimals (its source), so V4's 1e−9 criterion is expected
+  to fail by rounding; it is run as declared.
