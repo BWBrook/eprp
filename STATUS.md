@@ -220,30 +220,51 @@ is complete, following Barry's request to retain both branches and expand furthe
   expectations. Provider correlation within a stress is distinct from the
   cross-stress susceptibility covariance.
 
-**Claude is next responder**, invited to challenge cue reliability,
-co-transmission and recoverability. No new coding or empirical task allocation
-is recorded. Codex owns its dated notes and this handoff's README/STATUS
-pointers; Claude retains its notes and S3 files. No empirical extraction,
-model fitting, remote compute or register change occurred in this response.
-Exact arithmetic checked hypothetical constructions, not empirical evidence.
-The agents' different interest preferences remain, and the turnover decline is
-an optional shared contrast rather than a required explanation. Q-012's
-bounded engineering scope remains accepted, and both agents agree it waits
-behind this round (76/2343). Q-038 is jointly parked. Claude reports the
-scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and preceding
-commits; this ideation turn does not independently re-audit them. The
-separately authorised Databases, Packages/Sims and References/Literature
-support sessions continue in their own scopes, as relayed in 76/2338. The
-third resource-catalogue tranche is incorporated at `e23256e` (76/2361).
-[Detail withheld pending disclosure to the data custodian.] Its plate-model
-comparisons and Q-012 coordinate discrepancies are reported findings, not
-independently audited in this ideation turn. That work remains with the
-separate support session. The software-catalogue merge is incorporated at
-`1801f58` (76/2350). Its reported tests and dated-snapshot lead have not been
-independently audited in this ideation turn; no package run or snapshot
-download was started. Its next tranche at `88cf2d1` is also incorporated
-(76/2355); the reported hiatus-conversion bug and extinction-interval findings
-remain the side session's evidence, without a new audit in this brief.
+Claude replied in its
+[recoverability, cues and co-transmission note](ideas/2026-10-24-recoverability-cues-and-cotransmission-claude.md).
+- **Corrections accepted** and applied in place: the coral lead withdrawn, the
+  ratchet's collapse condition corrected, the covariance conflation withdrawn,
+  and the rarity prediction made conditional.
+- **Recoverability, stated formally.** At matched standing-alternative
+  abundance, does time spent dependent lower recovery? That separates eroded
+  capacity from scarce alternatives (Meijer) and from import.
+- **Fossil observable:** photosymbiont bleaching in planktonic foraminifera.
+  The association is lost and returns while host species persist (Edgar et
+  al. 2012). Q-012's Aze phylogeny supplies duration of dependence.
+- **Contrary worlds for cue reliability.** The crux is the ratio of response
+  lag to environmental autocorrelation, which links it to S1 and seed 1.
+  Ivany et al. 2000, in Barry's list, is the nearest case.
+- **Contrary worlds for co-transmission.** The strongest is ubiquitous
+  partners. A mixed-mode prediction separates the worlds.
+- **Proposal to close divergent ideation and converge:** blind nomination of
+  up to three candidates each; reconciliation; nearest-prior briefs and
+  question contracts with ownership crossed; register entries only after
+  review; a closing map with dispositions.
+
+**Barry decides whether to close.** Codex is next responder on the board. No
+new coding or empirical task allocation is recorded. Codex owns its dated
+notes and this handoff's README/STATUS pointers; Claude retains its notes and
+S3 files. No empirical extraction, model fitting, remote compute or register
+change occurred in this response. Exact arithmetic checked hypothetical
+constructions, not empirical evidence. The agents' different interest
+preferences remain, and the turnover decline is an optional shared contrast
+rather than a required explanation. Q-012's bounded engineering scope remains
+accepted, and both agents agree it waits behind this round (76/2343). Q-038 is
+jointly parked. Claude reports the scorer, PBDB-guard and Alroy repairs
+delivered at `bcf9f9b` and preceding commits; this ideation turn does not
+independently re-audit them. The separately authorised Databases,
+Packages/Sims and References/Literature support sessions continue in their own
+scopes, as relayed in 76/2338. The third resource-catalogue tranche is
+incorporated at `e23256e` (76/2361). [Detail withheld pending disclosure to
+the data custodian.] Its plate-model comparisons and Q-012 coordinate
+discrepancies are reported findings, not independently audited in this
+ideation turn. That work remains with the separate support session. The
+software-catalogue merge is incorporated at `1801f58` (76/2350). Its reported
+tests and dated-snapshot lead have not been independently audited in this
+ideation turn; no package run or snapshot download was started. Its next
+tranche at `88cf2d1` is also incorporated (76/2355); the reported
+hiatus-conversion bug and extinction-interval findings remain the side
+session's evidence, without a new audit in this brief.
 
 Side-session updates 76/2365, 2373 and 2374 are read: software tranche 3
 (`3053126`), expanded chronosphere profiling (`9b03517`), catalogue repairs

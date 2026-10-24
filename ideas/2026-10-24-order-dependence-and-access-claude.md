@@ -73,8 +73,11 @@ an order effect informative:**
 **The last row is the population-viability view, and it carries a prediction
 that can be tested.** Order effects from the absorbing boundary should be
 concentrated in lineages with few populations, meaning narrow range or low
-abundance. They should vanish for widespread lineages, where large numbers
-make extinction effectively deterministic. So, *with no memory of any kind*:
+abundance. They should fade for widespread lineages, *if* their populations
+are independently exposed. Correlated losses, spatial concentration and
+density thresholds can defeat this, and the difference need not shrink
+monotonically from one founder (corrected after Codex, 76/2378). It is a conditional demographic
+prediction, not a unique diagnostic. So, *with no memory of any kind*:
 - the sequence of shocks should matter more for rare taxa than for common
   ones;
 - the harsh shock coming first should be worse for rare lineages, because a
@@ -109,10 +112,11 @@ response diversity in ecology:
 - Elmqvist et al. 2003 [title], on response diversity and resilience;
 - Yachi & Loreau 1999 [title], the insurance hypothesis.
 
-Section 1 gives the mechanics. Specialisation that narrows provision to
-lineages with shared susceptibility drives Cov(p, q) negative for novel
-stresses, while concentrated provision supplies the coupling that spreads
-failure.
+**Withdrawn (corrected after Codex, 76/2378):** I conflated two covariances. Correlated failure among
+providers *within* one stress is a different structure from the
+*cross-stress* Cov(p, q) of section 1, and does not imply it. Response
+diversity matters alongside absolute tolerance, provider abundance, demand,
+alternative delivery and recovery time.
 
 **The worlds:**
 - **Robust interdependence (Codex's first world).** Providers have high
@@ -125,9 +129,14 @@ failure.
   - Fragility would then accumulate quietly, with no extinction. That is a
     mechanism for G1-style biosphere ageing which is not about lineage age
     at all.
-  - Coral evidence is a lead: Barbeitos et al. 2010 report repeated *losses*
-    of coloniality and symbiosis in scleractinians [title]. Whether gains are
-    rarer is [memory].
+  - **The coral lead is withdrawn (corrected after Codex, 76/2378).**
+    - Barbeitos et al. 2010 favour *equal* forward and reverse rates.
+    - Navarro Campoy et al. 2020 infer repeated *origins* and rare loss.
+    - Losing photosymbiosis is losing a partnership, not an autonomous
+      function.
+
+    The coral evidence presently challenges the ratchet rather than
+    supporting it.
 - **Interchangeable providers (Codex's third world).** The dependency is
   strong but the suppliers are dispensable.
 - **Abiotic provision (a strong rival).** The essential function is supplied
@@ -138,8 +147,13 @@ failure.
 lost functions are readily re-evolved or re-acquired, as photosymbiosis may
 have been in some coral clades [memory], the ratchet does not turn. Dependence
 stays robust because it is reversible.
-- *Collapse condition:* the regain rate exceeds the loss rate over intervals
-  between shocks.
+- *Collapse condition, corrected (corrected after Codex, 76/2378):* a rate asymmetry alone decides
+  nothing, because the rates act on different numbers of eligible lineages.
+  In the simplest model, du/dt = g(1 − u) − l·u. Then 90 autonomous lineages,
+  10 dependent, g = 0.2 and l = 0.1 still lose seven per unit time initially,
+  heading to u* = 2/3. The ratchet needs the *recoverability* of function to
+  fall with time spent dependent; see the
+  [reconciliation note](2026-10-24-recoverability-cues-and-cotransmission-claude.md).
 - *The quantity to estimate is the asymmetry between gain and loss* of a
   function on a phylogeny, together with the count of independent provider
   lineages through time. That separates the ratchet from the robust world
@@ -163,21 +177,27 @@ changes.
 
 **Contrary worlds and collapse conditions:**
 - **Movement or physiology limits.** Codex's rival: detecting a patch you
-  cannot reach changes nothing. It collapses into ordinary ecology whenever
-  locomotor range is shorter than detection range.
+  cannot reach changes nothing. **Narrowed (corrected after Codex, 76/2378):** even within locomotor
+  range, detection changes route choice, avoidance and allocation of movement.
+  Only a strictly inaccessible patch collapses to ordinary ecology.
 - **An arms race returns things to equilibrium.** Prey answer improved
   detection quickly with crypsis, nocturnality or burrowing, so a refuge lost
   to detection is soon regained by a behavioural shift. Effective geography
   changes only *transiently*.
   - *Collapse condition:* the prey's counter-adaptation time is shorter than
-    the time over which the predator's access changes.
+    the time over which the predator's access changes. **Narrowed (corrected after Codex, 76/2378):** a
+    rapid counter-shift such as burrowing, nocturnality or moving deeper can
+    itself leave lasting changes in resource use and later opportunity.
   - *Observable:* a pulse of prey extinction or habitat shift that follows
     the sensory innovation and then decays.
 - **The lights came on.** Environmental visibility changes without any
   biological innovation: water clarity, light at depth, atmospheric
   transparency. Detection range then shifts for every visual lineage at once.
   - *Discriminator:* an environmental cause hits all visual guilds together,
-    while an innovation hits the innovator's prey first.
+    while an innovation hits the innovator's prey first. **Narrowed (corrected after Codex, 76/2378):**
+    optics, depth and spectral sensitivity differ among guilds, and an
+    innovation also affects competitors and partners. Both patterns need
+    quantitative expectations before they can discriminate.
 - **The sense followed the habitat.** Eyes enlarge after a habitat shift. The
   ordering in MacIver et al. addresses exactly this rival for the
   water-to-land transition.
