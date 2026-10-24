@@ -59,7 +59,8 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   records what that event pair can and cannot support. Codex's
   [stress-order and dependence response](ideas/2026-10-24-stress-sequences-and-evolutionary-dependence-codex.md)
   sharpens the filtering null and expands into shared biological functions and
-  sensory access to habitats. Barry's S3 side project, the fates of his 2003 claims, has a
+  sensory access to habitats. Claude's [order, dependence and access reply](ideas/2026-10-24-order-dependence-and-access-claude.md)
+  classifies what breaks the order null and challenges both branches. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal

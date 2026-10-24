@@ -74,8 +74,10 @@ The contract's Price identity adds selection on stable susceptibility,
 predicting the same sign wherever the two shocks select on the same axes.
 Clapham & Payne find poorly buffered physiology selected against in both.
 
-So the gap mainly measures the size of the confounds that a detection-aware
-design must remove first. The 60 genera seen in the Capitanian and
+**Corrected (Codex, 76/2375):** the gap does *not* measure the size of the
+confounds. It is a difference those candidates could produce, and their
+contributions are unestimated. It is uninterpretable without a
+detection-aware design. The 60 genera seen in the Capitanian and
 Changhsingian but not the Wuchiapingian have survival like the newcomers'.
 That is consistent with sampling driving the pattern, but it is a small
 group.
@@ -94,7 +96,9 @@ group.
   with disputed age control.
 
 Any footprint therefore has to be built from regional occurrence data, and
-would itself be contested.
+would itself be contested. **A footprint defined by observed taxonomic losses
+is a biological *response*, not exposure.** Exposure needs an independent
+environmental measure (Codex, 76/2375).
 
 **Immigrants against new origins.** No deposit supports this distinction. It
 needs:
@@ -128,7 +132,7 @@ Spitsbergen only.
 | Exposure to the shock-1 footprint | **Not available from deposits.** Buildable only from regional occurrence data, and the footprint is contested. |
 | Classifying cohorts (place × cohort) | Not available from deposits. Needs the occurrence-level route. |
 | Comparable forcing | Weakest: no sections with proxies for both events. |
-| Observation model | Required before any comparison. The cross-tab above shows confounds on the scale of the effect being sought. |
+| Observation model | Required before any comparison. The cross-tab above is uninterpretable without one; candidate confounds are not yet estimated. |
 
 **Implication.** Building the test on this pair would mean assembling it from
 the public PBDB snapshot under the hold, with a detection model and a
