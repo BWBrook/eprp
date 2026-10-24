@@ -42,7 +42,8 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   [Claude's additions and Barry's rock-record prompt](ideas/2026-10-23-blue-sky-open-map-claude.md),
   [Codex's connected scenarios](ideas/2026-10-24-blue-sky-connections-codex.md),
   [Claude's contrasting worlds](ideas/2026-10-24-blue-sky-worlds-claude.md)
-  and [the first interest assessment](ideas/2026-10-24-blue-sky-interest-codex.md).
+  [the first interest assessment](ideas/2026-10-24-blue-sky-interest-codex.md)
+  and [Claude's challenge to it](ideas/2026-10-24-blue-sky-interest-response-claude.md).
   The conversation now compares scientific payoffs; novelty and feasibility
   remain separate. These sketches do not change the existing register entries.
 No primary investigation has been selected; question rankings and feasibility

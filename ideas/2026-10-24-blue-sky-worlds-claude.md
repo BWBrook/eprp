@@ -99,13 +99,17 @@ so precisely where an innovation built its own archive.
 Copy D loses as much rock as copy B, but this sea was spread across thirty
 separate basins, and the later fate of each basin is independent of the
 others. Random basins are lost. Every account of copy D shows the same rise,
-only noisier.
+only noisier, provided the original deposits covered the habitats in the first
+place. Independent later fates cannot restore a habitat that no deposit
+recorded, or remove a preservation filter that all deposits shared (Codex,
+76/2352).
 
 Geological fate rewrites history when the witnesses are few and correlated:
 one great platform, or one foreland. It barely matters when they are many and
 independent. **So the quantity to track may not be rock area or volume at
 all. It may be the effective number of independent witnesses per interval:**
-depositional systems whose later fates do not share a cause. This may sit
+depositional systems whose later fates do not share a cause. Codex rightly
+narrows this to a property specific to each claim, not a universal scalar. It may sit
 close to formation counts, which have been criticised as redundant with other
 proxies. The difference is independence of fate, not the number of named
 units.
@@ -141,6 +145,12 @@ that much, in those regions and in those guilds. So:
 
 **A bias correction is a forecast of future discoveries. Score it like one.**
 
+Codex's narrower and better wording (76/2352): a generative account of the
+discoverable record should make conditional predictions about further
+discovery under a stated observation process. A scalar richness correction
+does not, on its own, say where people will search or how names will be
+revised.
+
 Freeze an old vintage, fit the correction to it, and compare its forecast
 with what was found afterwards.
 - A correction that cannot forecast its own future is a curve fit.
@@ -160,11 +170,14 @@ vintages exists. Two limits apply:
 **Self-mutation.** In which copy does vintage forecasting fail? In copy B. Its
 lost lower half no longer exists, so no future discovery can ever fill it.
 Forecastable revisions only reach what survives. **This splits P1's three
-sources of variation cleanly:**
-- **collecting effort:** the vintages test it fully;
+sources of variation, though less cleanly than I first wrote:**
+- **collecting effort:** the vintages test a stated account of it, not all
+  of it;
 - **present exposure:** they test it partly, as new roads, quarries and
   boreholes open;
-- **destruction after deposition:** they can never test it.
+- **destruction after deposition:** the destroyed fossils can never arrive
+  as discoveries. Destruction can still be studied indirectly, through
+  surviving counterparts (Codex, 76/2352).
 
 ## Story 2. The quiet first shock
 
@@ -212,8 +225,10 @@ the lethality was S1's legacy.
 The small shock spends little, and the big shock meets a mostly buffered
 world. With identical physical inputs, the total losses differ by order
 alone. Alter the spacing instead: if Δ is shorter than τ, S2 is lethal; if Δ
-is longer than τ, S2 is harmless. **The number that matters is Δ/τ, not the
-size of either shock.**
+is longer than τ, S2 is harmless. **In this pure world, the number that
+matters is Δ/τ, not the size of either shock.** A real response also depends
+on the shocks' magnitudes and directions, several recovery times and which
+lineages remain exposed (Codex, 76/2352).
 
 ### World 3: filter
 
@@ -225,7 +240,10 @@ vulnerability *grows* with the gap.
 
 **The sign of the spacing effect is opposite to world 2's.** In world 2,
 closely spaced shocks are deadliest. In world 3, widely spaced shocks are.
-That sign separates the two worlds without measuring any buffer directly.
+That sign separates the two *pure* worlds without measuring any buffer
+directly. Once both processes act, it does not. Codex's bookkeeping makes the
+point: δ(Δ) = b·exp(−Δ/τ_b) − f·exp(−Δ/τ_f) is zero when the two terms match,
+despite both mechanisms operating, and it can change sign with Δ (76/2352).
 
 ### World 4: the casualty list is written early
 
@@ -287,8 +305,8 @@ not a project:
    Wang & Dodson 2006 for dinosaurs [memory]; the econometric literature on
    real-time data.
 2. **The spacing sign.** Is extinction magnitude a property of the shock or
-   of the history before it? Worlds 1, 2 and 3 predict zero, negative and
-   positive spacing effects. I know of no deep-time test, which is exactly
+   of the history before it? In their pure forms, worlds 1, 2 and 3 predict
+   zero, negative and positive spacing effects; mixtures can cancel. I know of no deep-time test, which is exactly
    what a prior check should establish.
 3. **Effective independent witnesses.** Which intervals' events, and which
    event–driver coincidences, rest on one shared geological fate?
