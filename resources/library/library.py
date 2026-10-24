@@ -905,7 +905,7 @@ def index(store, out):
             ft = "skipped_type"
         elif any(not is_lookup(o) for o in attempts[wid]):
             ft = "failed"
-        elif attempts[wid]:
+        elif attempts[wid] or not (rec.get("doi") or candidates(rec)):
             ft = "no_copy"
         else:
             ft = "not_tried"
