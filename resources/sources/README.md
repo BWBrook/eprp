@@ -537,8 +537,8 @@ the workflow when they generalise.
   where they are dates.
 - [Detail withheld pending disclosure to the data custodian.]
 - *Fetch Zenodo versions in parallel.* `--jobs 8` brought 12 tables
-  (1.76 GB) in about 25 minutes, against about 3 hours one at a time; take
-  only the files needed with `--files`.
+  (1.76 GB) in about 25 minutes, against an estimated 3 hours one at a time
+  at the measured 0.19 MB/s; take only the files needed with `--files`.
 
 **Outreach (Barry, 22 October 2026).**
 

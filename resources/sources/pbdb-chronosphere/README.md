@@ -1,7 +1,7 @@
 ---
 id: pbdb-chronosphere
-name: PBDB dated downloads archived by chronosphere — about 1,180 global occurrence tables, November 2019 to October 2026 (one Zenodo concept)
-kind: archive
+name: PBDB dated downloads archived by chronosphere — 1,178 global occurrence tables, November 2019 to October 2026 (one Zenodo concept)
+kind: deposit
 status: active
 last_update: "newest version 20261018 (Zenodo 23468334); versions indexed 2026-10-24"
 scope:
@@ -17,14 +17,14 @@ size:
   zenodo_bytes_all_versions: 492117258496
 access:
   tier: open
-  licence: "CC BY 4.0 on every Zenodo version; PBDB's own datainfo header in each download says CC0"
+  licence: "CC BY 4.0 on every Zenodo version; PBDB's own datainfo header says CC BY in downloads to 2025-02-17 and CC0 from 2025-02-24"
   routes:
-    - {type: zenodo, url: "https://doi.org/10.5281/zenodo.7808071", state: "concept record: 1,178 versions, each one PBDB download as pbdb_occs.rds, pbdb_parquet.zip, pbdb_csv.zip and metadata.txt (taxon tables too since 2026)", checked: 2026-10-24}
+    - {type: zenodo, url: "https://doi.org/10.5281/zenodo.7808071", state: "concept record: 1,178 versions, each one PBDB download as pbdb_occs.rds, pbdb_parquet.zip, pbdb_csv.zip and metadata.txt (taxon tables too since 2026-07-05)", checked: 2026-10-24}
     - {type: registry, url: "https://github.com/chronosphere-info/chrono_arch_2/raw/main/users/public/master.csv", state: "chronosphere's public registry: 1,171 occurrence versions and 16 taxon versions, each with its Zenodo DOI (resources/software/chronosphere/pbdb_versions.tsv)", checked: 2026-10-23}
-    - {type: r-package, url: "https://cran.r-project.org/package=chronosphere", state: "chronosphere::fetch('pbdb', ver=...) serves the registry's versions; not run here", checked: 2026-10-24}
+    - {type: r-package, url: "https://cran.r-project.org/package=chronosphere", state: "chronosphere::fetch(src='pbdb', ser=..., ver=...) serves the registry's versions; not run here", checked: 2026-10-24}
   api: "Zenodo REST API (versions of record 7808072); chronosphere R client"
 versioning:
-  replay: exact
+  replay: partial
   notes: "[Detail withheld pending disclosure to the data custodian.]"
 mirror:
   path: deep-server:/data/paleodata/pbdb-chronosphere
@@ -43,7 +43,7 @@ entry:
   created: 2026-10-24
   updated: 2026-10-24
   by: Claude (Opus 5.5, side session)
-  reviewed: "TBD"
+  reviewed: "2026-10-24, independent Claude Sonnet subagent; findings applied"
 ---
 
 # PBDB dated downloads archived by chronosphere
@@ -60,6 +60,11 @@ October 2026, on 118 to 313 days a year from 2020 to 2024 and weekly in
 
 [Detail withheld pending disclosure to the data custodian.]
 
+The 2026 Quaternary share is diluted by the 2025 IODP import. A filtered
+version is therefore a *public-data vintage*: that day's records as far as
+they are public today. It is not the full input the version's users saw,
+and its era composition shifts differently in each vintage.
+
 **The vintages differ in substance.** Take the occurrences public today and
 compare each one's then-current values with today's:
 
@@ -70,15 +75,27 @@ compare each one's then-current values with today's:
 | 2025-01-02 | 2.3% | 1.1% | 48.1% |
 | 2026-02-27 | 0.8% | 0.3% | 3.8% |
 
-PBDB re-dated its intervals between January 2024 and February 2026, in at
-least two steps: Kungurian 279.3 to 283.3 Ma, Wuchiapingian 259.9 to 259.857
-Ma, Late Pleistocene 0.126 to 0.129 Ma. A vintage comparison must separate
-this change of time scale from reassignment of occurrences to intervals.
+PBDB re-dated its intervals in at least three steps, each between two
+sampled versions (modal `max_ma` of single-interval rows):
 
-**Verdict for Q-045: usable, under the rule.** Two cautions apply. One
-sampled archive is truncated: 2023-12-28 holds 1,344,110 rows where its own
-metadata reports 1,595,282, and the registry omits it. And the call excluded
-pre-Ediacaran records until February 2026.
+| Step | Intervals changed | Examples |
+| --- | ---: | --- |
+| 2024-01-07 to 2025-01-02 | 462 | Kungurian 279.3 → 283.5; Wuchiapingian 259.9 → 259.51; Priabonian 38.0 → 37.71; Late Pleistocene 0.126 → 0.129 |
+| 2025-01-02 to 2026-02-27 | 327 | Kungurian 283.5 → 283.3; Roadian 273.01 → 274.4; Olenekian 251.2 → 249.9; Anisian 247.2 → 246.7; Maastrichtian 72.1 → 72.2 |
+| 2026-02-27 to 2026-10-18 | 17 | Wuchiapingian 259.51 → 259.857; Olenekian 249.9 → 250.8; Anisian 246.7 → 247.0; Middle Oxfordian 161.5 → 159.0 |
+
+So the first two steps brought several boundaries onto ICS chart values,
+and the third moved three of them (Olenekian, Anisian, Wuchiapingian) back
+off the chart, to the values queried in [CONTACTS.md](../CONTACTS.md) C10
+(i). A vintage comparison must separate these changes of time scale from
+reassignment of occurrences to intervals.
+
+**Verdict for Q-045: usable as public-data vintages, under the rule.**
+Three cautions apply:
+- One sampled archive is cut at its tail. 2023-12-28 holds 1,344,110 rows
+  where its own metadata reports 1,595,282, and the registry omits it.
+- The call excluded pre-Ediacaran records until February 2026.
+- The rule's era skew (above) must be carried into any comparison.
 
 [Detail withheld pending disclosure to the data custodian.]
 
@@ -127,9 +144,9 @@ licence PBDB stated. Versions since 5 July 2026 add the taxon table in the
 same three formats, plus `metadata_taxa.txt`. One row is one occurrence
 under its identification at the time of download; reidentified occurrences
 appear once (rows equal distinct occurrence numbers in every sampled
-version). The API call changed three times (see Weaknesses), and the CSV
-has 72 columns in 2019, 80 from September 2020, 144 from May 2021 and 152 in
-2026.
+version). The API call changed three times (see Weaknesses). Among the
+sampled tables, the CSV has 72 columns in 2019, 80 from September 2020, 144
+from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
 
 ## Access
 
@@ -160,7 +177,8 @@ has 72 columns in 2019, 80 from September 2020, 144 from May 2021 and 152 in
   seven years, each with a DOI, checksums and the exact API call.
 - Each table carries the identification, intervals, ages, palaeocoordinates
   and collection context of its day, so a past analysis can be rerun on the
-  data its authors could have seen.
+  data its authors could have seen, or, after the rule, on the part of it
+  that is public today.
 - Eleven of the 12 sampled tables hold exactly the records their metadata
   reports.
 - [Detail withheld pending disclosure to the data custodian.]
@@ -168,34 +186,52 @@ has 72 columns in 2019, 80 from September 2020, 144 from May 2021 and 152 in
 ## Weaknesses and pitfalls
 
 - [Detail withheld pending disclosure to the data custodian.]
-- **One truncated archive.** Version 2023-12-28 (Zenodo 10437013) holds
-  1,344,110 rows; its metadata reports 1,595,282 records found, and 231,368
-  occurrences that are public today and were created before its access date
-  are missing, from every creation year. The registry omits this version.
-  Check every table's rows against its metadata before use (the profiler
-  flags a mismatch).
+- **One archive cut at its tail.** Version 2023-12-28 (Zenodo 10437013)
+  holds 1,344,110 rows, and its metadata reports 1,595,282 records found.
+  The table is in occurrence-number order and stops at 1,382,650, partway
+  through a row, with no final newline (the profiler counts that partial
+  row). Of the 231,346 occurrences that are
+  public today, were created before its access time and are missing, 230,769
+  are numbered above that point. The rds and parquet files are probably cut
+  too: their bytes per record are about a fifth below the neighbouring
+  versions' (inferred from Zenodo's file sizes). The registry omits this
+  version. Check every table's rows against its metadata before use (the
+  profiler flags a mismatch). A screen of bytes per record over all 1,178
+  versions flags no other version (review, 2026-10-24), so no other archive
+  has lost more than about 5% of its records.
 - **The API call changed three times.**
   - 2020-09-09: 16 to 18 show blocks (`refattr`, `entname`).
   - 2021-05-18: 18 to 34 entries (`refattr` listed twice), adding
     abundance, ecospace, taphonomy, preservation, `geo`, `methods` and
     others.
   - 2026-02-27: `interval=Ediacaran,Holocene` replaced by `all_records`.
-  Until then pre-Ediacaran records were excluded. In January 2024, 1,382 of
-  the 2,061 occurrences that are public today, were created before the
-  download and are missing from it have Precambrian intervals (Tonian,
-  Statherian, Calymmian). In November 2019, 7,715 such occurrences are
-  missing, 7,107 of them created in 2019 and mostly Eocene; we have not
-  found why.
-- **Ages change with the time scale.** Between January 2024 and February
-  2026 PBDB re-dated its intervals in at least two steps (Summary). Before
+  Until then the interval filter excluded records. Take the occurrences
+  public today, created before a download and missing from it (complete
+  tables only; [checks](profile/pbdb_chronosphere_checks.tsv)):
+  - 649 to 2,061 per version from 2020 to 2025, 9 in February 2026 and
+    none in October 2026.
+  - In January 2024, 1,278 of the 2,061 lie wholly before the Ediacaran
+    (`min_ma` of at least 635 Ma).
+  - From 2020 to 2024, each version misses another 520 to 730, about 470 of
+    them in three regional or broad intervals (Westphalian B, Sarka,
+    Neoproterozoic). They are gone once the call changed, so we infer the
+    interval filter excluded them.
+  - In November 2019, 6,589 of the 7,875 missing were created in the six
+    weeks before that download (mostly Eocene). The February 2020 version
+    has them, and why the November download missed them is unknown.
+- **Ages change with the time scale.** PBDB re-dated its intervals in at
+  least three steps between January 2024 and October 2026 (Summary). Before
   comparing ages across versions, either re-date each version's intervals
   on one time scale, or compare interval assignments rather than ages.
-  Bisecting the dates of the change needs about four more tables per step.
+  The 2026 versions are weekly, so dating the third step needs only about
+  four more tables. The first two (daily 2024 versions, 71 in 2025) need
+  about four each.
 - **Zenodo's version index is broken for this record.** 157 versions share
-  index 741, and nine other indices repeat. The index's newest value (983)
-  is unique today, so `data_mirror.py --latest` picks 2026-10-18, but the
-  order cannot be trusted. Use the version strings, which are download
-  dates, as `zenodo-versions.tsv` and the profiler do. One version string
+  index 741, nine other indices repeat, and in 16 places a later version
+  has a lower index ([zenodo-survey.tsv](zenodo-survey.tsv)). The newest
+  value (983) is unique today, so `data_mirror.py --latest` picks
+  2026-10-18, but the order cannot be trusted. Use the version strings,
+  which are download dates, as the profiler does. One version string
   repeats (20240406, two records).
 - **Gaps.** The longest are 127 days (February to June 2020), 87 days
   (November 2019 to February 2020), 87 days (January to April 2023), 73 days
@@ -255,11 +291,25 @@ has 72 columns in 2019, 80 from September 2020, 144 from May 2021 and 152 in
 ## Verification log
 
 - 2026-10-24 (Claude, Opus 5.5):
-  - Indexed all 1,178 Zenodo versions and mirrored every metadata file
-    (1,194 files) and 12 tables (1.76 GB); all verify.
+  - *checked*: indexed all 1,178 Zenodo versions ([zenodo_survey.py](zenodo_survey.py),
+    with Zenodo's version index) and mirrored every metadata file (1,194
+    files) and 12 tables (1.76 GB); all verify.
   - [Detail withheld pending disclosure to the data custodian.]
-  - Confirmed that the age drift is a time-scale change: on 20191122,
-    981,357 of the 1,220,213 rows public today keep both intervals but have
-    a new `max_ma`, each interval shifting by one amount.
-  - Compared the registry with Zenodo (7 versions missing from the
-    registry).
+  - *checked*: [pbdb_chronosphere_checks.py](pbdb_chronosphere_checks.py)
+    gives the registry comparison, gaps, Zenodo index, interval-age steps,
+    era shares, missing public records and table tails
+    ([output](profile/pbdb_chronosphere_checks.tsv)).
+  - *checked*: the age drift is a time-scale change. On 20191122, 981,357 of
+    the 1,220,213 rows public today keep both intervals but have a new
+    `max_ma`, and each interval maps to one old and one new value.
+  - [Detail withheld pending disclosure to the data custodian.]
+  - *source claim*: the API calls (Zenodo descriptions and the datainfo
+    headers), PBDB's stated licences.
+  - Independent review (Claude Sonnet subagent), findings applied:
+    - the third re-dating step and its link to C10 (i);
+    - the era skew and "public-data vintage";
+    - the tail cut;
+    - the licence wording in the front matter;
+    - the contract wording;
+    - committed checks for the numbers;
+    - a `data_mirror.py` regression when a record has no files.

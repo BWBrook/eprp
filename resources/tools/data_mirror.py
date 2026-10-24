@@ -330,7 +330,7 @@ def mirror_version(r, raw_root, tool_sha, patterns=None):
     if r["files"] is None:
         r["files"] = github_files(r["repo"], r["record"])
     selected = [x for x in r["files"] if not patterns or any(fnmatch.fnmatchcase(x["key"], p) for p in patterns)]
-    if not selected:
+    if patterns and not selected:
         raise RuntimeError(f"{r['dir']}: no file matches {' '.join(patterns)}")
     os.makedirs(vdir, exist_ok=True)
     files = []

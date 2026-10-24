@@ -169,7 +169,10 @@ All from [profile/timescale_profile.tsv](profile/timescale_profile.tsv).
   | Wuchiapingian (Lopingian) base | 259.857 | 259.51 ± 0.21 |
 
   PBDB's three values appear on no chart release we hold, so we cannot say
-  where they come from (queued as CONTACTS C10 i).
+  where they come from (queued as CONTACTS C10 i). They are recent: PBDB
+  served the chart values until at least its 27 February 2026 download and
+  changed them by 18 October 2026, in the third of three re-datings since
+  2024 ([pbdb-chronosphere](../pbdb-chronosphere/README.md)).
 
 ## Access
 
