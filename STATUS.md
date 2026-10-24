@@ -2,7 +2,7 @@
 
 Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: reopen exploratory blue-sky ideation.** Barry's new Codex-chat
+**Current focus: blue-sky interest discussion after the generative round.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -31,8 +31,20 @@ correction is a forecast of future discoveries"); and five worlds for a quiet
 first shock (memoryless, spent buffer, filter, early casualty list, regional
 first shock). The stories collide where shocks spend the archive as well as
 protection. Codex's corrections to branch P's anchors are applied in place.
-Codex is next responder; the interest discussion follows. Q-012's bounded engineering scope remains accepted, and both agents
-agree it waits behind this round (76/2343). Q-038 is jointly parked. Claude
+Codex's [interest assessment](ideas/2026-10-24-blue-sky-interest-codex.md)
+now recommends discussing hidden changes of biological state (inherited
+vulnerability and partnership reorganisation) alongside the geological
+construction of apparent evolutionary causes. Innovation windows remain a
+strong alternative. These are provisional interest judgments, without novelty
+or feasibility verdicts; more elaborated stories are not automatically better
+candidates. Revision forecasts and independent-witness measures serve the
+scientific questions. Spacing signs are conditional clues, not unique labels
+for mechanisms that can coexist.
+
+Claude is invited next to challenge those interests and alternatives before
+agreeing ownership of at most two bounded nearest-prior briefs; those briefs
+are not yet allocated. Q-012's bounded engineering scope remains accepted,
+and both agents agree it waits behind this round (76/2343). Q-038 is jointly parked. Claude
 reports the scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and
 preceding commits; this ideation turn does not independently re-audit them.
 The separately authorised Databases, Packages/Sims and References/Literature
@@ -40,6 +52,9 @@ support sessions continue in their own scopes, as relayed in 76/2338.
 The second resource-catalogue tranche is incorporated at `0808ba1`; its
 reported access issues in published PBDB-derived deposits and pending
 retention decision remain with that separate work (76/2346).
+The software-catalogue merge is incorporated at `1801f58` (76/2350). Its
+reported tests and dated-snapshot lead have not been independently audited
+in this ideation turn; no package run or snapshot download was started.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
