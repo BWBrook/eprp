@@ -4,10 +4,11 @@
 # ///
 """Profile the mirrored plate models, and test them against the palaeocoordinates in NSB, Triton and PBDB.
 
-Usage: uv run palaeogeography_profile.py MODELS_RAW WRIGHT_RAW NSB_SQLITE TRITON_TSV_GZ PBDB_GLOBAL_RAW OUT_TSV
+Usage: uv run palaeogeography_profile.py MODELS_RAW WRIGHT_RAW PALEODEM_RAW NSB_SQLITE TRITON_TSV_GZ PBDB_GLOBAL_RAW OUT_TSV
 
 Inventory: for each model in the GPlates Plate Model Manager snapshot, the rotation
-files' pole count, moving plate IDs and time span, and the static polygons' count.
+files' pole count, moving plate IDs and time span, and the static polygons' count;
+the PaleoDEM zips' members, and the ages their file names give.
 
 Reconstruction: a present-day point takes the plate ID of the static polygon it
 falls in (partitioned at 0 Ma) and is rotated to the requested age, relative to
@@ -31,9 +32,9 @@ import collections
 import csv
 import glob
 import gzip
-import io
 import math
 import os
+import re
 import sqlite3
 import statistics
 import sys
@@ -42,7 +43,7 @@ import zipfile
 
 import pygplates
 
-models_raw, wright_raw, nsb_db, triton_gz, pbdb_raw, out_tsv = sys.argv[1:7]
+models_raw, wright_raw, paleodem_raw, nsb_db, triton_gz, pbdb_raw, out_tsv = sys.argv[1:8]
 csv.field_size_limit(1 << 30)
 out = []
 TMP = tempfile.mkdtemp()
@@ -140,6 +141,18 @@ for n in names:
         f"{len(rots)}; {poles}; {len(plates)}; {max(ages) if ages else 0:g}; {npoly}")
     if polys and rots:
         loaded[n] = (rots, polys)
+
+
+pv = sorted(glob.glob(os.path.join(paleodem_raw, "*")))[-1]
+put("paleodem", "version", "", os.path.basename(pv))
+for zp in sorted(glob.glob(os.path.join(pv, "*.zip"))):
+    with zipfile.ZipFile(zp) as z:
+        names = [i.filename for i in z.infolist() if not i.is_dir() and "__MACOSX" not in i.filename]
+    exts = collections.Counter(n.rsplit(".", 1)[-1].lower() for n in names if "." in os.path.basename(n))
+    ages = sorted({float(m) for n in names for m in re.findall(r"_(\d+(?:\.\d+)?)Ma\.(?:nc|csv)$", n)})
+    put("paleodem", os.path.basename(zp), "members; by extension; ages from file names (Ma)",
+        f"{len(names)}; {', '.join(f'{e} {c}' for e, c in exts.most_common(6))}; "
+        + (f"{len(ages)} ages, {ages[0]:g}-{ages[-1]:g}" if ages else "none"))
 
 
 def model(n):

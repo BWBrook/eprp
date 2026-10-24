@@ -1,0 +1,4 @@
+route	version_dir	provider	files	bytes	licence	doi_or_source
+gplates-models	2026-10-24T0301Z_url	url	135	141831547	per model (gplates-models-licences.tsv)	https://repo.gplates.org/webdav/pmm/config/models.json
+paleomap-paleodem	5460860	zenodo	6	414705405	CC BY 4.0	10.5281/zenodo.5460860
+wright2013-supplement	2026-10-24T0320Z_url	url	1	47754650	CC BY 3.0	https://bg.copernicus.org/articles/10/1529/2013/bg-10-1529-2013-supplement.zip

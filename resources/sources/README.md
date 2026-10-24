@@ -497,6 +497,26 @@ the workflow when they generalise.
 - *Read the automated review before merging.* Copilot's four findings on
   the first catalogue PR arrived after the merge; all were valid.
 
+**Pickups and palaeogeography (24 October 2026;
+[register-deposits](register-deposits/README.md),
+[palaeogeography](palaeogeography/README.md)).**
+
+- *Look for the open copy before calling something unavailable.* Wiley
+  refused the Aze et al. supplement to scripts, and I first wrote that ANU's
+  corrected datapacks had no public download; the review found them open
+  (CC BY), with MD5s in the listing.
+- *A project page can link storage its own API does not list.* Tennant et
+  al.'s OSF project links a GitHub repository that OSF's file API omits.
+- *A paper may cite an earlier version than the newest.* Gougeon et al.'s
+  paper cites Mendeley v1; both of its files differ in v2.
+- [Detail withheld pending disclosure to the data custodian.]
+- *Test a reconstruction against the source's own coordinates first.* The
+  mirrored Seton et al. 2012 model reproduces NSB's palaeocoordinates on
+  every row; only then are the differences between models worth reporting.
+- *Know which model a database's default is.* PBDB's default palaeocoordinate
+  model is Wright et al. 2013, not the GPlates Web Service's default, and it
+  reconstructs at whole-Ma ages.
+
 **Outreach (Barry, 22 October 2026).**
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up
