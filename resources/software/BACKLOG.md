@@ -51,7 +51,10 @@ a day on its free cores; nothing long on the laptop.
    N-002; Q-040, Q-042, Q-045).
 5. **Earth-system and spatial simulators.** cGENIE.muffin, pySCION,
    INDITEK-2.0 (licence first), gen3sis with goSPL, and the metabolic-index
-   implementations (L-012 to L-015; B-005, Q-001, Q-021, Q-049).
+   implementations (L-012 to L-015; B-005, Q-001, Q-021, Q-049). Scoped on
+   24 October 2026 ([bench/SCOPE_T5.md](bench/SCOPE_T5.md)): start cGENIE's
+   long runs first, then metabolic index, gen3sis, INDITEK-2.0, goSPL and
+   pySCION.
 6. **Trait, disparity and comparative tools.** paleoTS and evoTS, mvMORPH,
    dispRity, Claddis, BioGeoBEARS (GitHub), BEAST2 2.7.8 with SA and BDMM.
 7. **Food webs.** cheddar's cascade workflow (Dunhill et al. 2024 code), ATNr,
