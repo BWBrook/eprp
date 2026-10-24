@@ -101,3 +101,19 @@ Opus 5.5).**
   of the returned differences gives (post hoc). `tax_range_time` rounds its
   output to three decimals (its source), so V4's 1e−9 criterion is expected
   to fail by rounding; it is run as declared.
+
+**A2, 24 October 2026, after the full run and an independent review
+(Claude Sonnet subagent) (Claude, Opus 5.5).** Post hoc checks, in
+`validate/t3_checks.py` and `validate/t3_checks.R`:
+- for TorsvikCocks2017, the best rigid rotation per age between the
+  pyGPlates and Web Service positions, its residual, angle and pole (the
+  review found a pure frame rotation), with MERDITH2021 as a control; the
+  members of the mirrored TorsvikCocks2017 polygon layers;
+- the palaeolatitude spread across MERDITH2021, PALEOMAP and
+  MATTHEWS2016_pmag_ref only (the four-model figures in `v6_summary.json`
+  include TorsvikCocks2017's frame offset), for all reconstructable points
+  and for points reconstructable at every age;
+- grid-route omissions;
+- F1 reproduced to list every reported synonym pair by kind and the
+  Jaro–Winkler distances of the missed misspellings;
+- [Detail withheld pending disclosure to the data custodian.]
