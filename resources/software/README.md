@@ -57,6 +57,13 @@ cross-check had little power, so T3 waits for a larger comparison.
 | [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling |
 | [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation (biased, no undercoverage detected); q failed |
 | [RevBayes](revbayes/README.md) | T1 | none: FBD range process disabled in releases |
+| [admtools](admtools/README.md) | T2 | `time_to_strat`, hiatus accounting; `strat_to_time` failed |
+| [StratPal](stratpal/README.md) | T2 | `p3`, `thin` |
+| [paleoAM](paleoam/README.md) | T1 | subsampling self-consistency only |
+| [tbea](tbea/README.md) | T2 | Strauss–Sadler one-endpoint bound |
+| [EDE](ede/README.md) | T2 | Strauss–Sadler; others characterised |
+| [Rextinct](rextinct/README.md) | T1 | characterised only (GRIWM) |
+| [agnostic.R](agnostic-r/README.md) | T1 | characterised only |
 
 Tranche 1's harness and results: [bench/](bench/README.md).
 
@@ -192,3 +199,22 @@ Body sections, in order:
 - *The independent review earned its cost again.* It found no wrong
   number but five wrong or overstated interpretations, including two of
   ours that had already been written up as mechanisms.
+
+**Tranche 2 (24 October 2026; [bench](bench/README.md)).**
+
+- *A tool can reset the caller's random stream.* `griwm` calls `set.seed`
+  inside its loop; our dating errors, drawn in the same parallel worker
+  after each call, repeated across cases and invalidated a whole arm. Draw
+  every random number a design needs before calling third-party code, and
+  check replicates for duplicated values.
+- *Test round trips, not one direction.* admtools' `time_to_strat` is
+  correct and its inverse is not; only the round trip showed it.
+- *Compare against independent truth, not the tool's own generator.*
+  paleoAM's mixed sample is built from the same function as the reference
+  we compared it with.
+- *Score "no answer" deliberately.* Persistence tests that never reject and
+  posteriors that never reach 0.95 changed coverage by several points
+  depending on how they were counted; declare the rule in advance.
+- *Baseline a filter against the same cases without it.* Hiatuses also
+  remove fossils, so the right comparison for their effect is the same
+  species in the ideal arm, not the nominal 0.95.

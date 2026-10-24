@@ -1,0 +1,12 @@
+2026-10-24T02:27:25Z start; image sha256:49f30706716296938b47ea824971df7a19081550ab24e606bb93a53b8e7e0582
+2026-10-24T02:27:25Z S1-S5, P1
+2026-10-24T02:27:48Z exit 0
+2026-10-24T02:27:48Z E4-E6 benchmark
+2026-10-24T02:34:05Z exit 0
+2026-10-24T02:34:05Z summary
+2026-10-24T02:34:05Z exit 1
+2026-10-24T02:34:05Z done
+2026-10-24T02:34:29Z summary rerun after name fix: exit 0
+2026-10-24T03:12:45Z A2 rerun of E4-E6 (arm C noise fix) and summary
+2026-10-24T03:19:18Z A2 benchmark exit 0
+2026-10-24T03:19:19Z A2 summary exit 0 done

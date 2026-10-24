@@ -1,0 +1,21 @@
+{
+  "marshall": {
+    "min_gaps_with_upper": 110,
+    "n73": [1.018376, null],
+    "n111": [1.020867, 1.047202]
+  },
+  "dense": {
+    "n_deposited": 8282,
+    "n_wrong": 6,
+    "max_error": 0.465914,
+    "probe_times": [6.001, 6.005, 15.001, 15.005],
+    "probe_errors": [1.8, 1, 2.7, 1.5]
+  },
+  "modes": {
+    "heights": [2, 4, 8, 9, 11, 14, 15, 20],
+    "analytic_time": [1, 2, null, 7, 9, null, 15.5, 18],
+    "start": [1, 2, 4, 5.333333, 8, 12, 12.75, 16.5],
+    "end": [1.5, 3, 6, 7.5, 10.5, 15, 15.5, 18],
+    "destroy": [null, null, null, null, null, null, null, null]
+  }
+}
