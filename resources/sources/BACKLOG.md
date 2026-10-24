@@ -40,7 +40,7 @@ readiness:
 | 6 | ~~Time scale~~ **done 23 Oct** ([timescale](timescale/README.md)) | Q-041, Q-035, Q-005, Q-045 | ICS chart releases as RDF (to v2020/01) and PDF (to 2024/12), Macrostrat and PBDB interval tables | TimeScale Creator datapack blocked (C9 f) |
 | 7 | **Macrostrat, global** | B-005, B-007, B-008 and inferred others | open API, CC BY 4.0 | Reclassify: the Australian negative does not decide a global need |
 | 8 | **Island-extinction compilations** | Q-034, Q-017, Q-004 | ~~Rozzi 2023~~ (three Figshare articles and GitHub code) and ~~Cooke 2023~~ (Zenodo 10014585) mirrored in [register-deposits](register-deposits/README.md) | **done 24 Oct**; joins the Sahul and FRED work |
-| 9 | **Modern-bridge time series and invasions** | Q-025 (develop), Q-028, Q-047 | BioTIME, GRIIS, ~~SInAS~~ (3.2 mirrored in [register-deposits](register-deposits/README.md)), Seebens first records, GloNAF | Hosting to confirm |
+| 9 | ~~Modern-bridge time series and invasions~~ **done 24 Oct** ([biotime](biotime/README.md), [griis](griis/README.md), [alien-first-records](alien-first-records/README.md), [glonaf](glonaf/README.md)) | Q-025 (develop), Q-028, Q-047 | BioTIME 2.0, GRIIS (383 GBIF checklists and the Compendium), First Records v4.0 and v3.1, GloNAF 2.02; SInAS 3.2 in [register-deposits](register-deposits/README.md) | First Records 1.1–2 restricted (C32); GloNAF courtesy contact (C33) |
 | 10 | **LegacyPollen and LegacyAge 1.0** | Q-024 | ESSD data papers (PANGAEA; recall) | Neotoma covers the Sahul slice only |
 
 Also done, 23 October at Barry's request: the classic range compendia,

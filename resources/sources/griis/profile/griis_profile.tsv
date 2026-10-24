@@ -1,0 +1,25 @@
+section	metric	value
+checklists	datasets; with an archive	383; 383
+checklists	by kind (title)	GRIIS 303; protected area 79; GISD 1
+checklists	by year last modified on GBIF	2020 180; 2026 96; 2022 89; 2021 7; 2025 5; 2023 4; 2024 2
+checklists	by licence	CC BY 4.0 379; CC0 3; unspecified 1
+records	GRIIS checklists read; taxon rows; distribution rows	303; 140218; 147358
+records	the same for lists whose unit is not nested (no 'unit, country' title): lists; taxon rows; distribution rows	218; 110153; 117293
+records	distribution rows with an event date (share of all rows; of the rows in lists that give dates)	39686 (0.269; 0.538)
+event dates	lists whose dates are 80%+ from 2015 on (entry stamps, inferred): lists; dated rows	58; 24041
+event dates	other dated lists (dates spread over time): lists; dated rows	42; 15478
+event dates	occurrence.txt rows whose eventRemarks give an introduction date	6968
+other fields	distribution pathway filled: lists; rows	37; 20954
+other fields	distribution degreeOfEstablishment filled: lists; rows	7; 27454
+other fields	description.txt rows typed native range	5586
+records	files in the archives	taxon.txt 303; distribution.txt 303; speciesprofile.txt 303; eml.xml 303; meta.xml 303; vernacularname.txt 3; reference.txt 3; occurrence.txt 3; description.txt 1
+records	checklists with event dates	no 203; yes 100
+records	eventDate shape	9999 16186; 9999-99-99 14705; 9999/9999 8122; 9999s 142; From 9999 88; NA 67; 9999|9999 43; 9999-9999 31; 9999 - 9999 30; pre-9999 28; <9999 23; unknown 9
+records	kingdom	Plantae 96282; Animalia 41095; Fungi 1327; Chromista 1231; Viruses 132; Bacteria 116; Protozoa 33; (blank) 1; ChromistaMyzozoa 1
+records	taxonomicStatus	ACCEPTED 105064; Accepted GBIF 14164; SYNONYM 12197; (blank) 7120; DOUBTFUL 841; Accepted ITIS 386; HOMOTYPIC_SYNONYM 102; SPECIES 99; Accepted ION 82; HETEROTYPIC_SYNONYM 60; Accepted uBIO 33; Accepted NCBI 18
+records	occurrenceStatus	present 146068; (blank) 981; uncertain 222; eradicated 45; cryptogenic|uncertain 19; absent 18; on-going eradication 3; reported 1; invasive 1
+records	establishmentMeans	alien 72320; introduced 56725; introduced (alien, exotic, non-native, nonindigenous) 13813; cryptogenic|uncertain 3132; introduced: assisted colonization 873; native|introduced 327; native|alien 93; cryptogenic|uncerain 38; introduced (alien, exotic, non-native, nonindigenous); introduced: assisted colonization 14; uncertain 8; (blank) 7; cryptogenic|unknown 4
+records	isInvasive	null 66174; (blank) 54796; invasive 19121; false 891; yes 130; true 37; invasive? 16; invasive in the north of the island (122). 1; invasive ? 1
+compendium	rows; countries; distinct species	101104; 196; 23685
+compendium	isInvasive	NULL 84883; INVASIVE 16221
+compendium	kingdom	Plantae 73837; Animalia 25322; Chromista 933; Fungi 831; Bacteria 107; Viruses 59; Protozoa 15
