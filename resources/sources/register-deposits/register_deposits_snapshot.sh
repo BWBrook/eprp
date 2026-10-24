@@ -12,8 +12,8 @@
 #             snapshot. The Harvard Dataverse record over 5 GB as a file list only
 #   github    code repositories cited with their data (Rozzi et al. 2023; Tennant et al. 2018's
 #             OSF-linked repository), newest commit
-#   cran      paleotree, the CRAN package carrying Aze et al. 2011's Appendix S5 tables
-#             (CRAN's PACKAGES file gives the tarball's MD5)
+#   cran      paleotree, the CRAN package carrying Aze et al. 2011's Appendix S5 tables: the current
+#             version, checked against the MD5 in CRAN's PACKAGES, tables written to derived/
 set -uo pipefail
 cd /data/paleodata
 M="python3 _tools/data_mirror.py"
@@ -163,9 +163,11 @@ mendeley g2g74cj4x7/1 gougeon2024-chapel-island-ichnology-v1
 mendeley r2h822zzxp/1 sara2026-mussel-disturbance
 anu anudc:5981 aze2011-anu-datapacks
 EOF
-# Harvard Dataverse, 26.6 GB of CT volumes and video: the provider's file list only
-mkdir -p register-deposits/howman2024-armandia-burrows
-$O specs dataverse doi:10.7910/DVN/3DU1VW "$TMP/howman.specs" register-deposits/howman2024-armandia-burrows/files.tsv
+# Harvard Dataverse, 26.6 GB of CT volumes and video: the provider's file list only, dated,
+# with the download URLs (each carrying the Dataverse file id) beside it
+H=register-deposits/howman2024-armandia-burrows/$(date -u +%Y-%m-%d)
+mkdir -p "$H"
+$O specs dataverse doi:10.7910/DVN/3DU1VW "$H/specs.txt" "$H/files.tsv"
 rm -rf "$TMP"
 fi
 
@@ -176,8 +178,17 @@ $M github Protohedgehog/SQS register-deposits/tennant2018-sqs-code --latest || e
 fi
 
 if want cran; then
-$M url register-deposits/aze2011-paleotree-cran \
-  "paleotree_3.4.7.tar.gz::https://cran.r-project.org/src/contrib/paleotree_3.4.7.tar.gz" \
-  --license "CC0 (paleotree's DESCRIPTION); the tables are Aze et al. 2011, Appendix S5" || echo "paleotree FAILED"
+# the current paleotree version and its MD5 from CRAN's PACKAGES; the tables written to derived/
+read -r ver md5 < <(curl -sf -A "eprp-data-mirror/4 (research data archive)" https://cran.r-project.org/src/contrib/PACKAGES |
+  awk '/^Package: /{p=($2=="paleotree")} p&&/^Version: /{v=$2} p&&/^MD5sum: /{print v, $2; exit}')
+D=register-deposits/aze2011-paleotree-cran
+if [ -n "${ver:-}" ] && $M url "$D" "paleotree_$ver.tar.gz::https://cran.r-project.org/src/contrib/paleotree_$ver.tar.gz" \
+     --license "CC0 (paleotree's DESCRIPTION); the tables are Aze et al. 2011, Appendix S5, terms not stated"; then
+  v=$(ls -d $D/raw/*_url | tail -1)
+  printf 'name\tsize\talgorithm\tvalue\npaleotree_%s.tar.gz\t\tmd5\t%s\n' "$ver" "$md5" > "$D/provider-checksums-$(basename "$v").tsv"
+  python3 _tools/register-deposits_other_repos.py check "$v" "$D/provider-checksums-$(basename "$v").tsv" | tail -1
+  mkdir -p "$D/derived/$(basename "$v")"
+  Rscript --vanilla _tools/register-deposits_aze_paleotree_tables.R "$v/paleotree_$ver.tar.gz" "$D/derived/$(basename "$v")"
+else echo "paleotree FAILED"; fi
 fi
 echo DONE

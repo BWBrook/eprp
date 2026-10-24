@@ -7,7 +7,7 @@
 Usage: uv run palaeogeography_profile.py MODELS_RAW WRIGHT_RAW PALEODEM_RAW NSB_SQLITE TRITON_TSV_GZ PBDB_GLOBAL_RAW OUT_TSV
 
 Inventory: for each model in the GPlates Plate Model Manager snapshot, the rotation
-files' pole count, moving plate IDs and time span, and the static polygons' count;
+files' pole count, moving plate IDs and oldest pole, and the static polygons' count;
 the PaleoDEM zips' members, and the ages their file names give.
 
 Reconstruction: a present-day point takes the plate ID of the static polygon it
@@ -24,8 +24,9 @@ Tests (each one sentence in the output):
      both matthews2016 frames; Triton's Neptune rows (NSB's Seton coordinates)
      against matthews2016 at the row's age.
   4. PBDB's palaeocoordinates (three models per collection) against candidate
-     models here: seton2012, the Wright et al. (2013) supplement, paleomap and
-     scotese_and_wright2018.
+     models here: seton2012, the Wright et al. (2013) supplement and
+     matthews2016_mantle_ref (for "gplates"), paleomap and scotese_and_wright2018;
+     overall, with the mid age rounded to whole Ma, and by age band.
 """
 
 import collections
@@ -87,7 +88,7 @@ class Model:
         return self.cache[k]
 
     def reconstruct(self, lat, lon, age):
-        if self.max_age is not None and age > self.max_age:  # beyond the model's range in the index
+        if self.max_age is not None and round(age) > self.max_age:  # beyond the model's range in the index (whole Ma)
             return None
         p = self.plate(lat, lon)
         if p is None or p[1] < age:

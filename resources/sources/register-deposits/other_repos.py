@@ -9,9 +9,10 @@ the provider's size and checksum per file, and prints the deposit's title,
 version and licence. IDs: a Dataverse DOI (doi:10.7910/DVN/...), an OSF
 project (5 characters), a Mendeley dataset with its version (ID/VERSION), an
 ANU Data Commons record (anudc:NNNN). Dataverse serves ingested tables as .tab;
-the original upload is requested, as that is what its MD5 describes. ANU's
-file tree is read from its HTML listing (MD5 per file; folders flattened into
-the name with "__"). `check` re-hashes the mirrored files against the TSV (md5
+the original upload is requested, as that is what its MD5 describes; a file's
+Dataverse folder is flattened into its name with "__". ANU's file tree is read
+from its HTML listing (MD5 per file; folders flattened the same way; names
+kept as served). Mendeley's listing is read at the top folder only. `check` re-hashes the mirrored files against the TSV (md5
 or sha256, as the provider gives) and exits 1 on any mismatch or missing file.
 Standard library only; no contact details are sent.
 """
@@ -45,6 +46,8 @@ def dataverse(pid):
             raise SystemExit(f"{df['filename']} is restricted")
         original = df.get("originalFileName")
         name = original or df["filename"]
+        if f.get("directoryLabel"):  # the deposit's folder, flattened into the name
+            name = f["directoryLabel"].strip("/").replace("/", "__") + "__" + name
         url = f"https://dataverse.harvard.edu/api/access/datafile/{df['id']}" + ("?format=original" if original else "")
         size = df.get("originalFileSize") if original else df.get("filesize")
         rows.append((name, url, size, df["checksum"]["type"].lower(), df["checksum"]["value"]))
@@ -86,7 +89,7 @@ def anu(pid):
         with urllib.request.urlopen(urllib.request.Request(base + rel, headers=UA), timeout=120) as r:
             page = r.read().decode("utf-8", "replace")
         for block in re.split(r'<tr id="filerow-\d+"', page)[1:]:
-            href = html.unescape(re.search(r'<td class="col-filename">\s*<a[^>]*href="([^"]+)"', block).group(1))
+            href = re.search(r'<td class="col-filename">\s*<a[^>]*href="([^"]+)"', block).group(1)  # served raw, as named
             if href.endswith("/"):
                 time.sleep(0.5)
                 walk(rel + href)
@@ -94,7 +97,7 @@ def anu(pid):
             md5 = re.search(r"<th>MD5</th>\s*<td>([0-9a-f]{32})</td>", block)
             if md5 is None:
                 raise SystemExit(f"{rel}{href}: no MD5 listed")
-            name = urllib.parse.unquote(rel + href).replace("/", "__")
+            name = (rel + href).replace("/", "__")
             rows.append((name, base + urllib.parse.quote(rel + href, safe="/"), "", "md5", md5.group(1)))
 
     walk("")
@@ -102,8 +105,14 @@ def anu(pid):
         page = r.read().decode("utf-8", "replace")
     fields = [f.strip() for f in html.unescape(re.sub(r"<[^>]+>", "|", page)).split("|") if f.strip()]
 
+    labels = {"Access Rights", "Access Rights Type", "Rights held in and over the data", "Licence Type",
+              "Disposal Date", "Extent or Quantity", "Data Size", "Data Management Plan"}
+
     def field(name):
-        return fields[fields.index(name) + 1] if name in fields else "not stated"
+        if name not in fields or fields.index(name) + 1 >= len(fields):
+            return "not stated"
+        value = fields[fields.index(name) + 1]
+        return "not stated" if value in labels else value
 
     title = re.search(r"<title>(.*?)</title>", page, re.S).group(1).strip()
     return html.unescape(title), f"access: {field('Access Rights')}", field("Licence Type"), rows

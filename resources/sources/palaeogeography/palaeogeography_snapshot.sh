@@ -13,11 +13,16 @@ want() { [ "$ROUTES" = "  " ] || [[ "$ROUTES" == *" $1 "* ]]; }
 if want models; then
   TMP=$(mktemp -d)
   IDX=https://repo.gplates.org/webdav/pmm/config/models.json
-  curl -sf -A "eprp-data-mirror/4 (research data archive)" "$IDX" -o "$TMP/models.json" || { echo "index FAILED"; exit 1; }
-  python3 _tools/palaeogeography_pmm_specs.py "$TMP/models.json" "$TMP/specs"
-  # the index itself first, then every model file, from the same snapshot of the index
-  $M url "$D/gplates-models" "models.json::$IDX" --specs-file "$TMP/specs" --pause 0.5 \
-    --license "per model: see each model's URL and Version in models.json" || echo "models FAILED"
+  if curl -sf -A "eprp-data-mirror/4 (research data archive)" "$IDX" -o "$TMP/models.json"; then
+    python3 _tools/palaeogeography_pmm_specs.py "$TMP/models.json" "$TMP/specs"
+    # the index is fetched again as the snapshot's first file; check it is the copy the file list came from
+    $M url "$D/gplates-models" "models.json::$IDX" --specs-file "$TMP/specs" --pause 0.5 \
+      --license "per model: see each model's URL and Version in models.json" || echo "models FAILED"
+    cmp -s "$TMP/models.json" "$(ls -d $D/gplates-models/raw/*_url | tail -1)/models.json" \
+      || echo "WARNING: the index changed during the snapshot; the file list follows the earlier copy"
+  else
+    echo "index FAILED"
+  fi
   rm -rf "$TMP"
 fi
 # Scotese & Wright 2018 PaleoDEMs (concept 5348491); the notes cite the first version, 5348492
