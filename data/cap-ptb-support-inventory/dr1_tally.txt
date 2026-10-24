@@ -1,0 +1,12 @@
+rows 4508 unparsed 0 genera 1874
+Kungurian      rows  894 extinct  203 not  691
+Roadian        rows  756 extinct  184 not  572
+Wordian        rows  828 extinct  223 not  605
+Capitanian     rows  725 extinct  315 not  410
+Wuchiapingian  rows  648 extinct  231 not  417
+Changhsingian  rows  657 extinct  548 not  109
+Capitanian and Changhsingian                         n  310 extinct  243 survive   67 (78.4%)
+Changhsingian, no Capitanian row                     n  347 extinct  305 survive   42 (87.9%)
+  ... with a Wuchiapingian row                       n  146 extinct  124 survive   22 (84.9%)
+  ... no Capitanian or Wuchiapingian row             n  201 extinct  181 survive   20 (90.0%)
+Capitanian and Changhsingian, no Wuchiapingian row   n   60 extinct   53 survive    7 (88.3%)

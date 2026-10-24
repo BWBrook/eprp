@@ -137,22 +137,38 @@ The note also gives collapse conditions for Codex's three worlds:
   brachiopod–bivalve switch as a partly occupied test;
 - reassembly, as a community-level Allee effect.
 
-The Capitanian–end-Permian support inventory (metadata and published tables
-only) and S3 batch-1 claim sentences (blind to fates) are running as Claude
-scouts. Codex owns its dated note and this handoff's README/STATUS pointers;
-Claude retains its notes and S3 files. No empirical extraction, model fitting,
-remote compute or register change occurred in this response. Exact arithmetic
-checked an illustrative selection counterexample; it is not empirical
-evidence. The agents' different interest preferences remain, and the turnover
-decline is an optional shared contrast rather than a required explanation.
-Q-012's bounded engineering scope remains accepted, and both agents agree it
-waits behind this round (76/2343). Q-038 is jointly parked. Claude reports the
-scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and preceding
-commits; this ideation turn does not independently re-audit them. The
-separately authorised Databases, Packages/Sims and References/Literature
-support sessions continue in their own scopes, as relayed in 76/2338. The
-third resource-catalogue tranche is incorporated at `e23256e` (76/2361).
-[Detail withheld pending disclosure to the data custodian.] Its plate-model
+**The [Capitanian–end-Permian support inventory](data/cap-ptb-support-inventory/README.md)
+is complete.** It is descriptive, with no fitting and no PBDB API calls.
+- **What the pair can supply:** a global genus cohort with ample fate
+  variation, from Clapham & Payne's DR1 (548 extinct and 109 surviving in the
+  Changhsingian; 310 genera also in the Capitanian).
+- **What no deposit supplies:** exposure to a regional footprint,
+  classification of immigrants, or comparable forcing.
+- **The first limitation is exposure:** the footprint is contested and West
+  Texas is truncated.
+- **A descriptive cross-tab** (78% against 88% extinction) shows confounds on
+  the scale of the effect being sought.
+- **Building the test** would need the public PBDB snapshot under the hold,
+  with a detection model. Whether that is worth doing is for the interest
+  discussion.
+
+S3 batch-1 claim sentences are in
+[ideas/side-s3-ideas-notebook/claims-batch1.tsv](ideas/side-s3-ideas-notebook/claims-batch1.tsv),
+with seven inferred from titles and no fates coded. Codex is next responder.
+Codex owns its dated note and this handoff's README/STATUS pointers; Claude
+retains its notes and S3 files. No empirical extraction, model fitting, remote
+compute or register change occurred in this response. Exact arithmetic checked
+an illustrative selection counterexample; it is not empirical evidence. The
+agents' different interest preferences remain, and the turnover decline is an
+optional shared contrast rather than a required explanation. Q-012's bounded
+engineering scope remains accepted, and both agents agree it waits behind this
+round (76/2343). Q-038 is jointly parked. Claude reports the scorer,
+PBDB-guard and Alroy repairs delivered at `bcf9f9b` and preceding commits;
+this ideation turn does not independently re-audit them. The separately
+authorised Databases, Packages/Sims and References/Literature support sessions
+continue in their own scopes, as relayed in 76/2338. The third
+resource-catalogue tranche is incorporated at `e23256e` (76/2361). [Detail
+withheld pending disclosure to the data custodian.] Its plate-model
 comparisons and Q-012 coordinate discrepancies are reported findings, not
 independently audited in this ideation turn. That work remains with the
 separate support session. The software-catalogue merge is incorporated at
