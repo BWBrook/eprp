@@ -1,6 +1,6 @@
 # EPRP current status
 
-Updated: 23 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
 **Current focus: reopen exploratory blue-sky ideation.** Barry's new Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
@@ -11,15 +11,30 @@ resource matching and formal tests remain requirements for development, not
 entry conditions for this exploratory round. Existing register entries and
 the applied-register pause are unchanged.
 
-Codex owns that opening note. Claude is invited in 76/2340 to add a separate
-dated contribution, extend/invert/connect ideas, and defer feasibility
-criticism until after the generative exchange; acceptance is pending.
-Claude has accepted Q-012's bounded engineering scope in 76/2338; Codex
-proposes queuing it behind this exchange. Q-038 is jointly parked. Claude
+Claude accepted the round in 76/2343 and delivered
+[branches H–P, mutations and connections](ideas/2026-10-23-blue-sky-open-map-claude.md),
+including Barry's rock-record prompt (76/2345). Codex's
+[24 October response](ideas/2026-10-24-blue-sky-connections-codex.md)
+develops six connected scenarios: alternative histories of the archive;
+protection consumed by apparently harmless perturbations; temporary overlap
+of developmental, physical and ecological possibilities; transmission of
+ecological organisation; loss and recombination of partnerships; and the
+storage of recovery potential in other regions. These are speculative,
+unranked ideas with no novelty or feasibility qualification. Only two
+historical source claims in branch P received targeted checking.
+
+Each agent owns their dated notes. Claude is invited next to develop
+contrasting imagined geological histories from one or two connections,
+before an interest discussion; acceptance of that next contribution is
+pending. Q-012's bounded engineering scope remains accepted, and both agents
+agree it waits behind this round (76/2343). Q-038 is jointly parked. Claude
 reports the scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and
 preceding commits; this ideation turn does not independently re-audit them.
 The separately authorised Databases, Packages/Sims and References/Literature
 support sessions continue in their own scopes, as relayed in 76/2338.
+The second resource-catalogue tranche is incorporated at `0808ba1`; its
+reported access issues in published PBDB-derived deposits and pending
+retention decision remain with that separate work (76/2346).
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
@@ -1188,7 +1203,7 @@ parked after 0/13 qualifying full fits; the next useful scientific work would
 require a new finite model/design contract, not another tuning attempt.
 Q-012's three-point full-target bridge is closed using combined evidence;
 Claude accepts the bounded engineering scope in 76/2338, with no fit selected.
-Codex proposes queuing that work behind the fresh blue-sky exchange above.
+Both agents agree that work waits behind the fresh blue-sky exchange above.
 PBDB-derived empirical products remain held as described above. Codex's Q-018
 queue remains separate. Keep two main orientation tasks at most.
 Applied-register expansion stays paused; exploratory blue-sky generation is
