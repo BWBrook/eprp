@@ -132,8 +132,11 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
     AI service.
   - TDM copies are therefore kept apart, under `tdm/<publisher>/`, with
     manifest status `tdm_ok` and a note, and are used for local search and
-    mining only. Agents read them only once UTAS Library confirms that its
-    licences allow processing by AI services that do not train on the content.
+    mining only. Until UTAS Library confirms that its licences allow
+    processing by AI services that do not train on the content, agents do not
+    read their text in a session, and that includes grep output. Whatever
+    enters the conversation goes to the AI provider. Counts and aggregate
+    statistics from scripts are fine.
   - Everything obtained under a TDM licence stays under `tdm/`, including
     rejected downloads (`tdm/<publisher>/quarantine/`) and withdrawn copies
     (`tdm/<publisher>/withdrawn/`). Deleting `tdm/` therefore discharges the
