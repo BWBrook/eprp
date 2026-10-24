@@ -1,0 +1,887 @@
+{
+  "K6": {
+    "pass": true,
+    "estimators": {
+      "raw": {
+        "mean": 0.013778,
+        "se": 0.011413,
+        "n": 20,
+        "pass": true
+      },
+      "chao2_divdyn": {
+        "mean": 0.005045,
+        "se": 0.01007,
+        "n": 20,
+        "pass": true
+      },
+      "chao2_inext": {
+        "mean": 0.005055,
+        "se": 0.010114,
+        "n": 20,
+        "pass": true
+      },
+      "squares_divdyn": {
+        "mean": 0.00967,
+        "se": 0.009923,
+        "n": 20,
+        "pass": true
+      },
+      "sqs": {
+        "mean": 0.007526,
+        "se": 0.012007,
+        "n": 20,
+        "pass": true
+      },
+      "inext_cov": {
+        "mean": 0.005919,
+        "se": 0.012529,
+        "n": 20,
+        "pass": true
+      },
+      "gw_ml_inc": {
+        "mean": 0.007193,
+        "se": 0.009089,
+        "n": 20,
+        "pass": true
+      },
+      "gw_ml_abund": {
+        "mean": 0.007858,
+        "se": 0.00934,
+        "n": 20,
+        "pass": true
+      }
+    }
+  },
+  "quorum_0.8": {
+    "S": {
+      "sqs_q08": {
+        "mean": 0.048551,
+        "se": 0.017714,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": 0.019918,
+        "se": 0.013831,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": 0.035281,
+        "se": 0.013454,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": 0.025811,
+        "se": 0.016331,
+        "n": 20
+      },
+      "sqs_na_q08": 71,
+      "inext_extrapolated_q08": 59
+    },
+    "C": {
+      "sqs_q08": {
+        "mean": -0.065023,
+        "se": 0.014069,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": -0.08278,
+        "se": 0.01334,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": -0.121416,
+        "se": 0.013915,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": -0.12512,
+        "se": 0.015386,
+        "n": 20
+      },
+      "sqs_na_q08": 11,
+      "inext_extrapolated_q08": 10
+    },
+    "E": {
+      "sqs_q08": {
+        "mean": -0.577316,
+        "se": 0.019112,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": -0.626243,
+        "se": 0.020699,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": -0.700079,
+        "se": 0.024611,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": -0.763225,
+        "se": 0.02736,
+        "n": 20
+      },
+      "sqs_na_q08": 0,
+      "inext_extrapolated_q08": 0
+    },
+    "E050": {
+      "sqs_q08": {
+        "mean": 0.008279,
+        "se": 0.010633,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": 0.008696,
+        "se": 0.010705,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": 0.007526,
+        "se": 0.012007,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": 0.005919,
+        "se": 0.012529,
+        "n": 20
+      },
+      "sqs_na_q08": 0,
+      "inext_extrapolated_q08": 0
+    },
+    "E075": {
+      "sqs_q08": {
+        "mean": -0.049067,
+        "se": 0.010197,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": -0.053905,
+        "se": 0.010594,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": -0.072296,
+        "se": 0.011952,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": -0.082081,
+        "se": 0.012624,
+        "n": 20
+      },
+      "sqs_na_q08": 0,
+      "inext_extrapolated_q08": 0
+    },
+    "E100": {
+      "sqs_q08": {
+        "mean": -0.12535,
+        "se": 0.011944,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": -0.135934,
+        "se": 0.012342,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": -0.171798,
+        "se": 0.01436,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": -0.191309,
+        "se": 0.015367,
+        "n": 20
+      },
+      "sqs_na_q08": 0,
+      "inext_extrapolated_q08": 0
+    },
+    "E150": {
+      "sqs_q08": {
+        "mean": -0.323359,
+        "se": 0.014329,
+        "n": 20
+      },
+      "inext_q08": {
+        "mean": -0.34873,
+        "se": 0.01527,
+        "n": 20
+      },
+      "sqs_q06": {
+        "mean": -0.413045,
+        "se": 0.018475,
+        "n": 20
+      },
+      "inext_q06": {
+        "mean": -0.453906,
+        "se": 0.020195,
+        "n": 20
+      },
+      "sqs_na_q08": 0,
+      "inext_extrapolated_q08": 0
+    }
+  },
+  "robustness": {
+    "lnorm10": {
+      "observed_over_global": 0.60954,
+      "collections_mean_early": 77.145,
+      "collections_mean_late": 22.97,
+      "sampled_over_global": 0.891269,
+      "gw_na": 4,
+      "sqs_na": 2,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.767677,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.368172,
+            "se": 0.019554,
+            "n": 20
+          },
+          "male_sampled_area": 0.357362,
+          "male_global": 0.500706
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.145354,
+            "se": 0.014869,
+            "n": 20
+          },
+          "male_sampled_area": 0.143086,
+          "male_global": 0.262657
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.153431,
+            "se": 0.014338,
+            "n": 20
+          },
+          "male_sampled_area": 0.179218,
+          "male_global": 0.298313
+        },
+        "sqs": {
+          "bias": {
+            "mean": 0.035281,
+            "se": 0.013454,
+            "n": 20
+          },
+          "male_sampled_area": 1.141436,
+          "male_global": 1.249666
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.025811,
+            "se": 0.016331,
+            "n": 20
+          },
+          "male_sampled_area": 1.112682,
+          "male_global": 1.222581
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": 0.030829,
+            "se": 0.01473,
+            "n": 20
+          },
+          "male_sampled_area": 0.063702,
+          "male_global": 0.078999
+        }
+      }
+    },
+    "lnorm4": {
+      "observed_over_global": 0.42747,
+      "collections_mean_early": 30.325,
+      "collections_mean_late": 9.275,
+      "sampled_over_global": 0.799252,
+      "gw_na": 112,
+      "sqs_na": 96,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.690972,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.601117,
+            "se": 0.028498,
+            "n": 20
+          },
+          "male_sampled_area": 0.603676,
+          "male_global": 0.826135
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.183903,
+            "se": 0.024883,
+            "n": 20
+          },
+          "male_sampled_area": 0.211098,
+          "male_global": 0.38959
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.244216,
+            "se": 0.019886,
+            "n": 20
+          },
+          "male_sampled_area": 0.251008,
+          "male_global": 0.430737
+        },
+        "sqs": {
+          "bias": {
+            "mean": -0.057609,
+            "se": 0.042805,
+            "n": 19
+          },
+          "male_sampled_area": 1.100935,
+          "male_global": 1.239365
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.010149,
+            "se": 0.023639,
+            "n": 20
+          },
+          "male_sampled_area": 1.044905,
+          "male_global": 1.216403
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": -0.047154,
+            "se": 0.042947,
+            "n": 20
+          },
+          "male_sampled_area": 0.09138,
+          "male_global": 0.101744
+        }
+      }
+    },
+    "lnormhet10": {
+      "observed_over_global": 0.587842,
+      "collections_mean_early": 77.145,
+      "collections_mean_late": 22.97,
+      "sampled_over_global": 0.891269,
+      "gw_na": 12,
+      "sqs_na": 10,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.716495,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.408837,
+            "se": 0.02117,
+            "n": 20
+          },
+          "male_sampled_area": 0.411515,
+          "male_global": 0.546974
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.14518,
+            "se": 0.018688,
+            "n": 20
+          },
+          "male_sampled_area": 0.141714,
+          "male_global": 0.248568
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.155445,
+            "se": 0.017197,
+            "n": 20
+          },
+          "male_sampled_area": 0.181073,
+          "male_global": 0.303251
+        },
+        "sqs": {
+          "bias": {
+            "mean": 0.053348,
+            "se": 0.016236,
+            "n": 20
+          },
+          "male_sampled_area": 1.103261,
+          "male_global": 1.199305
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.039474,
+            "se": 0.017616,
+            "n": 20
+          },
+          "male_sampled_area": 1.061461,
+          "male_global": 1.163391
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": 0.059372,
+            "se": 0.023177,
+            "n": 20
+          },
+          "male_sampled_area": 0.068193,
+          "male_global": 0.085233
+        }
+      }
+    },
+    "lnormhet4": {
+      "observed_over_global": 0.39664,
+      "collections_mean_early": 30.325,
+      "collections_mean_late": 9.275,
+      "sampled_over_global": 0.799252,
+      "gw_na": 124,
+      "sqs_na": 142,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.655797,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.638543,
+            "se": 0.031176,
+            "n": 20
+          },
+          "male_sampled_area": 0.678951,
+          "male_global": 0.92437
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.117584,
+            "se": 0.032186,
+            "n": 20
+          },
+          "male_sampled_area": 0.239457,
+          "male_global": 0.391474
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.177282,
+            "se": 0.025411,
+            "n": 20
+          },
+          "male_sampled_area": 0.26068,
+          "male_global": 0.443962
+        },
+        "sqs": {
+          "bias": {
+            "mean": -0.054434,
+            "se": 0.058184,
+            "n": 18
+          },
+          "male_sampled_area": 1.089499,
+          "male_global": 1.209199
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.066996,
+            "se": 0.035777,
+            "n": 20
+          },
+          "male_sampled_area": 1.005397,
+          "male_global": 1.167467
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": 0.044119,
+            "se": 0.047656,
+            "n": 20
+          },
+          "male_sampled_area": 0.110925,
+          "male_global": 0.127855
+        }
+      }
+    },
+    "gamma10": {
+      "observed_over_global": 0.396283,
+      "collections_mean_early": 78.155,
+      "collections_mean_late": 23.57,
+      "sampled_over_global": 0.892696,
+      "gw_na": 1,
+      "sqs_na": 1,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.987469,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.349666,
+            "se": 0.020383,
+            "n": 20
+          },
+          "male_sampled_area": 0.800868,
+          "male_global": 0.903853
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.216409,
+            "se": 0.017641,
+            "n": 20
+          },
+          "male_sampled_area": 0.574576,
+          "male_global": 0.676774
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.220899,
+            "se": 0.017357,
+            "n": 20
+          },
+          "male_sampled_area": 0.630455,
+          "male_global": 0.739105
+        },
+        "sqs": {
+          "bias": {
+            "mean": 0.019081,
+            "se": 0.015788,
+            "n": 20
+          },
+          "male_sampled_area": 1.692077,
+          "male_global": 1.807028
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.024289,
+            "se": 0.01931,
+            "n": 20
+          },
+          "male_sampled_area": 1.686433,
+          "male_global": 1.798311
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": -0.09641,
+            "se": 0.018498,
+            "n": 20
+          },
+          "male_sampled_area": 0.403088,
+          "male_global": 0.497806
+        }
+      }
+    },
+    "gamma4": {
+      "observed_over_global": 0.283103,
+      "collections_mean_early": 31.085,
+      "collections_mean_late": 9.265,
+      "sampled_over_global": 0.797549,
+      "gw_na": 103,
+      "sqs_na": 55,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.976431,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.538581,
+            "se": 0.025632,
+            "n": 20
+          },
+          "male_sampled_area": 1.044523,
+          "male_global": 1.24922
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.209147,
+            "se": 0.032822,
+            "n": 20
+          },
+          "male_sampled_area": 0.661582,
+          "male_global": 0.848222
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.23923,
+            "se": 0.025327,
+            "n": 20
+          },
+          "male_sampled_area": 0.718348,
+          "male_global": 0.922675
+        },
+        "sqs": {
+          "bias": {
+            "mean": 0.001403,
+            "se": 0.019889,
+            "n": 20
+          },
+          "male_sampled_area": 1.644771,
+          "male_global": 1.813209
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.072042,
+            "se": 0.03216,
+            "n": 20
+          },
+          "male_sampled_area": 1.617691,
+          "male_global": 1.79869
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": -0.106546,
+            "se": 0.037849,
+            "n": 19
+          },
+          "male_sampled_area": 0.427716,
+          "male_global": 0.58276
+        }
+      }
+    },
+    "loguni10": {
+      "observed_over_global": 0.491363,
+      "collections_mean_early": 80.77,
+      "collections_mean_late": 23.235,
+      "sampled_over_global": 0.886036,
+      "gw_na": 2,
+      "sqs_na": 0,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.972362,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.410368,
+            "se": 0.017564,
+            "n": 20
+          },
+          "male_sampled_area": 0.563521,
+          "male_global": 0.717165
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.241018,
+            "se": 0.014,
+            "n": 20
+          },
+          "male_sampled_area": 0.318177,
+          "male_global": 0.435002
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.260041,
+            "se": 0.013993,
+            "n": 20
+          },
+          "male_sampled_area": 0.381473,
+          "male_global": 0.499254
+        },
+        "sqs": {
+          "bias": {
+            "mean": 0.001014,
+            "se": 0.018865,
+            "n": 20
+          },
+          "male_sampled_area": 1.458011,
+          "male_global": 1.573588
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": -0.006898,
+            "se": 0.02001,
+            "n": 20
+          },
+          "male_sampled_area": 1.458437,
+          "male_global": 1.575043
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": -0.110063,
+            "se": 0.019035,
+            "n": 20
+          },
+          "male_sampled_area": 0.138644,
+          "male_global": 0.235123
+        }
+      }
+    },
+    "loguni4": {
+      "observed_over_global": 0.349353,
+      "collections_mean_early": 31.81,
+      "collections_mean_late": 9.735,
+      "sampled_over_global": 0.79919,
+      "gw_na": 87,
+      "sqs_na": 67,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.948882,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.54683,
+            "se": 0.023118,
+            "n": 20
+          },
+          "male_sampled_area": 0.843328,
+          "male_global": 1.046617
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.273137,
+            "se": 0.021368,
+            "n": 20
+          },
+          "male_sampled_area": 0.431799,
+          "male_global": 0.639286
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.284309,
+            "se": 0.017646,
+            "n": 20
+          },
+          "male_sampled_area": 0.498945,
+          "male_global": 0.705629
+        },
+        "sqs": {
+          "bias": {
+            "mean": -0.000455,
+            "se": 0.024753,
+            "n": 20
+          },
+          "male_sampled_area": 1.411211,
+          "male_global": 1.591436
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.0277,
+            "se": 0.016306,
+            "n": 20
+          },
+          "male_sampled_area": 1.382752,
+          "male_global": 1.579519
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": -0.098141,
+            "se": 0.03398,
+            "n": 20
+          },
+          "male_sampled_area": 0.19503,
+          "male_global": 0.336095
+        }
+      }
+    },
+    "pareto10": {
+      "observed_over_global": 0.505586,
+      "collections_mean_early": 74.505,
+      "collections_mean_late": 22.34,
+      "sampled_over_global": 0.884902,
+      "gw_na": 9,
+      "sqs_na": 19,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.524297,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.474667,
+            "se": 0.028349,
+            "n": 20
+          },
+          "male_sampled_area": 0.563812,
+          "male_global": 0.695159
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.184496,
+            "se": 0.019,
+            "n": 20
+          },
+          "male_sampled_area": 0.20015,
+          "male_global": 0.332717
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.234615,
+            "se": 0.020242,
+            "n": 20
+          },
+          "male_sampled_area": 0.206011,
+          "male_global": 0.351479
+        },
+        "sqs": {
+          "bias": {
+            "mean": 0.083537,
+            "se": 0.022776,
+            "n": 20
+          },
+          "male_sampled_area": 1.258077,
+          "male_global": 1.36905
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": 0.051822,
+            "se": 0.025778,
+            "n": 20
+          },
+          "male_sampled_area": 1.246287,
+          "male_global": 1.355799
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": 0.036308,
+            "se": 0.046788,
+            "n": 20
+          },
+          "male_sampled_area": 0.18487,
+          "male_global": 0.146604
+        }
+      }
+    },
+    "pareto4": {
+      "observed_over_global": 0.333213,
+      "collections_mean_early": 30.73,
+      "collections_mean_late": 9.13,
+      "sampled_over_global": 0.796575,
+      "gw_na": 97,
+      "sqs_na": 136,
+      "bins": 400,
+      "gw_closer_than_chao2": 0.607261,
+      "estimators": {
+        "raw": {
+          "bias": {
+            "mean": -0.70664,
+            "se": 0.041471,
+            "n": 20
+          },
+          "male_sampled_area": 0.919495,
+          "male_global": 1.150934
+        },
+        "chao2_divdyn": {
+          "bias": {
+            "mean": -0.269162,
+            "se": 0.033233,
+            "n": 20
+          },
+          "male_sampled_area": 0.312532,
+          "male_global": 0.528501
+        },
+        "squares_divdyn": {
+          "bias": {
+            "mean": -0.363604,
+            "se": 0.032959,
+            "n": 20
+          },
+          "male_sampled_area": 0.353322,
+          "male_global": 0.603591
+        },
+        "sqs": {
+          "bias": {
+            "mean": -0.124593,
+            "se": 0.047817,
+            "n": 17
+          },
+          "male_sampled_area": 1.22039,
+          "male_global": 1.374644
+        },
+        "inext_cov": {
+          "bias": {
+            "mean": -0.00543,
+            "se": 0.031871,
+            "n": 20
+          },
+          "male_sampled_area": 1.18665,
+          "male_global": 1.39956
+        },
+        "gw_ml_inc": {
+          "bias": {
+            "mean": -0.472586,
+            "se": 0.053467,
+            "n": 20
+          },
+          "male_sampled_area": 0.214915,
+          "male_global": 0.269768
+        }
+      }
+    }
+  }
+}

@@ -328,7 +328,9 @@ missed its quorum; A3, DeepDive scored against its own label definition;
 A4, DeepDive's prior-window strata and a per-dataset arm; A5, after an
 independent review, a collection-size scenario, an evenness dose–response
 and Alroy's geometric Weibull (his CEGS model; that it is the 2026 paper's
-geometric Weibull is our inference), each declared before it ran. Results in
+geometric Weibull is our inference); A6, after a second review, a null
+control, quorum 0.8 and an abundance-family robustness arm. Each was
+declared before it ran. Results in
 `results/t4/`.
 
 The generator is independent of every estimator: paleobuddy birth–death
@@ -390,32 +392,42 @@ M).
   richness by 3–10%. It failed to fit 4 of the 400 bins of scenario S
   (all with 14 or fewer collections), which were dropped from its means;
   keeping the truth to the same bins changes the bias by 0.001.
-- **Its advantage is specific to this generator in size, though not yet in
-  sign.** An exploratory probe by the reviewer (8 replicates per
-  condition; not a declared test) kept the ranking against Chao2 under
-  gamma, log-uniform and Pareto abundances and heterogeneous collection
-  sizes, but not the magnitudes: under log-series-like abundances it
-  underestimated sampled-area richness by a third, and under Pareto
-  abundances at low effort its trend bias reached −0.40. With about 9
-  collections per bin it failed to fit a fifth to a third of bins.
+- **Its ranking held across abundance families; its size did not (A6, 20
+  replicates per condition).** Under scenario S's effort fall with gamma
+  (log-series-like), log-uniform or Pareto abundances, or variable
+  collection sizes, at about 77 or 30 collections per bin early, it had a
+  lower median error against sampled-area richness than Chao2 in all ten
+  conditions, but by margins from a near tie (Pareto: 0.19 against 0.20)
+  to large (log-uniform: 0.14 against 0.32), and under gamma abundances
+  both were poor (0.40–0.43 against 0.58–0.66). Its trend bias stayed
+  within −0.11 to +0.06 except for Pareto abundances at low effort
+  (−0.47, worse than Chao2's −0.27). With about 9 collections per bin late
+  it failed to fit 22–31% of bins (`results/t4/t4_rob.json`).
 - **This is not a test of Alroy's (2026) method as published.** The input
   that worked, collections per species, is not the paper's; on pooled
   individual counts, the paper's kind of input, it overshot as evenness
   fell (+0.46 at σ 2). Which variant the paper used (`cegsML`, `cegsLD` or
   `cegsB`; we ran the first two) is not known.
+- **The bias statistic is calibrated.** K6, with nothing changing (late σ
+  left at 0.5): every estimator within 0.014 of zero, **pass**.
 - **Coverage standardisation corrected fewer collections fully and smaller
   collections mostly.** Fewer collections of the same size: SQS and iNEXT
   +0.03, within ±0.10 (SQS's +0.034 is 2.4 SE above zero). The same number
   of collections, each a third the size: −0.12 and −0.13, outside ±0.10 by
   about 1.5 SE (K5 fail), though still removing about 64% of the raw
-  artefact (raw −0.33).
+  artefact (raw −0.33). At q = 0.8 the collection-size bias fell to −0.07
+  and −0.08, inside ±0.10, but 71 low-effort bins of scenario S could not
+  reach the quorum and iNEXT extrapolated 59. Across the four abundance
+  families and variable collection sizes, both kept the fewer-collections
+  trend within about ±0.13, the property they are designed for, though SQS
+  failed in up to 36% of bins at low effort.
 - **Coverage standardisation responds to evenness by degrees, at the
   quorum tested.** At q = 0.6 (native coverage 0.85–0.97, so a strong
   rarefaction), as the late-half σ rose from the early 0.5 to 0.75, 1, 1.5
   and 2 with richness flat, SQS moved −0.07, −0.17, −0.41 and −0.70, and
-  iNEXT slightly more, worse than raw richness at every dose. The dose
-  series has no σ = 0.5 no-change control, and higher quorums were not
-  run. Alroy (2026; [LEADS](../LEADS.md) L-006) reaches the same
+  iNEXT slightly more, worse than raw richness at every dose. At q = 0.8
+  the response was smaller but of the same kind (SQS −0.05, −0.13, −0.32,
+  −0.58). Alroy (2026; [LEADS](../LEADS.md) L-006) reaches the same
   conclusion by other tests; this is consistent with it, not a
   replication.
 - **Chao2 and squares are biased by every change, by 0.4–0.64 of raw

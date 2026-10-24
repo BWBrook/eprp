@@ -90,23 +90,32 @@ and Chao2 −0.01, −0.04, −0.16, −0.31; Chao2's errors were 0.06–0.15
 against sampled-area and 0.14–0.31 against global richness. `cegsLD` gave
 the same picture where run (S, E, M).
 
-**Robustness (reviewer's exploratory probe, not a declared test; 8
-replicates per condition, scenario S's effort fall).** Lower absolute
-error than Chao2 in every condition (gamma, log-uniform, Pareto and
-lognormal abundances, heterogeneous collection sizes, about 75 or 31
-collections per bin early), but under log-series-like (gamma 0.25)
-abundances it underestimated sampled-area richness by a third (error
-0.39–0.41), trend bias ranged −0.11 to +0.06 at normal effort and reached
-−0.40 for Pareto abundances at low effort, and with about 9 collections
-per bin a fifth to a third of fits failed.
+**Robustness (amendment A6, declared; 20 replicates per condition,
+scenario S's effort fall).** Abundances from gamma(0.25), log-uniform or
+Pareto distributions, or lognormal with variable collection sizes, at
+about 77 or 30 collections per bin early (`bench/results/t4/t4_rob.json`):
+
+| Condition | Median abs. log error vs sampled-area: `cegsML`; Chao2 | `cegsML` closer than Chao2 | `cegsML` trend bias | Failed `cegsML` fits (of 400 bins) |
+| --- | --- | --- | --- | --- |
+| lognormal (S itself) | 0.064; 0.143 | 77% | +0.03 | 4 |
+| lognormal, low effort | 0.091; 0.211 | 69% | −0.05 | 112 |
+| variable collection sizes | 0.068; 0.142 | 72% | +0.06 | 12 |
+| variable sizes, low effort | 0.111; 0.239 | 66% | +0.04 | 124 |
+| gamma(0.25) | 0.403; 0.575 | 99% | −0.10 | 1 |
+| gamma, low effort | 0.428; 0.662 | 98% | −0.11 | 103 |
+| log-uniform | 0.139; 0.318 | 97% | −0.11 | 2 |
+| log-uniform, low effort | 0.195; 0.432 | 95% | −0.10 | 87 |
+| Pareto (α = 1) | 0.185; 0.200 | 52% | +0.04 | 9 |
+| Pareto, low effort | 0.215; 0.313 | 61% | **−0.47** | 97 |
 
 ## Strengths
 
 - Among estimators run in every scenario, the only one whose trend bias
   stayed within ±0.12; within the declared ±0.10 everywhere except the
   strongest evenness change (−0.118, SE 0.021).
-- The lowest absolute error against sampled-area richness (0.036–0.077),
-  closer than Chao2 in 49–80% of bins, and it tracked a 54%
+- The lowest absolute error against sampled-area richness on the main
+  scenarios (0.036–0.077, closer than Chao2 in 49–80% of bins), lower than
+  Chao2's in all ten robustness conditions, and it tracked a 54%
   mass-extinction drop to within 0.015 log units.
 - Fast enough for per-bin use: about 1.6 s per bin for `cegsML`, 13 s for
   `cegsLD` (`cegsB` not timed on these records).
@@ -127,8 +136,13 @@ per bin a fifth to a third of fits failed.
 - **Fits fail silently in thin bins.** `cegsML` returns NA when a sample
   has fewer than three distinct counts or the fit reaches its parameter
   bounds: 4 of the 400 bins of scenario S, all with 14 or fewer
-  collections, and a fifth to a third of bins at about 9 collections in
-  the reviewer's probe. `cegsLD` failed none in our run.
+  collections, and 22–31% of bins at about 9 collections (A6). `cegsLD`
+  failed none in our run.
+- **Accuracy depends on the abundance distribution.** Under
+  log-series-like (gamma 0.25) abundances it underestimated sampled-area
+  richness by about a third (median log ratio −0.40; Chao2 −0.58), under
+  Pareto abundances it overestimated it (+0.18, where Chao2 was −0.20),
+  and under Pareto abundances at low effort its trend bias was −0.47.
 - Occurrence frequencies are bounded by the number of collections and
   saturate for common species; using them as counts is a heuristic we have
   not validated beyond these records.

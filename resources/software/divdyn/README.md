@@ -131,8 +131,12 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
 - **SQS corrects fewer collections fully and smaller ones mostly**: +0.03
   when collections fell 70% in number; −0.12 (K5 fail, about 1.5 SE beyond
   ±0.10) when they kept their number and shrank to a third of their size,
-  still removing about 64% of raw richness's −0.33. The evenness results
-  are at q = 0.6 only.
+  still removing about 64% of raw richness's −0.33. At q = 0.8 (A6) the
+  collection-size bias was −0.07 and the strongest evenness bias −0.58,
+  but 71 low-effort bins of scenario S could not reach the quorum.
+- **At low effort `subsample(type = "sqs")` stops** with "cannot run with
+  less than 3 bins" when too few bins reach the quorum, rather than
+  returning NA; wrap it.
 - Licence metadata conflict: CRAN says CC BY 4.0, the repository GPL-3.0.
 - Rates are per bin; unequal bin durations need explicit handling.
 
