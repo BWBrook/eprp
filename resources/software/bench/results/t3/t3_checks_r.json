@@ -1,0 +1,72 @@
+{
+  "F1_pairs": {
+    "by_kind": {
+      "clean names": 1,
+      "injected format error": 10,
+      "injected misspelling": 26
+    },
+    "clean_pairs": [
+      {
+        "t1": "Zatrofosa",
+        "t2": "Zatrosafo"
+      }
+    ],
+    "missed": [
+      {
+        "misspelling": "Lentatrovi",
+        "source": "Lenlatrovi",
+        "jw_distance": 0.103704,
+        "same_family": true,
+        "_row": "Lenlatrovi"
+      },
+      {
+        "misspelling": "Fometmoru",
+        "source": "Fometroru",
+        "jw_distance": 0.115741,
+        "same_family": true,
+        "_row": "Fometroru"
+      },
+      {
+        "misspelling": "Rulszaza",
+        "source": "Rulazaza",
+        "jw_distance": 0.178571,
+        "same_family": true,
+        "_row": "Rulazaza"
+      },
+      {
+        "misspelling": "Danikyxo",
+        "source": "Dinikyxo",
+        "jw_distance": 0.130952,
+        "same_family": true,
+        "_row": "Dinikyxo"
+      }
+    ]
+  },
+  "bin_edges": {
+    "bins": [
+      {
+        "bin": 10,
+        "interval_name": "Stage 10",
+        "max_ma": 489.5,
+        "min_ma": 485.4
+      },
+      {
+        "bin": 11,
+        "interval_name": "Tremadocian",
+        "max_ma": 485.4,
+        "min_ma": 477.7
+      },
+      {
+        "bin": 12,
+        "interval_name": "Floian",
+        "max_ma": 477.7,
+        "min_ma": 470
+      }
+    ],
+    "results": {
+      "midpoint_on_boundary": ["NA", 11, 12, 11],
+      "zero_width_on_boundary": [null, "error: replacement has length zero", "error: invalid first argument", "12"],
+      "equal_overlap_tie": ["NA", 11, 12, 12]
+    }
+  }
+}

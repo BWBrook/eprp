@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.r3, image: "eprp-
 blockers: ["[Detail withheld pending disclosure to the data custodian.]"]
 related_sources: [pbdb, triton]
 eprp_questions: [Q-045, Q-040]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # chronosphere

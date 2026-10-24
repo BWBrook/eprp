@@ -1,0 +1,232 @@
+{
+  "frame_fit": {
+    "TorsvikCocks2017": {
+      "10": {
+        "n": 243,
+        "max_residual_deg": 6.284957143946363e-05,
+        "median_residual_deg": 3.6373162246995867e-05,
+        "rotation_deg": 3.1300005509194615,
+        "pole_lat_lng": [
+          1.413345824114983e-05,
+          56.77997624211306
+        ],
+        "median_offset_before_deg": 2.6924552046946313
+      },
+      "50": {
+        "n": 236,
+        "max_residual_deg": 6.406716531265783e-05,
+        "median_residual_deg": 3.790404458475269e-05,
+        "rotation_deg": 9.580000093279736,
+        "pole_lat_lng": [
+          1.9300167201373024,
+          -96.65999287715164
+        ],
+        "median_offset_before_deg": 7.624522231292133
+      },
+      "100": {
+        "n": 234,
+        "max_residual_deg": 6.593432470570785e-05,
+        "median_residual_deg": 3.655806207719302e-05,
+        "rotation_deg": 2.5100005738529423,
+        "pole_lat_lng": [
+          5.879985461535221,
+          -124.39013353224169
+        ],
+        "median_offset_before_deg": 2.2657760710247774
+      },
+      "200": {
+        "n": 218,
+        "max_residual_deg": 6.593432470570785e-05,
+        "median_residual_deg": 3.661758659491557e-05,
+        "rotation_deg": 21.99999702034143,
+        "pole_lat_lng": [
+          -5.3337229741802435e-06,
+          -169.00000389800354
+        ],
+        "median_offset_before_deg": 18.150565218462333
+      },
+      "300": {
+        "n": 212,
+        "max_residual_deg": 5.975195722641721e-05,
+        "median_residual_deg": 3.5919144301772984e-05,
+        "rotation_deg": 7.000001348333675,
+        "pole_lat_lng": [
+          -1.7591845246128018e-05,
+          -168.99997915401454
+        ],
+        "median_offset_before_deg": 6.1058545448906845
+      },
+      "400": {
+        "n": 172,
+        "max_residual_deg": 6.312730980485284e-05,
+        "median_residual_deg": 3.430532315301043e-05,
+        "rotation_deg": 28.000001164357393,
+        "pole_lat_lng": [
+          1.0719523614488208e-05,
+          -169.00000455780898
+        ],
+        "median_offset_before_deg": 24.373354720535048
+      }
+    },
+    "MERDITH2021": {
+      "10": {
+        "n": 298,
+        "max_residual_deg": 6.363907575752405e-05,
+        "median_residual_deg": 3.270631706053292e-05,
+        "rotation_deg": 4.182619578303747e-06,
+        "pole_lat_lng": [
+          60.6433072825938,
+          -84.51479803435265
+        ],
+        "median_offset_before_deg": 3.3157070325397e-05
+      },
+      "50": {
+        "n": 280,
+        "max_residual_deg": 6.444153174914191e-05,
+        "median_residual_deg": 3.35912339663964e-05,
+        "rotation_deg": 1.7075472925031877e-06,
+        "pole_lat_lng": [
+          18.56067997305026,
+          86.28912683064445
+        ],
+        "median_offset_before_deg": 3.360022703782515e-05
+      },
+      "100": {
+        "n": 269,
+        "max_residual_deg": 6.155465233512212e-05,
+        "median_residual_deg": 3.420426507979949e-05,
+        "rotation_deg": 5.399738656763834e-06,
+        "pole_lat_lng": [
+          -3.955868360396747,
+          33.53088165460609
+        ],
+        "median_offset_before_deg": 3.4141471952531286e-05
+      },
+      "200": {
+        "n": 261,
+        "max_residual_deg": 6.76854602136057e-05,
+        "median_residual_deg": 3.603086636370456e-05,
+        "rotation_deg": 3.818191820832846e-06,
+        "pole_lat_lng": [
+          36.00599180607667,
+          120.51325818952174
+        ],
+        "median_offset_before_deg": 3.69595696445709e-05
+      },
+      "300": {
+        "n": 249,
+        "max_residual_deg": 6.667638748963003e-05,
+        "median_residual_deg": 4.0326685686829574e-05,
+        "rotation_deg": 2.4148365394514667e-06,
+        "pole_lat_lng": [
+          33.57302143867414,
+          59.42941282540014
+        ],
+        "median_offset_before_deg": 4.039561248695814e-05
+      },
+      "400": {
+        "n": 218,
+        "max_residual_deg": 6.305798989762885e-05,
+        "median_residual_deg": 3.5304768967340174e-05,
+        "rotation_deg": 4.517745487845102e-06,
+        "pole_lat_lng": [
+          11.299772606114797,
+          115.53449851691481
+        ],
+        "median_offset_before_deg": 3.4418788096511304e-05
+      }
+    }
+  },
+  "spread_three_models": {
+    "all_reconstructable": {
+      "10": {
+        "n": 269,
+        "median_deg": 2.8852389999999986,
+        "q90_deg": 4.989919399999998
+      },
+      "50": {
+        "n": 260,
+        "median_deg": 5.65437,
+        "q90_deg": 6.977739500000001
+      },
+      "100": {
+        "n": 255,
+        "median_deg": 4.316856999999999,
+        "q90_deg": 7.5229338
+      },
+      "200": {
+        "n": 247,
+        "median_deg": 5.494681000000002,
+        "q90_deg": 14.4537828
+      },
+      "300": {
+        "n": 217,
+        "median_deg": 4.730341000000001,
+        "q90_deg": 12.655178199999998
+      },
+      "400": {
+        "n": 194,
+        "median_deg": 13.554269000000001,
+        "q90_deg": 19.461387799999997
+      }
+    },
+    "reconstructable_at_all_ages": {
+      "10": {
+        "n": 194,
+        "median_deg": 2.7814139999999963,
+        "q90_deg": 4.977816299999999
+      },
+      "50": {
+        "n": 194,
+        "median_deg": 5.692528499999998,
+        "q90_deg": 6.9970421
+      },
+      "100": {
+        "n": 194,
+        "median_deg": 4.502943999999999,
+        "q90_deg": 6.289729
+      },
+      "200": {
+        "n": 194,
+        "median_deg": 5.489888500000001,
+        "q90_deg": 11.046393400000005
+      },
+      "300": {
+        "n": 194,
+        "median_deg": 4.71097,
+        "q90_deg": 12.501646400000006
+      },
+      "400": {
+        "n": 194,
+        "median_deg": 13.554269000000001,
+        "q90_deg": 19.461387799999997
+      }
+    }
+  },
+  "torsvikcocks2017_layers": {
+    "StaticPolygons": [
+      [
+        "StaticPolygons/Torsvik_Cocks_2016_Terranes.gpmlz",
+        4856517
+      ]
+    ],
+    "Coastlines": [
+      [
+        "Coastlines/Torsvik_Cocks_2016_Terranes.gpmlz",
+        4856517
+      ]
+    ]
+  },
+  "unassigned_points_pygplates": {
+    "MERDITH2021": 0,
+    "PALEOMAP": 0,
+    "TorsvikCocks2017": 49,
+    "MATTHEWS2016_pmag_ref": 0
+  },
+  "grid_omissions": {
+    "MERDITH2021": 56,
+    "PALEOMAP": 40,
+    "TorsvikCocks2017": 401,
+    "MATTHEWS2016_pmag_ref": 56
+  }
+}

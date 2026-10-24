@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.r3, image: "eprp-
 blockers: ["flag_ranges compares differences with its thresholds as text, and measures LAD excesses from the reference FAD"]
 related_sources: [pbdb, classic-compendia]
 eprp_questions: [Q-040, Q-038, Q-042]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # fossilbrush
@@ -36,15 +36,18 @@ taxonomy (400 genera, 5,000 occurrences) with injected errors:
 
 | Test | Result |
 | --- | --- |
-| F1: `check_taxonomy` | conflicting families: recall 1.0 (30 of 30), no false flags; non-letter characters: 1.0 (10 of 10), none false; **misspellings: 0.87 (26 of 30), with 11 synonym pairs reported among clean names** (F1 fails on the declared 0.9) |
+| F1: `check_taxonomy` | conflicting families: recall 1.0 (30 of 30), no false flags; non-letter characters: 1.0 (10 of 10), none false; **misspellings: 0.87 (26 of 30)** (F1 fails on the declared 0.9). Of the 37 synonym pairs reported, 26 are the injected misspellings, 10 pair the injected format errors with their source names, and 1 pairs two clean names |
 | F2: `flag_ranges` with `flag.diff = 5`, 100 injected outliers 10–30 Myr beyond their taxon's range among 20,000 valid occurrences | **fail**: 24 of 100 flagged (none of the 50 older than the FAD; 24 of the 50 younger than the LAD); no false flags |
 
 ## Weaknesses and pitfalls
 
 - **`flag_ranges` compares as text.** Its `fad_diff` and `lad_diff` start
   as copies of the character status vector, so `fad_diff >= flag.diff` is a
-  string comparison: 18.72 is "less than" "5" and goes unflagged, 55.65 is
-  flagged. The text-comparison prediction matches all 100 injected flags.
+  string comparison. At `flag.diff = 5` a difference is flagged only if its
+  leading digit is 5–9 (5–9.99, 50–99.99, 500+); 18.72 or 119.73 go
+  unflagged. The text-comparison prediction matches all 100 injected flags.
+  The 24 of 100 reflects the injected 10–30 Myr shifts, chosen after a smoke
+  run had shown the bug; it is not an estimate for real data.
 - **`flag_ranges` measures occurrences beyond the LAD from the reference
   FAD** (`yr$max[mt] - v$min` in the "R00", "1R0" and "0R0" branches; the
   per-taxon summary correctly uses `yr$min[mt]`). The returned LAD
@@ -53,8 +56,11 @@ taxonomy (400 genera, 5,000 occurrences) with injected errors:
 - Reading the returned differences numerically (`as.numeric`) and
   comparing them yourself recovers all 100 outliers with no false flags,
   but the LAD values themselves are wrong.
-- Spell-checking misses some one-letter substitutions and pairs distinct
-  names; review its synonym list rather than applying it.
+- Spell-checking is limited by its threshold: the four missed one-letter
+  substitutions have Jaro–Winkler distances of 0.104–0.179, above the
+  default `jw = 0.1`, and it compares only names in the same family that
+  share a first letter. Tune `jw`, and review the synonym list rather than
+  applying it (`bench/results/t3/t3_checks_r.json`).
 - Queued for the authors as [CONTACTS](../CONTACTS.md) S10.
 
 ## Citation and licence

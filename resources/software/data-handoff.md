@@ -31,8 +31,11 @@ of 23 October.
 ## From tranche 3 (24 October 2026)
 
 - [Detail withheld pending disclosure to the data custodian.]
-- **The Plate Model Manager's `torsvikcocks2017` does not reproduce the
-  GPlates Web Service's TorsvikCocks2017** (2–22° of palaeolatitude by age),
-  while the Web Service and the Jones & Domeier grids agree. MERDITH2021,
-  PALEOMAP and MATTHEWS2016_pmag_ref from the `palaeogeography` mirror agree
-  with the Web Service to 0.0001° ([palaeoverse](palaeoverse/README.md)).
+- **The Plate Model Manager's `torsvikcocks2017` is in a different absolute
+  frame from the GPlates Web Service's TorsvikCocks2017**: one rigid rotation
+  per age (3.1° at 10 Ma to 28.0° at 400 Ma) with identical relative plate
+  motions; the Web Service and the Jones & Domeier grids agree. Its mirrored
+  `StaticPolygons` layer is the terrane file (byte-identical to Coastlines),
+  so 49 of 300 points get no plate. MERDITH2021, PALEOMAP and
+  MATTHEWS2016_pmag_ref from the `palaeogeography` mirror agree with the Web
+  Service to 0.0001° ([palaeoverse](palaeoverse/README.md)).
