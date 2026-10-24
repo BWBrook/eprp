@@ -1,23 +1,28 @@
-"""File lists and provider checksums for deposits on Harvard Dataverse, OSF and Mendeley Data.
+"""File lists and provider checksums for deposits on Harvard Dataverse, OSF, Mendeley Data and ANU Data Commons.
 
 Usage:
-  python3 other_repos.py specs dataverse|osf|mendeley ID SPECS_OUT EXPECTED_OUT
+  python3 other_repos.py specs dataverse|osf|mendeley|anu ID SPECS_OUT EXPECTED_OUT
   python3 other_repos.py check VERSION_DIR EXPECTED_TSV
 
 `specs` writes NAME::URL lines for `data_mirror.py url --specs-file` and a TSV of
 the provider's size and checksum per file, and prints the deposit's title,
 version and licence. IDs: a Dataverse DOI (doi:10.7910/DVN/...), an OSF
-project (5 characters), a Mendeley dataset with its version (ID/VERSION).
-Dataverse serves ingested tables as .tab; the original upload is requested, as
-that is what its MD5 describes. `check` re-hashes the mirrored files against
-the TSV (md5 or sha256, as the provider gives) and exits 1 on any mismatch.
+project (5 characters), a Mendeley dataset with its version (ID/VERSION), an
+ANU Data Commons record (anudc:NNNN). Dataverse serves ingested tables as .tab;
+the original upload is requested, as that is what its MD5 describes. ANU's
+file tree is read from its HTML listing (MD5 per file; folders flattened into
+the name with "__"). `check` re-hashes the mirrored files against the TSV (md5
+or sha256, as the provider gives) and exits 1 on any mismatch or missing file.
 Standard library only; no contact details are sent.
 """
 
 import hashlib
+import html
 import json
 import os
+import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 
@@ -73,11 +78,46 @@ def mendeley(spec):
     return meta["name"], f"v{ver} ({(meta.get('publish_date') or '')[:10]})", licence, rows
 
 
+def anu(pid):
+    base = f"https://datacommons.anu.edu.au/DataCommons/rest/records/{pid}/data/"
+    rows = []
+
+    def walk(rel):
+        with urllib.request.urlopen(urllib.request.Request(base + rel, headers=UA), timeout=120) as r:
+            page = r.read().decode("utf-8", "replace")
+        for block in re.split(r'<tr id="filerow-\d+"', page)[1:]:
+            href = html.unescape(re.search(r'<td class="col-filename">\s*<a[^>]*href="([^"]+)"', block).group(1))
+            if href.endswith("/"):
+                time.sleep(0.5)
+                walk(rel + href)
+                continue
+            md5 = re.search(r"<th>MD5</th>\s*<td>([0-9a-f]{32})</td>", block)
+            if md5 is None:
+                raise SystemExit(f"{rel}{href}: no MD5 listed")
+            name = urllib.parse.unquote(rel + href).replace("/", "__")
+            rows.append((name, base + urllib.parse.quote(rel + href, safe="/"), "", "md5", md5.group(1)))
+
+    walk("")
+    with urllib.request.urlopen(urllib.request.Request(f"https://datacommons.anu.edu.au/DataCommons/rest/display/{pid}", headers=UA), timeout=120) as r:
+        page = r.read().decode("utf-8", "replace")
+    fields = [f.strip() for f in html.unescape(re.sub(r"<[^>]+>", "|", page)).split("|") if f.strip()]
+
+    def field(name):
+        return fields[fields.index(name) + 1] if name in fields else "not stated"
+
+    title = re.search(r"<title>(.*?)</title>", page, re.S).group(1).strip()
+    return html.unescape(title), f"access: {field('Access Rights')}", field("Licence Type"), rows
+
+
 def check(vdir, expected):
     bad = 0
     for line in open(expected, encoding="utf-8").read().splitlines()[1:]:
         name, size, algo, value = line.split("\t")
         path = os.path.join(vdir, name)
+        if not os.path.exists(path):
+            bad += 1
+            print("BAD " + name + " (missing)")
+            continue
         h = hashlib.new(algo)
         with open(path, "rb") as f:
             for b in iter(lambda: f.read(1 << 20), b""):
@@ -94,7 +134,7 @@ if __name__ == "__main__":
         check(sys.argv[2], sys.argv[3])
     else:
         provider, ident, specs_out, expected_out = sys.argv[2:6]
-        title, version, licence, rows = {"dataverse": dataverse, "osf": osf, "mendeley": mendeley}[provider](ident)
+        title, version, licence, rows = {"dataverse": dataverse, "osf": osf, "mendeley": mendeley, "anu": anu}[provider](ident)
         names = [r[0] for r in rows]
         if len(set(names)) != len(names) or any("/" in n for n in names):
             raise SystemExit("file names repeat or contain '/'")

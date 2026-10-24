@@ -7,10 +7,13 @@
 #   figshare  Figshare articles
 #   pangaea   PANGAEA datasets as tab-delimited text (the IODP U1313 series of the Q-050 crosswalk)
 #   index     version indexes only, for the Zenodo and Dryad records over 5 GB (fetch on demand)
-#   other     Mendeley Data and OSF deposits, as plain-URL snapshots checked against the providers'
-#             sha256 (other_repos.py); the Harvard Dataverse record over 5 GB as a file list only
-#   github    code repositories cited with their data (Rozzi et al. 2023), newest commit
+#   other     Mendeley Data, OSF and ANU Data Commons deposits, as plain-URL snapshots checked
+#             against the providers' sha256 or MD5 (other_repos.py); each run takes a new dated
+#             snapshot. The Harvard Dataverse record over 5 GB as a file list only
+#   github    code repositories cited with their data (Rozzi et al. 2023; Tennant et al. 2018's
+#             OSF-linked repository), newest commit
 #   cran      paleotree, the CRAN package carrying Aze et al. 2011's Appendix S5 tables
+#             (CRAN's PACKAGES file gives the tarball's MD5)
 set -uo pipefail
 cd /data/paleodata
 M="python3 _tools/data_mirror.py"
@@ -150,12 +153,15 @@ while read -r prov id slug; do
   $M url "register-deposits/$slug" --specs-file "$TMP/$slug.specs" --pause 1 --license "$lic" || { echo "$id FAILED"; continue; }
   v=$(ls -d register-deposits/$slug/raw/*_url | tail -1)
   cp "$TMP/$slug.expected" "register-deposits/$slug/provider-checksums-$(basename "$v").tsv"
-  $O check "$v" "$TMP/$slug.expected" | tail -1
+  if $O check "$v" "$TMP/$slug.expected" > "$TMP/$slug.check"; then tail -1 "$TMP/$slug.check"
+  else grep -v '^ok ' "$TMP/$slug.check"; echo "$id FAILED the provider checksums"; fi
 done <<'EOF'
 osf 2cdqg senel2023-chicxulub-dust
 osf nuhqx tennant2018-dinosaur-research-history
 mendeley g2g74cj4x7/2 gougeon2024-chapel-island-ichnology
+mendeley g2g74cj4x7/1 gougeon2024-chapel-island-ichnology-v1
 mendeley r2h822zzxp/1 sara2026-mussel-disturbance
+anu anudc:5981 aze2011-anu-datapacks
 EOF
 # Harvard Dataverse, 26.6 GB of CT volumes and video: the provider's file list only
 mkdir -p register-deposits/howman2024-armandia-burrows
@@ -165,6 +171,8 @@ fi
 
 if want github; then
 $M github RobRozzi/Island_mammals register-deposits/rozzi2023-island-mammals-code --latest || echo "rozzi github FAILED"
+# the GitHub storage linked from Tennant et al.'s OSF project (not in its osfstorage)
+$M github Protohedgehog/SQS register-deposits/tennant2018-sqs-code --latest || echo "tennant github FAILED"
 fi
 
 if want cran; then

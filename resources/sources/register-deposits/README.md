@@ -3,7 +3,7 @@ id: register-deposits
 name: Deposits named by the EPRP question registers and notes — Dryad, Zenodo, Figshare, PANGAEA, Mendeley Data, OSF, Dataverse, GitHub and CRAN (global deep time)
 kind: deposit
 status: active
-last_update: "2026-08-25 (newest deposit, Stigall et al. 2026)"
+last_update: "2026-10-16 (newest deposit, cGENIE.muffin v0.9.78)"
 scope:
   taxa: ["marine invertebrates (molluscs, brachiopods, bryozoans, ostracods, foraminifera, graptoloids, ammonoids)", "terrestrial tetrapods and mammals", "birds (island extinctions)", "Ediacaran biota", "plants and vegetation models", "alien species (modern bridge)"]
   time: "Proterozoic to Recent"
@@ -11,34 +11,35 @@ scope:
   record_unit: "varies: a PBDB occurrence download, a genus capture history, a specimen measurement, a trait table, a time series, a phylogeny, Earth-system model code and outputs"
 size:
   as_of: "2026-10-24"
-  deposits: 88
-  mirrored: 82
+  deposits: 91
+  mirrored: 85
   indexed_only: 6
-  mirrored_versions: 84
-  files_listed: 1331
-  files_on_disk: 1329
-  mirrored_bytes: 17703394263
+  mirrored_versions: 87
+  files_listed: 1344
+  files_on_disk: 1342
+  mirrored_bytes: 17807011893
 access:
   tier: open
-  licence: "mixed, per deposit (snapshots.tsv, newest versions): CC0 (27 Dryad, 1 Figshare, paleotree on CRAN); CC BY 4.0 (27 Zenodo, 8 Figshare, 2 OSF, 2 Mendeley Data); CC BY-SA 4.0 (1); MIT (5); AGPL-3 (1, recorded by Zenodo as 'apgl-v3'); 'other-open' (5 Zenodo software records); CC BY 3.0 (PANGAEA); none stated (Rozzi et al.'s GitHub code); the indexed-only records CC0 (2 Dryad, 1 Dataverse), CC BY 4.0 (2) and Apache 2.0 (1)"
+  licence: "mixed, per deposit (snapshots.tsv, newest versions): CC0 (27 Dryad, 1 Figshare, Tennant et al.'s GitHub code; paleotree's package licence, the Aze tables' own terms not stated); CC BY 4.0 (27 Zenodo, 8 Figshare, 2 OSF, 3 Mendeley Data snapshots); CC BY (ANU Data Commons); CC BY-SA 4.0 (1); MIT (5); AGPL-3 (1, recorded by Zenodo as 'apgl-v3'); 'other-open' (5 Zenodo software records); CC BY 3.0 (PANGAEA); none stated (Rozzi et al.'s GitHub code); the indexed-only records CC0 (2 Dryad, 1 Dataverse), CC BY 4.0 (2) and Apache 2.0 (1)"
   routes:
     - {type: dryad, url: "https://datadryad.org/api/v2/datasets/", state: "index open; downloads with the Dryad API account on deep-server; 27 deposits mirrored, 2 over 5 GB indexed only", checked: 2026-10-23}
     - {type: zenodo, url: "https://zenodo.org/api/records/", state: "open; 39 records mirrored (two of them at two versions), 3 over 5 GB indexed only", checked: 2026-10-23}
-    - {type: figshare, url: "https://api.figshare.com/v2/articles/", state: "open; 6 articles, one on the Smithsonian portal (10.25573)", checked: 2026-10-23}
+    - {type: figshare, url: "https://api.figshare.com/v2/articles/", state: "open; 9 articles, one on the Smithsonian portal (10.25573)", checked: 2026-10-23}
     - {type: pangaea, url: "https://doi.pangaea.de/10.1594/PANGAEA.736778", state: "five IODP U1313 datasets as tab-delimited text", checked: 2026-10-23}
-    - {type: osf, url: "https://api.osf.io/v2/nodes/", state: "open; 2 projects, plain-URL snapshots checked against OSF's sha256", checked: 2026-10-24}
-    - {type: mendeley-data, url: "https://data.mendeley.com/public-api/datasets/", state: "open; 2 datasets, plain-URL snapshots checked against Mendeley's sha256", checked: 2026-10-24}
+    - {type: osf, url: "https://api.osf.io/v2/nodes/", state: "open; 2 projects, plain-URL snapshots checked against OSF's sha256; one project's linked GitHub storage mirrored from GitHub", checked: 2026-10-24}
+    - {type: mendeley-data, url: "https://data.mendeley.com/public-api/datasets/", state: "open; 2 datasets (one at two versions), plain-URL snapshots checked against Mendeley's sha256", checked: 2026-10-24}
     - {type: dataverse, url: "https://dataverse.harvard.edu/api/datasets/", state: "open; 1 dataset of 26.6 GB, file list only", checked: 2026-10-24}
-    - {type: github, url: "https://github.com/RobRozzi/Island_mammals", state: "Rozzi et al.'s code and results, newest commit", checked: 2026-10-24}
-    - {type: cran, url: "https://cran.r-project.org/package=paleotree", state: "paleotree 3.4.7 source, carrying Aze et al. 2011's Appendix S5 tables", checked: 2026-10-24}
+    - {type: anu-data-commons, url: "https://doi.org/10.25911/5db66faba683b", state: "open access, CC BY; Aze et al. 2011 corrected datapacks, plain-URL snapshot checked against ANU's MD5", checked: 2026-10-24}
+    - {type: github, url: "https://github.com/RobRozzi/Island_mammals", state: "Rozzi et al.'s code and results, and Tennant et al.'s Protohedgehog/SQS, newest commits", checked: 2026-10-24}
+    - {type: cran, url: "https://cran.r-project.org/package=paleotree", state: "paleotree 3.4.7 source, carrying Aze et al. 2011's Appendix S5 tables; checked against CRAN's MD5", checked: 2026-10-24}
   api: "Dryad API v2, Zenodo REST, Figshare v2, PANGAEA, OSF v2, Mendeley Data public API, Dataverse native API, GitHub (data_mirror.py dryad, zenodo, figshare, github, url; other_repos.py for the OSF, Mendeley and Dataverse file lists)"
 versioning:
   replay: exact
-  notes: "each deposit is a fixed provider version; dryad-versions.tsv (38 versions), zenodo-versions.tsv (161) and figshare-versions.tsv (8) index every version. The newest version of each is mirrored, by the provider's own version order, except Monarrez et al.'s Dryad v10, kept because its files are identical to v11's and the main checkout's copies match it. cgenie.muffin and muffingen are also mirrored at the January 2023 releases the transfer-inputs note names. OSF has no deposit versions and Mendeley Data's are numbered; their copies, and the paleotree tarball, are dated plain-URL snapshots, each with the provider's checksums beside it (provider-checksums-<snapshot>.tsv)"
+  notes: "each deposit is a fixed provider version; dryad-versions.tsv (38 versions), zenodo-versions.tsv (161) and figshare-versions.tsv (11) index every version. The newest version of each is mirrored, by the provider's own version order, except Monarrez et al.'s Dryad v10, kept because its files are identical to v11's and the main checkout's copies match it. cgenie.muffin and muffingen are also mirrored at the January 2023 releases the transfer-inputs note names. OSF has no deposit versions and Mendeley Data's are numbered; their copies, and the paleotree tarball, are dated plain-URL snapshots, each with the provider's checksums beside it (provider-checksums-<snapshot>.tsv)"
 mirror:
   path: deep-server:/data/paleodata/register-deposits
-  policy: "newest version of every open deposit the registers, ideation notes, literature notes, proposals and data READMEs cite, and the data of papers they cite without naming a deposit, except those another entry holds; records over 5 GB indexed only"
-  state: "82 deposits at 84 versions, 1,329 files on disk (17.7 GB), each with a manifest; provider checksums verified on download (PANGAEA and the CRAN tarball: sha256 recorded only), and every deposit re-verified on 23 or 24 October"
+  policy: "newest version of every open deposit the registers, ideation notes, literature notes, proposals and data READMEs cite, and the data of papers they cite without a deposit identifier, except those another entry holds; records over 5 GB indexed only"
+  state: "85 deposits at 87 versions, 1,342 files on disk (17.8 GB), each with a manifest; provider checksums verified on download (PANGAEA: sha256 recorded only), and every deposit re-verified on 23 or 24 October"
 lineage:
   upstream:
     - "supporting data and code of papers 2015-2026"
@@ -47,7 +48,7 @@ lineage:
     - "EPRP questions Q-001, Q-002, Q-005, Q-011, Q-012, Q-022, Q-027, Q-031, Q-032, Q-033, Q-034, Q-036, Q-038, Q-044, Q-050 and B-002 (registers); B-009, B-012, B-014, B-016 (14 October ideation notes); Q-008, Q-009, Q-010, Q-020, Q-021, Q-029, B-001, B-003 (literature notes; inferred from the notes' topics); candidate C3 (23 October notes); Q-012 (Aze et al. 2011) and Q-034 (Rozzi et al. 2023) through their papers; Q-045 (data vintage, inferred); the 20-21 October proposals and consultations"
 eprp_questions: [Q-001, Q-002, Q-005, Q-008, Q-009, Q-010, Q-011, Q-012, Q-020, Q-021, Q-022, Q-027, Q-029, Q-031, Q-032, Q-033, Q-034, Q-036, Q-038, Q-044, Q-045, Q-050, B-001, B-002, B-003, B-009, B-012, B-014, B-016]
 citation:
-  - "each deposit's DOI (snapshots.tsv) and its paper (below)"
+  - "each deposit's DOI or source URL (snapshots.tsv) and its paper (below)"
 entry:
   created: 2026-10-23
   updated: 2026-10-23
@@ -67,17 +68,18 @@ Other entries hold five of them: Triton, the PhanDA priors, Song et al.
 2021, CENOGRID and Farrell et al.'s time-scale supplement. PaleoDEM waits
 for the palaeogeography entry. This entry holds the other 80, on Dryad,
 Zenodo, Figshare, PANGAEA, Mendeley Data, OSF and Harvard Dataverse. It
-also holds three Zenodo code records that its Dryad deposits link to, and
-the data of two papers the registers cite without naming a deposit: Rozzi
-et al. 2023 (three Figshare articles and a GitHub repository) and Aze et
-al. 2011 (Appendix S5, through the CRAN package paleotree). That makes 88
+also holds three Zenodo code records that its Dryad deposits link to; the
+data of two papers the registers cite without an identifier, Rozzi et al.
+2023 (three Figshare articles and a GitHub repository) and Aze et al. 2011
+(Appendix S5 through the CRAN package paleotree, and ANU's corrected
+datapacks); the GitHub code Tennant et al.'s OSF project links; and the
+version of Gougeon et al.'s dataset their paper cites. That makes 91
 deposits.
 
-Of these, 82 are mirrored at their newest versions (two also at an older
+Of these, 85 are mirrored at their newest versions (two also at an older
 release a note names). The providers' checksums were verified for every
-deposit except the PANGAEA tables and the CRAN tarball, whose sha256 was
-recorded on download. Six records over 5 GB are indexed only. Between them
-they hold:
+deposit except the PANGAEA tables, whose sha256 was recorded on download.
+Six records over 5 GB are indexed only. Between them they hold:
 
 - [Detail withheld pending disclosure to the data custodian.]
 - **Trait, body-size and functional tables.** Inputs to Q-031, Q-034, Q-036,
@@ -230,26 +232,29 @@ PBDB downloads above.
 
 ### Mendeley Data and OSF
 
-Plain-URL snapshots, each checked file by file against the provider's sha256
-([other_repos.py](other_repos.py)); the provider's list sits beside each
-snapshot as `provider-checksums-<snapshot>.tsv`.
+Plain-URL snapshots, each checked file by file against the provider's
+checksums ([other_repos.py](other_repos.py)); the provider's list sits beside
+each snapshot as `provider-checksums-<snapshot>.tsv`.
 
 | Deposit (directory) | Cited in | Content | Size |
 | --- | --- | --- | ---: |
 | Senel et al. 2023, Chicxulub impact winter and fine silicate dust (`senel2023-chicxulub-dust`, OSF 2CDQG) | recruitment proposal | figure source data: Tanis K–Pg grain sizes (Excel) and model output for the main and extended-data figures (MATLAB and zips) | 65.6 MB |
 | Tennant et al. 2018, dinosaur diversity through research history (`tennant2018-dinosaur-research-history`, OSF nuhqx) | Q-045 (data-vintage note, 11 October) | [Detail withheld pending disclosure to the data custodian.] | 12.8 MB |
+| Tennant et al. 2018: the project's linked GitHub storage (`tennant2018-sqs-code`, GitHub Protohedgehog/SQS at 2018-04-30) | Q-045 | SQS and bootstrap R scripts, a Perl script, time bins (CC0); not in the OSF storage, so the OSF snapshot lacks it | 0.03 MB |
 | Gougeon et al. 2025, Chapel Island Formation ichnology and sedimentology (`gougeon2024-chapel-island-ichnology`, Mendeley v2) | Ediacaran consultation | two PDF data logs (44.7 and 8.8 MB) | 53.5 MB |
+| Gougeon et al. 2025: the version the paper cites (`gougeon2024-chapel-island-ichnology-v1`, Mendeley v1, 2023-12-19) | Ediacaran consultation | the same two logs at v1 (44.4 and 8.5 MB; both differ from v2) | 52.8 MB |
 | Sarà 2026, mussel disturbance and energy budgets (`sara2026-mussel-disturbance`, Mendeley v1) | recruitment proposal | dynamic energy budget scenario results (37,801 rows), hourly temperature and food forcing for four sites over four years (35,040 rows each), code | 10.6 MB |
 
-### Papers the registers cite without naming a deposit
+### Papers the registers cite without a deposit identifier
 
 | Deposit (directory) | Cited in | Content | Size |
 | --- | --- | --- | ---: |
 | Rozzi et al. 2023, island dwarfism, gigantism and extinction: data (`rozzi2023-island-mammals-data`, Figshare 19686396) | Q-034 (nearest prior) | 12 tables: 7,867 fossil occurrences of insular mammals from the literature (no PBDB numbers), extant and fossil species and populations with island and mainland body masses, human arrival dates and island classes | 3.0 MB |
 | Rozzi et al. 2023: trees (`rozzi2023-island-mammals-trees`, Figshare 19686423) | Q-034 | 100 complete trees (TACT) and 100 DNA-only trees | 32.8 MB |
-| Rozzi et al. 2023: PyRate inputs (`rozzi2023-island-mammals-pyrate`, Figshare 19779709) | Q-034 | Late Pleistocene to Holocene occurrence inputs for the extinction-rate analyses | 8.3 MB |
-| Rozzi et al. 2023: code and results (`rozzi2023-island-mammals-code`, GitHub RobRozzi/Island_mammals at 2023-03-08) | Q-034 | R scripts, model tables, PyRate logs and rate tables (one per tree), figures; no licence stated | 218.9 MB |
-| Aze et al. 2011, Cenozoic macroperforate planktonic foraminiferal phylogeny (`aze2011-paleotree-cran`, paleotree 3.4.7) | Q-012 | Appendix S5 as carried by paleotree (CC0): morphospecies (339 rows) and lineage (210 rows) trees with ancestors and first and last appearances, and their fully bifurcating forms (677 and 369 rows); written to CSV in `derived/` by [aze_paleotree_tables.R](aze_paleotree_tables.R) | 1.0 MB |
+| Rozzi et al. 2023: PyRate inputs (`rozzi2023-island-mammals-pyrate`, Figshare 19779709) | Q-034 | Miocene-to-Holocene occurrence inputs for the extinction-rate analyses, at three time resolutions | 8.3 MB |
+| Rozzi et al. 2023: code and results (`rozzi2023-island-mammals-code`, GitHub RobRozzi/Island_mammals at 2023-03-08) | Q-034 | 706 files: R scripts, model tables, PyRate logs and rate tables, figures, and 506 TACT trees; no licence stated | 218.9 MB |
+| Aze et al. 2011, Cenozoic macroperforate planktonic foraminiferal phylogeny (`aze2011-paleotree-cran`, paleotree 3.4.7) | Q-012 | Appendix S5 as paleotree carries it (package licence CC0; the tables' own terms are not stated): morphospecies (339 rows) and lineage (210 rows) trees with ancestors and first and last appearances, and their fully bifurcating forms (677 and 369 rows); written to CSV in `derived/` by [aze_paleotree_tables.R](aze_paleotree_tables.R) | 1.0 MB |
+| Aze et al. 2011: corrected tree, July 2018 (`aze2011-anu-datapacks`, ANU Data Commons anudc:5981) | Q-012 | four TimeScale Creator datapacks of the integrated species–phenon tree (by ecogroup and morphogroup, with and without labels) and their settings file (open access, CC BY) | 48.3 MB |
 
 ### PANGAEA: IODP Site U1313 (Q-050)
 
@@ -309,12 +314,12 @@ TimeScale Creator datapacks, an Access database, zips, tar.gz archives and a
 7z archive. The profile lists every
 file and, for tables, rows, columns, headers and numeric columns. Zip members
 are inventoried; macOS resource-fork entries are skipped and counted;
-tar.gz and 7z archives are not opened. The committed profile is compacted by
-[compact_profile.py](compact_profile.py): zips of more than 250 members are
-summarised by extension, and the rows for Benson et al.'s bundled R package
-library (890 rows) are dropped, leaving 16,510 rows (2.8 MB). The full
-profile (1,762,569 rows, 450 MB, most of them the 791,281 files of Xiong and
-Mallet's simulation zip) is in the mirror at
+tar.gz, RAR and 7z archives are not opened. The committed profile is
+compacted by [compact_profile.py](compact_profile.py): zips of more than 250
+members are summarised by extension, and the rows for Benson et al.'s bundled
+R package library (890 rows) are dropped, leaving 19,305 rows (3.1 MB). The
+full profile (1,765,364 rows, 450 MB, most of them the 791,281 files of Xiong
+and Mallet's simulation zip) is in the mirror at
 `derived/2026-10-23/register_deposits_profile_full.tsv`.
 
 ## Access
@@ -340,9 +345,10 @@ Mallet's simulation zip) is in the mirror at
 - **The six indexed-only records** (233 GB together): fetch the Zenodo and
   Dryad ones on demand with `data_mirror.py zenodo RECORD DEST --latest` or
   `data_mirror.py dryad DOI DEST --latest`. For Howman et al.'s Dataverse
-  record, `other_repos.py specs dataverse doi:10.7910/DVN/3DU1VW` writes the
-  file list for `data_mirror.py url --specs-file`, and `other_repos.py check`
-  verifies the result against the provider's MD5s.
+  record, `other_repos.py specs dataverse doi:10.7910/DVN/3DU1VW SPECS
+  EXPECTED` writes the file list for `data_mirror.py url --specs-file SPECS`,
+  and `other_repos.py check VERSION_DIR EXPECTED` verifies the result against
+  the provider's MD5s.
 - **Main checkout copies.** Barry's hand-supplied files for Close, Benson,
   Monarrez and Brombacher and the Walton and Korn workbook are identical, file
   by file, to the mirror (sha256). The main checkout also holds
@@ -394,16 +400,22 @@ Mallet's simulation zip) is in the mirror at
   paper that Crossref finds.
 - **Not every cited deposit is here.** Five are in other entries (above),
   and PaleoDEM (Zenodo 5348492) belongs to the palaeogeography entry.
-- **Aze et al. 2011 comes second-hand.** Wiley refuses scripted requests for
-  the supplement (HTTP 403, 24 October), so Appendix S5 is held as paleotree
-  carries it, a transcription made for testing tree functions. ANU Data
-  Commons holds a corrected (July 2018) version of the tree as TimeScale
-  Creator datapacks (doi:10.25911/5db66faba683b), with no public download
-  link. Q-012's prior check names Lamyman et al. 2026, above, as the tree to
-  use in place of Aze et al.
+- **Aze et al. 2011 comes second-hand.** Wiley returned HTTP 403 to scripted
+  requests for the supplement (24 October; its page asks for cookies), so
+  Appendix S5 is held as paleotree carries it: the supplement's sheets
+  converted to text and included "primarily for testing" tree functions. ANU
+  Data Commons holds the corrected tree of July 2018 as TimeScale Creator
+  datapacks (doi:10.25911/5db66faba683b), mirrored here; a later ANU record
+  (anudc:6178, nine datapacks on GTS2020) is not. Q-012's prior check names
+  Lamyman et al. 2026, above, as the tree to use in place of Aze et al.
+- **Gougeon et al.'s paper cites version 1.** Crossref links the paper to
+  Mendeley v1; both PDFs differ between v1 and v2, so both are held.
 - **RAR archives need a different tool.** Tennant et al.'s raw data are
   RAR, which the profiler and the check do not open, and deep-server's 7z
   lacks the RAR codec; libarchive (through Python's libarchive-c) reads them.
+- **An OSF project can link storage outside OSF.** Tennant et al.'s project
+  links a GitHub repository, which OSF's file API does not list; it is
+  mirrored separately.
 - **Rozzi et al.'s code states no licence**; it is held privately under
   Barry's approval of 23 October, like any unlicensed source.
 
@@ -522,7 +534,8 @@ v0.9.35 was archived for it). cGENIE.muffin, muffingen and the Liu, Penn and
 Deutsch figure data are cited by their Zenodo DOIs (snapshots.tsv).
 
 Mendeley Data, OSF and Dataverse (cite the deposit DOI too: 10.17605/OSF.IO/2CDQG,
-OSF nuhqx, 10.17632/g2g74cj4x7.2, 10.17632/r2h822zzxp.1,
+10.17605/OSF.IO/NUHQX with github.com/Protohedgehog/SQS, 10.17632/g2g74cj4x7.1
+(the version the paper cites) or .2, 10.17632/r2h822zzxp.1,
 10.7910/DVN/3DU1VW): Senel et al. 2023 (Nat. Geosci.,
 doi:10.1038/s41561-023-01290-4); Tennant et al. 2018 (PeerJ,
 doi:10.7717/peerj.4417); Gougeon et al. 2025 (Data Brief,
@@ -530,11 +543,12 @@ doi:10.1016/j.dib.2024.111258; online 2024); Sarà 2026 (Mar. Environ. Res.,
 doi:10.1016/j.marenvres.2026.108411); Howman et al. 2024 (Sci. Data,
 doi:10.1038/s41597-024-03557-w).
 
-Papers cited without a named deposit: Rozzi et al. 2023 (Science,
+Papers cited without a deposit identifier: Rozzi et al. 2023 (Science,
 doi:10.1126/science.add8606; data 10.6084/m9.figshare.19686396,
 19686423 and 19779709; code github.com/RobRozzi/Island_mammals); Aze et al.
 2011 (Biol. Rev., doi:10.1111/j.1469-185X.2011.00178.x), as carried by
-paleotree (Bapst 2012, Methods Ecol. Evol., doi:10.1111/j.2041-210X.2012.00223.x).
+paleotree (Bapst 2012, Methods Ecol. Evol., doi:10.1111/j.2041-210X.2012.00223.x),
+and the corrected datapacks at ANU Data Commons (doi:10.25911/5db66faba683b).
 
 PANGAEA (CC BY 3.0): Naafs et al. 2010 (Earth Planet. Sci. Lett.,
 doi:10.1016/j.epsl.2010.08.023; PANGAEA.736778); Bolton et al. 2010
@@ -602,3 +616,14 @@ PANGAEA.892803 and 892804).
   notes, checked on Crossref; Rozzi et al.'s Figshare articles found by a
   Figshare search (author Roberto Rozzi, descriptions pointing to the
   paper's GitHub repository).
+- 2026-10-24, reviewed by an independent Claude Sonnet subagent (commit
+  992a847). Its findings are applied above: ANU's Aze datapacks are open
+  and are now mirrored (checked against ANU's MD5s); the Rozzi PyRate
+  inputs' span; stale counts; the paleotree licence and provenance wording;
+  "absent from PBDB" for Tennant et al., with their rows added to the
+  committed check output; Tennant et al.'s OSF DOI and linked GitHub code
+  (now mirrored); Gougeon et al.'s cited v1 (now mirrored); the paleotree
+  tarball checked against CRAN's MD5; the snapshot script now prints
+  checksum failures, `other_repos.py check` reports missing files, the
+  profiler and the check read dotfiles (14 in Rozzi et al.'s repository),
+  and snapshots.tsv gives the source URL for plain-URL snapshots.
