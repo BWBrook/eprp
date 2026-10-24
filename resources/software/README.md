@@ -50,10 +50,6 @@ describing the data twice.
 | --- | --- | --- |
 | [FossilSim](fossilsim/README.md) | T2 | Poisson fossil sampling; morphospecies counts; with TreeSim, birth–death histories |
 | [paleobuddy](paleobuddy/README.md) | T2 | constant and piecewise birth–death; Poisson fossil sampling |
-
-All five were reviewed independently on 24 October 2026 (Claude Sonnet
-subagent) and its findings applied. The two generators stay at T2: their
-cross-check had little power, so T3 waits for a larger comparison.
 | [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling |
 | [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation (biased, no undercoverage detected); q failed |
 | [RevBayes](revbayes/README.md) | T1 | none: FBD range process disabled in releases |
@@ -68,7 +64,11 @@ cross-check had little power, so T3 waits for a larger comparison.
 | [fossilbrush](fossilbrush/README.md) | T2 | `check_taxonomy` conflicts and formatting; `flag_ranges` failed |
 | [chronosphere](chronosphere/README.md) | T1 | [Detail withheld pending disclosure to the data custodian.] |
 
-Tranche 1's harness and results: [bench/](bench/README.md).
+Every entry was reviewed independently (Claude Sonnet subagent, one review
+per tranche) and the findings applied. The two generators stay at T2: their
+cross-check had little power, so T3 waits for a larger comparison.
+
+The harness and results of every tranche: [bench/](bench/README.md).
 
 ## Tiers
 

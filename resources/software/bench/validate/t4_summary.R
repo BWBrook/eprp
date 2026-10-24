@@ -21,7 +21,8 @@ summ <- function(v) list(mean = mean(v), sd = sd(v), se = sd(v) / sqrt(length(v)
 
 half_bias <- function(d, e) per_rep(d, function(x) lr(x[[e]], 1:10, 11:20) - lr(x$global, 1:10, 11:20))
 drop_m <- function(d, e) per_rep(d, function(x) lr(x[[e]], 9:10, 11:12))
-spear <- function(d, e) per_rep(d, function(x) suppressWarnings(cor(x[[e]], x$global, method = "spearman", use = "complete.obs")))
+spear <- function(d, e) per_rep(d, function(x) if (all(is.na(x[[e]]))) NA_real_ else
+  suppressWarnings(cor(x[[e]], x$global, method = "spearman", use = "complete.obs")))
 male <- function(d, e, truth) median(abs(log(d[[e]] / d[[truth]])), na.rm = TRUE)
 
 all_bins <- do.call(rbind, D)

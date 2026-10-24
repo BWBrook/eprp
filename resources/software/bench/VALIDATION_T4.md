@@ -126,3 +126,20 @@ inspected for format only and never compared with the truth. It found:
    of the core count).
 5. The generator's truth table gains an `extant` column (species alive at
    0 Ma). No random draw changes.
+
+## Amendment A2 (24 October 2026, after the R estimators ran, before DeepDive finished)
+
+1. **K2 for SQS is undefined as declared, and is recorded as not met.** In
+   replicate 10 of scenario S, bins 17 and 19 have 4 and 7 collections
+   (Good's u 0.16 and 0.54). SQS cannot reach q = 0.6 there and divDyn
+   returns NA (`useFailed = FALSE`), so the mean over bins 11–20 does not
+   exist. The pilot's four replicates did not show such bins: the per-area
+   weights and empty area–bins can leave a bin almost unsampled.
+2. Post hoc, reported but not graded ([validate/t4_posthoc.R](validate/t4_posthoc.R)),
+   for SQS and the iNEXT coverage estimate alike: (a) the K2 bias over the
+   19 replicates in which every bin reaches the quorum; (b) the bias over
+   all 20, with each half's mean taken over the bins that reach the quorum;
+   (c) for iNEXT, which extrapolates rather than failing, how far each
+   extrapolation runs beyond the observed collections (t/T), since Chao et
+   al. (2014) advise against extrapolating beyond about twice the
+   reference sample.
