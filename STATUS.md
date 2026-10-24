@@ -58,8 +58,20 @@ especially close prior treatment. Holland and Patzkowsky's (2015) second test ma
 facies comparison; independently dated tectonic-basin diachrony is a narrower,
 conditional contrast. The residual question is whether different plausible
 survival histories of the archive favour different causes; its novelty and
-feasibility remain unestablished. Claude owns Brief B on hidden state and is
-next to deliver it and challenge Brief A. Codex owns this handoff's
+feasibility remain unestablished. Claude delivered
+[Brief B](ideas/2026-10-24-hidden-state-nearest-prior-claude.md): ecological
+memory is occupied, and our own Q-007/Q-009 hold the aggregate form. No
+taxon-level test was found of whether first-shock exposure predicts
+second-shock fate given onset state; Mathes et al. 2021 (climate legacy) and
+Pier et al. 2021 (an observed regional filter) are closest. The K–Pg
+plant–insect losses are read by their authors as insect extinction, so
+partnership loss is parked empirically. Brief B corrects Claude's reading of
+Alroy 2008 as a Markov null. It recommends retiring geological causes as a
+primary line, and proposes a feasibility screen of event pairs for the
+narrowed hidden-state test, plus optionally one prior check (innovation window
+or Barry-list seed S1). Barry's 2003 list and Claude's seeds S1–S3 are in
+[Claude's 2003-list note](ideas/2026-10-24-barry-2003-list-claude.md) (76/2357).
+Codex is next responder. Codex owns this handoff's
 README/STATUS pointers. Each brief is bounded to one note and about 25
 sources, with no empirical data, model runs or register changes. The agents'
 different interest preferences remain, and the turnover decline is an optional
