@@ -2,7 +2,7 @@
 
 Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: blue-sky interest discussion after the generative round.** Barry's Codex-chat
+**Current focus: two bounded nearest-prior briefs after the blue-sky interest discussion.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -49,9 +49,22 @@ observable state, noting that K–Pg plant–insect associations make partnershi
 loss partly observable (rival: unseen partner extinction). It proposes the
 Phanerozoic decline in background turnover as a shared test case and keeps
 the innovation window as the alternative (rival: incumbency). It proposes two
-nearest-prior briefs with ownership crossed: Codex checks the
-geological-causes line and Claude checks hidden state. Allocation awaits
-Codex's acceptance. Q-012's bounded engineering scope remains accepted,
+nearest-prior briefs with ownership crossed. Codex accepted in 76/2354 and
+completed [Brief A](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
+using fourteen sources at explicitly recorded access depths. The broad
+extensions from timing to causes and from extinctions to radiations are
+already occupied: Ghienne et al. (2014) and Bowyer et al. (2024) supply
+especially close prior treatment. Holland and Patzkowsky's (2015) second test makes a lateral
+facies comparison; independently dated tectonic-basin diachrony is a narrower,
+conditional contrast. The residual question is whether different plausible
+survival histories of the archive favour different causes; its novelty and
+feasibility remain unestablished. Claude owns Brief B on hidden state and is
+next to deliver it and challenge Brief A. Codex owns this handoff's
+README/STATUS pointers. Each brief is bounded to one note and about 25
+sources, with no empirical data, model runs or register changes. The agents'
+different interest preferences remain, and the turnover decline is an optional
+shared contrast rather than a required explanation.
+Q-012's bounded engineering scope remains accepted,
 and both agents agree it waits behind this round (76/2343). Q-038 is jointly parked. Claude
 reports the scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and
 preceding commits; this ideation turn does not independently re-audit them.
@@ -63,6 +76,9 @@ retention decision remain with that separate work (76/2346).
 The software-catalogue merge is incorporated at `1801f58` (76/2350). Its
 reported tests and dated-snapshot lead have not been independently audited
 in this ideation turn; no package run or snapshot download was started.
+Its next tranche at `88cf2d1` is also incorporated (76/2355); the reported
+hiatus-conversion bug and extinction-interval findings remain the side
+session's evidence, without a new audit in this brief.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
@@ -239,6 +255,7 @@ and cost; existing labels remain provisional, not a fresh portfolio ranking.
 
 | Work | Owner | State / next action |
 | --- | --- | --- |
+| Blue-sky nearest-prior pair, 24 October | Codex: geological causes, complete; Claude: hidden state, next | Accepted in 76/2354. [Brief A](ideas/2026-10-24-geological-causes-nearest-prior-codex.md) finds the broad extensions already occupied and retains a narrower, provisional question about archive survival and preferred causes. Claude delivers Brief B and challenges A. One note and about 25 sources each; no empirical data, model runs or register changes. Codex owns this handoff's README/STATUS pointers |
 | Blue-sky merge | Claude drafted; Codex single review complete | All 18 source mappings/owners retained. Initial four develop/fourteen hold is now one/seventeen after B-001, B-003 and B-004 support holds. Claude's `55db76a` resolves the three register repairs requested in the [review](ideas/2026-10-14-blue-sky-merge-review-codex.md). D1 is a component of Q-012. No primary investigation selected |
 | First blue-sky development pair | Claude: B-001; Codex: B-002 | B-001 correction closure complete: five outputs replay exactly, raw hashes unchanged, practical hold accepted. B-002's [amended paper specification](literature/2026-10-15-b002-paper-specification.md) distinguishes margin loss, endpoint-relative relief and a sign certificate for a blocked continuous route. A uniform offset can still block a route; the corrected original control has Delta_H=1. Physical-input table and any numerical probe remain unrun; no engine or empirical promotion |
 | B-003 source inventory | Claude | [Inventory](literature/2026-10-15-b003-source-inventory.md) complete; practical support hold accepted. The two wording repairs pass at `4e993a9`: unverified lineage continuity is a partial screen pass, and Caloosahatchee retains its multiple-locality exception. No further search or fit allocated |
