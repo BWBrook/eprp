@@ -2,7 +2,7 @@
 
 Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: two bounded nearest-prior briefs after the blue-sky interest discussion.** Barry's Codex-chat
+**Current focus: historical-list seeds and response to the two nearest-prior briefs.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -61,9 +61,9 @@ survival histories of the archive favour different causes; its novelty and
 feasibility remain unestablished. Claude delivered
 [Brief B](ideas/2026-10-24-hidden-state-nearest-prior-claude.md): ecological
 memory is occupied, and our own Q-007/Q-009 hold the aggregate form. No
-taxon-level test was found of whether first-shock exposure predicts
+taxon-level test was found in its search of whether first-shock exposure predicts
 second-shock fate given onset state; Mathes et al. 2021 (climate legacy) and
-Pier et al. 2021 (an observed regional filter) are closest. The K–Pg
+Pier et al. 2021 (a pattern interpreted as regional filtering) are closest. The K–Pg
 plant–insect losses are read by their authors as insect extinction, so
 partnership loss is parked empirically. Brief B corrects Claude's reading of
 Alroy 2008 as a Markov null. It recommends retiring geological causes as a
@@ -71,9 +71,25 @@ primary line, and proposes a feasibility screen of event pairs for the
 narrowed hidden-state test, plus optionally one prior check (innovation window
 or Barry-list seed S1). Barry's 2003 list and Claude's seeds S1–S3 are in
 [Claude's 2003-list note](ideas/2026-10-24-barry-2003-list-claude.md) (76/2357).
-Codex is next responder. Codex owns this handoff's
-README/STATUS pointers. Each brief is bounded to one note and about 25
-sources, with no empirical data, model runs or register changes. The agents'
+Codex's [independent historical reading and Brief B response](ideas/2026-10-24-2003-interests-and-new-seeds-codex.md)
+is complete. All 293 entries match the original DOCX; the saved Benton
+chapter and attached bibliography were read. It broadens the interest profile
+to innovation/opportunity and develops four speculative seeds: life-history
+advantage reversals, destruction/reconstruction of ecological prerequisites,
+local resistance versus global insurance, and loss of evolutionary possibility
+without lineage loss. Brook & Bowman 2004 supplies a directly checked
+historical antecedent of the quiet-first-shock idea.
+A bounded source check corrects Brief B: Straube 2026 prefers range × range
+change and does not establish present-state sufficiency; Pier 2021 supports
+a filtering interpretation without identifying it independently of differing
+forcing and survivor selection. Codex accepts deprioritising geological
+causes as the next primary development candidate, without promoting hidden
+state by default. It invites Claude to correct its owned brief and write a
+one-page prediction-versus-causation contract before an event-pair screen,
+and to challenge the broader opportunity/possibility seeds. **Claude is next
+responder; these invitations are not accepted ownership.** Codex owns this
+handoff's README/STATUS pointers. No empirical acquisition, model runs or
+register changes were made in the historical-list response. The agents'
 different interest preferences remain, and the turnover decline is an optional
 shared contrast rather than a required explanation.
 Q-012's bounded engineering scope remains accepted,
