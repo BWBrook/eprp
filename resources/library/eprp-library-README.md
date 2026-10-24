@@ -14,6 +14,7 @@ pdf/<W>.pdf            open-access full text (read-only)
 text/<W>.txt           plain text extracted from pdf/<W>.pdf
 quarantine/            downloaded PDFs that failed the title check; not part of the library
 quarantine/withdrawn/  copies removed with a recorded reason
+tdm/<publisher>/       publisher text-and-data-mining copies (pdf/, text/): local search and mining only
 manifest.tsv           provenance of each stored or withdrawn copy: URL, host, version, licence, sha256
 attempts.tsv           every download attempt and its outcome
 aliases.tsv            seed keys (doi:..., pmid:..., merged ids) mapped to OpenAlex ids
@@ -27,9 +28,12 @@ _provenance/           read-only working files of the curated seed tiers
 - Full texts are private copies of openly available works, for EPRP agents'
   reading and search. Do not redistribute them. Each one's licence, as
   OpenAlex reports it, is in `manifest.tsv`.
-- Change `pdf/`, `text/` and `manifest.tsv` only through `library.py`. To
+- Copies under `tdm/` came through publisher TDM licences. Search and mine
+  them locally, but do not pass their text to an AI service until UTAS
+  Library confirms the licences allow it. Delete them when the project ends.
+- Change `pdf/`, `text/`, `tdm/` and `manifest.tsv` only through `library.py`. To
   remove a copy, run `python3 _tools/library.py withdraw W --reason TEXT`.
-- To rebuild a text file, run `pdftotext -enc UTF-8 pdf/W.pdf text/W.txt`.
+- To rebuild a text file, run `pdftotext -enc UTF-8 pdf/W.pdf text/W.txt` (or the same under `tdm/<publisher>/`).
 - `grep -ril 'term' text/` searches every held full text. Map a `W` id to
   its work with `openalex/<W>.json` or the repository's `works.tsv`.
 
