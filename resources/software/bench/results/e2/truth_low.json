@@ -1,0 +1,510 @@
+{
+  "meta": {
+    "date": "2026-10-23 12:13:34",
+    "arm": "low",
+    "n": 50,
+    "paleobuddy": "1.1.0"
+  },
+  "reps": {
+    "low_001": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40001,
+      "species_total": 47,
+      "species_sampled": 23,
+      "fossils": 45,
+      "extant_sampled": 7
+    },
+    "low_002": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40002,
+      "species_total": 79,
+      "species_sampled": 36,
+      "fossils": 68,
+      "extant_sampled": 15
+    },
+    "low_003": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40003,
+      "species_total": 73,
+      "species_sampled": 35,
+      "fossils": 56,
+      "extant_sampled": 12
+    },
+    "low_004": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40004,
+      "species_total": 64,
+      "species_sampled": 27,
+      "fossils": 48,
+      "extant_sampled": 5
+    },
+    "low_005": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40005,
+      "species_total": 111,
+      "species_sampled": 51,
+      "fossils": 83,
+      "extant_sampled": 22
+    },
+    "low_006": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40006,
+      "species_total": 51,
+      "species_sampled": 23,
+      "fossils": 45,
+      "extant_sampled": 5
+    },
+    "low_007": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40007,
+      "species_total": 60,
+      "species_sampled": 28,
+      "fossils": 56,
+      "extant_sampled": 13
+    },
+    "low_008": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40008,
+      "species_total": 136,
+      "species_sampled": 67,
+      "fossils": 113,
+      "extant_sampled": 20
+    },
+    "low_009": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40009,
+      "species_total": 59,
+      "species_sampled": 25,
+      "fossils": 47,
+      "extant_sampled": 3
+    },
+    "low_010": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40010,
+      "species_total": 80,
+      "species_sampled": 40,
+      "fossils": 79,
+      "extant_sampled": 14
+    },
+    "low_011": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40011,
+      "species_total": 146,
+      "species_sampled": 69,
+      "fossils": 126,
+      "extant_sampled": 28
+    },
+    "low_012": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40012,
+      "species_total": 77,
+      "species_sampled": 36,
+      "fossils": 74,
+      "extant_sampled": 15
+    },
+    "low_013": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40013,
+      "species_total": 85,
+      "species_sampled": 45,
+      "fossils": 88,
+      "extant_sampled": 14
+    },
+    "low_014": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40014,
+      "species_total": 52,
+      "species_sampled": 23,
+      "fossils": 45,
+      "extant_sampled": 4
+    },
+    "low_015": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40015,
+      "species_total": 112,
+      "species_sampled": 45,
+      "fossils": 76,
+      "extant_sampled": 13
+    },
+    "low_016": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40016,
+      "species_total": 62,
+      "species_sampled": 23,
+      "fossils": 41,
+      "extant_sampled": 13
+    },
+    "low_017": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40017,
+      "species_total": 51,
+      "species_sampled": 25,
+      "fossils": 53,
+      "extant_sampled": 8
+    },
+    "low_018": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40018,
+      "species_total": 55,
+      "species_sampled": 23,
+      "fossils": 49,
+      "extant_sampled": 7
+    },
+    "low_019": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40019,
+      "species_total": 91,
+      "species_sampled": 42,
+      "fossils": 71,
+      "extant_sampled": 15
+    },
+    "low_020": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40020,
+      "species_total": 36,
+      "species_sampled": 18,
+      "fossils": 24,
+      "extant_sampled": 7
+    },
+    "low_021": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40021,
+      "species_total": 43,
+      "species_sampled": 21,
+      "fossils": 37,
+      "extant_sampled": 9
+    },
+    "low_022": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40022,
+      "species_total": 69,
+      "species_sampled": 32,
+      "fossils": 50,
+      "extant_sampled": 7
+    },
+    "low_023": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40023,
+      "species_total": 40,
+      "species_sampled": 19,
+      "fossils": 29,
+      "extant_sampled": 4
+    },
+    "low_024": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40024,
+      "species_total": 32,
+      "species_sampled": 12,
+      "fossils": 22,
+      "extant_sampled": 5
+    },
+    "low_025": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40025,
+      "species_total": 41,
+      "species_sampled": 20,
+      "fossils": 37,
+      "extant_sampled": 7
+    },
+    "low_026": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40026,
+      "species_total": 54,
+      "species_sampled": 29,
+      "fossils": 44,
+      "extant_sampled": 16
+    },
+    "low_027": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40027,
+      "species_total": 41,
+      "species_sampled": 21,
+      "fossils": 39,
+      "extant_sampled": 7
+    },
+    "low_028": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40028,
+      "species_total": 42,
+      "species_sampled": 16,
+      "fossils": 24,
+      "extant_sampled": 6
+    },
+    "low_029": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40029,
+      "species_total": 113,
+      "species_sampled": 55,
+      "fossils": 102,
+      "extant_sampled": 16
+    },
+    "low_030": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40030,
+      "species_total": 32,
+      "species_sampled": 14,
+      "fossils": 22,
+      "extant_sampled": 3
+    },
+    "low_031": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40031,
+      "species_total": 147,
+      "species_sampled": 70,
+      "fossils": 99,
+      "extant_sampled": 30
+    },
+    "low_032": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40032,
+      "species_total": 68,
+      "species_sampled": 36,
+      "fossils": 63,
+      "extant_sampled": 10
+    },
+    "low_033": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40033,
+      "species_total": 62,
+      "species_sampled": 26,
+      "fossils": 52,
+      "extant_sampled": 9
+    },
+    "low_034": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40034,
+      "species_total": 52,
+      "species_sampled": 20,
+      "fossils": 35,
+      "extant_sampled": 10
+    },
+    "low_035": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40035,
+      "species_total": 38,
+      "species_sampled": 19,
+      "fossils": 33,
+      "extant_sampled": 5
+    },
+    "low_036": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40036,
+      "species_total": 62,
+      "species_sampled": 27,
+      "fossils": 48,
+      "extant_sampled": 10
+    },
+    "low_037": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40037,
+      "species_total": 66,
+      "species_sampled": 37,
+      "fossils": 63,
+      "extant_sampled": 17
+    },
+    "low_038": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40038,
+      "species_total": 54,
+      "species_sampled": 28,
+      "fossils": 52,
+      "extant_sampled": 9
+    },
+    "low_039": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40039,
+      "species_total": 53,
+      "species_sampled": 25,
+      "fossils": 44,
+      "extant_sampled": 5
+    },
+    "low_040": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40040,
+      "species_total": 62,
+      "species_sampled": 28,
+      "fossils": 52,
+      "extant_sampled": 8
+    },
+    "low_041": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40041,
+      "species_total": 108,
+      "species_sampled": 47,
+      "fossils": 95,
+      "extant_sampled": 18
+    },
+    "low_042": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40042,
+      "species_total": 48,
+      "species_sampled": 25,
+      "fossils": 46,
+      "extant_sampled": 12
+    },
+    "low_043": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40043,
+      "species_total": 35,
+      "species_sampled": 16,
+      "fossils": 30,
+      "extant_sampled": 6
+    },
+    "low_044": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40044,
+      "species_total": 60,
+      "species_sampled": 29,
+      "fossils": 47,
+      "extant_sampled": 8
+    },
+    "low_045": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40045,
+      "species_total": 116,
+      "species_sampled": 57,
+      "fossils": 118,
+      "extant_sampled": 21
+    },
+    "low_046": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40046,
+      "species_total": 43,
+      "species_sampled": 19,
+      "fossils": 28,
+      "extant_sampled": 4
+    },
+    "low_047": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40047,
+      "species_total": 91,
+      "species_sampled": 36,
+      "fossils": 71,
+      "extant_sampled": 15
+    },
+    "low_048": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40048,
+      "species_total": 81,
+      "species_sampled": 42,
+      "fossils": 65,
+      "extant_sampled": 19
+    },
+    "low_049": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40049,
+      "species_total": 122,
+      "species_sampled": 55,
+      "fossils": 85,
+      "extant_sampled": 20
+    },
+    "low_050": {
+      "lambda": 0.3,
+      "mu": 0.2,
+      "q": 0.25,
+      "seed": 40050,
+      "species_total": 30,
+      "species_sampled": 15,
+      "fossils": 28,
+      "extant_sampled": 9
+    }
+  }
+}

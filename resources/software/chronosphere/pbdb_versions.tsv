@@ -1,0 +1,1190 @@
+# https://github.com/chronosphere-info/chrono_arch_2/raw/main/users/public/master.csv
+# sha256 f48e3d438c81dcdcc562718fa20800add0b7921d9d9ba55c6b0a80b5dfe25425  retrieved 2026-10-23T10:44Z
+ser	seriesName	ver	productDate	licenseName	dataDOI	datafileName	dateAdded
+occs	Basic denormalized occurrence table	20191122	2019-11-22	CC BY 4.0	10.5281/zenodo.7808072	pbdb_occs.rds	2023-04-19
+occs	Basic denormalized occurrence table	20200217	2020-02-17	CC BY 4.0	10.5281/zenodo.7845041	pbdb_occs.rds	2023-04-19
+occs	Basic denormalized occurrence table	20200623	2020-06-23	CC BY 4.0	10.5281/zenodo.7845060	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200625	2020-06-25	CC BY 4.0	10.5281/zenodo.7845076	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200626	2020-06-26	CC BY 4.0	10.5281/zenodo.7845083	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200807	2020-08-07	CC BY 4.0	10.5281/zenodo.7845090	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200815	2020-08-15	CC BY 4.0	10.5281/zenodo.7845102	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200816	2020-08-16	CC BY 4.0	10.5281/zenodo.7845107	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200817	2020-08-17	CC BY 4.0	10.5281/zenodo.7845122	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200905	2020-09-05	CC BY 4.0	10.5281/zenodo.7845129	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200906	2020-09-06	CC BY 4.0	10.5281/zenodo.7845130	pbdb_occs.rds	2023-06-16
+occs	Basic denormalized occurrence table	20200907	2020-09-07	CC BY 4.0	10.5281/zenodo.7845139	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200909	2020-09-09	CC BY 4.0	10.5281/zenodo.7845143	pbdb_occs.rds	2023-05-03
+occs2	Basic denormalized occurrence table with references	20200910	2020-09-10	CC BY 4.0	10.5281/zenodo.7845144	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200911	2020-09-11	CC BY 4.0	10.5281/zenodo.7845149	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200913	2020-09-13	CC BY 4.0	10.5281/zenodo.7845150	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200914	2020-09-14	CC BY 4.0	10.5281/zenodo.7845155	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200915	2020-09-15	CC BY 4.0	10.5281/zenodo.7845158	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200916	2020-09-16	CC BY 4.0	10.5281/zenodo.7845164	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200917	2020-09-17	CC BY 4.0	10.5281/zenodo.7845172	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200918	2020-09-18	CC BY 4.0	10.5281/zenodo.7845179	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200920	2020-09-20	CC BY 4.0	10.5281/zenodo.7845180	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200921	2020-09-21	CC BY 4.0	10.5281/zenodo.7845185	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200922	2020-09-22	CC BY 4.0	10.5281/zenodo.7845190	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200923	2020-09-23	CC BY 4.0	10.5281/zenodo.7845199	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200924	2020-09-24	CC BY 4.0	10.5281/zenodo.7845202	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200925	2020-09-25	CC BY 4.0	10.5281/zenodo.7845207	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200926	2020-09-26	CC BY 4.0	10.5281/zenodo.7845215	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200927	2020-09-27	CC BY 4.0	10.5281/zenodo.7845218	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200928	2020-09-28	CC BY 4.0	10.5281/zenodo.7845222	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200929	2020-09-29	CC BY 4.0	10.5281/zenodo.7845228	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20200930	2020-09-30	CC BY 4.0	10.5281/zenodo.7845235	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201001	2020-10-01	CC BY 4.0	10.5281/zenodo.7845236	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201002	2020-10-02	CC BY 4.0	10.5281/zenodo.7845243	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201003	2020-10-03	CC BY 4.0	10.5281/zenodo.7845259	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201004	2020-10-04	CC BY 4.0	10.5281/zenodo.7845264	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201005	2020-10-05	CC BY 4.0	10.5281/zenodo.7845277	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201006	2020-10-06	CC BY 4.0	10.5281/zenodo.7845288	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201007	2020-10-07	CC BY 4.0	10.5281/zenodo.7845291	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201008	2020-10-08	CC BY 4.0	10.5281/zenodo.7845305	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201010	2020-10-10	CC BY 4.0	10.5281/zenodo.7845306	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201011	2020-10-11	CC BY 4.0	10.5281/zenodo.7845316	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201012	2020-10-12	CC BY 4.0	10.5281/zenodo.7845321	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201013	2020-10-13	CC BY 4.0	10.5281/zenodo.7845328	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201014	2020-10-14	CC BY 4.0	10.5281/zenodo.7845333	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201015	2020-10-15	CC BY 4.0	10.5281/zenodo.7845338	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201016	2020-10-16	CC BY 4.0	10.5281/zenodo.7845339	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201017	2020-10-17	CC BY 4.0	10.5281/zenodo.7845350	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201018	2020-10-18	CC BY 4.0	10.5281/zenodo.7845355	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201019	2020-10-19	CC BY 4.0	10.5281/zenodo.7845358	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201020	2020-10-20	CC BY 4.0	10.5281/zenodo.7845359	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201021	2020-10-21	CC BY 4.0	10.5281/zenodo.7845362	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201022	2020-10-22	CC BY 4.0	10.5281/zenodo.7845369	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201023	2020-10-23	CC BY 4.0	10.5281/zenodo.7845380	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201024	2020-10-24	CC BY 4.0	10.5281/zenodo.7845391	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201025	2020-10-25	CC BY 4.0	10.5281/zenodo.7845392	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201026	2020-10-26	CC BY 4.0	10.5281/zenodo.7845399	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201027	2020-10-27	CC BY 4.0	10.5281/zenodo.7845406	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201028	2020-10-28	CC BY 4.0	10.5281/zenodo.7845414	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201029	2020-10-29	CC BY 4.0	10.5281/zenodo.7845421	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201030	2020-10-30	CC BY 4.0	10.5281/zenodo.7845428	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201031	2020-10-31	CC BY 4.0	10.5281/zenodo.7845432	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201101	2020-11-01	CC BY 4.0	10.5281/zenodo.7845437	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201102	2020-11-02	CC BY 4.0	10.5281/zenodo.7845440	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201103	2020-11-03	CC BY 4.0	10.5281/zenodo.7845449	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201104	2020-11-04	CC BY 4.0	10.5281/zenodo.7845454	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201105	2020-11-05	CC BY 4.0	10.5281/zenodo.7845461	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201106	2020-11-06	CC BY 4.0	10.5281/zenodo.7845466	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201108	2020-11-08	CC BY 4.0	10.5281/zenodo.7845475	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201109	2020-11-09	CC BY 4.0	10.5281/zenodo.7845479	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201110	2020-11-10	CC BY 4.0	10.5281/zenodo.7845501	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201111	2020-11-11	CC BY 4.0	10.5281/zenodo.7845509	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201112	2020-11-12	CC BY 4.0	10.5281/zenodo.7845528	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201113	2020-11-13	CC BY 4.0	10.5281/zenodo.7845542	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201114	2020-11-14	CC BY 4.0	10.5281/zenodo.7845555	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201115	2020-11-15	CC BY 4.0	10.5281/zenodo.7845569	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201116	2020-11-16	CC BY 4.0	10.5281/zenodo.7845582	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201117	2020-11-17	CC BY 4.0	10.5281/zenodo.7845583	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201118	2020-11-18	CC BY 4.0	10.5281/zenodo.7845586	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201119	2020-11-19	CC BY 4.0	10.5281/zenodo.7845593	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201120	2020-11-20	CC BY 4.0	10.5281/zenodo.7845603	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201122	2020-11-22	CC BY 4.0	10.5281/zenodo.7845611	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201123	2020-11-23	CC BY 4.0	10.5281/zenodo.7845614	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201124	2020-11-24	CC BY 4.0	10.5281/zenodo.7845625	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201125	2020-11-25	CC BY 4.0	10.5281/zenodo.7845632	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201126	2020-11-26	CC BY 4.0	10.5281/zenodo.7845641	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201127	2020-11-27	CC BY 4.0	10.5281/zenodo.7845647	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201128	2020-11-28	CC BY 4.0	10.5281/zenodo.7845651	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201129	2020-11-29	CC BY 4.0	10.5281/zenodo.7845652	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201130	2020-11-30	CC BY 4.0	10.5281/zenodo.7845660	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201201	2020-12-01	CC BY 4.0	10.5281/zenodo.7845662	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201202	2020-12-02	CC BY 4.0	10.5281/zenodo.7845667	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201203	2020-12-03	CC BY 4.0	10.5281/zenodo.7845674	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201204	2020-12-04	CC BY 4.0	10.5281/zenodo.7845682	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201206	2020-12-06	CC BY 4.0	10.5281/zenodo.7845689	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201207	2020-12-07	CC BY 4.0	10.5281/zenodo.7845698	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201208	2020-12-08	CC BY 4.0	10.5281/zenodo.7845714	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201209	2020-12-09	CC BY 4.0	10.5281/zenodo.7845723	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201210	2020-12-10	CC BY 4.0	10.5281/zenodo.7845728	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201212	2020-12-12	CC BY 4.0	10.5281/zenodo.7845735	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201213	2020-12-13	CC BY 4.0	10.5281/zenodo.7845742	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201214	2020-12-14	CC BY 4.0	10.5281/zenodo.7845748	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201215	2020-12-15	CC BY 4.0	10.5281/zenodo.7845753	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201216	2020-12-16	CC BY 4.0	10.5281/zenodo.7845761	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201217	2020-12-17	CC BY 4.0	10.5281/zenodo.7845762	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201218	2020-12-18	CC BY 4.0	10.5281/zenodo.7845769	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201219	2020-12-19	CC BY 4.0	10.5281/zenodo.7845770	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201220	2020-12-20	CC BY 4.0	10.5281/zenodo.7845772	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201221	2020-12-21	CC BY 4.0	10.5281/zenodo.7845776	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201222	2020-12-22	CC BY 4.0	10.5281/zenodo.7845780	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201223	2020-12-23	CC BY 4.0	10.5281/zenodo.7845792	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201224	2020-12-24	CC BY 4.0	10.5281/zenodo.7845794	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201225	2020-12-25	CC BY 4.0	10.5281/zenodo.7845803	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201226	2020-12-26	CC BY 4.0	10.5281/zenodo.7845824	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201227	2020-12-27	CC BY 4.0	10.5281/zenodo.7845829	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201228	2020-12-28	CC BY 4.0	10.5281/zenodo.7845838	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201229	2020-12-29	CC BY 4.0	10.5281/zenodo.7845847	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201230	2020-12-30	CC BY 4.0	10.5281/zenodo.7845852	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20201231	2020-12-31	CC BY 4.0	10.5281/zenodo.7845861	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210101	2021-01-01	CC BY 4.0	10.5281/zenodo.7845868	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210102	2021-01-02	CC BY 4.0	10.5281/zenodo.7845878	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210103	2021-01-03	CC BY 4.0	10.5281/zenodo.7845889	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210104	2021-01-04	CC BY 4.0	10.5281/zenodo.7845900	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210105	2021-01-05	CC BY 4.0	10.5281/zenodo.7845906	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210106	2021-01-06	CC BY 4.0	10.5281/zenodo.7845919	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210107	2021-01-07	CC BY 4.0	10.5281/zenodo.7845929	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210108	2021-01-08	CC BY 4.0	10.5281/zenodo.7845942	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210109	2021-01-09	CC BY 4.0	10.5281/zenodo.7845947	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210110	2021-01-10	CC BY 4.0	10.5281/zenodo.7845966	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210111	2021-01-11	CC BY 4.0	10.5281/zenodo.7845974	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210112	2021-01-12	CC BY 4.0	10.5281/zenodo.7845985	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210113	2021-01-13	CC BY 4.0	10.5281/zenodo.7845993	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210114	2021-01-14	CC BY 4.0	10.5281/zenodo.7845996	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210115	2021-01-15	CC BY 4.0	10.5281/zenodo.7846001	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210116	2021-01-16	CC BY 4.0	10.5281/zenodo.7846020	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210117	2021-01-17	CC BY 4.0	10.5281/zenodo.7846048	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210118	2021-01-18	CC BY 4.0	10.5281/zenodo.7846054	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210120	2021-01-20	CC BY 4.0	10.5281/zenodo.7846062	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210121	2021-01-21	CC BY 4.0	10.5281/zenodo.7846069	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210122	2021-01-22	CC BY 4.0	10.5281/zenodo.7846078	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210123	2021-01-23	CC BY 4.0	10.5281/zenodo.7846091	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210124	2021-01-24	CC BY 4.0	10.5281/zenodo.7846092	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210125	2021-01-25	CC BY 4.0	10.5281/zenodo.7846097	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210126	2021-01-26	CC BY 4.0	10.5281/zenodo.7846102	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210127	2021-01-27	CC BY 4.0	10.5281/zenodo.7846108	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210128	2021-01-28	CC BY 4.0	10.5281/zenodo.7846113	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210130	2021-01-30	CC BY 4.0	10.5281/zenodo.7846117	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210131	2021-01-31	CC BY 4.0	10.5281/zenodo.7846120	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210201	2021-02-01	CC BY 4.0	10.5281/zenodo.7846139	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210202	2021-02-02	CC BY 4.0	10.5281/zenodo.7846143	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210204	2021-02-04	CC BY 4.0	10.5281/zenodo.7846154	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210205	2021-02-05	CC BY 4.0	10.5281/zenodo.7846163	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210207	2021-02-07	CC BY 4.0	10.5281/zenodo.7846171	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210208	2021-02-08	CC BY 4.0	10.5281/zenodo.7846186	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210209	2021-02-09	CC BY 4.0	10.5281/zenodo.7846189	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210210	2021-02-10	CC BY 4.0	10.5281/zenodo.7846197	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210211	2021-02-11	CC BY 4.0	10.5281/zenodo.7846201	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210212	2021-02-12	CC BY 4.0	10.5281/zenodo.7846219	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210214	2021-02-14	CC BY 4.0	10.5281/zenodo.7846222	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210215	2021-02-15	CC BY 4.0	10.5281/zenodo.7846227	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210216	2021-02-16	CC BY 4.0	10.5281/zenodo.7846235	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210217	2021-02-17	CC BY 4.0	10.5281/zenodo.7846250	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210218	2021-02-18	CC BY 4.0	10.5281/zenodo.7846254	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210219	2021-02-19	CC BY 4.0	10.5281/zenodo.7846268	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210221	2021-02-21	CC BY 4.0	10.5281/zenodo.7846275	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210222	2021-02-22	CC BY 4.0	10.5281/zenodo.7846284	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210223	2021-02-23	CC BY 4.0	10.5281/zenodo.7846291	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210224	2021-02-24	CC BY 4.0	10.5281/zenodo.7846304	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210225	2021-02-25	CC BY 4.0	10.5281/zenodo.7846305	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210226	2021-02-26	CC BY 4.0	10.5281/zenodo.7846317	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210228	2021-02-28	CC BY 4.0	10.5281/zenodo.7846328	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210301	2021-03-01	CC BY 4.0	10.5281/zenodo.7846341	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210302	2021-03-02	CC BY 4.0	10.5281/zenodo.7846350	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210303	2021-03-03	CC BY 4.0	10.5281/zenodo.7846357	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210304	2021-03-04	CC BY 4.0	10.5281/zenodo.7846375	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210305	2021-03-05	CC BY 4.0	10.5281/zenodo.7846376	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210306	2021-03-06	CC BY 4.0	10.5281/zenodo.7846379	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210307	2021-03-07	CC BY 4.0	10.5281/zenodo.7846384	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210308	2021-03-08	CC BY 4.0	10.5281/zenodo.7846409	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210310	2021-03-10	CC BY 4.0	10.5281/zenodo.7846418	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210311	2021-03-11	CC BY 4.0	10.5281/zenodo.7846424	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210312	2021-03-12	CC BY 4.0	10.5281/zenodo.7846433	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210313	2021-03-13	CC BY 4.0	10.5281/zenodo.7846437	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210314	2021-03-14	CC BY 4.0	10.5281/zenodo.7846442	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210315	2021-03-15	CC BY 4.0	10.5281/zenodo.7846443	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210317	2021-03-17	CC BY 4.0	10.5281/zenodo.7846444	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210318	2021-03-18	CC BY 4.0	10.5281/zenodo.7846447	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210319	2021-03-19	CC BY 4.0	10.5281/zenodo.7846450	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210320	2021-03-20	CC BY 4.0	10.5281/zenodo.7846453	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210321	2021-03-21	CC BY 4.0	10.5281/zenodo.7846458	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210322	2021-03-22	CC BY 4.0	10.5281/zenodo.7846461	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210323	2021-03-23	CC BY 4.0	10.5281/zenodo.7846470	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210324	2021-03-24	CC BY 4.0	10.5281/zenodo.7846475	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210325	2021-03-25	CC BY 4.0	10.5281/zenodo.7846476	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210326	2021-03-26	CC BY 4.0	10.5281/zenodo.7846480	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210328	2021-03-28	CC BY 4.0	10.5281/zenodo.7846487	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210331	2021-03-31	CC BY 4.0	10.5281/zenodo.7846492	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210401	2021-04-01	CC BY 4.0	10.5281/zenodo.7846496	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210402	2021-04-02	CC BY 4.0	10.5281/zenodo.7846501	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210403	2021-04-03	CC BY 4.0	10.5281/zenodo.7846502	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210405	2021-04-05	CC BY 4.0	10.5281/zenodo.7846504	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210406	2021-04-06	CC BY 4.0	10.5281/zenodo.7846508	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210407	2021-04-07	CC BY 4.0	10.5281/zenodo.7846517	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210408	2021-04-08	CC BY 4.0	10.5281/zenodo.7846528	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210409	2021-04-09	CC BY 4.0	10.5281/zenodo.7846539	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210410	2021-04-10	CC BY 4.0	10.5281/zenodo.7846546	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210411	2021-04-11	CC BY 4.0	10.5281/zenodo.7846551	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210412	2021-04-12	CC BY 4.0	10.5281/zenodo.7846554	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210413	2021-04-13	CC BY 4.0	10.5281/zenodo.7846558	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210414	2021-04-14	CC BY 4.0	10.5281/zenodo.7846560	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210416	2021-04-16	CC BY 4.0	10.5281/zenodo.7846564	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210417	2021-04-17	CC BY 4.0	10.5281/zenodo.7846567	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210418	2021-04-18	CC BY 4.0	10.5281/zenodo.7846571	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210419	2021-04-19	CC BY 4.0	10.5281/zenodo.7846572	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210420	2021-04-20	CC BY 4.0	10.5281/zenodo.7846581	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210421	2021-04-21	CC BY 4.0	10.5281/zenodo.7846582	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210422	2021-04-22	CC BY 4.0	10.5281/zenodo.7846589	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210423	2021-04-23	CC BY 4.0	10.5281/zenodo.7846592	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210424	2021-04-24	CC BY 4.0	10.5281/zenodo.7846595	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210425	2021-04-25	CC BY 4.0	10.5281/zenodo.7846598	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210426	2021-04-26	CC BY 4.0	10.5281/zenodo.7846602	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210427	2021-04-27	CC BY 4.0	10.5281/zenodo.7846605	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210428	2021-04-28	CC BY 4.0	10.5281/zenodo.7846607	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210429	2021-04-29	CC BY 4.0	10.5281/zenodo.7846612	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210430	2021-04-30	CC BY 4.0	10.5281/zenodo.7846621	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210501	2021-05-01	CC BY 4.0	10.5281/zenodo.7846628	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210502	2021-05-02	CC BY 4.0	10.5281/zenodo.7846629	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210503	2021-05-03	CC BY 4.0	10.5281/zenodo.7846639	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210504	2021-05-04	CC BY 4.0	10.5281/zenodo.7846644	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210505	2021-05-05	CC BY 4.0	10.5281/zenodo.7846647	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210506	2021-05-06	CC BY 4.0	10.5281/zenodo.7846649	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210507	2021-05-07	CC BY 4.0	10.5281/zenodo.7846652	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210508	2021-05-08	CC BY 4.0	10.5281/zenodo.7846653	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210509	2021-05-09	CC BY 4.0	10.5281/zenodo.7846654	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210510	2021-05-10	CC BY 4.0	10.5281/zenodo.7846657	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210511	2021-05-11	CC BY 4.0	10.5281/zenodo.7846665	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210512	2021-05-12	CC BY 4.0	10.5281/zenodo.7846694	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210513	2021-05-13	CC BY 4.0	10.5281/zenodo.7846715	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210514	2021-05-14	CC BY 4.0	10.5281/zenodo.7846736	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210515	2021-05-15	CC BY 4.0	10.5281/zenodo.7846761	pbdb_occs.rds	2023-06-16
+occs2	Basic denormalized occurrence table with references	20210517	2021-05-17	CC BY 4.0	10.5281/zenodo.7846788	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210518	2021-05-18	CC BY 4.0	10.5281/zenodo.7846821	pbdb_occs.rds	2023-05-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210519	2021-05-19	CC BY 4.0	10.5281/zenodo.7846850	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210520	2021-05-20	CC BY 4.0	10.5281/zenodo.7846869	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210521	2021-05-21	CC BY 4.0	10.5281/zenodo.7846893	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210522	2021-05-22	CC BY 4.0	10.5281/zenodo.7846908	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210524	2021-05-24	CC BY 4.0	10.5281/zenodo.7846933	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210525	2021-05-25	CC BY 4.0	10.5281/zenodo.7846960	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210526	2021-05-26	CC BY 4.0	10.5281/zenodo.7847007	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210527	2021-05-27	CC BY 4.0	10.5281/zenodo.7847040	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210528	2021-05-28	CC BY 4.0	10.5281/zenodo.7847065	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210529	2021-05-29	CC BY 4.0	10.5281/zenodo.7847078	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210530	2021-05-30	CC BY 4.0	10.5281/zenodo.7847103	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210531	2021-05-31	CC BY 4.0	10.5281/zenodo.7847129	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210601	2021-06-01	CC BY 4.0	10.5281/zenodo.7847146	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210602	2021-06-02	CC BY 4.0	10.5281/zenodo.7847165	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210603	2021-06-03	CC BY 4.0	10.5281/zenodo.7847188	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210604	2021-06-04	CC BY 4.0	10.5281/zenodo.7847205	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210605	2021-06-05	CC BY 4.0	10.5281/zenodo.7847212	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210606	2021-06-06	CC BY 4.0	10.5281/zenodo.7847218	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210607	2021-06-07	CC BY 4.0	10.5281/zenodo.7847222	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210608	2021-06-08	CC BY 4.0	10.5281/zenodo.7847227	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210609	2021-06-09	CC BY 4.0	10.5281/zenodo.7847230	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210610	2021-06-10	CC BY 4.0	10.5281/zenodo.7847233	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210611	2021-06-11	CC BY 4.0	10.5281/zenodo.7847238	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210612	2021-06-12	CC BY 4.0	10.5281/zenodo.7847243	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210613	2021-06-13	CC BY 4.0	10.5281/zenodo.7847246	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210615	2021-06-15	CC BY 4.0	10.5281/zenodo.7847250	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210616	2021-06-16	CC BY 4.0	10.5281/zenodo.7847255	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210617	2021-06-17	CC BY 4.0	10.5281/zenodo.7847259	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210618	2021-06-18	CC BY 4.0	10.5281/zenodo.7847264	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210619	2021-06-19	CC BY 4.0	10.5281/zenodo.7847267	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210620	2021-06-20	CC BY 4.0	10.5281/zenodo.7847276	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210621	2021-06-21	CC BY 4.0	10.5281/zenodo.7847277	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210622	2021-06-22	CC BY 4.0	10.5281/zenodo.7847282	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210623	2021-06-23	CC BY 4.0	10.5281/zenodo.7847288	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210624	2021-06-24	CC BY 4.0	10.5281/zenodo.7847293	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210625	2021-06-25	CC BY 4.0	10.5281/zenodo.7847294	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210626	2021-06-26	CC BY 4.0	10.5281/zenodo.7847299	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210627	2021-06-27	CC BY 4.0	10.5281/zenodo.7847302	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210628	2021-06-28	CC BY 4.0	10.5281/zenodo.7847306	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210629	2021-06-29	CC BY 4.0	10.5281/zenodo.7847309	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210630	2021-06-30	CC BY 4.0	10.5281/zenodo.7847315	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210701	2021-07-01	CC BY 4.0	10.5281/zenodo.7847316	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210702	2021-07-02	CC BY 4.0	10.5281/zenodo.7847319	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210703	2021-07-03	CC BY 4.0	10.5281/zenodo.7847324	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210704	2021-07-04	CC BY 4.0	10.5281/zenodo.7847329	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210705	2021-07-05	CC BY 4.0	10.5281/zenodo.7847330	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210706	2021-07-06	CC BY 4.0	10.5281/zenodo.7847331	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210707	2021-07-07	CC BY 4.0	10.5281/zenodo.7847337	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210708	2021-07-08	CC BY 4.0	10.5281/zenodo.7847338	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210709	2021-07-09	CC BY 4.0	10.5281/zenodo.7847340	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210711	2021-07-11	CC BY 4.0	10.5281/zenodo.7847341	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210712	2021-07-12	CC BY 4.0	10.5281/zenodo.7847350	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210713	2021-07-13	CC BY 4.0	10.5281/zenodo.7847353	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210714	2021-07-14	CC BY 4.0	10.5281/zenodo.7847356	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210715	2021-07-15	CC BY 4.0	10.5281/zenodo.7847361	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210716	2021-07-16	CC BY 4.0	10.5281/zenodo.7847362	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210717	2021-07-17	CC BY 4.0	10.5281/zenodo.7847365	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210718	2021-07-18	CC BY 4.0	10.5281/zenodo.7847370	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210719	2021-07-19	CC BY 4.0	10.5281/zenodo.7847376	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210720	2021-07-20	CC BY 4.0	10.5281/zenodo.7847379	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210721	2021-07-21	CC BY 4.0	10.5281/zenodo.7847384	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210722	2021-07-22	CC BY 4.0	10.5281/zenodo.7847389	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210723	2021-07-23	CC BY 4.0	10.5281/zenodo.7847396	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210724	2021-07-24	CC BY 4.0	10.5281/zenodo.7847404	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210725	2021-07-25	CC BY 4.0	10.5281/zenodo.7847406	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210726	2021-07-26	CC BY 4.0	10.5281/zenodo.7847412	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210727	2021-07-27	CC BY 4.0	10.5281/zenodo.7847415	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210728	2021-07-28	CC BY 4.0	10.5281/zenodo.7847416	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210729	2021-07-29	CC BY 4.0	10.5281/zenodo.7847422	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210730	2021-07-30	CC BY 4.0	10.5281/zenodo.7847423	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210801	2021-08-01	CC BY 4.0	10.5281/zenodo.7847430	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210802	2021-08-02	CC BY 4.0	10.5281/zenodo.7847436	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210803	2021-08-03	CC BY 4.0	10.5281/zenodo.7847440	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210804	2021-08-04	CC BY 4.0	10.5281/zenodo.7847445	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210805	2021-08-05	CC BY 4.0	10.5281/zenodo.7847451	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210806	2021-08-06	CC BY 4.0	10.5281/zenodo.7847452	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210807	2021-08-07	CC BY 4.0	10.5281/zenodo.7847461	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210808	2021-08-08	CC BY 4.0	10.5281/zenodo.7847465	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210809	2021-08-09	CC BY 4.0	10.5281/zenodo.7847469	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210810	2021-08-10	CC BY 4.0	10.5281/zenodo.7847479	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210811	2021-08-11	CC BY 4.0	10.5281/zenodo.7847480	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210812	2021-08-12	CC BY 4.0	10.5281/zenodo.7847483	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210813	2021-08-13	CC BY 4.0	10.5281/zenodo.7847493	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210814	2021-08-14	CC BY 4.0	10.5281/zenodo.7847498	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210815	2021-08-15	CC BY 4.0	10.5281/zenodo.7847507	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210816	2021-08-16	CC BY 4.0	10.5281/zenodo.7847516	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210817	2021-08-17	CC BY 4.0	10.5281/zenodo.7847517	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210818	2021-08-18	CC BY 4.0	10.5281/zenodo.7848200	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210819	2021-08-19	CC BY 4.0	10.5281/zenodo.7848203	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210820	2021-08-20	CC BY 4.0	10.5281/zenodo.7848209	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210822	2021-08-22	CC BY 4.0	10.5281/zenodo.7848218	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210823	2021-08-23	CC BY 4.0	10.5281/zenodo.7848227	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210825	2021-08-25	CC BY 4.0	10.5281/zenodo.7848233	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210826	2021-08-26	CC BY 4.0	10.5281/zenodo.7848239	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210827	2021-08-27	CC BY 4.0	10.5281/zenodo.7848254	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210828	2021-08-28	CC BY 4.0	10.5281/zenodo.7848259	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210829	2021-08-29	CC BY 4.0	10.5281/zenodo.7848265	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210830	2021-08-30	CC BY 4.0	10.5281/zenodo.7848298	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210901	2021-09-01	CC BY 4.0	10.5281/zenodo.7848325	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210902	2021-09-02	CC BY 4.0	10.5281/zenodo.7848333	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210903	2021-09-03	CC BY 4.0	10.5281/zenodo.7848357	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210904	2021-09-04	CC BY 4.0	10.5281/zenodo.7848380	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210905	2021-09-05	CC BY 4.0	10.5281/zenodo.7848389	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210906	2021-09-06	CC BY 4.0	10.5281/zenodo.7848406	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210907	2021-09-07	CC BY 4.0	10.5281/zenodo.7848418	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210909	2021-09-09	CC BY 4.0	10.5281/zenodo.7848427	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210915	2021-09-15	CC BY 4.0	10.5281/zenodo.7848464	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210916	2021-09-16	CC BY 4.0	10.5281/zenodo.7848474	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210917	2021-09-17	CC BY 4.0	10.5281/zenodo.7848488	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210919	2021-09-19	CC BY 4.0	10.5281/zenodo.7848495	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210920	2021-09-20	CC BY 4.0	10.5281/zenodo.7848507	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210921	2021-09-21	CC BY 4.0	10.5281/zenodo.7848525	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210922	2021-09-22	CC BY 4.0	10.5281/zenodo.7848543	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210923	2021-09-23	CC BY 4.0	10.5281/zenodo.7848560	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210924	2021-09-24	CC BY 4.0	10.5281/zenodo.7848567	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210925	2021-09-25	CC BY 4.0	10.5281/zenodo.7848577	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210926	2021-09-26	CC BY 4.0	10.5281/zenodo.7848589	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210927	2021-09-27	CC BY 4.0	10.5281/zenodo.7848600	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210928	2021-09-28	CC BY 4.0	10.5281/zenodo.7848636	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210929	2021-09-29	CC BY 4.0	10.5281/zenodo.7848652	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20210930	2021-09-30	CC BY 4.0	10.5281/zenodo.7848667	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211001	2021-10-01	CC BY 4.0	10.5281/zenodo.7848686	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211003	2021-10-03	CC BY 4.0	10.5281/zenodo.7848712	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211006	2021-10-06	CC BY 4.0	10.5281/zenodo.7848737	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211007	2021-10-07	CC BY 4.0	10.5281/zenodo.7848772	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211009	2021-10-09	CC BY 4.0	10.5281/zenodo.7848790	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211010	2021-10-10	CC BY 4.0	10.5281/zenodo.7848814	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211011	2021-10-11	CC BY 4.0	10.5281/zenodo.7848830	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211012	2021-10-12	CC BY 4.0	10.5281/zenodo.7848843	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211013	2021-10-13	CC BY 4.0	10.5281/zenodo.7848855	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211014	2021-10-14	CC BY 4.0	10.5281/zenodo.7848885	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211015	2021-10-15	CC BY 4.0	10.5281/zenodo.7848912	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211016	2021-10-16	CC BY 4.0	10.5281/zenodo.7848935	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211018	2021-10-18	CC BY 4.0	10.5281/zenodo.7848952	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211020	2021-10-20	CC BY 4.0	10.5281/zenodo.7848966	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211022	2021-10-22	CC BY 4.0	10.5281/zenodo.7848981	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211023	2021-10-23	CC BY 4.0	10.5281/zenodo.7848989	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211024	2021-10-24	CC BY 4.0	10.5281/zenodo.7849004	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211025	2021-10-25	CC BY 4.0	10.5281/zenodo.7849019	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211026	2021-10-26	CC BY 4.0	10.5281/zenodo.7849031	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211028	2021-10-28	CC BY 4.0	10.5281/zenodo.7849044	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211029	2021-10-29	CC BY 4.0	10.5281/zenodo.7849064	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211031	2021-10-31	CC BY 4.0	10.5281/zenodo.7849071	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211104	2021-11-04	CC BY 4.0	10.5281/zenodo.7849082	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211105	2021-11-05	CC BY 4.0	10.5281/zenodo.7849092	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211107	2021-11-07	CC BY 4.0	10.5281/zenodo.7849103	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211108	2021-11-08	CC BY 4.0	10.5281/zenodo.7849136	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211109	2021-11-09	CC BY 4.0	10.5281/zenodo.7849153	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211110	2021-11-10	CC BY 4.0	10.5281/zenodo.7849158	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211111	2021-11-11	CC BY 4.0	10.5281/zenodo.7849170	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211112	2021-11-12	CC BY 4.0	10.5281/zenodo.7849186	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211113	2021-11-13	CC BY 4.0	10.5281/zenodo.7849201	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211114	2021-11-14	CC BY 4.0	10.5281/zenodo.7849239	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211115	2021-11-15	CC BY 4.0	10.5281/zenodo.7849270	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211116	2021-11-16	CC BY 4.0	10.5281/zenodo.7849284	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211117	2021-11-17	CC BY 4.0	10.5281/zenodo.7849291	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211118	2021-11-18	CC BY 4.0	10.5281/zenodo.7849299	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211119	2021-11-19	CC BY 4.0	10.5281/zenodo.7849318	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211120	2021-11-20	CC BY 4.0	10.5281/zenodo.7849336	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211121	2021-11-21	CC BY 4.0	10.5281/zenodo.7849345	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211122	2021-11-22	CC BY 4.0	10.5281/zenodo.7849356	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211123	2021-11-23	CC BY 4.0	10.5281/zenodo.7849367	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211124	2021-11-24	CC BY 4.0	10.5281/zenodo.7849398	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211125	2021-11-25	CC BY 4.0	10.5281/zenodo.7849422	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211126	2021-11-26	CC BY 4.0	10.5281/zenodo.7849436	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211129	2021-11-29	CC BY 4.0	10.5281/zenodo.7849449	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211130	2021-11-30	CC BY 4.0	10.5281/zenodo.7849500	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211201	2021-12-01	CC BY 4.0	10.5281/zenodo.7849552	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211202	2021-12-02	CC BY 4.0	10.5281/zenodo.7849566	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211203	2021-12-03	CC BY 4.0	10.5281/zenodo.7849577	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211205	2021-12-05	CC BY 4.0	10.5281/zenodo.7849581	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211206	2021-12-06	CC BY 4.0	10.5281/zenodo.7849583	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211207	2021-12-07	CC BY 4.0	10.5281/zenodo.7849587	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211208	2021-12-08	CC BY 4.0	10.5281/zenodo.7849607	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211209	2021-12-09	CC BY 4.0	10.5281/zenodo.7849620	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211212	2021-12-12	CC BY 4.0	10.5281/zenodo.7849653	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211213	2021-12-13	CC BY 4.0	10.5281/zenodo.7849690	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211214	2021-12-14	CC BY 4.0	10.5281/zenodo.7849717	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211215	2021-12-15	CC BY 4.0	10.5281/zenodo.7849726	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211216	2021-12-16	CC BY 4.0	10.5281/zenodo.7849765	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211217	2021-12-17	CC BY 4.0	10.5281/zenodo.7849807	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211218	2021-12-18	CC BY 4.0	10.5281/zenodo.7849850	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211220	2021-12-20	CC BY 4.0	10.5281/zenodo.7850008	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211223	2021-12-23	CC BY 4.0	10.5281/zenodo.7850015	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211226	2021-12-26	CC BY 4.0	10.5281/zenodo.7850030	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211227	2021-12-27	CC BY 4.0	10.5281/zenodo.7850041	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211228	2021-12-28	CC BY 4.0	10.5281/zenodo.7850051	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20211230	2021-12-30	CC BY 4.0	10.5281/zenodo.7850061	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220101	2022-01-01	CC BY 4.0	10.5281/zenodo.7850252	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220102	2022-01-02	CC BY 4.0	10.5281/zenodo.7850270	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220104	2022-01-04	CC BY 4.0	10.5281/zenodo.7850281	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220106	2022-01-06	CC BY 4.0	10.5281/zenodo.7850296	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220109	2022-01-09	CC BY 4.0	10.5281/zenodo.7850305	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220110	2022-01-10	CC BY 4.0	10.5281/zenodo.7850315	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220112	2022-01-12	CC BY 4.0	10.5281/zenodo.7850332	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220114	2022-01-14	CC BY 4.0	10.5281/zenodo.7850344	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220115	2022-01-15	CC BY 4.0	10.5281/zenodo.7850350	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220116	2022-01-16	CC BY 4.0	10.5281/zenodo.7850365	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220117	2022-01-17	CC BY 4.0	10.5281/zenodo.7850376	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220118	2022-01-18	CC BY 4.0	10.5281/zenodo.7850393	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220119	2022-01-19	CC BY 4.0	10.5281/zenodo.7850398	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220120	2022-01-20	CC BY 4.0	10.5281/zenodo.7850416	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220121	2022-01-21	CC BY 4.0	10.5281/zenodo.7850489	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220123	2022-01-23	CC BY 4.0	10.5281/zenodo.7850548	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220125	2022-01-25	CC BY 4.0	10.5281/zenodo.7851768	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220126	2022-01-26	CC BY 4.0	10.5281/zenodo.7851823	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220127	2022-01-27	CC BY 4.0	10.5281/zenodo.7851869	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220129	2022-01-29	CC BY 4.0	10.5281/zenodo.7851909	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220130	2022-01-30	CC BY 4.0	10.5281/zenodo.7851926	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220131	2022-01-31	CC BY 4.0	10.5281/zenodo.7851933	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220202	2022-02-02	CC BY 4.0	10.5281/zenodo.7856737	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220203	2022-02-03	CC BY 4.0	10.5281/zenodo.7856746	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220204	2022-02-04	CC BY 4.0	10.5281/zenodo.7856753	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220207	2022-02-07	CC BY 4.0	10.5281/zenodo.7856766	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220208	2022-02-08	CC BY 4.0	10.5281/zenodo.7856773	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220209	2022-02-09	CC BY 4.0	10.5281/zenodo.7856778	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220210	2022-02-10	CC BY 4.0	10.5281/zenodo.7856785	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220212	2022-02-12	CC BY 4.0	10.5281/zenodo.7856789	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220214	2022-02-14	CC BY 4.0	10.5281/zenodo.7856795	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220216	2022-02-16	CC BY 4.0	10.5281/zenodo.7856804	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220217	2022-02-17	CC BY 4.0	10.5281/zenodo.7856809	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220220	2022-02-20	CC BY 4.0	10.5281/zenodo.7856813	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220221	2022-02-21	CC BY 4.0	10.5281/zenodo.7856814	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220222	2022-02-22	CC BY 4.0	10.5281/zenodo.7856819	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220223	2022-02-23	CC BY 4.0	10.5281/zenodo.7856833	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220224	2022-02-24	CC BY 4.0	10.5281/zenodo.7856842	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220226	2022-02-26	CC BY 4.0	10.5281/zenodo.7856851	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220227	2022-02-27	CC BY 4.0	10.5281/zenodo.7856859	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220228	2022-02-28	CC BY 4.0	10.5281/zenodo.7856864	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220301	2022-03-01	CC BY 4.0	10.5281/zenodo.7856869	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220302	2022-03-02	CC BY 4.0	10.5281/zenodo.7856877	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220306	2022-03-06	CC BY 4.0	10.5281/zenodo.7856882	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220307	2022-03-07	CC BY 4.0	10.5281/zenodo.7856891	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220308	2022-03-08	CC BY 4.0	10.5281/zenodo.7856896	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220309	2022-03-09	CC BY 4.0	10.5281/zenodo.7856907	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220310	2022-03-10	CC BY 4.0	10.5281/zenodo.7856913	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220311	2022-03-11	CC BY 4.0	10.5281/zenodo.7856924	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220313	2022-03-13	CC BY 4.0	10.5281/zenodo.7856927	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220314	2022-03-14	CC BY 4.0	10.5281/zenodo.7856934	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220317	2022-03-17	CC BY 4.0	10.5281/zenodo.7856939	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220318	2022-03-18	CC BY 4.0	10.5281/zenodo.7856946	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220319	2022-03-19	CC BY 4.0	10.5281/zenodo.7856975	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220321	2022-03-21	CC BY 4.0	10.5281/zenodo.7856976	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220323	2022-03-23	CC BY 4.0	10.5281/zenodo.7856982	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220324	2022-03-24	CC BY 4.0	10.5281/zenodo.7856983	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220325	2022-03-25	CC BY 4.0	10.5281/zenodo.7856987	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220330	2022-03-30	CC BY 4.0	10.5281/zenodo.7876233	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220401	2022-04-01	CC BY 4.0	10.5281/zenodo.7876249	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220403	2022-04-03	CC BY 4.0	10.5281/zenodo.7876266	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220404	2022-04-04	CC BY 4.0	10.5281/zenodo.7876269	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220405	2022-04-05	CC BY 4.0	10.5281/zenodo.7876288	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220406	2022-04-06	CC BY 4.0	10.5281/zenodo.7876332	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220407	2022-04-07	CC BY 4.0	10.5281/zenodo.7876339	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220408	2022-04-08	CC BY 4.0	10.5281/zenodo.7876361	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220409	2022-04-09	CC BY 4.0	10.5281/zenodo.7876367	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220411	2022-04-11	CC BY 4.0	10.5281/zenodo.7876385	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220412	2022-04-12	CC BY 4.0	10.5281/zenodo.7876397	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220413	2022-04-13	CC BY 4.0	10.5281/zenodo.7876406	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220414	2022-04-14	CC BY 4.0	10.5281/zenodo.7876428	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220415	2022-04-15	CC BY 4.0	10.5281/zenodo.7876435	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220417	2022-04-17	CC BY 4.0	10.5281/zenodo.7876453	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220418	2022-04-18	CC BY 4.0	10.5281/zenodo.7876463	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220421	2022-04-21	CC BY 4.0	10.5281/zenodo.7876476	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220422	2022-04-22	CC BY 4.0	10.5281/zenodo.7876488	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220423	2022-04-23	CC BY 4.0	10.5281/zenodo.7876502	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220425	2022-04-25	CC BY 4.0	10.5281/zenodo.7876516	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220427	2022-04-27	CC BY 4.0	10.5281/zenodo.7876528	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220428	2022-04-28	CC BY 4.0	10.5281/zenodo.7876541	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220429	2022-04-29	CC BY 4.0	10.5281/zenodo.7876564	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220430	2022-04-30	CC BY 4.0	10.5281/zenodo.7876589	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220501	2022-05-01	CC BY 4.0	10.5281/zenodo.7876598	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220502	2022-05-02	CC BY 4.0	10.5281/zenodo.7876603	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220503	2022-05-03	CC BY 4.0	10.5281/zenodo.7876618	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220504	2022-05-04	CC BY 4.0	10.5281/zenodo.7876627	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220505	2022-05-05	CC BY 4.0	10.5281/zenodo.7876643	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220509	2022-05-09	CC BY 4.0	10.5281/zenodo.7876656	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220510	2022-05-10	CC BY 4.0	10.5281/zenodo.7876665	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220619	2022-06-19	CC BY 4.0	10.5281/zenodo.7876678	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220621	2022-06-21	CC BY 4.0	10.5281/zenodo.7876696	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220622	2022-06-22	CC BY 4.0	10.5281/zenodo.7876707	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220623	2022-06-23	CC BY 4.0	10.5281/zenodo.7876719	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220625	2022-06-25	CC BY 4.0	10.5281/zenodo.7876736	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220626	2022-06-26	CC BY 4.0	10.5281/zenodo.7876746	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220627	2022-06-27	CC BY 4.0	10.5281/zenodo.7876771	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220630	2022-06-30	CC BY 4.0	10.5281/zenodo.7876790	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220701	2022-07-01	CC BY 4.0	10.5281/zenodo.7876805	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220702	2022-07-02	CC BY 4.0	10.5281/zenodo.7876826	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220703	2022-07-03	CC BY 4.0	10.5281/zenodo.7876857	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220704	2022-07-04	CC BY 4.0	10.5281/zenodo.7876936	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220705	2022-07-05	CC BY 4.0	10.5281/zenodo.7876949	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220706	2022-07-06	CC BY 4.0	10.5281/zenodo.7876964	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220707	2022-07-07	CC BY 4.0	10.5281/zenodo.7876977	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220708	2022-07-08	CC BY 4.0	10.5281/zenodo.7876985	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220711	2022-07-11	CC BY 4.0	10.5281/zenodo.7877008	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220712	2022-07-12	CC BY 4.0	10.5281/zenodo.7877069	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220713	2022-07-13	CC BY 4.0	10.5281/zenodo.7877168	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220715	2022-07-15	CC BY 4.0	10.5281/zenodo.7877234	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220717	2022-07-17	CC BY 4.0	10.5281/zenodo.7877300	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220728	2022-07-28	CC BY 4.0	10.5281/zenodo.7877307	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220729	2022-07-29	CC BY 4.0	10.5281/zenodo.7877311	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220731	2022-07-31	CC BY 4.0	10.5281/zenodo.7877345	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220801	2022-08-01	CC BY 4.0	10.5281/zenodo.7877349	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220802	2022-08-02	CC BY 4.0	10.5281/zenodo.7877366	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220803	2022-08-03	CC BY 4.0	10.5281/zenodo.7877373	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220808	2022-08-08	CC BY 4.0	10.5281/zenodo.7877385	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220810	2022-08-10	CC BY 4.0	10.5281/zenodo.7877396	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220811	2022-08-11	CC BY 4.0	10.5281/zenodo.7877410	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220812	2022-08-12	CC BY 4.0	10.5281/zenodo.7877414	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220815	2022-08-15	CC BY 4.0	10.5281/zenodo.7877427	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220816	2022-08-16	CC BY 4.0	10.5281/zenodo.7877451	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220817	2022-08-17	CC BY 4.0	10.5281/zenodo.7877470	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220818	2022-08-18	CC BY 4.0	10.5281/zenodo.7877490	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220821	2022-08-21	CC BY 4.0	10.5281/zenodo.7877505	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220824	2022-08-24	CC BY 4.0	10.5281/zenodo.7877533	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220825	2022-08-25	CC BY 4.0	10.5281/zenodo.7877549	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220826	2022-08-26	CC BY 4.0	10.5281/zenodo.7877572	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220830	2022-08-30	CC BY 4.0	10.5281/zenodo.7877583	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220901	2022-09-01	CC BY 4.0	10.5281/zenodo.7877598	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220902	2022-09-02	CC BY 4.0	10.5281/zenodo.7877601	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220903	2022-09-03	CC BY 4.0	10.5281/zenodo.7877606	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220904	2022-09-04	CC BY 4.0	10.5281/zenodo.7877615	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220905	2022-09-05	CC BY 4.0	10.5281/zenodo.7877626	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220906	2022-09-06	CC BY 4.0	10.5281/zenodo.7877636	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220908	2022-09-08	CC BY 4.0	10.5281/zenodo.7877649	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220909	2022-09-09	CC BY 4.0	10.5281/zenodo.7877656	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220912	2022-09-12	CC BY 4.0	10.5281/zenodo.7877663	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220913	2022-09-13	CC BY 4.0	10.5281/zenodo.7877675	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220914	2022-09-14	CC BY 4.0	10.5281/zenodo.7877685	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220915	2022-09-15	CC BY 4.0	10.5281/zenodo.7877694	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220916	2022-09-16	CC BY 4.0	10.5281/zenodo.7877703	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220918	2022-09-18	CC BY 4.0	10.5281/zenodo.7877713	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220919	2022-09-19	CC BY 4.0	10.5281/zenodo.7877725	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20220920	2022-09-20	CC BY 4.0	10.5281/zenodo.7877734	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221001	2022-10-01	CC BY 4.0	10.5281/zenodo.7877740	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221003	2022-10-03	CC BY 4.0	10.5281/zenodo.7877746	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221004	2022-10-04	CC BY 4.0	10.5281/zenodo.7877750	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221005	2022-10-05	CC BY 4.0	10.5281/zenodo.7877756	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221006	2022-10-06	CC BY 4.0	10.5281/zenodo.7877759	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221007	2022-10-07	CC BY 4.0	10.5281/zenodo.7877768	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221011	2022-10-11	CC BY 4.0	10.5281/zenodo.7877778	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221012	2022-10-12	CC BY 4.0	10.5281/zenodo.7877781	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221013	2022-10-13	CC BY 4.0	10.5281/zenodo.7877785	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221014	2022-10-14	CC BY 4.0	10.5281/zenodo.7877792	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221016	2022-10-16	CC BY 4.0	10.5281/zenodo.7877795	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221017	2022-10-17	CC BY 4.0	10.5281/zenodo.7877796	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221018	2022-10-18	CC BY 4.0	10.5281/zenodo.7877801	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221019	2022-10-19	CC BY 4.0	10.5281/zenodo.7877805	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221020	2022-10-20	CC BY 4.0	10.5281/zenodo.7877810	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221021	2022-10-21	CC BY 4.0	10.5281/zenodo.7877814	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221024	2022-10-24	CC BY 4.0	10.5281/zenodo.7877819	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221025	2022-10-25	CC BY 4.0	10.5281/zenodo.7877822	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221026	2022-10-26	CC BY 4.0	10.5281/zenodo.7877827	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221027	2022-10-27	CC BY 4.0	10.5281/zenodo.7877831	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221028	2022-10-28	CC BY 4.0	10.5281/zenodo.7877838	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221031	2022-10-31	CC BY 4.0	10.5281/zenodo.7877841	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221102	2022-11-02	CC BY 4.0	10.5281/zenodo.7877842	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221103	2022-11-03	CC BY 4.0	10.5281/zenodo.7877845	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221104	2022-11-04	CC BY 4.0	10.5281/zenodo.7877846	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221105	2022-11-05	CC BY 4.0	10.5281/zenodo.7877851	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221107	2022-11-07	CC BY 4.0	10.5281/zenodo.7877858	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221108	2022-11-08	CC BY 4.0	10.5281/zenodo.7877862	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221109	2022-11-09	CC BY 4.0	10.5281/zenodo.7877863	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221110	2022-11-10	CC BY 4.0	10.5281/zenodo.7877866	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221114	2022-11-14	CC BY 4.0	10.5281/zenodo.7877867	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221118	2022-11-18	CC BY 4.0	10.5281/zenodo.7877876	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221121	2022-11-21	CC BY 4.0	10.5281/zenodo.7877880	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221122	2022-11-22	CC BY 4.0	10.5281/zenodo.7877890	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221123	2022-11-23	CC BY 4.0	10.5281/zenodo.7877891	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221130	2022-11-30	CC BY 4.0	10.5281/zenodo.7877895	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221201	2022-12-01	CC BY 4.0	10.5281/zenodo.7877905	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221202	2022-12-02	CC BY 4.0	10.5281/zenodo.7877912	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221205	2022-12-05	CC BY 4.0	10.5281/zenodo.7877916	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221208	2022-12-08	CC BY 4.0	10.5281/zenodo.7877920	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221213	2022-12-13	CC BY 4.0	10.5281/zenodo.7877922	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221214	2022-12-14	CC BY 4.0	10.5281/zenodo.7877923	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221215	2022-12-15	CC BY 4.0	10.5281/zenodo.7877924	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221219	2022-12-19	CC BY 4.0	10.5281/zenodo.7877925	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221220	2022-12-20	CC BY 4.0	10.5281/zenodo.7877926	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20221221	2022-12-21	CC BY 4.0	10.5281/zenodo.7877928	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230104	2023-01-04	CC BY 4.0	10.5281/zenodo.7877929	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230109	2023-01-09	CC BY 4.0	10.5281/zenodo.7877932	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230406	2023-04-06	CC BY 4.0	10.5281/zenodo.7877935	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230414	2023-04-14	CC BY 4.0	10.5281/zenodo.8033932	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230417	2023-04-17	CC BY 4.0	10.5281/zenodo.8033975	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230419	2023-04-19	CC BY 4.0	10.5281/zenodo.8033988	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230423	2023-04-23	CC BY 4.0	10.5281/zenodo.8033994	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230502	2023-05-02	CC BY 4.0	10.5281/zenodo.8034001	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230503	2023-05-03	CC BY 4.0	10.5281/zenodo.8034043	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230504	2023-05-04	CC BY 4.0	10.5281/zenodo.8034081	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230505	2023-05-05	CC BY 4.0	10.5281/zenodo.8034106	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230515	2023-05-15	CC BY 4.0	10.5281/zenodo.8034143	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230516	2023-05-16	CC BY 4.0	10.5281/zenodo.8034157	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230517	2023-05-17	CC BY 4.0	10.5281/zenodo.8034177	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230519	2023-05-19	CC BY 4.0	10.5281/zenodo.8034229	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230522	2023-05-22	CC BY 4.0	10.5281/zenodo.8034251	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230523	2023-05-23	CC BY 4.0	10.5281/zenodo.8034261	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230524	2023-05-24	CC BY 4.0	10.5281/zenodo.8034278	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230525	2023-05-25	CC BY 4.0	10.5281/zenodo.8034297	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230531	2023-05-31	CC BY 4.0	10.5281/zenodo.8034371	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230601	2023-06-01	CC BY 4.0	10.5281/zenodo.8034408	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230602	2023-06-02	CC BY 4.0	10.5281/zenodo.8034434	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230603	2023-06-03	CC BY 4.0	10.5281/zenodo.8034467	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230606	2023-06-06	CC BY 4.0	10.5281/zenodo.8034475	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230608	2023-06-08	CC BY 4.0	10.5281/zenodo.8034505	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230609	2023-06-09	CC BY 4.0	10.5281/zenodo.8034524	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230610	2023-06-10	CC BY 4.0	10.5281/zenodo.8034554	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230612	2023-06-12	CC BY 4.0	10.5281/zenodo.8034570	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230613	2023-06-13	CC BY 4.0	10.5281/zenodo.8034590	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230614	2023-06-14	CC BY 4.0	10.5281/zenodo.8037670	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230615	2023-06-15	CC BY 4.0	10.5281/zenodo.8042620	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230616	2023-06-16	CC BY 4.0	10.5281/zenodo.8046535	pbdb_occs.rds	2023-06-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230619	2023-06-19	CC BY 4.0	10.5281/zenodo.8054531	pbdb_occs.rds	2023-06-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230620	2023-06-20	CC BY 4.0	10.5281/zenodo.8060131	pbdb_occs.rds	2023-06-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230621	2023-06-21	CC BY 4.0	10.5281/zenodo.8063307	pbdb_occs.rds	2023-06-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230622	2023-06-22	CC BY 4.0	10.5281/zenodo.8070702	pbdb_occs.rds	2023-06-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230623	2023-06-23	CC BY 4.0	10.5281/zenodo.8073696	pbdb_occs.rds	2023-06-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230626	2023-06-26	CC BY 4.0	10.5281/zenodo.8082480	pbdb_occs.rds	2023-06-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230627	2023-06-27	CC BY 4.0	10.5281/zenodo.8085963	pbdb_occs.rds	2023-06-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230628	2023-06-28	CC BY 4.0	10.5281/zenodo.8089468	pbdb_occs.rds	2023-06-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230629	2023-06-29	CC BY 4.0	10.5281/zenodo.8093851	pbdb_occs.rds	2023-06-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230630	2023-06-30	CC BY 4.0	10.5281/zenodo.8098774	pbdb_occs.rds	2023-06-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230703	2023-07-03	CC BY 4.0	10.5281/zenodo.8108490	pbdb_occs.rds	2023-07-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230704	2023-07-04	CC BY 4.0	10.5281/zenodo.8112705	pbdb_occs.rds	2023-07-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230705	2023-07-05	CC BY 4.0	10.5281/zenodo.8116108	pbdb_occs.rds	2023-07-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230706	2023-07-06	CC BY 4.0	10.5281/zenodo.8119113	pbdb_occs.rds	2023-07-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230707	2023-07-07	CC BY 4.0	10.5281/zenodo.8123430	pbdb_occs.rds	2023-07-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230710	2023-07-10	CC BY 4.0	10.5281/zenodo.8131025	pbdb_occs.rds	2023-07-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230711	2023-07-11	CC BY 4.0	10.5281/zenodo.8134061	pbdb_occs.rds	2023-07-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230712	2023-07-12	CC BY 4.0	10.5281/zenodo.8138080	pbdb_occs.rds	2023-07-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230713	2023-07-13	CC BY 4.0	10.5281/zenodo.8143311	pbdb_occs.rds	2023-07-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230714	2023-07-14	CC BY 4.0	10.5281/zenodo.8147303	pbdb_occs.rds	2023-07-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230717	2023-07-17	CC BY 4.0	10.5281/zenodo.8154743	pbdb_occs.rds	2023-07-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230718	2023-07-18	CC BY 4.0	10.5281/zenodo.8158652	pbdb_occs.rds	2023-07-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230719	2023-07-19	CC BY 4.0	10.5281/zenodo.8162758	pbdb_occs.rds	2023-07-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230720	2023-07-20	CC BY 4.0	10.5281/zenodo.8168004	pbdb_occs.rds	2023-07-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230721	2023-07-21	CC BY 4.0	10.5281/zenodo.8171045	pbdb_occs.rds	2023-07-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230726	2023-07-26	CC BY 4.0	10.5281/zenodo.8186969	pbdb_occs.rds	2023-07-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230727	2023-07-27	CC BY 4.0	10.5281/zenodo.8188521	pbdb_occs.rds	2023-07-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230728	2023-07-28	CC BY 4.0	10.5281/zenodo.8191816	pbdb_occs.rds	2023-07-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230730	2023-07-30	CC BY 4.0	10.5281/zenodo.8197663	pbdb_occs.rds	2023-07-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230731	2023-07-31	CC BY 4.0	10.5281/zenodo.8198931	pbdb_occs.rds	2023-07-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230801	2023-08-01	CC BY 4.0	10.5281/zenodo.8202103	pbdb_occs.rds	2023-08-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230802	2023-08-02	CC BY 4.0	10.5281/zenodo.8207445	pbdb_occs.rds	2023-08-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230803	2023-08-03	CC BY 4.0	10.5281/zenodo.8210925	pbdb_occs.rds	2023-08-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230804	2023-08-04	CC BY 4.0	10.5281/zenodo.8214773	pbdb_occs.rds	2023-08-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230807	2023-08-07	CC BY 4.0	10.5281/zenodo.8220212	pbdb_occs.rds	2023-08-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230809	2023-08-09	CC BY 4.0	10.5281/zenodo.8229509	pbdb_occs.rds	2023-08-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230810	2023-08-10	CC BY 4.0	10.5281/zenodo.8232301	pbdb_occs.rds	2023-08-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230811	2023-08-11	CC BY 4.0	10.5281/zenodo.8238270	pbdb_occs.rds	2023-08-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230812	2023-08-12	CC BY 4.0	10.5281/zenodo.8241248	pbdb_occs.rds	2023-08-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230814	2023-08-14	CC BY 4.0	10.5281/zenodo.8245819	pbdb_occs.rds	2023-08-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230815	2023-08-15	CC BY 4.0	10.5281/zenodo.8248571	pbdb_occs.rds	2023-08-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230816	2023-08-16	CC BY 4.0	10.5281/zenodo.8251814	pbdb_occs.rds	2023-08-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230817	2023-08-17	CC BY 4.0	10.5281/zenodo.8256225	pbdb_occs.rds	2023-08-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230821	2023-08-21	CC BY 4.0	10.5281/zenodo.8267979	pbdb_occs.rds	2023-08-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230822	2023-08-22	CC BY 4.0	10.5281/zenodo.8271858	pbdb_occs.rds	2023-08-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230823	2023-08-23	CC BY 4.0	10.5281/zenodo.8275996	pbdb_occs.rds	2023-08-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230824	2023-08-24	CC BY 4.0	10.5281/zenodo.8278652	pbdb_occs.rds	2023-08-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230825	2023-08-25	CC BY 4.0	10.5281/zenodo.8284166	pbdb_occs.rds	2023-08-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230826	2023-08-26	CC BY 4.0	10.5281/zenodo.8285489	pbdb_occs.rds	2023-08-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230828	2023-08-28	CC BY 4.0	10.5281/zenodo.8288862	pbdb_occs.rds	2023-08-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230829	2023-08-29	CC BY 4.0	10.5281/zenodo.8296397	pbdb_occs.rds	2023-08-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230830	2023-08-30	CC BY 4.0	10.5281/zenodo.8300420	pbdb_occs.rds	2023-08-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230831	2023-08-31	CC BY 4.0	10.5281/zenodo.8304869	pbdb_occs.rds	2023-08-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230901	2023-09-01	CC BY 4.0	10.5281/zenodo.8307694	pbdb_occs.rds	2023-09-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230902	2023-09-02	CC BY 4.0	10.5281/zenodo.8311960	pbdb_occs.rds	2023-09-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230903	2023-09-03	CC BY 4.0	10.5281/zenodo.8312608	pbdb_occs.rds	2023-09-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230904	2023-09-04	CC BY 4.0	10.5281/zenodo.8314985	pbdb_occs.rds	2023-09-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230905	2023-09-05	CC BY 4.0	10.5281/zenodo.8318109	pbdb_occs.rds	2023-09-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230906	2023-09-06	CC BY 4.0	10.5281/zenodo.8321146	pbdb_occs.rds	2023-09-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230907	2023-09-07	CC BY 4.0	10.5281/zenodo.8324466	pbdb_occs.rds	2023-09-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230908	2023-09-08	CC BY 4.0	10.5281/zenodo.8328044	pbdb_occs.rds	2023-09-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230909	2023-09-09	CC BY 4.0	10.5281/zenodo.8330878	pbdb_occs.rds	2023-09-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230910	2023-09-10	CC BY 4.0	10.5281/zenodo.8332179	pbdb_occs.rds	2023-09-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230914	2023-09-14	CC BY 4.0	10.5281/zenodo.8344224	pbdb_occs.rds	2023-09-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230915	2023-09-15	CC BY 4.0	10.5281/zenodo.8349606	pbdb_occs.rds	2023-09-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230918	2023-09-18	CC BY 4.0	10.5281/zenodo.8354657	pbdb_occs.rds	2023-09-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230919	2023-09-19	CC BY 4.0	10.5281/zenodo.8359000	pbdb_occs.rds	2023-09-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230920	2023-09-20	CC BY 4.0	10.5281/zenodo.8362269	pbdb_occs.rds	2023-09-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230921	2023-09-21	CC BY 4.0	10.5281/zenodo.8365519	pbdb_occs.rds	2023-09-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230922	2023-09-22	CC BY 4.0	10.5281/zenodo.8369468	pbdb_occs.rds	2023-09-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230923	2023-09-23	CC BY 4.0	10.5281/zenodo.8372728	pbdb_occs.rds	2023-09-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230925	2023-09-25	CC BY 4.0	10.5281/zenodo.8375246	pbdb_occs.rds	2023-09-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230926	2023-09-26	CC BY 4.0	10.5281/zenodo.8379161	pbdb_occs.rds	2023-09-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230927	2023-09-27	CC BY 4.0	10.5281/zenodo.8383678	pbdb_occs.rds	2023-09-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230928	2023-09-28	CC BY 4.0	10.5281/zenodo.8385376	pbdb_occs.rds	2023-09-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20230929	2023-09-29	CC BY 4.0	10.5281/zenodo.8390629	pbdb_occs.rds	2023-09-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231002	2023-10-02	CC BY 4.0	10.5281/zenodo.8398402	pbdb_occs.rds	2023-10-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231005	2023-10-05	CC BY 4.0	10.5281/zenodo.8411362	pbdb_occs.rds	2023-10-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231010	2023-10-10	CC BY 4.0	10.5281/zenodo.8425281	pbdb_occs.rds	2023-10-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231011	2023-10-11	CC BY 4.0	10.5281/zenodo.8429799	pbdb_occs.rds	2023-10-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231012	2023-10-12	CC BY 4.0	10.5281/zenodo.8436023	pbdb_occs.rds	2023-10-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231015	2023-10-15	CC BY 4.0	10.5281/zenodo.10013018	pbdb_occs.rds	2023-10-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231016	2023-10-16	CC BY 4.0	10.5281/zenodo.10013105	pbdb_occs.rds	2023-10-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231017	2023-10-17	CC BY 4.0	10.5281/zenodo.10013396	pbdb_occs.rds	2023-10-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231018	2023-10-18	CC BY 4.0	10.5281/zenodo.10017296	pbdb_occs.rds	2023-10-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231019	2023-10-19	CC BY 4.0	10.5281/zenodo.10021115	pbdb_occs.rds	2023-10-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231020	2023-10-20	CC BY 4.0	10.5281/zenodo.10053602	pbdb_occs.rds	2023-10-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231021	2023-10-21	CC BY 4.0	10.5281/zenodo.10053646	pbdb_occs.rds	2023-10-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231023	2023-10-23	CC BY 4.0	10.5281/zenodo.10057987	pbdb_occs.rds	2023-10-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231024	2023-10-24	CC BY 4.0	10.5281/zenodo.10066376	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231026	2023-10-26	CC BY 4.0	10.5281/zenodo.10066399	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231027	2023-10-27	CC BY 4.0	10.5281/zenodo.10066415	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231028	2023-10-28	CC BY 4.0	10.5281/zenodo.10066423	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231030	2023-10-30	CC BY 4.0	10.5281/zenodo.10066439	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231031	2023-10-31	CC BY 4.0	10.5281/zenodo.10066450	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231102	2023-11-02	CC BY 4.0	10.5281/zenodo.10066456	pbdb_occs.rds	2023-11-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231103	2023-11-03	CC BY 4.0	10.5281/zenodo.10069260	pbdb_occs.rds	2023-11-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231105	2023-11-05	CC BY 4.0	10.5281/zenodo.10073092	pbdb_occs.rds	2023-11-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231106	2023-11-06	CC BY 4.0	10.5281/zenodo.10074466	pbdb_occs.rds	2023-11-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231107	2023-11-07	CC BY 4.0	10.5281/zenodo.10078363	pbdb_occs.rds	2023-11-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231108	2023-11-08	CC BY 4.0	10.5281/zenodo.10083500	pbdb_occs.rds	2023-11-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231109	2023-11-09	CC BY 4.0	10.5281/zenodo.10091894	pbdb_occs.rds	2023-11-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231110	2023-11-10	CC BY 4.0	10.5281/zenodo.10101122	pbdb_occs.rds	2023-11-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231111	2023-11-11	CC BY 4.0	10.5281/zenodo.10113430	pbdb_occs.rds	2023-11-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231112	2023-11-12	CC BY 4.0	10.5281/zenodo.10116056	pbdb_occs.rds	2023-11-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231113	2023-11-13	CC BY 4.0	10.5281/zenodo.10117804	pbdb_occs.rds	2023-11-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231114	2023-11-14	CC BY 4.0	10.5281/zenodo.10124029	pbdb_occs.rds	2023-11-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231115	2023-11-15	CC BY 4.0	10.5281/zenodo.10136959	pbdb_occs.rds	2023-11-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231116	2023-11-16	CC BY 4.0	10.5281/zenodo.10143102	pbdb_occs.rds	2023-11-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231118	2023-11-18	CC BY 4.0	10.5281/zenodo.10153546	pbdb_occs.rds	2023-11-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231119	2023-11-19	CC BY 4.0	10.5281/zenodo.10157334	pbdb_occs.rds	2023-11-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231120	2023-11-20	CC BY 4.0	10.5281/zenodo.10162277	pbdb_occs.rds	2023-11-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231121	2023-11-21	CC BY 4.0	10.5281/zenodo.10171607	pbdb_occs.rds	2023-11-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231122	2023-11-22	CC BY 4.0	10.5281/zenodo.10194856	pbdb_occs.rds	2023-11-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231123	2023-11-23	CC BY 4.0	10.5281/zenodo.10201699	pbdb_occs.rds	2023-11-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231124	2023-11-24	CC BY 4.0	10.5281/zenodo.10203378	pbdb_occs.rds	2023-11-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231125	2023-11-25	CC BY 4.0	10.5281/zenodo.10205653	pbdb_occs.rds	2023-11-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231126	2023-11-26	CC BY 4.0	10.5281/zenodo.10207383	pbdb_occs.rds	2023-11-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231127	2023-11-27	CC BY 4.0	10.5281/zenodo.10208764	pbdb_occs.rds	2023-11-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231128	2023-11-28	CC BY 4.0	10.5281/zenodo.10213543	pbdb_occs.rds	2023-11-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231129	2023-11-29	CC BY 4.0	10.5281/zenodo.10222793	pbdb_occs.rds	2023-11-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231130	2023-11-30	CC BY 4.0	10.5281/zenodo.10225417	pbdb_occs.rds	2023-11-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231201	2023-12-01	CC BY 4.0	10.5281/zenodo.10246172	pbdb_occs.rds	2023-12-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231202	2023-12-02	CC BY 4.0	10.5281/zenodo.10251188	pbdb_occs.rds	2023-12-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231203	2023-12-03	CC BY 4.0	10.5281/zenodo.10253039	pbdb_occs.rds	2023-12-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231204	2023-12-04	CC BY 4.0	10.5281/zenodo.10256979	pbdb_occs.rds	2023-12-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231205	2023-12-05	CC BY 4.0	10.5281/zenodo.10260478	pbdb_occs.rds	2023-12-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231206	2023-12-06	CC BY 4.0	10.5281/zenodo.10277625	pbdb_occs.rds	2023-12-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231207	2023-12-07	CC BY 4.0	10.5281/zenodo.10284360	pbdb_occs.rds	2023-12-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231208	2023-12-08	CC BY 4.0	10.5281/zenodo.10300865	pbdb_occs.rds	2023-12-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231209	2023-12-09	CC BY 4.0	10.5281/zenodo.10323708	pbdb_occs.rds	2023-12-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231210	2023-12-10	CC BY 4.0	10.5281/zenodo.10339414	pbdb_occs.rds	2023-12-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231211	2023-12-11	CC BY 4.0	10.5281/zenodo.10352220	pbdb_occs.rds	2023-12-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231213	2023-12-13	CC BY 4.0	10.5281/zenodo.10371844	pbdb_occs.rds	2023-12-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231214	2023-12-14	CC BY 4.0	10.5281/zenodo.10390788	pbdb_occs.rds	2023-12-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231215	2023-12-15	CC BY 4.0	10.5281/zenodo.10390879	pbdb_occs.rds	2023-12-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231216	2023-12-16	CC BY 4.0	10.5281/zenodo.10394630	pbdb_occs.rds	2023-12-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231217	2023-12-17	CC BY 4.0	10.5281/zenodo.10396760	pbdb_occs.rds	2023-12-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231218	2023-12-18	CC BY 4.0	10.5281/zenodo.10405949	pbdb_occs.rds	2023-12-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231219	2023-12-19	CC BY 4.0	10.5281/zenodo.10406071	pbdb_occs.rds	2023-12-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231220	2023-12-20	CC BY 4.0	10.5281/zenodo.10409663	pbdb_occs.rds	2023-12-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20231221	2023-12-21	CC BY 4.0	10.5281/zenodo.10417560	pbdb_occs.rds	2023-12-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240107	2024-01-07	CC BY 4.0	10.5281/zenodo.10466717	pbdb_occs.rds	2024-01-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240108	2024-01-08	CC BY 4.0	10.5281/zenodo.10468140	pbdb_occs.rds	2024-01-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240109	2024-01-09	CC BY 4.0	10.5281/zenodo.10476163	pbdb_occs.rds	2024-01-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240111	2024-01-11	CC BY 4.0	10.5281/zenodo.10488784	pbdb_occs.rds	2024-01-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240113	2024-01-13	CC BY 4.0	10.5281/zenodo.10512330	pbdb_occs.rds	2024-01-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240115	2024-01-15	CC BY 4.0	10.5281/zenodo.10512824	pbdb_occs.rds	2024-01-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240116	2024-01-16	CC BY 4.0	10.5281/zenodo.10518709	pbdb_occs.rds	2024-01-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240117	2024-01-17	CC BY 4.0	10.5281/zenodo.10523314	pbdb_occs.rds	2024-01-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240118	2024-01-18	CC BY 4.0	10.5281/zenodo.10526953	pbdb_occs.rds	2024-01-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240119	2024-01-19	CC BY 4.0	10.5281/zenodo.10532038	pbdb_occs.rds	2024-01-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240120	2024-01-20	CC BY 4.0	10.5281/zenodo.10542253	pbdb_occs.rds	2024-01-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240121	2024-01-21	CC BY 4.0	10.5281/zenodo.10545032	pbdb_occs.rds	2024-01-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240124	2024-01-24	CC BY 4.0	10.5281/zenodo.10561260	pbdb_occs.rds	2024-01-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240125	2024-01-25	CC BY 4.0	10.5281/zenodo.10566619	pbdb_occs.rds	2024-01-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240126	2024-01-26	CC BY 4.0	10.5281/zenodo.10571404	pbdb_occs.rds	2024-01-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240127	2024-01-27	CC BY 4.0	10.5281/zenodo.10575331	pbdb_occs.rds	2024-01-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240128	2024-01-28	CC BY 4.0	10.5281/zenodo.10577668	pbdb_occs.rds	2024-01-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240129	2024-01-29	CC BY 4.0	10.5281/zenodo.10582202	pbdb_occs.rds	2024-01-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240130	2024-01-30	CC BY 4.0	10.5281/zenodo.10590845	pbdb_occs.rds	2024-01-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240131	2024-01-31	CC BY 4.0	10.5281/zenodo.10598207	pbdb_occs.rds	2024-01-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240201	2024-02-01	CC BY 4.0	10.5281/zenodo.10606211	pbdb_occs.rds	2024-02-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240202	2024-02-02	CC BY 4.0	10.5281/zenodo.10609497	pbdb_occs.rds	2024-02-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240203	2024-02-03	CC BY 4.0	10.5281/zenodo.10614041	pbdb_occs.rds	2024-02-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240204	2024-02-04	CC BY 4.0	10.5281/zenodo.10615566	pbdb_occs.rds	2024-02-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240205	2024-02-05	CC BY 4.0	10.5281/zenodo.10617925	pbdb_occs.rds	2024-02-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240206	2024-02-06	CC BY 4.0	10.5281/zenodo.10625783	pbdb_occs.rds	2024-02-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240207	2024-02-07	CC BY 4.0	10.5281/zenodo.10630055	pbdb_occs.rds	2024-02-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240208	2024-02-08	CC BY 4.0	10.5281/zenodo.10633933	pbdb_occs.rds	2024-02-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240209	2024-02-09	CC BY 4.0	10.5281/zenodo.10639851	pbdb_occs.rds	2024-02-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240211	2024-02-11	CC BY 4.0	10.5281/zenodo.10649269	pbdb_occs.rds	2024-02-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240212	2024-02-12	CC BY 4.0	10.5281/zenodo.10650686	pbdb_occs.rds	2024-02-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240213	2024-02-13	CC BY 4.0	10.5281/zenodo.10653359	pbdb_occs.rds	2024-02-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240214	2024-02-14	CC BY 4.0	10.5281/zenodo.10656466	pbdb_occs.rds	2024-02-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240215	2024-02-15	CC BY 4.0	10.5281/zenodo.10663792	pbdb_occs.rds	2024-02-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240216	2024-02-16	CC BY 4.0	10.5281/zenodo.10669961	pbdb_occs.rds	2024-02-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240218	2024-02-18	CC BY 4.0	10.5281/zenodo.10679898	pbdb_occs.rds	2024-02-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240219	2024-02-19	CC BY 4.0	10.5281/zenodo.10679984	pbdb_occs.rds	2024-02-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240220	2024-02-20	CC BY 4.0	10.5281/zenodo.10683067	pbdb_occs.rds	2024-02-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240221	2024-02-21	CC BY 4.0	10.5281/zenodo.10686771	pbdb_occs.rds	2024-02-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240222	2024-02-22	CC BY 4.0	10.5281/zenodo.10693958	pbdb_occs.rds	2024-02-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240227	2024-02-27	CC BY 4.0	10.5281/zenodo.10719476	pbdb_occs.rds	2024-02-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240228	2024-02-28	CC BY 4.0	10.5281/zenodo.10730352	pbdb_occs.rds	2024-03-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240301	2024-03-01	CC BY 4.0	10.5281/zenodo.10730406	pbdb_occs.rds	2024-03-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240303	2024-03-03	CC BY 4.0	10.5281/zenodo.10776706	pbdb_occs.rds	2024-03-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240304	2024-03-04	CC BY 4.0	10.5281/zenodo.10777327	pbdb_occs.rds	2024-03-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240305	2024-03-05	CC BY 4.0	10.5281/zenodo.10782507	pbdb_occs.rds	2024-03-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240306	2024-03-06	CC BY 4.0	10.5281/zenodo.10784846	pbdb_occs.rds	2024-03-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240308	2024-03-08	CC BY 4.0	10.5281/zenodo.10796462	pbdb_occs.rds	2024-03-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240309	2024-03-09	CC BY 4.0	10.5281/zenodo.10799926	pbdb_occs.rds	2024-03-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240310	2024-03-10	CC BY 4.0	10.5281/zenodo.10801969	pbdb_occs.rds	2024-03-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240311	2024-03-11	CC BY 4.0	10.5281/zenodo.10808362	pbdb_occs.rds	2024-03-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240312	2024-03-12	CC BY 4.0	10.5281/zenodo.10808442	pbdb_occs.rds	2024-03-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240313	2024-03-13	CC BY 4.0	10.5281/zenodo.10813440	pbdb_occs.rds	2024-03-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240314	2024-03-14	CC BY 4.0	10.5281/zenodo.10820965	pbdb_occs.rds	2024-03-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240315	2024-03-15	CC BY 4.0	10.5281/zenodo.10821426	pbdb_occs.rds	2024-03-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240317	2024-03-17	CC BY 4.0	10.5281/zenodo.10837560	pbdb_occs.rds	2024-03-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240319	2024-03-19	CC BY 4.0	10.5281/zenodo.10837775	pbdb_occs.rds	2024-03-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240323	2024-03-23	CC BY 4.0	10.5281/zenodo.10865987	pbdb_occs.rds	2024-03-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240324	2024-03-24	CC BY 4.0	10.5281/zenodo.10868033	pbdb_occs.rds	2024-03-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240325	2024-03-25	CC BY 4.0	10.5281/zenodo.10868184	pbdb_occs.rds	2024-03-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240326	2024-03-26	CC BY 4.0	10.5281/zenodo.10886003	pbdb_occs.rds	2024-03-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240327	2024-03-27	CC BY 4.0	10.5281/zenodo.10886067	pbdb_occs.rds	2024-03-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240328	2024-03-28	CC BY 4.0	10.5281/zenodo.10889657	pbdb_occs.rds	2024-03-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240329	2024-03-29	CC BY 4.0	10.5281/zenodo.10931463	pbdb_occs.rds	2024-04-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240330	2024-03-30	CC BY 4.0	10.5281/zenodo.10931473	pbdb_occs.rds	2024-04-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240331	2024-03-31	CC BY 4.0	10.5281/zenodo.10931491	pbdb_occs.rds	2024-04-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240401	2024-04-01	CC BY 4.0	10.5281/zenodo.10931518	pbdb_occs.rds	2024-04-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240402	2024-04-02	CC BY 4.0	10.5281/zenodo.10931527	pbdb_occs.rds	2024-04-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240405	2024-04-05	CC BY 4.0	10.5281/zenodo.10931575	pbdb_occs.rds	2024-04-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240406	2024-04-06	CC BY 4.0	10.5281/zenodo.10936451	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240407	2024-04-07	CC BY 4.0	10.5281/zenodo.10991650	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240409	2024-04-09	CC BY 4.0	10.5281/zenodo.10991663	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240410	2024-04-10	CC BY 4.0	10.5281/zenodo.10991674	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240412	2024-04-12	CC BY 4.0	10.5281/zenodo.10991689	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240413	2024-04-13	CC BY 4.0	10.5281/zenodo.10991701	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240418	2024-04-18	CC BY 4.0	10.5281/zenodo.10991707	pbdb_occs.rds	2024-04-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240419	2024-04-19	CC BY 4.0	10.5281/zenodo.10996570	pbdb_occs.rds	2024-04-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240426	2024-04-26	CC BY 4.0	10.5281/zenodo.11071199	pbdb_occs.rds	2024-04-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240427	2024-04-27	CC BY 4.0	10.5281/zenodo.11076679	pbdb_occs.rds	2024-04-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240428	2024-04-28	CC BY 4.0	10.5281/zenodo.11079842	pbdb_occs.rds	2024-04-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240429	2024-04-29	CC BY 4.0	10.5281/zenodo.11082875	pbdb_occs.rds	2024-04-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240430	2024-04-30	CC BY 4.0	10.5281/zenodo.11091260	pbdb_occs.rds	2024-04-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240501	2024-05-01	CC BY 4.0	10.5281/zenodo.11096468	pbdb_occs.rds	2024-05-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240502	2024-05-02	CC BY 4.0	10.5281/zenodo.11102358	pbdb_occs.rds	2024-05-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240503	2024-05-03	CC BY 4.0	10.5281/zenodo.11108220	pbdb_occs.rds	2024-05-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240505	2024-05-05	CC BY 4.0	10.5281/zenodo.11115162	pbdb_occs.rds	2024-05-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240506	2024-05-06	CC BY 4.0	10.5281/zenodo.11119269	pbdb_occs.rds	2024-05-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240507	2024-05-07	CC BY 4.0	10.5281/zenodo.11124710	pbdb_occs.rds	2024-05-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240508	2024-05-08	CC BY 4.0	10.5281/zenodo.11143112	pbdb_occs.rds	2024-05-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240512	2024-05-12	CC BY 4.0	10.5281/zenodo.11180630	pbdb_occs.rds	2024-05-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240513	2024-05-13	CC BY 4.0	10.5281/zenodo.11184357	pbdb_occs.rds	2024-05-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240514	2024-05-14	CC BY 4.0	10.5281/zenodo.11190003	pbdb_occs.rds	2024-05-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240515	2024-05-15	CC BY 4.0	10.5281/zenodo.11196180	pbdb_occs.rds	2024-05-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240516	2024-05-16	CC BY 4.0	10.5281/zenodo.11202847	pbdb_occs.rds	2024-05-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240517	2024-05-17	CC BY 4.0	10.5281/zenodo.11208096	pbdb_occs.rds	2024-05-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240518	2024-05-18	CC BY 4.0	10.5281/zenodo.11216524	pbdb_occs.rds	2024-05-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240519	2024-05-19	CC BY 4.0	10.5281/zenodo.11217915	pbdb_occs.rds	2024-05-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240521	2024-05-21	CC BY 4.0	10.5281/zenodo.11232180	pbdb_occs.rds	2024-05-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240522	2024-05-22	CC BY 4.0	10.5281/zenodo.11241564	pbdb_occs.rds	2024-05-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240523	2024-05-23	CC BY 4.0	10.5281/zenodo.11259351	pbdb_occs.rds	2024-05-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240524	2024-05-24	CC BY 4.0	10.5281/zenodo.11282099	pbdb_occs.rds	2024-05-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240525	2024-05-25	CC BY 4.0	10.5281/zenodo.11348898	pbdb_occs.rds	2024-05-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240528	2024-05-28	CC BY 4.0	10.5281/zenodo.11370717	pbdb_occs.rds	2024-05-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240529	2024-05-29	CC BY 4.0	10.5281/zenodo.11382541	pbdb_occs.rds	2024-05-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240530	2024-05-30	CC BY 4.0	10.5281/zenodo.11394480	pbdb_occs.rds	2024-05-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240531	2024-05-31	CC BY 4.0	10.5281/zenodo.11400763	pbdb_occs.rds	2024-05-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240602	2024-06-02	CC BY 4.0	10.5281/zenodo.11420858	pbdb_occs.rds	2024-06-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240604	2024-06-04	CC BY 4.0	10.5281/zenodo.11471062	pbdb_occs.rds	2024-06-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240605	2024-06-05	CC BY 4.0	10.5281/zenodo.11486606	pbdb_occs.rds	2024-06-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240606	2024-06-06	CC BY 4.0	10.5281/zenodo.11501535	pbdb_occs.rds	2024-06-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240607	2024-06-07	CC BY 4.0	10.5281/zenodo.11518237	pbdb_occs.rds	2024-06-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240608	2024-06-08	CC BY 4.0	10.5281/zenodo.12086854	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240609	2024-06-09	CC BY 4.0	10.5281/zenodo.12086989	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240611	2024-06-11	CC BY 4.0	10.5281/zenodo.12087086	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240612	2024-06-12	CC BY 4.0	10.5281/zenodo.12087209	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240613	2024-06-13	CC BY 4.0	10.5281/zenodo.12087374	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240614	2024-06-14	CC BY 4.0	10.5281/zenodo.12087536	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240616	2024-06-16	CC BY 4.0	10.5281/zenodo.12087608	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240617	2024-06-17	CC BY 4.0	10.5281/zenodo.12087716	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240618	2024-06-18	CC BY 4.0	10.5281/zenodo.12087863	pbdb_occs.rds	2024-06-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240619	2024-06-19	CC BY 4.0	10.5281/zenodo.12166408	pbdb_occs.rds	2024-06-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240620	2024-06-20	CC BY 4.0	10.5281/zenodo.12179647	pbdb_occs.rds	2024-06-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240621	2024-06-21	CC BY 4.0	10.5281/zenodo.12204343	pbdb_occs.rds	2024-06-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240622	2024-06-22	CC BY 4.0	10.5281/zenodo.12260887	pbdb_occs.rds	2024-06-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240624	2024-06-24	CC BY 4.0	10.5281/zenodo.12514488	pbdb_occs.rds	2024-06-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240625	2024-06-25	CC BY 4.0	10.5281/zenodo.12527999	pbdb_occs.rds	2024-06-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240626	2024-06-26	CC BY 4.0	10.5281/zenodo.12544673	pbdb_occs.rds	2024-06-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240627	2024-06-27	CC BY 4.0	10.5281/zenodo.12566545	pbdb_occs.rds	2024-06-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240628	2024-06-28	CC BY 4.0	10.5281/zenodo.12578926	pbdb_occs.rds	2024-06-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240630	2024-06-30	CC BY 4.0	10.5281/zenodo.12609933	pbdb_occs.rds	2024-07-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240701	2024-07-01	CC BY 4.0	10.5281/zenodo.12610164	pbdb_occs.rds	2024-07-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240702	2024-07-02	CC BY 4.0	10.5281/zenodo.12622468	pbdb_occs.rds	2024-07-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240703	2024-07-03	CC BY 4.0	10.5281/zenodo.12633816	pbdb_occs.rds	2024-07-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240704	2024-07-04	CC BY 4.0	10.5281/zenodo.12649376	pbdb_occs.rds	2024-07-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240705	2024-07-05	CC BY 4.0	10.5281/zenodo.12663368	pbdb_occs.rds	2024-07-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240707	2024-07-07	CC BY 4.0	10.5281/zenodo.12678423	pbdb_occs.rds	2024-07-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240708	2024-07-08	CC BY 4.0	10.5281/zenodo.12683822	pbdb_occs.rds	2024-07-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240709	2024-07-09	CC BY 4.0	10.5281/zenodo.12697902	pbdb_occs.rds	2024-07-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240710	2024-07-10	CC BY 4.0	10.5281/zenodo.12703956	pbdb_occs.rds	2024-07-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240711	2024-07-11	CC BY 4.0	10.5281/zenodo.12722000	pbdb_occs.rds	2024-07-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240719	2024-07-19	CC BY 4.0	10.5281/zenodo.12793238	pbdb_occs.rds	2024-07-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240720	2024-07-20	CC BY 4.0	10.5281/zenodo.12793255	pbdb_occs.rds	2024-07-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240721	2024-07-21	CC BY 4.0	10.5281/zenodo.12793274	pbdb_occs.rds	2024-07-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240722	2024-07-22	CC BY 4.0	10.5281/zenodo.12793382	pbdb_occs.rds	2024-07-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240723	2024-07-23	CC BY 4.0	10.5281/zenodo.12801918	pbdb_occs.rds	2024-07-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240724	2024-07-24	CC BY 4.0	10.5281/zenodo.12806482	pbdb_occs.rds	2024-07-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240725	2024-07-25	CC BY 4.0	10.5281/zenodo.12821310	pbdb_occs.rds	2024-07-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240727	2024-07-27	CC BY 4.0	10.5281/zenodo.13120623	pbdb_occs.rds	2024-07-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240728	2024-07-28	CC BY 4.0	10.5281/zenodo.13120624	pbdb_occs.rds	2024-07-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240729	2024-07-29	CC BY 4.0	10.5281/zenodo.13120731	pbdb_occs.rds	2024-07-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240730	2024-07-30	CC BY 4.0	10.5281/zenodo.13132702	pbdb_occs.rds	2024-07-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240731	2024-07-31	CC BY 4.0	10.5281/zenodo.13177769	pbdb_occs.rds	2024-08-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240801	2024-08-01	CC BY 4.0	10.5281/zenodo.13189828	pbdb_occs.rds	2024-08-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240803	2024-08-03	CC BY 4.0	10.5281/zenodo.13191897	pbdb_occs.rds	2024-08-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240804	2024-08-04	CC BY 4.0	10.5281/zenodo.13210196	pbdb_occs.rds	2024-08-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240805	2024-08-05	CC BY 4.0	10.5281/zenodo.13226981	pbdb_occs.rds	2024-08-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240806	2024-08-06	CC BY 4.0	10.5281/zenodo.13235311	pbdb_occs.rds	2024-08-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240807	2024-08-07	CC BY 4.0	10.5281/zenodo.13253831	pbdb_occs.rds	2024-08-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240808	2024-08-08	CC BY 4.0	10.5281/zenodo.13269768	pbdb_occs.rds	2024-08-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240809	2024-08-09	CC BY 4.0	10.5281/zenodo.13286140	pbdb_occs.rds	2024-08-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240810	2024-08-10	CC BY 4.0	10.5281/zenodo.13292224	pbdb_occs.rds	2024-08-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240811	2024-08-11	CC BY 4.0	10.5281/zenodo.13294553	pbdb_occs.rds	2024-08-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240812	2024-08-12	CC BY 4.0	10.5281/zenodo.13303612	pbdb_occs.rds	2024-08-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240813	2024-08-13	CC BY 4.0	10.5281/zenodo.13309195	pbdb_occs.rds	2024-08-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240814	2024-08-14	CC BY 4.0	10.5281/zenodo.13318297	pbdb_occs.rds	2024-08-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240815	2024-08-15	CC BY 4.0	10.5281/zenodo.13324938	pbdb_occs.rds	2024-08-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240816	2024-08-16	CC BY 4.0	10.5281/zenodo.13329371	pbdb_occs.rds	2024-08-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240817	2024-08-17	CC BY 4.0	10.5281/zenodo.13335916	pbdb_occs.rds	2024-08-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240818	2024-08-18	CC BY 4.0	10.5281/zenodo.13337361	pbdb_occs.rds	2024-08-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240819	2024-08-19	CC BY 4.0	10.5281/zenodo.13341164	pbdb_occs.rds	2024-08-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240820	2024-08-20	CC BY 4.0	10.5281/zenodo.13347780	pbdb_occs.rds	2024-08-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240821	2024-08-21	CC BY 4.0	10.5281/zenodo.13353101	pbdb_occs.rds	2024-08-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240822	2024-08-22	CC BY 4.0	10.5281/zenodo.13358609	pbdb_occs.rds	2024-08-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240823	2024-08-23	CC BY 4.0	10.5281/zenodo.13364551	pbdb_occs.rds	2024-08-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240828	2024-08-28	CC BY 4.0	10.5281/zenodo.13384379	pbdb_occs.rds	2024-08-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240829	2024-08-29	CC BY 4.0	10.5281/zenodo.13463720	pbdb_occs.rds	2024-08-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240830	2024-08-30	CC BY 4.0	10.5281/zenodo.13597202	pbdb_occs.rds	2024-08-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240831	2024-08-31	CC BY 4.0	10.5281/zenodo.13623099	pbdb_occs.rds	2024-08-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240901	2024-09-01	CC BY 4.0	10.5281/zenodo.13625157	pbdb_occs.rds	2024-09-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240902	2024-09-02	CC BY 4.0	10.5281/zenodo.13627370	pbdb_occs.rds	2024-09-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240903	2024-09-03	CC BY 4.0	10.5281/zenodo.13641665	pbdb_occs.rds	2024-09-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240904	2024-09-04	CC BY 4.0	10.5281/zenodo.13682375	pbdb_occs.rds	2024-09-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240905	2024-09-05	CC BY 4.0	10.5281/zenodo.13691637	pbdb_occs.rds	2024-09-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240906	2024-09-06	CC BY 4.0	10.5281/zenodo.13710090	pbdb_occs.rds	2024-09-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240907	2024-09-07	CC BY 4.0	10.5281/zenodo.13734547	pbdb_occs.rds	2024-09-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240908	2024-09-08	CC BY 4.0	10.5281/zenodo.13734550	pbdb_occs.rds	2024-09-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240909	2024-09-09	CC BY 4.0	10.5281/zenodo.13734651	pbdb_occs.rds	2024-09-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240910	2024-09-10	CC BY 4.0	10.5281/zenodo.13739371	pbdb_occs.rds	2024-09-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240911	2024-09-11	CC BY 4.0	10.5281/zenodo.13744473	pbdb_occs.rds	2024-09-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240912	2024-09-12	CC BY 4.0	10.5281/zenodo.13752691	pbdb_occs.rds	2024-09-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240913	2024-09-13	CC BY 4.0	10.5281/zenodo.13756804	pbdb_occs.rds	2024-09-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240914	2024-09-14	CC BY 4.0	10.5281/zenodo.13767116	pbdb_occs.rds	2024-09-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240915	2024-09-15	CC BY 4.0	10.5281/zenodo.13767121	pbdb_occs.rds	2024-09-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240916	2024-09-16	CC BY 4.0	10.5281/zenodo.13767176	pbdb_occs.rds	2024-09-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240917	2024-09-17	CC BY 4.0	10.5281/zenodo.13771387	pbdb_occs.rds	2024-09-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240918	2024-09-18	CC BY 4.0	10.5281/zenodo.13778441	pbdb_occs.rds	2024-09-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240919	2024-09-19	CC BY 4.0	10.5281/zenodo.13789321	pbdb_occs.rds	2024-09-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240920	2024-09-20	CC BY 4.0	10.5281/zenodo.13819375	pbdb_occs.rds	2024-09-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240922	2024-09-22	CC BY 4.0	10.5281/zenodo.13879833	pbdb_occs.rds	2024-10-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240923	2024-09-23	CC BY 4.0	10.5281/zenodo.13879836	pbdb_occs.rds	2024-10-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20240924	2024-09-24	CC BY 4.0	10.5281/zenodo.13879841	pbdb_occs.rds	2024-10-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241001	2024-10-01	CC BY 4.0	10.5281/zenodo.13879850	pbdb_occs.rds	2024-10-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241002	2024-10-02	CC BY 4.0	10.5281/zenodo.13879942	pbdb_occs.rds	2024-10-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241003	2024-10-03	CC BY 4.0	10.5281/zenodo.13889021	pbdb_occs.rds	2024-10-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241004	2024-10-04	CC BY 4.0	10.5281/zenodo.13889191	pbdb_occs.rds	2024-10-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241005	2024-10-05	CC BY 4.0	10.5281/zenodo.13908981	pbdb_occs.rds	2024-10-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241006	2024-10-06	CC BY 4.0	10.5281/zenodo.13908986	pbdb_occs.rds	2024-10-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241008	2024-10-08	CC BY 4.0	10.5281/zenodo.13909009	pbdb_occs.rds	2024-10-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241009	2024-10-09	CC BY 4.0	10.5281/zenodo.13909119	pbdb_occs.rds	2024-10-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241012	2024-10-12	CC BY 4.0	10.5281/zenodo.13941140	pbdb_occs.rds	2024-10-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241013	2024-10-13	CC BY 4.0	10.5281/zenodo.13941147	pbdb_occs.rds	2024-10-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241015	2024-10-15	CC BY 4.0	10.5281/zenodo.13941163	pbdb_occs.rds	2024-10-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241016	2024-10-16	CC BY 4.0	10.5281/zenodo.13941171	pbdb_occs.rds	2024-10-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241017	2024-10-17	CC BY 4.0	10.5281/zenodo.13943360	pbdb_occs.rds	2024-10-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241018	2024-10-18	CC BY 4.0	10.5281/zenodo.13950120	pbdb_occs.rds	2024-10-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241019	2024-10-19	CC BY 4.0	10.5281/zenodo.13959755	pbdb_occs.rds	2024-10-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241020	2024-10-20	CC BY 4.0	10.5281/zenodo.13959763	pbdb_occs.rds	2024-10-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241021	2024-10-21	CC BY 4.0	10.5281/zenodo.13959888	pbdb_occs.rds	2024-10-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241022	2024-10-22	CC BY 4.0	10.5281/zenodo.13971690	pbdb_occs.rds	2024-10-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241023	2024-10-23	CC BY 4.0	10.5281/zenodo.13983596	pbdb_occs.rds	2024-10-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241024	2024-10-24	CC BY 4.0	10.5281/zenodo.13985386	pbdb_occs.rds	2024-10-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241025	2024-10-25	CC BY 4.0	10.5281/zenodo.13990640	pbdb_occs.rds	2024-10-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241026	2024-10-26	CC BY 4.0	10.5281/zenodo.14000619	pbdb_occs.rds	2024-10-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241027	2024-10-27	CC BY 4.0	10.5281/zenodo.14000625	pbdb_occs.rds	2024-10-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241028	2024-10-28	CC BY 4.0	10.5281/zenodo.14000699	pbdb_occs.rds	2024-10-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241029	2024-10-29	CC BY 4.0	10.5281/zenodo.14008420	pbdb_occs.rds	2024-10-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241030	2024-10-30	CC BY 4.0	10.5281/zenodo.14011614	pbdb_occs.rds	2024-10-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241031	2024-10-31	CC BY 4.0	10.5281/zenodo.14034658	pbdb_occs.rds	2024-11-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241102	2024-11-02	CC BY 4.0	10.5281/zenodo.14034719	pbdb_occs.rds	2024-11-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241104	2024-11-04	CC BY 4.0	10.5281/zenodo.14034899	pbdb_occs.rds	2024-11-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241105	2024-11-05	CC BY 4.0	10.5281/zenodo.14038788	pbdb_occs.rds	2024-11-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241106	2024-11-06	CC BY 4.0	10.5281/zenodo.14043926	pbdb_occs.rds	2024-11-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241107	2024-11-07	CC BY 4.0	10.5281/zenodo.14052527	pbdb_occs.rds	2024-11-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241108	2024-11-08	CC BY 4.0	10.5281/zenodo.14054493	pbdb_occs.rds	2024-11-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241109	2024-11-09	CC BY 4.0	10.5281/zenodo.14060758	pbdb_occs.rds	2024-11-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241110	2024-11-10	CC BY 4.0	10.5281/zenodo.14062782	pbdb_occs.rds	2024-11-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241111	2024-11-11	CC BY 4.0	10.5281/zenodo.14065609	pbdb_occs.rds	2024-11-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241112	2024-11-12	CC BY 4.0	10.5281/zenodo.14093971	pbdb_occs.rds	2024-11-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241113	2024-11-13	CC BY 4.0	10.5281/zenodo.14131754	pbdb_occs.rds	2024-11-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241115	2024-11-15	CC BY 4.0	10.5281/zenodo.14169907	pbdb_occs.rds	2024-11-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241116	2024-11-16	CC BY 4.0	10.5281/zenodo.14173396	pbdb_occs.rds	2024-11-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241117	2024-11-17	CC BY 4.0	10.5281/zenodo.14178157	pbdb_occs.rds	2024-11-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241118	2024-11-18	CC BY 4.0	10.5281/zenodo.14178392	pbdb_occs.rds	2024-11-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241119	2024-11-19	CC BY 4.0	10.5281/zenodo.14185154	pbdb_occs.rds	2024-11-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241120	2024-11-20	CC BY 4.0	10.5281/zenodo.14191051	pbdb_occs.rds	2024-11-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241122	2024-11-22	CC BY 4.0	10.5281/zenodo.14202448	pbdb_occs.rds	2024-11-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241123	2024-11-23	CC BY 4.0	10.5281/zenodo.14210214	pbdb_occs.rds	2024-11-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241124	2024-11-24	CC BY 4.0	10.5281/zenodo.14211530	pbdb_occs.rds	2024-11-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241126	2024-11-26	CC BY 4.0	10.5281/zenodo.14221808	pbdb_occs.rds	2024-11-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241127	2024-11-27	CC BY 4.0	10.5281/zenodo.14228041	pbdb_occs.rds	2024-11-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241128	2024-11-28	CC BY 4.0	10.5281/zenodo.14235026	pbdb_occs.rds	2024-11-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241129	2024-11-29	CC BY 4.0	10.5281/zenodo.14246113	pbdb_occs.rds	2024-11-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241201	2024-12-01	CC BY 4.0	10.5281/zenodo.14253052	pbdb_occs.rds	2024-12-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241202	2024-12-02	CC BY 4.0	10.5281/zenodo.14258977	pbdb_occs.rds	2024-12-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241203	2024-12-03	CC BY 4.0	10.5281/zenodo.14264737	pbdb_occs.rds	2024-12-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241204	2024-12-04	CC BY 4.0	10.5281/zenodo.14277177	pbdb_occs.rds	2024-12-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241205	2024-12-05	CC BY 4.0	10.5281/zenodo.14281287	pbdb_occs.rds	2024-12-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241206	2024-12-06	CC BY 4.0	10.5281/zenodo.14287656	pbdb_occs.rds	2024-12-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241208	2024-12-08	CC BY 4.0	10.5281/zenodo.14309559	pbdb_occs.rds	2024-12-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241209	2024-12-09	CC BY 4.0	10.5281/zenodo.14329436	pbdb_occs.rds	2024-12-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241211	2024-12-11	CC BY 4.0	10.5281/zenodo.14379189	pbdb_occs.rds	2024-12-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241213	2024-12-13	CC BY 4.0	10.5281/zenodo.14440804	pbdb_occs.rds	2024-12-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241215	2024-12-15	CC BY 4.0	10.5281/zenodo.14493938	pbdb_occs.rds	2024-12-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241216	2024-12-16	CC BY 4.0	10.5281/zenodo.14499585	pbdb_occs.rds	2024-12-16
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241217	2024-12-17	CC BY 4.0	10.5281/zenodo.14509705	pbdb_occs.rds	2024-12-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241218	2024-12-18	CC BY 4.0	10.5281/zenodo.14512580	pbdb_occs.rds	2024-12-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241219	2024-12-19	CC BY 4.0	10.5281/zenodo.14524240	pbdb_occs.rds	2024-12-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241220	2024-12-20	CC BY 4.0	10.5281/zenodo.14535390	pbdb_occs.rds	2024-12-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241221	2024-12-21	CC BY 4.0	10.5281/zenodo.14540593	pbdb_occs.rds	2024-12-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241229	2024-12-29	CC BY 4.0	10.5281/zenodo.14577405	pbdb_occs.rds	2024-12-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20241230	2024-12-30	CC BY 4.0	10.5281/zenodo.14577954	pbdb_occs.rds	2024-12-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250102	2025-01-02	CC BY 4.0	10.5281/zenodo.14588615	pbdb_occs.rds	2025-01-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250107	2025-01-07	CC BY 4.0	10.5281/zenodo.14610158	pbdb_occs.rds	2025-01-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250108	2025-01-08	CC BY 4.0	10.5281/zenodo.14617293	pbdb_occs.rds	2025-01-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250109	2025-01-09	CC BY 4.0	10.5281/zenodo.14620453	pbdb_occs.rds	2025-01-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250110	2025-01-10	CC BY 4.0	10.5281/zenodo.14626685	pbdb_occs.rds	2025-01-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250112	2025-01-12	CC BY 4.0	10.5281/zenodo.14638014	pbdb_occs.rds	2025-01-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250113	2025-01-13	CC BY 4.0	10.5281/zenodo.14638282	pbdb_occs.rds	2025-01-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250114	2025-01-14	CC BY 4.0	10.5281/zenodo.14645976	pbdb_occs.rds	2025-01-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250115	2025-01-15	CC BY 4.0	10.5281/zenodo.14651385	pbdb_occs.rds	2025-01-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250117	2025-01-17	CC BY 4.0	10.5281/zenodo.14677180	pbdb_occs.rds	2025-01-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250120	2025-01-20	CC BY 4.0	10.5281/zenodo.14699237	pbdb_occs.rds	2025-01-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250121	2025-01-21	CC BY 4.0	10.5281/zenodo.14710573	pbdb_occs.rds	2025-01-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250122	2025-01-22	CC BY 4.0	10.5281/zenodo.14718585	pbdb_occs.rds	2025-01-22
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250123	2025-01-23	CC BY 4.0	10.5281/zenodo.14723323	pbdb_occs.rds	2025-01-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250124	2025-01-24	CC BY 4.0	10.5281/zenodo.14730775	pbdb_occs.rds	2025-01-24
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250127	2025-01-27	CC BY 4.0	10.5281/zenodo.14748201	pbdb_occs.rds	2025-01-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250128	2025-01-28	CC BY 4.0	10.5281/zenodo.14753044	pbdb_occs.rds	2025-01-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250129	2025-01-29	CC BY 4.0	10.5281/zenodo.14760456	pbdb_occs.rds	2025-01-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250131	2025-01-31	CC BY 4.0	10.5281/zenodo.14778460	pbdb_occs.rds	2025-01-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250203	2025-02-03	CC BY 4.0	10.5281/zenodo.14794787	pbdb_occs.rds	2025-02-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250204	2025-02-04	CC BY 4.0	10.5281/zenodo.14800597	pbdb_occs.rds	2025-02-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250205	2025-02-05	CC BY 4.0	10.5281/zenodo.14809270	pbdb_occs.rds	2025-02-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250206	2025-02-06	CC BY 4.0	10.5281/zenodo.14825452	pbdb_occs.rds	2025-02-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250207	2025-02-07	CC BY 4.0	10.5281/zenodo.14832089	pbdb_occs.rds	2025-02-07
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250210	2025-02-10	CC BY 4.0	10.5281/zenodo.14843463	pbdb_occs.rds	2025-02-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250211	2025-02-11	CC BY 4.0	10.5281/zenodo.14849733	pbdb_occs.rds	2025-02-11
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250212	2025-02-12	CC BY 4.0	10.5281/zenodo.14856508	pbdb_occs.rds	2025-02-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250213	2025-02-13	CC BY 4.0	10.5281/zenodo.14884204	pbdb_occs.rds	2025-02-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250214	2025-02-14	CC BY 4.0	10.5281/zenodo.15025837	pbdb_occs.rds	2025-03-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250217	2025-02-17	CC BY 4.0	10.5281/zenodo.15025856	pbdb_occs.rds	2025-03-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250224	2025-02-24	CC BY 4.0	10.5281/zenodo.15025873	pbdb_occs.rds	2025-03-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250303	2025-03-03	CC BY 4.0	10.5281/zenodo.15025888	pbdb_occs.rds	2025-03-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250310	2025-03-10	CC BY 4.0	10.5281/zenodo.15025912	pbdb_occs.rds	2025-03-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250317	2025-03-17	CC BY 4.0	10.5281/zenodo.15038042	pbdb_occs.rds	2025-03-17
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250328	2025-03-28	CC BY 4.0	10.5281/zenodo.15100642	pbdb_occs.rds	2025-03-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250331	2025-03-31	CC BY 4.0	10.5281/zenodo.15111554	pbdb_occs.rds	2025-03-31
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250410	2025-04-10	CC BY 4.0	10.5281/zenodo.15187705	pbdb_occs.rds	2025-04-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250414	2025-04-14	CC BY 4.0	10.5281/zenodo.15209532	pbdb_occs.rds	2025-04-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250423	2025-04-23	CC BY 4.0	10.5281/zenodo.15267667	pbdb_occs.rds	2025-04-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250503	2025-05-03	CC BY 4.0	10.5281/zenodo.15332248	pbdb_occs.rds	2025-05-03
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250505	2025-05-05	CC BY 4.0	10.5281/zenodo.15341271	pbdb_occs.rds	2025-05-05
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250512	2025-05-12	CC BY 4.0	10.5281/zenodo.15388287	pbdb_occs.rds	2025-05-12
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250519	2025-05-19	CC BY 4.0	10.5281/zenodo.15462694	pbdb_occs.rds	2025-05-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250526	2025-05-26	CC BY 4.0	10.5281/zenodo.15517918	pbdb_occs.rds	2025-05-26
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250602	2025-06-02	CC BY 4.0	10.5281/zenodo.15574631	pbdb_occs.rds	2025-06-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250610	2025-06-10	CC BY 4.0	10.5281/zenodo.15630181	pbdb_occs.rds	2025-06-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250623	2025-06-23	CC BY 4.0	10.5281/zenodo.15722687	pbdb_occs.rds	2025-06-23
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250630	2025-06-30	CC BY 4.0	10.5281/zenodo.15772628	pbdb_occs.rds	2025-06-30
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250710	2025-07-10	CC BY 4.0	10.5281/zenodo.15853740	pbdb_occs.rds	2025-07-10
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250714	2025-07-14	CC BY 4.0	10.5281/zenodo.15879161	pbdb_occs.rds	2025-07-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250721	2025-07-21	CC BY 4.0	10.5281/zenodo.16266863	pbdb_occs.rds	2025-07-21
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250728	2025-07-28	CC BY 4.0	10.5281/zenodo.16533395	pbdb_occs.rds	2025-07-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250804	2025-08-04	CC BY 4.0	10.5281/zenodo.16736879	pbdb_occs.rds	2025-08-04
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250815	2025-08-15	CC BY 4.0	10.5281/zenodo.16882042	pbdb_occs.rds	2025-08-15
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250819	2025-08-19	CC BY 4.0	10.5281/zenodo.16901999	pbdb_occs.rds	2025-08-19
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250825	2025-08-25	CC BY 4.0	10.5281/zenodo.16942655	pbdb_occs.rds	2025-08-25
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250901	2025-09-01	CC BY 4.0	10.5281/zenodo.17020675	pbdb_occs.rds	2025-09-01
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250908	2025-09-08	CC BY 4.0	10.5281/zenodo.17079412	pbdb_occs.rds	2025-09-08
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250918	2025-09-18	CC BY 4.0	10.5281/zenodo.17150847	pbdb_occs.rds	2025-09-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20250929	2025-09-29	CC BY 4.0	10.5281/zenodo.17225323	pbdb_occs.rds	2025-09-29
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251009	2025-10-09	CC BY 4.0	10.5281/zenodo.17305745	pbdb_occs.rds	2025-10-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251013	2025-10-13	CC BY 4.0	10.5281/zenodo.17341934	pbdb_occs.rds	2025-10-13
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251020	2025-10-20	CC BY 4.0	10.5281/zenodo.17398669	pbdb_occs.rds	2025-10-20
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251028	2025-10-28	CC BY 4.0	10.5281/zenodo.17463340	pbdb_occs.rds	2025-10-28
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251106	2025-11-06	CC BY 4.0	10.5281/zenodo.17541640	pbdb_occs.rds	2025-11-06
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251114	2025-11-14	CC BY 4.0	10.5281/zenodo.17608201	pbdb_occs.rds	2025-11-14
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251118	2025-11-18	CC BY 4.0	10.5281/zenodo.17638308	pbdb_occs.rds	2025-11-18
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251127	2025-11-27	CC BY 4.0	10.5281/zenodo.17739490	pbdb_occs.rds	2025-11-27
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251202	2025-12-02	CC BY 4.0	10.5281/zenodo.17791229	pbdb_occs.rds	2025-12-02
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251209	2025-12-09	CC BY 4.0	10.5281/zenodo.17865333	pbdb_occs.rds	2025-12-09
+occs3	Basic denormalized occurrence table with references, updated with abundance data	20251216	2025-12-16	CC BY 4.0	10.5281/zenodo.17966977	pbdb_occs.rds	2025-12-17
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260227	2026-02-27	CC BY 4.0	10.5281/zenodo.18803370	pbdb_occs.rds	2026-03-13
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260308	2026-03-08	CC BY 4.0	10.5281/zenodo.19005268	pbdb_occs.rds	2026-03-13
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260315	2026-03-15	CC BY 4.0	10.5281/zenodo.19047158	pbdb_occs.rds	2026-03-16
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260322	2026-03-22	CC BY 4.0	10.5281/zenodo.19186916	pbdb_occs.rds	2026-03-23
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260329	2026-03-29	CC BY 4.0	10.5281/zenodo.19329412	pbdb_occs.rds	2026-03-30
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260405	2026-04-05	CC BY 4.0	10.5281/zenodo.19451410	pbdb_occs.rds	2026-04-07
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260412	2026-04-12	CC BY 4.0	10.5281/zenodo.19566372	pbdb_occs.rds	2026-04-14
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260419	2026-04-19	CC BY 4.0	10.5281/zenodo.19660447	pbdb_occs.rds	2026-04-20
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260426	2026-04-26	CC BY 4.0	10.5281/zenodo.19811306	pbdb_occs.rds	2026-04-27
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260503	2026-05-03	CC BY 4.0	10.5281/zenodo.20035828	pbdb_occs.rds	2026-05-05
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260510	2026-05-10	CC BY 4.0	10.5281/zenodo.20117977	pbdb_occs.rds	2026-05-11
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260517	2026-05-17	CC BY 4.0	10.5281/zenodo.20267097	pbdb_occs.rds	2026-05-18
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260524	2026-05-24	CC BY 4.0	10.5281/zenodo.20393179	pbdb_occs.rds	2026-05-26
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260531	2026-05-31	CC BY 4.0	10.5281/zenodo.20486526	pbdb_occs.rds	2026-06-01
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260607	2026-06-07	CC BY 4.0	10.5281/zenodo.20589417	pbdb_occs.rds	2026-06-08
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260614	2026-06-14	CC BY 4.0	10.5281/zenodo.20729737	pbdb_occs.rds	2026-06-17
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260621	2026-06-21	CC BY 4.0	10.5281/zenodo.20814223	pbdb_occs.rds	2026-06-23
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260628	2026-06-28	CC BY 4.0	10.5281/zenodo.21028183	pbdb_occs.rds	2026-06-29
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260705	2026-07-05	CC BY 4.0	10.5281/zenodo.21215597	pbdb_occs.rds	2026-07-06
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260712	2026-07-12	CC BY 4.0	10.5281/zenodo.21341326	pbdb_occs.rds	2026-07-13
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260719	2026-07-19	CC BY 4.0	10.5281/zenodo.21620933	pbdb_occs.rds	2026-07-27
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260726	2026-07-26	CC BY 4.0	10.5281/zenodo.21621227	pbdb_occs.rds	2026-07-27
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260802	2026-08-02	CC BY 4.0	10.5281/zenodo.21869245	pbdb_occs.rds	2026-08-10
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260809	2026-08-09	CC BY 4.0	10.5281/zenodo.21869343	pbdb_occs.rds	2026-08-10
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260816	2026-08-16	CC BY 4.0	10.5281/zenodo.22077262	pbdb_occs.rds	2026-08-24
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260823	2026-08-23	CC BY 4.0	10.5281/zenodo.22078598	pbdb_occs.rds	2026-08-24
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260830	2026-08-30	CC BY 4.0	10.5281/zenodo.22204524	pbdb_occs.rds	2026-08-31
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260906	2026-09-06	CC BY 4.0	10.5281/zenodo.22640465	pbdb_occs.rds	2026-09-07
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260913	2026-09-13	CC BY 4.0	10.5281/zenodo.22746401	pbdb_occs.rds	2026-09-14
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260920	2026-09-20	CC BY 4.0	10.5281/zenodo.22870967	pbdb_occs.rds	2026-09-21
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20260927	2026-09-27	CC BY 4.0	10.5281/zenodo.23039853	pbdb_occs.rds	2026-09-29
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20261004	2026-10-04	CC BY 4.0	10.5281/zenodo.23155769	pbdb_occs.rds	2026-10-05
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20261011	2026-10-11	CC BY 4.0	10.5281/zenodo.23344598	pbdb_occs.rds	2026-10-13
+occs4	Basic denormalized occurrence table with references, updated with abundance data	20261018	2026-10-18	CC BY 4.0	10.5281/zenodo.23468334	pbdb_occs.rds	2026-10-19
+taxa	Denormalized taxon table	20260705	2026-07-05	CC BY 4.0	10.5281/zenodo.21215597	pbdb_taxa.rds	2026-07-08
+taxa	Denormalized taxon table	20260712	2026-07-12	CC BY 4.0	10.5281/zenodo.21341326	pbdb_taxa.rds	2026-07-13
+taxa	Denormalized taxon table	20260719	2026-07-19	CC BY 4.0	10.5281/zenodo.21620933	pbdb_taxa.rds	2026-07-27
+taxa	Denormalized taxon table	20260726	2026-07-26	CC BY 4.0	10.5281/zenodo.21621227	pbdb_taxa.rds	2026-07-27
+taxa	Denormalized taxon table	20260802	2026-08-02	CC BY 4.0	10.5281/zenodo.21869245	pbdb_taxa.rds	2026-08-10
+taxa	Denormalized taxon table	20260809	2026-08-09	CC BY 4.0	10.5281/zenodo.21869343	pbdb_taxa.rds	2026-08-10
+taxa	Denormalized taxon table	20260816	2026-08-16	CC BY 4.0	10.5281/zenodo.22077262	pbdb_taxa.rds	2026-08-24
+taxa	Denormalized taxon table	20260823	2026-08-23	CC BY 4.0	10.5281/zenodo.22078598	pbdb_taxa.rds	2026-08-24
+taxa	Denormalized taxon table	20260830	2026-08-30	CC BY 4.0	10.5281/zenodo.22204524	pbdb_taxa.rds	2026-08-31
+taxa	Denormalized taxon table	20260906	2026-09-06	CC BY 4.0	10.5281/zenodo.22640465	pbdb_taxa.rds	2026-09-07
+taxa	Denormalized taxon table	20260913	2026-09-13	CC BY 4.0	10.5281/zenodo.22746401	pbdb_taxa.rds	2026-09-14
+taxa	Denormalized taxon table	20260920	2026-09-20	CC BY 4.0	10.5281/zenodo.22870967	pbdb_taxa.rds	2026-09-21
+taxa	Denormalized taxon table	20260927	2026-09-27	CC BY 4.0	10.5281/zenodo.23039853	pbdb_taxa.rds	2026-09-29
+taxa	Denormalized taxon table	20261004	2026-10-04	CC BY 4.0	10.5281/zenodo.23155769	pbdb_taxa.rds	2026-10-05
+taxa	Denormalized taxon table	20261011	2026-10-11	CC BY 4.0	10.5281/zenodo.23344598	pbdb_taxa.rds	2026-10-13
+taxa	Denormalized taxon table	20261018	2026-10-18	CC BY 4.0	10.5281/zenodo.23468334	pbdb_taxa.rds	2026-10-19

@@ -1,0 +1,35 @@
+{
+  "high": {
+    "reps": 100,
+    "missing_logs": 0,
+    "low_ess": 0,
+    "usable": 100,
+    "covered": {
+      "lambda": 95,
+      "mu": 95,
+      "q": 81
+    },
+    "median_rel_bias": {
+      "lambda": -0.11281840605909255,
+      "mu": -0.11663529546147938,
+      "q": 0.08950396178097086
+    },
+    "pass": false
+  },
+  "low": {
+    "reps": 50,
+    "missing_logs": 0,
+    "low_ess": 0,
+    "usable": 50,
+    "covered": {
+      "lambda": 44,
+      "mu": 40,
+      "q": 33
+    },
+    "median_rel_bias": {
+      "lambda": 0.0621402639463533,
+      "mu": -0.029236285274002294,
+      "q": 0.4578832514022334
+    }
+  }
+}

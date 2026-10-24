@@ -1,0 +1,24 @@
+{
+  "high": {
+    "median_rel_bias": {
+      "lambda_all": -0.015,
+      "mu_all": 0.00595,
+      "lambda_sampled": -0.20527,
+      "mu_sampled": -0.19527,
+      "q_sampled": 0.06494
+    },
+    "median_species": 70,
+    "median_sampled": 54
+  },
+  "low": {
+    "median_rel_bias": {
+      "lambda_all": -0.02941,
+      "mu_all": -0.03747,
+      "lambda_sampled": -0.36542,
+      "mu_sampled": -0.36372,
+      "q_sampled": 0.42507
+    },
+    "median_species": 61,
+    "median_sampled": 27.5
+  }
+}
