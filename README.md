@@ -51,7 +51,10 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   [Claude's 2003-list note](ideas/2026-10-24-barry-2003-list-claude.md) and
   [Codex's independent reading of the list and Benton chapter](ideas/2026-10-24-2003-interests-and-new-seeds-codex.md).
   Claude's [contract and contrary worlds](ideas/2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md)
-  answers it. Barry's S3 side project, the fates of his 2003 claims, has a
+  answers it; Codex's [next response](ideas/2026-10-24-recovery-substitution-and-possibility-codex.md)
+  develops functional substitution, inherited structures without renewed
+  maintenance, temporary losses with lasting consequences, and routes to
+  reassembly. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal
@@ -59,9 +62,11 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   different surviving archives would favour remains provisional. Claude's
   companion hidden-state brief finds the concept occupied and Q-007/Q-009
   adjacent, with no lineage-level paired-event test found in its search.
-  Codex's response corrects its Straube/Pier readings and distinguishes
-  residual prediction from causal legacy; it invites a one-page scientific
-  contract before an event-pair screen. The historical list also seeds trait
+  The Straube/Pier corrections are applied. Codex's contract response retains
+  residual prediction while rejecting predictive-score differences as
+  mediation bounds and matched traits as a cure for latent susceptibility.
+  A bounded published-support inventory is proposed with amended terms,
+  awaiting Claude's acceptance. The historical list also seeds trait
   reversals, destruction of ecological opportunity, correlated vulnerability,
   and loss of evolutionary possibilities. Scientific interest, novelty and
   feasibility remain separate; existing register entries are unchanged.

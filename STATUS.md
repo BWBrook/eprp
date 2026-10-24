@@ -2,7 +2,7 @@
 
 Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: historical-list seeds and response to the two nearest-prior briefs.** Barry's Codex-chat
+**Current focus: recovery, substitution and evolutionary possibility.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -86,13 +86,12 @@ forcing and survivor selection. Codex accepts deprioritising geological
 causes as the next primary development candidate, without promoting hidden
 state by default. It invites Claude to correct its owned brief and write a
 one-page prediction-versus-causation contract before an event-pair screen,
-and to challenge the broader opportunity/possibility seeds. **Claude is next
-responder; these invitations are not accepted ownership.**
+and to challenge the broader opportunity/possibility seeds.
 Claude corrected Brief B and its 2003-list note in place (Straube, Pier, the
 keyword-rule extinction share, Burkey withdrawn). It wrote a
 [prediction-versus-causation contract](ideas/2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md)
 covering cohort, outcome, the baseline and history predictors (with exposure
-kept separate from response), and the total and residual estimands. It names
+kept separate from response), and proposed total and residual comparisons. It names
 four rivals and the contrast that bears on each: selective survival on stable
 susceptibility, which is Q-012's frailty structure, tested by contrasting
 residents with immigrants; mediation; exposure against response; and
@@ -103,26 +102,49 @@ substitution as dissection and the half-life of lost possibility, and folds
 S1 into Codex's seed 1. Barry decided on 24 October that S3 is a side project
 (exact words in the note); its rubric is fixed in
 [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md), with
-no codes yet. Codex is next responder. Codex owns this
-handoff's README/STATUS pointers. No empirical acquisition, model runs or
-register changes were made in the historical-list response. The agents'
-different interest preferences remain, and the turnover decline is an optional
-shared contrast rather than a required explanation.
-Q-012's bounded engineering scope remains accepted,
-and both agents agree it waits behind this round (76/2343). Q-038 is jointly parked. Claude
-reports the scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and
-preceding commits; this ideation turn does not independently re-audit them.
-The separately authorised Databases, Packages/Sims and References/Literature
-support sessions continue in their own scopes, as relayed in 76/2338.
-The second resource-catalogue tranche is incorporated at `0808ba1`; its
-reported access issues in published PBDB-derived deposits and pending
-retention decision remain with that separate work (76/2346).
-The software-catalogue merge is incorporated at `1801f58` (76/2350). Its
-reported tests and dated-snapshot lead have not been independently audited
-in this ideation turn; no package run or snapshot download was started.
-Its next tranche at `88cf2d1` is also incorporated (76/2355); the reported
-hiatus-conversion bug and extinction-interval findings remain the side
-session's evidence, without a new audit in this brief.
+no codes yet.
+
+Codex's [recovery/substitution
+response](ideas/2026-10-24-recovery-substitution-and-possibility-codex.md) is
+complete. It develops three further combinations: apparent recovery on
+inherited structures whose maintenance has failed; short interruptions with
+lasting consequences despite recurrence; and surviving components that lack a
+viable route to reassembly. Functional substitution may restore present
+performance while changing subsequent evolutionary opportunities. Targeted
+checks of Norris 1991 (abstract) and Marenco et al. 2012 (relevant full-text
+sections) anchor recurring morphology and specific habitat uses, without
+establishing recovered evolutionary possibility or identical reef restoration.
+Two transparent counterexamples repair the contract: predictive-score
+differences do not bound mediation, and matched measured traits do not remove
+selection on latent susceptibility. Homogenisation also needs an explicit
+coupling mechanism to propagate a regional shock beyond its footprint. Codex
+accepts the offered metadata/published-table scope for one event-pair support
+inventory, proposing descriptive joint support in place of uncalibrated count
+gates. **Claude is next responder; acceptance of the amended terms is
+pending.** Claude is also invited to challenge the inherited-structure and
+temporary-loss worlds. Codex owns its dated note and this handoff's
+README/STATUS pointers; Claude retains its notes and S3 files. No empirical
+extraction, model fitting, remote compute or register change occurred in this
+response. Exact arithmetic checked an illustrative selection counterexample;
+it is not empirical evidence. The agents' different interest preferences
+remain, and the turnover decline is an optional shared contrast rather than a
+required explanation. Q-012's bounded engineering scope remains accepted, and
+both agents agree it waits behind this round (76/2343). Q-038 is jointly
+parked. Claude reports the scorer, PBDB-guard and Alroy repairs delivered at
+`bcf9f9b` and preceding commits; this ideation turn does not independently
+re-audit them. The separately authorised Databases, Packages/Sims and
+References/Literature support sessions continue in their own scopes, as
+relayed in 76/2338. The third resource-catalogue tranche is incorporated at
+`e23256e` (76/2361). [Detail withheld pending disclosure to the data
+custodian.] Its plate-model comparisons and Q-012 coordinate discrepancies are
+reported findings, not independently audited in this ideation turn. That work
+remains with the separate support session. The software-catalogue merge is
+incorporated at `1801f58` (76/2350). Its reported tests and dated-snapshot
+lead have not been independently audited in this ideation turn; no package run
+or snapshot download was started. Its next tranche at `88cf2d1` is also
+incorporated (76/2355); the reported hiatus-conversion bug and
+extinction-interval findings remain the side session's evidence, without a new
+audit in this brief.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
