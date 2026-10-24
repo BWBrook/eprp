@@ -540,11 +540,26 @@ the workflow when they generalise.
   can be sampled with an HTTP Range request: inflate the first few MB of
   the zip member. Ten-megabyte heads of 344 versions dated PBDB's
   re-datings to single gaps between downloads in well under an hour (3.4 GB
-  read, against about 60 GB for whole tables). Confirm the result on whole tables, since a head
-  cannot be checksummed.
+  read, against about 60 GB for whole tables). Confirm the result on whole
+  tables, since a head cannot be checksummed.
 - *Fetch Zenodo versions in parallel.* `--jobs 8` brought 12 tables
   (1.76 GB) in about 25 minutes, against an estimated 3 hours one at a time
   at the measured 0.19 MB/s; take only the files needed with `--files`.
+
+**Modern bridge (BioTIME, GRIIS, First Records, GloNAF; 24 October 2026).**
+
+- *A "no dates" claim needs checking per release.* The scoping said GRIIS has
+  no dates; 104 of its checklists now carry an event date on 27% of rows,
+  in a dozen formats and with no stated meaning.
+- *Licence text needs classifying in the right order.* BioTIME's "ODbL
+  (CC-by-NC)" studies (19) count as non-commercial only if the NC test runs
+  before the ODbL one; the naive order halved the non-commercial count.
+- *A crosswalk's lower bound is still informative.* Exact names and
+  country units already put 12,480 plant species-country pairs in GloNAF,
+  First Records and GRIIS together; SInAS would raise it.
+- *Profile outputs must never carry contact fields.* BioTIME's study table
+  holds contributors' e-mail addresses; the profiler never reads those
+  columns, and committed files are grepped for "@".
 
 **Outreach (Barry, 22 October 2026).**
 

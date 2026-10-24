@@ -1,0 +1,11 @@
+section	metric	value
+records	taxon-by-region rows; distinct taxon ids; distinct accepted WCVP names; regions with records; lists	349271; 60757; 16504; 1343; 2774
+records	rows by status	Naturalized 300106; Invasive 49165
+records	distinct taxon-region pairs	327807
+taxa	taxa in the WCVP table; by WCVP status; by rank	95635; Accepted 92530; NA 1972; Artificial Hybrid 1133; Species 82491; Subspecies 7507; Variety 3422; NA 1972; Form 158
+taxa	rows by family (top)	Poaceae 51977; Asteraceae 42556; Fabaceae 31795; Brassicaceae 14793; Amaranthaceae 12311; Rosaceae 10450; Solanaceae 9844; Lamiaceae 9222; Caryophyllaceae 7926; Polygonaceae 6891
+regions	regions; islands; equivalent to an ISO country	1343; 427; 219
+regions	distinct accepted taxa per region: median; largest three	81; United States of America, contiguous (without Alaska and Hawaii) 3827, Australia 3266, France (incl. Corsica) 2509
+lists	lists by completeness_id	1 1513; 2 688; 3 563; (blank) 10
+lists	lists listing invasives only	724
+dates	rows with a creation date; first and last; last updated	323116; 2016-10-11 12:06:44; 2021-07-08 18:02:30; 2025-02-20 14:23:59

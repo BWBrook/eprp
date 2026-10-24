@@ -1,0 +1,25 @@
+section	metric	value
+studies	studies in the metadata	708
+studies	by REALM	Terrestrial 328; Marine 229; Freshwater 151
+studies	by TAXA	Invertebrates 241; Plants 163; Fish 131; Birds 82; Mammals 37; Multiple 28; Amphibians 14; Reptiles 9; Fungi 3
+studies	by AB_BIO	A 495; AB 143; B 68; Ab 2
+studies	by CLIMATE	Temperate 492; Tropical 115; Temperate/Tropical 49; Polar/Temperate 26; Polar 22; Global 4
+studies	by PROTECTED_AREA	FALSE 470; TRUE 180; MixedSpatialTemporal 40; MixedSpatial 11; Protected? 4; SpatialMixed 1; 0 1; (blank) 1
+studies	by licence class (PERMISSIONS, classified)	CC BY 369; CC0 or public domain 73; ODC-By 73; ODbL (share-alike) 65; open government or agency licence 44; non-commercial (CC BY-NC or ODbL with NC) 37; citation required, no licence named 32; blank 8; CC BY-SA 5; public, no licence named 2
+studies	PERMISSIONS as written, most common	CC-by 226; CC-BY 69; ODC-by 59; ODbL 45; CC0 30; CC BY 4.0 Attribution 4.0 International 29; Citation required 28; PDDL 24
+studies	study extent AREA_SQ_KM: n; min, quartiles, max	708; 0, 0.0211002, 30.8537, 13502, 2.08608e+08
+records	rows; studies; distinct valid names	11989233; 708; 56400
+records	years, first and last	1874; 2023
+records	rows without abundance; without biomass	1239675; 8644306
+records	rows by taxonomic resolution	species 10235432; genus 981911; family 305417; order 184696; class 148263; phylum 60712; subclass 26642; kingdom 22358; superorder 11204; genus/sp 6509; subfamily 1476; subterclass 1450
+records	rows by taxon group	Fish 3187497; Birds 3109490; Plants 1552028; Marine/freshwater invertebrates 990611; Invertebrates 944458; Terrestrial/freshwater invertebrates 458898; Molluscs 367314; Amphibians & reptiles 360101; Chromista 340083; Annelids 320628; Mammals 208046; Marine mammals 40095
+records	rows by realm	Marine 5197833; Terrestrial 5059806; Freshwater 1731594
+records	studies in the data but not in the metadata	0
+series	distinct years sampled per study: median; quartiles	8.0; [4.0, 8.0, 18.0]
+series	studies sampled in 2 or more distinct years	707
+series	studies sampled in 5 or more distinct years	481
+series	studies sampled in 10 or more distinct years	319
+series	studies sampled in 20 or more distinct years	159
+series	studies sampled in 30 or more distinct years	75
+local loss	studies with 10+ sampled years: species-study pairs recorded in the first three sampled years; of them, none in the last three	25847; 9203 (0.356)
+local loss	the same by realm (pairs; not in the last three)	Freshwater 3517; 1050; Marine 12746; 5965; Terrestrial 9584; 2188

@@ -1,0 +1,19 @@
+section	metric	value
+records	rows; distinct taxa; distinct locations	90023; 28823; 269
+records	locations in the location table; taxa in the taxonomy table	268; 28822
+years	rows with a first-record year (share); first; last	90023 (1.000); -7000; 2023
+years	rows whose year differs from the verbatim first record (a range or text resolved to one year)	13858
+years	rows before 1500 (incl. BCE); 1500-1799; 1800-1899; 1900-1949; 1950-1999; 2000 on	777; 7854; 19191; 20210; 32070; 9921
+fields	confidenceFirstRecordEvent	high confidence 77064; medium-high confidence 7087; low confidence 5392; medium confidence 355; medium-low confidence 125
+fields	occurrenceStatus	present 85208; uncertain 4332; absent 429; present (not occurring in the wild) 54
+fields	establishmentMeans	(blank) 52579; introduced 36953; uncertain 489; Native 2
+fields	degreeOfEstablishment	(blank) 60361; established 25693; casual 3119; invasive 550; extinct 231; captive 54; released 11; native 2; cultivated 1; reproducing 1
+fields	habitat	(blank) 84532; terrestrial 5078; marine 204; freshwater 150; freshwater, terrestrial 45; brackish, freshwater, marine 9; brackish, marine 3; Brackish, marine, terrestrial 1; Freshwater, brackish 1
+fields	accessRights	Free 89306; Free with proper credit/citation 717
+fields	rows with a pathway	2010
+taxa	rows by taxaGroup	Vascular plants 56028; Insects 13563; Birds 4225; Fishes 3792; Molluscs 2099; Crustaceans 2017; Annelids, nematodes, platyhelminthes, and other worms 1254; Other aquatic animals 1213; Mammals 1209; Fungi 875; SAR 860; Algae 741; (blank) 632; Reptiles 346; Arachnids 326
+taxa	rows by kingdom (GBIF)	Plantae 56950; Animalia 30408; Chromista 877; Fungi 875; (blank) 612; Bacteria 165; Viruses 100; Protozoa 36
+taxa	taxa by GBIF match status	ACCEPTED 22043; SYNONYM 5159; NoMatch 1328; DOUBTFUL 263; HETEROTYPIC_SYNONYM 29
+locations	rows by continent	Europe 38388; Oceania 13816; Asia 11828; North America 11482; Africa 6771; (blank) 4633; South America 2035; Antarctica 1070
+sources	rows by citation, most common	DAISIE (2014) 10771; Robeck et al (2024) 8990; GISD (2015) 6185; NOBANIS (2018) 5296; GAVIA (2017) 3159; Simpson et al (2018) 3142; Yamanaka et al (2015) 2854; AquaNIS (2015) 2821
+v3.1	rows in the free-data workbook (its largest sheet, less the header)	77375 (sheet2.xml)

@@ -6,11 +6,13 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | Source | Kind | Access | Taxa | Time | Size | Mirror | EPRP questions |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [ala-vertebrates](ala-vertebrates/README.md): Atlas of Living Australia, vertebrate occurrences (species-… | database | open | six vertebrate classes: birds, mammals, reptiles, amphibian… | historical and modern records; 0.34% of the six c… | 128,996,208 vertebrate records six classes | yes | – |
+| [alien-first-records](alien-first-records/README.md): Alien Species First Records Database (FirstRecords), v4.0 a… | compilation | open | all alien taxa with a dated first record: vascular plants 6… | first records from 7000 BCE to 2023; 90% from 180… | 90,023 records | yes | Q-047, Q-028 |
 | [asud](asud/README.md): Australian Stratigraphic Units Database (ASUD) | database | open | not taxonomic; stratigraphic units | Archean to Holocene | 18,357 units | yes | – |
 | [au-fossil-deposits](au-fossil-deposits/README.md): Deposited datasets for Australia's flagship fossil biotas (… | deposit | open | Ediacaran organisms, Ediacaran assemblages worldwide (co-oc… | Ediacaran to Holocene | 16 deposits | yes | – |
 | [austarch](austarch/README.md): AustArch, radiocarbon and other ages from Australian archae… | compilation | registered | not taxonomic; archaeological age determinations | radiocarbon to about 55 ka; luminescence and othe… | 5,522 ages | yes | – |
 | [austraits](austraits/README.md): AusTraits, a curated plant trait database for the Australia… | compilation | open | Australian vascular plants (native and naturalised) | modern | 1,798,215 trait rows | yes | – |
 | [beyer2020](beyer2020/README.md): Beyer, Krapp and Manica (2020) high-resolution terrestrial … | deposit | open | not taxonomic: climate, bioclimate and potential vegetation… | 120 ka to present: 2 kyr steps to 22 ka, then 1 k… | 72 time slices | yes | – |
+| [biotime](biotime/README.md): BioTIME 2.0, assemblage time series | database | open | invertebrates, plants, fish, birds, mammals, amphibians, re… | 1874-2023 (sampling years) | 11,989,233 records | yes | Q-025, Q-028 |
 | [classic-compendia](classic-compendia/README.md): Classic range compendia — Benton's The Fossil Record 2 (fam… | compilation | unclear | FR2: all life, families and family-surrogates (animals, pla… | FR2: Hadean to Holocene in 86 divisions (dated fr… | 7,109 fr2 family rows | yes | Q-023, Q-039, Q-040, Q-041, Q-042, Q-044, Q-045 |
 | [climate-forcing](climate-forcing/README.md): Climate-forcing series and event tables — PhanDA, PhanSST, … | compilation | unclear | not taxonomic: temperature, CO2, benthic isotopes, carbon-c… | Phanerozoic (PhanDA 0-486.85 Ma; Scotese 100 inte… | 85 phanda stage slices | yes | Q-003, Q-007, Q-011, Q-019, Q-027, Q-030, Q-050, B-018 |
 | [fossahul](fossahul/README.md): FosSahul, quality-rated fossil ages for Sahul's Late Quater… | compilation | open | non-human vertebrates (mammals, birds, reptiles, amphibians) | Late Quaternary, mostly the last 130 kyr (ages to… | 11,872 records | yes | – |
@@ -19,6 +21,8 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [ga-biozonation](ga-biozonation/README.md): Geoscience Australia Basin Biozonation and Stratigraphy cha… | deposit | open | biozone schemes: dinocysts, spore-pollen, foraminifera, nan… | Proterozoic to Neogene | 39 files | yes | – |
 | [gbif-ala-fossils](gbif-ala-fossils/README.md): GBIF and ALA fossil-specimen records for Australia and Papu… | database | open | all fossil taxa recorded as FOSSIL_SPECIMEN: mammals, birds… | Precambrian to Holocene, as recorded by each coll… | 40,453 au harvested | yes | – |
 | [gcd](gcd/README.md): Global Paleofire Database (GPD), formerly the Global Charco… | database | open-nc | not taxonomic; sedimentary charcoal records | Late Quaternary; Sahul sites mostly Holocene (med… | 935 sites | yes | – |
+| [glonaf](glonaf/README.md): Global Naturalized Alien Flora (GloNAF) 2.0, snapshot 2.02 | database | open | vascular plants (WCVP v12 names), naturalized or invasive o… | present-day status; no dates of introduction | 349,271 taxon region rows | yes | Q-047 |
+| [griis](griis/README.md): Global Register of Introduced and Invasive Species (GRIIS),… | database | open | all kingdoms; plants 69% of checklist taxon rows, animals 2… | present-day status; an event date on 27% of distr… | 383 checklists | yes | Q-047, Q-028 |
 | [krapp2021](krapp2021/README.md): Krapp et al. (2021) statistics-based reconstruction of glob… | deposit | open | not taxonomic: climate, bioclimate, vegetation and land/ice… | 800 ka to present at 1 kyr steps (800 time slices) | 122 files | yes | – |
 | [names-status](names-status/README.md): Names, conservation status and species traits for Australia… | compilation | open | Australian vascular plants (APC), nationally listed threate… | modern taxonomy and status; PHYLACINE also covers… | 113,869 apc rows | yes | – |
 | [neotoma](neotoma/README.md): Neotoma Paleoecology Database, with the Indo-Pacific Pollen… | database | open | pollen and spores, charcoal, plant macrofossils, other prox… | Quaternary; Sahul pollen records mostly Holocene … | 611 datasets | yes | – |
@@ -74,10 +78,10 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-021**: register-deposits
 - **Q-022**: register-deposits
 - **Q-023**: classic-compendia, pbdb
-- **Q-025**: pbdb
+- **Q-025**: biotime, pbdb
 - **Q-026**: pbdb
 - **Q-027**: climate-forcing, palaeogeography, pbdb, register-deposits, triton
-- **Q-028**: pbdb
+- **Q-028**: alien-first-records, biotime, griis, pbdb
 - **Q-029**: pbdb, register-deposits
 - **Q-030**: climate-forcing, palaeogeography, pbdb
 - **Q-031**: register-deposits
@@ -94,6 +98,6 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-042**: classic-compendia, pbdb
 - **Q-044**: classic-compendia, pbdb, pbdb-chronosphere, register-deposits
 - **Q-045**: classic-compendia, pbdb, pbdb-chronosphere, register-deposits, timescale
-- **Q-047**: pbdb
+- **Q-047**: alien-first-records, glonaf, griis, pbdb
 - **Q-049**: palaeogeography, pbdb
 - **Q-050**: climate-forcing, register-deposits

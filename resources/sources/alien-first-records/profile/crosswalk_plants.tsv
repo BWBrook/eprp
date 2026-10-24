@@ -1,0 +1,8 @@
+section	metric	value
+crosswalk	countries matched: GloNAF; First Records; GRIIS; in all three	219; 145; 194; 125
+crosswalk	locations of First Records matched to a country (of all)	211 of 268
+crosswalk	plant species-country pairs in the shared countries: GloNAF; First Records; GRIIS	36058; 45096; 62834
+crosswalk	pairs in GloNAF and GRIIS; GloNAF and First Records; First Records and GRIIS; all three	22856; 17064; 27766; 12480
+crosswalk	pairs in only one source: GloNAF; First Records; GRIIS	8618; 12746; 24692
+crosswalk	pairs in all three with a first-record year	12480
+crosswalk	countries with the most pairs in all three	AUS 2319; JPN 989; SWE 848; ZAF 735; NOR 675; BEL 497; NZL 359; IND 322
