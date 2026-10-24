@@ -75,6 +75,9 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
 | K1: `indices(method = "squares")` against Alroy's (2018) formula, 1,200 bins | identical (difference 0): **pass** |
 | K2: SQS (`subsample(type = "sqs", q = 0.6)`, 100 iterations) when effort falls 70% at constant evenness (scenario S) | **not met as declared**: in one replicate two bins (4 and 7 collections, Good's u 0.16 and 0.54) cannot reach the quorum and return NA, so the declared mean does not exist. Post hoc: **+0.034** (SE 0.014) over the 19 complete replicates, +0.035 using only bins that reach the quorum |
 | SQS when only evenness changes (scenario E; σ of log abundance 0.5 → 2) | **−0.70** (SE 0.025): true richness flat, SQS reports half |
+| K5 (amendment A5): SQS when collections shrink from 40 to 12 individuals at constant number (scenario C) | **−0.121** (SE 0.014) against ±0.10: **fail** |
+| SQS evenness dose–response (A5): late-half σ 0.75, 1.0, 1.5, 2.0 | −0.07, −0.17, −0.41, −0.70 |
+| Squares; Chao2 under the collection-size fall; under the evenness doses | −0.12, −0.15; squares −0.01, −0.04, −0.15, −0.31 and Chao2 −0.01, −0.04, −0.16, −0.31 |
 | Squares; Chao2 (`indices`) under the effort fall | −0.15, −0.15 (raw richness −0.37, range-through −0.27) |
 | Squares; Chao2 under the evenness change | −0.31, −0.31 (raw −0.49) |
 | Mass extinction at 50 Ma (true drop −0.78 in log richness, bins 11–12 against 9–10) | squares −0.74, Chao2 −0.74, SQS −0.67, raw −0.68 |
@@ -121,9 +124,13 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
 - SQS returns NA where a bin cannot reach the quorum (`useFailed = FALSE`),
   with no warning or message: safer than a number, but downstream means
   need explicit handling.
-- **SQS responds to evenness.** Under a pure evenness change it halved a
-  flat richness curve (−0.70), as did iNEXT's coverage estimate (−0.76);
-  see [inext](../inext/README.md) and lead L-006.
+- **SQS responds to evenness, by degrees.** Under a pure evenness change
+  it halved a flat richness curve (−0.70), as did iNEXT's coverage estimate
+  (−0.76), and a modest change (σ 0.5 to 1) already gave −0.17; see
+  [inext](../inext/README.md) and lead L-006.
+- **SQS corrects fewer collections but not smaller ones**: +0.03 when
+  collections fell 70% in number, −0.12 (K5 fail) when they kept their
+  number and shrank to a third of their size.
 - Licence metadata conflict: CRAN says CC BY 4.0, the repository GPL-3.0.
 - Rates are per bin; unequal bin durations need explicit handling.
 
@@ -137,8 +144,10 @@ and SQS implementations elsewhere cover richness, not rates.
 
 Stage-level rates for Q-040, Q-042 and Q-038 style analyses; the shared
 counting makes it the natural engine for an estimator comparison (lead
-N-002). Its SQS absorbed a fall in collection numbers (+0.03) but not an
-evenness change (−0.70; tranche 4, lead L-006), and squares and Chao2
+N-002). Its SQS absorbed a fall in collection numbers (+0.03) but not a
+fall in collection size (−0.12) or an evenness change (−0.70; tranche 4,
+lead L-006). Alroy's geometric Weibull did better on all three
+([alroy-richness](../alroy-richness/README.md)). Squares and Chao2
 recovered 70–83% of global richness on these records (partly a matter of
 definition: global richness counts every species alive at any time in a
 bin).

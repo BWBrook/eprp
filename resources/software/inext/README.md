@@ -63,6 +63,8 @@ log ratio.
 | --- | --- |
 | K2: effort falls 70% at bin 11, evenness fixed (scenario S) | bias **+0.026** (SE 0.016) against ±0.10: **pass**. Post hoc, without replicate 10 (two near-empty bins): +0.019 |
 | Evenness falls at bin 11, effort fixed (scenario E; σ of log abundance 0.5 → 2) | bias **−0.76** (SE 0.027): true richness flat, iNEXT reports less than half. Characterisation, no criterion |
+| K5 (amendment A5): collections keep their number but shrink from 40 to 12 individuals at bin 11 (scenario C) | bias **−0.125** (SE 0.015) against ±0.10: **fail** |
+| Evenness dose–response (A5): late-half σ 0.75, 1.0, 1.5, 2.0 | −0.08, −0.19, −0.45, −0.76 |
 | Mass extinction at 50 Ma (scenario M; true drop −0.78 in log richness, bins 11–12 against 9–10) | iNEXT drop −0.67 (SE 0.02): 0.11 too shallow |
 | K3: `ChaoRichness` against an independent implementation of its formula, S + (T − 1)/T · f₁²/(2f₂) | equal to 5 × 10⁻⁴ (iNEXT rounds to three decimals) |
 
@@ -70,8 +72,7 @@ log ratio.
 
 - When the number of collections fell 70% at constant evenness, the
   coverage estimate moved +0.03, where raw richness fell 0.37 and Chao2
-  0.15. Effort falling through smaller collections or lower preservation
-  was not tested.
+  0.15.
 - Interpolation and extrapolation share one framework, with analytical
   and bootstrap intervals.
 - Warns when an extrapolation runs past twice the reference sample.
@@ -81,14 +82,21 @@ log ratio.
 - **Coverage standardisation responds to evenness.** With true richness
   flat and only the abundance distribution becoming uneven, the coverage
   estimate fell by 0.76 in log units, more than raw richness (−0.49) or
-  Chao2 (−0.31), after a single step in evenness (σ 0.5 to 2; no
-  dose–response was run). Equal coverage is not equal completeness of the
+  Chao2 (−0.31). The dose–response is a slope, not a cliff: −0.08, −0.19,
+  −0.45 and −0.76 as the late-half σ rose from 0.5 to 0.75, 1, 1.5 and 2,
+  so a modest change in dominance already exceeds ±0.10. Equal coverage is not equal completeness of the
   species list when dominance changes. Alroy (2026; [LEADS](../LEADS.md)
   L-006) concludes from different tests (excluding dominants, pooling,
   singleton-matched pairs) that coverage-based rarefaction does not track
   richness; this result is consistent with that conclusion. Do not read
   coverage-standardised values as relative richness where evenness may
   differ between bins.
+- **The effort correction depends on how effort falls.** Fewer
+  collections of the same size: +0.03. The same number of collections,
+  each a third the size: −0.13 (K5 fail). Our reading, untested: smaller
+  collections change the shape of the incidence-frequency distribution,
+  not only its total.
+  Lower preservation was not tested.
 - **Extrapolation does not fail; it warns.** In a bin with 4 collections
   (sample coverage 0.20), `estimateD` extrapolated to 18 units (4.5× the
   sample) and returned 281 species from 86 observed, with the warning "the
@@ -108,7 +116,9 @@ occurrences) by subsampling rather than by interpolation. On these data
 SQS ran 2–5% below iNEXT on average, except in the uneven late bins of
 scenario E (1% above), and the two responded alike to effort (+0.03 each) and to
 evenness (−0.70 against −0.76). Alroy's geometric Weibull, which he
-prefers to both, was not run. Squares and Chao2 extrapolate to an asymptote
+prefers to both, moved only −0.12 under the strongest evenness change and
++0.09 under the collection-size fall, fitted to the same occurrence
+frequencies ([alroy-richness](../alroy-richness/README.md)). Squares and Chao2 extrapolate to an asymptote
 instead; they were less affected by the evenness change but biased by the
 effort change. DeepDive targets total richness by simulation-based
 inference ([deepdive](../deepdive/README.md)). divvy adds spatial

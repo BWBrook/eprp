@@ -63,6 +63,8 @@ describing the data twice.
 | [palaeoverse](palaeoverse/README.md) | T2 | `bin_time` (four methods, continuous ages); `tax_range_time`; `palaeorotate` consistent with pyGPlates for three models |
 | [fossilbrush](fossilbrush/README.md) | T2 | `check_taxonomy` conflicts and formatting; `flag_ranges` failed |
 | [chronosphere](chronosphere/README.md) | T1 | [Detail withheld pending disclosure to the data custodian.] |
+| [iNEXT](inext/README.md) | T2 | coverage-standardised richness under fewer collections; fails under smaller collections and evenness change |
+| [richness (Alroy)](alroy-richness/README.md) | T2 | geometric Weibull (CEGS) under its own model; the most accurate richness estimator on the tranche-4 records (characterised, no criterion) |
 
 Every entry was reviewed independently (Claude Sonnet subagent, one review
 per tranche) and the findings applied. The two generators stay at T2: their
