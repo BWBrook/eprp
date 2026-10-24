@@ -523,6 +523,23 @@ the workflow when they generalise.
   offset that matters to Q-012 is the one across the rows it pools (a median
   0.65°), not the one across NSB's grid of holes and ages (2.2°).
 
+**PBDB vintages (chronosphere, 24 October 2026; [entry](pbdb-chronosphere/README.md)).**
+
+- *Check each archived table against its own metadata.* One of 12 sampled
+  versions is short by 251,172 rows (16%); only rows against the
+  metadata's records found showed it.
+- *Separate a change of time scale from a change of data.* 80% of the 2019
+  rows still public have different ages today with unchanged intervals.
+  Compare interval assignments, or re-date every version on one scale.
+- *A provider's version order can be wrong.* Zenodo's version index repeats
+  for this record (157 versions share one value). `data_mirror.py --latest`
+  now refuses a tie at the newest version; order by the version strings
+  where they are dates.
+- [Detail withheld pending disclosure to the data custodian.]
+- *Fetch Zenodo versions in parallel.* `--jobs 8` brought 12 tables
+  (1.76 GB) in about 25 minutes, against about 3 hours one at a time; take
+  only the files needed with `--files`.
+
 **Outreach (Barry, 22 October 2026).**
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up

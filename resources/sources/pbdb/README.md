@@ -372,10 +372,7 @@ Vocabularies and traps (counts for the region unless stated):
   Lynch's Crater ([Neotoma](../neotoma/README.md)).
 - **Macrostrat.** No Australian columns; its name lexicon holds 12,279 names
   imported from ASUD (2015).
-- **Archived PBDB vintages.** Close et al. 2019, Benson et al. 2025 and
-  Monarrez et al. 2023 deposit PBDB downloads of 2017, 2022 and about 2023
-  ([register-deposits](../register-deposits/README.md)); with our dated
-  snapshots they support data-vintage work (Q-045).
+- [Detail withheld pending disclosure to the data custodian.]
 
 ## EPRP relevance
 
