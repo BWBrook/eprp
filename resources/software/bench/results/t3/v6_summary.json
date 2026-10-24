@@ -1,0 +1,103 @@
+{
+  "points": 300,
+  "combinations": 7200,
+  "by_model": {
+    "MERDITH2021": {
+      "c_reconstructed": 1575,
+      "a_reconstructed": 1575,
+      "b_reconstructed": 1535,
+      "both_a_c": 1575,
+      "a_only": 0,
+      "c_only": 0,
+      "frac_ac_within_0.1deg": 1.0,
+      "median_ac_deg": 3.5171413449868274e-05,
+      "max_ac_deg": 6.778345241086558e-05,
+      "median_bc_deg": 0.38315841838321124,
+      "q95_bc_deg": 0.5734162943630163,
+      "max_bc_deg": 55.78372411979155,
+      "frac_bc_within_1deg": 0.97761685319289,
+      "pass": true
+    },
+    "PALEOMAP": {
+      "c_reconstructed": 1523,
+      "a_reconstructed": 1523,
+      "b_reconstructed": 1487,
+      "both_a_c": 1523,
+      "a_only": 0,
+      "c_only": 0,
+      "frac_ac_within_0.1deg": 1.0,
+      "median_ac_deg": 3.587144125063423e-05,
+      "max_ac_deg": 6.548904270750127e-05,
+      "median_bc_deg": 0.3743088810605861,
+      "q95_bc_deg": 0.5852225712113653,
+      "max_bc_deg": 39.70756605451195,
+      "frac_bc_within_1deg": 0.9763991908293999,
+      "pass": true
+    },
+    "TorsvikCocks2017": {
+      "c_reconstructed": 1315,
+      "a_reconstructed": 1609,
+      "b_reconstructed": 1212,
+      "both_a_c": 1315,
+      "a_only": 294,
+      "c_only": 0,
+      "frac_ac_within_0.1deg": 0.0,
+      "median_ac_deg": 6.289132613897845,
+      "max_ac_deg": 27.999590157161293,
+      "median_bc_deg": 6.152604026167094,
+      "q95_bc_deg": 26.3211133425986,
+      "max_bc_deg": 28.418103873275154,
+      "frac_bc_within_1deg": 0.00835421888053467,
+      "pass": false
+    },
+    "MATTHEWS2016_pmag_ref": {
+      "c_reconstructed": 1586,
+      "a_reconstructed": 1586,
+      "b_reconstructed": 1540,
+      "both_a_c": 1586,
+      "a_only": 0,
+      "c_only": 0,
+      "frac_ac_within_0.1deg": 1.0,
+      "median_ac_deg": 3.590809005631244e-05,
+      "max_ac_deg": 6.972525395531184e-05,
+      "median_bc_deg": 0.38312247625444207,
+      "q95_bc_deg": 0.5733810147680386,
+      "max_bc_deg": 54.12628613593262,
+      "frac_bc_within_1deg": 0.9830065359477124,
+      "pass": true
+    }
+  },
+  "palaeolat_spread_across_models": {
+    "10": {
+      "n": 241,
+      "median_deg": 2.9346219999999974,
+      "q90_deg": 4.978618000000004
+    },
+    "50": {
+      "n": 229,
+      "median_deg": 6.871986000000003,
+      "q90_deg": 9.469075800000002
+    },
+    "100": {
+      "n": 223,
+      "median_deg": 5.170581000000006,
+      "q90_deg": 7.496337999999998
+    },
+    "200": {
+      "n": 213,
+      "median_deg": 17.038935000000002,
+      "q90_deg": 28.215975200000013
+    },
+    "300": {
+      "n": 195,
+      "median_deg": 5.602507,
+      "q90_deg": 16.627830599999992
+    },
+    "400": {
+      "n": 161,
+      "median_deg": 25.567481,
+      "q90_deg": 31.322398000000003
+    }
+  },
+  "pass": false
+}

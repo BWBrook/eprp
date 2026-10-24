@@ -240,3 +240,52 @@ the other 53 the inferred sample size is n − 1 (52 cases) or n − 2 (1).
 - **Two tools reset or break the caller's state.** `griwm` calls
   `set.seed()` inside its loop, which invalidated our first arm C; and
   `agnostic.R` fails under R ≥ 4.3 when `total` is supplied.
+
+# Tranche 3: data preparation and palaeogeography
+
+Run on `deep-server` on 24 October 2026 (`run_t3.sh`, tmux, about 40
+minutes, most of it downloading snapshots and pacing PBDB requests). Tests
+declared in [VALIDATION_T3.md](VALIDATION_T3.md) before running (`ec37fab`);
+amendment A1 records the changes made after smoke runs and before the full
+run. Read-only inputs from the data catalogue's mirror: the public PBDB
+snapshot, the plate models and the ICS chart tables. Results in
+`results/t3/`.
+
+## Results
+
+| Test | Tool | Result | Key numbers |
+| --- | --- | --- | --- |
+| V1 `bin_time` mid, majority | palaeoverse 1.5.0 | **pass** | 20,000 of 20,000 agree with independently computed bins (17 exact ties excluded) |
+| V2 `bin_time` random | palaeoverse | **pass** | equal draws among overlapped bins, χ² p = 0.40 (10,273 occurrences, 200 replicates) |
+| V3 `bin_time` point | palaeoverse | **pass** | draws in proportion to overlap, χ² p = 0.51 |
+| V4 `tax_range_time` | palaeoverse | **fail** (rounding) | FAD and LAD within 0.0005 of the truth; the function rounds to three decimals |
+| V5 `GTS2020` table | palaeoverse | reported | equals chart v2020/01 at 59 of 60 matched stages (Priabonian 37.71 against 37.8); differs from chart v2024/12 at 61 of 100 (Fortunian 541 against 538.8, Barremian 129.4 against 125.77, and others) |
+| V6 `palaeorotate` vs pyGPlates | palaeoverse | **pass** for MERDITH2021, PALEOMAP, MATTHEWS2016_pmag_ref; **fail** for TorsvikCocks2017 | point method within 0.00007° of pyGPlates for every point–age of the three models; grid method median 0.37–0.38° (grid snapping), 98% within 1°; TorsvikCocks2017 off by a median 6.3° (2–22° of latitude by age), 294 extra point–ages |
+| F1 `check_taxonomy` | fossilbrush 1.0.6 | **fail** (misspellings) | conflicts 30 of 30 and formatting 10 of 10, no false flags; misspellings 26 of 30, with 11 synonym pairs among clean names |
+| F2 `flag_ranges` | fossilbrush | **fail** (bugs) | 24 of 100 injected outliers flagged, no false flags; a numeric reading of its returned differences catches 100 of 100 |
+| [Detail withheld pending disclosure to the data custodian.] | chronosphere 0.6.1 | reported | [Detail withheld pending disclosure to the data custodian.] |
+
+## What tranche 3 found
+
+- **palaeoverse's binning is exactly right**, including the
+  length-weighted "point" draw and the length-blind "random" draw.
+- **palaeorotate's Web Service route and pyGPlates agree to 0.0001° for
+  three models**, as they should on the same model files. The grid route's
+  error is the present-day distance from a point to its cell centre
+  (median 0.38°), which rotation preserves, except near plate boundaries
+  (up to 56°).
+- **Two TorsvikCocks2017 versions are in circulation.** The Web Service and
+  the Jones & Domeier grids agree with each other but not with the
+  GPlates Plate Model Manager's files (2–22° of palaeolatitude by age).
+- **Plate-model choice moves palaeolatitudes by degrees.** Across
+  MERDITH2021, PALEOMAP and MATTHEWS2016_pmag_ref the same 300 collections
+  spread by a median 2.9° at 10 Ma, 4.3–5.7° from 50 to 300 Ma and 13.5°
+  at 400 Ma.
+- **fossilbrush's `flag_ranges` has two bugs.**
+  - It compares its differences with `flag.diff` as text, because they
+    start as copies of a character vector. At a 5-Myr threshold, outliers
+    of 10–49.99 Myr are never flagged; a text-comparison prediction
+    matches all 100 injected flags.
+  - It measures occurrences beyond the LAD from the reference FAD. The
+    returned LAD difference equals the true excess plus the taxon's range.
+- [Detail withheld pending disclosure to the data custodian.]

@@ -27,3 +27,12 @@ of 23 October.
 | GBIF fossil specimens | 10,257,862 records with `basisOfRecord=FOSSIL_SPECIMEN` on 2026-10-23 (verified) | `gbif-ala-fossils` covers the Australian slice |
 | Mesozoic food webs (`tylercl/Mesozoic-Food-Webs`) | Species-level metanetworks and R code, CC BY 4.0 (verified) | Not catalogued |
 | Toarcian palaeo-web code and data | Zenodo 11400588, CC BY 4.0, for Dunhill et al. 2024 (verified) | Not catalogued |
+
+## From tranche 3 (24 October 2026)
+
+- [Detail withheld pending disclosure to the data custodian.]
+- **The Plate Model Manager's `torsvikcocks2017` does not reproduce the
+  GPlates Web Service's TorsvikCocks2017** (2–22° of palaeolatitude by age),
+  while the Web Service and the Jones & Domeier grids agree. MERDITH2021,
+  PALEOMAP and MATTHEWS2016_pmag_ref from the `palaeogeography` mirror agree
+  with the Web Service to 0.0001° ([palaeoverse](palaeoverse/README.md)).

@@ -64,6 +64,9 @@ cross-check had little power, so T3 waits for a larger comparison.
 | [EDE](ede/README.md) | T2 | Strauss–Sadler; others characterised |
 | [Rextinct](rextinct/README.md) | T1 | characterised only (GRIWM) |
 | [agnostic.R](agnostic-r/README.md) | T1 | characterised only |
+| [palaeoverse](palaeoverse/README.md) | T2 | `bin_time` (four methods); `tax_range_time`; `palaeorotate` point and grid for three models |
+| [fossilbrush](fossilbrush/README.md) | T2 | `check_taxonomy` conflicts and formatting; `flag_ranges` failed |
+| [chronosphere](chronosphere/README.md) | T1 | [Detail withheld pending disclosure to the data custodian.] |
 
 Tranche 1's harness and results: [bench/](bench/README.md).
 
