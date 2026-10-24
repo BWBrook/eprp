@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.r2, image: "eprp-
 blockers: ["strat_to_time returns wrong times above each hiatus (S1)"]
 related_sources: []
 eprp_questions: [B-007, Q-003, Q-005, Q-041]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # admtools
@@ -60,13 +60,17 @@ Tests in [bench/VALIDATION_T2.md](../bench/VALIDATION_T2.md); results in
   points that share a hiatus height collapse to the hiatus start before
   interpolation, so heights above the surface are interpolated from the
   hiatus start, not its end. The error is up to the hiatus duration. On
-  the S1 model, 48% of deposited times came back wrong. `hiat_mode =
-  "end"` has the mirror error below a hiatus, and `"destroy"` sets to `NA`
-  every height where the two modes differ, which removes valid data on
-  both sides.
+  the S1 model, 48% of deposited times came back wrong.
+- The other modes (`t2_checks.R`, same model): `hiat_mode = "end"` keeps
+  the hiatus end and so errs below each hiatus instead; a segment lying
+  between two hiatuses is wrong in both modes (height 9 m returns 5.33 Myr
+  in `"start"` and 7.5 in `"end"`, against 7.0). `"destroy"` returns `NA`
+  wherever the two modes differ, which on this model is every height.
 - Dense age–depth models (tie points every 0.01 Myr) shrink the affected
-  interval to one spacing above each hiatus, but not the size of the error
-  (0.47 Myr maximum in S1).
+  fraction (6 of 8,282 times in S1, against the declared expectation that
+  the error would be bounded by the spacing) but not the error at the
+  surface: times 0.001 Myr after the two hiatuses come back 1.8 and
+  2.7 Myr early.
 - Until fixed, do not use `strat_to_time` (or functions that call it) on
   models with hiatuses; invert `time_to_strat` directly instead. Queued
   for the authors as [CONTACTS](../CONTACTS.md) S1.
@@ -96,4 +100,6 @@ doi:10.5194/gchron-7-427-2025 (checked on Crossref). GPL (≥ 3).
 ## Verification log
 
 - 2026-10-24 `checked`: S1–S3 on `deep-server`; `R/get_time.adm.R` read
-  on GitHub (`main`) and its commit history (last change 2023-12-18).
+  on GitHub (`main`) and its commit history (last change 2023-12-18);
+  dense-model errors and the `"end"` and `"destroy"` modes in
+  `bench/validate/t2_checks.R` (after the independent review).

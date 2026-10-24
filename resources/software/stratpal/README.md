@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.r2, image: "eprp-
 blockers: ["depends on admtools, whose strat_to_time is wrong above hiatuses"]
 related_sources: []
 eprp_questions: [B-007, Q-003, Q-005, Q-013, Q-041]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # StratPal
@@ -44,8 +44,11 @@ Higher-level functions (`strat_filter`, `last_occ`, `range_offset`,
 
 - Pipelines that map strat-domain results back to time go through
   admtools' `strat_to_time`, which is wrong above hiatuses
-  ([admtools](../admtools/README.md)). Check which direction a pipeline
-  converts before trusting its time-domain output.
+  ([admtools](../admtools/README.md)). **`last_occ` does** (its last step
+  is `admtools::strat_to_time(adm)`), so its time-domain last occurrences
+  are affected on models with hiatuses; `range_offset` uses only
+  `time_to_strat`. Check which direction a pipeline converts before
+  trusting its time-domain output.
 
 ## EPRP relevance
 

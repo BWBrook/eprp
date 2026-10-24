@@ -87,10 +87,10 @@
       "griwm_biased_interval": {
         "n_scored": 2000,
         "n_na": 0,
-        "coverage": 0.008,
+        "coverage": 0.0085,
         "by_fossils": {
           "3-5": 0.0055,
-          "6-10": 0.01062,
+          "6-10": 0.01214,
           ">10": 0.01195
         }
       },
@@ -130,50 +130,150 @@
         "n": 2000,
         "median_error_over_range": 0.04154,
         "median_abs_error_over_range": 0.149,
-        "frac_before_truth": 0.405
+        "frac_before_truth": 0.405,
+        "rmse_myr": 0.87748,
+        "frac_closer_than_ss_estimate": 0,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.24753,
+          "6-10": 0.10193,
+          ">10": 0.05308
+        }
       },
       "ede_robson": {
         "n": 2000,
         "median_error_over_range": 0.00601,
         "median_abs_error_over_range": 0.16598,
-        "frac_before_truth": 0.485
+        "frac_before_truth": 0.485,
+        "rmse_myr": 1.10231,
+        "frac_closer_than_ss_estimate": 0.4315,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.29175,
+          "6-10": 0.10729,
+          ">10": 0.05207
+        }
       },
       "ede_ole": {
         "n": 1988,
         "median_error_over_range": 0.12431,
         "median_abs_error_over_range": 0.2428,
-        "frac_before_truth": 0.30986
+        "frac_before_truth": 0.30986,
+        "rmse_myr": 101.33787,
+        "frac_closer_than_ss_estimate": 0.334,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.50533,
+          "6-10": 0.16045,
+          ">10": 0.06369
+        }
       },
       "ede_solow": {
         "n": 1494,
         "median_error_over_range": 0.64585,
         "median_abs_error_over_range": 0.70395,
-        "frac_before_truth": 0.06693
+        "frac_before_truth": 0.06693,
+        "rmse_myr": 3.10082,
+        "frac_closer_than_ss_estimate": 0.15797,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 1.48063,
+          "6-10": 0.44141,
+          ">10": 0.18631
+        }
       },
       "ede_mcinerny": {
         "n": 1707,
         "median_error_over_range": 0.39619,
         "median_abs_error_over_range": 0.46963,
-        "frac_before_truth": 0.13415
+        "frac_before_truth": 0.13415,
+        "rmse_myr": 1.89319,
+        "frac_closer_than_ss_estimate": 0.22613,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.755,
+          "6-10": 0.33677,
+          ">10": 0.1593
+        }
       },
       "ede_burgman": {
         "n": 1207,
         "median_error_over_range": 0.99604,
         "median_abs_error_over_range": 1.05238,
-        "frac_before_truth": 0.24772
+        "frac_before_truth": 0.24772,
+        "rmse_myr": 4.92331,
+        "frac_closer_than_ss_estimate": 0.14416,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 2.08433,
+          "6-10": 0.89556,
+          ">10": 0.42874
+        }
       },
       "griwm_biased": {
         "n": 2000,
-        "median_error_over_range": 0.11448,
-        "median_abs_error_over_range": 0.23436,
-        "frac_before_truth": 0.3275
+        "median_error_over_range": 0.11452,
+        "median_abs_error_over_range": 0.2344,
+        "frac_before_truth": 0.3275,
+        "rmse_myr": 1.32125,
+        "frac_closer_than_ss_estimate": 0.356,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.40198,
+          "6-10": 0.17716,
+          ">10": 0.0912
+        }
       },
       "griwm_unbiased": {
         "n": 2000,
-        "median_error_over_range": -0.04944,
-        "median_abs_error_over_range": 0.11695,
-        "frac_before_truth": 0.624
+        "median_error_over_range": -0.04941,
+        "median_abs_error_over_range": 0.11697,
+        "frac_before_truth": 0.624,
+        "rmse_myr": 0.91438,
+        "frac_closer_than_ss_estimate": 0.484,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.19859,
+          "6-10": 0.07575,
+          ">10": 0.03995
+        }
+      },
+      "ss_median_unbiased": {
+        "n": 2000,
+        "median_error_over_range": 0.00165,
+        "median_abs_error_over_range": 0.1231,
+        "frac_before_truth": 0.497,
+        "rmse_myr": 0.86233,
+        "frac_closer_than_ss_estimate": 0.549,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.21756,
+          "6-10": 0.07839,
+          ">10": 0.04062
+        }
+      },
+      "last_occurrence": {
+        "n": 2000,
+        "median_error_over_range": -0.16336,
+        "median_abs_error_over_range": 0.16336,
+        "frac_before_truth": 1,
+        "rmse_myr": 1.10296,
+        "frac_closer_than_ss_estimate": 0.38,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.28832,
+          "6-10": 0.11052,
+          ">10": 0.05592
+        }
       }
+    },
+    "persistence_post_hoc": {
+      "ede_solow": {
+        "coverage_missing_as_not_extinct": 0.95
+      },
+      "ede_mcinerny": {
+        "coverage_missing_as_not_extinct": 0.8855
+      },
+      "ede_burgman": {
+        "coverage_missing_as_not_extinct": 0.8505
+      }
+    },
+    "agnostic_detail": {
+      "n_na": 73,
+      "n_never_reaches_0.95": 1288,
+      "n_finite": 639,
+      "coverage_finite_first_absent_bin": 0.97027,
+      "coverage_finite_declared_bin_of_te": 0.99531
     },
     "last_occurrence_gap_over_range": 0.16336,
     "ss_agreement": {
@@ -427,50 +527,165 @@
         "n": 1272,
         "median_error_over_range": -0.00701,
         "median_abs_error_over_range": 0.24294,
-        "frac_before_truth": 0.50629
+        "frac_before_truth": 0.50629,
+        "rmse_myr": 1.4794,
+        "frac_closer_than_ss_estimate": 0,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.32663,
+          "6-10": 0.12599,
+          ">10": 0.06698
+        }
       },
       "ede_robson": {
         "n": 1272,
         "median_error_over_range": -0.06961,
         "median_abs_error_over_range": 0.30315,
-        "frac_before_truth": 0.58805
+        "frac_before_truth": 0.58805,
+        "rmse_myr": 1.80363,
+        "frac_closer_than_ss_estimate": 0.40881,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.44879,
+          "6-10": 0.14627,
+          ">10": 0.08716
+        }
       },
       "ede_ole": {
         "n": 1262,
         "median_error_over_range": 0.07664,
         "median_abs_error_over_range": 0.43842,
-        "frac_before_truth": 0.42789
+        "frac_before_truth": 0.42789,
+        "rmse_myr": 130.17873,
+        "frac_closer_than_ss_estimate": 0.39303,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.7366,
+          "6-10": 0.1823,
+          ">10": 0.10157
+        }
       },
       "ede_solow": {
         "n": 857,
         "median_error_over_range": 0.67021,
         "median_abs_error_over_range": 0.88836,
-        "frac_before_truth": 0.16919
+        "frac_before_truth": 0.16919,
+        "rmse_myr": 3.87111,
+        "frac_closer_than_ss_estimate": 0.33022,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 1.39464,
+          "6-10": 0.40355,
+          ">10": 0.20352
+        }
       },
       "ede_mcinerny": {
         "n": 990,
         "median_error_over_range": 0.33345,
         "median_abs_error_over_range": 0.5775,
-        "frac_before_truth": 0.29899
+        "frac_before_truth": 0.29899,
+        "rmse_myr": 2.45758,
+        "frac_closer_than_ss_estimate": 0.41919,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.77059,
+          "6-10": 0.32721,
+          ">10": 0.16964
+        }
       },
       "ede_burgman": {
         "n": 816,
         "median_error_over_range": 0.26614,
         "median_abs_error_over_range": 0.94729,
-        "frac_before_truth": 0.47672
+        "frac_before_truth": 0.47672,
+        "rmse_myr": 4.39094,
+        "frac_closer_than_ss_estimate": 0.29412,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 1.8404,
+          "6-10": 0.42928,
+          ">10": 0.33182
+        }
       },
       "griwm_biased": {
         "n": 1272,
-        "median_error_over_range": 0.03074,
-        "median_abs_error_over_range": 0.36208,
-        "frac_before_truth": 0.4717
+        "median_error_over_range": 0.03077,
+        "median_abs_error_over_range": 0.36202,
+        "frac_before_truth": 0.4717,
+        "rmse_myr": 2.02471,
+        "frac_closer_than_ss_estimate": 0.44418,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.50802,
+          "6-10": 0.18247,
+          ">10": 0.08944
+        }
       },
       "griwm_unbiased": {
         "n": 1272,
-        "median_error_over_range": -0.14469,
+        "median_error_over_range": -0.14468,
         "median_abs_error_over_range": 0.21114,
-        "frac_before_truth": 0.69104
+        "frac_before_truth": 0.69104,
+        "rmse_myr": 1.56818,
+        "frac_closer_than_ss_estimate": 0.40723,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.30664,
+          "6-10": 0.10199,
+          ">10": 0.05715
+        }
+      },
+      "ss_median_unbiased": {
+        "n": 1272,
+        "median_error_over_range": -0.06448,
+        "median_abs_error_over_range": 0.22749,
+        "frac_before_truth": 0.56761,
+        "rmse_myr": 1.47306,
+        "frac_closer_than_ss_estimate": 0.46462,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.30806,
+          "6-10": 0.09961,
+          ">10": 0.04983
+        }
+      },
+      "last_occurrence": {
+        "n": 1272,
+        "median_error_over_range": -0.27319,
+        "median_abs_error_over_range": 0.27319,
+        "frac_before_truth": 1,
+        "rmse_myr": 1.78371,
+        "frac_closer_than_ss_estimate": 0.33019,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.44009,
+          "6-10": 0.14115,
+          ">10": 0.06697
+        }
       }
+    },
+    "persistence_post_hoc": {
+      "ede_solow": {
+        "coverage_missing_as_not_extinct": 0.88601,
+        "by_te_class": {
+          "elsewhere": 0.94314,
+          "in_hiatus": 0.83371,
+          "within_1_after": 0.83843
+        }
+      },
+      "ede_mcinerny": {
+        "coverage_missing_as_not_extinct": 0.7673,
+        "by_te_class": {
+          "elsewhere": 0.89967,
+          "in_hiatus": 0.64045,
+          "within_1_after": 0.66812
+        }
+      },
+      "ede_burgman": {
+        "coverage_missing_as_not_extinct": 0.69418,
+        "by_te_class": {
+          "elsewhere": 0.69732,
+          "in_hiatus": 0.69663,
+          "within_1_after": 0.68122
+        }
+      }
+    },
+    "agnostic_detail": {
+      "n_na": 103,
+      "n_never_reaches_0.95": 951,
+      "n_finite": 218,
+      "coverage_finite_first_absent_bin": 0.98624,
+      "coverage_finite_declared_bin_of_te": 0.99541
     },
     "last_occurrence_gap_over_range": 0.27319,
     "te_class_counts": {
@@ -536,6 +751,30 @@
         "mean_post": 0.94759,
         "frac_extinct": 0.99165
       }
+    },
+    "paired_arm_A_baseline": {
+      "tbea_ss": {
+        "all": 0.94025,
+        "elsewhere": 0.95485,
+        "in_hiatus": 0.92135,
+        "within_1_after": 0.93886
+      },
+      "ede_robson": {
+        "all": 0.9544,
+        "elsewhere": 0.94816,
+        "in_hiatus": 0.95056,
+        "within_1_after": 0.97817
+      },
+      "ede_solow_missing_as_not_extinct": {
+        "all": 0.94261,
+        "elsewhere": 0.95652,
+        "in_hiatus": 0.92584,
+        "within_1_after": 0.93886
+      }
+    },
+    "paired_mean_fossils": {
+      "arm_A": 7.61792,
+      "arm_B": 4.96619
     }
   },
   "C": {
@@ -546,11 +785,11 @@
       "tbea_ss": {
         "n_scored": 2000,
         "n_na": 0,
-        "coverage": 0.938,
+        "coverage": 0.9525,
         "by_fossils": {
-          "3-5": 0.93945,
-          "6-10": 0.93171,
-          ">10": 0.94821
+          "3-5": 0.95596,
+          "6-10": 0.94992,
+          ">10": 0.94422
         }
       },
       "tbea_marshall": {
@@ -566,71 +805,71 @@
       "ede_ss": {
         "n_scored": 2000,
         "n_na": 0,
-        "coverage": 0.9385,
+        "coverage": 0.9545,
         "by_fossils": {
-          "3-5": 0.93945,
-          "6-10": 0.93323,
+          "3-5": 0.9578,
+          "6-10": 0.95144,
           ">10": 0.94821
         }
       },
       "ede_robson": {
         "n_scored": 2000,
         "n_na": 0,
-        "coverage": 0.9455,
+        "coverage": 0.959,
         "by_fossils": {
-          "3-5": 0.94862,
-          "6-10": 0.9393,
-          ">10": 0.94821
+          "3-5": 0.95413,
+          "6-10": 0.96055,
+          ">10": 0.9761
         }
       },
       "ede_ole": {
-        "n_scored": 1984,
-        "n_na": 16,
-        "coverage": 0.59123,
+        "n_scored": 1992,
+        "n_na": 8,
+        "coverage": 0.55221,
         "by_fossils": {
-          "3-5": 0.41759,
-          "6-10": 0.79268,
-          ">10": 0.81452
+          "3-5": 0.37661,
+          "6-10": 0.75457,
+          ">10": 0.784
         }
       },
       "ede_solow": {
-        "n_scored": 1493,
-        "n_na": 507,
-        "coverage": 0.91829,
+        "n_scored": 1482,
+        "n_na": 518,
+        "coverage": 0.9386,
         "by_fossils": {
-          "3-5": 0.91484,
-          "6-10": 0.91522,
-          ">10": 0.9397
+          "3-5": 0.93987,
+          "6-10": 0.93834,
+          ">10": 0.93434
         }
       },
       "ede_mcinerny": {
-        "n_scored": 1704,
-        "n_na": 296,
-        "coverage": 0.84859,
+        "n_scored": 1691,
+        "n_na": 309,
+        "coverage": 0.87759,
         "by_fossils": {
-          "3-5": 0.82227,
-          "6-10": 0.8708,
-          ">10": 0.90732
+          "3-5": 0.86129,
+          "6-10": 0.89029,
+          ">10": 0.91707
         }
       },
       "ede_burgman": {
-        "n_scored": 1213,
-        "n_na": 787,
-        "coverage": 0.7535,
+        "n_scored": 1171,
+        "n_na": 829,
+        "coverage": 0.81127,
         "by_fossils": {
-          "3-5": 0.68445,
-          "6-10": 0.81775,
-          ">10": 0.88571
+          "3-5": 0.75801,
+          "6-10": 0.86441,
+          ">10": 0.89552
         }
       },
       "griwm_biased_interval": {
         "n_scored": 2000,
         "n_na": 0,
-        "coverage": 0.7055,
+        "coverage": 0.6885,
         "by_fossils": {
-          "3-5": 0.73394,
-          "6-10": 0.67071,
-          ">10": 0.67331
+          "3-5": 0.71284,
+          "6-10": 0.65706,
+          ">10": 0.66534
         }
       },
       "griwm_unbiased_interval": {
@@ -638,140 +877,240 @@
         "n_na": 0,
         "coverage": 0.6825,
         "by_fossils": {
-          "3-5": 0.67615,
-          "6-10": 0.69499,
-          ">10": 0.67729
+          "3-5": 0.68257,
+          "6-10": 0.69954,
+          ">10": 0.63745
         }
       },
       "griwm_biased_median_as_bound": {
         "n_scored": 2000,
         "n_na": 0,
-        "coverage": 0.7055,
+        "coverage": 0.7425,
         "by_fossils": {
-          "3-5": 0.66422,
-          "6-10": 0.74962,
-          ">10": 0.76892
+          "3-5": 0.71284,
+          "6-10": 0.78452,
+          ">10": 0.76096
         }
       },
       "agnostic_95": {
-        "n_scored": 1906,
-        "n_na": 94,
-        "coverage": 0.99003,
+        "n_scored": 1938,
+        "n_na": 62,
+        "coverage": 0.99071,
         "by_fossils": {
-          "3-5": 1,
-          "6-10": 0.98179,
-          ">10": 0.97211
+          "3-5": 0.99903,
+          "6-10": 0.98634,
+          ">10": 0.96813
         }
       }
     },
     "point_estimates": {
       "ede_ss": {
         "n": 2000,
-        "median_error_over_range": 0.03398,
-        "median_abs_error_over_range": 0.15195,
-        "frac_before_truth": 0.4325
+        "median_error_over_range": 0.04424,
+        "median_abs_error_over_range": 0.16423,
+        "frac_before_truth": 0.417,
+        "rmse_myr": 0.92567,
+        "frac_closer_than_ss_estimate": 0,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.27535,
+          "6-10": 0.10593,
+          ">10": 0.05891
+        }
       },
       "ede_robson": {
         "n": 2000,
-        "median_error_over_range": -0.00497,
-        "median_abs_error_over_range": 0.19746,
-        "frac_before_truth": 0.5075
+        "median_error_over_range": 0.00957,
+        "median_abs_error_over_range": 0.19118,
+        "frac_before_truth": 0.482,
+        "rmse_myr": 1.15643,
+        "frac_closer_than_ss_estimate": 0.4185,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.31798,
+          "6-10": 0.12786,
+          ">10": 0.05629
+        }
       },
       "ede_ole": {
-        "n": 1984,
-        "median_error_over_range": 0.11529,
-        "median_abs_error_over_range": 0.26565,
-        "frac_before_truth": 0.32812
+        "n": 1992,
+        "median_error_over_range": 0.13419,
+        "median_abs_error_over_range": 0.26733,
+        "frac_before_truth": 0.30271,
+        "rmse_myr": 9.91853,
+        "frac_closer_than_ss_estimate": 0.31827,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.5769,
+          "6-10": 0.17284,
+          ">10": 0.06964
+        }
       },
       "ede_solow": {
-        "n": 1493,
-        "median_error_over_range": 0.62597,
-        "median_abs_error_over_range": 0.68173,
-        "frac_before_truth": 0.08171
+        "n": 1482,
+        "median_error_over_range": 0.67509,
+        "median_abs_error_over_range": 0.70613,
+        "frac_before_truth": 0.0614,
+        "rmse_myr": 3.24747,
+        "frac_closer_than_ss_estimate": 0.1444,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 1.47735,
+          "6-10": 0.46004,
+          ">10": 0.19111
+        }
       },
       "ede_mcinerny": {
-        "n": 1704,
-        "median_error_over_range": 0.37225,
-        "median_abs_error_over_range": 0.43892,
-        "frac_before_truth": 0.15141
+        "n": 1691,
+        "median_error_over_range": 0.41365,
+        "median_abs_error_over_range": 0.4764,
+        "frac_before_truth": 0.12241,
+        "rmse_myr": 1.96582,
+        "frac_closer_than_ss_estimate": 0.21821,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.76056,
+          "6-10": 0.34558,
+          ">10": 0.16397
+        }
       },
       "ede_burgman": {
-        "n": 1213,
-        "median_error_over_range": 0.94026,
-        "median_abs_error_over_range": 1.03595,
-        "frac_before_truth": 0.2465
+        "n": 1171,
+        "median_error_over_range": 1.09023,
+        "median_abs_error_over_range": 1.17908,
+        "frac_before_truth": 0.18873,
+        "rmse_myr": 5.24791,
+        "frac_closer_than_ss_estimate": 0.13749,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 2.14482,
+          "6-10": 0.93377,
+          ">10": 0.42389
+        }
       },
       "griwm_biased": {
         "n": 2000,
-        "median_error_over_range": 0.12784,
-        "median_abs_error_over_range": 0.23842,
-        "frac_before_truth": 0.2945
+        "median_error_over_range": 0.15094,
+        "median_abs_error_over_range": 0.24952,
+        "frac_before_truth": 0.2575,
+        "rmse_myr": 1.37899,
+        "frac_closer_than_ss_estimate": 0.3545,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.40715,
+          "6-10": 0.17791,
+          ">10": 0.08358
+        }
       },
       "griwm_unbiased": {
         "n": 2000,
-        "median_error_over_range": -0.04986,
-        "median_abs_error_over_range": 0.12558,
-        "frac_before_truth": 0.6185
+        "median_error_over_range": -0.02819,
+        "median_abs_error_over_range": 0.13363,
+        "frac_before_truth": 0.577,
+        "rmse_myr": 0.91875,
+        "frac_closer_than_ss_estimate": 0.5345,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.2296,
+          "6-10": 0.08273,
+          ">10": 0.0472
+        }
+      },
+      "ss_median_unbiased": {
+        "n": 2000,
+        "median_error_over_range": 0.00459,
+        "median_abs_error_over_range": 0.14018,
+        "frac_before_truth": 0.4905,
+        "rmse_myr": 0.89848,
+        "frac_closer_than_ss_estimate": 0.5465,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.24882,
+          "6-10": 0.0885,
+          ">10": 0.04913
+        }
+      },
+      "last_occurrence": {
+        "n": 2000,
+        "median_error_over_range": -0.15474,
+        "median_abs_error_over_range": 0.15989,
+        "frac_before_truth": 0.8745,
+        "rmse_myr": 1.10676,
+        "frac_closer_than_ss_estimate": 0.403,
+        "median_abs_error_over_range_by_fossils": {
+          "3-5": 0.2872,
+          "6-10": 0.11289,
+          ">10": 0.05366
+        }
       }
     },
-    "last_occurrence_gap_over_range": 0.1796,
+    "persistence_post_hoc": {
+      "ede_solow": {
+        "coverage_missing_as_not_extinct": 0.9545
+      },
+      "ede_mcinerny": {
+        "coverage_missing_as_not_extinct": 0.8965
+      },
+      "ede_burgman": {
+        "coverage_missing_as_not_extinct": 0.8895
+      }
+    },
+    "agnostic_detail": {
+      "n_na": 62,
+      "n_never_reaches_0.95": 1281,
+      "n_finite": 657,
+      "coverage_finite_first_absent_bin": 0.9726,
+      "coverage_finite_declared_bin_of_te": 0.99391
+    },
+    "last_occurrence_gap_over_range": 0.15474,
     "ss_agreement": {
-      "frac_within_0.02": 0.894,
-      "max_abs_diff": 42.10342,
-      "median_abs_diff": 0.00526,
-      "discretised_max_abs_diff": 42.08051,
-      "discretised_frac_within_1e6": 0.956
+      "frac_within_0.02": 0.9145,
+      "max_abs_diff": 19.71751,
+      "median_abs_diff": 0.00545,
+      "discretised_max_abs_diff": 19.72039,
+      "discretised_frac_within_1e6": 0.9675
     },
     "agnostic_calibration": {
       "[0,0.1]": {
-        "n": 3,
-        "mean_post": 0.08487,
-        "frac_extinct": 0.66667
+        "n": 4,
+        "mean_post": 0.0829,
+        "frac_extinct": 1
       },
       "(0.1,0.2]": {
-        "n": 69,
-        "mean_post": 0.16249,
-        "frac_extinct": 0.53623
+        "n": 70,
+        "mean_post": 0.162,
+        "frac_extinct": 0.61429
       },
       "(0.2,0.3]": {
-        "n": 145,
-        "mean_post": 0.26207,
-        "frac_extinct": 0.53103
+        "n": 143,
+        "mean_post": 0.26359,
+        "frac_extinct": 0.55245
       },
       "(0.3,0.4]": {
-        "n": 274,
-        "mean_post": 0.35844,
-        "frac_extinct": 0.5073
+        "n": 261,
+        "mean_post": 0.35805,
+        "frac_extinct": 0.48659
       },
       "(0.4,0.5]": {
-        "n": 412,
-        "mean_post": 0.45162,
-        "frac_extinct": 0.6165
+        "n": 408,
+        "mean_post": 0.45457,
+        "frac_extinct": 0.6348
       },
       "(0.5,0.6]": {
         "n": 824,
-        "mean_post": 0.5405,
-        "frac_extinct": 0.58374
+        "mean_post": 0.54228,
+        "frac_extinct": 0.6165
       },
       "(0.6,0.7]": {
-        "n": 1082,
-        "mean_post": 0.65698,
-        "frac_extinct": 0.73475
+        "n": 1023,
+        "mean_post": 0.65675,
+        "frac_extinct": 0.72727
       },
       "(0.7,0.8]": {
-        "n": 1597,
-        "mean_post": 0.75169,
-        "frac_extinct": 0.86788
+        "n": 1553,
+        "mean_post": 0.75141,
+        "frac_extinct": 0.86671
       },
       "(0.8,0.9]": {
-        "n": 2660,
-        "mean_post": 0.85503,
-        "frac_extinct": 0.94135
+        "n": 2610,
+        "mean_post": 0.85535,
+        "frac_extinct": 0.94176
       },
       "(0.9,1]": {
-        "n": 8757,
-        "mean_post": 0.96618,
-        "frac_extinct": 0.99109
+        "n": 9040,
+        "mean_post": 0.96596,
+        "frac_extinct": 0.99115
       }
     }
   },

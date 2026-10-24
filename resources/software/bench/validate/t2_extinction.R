@@ -87,11 +87,13 @@ te_class <- function(te_f) {
 }
 
 arm_rows <- function(arm) {
-  RNGkind("L'Ecuyer-CMRG"); set.seed(switch(arm, A = 61, B = 62, C = 63))
+  # Draw arm-C dating errors here, in the parent: griwm calls set.seed() internally, which resets the workers' streams
+  set.seed(63)
+  noise <- lapply(cases, function(cs) rnorm(length(cs$ages), 0, 0.25))
   res <- parallel::mclapply(seq_along(cases), function(i) {
     cs <- cases[[i]]; ages <- cs$ages; sigma <- 0.001
     if (arm == "B") ages <- ages[!is.na(time_to_strat(tmax - ages, adm_b, destructive = TRUE))]
-    if (arm == "C") { ages <- pmin(tmax, pmax(0, ages + rnorm(length(ages), 0, 0.25))); sigma <- 0.25 }
+    if (arm == "C") { ages <- pmin(tmax, pmax(0, ages + noise[[i]])); sigma <- 0.25 }
     if (length(ages) < 3) return(list(row = c(case = i, dropped = 1), post = NULL))
     r <- run_methods(ages, cs$TE, sigma)
     list(row = c(case = i, dropped = 0, r$row), post = r$post)

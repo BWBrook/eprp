@@ -13,10 +13,10 @@ maintenance: {state: active, last_commit: 2026-09-06, checked: 2026-10-24}
 tier: T2
 validated_uses: ["stratCI Strauss-Sadler (1989) one-endpoint 95% bound under homogeneous sampling"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.r2, image: "eprp-sw/bench-r2:t2 (sha256:49f30706…)", host: deep-server}
-blockers: ["Marshall (1994) bracket needs at least 73 fossils at quantile 0.95"]
+blockers: ["Marshall (1994) upper bracket needs at least 111 fossils at quantile 0.95 and confidence 0.95"]
 related_sources: []
 eprp_questions: [Q-013, Q-017, Q-034, Q-041]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # tbea (stratCI)
@@ -42,8 +42,8 @@ E4 in [bench/VALIDATION_T2.md](../bench/VALIDATION_T2.md), 2,000 species:
 | Arm | Strauss–Sadler coverage |
 | --- | --- |
 | A: homogeneous Poisson fossils | **0.948** (pass; band 0.937–0.962), by fossil count 0.950 / 0.941 / 0.952 |
-| B: six 2-Myr hiatuses | 0.884 (0.943 away from hiatuses; 0.829 when the extinction falls in one; 0.838 within 1 Myr after one) |
-| C: 0.25-Myr dating error | 0.938 |
+| B: six 2-Myr hiatuses (1,272 species) | 0.884 (0.943 away from hiatuses; 0.829 when the extinction falls in one; 0.838 within 1 Myr after one; the same species score 0.955, 0.921 and 0.939 in arm A) |
+| C: 0.25-Myr dating error | 0.953 (A2 rerun with independent errors) |
 
 Cross-check with EDE's `strauss1989`: identical on the same discretised
 input in 97.35% of cases; the rest differ by EDE's use of distinct sighting
@@ -51,15 +51,20 @@ times (see [EDE](../ede/README.md)).
 
 ## Weaknesses and pitfalls
 
-- **Marshall (1994) returned no bound for any case.** Its upper bracket at
-  quantile 0.95 and confidence 0.95 exists only when 0.95^N < 0.025 for N
-  gaps (at least 72 gaps); the largest record had 30 fossils. The function
-  warns and returns a single value, not an error.
+- **Marshall (1994) returned no upper bound for any case.** At quantile
+  0.95 and confidence 0.95 its upper bracket needs at least 110 gaps (111
+  fossils; `bench/validate/t2_checks.R`): `.upperBound` rejects an index
+  equal to the number of gaps, so the largest gap can never be the bound,
+  which would otherwise need only 72 gaps. Possibly an off-by-one;
+  queued as [CONTACTS](../CONTACTS.md) S9. The largest record here had 30
+  fossils. The function warns and returns the lower bracket with `NA` as
+  the upper.
 - `endpoint = "first"` is the larger value and `"last"` the smaller: with
   ages (older = larger), `"last"` is the extinction end; with forward time,
   `"first"`.
 - Strauss–Sadler assumes uniform recovery; hiatuses near the extinction
-  cut coverage to about 0.83.
+  cut coverage to about 0.83, about 9–10 points below the same species'
+  coverage without the hiatuses.
 
 ## Citation and licence
 
@@ -71,4 +76,5 @@ Crossref). tbea's own paper not checked here. GPL-3.
 ## Verification log
 
 - 2026-10-24 `checked`: E4–E6 on `deep-server`; `R/stratCI.R` read on
-  GitHub (`master`).
+  GitHub (`master`); Marshall threshold in `t2_checks.R` (after the
+  independent review corrected our first figure of 72 gaps).

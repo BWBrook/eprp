@@ -128,43 +128,58 @@ are committed here. Wall time on 23 October: generators 62 min and divDyn
 Run on `deep-server` on 24 October 2026 (`run_t2.sh`, tmux, 12 cores, about
 7 minutes). Tests declared in [VALIDATION_T2.md](VALIDATION_T2.md) before
 running (`74892e4`); amendment A1 records the changes made after a 24-case
-smoke run and before the full run. Results in `results/t2/`.
+smoke run, and A2 the rerun and post-hoc additions after an independent
+review (Claude Sonnet subagent), whose findings are applied here. Results in
+`results/t2/`; follow-up checks in `results/t2/t2_checks.json`.
 
 ## Results: stratigraphic tools
 
 | Test | Tool | Result | Key numbers |
 | --- | --- | --- | --- |
-| S1 round trip height ↔ time | admtools 0.7.0 | **fail** | 3,972 of 8,282 deposited times return wrong, by up to 2.0 and 3.0 Myr (the two hiatus durations): every time in the segment directly above each hiatus. Dense model (tie points every 0.01 Myr): max error still 0.47 Myr |
+| S1 round trip height ↔ time | admtools 0.7.0 | **fail** | 3,972 of 8,282 deposited times return wrong, by up to 2.0 and 3.0 Myr (the two hiatus durations): every time in the two segments directly above the hiatuses. Dense model (tie points every 0.01 Myr): 6 of 8,282 wrong, but by up to 2.7 Myr just above a hiatus, so the declared expectation of an error bounded by the spacing also fails |
 | S2 hiatus accounting | admtools | **pass** | 17.18% of times in hiatus vs 16.67% (z = 1.38); completeness 25/30 and hiatus durations exact |
 | S3 constant accumulation | admtools | **pass** | exact |
 | S4 Poisson point process | StratPal 0.7.1 `p3` | **pass** | mean 19.96 vs 20 (z = −1.40); variance ratio 1.001; KS p = 0.35 |
 | S5 thinning | StratPal `thin` | **pass** | retained 0.2995 vs 0.3 (z = −0.49); linear retention KS p = 0.21 |
-| P1 time-averaged mixture | paleoAM 1.0.1 | **pass** | 17 species above 1%; max \|z\| = 2.57 (declared < 3.5); 200 replicates |
+| P1 time-averaged mixture | paleoAM 1.0.1 | **pass** (self-consistency only) | 17 species above 1%; max \|z\| = 2.57 (declared < 3.5); but `simMixedAssemblageSample` calls `getTimestepAbundances` and subsamples, so this checks only the subsampling (A2) |
 
 `strat_to_time` fails because `get_time.adm` interpolates with
 `stats::approx(..., ties = list("ordered", min))`: the two tie points at a
-hiatus height collapse to the hiatus start, and every height above the
-surface, up to the next tie point, is interpolated from the wrong time.
-`time_to_strat` is correct. The code dates from 2023.
+hiatus height collapse to the hiatus start, so heights above the surface are
+interpolated from the wrong time. `hiat_mode = "end"` errs below hiatuses
+instead, a segment between two hiatuses is wrong in both modes, and
+`"destroy"` returned `NA` for every height on the S1 model
+(`t2_checks.R`). `time_to_strat` is correct. The code dates from 2023.
+StratPal's `last_occ` ends with `strat_to_time`.
 
 ## Results: extinction dates
 
 2,000 extinct species with at least three fossils (two seeded paleobuddy
-clades; λ 0.3, μ 0.2, ψ 1.0). Coverage of the true extinction time:
+clades; λ 0.3, μ 0.2, ψ 1.0). Arm B keeps 1,272 species with at least three
+fossils outside the hiatuses. Arm C is the A2 rerun with independent
+dating errors (the first arm C was invalid: `griwm` resets the random
+stream). Coverage of the true extinction time:
 
 | Method (scored as declared) | A: ideal | B: hiatuses | C: dating error |
 | --- | --- | --- | --- |
-| Strauss–Sadler, `tbea` (95% one-sided) | **0.948** | 0.884 | 0.938 |
-| Strauss–Sadler, EDE | **0.950** | 0.886 | 0.939 |
-| Robson & Whitlock, EDE (95% one-sided) | 0.955 | 0.921 | 0.946 |
-| OLE, EDE (95% two-sided) | 0.610 | 0.496 | 0.591 |
-| Solow 1993, EDE (estimate as bound; scored cases) | 0.933 | 0.831 | 0.918 |
-| McInerny 2006, EDE (same) | 0.866 | 0.701 | 0.849 |
-| Burgman 1995, EDE (same) | 0.752 | 0.523 | 0.754 |
-| GRIWM interval, biased / unbiased | 0.008 / 0.003 | 0.002 / 0.006 | 0.706 / 0.682 |
-| GRIWM biased median as a bound (post hoc) | 0.672 | 0.528 | 0.706 |
-| `agnostic` 95% bin | 0.990 | 0.997 | 0.990 |
-| Marshall 1994, `tbea` | not computable for any case | same | same |
+| Strauss–Sadler, `tbea` (95% one-sided) | **0.948** | 0.884 | 0.953 |
+| Strauss–Sadler, EDE | **0.950** | 0.886 | 0.955 |
+| Robson & Whitlock, EDE (95% one-sided) | 0.955 | 0.921 | 0.959 |
+| OLE, EDE (95% two-sided) | 0.610 | 0.496 | 0.552 |
+| Solow 1993, EDE (estimate as bound; scored cases) | 0.933 | 0.831 | 0.939 |
+| McInerny 2006, EDE (same) | 0.866 | 0.701 | 0.878 |
+| Burgman 1995, EDE (same) | 0.752 | 0.523 | 0.811 |
+| GRIWM interval, biased / unbiased | 0.009 / 0.003 | 0.002 / 0.005 | 0.689 / 0.682 |
+| `agnostic` 95% bin (never reaching 0.95 counted as covered) | 0.990 | 0.997 | 0.991 |
+| Marshall 1994, `tbea` | no upper bound for any case | same | same |
+
+Post hoc (A2):
+
+| Score | A | B | C |
+| --- | --- | --- | --- |
+| Solow / McInerny / Burgman, a missing estimate read as "not inferred extinct" | 0.950 / 0.885 / 0.851 | 0.886 / 0.767 / 0.694 | 0.955 / 0.896 / 0.889 |
+| GRIWM biased median read as a 95% bound | 0.672 | 0.528 | 0.743 |
+| `agnostic`, cases whose posterior reaches 0.95 (number) | 0.970 (639) | 0.986 (218) | 0.973 (657) |
 
 E4's coverage criteria pass: both Strauss–Sadler implementations lie in the
 99% binomial band [0.937, 0.962]. Its agreement criterion fails: 91.0% of
@@ -181,32 +196,47 @@ the other 53 the inferred sample size is n − 1 (52 cases) or n − 2 (1).
 
 - **Strauss–Sadler and Robson–Whitlock are calibrated under homogeneous
   sampling**, at every fossil count tested (3–5, 6–10, more than 10), and
-  degrade only slightly with 0.25-Myr dating error.
-- **Hiatuses near the extinction break them.** In arm B, Strauss–Sadler
-  coverage is 0.943 when the extinction falls away from a hiatus, but 0.829
-  when it falls inside one and 0.838 within 1 Myr after one. 728 of the 2,000
-  species dropped below three fossils.
-- **OLE's 95% interval covers far below nominal:** 0.42 with 3–5 fossils,
-  0.81 with 6–10, 0.89 above 10.
+  with 0.25-Myr dating errors (0.953 and 0.959).
+- **Hiatuses near the extinction degrade them.** In arm B, Strauss–Sadler
+  coverage is 0.943 when the extinction falls away from a hiatus, 0.829 when
+  it falls inside one and 0.838 within 1 Myr after one. Losing fossils to
+  the hiatuses already lowers coverage for the same species: in arm A they
+  score 0.955, 0.921 and 0.939. The paired effect of the hiatuses is
+  therefore about −9 and −10 points in the two hiatus classes (fossil counts
+  fall from 7.6 to 5.0 on average). This is one design, with 40% of the
+  time in hiatuses.
+- **EDE's OLE interval covers far below nominal:** 0.42 with 3–5 fossils,
+  0.81 with 6–10, 0.89 above 10. Its misses are symmetric: the truth falls
+  below the interval in 23.9% of the 1,988 scored cases and above it in
+  24.5%, and the lower limit lies above the last fossil in 96%. This is EDE's
+  implementation of the Roberts–Solow interval with k = all sightings; we
+  have no second implementation to compare.
 - **Solow's test is calibrated once its missing estimates are read
-  correctly.** Its 506 missing estimates come from species whose last
-  fossil is close to the present (median 2.2 Myr, against 9.5 Myr for the
-  scored ones): the test never rejects persistence before the present.
-  Counting those as "not inferred extinct" (post hoc), coverage is 0.950.
-  McInerny reaches 0.886 and Burgman 0.850 under the same reading.
+  correctly (post hoc).** Its 506 missing estimates in arm A come from
+  species whose last fossil is close to the present (median 2.2 Myr, against
+  9.5 Myr for the scored ones): the test never rejects persistence before the
+  present. Counting those as "not inferred extinct", coverage is 0.950.
+  McInerny reaches 0.885 and Burgman 0.851.
 - **GRIWM's 2.5–97.5% interval is the spread of its estimate under dating
   error, not an interval for the extinction time.** With negligible dating
-  error it covers the truth 0.3–0.8% of the time; with 0.25-Myr error,
-  about 0.7. As a point estimator the unbiased GRIWM is the most accurate
-  method here: median error −0.049 and median absolute error 0.117 of the
-  observed range, against 0.149 for Strauss–Sadler's estimate. Its biased
-  form (α 0.05) used as a 95% bound covers 0.67.
-- **`agnostic` (prior 0.5) is conservative:** its 95% bin covers 0.99. Its
-  posterior is miscalibrated in both directions for these all-extinct
-  species: posteriors of 0.1–0.2 correspond to 63% extinct; 0.8–0.9 to
-  94%. Every case here is extinct, against the method's default prior of
-  0.5, so this is a characterisation, not a test of the method.
-- **Marshall (1994) in `tbea` returned no bound for any case.** With
-  quantile 0.95 and confidence 0.95, its upper bracket exists only when
-  0.95^N < 0.025 for N gaps, which needs at least 72 gaps (73 fossils);
-  the largest record here has 30.
+  error it covers the truth under 1% of the time; with 0.25-Myr errors,
+  0.69. Its unbiased median has the lowest median scaled absolute error of
+  the methods run (0.117 of the observed range in arm A), but a
+  median-unbiased Strauss–Sadler point, last + R(2^{1/(n−1)} − 1), is
+  essentially as good (0.123) and better on root-mean-square error
+  (0.862 against 0.914 Myr), and is closer to the truth in 55% of paired
+  cases against GRIWM's 48% (both compared with EDE's Strauss–Sadler
+  estimate). 62% of GRIWM's unbiased estimates fall before the truth.
+- **`agnostic` (prior 0.5) is conservative, partly by construction of the
+  score:** 67% of arm-A cases never reach a posterior of 0.95 and count as
+  covered; among the 639 that do, coverage is 0.970 (0.995 under the
+  declared wording, which allows the extinction's own bin). Its posterior
+  is below the observed fraction extinct in every decile (0.16 → 0.63;
+  0.86 → 0.945): underconfident, as expected for all-extinct species under a
+  prior of 0.5. The decile pairs are dependent; this is a characterisation.
+- **Marshall (1994) in `tbea` gave no upper bound for any case.** Its upper
+  bracket needs at least 110 gaps (111 fossils) at quantile 0.95 and
+  confidence 0.95 (`t2_checks.R`); the largest record here has 30.
+- **Two tools reset or break the caller's state.** `griwm` calls
+  `set.seed()` inside its loop, which invalidated our first arm C; and
+  `agnostic.R` fails under R ≥ 4.3 when `total` is supplied.

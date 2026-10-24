@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2026-10-24 02:27:55",
+    "date": "2026-10-24 03:12:53",
     "n_cases": 2000,
     "griwm_resample": 1000,
     "clade_seeds": [50001, 50002],
@@ -12,8 +12,8 @@
       "admtools": "0.7.0",
       "paleobuddy": "1.1.0"
     },
-    "seconds_A": 140.1643,
-    "seconds_B": 91.3734,
-    "seconds_C": 137.6213
+    "seconds_A": 143.3166,
+    "seconds_B": 96.7284,
+    "seconds_C": 144.6504
   }
 }

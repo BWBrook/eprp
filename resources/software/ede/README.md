@@ -9,14 +9,14 @@ repo: https://github.com/rodrigosqrt3/EDE
 paper: [10.1007/bf00897326, 10.1038/426245a, 10.2307/1940821]
 licence: GPL (>= 3)
 release: {version: 0.2.0, date: 2026-09-21, checked: 2026-10-24}
-maintenance: {state: active, last_commit: 2026-09-23, checked: 2026-10-24}
+maintenance: {state: active, last_commit: "2026-09-19 (author date; pushed 2026-09-23)", checked: 2026-10-24}
 tier: T2
 validated_uses: ["strauss1989 one-sided 95% bound under homogeneous sampling"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.r2, image: "eprp-sw/bench-r2:t2 (sha256:49f30706…)", host: deep-server}
 blockers: []
 related_sources: []
 eprp_questions: [Q-013, Q-017, Q-034, Q-041]
-entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "not yet"}
+entry: {created: 2026-10-24, updated: 2026-10-24, by: Claude (Opus 5.5), reviewed: "Claude Sonnet subagent, 24 Oct 2026; findings applied"}
 ---
 
 # EDE
@@ -36,14 +36,17 @@ E4–E6 in [bench/VALIDATION_T2.md](../bench/VALIDATION_T2.md), 2,000 species,
 sightings in 0.01-Myr units, the present as `test_year`. Coverage of the
 true extinction time:
 
-| Method | A: ideal | B: hiatuses | C: dating error |
+| Method | A: ideal | B: hiatuses (1,272 species) | C: dating error |
 | --- | --- | --- | --- |
-| `strauss1989` (one-sided 95%) | **0.950** (pass) | 0.886 | 0.939 |
-| `robson1964` (one-sided 95%) | 0.955 | 0.921 | 0.946 |
-| `ole` (two-sided 95%) | 0.610 | 0.496 | 0.591 |
-| `solow1993` estimate as a bound, scored cases / post hoc with missing estimates as "not inferred extinct" | 0.933 / 0.950 | 0.831 / 0.886 | 0.918 / 0.939 |
-| `mcinerny2006`, same | 0.866 / 0.886 | 0.701 | 0.849 |
-| `burgman1995`, same | 0.752 / 0.850 | 0.523 | 0.754 |
+| `strauss1989` (one-sided 95%) | **0.950** (meets its coverage criterion) | 0.886 | 0.955 |
+| `robson1964` (one-sided 95%) | 0.955 | 0.921 | 0.959 |
+| `ole` (two-sided 95%) | 0.610 | 0.496 | 0.552 |
+| `solow1993` estimate as a bound, scored cases / post hoc with missing estimates as "not inferred extinct" | 0.933 / 0.950 | 0.831 / 0.886 | 0.939 / 0.955 |
+| `mcinerny2006`, same | 0.866 / 0.885 | 0.701 / 0.767 | 0.878 / 0.896 |
+| `burgman1995`, same | 0.752 / 0.851 | 0.523 / 0.694 | 0.811 / 0.889 |
+
+E4 as a whole failed as declared, on its agreement criterion with `tbea`
+(see Weaknesses: EDE counts distinct sighting times). Arm C is the A2 rerun.
 
 Missing estimates for the three persistence tests come from species whose
 last fossil is close to the present (median 1.4–3.2 Myr, against
@@ -53,15 +56,20 @@ last fossil is close to the present (median 1.4–3.2 Myr, against
 ## Strengths
 
 - One interface over many methods; fast (pure R).
-- Strauss–Sadler, Robson–Whitlock and (read correctly) Solow 1993 are
-  calibrated under homogeneous sampling.
+- Strauss–Sadler and Robson–Whitlock are calibrated under homogeneous
+  sampling; Solow 1993 is too, under the post hoc reading of its missing
+  estimates.
 
 ## Weaknesses and pitfalls
 
 - **OLE's 95% interval undercovers badly** on records of 3–30 fossils:
-  0.42 with 3–5 fossils, 0.81 with 6–10, 0.89 above 10.
+  0.42 with 3–5 fossils, 0.81 with 6–10, 0.89 above 10, with misses on
+  both sides (truth below the interval 23.9%, above 24.5%). This is EDE's
+  implementation with the default k (all distinct sighting times); no
+  second implementation was compared.
 - McInerny and Burgman estimates, read as α = 0.05 inference dates, are
-  anti-conservative (0.87, 0.75 in arm A).
+  anti-conservative (0.87 and 0.75 in arm A as scored; 0.885 and 0.851
+  under the post hoc reading).
 - **`strauss1989` counts distinct sighting times** (`unique()` in its
   source), so sightings sharing a time unit count once. That makes the
   bound wider than the sighting-count formula when units are coarse; on

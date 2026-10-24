@@ -7,3 +7,6 @@
 2026-10-24T02:34:05Z exit 1
 2026-10-24T02:34:05Z done
 2026-10-24T02:34:29Z summary rerun after name fix: exit 0
+2026-10-24T03:12:45Z A2 rerun of E4-E6 (arm C noise fix) and summary
+2026-10-24T03:19:18Z A2 benchmark exit 0
+2026-10-24T03:19:19Z A2 summary exit 0 done

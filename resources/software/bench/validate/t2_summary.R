@@ -27,6 +27,8 @@ score_arm <- function(arm) {
   est <- list(ede_ss = x$ede_ss_est, ede_robson = x$ede_robson_est, ede_ole = x$ede_ole_est, ede_solow = x$ede_solow_est,
               ede_mcinerny = x$ede_mcinerny_est, ede_burgman = x$ede_burgman_est,
               griwm_biased = x$griwm_b_med, griwm_unbiased = x$griwm_u_med)
+  est$ss_median_unbiased <- x$last + x$range * (2^(1 / (x$n - 1)) - 1)   # A2, post hoc
+  est$last_occurrence <- x$last
   strata <- cut(x$n, c(2, 5, 10, Inf), labels = c("3-5", "6-10", ">10"))
   out <- list(cases = nrow(x), dropped = dropped, binomial99_for_0.95 = binom99(nrow(x)))
   out$methods <- lapply(names(covered), function(m) {
@@ -40,8 +42,22 @@ score_arm <- function(arm) {
   out$point_estimates <- lapply(est, function(e) {
     rel <- (e - te) / x$range
     list(n = sum(!is.na(rel)), median_error_over_range = median(rel, na.rm = TRUE),
-         median_abs_error_over_range = median(abs(rel), na.rm = TRUE), frac_before_truth = mean(e < te, na.rm = TRUE))
+         median_abs_error_over_range = median(abs(rel), na.rm = TRUE), frac_before_truth = mean(e < te, na.rm = TRUE),
+         rmse_myr = sqrt(mean((e - te)^2, na.rm = TRUE)),
+         frac_closer_than_ss_estimate = mean(abs(e - te) < abs(x$ede_ss_est - te), na.rm = TRUE),
+         median_abs_error_over_range_by_fossils = as.list(tapply(abs(rel), strata, median, na.rm = TRUE)))
   })
+  out$persistence_post_hoc <- lapply(c(ede_solow = "ede_solow_est", ede_mcinerny = "ede_mcinerny_est", ede_burgman = "ede_burgman_est"),
+    function(col) {
+      v <- te <= x[[col]] | is.na(x[[col]])
+      s <- list(coverage_missing_as_not_extinct = mean(v))
+      if (arm == "B") s$by_te_class <- as.list(tapply(v, x$te_class, mean))
+      s
+    })
+  fin <- !is.na(x$ag_bin95) & is.finite(x$ag_bin95)
+  out$agnostic_detail <- list(n_na = sum(is.na(x$ag_bin95)), n_never_reaches_0.95 = sum(is.infinite(x$ag_bin95)), n_finite = sum(fin),
+                              coverage_finite_first_absent_bin = mean(x$ag_true_bin[fin] <= x$ag_bin95[fin]),
+                              coverage_finite_declared_bin_of_te = mean(x$ag_true_bin[fin] - 1 <= x$ag_bin95[fin]))
   out$last_occurrence_gap_over_range <- median((te - x$last) / x$range)
   if (arm == "B") out$te_class_counts <- as.list(table(x$te_class))
   agree <- abs(x$tbea_ss_upper - x$ede_ss_upper)
@@ -61,6 +77,13 @@ score_arm <- function(arm) {
 }
 
 res <- lapply(c(A = "A", B = "B", C = "C"), score_arm)
+# A2, post hoc: arm-A coverage of the same species that survive into arm B, by arm-B extinction class
+xa <- read.delim(file.path(d, "t2_extinction_A.tsv")); xb <- read.delim(file.path(d, "t2_extinction_B.tsv"))
+xb <- xb[xb$dropped == 0, ]; xa <- xa[match(xb$case, xa$case), ]
+paired <- list(tbea_ss = xa$te_fwd <= xa$tbea_ss_upper, ede_robson = xa$te_fwd <= xa$ede_robson_upper,
+               ede_solow_missing_as_not_extinct = xa$te_fwd <= xa$ede_solow_est | is.na(xa$ede_solow_est))
+res$B$paired_arm_A_baseline <- lapply(paired, function(v) c(list(all = mean(v)), as.list(tapply(v, xb$te_class, mean))))
+res$B$paired_mean_fossils <- list(arm_A = mean(xa$n), arm_B = mean(xb$n))
 A <- res$A
 ci <- A$binomial99_for_0.95
 res$E4_pass <- list(
