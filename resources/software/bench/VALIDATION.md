@@ -117,3 +117,29 @@ coverage is expected; with 1,000 replicates the 2.5% binomial quantile is
 - G1–G5 and E1 run their replicates across 12 cores (`parallel::mclapply`,
   L'Ecuyer-CMRG streams); results do not depend on the core count except
   through the random streams.
+
+**A2, 24 October 2026, after the full run and an independent review
+(Claude Sonnet subagent), before the tests below were run (Claude, Opus 5.5).**
+- New test **G3b (shift order)**: G3 cannot tell λ = 0.4 then 0.1 from the
+  reverse, because E[N(15)] depends only on ∫(λ − μ). On 2,000 new paleobuddy
+  runs with G3's settings, count species alive 7.5 Myr after the origin.
+  Truth if the first rate applies first: e^{(0.4−0.2)·7.5} = 4.4817; if
+  reversed, e^{(0.1−0.2)·7.5} = 0.4724. Pass: mean within 3 standard errors
+  of 4.4817.
+- Disclosures of choices made before the full run but not declared:
+  `pyrate_sim.R` rejects records with fewer than 10 sampled species (never
+  binding at ψ = 1.0, minimum 21; possibly binding at ψ = 0.25, minimum 12).
+  G5's two counts are one check: in every tree, originations − terminations
+  = extant species − 1, so the two z-scores are identical, and the test
+  constrains βS + λa·L, not β and λa separately. G2's dispersion tolerance
+  assumes a per-replicate variance of 2; the true variance is 2 + 1/(ψL),
+  so the tolerance is about 2 empirical standard errors for paleobuddy.
+  The ten TreeSim clades returned as a single surviving lineage have no
+  tree for FossilSim and are absent from G2 and from G4's fossil-count
+  comparison.
+- Corrections to the text above: seeds are in the scripts and image ids in
+  `results/image-ids.txt`, not in each result file; the 2.5% binomial
+  quantile for 100 replicates at 0.95 is 90, not 91 (the criterion, at
+  least 90, is unchanged).
+- PyRate's runs used the compiled FastPyRateC likelihood shipped in the
+  repository (the run logs say it was loaded), not the Python functions.
