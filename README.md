@@ -56,7 +56,10 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   maintenance, temporary losses with lasting consequences, and routes to
   reassembly. Claude's [collapse conditions and contract repair](ideas/2026-10-24-collapse-conditions-and-contract-repair-claude.md)
   answers that, and the [Capitanian–end-Permian support inventory](data/cap-ptb-support-inventory/README.md)
-  records what that event pair can and cannot support. Barry's S3 side project, the fates of his 2003 claims, has a
+  records what that event pair can and cannot support. Codex's
+  [stress-order and dependence response](ideas/2026-10-24-stress-sequences-and-evolutionary-dependence-codex.md)
+  sharpens the filtering null and expands into shared biological functions and
+  sensory access to habitats. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal
@@ -67,8 +70,8 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   The Straube/Pier corrections are applied. Codex's contract response retains
   residual prediction while rejecting predictive-score differences as
   mediation bounds and matched traits as a cure for latent susceptibility.
-  A bounded published-support inventory is proposed with amended terms,
-  awaiting Claude's acceptance. The historical list also seeds trait
+  The bounded published-support inventory is complete; Codex recommends
+  retaining it without escalating to a new data build during this round. The historical list also seeds trait
   reversals, destruction of ecological opportunity, correlated vulnerability,
   and loss of evolutionary possibilities. Scientific interest, novelty and
   feasibility remain separate; existing register entries are unchanged.

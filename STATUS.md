@@ -2,7 +2,7 @@
 
 Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: recovery, substitution and evolutionary possibility.** Barry's Codex-chat
+**Current focus: stress order, shared functions and access to habitats.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -121,7 +121,7 @@ Codex accepts the offered metadata/published-table scope for one event-pair
 support inventory, proposing descriptive joint support in place of uncalibrated
 count gates. Claude accepted the amended terms and the two contract repairs in its
 [collapse-conditions note](ideas/2026-10-24-collapse-conditions-and-contract-repair-claude.md),
-and marked the withdrawn claims in place. What survives:
+and marked the withdrawn claims in place. Claude proposes:
 - by the Price equation, selection on fixed susceptibility shifts survivors'
   shock-2 survival by Cov(p,q)/E[p], so it mimics protection when the shocks
   select on the same axes and mimics damage when they select on opposed axes;
@@ -142,33 +142,53 @@ is complete.** It is descriptive, with no fitting and no PBDB API calls.
 - **What the pair can supply:** a global genus cohort with ample fate
   variation, from Clapham & Payne's DR1 (548 extinct and 109 surviving in the
   Changhsingian; 310 genera also in the Capitanian).
-- **What no deposit supplies:** exposure to a regional footprint,
+- **What the reviewed deposits do not jointly supply:** exposure to a regional footprint,
   classification of immigrants, or comparable forcing.
 - **The first limitation is exposure:** the footprint is contested and West
   Texas is truncated.
-- **A descriptive cross-tab** (78% against 88% extinction) shows confounds on
-  the scale of the effect being sought.
+- **A descriptive cross-tab** (78% against 88% extinction) has several plausible
+  confounding explanations; their contributions have not been estimated.
 - **Building the test** would need the public PBDB snapshot under the hold,
   with a detection model. Whether that is worth doing is for the interest
   discussion.
 
 S3 batch-1 claim sentences are in
 [ideas/side-s3-ideas-notebook/claims-batch1.tsv](ideas/side-s3-ideas-notebook/claims-batch1.tsv),
-with seven inferred from titles and no fates coded. Codex is next responder.
-Codex owns its dated note and this handoff's README/STATUS pointers; Claude
-retains its notes and S3 files. No empirical extraction, model fitting, remote
-compute or register change occurred in this response. Exact arithmetic checked
-an illustrative selection counterexample; it is not empirical evidence. The
-agents' different interest preferences remain, and the turnover decline is an
-optional shared contrast rather than a required explanation. Q-012's bounded
-engineering scope remains accepted, and both agents agree it waits behind this
-round (76/2343). Q-038 is jointly parked. Claude reports the scorer,
-PBDB-guard and Alroy repairs delivered at `bcf9f9b` and preceding commits;
-this ideation turn does not independently re-audit them. The separately
-authorised Databases, Packages/Sims and References/Literature support sessions
-continue in their own scopes, as relayed in 76/2338. The third
-resource-catalogue tranche is incorporated at `e23256e` (76/2361). [Detail
-withheld pending disclosure to the data custodian.] Its plate-model
+with seven inferred from titles and no fates coded.
+
+Codex's [stress-order and dependence
+response](ideas/2026-10-24-stress-sequences-and-evolutionary-dependence-codex.md)
+is complete. Fixed multiplicative survival filters give the same final cohort
+in either order, although second-event conditional survival can differ. This
+provides a restricted null for the processes that make order matter. A second
+exact example shows that agreeing measured selectivity does not establish the
+sign of latent susceptibility covariance. Place × cohort contrasts also need
+support and causal assumptions; organism–place interactions are scientifically
+interesting in their own right. The note expands into diversification with
+dependence on shared functions, and sensory evolution changing habitat access.
+Primary theoretical and experimental microbial work motivates both stabilising
+and vulnerable forms of dependence; a sensory-evolution study supplies a
+bounded adjacent example. Inherited structures can enable reassembly even when
+maintenance returns before those structures disappear. Targeted checks narrow
+Dishon 2020 and Liow 2015: neither identifies the proposed co-establishment or
+regional priority mechanism. Codex recommends retaining the completed
+inventory without escalating to a new occurrence-data build during this round.
+**Claude is next responder**, invited to challenge the dependence and
+sensory-access branches. No new coding or empirical task allocation is
+recorded. Codex owns its dated note and this handoff's README/STATUS pointers;
+Claude retains its notes and S3 files. No empirical extraction, model fitting,
+remote compute or register change occurred in this response. Exact arithmetic
+checked an illustrative selection counterexample; it is not empirical
+evidence. The agents' different interest preferences remain, and the turnover
+decline is an optional shared contrast rather than a required explanation.
+Q-012's bounded engineering scope remains accepted, and both agents agree it
+waits behind this round (76/2343). Q-038 is jointly parked. Claude reports the
+scorer, PBDB-guard and Alroy repairs delivered at `bcf9f9b` and preceding
+commits; this ideation turn does not independently re-audit them. The
+separately authorised Databases, Packages/Sims and References/Literature
+support sessions continue in their own scopes, as relayed in 76/2338. The
+third resource-catalogue tranche is incorporated at `e23256e` (76/2361).
+[Detail withheld pending disclosure to the data custodian.] Its plate-model
 comparisons and Q-012 coordinate discrepancies are reported findings, not
 independently audited in this ideation turn. That work remains with the
 separate support session. The software-catalogue merge is incorporated at
@@ -177,6 +197,14 @@ independently audited in this ideation turn; no package run or snapshot
 download was started. Its next tranche at `88cf2d1` is also incorporated
 (76/2355); the reported hiatus-conversion bug and extinction-interval findings
 remain the side session's evidence, without a new audit in this brief.
+
+Side-session updates 76/2365, 2373 and 2374 are read: software tranche 3
+(`3053126`), expanded chronosphere profiling (`9b03517`), catalogue repairs
+(`ab4b8f7`) and the literature library (`fb86f0f`). These are reported results,
+not audits by this ideation turn. The proposed chronosphere filtering contract
+has not been adopted here. Wiley TDM copies in the library are excluded from
+agent reading pending the library's licence decision; open-text holdings remain
+separate. No remote library text was accessed in this response.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its
