@@ -56,7 +56,7 @@ one_rep <- function(r) {
   truth <- data.frame(rep = r, bin = seq_len(nb), top = edges[-length(edges)], bottom = edges[-1],
                       global = colSums(frac > 0), sampled_area = sampled_area,
                       collections = colSums(n_coll), s_b = s_b, sd_b = sd_b, extant = sum(sp$te == 0),
-                      dd_label = colSums(pmin(1, (stop - start + 1) * frac)))
+                      dd_label = colSums(pmin(frac * (stop - start + 1), 1)))
   list(occ = do.call(rbind, occ), truth = truth)
 }
 
