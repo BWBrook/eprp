@@ -11,7 +11,7 @@ licence: GPL (>= 3)
 release: {version: 3.0.2, date: 2025-07-30, checked: 2026-10-23}
 maintenance: {state: slow, last_commit: 2025-07-30, checked: 2026-10-23}
 tier: T2
-validated_uses: ["estimateD coverage-standardised richness (incidence, q = 0): unbiased under a 70% fall in sampling effort at constant evenness", "ChaoRichness incidence Chao2 reproduced by an independent implementation"]
+validated_uses: ["estimateD coverage-standardised richness (incidence, q = 0): within ±0.10 (+0.026) of the truth's trend when collections fall 70% at constant evenness", "ChaoRichness incidence Chao2 reproduced by an independent implementation"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.r4, image: "eprp-sw/bench-r4:t4 (sha256:d0c1c51a…)", host: deep-server}
 blockers: []
 related_sources: [pbdb]
@@ -68,8 +68,10 @@ log ratio.
 
 ## Strengths
 
-- Under a change of sampling effort alone, coverage standardisation did
-  what it is designed to do, where raw richness fell 0.37 and Chao2 0.15.
+- When the number of collections fell 70% at constant evenness, the
+  coverage estimate moved +0.03, where raw richness fell 0.37 and Chao2
+  0.15. Effort falling through smaller collections or lower preservation
+  was not tested.
 - Interpolation and extrapolation share one framework, with analytical
   and bootstrap intervals.
 - Warns when an extrapolation runs past twice the reference sample.
@@ -79,15 +81,19 @@ log ratio.
 - **Coverage standardisation responds to evenness.** With true richness
   flat and only the abundance distribution becoming uneven, the coverage
   estimate fell by 0.76 in log units, more than raw richness (−0.49) or
-  Chao2 (−0.31). Equal coverage is not equal completeness of the species
-  list when dominance changes. This is the substance of Alroy's (2026)
-  critique ([LEADS](../LEADS.md) L-006); do not read coverage-standardised
-  values as relative richness where evenness may differ between bins.
+  Chao2 (−0.31), after a single step in evenness (σ 0.5 to 2; no
+  dose–response was run). Equal coverage is not equal completeness of the
+  species list when dominance changes. Alroy (2026; [LEADS](../LEADS.md)
+  L-006) concludes from different tests (excluding dominants, pooling,
+  singleton-matched pairs) that coverage-based rarefaction does not track
+  richness; this result is consistent with that conclusion. Do not read
+  coverage-standardised values as relative richness where evenness may
+  differ between bins.
 - **Extrapolation does not fail; it warns.** In a bin with 4 collections
   (sample coverage 0.20), `estimateD` extrapolated to 18 units (4.5× the
   sample) and returned 281 species from 86 observed, with the warning "the
   results for q = 0 may be subject to large prediction bias". divDyn's SQS
-  returns NA in the same bin. Inside `parallel::mclapply` or a loop the
+  returns NA in the same bin, with no warning. Inside `parallel::mclapply` or a loop the
   warning is easily lost: check `t / T` in the output and drop bins beyond
   2.
 - `estimateD` returns rows by assemblage name; match on `Assemblage`
@@ -98,9 +104,11 @@ log ratio.
 ## Alternatives and overlap
 
 divDyn's SQS standardises to the same kind of coverage (Good's u, on
-occurrences) by subsampling rather than by interpolation; on these data
-the two agreed in every scenario (K2 effort: +0.03 for both; evenness:
-−0.70 against −0.76). Squares and Chao2 extrapolate to an asymptote
+occurrences) by subsampling rather than by interpolation. On these data
+SQS ran 2–5% below iNEXT on average, except in the uneven late bins of
+scenario E (1% above), and the two responded alike to effort (+0.03 each) and to
+evenness (−0.70 against −0.76). Alroy's geometric Weibull, which he
+prefers to both, was not run. Squares and Chao2 extrapolate to an asymptote
 instead; they were less affected by the evenness change but biased by the
 effort change. DeepDive targets total richness by simulation-based
 inference ([deepdive](../deepdive/README.md)). divvy adds spatial

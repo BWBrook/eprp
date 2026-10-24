@@ -52,9 +52,14 @@ k3_ref <- with(all_bins, {
   S <- raw; T <- collections
   divdyn <- S + (S - 1) / S * f1 * (f1 - 1) / (2 * (f2 + 1))
   inext <- ifelse(f2 > 0, S + (T - 1) / T * f1^2 / (2 * f2), S + (T - 1) / T * f1 * (f1 - 1) / 2)
+  bias_corrected <- S + (T - 1) / T * f1 * (f1 - 1) / (2 * (f2 + 1))
+  vs_bc <- (chao2_divdyn - bias_corrected) / bias_corrected
   list(divdyn_max_abs_diff = max(abs(chao2_divdyn - divdyn)), inext_max_abs_diff = max(abs(chao2_inext - inext)),
        rel_diff_median = median((chao2_divdyn - chao2_inext) / chao2_inext),
-       rel_diff_range = range((chao2_divdyn - chao2_inext) / chao2_inext))
+       rel_diff_range = range((chao2_divdyn - chao2_inext) / chao2_inext),
+       divdyn_vs_bias_corrected = list(median = median(vs_bc), p99 = unname(quantile(vs_bc, 0.99)), max = max(vs_bc),
+                                       at_max = all_bins[which.max(vs_bc), c("rep", "bin", "collections", "raw")],
+                                       spearman_with_inverse_T = cor(vs_bc, 1 / T, method = "spearman")))
 })
 
 dd_test <- lapply(c(S = "S", E = "E", M = "M"), function(s) {

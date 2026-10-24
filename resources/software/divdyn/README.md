@@ -79,7 +79,7 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
 | Squares; Chao2 under the evenness change | −0.31, −0.31 (raw −0.49) |
 | Mass extinction at 50 Ma (true drop −0.78 in log richness, bins 11–12 against 9–10) | squares −0.74, Chao2 −0.74, SQS −0.67, raw −0.68 |
 | Squares and Chao2 against true richness (median absolute log error) | 0.17–0.36 against global richness, 0.09–0.18 against richness in the sampled areas; both underestimate (mean log ratio −0.19 to −0.35) |
-| K3: `indices` Chao2 against an independent implementation of its formula | equal to 5 × 10⁻¹³ |
+| K3: `indices` Chao2 against an independent implementation of its formula | equal to 5 × 10⁻¹³; against iNEXT's Chao2, a median −0.2% (range −1.9% to +9.4%) |
 
 ## Strengths
 
@@ -118,8 +118,9 @@ mean estimates in bins 11–20 to bins 1–10, minus the true log ratio.
   from the bias-corrected Chao2 with (T − 1)/T was a median +0.14% here but
   +25% in a bin with 4 collections (Spearman ρ 0.82 with 1/T). It matters
   only for thinly sampled bins.
-- SQS returns NA where a bin cannot reach the quorum (`useFailed = FALSE`):
-  the safe behaviour, but downstream means need explicit handling.
+- SQS returns NA where a bin cannot reach the quorum (`useFailed = FALSE`),
+  with no warning or message: safer than a number, but downstream means
+  need explicit handling.
 - **SQS responds to evenness.** Under a pure evenness change it halved a
   flat richness curve (−0.70), as did iNEXT's coverage estimate (−0.76);
   see [inext](../inext/README.md) and lead L-006.
@@ -136,9 +137,11 @@ and SQS implementations elsewhere cover richness, not rates.
 
 Stage-level rates for Q-040, Q-042 and Q-038 style analyses; the shared
 counting makes it the natural engine for an estimator comparison (lead
-N-002). Its SQS removes an effort change but not an evenness change
-(tranche 4; lead L-006), and squares and Chao2 recover 70–83% of global
-richness on these records.
+N-002). Its SQS absorbed a fall in collection numbers (+0.03) but not an
+evenness change (−0.70; tranche 4, lead L-006), and squares and Chao2
+recovered 70–83% of global richness on these records (partly a matter of
+definition: global richness counts every species alive at any time in a
+bin).
 
 ## Citation and licence
 
