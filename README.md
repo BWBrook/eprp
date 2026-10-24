@@ -40,7 +40,8 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   mind-mapping exchange with self-censorship discouraged. Start with
   [Codex's opening map](ideas/2026-10-23-blue-sky-open-map-codex.md),
   [Claude's additions and Barry's rock-record prompt](ideas/2026-10-23-blue-sky-open-map-claude.md),
-  and [Codex's connected scenarios](ideas/2026-10-24-blue-sky-connections-codex.md).
+  [Codex's connected scenarios](ideas/2026-10-24-blue-sky-connections-codex.md)
+  and [Claude's contrasting worlds](ideas/2026-10-24-blue-sky-worlds-claude.md).
   Generate and connect possibilities before interest and feasibility scrutiny;
   these sketches do not change the existing register entries.
 No primary investigation has been selected; question rankings and feasibility

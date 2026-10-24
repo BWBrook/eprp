@@ -324,22 +324,31 @@ abstracts and indexes, not the full texts.
 - **Wall et al. 2009:** a global outcrop–diversity power law. They read it
   as mainly sampling, not common cause, with a global signal surviving.
 - **Common cause:** Peters, and Hannisdal & Peters 2011. Sea level and
-  tectonics may drive both rock and life.
-- **The residual method shown to be flawed:** Sakamoto, Venditti & Benton
-  2017. Formation proxies are information-redundant (Dunhill and
+  tectonics may drive both rock and life. Hannisdal & Peters used
+  conditional, directional information transfer among environmental, rock
+  and diversity records, so the field has already gone beyond simple
+  correlation (Codex's check, 24 October).
+- **A flaw in one residual procedure:** Sakamoto, Venditti & Benton 2017.
+  Their central criticism targets the SDDM step, which sorts diversity and
+  its sampling proxy independently and so destroys their pairing. It is not
+  a refutation of every regression-based treatment (Codex's check, 24
+  October). Formation proxies are information-redundant (Dunhill and
   colleagues).
 - **Still live:** Na et al. 2023 (Geobiodiversity Database, 85% of sampled
   variation tied to rock); Ye & Peters 2023 (Macrostrat bedrock maps; North
   America and Europe over-yield per sedimentary area; about 639,000 more
   occurrences needed for global parity).
 
-**P1. The provocation.** For fifty years the bias-versus-common-cause
-argument has rested on correlation, which cannot separate them. So **find
-variation that changes the record but cannot change the biology,** and
-use it as an instrument:
+**P1. The provocation.** Much of the bias-versus-common-cause argument
+has rested on correlation and residuals, and even directional
+information-transfer methods read every series as observed. So **find
+variation that changes the record after the organisms lived,** and treat
+it as a candidate instrument. Timing rules out backward causation, but not
+shared geography, lithology or selective survival, so validity has to be
+argued case by case (Codex, 24 October):
 - **Destruction after deposition.** Tectonic recycling removes old rock
-  (area–age survivorship). It is purely geological and happens long after
-  the organisms lived.
+  (area–age survivorship). It happens long after the organisms lived, but
+  where it strikes can share causes with their original habitats.
 - **Today's exposure.** Vegetation, land use, topography and coastal
   proximity decide what crops out now.
 - **Collecting effort.** Ye & Peters' geological-parity deficit.
@@ -352,14 +361,16 @@ it, instead of correcting with residuals.
 rock cycle's survivorship curve? Old seafloor is subducted, and old
 continental platforms are eroded and buried. If the area of surviving
 rock decays with age at a known rate, an unbiased biosphere would show a
-"rise" of exactly that shape. The interesting part is whatever is left
-after dividing it out.
+"rise" of roughly that shape. The interesting part is whatever is left
+after accounting for it. Simple division will not do, because different
+settings, abundances and detection probabilities give different
+accumulation curves (Codex, 24 October).
 
 **P3. Mutation.** Run the logic backwards. Where biology and rock
 survival *disagree*, for example a diversity peak in an interval with
-little surviving rock, the biology is telling us something the sampling
-cannot fake. Rock-poor intervals with rich faunas are the strongest
-evidence of real highs.
+little surviving rock, the mismatch is worth explaining. It is not proof of
+a real high, because concentrated preservation, collecting and time
+averaging can also produce it (Codex, 24 October).
 
 **Connections:**
 - Q-040 (the rise, decomposed spatially; this adds the observation model);
