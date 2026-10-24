@@ -548,17 +548,26 @@ the workflow when they generalise.
 
 **Modern bridge (BioTIME, GRIIS, First Records, GloNAF; 24 October 2026).**
 
-- *A "no dates" claim needs checking per release.* The scoping said GRIIS has
-  no dates; 104 of its checklists now carry an event date on 27% of rows,
-  in a dozen formats and with no stated meaning.
+- *A date field means what each list's metadata says.* The scoping said GRIIS
+  has no dates. 100 of its checklists fill an event date (27% of all
+  distribution rows, 54% within those lists), but in 58 lists it is an entry
+  or compilation stamp. The US lists put introduction dates in
+  `eventRemarks`, and Belgium gives first-introduction ranges. Read the EML
+  before reading the column.
 - *Licence text needs classifying in the right order.* BioTIME's "ODbL
   (CC-by-NC)" studies (19) count as non-commercial only if the NC test runs
   before the ODbL one; the naive order halved the non-commercial count.
-- *A crosswalk's lower bound is still informative.* Exact names and
-  country units already put 12,480 plant species-country pairs in GloNAF,
-  First Records and GRIIS together; SInAS would raise it.
+- *A crosswalk's lower bound is still informative, if its units are clean.*
+  Exact names and country units put 13,181 plant species-country pairs in
+  GloNAF, First Records and GRIIS together. Using accepted names, dropping
+  nested and protected-area lists, and adding country aliases raised it by
+  6%. Different inclusion rules are not missed matches.
+- *Pooled counts hide local loss.* BioTIME names not recorded again: 36%
+  pooled over a study, 32% site by site, and the two differ for the same
+  studies (24% pooled against 32% by site, by the review's count). Neither
+  bounds local loss.
 - *Profile outputs must never carry contact fields.* BioTIME's study table
-  holds contributors' e-mail addresses; the profiler never reads those
+  holds contributors' e-mail addresses; the profiler never outputs those
   columns, and committed files are grepped for "@".
 
 **Outreach (Barry, 22 October 2026).**

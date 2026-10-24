@@ -1,8 +1,9 @@
 section	metric	value
-crosswalk	countries matched: GloNAF; First Records; GRIIS; in all three	219; 145; 194; 125
-crosswalk	locations of First Records matched to a country (of all)	211 of 268
-crosswalk	plant species-country pairs in the shared countries: GloNAF; First Records; GRIIS	36058; 45096; 62834
-crosswalk	pairs in GloNAF and GRIIS; GloNAF and First Records; First Records and GRIIS; all three	22856; 17064; 27766; 12480
-crosswalk	pairs in only one source: GloNAF; First Records; GRIIS	8618; 12746; 24692
-crosswalk	pairs in all three with a first-record year	12480
-crosswalk	countries with the most pairs in all three	AUS 2319; JPN 989; SWE 848; ZAF 735; NOR 675; BEL 497; NZL 359; IND 322
+crosswalk	GRIIS checklists used; skipped (protected areas, GISD, nested units, no distribution)	218; 165
+crosswalk	countries matched: GloNAF; First Records; GRIIS; in all three	219; 148; 203; 138
+crosswalk	locations of First Records matched to a country (of all)	217 of 268
+crosswalk	plant species-country pairs in the shared countries: GloNAF; First Records; GRIIS	38553; 38939; 59805
+crosswalk	pairs in GloNAF and GRIIS; GloNAF and First Records; First Records and GRIIS; all three	24802; 17585; 24445; 13181
+crosswalk	pairs in only one source: GloNAF; First Records; GRIIS	9347; 10090; 23739
+crosswalk	pairs in all three by First Records confidence	high confidence 10469; medium-high confidence 1400; low confidence 1276; medium confidence 19; medium-low confidence 17
+crosswalk	countries with the most pairs in all three	AUS 2403; JPN 1070; SWE 867; ZAF 769; NOR 714; BEL 492; NZL 354; IND 334

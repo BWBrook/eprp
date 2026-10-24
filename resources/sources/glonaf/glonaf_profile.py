@@ -37,11 +37,17 @@ put("records", "taxon-by-region rows; distinct taxon ids; distinct accepted WCVP
     f"{len(flora)}; {len({r['taxon_wcvp_id'] for r in flora})}; {len({acc.get(r['taxon_wcvp_id']) for r in flora} - {None, ''})}; "
     f"{len({r['region_id'] for r in flora})}; {len(lists)}")
 put("records", "rows by status", counts(collections.Counter(r["status"] for r in flora)))
-put("records", "distinct taxon-region pairs", len({(r["taxon_wcvp_id"], r["region_id"]) for r in flora}))
+put("records", "distinct pairs: original-name id by region; accepted name by region",
+    f"{len({(r['taxon_wcvp_id'], r['region_id']) for r in flora})}; "
+    f"{len({(acc.get(r['taxon_wcvp_id']), r['region_id']) for r in flora if acc.get(r['taxon_wcvp_id'])})}")
 put("taxa", "taxa in the WCVP table; by WCVP status; by rank",
     f"{len(taxa)}; {counts(collections.Counter(t['wcvp_taxon_status'] for t in taxa), 5)}; {counts(collections.Counter(t['wcvp_taxon_rank'] for t in taxa), 5)}")
 put("taxa", "rows by family (top)", counts(collections.Counter(r["family_wcvp"] for r in flora), 10))
-put("regions", "regions; islands; equivalent to an ISO country", f"{len(region)}; {sum(r['island'] == '1' for r in region)}; {sum(r['iso_equivalent'] == '1' for r in region)}")
+put("regions", "regions; islands; iso_equivalent = 1", f"{len(region)}; {sum(r['island'] == '1' for r in region)}; {sum(r['iso_equivalent'] == '1' for r in region)}")
+put("regions", "iso_equivalent values", counts(collections.Counter(r["iso_equivalent"] for r in region)))
+put("regions", "iso_equivalent = 1 regions whose code is not three capital letters",
+    "; ".join(r["code"] for r in region if r["iso_equivalent"] == "1" and not (len(r["code"]) == 3 and r["code"].isalpha() and r["code"].isupper())) or "none")
+put("lists", "naturalized_explicit_id values (the dictionary defines 0 and 1)", counts(collections.Counter(r["naturalized_explicit_id"] for r in lists)))
 sets = collections.defaultdict(set)
 for r in flora:
     sets[r["region_id"]].add(acc.get(r["taxon_wcvp_id"]) or r["taxon_wcvp_id"])

@@ -44,7 +44,7 @@ entry:
   created: 2026-10-24
   updated: 2026-10-24
   by: Claude (Opus 5.5, side session)
-  reviewed: "not yet"
+  reviewed: "2026-10-24, independent Claude Sonnet subagent; findings applied"
 ---
 
 # BioTIME 2.0
@@ -59,9 +59,11 @@ species were present in each sample, year after year, at a stated grain, so
 local disappearances can be put on the same observation filter as fossil
 local losses. For Q-028 it can define "winners" as taxa increasing within
 assemblages. Its limits for both are length and grain: the median study
-covers 8 sampled years and the median extent is 31 km². Absences are not
-recorded, because zero abundances are dropped. Reach for it for local change
-in whole assemblages; it is not a source of global outcomes.
+covers 8 sampled years and the median extent is 31 km². Zero abundances are
+dropped, but each record belongs to a sample in which the whole assemblage
+was recorded, so absences can be rebuilt sample by sample (Dornelas et al.
+2025, as the review read it). Reach for it for local change in whole
+assemblages; it is not a source of global outcomes.
 
 ## Contents
 
@@ -83,11 +85,19 @@ in whole assemblages; it is not a source of global outcomes.
   span 30 or more.
 - **Study extent** (`AREA_SQ_KM`): quartiles 0.02, 31 and 13,500 km²,
   maximum global.
-- **Candidate local disappearances.** Take the 319 studies with 10 or more
-  sampled years. Of the 25,847 species recorded in a study's first three
-  sampled years, 9,203 (36%) are absent from its last three: marine 47%,
-  freshwater 30%, terrestrial 23%. Because zeros are not recorded and effort
-  varies between years, this is a ceiling on local loss, not an estimate.
+- **Names not recorded again.** Take the 319 studies with 10 or more sampled
+  years and compare each study's first three sampled years with its last
+  three:
+  - Pooled over each study, 9,203 (36%) of the 25,847 taxon names recorded
+    early are not recorded late: marine 47%, freshwater 30%, terrestrial
+    23%. For names at species resolution it is 6,866 of 20,877 (33%).
+  - Site by site (study, latitude and longitude) at the 7,631 sites in 263
+    studies sampled in both windows, 46,917 (32%) of the 146,272 names
+    recorded early are not recorded late at that site.
+  - Pooling over a study hides losses at single sites. Effort varies between
+    years and sites, and the windows are a few years each. These are
+    descriptive counts, neither floors nor ceilings on local loss. An honest
+    Q-025 filter would rebuild absences sample by sample.
 
 ## Provenance and lineage
 
@@ -108,8 +118,9 @@ The raw-data CSV has one row per taxon per sample: `ID_ALL_RAW_DATA`,
 joined by `STUDY_ID`) gives realm, climate, habitat, treatment, protection,
 taxa, `AB_BIO` (A, B or AB; 2 studies write "Ab"), years, grain and extent,
 methods and `PERMISSIONS`. It also holds contributors' names and e-mail
-addresses, which nothing here copies. The RDS on Zenodo is the
-same data in BioTIME's query format.
+addresses, which nothing here outputs. The RDS on Zenodo is the same data
+in BioTIME's query format: the review found the same 11,989,233 rows, 16
+columns, 708 studies, 56,400 names and 1,239,675 blank abundances.
 
 ## Access
 
@@ -132,14 +143,17 @@ same data in BioTIME's query format.
 
 ## Weaknesses and pitfalls
 
-- **No zeros.** Absent taxa are not recorded, so absence must be inferred
-  from the sampling of each study and year.
+- **No zeros.** Absent taxa are not stored as rows. Rebuild absences from the
+  samples (`SAMPLE_DESC`) in which the rest of the assemblage was recorded,
+  not from a study's pooled list.
 - **Short series.** The median study has 8 sampled years. Only 159 have 20
   or more, far shorter than fossil time bins.
 - **Mixed measures.** Counts, densities, presence/absence and biomass sit in
   the same columns. Check `AB_BIO` and the study methods before comparing.
-- **Per-study licences.** 37 studies are non-commercial and 65 ODbL
-  (share-alike), and 32 name no licence, only a citation requirement. Private
+- **Per-study licences.** 37 studies are non-commercial, counting the 19
+  marked "ODbL (CC-by-NC)" as non-commercial (the stricter reading). 65 are
+  ODbL (share-alike). 32 name only a citation requirement, 2 say "Public"
+  and 8 are blank. Private
   mirroring is covered by Barry's universal approval of 23 October 2026. Any
   released derivative must filter by `PERMISSIONS` and cite every study used.
 - **Contributor e-mail addresses** are in the study table: never copy them
@@ -158,8 +172,9 @@ same data in BioTIME's query format.
 
 - **Q-025.** The modern local-loss data the residual names ("Keil 2018's
   datasets, BioTIME, IUCN"). Support counts: 319 studies with 10 or more
-  sampled years, and 25,847 species-study pairs that can be followed from a
-  study's start to its end. The kill criterion's second obstacle, the time
+  sampled years, and 7,631 sites in 263 of them sampled at both ends of
+  their series. That gives nested grains (sample, site, study) for the
+  per-species loss-against-area estimate. The kill criterion's second obstacle, the time
   grain, is visible here: series last years to decades. BioTIME cannot give
   global outcomes, so C(A) for today still needs IUCN or extinction records.
 - **Q-028 (iii).** Pre-defined modern winners: taxa increasing within
@@ -188,4 +203,11 @@ matter's licence.
   - *checked*: per-study licences classified from `PERMISSIONS` (non-NC
     ODbL and NC variants separated);
   - *source claim*: the usage-guideline wording and the paper's counts
-    (scoping subagent).
+    (scoping subagent); that samples record whole assemblages (the 2.0 paper,
+    as the review read it).
+  - Independent review (Claude Sonnet subagent), findings applied:
+    - the local-loss counts reframed (taxon names, species-only and
+      site-level counts; neither floor nor ceiling);
+    - absences can be rebuilt per sample;
+    - the RDS equals the CSV (checked by the review);
+    - the licence notes.

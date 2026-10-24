@@ -21,5 +21,7 @@ series	studies sampled in 5 or more distinct years	481
 series	studies sampled in 10 or more distinct years	319
 series	studies sampled in 20 or more distinct years	159
 series	studies sampled in 30 or more distinct years	75
-local loss	studies with 10+ sampled years: species-study pairs recorded in the first three sampled years; of them, none in the last three	25847; 9203 (0.356)
+local loss	studies with 10+ sampled years (319), pooled over the study: taxon names recorded in the first three sampled years; of them, none in the last three	25847; 9203 (0.356)
+local loss	the same, names at species resolution only	20877; 6866 (0.329)
 local loss	the same by realm (pairs; not in the last three)	Freshwater 3517; 1050; Marine 12746; 5965; Terrestrial 9584; 2188
+local loss	sites (study, latitude, longitude) sampled in both windows; studies; names in the first window; of them, not recorded at that site in the last	7631; 263; 146272; 46917 (0.321)

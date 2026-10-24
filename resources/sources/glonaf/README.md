@@ -34,7 +34,7 @@ lineage:
   upstream:
     - "about 336 published floras, checklists and databases (glonaf_reference), harmonised to the World Checklist of Vascular Plants by the GloNAF team (van Kleunen, Pyšek, Essl, Kreft, Weigelt, Winter and others)"
   downstream:
-    - "SInAS 3.x (Gómez-Suárez et al. 2025), which harmonises an earlier GloNAF with GRIIS and the First Records Database; 3.2 mirrored in register-deposits"
+    - "SInAS 3.2 (Gómez-Suárez et al. 2025), which harmonises this same GloNAF table (2.02's flora2, with 8,512 duplicated rows) with GRIIS and the First Records Database; mirrored in register-deposits"
 eprp_questions: [Q-047]
 citation:
   - "Davis, A. J. S. et al. (2025) The Updated Global Naturalized Alien Flora (GloNAF 2.0) Database. Ecology 106(11): e70245, doi:10.1002/ecy.70245"
@@ -44,7 +44,7 @@ entry:
   created: 2026-10-24
   updated: 2026-10-24
   by: Claude (Opus 5.5, side session)
-  reviewed: "not yet"
+  reviewed: "2026-10-24, independent Claude Sonnet subagent; findings applied"
 ---
 
 # GloNAF: Global Naturalized Alien Flora
@@ -87,8 +87,10 @@ matches every name to the World Checklist of Vascular Plants (v12). Version
 1.2 (van Kleunen et al. 2019) was released on iDiv's data portal. Version 2.0
 (Davis et al. 2025) is on Zenodo, and the 2.02 snapshot of 12 September 2025
 is "a snapshot of the GloNAF database last updated on February 24, 2025",
-with structural changes only (glonaf.md, in the deposit). SInAS harmonises an
-earlier GloNAF with GRIIS and the First Records Database.
+with structural changes only (glonaf.md, in the deposit). SInAS 3.2's GloNAF
+input is this release's `flora2` table (the review found the same 349,271
+ids with the same taxon, region, list and status, plus 8,512 duplicated rows
+and 2,656 rows with a different `family_wcvp`).
 
 ## Structure
 
@@ -106,8 +108,14 @@ shapefile. Codes, as the data dictionaries define them:
 - `taxon_group_id`: 1 Tracheophyta, 2 Spermatophyta, 3 Angiospermae, 4
   Gymnospermae, 5 Pteridophyta, 6 other, 7 not clear, 8 Embryophyta.
 - `naturalized_explicit_id`: whether the source uses the word naturalized or
-  established.
-- `iso_equivalent`, `island`: 0/1 flags on regions.
+  established (0 or 1). 517 lists carry the value 2, which the dictionary
+  does not define; 1 is blank.
+- `island`: a 0/1 flag on regions.
+- `iso_equivalent`: 0 (1,098 regions), 1 (219), 2 (3) and blank (23). It
+  is not a reliable country flag. Georgia is 0; Kiribati, Bahrain and
+  Honduras are blank; Sudan with South Sudan is 2; and six flagged regions
+  have codes that are not ISO3 (CHN.91, CHN.92, USA.VI, CHN.THK, ECU.ALL,
+  NOR.SVA.JM). Match countries on the code itself.
 
 ## Access
 
@@ -122,8 +130,9 @@ shapefile. Codes, as the data dictionaries define them:
 
 - One harmonised name backbone (WCVP) across 336 sources and 1,343 regions.
 - List completeness is graded, so analyses can weight or filter by it.
-- Islands and ISO-equivalent regions are flagged, which eases joins to
-  country-level sources.
+- Islands are flagged, and country regions carry ISO3 codes, which supports
+  joins to country-level sources (on the code, not the `iso_equivalent`
+  flag).
 
 ## Weaknesses and pitfalls
 
@@ -133,8 +142,10 @@ shapefile. Codes, as the data dictionaries define them:
 - **Four-fifths of lists are very incomplete or incomplete** by GloNAF's own
   judgement (2,201 of the 2,764 judged). Richness differences between regions are
   partly list quality.
-- **Rows are not taxa.** A region with several lists repeats taxa; 327,807
-  distinct taxon-region pairs underlie the 349,271 rows.
+- **Rows are not taxa.** A region with several lists repeats taxa, and
+  `taxon_wcvp_id` identifies original names, not accepted ones. The 349,271
+  rows hold 327,807 distinct original-name × region pairs and 256,988
+  distinct accepted-name × region pairs.
 - **Plants only.** A three-source crosswalk with GRIIS and First Records is a
   plant crosswalk.
 - **Its own README miscounts the list table** (2,274 rows; the file has
@@ -143,14 +154,14 @@ shapefile. Codes, as the data dictionaries define them:
 ## Overlap with other sources
 
 - **GRIIS and the First Records Database.** Exact-name matching of plant
-  species by country, in the 125 countries all three cover: 36,058 GloNAF
-  pairs, of which 22,856 are also in GRIIS, 17,064 in First Records and
-  12,480 in all three ([crosswalk](../alien-first-records/profile/crosswalk_plants.tsv);
-  exact names, so a lower bound). See
+  species by country, in the 138 countries all three cover: 38,553 GloNAF
+  pairs, of which 24,802 are also in GRIIS, 17,585 in First Records and
+  13,181 in all three ([crosswalk](../alien-first-records/profile/crosswalk_plants.tsv);
+  exact names and country units, so a lower bound). See
   [alien-first-records](../alien-first-records/README.md).
-- **SInAS 3.2** ([register-deposits](../register-deposits/README.md)) holds
-  an earlier GloNAF taxon-region-reference table (357,783 rows) within its
-  harmonised inputs.
+- **SInAS 3.2** ([register-deposits](../register-deposits/README.md))
+  carries this release's `flora2` table (357,783 rows: the 349,271 here plus
+  8,512 duplicated rows) among its inputs.
 
 ## EPRP relevance
 
@@ -182,3 +193,6 @@ C33).
   - *source claim*: the snapshot date and structural changes (glonaf.md);
     the 336 sources (scoping, from glonaf.md and the data paper);
   - *checked*: plant crosswalk with GRIIS and First Records (see Overlap).
+  - Independent review (Claude Sonnet subagent), findings applied: accepted
+    name × region pairs, SInAS 3.2 carries this release, the
+    `iso_equivalent` and `naturalized_explicit_id` codes.

@@ -35,16 +35,36 @@ def table(name, delim=","):
         return list(csv.DictReader(f, delimiter=delim))
 
 
+with open(os.path.join(v4, "FirstRecords_dataset_public_v4.0.csv"), "rb") as f:
+    raw_bytes = f.read()
+try:
+    raw_bytes.decode("utf-8")
+    utf8 = "valid UTF-8"
+except UnicodeDecodeError as e:
+    utf8 = f"not valid UTF-8 (first bad byte at offset {e.start}; {raw_bytes.decode('utf-8', 'replace').count(chr(0xFFFD))} replacement characters)"
+put("records", "records file encoding", utf8)
 rec = table("FirstRecords_dataset_public_v4.0.csv", ";")
-loc = {r["locationID"]: r for r in table("FirstRecords_location_table_public_v4.0.csv")}
+loc_rows = table("FirstRecords_location_table_public_v4.0.csv")
+loc = {r["locationID"]: r for r in loc_rows}
 tax = {r["taxonID"]: r for r in table("FirstRecords_taxonomy_table_public_v4.0.csv")}
-put("records", "rows; distinct taxa; distinct locations", f"{len(rec)}; {len({r['taxonID'] for r in rec})}; {len({r['locationID'] for r in rec})}")
-put("records", "locations in the location table; taxa in the taxonomy table", f"{len(loc)}; {len(tax)}")
+blank = [r for r in rec if not r["locationID"].strip()]
+put("records", "rows; distinct taxa; distinct locations (blank excluded)",
+    f"{len(rec)}; {len({r['taxonID'] for r in rec})}; {len({r['locationID'] for r in rec} - {''})}")
+put("records", "rows with no location identifier; their verbatim locations",
+    f"{len(blank)}; {counts(collections.Counter(r['verbatimLocation'] for r in blank), 6)}")
+put("records", "location table rows; distinct location ids; taxa in the taxonomy table", f"{len(loc_rows)}; {len(loc)}; {len(tax)}")
 years = [int(r["firstRecordEvent"]) for r in rec if re.fullmatch(r"-?\d+", r["firstRecordEvent"].strip())]
 put("years", "rows with a first-record year (share); first; last",
     f"{len(years)} ({len(years) / len(rec):.3f}); {min(years)}; {max(years)}")
 put("years", "rows whose year differs from the verbatim first record (a range or text resolved to one year)",
     sum(1 for r in rec if r["firstRecordEvent"].strip() != r["verbatimFirstRecordEvent"].strip()))
+spans = []
+for r in rec:
+    m = re.fullmatch(r"\s*(-?\d{3,4})\s*[-–/]\s*(-?\d{3,4})\s*", r["verbatimFirstRecordEvent"])
+    if m and int(m.group(2)) > int(m.group(1)):
+        spans.append(int(m.group(2)) - int(m.group(1)))
+put("years", "verbatim year ranges (YYYY-YYYY); spanning more than 20 years; widest span",
+    f"{len(spans)}; {sum(1 for s in spans if s > 20)}; {max(spans) if spans else ''}")
 put("years", "rows before 1500 (incl. BCE); 1500-1799; 1800-1899; 1900-1949; 1950-1999; 2000 on",
     "; ".join(str(sum(1 for y in years if lo <= y < hi)) for lo, hi in
               ((-99999, 1500), (1500, 1800), (1800, 1900), (1900, 1950), (1950, 2000), (2000, 3000))))

@@ -7,11 +7,13 @@ METADATA_CSV the study table from Zenodo. Writes section, metric, value rows:
 study counts by realm, taxa, abundance type and licence (contact and e-mail
 columns are never read into the output); records, species and years; per
 study, the number of distinct years sampled; and, for studies with ten or more
-sampled years, species recorded in any of a study's first three sampled years
-but in none of its last three ("candidate local disappearances"). BioTIME
-drops zero abundances, so absence means not recorded, and sampling effort
-varies between years: the count is a ceiling on local loss, not an estimate.
-Standard library only.
+sampled years, taxon names recorded in a study's first three sampled years
+but in none of its last three, pooled over the study and, in a second pass,
+at each site (study, latitude, longitude) sampled in both windows. BioTIME
+drops zero abundances (samples record whole assemblages, so absences can be
+rebuilt per sample), and effort varies between years and sites: these are
+descriptive counts, neither floors nor ceilings on local loss. Standard
+library only.
 """
 
 import collections
@@ -76,6 +78,7 @@ if area:
 
 years_of = collections.defaultdict(set)
 pres = collections.defaultdict(lambda: collections.defaultdict(set))
+resolution_of = {}
 rows, ab_na, bio_na, species, res, taxon, realm_rows = 0, 0, 0, set(), collections.Counter(), collections.Counter(), collections.Counter()
 ymin, ymax = 9999, 0
 with zipfile.ZipFile(raw_zip) as z:
@@ -90,6 +93,7 @@ with zipfile.ZipFile(raw_zip) as z:
         bio_na += row[ix["BIOMASS"]] in ("", "NA")
         species.add(sp)
         res[row[ix["resolution"]]] += 1
+        resolution_of[(s, sp)] = row[ix["resolution"]]
         taxon[row[ix["taxon"]]] += 1
         realm_rows[meta_by_id.get(s, {}).get("REALM", "not in metadata")] += 1
         if y.isdigit():
@@ -110,25 +114,52 @@ put("series", "distinct years sampled per study: median; quartiles", f"{statisti
 for k in (2, 5, 10, 20, 30):
     put("series", f"studies sampled in {k} or more distinct years", sum(1 for n in n_years if n >= k))
 
-pairs = gone = 0
-gone_by_realm, pairs_by_realm = collections.Counter(), collections.Counter()
+windows = {}
 for s, ys in years_of.items():
-    if len(ys) < 10:
-        continue
-    order = sorted(ys)
-    first, last = set(order[:3]), set(order[-3:])
+    if len(ys) >= 10:
+        order = sorted(ys)
+        windows[s] = (set(order[:3]), set(order[-3:]))
+pairs = gone = sp_pairs = sp_gone = 0
+gone_by_realm, pairs_by_realm = collections.Counter(), collections.Counter()
+for s, (first, last) in windows.items():
     realm = meta_by_id.get(s, {}).get("REALM", "not in metadata")
     for sp, spy in pres[s].items():
         if spy & first:
             pairs += 1
             pairs_by_realm[realm] += 1
-            if not spy & last:
-                gone += 1
-                gone_by_realm[realm] += 1
-put("local loss", "studies with 10+ sampled years: species-study pairs recorded in the first three sampled years; of them, none in the last three",
+            lost = not spy & last
+            gone += lost
+            gone_by_realm[realm] += lost
+            if resolution_of.get((s, sp)) == "species":
+                sp_pairs += 1
+                sp_gone += lost
+put("local loss", f"studies with 10+ sampled years ({len(windows)}), pooled over the study: taxon names recorded in the first three sampled years; of them, none in the last three",
     f"{pairs}; {gone} ({gone / pairs:.3f})" if pairs else "0")
+put("local loss", "the same, names at species resolution only", f"{sp_pairs}; {sp_gone} ({sp_gone / sp_pairs:.3f})" if sp_pairs else "0")
 put("local loss", "the same by realm (pairs; not in the last three)",
     "; ".join(f"{k} {pairs_by_realm[k]}; {gone_by_realm[k]}" for k in sorted(pairs_by_realm)))
+
+# second pass: the same at each site (study, latitude, longitude) sampled in both windows
+site_first, site_last = collections.defaultdict(set), collections.defaultdict(set)
+with zipfile.ZipFile(raw_zip) as z:
+    member = [m for m in z.infolist() if m.filename.endswith(".csv")][0]
+    r = csv.reader(io.TextIOWrapper(z.open(member), encoding="utf-8", errors="replace", newline=""))
+    h = next(r)
+    ix = {k: h.index(k) for k in ("YEAR", "STUDY_ID", "valid_name", "LATITUDE", "LONGITUDE")}
+    for row in r:
+        s = row[ix["STUDY_ID"]]
+        if s not in windows or not row[ix["YEAR"]].isdigit():
+            continue
+        y, site = int(row[ix["YEAR"]]), (s, row[ix["LATITUDE"]], row[ix["LONGITUDE"]])
+        if y in windows[s][0]:
+            site_first[site].add(row[ix["valid_name"]])
+        if y in windows[s][1]:
+            site_last[site].add(row[ix["valid_name"]])
+both = [site for site in site_first if site in site_last]
+sp_site = sum(len(site_first[site]) for site in both)
+lost_site = sum(len(site_first[site] - site_last[site]) for site in both)
+put("local loss", "sites (study, latitude, longitude) sampled in both windows; studies; names in the first window; of them, not recorded at that site in the last",
+    f"{len(both)}; {len({site[0] for site in both})}; {sp_site}; {lost_site} ({lost_site / sp_site:.3f})" if sp_site else "0")
 
 with open(out_tsv, "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n")
