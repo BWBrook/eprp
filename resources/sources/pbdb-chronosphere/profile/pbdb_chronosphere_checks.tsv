@@ -1,0 +1,69 @@
+section	version	metric	value
+versions		versions on Zenodo	1178
+versions		versions per year	2019 1; 2020 118; 2021 313; 2022 194; 2023 175; 2024 272; 2025 71; 2026 34
+versions		longest gaps (days, from, to)	127 2020-02-17 2020-06-23; 87 2023-01-09 2023-04-06; 87 2019-11-22 2020-02-17; 73 2025-12-16 2026-02-27; 42 2020-06-26 2020-08-07; 40 2022-05-10 2022-06-19
+versions		repeated version strings	20240406
+versions		registry occurrence versions	1171
+versions		on Zenodo, not in the registry	7: 20211219_7849874; 20211231_7850072; 20220124_7850609; 20220201_7851950; 20220329_7856989; 20231228_10437013; 20240406_10991647
+index		distinct index values; values shared by more than one version	984; 10
+index		most shared index value	741 (157 versions)
+index		newest index; versions holding it; its version	983; 1; 20261018_23468334
+index		inversions: a later version with a lower index	16
+tail	20191122_7808072	highest occurrence number; CSV ends with a newline	1485156; True
+absent	20191122_7808072	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	7875; 112; 6589; 176
+absent	20191122_7808072	the rest: count; early intervals; creation years	1158; Bartonian 513, Westphalian B 258, Sarka 176, Ypresian 46; 2019 669, 1999 116, 2014 95, 2013 90
+tail	20200217_7845041	highest occurrence number; CSV ends with a newline	1494937; True
+absent	20200217_7845041	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	649; 112; 1; 16
+absent	20200217_7845041	the rest: count; early intervals; creation years	520; Westphalian B 259, Sarka 176, Neoproterozoic 36, Wonokan 16; 1999 116, 2014 90, 2013 90, 2010 58
+timescale	20191122_7808072 to 20200217_7845041	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20200909_7845143	highest occurrence number; CSV ends with a newline	1526490; True
+absent	20200909_7845143	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	727; 119; 7; 23
+absent	20200909_7845143	the rest: count; early intervals; creation years	585; Westphalian B 259, Sarka 176, Neoproterozoic 37, Wonokan 16; 1999 116, 2014 90, 2013 90, 2020 75
+timescale	20200217_7845041 to 20200909_7845143	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20210101_7845868	highest occurrence number; CSV ends with a newline	1541750; True
+absent	20210101_7845868	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	780; 120; 69; 16
+absent	20210101_7845868	the rest: count; early intervals; creation years	576; Westphalian B 262, Sarka 176, Neoproterozoic 37, Wonokan 16; 1999 116, 2013 92, 2014 89, 2020 66
+timescale	20200909_7845143 to 20210101_7845868	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20210518_7846821	highest occurrence number; CSV ends with a newline	1560937; True
+absent	20210518_7846821	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	774; 120; 3; 17
+absent	20210518_7846821	the rest: count; early intervals; creation years	636; Westphalian B 283, Sarka 176, Pennsylvanian 55, Neoproterozoic 37; 2020 134, 1999 116, 2013 92, 2014 89
+timescale	20210101_7845868 to 20210518_7846821	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20220101_7850252	highest occurrence number; CSV ends with a newline	1585167; True
+absent	20220101_7850252	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	813; 153; 24; 38
+absent	20220101_7850252	the rest: count; early intervals; creation years	621; Westphalian B 284, Sarka 176, Middle Pleistocene 53, Neoproterozoic 37; 1999 116, 2013 92, 2014 89, 2021 77
+timescale	20210518_7846821 to 20220101_7850252	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20230104_7877929	highest occurrence number; CSV ends with a newline	1616333; True
+absent	20230104_7877929	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	1700; 1146; 16; 15
+absent	20230104_7877929	the rest: count; early intervals; creation years	539; Westphalian B 285, Sarka 176, Neoproterozoic 37, Tonian 22; 1999 116, 2013 92, 2014 89, 2010 58
+timescale	20220101_7850252 to 20230104_7877929	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20231228_10437013	highest occurrence number; CSV ends with a newline	1382650; False
+absent	20231228_10437013	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	231346; 1266; 2081; 230769
+absent	20231228_10437013	the rest: count; early intervals; creation years	467; Westphalian B 257, Sarka 171, Neoproterozoic 36, Ediacaran 2; 1999 116, 2013 92, 2014 89, 2010 58
+timescale	20230104_7877929 to 20231228_10437013	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20240107_10466717	highest occurrence number; CSV ends with a newline	1642481; True
+absent	20240107_10466717	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	2061; 1278; 164; 15
+absent	20240107_10466717	the rest: count; early intervals; creation years	731; Westphalian B 294, Sarka 190, Maastrichtian 77, Neoproterozoic 64; 2023 192, 1999 116, 2013 92, 2014 89
+timescale	20231228_10437013 to 20240107_10466717	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+tail	20250102_14588615	highest occurrence number; CSV ends with a newline	1679597; True
+absent	20250102_14588615	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	1649; 1414; 130; 2
+absent	20250102_14588615	the rest: count; early intervals; creation years	232; Maastrichtian 78, Late Maastrichtian 65, Neoproterozoic 64, Tonian 22; 2023 168, 2010 25, 2021 22, 2001 11
+timescale	20240107_10466717 to 20250102_14588615	intervals (50+ single-interval rows) whose modal max_ma changed; largest	462; Late Pleistocene 0.1260->0.1290; Wuchiapingian 259.9000->259.5100; Changhsingian 254.1700->254.1400; Bartonian 41.3000->41.2000; Priabonian 38.0000->37.7100; Late Maastrichtian 70.6000->72.1000
+tail	20260227_18803370	highest occurrence number; CSV ends with a newline	2058993; True
+absent	20260227_18803370	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	9; 0; 1; 1
+absent	20260227_18803370	the rest: count; early intervals; creation years	8; Maastrichtian 7, Late Aptian 1; 2025 6, 2024 1, 2011 1
+timescale	20250102_14588615 to 20260227_18803370	intervals (50+ single-interval rows) whose modal max_ma changed; largest	327; Maastrichtian 72.1000->72.2000; Bartonian 41.2000->41.0300; Givetian 387.7000->387.9500; Lutetian 47.8000->48.0700; Late Maastrichtian 72.1000->72.2000; Burdigalian 20.4400->20.4500
+tail	20261018_23468334	highest occurrence number; CSV ends with a newline	2077962; True
+absent	20261018_23468334	public today, created before the access time, missing; wholly pre-Ediacaran (min_ma >= 635); created in the 42 days before; numbered above the table's highest	0; 0; 0; 0
+absent	20261018_23468334	the rest: count; early intervals; creation years	0; ; 
+timescale	20260227_18803370 to 20261018_23468334	intervals (50+ single-interval rows) whose modal max_ma changed; largest	17; Wuchiapingian 259.5100->259.8570; Anisian 246.7000->247.0000; Smithian 249.9000->250.8000; Spathian 248.1000->248.6000; Illyrian 243.3300->243.4300; Middle Oxfordian 161.5000->159.0000
+timescale	20261018_23468334 to today	intervals (50+ single-interval rows) whose modal max_ma changed; largest	0; 
+timescale	Kungurian	modal max_ma in each sampled table, then today	20191122 279.3000; 20200217 279.3000; 20200909 279.3000; 20210101 279.3000; 20210518 279.3000; 20220101 279.3000; 20230104 279.3000; 20231228 279.3000; 20240107 279.3000; 20250102 283.5000; 20260227 283.3000; 20261018 283.3000; today 283.3000
+timescale	Roadian	modal max_ma in each sampled table, then today	20191122 272.3000; 20200217 272.3000; 20200909 272.3000; 20210101 272.3000; 20210518 272.3000; 20220101 272.3000; 20230104 272.3000; 20231228 272.3000; 20240107 272.3000; 20250102 273.0100; 20260227 274.4000; 20261018 274.4000; today 274.4000
+timescale	Wuchiapingian	modal max_ma in each sampled table, then today	20191122 259.9000; 20200217 259.9000; 20200909 259.9000; 20210101 259.9000; 20210518 259.9000; 20220101 259.9000; 20230104 259.9000; 20231228 259.9000; 20240107 259.9000; 20250102 259.5100; 20260227 259.5100; 20261018 259.8570; today 259.8570
+timescale	Changhsingian	modal max_ma in each sampled table, then today	20191122 254.1700; 20200217 254.1700; 20200909 254.1700; 20210101 254.1700; 20210518 254.1700; 20220101 254.1700; 20230104 254.1700; 20231228 254.1700; 20240107 254.1700; 20250102 254.1400; 20260227 254.1400; 20261018 254.1400; today 254.1400
+timescale	Olenekian	modal max_ma in each sampled table, then today	20191122 251.2000; 20200217 251.2000; 20200909 251.2000; 20210101 251.2000; 20210518 251.2000; 20220101 251.2000; 20230104 251.2000; 20231228 251.2000; 20240107 251.2000; 20250102 251.2000; 20260227 249.9000; 20261018 250.8000; today 250.8000
+timescale	Anisian	modal max_ma in each sampled table, then today	20191122 247.2000; 20200217 247.2000; 20200909 247.2000; 20210101 247.2000; 20210518 247.2000; 20220101 247.2000; 20230104 247.2000; 20231228 247.2000; 20240107 247.2000; 20250102 247.2000; 20260227 246.7000; 20261018 247.0000; today 247.0000
+timescale	Middle Oxfordian	modal max_ma in each sampled table, then today	20191122 161.2000; 20200217 161.2000; 20200909 161.2000; 20210101 161.2000; 20210518 161.2000; 20220101 161.2000; 20230104 161.2000; 20231228 161.2000; 20240107 161.2000; 20250102 161.5000; 20260227 161.5000; 20261018 159.0000; today 159.0000
+timescale	Maastrichtian	modal max_ma in each sampled table, then today	20191122 72.1000; 20200217 72.1000; 20200909 72.1000; 20210101 72.1000; 20210518 72.1000; 20220101 72.1000; 20230104 72.1000; 20231228 72.1000; 20240107 72.1000; 20250102 72.1000; 20260227 72.2000; 20261018 72.2000; today 72.2000
+timescale	Priabonian	modal max_ma in each sampled table, then today	20191122 38.0000; 20200217 38.0000; 20200909 38.0000; 20210101 38.0000; 20210518 38.0000; 20220101 38.0000; 20230104 38.0000; 20231228 38.0000; 20240107 38.0000; 20250102 37.7100; 20260227 37.7100; 20261018 37.7100; today 37.7100
+timescale	Late Pleistocene	modal max_ma in each sampled table, then today	20191122 0.1260; 20200217 0.1260; 20200909 0.1260; 20210101 0.1260; 20210518 0.1260; 20220101 0.1260; 20230104 0.1260; 20231228 0.1260; 20240107 0.1260; 20250102 0.1290; 20260227 0.1290; 20261018 0.1290; today 0.1290
