@@ -510,12 +510,18 @@ the workflow when they generalise.
 - *A paper may cite an earlier version than the newest.* Gougeon et al.'s
   paper cites Mendeley v1; both of its files differ in v2.
 - [Detail withheld pending disclosure to the data custodian.]
-- *Test a reconstruction against the source's own coordinates first.* The
-  mirrored Seton et al. 2012 model reproduces NSB's palaeocoordinates on
-  every row; only then are the differences between models worth reporting.
+- *Test a reconstruction against the source's own coordinates first, by
+  age.* The mirrored Seton et al. 2012 model reproduces NSB's
+  palaeocoordinates with the same plate on every row; PBDB's are reproduced
+  under 100 Ma but drift for older collections, which only age bands
+  showed. Pygplates returns the identity rotation for a plate with no pole
+  at the age, which silently leaves points where they are today.
 - *Know which model a database's default is.* PBDB's default palaeocoordinate
-  model is Wright et al. 2013, not the GPlates Web Service's default, and it
-  reconstructs at whole-Ma ages.
+  model is Wright et al. 2013, not the GPlates Web Service's default; its
+  coordinates match best at the mid age rounded to whole Ma (inference).
+- *Weight a comparison the way the analysis is weighted.* The plate-model
+  offset that matters to Q-012 is the one across the rows it pools (a median
+  0.65°), not the one across NSB's grid of holes and ages (2.2°).
 
 **Outreach (Barry, 22 October 2026).**
 
