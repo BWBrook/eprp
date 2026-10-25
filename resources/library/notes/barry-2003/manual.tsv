@@ -1,0 +1,8 @@
+source	item	doi	openalex_id	confidence	matched_title	via
+list	TREE 40	10.1016/0169-5347(96)10026-4		exact	Extinction filters and current resilience: the significance of past selection pressures for conservation biology	manual: Crossref by hand; first author, volume 11 and pages 193-196 agree (the matcher's query hit HTTP errors)
+list	Nature 32	10.1038/372296a0		exact	Theories in collision	manual: Hallam's Nature 372, 296 review of Glen's book; author, volume and page agree
+endnote:Papers and Books Held	Papers and Books Held 30	10.1038/372296a0		exact	Theories in collision	manual: as list Nature 32
+endnote:Papers and Books Held	Papers and Books Held 178		W1599898647	probable	Extinction: bad genes or bad luck?	manual: OpenAlex holds Raup's book only as this Choice review stub (author Raup); the canon uses the same record
+list	Science 126		W2742052218	exact	Extinction: Complexity of assessing risk - Reply	manual: the reply by Gittleman, Gompper & Jones has no DOI (10.1126/science.292.5515.217b is MacPhee & Flemming's letter it answers); OpenAlex holds the reply
+list	Nature 48	10.1038/41263		exact	At a glance	manual: Nature's short-review column at 388, 438 (authors Handy and Palmer) carries Palmer's review of Benton's book
+endnote:Nature	Nature 7	10.1038/41263		exact	At a glance	manual: as list Nature 48
