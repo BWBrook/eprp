@@ -442,16 +442,21 @@ M).
   abundances in `indices()`; its Chao2 uses (S − 1)/S where Chao's has
   (T − 1)/T: a median +0.14% and 99th percentile +2.4% here, but +25% in
   the bin with 4 collections.
-- **DeepDive held the effort trend and the mass extinction, but
-  overestimated richness throughout and misread evenness.** The shared
-  models gave +0.10 under the fall in collections and a drop error of +0.04,
-  but −0.58 under the evenness change, and they overestimated global
-  richness by 14–76% on average (mean log ratio +0.13 to +0.57; more
-  against DeepDive's own label definition, so it is not a definitional
-  artefact). Neither the prior window (17, 11 and 2 of 20 replicates
-  inside; strata alike) nor per-dataset tuning, DeepDive's intended use,
-  changed this: on replicates 1–4, −0.47 under the evenness change and a
-  drop error of +0.17 (S pending). It needed three configuration fixes to
+- **DeepDive held the effort trend and the mass extinction, but its level
+  was biased and it misread evenness.** Without a present-diversity
+  anchor, the shared models gave +0.10 under the fall in collections (just
+  inside ±0.10) and a drop error of +0.04, but they overestimated every bin
+  of S and nearly every bin of M (mean log ratio to global richness +0.57
+  and +0.21, more against DeepDive's own label), and under the evenness
+  change they overestimated early bins and underestimated late ones, a
+  spurious decline of −0.58. The independent review confirmed that our
+  pipeline reproduces DeepDive's own predictions and inputs exactly. The
+  prior window changed the trend in no stratum; per-dataset tuning,
+  DeepDive's intended use, did not fix either problem (on replicates 1–4
+  the evenness trend moved from −0.58 to −0.47 and the level error rose;
+  three refits per scenario, S pending). Consistent with the evidence but
+  untested: our records are far more completely sampled than most of its
+  autotuned prior, and the evenness change lies outside its simulator. It needed three configuration fixes to
   run correctly (A1): `extant_sp` without present diversity, `s_species`
   for a window that opens on a diverse clade, and a TensorFlow pin
   ([deepdive](../deepdive/README.md)).

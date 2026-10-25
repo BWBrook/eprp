@@ -247,11 +247,13 @@ Body sections, in order:
   the first settings would have made SQS fail by construction; tuning it
   on sampling diagnostics alone, and saying so, kept the test fair.
 - *Read the prior a tool trains on.* DeepDiveR's default prior started
-  every clade from one species; no amount of training could have fitted a
-  window that opens on a diverse clade.
+  every clade from one species and almost never reached the richness a
+  window opening on a diverse clade has; that is an inference from the
+  prior's support, not a scored run.
 - *Score against the tool's own target as well as yours.* DeepDive's label
   counts part-bin species fractionally; scoring it only against "alive at
-  any time" would have charged it for a definition.
+  any time" would have flattered its level error (+0.13 to +0.57 against
+  global richness, +0.30 to +0.73 against its own label).
 - *Declare the tolerance before the ranking.* A band chosen after seeing
   the results (±0.12) made one estimator look as if it passed; on the
   declared ±0.10 it did not.
