@@ -33,12 +33,13 @@ if (mode == "select") {
   n <- as.integer(args[2])
   s <- summary_csv(args[3])
   row <- s[s$X == paste0("config_auto_", n), ]
-  cfg <- file.path(args[4], "configs", paste0("config_auto_", n, ".R"))
-  out <- file.path(args[4], "out", paste0("m1_", n))
+  work <- normalizePath(args[4])
+  cfg <- file.path(work, "configs", paste0("config_auto_", n, ".R"))
+  out <- file.path(work, "out", paste0("m1_", n))
   dir.create(out, recursive = TRUE, showWarnings = FALSE)
   setwd(out)
   t0 <- Sys.time()
-  sim <- run_simulation(config = cfg, landscape = file.path(args[4], "landscapes", row$landscape), output_directory = out,
+  sim <- run_simulation(config = cfg, landscape = file.path(work, "landscapes", row$landscape), output_directory = out,
                         call_observer = NA, verbose = 0)
   ph <- sim$summary$phylo_summary
   last <- ph[nrow(ph), ]
@@ -49,6 +50,6 @@ if (mode == "select") {
                     deposit_alive_t0 = row$n_sp_alive_t0, deposit_fraction_colonized = row$fraction_colonized,
                     deposit_perc_extinction = row$perc_extinction, deposit_cpu_time = row$cpu_time,
                     runtime_h = as.numeric(difftime(Sys.time(), t0, units = "hours")))
-  write.csv(res, file.path(args[4], paste0("g3_m1_", n, ".csv")), row.names = FALSE)
+  write.csv(res, file.path(work, paste0("g3_m1_", n, ".csv")), row.names = FALSE)
   print(res)
 }
