@@ -111,8 +111,9 @@ infrastructure, which is close to Barry's interest in how science is
 changing.
 
 **This is outside the hypothesis registers and touches outward-facing
-matters.** Barry has queued contacts with the data and software providers
-(CONTACTS C10, C31–C35). Whether and when to turn it into an output is his
+matters.** Barry has queued contacts with the data and software providers: the sources
+catalogue's CONTACTS, for example C10 for PBDB, and the software catalogue's
+contacts for package authors. Whether and when to turn it into an output is his
 decision. I raise it because the Big Questions list shows the field
 explicitly asking for it.
 
