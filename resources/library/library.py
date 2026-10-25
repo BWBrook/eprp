@@ -7,6 +7,7 @@ Usage:
   python3 library.py harvest REPO_ROOT
   python3 library.py resolve [--store DIR] [--recheck]
   python3 library.py expand [--store DIR] [--min-refs K] [--out DIR]
+  python3 library.py frontier [--since DATE] [--min-refs K] [--out DIR] [--store DIR]
   python3 library.py journal ISSN --name NAME [--out DIR]
   python3 library.py match IN.tsv OUT.tsv [--workers N]
   python3 library.py textindex [--store DIR]
@@ -89,7 +90,7 @@ SKIP_TYPES = {"dataset", "software", "paratext", "erratum", "retraction", "edito
               "grant", "standard", "supplementary-materials"}
 DEAD_KEY_STATUS = {"datacite", "invalid", "deleted", "not_found"}
 VERSION_RANK = {"publishedVersion": 0, "acceptedVersion": 1, "submittedVersion": 2, None: 3}
-TIER_RANK = {"canon": 1, "neighbours": 2}
+TIER_RANK = {"canon": 1, "neighbours": 2, "frontier": 2}
 STOPWORDS = {"the", "and", "for", "with", "from", "into", "its", "are", "was", "were", "not", "but", "has", "how",
              "why", "new", "can", "our", "out", "all", "any", "via", "who", "what", "when", "der", "die", "das",
              "und", "les", "des", "une", "von"}
@@ -575,18 +576,10 @@ def resolve(store, recheck=False):
 # ---------------------------------------------------------------- expand
 
 def expand(store, k, out):
-    """Write the neighbours tier: works outside the other tiers that at least k seed works reference.
-    Each inherits the questions of the seed works that reference it."""
+    """Write the neighbours tier: works outside the core (cited tiers and canon) that at least k core works
+    reference. Each inherits the questions of the core works that reference it."""
     recs = load_records(store)
-    aliases = load_aliases(store)
-    seed_q = defaultdict(set)
-    for tier, rows in load_seeds().items():
-        if tier == "neighbours" or is_field(tier):
-            continue
-        for r in rows:
-            wid = seed_wid(r, aliases)
-            if wid in recs:
-                seed_q[wid] |= {q for q in (r.get("questions") or "").split(";") if q}
+    seed_q = core_works(store, recs, load_aliases(store))
     count, qs = Counter(), defaultdict(set)
     for wid, q in seed_q.items():
         for ref in {short_wid(x) for x in recs[wid].get("referenced_works") or []}:
@@ -753,6 +746,67 @@ def match(infile, outfile, workers):
     fields = list(rows[0].keys()) + ["doi", "openalex_id", "confidence", "matched_title", "via"]
     write_tsv(Path(outfile), out, list(dict.fromkeys(fields)))
     print(f"{len(out)} citations: {dict(Counter(r['confidence'] or 'unresolved' for r in out))} -> {outfile}")
+
+
+# ---------------------------------------------------------------- frontier (forward citations)
+
+def core_works(store, recs, aliases):
+    """{W: questions} for the works of the cited tiers and the canon, the core the outward rings grow from."""
+    core = defaultdict(set)
+    for tier, rows in load_seeds().items():
+        if tier.startswith("cited") or tier == "canon":
+            for r in rows:
+                wid = seed_wid(r, aliases)
+                if wid in recs:
+                    core[wid] |= {q for q in (r.get("questions") or "").split(";") if q}
+    return core
+
+
+def frontier(store, since, k, out, reuse=False):
+    """Write the frontier tier: works published since SINCE that cite at least K core works, with that count and
+    the questions of the cited works they reference. Every citer's count is kept in
+    STORE/frontier-counts-<SINCE>.tsv (written after each batch, as .partial until complete); --reuse
+    re-thresholds a complete file without querying again."""
+    final = store / f"frontier-counts-{since}.tsv"
+    if reuse:
+        every = read_tsv(final)
+        rows = [r for r in every if int(r["ref_count"]) >= k]
+        write_tsv(out / "frontier.tsv", rows, ["openalex_id", "ref_count", "year", "questions"])
+        print(f"{len(rows)} of {len(every)} citers since {since} cite at least {k} core works -> {out / 'frontier.tsv'}")
+        return
+    partial = store / f"frontier-counts-{since}.partial.tsv"
+    recs = load_records(store)
+    core = core_works(store, recs, load_aliases(store))
+    ids = sorted(core)
+    counts, qs, years, headers = {}, {}, {}, {}
+
+    def rows_so_far():
+        return [{"openalex_id": w, "ref_count": n, "year": years[w], "questions": ";".join(sorted(qs[w]))}
+                for w, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))]
+
+    for i in range(0, len(ids), 50):
+        cursor = "*"
+        while cursor:
+            data, headers = get_json(openalex_url("works", {
+                "filter": f"cites:{'|'.join(ids[i:i + 50])},from_publication_date:{since}",
+                "select": "id,referenced_works,publication_year", "per-page": "200", "cursor": cursor}))
+            for w in data["results"]:
+                wid = short_wid(w["id"])
+                if wid in counts or wid in core:
+                    continue
+                refs = {short_wid(x) for x in w.get("referenced_works") or []} & core.keys()
+                counts[wid], years[wid] = len(refs), w.get("publication_year") or ""
+                qs[wid] = set().union(*(core[r] for r in refs)) if refs else set()
+            cursor = data["meta"].get("next_cursor") if data["results"] else None
+        write_tsv(partial, rows_so_far(), ["openalex_id", "ref_count", "year", "questions"])
+        print(f"  core {min(i + 50, len(ids))}/{len(ids)}: {len(counts)} citers (credits left "
+              f"{headers.get('x-ratelimit-remaining')})", flush=True)
+    every = rows_so_far()
+    os.replace(partial, final)
+    rows = [r for r in every if r["ref_count"] >= k]
+    write_tsv(out / "frontier.tsv", rows, ["openalex_id", "ref_count", "year", "questions"])
+    print(f"{len(counts)} works since {since} cite the {len(core)} core works; {len(rows)} cite at least {k} "
+          f"-> {out / 'frontier.tsv'}; distribution: {dict(sorted(Counter(min(r['ref_count'], 10) for r in every).items()))}")
 
 
 # ---------------------------------------------------------------- journal (field tier)
@@ -1233,7 +1287,10 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
             found_urls[r["url"]] = r["detail"].split() if r["outcome"].endswith("_found") else []
     tried = set() if retry_failed else {u for u, o in latest.items() if not transient(o)}
     tried |= {r["url"] for r in manifest.values() if r["status"] == "withdrawn"}
-    skip = done | (set() if retry_failed else tdm_done)  # TDM-held works are revisited only with --retry-failed
+    # TDM-held works are revisited when a lookup is still pending (e.g. skipped for rate limits), so an open copy
+    # found later replaces the TDM copy; --retry-failed revisits them all.
+    pending = {w for w in tdm_done if w in recs and any((k := key(recs[w])) and k not in tried for *_, key in LOOKUPS)}
+    skip = done | (set() if retry_failed else tdm_done - pending)
     dups = duplicate_map(recs, set(order) | done | tdm_done, done | tdm_done)
     skip |= {w for w, canon in dups.items() if canon in set(order) | done | tdm_done}  # fetch one record per work
     todo = [recs[w] for w in sorted(set(order) - skip, key=order.get) if recs[w].get("type") not in SKIP_TYPES]
@@ -1461,20 +1518,29 @@ def abstract_text(rec):
     return " ".join(words[i] for i in sorted(words))
 
 
+TDM_SEARCH_DB = "tdm/search-tdm.sqlite"
+TOKENIZE = "tokenize='porter unicode61 remove_diacritics 2'"
+
+
 def textindex(store):
-    """Build STORE/search.sqlite from scratch: an FTS5 index (porter stemming, accents folded) of every catalogued
-    work's title and abstract and of the extracted text of every held copy, open or TDM."""
+    """Build the search indexes from scratch (FTS5, Porter stemming, accents folded):
+    - STORE/search.sqlite: every catalogued work's title and abstract, and the text of every held open copy;
+    - STORE/tdm/search-tdm.sqlite: TDM texts in a contentless index, which stores no readable text and gives no
+      passages, so everything derived from a TDM licence stays under tdm/."""
     import sqlite3
     recs = load_records(store)
     rows, _, merged = catalogue(store, recs)
     manifest = load_manifest(store)
-    tmp = store / (SEARCH_DB + ".tmp")
-    tmp.unlink(missing_ok=True)
-    db = sqlite3.connect(tmp)
+    tmp, tdm_tmp = store / (SEARCH_DB + ".tmp"), store / (TDM_SEARCH_DB + ".tmp")
+    for p in (tmp, tdm_tmp):
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.unlink(missing_ok=True)
+    db, tdm = sqlite3.connect(tmp), sqlite3.connect(tdm_tmp)
     db.execute("CREATE TABLE works (wid TEXT PRIMARY KEY, year INT, author TEXT, title TEXT, venue TEXT, doi TEXT, "
                "tiers TEXT, fulltext TEXT, cited_by INT)")
-    db.execute("CREATE VIRTUAL TABLE docs USING fts5(wid UNINDEXED, part UNINDEXED, title, body, "
-               "tokenize='porter unicode61 remove_diacritics 2')")
+    db.execute(f"CREATE VIRTUAL TABLE docs USING fts5(wid UNINDEXED, part UNINDEXED, title, body, {TOKENIZE})")
+    tdm.execute("CREATE TABLE ids (rowid INTEGER PRIMARY KEY, wid TEXT)")
+    tdm.execute(f"CREATE VIRTUAL TABLE tdmdocs USING fts5(body, content='', {TOKENIZE})")
     n = Counter()
     for r in rows:
         wid = r["openalex_id"]
@@ -1486,55 +1552,96 @@ def textindex(store):
         m = manifest.get(wid)
         if m and m["status"] in OPEN_HELD + TDM_HELD:
             text = store / text_path(Path(m.get("path") or f"pdf/{wid}.pdf"))
-            if text.exists():
-                part = "tdm" if m["status"] in TDM_HELD else "fulltext"
-                db.execute("INSERT INTO docs VALUES (?,?,?,?)", (wid, part, "", text.read_text(encoding="utf-8", errors="replace")))
-                n[part] += 1
-    db.commit()
-    db.execute("INSERT INTO docs(docs) VALUES ('optimize')")
-    db.commit()
-    db.close()
-    os.replace(tmp, store / SEARCH_DB)
-    print(f"{len(rows)} works indexed: {n['abstracts']} with abstracts, {n['fulltext']} open full texts, "
-          f"{n['tdm']} TDM texts -> {store / SEARCH_DB}")
+            if not text.exists():
+                continue
+            body = text.read_text(encoding="utf-8", errors="replace")
+            if m["status"] in TDM_HELD:
+                n["tdm"] += 1
+                tdm.execute("INSERT INTO ids VALUES (?,?)", (n["tdm"], wid))
+                tdm.execute("INSERT INTO tdmdocs (rowid, body) VALUES (?,?)", (n["tdm"], body))
+            else:
+                db.execute("INSERT INTO docs VALUES (?,?,?,?)", (wid, "fulltext", "", body))
+                n["fulltext"] += 1
+    for conn, table, target in ((db, "docs", store / SEARCH_DB), (tdm, "tdmdocs", store / TDM_SEARCH_DB)):
+        conn.commit()
+        conn.execute(f"INSERT INTO {table}({table}) VALUES ('optimize')")
+        conn.commit()
+        conn.close()
+        os.replace(Path(str(target) + ".tmp"), target)
+    print(f"{len(rows)} works indexed: {n['abstracts']} with abstracts, {n['fulltext']} open full texts -> "
+          f"{store / SEARCH_DB}; {n['tdm']} TDM texts -> {store / TDM_SEARCH_DB}")
+
+
+def chunks(items, size=500):
+    items = list(items)
+    return [items[i:i + size] for i in range(0, len(items), size)]
 
 
 def search(store, query, limit, tiers, parts, as_tsv):
-    """Rank works by BM25 over titles (weighted 5), abstracts and held full texts. TDM texts report a match only:
-    never a snippet, so no licensed text reaches an agent session."""
+    """Rank works by their best BM25 match over titles (weighted 5), abstracts, open full texts and TDM texts.
+    Filters apply before ranking. Passages come only from abstracts and open texts; a TDM match is reported
+    without one, because the TDM index holds no text."""
     import sqlite3
     db = sqlite3.connect(f"file:{store / SEARCH_DB}?mode=ro", uri=True)
-    sql = ("SELECT wid, part, bm25(docs, 0, 0, 5.0, 1.0), "
-           "CASE WHEN part = 'tdm' THEN '' ELSE snippet(docs, 3, '[', ']', ' … ', 20) END "
-           "FROM docs WHERE docs MATCH ? ORDER BY bm25(docs, 0, 0, 5.0, 1.0) LIMIT ?")
+    if (store / TDM_SEARCH_DB).exists():
+        db.execute("ATTACH DATABASE ? AS t", (f"file:{store / TDM_SEARCH_DB}?mode=ro",))
+    has_tdm = bool(db.execute("SELECT 1 FROM pragma_database_list WHERE name = 't'").fetchone())
+    allowed = set(parts or ("abstract", "fulltext", "tdm"))
+    in_tiers = (" AND wid IN (SELECT wid FROM works WHERE " + " OR ".join("(';' || tiers || ';') LIKE ?" for _ in tiers)
+                + ")") if tiers else ""
+    tier_args = [f"%;{t};%" for t in tiers or []]
+
+    def matches(q):
+        hits = []
+        main_parts = sorted(allowed & {"abstract", "fulltext"})
+        if main_parts:
+            hits += db.execute(f"SELECT wid, part, bm25(docs, 0, 0, 5.0, 1.0) FROM docs WHERE docs MATCH ? "
+                               f"AND part IN ({','.join('?' * len(main_parts))}){in_tiers}",
+                               [q, *main_parts, *tier_args]).fetchall()
+        if "tdm" in allowed and has_tdm:
+            tdm_hits = db.execute("SELECT i.wid, 'tdm', bm25(tdmdocs) FROM t.tdmdocs JOIN t.ids i ON i.rowid = "
+                                  "tdmdocs.rowid WHERE tdmdocs MATCH ?", [q]).fetchall()  # FTS5 wants it unqualified
+            if tiers:
+                keep = {w for c in chunks({h[0] for h in tdm_hits}) for (w,) in db.execute(
+                    f"SELECT wid FROM works WHERE wid IN ({','.join('?' * len(c))}){in_tiers}", [*c, *tier_args])}
+                tdm_hits = [h for h in tdm_hits if h[0] in keep]
+            hits += tdm_hits
+        return hits
+
     try:
-        hits = db.execute(sql, (query, limit * 20)).fetchall()
+        hits = matches(query)
     except sqlite3.OperationalError:  # not valid FTS5 syntax (e.g. "Signor-Lipps"): search for all its words
-        query = " ".join(f'"{w}"' for w in re.findall(r"\w+", query))
-        hits = db.execute(sql, (query, limit * 20)).fetchall()
-    found = {}
-    for wid, part, score, snip in hits:
-        if parts and part not in parts:
-            continue
-        f = found.setdefault(wid, {"score": score, "parts": {}})
-        f["parts"].setdefault(part, snip)
-    meta = {r[0]: r for r in db.execute(f"SELECT * FROM works WHERE wid IN ({','.join('?' * len(found))})", list(found))}
-    ranked = [w for w in sorted(found, key=lambda w: found[w]["score"])
-              if not tiers or set(meta[w][6].split(";")) & set(tiers)][:limit]
+        words = re.findall(r"\w+", query)
+        if not words:
+            sys.exit("search: the query has no words to search for")
+        query = " ".join(f'"{w}"' for w in words)
+        hits = matches(query)
+    best, matched = {}, defaultdict(dict)
+    for wid, part, score in hits:
+        best[wid] = min(score, best.get(wid, score))
+        matched[wid][part] = ""
+    ranked = sorted(best, key=best.get)[:limit]
+    for c in chunks(ranked):
+        for wid, part, snip in db.execute(
+                f"SELECT wid, part, snippet(docs, 3, '[', ']', ' … ', 20) FROM docs WHERE docs MATCH ? "
+                f"AND part IN ('abstract', 'fulltext') AND wid IN ({','.join('?' * len(c))})", [query, *c]):
+            if part in matched[wid]:
+                matched[wid][part] = snip
+    meta = {r[0]: r for c in chunks(ranked) for r in db.execute(
+        f"SELECT * FROM works WHERE wid IN ({','.join('?' * len(c))})", c)}
     if as_tsv:
         print("\t".join(["openalex_id", "year", "first_author", "title", "venue", "doi", "tiers", "fulltext", "matched", "snippet"]))
     for i, w in enumerate(ranked, 1):
         _, year, author, title, venue_, doi, tiers_, ft, _ = meta[w]
-        matched = found[w]["parts"]
-        snip = next((s for p, s in matched.items() if s), "")
+        snip = next((s for s in matched[w].values() if s), "")
         if as_tsv:
-            print("\t".join(str(x or "") for x in (w, year, author, title, venue_, doi, tiers_, ft, ";".join(matched),
+            print("\t".join(str(x or "") for x in (w, year, author, title, venue_, doi, tiers_, ft, ";".join(matched[w]),
                                                    re.sub(r"\s+", " ", snip))))
             continue
         print(f"{i:2}. {year} {author}: {title} ({venue_}) {w}{' doi:' + doi if doi else ''}")
-        print(f"    tiers {tiers_}; full text {ft}; matched in {', '.join(matched)}"
-              f"{' (TDM: match only)' if 'tdm' in matched else ''}")
-        for p, s in matched.items():
+        print(f"    tiers {tiers_}; full text {ft}; matched in {', '.join(matched[w])}"
+              f"{' (TDM: match only)' if 'tdm' in matched[w] else ''}")
+        for p, s in matched[w].items():
             if s:
                 flat = re.sub(r"\s+", " ", s)
                 print(f"    {p}: {flat[:300]}")
@@ -1564,6 +1671,12 @@ def main():
     p.add_argument("infile")
     p.add_argument("outfile")
     p.add_argument("--workers", type=int, default=4)
+    p = sub.add_parser("frontier")
+    p.add_argument("--since", default="2020-01-01", help="earliest publication date of citing works")
+    p.add_argument("--reuse", action="store_true", help="re-threshold the saved counts without querying")
+    p.add_argument("--min-refs", type=int, default=5, help="minimum number of core works a citing work references")
+    p.add_argument("--out", type=Path, default=SEEDS)
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     p = sub.add_parser("journal")
     p.add_argument("issn")
     p.add_argument("--name", required=True, help="tier name: seeds/field-<name>.tsv")
@@ -1595,6 +1708,8 @@ def main():
         search(a.store, " ".join(a.query), a.limit, a.tier, a.part, a.tsv)
     elif a.cmd == "match":
         match(a.infile, a.outfile, a.workers)
+    elif a.cmd == "frontier":
+        frontier(a.store, a.since, a.min_refs, a.out, a.reuse)
     elif a.cmd == "journal":
         journal(a.issn, a.name, a.out)
     elif a.cmd == "resolve":
