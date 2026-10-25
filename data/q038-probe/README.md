@@ -1,5 +1,12 @@
 # Q-038 primary probe: implementation and the five-dataset S2 pilot
 
+[Detail withheld pending disclosure to the data custodian.]
+- **What uses it:** only `deposit_constants.py`, which turns it into aggregate
+  scaling constants (`deposit_constants.json`).
+- **What does not:** the pilot fits use *simulated* data, and no file here
+  carries occurrence numbers or record content.
+- [Detail withheld pending disclosure to the data custodian.]
+
 Contract: [v3](../q038-predictor-contract/contract.md), section D. Cleared for
 implementation by Codex in 76/2195. This pilot measures **runtime and
 convergence only**: five datasets cannot pass any recovery gate. The larger

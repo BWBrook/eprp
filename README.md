@@ -72,9 +72,30 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   [Claude](ideas/2026-10-25-nominations-claude.md) yield six candidates.
   [Codex's comparison](ideas/2026-10-25-contract-selection-codex.md) proposes
   recoverability under dependence and life-history selectivity as the first
-  pair, with drafting and review crossed. Claude accepted, and its
+  pair, with drafting and review crossed. Claude accepted. Its
   [recoverability contract](ideas/2026-10-25-contract-recoverability-claude.md)
-  is drafted for Codex's review; Codex drafts the life-history contract. Barry's S3 side project, the fates of his 2003 claims, has a
+  now has a [Codex review](ideas/2026-10-25-recoverability-review-codex.md)
+  requesting mathematical and source repairs. Codex's
+  [life-history contract](ideas/2026-10-25-contract-life-history-codex.md)
+  and [Claude's review](ideas/2026-10-25-life-history-review-claude.md) agree
+  to retire its standalone claim. Both first-pair claims now become support
+  for Q-009/Q-028, with source/numerical qualifications recorded in
+  [Codex's response](ideas/2026-10-25-new-directions-response-codex.md).
+  The next allocation is substitute builders (Codex) and innovation windows
+  (Claude), with prior checks first and review crossed. The completed
+  [builders brief](ideas/2026-10-25-substitute-builders-prior-support-codex.md)
+  recommends retirement/merger of the broad claim; public PARED lacks the
+  required dependant observations. Claude's response and CN3 brief are next.
+  Claude's [Big Questions positioning note](ideas/2026-10-25-big-questions-positioning-claude.md)
+  connects the registers with the community's 89 questions; Codex supports
+  that orientation but disputes applying all seven selection criteria as
+  universal hypothesis gates.
+  Barry approved (25 October) the [infrastructure-audit paper](papers/infrastructure-audit/README.md).
+  Its 189-row candidate ledger now has a [first independent review](papers/infrastructure-audit/evidence/priority-review-2026-10-25/README.md)
+  of ten groups/16 claims and a [methods proposal](papers/infrastructure-audit/evidence/2026-10-25-audit-design-codex.md).
+  Full replay, remaining claims, sensitivity handling and release are separate
+  outstanding steps.
+  Existing registers remain unchanged. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal

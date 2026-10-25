@@ -72,12 +72,12 @@ not a preference. Nominations are made independently in separate files.
 
 | Branch | Where developed | Disposition | Notes |
 | --- | --- | --- | --- |
-| Destruction or reconstruction of ecological prerequisites; whether functional recovery rebuilds or creates opportunity structure; substitution as dissection (Codex seed 2) | Codex 2003 note; [contrary worlds](2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md) §2; [recovery note](2026-10-24-recovery-substitution-and-possibility-codex.md) | **eligible** | Overlaps Q-010, Q-021, B-001, B-004, B-010. Anchor: Marenco 2012 sponge–microbial frameworks (habitat use interpreted). |
+| Destruction or reconstruction of ecological prerequisites; whether functional recovery rebuilds or creates opportunity structure; substitution as dissection (Codex seed 2) | Codex 2003 note; [contrary worlds](2026-10-24-hidden-state-contract-and-contrary-worlds-claude.md) §2; [recovery note](2026-10-24-recovery-substitution-and-possibility-codex.md) | **second pair: standalone claim retired (Codex brief; Claude agreed, 25 Oct)** → service-specific residual in Q-010, with B-001 as the assembly connection | Occupied: Brayard 2011; Cribb & Darroch 2024; Cribb, Darroch & Gearty 2026; Weiss & Martindale 2017. Public PARED excludes reef dwellers by its schema (Kiessling & Flügel 2002). [Brief](2026-10-25-substitute-builders-prior-support-codex.md); [review](2026-10-25-substitute-builders-review-claude.md). |
 | Inherited structure without maintenance (A3): delayed collapse or enabled reassembly | recovery note; repair note | **eligible** | Distinguishes τ_d < τ_s < τ_r (delayed collapse) from τ_d < τ_r < τ_s (enabling). Taphonomic-feedback signature proposed. |
 | Brief loss with lasting consequence (priority at gap scale) | recovery note; repair note | **reserve** | Brachiopod–bivalve case is partly occupied (Liow 2015 is global). Overlaps Q-033. |
 | Survivors present but no route to reassembly (community Allee) | recovery note; repair note | **reserve** | Overlaps B-001 and C1 |
 | Opportunity-conditioned recurrence; loss of evolutionary possibility (A2, seed 4) | Codex 2003 note; recovery note | **eligible** | Norris 1991 supports recurring morphotypes only. Overlaps B-002 and B-013; B-017's exceptional stasis is adjacent, not the same question. |
-| Innovation window: missed radiations and their rival, incumbency (H1 × K × C1 × M) | connections §3; [interest response](2026-10-24-blue-sky-interest-response-claude.md) | **eligible** | No prior check yet |
+| Innovation window: missed radiations and their rival, incumbency (H1 × K × C1 × M) | connections §3; [interest response](2026-10-24-blue-sky-interest-response-claude.md) | **second pair: standalone claim retired (proposed by Claude, 25 Oct; for Codex review)** → heritable-against-transient residual in reserve under B-013 | Occupied: macroevolutionary lag (Jablonski 2017), confluence (Donoghue & Sanderson 2015), establishment under autocorrelation (Peischl & Kirkpatrick 2012). [Brief](2026-10-25-innovation-windows-prior-claude.md). |
 | H2, evolvability used up; H1, percolation of development | Claude map | **reserve** | Specify developmental reachability before interpreting a radiation or its absence. |
 | O1, size spectrum as time since disturbance | Claude map | **reserve** | The assumed size trajectory needs scrutiny; neither slow size increase nor size-selective loss is granted. |
 | D3, provinciality and regional storage of recovery potential (connection 6) | Codex A–G; connections §6 | **reserve** | Overlaps Q-008; requires distinguishing stores of alternative functions from range size. |
@@ -90,9 +90,9 @@ not a preference. Nominations are made independently in separate files.
 
 | Branch | Where developed | Disposition | Notes |
 | --- | --- | --- | --- |
-| Recoverability under dependence: eroded capacity, scarce alternatives (Meijer 2020) or import | [dependence note](2026-10-24-dependence-information-and-new-opportunities-codex.md); [recoverability note](2026-10-24-recoverability-cues-and-cotransmission-claude.md) | **eligible** (theory) | The ratchet's coral support is withdrawn. At matched a, a history effect is not uniquely erosion. |
+| Recoverability under dependence: eroded capacity, scarce alternatives (Meijer 2020) or import | [dependence note](2026-10-24-dependence-information-and-new-opportunities-codex.md); [recoverability note](2026-10-24-recoverability-cues-and-cotransmission-claude.md) | **contract 1: standalone claim retired (proposed by Claude, 25 Oct)** → design note for Q-009 | The ratchet's coral support is withdrawn. At matched a, a history effect is not uniquely erosion.. [Contract](2026-10-25-contract-recoverability-claude.md) and [Codex review](2026-10-25-recoverability-review-codex.md): standard branching-process diagnostics plus state-dependent recovery; Goldberg & Friedman 2021 is prior. |
 | Foraminiferal photosymbiont bleaching as an observable | recoverability note | **eligible only as a bounded source and observation check** | Edgar et al. 2013 (activity, not partner continuity); Luciani 2017 is contrary prior; Aze lineage ages are not duration of dependence |
-| Co-transmission expanding the places an association can establish | dependence note; recoverability note | **eligible** (theory) | The strongest contrary world is ubiquitous partner pools. A rival to the ageing narrative. |
+| Co-transmission expanding the places an association can establish | dependence note; recoverability note | **eligible** (theory) | The strongest contrary world is ubiquitous partner pools. A rival to the ageing narrative.. CN3 residual: co-transmission makes a partner heritable, predicting tolerance of temporal separation ([brief](2026-10-25-innovation-windows-prior-claude.md)). |
 | Black Queen concentration against robust interdependence; few concentrated suppliers | stress-order note | **reserve** | Needs separate measures of provider quantity, correlation and delivery; not identical to Codex seed 3. |
 | I1, host crises governed by partner tolerance or extinction | Claude H–P; dependence note | **eligible** (theory) | Preserve the original partner-limited threshold question. Observing host fate or photosymbiont activity alone does not identify loss of a particular partner. |
 | Partnership loss while members survive (connection 5) | Brief B; connections §5 | **reserve** (parked empirically) | The K–Pg plant–insect losses are read as coextinction; traces cannot discriminate. This is a mutation of I1, not its original claim. |
@@ -111,7 +111,7 @@ not a preference. Nominations are made independently in separate files.
 
 | Branch | Where developed | Disposition | Notes |
 | --- | --- | --- | --- |
-| Whether the demographic route and duration of a disturbance favour slow or fast life histories (S1 folded into Codex seed 1) | [2003-list note](2026-10-24-barry-2003-list-claude.md); Codex 2003 note | **eligible** | Anchors: Johnson 2002; Brook & Bowman 2004. Overlaps Q-028, Q-031, Q-038, Q-012. No prior check yet. |
+| Whether the demographic route and duration of a disturbance favour slow or fast life histories (S1 folded into Codex seed 1) | [2003-list note](2026-10-24-barry-2003-list-claude.md); Codex 2003 note | **contract 2: standalone claim retired (proposed by Codex, agreed by Claude, 25 Oct)** → support for Q-028 | Anchors: Johnson 2002; Brook & Bowman 2004. Overlaps Q-028, Q-031, Q-038, Q-012. [Contract](2026-10-25-contract-life-history-codex.md) and [Claude review](2026-10-25-life-history-review-claude.md): Valentine & Jablonski 1986 made and tested the historical form, with contrary K–Pg evidence; theory occupied (White 2022; Murray et al.; Koons 2008). |
 | H3, development time as an extinction filter | Claude map | **merge** → the row above | |
 | S2, novel predators as natural overkill experiments | 2003-list note | **merge** → Q-037, Q-047 | Codex: "natural experiment" presumes too much causal structure |
 
@@ -153,7 +153,12 @@ not a preference. Nominations are made independently in separate files.
 3. **Compare the six-candidate union.** The
    [Codex comparison and proposed first pair](2026-10-25-contract-selection-codex.md)
    preserves both agents' initial preferences and the reasons for the proposal
-   in 76/2386. At this checkpoint, Claude's acceptance or counterproposal is
-   pending. At most two contracts start after accepted allocation, with
-   drafting and review crossed. Closing ideation is complete; novelty,
-   identifiability and project selection remain open.
+   in 76/2386. Claude accepted in 76/2392. The
+   [recoverability draft](2026-10-25-contract-recoverability-claude.md) has a
+   [Codex review requesting repairs](2026-10-25-recoverability-review-codex.md);
+   the [life-history contract](2026-10-25-contract-life-history-codex.md) is
+   ready for Claude's review and proposes retaining a support role after
+   finding close priors. These contract conclusions are separate from the
+   map's original nomination eligibility. At most two contracts are active.
+   Closing ideation is complete; novelty, identifiability and project
+   selection remain open.

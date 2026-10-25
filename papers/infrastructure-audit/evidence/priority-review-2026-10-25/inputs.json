@@ -1,0 +1,62 @@
+{
+  "scope": "Derived-table reaggregation only; not gate-2 source/package clearance",
+  "inputs": [
+    {
+      "path": "resources/software/bench/results/t2/t2_extinction_A.tsv",
+      "sha256": "0af55b4567c46190fb224936e32fde81aa73f039ca471f3eca5873d377763a7f",
+      "bytes": 589595,
+      "rows": 2000,
+      "material": "synthetic estimator outputs; ideal-sampling arm"
+    },
+    {
+      "path": "resources/software/bench/results/t2/t2_extinction_B.tsv",
+      "sha256": "bab5ba2f0e3e3e5f6e75a8d6ca1dbe8bf6dba187cdbfef58ec2052d1ae87a8fa",
+      "bytes": 473062,
+      "rows": 2000,
+      "material": "synthetic estimator outputs; executed hiatus arm"
+    },
+    {
+      "path": "resources/software/bench/results/t2/t2_extinction_C.tsv",
+      "sha256": "d446203759f60d80c13a67b38e53da48ee902b24f5377cffbe79833764b8889f",
+      "bytes": 589598,
+      "rows": 2000,
+      "material": "synthetic estimator outputs; corrected dating-error arm"
+    },
+    {
+      "path": "resources/software/bench/results/e2/e2_pyrate_reps.tsv",
+      "sha256": "09a1ab064fbfabb5b1f67d65dcc2eeb7cbb5ba18f5520b9ab9c3de913a1c7c0f",
+      "bytes": 21456,
+      "rows": 150,
+      "material": "synthetic per-replicate posterior interval and ESS summaries"
+    },
+    {
+      "path": "resources/software/bench/results/t3/t3_flag_ranges.tsv",
+      "sha256": "04e62f67987916dabd67ba9151d45c9c8526142f1d7a5c3bcafd80b7aed9bb0a",
+      "bytes": 1206084,
+      "rows": 20100,
+      "material": "synthetic occurrences and fossilbrush flags"
+    },
+    {
+      "path": "resources/software/bench/results/t3/v6_merged.tsv",
+      "sha256": "11b7a9c7abb648e409f149776116514f44102ad6a3ac2d72dca57dbb02a2844e",
+      "bytes": 935481,
+      "rows": 7200,
+      "material": "reconstructions of sampled public collection coordinates"
+    }
+  ],
+  "runtime": {
+    "python": "3.12.3",
+    "python_implementation": "CPython",
+    "numpy": "2.1.3",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "machine": "x86_64"
+  },
+  "dependency_specification": {
+    "python": ">=3.12,<3.13",
+    "numpy": "2.1.3"
+  },
+  "output": {
+    "path": "papers/infrastructure-audit/evidence/priority-review-2026-10-25/reaggregate.json",
+    "sha256": "3b4265592c1c245491b7f07bd52924da6c346f34ab85664c31b1a18e8bba5b38"
+  }
+}

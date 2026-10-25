@@ -1,0 +1,6 @@
+FROM eprp-sw/bench-r4:t4
+# doMI.R (Pohl metabolic index) needs optparse, AquaEnv, ncdf4, reshape2 and RNetCDF; the netCDF packages need the system library.
+RUN apt-get update && apt-get install -y --no-install-recommends libnetcdf-dev libudunits2-dev && rm -rf /var/lib/apt/lists/*
+RUN R -q -e "options(repos = c(CRAN = Sys.getenv('PPM'))); install.packages(c('optparse', 'AquaEnv', 'ncdf4', 'reshape2', 'RNetCDF'), Ncpus = 8)"
+RUN R -q -e "for (p in c('optparse', 'AquaEnv', 'ncdf4', 'reshape2', 'RNetCDF', 'dplyr')) library(p, character.only = TRUE); ip <- installed.packages()[, c('Package', 'Version')]; write.table(ip, '/opt/r-packages.tsv', sep = '\t', quote = FALSE, row.names = FALSE)"
+WORKDIR /work

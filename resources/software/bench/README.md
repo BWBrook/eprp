@@ -315,3 +315,149 @@ Results in `results/t3/`; post hoc checks in `t3_checks.json` and
   letter; `jw` is tunable. Ten of the eleven extra pairs it reported pair our
   injected format errors with their source names, which is a correct catch.
 - [Detail withheld pending disclosure to the data custodian.]
+
+# Tranche 4: richness estimators on spatially structured records
+
+Run on `deep-server` on 24–25 October 2026 (`run_t4.sh`, `run_t4b.sh`,
+`run_t4c.sh`, tmux). The R estimators take under a minute per scenario,
+the geometric Weibull fits about an hour in all, and DeepDive 5–6 h per
+model on 16 cores (three shared models in parallel, then nine per-dataset
+models three at a time). Tests declared in [VALIDATION_T4.md](VALIDATION_T4.md) before
+running (`64d7818`), after a generator-only pilot disclosed there. The
+amendments: A1, smoke-test fixes; A2, post hoc K2 variants when SQS
+missed its quorum; A3, DeepDive scored against its own label definition;
+A4, DeepDive's prior-window strata and a per-dataset arm; A5, after an
+independent review, a collection-size scenario, an evenness dose–response
+and Alroy's geometric Weibull (his CEGS model; that it is the 2026 paper's
+geometric Weibull is our inference); A6, after a second review, a null
+control, quorum 0.8 and an abundance-family robustness arm. Each was
+declared before it ran. Results in
+`results/t4/`.
+
+The generator is independent of every estimator: paleobuddy birth–death
+(400 starting species, λ = μ = 0.05), eight areas in a row with contiguous
+species ranges, fixed lognormal abundances, and Poisson collections of 40
+individuals per area and bin. Scenarios, 20 replicates each:
+- **S**: the number of collections falls 70% at 50 Ma; evenness fixed.
+- **C**: the number of collections is fixed; each shrinks from 40 to 12
+  individuals at 50 Ma.
+- **E**: effort fixed; evenness falls (σ of log abundance 0.5 → 2), with
+  doses at 0.75, 1 and 1.5 sharing E's seeds.
+- **M**: 60% of species die at 50 Ma, then recovery (true drop −0.78 in
+  log richness, bins 11–12 against 9–10).
+
+True richness is flat in expectation in S, C and E. "Bias" is the log
+ratio of mean estimates in the late half (bins 11–20) to the early half,
+minus the true log ratio: 0 is perfect, −0.69 a spurious halving.
+
+## Results
+
+| Estimator | S: fewer collections | C: smaller collections | E: late σ 0.75, 1, 1.5, 2 (early 0.5) | M: drop error | Error against global richness (median abs. log) |
+| --- | --- | --- | --- | --- | --- |
+| raw (sampled in bin) | −0.37 | −0.33 | −0.03, −0.08, −0.26, −0.49 | +0.10 | 0.24–0.50 |
+| range-through (divDyn) | −0.27 | – | σ 2 only: −0.40 | +0.10 | – |
+| Chao2 (divDyn; iNEXT agrees within 0.01) | −0.15 | −0.15 | −0.01, −0.04, −0.16, −0.31 | +0.04 | 0.14–0.31 |
+| squares (divDyn) | −0.15 | −0.12 | −0.01, −0.04, −0.15, −0.31 | +0.04 | 0.18–0.36 |
+| SQS q = 0.6 (divDyn) | K2 **not met** (2 bins below quorum; post hoc +0.03) | K5 **fail**, −0.12 | −0.07, −0.17, −0.41, −0.70 | +0.11 | relative only |
+| iNEXT coverage 0.6 | K2 **pass**, +0.03 | K5 **fail**, −0.13 | −0.08, −0.19, −0.45, −0.76 | +0.11 | relative only |
+| geometric Weibull (`cegsML`), occurrence frequencies | +0.03 | +0.09 | −0.01, −0.02, −0.06, −0.12 | −0.01 | 0.06–0.10 |
+| geometric Weibull (`cegsML`), pooled individual counts | +0.06 | +0.11 | +0.03, +0.07, +0.21, +0.46 | −0.05 | 0.06–0.15 |
+| DeepDive, shared model (autotuned to replicate 1) | +0.10 | – | σ 2 only: −0.58 | +0.04 | 0.22–0.57 (overestimates) |
+
+Standard errors of the biases are 0.007–0.046 (20 replicates). "Global"
+richness counts every species alive at any time in a bin, including the
+9–11% that live only in areas without collections; against the
+identifiable target, richness in the sampled areas, the median absolute
+log errors are 0.036–0.077 (geometric Weibull, occurrence frequencies),
+0.06–0.15 (Chao2) and 0.10–0.18 (squares). K1 (divDyn squares against
+Alroy's formula): identical, **pass**, a check that the formula is
+transcribed, not of the estimator. K3: both Chao2 implementations equal
+re-implementations of their own formulas (to 5 × 10⁻¹³ and 5 × 10⁻⁴)
+and differ from each other by a median 0.2% (range −1.9% to +9.4%, the
+extreme in a thin bin). K4 (Alroy's package on counts drawn from its own
+model): **pass**, median log(R̂/R) −0.03 and −0.01; it has no
+occurrence-frequency analogue. `cegsLD` matched `cegsML` where run (S, E,
+M).
+
+## What tranche 4 found
+
+- **On this generator, the geometric Weibull fitted to occurrence
+  frequencies had the lowest absolute error of the estimators run, but it
+  does not pass on the declared terms.** Against sampled-area richness
+  its median error was 0.036–0.077, against Chao2's 0.06–0.15, and it was
+  closer than Chao2 in 49–80% of bins (49% at the smallest evenness dose).
+  Its trend bias stayed inside ±0.10 except under the strongest evenness
+  change (−0.118, SE 0.021), and it has its own, smaller dose–response
+  (−0.01, −0.02, −0.06, −0.12; about a sixth of SQS's). Its 90–98%
+  recovery of global richness comes partly from overshooting sampled-area
+  richness by 3–10%. It failed to fit 4 of the 400 bins of scenario S
+  (all with 14 or fewer collections), which were dropped from its means;
+  keeping the truth to the same bins changes the bias by 0.001.
+- **Its ranking held across abundance families; its size did not (A6, 20
+  replicates per condition).** Under scenario S's effort fall with gamma
+  (log-series-like), log-uniform or Pareto abundances, or variable
+  collection sizes, at about 77 or 30 collections per bin early, it had a
+  lower median error against sampled-area richness than Chao2 in all ten
+  conditions, but by margins from a near tie (Pareto: 0.19 against 0.20)
+  to large (log-uniform: 0.14 against 0.32), and under gamma abundances
+  both were poor (0.40–0.43 against 0.58–0.66). Its trend bias stayed
+  within −0.11 to +0.06 except for Pareto abundances at low effort
+  (−0.47, worse than Chao2's −0.27). With about 9 collections per bin late
+  it failed to fit 22–31% of bins (`results/t4/t4_rob.json`).
+- **This is not a test of Alroy's (2026) method as published.** The input
+  that worked, collections per species, is not the paper's; on pooled
+  individual counts, the paper's kind of input, it overshot as evenness
+  fell (+0.46 at σ 2). Which variant the paper used (`cegsML`, `cegsLD` or
+  `cegsB`; we ran the first two) is not known.
+- **The bias statistic is calibrated.** K6, with nothing changing (late σ
+  left at 0.5): every estimator within 0.014 of zero, **pass**.
+- **Coverage standardisation corrected fewer collections fully and smaller
+  collections mostly.** Fewer collections of the same size: SQS and iNEXT
+  +0.03, within ±0.10 (SQS's +0.034 is 2.4 SE above zero). The same number
+  of collections, each a third the size: −0.12 and −0.13, outside ±0.10 by
+  about 1.5 SE (K5 fail), though still removing about 64% of the raw
+  artefact (raw −0.33). At q = 0.8 the collection-size bias fell to −0.07
+  and −0.08, inside ±0.10, but 71 low-effort bins of scenario S could not
+  reach the quorum and iNEXT extrapolated 59. Across the four abundance
+  families and variable collection sizes, both kept the fewer-collections
+  trend within about ±0.13, the property they are designed for, though SQS
+  failed in up to 36% of bins at low effort.
+- **Coverage standardisation responds to evenness by degrees, at the
+  quorum tested.** At q = 0.6 (native coverage 0.85–0.97, so a strong
+  rarefaction), as the late-half σ rose from the early 0.5 to 0.75, 1, 1.5
+  and 2 with richness flat, SQS moved −0.07, −0.17, −0.41 and −0.70, and
+  iNEXT slightly more, worse than raw richness at every dose. At q = 0.8
+  the response was smaller but of the same kind (SQS −0.05, −0.13, −0.32,
+  −0.58). Alroy (2026; [LEADS](../LEADS.md) L-006) reaches the same
+  conclusion by other tests; this is consistent with it, not a
+  replication.
+- **Chao2 and squares are biased by every change, by 0.4–0.64 of raw
+  richness's bias**, and underestimate global richness by 15–30%.
+- **Thin bins fail differently.** In one replicate two bins had 4 and 7
+  collections: divDyn's SQS returned NA with no warning or message; iNEXT
+  extrapolated 4.5× beyond the sample and returned 281 species from 86
+  observed, with a warning that a loop or `mclapply` easily loses; `cegsML`
+  returned NA for both, silently, as it did for two other thin bins.
+- **divDyn** stops on integer taxon IDs in SQS and reads them as
+  abundances in `indices()`; its Chao2 uses (S − 1)/S where Chao's has
+  (T − 1)/T: a median +0.14% and 99th percentile +2.4% here, but +25% in
+  the bin with 4 collections.
+- **DeepDive held the effort trend and the mass extinction, but its level
+  was biased and it misread evenness.** Without a present-diversity
+  anchor, the shared models gave +0.10 under the fall in collections (just
+  inside ±0.10) and a drop error of +0.04, but they overestimated every bin
+  of S and nearly every bin of M (mean log ratio to global richness +0.57
+  and +0.21, more against DeepDive's own label), and under the evenness
+  change they overestimated early bins and underestimated late ones, a
+  spurious decline of −0.58. The independent review confirmed that our
+  pipeline reproduces DeepDive's own predictions and inputs exactly. The
+  prior window changed the trend in no stratum; per-dataset tuning,
+  DeepDive's intended use, did not fix either problem (on replicates 1–4
+  the evenness trend moved from −0.58 to −0.47, the effort trend stayed at
+  +0.11, and the level error rose in every scenario; three refits per
+  scenario). Consistent with the evidence but
+  untested: our records are far more completely sampled than most of its
+  autotuned prior, and the evenness change lies outside its simulator. It needed three configuration fixes to
+  run correctly (A1): `extant_sp` without present diversity, `s_species`
+  for a window that opens on a diverse clade, and a TensorFlow pin
+  ([deepdive](../deepdive/README.md)).

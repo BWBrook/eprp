@@ -2,7 +2,60 @@
 
 Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: ideation closed; first hypothesis-contract pair proposed (25 October).**
+**Current focus: next-pair source checks and independent infrastructure audit (25 October).**
+Codex accepted Claude's proposed allocation in 76/2408: substitute builders
+(Card 3) for Codex's prior/support brief, innovation windows (CN3) for
+Claude's, with review crossed. Cue reliability stays in reserve. The
+[Codex response](ideas/2026-10-25-new-directions-response-codex.md) accepts
+nearest-prior-first but rejects making all seven Big Questions selection
+criteria mandatory hypothesis gates: conditional mechanisms can be informative.
+
+**Substitute builders:** the [completed prior/support brief](ideas/2026-10-25-substitute-builders-prior-support-codex.md)
+recommends retiring the broad standalone claim and retaining a service-specific
+residual under Q-010/B-001. Close priors already cover replacement engineers
+and new reef ecologies. PARED's documented composition/guild/diversity fields
+concern builders and exclude the required dependant composition; the proposed
+public-PARED test fails its joint-support gate. The residual's novelty and
+empirical support remain unestablished. Claude is next to review this
+recommendation and deliver its CN3 prior brief; no new model or data build
+has begun.
+
+**Both first-pair standalone claims are retired by agreement (76/2402, 2408).**
+Recoverability becomes Q-009 support; life history becomes Q-028 support.
+The updated [life-history contract](ideas/2026-10-25-contract-life-history-codex.md)
+records the full Valentine–Jablonski source check: larval survival was 11/28
+versus 9/23; the printed size-test significance is not reproduced from the
+summary counts. Neither this source nor the toy identifies historical adult
+mortality. The toy also permits winner changes within one route, so Claude's
+fixed-sign summary needs correction. [Reproducible closure checks](data/life-history-contract/closure-checks.json)
+preserve the evidence. Murray's final citation remains 2026. Codex requested
+correction of contradictory older recoverability passages in 76/2410; the
+retirement decision does not validate them.
+
+**Infrastructure-audit paper: approved preparation; first independent tranche complete.**
+The [scaffold](papers/infrastructure-audit/README.md) holds Barry's approval
+and 189 candidate-claim rows. Codex's [priority review](papers/infrastructure-audit/evidence/priority-review-2026-10-25/README.md)
+covers ten groups/16 rows, with saved-output recalculations and explicit
+limits on original implementation replay. It finds an off-by-one headline,
+a conflated sample/probe maximum, a declared/executed hiatus discrepancy,
+and missing differential replay evidence for C045. The [methods proposal](papers/infrastructure-audit/evidence/2026-10-25-audit-design-codex.md)
+distinguishes case-specific improvements from untested claims of AI superiority.
+The 189 rows are not 189 independent defects; 173 remain outside this tranche.
+Packages PR #18 (`efbd8f6`) is integrated; its additional T4/T5 findings were
+reported in 76/2409 but are outside this independent audit.
+
+[Detail withheld pending disclosure to the data custodian.]
+
+**Accepted ownership:** Codex owns its dated response/builders brief,
+life-history source/control follow-up, separate audit evidence, README and
+this status. Claude owns its CN3 brief, contract corrections, scaffold and
+ledger. Databases/Packages and Q-012/Q-007 owners retain their source and
+analysis files. Claude is next to integrate or challenge the audit findings
+and coordinate the named owner replays; Codex then reviews corrected evidence.
+No registers or primary-project selections changed. Q-012 remains queued;
+Q-038 remains parked.
+
+**Earlier checkpoint, superseded by the closure above: first contract pair drafted (25 October).**
 Barry explicitly instructed Codex to close the round, prepare the closing map
 and independent cards, and coordinate the first crossed contracts. The
 [closing map](ideas/2026-10-25-blue-sky-closing-map.md) is complete: all 43
@@ -12,29 +65,41 @@ at `a5608c0`; [Codex's three](ideas/2026-10-25-nominations-codex.md) at
 `5f49d04`, before Codex opened Claude's cards. This establishes independent
 nomination within a shared discussion, not independent scientific evidence.
 
-[Codex's comparison of the union](ideas/2026-10-25-contract-selection-codex.md)
-proposes recoverability under dependence and demographic route/duration of
-life-history selectivity (76/2386). **Claude accepted** (76/2392), and the
-[recoverability contract draft](ideas/2026-10-25-contract-recoverability-claude.md)
-is ready for Codex's review.
-- **Prior check:** the five-way separation is open in this search. Its
-  ingredients are occupied separately: Meijer 2020; Melero-Jiménez 2025; the
-  Black Queen hypothesis; Lahti 2009; Ellers 2012; Marshall et al. 1994.
-- **What the toy computations show** (in `data/recoverability-contract/`):
-  scarcity, growth erosion, provision erosion, import and de novo reversion
-  can all produce the same recovery outcome and timing. They separate only by
-  trajectory slope, by paired measurements of service and abundance, by
-  dispersion between replicates when few founders survive, by a census before
-  release, or by mutation supply.
-- **Codex's life-history contract** is awaited, for Claude's review. Proposed ownership: Claude drafts recoverability for Codex review;
-Codex drafts life history for Claude review. At most two contracts start after
-accepted allocation. Each combines nearest-prior review and a minimal generative
-model, with a separate observation model for any proposed data. Disturbance
-order serves initially as a shared control; cue reliability and innovation
-windows remain alternatives. Existing registers and primary-project selection
-are unchanged. Codex owns this completed map amendment, comparison and
-README/STATUS handoff; Claude retains its dated cards and notes. Claude is
-the next responder on the contract pair.
+[Codex's proposed pair](ideas/2026-10-25-contract-selection-codex.md) was
+**accepted by Claude in 76/2392**: Claude drafts recoverability and Codex
+reviews; Codex drafts life-history selectivity and Claude reviews.
+
+- **Recoverability:** [Claude's draft](ideas/2026-10-25-contract-recoverability-claude.md)
+  and toy outputs replay, but [Codex's cross-review](ideas/2026-10-25-recoverability-review-codex.md)
+  requests revision before an observation-design sweep. The stated rescue
+  deadline is absent; the W expression approximates first passage; tuned
+  examples do not establish necessary/sufficient identification conditions;
+  and the onset curve is the log of ensemble mean abundance. The default
+  large threshold makes the approximation accurate, but does not cure the
+  target mismatch. [Reproducible checks](data/recoverability-review/README.md)
+  give counterexamples. Goldberg & Friedman (2021) and Meijer already analyse
+  trajectories; the Melero-Jiménez experiment does not establish the absence
+  of standing compensatory variants at stress onset; Marshall's gene-reactivation
+  bounds do not establish a clock from ecological dependence to recovery loss.
+- **Life history:** [Codex's contract](ideas/2026-10-25-contract-life-history-codex.md)
+  is ready for Claude's review. The [prior check](data/life-history-contract/prior-check.md)
+  finds close route/duration and life-history precedents, including White
+  (2022), Koons (2008) and Murray (2026; final abstract only). The proposed
+  disposition retires broad theoretical novelty and retains the mechanism
+  as support for Q-028; a distinct historical test remains conditional.
+  The [exact branching control](data/life-history-contract/README.md) has
+  144 comparisons and four order controls, independently checked. Prolonged
+  recruitment suppression need not favour fast turnover, and abundance and
+  extinction probability can rank strategies differently. No empirical
+  joint-support dataset is established.
+
+Claude is next to repair its recoverability draft and review the life-history
+contract and proposed disposition. Codex owns its separate review, contract,
+`data/recoverability-review/`, `data/life-history-contract/` and this handoff;
+Claude retains its recoverability source/scripts and other dated notes.
+Disturbance order remains a shared control; other nominations remain live.
+No third contract, register change, empirical build, fitting or primary-project
+selection follows from this checkpoint. Q-012 remains queued and Q-038 parked.
 
 **Previous focus: dependence, biological information and new ecological opportunities.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
@@ -281,10 +346,10 @@ Claude replied in its
 Barry put the closing question to both agents. Codex agreed and amended the
 protocol (76/2383), and its foraminiferal source corrections are applied in
 place. **Barry has closed the round** (see Current focus). The first contract
-allocation is proposed, not yet accepted. No empirical task is allocated.
-Codex owns its dated notes and this handoff's README/STATUS pointers; Claude
-retains its notes and S3 files. No empirical extraction, model fitting, remote
-compute or register change occurred in this response. Exact arithmetic checked
+allocation was accepted in 76/2392. No empirical task is allocated. Codex owns
+its dated notes and this handoff's README/STATUS pointers; Claude retains its
+notes and S3 files. No empirical extraction, model fitting, remote compute or
+register change occurred in this response. Exact arithmetic checked
 hypothetical constructions, not empirical evidence. The agents' different
 interest preferences remain, and the turnover decline is an optional shared
 contrast rather than a required explanation. Q-012's bounded engineering scope
@@ -312,6 +377,13 @@ not audits by this ideation turn. The proposed chronosphere filtering contract
 has not been adopted here. Wiley TDM copies in the library are excluded from
 agent reading pending the library's licence decision; open-text holdings remain
 separate. No remote library text was accessed in this response.
+
+Side-session updates 76/2396–2397 report the Macrostrat global snapshot
+(`5581981`) and resolution of Barry's 2003–04 list and legacy EndNote libraries
+(`5054884`). They were read and incorporated with a fast-forward update,
+without independently auditing those resource claims here. Their source
+coverage, age-model limitations and TDM restrictions remain as recorded by
+the owning sessions; no remote library text was used for these contracts.
 
 **Stage:**
 - The applied register's first tranche is complete at **50 questions**; its

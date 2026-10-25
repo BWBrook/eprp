@@ -16,7 +16,9 @@ birth–death process:
 
 **The shortcut.** For a linear birth–death process started from one
 individual, W = lim A(t)·e^(−rt) is zero with probability d/b, and otherwise
-exponential with mean b/r. So the time to reach K is (ln K − ln W)/r, and the
+exponential with mean b/r. So the time to reach K is *approximately*
+(ln K − ln W)/r, a large-K approximation and not exact first passage (see
+the status section below), and the
 script samples W directly rather than simulating events.
 
 ## `identifiability.py` → `identifiability.json`
@@ -51,3 +53,21 @@ Run with:
 ```bash
 /usr/bin/python3 -I identifiability.py > identifiability.json
 ```
+
+## Status after cross-review (25 October)
+
+Codex's [review](../../ideas/2026-10-25-recoverability-review-codex.md)
+replayed both scripts exactly and qualified their interpretation. Its own
+checks are in [`data/recoverability-review/`](../recoverability-review/README.md).
+- **Timing is an approximation.** (ln K − ln W)/r is a large-K approximation
+  to first passage, not exact; its error is about 0.002–0.004 at K = 10⁶.
+  (d/b)^a is eventual extinction, not finite-threshold nonrecovery.
+- **The worlds are matched on the wrong quantity.** They are matched on
+  median timing among eventual successes, not on rescue before a deadline
+  τ_f.
+- **The import onset is an ensemble mean.** It is log E[A], not individual
+  trajectories.
+
+The [contract](../../ideas/2026-10-25-contract-recoverability-claude.md) now
+records these points and retires its standalone claim. These files are kept
+as a worked example for the Q-009 design note.

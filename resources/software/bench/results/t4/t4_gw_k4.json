@@ -1,0 +1,42 @@
+{
+  "default": {
+    "lambda": 1,
+    "gamma": 2,
+    "R": 300,
+    "observed_fraction": 0.378467,
+    "ML": {
+      "median_log_ratio": -0.026332,
+      "mean_log_ratio": 0.017283,
+      "iqr": 0.370399,
+      "na": 0,
+      "pass": true
+    },
+    "LD": {
+      "median_log_ratio": 0.037309,
+      "mean_log_ratio": 0.051924,
+      "iqr": 0.330015,
+      "na": 0,
+      "pass": true
+    }
+  },
+  "moderate": {
+    "lambda": 0.1,
+    "gamma": 1,
+    "R": 300,
+    "observed_fraction": 0.7945,
+    "ML": {
+      "median_log_ratio": -0.009915,
+      "mean_log_ratio": -0.008907,
+      "iqr": 0.069653,
+      "na": 0,
+      "pass": true
+    },
+    "LD": {
+      "median_log_ratio": -0.007613,
+      "mean_log_ratio": -0.005813,
+      "iqr": 0.072503,
+      "na": 0,
+      "pass": true
+    }
+  }
+}

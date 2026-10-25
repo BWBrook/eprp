@@ -8,7 +8,7 @@ are `checked`; everything else is the scans' report, labelled `verified`
 where a scan read a primary page and `recall` otherwise. Question tags are
 the scans' inference. A row here is not a recommendation.
 
-363 tools. Refresh with `uv run resources/software/landscape.py`.
+364 tools. Refresh with `uv run resources/software/landscape.py`.
 
 ## Data access and preparation
 
@@ -153,6 +153,7 @@ the scans' inference. A row here is not a recommendation.
 | [PyRate](https://github.com/dsilvestro/PyRate) | python-package; Python 3.10+ (numpy, scipy, pandas, nlopt, dendropy, scikit-learn); optional C++ fastPyRateC (small C++/SWIG per D); R plotting scripts | Bayesian reversible-jump MCMC for preservation, speciation and extinction rates from occurrences, with age uncertainty and extension modules (DES, ADE, BDC, MCDD/MBD, MTE, simulators). | GitHub pushed 2026-10-22, release v3.1.1 (2022-03-09) | 2026-10-22 | AGPL-3.0 | clone, venv, pip install -r requirements.txt [verified; B, D]; not on PyPI: PyPI pyrate is an unrelated API wrapper [verified; B] (0.4.0, 2017, chive/pyrate [C]); MCMC runs are long: deep-server; AGPL matters if wrapped as a network service [B]; AGPL-3.0 carries a network-use clause [recall; D] | Q-004; Q-006; Q-011; Q-012; Q-019; Q-023; Q-026; Q-039; Q-047; Q-049; B-014; B-017; B-018; Q-040; Q-022; Q-042; Q-045 |
 | [RAMU-MSOM](https://github.com/trondreitan/RAMU-MSOM) | workflow; R scripts (custom MCMC) | Hierarchical Bayesian multispecies occupancy for temporal fossil communities (RAMU-MSOM repository). | GitHub pushed 2023-03-31 | 2023-03-31 | GPL-3.0 | copy-and-edit run scripts; R | Q-016; Q-020; B-001; Q-032 |
 | rareNMtests | r-package; R | Richness estimation and rarefaction package (Chao and parametric estimators). | CRAN 1.2 (2022-06-07) | 2022-06-07 | GPL (>= 2) | install.packages | Q-040 |
+| [richness (Alroy)](https://github.com/johnalroy/richness) | r-package; R (GitHub only) | Alroy's species-abundance-distribution and richness estimators: the compound exponential-geometric series or geometric Weibull (cegsML, cegsB, cegsLD), Chao 1 and 2, jackknives, discrete Weibull, Poisson log normal, SQS, rarefaction, and random generators. |  |  | CC0-1.0 (repository LICENSE) against GPL-2 \| GPL-3 (DESCRIPTION) [verified; GH] (scan) | none; imports minpack.lm, poilog, sads, stats4 | Q-040; Q-042; Q-044; B-015 |
 | [RMark (with MARK)](https://github.com/sjbonner/RMark) | r-package; R plus external MARK binary | R interface to MARK for CJS and other CMR models; the route behind genus capture-history analyses. | CRAN 3.1.0 (2026-07-27); GitHub pushed 2026-10-13 | 2026-10-13 | GPL (>= 2) | CRAN says it needs mark32.exe/mark64.exe (Windows) or mark (Linux >= 11.2) [verified; CRAN]: an external Fortran binary, not on CRAN | Q-038; Q-012; Q-023; Q-016 |
 | [Selectivity and extinction-risk workflows](https://github.com/GawainAntell/ExtSelectivity2020) | workflow; R compendia | Per-study R compendia for logistic and mixed-model selectivity versus traits, and ML selectivity. | GitHub pushed 2023-07-12, release v1.0.1 (2020-04-24) | 2023-07-12 | GPL-3.0 | R | Q-001; Q-002; Q-012; Q-038 |
 | SpadeR | r-package; R | Richness estimation and rarefaction package (Chao and parametric estimators). | CRAN 0.1.1 (2016-09-06) | 2016-09-06 | GPL (>= 3) | install.packages | Q-040 |

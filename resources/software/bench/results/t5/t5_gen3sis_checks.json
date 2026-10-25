@@ -1,0 +1,26 @@
+{
+  "gen3sis": "1.6.0",
+  "G1": {
+    "tests": 18,
+    "expectations": 41,
+    "failed": 2,
+    "errors": 0,
+    "skipped": 9,
+    "skipped_tests": ["prepare_directories: Error on missing config file and input directory", "prepare_directories: Error on non-existing input directory", "derive input/output directories from config path", "prepare_directories: default config, input_directory given, output directory derived", "prepare_directories: config, input-, and output- directory given", "no user config provided, using default config", "partial user config provided", "full user config provided", "user config provided with extra values"],
+    "files": ["test-config_handling.R", "test-distances.R", "test-gen3sis_main.R", "test-input_creation.R"],
+    "pass": false
+  },
+  "G2a": {
+    "distances": [100, 300, 500, 700, 900, 1100, 1300, 1500],
+    "expected": [0.997089, 0.924301, 0.694591, 0.367879, 0.119389, 0.020641, 0.001653, 0.000053],
+    "observed": [0.997, 0.919, 0.70225, 0.3685, 0.124, 0.016, 0.0005, 0],
+    "z": [-0.104234, -1.267534, 1.051654, 0.081388, 0.899306, -2.064531, -1.794932, -0.213184],
+    "pass": true
+  },
+  "G2b": {
+    "threshold": 5,
+    "species_after_each_step": [1, 1, 1, 1, 1, 2, 2, 2],
+    "first_step_with_two": 6,
+    "pass": true
+  }
+}

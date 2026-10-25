@@ -50,10 +50,6 @@ describing the data twice.
 | --- | --- | --- |
 | [FossilSim](fossilsim/README.md) | T2 | Poisson fossil sampling; morphospecies counts; with TreeSim, birth–death histories |
 | [paleobuddy](paleobuddy/README.md) | T2 | constant and piecewise birth–death; Poisson fossil sampling |
-
-All five were reviewed independently on 24 October 2026 (Claude Sonnet
-subagent) and its findings applied. The two generators stay at T2: their
-cross-check had little power, so T3 waits for a larger comparison.
 | [divDyn](divdyn/README.md) | T2 | binned rates under complete sampling |
 | [PyRate](pyrate/README.md) | T2 | constant λ and μ at high preservation (biased, no undercoverage detected); q failed |
 | [RevBayes](revbayes/README.md) | T1 | none: FBD range process disabled in releases |
@@ -67,8 +63,15 @@ cross-check had little power, so T3 waits for a larger comparison.
 | [palaeoverse](palaeoverse/README.md) | T2 | `bin_time` (four methods, continuous ages); `tax_range_time`; `palaeorotate` consistent with pyGPlates for three models |
 | [fossilbrush](fossilbrush/README.md) | T2 | `check_taxonomy` conflicts and formatting; `flag_ranges` failed |
 | [chronosphere](chronosphere/README.md) | T1 | [Detail withheld pending disclosure to the data custodian.] |
+| [iNEXT](inext/README.md) | T2 | coverage-standardised richness under fewer collections; K5 failed under smaller collections; biased by evenness change |
+| [DeepDive and DeepDiveR](deepdive/README.md) | T1 | runs after three configuration fixes; characterised only (overestimates, misreads evenness) |
+| [richness (Alroy)](alroy-richness/README.md) | T2 | CEGS (the geometric Weibull, on our inference) under its own model; lowest absolute error on the tranche-4 records (characterised, one generator family) |
 
-Tranche 1's harness and results: [bench/](bench/README.md).
+Every entry was reviewed independently (Claude Sonnet subagent, one review
+per tranche) and the findings applied. The two generators stay at T2: their
+cross-check had little power, so T3 waits for a larger comparison.
+
+The harness and results of every tranche: [bench/](bench/README.md).
 
 ## Tiers
 
@@ -237,3 +240,26 @@ Body sections, in order:
 - *Type bugs hide behind plausible output.* `flag_ranges` returns numbers
   that look right and flags that look sparse; only an injection test with
   known answers showed the text comparison.
+
+**Tranche 4 (24–25 October 2026; [bench](bench/README.md)).**
+
+- *Pilot the generator before declaring.* A generator-only pilot showed
+  the first settings would have made SQS fail by construction; tuning it
+  on sampling diagnostics alone, and saying so, kept the test fair.
+- *Read the prior a tool trains on.* DeepDiveR's default prior started
+  every clade from one species and almost never reached the richness a
+  window opening on a diverse clade has; that is an inference from the
+  prior's support, not a scored run.
+- *Score against the tool's own target as well as yours.* DeepDive's label
+  counts part-bin species fractionally; scoring it only against "alive at
+  any time" would have flattered its level error (+0.13 to +0.57 against
+  global richness, +0.30 to +0.73 against its own label).
+- *Declare the tolerance before the ranking.* A band chosen after seeing
+  the results (±0.12) made one estimator look as if it passed; on the
+  declared ±0.10 it did not.
+- *Ask what the target is.* "Recovering 95% of global richness" was partly
+  overshooting the species the samples could see.
+- *Multi-key `merge` in R sorts on a text key.* Positional half-means after
+  it mixed bins 10 and 2 until the rows were reordered.
+- *Search the authors' own repositories.* The estimator the scans recorded
+  as unpublished was in the author's GitHub package, cited by his preprint.

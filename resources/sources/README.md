@@ -21,6 +21,7 @@ resources/sources/
   CONTACTS.md               outreach queue: issues for outside parties, held for one tranche
   build_index.py            rebuilds the index: uv run resources/sources/build_index.py
   paleodata-README.md       the README installed at /data/paleodata/
+  data-raw-audit/           audit of the main checkout's data/raw against the catalogue (not an entry)
   <id>/README.md            the entry: YAML front matter + guide
   <id>/<provider>-versions.tsv  full version index, where the source is versioned
   <id>/<id>_profile.py      our profiling code for that source
@@ -585,6 +586,37 @@ the workflow when they generalise.
   out; derive what you can from the units.
 - *Test a route on an id that exists.* The age-model route "returned
   nothing" for a column id that does not exist; it works for real ones.
+
+**LegacyPollen (25 October 2026; [entry](legacypollen/README.md)).**
+
+- *Look for the newer release before cataloguing the named one.* The backlog
+  named LegacyPollen 1.0; 2.0 (3,680 records, published 2025) and a 2026
+  African full-age table exist.
+- *Check whose status a metadata field is.* PANGAEA's "in review" flag in
+  2.0's metadata belonged to a related paper, not to the dataset.
+- *Screen on the records that have what the analysis needs.* 2.0 has 446
+  records of 100+ samples, but 101 of them carry no ages.
+- *A file's extension is not its format.* The ".csv" files are
+  tab-separated; detect the delimiter from the header.
+- *Read a column's values, not its name.* LegacyAge's
+  `Uncertainty_Record.mean` is about a quarter of the mean 95%-range width;
+  the true width is computed from the minimum and maximum ages.
+
+**data/raw audit (25 October 2026; [report](data-raw-audit/README.md)).**
+
+- *Match by content, not by name.* Hashing files and zip members tied every
+  data file in the main checkout to the mirror, including renamed copies
+  (`occurrences.csv` is Benson et al.'s `Animalia^Chordata_data.csv`) and
+  files extracted from zips.
+- [Detail withheld pending disclosure to the data custodian.]
+- *Walk unknown R objects defensively.* Deposited binaries contain deeply
+  nested lists and S4 objects whose packages are absent; bound the
+  recursion and catch errors per object, or one file stops the scan.
+- *Check that every input path a script names exists.* One build reads a
+  `data/raw` file that nobody holds; the catalogue now has it.
+- *A plain-URL route snapshots on every run.* Run only the block you need;
+  rerunning the `esm` route duplicated a snapshot that the mirror rule then
+  keeps.
 
 **Outreach (Barry, 22 October 2026).**
 

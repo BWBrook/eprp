@@ -1,0 +1,6 @@
+FROM eprp-sw/bench-r3:t3
+ARG DEEPDIVER_COMMIT=b1592de51e3765e8b1f079c774a8078a15d4d000
+RUN R -q -e "options(repos = c(CRAN = Sys.getenv('PPM'))); install.packages(c('iNEXT', 'ConfigParser', 'R6', 'dplyr'), Ncpus = 8)"
+RUN R -q -e "remotes::install_github('DeepDive-project/DeepDiveR', ref = Sys.getenv('DEEPDIVER_COMMIT'), upgrade = 'never', dependencies = FALSE)"
+RUN R -q -e "for (p in c('iNEXT', 'DeepDiveR', 'divDyn', 'paleobuddy')) library(p, character.only = TRUE); ip <- installed.packages()[, c('Package', 'Version')]; write.table(ip, '/opt/r-packages.tsv', sep = '\t', quote = FALSE, row.names = FALSE)"
+WORKDIR /work
