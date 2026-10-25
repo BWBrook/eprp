@@ -572,14 +572,19 @@ the workflow when they generalise.
 
 **Macrostrat (25 October 2026; [entry](macrostrat/README.md)).**
 
-- *Test a database's ages for convention before using them as a
-  chronology.* 18% of North American unit boundaries sit exactly on an
-  international stage boundary, which a continuous age would almost never
-  do; only 2% of units are radiometrically dated.
+- *Test a database's ages for convention, against a baseline.* 21% of North
+  American Phanerozoic unit boundaries sit exactly on an international stage
+  boundary, against 0.1% of boundaries interpolated inside an interval.
+- *A date is not a unit age.* Of 515 North American units with dates in Ma,
+  452 carry only detrital-grain spectra; 63 have igneous or ash dates, and
+  25 of those agree with the unit's age range.
 - [Detail withheld pending disclosure to the data custodian.]
-- *Partition a live API so nothing is silently left out.* Requesting every
-  project and every column status separately reproduced the stats route's
-  unit counts exactly; the default `all` request returns a subset.
+- *Partition a live API, and reconcile every route.* Requesting every project
+  and every column status reproduced the stats route's unit counts, but the
+  fossils and sections routes still leave obsolete columns and some packages
+  out; derive what you can from the units.
+- *Test a route on an id that exists.* The age-model route "returned
+  nothing" for a column id that does not exist; it works for real ones.
 
 **Outreach (Barry, 22 October 2026).**
 
