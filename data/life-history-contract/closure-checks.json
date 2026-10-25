@@ -1,0 +1,57 @@
+{
+  "source": "Valentine and Jablonski 1986, PNAS 83:6912-6914, page 6913",
+  "assumptions": "n denotes group totals; percentages rounded to nearest whole percent; original unpublished data/test unavailable",
+  "source_reported_p": "0.01<P<0.05",
+  "size_tests": [
+    {
+      "counts": [
+        11,
+        36,
+        65,
+        160
+      ],
+      "pooled_two_sided_z_p": 0.26257162094870357,
+      "two_sided_fisher_p": 0.34418284388963355
+    },
+    {
+      "counts": [
+        11,
+        36,
+        66,
+        160
+      ],
+      "pooled_two_sided_z_p": 0.23519749502928988,
+      "two_sided_fisher_p": 0.2621869201586907
+    }
+  ],
+  "route_counterexample": {
+    "conditions": "adult_survival, fixed_intensity, stable_rounded, 32 post-disturbance steps",
+    "limit": "Changing duration also changes dose and total horizon; not an isolated duration effect",
+    "rows": [
+      {
+        "strategy": "fast",
+        "duration": 1,
+        "p_persist_to_horizon": 0.9561118374295993,
+        "excess_extinction_probability": 0.028016553733595573
+      },
+      {
+        "strategy": "slow",
+        "duration": 1,
+        "p_persist_to_horizon": 0.9940235705365831,
+        "excess_extinction_probability": 0.005976399685261453
+      },
+      {
+        "strategy": "fast",
+        "duration": 4,
+        "p_persist_to_horizon": 0.7583956567747145,
+        "excess_extinction_probability": 0.2197650353685947
+      },
+      {
+        "strategy": "slow",
+        "duration": 4,
+        "p_persist_to_horizon": 0.6636802608974541,
+        "excess_extinction_probability": 0.3363196479077187
+      }
+    ]
+  }
+}

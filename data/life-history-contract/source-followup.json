@@ -1,0 +1,47 @@
+{
+  "retrieved_at": "2026-10-25 Australia/Hobart",
+  "valentine_jablonski": {
+    "url": "https://www.pnas.org/doi/pdf/10.1073/pnas.83.18.6912",
+    "doi": "10.1073/pnas.83.18.6912",
+    "access_depth": "full 3-page primary PDF text extracted; pages6912 and6913 visually inspected",
+    "pdf": "Temporary primary PDF; not redistributed in this repository",
+    "sha256": "8bab886f36153b0bfb8469fe8f4b9ddfbc8b18f01d861a9e5c2c66fc9c06a8f9",
+    "source_reported_size_test_p": "0.01<P<0.05",
+    "independent_check_assumptions": "n interpreted as total genera; percentages rounded to nearest whole percent imply11/36 vs65/160 or66/160; pooled two-sided z and two-sided probability-ordering Fisher exact test",
+    "independent_checks": [
+      {
+        "counts": [
+          11,
+          36,
+          65,
+          160
+        ],
+        "pooled_two_sided_z_p": 0.26257162094870357,
+        "two_sided_fisher_p": 0.34418284388963355
+      },
+      {
+        "counts": [
+          11,
+          36,
+          66,
+          160
+        ],
+        "pooled_two_sided_z_p": 0.23519749502928988,
+        "two_sided_fisher_p": 0.2621869201586907
+      }
+    ],
+    "limits": "Original unpublished genus data and exact authors test procedure not recovered; source-reported significance conflicts with ordinary tests of displayed summary. Size-comparison sentence does not explicitly restrict to planktotrophs. No independent lifespan or demographic-route measurement."
+  },
+  "murray_townley_hodgson": {
+    "publisher": "https://www.journals.uchicago.edu/doi/10.1086/739750",
+    "crossref": "https://api.crossref.org/works/10.1086/739750",
+    "access_depth": "publisher abstract/history/bibliographic metadata; full Crossref JSON retrieved; no final main text",
+    "citation": "Murray, K., Townley, S. & Hodgson, D.2026. A Disturbing View of Life History Evolution. The American Naturalist207(6):785-799. doi:10.1086/739750.",
+    "publisher_published_online": "2026-04-07",
+    "publisher_issue_date": "2026-06-01",
+    "crossref_created": "2025-11-22T01:10:47Z",
+    "crossref_published_print_and_issued": "2026-06-01",
+    "crossref_published_online": null,
+    "interpretation": "2025 DOI record creation is not evidence of2025 final journal publication.2026 citation is correct."
+  }
+}

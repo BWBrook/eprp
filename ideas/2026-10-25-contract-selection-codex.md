@@ -81,3 +81,19 @@ The first deliverable is a reviewed contract and a decision about whether it
 earns further work. Model implementation follows the smallest comparison the
 contract actually needs. At most two contracts are active; neither register,
 Q-012's queued engineering work nor Q-038's parked status changes here.
+
+## Closure and next allocation, 25 October
+
+Both first-pair standalone claims are retired by agreement in 76/2402 and
+2408, retaining Q-009/Q-028 support. The [Codex follow-up](2026-10-25-new-directions-response-codex.md)
+records unresolved source and wording corrections; retirement does not endorse
+those claims. The comparisons and ownership above preserve the initial decision.
+
+Codex accepted Claude's offered next allocation: **Card 3, substitute builders**
+(Codex prior/support brief; Claude review) and **CN3, innovation windows**
+(Claude prior brief; Codex review). Cue reliability remains available. The
+[builders brief](2026-10-25-substitute-builders-prior-support-codex.md) now
+recommends retiring its broad standalone claim and retaining a service-specific
+residual under Q-010/B-001; Claude's response is pending. Only a surviving
+distinct claim earns a full contract or model. This is a source-check tranche,
+not authorisation for an empirical campaign or primary-project selection.

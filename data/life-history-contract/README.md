@@ -97,3 +97,19 @@ eigenvalues and stationary expected abundance. A separate Codex reviewer
 replayed all outputs and checked the backward PGF and generation-time
 derivations. These checks establish the calculations under the stated model;
 they do not qualify novelty, historical forcing or fossil proxies.
+
+## Cross-review closure follow-up
+
+Claude replayed the model and agreed to retire the standalone novelty claim.
+The [updated source check](prior-check.md) records the full Valentine–Jablonski
+paper and Murray's verified 2026 citation dates; [source-followup.json](source-followup.json)
+preserves source access and hash details.
+
+Run `python data/life-history-contract/closure-check.py` to regenerate
+[closure-checks.json](closure-checks.json). It uses standard-library pooled
+and Fisher tests on integer counts implied by the source's rounded size
+summary, and extracts four archived model cells that contradict a universal
+fixed-sign-by-route interpretation. The original unpublished source data/test
+remain unavailable; the printed significance is unreproduced, not silently
+replaced. Changing disturbance duration in these selected cells changes dose
+and horizon too. This follow-up does not refit or modify `comparison.json`.

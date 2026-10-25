@@ -2,32 +2,60 @@
 
 Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: both first-pair contracts concluded; next pair proposed (25 October).**
-Claude repaired its [recoverability contract](ideas/2026-10-25-contract-recoverability-claude.md)
-in place after Codex's review, and proposes **retiring its standalone claim**.
-What remains is standard birth–death estimation from replicated trajectories
-plus state-dependent recovery, and Goldberg & Friedman 2021 is prior. It
-becomes a design note for Q-009 on the evidence an erosion claim needs.
+**Current focus: next-pair source checks and independent infrastructure audit (25 October).**
+Codex accepted Claude's proposed allocation in 76/2408: substitute builders
+(Card 3) for Codex's prior/support brief, innovation windows (CN3) for
+Claude's, with review crossed. Cue reliability stays in reserve. The
+[Codex response](ideas/2026-10-25-new-directions-response-codex.md) accepts
+nearest-prior-first but rejects making all seven Big Questions selection
+criteria mandatory hypothesis gates: conditional mechanisms can be informative.
 
-Claude's [life-history review](ideas/2026-10-25-life-history-review-claude.md)
-**agrees to retire that standalone claim** too, folding it into Q-028 as a
-control and caution. Valentine & Jablonski 1986, read in full, made and tested
-the historical route × life-history prediction across the K–Pg and the
-end-Permian. At the K–Pg, larval type made no difference (39% survival for
-both types) and large, long-lived planktotrophs survived worse. Claude
-replayed Codex's computation exactly.
+**Substitute builders:** the [completed prior/support brief](ideas/2026-10-25-substitute-builders-prior-support-codex.md)
+recommends retiring the broad standalone claim and retaining a service-specific
+residual under Q-010/B-001. Close priors already cover replacement engineers
+and new reef ecologies. PARED's documented composition/guild/diversity fields
+concern builders and exclude the required dependant composition; the proposed
+public-PARED test fails its joint-support gate. The residual's novelty and
+empirical support remain unestablished. Claude is next to review this
+recommendation and deliver its CN3 prior brief; no new model or data build
+has begun.
 
-Claude's next-pair proposal is in 76; Codex is next responder.
+**Both first-pair standalone claims are retired by agreement (76/2402, 2408).**
+Recoverability becomes Q-009 support; life history becomes Q-028 support.
+The updated [life-history contract](ideas/2026-10-25-contract-life-history-codex.md)
+records the full Valentine–Jablonski source check: larval survival was 11/28
+versus 9/23; the printed size-test significance is not reproduced from the
+summary counts. Neither this source nor the toy identifies historical adult
+mortality. The toy also permits winner changes within one route, so Claude's
+fixed-sign summary needs correction. [Reproducible closure checks](data/life-history-contract/closure-checks.json)
+preserve the evidence. Murray's final citation remains 2026. Codex requested
+correction of contradictory older recoverability passages in 76/2410; the
+retirement decision does not validate them.
 
-**New output line, approved by Barry (Claude chat, 25 October): the
-infrastructure-audit paper.** The scaffold is in
-[papers/infrastructure-audit/](papers/infrastructure-audit/README.md), with a
-189-claim first-pass ledger, gates for replay and disclosure, and a proposed
-division of roles. Before any release:
-- [Detail withheld pending disclosure to the data custodian.]
-- **Provider and author contacts** go first.
+**Infrastructure-audit paper: approved preparation; first independent tranche complete.**
+The [scaffold](papers/infrastructure-audit/README.md) holds Barry's approval
+and 189 candidate-claim rows. Codex's [priority review](papers/infrastructure-audit/evidence/priority-review-2026-10-25/README.md)
+covers ten groups/16 rows, with saved-output recalculations and explicit
+limits on original implementation replay. It finds an off-by-one headline,
+a conflated sample/probe maximum, a declared/executed hiatus discrepancy,
+and missing differential replay evidence for C045. The [methods proposal](papers/infrastructure-audit/evidence/2026-10-25-audit-design-codex.md)
+distinguishes case-specific improvements from untested claims of AI superiority.
+The 189 rows are not 189 independent defects; 173 remain outside this tranche.
+Packages PR #18 (`efbd8f6`) is integrated; its additional T4/T5 findings were
+reported in 76/2409 but are outside this independent audit.
 
-**Previous focus: first contract pair drafted; Codex review and life-history prior check complete (25 October).**
+[Detail withheld pending disclosure to the data custodian.]
+
+**Accepted ownership:** Codex owns its dated response/builders brief,
+life-history source/control follow-up, separate audit evidence, README and
+this status. Claude owns its CN3 brief, contract corrections, scaffold and
+ledger. Databases/Packages and Q-012/Q-007 owners retain their source and
+analysis files. Claude is next to integrate or challenge the audit findings
+and coordinate the named owner replays; Codex then reviews corrected evidence.
+No registers or primary-project selections changed. Q-012 remains queued;
+Q-038 remains parked.
+
+**Earlier checkpoint, superseded by the closure above: first contract pair drafted (25 October).**
 Barry explicitly instructed Codex to close the round, prepare the closing map
 and independent cards, and coordinate the first crossed contracts. The
 [closing map](ideas/2026-10-25-blue-sky-closing-map.md) is complete: all 43

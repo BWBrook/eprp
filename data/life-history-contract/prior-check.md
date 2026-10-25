@@ -61,7 +61,10 @@ and text-extracted locally into temporary files. Murray's older preprint was
 read through web PDF extraction; it is explicitly distinguished below from
 the final article. No figures were quantitatively reanalysed. Locations below
 are printed pages where available, otherwise named sections. All access
-depths refer to this check, not an earlier session's reading.
+depths refer to this check, not an earlier session's reading. The later
+25 October follow-up read the full Valentine–Jablonski PDF, visually checked
+its table/size results, and verified Murray's publisher dates. A
+[source receipt](source-followup.json) preserves URLs, access and PDF hash.
 
 ## Closest sources and what they actually establish
 
@@ -94,8 +97,11 @@ under a long press.
 ### 2. Murray, Townley & Hodgson (2026): disturbance can favour either strategy
 
 *A Disturbing View of Life History Evolution.* American Naturalist
-207:785–799. [Final DOI](https://doi.org/10.1086/739750).
+207(6):785–799. [Final DOI](https://doi.org/10.1086/739750).
 **Access:** final publisher abstract/metadata; final main text gated.
+Follow-up: the publisher records online publication on 7 April 2026 and the
+June 2026 issue. Crossref's 22 November 2025 creation date concerns the DOI
+record, not final publication; retain 2026 as the citation year.
 Also inspected relevant introduction/methods of the
 [2024 preprint](https://doi.org/10.22541/au.172220827.78164261/v1),
 [accessible PDF](https://d197for5662m48.cloudfront.net/documents/publicationstatus/215847/preprint_pdf/ccfa9d47a04a483d5338d25401eceeb1.pdf).
@@ -298,15 +304,31 @@ The closer companion is Valentine, J.W. & Jablonski, D. (1986), *Mass
 extinctions: Sensitivity of marine larval types*, PNAS 83:6912–6914.
 [DOI](https://doi.org/10.1073/pnas.83.18.6912);
 [PubMed abstract](https://pubmed.ncbi.nlm.nih.gov/16593761/).
-**Access:** complete abstract, not scanned full text.
-**Source result:** It explicitly predicts selection against feeding larvae
-if impact-induced loss of planktonic food lasts months/years, but reports
-equal survival of planktotrophic/nonplanktotrophic prosobranchs at the K–Pg.
-It contrasts indirect evidence of prolonged end-Permian selection against
-planktotrophy. **Boundary:** no controlled generation-time comparison follows
-from the abstract. This is already a demographic-route argument confronted
-with contrary fossil evidence, and deserves full-text recovery before any
-claim that the proposed empirical comparison is new.
+**Access, updated 25 October:** full [primary three-page PDF](https://www.pnas.org/doi/pdf/10.1073/pnas.83.18.6912),
+text and visual checks of pp. 6912–6913; source/hash in [source-followup.json](source-followup.json).
+**Source results:** Table 1 gives 11/28 versus 9/23 surviving Coastal Plain
+gastropod genera, approximately 39% in each larval group. Page 6913 reports
+31% survival for genera above 4 cm (n=36) and 41% below 4 cm (n=160), with
+size defined by genus median shell height/length geometric mean. That
+sentence does not explicitly restrict the comparison to planktotrophs;
+its printed significance is 0.01<P<0.05. A separate small-planktotroph
+comparison is explicitly nonsignificant. The paper rejects brief catastrophic
+plankton loss; it does not identify adult mortality. Its end-Permian inference
+is indirect, conditional and needs corroboration; the quoted 5–17 Myr reflects
+its contemporary timescale.
+
+**Unresolved numerical discrepancy:** interpreting n as group totals and
+rounding to whole percentages implies 11/36 versus 65/160 or 66/160.
+Our [standard-library check](closure-check.py) gives two-sided pooled-test
+P=0.263/0.235 and Fisher P=0.344/0.262. These do not reproduce the printed
+significance. The source cites unpublished data; the exact original test and
+counts remain unavailable. Report the discrepancy rather than silently
+correcting the source or treating its significance as validated.
+
+**Boundary:** larval mode, size and longevity are not interchangeable
+measurements. This is already a demographic-route argument tested against
+fossil evidence, not an independently identified adult-mortality mechanism or
+controlled generation-time comparison.
 
 ## Controls the minimal model needs
 
@@ -352,9 +374,9 @@ results attributed to the papers.
 
 ## What remains missing, and disposition
 
-The decisive literature gap in this check is access to Murray's final main
-text and a careful full-text comparison with Valentine & Jablonski, not
-another broad list of extinction-selectivity papers. The source search also
+The remaining close-source gap is access to Murray's final main text. The
+Valentine–Jablonski follow-up is complete, with the unresolved numerical
+discrepancy preserved; another broad list of selectivity papers is not needed. The source search also
 does not establish a compiled fossil dataset with independent adult longevity,
 maturation, body size, physiological exposure, demographic route and event
 duration for two contrasting events. Histology, growth increments and larval

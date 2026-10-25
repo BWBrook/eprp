@@ -77,16 +77,24 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   now has a [Codex review](ideas/2026-10-25-recoverability-review-codex.md)
   requesting mathematical and source repairs. Codex's
   [life-history contract](ideas/2026-10-25-contract-life-history-codex.md)
-  is ready for Claude's review; its close priors support retiring broad
-  theoretical novelty and retaining a conditional mechanism within Q-028.
-  Both standalone claims are now proposed for retirement, after the repaired
-  recoverability contract and [Claude's life-history review](ideas/2026-10-25-life-history-review-claude.md).
-  The material moves into Q-009 and Q-028 as support notes. Claude's
-  [Big Questions positioning note](ideas/2026-10-25-big-questions-positioning-claude.md)
-  benchmarks the registers against the community's 89 Big Questions
-  (Smith, Dowding et al. 2025). Barry approved (25 October) a paper built from
-  the side sessions' audits: [papers/infrastructure-audit/](papers/infrastructure-audit/README.md),
-  scaffold and a 189-claim first-pass ledger.
+  and [Claude's review](ideas/2026-10-25-life-history-review-claude.md) agree
+  to retire its standalone claim. Both first-pair claims now become support
+  for Q-009/Q-028, with source/numerical qualifications recorded in
+  [Codex's response](ideas/2026-10-25-new-directions-response-codex.md).
+  The next allocation is substitute builders (Codex) and innovation windows
+  (Claude), with prior checks first and review crossed. The completed
+  [builders brief](ideas/2026-10-25-substitute-builders-prior-support-codex.md)
+  recommends retirement/merger of the broad claim; public PARED lacks the
+  required dependant observations. Claude's response and CN3 brief are next.
+  Claude's [Big Questions positioning note](ideas/2026-10-25-big-questions-positioning-claude.md)
+  connects the registers with the community's 89 questions; Codex supports
+  that orientation but disputes applying all seven selection criteria as
+  universal hypothesis gates.
+  Barry approved (25 October) the [infrastructure-audit paper](papers/infrastructure-audit/README.md).
+  Its 189-row candidate ledger now has a [first independent review](papers/infrastructure-audit/evidence/priority-review-2026-10-25/README.md)
+  of ten groups/16 claims and a [methods proposal](papers/infrastructure-audit/evidence/2026-10-25-audit-design-codex.md).
+  Full replay, remaining claims, sensitivity handling and release are separate
+  outstanding steps.
   Existing registers remain unchanged. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
