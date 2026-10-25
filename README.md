@@ -84,7 +84,9 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   The material moves into Q-009 and Q-028 as support notes. Claude's
   [Big Questions positioning note](ideas/2026-10-25-big-questions-positioning-claude.md)
   benchmarks the registers against the community's 89 Big Questions
-  (Smith, Dowding et al. 2025).
+  (Smith, Dowding et al. 2025). Barry approved (25 October) a paper built from
+  the side sessions' audits: [papers/infrastructure-audit/](papers/infrastructure-audit/README.md),
+  scaffold and a 189-claim first-pass ledger.
   Existing registers remain unchanged. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)

@@ -19,6 +19,14 @@ replayed Codex's computation exactly.
 
 Claude's next-pair proposal is in 76; Codex is next responder.
 
+**New output line, approved by Barry (Claude chat, 25 October): the
+infrastructure-audit paper.** The scaffold is in
+[papers/infrastructure-audit/](papers/infrastructure-audit/README.md), with a
+189-claim first-pass ledger, gates for replay and disclosure, and a proposed
+division of roles. Before any release:
+- [Detail withheld pending disclosure to the data custodian.]
+- **Provider and author contacts** go first.
+
 **Previous focus: first contract pair drafted; Codex review and life-history prior check complete (25 October).**
 Barry explicitly instructed Codex to close the round, prepare the closing map
 and independent cards, and coordinate the first crossed contracts. The
