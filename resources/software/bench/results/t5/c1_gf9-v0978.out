@@ -1,0 +1,264 @@
+**** TESTING - configs/eb_go_gs_ac_bg_test.xml ****
+make[1]: Entering directory '/home/cg/cgenie.muffin/genie-main'
+makefile:142: target 'clean_plasim' given more than once in the same rule
+makefile:168: target '/home/cg/cgenie.muffin/genie-plasim/' given more than once in the same rule
+makefile:177: target '/home/cg/cgenie.muffin/genie-plasim/lib/libplasim.a' given more than once in the same rule
+\cd /home/cg/cgenie.muffin/genie-lib/libnc1; make libnc1.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-lib/libnc1'
+make[2]: 'libnc1.a' is up to date.
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-lib/libnc1'
+\cd /home/cg/cgenie.muffin/genie-lib/libutil1; make libutil1.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-lib/libutil1'
+make[2]: 'libutil1.a' is up to date.
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-lib/libutil1'
+\cd /home/cg/cgenie.muffin/genie-main/src/fortran/cmngem; make libcmngem.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-main/src/fortran/cmngem'
+make[2]: 'libcmngem.a' is up to date.
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-main/src/fortran/cmngem'
+\cp /home/cg/cgenie.muffin/genie-main/src/fortran/cmngem/*.mod /home/cg/cgenie.muffin/genie-main/include
+\cd /home/cg/cgenie.muffin/genie-goldstein/lib/..; make libgoldstein.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-goldstein'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-goldstein/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-goldstein/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-goldstein/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-goldstein/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-goldstein'
+if [ -d /home/cg/cgenie.muffin/genie-goldstein/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-goldstein/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-embm/lib/..; make libembm.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-embm'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-embm/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-embm/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-embm/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-embm/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-embm'
+if [ -d /home/cg/cgenie.muffin/genie-embm/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-embm/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-plasim/lib/..; make libplasim.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-plasim'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-plasim/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-plasim/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-plasim/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-plasim/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-plasim'
+if [ -d /home/cg/cgenie.muffin/genie-plasim/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-plasim/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-goldsteinseaice/lib/..; make libgoldsteinseaice.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-goldsteinseaice'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-goldsteinseaice/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-goldsteinseaice/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-goldsteinseaice/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-goldsteinseaice/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-goldsteinseaice'
+if [ -d /home/cg/cgenie.muffin/genie-goldsteinseaice/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-goldsteinseaice/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-ents/lib/..; make libents.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-ents'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-ents/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-ents/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-ents/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-ents/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-ents'
+if [ -d /home/cg/cgenie.muffin/genie-ents/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-ents/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-atchem/lib/..; make libatchem.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-atchem'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-atchem/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-atchem/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-atchem/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-atchem/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-atchem'
+if [ -d /home/cg/cgenie.muffin/genie-atchem/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-atchem/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-biogem/lib/..; make libbiogem.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-biogem'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-biogem/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-biogem/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-biogem/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-biogem/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-biogem'
+if [ -d /home/cg/cgenie.muffin/genie-biogem/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-biogem/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-sedgem/lib/..; make libsedgem.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-sedgem'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-sedgem/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-sedgem/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-sedgem/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-sedgem/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-sedgem'
+if [ -d /home/cg/cgenie.muffin/genie-sedgem/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-sedgem/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-rokgem/lib/..; make librokgem.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-rokgem'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-rokgem/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-rokgem/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-rokgem/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-rokgem/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-rokgem'
+if [ -d /home/cg/cgenie.muffin/genie-rokgem/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-rokgem/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-ecogem/lib/..; make libecogem.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-ecogem'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-ecogem/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-ecogem/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-ecogem/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-ecogem/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-ecogem'
+if [ -d /home/cg/cgenie.muffin/genie-ecogem/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-ecogem/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-goldlite/lib/..; make libgoldlite.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-goldlite'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-goldlite/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-goldlite/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-goldlite/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-goldlite/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-goldlite'
+if [ -d /home/cg/cgenie.muffin/genie-goldlite/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-goldlite/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-gemlite/lib/..; make libgemlite.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-gemlite'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-gemlite/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-gemlite/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-gemlite/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-gemlite/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-gemlite'
+if [ -d /home/cg/cgenie.muffin/genie-gemlite/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-gemlite/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd /home/cg/cgenie.muffin/genie-ocnlite/lib/..; make libocnlite.a
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-ocnlite'
+\cd src/fortran ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-ocnlite/src/fortran'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-ocnlite/src/fortran'
+\cd lib ; make all
+make[3]: Entering directory '/home/cg/cgenie.muffin/genie-ocnlite/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cg/cgenie.muffin/genie-ocnlite/lib'
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-ocnlite'
+if [ -d /home/cg/cgenie.muffin/genie-ocnlite/lib/../mod ] ; then \
+	\cp /home/cg/cgenie.muffin/genie-ocnlite/lib/../mod/*.mod /home/cg/cgenie.muffin/genie-main/include; \
+fi
+\cd src/c; make
+make[2]: Entering directory '/home/cg/cgenie.muffin/genie-main/src/c'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/cg/cgenie.muffin/genie-main/src/c'
+make[1]: Leaving directory '/home/cg/cgenie.muffin/genie-main'
+STARTING EXPERIMENT:
+Sun Oct 25 01:12:56 UTC 2026
+
+ *******************************************************
+  *** Welcome to cGENIE -- version:    0
+ *******************************************************
+
+ =======================================================
+  >>> Initialising GOLDSTEIN ocean module ...
+  <<< Initialisation complete
+ =======================================================
+ =======================================================
+  >>> Initialising EMBM atmosphere module ...
+  <<< Initialisation complete
+ =======================================================
+ =======================================================
+  >>> Initialising sea-ice module ...
+  <<< Initialisation complete
+ =======================================================
+ =======================================================
+  >>> Initialising GEM geochemistry module ...
+  <<< Initialisation complete
+ =======================================================
+ =======================================================
+  >>> Initialising BIOGEM ocean biogeochem. module ...
+  
+ *** WARNING ***
+  -> Originating location in code [module,subroutine]: biogem_data,sub_check_par
+  -> ERROR MESSAGE: Particulate tracer CaCO3 does not have *all possible* corresponding ocean tracers selected, e.g. Ca (BUT may not need them, esp. if involving the Fe sytem ...)
+  -> ERROR ACTION:  CONTINUING
+  
+  <<< Initialisation complete
+ =======================================================
+free(): invalid pointer
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7b5baa67dd4a
+#1  0x7b5baa67cee5
+#2  0x7b5baa31808f
+#3  0x7b5baa31800b
+#4  0x7b5baa2f7858
+#5  0x7b5baa362265
+#6  0x7b5baa36a2fb
+#7  0x7b5baa36bb2b
+#8  0x5db0b4a68545
+#9  0x5db0b47e7aee
+#10  0x5db0b47c78fe
+#11  0x7b5baa2f9082
+#12  0x5db0b47c792d
+#13  0xffffffffffffffff
+./genie.job: line 357:   176 Aborted                 (core dumped) ./genie.exe
+
+real	0m1.198s
+user	0m0.330s
+sys	0m0.552s
+cp: cannot stat 'fort.2': No such file or directory
+ERROR: !!!!!!!!!! ERROR PROCESSING !!!!!!!!!!

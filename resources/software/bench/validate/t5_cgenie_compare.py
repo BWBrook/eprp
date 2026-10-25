@@ -20,8 +20,8 @@ for ib, t in enumerate(np.asarray(b["time"][:])):
         continue
     row = {"time": float(t)}
     for v, k in scale.items():
-        fa = np.ma.masked_invalid(a[v][ia[0]]) * k
-        fb = np.ma.masked_invalid(b[v][ib]) * k
+        fa = np.ma.masked_invalid(np.ma.asarray(a[v][ia[0]], dtype=float)) * k
+        fb = np.ma.masked_invalid(np.ma.asarray(b[v][ib], dtype=float)) * k
         wet = ~np.ma.getmaskarray(fa) & ~np.ma.getmaskarray(fb)
         w = vol * wet
         ma, mb = float((fa.filled(0) * w).sum() / w.sum()), float((fb.filled(0) * w).sum() / w.sum())
@@ -31,10 +31,10 @@ for ib, t in enumerate(np.asarray(b["time"][:])):
                   "identical": bool(np.array_equal(fa.filled(np.nan), fb.filled(np.nan), equal_nan=True)),
                   "wet_cells": int(wet.sum()),
                   "mask_mismatch": int((np.ma.getmaskarray(fa) != np.ma.getmaskarray(fb)).sum())}
-    graded = t > 100
+    graded = bool(t > 100)
     row["graded"] = graded
     if graded:
-        row["pass"] = (abs(row["ocn_temp"]["diff"]) <= 0.05 and abs(row["ocn_O2"]["diff"]) <= 1.0
+        row["pass"] = bool(abs(row["ocn_temp"]["diff"]) <= 0.05 and abs(row["ocn_O2"]["diff"]) <= 1.0
                        and row["ocn_temp"]["r"] >= 0.99 and row["ocn_O2"]["r"] >= 0.99)
     slices.append(row)
 

@@ -1,0 +1,44 @@
+{
+  "units_in_output": {
+    "temperature": "degC",
+    "pO2": "matm",
+    "habitat_viability": "(%)"
+  },
+  "temperature_interpreted_as": "degC",
+  "pO2_interpreted_as": "atm",
+  "pO2_range": [
+    -3.403571099624969e-05,
+    0.2476484626531601
+  ],
+  "M1": {
+    "cells": 524,
+    "cells_with_negative_pO2": 2,
+    "n_ecotypes": 10000,
+    "max_abs_z": 1.8124609767023565,
+    "mean_abs_z": 0.6685327184809382,
+    "max_abs_diff": 0.008505864522574569,
+    "pass": true
+  },
+  "M2": {
+    "max_abs_diff_percent": 3.662109378410605e-06,
+    "pass": false,
+    "post_hoc_ecotype_viability_mismatches": 0,
+    "post_hoc_missing_entries_in_cells": 3023696,
+    "post_hoc_ecotype_cells": 5240000
+  },
+  "M3": {
+    "cells": 524,
+    "cells_excluded_nonpositive": 2,
+    "median_abs_dlog": 0.00036101610658190175,
+    "max_abs_dlog": 0.0005763972682415464,
+    "fraction_within_0.02": 0.9961832061068703,
+    "pass": true,
+    "nu_31.9_median_abs_dlog": 0.0003085611092409346,
+    "nu_31.9_max_abs_dlog": 0.0004823836880971655,
+    "depths_m": [
+      40.42035469293703,
+      127.5515430420754,
+      228.77022554277085
+    ]
+  }
+}
