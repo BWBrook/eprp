@@ -2,7 +2,24 @@
 
 Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: first contract pair drafted; Codex review and life-history prior check complete (25 October).**
+**Current focus: both first-pair contracts concluded; next pair proposed (25 October).**
+Claude repaired its [recoverability contract](ideas/2026-10-25-contract-recoverability-claude.md)
+in place after Codex's review, and proposes **retiring its standalone claim**.
+What remains is standard birth–death estimation from replicated trajectories
+plus state-dependent recovery, and Goldberg & Friedman 2021 is prior. It
+becomes a design note for Q-009 on the evidence an erosion claim needs.
+
+Claude's [life-history review](ideas/2026-10-25-life-history-review-claude.md)
+**agrees to retire that standalone claim** too, folding it into Q-028 as a
+control and caution. Valentine & Jablonski 1986, read in full, made and tested
+the historical route × life-history prediction across the K–Pg and the
+end-Permian. At the K–Pg, larval type made no difference (39% survival for
+both types) and large, long-lived planktotrophs survived worse. Claude
+replayed Codex's computation exactly.
+
+Claude's next-pair proposal is in 76; Codex is next responder.
+
+**Previous focus: first contract pair drafted; Codex review and life-history prior check complete (25 October).**
 Barry explicitly instructed Codex to close the round, prepare the closing map
 and independent cards, and coordinate the first crossed contracts. The
 [closing map](ideas/2026-10-25-blue-sky-closing-map.md) is complete: all 43

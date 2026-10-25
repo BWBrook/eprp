@@ -5,6 +5,39 @@ Claude, 25 October 2026. Drafted under the crossed allocation accepted in
 [its nominations](2026-10-25-nominations-codex.md), and the protocol is in the
 [closing map](2026-10-25-blue-sky-closing-map.md).
 
+## Disposition after cross-review (25 October)
+
+**Retire the standalone claim. Keep this note as a design note supporting
+Q-009.** Codex's [review](2026-10-25-recoverability-review-codex.md) is
+right on all five points, and the corrections are made in place below.
+
+**Why the contribution does not survive as a standalone question:**
+- **The deadline was not implemented.** The tuned worlds matched median
+  timing among eventual successes, not rescue before τ_f. With a deadline of
+  13 they differ sharply: rescue probabilities are 0.49, 0.89, 1.00 and 0.57
+  for scarcity, growth erosion, provision erosion and import.
+- **The rescue-time formula is a large-K approximation, not exact first
+  passage.** At K = 10⁶ its timing error is about 0.002–0.004, so the table
+  stands as an approximation.
+- **The diagnostics are conditional, not an identification theorem.** With
+  ideal replicated timing data and known b, d and K0, the mean and CV² of
+  Z = exp(−rT) are c_p·a/K0 and (b + d)/(a·r). Those identify a and c_p at
+  *any* finite founder number, so the few-founder cutoff is practical, not
+  structural. Near-critical growth erosion (b = 1.0001) has a 0.905
+  extinction probability, so erosion is not always uniform and slow.
+- **The diagnostics are standard.** What remains is the standard estimation
+  of birth–death parameters from replicated trajectories, plus
+  state-dependent recovery. Goldberg & Friedman 2021 already analyse rescue
+  windows, mutation arrival and trajectories.
+
+**What carries forward to Q-009, as a design note.** An erosion or ratchet
+claim cannot rest on outcomes or dates. It needs:
+- a deadline-aware rescue target;
+- trajectories after release;
+- abundance and function measured together;
+- replicated timing distributions with stated nuisance parameters;
+- a census before release, or knowledge of mutation supply.
+
 **This is a contract, not a result.** It states the target, what the nearest
 models already establish, the minimal generative comparison, what is
 identifiable, and the conditions for retaining, merging or retiring the
@@ -51,23 +84,24 @@ Its ingredients are occupied separately.**
 
 | Source | What it establishes | What it does not |
 | --- | --- | --- |
-| **Meijer, van Dijk & Hogeweg 2020**, *Commun. Biol.* [10.1038/s42003-020-1107-x](https://doi.org/10.1038/s42003-020-1107-x). Full text; supplement unread. | Remove one lineage with mutation rates set to zero, and recovery can come only from standing variants (checked). Rare autonomous mutants rescue some cases. 407 of 412 surviving cases grow more slowly alone (checked). Dependencies change over evolutionary time through turnover of the dominant genotypes. | It does not separate scarcity from erosion, and has no trajectory or dispersion analysis. Its removal tests are not replicated from an identical state. Survivors initially grow on **building blocks left by the removed partner**, a carry-over transient (section 6). |
-| **Melero-Jiménez et al. 2025**, *Nat. Commun.* 16:3482, [10.1038/s41467-025-58742-1](https://doi.org/10.1038/s41467-025-58742-1), "Mutualism breakdown underpins evolutionary rescue in an obligate cross-feeding bacterial consortium". Full text. | **The closest empirical neighbour in analysis style.** Stress on obligate *E. coli* cross-feeders gives U-shaped recovery curves, measured as time to recovery, maximal recovery rate and final density. Dispersion is tested between stresses with a Levene test (checked). Rescue came by de novo bypass of auxotrophy, and the authors attribute one strain's advantage to its greater abundance, i.e. mutation supply. | It does not manipulate standing alternatives or competence, and does not separate mechanisms. The perturbation is stress on both partners, not removal of a provider. **It adds the fifth mechanism, de novo reversion.** |
+| **Meijer, van Dijk & Hogeweg 2020**, *Commun. Biol.* [10.1038/s42003-020-1107-x](https://doi.org/10.1038/s42003-020-1107-x). Full text; supplement unread. | Remove one lineage with mutation rates set to zero, and recovery can come only from standing variants (checked). Rare autonomous mutants rescue some cases. 407 of 412 surviving cases grow more slowly alone (checked). Dependencies change over evolutionary time through turnover of the dominant genotypes. | It does not separate scarcity from erosion. **Corrected:** post-removal trajectories *are* shown; what is missing is the matched-state discrimination and replicated-removal analysis. Its removal tests are not replicated from an identical state. Survivors initially grow on **building blocks left by the removed partner**, a carry-over transient (section 6). |
+| **Melero-Jiménez et al. 2025**, *Nat. Commun.* 16:3482, [10.1038/s41467-025-58742-1](https://doi.org/10.1038/s41467-025-58742-1), "Mutualism breakdown underpins evolutionary rescue in an obligate cross-feeding bacterial consortium". Full text. | **The closest empirical neighbour in analysis style.** Stress on obligate *E. coli* cross-feeders gives U-shaped recovery curves, measured as time to recovery, maximal recovery rate and final density. Dispersion is tested between stresses with a Levene test (checked). Rescue came by de novo bypass of auxotrophy, and the authors attribute one strain's advantage to its greater abundance, i.e. mutation supply. | It does not manipulate standing alternatives or competence, and does not separate mechanisms. The perturbation is stress on both partners, not removal of a provider. **It adds the fifth mechanism, de novo reversion.** **Corrected:** it establishes restoration of autonomy by compensation, *not* the absence of standing compensatory variants when stress began (there were preculture and stress-free transfers). The mutation-supply explanation is provisional; mutational target size is an alternative. A world with zero standing variants is a model assumption. |
 | **Morris, Lenski & Zinser 2012**, *mBio* (the Black Queen hypothesis). Full text. | Adaptive loss of leaky functions. Function supply is k = k0 + Σ N_i L_i k_i, the same form as S = s·c_p·A here. Frequency dependence keeps helpers rare but present. | It says nothing on regaining a function or on recovery after helpers are lost. |
 | **Morris, Papoulis & Lenski 2014**, *Evolution*. Abstract. | Stable coexistence of helpers and beneficiaries over 1,200 generations, with helpers' provision rising. | No removal experiment. |
 | **Ellers et al. 2012**, *Ecol. Lett.* [10.1111/j.1461-0248.2012.01830.x](https://doi.org/10.1111/j.1461-0248.2012.01830.x). Full text, author copy. | "Compensated trait loss", with parasitoid lipogenesis as the main case. Loss tightens dependence and coextinction risk. Some parasitoids have *regained* lipid synthesis, by mechanisms unknown. | No timing or trajectories. |
 | **Lahti et al. 2009**, *TREE* [10.1016/j.tree.2009.03.010](https://doi.org/10.1016/j.tree.2009.03.010). Full text, author copy. | Unused traits decay slowly when the loss is neutral and quickly when the trait is costly. Reversibility of genetic loss is not quantified. | No link to recovery dynamics. |
-| **Marshall, Raff & Raff 1994**, *PNAS* [10.1073/pnas.91.25.12283](https://doi.org/10.1073/pnas.91.25.12283). Abstract only. | Silenced genes keep a significant chance of reactivation for about **0.5–6 Myr**, and essentially none after about 10 Myr unless otherwise constrained. | The decay model is unverified, since the full text was blocked. |
+| **Marshall, Raff & Raff 1994**, *PNAS* [10.1073/pnas.91.25.12283](https://doi.org/10.1073/pnas.91.25.12283). Abstract only. | Silenced genes keep a significant chance of reactivation for about **0.5–6 Myr**, and essentially none after about 10 Myr unless otherwise constrained. | The decay model is unverified, since the full text was blocked. It is **not** a clock for ecological dependence (withdrawn below). |
 | **Sachs & Simms 2006**, *TREE*. Abstract. | Reversion to autonomy may be a common end point of mutualism breakdown, on phylogenetic evidence. | Body unread. |
-| **Goldberg & Friedman 2020**, bioRxiv. Abstract. | Positive interactions lower the probability of evolutionary rescue through a threshold in minimum numbers. | Rescue probability only; no trajectories. |
+| **Goldberg & Friedman 2021**, *PLOS Comput. Biol.* [10.1371/journal.pcbi.1008732](https://doi.org/10.1371/journal.pcbi.1008732). The scout read only the 2020 bioRxiv abstract. | Positive interactions lower the probability of evolutionary rescue. **Corrected (Codex's review):** the published paper analyses rescue windows, mutation arrival and trajectories altered by competition. My earlier "rescue probability only; no trajectories" was wrong. | It does not set out this particular five-way map. |
 
 **What this changes in the contract:**
 - **A fifth mechanism.** De novo reversion is a distinct route, and it is the
   one observed in the closest experiment.
-- **A timescale for deep time.** If competence is gene-based, Marshall et
-  al.'s reactivation window predicts that recoverability falls over roughly
-  0.5–10 Myr of dependence. That is a geological, testable timescale for the
-  erosion claim, though from the abstract only.
+- **A timescale for deep time: withdrawn (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md)).** Marshall et al.'s
+  reactivation bounds concern genetic information kept or lost under
+  selective maintenance. They do not supply a clock running from ecological
+  dependence to gene silencing to ecological recovery. Using 0.5–10 Myr here
+  is an untested extrapolation, not a prediction from the paper.
 - **A new rival.** Carry-over of the partner's leftover products (Meijer) can
   mimic an additive onset.
 
@@ -92,7 +126,15 @@ Scopus or Web of Science.
 W = lim A(t)·e^(−rt) is 0 with probability d/b, and otherwise exponential
 with mean b/r. The time to rescue is therefore
 
-> T = (ln K − ln W) / r, with r = b0·c_g − d and K = θ/(s·c_p).
+> T ≈ (ln K − ln W) / r, with r = b0·c_g − d and K = θ/(s·c_p).
+
+**This is a large-K approximation for supercritical growth, not the exact
+first passage H_K (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md)).** A lineage can reach K and then die out, and
+(d/b)^a is eventual extinction, not failure to reach a finite threshold.
+- *Exact counterexample:* b = 2, d = 1, a = 1, K = 2. Never reaching K has
+  probability 1/3, against eventual extinction of 1/2.
+- *At K = 10⁶:* the leading timing error is about 0.002–0.004.
+- *The target that should have been used:* P(H_K ≤ τ_f).
 
 **The confound is explicit in this formula.** Abundance (through W), growth
 competence (through r) and provision competence (through K) all enter one
@@ -125,12 +167,17 @@ README. SD is of rescue time among replicates that recover.
 - **Scarcity** shows as *dispersion between replicates*: some replicates never
   recover, and timing is variable. That is the founder-loss mechanism, the
   absorbing boundary at extinction from Claude's order card, which this
-  contract carries as its shared control. **It is identifiable only when very
-  few founders survive.** The never-recover rate is 1/8 at a = 3 and about
+  contract carries as its shared control. **In practice it stands out only
+  when few founders survive.** That is practical, not structural: with ideal
+  replicated timing data and known nuisance parameters, a is identifiable at
+  any finite value (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md)). The never-recover rate is 1/8 at a = 3 and about
   10⁻³ at a = 10. Timing SD falls from 1.18 at a = 3 to 0.33 at a = 30 and
   0.18 at a = 100, close to growth erosion's 0.13.
 - **Import** shows as a *concave onset*: early additive arrivals, then
-  exponential growth.
+  exponential growth. **That curve is log E[A(t)], an ensemble mean** (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md)).
+  Individual replicates often have zero alternatives early: the probability
+  is 0.48 at t = 0.25 and 0.25 at t = 0.5. Concavity of the mean does not
+  identify import against new variants or carry-over.
 - **De novo reversion** shows *dispersion like scarcity's*, about 1.2 in
   both. It separates from scarcity by:
   - whether alternatives exist *before* release, which needs a census before
@@ -141,7 +188,9 @@ README. SD is of rescue time among replicates that recover.
   This is exactly the inference Melero-Jiménez et al. draw from strain
   abundance.
 
-**The substantive conclusion this contract would test.** Erosion is
+**The substantive conclusion this contract would test** (as drafted; the
+"only" below is withdrawn: these are conditional candidate diagnostics, not
+necessary or sufficient conditions (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md))). Erosion is
 distinguishable from scarcity only with *trajectories* (for growth erosion),
 *paired measurements of abundance and function* (for provision erosion), or
 *replicated recoveries from very few founders* (for scarcity). Scarcity is
@@ -159,8 +208,8 @@ mechanisms:
 - relaxed selection lowers c_g or c_p;
 - lost connectivity lowers m;
 - loss of the target sequences lowers the chance of reversion per mutation,
-  and with it μ. On Marshall et al.'s window, that happens over about
-  0.5–10 Myr if competence is gene-based.
+  and with it μ. Any timescale for this is untested. Marshall et al.'s
+  reactivation bounds do not supply one (withdrawn above).
 
 **Erosion is the specific claim that c_g or c_p falls with d_dep at matched
 a.** The contract's predictive form is:
@@ -222,6 +271,9 @@ These apply only if an empirical application is proposed.
     dependence.
   - **Its first support question:** do symbiosis-proxy time series exist at
     a resolution finer than the recovery, at more than one site?
+  - **Prior to that, the biological units must be mapped (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md)).** Host counts
+    are not automatically counts of the autonomous alternatives A, and a host
+    isotope proxy is not automatically service per alternative.
 
 ## 8. Retain, merge or retire
 

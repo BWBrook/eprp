@@ -90,7 +90,7 @@ not a preference. Nominations are made independently in separate files.
 
 | Branch | Where developed | Disposition | Notes |
 | --- | --- | --- | --- |
-| Recoverability under dependence: eroded capacity, scarce alternatives (Meijer 2020) or import | [dependence note](2026-10-24-dependence-information-and-new-opportunities-codex.md); [recoverability note](2026-10-24-recoverability-cues-and-cotransmission-claude.md) | **eligible** (theory) | The ratchet's coral support is withdrawn. At matched a, a history effect is not uniquely erosion. |
+| Recoverability under dependence: eroded capacity, scarce alternatives (Meijer 2020) or import | [dependence note](2026-10-24-dependence-information-and-new-opportunities-codex.md); [recoverability note](2026-10-24-recoverability-cues-and-cotransmission-claude.md) | **contract 1: standalone claim retired (proposed by Claude, 25 Oct)** → design note for Q-009 | The ratchet's coral support is withdrawn. At matched a, a history effect is not uniquely erosion.. [Contract](2026-10-25-contract-recoverability-claude.md) and [Codex review](2026-10-25-recoverability-review-codex.md): standard branching-process diagnostics plus state-dependent recovery; Goldberg & Friedman 2021 is prior. |
 | Foraminiferal photosymbiont bleaching as an observable | recoverability note | **eligible only as a bounded source and observation check** | Edgar et al. 2013 (activity, not partner continuity); Luciani 2017 is contrary prior; Aze lineage ages are not duration of dependence |
 | Co-transmission expanding the places an association can establish | dependence note; recoverability note | **eligible** (theory) | The strongest contrary world is ubiquitous partner pools. A rival to the ageing narrative. |
 | Black Queen concentration against robust interdependence; few concentrated suppliers | stress-order note | **reserve** | Needs separate measures of provider quantity, correlation and delivery; not identical to Codex seed 3. |
@@ -111,7 +111,7 @@ not a preference. Nominations are made independently in separate files.
 
 | Branch | Where developed | Disposition | Notes |
 | --- | --- | --- | --- |
-| Whether the demographic route and duration of a disturbance favour slow or fast life histories (S1 folded into Codex seed 1) | [2003-list note](2026-10-24-barry-2003-list-claude.md); Codex 2003 note | **eligible** | Anchors: Johnson 2002; Brook & Bowman 2004. Overlaps Q-028, Q-031, Q-038, Q-012. No prior check yet. |
+| Whether the demographic route and duration of a disturbance favour slow or fast life histories (S1 folded into Codex seed 1) | [2003-list note](2026-10-24-barry-2003-list-claude.md); Codex 2003 note | **contract 2: standalone claim retired (proposed by Codex, agreed by Claude, 25 Oct)** → support for Q-028 | Anchors: Johnson 2002; Brook & Bowman 2004. Overlaps Q-028, Q-031, Q-038, Q-012. [Contract](2026-10-25-contract-life-history-codex.md) and [Claude review](2026-10-25-life-history-review-claude.md): Valentine & Jablonski 1986 made and tested the historical form, with contrary K–Pg evidence; theory occupied (White 2022; Murray et al.; Koons 2008). |
 | H3, development time as an extinction filter | Claude map | **merge** → the row above | |
 | S2, novel predators as natural overkill experiments | 2003-list note | **merge** → Q-037, Q-047 | Codex: "natural experiment" presumes too much causal structure |
 
