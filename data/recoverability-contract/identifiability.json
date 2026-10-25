@@ -1,0 +1,74 @@
+{
+ "seed": 20261025,
+ "N": 200000,
+ "K": 1000000.0,
+ "death": 1.0,
+ "worlds": [
+  {
+   "world": "scarcity: a=3, full competence",
+   "P_fail_never": 0.12583,
+   "median_T": 12.83814110209456,
+   "sd_T_given_success": 1.1739589212660737,
+   "slope_r": 1.0,
+   "median_lnW": 0.9773694558697137,
+   "threshold_K": 1000000.0
+  },
+  {
+   "world": "growth erosion: a=1000, c_g=0.769",
+   "P_fail_never": 0.0,
+   "median_T": 12.838944654261645,
+   "sd_T_given_success": 0.12822593534021884,
+   "slope_r": 0.5381686521374482,
+   "median_lnW": 6.905993018512987,
+   "threshold_K": 1000000.0
+  },
+  {
+   "world": "provision erosion: a=1000, c_p=0.0027",
+   "P_fail_never": 0.0,
+   "median_T": 12.838022660464803,
+   "sd_T_given_success": 0.054902718992624146,
+   "slope_r": 1.0,
+   "median_lnW": 6.90697108392393,
+   "threshold_K": 375960162.29157543
+  },
+  {
+   "world": "import: a=0, m=3.303 per unit time",
+   "P_fail_never": 0.0,
+   "median_T": 12.834109195464674,
+   "sd_T_given_success": 0.9068415601731772,
+   "slope_r": 1.0,
+   "median_lnW": 0.9814013624996003,
+   "threshold_K": 1000000.0
+  },
+  {
+   "world": "de novo reversion: a=0, mu*N0=5.023, dependants decline at 0.5",
+   "P_fail_never": 0.007025,
+   "median_T": 12.835726785580079,
+   "sd_T_given_success": 1.234227698702555,
+   "slope_r": 1.0,
+   "median_lnW": 0.9797837723841959,
+   "threshold_K": 1000000.0,
+   "P_fail_exact": 0.006586240605782844
+  }
+ ],
+ "onset": {
+  "scarcity_lnA_minus_lnA0": [
+   0.25,
+   0.5,
+   1.0,
+   2.0
+  ],
+  "import_lnA_early": [
+   -0.064,
+   0.762,
+   1.736,
+   3.049
+  ],
+  "import_local_slope_dlnA_dt": [
+   4.521,
+   2.541,
+   1.582,
+   1.157
+  ]
+ }
+}

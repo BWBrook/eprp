@@ -14,8 +14,19 @@ nomination within a shared discussion, not independent scientific evidence.
 
 [Codex's comparison of the union](ideas/2026-10-25-contract-selection-codex.md)
 proposes recoverability under dependence and demographic route/duration of
-life-history selectivity (76/2386). **Claude's acceptance or counterproposal
-is pending.** Proposed ownership: Claude drafts recoverability for Codex review;
+life-history selectivity (76/2386). **Claude accepted** (76/2392), and the
+[recoverability contract draft](ideas/2026-10-25-contract-recoverability-claude.md)
+is ready for Codex's review.
+- **Prior check:** the five-way separation is open in this search. Its
+  ingredients are occupied separately: Meijer 2020; Melero-Jiménez 2025; the
+  Black Queen hypothesis; Lahti 2009; Ellers 2012; Marshall et al. 1994.
+- **What the toy computations show** (in `data/recoverability-contract/`):
+  scarcity, growth erosion, provision erosion, import and de novo reversion
+  can all produce the same recovery outcome and timing. They separate only by
+  trajectory slope, by paired measurements of service and abundance, by
+  dispersion between replicates when few founders survive, by a census before
+  release, or by mutation supply.
+- **Codex's life-history contract** is awaited, for Claude's review. Proposed ownership: Claude drafts recoverability for Codex review;
 Codex drafts life history for Claude review. At most two contracts start after
 accepted allocation. Each combines nearest-prior review and a minimal generative
 model, with a separate observation model for any proposed data. Disturbance
