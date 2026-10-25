@@ -1,27 +1,481 @@
 openalex_id	duplicate	year	type	doi	title
 W1603486062	W2502354381	1878	book	10.5962/bhl.title.1261	Tropical nature, and other essays
+W1831957949	W1852258340	2015	article	10.1111/pala.12193	Cyanobacteria and the Great Oxidation Event: evidence from genes and fossils
+W1964047698	W4244969939	1983	article	10.1111/j.1502-3931.1983.tb01152.x	Cyathotheca suecica and its bearing on the evolution of the Edrioasteroidea
 W1964116332	W4232440558	1987	article	10.2307/2409086	A Comparative Study of Diversification Events: The Early Paleozoic Versus the Mesozoic
+W1966248440	W4242832982	2000	article	10.1017/s0022336000031577	Presence of Helicoprion (Chondrichthyes, Elasmobranchii) in the Permian Patlanoaya Formation, Puebla, Mexico
+W1966411289	W4235567410	2000	article	10.1017/s0022336000032777	Spatangoid echinoids from the Eocene of Jamaica
+W1970939629	W4232646158	2002	article	10.1017/s0022336000017467	New record of the trimerellid brachiopod Gasconsia, a rare Silurian lazarus taxon
+W1971057069	W3151375362	1980	article		Paleoenvironment of Late Mississippian fenestrate bryozoans, eastern United States
+W1971975691	W4253459167	2002	article	10.1080/002411602317345885	A relict Ordovician brachiopod fauna from the Parakidograptus acuminatus Biozone (lower Silurian) of the English Lake District
 W1972793331	W4239229013	2012	article	10.1017/s0094837300000415	Using striated tooth marks on bone to predict body size in theropod dinosaurs: a model based on feeding observations of Varanus komodoensis, the Komodo monitor
+W1977783784	W4243075255	2003	article	10.1017/s0022336000044450	Element association and morphology in some Middle Ordovician platform-equipped conodonts
+W1979764706	W3144926440	1985	article		Name endings in ostracode superfamilies; a response to I.G. Sohn
+W1990091757	W4244687433	1983	article	10.1111/j.1502-3931.1983.tb01147.x	Trace fossils formed by heart urchins - a study of Scolicia and related traces
+W1990804530	W4239892417	2001	article	10.1017/s0022336000039639	Middle Miocene recovery of Caribbean reef corals: New data from the Tamana Formation, Trinidad
+W1991435989	W4241375026	2003	article	10.1017/s0022336000044784	New cyclocystoid (Phylum Echinodermata) from Anticosti Island, Quebec, and its bearing on cyclocystoid life modes
+W1992756787	W4240154767	2003	article	10.1017/s0022336000043626	Middle Devonian brachiopods from the Bird Fiord Formation, Arctic Canada
+W1995975851	W4233675079	2002	article	10.1017/s0022336000037550	A new Psilonichnus ichnospecies attributed to mud-shrimp Upogebia in estuarine settings
+W1999253650	W4247178162	2010	article	10.1017/s0022336000053142	Cheetham, A. H., J. Sanner, and J. B. C. Jackson. 2007. Metrarabdotos and related genera (Bryozoa: Cheilostomata) in the late Paleogene and Neogene of tropical America. Paleontological Society Memoir 67, supplement to Journal of Paleontology, 81(1)
+W1999319591	W4230110506	2002	article	10.1080/002411602320790607	Mechanics of sculpture formation in Magadiceramus? rangatira rangatira (Inoceramidae, Bivalvia) from the Upper Cretaceous of New Zealand
+W1999866199	W4233929866	1998	article	10.2307/3515324	An integrated paleontological approach to reservoir problems; Upper Cretaceous Medicine Hat Formation and First White Speckled Shale in southern Alberta, Canada
+W2000296998	W4254487149	2003	article	10.1017/s0022336000043389	The origin and significance of zigzag microstructure in late Paleozoic Lophophyllidium (Anthozoa, Rugosa)
+W2002542351	W4234344907	2000	article	10.1017/s0022336000031279	Stiptognathus new genus (Conodonta: Ibexian, Lower Ordovician), and the apparatus of Stiptognathus borealis (Repetski, 1982)
+W2005584450	W4256481862	2002	article	10.1017/s0022336000057887	Blancan lagomorphs and rodents of the Deer Park assemblages, Meade County, Kansas
+W2007204572	W4255755197	2001	article	10.2307/3515605	Stable Isotope Ecology of a Late Miocene Population of Gomphotherium productus (Mammalia, Proboscidea) from Port of Entry Pit, Oklahoma, USA
+W2013146948	W1998036995	2002	article	10.1111/j.1502-3931.2002.tb00079.x	Early Cambrian phytoplankton diversification and appearance of trilobites in the Swedish Caledonides with implications for coupled evolutionary events between primary producers and consumers
 W2019359087	W2410593232	1997	article		Comparative diversification dynamics among palaeocontinents during the Ordovician Radiation.
+W2021508156	W4247284512	2003	article	10.1017/s002233600004484x	Revision of Diaphanoptera species and new diagnosis of Diaphanopteridae (Palaeoptera: Diaphanopterodea)
+W2024726427	W4241658480	2002	article	10.1017/s0022336000037331	Conodont sequence biostratigraphy of the Hermosa Group (Pennsylvanian) at Honaker Trail, Paradox Basin, Utah
+W2027927483	W4233618799	2000	article	10.2307/3515619	High-Resolution Architecture and Paleoecology of an Active Margin, Storm-Flood Influenced Estuary, Quinault Formation (Pliocene), Washington
+W2028895087	W4231833079	2002	article	10.1017/s002233600003732x	Crustacean-bearing continental deposits in the Petrolia Formation (Leonardian Series, Lower Permian) of north-central Texas
+W2029498112	W4249806150	2001	article	10.1017/s0022336000018084	A Lopingian (Late Permian) brachiopod fauna from the Qubuerga Formation at Shengmi in the Mount Qomolangma region of southern Xizang (Tibet), China
+W2043829422	W4246823468	1982	article	10.1111/j.1502-3931.1982.tb01118.x	Regional integration of evidence for evolution in the Silurian Pentamerus-Pentameroides lineage
+W2044711637	W4251548479	1983	article	10.1111/j.1502-3931.1983.tb01140.x	The life habits of the Ordovician illaenine trilobite Bumastoides
+W2048434848	W4239745945	2002	article	10.1017/s0022336000057796	Llandoverian (Early Silurian) radiolarians from the Road River Formation of east-central Alaska and the new family Haplotaeniatumidae
+W2056899680	W4231087235	2002	article	10.1017/s0022336000041743	Macroscopic carbonaceous compressions in a terminal Proterozoic shale: A systematic reassessment of the Miaohe biota, south China
+W2059003195	W4232834815	2002	article	10.1017/s0022336000041913	The early Silurian pentamerid brachiopodCostistricklandia canadensis(Billings, 1859) and its biostratigraphic and paleobiogeographic significance
+W2060106900	W4243062175	2001	article	10.1017/s002233600003972x	Calibrating spatial and temporal species richness patterns in tropical American Marginellid gastropods
+W2060185428	W4255521549	2002	article	10.1017/s0022336000037525	South American occurrences of the Adamanian (Late Triassic: Latest Carnian) index taxonStagonolepis(Archosauria: Aetosauria) and their biochronological significance
+W2061149362	W4252589354	2001	article	10.1017/s0022336000018230	An Early Permian flora with Late Permian and Mesozoic affinities from north-central Texas
+W2061261749	W4211103333	2001	article	10.1017/s0022336000017145	Stromatoporoidea, 1926–2000
+W2068982733	W4242202718	1982	article	10.1111/j.1502-3931.1982.tb01124.x	Structure and cuticle formation of the reticulated carapace of the ostracode Bicornucythere bisanensis
+W2092971451	W4252434342	1982	article	10.1111/j.1502-3931.1982.tb01129.x	Recent freshwater oscillatoriacean analogue of the Lower Palaeozoic calcareous alga Angulocellularia
+W2093280718	W4247553052	1983	article	10.1111/j.1502-3931.1983.tb01151.x	Buccal mass structure of the Cretaceous ammonite Gaudryceras
+W2094712708	W4241544079	1987	article	10.1111/j.1502-3931.1987.tb00777.x	The Cambrian Opabinia and Anomalocaris
+W2095434251	W4254541297	1982	article	10.1111/j.1502-3931.1982.tb01137.x	Morphological and structural adaptations to soft substrates in the Early Jurassic monomyarians Lithiotis and Cochlearites
+W2095922935	W4256361280	2002	article	10.1017/s0022336000041950	Phylogenetic analysis of some basal early Cambrian trilobites, the biogeographic origins of the Eutrilobita, and the timing of the Cambrian radiation
+W2096952697	W4244665553	2002	article	10.1017/s0022336000057905	A new, large acteonid gastropod (Mollusca) from the latest Cretaceous of Antarctica
+W2098703400	W4237865246	2010	article	10.1017/s0022336000058406	Description and phylogenetic analysis of Iberostomata fombuenensis new genus and species (Bryozoa, Ptilodictyina)
+W2099274421	W4247136546	2002	article	10.1017/s0022336000041974	A new carcineretid crab (upper Turonian, Cretaceous) of Colombia
+W2101061514	W4234114507	2002	article	10.1017/s0022336000037598	New calappid crabs (Crustacea, Decapoda, Brachyura) from the Late Maastrichtian of the Netherlands
+W2101158999	W4254580941	2003	article	10.1017/s0022336000044711	Evolutionary adaptation and geographic spread of the Cenozoic buccinid genus Lirabuccinum in the North Pacific
+W2102380130	W4251078046	2000	article	10.2307/3515643	Peyssonnelid Rhodoliths from the Late Pleistocene Ironshore Formation, Grand Cayman, British West Indies
+W2103383851	W4252163011	2003	article	10.1017/s0022336000044279	Palaemon antonellae new species (Crustacea, Decapoda, Caridea) from the lower Cretaceous “Platydolomite” of Profeti (Caserta, Italy)
+W2104406513	W4256004882	2002	article	10.1017/s0022336000041895	New well-preserved scleritomes of Chancelloridae from the early Cambrian Yuanshan Formation (Chengjiang, China) and the middle Cambrian Wheeler Shale (Utah, USA) and paleobiological implications
+W2105492079	W4255780472	2000	article	10.1017/s0022336000017728	Pennsylvanian and Mississippian pluricolumnal assemblages (class Crinoidea) from southern Mexico and a new occurrence of a column with a tetralobate lumen
 W2106672646	W4234678574	2005	article	10.1666/04059.1	Evolution of large body size in abalones (Haliotis): patterns and implications
+W2107008266	W4249048141	2001	article	10.1017/s0022336000031905	New Late Cretaceous gastropods from the Pacific slope of North America
+W2107824664	W4229739731	2001	article	10.1017/s0022336000017212	The study of crinoids during the 20th century and the challenges of the 21st century
+W2108835125	W4234110182	1987	article	10.1111/j.1502-3931.1987.tb00797.x	Tumulduria incomperta and the case for Tommotian trilobites
+W2110119646	W4248190703	2001	article	10.1080/002411601753293051	Hyolith-type microstructure in a mollusc-like fossil from the Early Cambrian of Yunnan, China
+W2110574655	W4241637828	2002	article	10.1017/s0022336000037379	Manus-only sauropod tracks in the Uhangri Formation (upper Cretaceous), Korea and their Paleobiological implications
+W2110860412	W4243345171	2002	article	10.1017/s0022336000037410	New Cuvieronius finds from the Pleistocene of central Mexico
+W2112721722	W4246637283	2003	article	10.1017/s0022336000044747	Mangrove-dwelling crabs (Decapoda: Brachyura: Necrocarcinidae) associated with dinosaurs from the Upper Cretaceous (Cenomanian) of Egypt
+W2112854419	W4252298950	2000	article	10.2307/3515593	High-Resolution Correlation in Apparently Monotonous Rocks: Upper Ordovician Kope Formation, Cincinnati Arch
+W2113072631	W4232794453	2000	article	10.2307/3515590	Cool-Water Carbonate Production from Epizoic Bryozoans on Ephemeral Substrates
+W2114688043	W4252644017	2003	article	10.1017/s0022336000043511	Resolution, sampling, higher taxa and assumptions in stratocladistic analysis
+W2115651375	W4253723433	2004	article	10.1017/s0022336000044048	The oldest-known metazoan parasite?
+W2116781939	W4243259382	2000	article	10.2307/3515503	A Comment on the Systematic Confusion of Thrombolites
+W2117380848	W4247830649	2003	article	10.1017/s0022336000044164	New Cretaceous cerithiform gastropods from the Pacific Slope of North America
+W2118208163	W4231259196	2004	article	10.1017/s0022336000043973	Terlinguachelys fischbecki, a new genus and species of sea turtle (Chelonioidea: Protostegidae) from the Upper Cretaceous of Texas
+W2118392229	W4231371860	2001	article	10.2307/3515573	Applied Marine Paleoecology: An Oxymoron or Reality?
+W2118476302	W4246543644	2001	article	10.1017/s0022336000017042	Presentation of the Paleontological Society Medal to Jack A. Wolfe
+W2120139460	W4235125110	2000	article	10.1017/s0022336000032790	A new temnospondyl amphibian from the Late Triassic of Texas
 W2120631206	W3146473634	2007	article	10.2307/4125319	Resolving the Paradox of Stasis: Models with Stabilizing Selection Explain Evolutionary Divergence on All Timescales
+W2120732537	W4238933834	2001	article	10.2307/3515530	Differential Preservation of Gravelsized Bioclasts in Alpheid-versus Callianassid-Bioturbated Muddy Reefal Sediments
+W2121731342	W4238586183	2001	article	10.1080/002411601316981151	Causes of mass extinctions
+W2121893553	W4238705327	2002	article	10.1017/s0022336000041676	New early Devonian gastropods from the families Crassimarginatidae (new family) and Scoliostomatidae (new family), Royal Creek Area, Yukon Territory, Canada
+W2125011087	W4249496748	2002	article	10.1017/s0022336000037392	New genera of Paleozoic Polyplacophora (Mollusca)
+W2125424779	W4250893630	2003	article	10.1017/s0022336000044371	The Papiliophyllidae (Lower Devonian Rugosa): Their systematics and reinterpreted biostratigraphic value in Nevada
+W2125476152	W4247414068	2000	article	10.2307/3515535	The Rocky Road of Vertebrate Paleontology
+W2125698330	W4242449193	2004	article	10.1017/s0022336000043924	Mexfusus rotundicostatus, a new genus and species of neogastropod from the Late Cretaceous of southern Mexico
+W2126050474	W4234746204	2000	article	10.1017/s0022336000033084	A new mitrate (Echinodermata, Stylophora) from the Tremadoc of Shropshire (England) and the origin of the Mitrocystitida
+W2126088534	W4250105211	2003	article	10.1017/s0022336000043742	Holotype snout elements of Saniwa ensidens reassigned to cf. Restes sp. indet (Xenosauridae)
+W2127243700	W4252254542	1987	article	10.1111/j.1502-3931.1987.tb00770.x	Trilobites Calmoniidae de l'Ordovicien supérieur du Maroc et les origines de la Province Malvino-Cafre
+W2127962560	W4235542803	2000	article	10.1017/s0022336000017571	Evolution of trilobite biofacies in Cambrian basins of the Siberian Platform
+W2128252909	W2771973931	2014	article	10.1017/s0022336000057656	Paleobiology and Paleoecology of Palaeoaplysina and Eopalaeoaplysina New Genus in Arctic Canada
+W2130392199	W4254472133	2001	article	10.1080/002411601753292971	A second varanopseid skull from the Upper Permian of South Africa: implications for Late Permian 'pelycosaur' evolution
+W2130927621	W4242075880	1987	article	10.1111/j.1502-3931.1987.tb00776.x	The affinities of the Cambrian animals Anomalocaris and Opabinia
+W2131682337	W4242759372	2004	article	10.1666/0022-3360(2004)078<1222:e>2.0.co;2	TWO NEW SPECIES OFADELOMELONDALL, 1906 (GASTROPODA: VOLUTIDAE) FROM THE TERTIARY OF PATAGONIA (ARGENTINA)
+W2131761468	W4229749062	2001	article	10.1017/s0022336000018126	Maastrichtian crustacea (Brachyura: Decapoda) from the Ocozocuautla Formation in Chiapas, southeast Mexico
+W2132223985	W4230288085	2001	article	10.1017/s0022336000031887	External morphology and paleobiology of Heliophyllum halli (Zoantharia, Rugosa), from the Middle Devonian Hamilton Group of New York State
+W2133712830	W4241475975	2001	article	10.2307/3515630	Taphonomy of Silicified Filamentous Microbes in Modern Geothermal Sinters: Implications for Identification
+W2133866746	W4236596840	1988	article	10.1017/s002233600005887x	A new species of Pulvinites (Mollusca: Bivalvia) from the upper Paleocene Paspotansa Member of the Aquia Formation in Virginia
+W2133990641	W4245929778	2002	article	10.1017/s0022336000037513	Cheirocystis fultonensis, a new glyptocystitoid rhombiferan from the Upper Ordovician of the Cincinnati Arch—comments on cheirocrinid ontogeny
+W2134375797	W4254715509	2000	article	10.1017/s0022336000031309	A vertebrate fauna from the Middle Devonian Yahatinda Formation of southwestern Canada
 W2135614732	W4243815109	2012	article	10.1017/s0094837300000397	Evolutionary and ecological implications of trematode parasitism of modern and fossil northern Adriatic bivalves
+W2135721432	W4254316375	2002	article	10.1017/s0022336000037562	First report of Sphenothallus Hall, 1847 in the middle Cambrian
 W2139028112	W4235882060	1974	article	10.2307/2412538	Stochastic Simulation and Evolution of Morphology-Towards a Nomothetic Paleontology
+W2139573603	W4248704710	2004	article	10.1017/s0022336000043936	Mississippian (late Osagean) ammonoids from the New Providence Shale Member of the Borden Formation, north-central Kentucky
+W2141832579	W2917996007	2001	article	10.1017/s0022336000018199	Gut contents from a Cretaceous Tyrannosaurid: Implications for theropod dinosaur digestive tracts
+W2144938997	W4229640831	2000	article	10.1017/s0022336000032704	Bryozoa of the Mission Argillite (Permian), northeastern Washington
 W2144995811	W4244458236	2003	article	10.1017/s0094837300018054	The pattern of evolution in Pleistocene human brain size
+W2147780264	W4254439948	2000	article	10.1017/s0022336000017625	Crinoids from the Muldraugh Member of the Borden Formation in north-central Kentucky (Echinodermata, Lower Mississippian)
+W2148333429	W4234869213	2001	article	10.1017/s0022336000031917	Early Mississippian polyplacophora (Mollusca) from Iowa
+W2149107424	W4233945538	2001	article	10.1017/s0022336000017133	Archaeocyaths—a history of phylogenetic interpretation
+W2149174861	W4233996632	2002	article	10.1017/s0022336000037586	Morphological and taxonomic clarification of the lower Mississippian (Kinderhookian) ammonoid genus Eoprodromites
+W2149499374	W4243106755	2003	article	10.1017/s0022336000043614	Early Ordovician (Arenig) brachiopods from volcaniclastic rocks of the Famatina Range, northwest Argentina
+W2150391082	W4243820374	2001	article	10.1080/002411601753293015	Survival of crinoid stems following decapitation: evidence from the Ordovician and palaeobiological implications
+W2150520143	W4230779284	2002	article	10.1017/s0022336000037628	On the presence of Megantereon whitei at the South Turkwel Hominid Site, northern Kenya
+W2154703438	W4244751657	2004	article	10.1017/s0022336000044036	Arcellites stellatus new species, a new megaspore from the Lower Cretaceous of Maryland, USA
+W2157264771	W4252316068	2000	article	10.1017/s0022336000033114	Origin and early evolution of the amniote occiput
+W2157897599	W4245220498	2001	article	10.1017/s0022336000039767	An exceptional coastal upwelling fish assemblage in the Caribbean Neogene
+W2159722498	W4238334862	2001	article	10.1017/s0022336000018187	Small vertebrates from the late Cretaceous and early Tertiary of the northeastern Aral Sea region, Kazakhstan
+W2160468680	W4244534498	2000	article	10.1017/s0022336000031784	Szecladia new genus, a late Permian conifer with multiveined leaves from South China
+W2162849566	W4253349456	2003	article	10.1017/s0022336000044401	Shell microstructure of the Late Carboniferous rostroconch molluscApotocardium lanterna(Branson, 1965)
+W2163902231	W4251649374	2014	article	10.1017/s0022336000057590	Reappraisal of Testudo antiqua (Testudines, Testudinidae) from the Miocene of Hohenhöwen, Germany
 W2164098305	W4255718822	2012	article	10.1017/s0094837300000464	Climatic forcing of quaternary deep-sea benthic communities in the North Pacific Ocean
+W2164219075	W4242871823	2000	article	10.1017/s0022336000031346	Enigmatic fossil encrusting an Upper Ordovician rocky shore on Hudson Bay, Canada, is a coral
+W2165341720	W4247482717	2001	article	10.1017/s0022336000039779	The Neogene Marine Biota of Tropical America (“NMITA”) database: Accounting for biodiversity in paleontology
+W2166167035	W3139961226	1988	article		A bryozoan buildup from the Lower Carboniferous of north Wales
+W2167056426	W4254526222	2002	article	10.1017/s0022336000017455	Fusulinids: Predation damage and repair of tests from the Upper Pennsylvanian of Kansas
+W2167401654	W4245885105	2003	article	10.1017/s0022336000044140	Vase-shaped microfossils from the Neoproterozoic Chuar Group, Grand Canyon: A classification guided by modern testate amoebae
+W2169711603	W4247268699	2000	article	10.2307/3515520	Late Cretaceous and Cenozoic History of North American Vegetation
+W2169916303	W4252157879	2000	article	10.2307/3515540	Microfacies Analysis of Recent Carbonate Environments in the Southern Gulf of California, Mexico: A Model for Warm-Temperate to Subtropical Carbonate Formation
+W2172417404	W4234155704	2000	article	10.2307/3515512	Biostromal Coral Facies: A Miocene Example from the Leitha Limestone (Austria) and Its Actualistic Interpretation
+W2172422781	W4250483624	2003	article	10.1017/s0022336000043638	Revision of selected North American and Eurasian Late Devonian (Frasnian) species of Cyrtospirifer and Regelia (Brachiopoda)
+W2172422983	W4248913807	2002	article	10.1017/s0022336000041664	TheAstarte(Bivalvia: Astartidae) that document the earliest opening of Bering Strait
+W2172445848	W4236011303	2001	article	10.1017/s0022336000018151	Stratocladistic analysis of blastoid phylogeny
+W2172548929	W4242321840	2002	article	10.1017/s0022336000037367	New lower Permian nonmarine arthropod trace fossils from New Mexico and South Africa
+W2172643284	W4232116071	2002	article	10.1017/s0022336000041731	Upper Homerian (upper Wenlock, Silurian) graptolites from arctic Canada
+W2172650264	W4230064156	2001	article	10.1017/s0022336000039627	Archaiasinids and related porcelaneous larger foraminifera from the late Miocene of the Dominican Republic
+W2172710074	W4245186083	2001	article	10.1017/s0022336000017157	Towards a new synthesis of evolutionary relationships and classification of Scleractinia
+W2172710623	W4242109318	2002	article	10.1017/s0022336000017364	New late Paleozoic conchostracan (Crustacea: Branchiopoda) from the Shackleton Glacier Area, Antarctica: Age and paleoenvironmental implications
+W2172717039	W4239807524	2001	article	10.1017/s0022336000016942	Systematics of Shumardiidae (Trilobita), with new species from the Ordovician of Argentina
+W2172770133	W4255117313	2003	article	10.1017/s0022336000043663	The ammonoidDesmocerasin the Upper Albian (Lower Cretaceous) of Japan
+W2172794342	W4242439465	2002	article	10.1017/s0022336000042001	Artinskian conodonts from the Dingjiazhai Formation of the Baoshan Block, west Yunnan, southwest China
+W2172868900	W4249413548	2000	article	10.2307/3515502	The Fossil Record of Cretaceous Tetrapods
 W2172916255	W4249701835	2003	article	10.1017/s0094837300018066	Mapping the origin of faunal assemblages using strontium isotopes
+W2172948080	W4256302061	2002	article	10.1017/s0022336000017376	KochiellaPoulsen, 1927, andHadrocephalitesnew genus (Trilobita: Ptychopariida) from the early Middle Cambrian of western North America
+W2172948988	W4251401405	2002	article	10.1017/s0022336000041652	New chonostrophiid brachiopods from the Famennian (Late Devonian) of the Santanghu Basin, Xinjiang, northwest China
+W2172960401	W4246026599	2003	article	10.1017/s0022336000043420	Ontogeny and thanatocoenoses of early middle Ordovician palaeocope ostracode speciesBrezelina palmata(Krause, 1889) andOgmoopsis bocki(Öpik, 1935)
+W2172971630	W4234502279	2002	article	10.1017/s0022336000057814	Ordovician [Dobrotivian (Llandeillian Stage) to Ashgill] crinoids (phylum Echinodermata) from the Montes de Toledo and Sierra Morena, Spain with implications for paleogeography of Peri-Gondwana
+W2172978933	W4233153669	2003	article	10.1017/s0022336000044760	The Middle Eocene bee faunas of Eckfeld and Messel, Germany (Hymenoptera: Apoidea)
+W2173095601	W4255755389	2001	article	10.1017/s0022336000031863	Small problematic phosphatic sclerites from the Ordovician of Iapetus
 W2173098218	W4249433855	2003	article	10.1017/s0094837300018091	Vertebral pneumaticity, air sacs, and the physiology of sauropod dinosaurs
+W2173169333	W4254887031	2002	article	10.1017/s0022336000017340	New genera and species of Middle Pennsylvanian gastropods from west Texas
+W2173183959	W4236617231	2002	article	10.1017/s0022336000017480	The oldest known catfish (Teleostei: Siluriformes) from Asia (India, Late Cretaceous)
+W2173247133	W4210914871	2000	article	10.1017/s0022336000031413	Lower Permian Polyplacophora (Mollusca) from Argentina
+W2173253834	W4236041863	2000	article	10.1017/s0022336000033035	Late Cambrian conulariids from Wisconsin and Minnesota
+W2173292372	W4234026584	2002	article	10.1017/s0022336000037501	Middle Cambrian (Acadian Series) conocoryphid and paradoxidid trilobites from the Upper Chamberlain's Brook Formation, Newfoundland and New Brunswick
+W2173327476	W4231395283	2001	article	10.1017/s0022336000039688	Patterns of morphological diversity among and within arcid bivalve species pairs separated by the Isthmus of Panama
+W2173329905	W4240925380	2001	article	10.1017/s0022336000039883	Kirkbyoid ostracodes (Upper Carboniferous) from the Cantabrian Mountains (Spain) and Carnic Alps (Austria and Italy)
+W2173372132	W4242240439	2003	article	10.1017/s0022336000044280	Mississippian (middle Osagean) ammonoids from the Nada Member of the Borden Formation, Kentucky
+W2173416375	W4231792700	2003	article	10.1017/s0022336000044218	Late Ordovician jawed polychaete faunas of the type Cincinnatian region, U.S.A.
+W2173422804	W4237597378	2000	article	10.1017/s0022336000031498	Graptolites from the Qilang and Yingan formations (Caradoc, Ordovician) of Kalpin, western Tarim, Xinjiang, China
+W2173443623	W4211023138	2002	article	10.1017/s0022336000041718	Latest Early Cambrian small shelly fossils, trilobites, and Hatch Hill dysaerobic interval on the Québec continental slope
+W2173481718	W4241568566	2000	article	10.1017/s0022336000031723	Upper Campanian (Cretaceous) ammonites from the Shinarish Formation, Djebel Sinjar, northwest Iraq
+W2173538945	W4249599620	2001	article	10.1017/s0022336000016978	Fusulinacean biostratigraphy of the Virgilian Stage (Upper Pennsylvanian) in Kansas
+W2173645756	W4211042836	2001	article	10.1017/s0022336000017170	Bivalve systematics during the 20th century
+W2173676597	W4250926387	2000	article	10.1017/s0022336000032741	Ptychopariid trilobites of the Lower-Middle Cambrian boundary interval, Pioche Shale, southeastern Nevada
+W2173796287	W4250455586	2003	article	10.1017/s0022336000044693	Origin and early evolutionary radiation of the Order Lagenida (Foraminifera)
+W2173832424	W4237368563	2000	article	10.1017/s0022336000031322	A new ichnospecies ofNereitesfrom Carboniferous tidal-flat facies of eastern Kansas, USA: Implications for theNereites-Neonereitesdebate
+W2173859487	W4245480897	2002	article	10.1017/s002233600004169x	Neogastropod molluscs from the Miocene of western Amazonia, with comments on marine to freshwater transitions in molluscs
+W2173873012	W4243073716	2003	article	10.1017/s002233600004422x	Ctenacanthus and other chondrichthyan spines and denticles from the Minturn Formation (Pennsylvanian) of Colorado
+W2173907534	W4244306455	2000	article	10.1017/s0022336000032716	New Permian polyplacophora (Mollusca) from Malaysia
+W2173913417	W4230829583	2003	article	10.1017/s0022336000044474	Late Torrejonian (middle Paleocene) mammals from south central Alberta, Canada
+W2173950177	W4246761474	2002	article	10.1017/s002233600004172x	Lichidae (Trilobita): Morphology and classification
+W2173971467	W4253190514	2001	article	10.1017/s0022336000018059	The growth and function of skeletal diaphragms in the colony life of lower Paleozoic Trepostomata (Bryozoa)
+W2174069914	W4255417493	2003	article	10.1017/s0022336000043444	Uppermost Cambrian-lower Ordovician faunas and Laurentian platform sequence stratigraphy, eastern New York and Vermont
+W2174142092	W4232923951	2002	article	10.1017/s0022336000041986	Crinoid distribution and feeding morphology through a depositional sequence: Kope and Fairview formations, Upper Ordovician, Cincinnati Arch region
+W2174274737	W4234565340	2001	article	10.1017/s0022336000031899	Triassic roots of the amphiastraeid scleractinian corals
+W2174284511	W4231309117	2002	article	10.1017/s0022336000017431	A juvenile specimen of the sauropod dinosaur Alamosaurus sanjuanensis from the Upper Cretaceous of Big Bend National Park, Texas
+W2174315148	W4244956739	2000	article	10.2307/3515646	The Taphonomic Significance of Endoliths in Dead-versus Live-Coral Skeletons
+W2174329281	W4250411250	2000	article	10.1017/s0022336000017686	Abderitid marsupials from the Miocene of Patagonia: An assessment of form, function, and evolution
+W2174379891	W4254301248	2001	article	10.1017/s0022336000017236	Progress and future directions in archosaur phylogenetics
+W2174405334	W4240164469	2002	article	10.1017/s002233600001742x	Teleost centra from uppermost Judith River Group (Dinosaur Park Formation, Campanian) of Alberta, Canada
+W2174482808	W4243227768	2004	article	10.1017/s0022336000043882	Namurian fossils (brachiopods, goniatites) from Satun Province, southern Thailand
+W2174530796	W4243134033	2003	article	10.1017/s002233600004364x	Ibergirhynchia contraria (F. A. Roemer, 1850), an Early Carboniferous seep–related rhynchonellide brachiopod from the Harz Mountains, Germany—a possible successor to Dzieduszyckia?
+W2174557908	W4244394192	2003	article	10.1017/s0022336000044188	Developmental breakdown during the early evolution of the Codiacrinidae:Parazophocrinus callosusStrimple, 1963 (class Crinoidea)
+W2174591922	W4230924523	2002	article	10.1017/s0022336000037288	Endemic Permian ammonoid genus Yinoceras, central Hunan, south China
+W2174656624	W4235519025	2001	article	10.1017/s0022336000017182	Gastropod phylogenetics: Progress, problems, and implications
+W2174664590	W4238947326	2001	article	10.1017/s0022336000039925	A new species of Leptarctus (Carnivora, Mustelidae) from the Late Miocene of Texas
+W2174691052	W4237973570	2001	article	10.1017/s0022336000031942	Middle Cambrian of Avalonian Massachusetts: Stratigraphy and correlation of the Braintree trilobites
+W2174719559	W4246851462	2001	article	10.1017/s0022336000031930	Phylogenetic analysis of the Olenellina Walcott, 1890 (Trilobita, Cambrian)
+W2174822938	W4254378427	2003	article	10.1017/s0022336000043717	Neogene occurrences of the marine acritarch genusNannobarbophoraHabib and Knapp, 1982 emend., and the new speciesN. Gedlii
+W2174885499	W4256045194	2001	article	10.1017/s0022336000017169	Ghosts of the past, present, and future in brachiopod systematics
+W2174886440	W4251609442	2003	article	10.1017/s002233600004419x	Ossicular homologies, systematics, and phylogenetic implications of certain North American Carboniferous asteroids (Echinodermata)
+W2174939698	W4251403806	2003	article	10.1017/s0022336000044449	Non-trilobite arthropods from the Silver Peak Range, Nevada
+W2175072970	W4253056495	2000	article	10.1017/s002233600003167x	Quantitative analysis of epizoans on Silurian stromatoporoids within the Brassfield Formation
+W2175116116	W4239532133	2000	article	10.1017/s0022336000033011	Late Permian to Middle Triassic radiolarian faunas from northern Thailand
+W2175190089	W4236169317	2001	article	10.1017/s0022336000031875	Biostratigraphy of Devonian stromatoporoid faunas of arctic and western Canada
+W2175210450	W4230552678	2002	article	10.1017/s0022336000041688	Permian Polyplacophora (Mollusca) from Nevada, Utah, and Arizona
+W2175238065	W4236128926	2003	article	10.1017/s0022336000043729	Maastrichtiocaris rostratus new genus and species, the first Cretaceous cycloid
+W2175258097	W4244343156	2000	article	10.1017/s0022336000031486	Phylogenetic systematics of Tertiary monophorasterid sand dollars (Clypeasteroida: Echinoidea) from South America
+W2175325348	W4243701331	2001	article	10.1017/s002233600003986x	New middle Eocene decapods (Crustacea) from Chiapas, México
+W2175375435	W4235141982	2000	article	10.1017/s0022336000031553	Ediacaran fossils from the southwestern Great Basin, United States
+W2175439358	W4239350042	2000	article	10.1017/s0022336000017674	Conodonts and biostratigraphy of Upper Ordovician strata along a shelf to basin transect in central Nevada
+W2175474378	W4210837130	2000	article	10.1017/s0022336000031796	Drill holes in shells of Permian benthic invertebrates
+W2175491748	W4243362532	2000	article	10.1017/s002233600003300x	Phosphatized animal embryos from the Neoproterozoic Doushantuo Formation at Weng'an, Guizhou, South China
+W2175542453	W4252824725	2000	article	10.1017/s0022336000033138	Famennian tentaculitids of China
+W2175599645	W4242479386	2000	article	10.1017/s0022336000017637	A new species of Leodia (Clypeasteroida: Echinoidea) from the Neogene of Venezuela and its importance in the phylogeny of mellitid sand dollars
+W2175732847	W4229942573	2000	article	10.1017/s0022336000033047	Phylogenetic relationships among nassariid gastropods
+W2175799887	W4233400311	2002	article	10.1017/s0022336000037549	IchnogenusPholeusFiege, 1944, revisited
+W2175837571	W4241884368	2000	article	10.1017/s0022336000031334	A new fossil resin with biological inclusions in Lower Cretaceous deposits from Álava (northern Spain, Basque-Cantabrian Basin)
+W2175872469	W4233791386	2002	article	10.1017/s0022336000017418	Graptolites from near the Ordovician-Silurian boundary in Illinois and Iowa
+W2175890014	W4244127189	2003	article	10.1017/s0022336000043377	New species of dinoflagellate cysts and other palynomorphs from the latest Miocene and Pliocene of DSDP Hole 603C, western north Atlantic
+W2175900297	W4246457975	2000	article	10.1017/s0022336000031504	Early tetrapod jaws from the Late Devonian of Pennsylvania, USA
+W2175916325	W4245425629	2000	article	10.2307/3515591	Insect Trace Fossil Associations in Paleosols: The Coprinisphaera Ichnofacies
+W2175918497	W4248512079	2002	article	10.1017/s0022336000037276	Albian Caprinid rudists from Texas re-evaluated
 W2175950166	W4232727204	2003	article	10.1017/s0094837300018078	Paleoecological reconstruction of a lower Pleistocene large mammal community using biogeochemical (δ 13 C, δ 15 N, δ 18 O, Sr:Zn) and ecomorphological approaches
+W2176013593	W4249953404	2002	article	10.1017/s0022336000057826	Quintuplexacrinus, a new cladid crinoid genus from the Upper Ordovician Maquoketa Formation of the northern midcontinent of the United States
 W2176028123	W4250878738	2003	article	10.1017/s009483730001808x	Stable isotopes, hypsodonty, and the paleodiet of Hemiauchenia (Mammalia: Camelidae): a morphological specialization creating ecological generalization
+W2176029702	W4254778367	2002	article	10.1017/s0022336000041962	Kunmingaspis(Trilobita) putatively from the Yunling collage, and the Cambrian history of the eastern Himalayan syntaxial region
+W2176166003	W4236025692	2001	article	10.1017/s0022336000031991	Late Campanian southern dinosaurs, Aguja Formation, Big Bend, Texas
+W2176235895	W4235440204	2001	article	10.1017/s0022336000039937	Large Devonian and Mississippian rostroconchs (Mollusca) from Iran
+W2176293130	W4241809808	2000	article	10.1017/s0022336000017613	Evidence of oribatid mite herbivory in the stem of a Late Triassic tree fern from Arizona
+W2176322653	W4231423020	2002	article	10.1017/s0022336000017327	A new species of Coenothyris (Brachiopoda) from the Triassic (Upper Anisian-Ladinian) of Israel
+W2176330938	W4233776392	2002	article	10.1017/s0022336000057784	Stephen J. Gould (1941–2002): A personal reflection on his life and work
+W2176335101	W4235987173	2001	article	10.1017/s002233600003198x	Ordovician rhipidognathid conodonts from Australia and Iran
+W2176344348	W4230905634	2002	article	10.1017/s002233600003729x	Jurassic Ostreoida (Bivalvia) from China (Tanggula Mountains, Qinghai-Xizang Plateau) and their Paleobiogeographic context
+W2176354792	W4243567360	2001	article	10.2307/3515574	Evolutionary Rates of Jurassic Ammonites in Relation to Sea-Level Fluctuations
+W2176366148	W4230220905	2001	article	10.2307/3515555	A Fossil Dicotyledonous Woodland/Forest from the Upper Cretaceous of Big Bend National Park, Texas
+W2176377372	W4255320809	2000	article	10.1017/s0022336000033096	An early polycotylid plesiosaur (Reptilia: Sauropterygia) from the Cretaceous of Hokkaido, Japan
+W2176399321	W4251551427	2003	article	10.1017/s0022336000043468	Heterochrony and paedomorphic morphology of Sprinkleocystis ektopios, new genus and species, (Rhombifera, Glyptocystida) from the Middle Ordovician (Caradoc) of Tennessee
+W2176447931	W4251580325	2002	article	10.1017/s0022336000017388	European Paleozoic polyplacophora, multiplacophora, and turrilepadida in United States repositories
+W2176461647	W4242243989	2001	article	10.1017/s0022336000018254	Dental morphology of Remingtonocetidae (Cetacea, Mammalia)
+W2176510986	W4231754089	2002	article	10.1017/s0022336000037616	Three-dimensionally preserved specimens of Amplexograptus (Ordovician, Graptolithina) from the North American mid-continent: taxonomic and biostratigraphic significance
+W2176567266	W4250336166	2000	article	10.1017/s0022336000031668	A varied Middle Ordovician sponge spicule assemblage from western Newfoundland
+W2176596757	W4253937789	2000	article	10.2307/3515615	Significance of a Halysitid-Heliolitid Mud-Facies Autobiostrome from the Middle Silurian of Gotland, Sweden
+W2176613053	W4210970661	2000	article	10.1017/s0022336000032996	Stratigraphy in phylogeny reconstruction
+W2176695746	W4231592419	2001	article	10.1017/s0022336000016930	Paleobiogeography of Cretaceous and Tertiary decapod crustaceans of the North Pacific Ocean
+W2176736775	W4240756525	2001	article	10.1017/s0022336000016954	A new pleurodiran turtle from the Jagua Formation (Oxfordian) of western Cuba
+W2176779431	W4254211909	2003	article	10.1017/s002233600004350x	Homology of the astragalus and structure and function of the tarsus of Diadectidae
+W2176791254	W4256421676	2004	article	10.1017/s0022336000044024	Goliath grouper (Pisces: Serranidae) from the upper Miocene Urumaco Formation, Venezuela
+W2176871260	W4242522441	2000	article	10.1017/s0022336000031541	Mammalian faunas from the Paleogene of the Sierra Palomera (Teruel, Spain)
+W2176887810	W4242448312	2003	article	10.1017/s0022336000044267	Sphenothallus from the Lower Silurian of China
+W2176901331	W4254411495	2003	article	10.1017/s0022336000043407	Jiangxispira, a new gastropod genus from the early Triassic of China with remarks on the phylogeny of the Heterostropha at the Permian/Triassic boundary
+W2177026210	W4234659372	2003	article	10.1017/s0022336000044152	Middle Ordovician lithistid sponges from the Bachu-Kalpin area, Xinjiang, northwestern China
+W2177074273	W4236966440	2000	article	10.2307/3515501	Beetle Taphonomy in a Recent Ephemeral Lake, Southeastern Arizona
+W2177115321	W4241742515	2001	article	10.1017/s0022336000018060	Cambrian and Ordovician linguliform brachiopods from the Shallow Bay Formation (Cow Head Group), western Newfoundland
+W2177156998	W4245989632	2003	article	10.1017/s0022336000044462	A new species of the sauropterygian genusNothosaurusfrom the Lower Muschelkalk of Winterswijk, The Netherlands
+W2177257136	W4235971430	2003	article	10.1017/s0022336000044796	Conodont fauna and biostratigraphy of the Outram, Skoki, and Owen Creek Formations (Lower to Middle Ordovician), Wilcox Pass, Alberta, Canada
+W2177279084	W4238061773	2002	article	10.1017/s0022336000017352	The function of the ammonite fluted septal margins
+W2177318426	W4239888480	2002	article	10.1017/s0022336000037380	Occurrence of the siliceous sponge spicule Konyrium (Hexactinellida) in the upper Cambrian of the Mackenzie Mountains, northwestern Canada
+W2177374692	W4241589803	2002	article	10.1017/s0022336000041925	New brachiopod genera from Bird Fiord Formation (Devonian), arctic Canada
+W2177395787	W4250396339	2003	article	10.1017/s0022336000043651	New Middle and Late Ordovician hyoliths from Estonia
+W2177467584	W4240994044	2001	article	10.1017/s0022336000039652	Numerical and taxonomic scale of analysis in paleoecological data sets: Examples from neo-tropical Pleistocene reef coral communities
+W2177481699	W4252925398	2002	article	10.1017/s0022336000037355	Upper Pennsylvanian tetrapods from the Ada Formation of Seminole County, Oklahoma
+W2177540307	W4246829230	2004	article	10.1017/s002233600004395x	Evidence of oribatid mite detritivory in Antarctica during the late Paleozoic and Mesozoic
+W2177577346	W4237771397	2002	article	10.1017/s0022336000041779	Weird things from the Middle Ordovician of North America interpreted as conulariid fragments
+W2177583483	W4238691178	2001	article	10.1017/s0022336000017194	Trilobite systematics: The last 75 years
+W2177644509	W4248610035	2003	article	10.1017/s0022336000044206	Eocene echinoids of Texas
+W2177645162	W4245581190	2003	article	10.1017/s0022336000044243	Two new pleurodiran turtles from the Portezuelo Formation (upper Cretaceous) of northern Patagonia, Argentina
+W2177667838	W4248647635	2000	article	10.1017/s0022336000031644	Paleoecologic and taxonomic implications of Sphenothallus and Sphenothallus-like specimens from Ohio and areas adjacent to Ohio
+W2177708898	W4244839307	2003	article	10.1017/s0022336000044395	Echinochiton dufoei: A New Spiny Ordovician chiton
+W2177762753	W4253448011	2001	article	10.1017/s0022336000039743	Gradual Miocene to Pleistocene uplift of the Central American isthmus: Evidence from tropical American tonnoidean gastropods
+W2178011625	W4243907886	2004	article	10.1017/s0022336000044012	The first hangingfly (Insecta: Mecoptera: Bittacidae) from the Cretaceous of Europe
+W2178030724	W4250821476	1988	article	10.1017/s0022336000058923	Leviceraurus, a new cheirurine trilobite from the Cobourg Formation (Middle-Upper Ordovician), southern Ontario, Canada
+W2178281830	W4250121988	2004	article	10.1017/s0022336000043985	A Pliocene record of Capromeryx (Mammalia: Antilocapridae) in México
+W2178397170	W4251340246	2003	article	10.1017/s0022336000043730	First basal synapsids (“pelycosaurs”) from the Upper Permian-?Lower Triassic of Uruguay, South America
+W2178445254	W2422608367	2003	article	10.1017/s0022336000044437	The Upper Cambrian trilobitesPlethopeltisandLeiocoryphe: Morphology, paedomorphism, classification
+W2178467916	W4245750803	2003	article	10.1017/s0022336000044681	Experimental evidence for the species character of Calcidiscus leptoporus morphotypes
+W2178478072	W4236075426	2000	article	10.1017/s0022336000031280	Conodonts from the Upper Olentangy Shale (Upper Devonian, central Ohio) and stratigraphy across the Frasnian-Famennian Boundary
+W2178569708	W4246380768	2001	article	10.1017/s0022336000031978	Morphology and phylogeny of some early Silurian (Mid-Rhuddanian) monograptid graptolites from the South Urals of Russia
+W2178585193	W4254464737	2000	article	10.1017/s0022336000031310	An unusual aquatic sphenodontian (Reptilia: Diapsida) from the Tlayua Formation (Albian), Central Mexico
+W2178587969	W4245875335	2001	article	10.1017/s0022336000016905	Phylogenetic nomenclature and paleontology
+W2178610095	W4250115026	2003	article	10.1017/s0022336000044486	A revision of Tapocyon (Carnivoramorpha), including analysis of the first cranial specimens and identification of a new species
+W2178633282	W4233160165	2000	article	10.2307/3515498	Phytogeography and Paleoecology in Western Europe and Eastern Greenland near the Triassic-Jurassic Boundary
+W2178682568	W4243103009	2002	article	10.1017/s0022336000037343	Amino acid residues in conodont elements
+W2178707058	W4233989981	2000	article	10.1017/s0022336000031760	A new ichthyosaur from the Upper Jurassic lithographic limestones of Bavaria
+W2178708850	W4256204955	2003	article	10.1017/s0022336000043602	Middle to Upper Cambrian linguliformean brachiopods from the Deadwood Formation of subsurface Alberta and Saskatchewan, Canada
+W2178868610	W4252196475	2002	article	10.1017/s0022336000041998	A revision of Novacystis hawkesi Paul and Bolton 1991 (Middle Silurian: Glyptocystitida, Echinodermata) and the phylogeny of early callocystitids
+W2178959514	W4230397668	2003	article	10.1017/s0022336000043456	The world's biggest trilobite—Isotelus rexnew species from the upper Ordovician of northern Manitoba, Canada
+W2178973489	W4253948110	2001	article	10.1017/s0022336000039755	The Antillean Tertiary crinoid fauna
+W2179114768	W4254635754	2001	article	10.2307/3515602	Middle Jurassic (Bajocian and Bathonian) Dinosaur Megatracksites, Bighorn Basin, Wyoming, U.S.A.
+W2179125317	W4230260667	2000	article	10.1017/s002233600003273x	A primitive Halobia (Bivalvia: Halobioidea) from the Triassic of northeast British Columbia
+W2179142821	W4249635264	2002	article	10.1017/s0022336000017339	New early Late Cretaceous (Cenomanian) mollusks from Oregon
+W2179161010	W2973165593	2002	article	10.1017/s0022336000017479	The lower Mississippian (Kinderhookian) ammonoidGoniocyclusfrom the Hannibal Shale, Missouri
+W2179173160	W4256509273	2001	article	10.1017/s0022336000018114	A new upper Middle Triassic shrimp (Crustacea: Lophogastrida) from Guizhou, China, with discussion regarding other fossil “mysidaceans”
+W2179188758	W4254051358	2000	article	10.1017/s0022336000033060	Lower Cambrian (Branchian) trilobites and biostratigraphy of the Hanford Brook Formation, southern New Brunswick
+W2179191231	W4256005440	2003	article	10.1017/s0022336000044516	Recurrences of hypotheses about ammonites and Argonauta
+W2179204982	W4235902411	2001	article	10.1017/s0022336000039858	Shell morphology, shell texture and species discrimination of CaribbeanTucetona(Bivalvia, Glycymeridae)
+W2179204982	W4248972044	2001	article	10.1017/s0022336000039718	Shell morphology, shell texture and species discrimination of CaribbeanTucetona(Bivalvia, Glycymeridae)
+W2179233868	W4241827302	2003	article	10.1017/s0022336000044838	The first evidence of drilling predation in inoceramids
+W2179239323	W4255183467	2001	article	10.1017/s0022336000017224	Conodonts: Past, present, future
+W2179244414	W4254621970	2001	article	10.2307/3515632	Paleoecology and Taphonomy of Polystrata alba (Red Alga) from the Late Eocene Alpine Foreland: A New Tool for the Reconstruction of Sedimentary Environments
+W2179316110	W4250865806	2001	article	10.1017/s0022336000039846	A history of diversification, extinction, and invasion in tropical America as derived from species-level phylogenies of chionine genera (Family Veneridae)
+W2179316110	W4251859600	2001	article	10.1017/s0022336000039706	A history of diversification, extinction, and invasion in tropical America as derived from species-level phylogenies of chionine genera (Family Veneridae)
+W2179337081	W4250987420	2003	article	10.1017/s0022336000043675	A new crab from the late Eocene Hoko River Formation, Olympic Peninsula, Washington: The earliest record of Euphylax (Decapoda: Portunidae)
+W2179399884	W4234721931	2001	article	10.1017/s002233600003969x	Evolution and phylogenetic significance of cardioidean shell microstructure (Mollusca, Bivalvia)
+W2179499540	W4233370330	2001	article	10.1017/s0022336000039901	Silurian Ramphoprionid polychaetes from Gotland, Sweden
+W2179512910	W4238962970	2000	article	10.2307/3515616	An Early Permian Coastal Flora from the Central Basin Platform of Gaines County, West Texas
+W2179520681	W4246887225	2002	article	10.1017/s0022336000041949	A new species ofMexicaprina(Caprinidae, Coalcomaninae) and review of the age and paleobiogeography of the genus
+W2179532934	W4242271471	2001	article	10.1017/s0022336000031929	Leperditicopid arthropods (Ordovician-Late Devonian): Functional morphology and ecological range
 W2179549739	W4254765278	2003	article	10.1017/s0094837300018030	Environmentally driven variation in ancient populations of turritellids: evaluating the causal link
+W2179582797	W4230674041	2001	article	10.1017/s0022336000016929	Devonian cladid crinoids: Families Glossocrinidae Goldring, 1923, and Rutkowskicrinidae new family
+W2179679488	W4234188897	2002	article	10.1017/s002233600001739x	Cupulocrinus angustatus (Meek and Worthen, 1870), a cladid crinoid from the Upper Ordovician Maquoketa Formation of the northern midcontinent of the United States
+W2179779381	W4250403537	2001	article	10.1017/s0022336000039676	Preliminary systematics and diversity patterns of cyclostome bryozoans from the Neogene of the Central American Isthmus
 W2179780679	W4249334621	2003	article	10.1017/s0094837300018042	Estimation of stratigraphic ranges when fossil finds are not randomly distributed
+W2179785898	W4248539129	2000	article	10.1017/s0022336000031437	Trilobites, biostratigraphy, and lithostratigraphy of the Crepicephalus and Aphelaspis zones, lower Deadwood Formation (Marjuman and Steptoean stages, Upper Cambrian), Black Hills, South Dakota
+W2179791995	W4245808769	2000	article	10.1017/s0022336000031425	Permian Polyplacophora, Rostroconchia, and Problematica from Oregon
+W2179802057	W4234797146	2000	article	10.1017/s0022336000031450	New species of calappid crabs from western North America and reconsideration of the Calappidae sensu lato
+W2179847854	W4245880672	2004	article	10.1017/s0022336000043900	Shell composition, cryptic costae, complex composite molds, and taphonomic chicanery in Mytiloides (Inoceramidae, Bivalvia)
+W2179886568	W4250709339	2003	article	10.1017/s0022336000043754	A land plant not a sponge: A re-evaluation of the Mississippian demosponge Vintonia and the family Vintoniidae
+W2179886647	W4245750461	2003	article	10.1017/s002233600004470x	Early Carboniferous athyridid brachiopods from the Qaidam Basin, northwest China
+W2179910934	W4231326544	2003	article	10.1017/s0022336000044498	First plesiosaur remains from the lower Cretaceous of the Neuquén Basin, Argentina
+W2179957405	W4250648800	2004	article	10.1017/s0022336000043912	Tertiary marine molluscan assemblages of eastern Patagonia (Argentina): A biostratigraphic analysis
+W2180142056	W4254989345	2000	article	10.1017/s0022336000032832	Early Cambrian Ediacaran-type fossils from California
+W2180164778	W4239205053	2000	article	10.1017/s0022336000032807	The first complete skeleton of Solnhofia parsonsi (Cryptodira, Eurysternidae) from the Upper Jurassic of Germany and its taxonomic implications
+W2180176866	W4251120299	2001	article	10.1017/s0022336000031966	Upper Wenlock and lower Ludlow (Silurian), post-extinction graptolites, Všeradice section, Barrandian area, Czech Republic
+W2180190763	W4237736614	2002	article	10.1017/s0022336000037495	Ontogeny and heterochrony in the Middle Carboniferous ammonoidArkanites relictus(Quinn, McCaleb, and Webb) from northern Arkansas
+W2180223226	W4243372914	2000	article	10.1017/s0022336000031735	Pectinate claws in decapod crustaceans: Convergence in four lineages
+W2180306777	W4231861303	2000	article	10.1017/s0022336000031206	Early Maastrichtian mollusca from the Mexcala Formation of the state of Guerrero, southern Mexico
+W2180319628	W4250413062	2001	article	10.1017/s0022336000017200	Insect evolutionary history from Handlirsch to Hennig, and beyond
+W2180341590	W4232165669	2000	article	10.1017/s002233600001756x	Worm tubes in an allochthonous cold-seep carbonate from lower Oligocene rocks of western Washington
+W2180349913	W4244552881	2002	article	10.1017/s0022336000041640	Lingulate brachiopods from the Cambrian-Ordovician boundary beds of Utah
+W2180424363	W4248019503	2003	article	10.1017/s002233600004347x	Primitive cladid crinoids from the early Osagean Burlington Limestone and the phylogenetics of Mississippian species of Cyathocrinites
+W2180486948	W4232519737	2001	article	10.1017/s0022336000018229	Paleobiology of the Neoproterozoic (Upper Riphean) Shorikha and Burovaya silicified microbiotas, Turukhansk Uplift, Siberia
+W2180506643	W4236932803	2003	article	10.1017/s0022336000044383	Ordovician and Silurian hyoliths and gastropods reassigned from the Hyolitha from the Girvan district, Scotland
+W2180561811	W4243773974	2000	article	10.1017/s002233600003153x	Durudawirines, a new group of phalangeroid marsupials from the Miocene of Riversleigh, northwestern Queensland
+W2180571637	W4236851411	2003	article	10.1017/s0022336000044759	Trilobites from theLejopyge armataZone (upper Middle Cambrian) of the Machari Formation, Yongwol Group, Korea
+W2180647287	W4254534966	2002	article	10.1017/s0022336000017406	The cladid crinoid Barycrinus from the Burlington Limestone (early Osagean) and the phylogenetics of Mississippian botryocrinids
+W2180675612	W4241415868	2002	article	10.1017/s002233600003763x	Species identification in Megantereon: A reply to Palmqvist
+W2180760554	W4241317102	2003	article	10.1017/s0022336000043705	The Mesozoic family Archizelmiridae (Diptera: Insecta)
+W2180769216	W4252459214	2002	article	10.1017/s0022336000017443	On Paleozoic plants from marine strata: Hexaloba finisensia new genus and species, a trigonocarpalean ovule from the Virgilian (Upper Pennsylvanian: Gzhelian) Finis Shale of Texas
+W2180778888	W4239856033	2001	article	10.1017/s0022336000018205	A new Isectolophid Tapiromorph (Perissodactyla, Mammalia) from the Early Eocene of Pakistan
+W2180793392	W4235982345	2000	article	10.1017/s0022336000017649	Lowermost Silurian graptolites from the Kurama Range, eastern Uzbekistan
+W2180802138	W4252858024	2002	article	10.1017/s0022336000041755	Paracalamitina striata—a newly reconstructed equisetophyte from the Permian of Angaraland
+W2180834581	W4240762487	2000	article	10.1017/s0022336000031462	Summit structures in Mississippian blastoids
+W2180847047	W4245517559	2000	article	10.1017/s0022336000017558	Evolution of the late Ordovician orthid brachiopod Gnamptorhynchos Jin, 1989 from Platystrophia King, 1850, in North America
+W2180873305	W4248285140	2003	article	10.1017/s0022336000044826	Description and interpretation ofSanctum laurentiensis, new ichnogenus and ichnospecies, a domichnium mined into Late Ordovician (Cincinnatian) ramose bryozoan colonies
+W2180893688	W4254127996	2002	article	10.1017/s0022336000041767	Added nerineoid gastropod evidence for a warm Turonian sea in southern California
+W2180919902	W4231727706	2001	article	10.1017/s0022336000031954	Paleoecology and taphonomy of two new edrioasteroids from a Mississippian hardground in Kentucky
+W2180979585	W4231717778	2002	article	10.1017/s0022336000042013	Small theropod and bird teeth from the late Cretaceous (late Campanian) Judith River Group, Alberta
+W2180994296	W4247556170	2000	article	10.1017/s0022336000033126	A new near-shore marine fauna and flora from the Early Neogene of northwestern Venezuela
+W2181044274	W4255957102	2002	article	10.1017/s0022336000037483	Uppermost Changxingian (Permian) radiolarian fauna from southern Guizhou, southwestern China
+W2181066153	W4236502258	2000	article	10.1017/s0022336000017662	Mohawkian (Upper Ordovician) conodonts of eastern North America and Baltoscandia
+W2181067680	W4248523572	2000	article	10.1017/s0022336000031528	Cranial remains of a new species of balbarine kangaroo (Marsupialia: Macropodoidea) from the Oligo-Miocene freshwater limestone deposits of Riversleigh World Heritage Area, northern Australia
+W2181090840	W4255232642	2002	article	10.1017/s0022336000037306	Description and paleobiogeographic significance of a rare Cenomanian molluscan faunule from Bathurst Island, northern Australia
+W2181125977	W4236123263	2003	article	10.1017/s0022336000043687	Trilobites of the lower Middle CambrianPoliella denticulataBiozone (new) of southeastern Nevada
+W2181148236	W4233185062	2003	article	10.1017/s0022336000044413	A new soft-bodied fauna: The Pioche Formation of Nevada
+W2181163211	W4231419609	2002	article	10.1017/s0022336000017315	Late Cambrian radiolarian faunas and biostratigraphy of the Cow Head Group, western Newfoundland
+W2181204530	W4237106849	2004	article	10.1017/s0022336000043894	Terquemia (Dentiterquemia) eudesdeslongchampsinew subgenus and species, an interesting cementing bivalve from the Lower Jurassic of the western Carpathians (Slovakia)
+W2181246486	W4238185540	2002	article	10.1017/s0022336000042037	First record of the Caribbean genus Cittarium (Mollusca: Gastropoda: Trochidae) from the Oligocene of Europe and its paleobiogeographic implications
+W2181248164	W4244975957	2002	article	10.1017/s0022336000057917	The Burgess Shale arthropod Mollisonia (M. sinica new species): new occurrence from the Middle Cambrian Kaili fauna of southwest China
+W2181264753	W4249507719	2000	article	10.1017/s0022336000032728	Identity and phylogeny of the late Paleozoic Subulitoidea (Gastropoda)
+W2181699266	W4233004808	2001	article	10.1017/s0022336000018138	Differentiation of the fossil Hexapodidae Miers, 1886 (Decapoda: Brachyura) from similar forms
+W2183235783	W4249081509	2003	article	10.1017/s0022336000044814	Late Pliocene and early Pleistocene rodents from the northern Borchers Badlands (Meade County, Kansas), with comments on the Blancan-Irvingtonian boundary in the Meade Basin
+W2183238086	W4239190986	2001	article	10.1017/s0022336000018242	A new Ordovician gastropod and operculum from the Czech Republic
 W2183636582	W4251649490	2003	article	10.1017/s0094837300018108	Reconstruction of Tertiary Metasequoia forests. I. Test of a method for biomass determination based on stem dimensions
+W2185605052	W4244831468	2001	article	10.1017/s0022336000039640	The origin and early evolution of theMontastraea “annularis”species complex (Anthozoa: Scleractinia)
+W2185864609	W4230917528	2001	article	10.1017/s0022336000016917	Middle Permian rugose corals from Laibin, Guangxi, South China
+W2186254817	W4234288093	2003	article	10.1017/s0022336000043432	A new scolopendromorph centipede (Myriapoda: Chilopoda) from the lower Cretaceous (Aptian) of Brazil
+W2186700957	W4244036377	2004	article	10.1017/s0022336000043948	A new Late Silurian (Pridolian) naraoiid (Euarthropoda: Nektaspida) from the Bertie Formation of southern Ontario, Canada—delayed fallout from the Cambrian explosion
+W2187548840	W4252283031	2003	letter	10.1017/s0022336000044528	Reply to Checa and to Hewitt and Westermann
+W2187623349	W4241527475	2000	article	10.1017/s002233600003122x	Two early millericrinids and an unusual crinoid of uncertain systematic position from the lower Upper Anisian (Middle Triassic) of Qingyan, southwestern China
+W2188793287	W4240882949	2000	article	10.1017/s0022336000031747	Suture modification by pectinirhomb growth in Lepadocystis decorus, a new species of callocystitid glyptocystitid rhombiferan (Echinodermata) from Illinois
+W2190790889	W4205217598	2000	article	10.1017/s0022336000017704	Heterochrony in Stringocephalus
+W2191620522	W4234431980	2000	article	10.1017/s0022336000032765	New fossil portunids from Washington, USA, and Argentina, and a re-evaluation of generic and family relationships within the Portunoidea Rafinesque, 1815 (Decapoda: Brachyura)
+W2191666340	W4237838189	2002	article	10.1017/s0022336000037264	Revision of the generaSphaerodinellaKeupp and Versteegh, 1989 andOrthopithonellaKeuppinKeupp and Mutterlose, 1984 (Calciodinelloideae, calcareous dinoflagellate cysts)
+W2191798007	W4230708513	2002	article	10.1017/s0022336000041780	An easy way to remove fossils from sandstones: DMSO disaggregation
+W2192753889	W4251304836	2002	article	10.1017/s0022336000057863	Redescription, phylogenetic position, and stratigraphic significance of the dicynodont genus Odontocyclops (Synapsida: Anomodontia)
+W2193133230	W4241663113	2004	article	10.1017/s0022336000043961	A reconnaissance of skeletal crystallography in rhombiferans, diploporans, and paracrinoids
+W2196842540	W4251407233	2000	article	10.1017/s0022336000017698	Carnivora from the South Turkwel hominid site, northern Kenya
+W2198463347	W4243456743	2000	article	10.1017/s0022336000017601	Lower Mississippian trilobites from southern New Mexico
+W2199379386	W4235210041	2000	article	10.1017/s0022336000031243	The biological implications of an edrioasteroid attached to a pleurocystitid rhombiferan
+W2200358324	W4253787956	2003	article	10.1017/s0022336000044772	A quadrupling of Famennian pelmatozoan diversity: New Late Devonian blastoids and crinoids from northwest China
+W2203334543	W4229522652	2000	article	10.1017/s0022336000032923	Presentation of the 1999 Harrell L. Strimple Award to the Aranguti Family
+W2203365700	W4234381921	2000	article	10.1017/s0022336000033072	Stygina, Eobronteus(Ordovician Styginidae, Trilobita): Morphology, classification, and affinities of Illaenidae
+W2204191335	W4234013124	1988	article	10.1017/s0022336000058893	The upper Paleozoic (Pennsylvanian-Permian) ammonoid Emilites
+W2205590374	W4243479943	2000	article	10.1017/s0022336000031292	Orientation and anatomical notation in conodonts
+W2206700735	W4246197486	2002	article	10.1017/s0022336000037574	Idanoceras, a new heteromorph ammonite genus from the Late Albian of eastern Australia
+W2208168806	W4246203783	2003	article	10.1017/s0022336000044723	Permian rostroconchs (Mollusca) from Nevada
+W2208763218	W4243198474	2000	article	10.2307/3515645	Body Form and Trackway Pattern in Australian Desert Monitors (Squamata: Varanidae): Comparing Zoological and Ichnological Diversity
+W2208838713	W4252046734	2002	article	10.1017/s0022336000041901	Phylogeny, systematics, and biostratigraphy of the Ordovician bryozoan genus Peronopora
+W2210064242	W4238363609	2002	article	10.1017/s0022336000037537	The dentition and relationships of Carpodaptes cygneus (Russell) (Carpolestidae, Plesiadapiformes, Mammalia), from the Late Paleocene of Alberta, Canada
+W2210420323	W4248024303	2003	article	10.1017/s0022336000044255	Coenobichnus currani (new ichnogenus and ichnospecies): Fossil trackway of a land hermit crab, early Holocene, San Salvador, Bahamas
+W2210874817	W4229943776	2002	article	10.1017/s0022336000042025	Flabelligerida from the Francis Creek Shale of Illinois
+W2212804906	W4238683206	2001	article	10.1017/s0022336000017248	The origin and early radiation of terrestrial vertebrates
+W2213114037	W4246137370	2002	article	10.1017/s0022336000057899	New viverravids from the Torrejonian (Middle Paleocene) of Kutz Canyon, New Mexico and the oldest skull of the order Carnivora
+W2213283599	W3215260066	2004	article	10.1017/s0022336000043857	Thectardis avalonensis: A new Ediacaran fossil from the Mistaken Point biota, Newfoundland
+W2217936318	W4250167546	2002	article	10.1017/s0022336000057875	A dyrosaurid crocodyliform braincase from Mali
+W2219215990	W4229958266	2000	article	10.1017/s002233600003170x	The spondylium and related structures in the clitambonitidine brachiopods
+W2220393743	W4253039493	2002	article	10.1017/s0022336000037471	Should paleontologists use “phylogenetic” nomenclature?
+W2220443362	W4238433244	2002	article	10.1017/s0022336000057838	Homeomorphy in the Asteroidea (Echinodermata); a new Late Cretaceous genus and species from Colorado
+W2221386607	W4235792066	2002	article	10.1017/s0022336000037604	A new species of Anartiocystis (Callocystitida, Glyptocystitida) from the Brassfield Formation of central Kentucky
+W2222430013	W4231210451	2002	article	10.1017/s0022336000057802	New Cambrian and Lower Ordovician monoplacophorans from the Ozark Uplift, Missouri
+W2222435477	W4239942705	2000	article	10.1017/s0022336000031255	The systematics of postibullinid edrioasteroids
+W2226937171	W4254238765	2003	article	10.1017/s0022336000043699	Fenestrate graptolite theoretical morphology: Geometric constraints on lophophore shape and arrangement in extinct hemichordates
+W2227314756	W4232261681	2002	article	10.1017/s0022336000037409	Masonoceras, a new karagandoceratid ammonoid from the lower Mississippian (lower Osagean) of Kentucky
+W2227955062	W4252894004	2004	article	10.1017/s0022336000044000	The first Mesozoic stephanid wasp (Hymenoptera: Stephanidae)
+W2230588466	W2177505033	2001	article	10.1666/0022-3360(2001)075<0284:mowgow>2.0.co;2	MIDDLE ORDOVICIAN (WHITEROCKIAN) GASTROPODS OF WESTERN NEWFOUNDLAND: MACLURITOIDEA AND EUOMPHALOIDEA
+W2231959447	W4233958893	2002	article	10.1017/s0022336000037318	Functional morphology and taxonomic significance of a novel cuticular Structure in Cretaceous Raninid crabs (Decapoda: Brachyura: Raninidae)
+W2232717098	W4239253145	2001	article	10.2307/3515550	Nature and Origin of Spectacular Marine Miocene Shell Beds of Northeastern Patagonia (Argentina): Paleoecological and Bathymetric Significance
+W2234122489	W4210954633	2000	article	10.1017/s0022336000017741	Donation of Amoco fossil collections
+W2235097679	W4211017244	2001	article	10.1017/s002233600001725x	Early mammalian radiations
+W2236328087	W4249498557	2004	article	10.1017/s0022336000043870	Paleobiologic features of Trabeculites maculatus (Tabulata, Late Ordovician, southern Manitoba)
+W2236398340	W4234891515	2002	article	10.1017/s0022336000057851	Revision of the aïstopod genusPhlegethontia(Tetrapoda: Lepospondyli)
+W2236488828	W4236451504	2002	article	10.1017/s0022336000041937	Evaluating internal versus external characters: Phylogenetic analyses of the Echinoconchidae, Buxtoniinae, and Juresaniinae (phylum Brachiopoda)
+W2237098126	W4246235929	2003	article	10.1017/s0022336000043390	Early Devonian gastropods from Zhusilenghaierhan region, western inner Mongolia, China
+W2237607420	W4242490319	2003	article	10.1017/s0022336000043419	New late Cretaceous (Campanian and Maastrichtian) marine gastropods from California
+W2238100720	W4247305356	2002	article	10.1017/s0022336000041792	Ronald Pearson Tripp (1914-2001)
+W2241604224	W4243861904	2003	article	10.1017/s0022336000043481	Lower Mississippian crinoid (Echinodermata) fauna from Utah County, Utah
+W2242904056	W4246116587	2002	article	10.1017/s0022336000041858	Stratigraphy in phylogeny reconstruction—comment on Smith (2000)
+W2242953236	W4241701602	2004	article	10.1017/s0022336000043869	Cystothalamia vandegraaffi new species and other Sphinctozoan sponges from the Upper Carboniferous of Spain
+W2243724610	W4247343867	2003	article	10.1017/s0022336000044504	Fabrication and function of ammonite septa—Comment on Lewy
+W2247450493	W4239214376	2004	article	10.1017/s0022336000043997	A remarkable new genus of Mytilidae (Bivalvia) from the Lower Cretaceous of southwestern Gondwanaland
+W2253162857	W4240716730	2002	article	10.1017/s002233600005784x	Two Carboniferous fine-eyed palaeoniscoids (Pisces, Actinopterygii) from Bear Gulch (USA)
+W2257896751	W4230267114	2000	article	10.2307/3515539	Carbon Isotope Excursion in Atmospheric CO 2 at the Cretaceous-Tertiary Boundary: Evidence from Terrestrial Sediments
+W2258997633	W4251942255	2001	article	10.2307/3515528	Evidence of Earliest Known Wildfires
+W2267625395	W4244154099	2002	article	10.1017/s0022336000041883	Stratigraphy in phylogeny reconstruction—response
+W2275975051	W4234375529	2001	article	10.1017/s002233600001698x	Nomenclature of disarticulated pelmatozoan columnals: A comment
+W2283724769	W2175684783	2001	article	10.1669/0883-1351(2001)016<0531:br>2.0.co;2	3-D Seismic Interpretation: A Primer for Geologists
 W2333034491	W4241980382	1966	article	10.2307/2411985	The Extinction of the Multituberculates
+W2343139496	W4253478887	1988	article	10.1017/s0022336000058832	The influence of Trypanites in the diagenesis of Devonian stromatoporoids
+W2493459232	W2052424964	1991	article	10.1111/j.1502-3931.1991.tb01475.x	Golden Trilobite Awards announced
 W2496753913	W4235190899	1980	article	10.1017/s0094837300025720	Function of cameral water in Nautilus
+W2498672866	W2038244260	1993	article	10.1111/j.1502-3931.1993.tb01802.x	Second Golden Trilobite Awards announced
 W2501042907	W4230524357	1980	article	10.1017/s0094837300025719	The neotenous origin of the pollen organ of the gymnosperm Cycadeoidea and implications for the origin of higher taxa
+W2737220184	W4255913836	2017	paratext	10.1002/spp2.2017.3.issue-4	A new Mississippian tetrapod from Fife, Scotland, and its environmental context
 W2883512297	W4299541734	1859	book	10.5962/bhl.title.82303	On the origin of species by means of natural selection, or, The preservation of favoured races in the struggle for life
+W2887601942	W4249181750	2018	paratext	10.1111/pala.2018.61.issue-6	Testosterone in ancient hair from an extinct species
+W2909468306	W4247492915	2019	article	10.1111/pala.12418-1	Coralline red algae from the Silurian of Gotland indicate that the order Corallinales (Corallinophycidae, Rhodophyta) is much older than previously thought
+W2909468306	W4255562587	2019	article	10.1111/pala.12418-2	Coralline red algae from the Silurian of Gotland indicate that the order Corallinales (Corallinophycidae, Rhodophyta) is much older than previously thought
+W2986585733	W2172351076	2000	article	10.1669/0883-1351(2000)015<0257:br>2.0.co;2	Functional Morphology of the Invertebrate Skeleton
+W2986903187	W2066816170	2000	article	10.1669/0883-1351(2000)015<0171:br>2.0.co;2	The Idea of Time
+W2987094699	W2154455620	2000	article	10.1669/0883-1351(2000)015<0172:br>2.0.co;2	Bivalves: An Eon of Evolution. Paleobiological Studies Honoring Norman D. Newell
+W2988970486	W2184012855	2001	article	10.1669/0883-1351(2001)016<0615:brsfaa>2.0.co;2	Surfactants: Fundamentals and Applications in the Petroleum Industry
+W4212955635	W2151900888	2001	article	10.1669/0883-1351(2001)016<0616:brteot>2.0.co;2	The Ecology of the Cambrian Radiation
+W4230320433	W2208191085	2000	article	10.1669/0883-1351(2000)015<0256:br>2.0.co;2	Paleocommunities--A Case Study from the Silurian and Lower Devonian
+W4232379313	W2139311249	2002	article	10.1666/0022-3360(2002)076<0775:potacm>2.0.co;2	PROCEEDINGS OF THE 2001 ANNUAL COUNCIL MEETING
 W4232723094	W2479024925	1999	article	10.1666/0094-8373-25.4.504	Shape disassociation and inferred heterochrony in a clade of pachypleurosaurs (Reptilia, Sauropterygia)
+W4233403555	W2199287453	2003	article	10.1666/0022-3360(2003)077<0408:nototc>2.0.co;2	NOTICE OF TRANSFER OF THE CALIFORNIA STATE UNIVERSITY, NORTHRIDGE, PALEONTOLOGY COLLECTION TO THE NATURAL HISTORY MUSEUM OF LOS ANGELES COUNTY
+W4233465979	W2262833586	2001	article	10.1666/0022-3360(2001)075<0753:apctps>2.0.co;2	A PIONEER COMMUNITY: THE PALEONTOLOGICAL SOCIETY TAKES ITS PUBLICATIONS ONLINE!
+W4234734940	W2276787635	2000	article	10.1666/0022-3360(2000)074<0754:potpsm>2.0.co;2	PRESENTATION OF THE PALEONTOLOGICAL SOCIETY MEDAL TO ARTHUR J. BOUCOT
+W4236503262	W2907316359	2006	article	10.1666/0022-3360(2006)80[604:r]2.0.co;2	REVIEWS
+W4236573690	W2248192241	2001	article	10.1666/0022-3360(2001)075<0922:potcsa>2.0.co;2	PRESENTATION OF THE CHARLES SCHUCHERT AWARD OF THE PALEONTOLOGICAL SOCIETY TO MICHAEL J. FOOTE
+W4239121684	W2170279911	2000	article	10.1666/0022-3360(2000)074<0758:potcsa>2.0.co;2	PRESENTATION OF THE CHARLES SCHUCHERT AWARD OF THE PALEONTOLOGICAL SOCIETY TO CHARLES R. MARSHALL
+W4239211780	W2136529274	2001	article	10.1669/0883-1351(2001)016<0307:br>2.0.co;2	The Carbon Cycle
+W4239294603	W2150674770	2000	article	10.1666/0022-3360(2000)074<0052:scacca>2.0.co;2	SKELETAL CRYSTALLOGRAPHY AND CRINOID CALYX ARCHITECTURE
+W4240079120	W2237447072	2002	article	10.1666/0022-3360(2002)076<0789:pothls>2.0.co;2	PRESENTATION OF THE HARRELL L. STRIMPLE AWARD TO STEPHEN FELTON
+W4240405325	W1990055061	1982	article	10.1111/j.1502-3931.1982.tb01984.x	Dictyodora and associated trace fossils from the Palaeozoic of Thuringia
+W4240732353	W2172340398	2000	article	10.1669/0883-1351(2000)015<0081:br>2.0.co;2	Stratigraphy and Paleoenvironments of the Cretaceous Western Interior Seaway, USA: SEPM Concepts in Sedimentology and Paleontology No. 6
+W4240866375	W2063288943	2002	article	10.1111/j.1502-3931.2002.tb00078.x	First occurrence of premaxillary caniniform teeth in the Varanoidea: Presence in the extinct mosasaur Goronyosaurus (Squamata: Mosasauridae) and its functional and paleoecological implications
+W4241321604	W2175569753	2000	article	10.1669/0883-1351(2000)015<0363:br>2.0.co;2	Mesozoic and Cenozoic Sequence Stratigraphy of European Basins: SEPM Special Publication Series No. 60
+W4241460783	W2124925109	1987	article	10.1111/j.1502-3931.1987.tb02048.x	Directory of Paleontologists of the World Fifth Edition, 1989
+W4242802676	W2171000316	2003	article	10.1666/0022-3360(2003)077<0876:iaivit>2.0.co;2	INTRA- AND INTERSPECIFIC VARIATION IN THE EARLY INTERNAL SHELL FEATURES OF SOME CRETACEOUS AMMONOIDS
+W4244018915	W2176776328	2000	article	10.1666/0022-3360(2000)074<0360:aiolot>2.0.co;2	ADDITIONAL INFORMATION ON LOWEST ORDOVICIAN TRILOBITES FROM THE UPPERMOST DEADWOOD FORMATION, BLACK HILLS AND BEAR LODGE MOUNTAINS, SOUTH DAKOTA AND WYOMING
+W4244580748	W2218378847	1996	article	10.1017/s0022336000023672	Presentation of the Paleontological Society Medal to Alfred G. Fischer
+W4244800447	W2235001280	2002	article	10.1666/0022-3360(2002)076<0783:potpsm>2.0.co;2	PRESENTATION OF THE PALEONTOLOGICAL SOCIETY MEDAL TO ALAN H. CHEETHAM
+W4244933467	W2225938575	2002	article	10.1666/0022-3360(2002)076<1109:wattsc>2.0.co;2	WEB ACCESS TO THE SPECIMEN CATALOG AT THE NEW BRUNSWICK MUSEUM
+W4245129070	W2188480451	2000	article	10.1666/0022-3360(2000)074<0367:jhsadp>2.0.co;2	JAMES H. STITT: A DEDICATED PROFESSOR AND EXEMPLARY BIOSTRATIGRAPHER
+W4246005342	W1967576163	1984	article	10.1111/j.1502-3931.1984.tb02022.x	A comparative study of Lower Cambrian Halkieria and Middle Cambrian Wiwaxia
+W4247495426	W2074013155	2003	article	10.1666/0022-3360(2003)077<0814:potcsa>2.0.co;2	PRESENTATION OF THE CHARLES SCHUCHERT AWARD OF THE PALEONTOLOGICAL SOCIETY TO BRUCE SMITH LIEBERMAN
+W4248169904	W2023217755	1983	article	10.1111/j.1502-3931.1983.tb01995.x	Ribbing patterns in the brachiopod Diceromyonia
+W4248315644	W4247058422	1988	article	10.1017/s0022336000018515	Report of the Secretary
+W4248394060	W1963992798	2000	article	10.1666/0022-3360(2000)074<1198:nototu>2.0.co;2	NOTICE OF TRANSFER OF THE UNIVERSITY OF CINCINNATI PALEONTOLOGY COLLECTIONS TO CINCINNATI MUSEUM CENTER
+W4248889696	W2785548483	2002	article	10.1666/0022-3360(2002)076<0771:potmcm>2.0.co;2	PROCEEDINGS OF THE 2001 MIDYEAR COUNCIL MEETING
+W4249223796	W2199067582	2004	article	10.1666/0022-3360(2004)078<1221:pannfa>2.0.co;2	PALMATOLEPIS ARTA, NEW NAME FOR A FAMENNIAN CONODONT
+W4249666696	W4254985377	2001	article	10.1666/0022-3360(2001)075<1055:sp>2.0.co;2	SYSTEMATIC PALEONTOLOGY
+W4249737006	W4241077233	2003	article	10.1666/0022-3360(2003)077<0599:e>2.0.co;2	ERRATA
+W4251299008	W2262022458	2002	article	10.1666/0022-3360(2002)076<0786:potcsa>2.0.co;2	PRESENTATION OF THE CHARLES SCHUCHERT AWARD OF THE PALEONTOLOGICAL SOCIETY TO LOREN E. BABCOCK
+W4251750881	W2269849103	2001	article	10.1666/0022-3360(2001)075<0222:gac>2.0.co;2	G. ARTHUR COOPER 1902–1999
+W4252623620	W2183573704	2002	article	10.1666/0022-3360(2002)076<0194:oscaat>2.0.co;2	ONLINE SPECIMEN CATALOG AVAILABLE AT THE UNIVERSITY OF WYOMING
+W4253783505	W2200756721	2002	article	10.1666/0022-3360(2002)076<0197:cicdih>2.0.co;2	CHANGES IN COLONIAL DEVELOPMENT, INTRASPECIFIC HETEROCHRONY, MORPHOLOGICAL INTEGRATION, AND CHARACTER HERITABILITIES IN TWO POPULATIONS OF THE BRYOZOAN SPECIES BATOSTOMA JAMESI FROM THE KOPE FORMATION (UPPER ORDOVICIAN, CINCINNATIAN)
+W4254027312	W2012116921	2014	article	10.1666/13-122	Anthracotheres from Wadi Moghra, Early Miocene, Egypt
+W4254465106	W1996558647	2001	article	10.1666/0022-3360(2001)075<0926:pothls>2.0.co;2	PRESENTATION OF THE HARRELL L. STRIMPLE AWARD TO DEAN PEARSON
+W4254776936	W1998675830	1982	article	10.1111/j.1502-3931.1982.tb01974.x	The genus Luppovia and the phylogeny of Cretaceous heteromorphic ammonoids
+W4254844957	W2064512622	2003	article	10.1666/0022-3360(2003)077<0817:pothls>2.0.co;2	PRESENTATION OF THE HARRELL L. STRIMPLE AWARD OF THE PALEONTOLOGICAL SOCIETY TO HANS HESS
+W4255165465	W2173842291	2003	article	10.1666/0022-3360(2003)077<0811:potpsm>2.0.co;2	PRESENTATION OF THE PALEONTOLOGICAL SOCIETY MEDAL TO STEPHEN JAY GOULD
+W4255291647	W2125506556	1982	article	10.1111/j.1502-3931.1982.tb01973.x	A very personal geology of Europe
+W4255603003	W2495287385	1988	article	10.1017/s0022336000017972	Megalosia, a new strophalosiid (Brachiopoda) genus from the Late Permian Nisal Member, Manang District, Nepal
 W4255662033	W7214216238	2005	article	10.1666/0094-8373(2005)031[0676:aohmma]2.0.co;2	Analysis of hindlimb muscle moment arms in Tyrannosaurus rex using a three-dimensional musculoskeletal computer model: implications for stance, gait, and speed
+W4256055097	W2036381238	1982	article	10.1111/j.1502-3931.1982.tb01992.x	Global events and evolution First IPA Research Programme
+W4256370549	W2176392032	2001	article	10.1666/0022-3360(2001)075<0370:fcftuo>2.0.co;2	FLEXIBLE CRINOIDS FROM THE UPPER ORDOVICIAN MAQUOKETA FORMATION OF THE NORTHERN MIDCONTINENT AND THE EVOLUTION OF EARLY FLEXIBLE CRINOIDS
+W4256581215	W2151561941	2001	article	10.1666/0022-3360(2001)075<0905:potmcm>2.0.co;2	PROCEEDINGS OF THE 2000 MIDYEAR COUNCIL MEETING
+W4300670600	W2056015968	2000	article	10.1669/0883-1351(2000)015<0364:br>2.0.co;2	Numerical Palaeobiology--Computer-based Modelling and Analysis of Fossils and their Distributions
 W4300925890	W1539968307	2002	book-review	10.5860/choice.39-6411	The structure of evolutionary theory
 W4302781015	W2018204894	1996	book-review	10.5860/choice.33-2720	Species diversity in space and time
 W4389219389	W6967847691	2023	article	10.5281/zenodo.10149113	Response of siliceous marine organisms to the Permian-Triassic climate crisis based on new findings from central Spitsbergen, Svalbard
