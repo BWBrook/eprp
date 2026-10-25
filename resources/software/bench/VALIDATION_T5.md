@@ -137,3 +137,38 @@ for the 540 Ma experiment that rerun failed ("cannot stat 'fort.2'",
 ([run_t5_c1.sh](run_t5_c1.sh)), again `**TEST OK**` in all three; those
 outputs are the committed C1 results, and the failed reruns are kept as
 `results/t5/c1_*_rerun_dirty_tree.txt`.
+
+## Amendment A3 (25 October 2026, before running any of it): gen3sis
+
+Next in [SCOPE_T5.md](SCOPE_T5.md)'s order. gen3sis 1.6.0 from the
+CRAN snapshot of 2026-10-22, with its source tarball for the shipped
+tests (`eprp-sw/bench-r5g:t5`, [Dockerfile](env/Dockerfile.r5g)). Hagen et
+al. (2021, *PLOS Biology*, 10.1371/journal.pbio.3001340) deposit their
+configs, landscapes and per-simulation summaries (Zenodo 5006413, CC BY
+4.0); their own simulation output records gen3sis 0.9.9 (pre-CRAN) on
+R 3.6.1, so a bit-identical rerun is not expected.
+
+1. **G1, shipped tests (T1).** `testthat` on the package's `tests/` with
+   `NOT_CRAN=true`, which includes the CaseStudy1 reference outputs. Pass:
+   no failures.
+2. **G2a, dispersal closed form.** gen3sis draws one dispersal value per
+   (occupied, free) cell pair and colonises a free cell if any draw reaches
+   its distance. With one occupied cell and Weibull(shape k, scale λ)
+   draws, a free cell at distance d is colonised in one step with
+   probability exp(−(d/λ)^k). Call the internal `disperse` on a synthetic
+   species and distance matrix (one occupied cell, free cells at
+   d = 100, 300, …, 1,500 km; k = 3, λ = 700, the shape and scale of
+   Hagen's first M1 config), 4,000 replicates. Pass: every cell's
+   colonisation fraction within 4 binomial SE of the formula.
+3. **G2b, speciation timing.** Two occupied cells farther apart than any
+   dispersal draw, so isolated from the first step, divergence factor 1,
+   threshold T = 5: run the internal `loop_speciation` step by step. Pass:
+   one species through step T, exactly two after step T + 1.
+4. **G3, Hagen's deposited M1 simulations (characterisation).** Rerun the
+   first ten M1 configs (by number) that finished and use a deposited
+   landscape (`straume_4d` or `scotese_4d`) at gen3sis 1.6.0 with their
+   own seeds, and compare species alive at the end, the final fraction of
+   habitable cells occupied, and the deposited `perc_extinction` with our
+   reading of it (extinct ÷ total species ever). Reported, no criterion:
+   NEWS for 1.5.11 and 1.6.0 lists changes to extinction accounting and
+   indexing since the version that produced the deposit.
