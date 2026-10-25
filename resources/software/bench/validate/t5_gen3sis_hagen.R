@@ -11,12 +11,16 @@ if (mode == "select") {
   s <- summary_csv(args[2])
   s$n <- as.integer(sub("config_auto_", "", s$X))
   s <- s[order(s$n), ]
-  pick <- head(s[s$finished == "OK" & s$landscape %in% c("straume_4d", "scotese_4d"), ], 10)
+  pick <- head(s[s$finished %in% "OK" & s$landscape %in% c("straume_4d", "scotese_4d"), ], 10)
   cat(paste(pick$n, pick$landscape), sep = "\n")
 } else if (mode == "compile") {
   # the deposit's compile_gen3sis_landscape.R: water cost function, 8 directions, full distance matrices, 391 steps
   lsname <- args[2]
   ls1 <- readRDS(file.path(args[4], "landscapes_rds", lsname, "landscapes.rds"))
+  # the 2020 deposit stores each variable as a data frame (x, y, one column per time step, present first);
+  # gen3sis 1.6.0 wants lists of rasters, present first (amendment A4); values are unchanged
+  crs <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84"
+  ls1 <- lapply(ls1, function(df) lapply(names(df)[-(1:2)], function(cn) raster::rasterFromXYZ(df[, c("x", "y", cn)], crs = crs)))
   cost_function_water <- function(source, habitable_src, dest, habitable_dest) {
     if (!all(habitable_src, habitable_dest)) 2 / 1000 else 1 / 1000
   }
@@ -24,7 +28,7 @@ if (mode == "select") {
   create_input_landscape(landscapes = ls1, cost_function = cost_function_water, directions = 8,
                          output_directory = file.path(args[4], "landscapes", lsname), timesteps = steps,
                          calculate_full_distance_matrices = TRUE,
-                         crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84", verbose = FALSE)
+                         crs = crs, verbose = FALSE)
 } else if (mode == "run") {
   n <- as.integer(args[2])
   s <- summary_csv(args[3])

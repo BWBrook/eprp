@@ -172,3 +172,26 @@ R 3.6.1, so a bit-identical rerun is not expected.
    reading of it (extinct ÷ total species ever). Reported, no criterion:
    NEWS for 1.5.11 and 1.6.0 lists changes to extinction accounting and
    indexing since the version that produced the deposit.
+
+## Amendment A4 (25 October 2026, after G1 and G2 ran, before G3 ran)
+
+1. The CRAN tarball of gen3sis 1.6.0 has no `tests/`; G1 used the
+   repository's tests at the release commit (`cf76a62`, DESCRIPTION 1.6.0,
+   2025-09-01). Its first run errored in our setup (the simulation test
+   opens a plot device and the tests sat in a read-only directory); it was
+   rerun from a writable copy. **G1 is not met as declared**: of 18 tests,
+   9 are skipped by the authors' own `skip()` calls, and the CaseStudy1
+   test fails two of its three expectations, the md5 checks of `phy.nex`
+   and `phy.txt`. The stored reference files have Windows (CRLF) line
+   endings and the files written on Linux have LF; line by line they are
+   identical, and the summary reference matches (`all.equal`).
+2. G2a and G2b ran as declared (`results/t5/t5_gen3sis_checks.json`).
+3. G3: the deposit's `landscapes.rds` (2020, gen3sis 0.9.9) is a list of
+   data frames (x, y, one column per time step), which gen3sis 1.6.0's
+   `create_input_landscape` rejects; each column is converted to a raster
+   with `raster::rasterFromXYZ`, values unchanged, and the landscapes are
+   compiled with the deposit's own settings (`compile_gen3sis_landscape.R`:
+   water cost function, 8 directions, full distance matrices, 391 steps).
+   The first selection of configs let an `NA` row through (an unfinished
+   config compared with `==`); the corrected list is configs 1, 2, 8, 9,
+   10, 12, 13, 15, 16 and 18.
