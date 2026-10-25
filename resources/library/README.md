@@ -19,7 +19,7 @@ resources/library/
   library.py              harvest | resolve | expand | journal | fetch | withdraw | index
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
-  notes/                  method records for curated tiers (how the canon and author-year seeds were built)
+  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts)
   review/                 candidates held back from the seeds: unsettled citations, canon reserve and unverified
   works.tsv               generated: one row per resolved work, with tiers, questions and full-text status
   INDEX.md                generated: counts by tier, full-text status, type, decade and venue
@@ -67,6 +67,8 @@ rebuilt.
 | `cited-authoryear` | `seeds/cited-authoryear.tsv` | author–year citations in the registers and notes, resolved and graded `exact` or `probable` ([method](notes/authoryear-method.md)) |
 | `canon` | `seeds/canon.tsv` | curated foundational and landmark works, from the 1830s to 2026, under the [topic tree](topics.md) ([method](notes/canon-method.md)) |
 | `neighbours` | `seeds/neighbours.tsv` | works outside the tiers above that at least 5 of their works reference (`library.py expand`), with that count and the questions of the citing works |
+| `barry-2003-list` | `seeds/barry-2003-list.tsv` | the 293 papers on Barry's 2003 list of the most promising papers for further research, with their group and item numbers ([note](notes/barry-2003.md)) |
+| `barry-2003-endnote` | `seeds/barry-2003-endnote.tsv` | the 491 distinct works in his 2003–04 EndNote libraries and "Papers Held" bibliography, decoded and resolved ([note](notes/barry-2003.md)) |
 | `field-<journal>` | `seeds/field-<journal>.tsv` | a core journal's complete run as OpenAlex lists it (`library.py journal ISSN --name NAME`); see below |
 
 The journal runs so far (metadata, abstracts and reference lists; open full
@@ -197,9 +199,10 @@ the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
     rejected downloads (`tdm/<publisher>/quarantine/`) and withdrawn copies
     (`tdm/<publisher>/withdrawn/`). Deleting `tdm/` therefore discharges the
     end-of-project duty.
-  - A TDM route is tried only after every open route has been tried in that
-    run, none skipped for rate limits or failing transiently, and only for
-    that publisher's DOIs.
+  - A TDM route is tried only for that publisher's DOIs, and only after every
+    open route has been tried in that run with no transient failure. A lookup
+    service paused for rate limits (Semantic Scholar often is) does not block
+    TDM, because an open copy found later replaces the TDM copy.
   - If an open copy turns up later (with `--retry-failed`), it replaces the
     TDM copy, which is deleted.
   - **Wiley** (since 24 October 2026): `api.wiley.com` with the TDM token,
@@ -252,6 +255,14 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   next run. `--retry-failed` retries everything.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
+- `match IN.tsv OUT.tsv` resolves a reference list to DOIs or OpenAlex ids:
+  - Input columns: `raw` (the citation), `first_author`, `year`, and where
+    known `title`, `volume` and `pages`.
+  - Crossref candidates come first, then an OpenAlex title search.
+  - Each match is graded `exact` or `probable`. The rules are in
+    [the 2003 note](notes/barry-2003.md), where 892 of 904 citations
+    resolved exactly.
+  - Add the resolved rows to a seed file to make a tier.
 - `resolve`, `fetch` and `withdraw` take a lock on the store, so two writers
   cannot run at once.
 - Run anything longer than a few minutes on `deep-server`, never on the

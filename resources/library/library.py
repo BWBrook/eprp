@@ -8,6 +8,7 @@ Usage:
   python3 library.py resolve [--store DIR] [--recheck]
   python3 library.py expand [--store DIR] [--min-refs K] [--out DIR]
   python3 library.py journal ISSN --name NAME [--out DIR]
+  python3 library.py match IN.tsv OUT.tsv [--workers N]
   python3 library.py fetch [--store DIR] [--tier TIER ...] [--workers N] [--retry-failed] [--limit N]
   python3 library.py withdraw W [W ...] --reason TEXT [--store DIR]
   python3 library.py index [--store DIR] [--out DIR]
@@ -42,6 +43,7 @@ one, OpenAlex allows each IP address about 1,000 credits a day.
 import argparse
 import concurrent.futures
 import csv
+import difflib
 import datetime
 import fcntl
 import hashlib
@@ -595,6 +597,162 @@ def expand(store, k, out):
           f"-> {out / 'neighbours.tsv'}")
 
 
+# ---------------------------------------------------------------- match (reference lists)
+
+GRADE_RANK = {"exact": 2, "probable": 1, "": 0}
+FOLD_MAP = str.maketrans({"ł": "l", "Ł": "L", "ø": "o", "Ø": "O", "æ": "ae", "Æ": "AE", "œ": "oe", "Œ": "OE",
+                          "ß": "ss", "đ": "d", "Đ": "D", "ð": "d", "þ": "th", "ı": "i"})
+NOT_THE_WORK_RE = re.compile(r"\b(erratum|errata|corrigend\w*|correction|reply|response|comment)\b", re.I)
+
+
+def kind(word):
+    """'correction' for errata and corrigenda, 'reply' for replies, responses and comments."""
+    return "correction" if word.lower().startswith(("errat", "corrigend", "correction")) else "reply"
+
+
+def ascii_fold(text):
+    """Letters and digits only, with accents and ligatures folded to ASCII, lower case."""
+    text = unicodedata.normalize("NFKD", (text or "").translate(FOLD_MAP))
+    return re.sub(r"[^a-z0-9]", "", text.encode("ascii", "ignore").decode().casefold())
+
+
+def same_author(cited, candidate):
+    """Cited first-author surname against a candidate's family or full name: equal, or one ends the other
+    ("Van Valen" / "Valen", "Simon Conway Morris" / "Conway Morris"). Names that fold to nothing never match."""
+    a, b = ascii_fold(cited), ascii_fold(candidate)
+    if len(a) < 2 or len(b) < 2:
+        return False
+    last = ascii_fold((candidate or "").split()[-1]) if (candidate or "").split() else ""
+    short, longer = sorted((a, b), key=len)
+    return a == b or a == last or (len(short) >= 4 and longer.endswith(short))
+
+
+def first_page(pages):
+    """First page in lower case without leading zeros ("e0012" -> "e12"); "" when it has no digits."""
+    m = re.match(r"\s*([A-Za-z]{0,2})0*(\d+)", str(pages or ""))
+    return (m.group(1).lower() + m.group(2)) if m else ""
+
+
+def clean_title(title):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", title or "")).strip()
+
+
+def judge(row, title, year, author, volume, page, doi=""):
+    """Grade and score a candidate against a citation row. exact: the year agrees within one, and the first
+    author agrees with the title or with volume and first page; or title, volume and first page agree where no
+    author is known on one side. probable: title, volume and first page agree but the authors differ (name
+    formats), the title agrees where no author is known, or author and title agree but the cited volume
+    conflicts with the candidate's. A candidate title must cover most of the cited one. Errata and
+    replies (reply, response, comment) match only a citation of the same kind, unless first author, volume and
+    first page all agree; Choice reviews (10.5860) never match."""
+    if norm_doi(doi).startswith("10.5860/"):
+        return "", 0
+    title = clean_title(title)
+    raw, wanted, t = compact(row.get("raw")), compact(row.get("title")), compact(title)
+    if wanted:
+        title_ok = len(t) >= 8 and (difflib.SequenceMatcher(None, t, wanted).ratio() >= 0.85
+                                    or (t in raw and len(t) >= 0.6 * len(wanted)))
+    else:
+        title_ok = len(t) >= 20 and t in raw
+    year_ok = bool(year) and str(row.get("year", "")).isdigit() and abs(int(year) - int(row["year"])) <= 1
+    known = len(ascii_fold(author)) >= 2 and len(ascii_fold(row.get("first_author"))) >= 2
+    author_ok = known and same_author(row.get("first_author"), author)
+    number = lambda v: (re.match(r"\s*(\d+)", str(v or "")) or [None, ""])[1]  # "293A" -> "293"
+    volume, fp = number(volume), first_page(page)
+    cited_volume, cited_fp = number(row.get("volume")), first_page(row.get("pages"))
+    coords_ok = bool(volume) and volume == cited_volume and bool(fp) and fp == cited_fp
+    coords_conflict = bool(volume and cited_volume) and volume != cited_volume  # a page slip alone is no conflict
+    score = 4 * author_ok + 2 * coords_ok + 2 * title_ok
+    other_kind = re.match(r"\s*" + NOT_THE_WORK_RE.pattern, title, re.I)
+    if other_kind and not (author_ok and coords_ok) and kind(other_kind.group(1)) not in {
+            kind(w) for w in NOT_THE_WORK_RE.findall(row.get("raw") or "")}:
+        return "", 0
+    if not year_ok:
+        return "", 0
+    if author_ok and (title_ok or coords_ok):
+        return ("probable" if coords_conflict else "exact"), score
+    if title_ok and coords_ok:
+        return ("probable" if known else "exact"), score
+    if title_ok and not known:
+        return "probable", score
+    return "", 0
+
+
+def crossref_match(row, pacer):
+    """Best Crossref candidate for a citation row: (grade, doi, title)."""
+    y = int(row["year"]) if str(row.get("year", "")).isdigit() else None
+    params = {"query.bibliographic": row["raw"][:500], "rows": "5"}
+    if y:
+        params["filter"] = f"from-pub-date:{y - 1},until-pub-date:{y + 1}"
+    url = "https://api.crossref.org/works?" + urllib.parse.urlencode(params)
+    pacer.wait(url)
+    data, _ = get_json(url, tries=3)
+    best, key = ("", "", ""), (0, 0)
+    for it in data.get("message", {}).get("items", []):
+        title = clean_title(" ".join((it.get("title") or []) + (it.get("subtitle") or [])))  # books split them
+        issued = ((it.get("issued") or {}).get("date-parts") or [[None]])[0][0]
+        first = (it.get("author") or [{}])[0]
+        g, score = judge(row, title, issued, first.get("family") or first.get("name") or "", it.get("volume"),
+                         it.get("page"), it.get("DOI"))
+        if (GRADE_RANK[g], score) > key:
+            best, key = (g, norm_doi(it.get("DOI")), title), (GRADE_RANK[g], score)
+    return best
+
+
+def openalex_match(row):
+    """Best OpenAlex candidate by title search (10 credits): (grade, openalex_id, doi, title)."""
+    y = int(row["year"]) if str(row.get("year", "")).isdigit() else None
+    query = " ".join(re.findall(r"[^\W\d_]{3,}", row.get("title") or row["raw"]))[:200]
+    params = {"search": query, "per-page": "5"}
+    if y:
+        params["filter"] = f"publication_year:{y - 1}-{y + 1}"
+    data, _ = get_json(openalex_url("works", params), tries=3)
+    best, key = ("", "", "", ""), (0, 0)
+    for w in data.get("results", []):
+        auths = w.get("authorships") or []
+        name = ((auths[0].get("author") or {}).get("display_name") or auths[0].get("raw_author_name") or "") if auths else ""
+        biblio = w.get("biblio") or {}
+        g, score = judge(row, w.get("title"), w.get("publication_year"), name, biblio.get("volume"),
+                         biblio.get("first_page"), w.get("doi"))
+        if (GRADE_RANK[g], score) > key:
+            best, key = (g, short_wid(w["id"]), norm_doi(w.get("doi")), clean_title(w.get("title"))), (GRADE_RANK[g], score)
+    return best
+
+
+def match(infile, outfile, workers):
+    """Resolve a citation table (columns raw, first_author, year, and where known title, volume, pages) to DOIs or
+    OpenAlex ids: Crossref candidates first, an OpenAlex title search for the rest, and one sequential retry for
+    rows that hit errors. Writes the rows back with doi, openalex_id, confidence (exact, probable or empty),
+    matched_title and via."""
+    rows = read_tsv(infile)
+    pacer = HostPacer(0.5)
+
+    def one(row):
+        g, doi, wid, title, via, errors = "", "", "", "", "", []
+        try:
+            g, doi, title = crossref_match(row, pacer)
+            via = "crossref" if g else ""
+        except Exception as e:  # fall through to OpenAlex; noted if nothing matches
+            errors.append(f"crossref {type(e).__name__}")
+        if not g:
+            try:
+                g, wid, doi, title = openalex_match(row)
+                via = "openalex" if g else ""
+            except Exception as e:
+                errors.append(f"openalex {type(e).__name__}")
+        if not g and errors:
+            via = "error: " + ", ".join(errors)
+        return {**row, "doi": doi if g else "", "openalex_id": wid if g else "", "confidence": g,
+                "matched_title": title if g else "", "via": via}
+
+    with concurrent.futures.ThreadPoolExecutor(workers) as ex:
+        out = list(ex.map(one, rows))
+    out = [one(r) if r["via"].startswith("error") else r for r in out]
+    fields = list(rows[0].keys()) + ["doi", "openalex_id", "confidence", "matched_title", "via"]
+    write_tsv(Path(outfile), out, list(dict.fromkeys(fields)))
+    print(f"{len(out)} citations: {dict(Counter(r['confidence'] or 'unresolved' for r in out))} -> {outfile}")
+
+
 # ---------------------------------------------------------------- journal (field tier)
 
 def journal(issn, name, out):
@@ -997,7 +1155,7 @@ def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha, found_urls=Non
         append_tsv(store / "attempts.tsv", {"openalex_id": wid, "url": url, "host": host, "outcome": outcome,
                                             "detail": detail, "when": now()}, ATTEMPT_FIELDS, lock)
 
-    open_exhausted = True  # becomes False if an open route was skipped or failed transiently this run
+    open_exhausted = True  # becomes False if an open download or lookup failed transiently this run
 
     def attempt(cand, **kw):
         nonlocal open_exhausted
@@ -1019,9 +1177,9 @@ def fetch_one(rec, store, pacer, tried, tdm_done, lock, tool_sha, found_urls=Non
             urls = found_urls.get(k, [])
         else:
             outcome, urls = lookup(rec, pacer)
-            if outcome in ("skipped", "error"):
+            if outcome == "error":
                 open_exhausted = False
-            if outcome == "skipped":
+            if outcome == "skipped":  # rate-limited this run; an open copy found later replaces any TDM copy
                 continue
             record(k, host, f"{prefix}_{outcome}", " ".join(urls)[:4000])
         for u in [u for u in urls if u not in tried]:
@@ -1289,6 +1447,10 @@ def main():
     p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     p.add_argument("--min-refs", type=int, default=5, help="minimum number of seed works referencing a work")
     p.add_argument("--out", type=Path, default=SEEDS)
+    p = sub.add_parser("match")
+    p.add_argument("infile")
+    p.add_argument("outfile")
+    p.add_argument("--workers", type=int, default=4)
     p = sub.add_parser("journal")
     p.add_argument("issn")
     p.add_argument("--name", required=True, help="tier name: seeds/field-<name>.tsv")
@@ -1314,6 +1476,8 @@ def main():
         harvest(a.repo)
     elif a.cmd == "expand":
         expand(a.store, a.min_refs, a.out)
+    elif a.cmd == "match":
+        match(a.infile, a.outfile, a.workers)
     elif a.cmd == "journal":
         journal(a.issn, a.name, a.out)
     elif a.cmd == "resolve":

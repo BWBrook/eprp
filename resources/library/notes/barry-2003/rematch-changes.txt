@@ -1,0 +1,11 @@
+Nature 48                    probable 10.1038/41263                    -> exact    10.1038/41263                    | Palmer, D. Vertebrate palaeontology, 2nd edition - Benton,MJ
+Science 66                   exact    10.1126/science.268.5211.625.c   -> probable 10.1126/science.267.5201.1123    | Steadman, D. W. Prehistoric Extinction of Pacific Island Bir
+Science 126                  exact    10.1126/science.292.5515.217b    -> exact    W2742052218                      | Gittleman, J., Gompper, M. E. & Jones, K. E. Extinction: Com
+TREE 13                      exact    10.1016/s0169-5347(00)02003-6    -> exact    10.1016/s0169-5347(00)02002-4    | Chown, S. L. & Gaston, K. J. Rapoport effect and speciation/
+Papers Held 15               exact    10.1016/s0169-5347(00)02003-6    -> exact    10.1016/s0169-5347(00)02002-4    | Chown, S. L. & Gaston, K. J. Rapoport effect and speciation/
+Body mass 46                 exact    10.1111/j.1600-0587.2000.tb00264 -> exact    10.1034/j.1600-0587.2000.230110. | Murray, B. R.; Dickman, C. R.. Relationships between body si
+Nature 7                     probable 10.1038/41263                    -> exact    10.1038/41263                    | Palmer, D.. Vertebrate palaeontology, 2nd edition - Benton,M
+Papers and Books Held 71     exact    10.1016/s0169-5347(00)02003-6    -> exact    10.1016/s0169-5347(00)02002-4    | Chown, S. L.; Gaston, K. J.. Rapoport effect and speciation/
+Papers and Books Held 143    exact    10.1126/science.268.5211.625.c   -> probable 10.1126/science.267.5201.1123    | Steadman, D. W.. Prehistoric Extinction of Pacific Island Bi
+Science 51                   exact    10.1126/science.292.5515.217b    -> exact    W2742052218                      | Gittleman, J.; Gompper, M. E.; Jones, K. E.. Extinction: Com
+Counter({('exact', 'exact'): 6, ('probable', 'exact'): 2, ('exact', 'probable'): 2})
