@@ -67,7 +67,23 @@ rebuilt.
 | `cited-authoryear` | `seeds/cited-authoryear.tsv` | author–year citations in the registers and notes, resolved and graded `exact` or `probable` ([method](notes/authoryear-method.md)) |
 | `canon` | `seeds/canon.tsv` | curated foundational and landmark works, from the 1830s to 2026, under the [topic tree](topics.md) ([method](notes/canon-method.md)) |
 | `neighbours` | `seeds/neighbours.tsv` | works outside the tiers above that at least 5 of their works reference (`library.py expand`), with that count and the questions of the citing works |
-| `field-<journal>` | `seeds/field-paleobiology.tsv`, … | a core journal's complete run as OpenAlex lists it (`library.py journal ISSN --name NAME`); *Paleobiology* since 24 October 2026 (2,584 works, 1975–2026) |
+| `field-<journal>` | `seeds/field-<journal>.tsv` | a core journal's complete run as OpenAlex lists it (`library.py journal ISSN --name NAME`); see below |
+
+The journal runs so far (metadata, abstracts and reference lists; open full
+text fetched for *Paleobiology* only):
+
+| Tier | Journal (ISSN) | Works | Years | Added |
+| --- | --- | ---: | --- | --- |
+| `field-paleobiology` | *Paleobiology* (0094-8373) | 2,584 | 1975–2026 | 24 Oct 2026 |
+| `field-journal-of-paleontology` | *Journal of Paleontology* (0022-3360) | 10,274 | 1927–2026 | 25 Oct 2026 |
+| `field-lethaia` | *Lethaia* (0024-1164) | 2,875 | 1968–2026 | 25 Oct 2026 |
+| `field-palaios` | *PALAIOS* (0883-1351) | 2,500 | 1986–2026 | 25 Oct 2026 |
+| `field-palaeontology` | *Palaeontology* (0031-0239) | 2,045 | 1999–2026 (84 earlier) | 25 Oct 2026 |
+| `field-papers-in-palaeontology` | *Papers in Palaeontology* (2056-2802) | 682 | 2014–2026 | 25 Oct 2026 |
+
+OpenAlex lacks *Palaeontology* before 2000. The Palaeontological Association
+hosts that archive itself, so it needs its own route. Of the *Journal of
+Paleontology* run, 4,445 works (mostly before the 1990s) have no DOI.
 
 A work belongs to every tier that names it. `fetch` tries works in tier order:
 the cited tiers first, then the canon, then neighbours by reference count, then
