@@ -16,7 +16,7 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | journal | fetch | withdraw | index
+  library.py              harvest | resolve | expand | journal | match | fetch | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts)
@@ -46,6 +46,7 @@ The store is on `deep-server`, beside the data-source mirror:
   unresolved-keys.tsv     seed keys OpenAlex lacks: Crossref-only, invalid or deleted
   _tools/                 the deployed library.py and seeds/
   _provenance/            read-only working files, scripts and API caches of the curated tiers
+  search.sqlite           full-text search index (`textindex`; derived, rebuildable)
 ```
 
 `W` is the OpenAlex work id, the library's primary key. It covers works without
@@ -255,6 +256,20 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   next run. `--retry-failed` retries everything.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
+- `search QUERY` searches the whole library: every work's title and abstract
+  (reconstructed from OpenAlex), and the extracted text of every held copy.
+  It is SQLite FTS5 with BM25 ranking (titles weighted 5), Porter stemming
+  and accent folding. Queries take words (all required), `"phrases"`, `OR`,
+  `NOT`, `NEAR(a b, 10)` and `prefix*`; a query FTS5 cannot parse is retried
+  as all its words. `--tier` and `--part` narrow it, and `--tsv` gives
+  machine-readable output.
+  - Results show matching passages from abstracts and open full texts. A match
+    in a TDM text is reported without a passage, so no licensed text reaches
+    an agent session.
+  - From any machine:
+    `ssh deep-server 'python3 /data/paleodata/library/_tools/library.py search "age-dependent extinction"'`.
+  - `textindex` rebuilds the index (`search.sqlite` in the store, about a
+    minute). Run it after `resolve` or `fetch` adds works or texts.
 - `match IN.tsv OUT.tsv` resolves a reference list to DOIs or OpenAlex ids:
   - Input columns: `raw` (the citation), `first_author`, `year`, and where
     known `title`, `volume` and `pages`.

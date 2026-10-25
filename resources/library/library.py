@@ -9,6 +9,8 @@ Usage:
   python3 library.py expand [--store DIR] [--min-refs K] [--out DIR]
   python3 library.py journal ISSN --name NAME [--out DIR]
   python3 library.py match IN.tsv OUT.tsv [--workers N]
+  python3 library.py textindex [--store DIR]
+  python3 library.py search QUERY... [--limit N] [--tier T ...] [--part abstract fulltext tdm] [--tsv]
   python3 library.py fetch [--store DIR] [--tier TIER ...] [--workers N] [--retry-failed] [--limit N]
   python3 library.py withdraw W [W ...] --reason TEXT [--store DIR]
   python3 library.py index [--store DIR] [--out DIR]
@@ -1301,8 +1303,9 @@ def venue(rec):
     return (((rec.get("primary_location") or {}).get("source")) or {}).get("display_name") or ""
 
 
-def index(store, out):
-    recs = load_records(store)
+def catalogue(store, recs):
+    """One row per work in any tier (duplicate records merged), with tiers, questions and full-text status;
+    also the unresolved seed rows and the merges."""
     aliases = load_aliases(store)
     manifest = load_manifest(store)
     attempts = defaultdict(set)
@@ -1331,11 +1334,6 @@ def index(store, out):
         work_qs[canon] |= work_qs.pop(dup, set())
         if dup in work_topic:
             work_topic.setdefault(canon, work_topic.pop(dup))
-    write_tsv(out / "duplicates.tsv", [
-        {"openalex_id": canon, "duplicate": dup, "year": recs[dup].get("publication_year") or "",
-         "type": recs[dup].get("type") or "", "doi": norm_doi(recs[dup].get("doi")),
-         "title": re.sub(r"\s+", " ", recs[dup].get("title") or "").strip()}
-        for canon, ds in sorted(merged.items()) for dup in ds], ["openalex_id", "duplicate", "year", "type", "doi", "title"])
     rows = []
     for wid in sorted(work_tiers, key=lambda w: (recs[w].get("publication_year") or 0, w)):
         rec = recs[wid]
@@ -1358,10 +1356,23 @@ def index(store, out):
                      "questions": ";".join(sorted(work_qs[wid])), "topic": work_topic.get(wid, ""),
                      "oa_topic": ((rec.get("primary_topic") or {}).get("display_name") or ""),
                      "merged": ";".join(merged.get(wid, []))})
+    return rows, unresolved, merged
+
+
+WORK_FIELDS = ["openalex_id", "doi", "year", "first_author", "title", "venue", "type", "cited_by", "oa_status",
+               "fulltext", "tiers", "questions", "topic", "oa_topic", "merged"]
+
+
+def index(store, out):
+    recs = load_records(store)
+    rows, unresolved, merged = catalogue(store, recs)
     out.mkdir(parents=True, exist_ok=True)
-    fields = ["openalex_id", "doi", "year", "first_author", "title", "venue", "type", "cited_by", "oa_status",
-              "fulltext", "tiers", "questions", "topic", "oa_topic", "merged"]
-    write_tsv(out / "works.tsv", rows, fields)
+    write_tsv(out / "duplicates.tsv", [
+        {"openalex_id": canon, "duplicate": dup, "year": recs[dup].get("publication_year") or "",
+         "type": recs[dup].get("type") or "", "doi": norm_doi(recs[dup].get("doi")),
+         "title": re.sub(r"\s+", " ", recs[dup].get("title") or "").strip()}
+        for canon, ds in sorted(merged.items()) for dup in ds], ["openalex_id", "duplicate", "year", "type", "doi", "title"])
+    write_tsv(out / "works.tsv", rows, WORK_FIELDS)
     write_tsv(out / "unresolved.tsv", unresolved, ["tier", "key", "citation", "files", "questions"])
     write_index_md(out, rows, unresolved)
     write_by_question(out, rows)
@@ -1436,6 +1447,99 @@ def write_by_question(out, rows):
     (out / "by-question.md").write_text("\n".join(text), encoding="utf-8")
 
 
+# ---------------------------------------------------------------- search
+
+SEARCH_DB = "search.sqlite"
+
+
+def abstract_text(rec):
+    """The abstract, rebuilt from OpenAlex's inverted index."""
+    words = {}
+    for word, places in (rec.get("abstract_inverted_index") or {}).items():
+        for p in places:
+            words[p] = word
+    return " ".join(words[i] for i in sorted(words))
+
+
+def textindex(store):
+    """Build STORE/search.sqlite from scratch: an FTS5 index (porter stemming, accents folded) of every catalogued
+    work's title and abstract and of the extracted text of every held copy, open or TDM."""
+    import sqlite3
+    recs = load_records(store)
+    rows, _, merged = catalogue(store, recs)
+    manifest = load_manifest(store)
+    tmp = store / (SEARCH_DB + ".tmp")
+    tmp.unlink(missing_ok=True)
+    db = sqlite3.connect(tmp)
+    db.execute("CREATE TABLE works (wid TEXT PRIMARY KEY, year INT, author TEXT, title TEXT, venue TEXT, doi TEXT, "
+               "tiers TEXT, fulltext TEXT, cited_by INT)")
+    db.execute("CREATE VIRTUAL TABLE docs USING fts5(wid UNINDEXED, part UNINDEXED, title, body, "
+               "tokenize='porter unicode61 remove_diacritics 2')")
+    n = Counter()
+    for r in rows:
+        wid = r["openalex_id"]
+        db.execute("INSERT INTO works VALUES (?,?,?,?,?,?,?,?,?)", (wid, r["year"] or None, r["first_author"], r["title"],
+                                                                    r["venue"], r["doi"], r["tiers"], r["fulltext"], r["cited_by"]))
+        abstract = next((a for a in (abstract_text(recs[w]) for w in [wid] + merged.get(wid, []) if w in recs) if a), "")
+        db.execute("INSERT INTO docs VALUES (?,?,?,?)", (wid, "abstract", r["title"], abstract))
+        n["abstracts"] += bool(abstract)
+        m = manifest.get(wid)
+        if m and m["status"] in OPEN_HELD + TDM_HELD:
+            text = store / text_path(Path(m.get("path") or f"pdf/{wid}.pdf"))
+            if text.exists():
+                part = "tdm" if m["status"] in TDM_HELD else "fulltext"
+                db.execute("INSERT INTO docs VALUES (?,?,?,?)", (wid, part, "", text.read_text(encoding="utf-8", errors="replace")))
+                n[part] += 1
+    db.commit()
+    db.execute("INSERT INTO docs(docs) VALUES ('optimize')")
+    db.commit()
+    db.close()
+    os.replace(tmp, store / SEARCH_DB)
+    print(f"{len(rows)} works indexed: {n['abstracts']} with abstracts, {n['fulltext']} open full texts, "
+          f"{n['tdm']} TDM texts -> {store / SEARCH_DB}")
+
+
+def search(store, query, limit, tiers, parts, as_tsv):
+    """Rank works by BM25 over titles (weighted 5), abstracts and held full texts. TDM texts report a match only:
+    never a snippet, so no licensed text reaches an agent session."""
+    import sqlite3
+    db = sqlite3.connect(f"file:{store / SEARCH_DB}?mode=ro", uri=True)
+    sql = ("SELECT wid, part, bm25(docs, 0, 0, 5.0, 1.0), "
+           "CASE WHEN part = 'tdm' THEN '' ELSE snippet(docs, 3, '[', ']', ' … ', 20) END "
+           "FROM docs WHERE docs MATCH ? ORDER BY bm25(docs, 0, 0, 5.0, 1.0) LIMIT ?")
+    try:
+        hits = db.execute(sql, (query, limit * 20)).fetchall()
+    except sqlite3.OperationalError:  # not valid FTS5 syntax (e.g. "Signor-Lipps"): search for all its words
+        query = " ".join(f'"{w}"' for w in re.findall(r"\w+", query))
+        hits = db.execute(sql, (query, limit * 20)).fetchall()
+    found = {}
+    for wid, part, score, snip in hits:
+        if parts and part not in parts:
+            continue
+        f = found.setdefault(wid, {"score": score, "parts": {}})
+        f["parts"].setdefault(part, snip)
+    meta = {r[0]: r for r in db.execute(f"SELECT * FROM works WHERE wid IN ({','.join('?' * len(found))})", list(found))}
+    ranked = [w for w in sorted(found, key=lambda w: found[w]["score"])
+              if not tiers or set(meta[w][6].split(";")) & set(tiers)][:limit]
+    if as_tsv:
+        print("\t".join(["openalex_id", "year", "first_author", "title", "venue", "doi", "tiers", "fulltext", "matched", "snippet"]))
+    for i, w in enumerate(ranked, 1):
+        _, year, author, title, venue_, doi, tiers_, ft, _ = meta[w]
+        matched = found[w]["parts"]
+        snip = next((s for p, s in matched.items() if s), "")
+        if as_tsv:
+            print("\t".join(str(x or "") for x in (w, year, author, title, venue_, doi, tiers_, ft, ";".join(matched),
+                                                   re.sub(r"\s+", " ", snip))))
+            continue
+        print(f"{i:2}. {year} {author}: {title} ({venue_}) {w}{' doi:' + doi if doi else ''}")
+        print(f"    tiers {tiers_}; full text {ft}; matched in {', '.join(matched)}"
+              f"{' (TDM: match only)' if 'tdm' in matched else ''}")
+        for p, s in matched.items():
+            if s:
+                flat = re.sub(r"\s+", " ", s)
+                print(f"    {p}: {flat[:300]}")
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -1447,6 +1551,15 @@ def main():
     p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     p.add_argument("--min-refs", type=int, default=5, help="minimum number of seed works referencing a work")
     p.add_argument("--out", type=Path, default=SEEDS)
+    p = sub.add_parser("textindex")
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
+    p = sub.add_parser("search")
+    p.add_argument("query", nargs="+", help="FTS5 query: words (AND), \"phrases\", OR, NOT, NEAR(a b, 10), prefix*")
+    p.add_argument("--limit", type=int, default=15)
+    p.add_argument("--tier", nargs="*", default=None, help="only works in these tiers")
+    p.add_argument("--part", nargs="*", default=None, choices=["abstract", "fulltext", "tdm"])
+    p.add_argument("--tsv", action="store_true")
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     p = sub.add_parser("match")
     p.add_argument("infile")
     p.add_argument("outfile")
@@ -1476,6 +1589,10 @@ def main():
         harvest(a.repo)
     elif a.cmd == "expand":
         expand(a.store, a.min_refs, a.out)
+    elif a.cmd == "textindex":
+        textindex(a.store)
+    elif a.cmd == "search":
+        search(a.store, " ".join(a.query), a.limit, a.tier, a.part, a.tsv)
     elif a.cmd == "match":
         match(a.infile, a.outfile, a.workers)
     elif a.cmd == "journal":
