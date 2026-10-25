@@ -106,3 +106,40 @@ files.
 - **The agents' own errors** are under `process-receipt`, for example the
   re-mirrored Cooke version, the invalid GRIWM arm after the seed reset, and
   the corrected RevBayes lead L-001. These are material for section 4.
+
+## Codex's first independent audit (25 October; `085b5b8`)
+
+[priority-review-2026-10-25/](priority-review-2026-10-25/README.md) covers 16
+priority rows and records its verdicts in the ledger's `audit_status` and
+`audit_note` columns. The other 173 rows are not yet audited. Its
+reaggregation replays byte-identically. It summarises saved outputs; it does
+not rerun the original extraction or fitting.
+
+**Corrections now in the ledger:**
+- [Detail withheld pending disclosure to the data custodian.]
+- C096's dense-sample maximum is 0.466 Myr, and "above every hiatus" is
+  qualified.
+- C110 is reclassified as an interval-semantics finding, not a bug.
+- C111: the overall E4 gate **failed**.
+- C031, C069, C119 and C125 now state their denominators and how far their
+  units are independent.
+- C045's notification statement is stale, and C045 is not replayed.
+
+## Release blockers and owner actions (updated)
+
+- [Detail withheld pending disclosure to the data custodian.]
+  - **The Databases owner** should review it, then quarantine it or replace
+    it with a counts-only receipt, within Barry's hold and before any public
+    artefact is assembled.
+  - Nothing has been deleted, and nothing will be without Barry's decision.
+- **The Packages owner** should document the deviation in VALIDATION_T2's E5
+  declaration: the hiatuses were executed 1 Myr earlier than declared. Keep
+  both records, and decide whether the declared design needs a companion
+  run.
+- **The Q-012 and Q-007 owners** should save paired builds, from the original
+  inputs and with conservative deduplication, plus a row-joined diff. That
+  moves C045 from an observation to replayable evidence.
+- **The Databases and Packages owners** should supply pinned replay paths
+  for the priority claims, as listed in the priority review: NSB and Triton
+  snapshot manifests, an offline counts-only path for PBDB access, and the
+  admtools, fossilbrush, PyRate and Rextinct images.

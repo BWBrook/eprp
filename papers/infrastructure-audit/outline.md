@@ -11,8 +11,9 @@ and what would undercut it.
 - **The infrastructure layer.** Quantitative palaeobiology depends on
   shared databases (PBDB, Macrostrat, GBDB), published deposits, time scales,
   plate models and packages.
-- **The problem.** Their failures propagate silently into published
-  inference. The community asks for exactly this auditing in Big Questions
+- **The problem.** Problems in these layers can reach published inference
+  without being noticed. The paper reports *cases*, not a prevalence rate
+  (thesis revised after Codex's audit design). The community asks for exactly this auditing in Big Questions
   AFR1–AFR3 and FI1.
 - **The gap.** Audits are rare because they are tedious, broad and thankless.
   Agentic AI changes that cost.
@@ -41,8 +42,18 @@ the ledger must show which checks each claim actually had.
 
 ## 3. What the audits found
 
-Each finding is presented as the claim, the receipt and the consequence for
-inference.
+Each case is presented as the claim, the receipt with its evidence status,
+and the consequence for inference. Each is also classified (Codex's audit
+design) as one of:
+- an implementation defect;
+- a data inconsistency;
+- a calibration failure under a stated model;
+- a violated assumption or semantic finding;
+- an intended version or model choice;
+- a sensitive access finding;
+- an internal downstream effect.
+
+The subsections below are a first grouping.
 
 | Subsection | Findings |
 | --- | --- |

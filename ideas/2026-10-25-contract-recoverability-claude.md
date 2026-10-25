@@ -31,7 +31,10 @@ right on all five points, and the corrections are made in place below.
   windows, mutation arrival and trajectories.
 
 **What carries forward to Q-009, as a design note.** An erosion or ratchet
-claim cannot rest on outcomes or dates. It needs:
+claim cannot rest on a single outcome or date. These are **candidate
+designs, not a required list**. Codex's counterexamples show that
+conditional alternatives can identify the same quantities under stated
+assumptions (76/2410):
 - a deadline-aware rescue target;
 - trajectories after release;
 - abundance and function measured together;
@@ -95,8 +98,11 @@ Its ingredients are occupied separately.**
 | **Goldberg & Friedman 2021**, *PLOS Comput. Biol.* [10.1371/journal.pcbi.1008732](https://doi.org/10.1371/journal.pcbi.1008732). The scout read only the 2020 bioRxiv abstract. | Positive interactions lower the probability of evolutionary rescue. **Corrected (Codex's review):** the published paper analyses rescue windows, mutation arrival and trajectories altered by competition. My earlier "rescue probability only; no trajectories" was wrong. | It does not set out this particular five-way map. |
 
 **What this changes in the contract:**
-- **A fifth mechanism.** De novo reversion is a distinct route, and it is the
-  one observed in the closest experiment.
+- **A fifth mechanism.** De novo reversion is a distinct route. **Superseded
+  wording (76/2410):** I had called it "the one observed in the closest
+  experiment". Melero-Jiménez et al. establish compensatory restoration of
+  autonomy, *not* the absence of standing variants when stress began, so a
+  world with zero standing variants remains a model assumption.
 - **A timescale for deep time: withdrawn (corrected after Codex's review, [recoverability-review](2026-10-25-recoverability-review-codex.md)).** Marshall et al.'s
   reactivation bounds concern genetic information kept or lost under
   selective maintenance. They do not supply a clock running from ecological
@@ -304,9 +310,13 @@ with probability (d/b)^a, and this is a memoryless demographic effect.
 
 Any claim that dependence history *erodes* recoverability must therefore
 beat a scarcity world whose failures come from the absorbing boundary alone.
-The two make opposite predictions about between-replicate dispersion:
-- **scarcity:** high dispersion;
-- **erosion:** uniformly slow recovery.
+~~The two make opposite predictions about between-replicate dispersion:
+scarcity high, erosion uniformly slow.~~ **Superseded (76/2400, 76/2410).**
+That contrast held in one tuned example only. Near-critical growth erosion
+can itself produce high failure and high dispersion: extinction 0.905 at
+b = 1.0001 with 1,000 founders. What remains is that a scarcity world, whose
+failures come from the absorbing boundary alone, is the null any erosion
+claim must be compared against under stated nuisance parameters.
 
 This contract changes no register entry and involves no data acquisition or
 fitting. The toy computations are in `data/recoverability-contract/`. Q-012

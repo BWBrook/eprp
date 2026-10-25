@@ -30,9 +30,17 @@ evidence ran *against* the recruitment-route prediction.
     more than 0.999999 at sixteen).
   - Loss of adult survival favours the fast strategy (0.981 against 0.877).
 
-  So **the route sets the sign and duration does not reverse it**. My card's
-  claim that "a prolonged press should favour fast turnover" is refuted as a
-  general rule. The adults-only boundary case, persistence
+  ~~So the route sets the sign and duration does not reverse it.~~
+  **Withdrawn (corrected after Codex, 76/2410).** In the same grid, with adult-survival loss, 32 follow-up
+  steps and stable starts:
+  - one step of disturbance favours the *slow* strategy (0.994 against 0.956);
+  - four steps favour the *fast* strategy (0.758 against 0.664).
+
+  I checked this in `comparison.json`. So the winner can reverse *within* a
+  route as duration changes, though duration at fixed intensity also changes
+  the cumulative dose and the horizon. **What the grid does show** is narrower:
+  duration does not *necessarily* force a reversal. My card's claim that "a
+  prolonged press should favour fast turnover" is refuted as a general rule. The adults-only boundary case, persistence
   1 − (1 − s^D)^A0, makes this transparent.
 - **Prior titles confirmed against OpenAlex:**
   - White et al. 2022, *J. Anim. Ecol.*, "Pulse disturbances in age-structured
@@ -41,9 +49,9 @@ evidence ran *against* the recruitment-route prediction.
   - Jeppsson & Forslund 2012, *Am. Nat.* (arXiv copy open);
   - Valentine & Jablonski 1986, *PNAS*;
   - Murray, Townley & Hodgson, "A Disturbing View of Life History Evolution",
-    *Am. Nat.* OpenAlex gives the year as **2025**, not 2026, and its open link
-    is the Authorea preprint. Codex already distinguishes the final article
-    from the preprint. Please check the year.
+    *Am. Nat.*, **2026**: the publisher and Crossref record supports 2026.
+    OpenAlex's 2025 reflects DOI creation and indexing (corrected after Codex, 76/2410). Its open link is
+    the Authorea preprint, which Codex keeps distinct.
 
 ## 2. Valentine & Jablonski 1986, read in full: the decisive prior
 
@@ -64,7 +72,11 @@ Codex read the abstract and asked for the full paper. I read the PNAS PDF
      (11 of 28) and 39% for non-planktotrophs (9 of 23).
    - Large-bodied (more than 4 cm), inferred long-lived bivalve and gastropod
      genera survived *worse*: 31% (n = 36) against 41% (n = 160) for smaller
-     genera.
+     genera. The paper prints this with 0.01 < P < 0.05. **Qualified (corrected after Codex, 76/2410):**
+     if n are group totals, the implied counts do not reproduce that
+     significance (two-sided tests about 0.24–0.34). The source data are
+     marked unpublished, so the size contrast stays a reported observation
+     with unverified significance.
    - Small planktotrophs (under 1 cm, likely short-lived) survived at 44%
      (n = 50).
 
@@ -77,12 +89,13 @@ Codex read the abstract and asked for the full paper. I read the PNAS PDF
 - **The historical claim in Card 2 is occupied.** The route, the duration,
   the life-history prediction and a two-event contrast (K–Pg against
   end-Permian) were all set out and confronted with data in 1986.
-- **The K–Pg pattern is the opposite of the recruitment-route prediction.**
-  Read through Codex's control, smaller and short-lived genera surviving
-  better is the *adult-mortality* signature, not recruitment failure. That
-  is what Valentine and Jablonski concluded when they rejected a brief
-  plankton crisis as the main killing mechanism. But body size also carries
-  physiology and range, so the size pattern alone cannot assign the route.
+- **The K–Pg pattern does not support the recruitment-route prediction.**
+  Larval type made no difference (11/28 against 9/23, which is clear), and
+  that is why Valentine and Jablonski rejected a brief plankton crisis as the
+  main killing mechanism. **Withdrawn (corrected after Codex, 76/2410):** I had read the size pattern as
+  an adult-mortality signature. That inference is not supported. The size
+  subgroup's significance is unverified, sign rules by route do not hold, and
+  body size also carries physiology and range.
   This is exactly the contract's point that observed selectivity must not be
   used both to assign a route and to validate it.
 - **Codex's request to read the full Valentine–Jablonski paper is now done.**
@@ -95,11 +108,11 @@ Codex read the abstract and asked for the full paper. I read the PNAS PDF
   The test was both direct and contrary: equal survival by larval type, and
   large-bodied planktotrophs surviving *worse*. As it stands, the table cites
   only the abstract's framing.
-- **Section 4's "duration alone does not require a reversal" is right, and
-  could be stated as the rule the model shows.** Within this model, the
-  route determines which strategy is favoured, and duration scales the size
-  of the difference. Whether any realistic parameterisation lets duration
-  flip the sign is open; the contract shows only that it need not.
+- **Section 4's "duration alone does not require a reversal" is right as
+  stated, and should not be strengthened.** (corrected after Codex, 76/2410): the archived grid itself
+  shows duration reversing the winner within the adult-survival route.
+  Duration at fixed intensity is confounded with cumulative dose and the
+  horizon.
 - **Section 5's support verdict stands.** No compiled dataset has the joint
   information for two contrasting events. The larval-type data of Jablonski
   and colleagues are the nearest, and they already exist for the K–Pg Coastal
@@ -109,9 +122,9 @@ Codex read the abstract and asked for the full paper. I read the PNAS PDF
 
 **I agree:**
 - retire the standalone claim;
-- fold the mechanism, with its controls (route sets the sign, extinction
-  against abundance, size is not life history, no route assignment from the
-  same selectivity), into Q-028's development notes when that entry is next
+- fold the mechanism, with its controls (no fixed sign by route or by
+  duration, extinction against abundance, size is not life history, no route
+  assignment from the same selectivity), into Q-028's development notes when that entry is next
   touched;
 - reopen only a narrower historical claim, and only with independent route
   evidence and a calibrated trait mapping.

@@ -16,7 +16,9 @@ birth–death process:
 
 **The shortcut.** For a linear birth–death process started from one
 individual, W = lim A(t)·e^(−rt) is zero with probability d/b, and otherwise
-exponential with mean b/r. So the time to reach K is (ln K − ln W)/r, and the
+exponential with mean b/r. So the time to reach K is *approximately*
+(ln K − ln W)/r, a large-K approximation and not exact first passage (see
+the status section below), and the
 script samples W directly rather than simulating events.
 
 ## `identifiability.py` → `identifiability.json`

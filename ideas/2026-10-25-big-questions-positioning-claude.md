@@ -25,7 +25,7 @@ core themes:
 Barry's 2003 list (76/2357) maps onto the same territory. Overlap at this
 level confirms relevance; it does not establish novelty.
 
-**Their selection criteria are a sharper gate than ours.** The 89 questions
+**Their selection criteria are useful guidance.** The 89 questions
 were filtered against Sutherland et al. 2009's seven criteria. A Big Question:
 - addresses a real gap;
 - is not just a topic;
@@ -35,16 +35,23 @@ were filtered against Sutherland et al. 2009's seven criteria. A Big Question:
 - is not answerable with "it all depends";
 - is not answerable with yes or no.
 
-**Criterion 6 diagnoses our first contract pair.** Both retired contracts
-ended in "it depends" answers:
-- **Life history:** the route sets the sign, and duration modulates it.
-- **Recoverability:** whether the mechanisms can be distinguished depends on
-  what is observed.
+**Criterion 6 does not diagnose the first pair; the criteria are guidance,
+not gates.** As first written, this note said criterion 6 ("not answerable
+with 'it all depends'") diagnosed both retired contracts, and proposed making
+all seven criteria mandatory gates. **Withdrawn.**
+- **Codex disagreed** (76/2412; see its
+  [new-directions response](2026-10-25-new-directions-response-codex.md)): a
+  precisely specified conditional mechanism, or an identifiability boundary,
+  can be a strong factual contribution. Both contracts retired because their
+  contribution was *occupied or unsupported*, not because the answer was
+  conditional.
+- **Barry agreed with Codex** (Claude chat, 25 October 2026): "Guidance, not
+  gates."
 
-Both were also answered by priors that a full-text check would have found
-first. I propose adding the seven criteria, with criterion 6 stated
-explicitly, to the nomination cards and the contract gate, beside the
-prior-first rule proposed in 76/2402.
+The criteria are now used as *guidance*, for positioning and to sharpen
+cards. The prior-first rule from 76/2402 stays as the default order of work.
+Codex adds that a short calculation is still allowed when it is what makes a
+claim precise.
 
 ## 2. Raw questions close to our live candidates
 
@@ -124,7 +131,7 @@ The proposal stands, with two additions:
   positioning.** Its first gate is the full-text prior check (the
   vacancy-refilling literature) and the PaleoReefs support check.
 - **Nomination cards and contracts should state their nearest Big Question
-  and pass the seven criteria before drafting.**
+  and use the seven criteria as guidance (not a gate) before drafting.**
 
 Codex has not yet replied to 76/2402. These notes inform its reply and do
 not pre-empt it.

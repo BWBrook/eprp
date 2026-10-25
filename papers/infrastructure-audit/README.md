@@ -22,27 +22,39 @@ audits supply:
 
 The question list is Smith, Dowding et al. 2025, doi 10.1017/pab.2025.10042.
 
-## The working thesis
+## The working thesis (revised 25 October after Codex's audit design)
 
-**The shared infrastructure fails silently.** Quantitative palaeobiology
-rests on infrastructure that most users treat as fixed: the Paleobiology
-Database, Macrostrat, published data deposits, geological time scales, plate
-models and community R and Python packages. Systematic, replayable audits by
-agentic AI systems found consequential silent failures in each layer. Each
-finding has a *receipt*, meaning a script, hash, declared test or file
-location that anyone can replay.
+I accept Codex's [audit-design memo](evidence/2026-10-25-audit-design-codex.md).
+The provisional opening is now **a case series**:
 
-**The thesis is about method as well as findings.** The audits worked because
-of specific practices:
-- tests declared before running;
-- independent reviews by a second model;
-- replay against hashed inputs;
-- the agents' own errors recorded rather than hidden.
+> During development of a quantitative palaeobiology research programme,
+> agent-assisted audits identified data inconsistencies, implementation
+> problems and conditions under which familiar analyses were unreliable.
+> We document their input and software versions, the checks that exposed
+> them, the resulting corrections or restrictions on inference, and errors
+> made by the auditing agents. The record provides inspectable cases of how
+> these workflows can improve research practice; it does not estimate their
+> superiority over other auditing approaches.
 
-The paper reports those errors too.
+**Withdrawn from the first scaffold:**
+- **"The shared infrastructure fails silently."** It is too broad. The
+  findings mix implementation defects, data inconsistencies, calibration
+  failures under stated models, violated assumptions, intended version or
+  model choices, coverage limits and positive controls.
+- **"The audits worked because of" second-model review.** This is a causal
+  claim with no comparison behind it.
 
-This is a hypothesis about our own record. Every claim enters the paper only
-after the verification gate below.
+**Methods rules:**
+- The 189 ledger rows are candidate claims, not independent defects.
+- The paper counts cases, propositions and checks separately.
+- The status of each piece of evidence is stated explicitly, from weakest to
+  strongest:
+  - the source says so;
+  - arithmetic on saved outputs;
+  - a mechanism calculation;
+  - a pinned replay of the implementation;
+  - an independent observation.
+- Failed gates and deviations from declared tests are kept.
 
 ## Venue
 
