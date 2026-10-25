@@ -126,3 +126,14 @@ gave the declared results below, except where these rules apply:
    reported as the number of mismatches.
 3. The output labels pO₂ as "matm" while its values (0 to 0.25) are in
    atm; the checks read the values as atm, as `doMI.R` uses them.
+
+## Amendment A2 (25 October 2026): C1 evidence
+
+C1's first, clean run (all three builds `**TEST OK**`, seen in the session
+log at 12:03 AEDT) was overwritten on `deep-server` before it was copied:
+the driver reruns C1 at the start of every run, and in a tree already built
+for the 540 Ma experiment that rerun failed ("cannot stat 'fort.2'",
+"ERROR PROCESSING"). C1 was therefore rerun in fresh copies of each tree
+([run_t5_c1.sh](run_t5_c1.sh)), again `**TEST OK**` in all three; those
+outputs are the committed C1 results, and the failed reruns are kept as
+`results/t5/c1_*_rerun_dirty_tree.txt`.

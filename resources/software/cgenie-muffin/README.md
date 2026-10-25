@@ -52,7 +52,9 @@ needs, found by failing (tranche 5, amendment A1):
   in `outm_netcdf.F`; later makefiles add `-fallow-argument-mismatch`.
   Ubuntu 20.04 (gfortran 9.4) builds it.
 - One run per code tree at a time: `runmuffin.sh` cleans and rebuilds when
-  the base configuration changes.
+  the base configuration changes. Rerunning `make testbiogem` in a tree
+  built for another configuration failed ("cannot stat 'fort.2'", "ERROR
+  PROCESSING"); run it in a fresh tree.
 - A build takes about six minutes.
 
 ## Validation
