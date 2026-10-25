@@ -441,7 +441,7 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 - **T** Pohl et al. 2023. Why the Early Paleozoic was intrinsically prone to marine extinction. *Science Advances*. [doi](https://doi.org/10.1126/sciadv.adg7679)
 - Malanoski et al. 2026. Paleogeography modulates marine extinction risk throughout the Phanerozoic. *Science*. [doi](https://doi.org/10.1126/science.adv2627)
 
-## Q-021 (23)
+## Q-021 (22)
 
 - Payne & Finnegan 2007. The effect of geographic range on extinction risk during background and mass extinction. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.0701257104)
 - Algeo & Twitchett 2010. Anomalous Early Triassic sediment fluxes due to elevated weathering rates and their biological consequences. *Geology*. [doi](https://doi.org/10.1130/g31203.1)
@@ -457,7 +457,6 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 - Cao et al. 2022. Persistent late Permian to Early Triassic warmth linked to enhanced reverse weathering. *Nature Geoscience*. [doi](https://doi.org/10.1038/s41561-022-01009-x)
 - **T** Isson et al. 2022. Marine siliceous ecosystem decline led to sustained anomalous Early Triassic warmth. *Nature Communications*. [doi](https://doi.org/10.1038/s41467-022-31128-3)
 - Yang et al. 2022. Collapse of Late Permian chert factories in the equatorial Tethys and the nature of the Early Triassic chert gap. *Earth and Planetary Science Letters*. [doi](https://doi.org/10.1016/j.epsl.2022.117861)
-- Foster 2023. Response of siliceous marine organisms to the Permian-Triassic climate crisis based on new findings from central Spitsbergen, Svalbard. *Zenodo (CERN European Organization for Nuclear Research)*. [doi](https://doi.org/10.5281/zenodo.10149113)
 - **T** Foster et al. 2023. Response of Siliceous Marine Organisms to the Permian‐Triassic Climate Crisis Based on New Findings From Central Spitsbergen, Svalbard. *Paleoceanography and Paleoclimatology*. [doi](https://doi.org/10.1029/2023pa004766)
 - **T** Monarrez et al. 2023. Reduced strength and increased variability of extinction selectivity during mass extinctions. *Royal Society Open Science*. [doi](https://doi.org/10.1098/rsos.230795)
 - **T** Rauzi et al. 2024. Lithium isotopic evidence for enhanced reverse weathering during the Early Triassic warm period. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.2318860121)
