@@ -1,0 +1,90 @@
+id	theme	question	eprp_nearest
+AFR1	The Adequacy of the Fossil Record	How can we best quantify preservation and collecting biases?	Q-017 Q-045 B-007
+AFR2	The Adequacy of the Fossil Record	How do we develop methods to identify, minimize, and correct data entry biases?	
+AFR3	The Adequacy of the Fossil Record	How do we account for data loss in historical collections and publications?	Q-045
+AFR4	The Adequacy of the Fossil Record	How do we standardize taxonomic, stratigraphic, and ecological reporting during data acquisition?	
+AFR5	The Adequacy of the Fossil Record	How can we improve the collection of biomolecules from fossils, and what are the limits for biomolecule analysis?	
+AFR6	The Adequacy of the Fossil Record	How can we correlate marine and terrestrial strata more precisely?	Q-035
+AFR7	The Adequacy of the Fossil Record	In what ways can we use isotopic systems and geochemical methods to help identify preservation biases?	
+AFR8	The Adequacy of the Fossil Record	Which opportunities and threats for fossil discovery will arise as a result of the changing climate?	
+SEP1	Scaling Ecological and Evolutionary Processes and Patterns	Which evolutionary and ecological processes (local to global) can be best evaluated using the fossil record?	Q-006
+SEP2	Scaling Ecological and Evolutionary Processes and Patterns	In the fossil record, how do we interpret and measure ecological and evolutionary trends at different taxonomic, spatial, and temporal scales to infer directionality or causality?	Q-019 Q-030
+SEP3	Scaling Ecological and Evolutionary Processes and Patterns	How do we address the spatial, temporal, and taxonomic incompleteness of the fossil record to be able to interpret ecological and evolutionary processes and patterns at different scales?	Q-017 Q-040 Q-006
+SEP4	Scaling Ecological and Evolutionary Processes and Patterns	How can we identify and counteract spatial and temporal transmutations (a change in the relationship between variables caused by crossing data scales, leading to interpretive error) within ecological and evolutionary models?	Q-025
+SEP5	Scaling Ecological and Evolutionary Processes and Patterns	Given incompleteness of the fossil record and spatiotemporal averaging, how do we estimate rates of change in taxonomic composition, community structure, ecosystem function, niches, traits, life modes, turnover etc., using the fossil record?	Q-015 Q-024 B-013
+SEP6	Scaling Ecological and Evolutionary Processes and Patterns	What drives metacommunity composition and community assembly over time and space?	B-001 Q-033
+SEP7	Scaling Ecological and Evolutionary Processes and Patterns	How do external environmental drivers (e.g., plate tectonics, global temperature, sea level) influence the structure of biological systems at different spatiotemporal scales?	Q-019 Q-029 B-005
+SEP8	Scaling Ecological and Evolutionary Processes and Patterns	What are the signatures of emergent processes at macroevolutionary timescales (e.g., species sorting, species selection, clade competition)?	B-014 B-016 Q-039
+SEP9	Scaling Ecological and Evolutionary Processes and Patterns	How do biological systems impact the abiotic systems and the feedback between them at different scales?	Q-021 B-004
+PTS1	Phylogenetics, Taxonomy, and Systematics	What causes the mechanism of speciation or character evolution to change over time?	Q-050
+PTS2	Phylogenetics, Taxonomy, and Systematics	Which abiotic and biotic factors determine species longevity (stratigraphic duration)?	Q-012 Q-038 B-017
+PTS3	Phylogenetics, Taxonomy, and Systematics	Which aspects of the macroevolutionary process are identifiable in the molecular or fossil records using phylogenetic methods, and under which circumstances?	Q-006
+PTS4	Phylogenetics, Taxonomy, and Systematics	How can traditional taxonomy be used to inform the process of selecting the best operational taxonomic unit for a particular phylogenetic analysis (e.g. diversification, disparification, phylogeny)?	
+PTS5	Phylogenetics, Taxonomy, and Systematics	How can taxonomic practice help to harmonize boundaries between taxa in fossil and extant groups?	Q-004
+PTS6	Phylogenetics, Taxonomy, and Systematics	How can we collect and integrate developmental data observable in the fossil record (e.g., timing of organogenesis, gene expression) into phylogenetic approaches?	
+PTS7	Phylogenetics, Taxonomy, and Systematics	How much phylogenetic information can be gained from combining different types of data (e.g. morphology, stratigraphy, biogeography, environmental)?	Q-006
+PTS8	Phylogenetics, Taxonomy, and Systematics	How can we improve the performance of phylogenetic inference through the development of better methods?	
+PTS9	Phylogenetics, Taxonomy, and Systematics	How do we improve the representation of uncertainty and bias from the fossil and geological records in phylogenetic inference?	Q-006 Q-022
+PTS10	Phylogenetics, Taxonomy, and Systematics	What can we learn about environmental and geological processes using phylogenetic methods?	
+BST1	Biodiversity Dynamics in Space and Time	What is the global diversity trend through time and how is diversity constrained, if at all?	Q-040 Q-010 Q-044
+BST2	Biodiversity Dynamics in Space and Time	How have large-scale spatial diversity patterns (e.g., latitudinal diversity gradient, distribution of diversity hotspots) changed across deep time?	Q-027 B-005
+BST3	Biodiversity Dynamics in Space and Time	What are important drivers of global trends in taxonomic diversity or ecological disparity, and has their relative importance changed through time?	Q-019 B-013
+BST4	Biodiversity Dynamics in Space and Time	What is the relationship between deep-time biodiversity (e.g., taxonomic richness, ecomorphological disparity) and ecosystem function (the combination of all biological interactions and physical processes occurring in an ecosystem)?	Q-046 Q-009
+BST5	Biodiversity Dynamics in Space and Time	What are the drivers of origination in space and time?	Q-023 B-018 B-009
+BST6	Biodiversity Dynamics in Space and Time	What is a common basis (e.g., taxonomic units, morphological traits) that can be used consistently to bridge modern and fossil biodiversity research?	Q-004 Q-028
+BST7	Biodiversity Dynamics in Space and Time	In what ways is the “Anthropocene” creating a unique signature in biodiversity over geologic time (both direct and indirect effects; e.g., changes in climate and in connectivity)?	Q-013
+BD1	Biodiversity Drivers	How does the ecological niche of species influence their response to perturbation?	Q-001 Q-002 Q-015
+BD2	Biodiversity Drivers	How does the prevailing climate state experienced by species and communities influence their response to perturbation?	Q-030 Q-027
+BD3	Biodiversity Drivers	How do methodological choices influence the outcome of studies investigating the relative importance of abiotic and biotic drivers in driving biodiversity dynamics?	Q-019
+BD4	Biodiversity Drivers	How do the rate and magnitude of environmental change impact diversification?	Q-050 Q-003 Q-002
+BD5	Biodiversity Drivers	How did biologic evolution affect the evolution of other Earth systems (e.g., litho-, atmo-, and hydrosphere)?	Q-021 B-004 B-006
+BD6	Biodiversity Drivers	How has the relative importance of biotic and abiotic drivers of biodiversity and extinction changed through time?	Q-019 Q-030
+BD7	Biodiversity Drivers	What is the relative role of biotic and abiotic drivers in increasing ecosystem complexity?	Q-010 B-010 B-003
+BD8	Biodiversity Drivers	To what extent do population-based characteristics determine resilience to extinction through geological time?	Q-020 Q-016
+BD9	Biodiversity Drivers	How do changes in community structure observed at the population level relate to evolutionary changes in ecosystems through time?	Q-009 Q-007
+AIO1	Adaptations, Innovations, Origins	What were the geological and biological drivers of the origin of life, and major groups of organisms such as eukaryotes, plants, animals, and fungi?	
+AIO2	Adaptations, Innovations, Origins	How were major life transitions (e.g., origins of biomineralization, early Paleozoic diversifications, terrestrialization, evolution of planktonic lifestyle) in Earth’s history associated with major changes in the geological and/or biological environment?	B-009 B-006 B-011
+AIO3	Adaptations, Innovations, Origins	How is our understanding of the origination of novelties and innovations affected by fossil preservation, the global quality of the fossil record, and stratigraphic completeness?	B-013
+AIO4	Adaptations, Innovations, Origins	What are best practices for integrating different analytical tools and techniques to improve our interpretation of the ecological context and timing of the origin of adaptations and features?	
+AIO5	Adaptations, Innovations, Origins	How have changes in ontogeny (i.e., life history traits such as larval/juvenile ecology, growth, and developmental patterns including heterochronies) influenced macroevolution or themselves been influenced by environmental change?	B-002 Q-028
+AIO6	Adaptations, Innovations, Origins	Which common patterns of morphological or behavioral responses to environmental change on evolutionary timescales can be identified and how do these compare with modern systems on ecological timescales?	Q-031 Q-036
+AIO7	Adaptations, Innovations, Origins	Which observable differences in the origin and fixation of features at different scales of biological hierarchy can be identified and what generated these patterns?	B-016
+ED1	Extinction Dynamics	Which data types can be used to most effectively compare past extinctions to the current biodiversity crisis?	Q-013 Q-004 Q-034
+ED2	Extinction Dynamics	With our changing understanding of extinctions, how should the definition of “mass extinction” be updated to reflect a unified concept?	Q-011 Q-013 Q-018
+ED3	Extinction Dynamics	Which, if any, biotic traits associated with survival through a mass extinction (e.g. body size, trophic mode, species associations) are universal across taxa and/or time?	Q-028 Q-038 Q-002
+ED4	Extinction Dynamics	Which, if any, ecological impacts of extinction are generalizable across time?	Q-037 Q-022 Q-009
+ED5	Extinction Dynamics	To what extent are ecological functions maintained following the extinction of species?	Q-009 Q-021 Q-043
+ED6	Extinction Dynamics	To what extent are the phases of events (e.g., collapse, recovery) during extinctions consistent across different biotic crises?	Q-005 Q-014 Q-035
+ED7	Extinction Dynamics	Which, if any, patterns in the process and timing of recovery following extinction events are universal across clades?	B-001 Q-008 Q-026 Q-007
+ED8	Extinction Dynamics	At what threshold can climate or other abiotic change cause an extinction?	Q-003 Q-002 Q-001
+ED9	Extinction Dynamics	What is the role of cascading biological effects in extinction dynamics?	Q-037 Q-048 Q-025
+CPP1	Climate Change Past and Present	How can fossils best be used to reconstruct climate change over different time scales?	
+CPP2	Climate Change Past and Present	Which climate factors are the proximate drivers of extinction?	Q-001 Q-049
+CPP3	Climate Change Past and Present	How can we best use the fossil record to predict climate change impacts on the modern biota?	Q-028 Q-015 Q-047
+CPP4	Climate Change Past and Present	What is the "ecosystem sensitivity" of ecosystem structure in response to climate change?	Q-030
+CPP5	Climate Change Past and Present	How have the spatial distributions of organisms shifted in response to climate change?	Q-049 Q-027
+CPP6	Climate Change Past and Present	How have organisms’ tolerances changed in response to climate change?	Q-015
+CPP7	Climate Change Past and Present	Which cascading effects of climate change can be identified from the fossil record?	Q-048 Q-037
+CPP8	Climate Change Past and Present	What adaptation and management options for conservation biology can be derived from past biosphere responses to climate change?	
+CPP9	Climate Change Past and Present	How has climate change affected the evolution of life?	Q-050 Q-019 B-018
+CPB1	Conservation Paleobiology	What translational science strategies could be adopted to ensure that conservation paleobiology research remains relevant and aligned with the priorities of environmental resource managers and conservation practitioners?	
+CPB2	Conservation Paleobiology	How do we integrate multiple types of paleontological data (e.g., molecular, environmental, ecological) with planning and decision support tools for guiding ecosystem management?	
+CPB3	Conservation Paleobiology	How can our understanding of past episodes of environmental change be used to develop scenarios of biological responses to modern and future environmental stressors?	Q-028 Q-047
+CPB4	Conservation Paleobiology	How can we use paleontological data to define meaningful ecological baselines that are relevant to conservation across spatial and temporal scales?	Q-004 Q-034
+CPB5	Conservation Paleobiology	How can the fossil record inform our ability to diagnose and mitigate the effects of multiple interacting human and non-human drivers of environmental change on biodiversity and ecosystem functioning?	Q-048
+CPB6	Conservation Paleobiology	How can we compare rates of biodiversity change (e.g., extinction, adaptation, geographic range shifts) across ecological, historical, and paleontological timescales?	Q-004 Q-025 Q-034
+CPB7	Conservation Paleobiology	How can recent sedimentary records expand the temporal scope over which ecological resilience can be evaluated?	Q-024
+CPB8	Conservation Paleobiology	In what ways can paleoenvironmental reconstructions improve the accuracy and scope of ecosystem services risk assessments?	
+FI1	Fundamental Issues	How can we efficiently collect, store, and combine different paleontological data types in an openly accessible and inclusive way?	
+FI2	Fundamental Issues	What are best practices for training paleontologists to have a broad set of skills (e.g., data analyses, research skills, soft skills) that is transferable to an increasingly wider range of job requirements inside and outside of academia?	
+FI3	Fundamental Issues	How can we best motivate taxonomic and systematic work and facilitate cross-talk and collaboration with other paleontological disciplines?	
+FI4	Fundamental Issues	How can paleontologists communicate findings and foster critical thinking skills so that the public can understand the utility of paleontological information and differentiate valid scientific ideas from other ideas?	
+FI5	Fundamental Issues	What are the best practices for the protection and valorization of geosites and unique fossil heritage?	
+LIO1	Looking Inward and Outward	How is our understanding of past ecological and evolutionary processes shaped by biases in publication by location, authorship, language use, and funding availability?	Q-045
+LIO2	Looking Inward and Outward	Which processes drive turnover in diversity trends (e.g., gender identities, different geographic regions) of academic paleontologists over time, and how could increased diversity lead to increasingly diverse products and outcomes?	
+LIO3	Looking Inward and Outward	Which socioeconomic and identity factors—and their intersections—underlie variability in publication rate, professional advancement, and grant awards among the global paleontology community, both historically and in the present day?	
+LIO4	Looking Inward and Outward	To what extent are paleontological specimen collecting and repository practices built on a legacy of colonial economic structures and how can we avoid recapitulating these interactions today across individual and institutional collaborations?	
+LIO5	Looking Inward and Outward	How should qualities of fossil origin (e.g., country, sovereignty, collection process, local collaborative involvement, political conflict) be considered when designing research and navigating potential trade-offs in ethics and scientific value?	
+LIO6	Looking Inward and Outward	Which settings (e.g., economic, cultural, physical) govern the biogeography of where paleontological field work occurs and who (e.g., gender/ethnic identity) carries out—and benefits from—that work?	
+LIO7	Looking Inward and Outward	Which institutional and mentorship attributes, such as accountability mechanisms, facilitate equitable collaboration among paleontologists, avoid bias, and promote the retention of students from backgrounds and identities currently underrepresented in paleontology?	
+LIO8	Looking Inward and Outward	How do we integrate and sustain a commitment to diversity, equity, and inclusion initiatives into the foundations of hiring, promotion, and funding schemes in paleontology?	

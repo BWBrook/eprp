@@ -19,7 +19,7 @@ resources/library/
   library.py              harvest | resolve | expand | frontier | journal | match | fetch | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
-  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts)
+  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025)
   review/                 candidates held back from the seeds: unsettled citations, canon reserve and unverified
   works.tsv               generated: one row per resolved work, with tiers, questions and full-text status
   INDEX.md                generated: counts by tier, full-text status, type, decade and venue
