@@ -47,7 +47,9 @@ assert m["ecotype_viability"].dimensions[0] == "Ecotype"
 ev_cells = ev[:, cells].T
 ev2 = (phi >= phic[None, :]).astype(int)
 m2 = {"max_abs_diff_percent": float(np.abs(hv2 - Hc * 100).max()), "pass": bool(np.abs(hv2 - Hc * 100).max() <= 1e-9),
-      "post_hoc_ecotype_viability_mismatches": int((np.nan_to_num(ev_cells, nan=-1) != ev2).sum()),
+      # doMI.R stores 1 for viable ecotypes and leaves the rest missing (NA), not 0
+      "post_hoc_ecotype_viability_mismatches": int((np.nan_to_num(ev_cells, nan=0) != ev2).sum()),
+      "post_hoc_missing_entries_in_cells": int(np.isnan(ev_cells).sum()),
       "post_hoc_ecotype_cells": int(ev2.size)}
 
 # M3: independent pO2 from TEOS-10 on the same cells
