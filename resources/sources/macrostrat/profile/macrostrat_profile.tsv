@@ -1,0 +1,102 @@
+section	project	metric	value
+inputs		environment classes defined	non-marine 44; marine 43
+inputs		snapshot	2026-10-25T0011Z_url
+inputs		international stages (timescale 1); distinct boundary ages	102; 103
+columns	1	columns; by status; by type	1076; active 949; obsolete 121; in process 6; column 1076
+columns	1	summed column area (km2)	28444219
+columns	3	columns; by status; by type	1710; active 1709; in process 1; section 1710
+columns	3	summed column area (km2)	0
+columns	4	columns; by status; by type	133; active 132; in process 1; column 132; section 1
+columns	4	summed column area (km2)	370908
+columns	5	columns; by status; by type	587; active 329; in process 258; column 344; section 243
+columns	5	summed column area (km2)	405281
+columns	6	columns; by status; by type	1; in process 1; column 1
+columns	6	summed column area (km2)	0
+columns	7	columns; by status; by type	64; active 64; column 64
+columns	7	summed column area (km2)	1944083
+columns	8	columns; by status; by type	61; active 58; in process 3; column 61
+columns	8	summed column area (km2)	4788008
+columns	9	columns; by status; by type	2; active 2; column 2
+columns	9	summed column area (km2)	190852
+columns	10	columns; by status; by type	218; active 218; column 218
+columns	10	summed column area (km2)	1376968
+columns	11	columns; by status; by type	1; in process 1; column 1
+columns	11	summed column area (km2)	0
+columns	12	columns; by status; by type	25; in process 25; column 25
+columns	12	summed column area (km2)	0
+columns	14	columns; by status; by type	1923; active 1534; in process 268; obsolete 121; column 1679; section 244
+columns	14	summed column area (km2)	36143350
+measurements	1	rows; distinct measurement names; most common	1086577; 103; Ba 30670; Cu 28733; Fe 28134; Cr 26824; Sr 26770; Al2O3 25724; SiO2 25588; K2O 25495
+measurements	5	rows; distinct measurement names; most common	18; 3; 238U-206Pb 6; 235U-207Pb 6; 207Pb-206Pb 6
+measurements	7	rows; distinct measurement names; most common	1285; 67; transport direction 133; 238U-206Pb 97; 207Pb-206Pb 96; 235U-207Pb 92; Ba 35; Zn 34; Sr 30; Ce 28
+measurements	8	rows; distinct measurement names; most common	426; 3; 238U-206Pb 160; 207Pb-206Pb 144; 235U-207Pb 122
+measurements	10	rows; distinct measurement names; most common	238; 6; D13C 117; D18O 117; C_CARB 1; 238U-206Pb 1; 235U-207Pb 1; 207Pb-206Pb 1
+units	1	units; gap-bound sections; columns with units	27034; 8208; 1076
+units	1	units with a numeric base age; oldest base; youngest top (Ma)	24141; 4059.45; 0
+age support	1	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	12887 of 54068 (0.238); 9676 (0.179)
+age support	1	units with a geochronological measurement (units of Ma)	515 (0.019)
+environments	1	units by environment class	marine 19471; non-marine 3845; none given 2790; both 928
+pbdb	1	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	4867; 55568; 511102
+pbdb	1	fossil links: rows; distinct collections; Macrostrat occurrences; public occurrences today	50984; 48696; 361953; 330519
+units	3	units; gap-bound sections; columns with units	92451; 2029; 1710
+units	3	units with a numeric base age; oldest base; youngest top (Ma)	92449; 187.098; 0
+age support	3	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	2033 of 184902 (0.011); 2723 (0.015)
+age support	3	units with a geochronological measurement (units of Ma)	0 (0.000)
+environments	3	units by environment class	marine 91489; both 486; non-marine 475; none given 1
+pbdb	3	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	4	units; gap-bound sections; columns with units	7356; 389; 133
+units	4	units with a numeric base age; oldest base; youngest top (Ma)	7356; 382.31; 0
+age support	4	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	1746 of 14712 (0.119); 162 (0.011)
+age support	4	units with a geochronological measurement (units of Ma)	0 (0.000)
+environments	4	units by environment class	marine 7022; none given 333; both 1
+pbdb	4	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	5	units; gap-bound sections; columns with units	2871; 1096; 587
+units	5	units with a numeric base age; oldest base; youngest top (Ma)	2545; 278.25; 0.0567
+age support	5	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	2274 of 5742 (0.396); 324 (0.056)
+age support	5	units with a geochronological measurement (units of Ma)	6 (0.002)
+environments	5	units by environment class	marine 2683; both 78; none given 70; non-marine 40
+pbdb	5	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	78; 328; 4217
+pbdb	5	fossil links: rows; distinct collections; Macrostrat occurrences; public occurrences today	331; 328; 4217; 2658
+units	6	units; gap-bound sections; columns with units	32; 4; 1
+units	6	units with a numeric base age; oldest base; youngest top (Ma)	0
+age support	6	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	0 of 64 (0.000); 0 (0.000)
+age support	6	units with a geochronological measurement (units of Ma)	0 (0.000)
+environments	6	units by environment class	marine 32
+pbdb	6	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	7	units; gap-bound sections; columns with units	798; 243; 64
+units	7	units with a numeric base age; oldest base; youngest top (Ma)	798; 4031; 0
+age support	7	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	634 of 1596 (0.397); 630 (0.395)
+age support	7	units with a geochronological measurement (units of Ma)	27 (0.034)
+environments	7	units by environment class	marine 608; none given 110; non-marine 57; both 23
+pbdb	7	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	80; 897; 16898
+pbdb	7	fossil links: rows; distinct collections; Macrostrat occurrences; public occurrences today	897; 897; 15707; 8801
+units	8	units; gap-bound sections; columns with units	1238; 469; 61
+units	8	units with a numeric base age; oldest base; youngest top (Ma)	1209; 4031; 0
+age support	8	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	627 of 2476 (0.253); 560 (0.226)
+age support	8	units with a geochronological measurement (units of Ma)	42 (0.034)
+environments	8	units by environment class	marine 540; non-marine 415; both 164; none given 119
+pbdb	8	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	9	units; gap-bound sections; columns with units	41; 11; 2
+units	9	units with a numeric base age; oldest base; youngest top (Ma)	41; 1850; 0
+age support	9	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	11 of 82 (0.134); 5 (0.061)
+age support	9	units with a geochronological measurement (units of Ma)	0 (0.000)
+environments	9	units by environment class	marine 18; both 8; none given 8; non-marine 7
+pbdb	9	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	10	units; gap-bound sections; columns with units	1372; 648; 218
+units	10	units with a numeric base age; oldest base; youngest top (Ma)	1372; 4031; 0
+age support	10	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	813 of 2744 (0.296); 466 (0.170)
+age support	10	units with a geochronological measurement (units of Ma)	1 (0.001)
+environments	10	units by environment class	none given 771; marine 480; non-marine 65; both 56
+pbdb	10	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	11	units; gap-bound sections; columns with units	13; 2; 1
+units	11	units with a numeric base age; oldest base; youngest top (Ma)	0
+age support	11	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	0 of 26 (0.000); 0 (0.000)
+age support	11	units with a geochronological measurement (units of Ma)	0 (0.000)
+environments	11	units by environment class	marine 6; none given 5; non-marine 2
+pbdb	11	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0
+units	12	units; gap-bound sections; columns with units	212; 64; 25
+units	12	units with a numeric base age; oldest base; youngest top (Ma)	212; 538.8; 0
+age support	12	unit tops and bottoms (2 per unit) on an interval edge (prop 0 or 1); equal to an international stage boundary	319 of 424 (0.752); 319 (0.752)
+age support	12	units with a geochronological measurement (units of Ma)	0 (0.000)
+environments	12	units by environment class	none given 85; marine 50; non-marine 49; both 28
+pbdb	12	units with PBDB collections; summed pbdb_collections; summed pbdb_occurrences	0; 0; 0

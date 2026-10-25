@@ -24,6 +24,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [glonaf](glonaf/README.md): Global Naturalized Alien Flora (GloNAF) 2.0, snapshot 2.02 | database | open | vascular plants (WCVP v12 names), naturalized or invasive o… | present-day status; no dates of introduction | 349,271 taxon region rows | yes | Q-047 |
 | [griis](griis/README.md): Global Register of Introduced and Invasive Species (GRIIS),… | database | open | all kingdoms; plants 69% of checklist taxon rows, animals 2… | present-day status; timing in some lists only (li… | 383 checklists | yes | Q-047, Q-028 |
 | [krapp2021](krapp2021/README.md): Krapp et al. (2021) statistics-based reconstruction of glob… | deposit | open | not taxonomic: climate, bioclimate, vegetation and land/ice… | 800 ka to present at 1 kyr steps (800 time slices) | 122 files | yes | – |
+| [macrostrat](macrostrat/README.md): Macrostrat, columns, units and gap-bound packages (API v2),… | database | open | not taxonomic: rock units, with links to PBDB collections | Archean to present (oldest unit base 4,059 Ma); d… | 3,878 columns ex composite | yes | B-005, B-007, B-008, Q-005, Q-023, Q-035, Q-041 |
 | [names-status](names-status/README.md): Names, conservation status and species traits for Australia… | compilation | open | Australian vascular plants (APC), nationally listed threate… | modern taxonomy and status; PHYLACINE also covers… | 113,869 apc rows | yes | – |
 | [neotoma](neotoma/README.md): Neotoma Paleoecology Database, with the Indo-Pacific Pollen… | database | open | pollen and spores, charcoal, plant macrofossils, other prox… | Quaternary; Sahul pollen records mostly Holocene … | 611 datasets | yes | – |
 | [nsb](nsb/README.md): Neptune Sandbox Berlin (NSB) | database | open | calcareous nannofossils, planktonic foraminifera, radiolari… | Late Jurassic to Recent; occurrence ages 0-151.08… | 783,987 occurrences | yes | Q-007, Q-016 |
@@ -47,9 +48,9 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **B-001**: pbdb, register-deposits
 - **B-002**: register-deposits
 - **B-003**: pbdb, register-deposits
-- **B-005**: palaeogeography, pbdb
-- **B-007**: pbdb
-- **B-008**: pbdb
+- **B-005**: macrostrat, palaeogeography, pbdb
+- **B-007**: macrostrat, pbdb
+- **B-008**: macrostrat, pbdb
 - **B-009**: pbdb, register-deposits
 - **B-010**: pbdb
 - **B-012**: register-deposits
@@ -62,7 +63,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-002**: pbdb, register-deposits
 - **Q-003**: climate-forcing
 - **Q-004**: pbdb
-- **Q-005**: register-deposits, timescale, triton
+- **Q-005**: macrostrat, register-deposits, timescale, triton
 - **Q-006**: pbdb
 - **Q-007**: climate-forcing, nsb, triton
 - **Q-008**: register-deposits
@@ -77,7 +78,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-020**: palaeogeography, pbdb, register-deposits, triton
 - **Q-021**: register-deposits
 - **Q-022**: register-deposits
-- **Q-023**: classic-compendia, pbdb
+- **Q-023**: classic-compendia, macrostrat, pbdb
 - **Q-025**: biotime, pbdb
 - **Q-026**: pbdb
 - **Q-027**: climate-forcing, palaeogeography, pbdb, register-deposits, triton
@@ -88,13 +89,13 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-032**: register-deposits
 - **Q-033**: pbdb, register-deposits
 - **Q-034**: fred, register-deposits
-- **Q-035**: palaeogeography, timescale
+- **Q-035**: macrostrat, palaeogeography, timescale
 - **Q-036**: register-deposits
 - **Q-037**: pbdb
 - **Q-038**: pbdb, register-deposits
 - **Q-039**: classic-compendia, pbdb
 - **Q-040**: classic-compendia, palaeogeography, pbdb, pbdb-chronosphere
-- **Q-041**: classic-compendia, pbdb, timescale
+- **Q-041**: classic-compendia, macrostrat, pbdb, timescale
 - **Q-042**: classic-compendia, pbdb
 - **Q-044**: classic-compendia, pbdb, pbdb-chronosphere, register-deposits
 - **Q-045**: classic-compendia, pbdb, pbdb-chronosphere, register-deposits, timescale

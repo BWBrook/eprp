@@ -570,6 +570,17 @@ the workflow when they generalise.
   holds contributors' e-mail addresses; the profiler never outputs those
   columns, and committed files are grepped for "@".
 
+**Macrostrat (25 October 2026; [entry](macrostrat/README.md)).**
+
+- *Test a database's ages for convention before using them as a
+  chronology.* 18% of North American unit boundaries sit exactly on an
+  international stage boundary, which a continuous age would almost never
+  do; only 2% of units are radiometrically dated.
+- [Detail withheld pending disclosure to the data custodian.]
+- *Partition a live API so nothing is silently left out.* Requesting every
+  project and every column status separately reproduced the stats route's
+  unit counts exactly; the default `all` request returns a subset.
+
 **Outreach (Barry, 22 October 2026).**
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up
