@@ -1,0 +1,1 @@
+171 intervals; 0 missing from the snapshot; 0 differ in name or ages

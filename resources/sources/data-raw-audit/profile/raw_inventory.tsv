@@ -1,0 +1,193 @@
+holding	path	bytes	sha256	zip_members
+ammonoid-growth-walton-korn-2018	Ontogenetic_Conch_Parameter_Data.xlsx	215182	fbe2012f1d420ef7b292141ae0ed0ea8d046c4c15303663565dc72e0727ebe40	
+ammonoid-growth-walton-korn-2018	dataset-metadata.json	4115	10875c8310d3a9b04c432b41b790067ebdc792f7e56ec6e6c1749ccac413cb08	
+ammonoid-growth-walton-korn-2018	files-metadata.json	1154	3f1431d173b62e0f721ba4b439c13ce9cac1cdefdf037470deae53975affda9b	
+ammonoid-growth-walton-korn-2018	retrieval-log.json	571	52b512070ecbd697547620a3b7ffa7b2518720eaca728eb9109460c6f9d3a916	
+ammonoid-growth-walton-korn-2018	walton-korn-2017-publisher.html	647682	5269c1491ea09cad3ae142d8b74263f8d28465292c4d074e28314e8c4196a501	
+ammonoid-growth-walton-korn-2018	walton-korn-2017-retrieval-20261015.json	402	82df68d662ab84d4256b9edde367d4de659a8b98262a682ca3d4cc09d39a4daa	
+benson2025	country_codes.csv	130102	58d27a780d919a9fa9d027e65f1f54b9e8126ce1384b4ca6696ee4d8f43a7f3a	
+benson2025	marine_regions.csv	7869	0c43e3c1bb171b36c4fc9b332ea41202754c7e257d23d6ee76c5e25653f35719	
+benson2025	occurrences.csv	1125499083	c5da9359fced2285e0d50f20626a1ab562738d80ff12cece2bb0af530746670d	
+benson2025	pbdb_time_int.csv	9121	023c31855b30247b324a2fb2c2edeb493eef84f898c082c359d647da3c3f9765	
+cantalapiedra2019	S1.nex	3123187	aed0338b5b03d03c88a3ecd3fd61ed1d221a44040bbee9016575ce5649d6530a	
+cantalapiedra2019	S10.nex	147836	4ff82c41e77aac01f850742dcff9679c7b829b4d2404a9088a39256310b8c4e4	
+cantalapiedra2019	S2.nex	2932774	2ac7bded03cb5482bef0fce8d7be50044ec9a91a8a6448a1979d837a5fca66af	
+cantalapiedra2019	S3.nex	1880748	b5b1d558977c19e00293722fdc77be24e7bb93b7c8fb6f6d1d635be441dbef52	
+cantalapiedra2019	S4.nex	12428	b03549c8d8c974a2671de6236fba40cfb7e2388e799fc4ebfe043c605576b26c	
+cantalapiedra2019	S5.nex	358943	b402a15cba727b9c4c87b9be9cb3c022e42ebe3e4891024513357683a855f445	
+cantalapiedra2019	S6.nex	378535	2487f7a1f80db279cc21f597f58f530ed751594e07ab62a7569efca5c4dce068	
+cantalapiedra2019	S7.nex	222159	98f5ff66a4c6f5d795bdce40909baa493f645a809f8b32f5a35f39804e6aa2bb	
+cantalapiedra2019	S8.nex	209113	f06b71abdb4eb412dafbbd76f44d79b4b48b293a446bb7ca5271952f825454b0	
+cantalapiedra2019	S9.nex	229481	3877f2fc7b2102a75a8fdf7236b6a7d36062efc5e5a2fb397d3bb16066704387	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale.zip	72217726	154c3119c77986717af6e3609596702162b8cacf658e1c7b20b1263e52ea967f	889
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.gitignore	26	02ebc70845588376fcc00d520127cab209a9684382c61f3e6400d4ee4c44aece	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/0. master-script.R	948	0262b3c0ae8919443bc668b25d421fcc79165355e63f7e2357906506457def85	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/HEAD	23	f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/config	137	cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/description	73	85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/applypatch-msg.sample	478	0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/commit-msg.sample	896	1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/post-update.sample	189	81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/pre-applypatch.sample	424	e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/pre-commit.sample	1642	12c723235131f1c5576c652ac2a0a007f261a93c0ddc445b1dcee6cd98e30788	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/pre-push.sample	1348	4b1119e1e13a212571976f4aee77847cdbd40978546d6273a557e238981a40d1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/pre-rebase.sample	4951	d24bb1ec5d4ad70fc1b51bf4c7925795fc9526f53387ba32cc11ca2fd9755a59	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/pre-receive.sample	544	a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/prepare-commit-msg.sample	1239	f7e5627b5a26d0026ef50352f7393350ee58cc101f5e8337f944b57a5039968c	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/hooks/update.sample	3610	751c037320024ec2ee2757f3ffae0b10ad2c946367684e7059d4dc97eac7e431	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/.git/info/exclude	240	6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/countLocalRichness.R	6194	f052934d59b436e410faf123c095c88a153cd4df2ad046a312303c316eef5818	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/dropBlanks.R	78	c3bc5869b4c3a304912600e5aff44c3ee13e6d86c757897839e6cf68167cfa72	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/goodsU.R	358	7de932ee034c8f66e9d9360ec6801f5b4bade5b9a103e3dfaf9e30ecc4c7b430	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/multiton.R	682	38044b55f203b7e7307c0f01077ec854b9576462b152bb023f71f032a4e67059	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/my_mean.R	344	15236b1cda33d634585263b1320008246dbaf059e21dec14f6a8efc38e7c5ea1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/outersect.R	73	21b2268d67cb0734ebc96f24b91f34206e181cddbd4cd898168327e29257d322	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/pcoordColls.R	391	afdfa2f6ffeb0c1e05e8743e84019c490d08d9092c5d18e82c83c9579c8a1185	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/set_up_parellel_processing.R	430	3cc4c56355b69f2579be69af4b5db2244b7fc0bd0e39d5ca7354f0d8bfb9020d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/functions/ylim.max.R	96	599d10b0175489b68f9624a966f76e5136ad14f328fb55e51002e0c7467ef146	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.RData	652736	94922f2c11bf1bcbce1f3244398b004bcf7e802575c37f9789461a59ed12bc95	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.Rbuildignore	28	49ac1afea9aa06a2540e48e9142f8900c49235538f7b4eafa2fd55cd48eb325e	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.gitignore	29	b0ab81060ce9c20a0b17e38328651f149788c144366bf6e841baf03674d1817d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/DESCRIPTION	477	bdd77877e3876f22ce87489192ba33f7201f0f27508f82c1a883b15a44ff9812	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/NAMESPACE	366	4a8619ea3124e7d84cda80183f10ca39aba884a14c9368cc3ac77515ddc05906	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/geoMST.Rproj	384	9706ebc632cff70d02a9f8bd9a03619b6d324e9353fed2d89d3e247d020011dc	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/COMMIT_EDITMSG	45	0ac4e2226624ea6ad38792c70cb59bbdd70ef08e5812655a1cc933650d03137b	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/FETCH_HEAD	94	63f6afe13d3bc128e40dadb24199a97445c49536e863f8a37fb1b6e4f42dd726	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/HEAD	23	f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/config	306	5416550655a40fd7ddec7fd3b9d0d06a6248a61c7ac23ad594723d7e329883a6	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/description	73	85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/index	3698	b5f3dbeddb8b925d114eadf713d766af7e207167344f38abb065aa3a9e8bcec5	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/packed-refs	166	136748d86ddf05a3523cc7ed52628fc271ce03681209e8b35b9fa9311fc07f2f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/applypatch-msg.sample	478	0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/commit-msg.sample	896	1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/post-update.sample	189	81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/pre-applypatch.sample	424	e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/pre-commit.sample	1642	12c723235131f1c5576c652ac2a0a007f261a93c0ddc445b1dcee6cd98e30788	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/pre-push.sample	1348	4b1119e1e13a212571976f4aee77847cdbd40978546d6273a557e238981a40d1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/pre-rebase.sample	4951	d24bb1ec5d4ad70fc1b51bf4c7925795fc9526f53387ba32cc11ca2fd9755a59	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/prepare-commit-msg.sample	1239	f7e5627b5a26d0026ef50352f7393350ee58cc101f5e8337f944b57a5039968c	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/hooks/update.sample	3611	166e4898f31cd99b1814453c9cb4f3a43fc9d425adeb225a1962a6e715596c2a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/info/exclude	240	6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/info/refs	127	90f32403d7c1c3348ff0cbda5c9f1f405a51cb8d7eec6abaf0e887149b92c5ab	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/logs/HEAD	347	6cc7ce1d9d9af8394855d1c7029680ca3d400fd79b0c9924f9fee354c2faaa4d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/logs/refs/heads/master	347	6cc7ce1d9d9af8394855d1c7029680ca3d400fd79b0c9924f9fee354c2faaa4d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/logs/refs/remotes/origin/master	450	04ea2611e89a2e8649ff9650788b5f671de186c81c252445567d4cc582af0917	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/objects/info/packs	54	1451bbda1d0a4f999dc917497e1abac290febb9fc110a94487a11317d02b9bca	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/objects/pack/pack-8fb6f42029d02f5b5820de07f32a18410d456efe.idx	2808	7d8f9d61749ad229728574233654bc2e39c42eb8ef162a10dae682cefb84a211	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/.git/objects/pack/pack-8fb6f42029d02f5b5820de07f32a18410d456efe.pack	20619	76dcb44708dd7aa7efad6e1c993aeb307b018761096b75fc697c699ee2bf2b5e	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/MST.R	1227	05fabf7dc0a070e876845d90a62817641c42419f11e31f77d80b813395af5384	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/binaryMST2edges.R	1276	1e89ff5c87b992d621ee27c52854d20d91d92b7c0e0602749cea2680222d809d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/collRegions.R	425	e85c1e259acee64b642d53e5acc82414584c81f190310e64090d301553a69def	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/dist2MST.R	921	947b7499c72f31faedfe5639b3fe6e8900316e4aacea7fdd12b64ca22fc1164a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/edgesMST2binary.R	692	0b875e8c403bf675d9220abc930c4498effe2151f61d18635f45b9345c64c979	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/findAllSubtrees.R	1039	0069c587b9137a09b9f73b805a49f4ec81f39fdd0f96fa38fae040d3fced9785	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/fragmentMST.R	3330	71aeec3b2807fe7d4e9cc67e6583554471a10fb086fe387f87b72b1ec94809d1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/gcd.R	355	4b4296a3cd994c336a6c33bb005798653a5d492f3edaaf49c2c519e21d8c1e06	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/gcd2intDist.R	652	e8c5de2b776b37b3a5e05ced541dc2d888910b54aac6c2532b8dec455072e7b9	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/getPalaeoCoords.R	1380	b49f096ba682356b6601042ea3baece4f78ed0a8afa1bd9eccd1940205161571	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/intDist2mst.R	1304	2c0aa549cca89028cb026ba06273e324300ab590b3909f282b51f9b47cebae8d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/medianPalaeolat.R	426	27d52f5d002b8b9294d61e1fa69944023334e6f3de5353207a70210daeef98ca	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/pcoord2gcd.R	944	f8823502343c87aab6fafb9f2c66171b6e4b82ebbde357288fbd5de5e426515e	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/plotCoords.R	664	4a58edbab3de3931cc4fd62544e1587cdc16c1b2fd5e3eda4373b3174b11d00d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/plotMSTboring.R	1109	4a65e2a6ecf49066c6310fee66ebc171176c4ba0c77767a8877349c5d4633348	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/plotMSTworldMap.R	658	d288ede0b883f8bd26913636c01258296e81c491c8ba2e7ab3a21ad121ff2e05	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/seedMST.R	871	8bb77dac46451a3ee7c3350797416e154d88f961e0a2e9e7de6e1c67a7cfb847	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/severRegionalMSTlinks.R	628	96c90691192e2895dde0473bec4cd471fa77b0006fb707906c901b01e8b96d9f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/splitMST.R	1050	1a5b3bcb2e1a7ae70e27412c2d8387b931879b5f933763750da56a561b79b364	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/R/subsampleMST.R	8613	f05964fda0027a8428b75ed83ccebbb51d4f413f3526ec1eb6661fbdfbffc06a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/MST.Rd	565	b5ebc8b0d4c8f517973a85661e80a4870e9b86d52d28ddf706cbbdc891db7efb	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/binaryMST2edges.Rd	763	c725b4625942fc2544f4b441e90c9fd460955b5eedc2a6edd3bf65c0b27e8d79	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/dist2MST.Rd	601	8d14f7c1bc7a05d52e5f6ffa0ad3dc645515e0871273dc3a155bac0219933c58	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/edgesMST2binary.Rd	524	504f74404ef566b4ec0820b3e1233f551d65cdc5eca5c4fe1d94a3d726def02a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/findAllSubtrees.Rd	475	6cb71f7a6bda7fe755ca0e037182fb877dfdee2973a2f654e338454cda99d2b1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/gcd.Rd	310	25fb1fb15f5c4d90fc5c2ecf6731e50276f70f1533b9d7527a04aae0d3d96483	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/gcd2intDist.Rd	439	5e09f6fe774e817c8baa1e3a1f4ab947779cbd0bfded4ae31598e266e8b5e7c7	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/getPalaeoCoords.Rd	661	8790991485e7d750484faa9d7c6ea21e143aec45801b6bd84c48c3922dbd5d24	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/intDist2mst.Rd	543	720f17155c73ed5d860f4841d71a671977ce7e162da3cdfe9d4dad001cbe51c7	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/medianPalaeolat.Rd	460	921fd160ce4585d5257ec155b6a701342dfe27192b102eb4c5843bab1f0ce35b	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/pcoord2gcd.Rd	464	93b46d94661a4e6fdcccd3be37f5cd22edb457351fd9b161e76484afb3297c76	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/plotMSTboring.Rd	641	8356ed18027d71c58e1e189f2a7148306214259d00043ca9c2acf28b4ac7ab07	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/plotMSTworldMap.Rd	370	a13f8d928ab68b2b24eea8753845f272d144b05a30fa3f7f9c8822491595fcf0	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/seedMST.Rd	502	7893ea8483cde7cfe6dd871e5d9ab459681ad5fed79182de48f4d7b88ef5528a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/splitMST.Rd	558	d36edd326a0b354e3a812e13667d64803886cbb9783fc59ad88a4193609f744a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/geoMST/man/subsampleMST.Rd	1436	f2cfd7981fab69ad303b2642aa8037c1520b69641a949125229c893ca5daea28	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/equal-length-intervals.csv	2329	94cf16fcea05c7bd0b33415e8a1617be4f574fc226c07de96586d57a117859ed	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/pbdb_time_int.csv	10191	1da9950e6c624843ce6cc74bdc73141e17c0dc4e7a98af0f348b06299fb345a1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/stage-length-intervals.csv	3951	47b555289a568d17a0702da4ed73fd1701f36412578acb6dd890beb8a37783e8	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/tetrapod-superlocalities.csv	7468	e62f348fd1cd77416115fb41c69144909ff772d647d5b488e85830fb1b8e6f24	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/timebins.txt	1897	832041dc88312fbbc1341f069f7c53a44bf70b4d4c151d8e7f7615b2787b3092	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/timescale_cols.csv	6872	2d0e9e5dc1f5e898d959a9d0d5c179eb002e1241596c5e776cfdc61ea5b5bcdc	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_aves.csv	10432876	41e2155a69081477b0f21450d2e4f3e04f34abf7ed0bee607b9678d78d46910f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_cetacea.csv	6042121	a677f8c3e9e98486205be5b7d2951ff275f63b126a5b834d93e8d91589f21281	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_chiroptera.csv	2035279	051c8a240d9e976a0867f9376a01a3d74449c278590e1f8c3b24a7f03bd3494e	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_coll_data.csv	177964936	1d0cb3ea8966182f1b483733183bc47c2d0117785d106a1302f7c9dc3906bf5c	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_dinosauria.csv	21964783	bf896a1a3563822ed0571c527362d17777956c63fad7acc58e8961f600f080ca	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_lissamphibia.csv	4637531	2d6654f992fbf5ed386ba6ac9fde3b48026e79be2a776efbc9b29434b753c6ac	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_mammaliamorpha.csv	159871945	b9dc309231072ef39ae5893609e6341e1dbba339bcb60358557e1448e1568d7d	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_multituberculata.csv	2996746	d5b14495a469386fdf9f342927ffd72f6dbd5a51151e2730964f4bfa401ece2a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_pinnipedimorpha.csv	1820782	2c95ffb558ccb5ecc58ae1bd90f14abdf1cb551dbee5606a77dff8b6229ef6d9	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_pseudosuchia.csv	8442999	91794389edd3dbe2cf65d492ccbd19ebc0ed5afd0d3ac8ef4ea66ce1760c6cd0	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_pterosauria.csv	1583801	add1f120768e1c03cf7b2916079f00efadc486e4afa91fabfb1fd7a82caf423a	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_rodentia.csv	30784860	66f63e2678d0cb0ce29bcb101b49b6f477e6fcb4b9635f557787d8bbcd1c24e0	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_sirenia.csv	1008660	fb93b8c70843e25ba290e0c134c11bb47981207ffd15ab554cfb8e3b8313bf42	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_squamata.csv	11860036	de8530c72fc0a6b2ffef1501a09e388498df1d2863572a1ebe8f2ded1c69d899	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_testudinata.csv	11709150	827e1b69362e451201987bcc4ab3a488b66d8439b46fc0da6bd28ee82f9b37d7	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/alpha_tetrapodomorpha.csv	247565747	2c57030860c72be16f1e01d8740de4d07056ee030dfa7c8ced8f02f461230e63	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/data_downloads/taxa.csv	4718301	cf3d63842cf37691decc84f1894b91b9f6d357d75548f7de4d104dc150ebb624	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/exclude-terms/egg-terms.txt	823	da602cc2fc03e0901499afe68d6564d2b83f7da06df1cf224930fc07885f106c	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/exclude-terms/marine-terms.txt	12995	9e1daa91835e15325261ca20182bd3f8e8a5c88de026e86c20d9902a9d0b7598	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/input-data/exclude-terms/trace-terms.txt	3526	e44b28d46d4c3b51655b8bd7f8c89a908f502afaaeb1111d6e4958c810a9140e	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/0.1 load-packages.R	2056	d8f5b9656c302f400fcb4d625985c2a31e9bd5dd62c8ac33456ce2edabde6fd9	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/01 load-alpha-data.R	19622	5bc7adaeec6ec158b4fb240e9bba9710280cb40f7bae6b6cb07ec36520e1f0f9	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/01.1 define_regions.R	1465	af940f903527a248b46bebdd02a11a3a6f49043dc40aec74137cc6c63a0fa3bf	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/02 calculate-local-richness.R	31294	7a044185f858a6d749b64a780adb754f89a068d00b1d819b076b2c78b783d1be	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/02.1 define-objective-superlocalities.R	10254	341976ad9a6a2416659b46f3a0d5844cdcf93861ab676a78b1ff552d0a038b61	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/03.1 generate-rarefaction-curves.R	15326	b5ec030690fd1fb2ace5fc457a99e5c00d80b9ba05294edd35de7f660bbbee7f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/03.1 simulate-lr-null.R	11904	0defce6e6325ca1e28714c04913b31bc05d4171900ec25d9a80609c8fe70d955	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/04 plot-figures.R	3131	d0e1c0d1299f979a7167429248f7d31a524f12cfba605a16d9e431f785a16e6f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/05 generate-publication-tables.R	903	0cf4e0414e0eca4633b01ceaf9084c63d5fc83189f5d49e7e2dad24a545956f2	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/Figure 1 code.R	16383	e97f2b5755c9cce4ff8fe322f1b4974ff13cb6317d9153261cbfeb6bf9c2075f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-main-figure-boring-tetrapods.R	8686	9791259cba8022f6f68d66a952b9ed11f083ce5a70067a696ff123948d918af4	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-main-figure-clades.R	11677	6f38c186e0a7026c1089233dfafafa1ae782fb585416272f23ebfe63666a6dba	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-main-figure-flying-tetrapods.R	10676	2677c2d09a1e3057d7ee40cd4626fe253ede60d774e0bcd9dd5f297b8e51539f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-main-figure-palaeolatitudes-through-time.R	3516	a3236b2841b79f7db8de478b9fdea4663ed061937646ec44cae9c7d97480ee21	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-main-figure-sampling-biases.R	6606	d1d41394d7901a176fb827a4d0bf1ff9989e944c5b57a0c977297cbc41e92111	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-main-figures-sampling-proxy-local-richness-relationships.R	26674	256073331b1802ee76c6ada66ee48b464a5ab8f810dc0600d59eb42a1c9c5ff1	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-supplementary-figure-dropped-collections.R	2007	dc1b5f0f13d75f1fcdc3276c6c2ddfed227b56d596b5a7e77aadd87ad91e8f2f	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-supplementary-figure-lithstratgeogscale-data.R	5510	f3855ac14e4dcdfd656fafea9eb42ea2679bcb6eb93f61084e3ee729c7950a71	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-supplementary-figure-non-flying-tetrapod-LR-facetted-by-paleolat_zone.R	2044	baf7a2339bb9094fdca3e60bdfc9894aa8eb4cb65ad76b06f082f06eee4d803b	
+close2019	code-for-close-et-al-diversity-dynamics-of-phanerozoic-terrestrial-tetrapods-at-the-local-scale/subscripts/pub-figure-code/pub-supplementary-figure-regional-patterns.R	1769	d180961b30da3deedcaccdb9db8d27c7a82795ba9e7a8dc14e7b61a2a82082a8	
+dryad-downloads	doi_10_5061_dryad_3v0p84v__v20190218.zip	72218038	fb5d7457d3c21d20262772fad26a5175a3aaa4be5b4318f695ec3308233d7010	1
+dryad-downloads	doi_10_5061_dryad_6djh9w1bx__v20250429.zip	79549735	13b97814b8200053d882c275cba2cbe9a857aa2da99a945958f1f1b1989f71e2	2
+dryad-downloads	doi_10_5061_dryad_8jf2k__Data_Brombacher_et_al.xlsx	845521	195e15b36f599e9f8c064be046a1d08df58d2dbdb625688407d1d1fcb28b311f	
+dryad-downloads	doi_10_5061_dryad_931zcrjqw__v20230915.zip	98662042	6d78a031a08a84c32331100531b95ca75a1a8272d9652e9aacca82d018ac7391	10
+knope2015	41467_2015_BFncomms7455_MOESM1087_ESM.xls	3911680	e5c1eef44f51e788c12c80efdceba9e6597472af57d0a7146ae8f015ecf3f181	
+lamyman2026	All_Species_Lineages.nex	19873	e8bb5da6f67032f820b27ff2acc4e704b734102d4f4245bb3fddfd19b438ad95	
+lamyman2026	All_Species_Morphospecies.nex	52644	3a0867e048006975d60532c34bcaec548b051769a25b376bb62fafb94a009ce3	
+lamyman2026	S1. Morphospecies Key Information.xlsx	58174	88cd9b0a054aae64c9adfeadad5ec730dddfb11d169b8100ab61f803f0e05d84	
+lamyman2026	Supporting Data.xlsx	902354	2412991df3ff35d9f62275a500a474feff77e2c89b24ec86289574a8f7a7366b	
+lamyman2026	article/Phylogeny of the Cenozoic planktonic foraminifera.epub	585130	321defbb38d1ae2739364092f7ad26f6839c937238df032f3021abd0000cfa4d	
+lamyman2026	article/Phylogeny of the Cenozoic planktonic foraminifera.pdf	1670561	bf47924997b025462de3cefc0560048c000e9fa58e8fda59eee9880976597579	
+monarrez2023	README.md	11865	272993d037de29b26dba23f13182584a62b11972ac68d397c5f7cb772b7b3e27	
+monarrez2023	coeffs_bs_gr_Bambach_Pradel.txt	2224	5273121aeb36434fbe64b899938ce3e6bd83806a7d43317bc3ca5f26f93046eb	
+monarrez2023	coeffs_bs_gr_Big5_Pradel.txt	3284	b44ee91a5db5246ee93b9fa8f95ed9a35e0b453cfabdd5890359dc40412ccf9c	
+monarrez2023	coeffs_bs_gr_sansKPG_molluscs_Pradel.txt	1293	9270e6dbde334a7f0536a2c07c180ed25e707c69dd93c2a7c770b06ae135b6a7	
+monarrez2023	coeffs_bs_gr_sansLOME_brachiopods_Pradel.txt	1921	35088d6f766929e565029ba7179ffcf6aa1f6c403a33f25bddfa44c0632971e4	
+monarrez2023	encounter_history_bs_gr_5class_Big5.Rdata	372369	1d0787508c568abdeeb132b06cd4659491b235c7081c4ac4f76600aa2b4a43f0	
+monarrez2023	genera_range_through.txt	3417020	0008a40fa9869d46c80d1c5eb2032c3441cfea69470bf255a5bb3eb001fd9993	
+monarrez2023	genus.sizes.ranges.cleaned.classes.csv	630163	1cf3ec5adceed18a065d127618bc590ab42c144beec86977c6efd6b1b36c471c	
+monarrez2023	pbdb.cleaned.classes.csv	79529959	239d668aa298337f659a26792b8ff50a18e9640db5a2290d737f363d0a63121d	
+monarrez2023	pbdbAnimals.Rdata	14690410	cbd1ebc0b76785ca83523d1577578f45a96d372c502e1f1de05d1b25a1338fef	
+pbdb	intervals_scale1.json	23893	ee2f3c145de2ef6b747b08dd47606b7226fffe7083a5b2600279e6dbfeba6f90	
+phanda	GTS2020.mat	4715	00cbf5fa5dd5acdb93eb9c1b6379db4be012903532eea2b9ca7b4f628ffc4de7	
+phanda	GTS2020_PETM.mat	4773	f294a0aeafa9a6a3c938b0272391a5d2df6aa43f1403f417e51c9204322c9190	
+phanda	PhanDA_GMST_ensemble.mat	20332268	6213e8164af32b7e67daee1acb603f6e8a186286041b54b0897c934fa51246ce	
+phanda	PhanDA_GMSTandCO2_percentiles.csv	18513	22cad7964bac3b679ad83bf8a9c83eb66e995898a01eb9e93142087b2d4f6e1f	
+phansst	PhanSST_v001.csv	42453391	c46913f8501d6f8f95d5e27884c4f4055d68accc08d0cd3a060a93a50e33833b	
+song2021	Database_S1.xlsx	1330137	19e2590fa5a40d10535c2a5f0ebe211141e78427e8734786e4f4cc9a7b2a2473	
+song2021	R_code_extinction_rate.R	7886	47585e1266d9be9448ac8e00941902c0e7ac14afbded377173135fc6e6c4750b	
+song2021	R_code_thresholds.R	8533	3f7a3359793dd16b75356d347c7e7fae47eeb030cb39d0fd032113927c8eeb97	
+triton	Triton.zip	307268124	95c20a49d8e958799c86ec07ef50fe694a59f12edbe5cb9d9c7f3ab1daa50122	3
+triton	readme.txt	4547	c4b030283658cca162b29aaa2229880249634f6c92c597101a79db8505a6567c	
+triton	triton_no_dup.RData	93573331	0268a8df62d13dcf322e1ecc5aa3eb82fdb0e227ded76250d933d6b88130b360	
+triton	triton_update_2023.RData	213694369	7275120da2727e37b7d951632ea15364b0135d4aeaa5e67dee64a4a3d738af46	
