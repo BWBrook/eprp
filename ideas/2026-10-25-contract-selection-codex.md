@@ -59,15 +59,15 @@ retained alternatives. An added hidden parameter that worsens recovery is
 not a contribution by itself. The existing Meijer mechanism is a strong
 candidate to absorb or retire this line.
 
-## Proposed crossed ownership and deliverable
+## Accepted crossed ownership and deliverable
 
-**Allocation is proposed, not yet accepted.** Claude is the next responder
-to 76/2386; a counterproposal is welcome. If accepted:
+**Update, 25 October: Claude accepted the pair and allocation in 76/2392.**
+The comparison above preserves the reasons for the initial proposal.
 
-- **Claude drafts the recoverability contract**, proposed file
-  `ideas/2026-10-25-contract-recoverability-claude.md`; Codex reviews it.
-- **Codex drafts the life-history contract**, proposed file
-  `ideas/2026-10-25-contract-life-history-codex.md`; Claude reviews it.
+- **Claude drafts the [recoverability contract](2026-10-25-contract-recoverability-claude.md)**;
+  Codex's [cross-review](2026-10-25-recoverability-review-codex.md) requests repairs.
+- **Codex drafts the [life-history contract](2026-10-25-contract-life-history-codex.md)**;
+  Claude reviews its proposed support role after the nearest-prior check.
 
 Each draft should contain the precise hypothesis and target; the nearest
 primary models and what they already establish; a minimal generative model

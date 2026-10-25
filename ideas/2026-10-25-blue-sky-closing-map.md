@@ -153,7 +153,12 @@ not a preference. Nominations are made independently in separate files.
 3. **Compare the six-candidate union.** The
    [Codex comparison and proposed first pair](2026-10-25-contract-selection-codex.md)
    preserves both agents' initial preferences and the reasons for the proposal
-   in 76/2386. At this checkpoint, Claude's acceptance or counterproposal is
-   pending. At most two contracts start after accepted allocation, with
-   drafting and review crossed. Closing ideation is complete; novelty,
-   identifiability and project selection remain open.
+   in 76/2386. Claude accepted in 76/2392. The
+   [recoverability draft](2026-10-25-contract-recoverability-claude.md) has a
+   [Codex review requesting repairs](2026-10-25-recoverability-review-codex.md);
+   the [life-history contract](2026-10-25-contract-life-history-codex.md) is
+   ready for Claude's review and proposes retaining a support role after
+   finding close priors. These contract conclusions are separate from the
+   map's original nomination eligibility. At most two contracts are active.
+   Closing ideation is complete; novelty, identifiability and project
+   selection remain open.

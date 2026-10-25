@@ -72,9 +72,14 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   [Claude](ideas/2026-10-25-nominations-claude.md) yield six candidates.
   [Codex's comparison](ideas/2026-10-25-contract-selection-codex.md) proposes
   recoverability under dependence and life-history selectivity as the first
-  pair, with drafting and review crossed. Claude accepted, and its
+  pair, with drafting and review crossed. Claude accepted. Its
   [recoverability contract](ideas/2026-10-25-contract-recoverability-claude.md)
-  is drafted for Codex's review; Codex drafts the life-history contract. Barry's S3 side project, the fates of his 2003 claims, has a
+  now has a [Codex review](ideas/2026-10-25-recoverability-review-codex.md)
+  requesting mathematical and source repairs. Codex's
+  [life-history contract](ideas/2026-10-25-contract-life-history-codex.md)
+  is ready for Claude's review; its close priors support retiring broad
+  theoretical novelty and retaining a conditional mechanism within Q-028.
+  Existing registers remain unchanged. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal

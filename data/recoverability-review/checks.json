@@ -1,0 +1,62 @@
+{
+  "source_sha256": {
+    "identifiability.py": "2949ee90dd04182c1baa4e36c66b3de818caf5004af4f37f4d311ff221aeddcc",
+    "identifiability.json": "a2b5657fc349d8306514eac0c0884b517db1f2993cf90b9c7f7a83edca5913b8",
+    "scarcity_dispersion.py": "d89a4d7ee56e27ae339aba8ed8e87b330bbbcefa09d2e35d5d4fa482c733575f",
+    "scarcity_dispersion.json": "c9082bf8d6b8e1808b2a304d54258b9b1658cb8d23db7b9b6417898662d80e36"
+  },
+  "numpy_version": "1.26.4",
+  "seed": 123,
+  "draws_per_deadline_comparison": 1000000,
+  "finite_K2": {
+    "b": 2,
+    "d": 1,
+    "a": 1,
+    "true_never_hit": 0.3333333333333333,
+    "eventual_extinction": 0.5,
+    "true_hit_by_1": 0.6334752877547574,
+    "W_proxy_hit_by_1": 0.3461003137776732,
+    "W_proxy_negative_time": 0.18393972058572117
+  },
+  "deadline_13_under_W_proxy": [
+    {
+      "world": "scarcity: a=3, full competence",
+      "probability_W_proxy_time_le_13": 0.491571
+    },
+    {
+      "world": "growth erosion: a=1000, c_g=0.769",
+      "probability_W_proxy_time_le_13": 0.892853
+    },
+    {
+      "world": "provision erosion: a=1000, c_p=0.0027",
+      "probability_W_proxy_time_le_13": 0.997842
+    },
+    {
+      "world": "import, rounded m=3.303, arrivals continue indefinitely",
+      "probability_W_proxy_time_le_13": 0.574717
+    }
+  ],
+  "import_P_zero": [
+    {
+      "t": 0.25,
+      "probability": 0.47573240267876915
+    },
+    {
+      "t": 0.5,
+      "probability": 0.25316545584335437
+    },
+    {
+      "t": 1.0,
+      "probability": 0.0853890823664462
+    },
+    {
+      "t": 2.0,
+      "probability": 0.013140992953411227
+    }
+  ],
+  "growth_erosion_nearcritical_extinction_a1000_b1p0001_d1": 0.9048419419327538,
+  "large_K_timing_error_scale": {
+    "baseline": 0.0017320508075688774,
+    "growth": 0.00403536332543621
+  }
+}
