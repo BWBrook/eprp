@@ -41,7 +41,7 @@ readiness:
 | 7 | ~~Macrostrat, global~~ **done 25 Oct** ([macrostrat](macrostrat/README.md)) | B-005, B-007, B-008 and inferred others | open API, CC BY 4.0; dated snapshot of every project | [Detail withheld pending disclosure to the data custodian.] |
 | 8 | **Island-extinction compilations** | Q-034, Q-017, Q-004 | ~~Rozzi 2023~~ (three Figshare articles and GitHub code) and ~~Cooke 2023~~ (Zenodo 10014585) mirrored in [register-deposits](register-deposits/README.md) | **done 24 Oct**; joins the Sahul and FRED work |
 | 9 | ~~Modern-bridge time series and invasions~~ **done 24 Oct** ([biotime](biotime/README.md), [griis](griis/README.md), [alien-first-records](alien-first-records/README.md), [glonaf](glonaf/README.md)) | Q-025 (develop), Q-028, Q-047 | BioTIME 2.0, GRIIS (383 GBIF checklists and the Compendium), First Records v4.0 and v3.1, GloNAF 2.02; SInAS 3.2 in [register-deposits](register-deposits/README.md) | First Records 1.1–2 restricted (C32); GloNAF courtesy contact (C33) |
-| 10 | ~~LegacyPollen and LegacyAge 1.0~~ **done 25 Oct** ([legacypollen](legacypollen/README.md)) | Q-024 | LegacyPollen 1.0 and 2.0 (in review), LegacyAge 1.0, on PANGAEA | No age ensembles published (rerun Bacon from the inputs); 15 records of 450+ samples; Sahul thin (59) |
+| 10 | ~~LegacyPollen and LegacyAge 1.0~~ **done 25 Oct** ([legacypollen](legacypollen/README.md)) | Q-024 | LegacyPollen 1.0 and 2.0, LegacyAge 1.0, on PANGAEA | No age ensembles published (Bacon inputs for 1.0 records only); 345 dated 2.0 records of 100+ samples, 8 of 450+; 95% age range ~950 yr; Sahul thin (59) (C35) |
 
 Also done, 23 October at Barry's request: the classic range compendia,
 Benton's *The Fossil Record 2* and Sepkoski's genus compendium

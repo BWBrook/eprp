@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Mirror the LegacyPollen family on PANGAEA: LegacyPollen 1.0 (929773), LegacyAge 1.0 (933132) with the
-# 2026 African full-age table (931920), and LegacyPollen 2.0 (965907, in review when written): its
+# 2026 African full-age table (931920), and LegacyPollen 2.0 (965907, published 2025): the superseded
 # review zip, harmonisation table, overview and the seven regional count tables (percentages are
 # derivable and not mirrored). The LegacyVegetation, REVEALS and climate reconstructions are not
 # mirrored.
@@ -49,7 +49,7 @@ if want v2; then
       echo "PANGAEA.${pair%%:*}_counts_${pair#*:}.tab::$P.${pair%%:*}?format=textfile"
     done
   } > "$TMP/v2"
-  $M url "$D/v2" --specs-file "$TMP/v2" --pause 2 --license "$LIC (in review on PANGAEA when mirrored)" || echo "v2 FAILED"
+  $M url "$D/v2" --specs-file "$TMP/v2" --pause 2 --license "$LIC" || echo "v2 FAILED"
 fi
 rm -rf "$TMP"
 echo DONE

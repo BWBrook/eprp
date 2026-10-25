@@ -589,13 +589,17 @@ the workflow when they generalise.
 **LegacyPollen (25 October 2026; [entry](legacypollen/README.md)).**
 
 - *Look for the newer release before cataloguing the named one.* The backlog
-  named LegacyPollen 1.0; 2.0 (3,680 records, in review on PANGAEA) and a
-  2026 African full-age table exist.
+  named LegacyPollen 1.0; 2.0 (3,680 records, published 2025) and a 2026
+  African full-age table exist.
+- *Check whose status a metadata field is.* PANGAEA's "in review" flag in
+  2.0's metadata belonged to a related paper, not to the dataset.
+- *Screen on the records that have what the analysis needs.* 2.0 has 446
+  records of 100+ samples, but 101 of them carry no ages.
 - *A file's extension is not its format.* The ".csv" files are
-  tab-separated, and the readme's "semicolon" is wrong; detect the delimiter
-  from the header.
-- *"Uncertainty" can be quantiles, not draws.* LegacyAge publishes age
-  quantiles per depth; ensembles must be rebuilt from its Bacon inputs.
+  tab-separated; detect the delimiter from the header.
+- *Read a column's values, not its name.* LegacyAge's
+  `Uncertainty_Record.mean` is about a quarter of the mean 95%-range width;
+  the true width is computed from the minimum and maximum ages.
 
 **Outreach (Barry, 22 October 2026).**
 
