@@ -19,7 +19,7 @@ resources/library/
   library.py              harvest | resolve | expand | frontier | journal | match | fetch | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
-  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025)
+  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
   review/                 candidates held back from the seeds: unsettled citations, canon reserve and unverified
   works.tsv               generated: one row per resolved work, with tiers, questions and full-text status
   INDEX.md                generated: counts by tier, full-text status, type, decade and venue
@@ -71,6 +71,7 @@ rebuilt.
 | `canon` | `seeds/canon.tsv` | curated foundational and landmark works, from the 1830s to 2026, under the [topic tree](topics.md) ([method](notes/canon-method.md)) |
 | `neighbours` | `seeds/neighbours.tsv` | works that at least 5 core works reference (`library.py expand`), with that count and the questions of the referencing works |
 | `frontier` | `seeds/frontier.tsv` | works published since 2020 that cite at least 5 core works (`library.py frontier`), with that count and the questions of the works they cite |
+| `agendas` | `seeds/agendas.tsv` | published question lists and research agendas: priority-question exercises, horizon scans, grand challenges, *Paleobiology*'s 50th-anniversary issue, and palaeontology reviews with question boxes ([note](notes/question-agendas.md)) |
 | `barry-2003-list` | `seeds/barry-2003-list.tsv` | the 293 papers on Barry's 2003 list of the most promising papers for further research, with their group and item numbers ([note](notes/barry-2003.md)) |
 | `barry-2003-endnote` | `seeds/barry-2003-endnote.tsv` | the 491 distinct works in his 2003–04 EndNote libraries and "Papers Held" bibliography, decoded and resolved ([note](notes/barry-2003.md)) |
 | `field-<journal>` | `seeds/field-<journal>.tsv` | a core journal's complete run as OpenAlex lists it (`library.py journal ISSN --name NAME`); see below |
