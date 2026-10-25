@@ -1,0 +1,35 @@
+section	metric	value
+v1	harmonised taxa (count columns, all regions)	987
+v1	records; samples; median samples per record; quartiles	2676; 148431; 43.0; [27.0, 43.0, 68.0]
+v1	records with 50 or more samples	1132
+v1	records with 100 or more samples	305
+v1	records with 450 or more samples	5
+v1	median spacing between samples (kyr): median over records; quartiles	0.165; [0.086, 0.165, 0.291]
+v1	records with 100+ samples and median spacing at most 100 years	210
+v1	records with 100+ samples and median spacing at most 200 years	264
+v1	records with 450+ samples and median spacing at most 50 years	4
+v1	records by continent	Europe 1075; Eastern North America 670; Western North America 362; Asia 333; South America 150; Africa 54; Indopacific 32
+v1	median pollen sum per sample: median over records	384
+v1	records in the percentage tables; of them, not in the count tables	2831; 155
+formats	field delimiters found	1.0 pollen_counts_africa.csv: '\t'; 1.0 pollen_counts_asia.csv: '\t'; 1.0 pollen_counts_europe.csv: '\t'; 1.0 pollen_counts_indopacific.csv: '\t'; 1.0 pollen_counts_north_america_east.csv: '\t'; 1.0 pollen_counts_north_america_west.csv: '\t'; 1.0 pollen_counts_south_america.csv: '\t'; LegacyAge Table-S1_chronological_control_points_metadata.csv: '\t'; LegacyAge Table-S3_bacon_parameter_settings.csv: '\t'; LegacyAge Table-S5_legacyage_1_0_chronology.csv: '\t'; LegacyAge Table-S6_chronology_comparison.csv: '\t'
+legacyage	control points; records with control points; records with Bacon settings; records in the chronology table	19990; 2831; 2823; 2742
+legacyage	control points by dating method	Carbon-14 17215; Dates from prior information 1705; Lead-210 999; Thermoluminescence 50; Uranium series 17; Argon-argon 3; Cosmogenic 1
+legacyage	dates per record: median; quartiles; records with fewer than 3	5; [4.0, 5.0, 8.0]; 277
+legacyage	Uncertainty_Record.mean (yr; the record's mean width of the 95% age range, per the readme): median; quartiles	280; [178, 280, 396]
+legacyage	chronology rows (depths); columns	1483815; ['Dataset_ID', 'Dates_Number', 'Depth (cm)', 'Age_Minimum', 'Age_Maximum', 'Age_Median', 'Age_Mean', 'Uncertainty_Each.depth', 'Uncertainty_Record.mean']
+legacyage	comparison with the original chronology (Original.chronology_VS._Newly.chronology)	Original chronology is within the 95% confidence i 1011; Original chronology is partially or completely out 914; No original (calibrated) chronology 906
+legacyage	1.0 records without LegacyAge dates	0
+v2	records; samples; median samples per record; quartiles	3680; 211167; 43.0; [25.25, 43.0, 69.0]
+v2	records with 50 or more samples	1555
+v2	records with 100 or more samples	446
+v2	records with 450 or more samples	15
+v2	median spacing between samples (kyr): median over records; quartiles	0.150; [0.08, 0.15, 0.27]
+v2	records with 100+ samples and median spacing at most 100 years	259
+v2	records with 100+ samples and median spacing at most 200 years	320
+v2	records with 450+ samples and median spacing at most 50 years	8
+v2	records by continent	Europe 1446; Eastern North America 705; Asia 687; Western North America 417; South America 185; Africa 159; Indopacific 81
+v2	median pollen sum per sample: median over records	361
+v1 to v2	records in 1.0; in 2.0; in both (by dataset id); only in 1.0; only in 2.0	2676; 3680; 2643; 33; 1037
+v1 to v2	records in both: oldest median age changed by more than 0.5 kyr; median absolute change (kyr)	43; 0.003
+v1	Indopacific records; records in the Sahul region (Australia and New Guinea boxes); of them with 100+ samples	32; 21; 5
+v2	Indopacific records; records in the Sahul region (Australia and New Guinea boxes); of them with 100+ samples	81; 59; 7

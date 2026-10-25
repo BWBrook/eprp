@@ -586,6 +586,17 @@ the workflow when they generalise.
 - *Test a route on an id that exists.* The age-model route "returned
   nothing" for a column id that does not exist; it works for real ones.
 
+**LegacyPollen (25 October 2026; [entry](legacypollen/README.md)).**
+
+- *Look for the newer release before cataloguing the named one.* The backlog
+  named LegacyPollen 1.0; 2.0 (3,680 records, in review on PANGAEA) and a
+  2026 African full-age table exist.
+- *A file's extension is not its format.* The ".csv" files are
+  tab-separated, and the readme's "semicolon" is wrong; detect the delimiter
+  from the header.
+- *"Uncertainty" can be quantiles, not draws.* LegacyAge publishes age
+  quantiles per depth; ensembles must be rebuilt from its Bacon inputs.
+
 **Outreach (Barry, 22 October 2026).**
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up
