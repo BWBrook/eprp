@@ -320,8 +320,9 @@ Results in `results/t3/`; post hoc checks in `t3_checks.json` and
 
 Run on `deep-server` on 24–25 October 2026 (`run_t4.sh`, `run_t4b.sh`,
 `run_t4c.sh`, tmux). The R estimators take under a minute per scenario,
-the geometric Weibull fits about an hour in all, and DeepDive's training
-DD_HOURS. Tests declared in [VALIDATION_T4.md](VALIDATION_T4.md) before
+the geometric Weibull fits about an hour in all, and DeepDive 5–6 h per
+model on 16 cores (three shared models in parallel, then nine per-dataset
+models three at a time). Tests declared in [VALIDATION_T4.md](VALIDATION_T4.md) before
 running (`64d7818`), after a generator-only pilot disclosed there. The
 amendments: A1, smoke-test fixes; A2, post hoc K2 variants when SQS
 missed its quorum; A3, DeepDive scored against its own label definition;
@@ -361,7 +362,7 @@ minus the true log ratio: 0 is perfect, −0.69 a spurious halving.
 | iNEXT coverage 0.6 | K2 **pass**, +0.03 | K5 **fail**, −0.13 | −0.08, −0.19, −0.45, −0.76 | +0.11 | relative only |
 | geometric Weibull (`cegsML`), occurrence frequencies | +0.03 | +0.09 | −0.01, −0.02, −0.06, −0.12 | −0.01 | 0.06–0.10 |
 | geometric Weibull (`cegsML`), pooled individual counts | +0.06 | +0.11 | +0.03, +0.07, +0.21, +0.46 | −0.05 | 0.06–0.15 |
-| DeepDive | DD_ROW |
+| DeepDive, shared model (autotuned to replicate 1) | +0.10 | – | σ 2 only: −0.58 | +0.04 | 0.22–0.57 (overestimates) |
 
 Standard errors of the biases are 0.007–0.046 (20 replicates). "Global"
 richness counts every species alive at any time in a bin, including the
@@ -441,4 +442,16 @@ M).
   abundances in `indices()`; its Chao2 uses (S − 1)/S where Chao's has
   (T − 1)/T: a median +0.14% and 99th percentile +2.4% here, but +25% in
   the bin with 4 collections.
-- DD_FINDINGS
+- **DeepDive held the effort trend and the mass extinction, but
+  overestimated richness throughout and misread evenness.** The shared
+  models gave +0.10 under the fall in collections and a drop error of +0.04,
+  but −0.58 under the evenness change, and they overestimated global
+  richness by 14–76% on average (mean log ratio +0.13 to +0.57; more
+  against DeepDive's own label definition, so it is not a definitional
+  artefact). Neither the prior window (17, 11 and 2 of 20 replicates
+  inside; strata alike) nor per-dataset tuning, DeepDive's intended use,
+  changed this: on replicates 1–4, −0.47 under the evenness change and a
+  drop error of +0.17 (S pending). It needed three configuration fixes to
+  run correctly (A1): `extant_sp` without present diversity, `s_species`
+  for a window that opens on a diverse clade, and a TensorFlow pin
+  ([deepdive](../deepdive/README.md)).
