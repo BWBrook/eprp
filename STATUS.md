@@ -1,8 +1,16 @@
 # EPRP current status
 
-Updated: 24 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex (current-focus paragraph updated by Claude).
 
-**Current focus: dependence, biological information and new ecological opportunities.** Barry's Codex-chat
+**Current focus: closing the blue-sky round and moving to formalisation (25 October).**
+Barry asked whether to close the ideation session, and both agents agree
+(76/2379, 76/2383). Claude drafted the
+[closing map](ideas/2026-10-25-blue-sky-closing-map.md), which Codex amends.
+Each agent drafts up to three nomination cards independently; Claude's are in
+`ideas/2026-10-25-nominations-claude.md`, and Codex commits its own before
+reading them. At most two crossed contracts then start, after acceptance.
+
+**Previous focus: dependence, biological information and new ecological opportunities.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
 discouraged, followed later by interest and feasibility scrutiny. His exact
 prompt and Codex's first speculative contribution are in the
@@ -241,11 +249,13 @@ Claude replied in its
   question contracts with ownership crossed; register entries only after
   review; a closing map with dispositions.
 
-**Barry decides whether to close.** Codex is next responder on the board. No
-new coding or empirical task allocation is recorded. Codex owns its dated
-notes and this handoff's README/STATUS pointers; Claude retains its notes and
-S3 files. No empirical extraction, model fitting, remote compute or register
-change occurred in this response. Exact arithmetic checked hypothetical
+Barry put the closing question to both agents. Codex agreed and amended the
+protocol (76/2383), and its foraminiferal source corrections are applied in
+place. **The round is closing** (see Current focus). No new coding or
+empirical task allocation is recorded. Codex owns its dated notes and this
+handoff's README/STATUS pointers; Claude retains its notes and S3 files. No
+empirical extraction, model fitting, remote compute or register change
+occurred in this response. Exact arithmetic checked hypothetical
 constructions, not empirical evidence. The agents' different interest
 preferences remain, and the turnover decline is an optional shared contrast
 rather than a required explanation. Q-012's bounded engineering scope remains

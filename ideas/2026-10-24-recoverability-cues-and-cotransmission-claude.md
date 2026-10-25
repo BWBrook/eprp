@@ -66,31 +66,43 @@ lower the probability of recovery? "No" is the scarce-alternatives world; "yes"
 is erosion. It is the same structure as the hidden-state contract: does
 history add prediction beyond measured state? It inherits the same caution,
 that noisy measurement of a can manufacture an apparent effect of d.
+**Narrowed (corrected after Codex's source check, 76/2383):** at matched a, an effect of d does not uniquely mean
+erosion. Forcing, the functional threshold, failure time, the quality of the
+alternatives and import can all differ. Prediction and mechanism have to be
+specified separately.
 
 **A fossil system where this could be observed: photosymbiosis in planktonic
 foraminifera.**
 - **The observable.** Symbiont-bearing species carry a geochemical signature
-  of photosymbiosis, a δ13C trend with test size. That signature disappeared
-  temporarily during the Middle Eocene Climatic Optimum while the host
-  species persisted (Edgar et al. 2012, "Symbiont 'bleaching' in planktic
-  foraminifera…" [title]). Similar episodes at other hyperthermals are
-  [memory].
-- **Why it matters.** The *association is lost while both partners survive*,
-  and then returns: the partnership world, observed directly rather than
-  inferred from traces.
+  of photosymbiosis, a δ13C trend with test size. During the Middle Eocene
+  Climatic Optimum that relationship weakened temporarily, read as
+  bleaching, alongside ecological changes in the hosts. The source is Edgar
+  et al., Geology 41 (2013; online 2012) [title].
+- **Corrected (corrected after Codex's source check, 76/2383).** This is evidence of reduced photosymbiotic *activity*. It
+  does not show that both original partner lineages persisted and later
+  reunited. **Contrary prior:** Luciani et al. 2017 find inferred
+  photosymbiotic activity recovered while the decline of *Morozovella*
+  persisted. They reject bleaching as the main cause of the long-term
+  turnover.
+- **Why it still matters.** It is a fossil observable of a partnership's
+  *function* through a perturbation, with the host record kept separately.
 - **How it maps onto the questions:**
   - *recoverability:* whether and how fast the signature returns after each
     event;
-  - *duration of dependence:* how long each lineage has been symbiotic,
-    from the macroperforate phylogeny and its ecogroups (Aze et al. 2011,
-    already in Q-012's pipeline);
+  - *duration of dependence:* lineage ages and ecogroups from the
+    macroperforate phylogeny (Aze et al. 2011, already in Q-012's pipeline)
+    are *not* an independent measure of how long a lineage has been
+    symbiotic. The onset and continuity of the association need their own
+    evidence (corrected after Codex's source check, 76/2383);
   - *order:* repeated hyperthermals of graded size.
 - **Not yet checked:** the nearest prior, and whether the isotope-by-size data
   exist across enough species and events. Q-007's audit showed that
   species-level Cenozoic support is thin, but these are different data:
   isotopes by size fraction, not occurrences.
 
-This is the most EPRP-native candidate the round has produced.
+It remains an EPRP-native system. After Codex's check it warrants a bounded
+source and observation check, not designation as the leading empirical
+candidate (corrected after Codex's source check, 76/2383).
 
 ## 2. Contrary worlds for misleading cues
 
@@ -106,6 +118,9 @@ that matters.
   - **The lag ratio is the crux.** Development time, generation time and
     migration lead time set how far ahead an organism must predict. Lineages
     with long prediction horizons are the ones misleading cues can hurt.
+    **Narrowed (corrected after Codex's source check, 76/2383):** the target is the cue–future-condition relationship
+    *at the response lag*. Autocorrelation and slow life history alone do not
+    determine it.
 - **Bet hedging.** Diversified phenotypes or spread reproduction already pay a
   fixed insurance cost, so decoupling costs little extra.
   - *Collapse condition:* the hedging lineage's mismatch is insensitive to

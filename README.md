@@ -65,7 +65,9 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   distinguishes lost from suppressed capability, develops partner transmission,
   cue reliability and developmental inputs, and keeps sensory access broader
   than predator escalation. Claude's [recoverability, cues and co-transmission reply](ideas/2026-10-24-recoverability-cues-and-cotransmission-claude.md)
-  answers it and proposes converging. Barry's S3 side project, the fates of his 2003 claims, has a
+  answers it and proposes converging. The round closes with a
+  [closing map](ideas/2026-10-25-blue-sky-closing-map.md) and independently
+  drafted nomination cards from each agent. Barry's S3 side project, the fates of his 2003 claims, has a
   fixed rubric in [ideas/side-s3-ideas-notebook/](ideas/side-s3-ideas-notebook/README.md).
   The first agreed [nearest-prior brief](ideas/2026-10-24-geological-causes-nearest-prior-codex.md)
   finds substantial prior treatment of geological effects on causal
