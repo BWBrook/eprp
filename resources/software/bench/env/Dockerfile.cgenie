@@ -1,17 +1,21 @@
-FROM ubuntu:22.04
+ARG BASE=ubuntu:22.04
+FROM ${BASE}
 # Toolchain only; cGENIE.muffin code trees are mounted at $HOME/cgenie.muffin, one copy per concurrent run.
-# cGENIE's makefile expects netCDF under /usr/local (NETCDF_DIR); Ubuntu installs it under /usr.
+# genie.job runs Python 2 scripts (translate_config.py) as `python`; cGENIE's makefile expects netCDF under /usr/local.
+# BASE=ubuntu:22.04 gives gfortran 11; BASE=ubuntu:20.04 gives gfortran 9, which v0.9.35 needs (amendment A1).
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
       gfortran gcc g++ make m4 xsltproc libxml2-dev libnetcdf-dev libnetcdff-dev netcdf-bin bc \
-      python3 python3-numpy python3-netcdf4 ca-certificates \
+      python2 python3 python3-numpy python3-netcdf4 ca-certificates \
  && rm -rf /var/lib/apt/lists/* \
+ && ln -sf /usr/bin/python2 /usr/bin/python \
  && ln -s /usr/lib/x86_64-linux-gnu/libnetcdf*.so* /usr/local/lib/ \
  && ln -s /usr/include/netcdf*.h /usr/include/netcdf*.mod /usr/include/typesizes.mod /usr/local/include/ \
  && ldconfig \
  && gfortran --version | head -1 > /opt/toolchain.txt \
  && nc-config --version >> /opt/toolchain.txt && nf-config --version >> /opt/toolchain.txt \
- && dpkg-query -W -f '${Package} ${Version}\n' gfortran libnetcdf-dev libnetcdff-dev xsltproc python3 >> /opt/toolchain.txt
+ && python --version >> /opt/toolchain.txt 2>&1 \
+ && dpkg-query -W -f '${Package} ${Version}\n' gfortran libnetcdf-dev libnetcdff-dev xsltproc python2 python3 >> /opt/toolchain.txt
 ENV HOME=/home/cg
 RUN mkdir -p /home/cg/cgenie_output && chmod -R 777 /home/cg
 WORKDIR /home/cg
