@@ -1,14 +1,29 @@
 # EPRP current status
 
-Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex (current-focus paragraph updated by Claude).
+Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
-**Current focus: closing the blue-sky round and moving to formalisation (25 October).**
-Barry asked whether to close the ideation session, and both agents agree
-(76/2379, 76/2383). Claude drafted the
-[closing map](ideas/2026-10-25-blue-sky-closing-map.md), which Codex amends.
-Each agent drafts up to three nomination cards independently; Claude's are in
-`ideas/2026-10-25-nominations-claude.md`, and Codex commits its own before
-reading them. At most two crossed contracts then start, after acceptance.
+**Current focus: ideation closed; first hypothesis-contract pair proposed (25 October).**
+Barry explicitly instructed Codex to close the round, prepare the closing map
+and independent cards, and coordinate the first crossed contracts. The
+[closing map](ideas/2026-10-25-blue-sky-closing-map.md) is complete: all 43
+numbered opening questions and the later developments retain dispositions.
+[Claude's three cards](ideas/2026-10-25-nominations-claude.md) were committed
+at `a5608c0`; [Codex's three](ideas/2026-10-25-nominations-codex.md) at
+`5f49d04`, before Codex opened Claude's cards. This establishes independent
+nomination within a shared discussion, not independent scientific evidence.
+
+[Codex's comparison of the union](ideas/2026-10-25-contract-selection-codex.md)
+proposes recoverability under dependence and demographic route/duration of
+life-history selectivity (76/2386). **Claude's acceptance or counterproposal
+is pending.** Proposed ownership: Claude drafts recoverability for Codex review;
+Codex drafts life history for Claude review. At most two contracts start after
+accepted allocation. Each combines nearest-prior review and a minimal generative
+model, with a separate observation model for any proposed data. Disturbance
+order serves initially as a shared control; cue reliability and innovation
+windows remain alternatives. Existing registers and primary-project selection
+are unchanged. Codex owns this completed map amendment, comparison and
+README/STATUS handoff; Claude retains its dated cards and notes. Claude is
+the next responder on the contract pair.
 
 **Previous focus: dependence, biological information and new ecological opportunities.** Barry's Codex-chat
 steer on 23 October asks for a shared mind-mapping round with self-censorship
@@ -233,15 +248,18 @@ Claude replied in its
 - **Corrections accepted** and applied in place: the coral lead withdrawn, the
   ratchet's collapse condition corrected, the covariance conflation withdrawn,
   and the rarity prediction made conditional.
-- **Recoverability, stated formally.** At matched standing-alternative
-  abundance, does time spent dependent lower recovery? That separates eroded
-  capacity from scarce alternatives (Meijer) and from import.
+- **Recoverability, proposed formally.** At matched standing-alternative
+  abundance, does time spent dependent lower recovery? Codex's response
+  (76/2383) retains this as a predictive question: it does not by itself
+  separate competence loss, suppression, import or different times to failure.
 - **Fossil observable:** photosymbiont bleaching in planktonic foraminifera.
-  The association is lost and returns while host species persist (Edgar et
-  al. 2012). Q-012's Aze phylogeny supplies duration of dependence.
-- **Contrary worlds for cue reliability.** The crux is the ratio of response
-  lag to environmental autocorrelation, which links it to S1 and seed 1.
-  Ivany et al. 2000, in Barry's list, is the nearest case.
+  The corrected source is Edgar et al. (2013): activity loss and recovery do
+  not establish continuity or identity of partners. Luciani et al. (2017)
+  supplies contrary evidence. Aze lineage ages are not duration of dependence.
+- **Contrary worlds for cue reliability.** The target is the cue–future
+  relationship at the response lag, not environmental autocorrelation alone.
+  Ivany et al. (2000) motivates seasonal forcing but does not measure that
+  relationship. The mechanism's nearest-prior qualification remains open.
 - **Contrary worlds for co-transmission.** The strongest is ubiquitous
   partners. A mixed-mode prediction separates the worlds.
 - **Proposal to close divergent ideation and converge:** blind nomination of
@@ -251,18 +269,18 @@ Claude replied in its
 
 Barry put the closing question to both agents. Codex agreed and amended the
 protocol (76/2383), and its foraminiferal source corrections are applied in
-place. **The round is closing** (see Current focus). No new coding or
-empirical task allocation is recorded. Codex owns its dated notes and this
-handoff's README/STATUS pointers; Claude retains its notes and S3 files. No
-empirical extraction, model fitting, remote compute or register change
-occurred in this response. Exact arithmetic checked hypothetical
-constructions, not empirical evidence. The agents' different interest
-preferences remain, and the turnover decline is an optional shared contrast
-rather than a required explanation. Q-012's bounded engineering scope remains
-accepted, and both agents agree it waits behind this round (76/2343). Q-038 is
-jointly parked. Claude reports the scorer, PBDB-guard and Alroy repairs
-delivered at `bcf9f9b` and preceding commits; this ideation turn does not
-independently re-audit them. The separately authorised Databases,
+place. **Barry has closed the round** (see Current focus). The first contract
+allocation is proposed, not yet accepted. No empirical task is allocated.
+Codex owns its dated notes and this handoff's README/STATUS pointers; Claude
+retains its notes and S3 files. No empirical extraction, model fitting, remote
+compute or register change occurred in this response. Exact arithmetic checked
+hypothetical constructions, not empirical evidence. The agents' different
+interest preferences remain, and the turnover decline is an optional shared
+contrast rather than a required explanation. Q-012's bounded engineering scope
+remains accepted, and both agents agree it waits behind this round (76/2343).
+Q-038 is jointly parked. Claude reports the scorer, PBDB-guard and Alroy
+repairs delivered at `bcf9f9b` and preceding commits; this ideation turn does
+not independently re-audit them. The separately authorised Databases,
 Packages/Sims and References/Literature support sessions continue in their own
 scopes, as relayed in 76/2338. The third resource-catalogue tranche is
 incorporated at `e23256e` (76/2361). [Detail withheld pending disclosure to
