@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+ARG DEEPDIVE_TAG=v.1.0.28
+# A plain install as the README gives it: pip resolves setup.py's unpinned dependencies (smoke test only).
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/* \
+ && pip install --no-cache-dir "git+https://github.com/DeepDive-project/deepdive@${DEEPDIVE_TAG}" \
+ && git clone --depth 1 --branch ${DEEPDIVE_TAG} https://github.com/DeepDive-project/deepdive /opt/deepdive \
+ && pip freeze > /opt/pip-freeze.txt
+WORKDIR /work

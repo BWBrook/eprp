@@ -1,0 +1,10 @@
+FROM eprp-sw/bench-r5:t5
+# gen3sis 1.6.0 (CRAN snapshot) with the GDAL/GEOS/PROJ stack raster and terra need, plus its source tarball for the shipped tests.
+RUN apt-get update && apt-get install -y --no-install-recommends libgdal-dev libgeos-dev libproj-dev gdal-bin && rm -rf /var/lib/apt/lists/*
+RUN R -q -e "options(repos = c(CRAN = Sys.getenv('PPM'))); install.packages(c('gen3sis', 'testthat', 'ape'), Ncpus = 8)"
+# The CRAN tarball omits tests/; take them from the GitHub commit of the 1.6.0 release (cf76a62, 2025-09-01).
+ARG GEN3SIS_COMMIT=cf76a62a5a6d45324c5f4b51d83edf839d7cb017
+RUN mkdir -p /opt/src && cd /opt/src && R -q -e "download.file(paste0('https://github.com/project-Gen3sis/R-package/archive/', Sys.getenv('GEN3SIS_COMMIT'), '.tar.gz'), 'gen3sis.tar.gz')" \
+ && tar -xzf gen3sis.tar.gz && mv R-package-* gen3sis && grep -E '^Version' gen3sis/DESCRIPTION && ls gen3sis/tests/testthat
+RUN R -q -e "library(gen3sis); ip <- installed.packages()[, c('Package', 'Version')]; write.table(ip, '/opt/r-packages.tsv', sep = '\t', quote = FALSE, row.names = FALSE); print(packageVersion('gen3sis'))"
+WORKDIR /work

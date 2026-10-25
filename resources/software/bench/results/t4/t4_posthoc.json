@@ -1,0 +1,43 @@
+{
+  "sqs": {
+    "complete_replicates": {
+      "mean": 0.034306,
+      "se": 0.014144,
+      "n": 19
+    },
+    "quorum_bins_only": {
+      "mean": 0.035281,
+      "se": 0.013454,
+      "n": 20
+    }
+  },
+  "inext_cov": {
+    "complete_replicates": {
+      "mean": 0.019154,
+      "se": 0.015719,
+      "n": 19
+    },
+    "quorum_bins_only": {
+      "mean": 0.020227,
+      "se": 0.014951,
+      "n": 20
+    }
+  },
+  "inext_extrapolation": {
+    "bins_extrapolated": 2,
+    "beyond_double": 1,
+    "max_ratio": 4.507858,
+    "worst": [
+      {
+        "rep": 10,
+        "bin": 17,
+        "collections": 4,
+        "raw": 86,
+        "inext_cov": 281.0125,
+        "inext_cov_t": 18.031431,
+        "global": 353
+      }
+    ]
+  },
+  "incomplete_replicates": "10"
+}

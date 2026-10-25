@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+ARG DEEPDIVE_TAG=v.1.0.28
+# DeepDive's setup.py leaves TensorFlow and Keras unpinned (>= 2.8); pin the last release with Keras 2 built in.
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/* \
+ && pip install --no-cache-dir "tensorflow-cpu==2.15.1" "numpy<2" "pandas<2.3" "scipy<1.14" "matplotlib<3.10" "seaborn<0.14" "scikit-learn==1.6.1" \
+ && pip install --no-cache-dir --no-deps "git+https://github.com/DeepDive-project/deepdive@${DEEPDIVE_TAG}" \
+ && git clone --depth 1 --branch ${DEEPDIVE_TAG} https://github.com/DeepDive-project/deepdive /opt/deepdive \
+ && python -c "import deepdive as dd; print(dd.__version__)" \
+ && pip freeze > /opt/pip-freeze.txt
+WORKDIR /work
