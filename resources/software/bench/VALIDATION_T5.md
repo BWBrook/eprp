@@ -87,3 +87,42 @@ second argument is `trim`); its effect is reported separately.
 
 Penn & Deutsch's MATLAB implementation is not run (no MATLAB or Octave on
 any host).
+
+## Amendment A1 (25 October 2026, after smoke runs, before the C2 and C3 runs and before M1 and M2 were scored)
+
+**cGENIE toolchain.** The first image could not run either version:
+`genie.job` calls Python 2 scripts (`translate_config.py`) as `python`, and
+the `nccompare` tool built with every run needs the legacy netCDF C++
+headers (`netcdf.hh`). v0.9.35 also fails to compile under gfortran ≥ 10
+(rank mismatch in `outm_netcdf.F`; later makefiles add
+`-fallow-argument-mismatch`). Both images now carry Python 2.7.18 and
+`libnetcdf-cxx-legacy-dev` ([Dockerfile](env/Dockerfile.cgenie)), built on
+Ubuntu 22.04 (gfortran 11.4, `eprp-sw/bench-cgenie:t5`) and 20.04
+(gfortran 9.4, netCDF 4.7.3, `eprp-sw/bench-cgenie20:t5`). Three runs, each
+with C1 first ([run_t5_cgenie.sh](run_t5_cgenie.sh)):
+
+- `gf9-v0935`: v0.9.35 with gfortran 9, for C2;
+- `gf11-v0978`: v0.9.78 with gfortran 11, for C3, as a new user would
+  build it today;
+- `gf9-v0978`: v0.9.78 with gfortran 9, added to separate the code
+  version from the compiler; reported against C3's criteria.
+
+The driver now keeps `testbiogem.out` before `make cleanall` removes it;
+the first C1 attempt lost it.
+
+**Metabolic index.** The first run of the checks stopped at a variable
+name (`doMI.R` writes `temperature`, not `temp`); the corrected script then
+gave the declared results below, except where these rules apply:
+
+1. Two evaluated cells have slightly negative O₂ (−0.04 µmol/kg, a
+   numerical artefact of the model) and so negative pO₂, for which
+   `doMI.R` gives zero viability. M1 sets p = 0 there; M3 counts them as
+   outside its tolerance and excludes them from its median and maximum.
+2. **M2 is not met as declared.** `doMI.R` stores habitat viability as
+   float32, so the recomputed percentages differ from the stored ones by
+   up to 3.7 × 10⁻⁶, the float32 resolution near 100; the 10⁻⁹ tolerance
+   was wrong for the storage. Post hoc, the exact check is against the
+   stored 0/1 matrix `ecotype_viability` (10,000 ecotypes × cells):
+   reported as the number of mismatches.
+3. The output labels pO₂ as "matm" while its values (0 to 0.25) are in
+   atm; the checks read the values as atm, as `doMI.R` uses them.

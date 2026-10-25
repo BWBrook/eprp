@@ -18,7 +18,8 @@ CG() { docker run --rm -u "$(id -u):$(id -g)" -e HOME=/home/cg -v "$PWD/$home":/
 exp=AP.540ebP2_.bg.PO4.Tdep.pCO2FKr_x0.5.PO4PD.pO2PD_radfor.SPIN
 
 log "C1 testbiogem $label"
-CG bash -c "make testbiogem > testbiogem.make.log 2>&1; grep -B1 '\*\*TEST' testbiogem.out || echo 'no TEST line'" | tee "results/c1_$label.txt"
+CG bash -c "make testbiogem > testbiogem.make.log 2>&1; cp testbiogem.out testbiogem.make.log /home/cg/ 2>/dev/null; grep -B1 '\*\*TEST' testbiogem.out || echo 'no TEST line'" | tee "results/c1_$label.txt"
+cp "$home/testbiogem.out" "results/c1_$label.out" 2>/dev/null || true
 log "run $label for $years yr"
 CG bash -c "make cleanall > /dev/null 2>&1; nice -n 5 ./runmuffin.sh muffin.AP.540ebP2_.eb_go_gs_ac_bg.PO4.SPIN PUBS/submitted/Pohl_et_al.SciAdv.2023 $exp $years" \
   > "logs/cgenie_run_$label.log" 2>&1 && log "run finished $label" || log "run FAILED $label"

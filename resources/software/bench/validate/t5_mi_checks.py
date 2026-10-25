@@ -18,9 +18,9 @@ m = nc.Dataset(mi_file)
 f = nc.Dataset(fields_file)
 dims = m["habitat_viability"].dimensions
 hv = np.ma.masked_invalid(m["habitat_viability"][:]).astype(float)
-temp = np.ma.masked_invalid(m["temp"][:]).astype(float)
+temp = np.ma.masked_invalid(m["temperature"][:]).astype(float)
 po2 = np.ma.masked_invalid(m["pO2"][:]).astype(float)
-units = {v: getattr(m[v], "units", "") for v in ("temp", "pO2", "habitat_viability")}
+units = {v: getattr(m[v], "units", "") for v in ("temperature", "pO2", "habitat_viability")}
 A0, E0, phic = (np.asarray(m[v][:], float) for v in ("A0", "E0", "phi_crit"))
 n = A0.size
 
@@ -31,16 +31,24 @@ Tc, Pc, Hc = T_K.data[cells], po2_atm.data[cells], hv.data[cells] / 100
 
 # M1: closed form
 x = (1 / Tc - 1 / Tref) / kB
-p = norm.cdf((uA + np.log(Pc) + uE * x - uC) / np.sqrt(sA**2 + sC**2 + (sE * x) ** 2))
+pos = Pc > 0
+p = np.zeros_like(Pc)
+p[pos] = norm.cdf((uA + np.log(Pc[pos]) + uE * x[pos] - uC) / np.sqrt(sA**2 + sC**2 + (sE * x[pos]) ** 2))
 se = np.sqrt(np.maximum(p * (1 - p), 1 / n) / n)
 z = (Hc - p) / se
-m1 = {"cells": int(cells.sum()), "n_ecotypes": n, "max_abs_z": float(np.abs(z).max()), "mean_abs_z": float(np.abs(z).mean()),
+m1 = {"cells": int(cells.sum()), "cells_with_negative_pO2": int((~pos).sum()), "n_ecotypes": n, "max_abs_z": float(np.abs(z).max()), "mean_abs_z": float(np.abs(z).mean()),
       "max_abs_diff": float(np.abs(Hc - p).max()), "pass": bool(np.abs(z).max() <= 4)}
 
 # M2: recompute from the saved traits
 phi = A0[None, :] * Pc[:, None] * np.exp((E0[None, :] / kB) * (1 / Tc[:, None] - 1 / Tref))
 hv2 = (phi >= phic[None, :]).mean(axis=1) * 100
-m2 = {"max_abs_diff_percent": float(np.abs(hv2 - Hc * 100).max()), "pass": bool(np.abs(hv2 - Hc * 100).max() <= 1e-9)}
+ev = np.asarray(m["ecotype_viability"][:])
+assert m["ecotype_viability"].dimensions[0] == "Ecotype"
+ev_cells = ev[:, cells].T
+ev2 = (phi >= phic[None, :]).astype(int)
+m2 = {"max_abs_diff_percent": float(np.abs(hv2 - Hc * 100).max()), "pass": bool(np.abs(hv2 - Hc * 100).max() <= 1e-9),
+      "post_hoc_ecotype_viability_mismatches": int((np.nan_to_num(ev_cells, nan=-1) != ev2).sum()),
+      "post_hoc_ecotype_cells": int(ev2.size)}
 
 # M3: independent pO2 from TEOS-10 on the same cells
 it = int(np.argmin(np.abs(np.asarray(f["time"][:]) - year)))
@@ -65,10 +73,13 @@ surf = O2.data / O2sat * 0.20946 * (1 - ph2o)
 def corr(nu_cm3):
     return surf * np.exp(nu_cm3 * 1e-6 * pdbar * 1e4 / (8.314472 * (t_in.data + 273.15)))
 indep = corr(32.0)
-dl = np.log(Pc) - np.log(indep[cells])
-dl319 = np.log(Pc) - np.log(corr(31.9)[cells])
-m3 = {"cells": int(cells.sum()), "median_abs_dlog": float(np.median(np.abs(dl))), "max_abs_dlog": float(np.abs(dl).max()),
-      "fraction_within_0.02": float((np.abs(dl) <= 0.02).mean()), "pass": bool((np.abs(dl) <= 0.02).mean() >= 0.99),
+ok = pos & (indep[cells] > 0)
+dl = np.log(Pc[ok]) - np.log(indep[cells][ok])
+dl319 = np.log(Pc[ok]) - np.log(corr(31.9)[cells][ok])
+within = np.zeros(int(cells.sum()), bool)
+within[ok] = np.abs(dl) <= 0.02
+m3 = {"cells": int(cells.sum()), "cells_excluded_nonpositive": int((~ok).sum()), "median_abs_dlog": float(np.median(np.abs(dl))),
+      "max_abs_dlog": float(np.abs(dl).max()), "fraction_within_0.02": float(within.mean()), "pass": bool(within.mean() >= 0.99),
       "nu_31.9_median_abs_dlog": float(np.median(np.abs(dl319))), "nu_31.9_max_abs_dlog": float(np.abs(dl319).max()),
       "depths_m": mdep.tolist()}
 
