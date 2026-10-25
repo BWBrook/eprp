@@ -453,8 +453,9 @@ M).
   pipeline reproduces DeepDive's own predictions and inputs exactly. The
   prior window changed the trend in no stratum; per-dataset tuning,
   DeepDive's intended use, did not fix either problem (on replicates 1–4
-  the evenness trend moved from −0.58 to −0.47 and the level error rose;
-  three refits per scenario, S pending). Consistent with the evidence but
+  the evenness trend moved from −0.58 to −0.47, the effort trend stayed at
+  +0.11, and the level error rose in every scenario; three refits per
+  scenario). Consistent with the evidence but
   untested: our records are far more completely sampled than most of its
   autotuned prior, and the evenness change lies outside its simulator. It needed three configuration fixes to
   run correctly (A1): `extant_sp` without present diversity, `s_species`

@@ -106,7 +106,7 @@ ratio of the late half (bins 11–20) to the early half; 0 is perfect.
 
 | Scenario | Shared model, 20 replicates: trend bias | Mean log ratio to global richness; to DeepDive's own label | Median abs. log error, global | Replicates 1–4: shared; per-dataset; Chao2 |
 | --- | --- | --- | --- | --- |
-| S: collections fall 70% | +0.10 (SE 0.014) | +0.57; +0.73 | 0.57 | PENDING_S |
+| S: collections fall 70% | +0.10 (SE 0.014) | +0.57; +0.73 | 0.57 | trend +0.10; +0.11; −0.15. Level +0.55; +0.65; −0.29 |
 | E: evenness falls (σ 0.5 → 2) | **−0.58** (SE 0.016) | +0.13; +0.30 | 0.30 | trend −0.58; −0.47; −0.33. Level +0.17; +0.32; −0.31 |
 | M: 60% extinction at 50 Ma (true drop −0.78) | drop error +0.04 (SE 0.025) | +0.21; +0.39 | 0.22 | drop error +0.07; +0.17; +0.06. Level +0.25; +0.32; −0.19 |
 
@@ -122,7 +122,7 @@ harness.
   −0.19 in E, where 19 of 20 replicates underestimate the last four bins.
 - **Error on its own simulations is not a guide.** On its 112 test
   simulations DeepDive's mean squared error in log(1 + richness) was
-  0.14–0.21 (shared) and 0.15–0.22 (per-dataset) with almost no bias
+  0.14–0.21 (shared) and 0.15–0.24 (per-dataset) with almost no bias
   (−0.04 to +0.08 for richness 300–1,000); on our records, against its own
   label, it was 0.55, 0.20 and 0.17 (S, E, M), almost all bias (S +0.73,
   SD 0.14; M +0.39, SD 0.13).
@@ -139,7 +139,9 @@ harness.
   E refits reduced the spurious decline (by 0.09–0.21) and all raised the
   level error; the M refits were no better on the drop (+0.17 against
   +0.07 for the shared model on the same replicates; difference +0.13,
-  SE 0.06).
+  SE 0.06); the S refits held the effort trend (+0.11 against +0.10) and
+  raised the level error (+0.65 against +0.55). In no scenario did tuning
+  to the record fix the level bias.
 - **Cause (consistent with the evidence, not tested).** Our records are
   much more completely sampled than most of DeepDive's autotuned prior: in
   its training simulations the median ratio of sampled to true richness
@@ -179,7 +181,8 @@ harness.
 - **It read an evenness change as a decline**: −0.58 with richness flat,
   between Chao2 (−0.31) and SQS (−0.70), overestimating early and
   underestimating late. Per-dataset tuning, its intended use, reduced this
-  to −0.47 on four replicates and raised the level error.
+  to −0.47 on four replicates and raised the level error, as it did in S
+  and M.
 - **The default prior cannot start a window on a diverse clade.**
   DeepDiveR's `s_species = 1` with `root_r` at 80–100% of the span starts
   every training clade from one species. In 80 training simulations of the

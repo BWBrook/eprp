@@ -46,10 +46,16 @@ a day on its free cores; nothing long on the laptop.
    `chronosphere` (list its PBDB snapshots, L-005), and a cross-implementation
    check of palaeocoordinates between `palaeorotate` and pyGPlates or
    GPlately (L-010).
-4. **Richness estimators.** DeepDive/DeepDiveR, squares, iNEXT and divDyn's
-   SQS on the same simulated records with spatial sampling structure (L-006,
-   N-002; Q-040, Q-042, Q-045).
-5. **Earth-system and spatial simulators.** cGENIE.muffin, pySCION,
+4. **Done 25 October 2026 ([bench](bench/README.md), tranche 4).**
+   **Richness estimators.** DeepDive/DeepDiveR, squares, iNEXT, divDyn's SQS
+   and, added under amendment A5, Alroy's geometric Weibull, on simulated
+   records with spatial sampling structure (L-006, N-002; Q-040, Q-042,
+   Q-045). Follow-ups: DeepDive with a present-diversity anchor; an
+   occurrence-frequency analogue of K4 for the geometric Weibull; coverage
+   standardisation at higher quorums against effort reduced through
+   preservation.
+5. **In progress from 25 October 2026 ([bench/VALIDATION_T5.md](bench/VALIDATION_T5.md)).**
+   **Earth-system and spatial simulators.** cGENIE.muffin, pySCION,
    INDITEK-2.0 (licence first), gen3sis with goSPL, and the metabolic-index
    implementations (L-012 to L-015; B-005, Q-001, Q-021, Q-049). Scoped on
    24 October 2026 ([bench/SCOPE_T5.md](bench/SCOPE_T5.md)): start cGENIE's

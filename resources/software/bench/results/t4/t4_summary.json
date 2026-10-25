@@ -339,36 +339,36 @@
         "global": 0.262657,
         "sampled_area": 0.143086,
         "mean_log_ratio_global": -0.275606,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.109651,
+        "mean_log_ratio_dd_label": -0.11226
       },
       "chao2_inext": {
         "global": 0.26381,
         "sampled_area": 0.143285,
         "mean_log_ratio_global": -0.277106,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.109914,
+        "mean_log_ratio_dd_label": -0.11376
       },
       "squares_divdyn": {
         "global": 0.298313,
         "sampled_area": 0.179218,
         "mean_log_ratio_global": -0.316795,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.137267,
+        "mean_log_ratio_dd_label": -0.15345
       },
       "deepdive": {
         "global": 0.569564,
         "sampled_area": 0.678255,
         "mean_log_ratio_global": 0.565538,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.728987,
+        "mean_log_ratio_dd_label": 0.728884
       },
       "raw": {
         "global": 0.500706,
         "sampled_area": 0.357362,
         "mean_log_ratio_global": -0.522735,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.33901,
+        "mean_log_ratio_dd_label": -0.359389
       }
     },
     "E": {
@@ -376,36 +376,36 @@
         "global": 0.313552,
         "sampled_area": 0.128439,
         "mean_log_ratio_global": -0.319337,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.152508,
+        "mean_log_ratio_dd_label": -0.154786
       },
       "chao2_inext": {
         "global": 0.307491,
         "sampled_area": 0.122188,
         "mean_log_ratio_global": -0.314753,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.148177,
+        "mean_log_ratio_dd_label": -0.150202
       },
       "squares_divdyn": {
         "global": 0.359372,
         "sampled_area": 0.175843,
         "mean_log_ratio_global": -0.350812,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.194102,
+        "mean_log_ratio_dd_label": -0.186261
       },
       "deepdive": {
         "global": 0.297536,
         "sampled_area": 0.311326,
         "mean_log_ratio_global": 0.1324,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.336609,
+        "mean_log_ratio_dd_label": 0.296951
       },
       "raw": {
         "global": 0.483879,
         "sampled_area": 0.305721,
         "mean_log_ratio_global": -0.493081,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.32738,
+        "mean_log_ratio_dd_label": -0.32853
       }
     },
     "M": {
@@ -413,36 +413,36 @@
         "global": 0.171991,
         "sampled_area": 0.095719,
         "mean_log_ratio_global": -0.191435,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.062771,
+        "mean_log_ratio_dd_label": -0.014524
       },
       "chao2_inext": {
         "global": 0.169312,
         "sampled_area": 0.092894,
         "mean_log_ratio_global": -0.18829,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.063228,
+        "mean_log_ratio_dd_label": -0.011379
       },
       "squares_divdyn": {
         "global": 0.205473,
         "sampled_area": 0.130868,
         "mean_log_ratio_global": -0.226016,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.062619,
+        "mean_log_ratio_dd_label": -0.049105
       },
       "deepdive": {
         "global": 0.216537,
         "sampled_area": 0.300851,
         "mean_log_ratio_global": 0.212158,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.39303,
+        "mean_log_ratio_dd_label": 0.389069
       },
       "raw": {
         "global": 0.28717,
         "sampled_area": 0.207692,
         "mean_log_ratio_global": -0.30654,
-        "dd_label": null,
-        "mean_log_ratio_dd_label": null
+        "dd_label": 0.111973,
+        "mean_log_ratio_dd_label": -0.129629
       }
     }
   },
@@ -460,7 +460,7 @@
       "inext_cov_na": 0,
       "global_mean": 504.8975,
       "sampled_area_mean": 449.905,
-      "dd_label_over_global": null
+      "dd_label_over_global": 0.849389
     },
     "E": {
       "good_u_min": 0.854317,
@@ -470,7 +470,7 @@
       "inext_cov_na": 0,
       "global_mean": 498.485,
       "sampled_area_mean": 450.905,
-      "dd_label_over_global": null
+      "dd_label_over_global": 0.84836
     },
     "M": {
       "good_u_min": 0.870588,
@@ -480,7 +480,7 @@
       "inext_cov_na": 0,
       "global_mean": 431.03,
       "sampled_area_mean": 394.555,
-      "dd_label_over_global": null
+      "dd_label_over_global": 0.838044
     }
   }
 }
