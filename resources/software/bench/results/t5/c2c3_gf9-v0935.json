@@ -1,0 +1,38 @@
+{
+  "run": "/w/runs/gf9-v0935/home/cgenie_output/AP.540ebP2_.bg.PO4.Tdep.pCO2FKr_x0.5.PO4PD.pO2PD_radfor.SPIN/biogem/fields_biogem_3d.nc",
+  "units": {
+    "ocn_temp": "degrees C",
+    "ocn_O2": "mol kg-1"
+  },
+  "slices": [
+    {
+      "time": 999.5,
+      "ocn_temp": {
+        "run_mean": 3.7942505883198057,
+        "deposit_mean": 3.7942699580964665,
+        "diff": -1.9369776660838056e-05,
+        "r": 0.999999492105221,
+        "max_abs_diff": 0.1254849135875702,
+        "identical": false,
+        "wet_cells": 13868,
+        "mask_mismatch": 0
+      },
+      "ocn_O2": {
+        "run_mean": 159.58557974197663,
+        "deposit_mean": 159.58679595384703,
+        "diff": -0.0012162118703997749,
+        "r": 0.9999971500667021,
+        "max_abs_diff": 5.549998604692519,
+        "identical": false,
+        "wet_cells": 13868,
+        "mask_mismatch": 0
+      },
+      "graded": true,
+      "pass": true
+    }
+  ],
+  "slices_compared": 1,
+  "slices_expected": 11,
+  "pass_so_far": true,
+  "complete": false
+}

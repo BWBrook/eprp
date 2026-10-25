@@ -66,11 +66,12 @@ and v0.9.78 with gfortran 9.
 | Test | Result |
 | --- | --- |
 | C1: `make testbiogem` against the shipped `genie-knowngood` output | **pass** in all three builds (`**TEST OK**`; `bench/results/t5/c1_*`) |
-| C2: rerun Pohl et al.'s 540 Ma cold baseline (`AP.540ebP2_.bg.PO4.Tdep.pCO2FKr_x0.5.PO4PD.pO2PD_radfor.SPIN`) for 10,000 yr at v0.9.35 and match the deposited output (volume means within 0.05 °C and 1 µmol/kg O₂, r ≥ 0.99, at every slice from 999.5 yr) | running; at the first slice (9.5 yr) the volume means match to 10⁻⁴ °C and 10⁻³ µmol/kg |
-| C3: the same at v0.9.78 | running; at 9.5 yr, temperature matches and O₂ is 0.015 µmol/kg lower |
+| C2: rerun Pohl et al.'s 540 Ma cold baseline (`AP.540ebP2_.bg.PO4.Tdep.pCO2FKr_x0.5.PO4PD.pO2PD_radfor.SPIN`) for 10,000 yr at v0.9.35 and match the deposited output (volume means within 0.05 °C and 1 µmol/kg O₂, r ≥ 0.99, at every slice from 999.5 yr) | running (to about 21:30 AEDT 26 Oct). At 999.5 yr: **pass**, ΔT_vol < 10⁻⁴ °C, ΔO₂_vol −0.001 µmol/kg, r = 1.0000; not bitwise identical (largest cell differences 0.13 °C and 5.6 µmol/kg, in the southernmost rows) |
+| C3: the same at v0.9.78 | running. At 999.5 yr: **pass**, ΔT_vol < 10⁻⁴ °C, ΔO₂_vol −0.045 µmol/kg. gfortran 9 and 11 give bitwise-identical v0.9.78 fields, so the drift is the code version, not the compiler |
 
 The deposit's readme runs this experiment for 8,000 yr; its deposited
-output runs to 10,000 yr.
+output runs to 10,000 yr and includes a 9.5-yr slice that our 10,000-yr
+runs do not write, so it was probably made with different run settings.
 
 ## Weaknesses and pitfalls
 
