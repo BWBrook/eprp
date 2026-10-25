@@ -26,6 +26,8 @@ one_scen <- function(s) {
   tag <- paste0(s, "_001_020")
   truth <- read.csv(file.path(dat, paste0("truth_", tag, ".csv")))
   d <- merge(merge(truth, read.csv(file.path(res, paste0("est_", s, ".csv")))), read.csv(file.path(res, paste0("deepdive_", s, ".csv"))))
+  # merge on several keys sorts by a pasted text key (bin 10 before 2); the half and drop metrics need bin order
+  d <- d[order(d$rep, d$bin), ]
   occ <- read.csv(file.path(dat, paste0("occ_", tag, ".csv.gz")))
   cfg <- file.path(ddir, s, "config_autotuned.ini")
   target <- ini_value(cfg, "target_n_occs"); max_locs <- ini_value(cfg, "maximum_localities_per_bin")
@@ -45,6 +47,7 @@ one_scen <- function(s) {
     o <- read.csv(own_file); names(o)[names(o) == "deepdive"] <- "deepdive_own"
     d4 <- d[d$rep %in% 1:4, ]
     d4 <- merge(d4, rbind(o, transform(d4[d4$rep == 1, c("rep", "bin", "deepdive")], deepdive_own = deepdive)[, c("rep", "bin", "deepdive_own")]), all.x = TRUE)
+    d4 <- d4[order(d4$rep, d4$bin), ]
     own <- lapply(setNames(c("deepdive_own", "deepdive", others), c("deepdive_own", "deepdive_shared", others)), function(e) metrics(d4, e, s))
   }
   list(target_n_occs = target, maximum_localities_per_bin = max_locs, window = window, shared = shared, replicates_1_to_4 = own,
