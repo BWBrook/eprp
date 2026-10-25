@@ -6,10 +6,13 @@ res <- list(gen3sis = as.character(packageVersion("gen3sis")))
 
 # G1: the repository's tests at the 1.6.0 release commit
 Sys.setenv(NOT_CRAN = "true")
-r <- as.data.frame(test_dir("/opt/src/gen3sis/tests/testthat", reporter = "silent", stop_on_failure = FALSE,
-                            package = "gen3sis", load_package = "installed"))
+# run from a writable copy: run_simulation opens a plot device in the working directory
+tdir <- file.path(tempdir(), "testthat")
+dir.create(tdir); file.copy(list.files("/opt/src/gen3sis/tests/testthat", full.names = TRUE), tdir, recursive = TRUE)
+r <- as.data.frame(test_dir(tdir, reporter = "silent", stop_on_failure = FALSE, package = "gen3sis", load_package = "installed"))
 res$G1 <- list(tests = nrow(r), expectations = sum(r$nb), failed = sum(r$failed), errors = sum(r$error),
-               skipped = sum(r$skipped), files = unique(r$file), pass = sum(r$failed) == 0 && !any(r$error))
+               skipped = sum(r$skipped), skipped_tests = r$test[r$skipped], files = unique(r$file),
+               pass = sum(r$failed) == 0 && !any(r$error))
 
 # G2a: one occupied cell, free cells at known distances, Weibull draws
 k <- 3; lam <- 700; n_rep <- 4000
