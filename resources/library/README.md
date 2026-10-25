@@ -16,10 +16,10 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | journal | fetch | withdraw | index
+  library.py              harvest | resolve | expand | frontier | journal | match | fetch | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
-  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025)
+  notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
   review/                 candidates held back from the seeds: unsettled citations, canon reserve and unverified
   works.tsv               generated: one row per resolved work, with tiers, questions and full-text status
   INDEX.md                generated: counts by tier, full-text status, type, decade and venue
@@ -46,6 +46,9 @@ The store is on `deep-server`, beside the data-source mirror:
   unresolved-keys.tsv     seed keys OpenAlex lacks: Crossref-only, invalid or deleted
   _tools/                 the deployed library.py and seeds/
   _provenance/            read-only working files, scripts and API caches of the curated tiers
+  search.sqlite           full-text search index of titles, abstracts and open texts (`textindex`; rebuildable)
+  tdm/search-tdm.sqlite   contentless search index of TDM texts (no readable text; rebuildable)
+  frontier-counts-*.tsv   every post-SINCE citer of the core, with its count of core references (`frontier`)
 ```
 
 `W` is the OpenAlex work id, the library's primary key. It covers works without
@@ -66,7 +69,9 @@ rebuilt.
 | `cited-ids` | `seeds/cited-ids.tsv` | every DOI (as written, including SICI forms), PMC, PubMed and arXiv id in a tracked text file (`library.py harvest`) |
 | `cited-authoryear` | `seeds/cited-authoryear.tsv` | author–year citations in the registers and notes, resolved and graded `exact` or `probable` ([method](notes/authoryear-method.md)) |
 | `canon` | `seeds/canon.tsv` | curated foundational and landmark works, from the 1830s to 2026, under the [topic tree](topics.md) ([method](notes/canon-method.md)) |
-| `neighbours` | `seeds/neighbours.tsv` | works outside the tiers above that at least 5 of their works reference (`library.py expand`), with that count and the questions of the citing works |
+| `neighbours` | `seeds/neighbours.tsv` | works that at least 5 core works reference (`library.py expand`), with that count and the questions of the referencing works |
+| `frontier` | `seeds/frontier.tsv` | works published since 2020 that cite at least 5 core works (`library.py frontier`), with that count and the questions of the works they cite |
+| `agendas` | `seeds/agendas.tsv` | published question lists and research agendas: priority-question exercises, horizon scans, grand challenges, *Paleobiology*'s 50th-anniversary issue, and palaeontology reviews with question boxes ([note](notes/question-agendas.md)) |
 | `barry-2003-list` | `seeds/barry-2003-list.tsv` | the 293 papers on Barry's 2003 list of the most promising papers for further research, with their group and item numbers ([note](notes/barry-2003.md)) |
 | `barry-2003-endnote` | `seeds/barry-2003-endnote.tsv` | the 491 distinct works in his 2003–04 EndNote libraries and "Papers Held" bibliography, decoded and resolved ([note](notes/barry-2003.md)) |
 | `field-<journal>` | `seeds/field-<journal>.tsv` | a core journal's complete run as OpenAlex lists it (`library.py journal ISSN --name NAME`); see below |
@@ -87,12 +92,24 @@ OpenAlex lacks *Palaeontology* before 2000. The Palaeontological Association
 hosts that archive itself, so it needs its own route. Of the *Journal of
 Paleontology* run, 4,445 works (mostly before the 1990s) have no DOI.
 
-A work belongs to every tier that names it. `fetch` tries works in tier order:
-the cited tiers first, then the canon, then neighbours by reference count, then
-field tiers. Field tiers are fetched only when named (`fetch --tier
-field-paleobiology`), and they do not feed `expand`, so a journal run adds
-metadata without reshaping the neighbours ring. Topic sweeps and the works
-citing the seeds are the next kinds of field tier.
+A work belongs to every tier that names it. The **core** is the cited tiers
+plus the canon. The two rings grow from the core alone:
+
+- **neighbours:** older works the core leans on;
+- **frontier:** newer works that build on it.
+
+Other tiers, such as journal runs and Barry's 2003 materials, add works
+without reshaping the rings. `fetch` tries works in tier order:
+
+1. the cited tiers and Barry's 2003 tiers;
+2. the canon;
+3. neighbours and frontier, by reference count;
+4. field tiers.
+
+Field tiers are fetched only when named (`fetch --tier field-paleobiology`).
+`frontier-counts-<since>.tsv` in the store keeps every citer's count of core
+references. It is written after each batch, as `.partial` until complete.
+`frontier --reuse --min-refs K` re-thresholds it without new queries.
 
 **Duplicate records.** OpenAlex sometimes holds one work under several ids:
 a book and its book-review stub, two scans of one edition, or a preprint and
@@ -113,8 +130,9 @@ merged ids in its `merged` column, and `duplicates.tsv` lists each merge.
 Questions come from the citing context. In the registers, that is the
 enclosing `### Q-NNN` or `### B-NNN` section. Elsewhere, it is a `q012`/`b003`
 token in the path or a `resources/sources/<id>/` directory. `works.tsv` and
-`by-question.md` carry the cited tiers' questions only. A neighbour's inherited
-questions stay in `seeds/neighbours.tsv`, as leads rather than citations.
+`by-question.md` carry the cited tiers' questions only. Questions inherited by
+neighbours and frontier works stay in their seed files, as leads rather than
+citations.
 Canon works carry a topic id from the topic tree.
 
 The `review/` lists hold candidates that are not yet seeds:
@@ -126,8 +144,13 @@ The `review/` lists hold candidates that are not yet seeds:
 To promote a work, add it to a seed file with its reason.
 
 Rerun `harvest` and `resolve` whenever the registers, notes or catalogue
-cite new works. Rerun `expand` after any seed tier changes. At 5 references
-the neighbours ring holds about 2,100 works; at 3, about 5,500; at 8, about 800.
+cite new works. Rerun `expand` and `frontier` after the cited tiers or the
+canon change.
+
+When the neighbours ring was last built (24 October 2026, from all non-ring
+tiers then present: the cited tiers and the canon), it held about 2,100 works
+at 5 references, about 5,500 at 3 and about 800 at 8. "Neighbours" means
+works the core references, so a few are recent.
 
 ## Access policy
 
@@ -243,7 +266,9 @@ python3 resources/library/library.py harvest .
 rsync -a resources/library/library.py resources/library/seeds deep-server:/data/paleodata/library/_tools/
 ssh deep-server 'cd /data/paleodata/library && python3 _tools/library.py resolve'
 ssh deep-server 'cd /data/paleodata/library && python3 _tools/library.py expand --out /tmp/expand' && scp deep-server:/tmp/expand/neighbours.tsv resources/library/seeds/
+ssh deep-server 'cd /data/paleodata/library && python3 _tools/library.py frontier --out /tmp/frontier' && scp deep-server:/tmp/frontier/frontier.tsv resources/library/seeds/
 ssh deep-server 'cd /data/paleodata/library && setsid nohup python3 _tools/library.py fetch --workers 8 > fetch.log 2>&1 < /dev/null &'
+ssh deep-server 'cd /data/paleodata/library && python3 _tools/library.py textindex'
 ssh deep-server 'cd /data/paleodata/library && python3 _tools/library.py index --out /tmp/library-index'
 scp 'deep-server:/tmp/library-index/*' resources/library/
 ```
@@ -255,6 +280,24 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   next run. `--retry-failed` retries everything.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
+- `search QUERY` searches the whole library: every work's title and abstract
+  (reconstructed from OpenAlex), and the extracted text of every held copy.
+  It is SQLite FTS5 with BM25 ranking (titles weighted 5), Porter stemming
+  and accent folding. Queries take words (all required), `"phrases"`, `OR`,
+  `NOT`, `NEAR(a b, 10)` and `prefix*`; a query FTS5 cannot parse is retried
+  as all its words. `--tier` and `--part` narrow it, and `--tsv` gives
+  machine-readable output.
+  - Results show matching passages from abstracts and open full texts. A match
+    in a TDM text is reported without a passage, so no licensed text reaches
+    an agent session.
+  - From any machine:
+    `ssh deep-server 'python3 /data/paleodata/library/_tools/library.py search "age-dependent extinction"'`.
+  - `textindex` rebuilds the indexes in about a minute. Run it after
+    `resolve`, `fetch` or `withdraw` changes works or texts.
+    - `search.sqlite` holds titles, abstracts and open texts.
+    - `tdm/search-tdm.sqlite` holds TDM texts in a contentless index. It
+      stores no readable text and gives no passages, and it sits under `tdm/`
+      with the copies it derives from, so deleting `tdm/` removes all of it.
 - `match IN.tsv OUT.tsv` resolves a reference list to DOIs or OpenAlex ids:
   - Input columns: `raw` (the citation), `first_author`, `year`, and where
     known `title`, `volume` and `pages`.
