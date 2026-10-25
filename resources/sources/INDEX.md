@@ -24,6 +24,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 | [glonaf](glonaf/README.md): Global Naturalized Alien Flora (GloNAF) 2.0, snapshot 2.02 | database | open | vascular plants (WCVP v12 names), naturalized or invasive o… | present-day status; no dates of introduction | 349,271 taxon region rows | yes | Q-047 |
 | [griis](griis/README.md): Global Register of Introduced and Invasive Species (GRIIS),… | database | open | all kingdoms; plants 69% of checklist taxon rows, animals 2… | present-day status; timing in some lists only (li… | 383 checklists | yes | Q-047, Q-028 |
 | [krapp2021](krapp2021/README.md): Krapp et al. (2021) statistics-based reconstruction of glob… | deposit | open | not taxonomic: climate, bioclimate, vegetation and land/ice… | 800 ka to present at 1 kyr steps (800 time slices) | 122 files | yes | – |
+| [legacypollen](legacypollen/README.md): LegacyPollen 1.0 and 2.0 and LegacyAge 1.0, harmonised glob… | compilation | open | pollen taxa harmonised to genus (woody and major herbaceous… | late Quaternary, mostly the last 30 ka (chronolog… | 2,831 v1 records | yes | Q-024 |
 | [macrostrat](macrostrat/README.md): Macrostrat, columns, units and gap-bound packages (API v2),… | database | open | not taxonomic: rock units, with links to PBDB collections | Archean to present (oldest unit base 4,059 Ma); d… | 3,878 columns ex composite | yes | B-005, B-007, B-008, Q-005, Q-023, Q-035, Q-041 |
 | [names-status](names-status/README.md): Names, conservation status and species traits for Australia… | compilation | open | Australian vascular plants (APC), nationally listed threate… | modern taxonomy and status; PHYLACINE also covers… | 113,869 apc rows | yes | – |
 | [neotoma](neotoma/README.md): Neotoma Paleoecology Database, with the Indo-Pacific Pollen… | database | open | pollen and spores, charcoal, plant macrofossils, other prox… | Quaternary; Sahul pollen records mostly Holocene … | 611 datasets | yes | – |
@@ -79,6 +80,7 @@ Machine-readable copy: [index.tsv](index.tsv). Conventions: [README.md](README.m
 - **Q-021**: register-deposits
 - **Q-022**: register-deposits
 - **Q-023**: classic-compendia, macrostrat, pbdb
+- **Q-024**: legacypollen
 - **Q-025**: biotime, pbdb
 - **Q-026**: pbdb
 - **Q-027**: climate-forcing, palaeogeography, pbdb, register-deposits, triton

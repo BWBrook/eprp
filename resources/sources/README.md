@@ -586,6 +586,21 @@ the workflow when they generalise.
 - *Test a route on an id that exists.* The age-model route "returned
   nothing" for a column id that does not exist; it works for real ones.
 
+**LegacyPollen (25 October 2026; [entry](legacypollen/README.md)).**
+
+- *Look for the newer release before cataloguing the named one.* The backlog
+  named LegacyPollen 1.0; 2.0 (3,680 records, published 2025) and a 2026
+  African full-age table exist.
+- *Check whose status a metadata field is.* PANGAEA's "in review" flag in
+  2.0's metadata belonged to a related paper, not to the dataset.
+- *Screen on the records that have what the analysis needs.* 2.0 has 446
+  records of 100+ samples, but 101 of them carry no ages.
+- *A file's extension is not its format.* The ".csv" files are
+  tab-separated; detect the delimiter from the header.
+- *Read a column's values, not its name.* LegacyAge's
+  `Uncertainty_Record.mean` is about a quarter of the mean 95%-range width;
+  the true width is computed from the minimum and maximum ages.
+
 **Outreach (Barry, 22 October 2026).**
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up
