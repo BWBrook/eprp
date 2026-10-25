@@ -10,17 +10,17 @@ scope:
   space: "global"
   record_unit: "varies: a PBDB occurrence download, a genus capture history, a specimen measurement, a trait table, a time series, a phylogeny, Earth-system model code and outputs"
 size:
-  as_of: "2026-10-24"
-  deposits: 91
-  mirrored: 85
+  as_of: "2026-10-25"
+  deposits: 93
+  mirrored: 87
   indexed_only: 6
-  mirrored_versions: 87
-  files_listed: 1344
-  files_on_disk: 1342
-  mirrored_bytes: 17807011893
+  mirrored_versions: 90
+  files_listed: 1348
+  files_on_disk: 1346
+  mirrored_bytes: 17816427582
 access:
   tier: open
-  licence: "mixed, per deposit (snapshots.tsv, newest versions): CC0 (27 Dryad, 1 Figshare, Tennant et al.'s GitHub code; paleotree's package licence, the Aze tables' own terms not stated); CC BY 4.0 (27 Zenodo, 8 Figshare, 2 OSF, 3 Mendeley Data snapshots); CC BY (ANU Data Commons); CC BY-SA 4.0 (1); MIT (5); AGPL-3 (1, recorded by Zenodo as 'apgl-v3'); 'other-open' (5 Zenodo software records); CC BY 3.0 (PANGAEA); none stated (Rozzi et al.'s GitHub code); the indexed-only records CC0 (2 Dryad, 1 Dataverse), CC BY 4.0 (2) and Apache 2.0 (1)"
+  licence: "mixed, per deposit (snapshots.tsv, newest versions): CC0 (27 Dryad, 1 Figshare, Tennant et al.'s GitHub code; paleotree's package licence, the Aze tables' own terms not stated); CC BY 4.0 (27 Zenodo, 8 Figshare, 2 OSF, 3 Mendeley Data snapshots, 1 publisher supplement); CC BY (ANU Data Commons); CC BY-SA 4.0 (1); MIT (5); AGPL-3 (1, recorded by Zenodo as 'apgl-v3'); 'other-open' (5 Zenodo software records); CC BY 3.0 (PANGAEA); Springer Nature TDM licence (Cao et al. 2022's supplement, held privately); none stated (Rozzi et al.'s GitHub code); the indexed-only records CC0 (2 Dryad, 1 Dataverse), CC BY 4.0 (2) and Apache 2.0 (1)"
   routes:
     - {type: dryad, url: "https://datadryad.org/api/v2/datasets/", state: "index open; downloads with the Dryad API account on deep-server; 27 deposits mirrored, 2 over 5 GB indexed only", checked: 2026-10-23}
     - {type: zenodo, url: "https://zenodo.org/api/records/", state: "open; 39 records mirrored (two of them at two versions), 3 over 5 GB indexed only", checked: 2026-10-23}
@@ -29,6 +29,7 @@ access:
     - {type: osf, url: "https://api.osf.io/v2/nodes/", state: "open; 2 projects, plain-URL snapshots checked against OSF's sha256; one project's linked GitHub storage mirrored from GitHub", checked: 2026-10-24}
     - {type: mendeley-data, url: "https://data.mendeley.com/public-api/datasets/", state: "open; 2 datasets (one at two versions), plain-URL snapshots checked against Mendeley's sha256", checked: 2026-10-24}
     - {type: dataverse, url: "https://dataverse.harvard.edu/api/datasets/", state: "open; 1 dataset of 26.6 GB, file list only", checked: 2026-10-24}
+    - {type: publisher-esm, url: "https://media.springernature.com/original/springer-static/esm/", state: "Springer Nature's static ESM links, sha256 recorded: Knope et al. 2015's Supplementary Data 1 (CC BY 4.0) and Cao et al. 2022's Table S1 and supplementary PDF (TDM licence, private)", checked: 2026-10-25}
     - {type: anu-data-commons, url: "https://doi.org/10.25911/5db66faba683b", state: "open access, CC BY; Aze et al. 2011 corrected datapacks, plain-URL snapshot checked against ANU's MD5", checked: 2026-10-24}
     - {type: github, url: "https://github.com/RobRozzi/Island_mammals", state: "Rozzi et al.'s code and results, and Tennant et al.'s Protohedgehog/SQS, newest commits", checked: 2026-10-24}
     - {type: cran, url: "https://cran.r-project.org/package=paleotree", state: "paleotree 3.4.7 source, carrying Aze et al. 2011's Appendix S5 tables; checked against CRAN's MD5", checked: 2026-10-24}
@@ -39,7 +40,7 @@ versioning:
 mirror:
   path: deep-server:/data/paleodata/register-deposits
   policy: "newest version of every open deposit the registers, ideation notes, literature notes, proposals and data READMEs cite, and the data of papers they cite without a deposit identifier, except those another entry holds; records over 5 GB indexed only"
-  state: "85 deposits at 87 versions, 1,342 files on disk (17.8 GB), each with a manifest; provider checksums verified on download (PANGAEA: sha256 recorded only), and every deposit re-verified on 23 or 24 October"
+  state: "87 deposits at 90 versions, 1,346 files on disk (17.8 GB), each with a manifest; provider checksums verified on download (PANGAEA and the two publisher supplements: sha256 recorded only), and every deposit re-verified on 23 or 24 October"
 lineage:
   upstream:
     - "supporting data and code of papers 2015-2026"
@@ -51,7 +52,7 @@ citation:
   - "each deposit's DOI or source URL (snapshots.tsv) and its paper (below)"
 entry:
   created: 2026-10-23
-  updated: 2026-10-23
+  updated: 2026-10-25
   by: Claude (Opus 5.5, side session); DOIs gathered from the registers and notes, and papers identified, by Claude Sonnet subagents
   reviewed: "2026-10-23, independent Claude Sonnet subagents: the Dryad tranche, then the whole entry (16 findings, including 19 missed deposits); findings applied"
 ---
@@ -72,13 +73,18 @@ also holds three Zenodo code records that its Dryad deposits link to; the
 data of two papers the registers cite without an identifier, Rozzi et al.
 2023 (three Figshare articles and a GitHub repository) and Aze et al. 2011
 (Appendix S5 through the CRAN package paleotree, and ANU's corrected
-datapacks); the GitHub code Tennant et al.'s OSF project links; and the
-version of Gougeon et al.'s dataset their paper cites. That makes 91
+datapacks); the GitHub code Tennant et al.'s OSF project links; the
+version of Gougeon et al.'s dataset their paper cites; and two publisher
+supplements that the [data/raw audit](../data-raw-audit/README.md) found
+uncatalogued: Knope et al. 2015's genus coding, which B-001 uses, and Cao et
+al. 2022's lithium table, which Q-021's Shangsi check reads. That makes 93
 deposits.
 
-Of these, 85 are mirrored at their newest versions (two also at an older
-release a note names). The providers' checksums were verified for every
-deposit except the PANGAEA tables, whose sha256 was recorded on download.
+Of these, 87 are mirrored at their newest versions (two also at an older
+release a note names; Knope et al.'s supplement was snapshotted twice on 25
+October, byte-identical). The providers' checksums were verified for every
+deposit except the PANGAEA tables and the two publisher supplements, whose
+sha256 was recorded on download.
 Six records over 5 GB are indexed only. Between them they hold:
 
 - [Detail withheld pending disclosure to the data custodian.]
@@ -130,7 +136,7 @@ disruption-susceptibility note and `resources/capability-inventory.md`.
 
 | Deposit (directory) | Questions | Content | Size |
 | --- | --- | --- | ---: |
-| Monarrez et al. 2023, extinction selectivity (`monarrez2023-selectivity`) | Q-038 | cleaned PBDB occurrences (253,747 rows × 40 columns), genus sizes and ranges (6,707 rows), range-through genus table, encounter histories and Pradel model coefficients for the Big Five and other partitions | 98.7 MB |
+| Monarrez et al. 2023, extinction selectivity (`monarrez2023-selectivity`) | Q-038 | [Detail withheld pending disclosure to the data custodian.] | 98.7 MB |
 | Walton and Korn 2017, ammonoid conch ontogeny (`walton2018-ammonoid-ontogeny`) | B-002 | one workbook: 179 species rows, with conch parameters along ontogeny in parallel sheets | 0.2 MB |
 | Close et al. 2019, tetrapod local richness (`close2019-tetrapod-local-richness`) | Q-044 | code and inputs: PBDB downloads (157,847 tetrapodomorph and 106,147 mammaliamorph occurrences × 135 columns; 168,713 collection rows; 32,189 taxa), dated 2017-12-13 by the zip members' timestamps (inferred) | 72.2 MB |
 | Brombacher et al. 2017, foraminiferal allometry (`brombacher2017-foram-allometry`) | Q-050 | 12,633 specimen measurements × 12 columns | 0.8 MB |
@@ -153,7 +159,7 @@ disruption-susceptibility note and `resources/capability-inventory.md`.
 | Kocsis et al. 2018, biogeographical imprint of mass extinctions (`kocsis2018-biogeographic-imprint`) | register expansion | PBDB downloads of 2017-07-07 (folder name) for eight marine groups (648,458 occurrences × 117 columns; bivalves 176,682, brachiopods 164,946, gastropods 139,859), a Fossilworks collection table of 2017-07-10 (95,047 rows), stage tables, shapefiles and R code | 185.7 MB |
 | Benson et al. 2025, code and data (`close2025-marine-latitudinal-diversity-code`; Zenodo lists Close first) | Q-027 | the Dryad deposit's PBDB download of 2022-05-23 (Animalia minus Chordata, 712,947 × 126, and 32 group files), PaleoReefs downloads (4,332 reefs), plate-model reconstructions (99,852 rows), climate-model fields (`gcm_data_df.rda`, 241 MB), analysis code with a bundled `renv` R library (46,914 zip members in all) | 1,549.3 MB |
 | Gavirneni et al. 2025, bivalve metabolic rate and extinction (`gavirneni2025-bivalve-metabolic-rate`) | disruption susceptibility | PBDB occurrences with sea-surface temperatures (838,280 rows × 137 columns, a 1.16 GB CSV), a 222-cell trait table (124,786 rows), genus sizes and ranges (9,404 rows), a stage table, R script and supplement | 1,168.9 MB |
-| Carrillo et al. 2020, South American mammals and the interchange (`carrillo2020-south-american-mammals`) | Q-033 | Datasets S1 to S4: 100 occurrence tables of American fossil mammals (S1) and 100 permutation tables (S4), drawn from 15,637 distinct PBDB occurrences; PyRate dispersal and diversification logs; R scripts | 129.5 MB |
+| Carrillo et al. 2020, South American mammals and the interchange (`carrillo2020-south-american-mammals`) | Q-033 | PyRate dispersal and diversification logs; R scripts [Detail withheld pending disclosure to the data custodian.] | 129.5 MB |
 | Al Aswad et al. 2025, end-Permian homogenisation (`alaswad2024-end-permian-homogenization`) | register expansion; disruption susceptibility; recovery contingency | a GitHub release: a PBDB extract (4,340 occurrences × 14 columns) and Quarto analysis code (AGPL-3) | 2.4 MB |
 | Monarrez et al. 2023, code (`monarrez2023-selectivity-code`) and electronic supplement (`monarrez2023-selectivity-zenodo`) | Q-038 | 35 R scripts (MIT); five workbooks: encounter histories (6,562 rows) and the AIC tables S1 to S4 | 0.2 and 5.9 MB |
 
@@ -168,11 +174,11 @@ disruption-susceptibility note and `resources/capability-inventory.md`.
 | Tsuboi et al. 2024, paradox of predictability (`tsuboi2024-paradox-of-predictability`) | Q-050 | R code and 28 trait time series, each in two forms, Brombacher et al.'s foraminifera among them | 0.2 MB |
 | Edie et al. 2025, K–Pg functional diversity of bivalves (`edie2025-kpg-functional-diversity`) | register expansion | Dataset S1: 1,711 bivalve genera × 24 columns (functional traits and stratigraphic bounds), 224 species-level assignments, a 43-field key and a family phylogeny; R code | 0.4 MB |
 | Klompmaker et al. 2017, predator–prey size ratios (`klompmaker2017-external-database-2`) | B-003 (escalation evidence) | External Database 2: 364 literature records of predation traces × 36 columns (producer, prey taxonomy, sizes, ages) | 0.1 MB |
-| Cribb et al. 2026, ecosystem engineers (`cribb2026-ecosystem-engineers`) | Q-010 (prior check); register expansion | R code, cleaned Phanerozoic occurrences and reef and bioturbator data (RData), effect-size outputs | 100.1 MB |
-| Cribb et al. 2023, end-Triassic ecospace (`cribb2023-ete-ecospace`) | B-001 (reassembly contract) | R code and marine and terrestrial ecospace data (RData) | 3.7 MB |
+| Cribb et al. 2026, ecosystem engineers (`cribb2026-ecosystem-engineers`) | Q-010 (prior check); register expansion | [Detail withheld pending disclosure to the data custodian.] | 100.1 MB |
+| Cribb et al. 2023, end-Triassic ecospace (`cribb2023-ete-ecospace`) | B-001 (reassembly contract) | [Detail withheld pending disclosure to the data custodian.] | 3.7 MB |
 | Dunhill et al. 2024, Toarcian food webs (`beckerman2024-toarcian-secondary-extinction`) | B-001 (reassembly contract); register expansion; recovery contingency | four guild tables (21 to 48 guilds × 14 columns: guild, clade and 12 trait columns), feeding rules, network metrics, R code | 0.2 MB |
 | Foster et al. 2023, Permian–Triassic siliceous organisms of Spitsbergen (`foster2023-siliceous-permian-triassic`) | Q-021 (route review) | 237 specimens × 17 columns and an abundance table | 0.04 MB |
-| Smith et al. 2023, BioDeepTime (`smith2023-biodeeptime`) | disruption susceptibility | the database (7,437,847 rows as CSV; also Parquet, SQLite and RDS) and its compilation bundle, with source exports from BioTIME, Neotoma, Triton and others and 5,496 BibTeX files | 1,527.5 MB |
+| Smith et al. 2023, BioDeepTime (`smith2023-biodeeptime`) | disruption susceptibility | [Detail withheld pending disclosure to the data custodian.] | 1,527.5 MB |
 | Gómez-Suárez et al. 2025, SInAS 3.2 (`seebens2026-sinas`) | interchange transfer | 391,234 species–region records of native and alien ranges, location shapefiles, workflow inputs and outputs (GloNAF, WCVP and others), manual | 472.8 MB |
 | Craffey et al. 2024, the journal's copy (`craffey2024-ediacaran-cooccurrence-figshare`) | Ediacaran assessments (21 October) | the Dryad deposit's data and code plus a trait table (117 genera × 23 columns); see pitfalls | 0.2 MB |
 | Wang et al. 2025, trace-fossil trajectories (`wang2025-trace-fossil-trajectories`) | Ediacaran consultation | MATLAB and R code, two example trajectories, and a Windows executable (see pitfalls) | 60.8 MB |
@@ -254,6 +260,8 @@ each snapshot as `provider-checksums-<snapshot>.tsv`.
 | Rozzi et al. 2023: PyRate inputs (`rozzi2023-island-mammals-pyrate`, Figshare 19779709) | Q-034 | Miocene-to-Holocene occurrence inputs for the extinction-rate analyses, at three time resolutions | 8.3 MB |
 | Rozzi et al. 2023: code and results (`rozzi2023-island-mammals-code`, GitHub RobRozzi/Island_mammals at 2023-03-08) | Q-034 | 706 files: R scripts, model tables, PyRate logs and rate tables, figures, and 506 TACT trees; no licence stated | 218.9 MB |
 | Aze et al. 2011, Cenozoic macroperforate planktonic foraminiferal phylogeny (`aze2011-paleotree-cran`, paleotree 3.4.7) | Q-012 | Appendix S5 as paleotree carries it (package licence CC0; the tables' own terms are not stated): morphospecies (339 rows) and lineage (210 rows) trees with ancestors and first and last appearances, and their fully bifurcating forms (677 and 369 rows); written to CSV in `derived/` by [aze_paleotree_tables.R](aze_paleotree_tables.R) | 1.0 MB |
+| Knope et al. 2015, functional differentiation in early animal diversification: Supplementary Data 1 (`knope2015-guild-coding`, Nature Communications ESM, doi:10.1038/ncomms7455) | B-001 (*reassembly contract*; `data/b001-support/`) | one sheet (named `supplementary_data_file_2.txt`): 18,317 marine animal genera with phylum, class, first and last appearance (age and interval), tiering, motility and feeding codes, the combined ecological mode and its source reference; CC BY 4.0 (Crossref, version of record). Added by the [data/raw audit](../data-raw-audit/README.md), 25 October; two byte-identical snapshots | 3.9 MB |
+| Cao et al. 2022, late Permian to Early Triassic warmth and reverse weathering: Supplementary Table S1 and supplementary PDF (`cao2022-reverse-weathering-esm`, Nature Geoscience ESM, doi:10.1038/s41561-022-01009-x) | Q-021 (`data/q021-shangsi-support/`, `data/q021-recovery-support/`) | the lithium-isotope workbook (Shangsi carbonate δ7Li with ages and stages) and the supplementary information PDF; both sha256 values match those Codex pinned in the Q-021 notes. Springer Nature TDM licence, not open access: held privately under Barry's 23 October decision. Added by the data/raw audit, 25 October | 1.6 MB |
 | Aze et al. 2011: corrected tree, July 2018 (`aze2011-anu-datapacks`, ANU Data Commons anudc:5981) | Q-012 | four TimeScale Creator datapacks of the integrated species–phenon tree (by ecogroup and morphogroup, with and without labels) and their settings file (open access, CC BY) | 48.3 MB |
 
 ### PANGAEA: IODP Site U1313 (Q-050)
@@ -284,8 +292,28 @@ with PANGAEA's metadata header:
 ## [Detail withheld pending disclosure to the data custodian.]
 
 [Detail withheld pending disclosure to the data custodian.]
-- Kocsis, Gavirneni, Carrillo and Couzens et al. kept no query, so their
-  route is unknown.
+- Kocsis, Gavirneni, Couzens and Cribb et al. kept no query, so their route
+  is unknown. BioDeepTime records its PBDB export dates (`inputversions.csv`:
+  2022-10-21, then 2022-12-09) but no query; its PBDB filtering code calls
+  chronosphere's `fetch("pbdb", ver="20220510")`.
+
+[Detail withheld pending disclosure to the data custodian.]
+
+**R binaries.** The check above reads text tables only. The
+[data/raw audit](../data-raw-audit/README.md) (25 October) read every R
+binary in the mirror, loose and inside zips, with package internals such as
+`renv` libraries skipped: 412 files in 24 entries and deposits. It compared
+their occurrence numbers with the same snapshot
+([output](../data-raw-audit/profile/rbin_mirror_check.tsv); per file:
+[rbin_mirror_files.tsv](../data-raw-audit/profile/rbin_mirror_files.tsv)):
+
+[Detail withheld pending disclosure to the data custodian.]
+
+Cribb et al. 2023 and 2026 and BioDeepTime are new to the list. Monarrez et
+al.'s and Carrillo et al.'s binaries hold more numbers than their text
+tables. The other binaries, Kocsis et al.'s four among them, hold no
+occurrence numbers. Under Barry's 24 October decision the three new
+deposits stay in the mirror, flagged here.
 
 [Detail withheld pending disclosure to the data custodian.]
 
@@ -358,7 +386,7 @@ and Mallet's simulation zip) is in the mirror at
 
 - One place for the deposits the project's questions and notes cite, at fixed
   versions with checksums, so analyses can cite exactly what they used.
-- Eight archived PBDB downloads with occurrence numbers, from July 2017 to
+- Eleven archived PBDB downloads with occurrence numbers, from July 2017 to
   2024, and at least three more without them, for data-vintage work (Q-045)
   and for reproducing published analyses.
 - Code alongside data for most papers, sometimes with a pinned environment
@@ -636,3 +664,4 @@ PANGAEA.892803 and 892804).
   checksum failures, `other_repos.py check` reports missing files, the
   profiler and the check read dotfiles (14 in Rozzi et al.'s repository),
   and snapshots.tsv gives the source URL for plain-URL snapshots.
+- [Detail withheld pending disclosure to the data custodian.]

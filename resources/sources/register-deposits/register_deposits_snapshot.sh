@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # Mirror the deposits cited by the EPRP question registers, ideation notes,
 # literature notes and data READMEs (latest version each).
-# Usage: register_deposits_snapshot.sh [dryad] [zenodo] [figshare] [pangaea] [index] [other] [github] [cran] (default: all)
+# Usage: register_deposits_snapshot.sh [dryad] [zenodo] [figshare] [pangaea] [esm] [index] [other] [github] [cran] (default: all)
 #   dryad     Dryad deposits, with the Dryad API account on the host (credentials outside the repository)
 #   zenodo    Zenodo records up to 5 GB, four at a time (Zenodo serves about 0.3 MB/s per connection)
 #   figshare  Figshare articles
 #   pangaea   PANGAEA datasets as tab-delimited text (the IODP U1313 series of the Q-050 crosswalk)
+#   esm       publisher supplementary files with no repository deposit (Knope et al. 2015's
+#             Supplementary Data 1, B-001's guild coding; Cao et al. 2022's Table S1 and
+#             supplementary PDF, Q-021's Shangsi lithium series)
 #   index     version indexes only, for the Zenodo and Dryad records over 5 GB (fetch on demand)
 #   other     Mendeley Data, OSF and ANU Data Commons deposits, as plain-URL snapshots checked
 #             against the providers' sha256 or MD5 (other_repos.py); each run takes a new dated
@@ -140,6 +143,19 @@ $M url register-deposits/pangaea-u1313 \
   "PANGAEA.761443.tab::$P.761443?format=textfile" "PANGAEA.892803.tab::$P.892803?format=textfile" \
   "PANGAEA.892804.tab::$P.892804?format=textfile" --pause 2 \
   --license "CC BY 3.0 (PANGAEA dataset metadata, all five)" || echo "pangaea FAILED"
+fi
+
+if want esm; then
+E="https://media.springernature.com/original/springer-static/esm"
+$M url register-deposits/knope2015-guild-coding \
+  "41467_2015_BFncomms7455_MOESM1087_ESM.xls::$E/art%3A10.1038%2Fncomms7455/MediaObjects/41467_2015_BFncomms7455_MOESM1087_ESM.xls" \
+  --license "CC BY 4.0 (Nature Communications article and its supplementary information)" || echo "knope2015 FAILED"
+C="$E/art%3A10.1038%2Fs41561-022-01009-x/MediaObjects"
+$M url register-deposits/cao2022-reverse-weathering-esm \
+  "41561_2022_1009_MOESM1_ESM.pdf::$C/41561_2022_1009_MOESM1_ESM.pdf" \
+  "41561_2022_1009_MOESM2_ESM.xlsx::$C/41561_2022_1009_MOESM2_ESM.xlsx" --pause 1 \
+  --license "Springer Nature TDM licence (Crossref; not open access); held privately under Barry's 23 October 2026 mirroring decision" \
+  || echo "cao2022 FAILED"
 fi
 
 if want other; then
