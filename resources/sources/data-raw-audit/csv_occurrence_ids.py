@@ -4,10 +4,11 @@ Usage: python3 csv_occurrence_ids.py ROOT OUT_DIR
 
 Walks every holding (first-level directory) under ROOT. Each .csv, .tsv and
 .txt file, and each such member of a .zip (nested zips one level down), whose
-header within its first 100 lines has an occurrence_no column is read; its
-distinct numbers go to OUT_DIR/<holding>__<n>.ids, and OUT_DIR/ids_files.tsv
-maps each .ids file to its source. Same column rule as
-register-deposits/embedded_pbdb_check.py. Standard library only.
+header within its first 100 lines has an occurrence_no column (or, failing
+that, an oid column of occ: identifiers) is read; its distinct numbers go to
+OUT_DIR/<holding>__<n>.ids, and OUT_DIR/ids_files.tsv maps each .ids file to
+its source. Same column rule as register-deposits/embedded_pbdb_check.py.
+Standard library only.
 """
 
 import csv
@@ -31,14 +32,15 @@ def scan(holding, label, stream):
         line = stream.readline()
         if not line:
             return
-        if "occurrence_no" in line:
+        if "occurrence_no" in line or re.search(r"(^|[\t,\"])oid([\t,\"]|$)", line):
             break
     else:
         return
     delim = "\t" if line.count("\t") > line.count(",") else ","
-    header = next(csv.reader([line], delimiter=delim))
-    cols = [i for i, h in enumerate(header) if OCC.match(h.strip())]
-    if not cols:
+    header = [h.strip().strip('"') for h in next(csv.reader([line], delimiter=delim))]
+    cols = [i for i, h in enumerate(header) if OCC.match(h)]
+    oid = [] if cols else [i for i, h in enumerate(header) if h.lower() == "oid"]
+    if not cols and not oid:
         return
     ids, n = set(), 0
     for row in csv.reader(stream, delimiter=delim):
@@ -46,6 +48,12 @@ def scan(holding, label, stream):
         for i in cols:
             if i < len(row) and row[i].strip().isdigit():
                 ids.add(int(row[i]))
+        for i in oid:
+            m = re.fullmatch(r"occ:(\d+)", row[i].strip()) if i < len(row) else None
+            if m:
+                ids.add(int(m.group(1)))
+    if oid and not ids:
+        return
     count[holding] = count.get(holding, 0) + 1
     name = f"{holding}__{count[holding]:03d}.ids"
     with open(os.path.join(out_dir, name), "w") as f:

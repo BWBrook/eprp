@@ -3,7 +3,8 @@
 # Usage: Rscript rdata_occurrence_ids.R OUT_DIR PREFIX FILE [FILE ...]
 #
 # embedded_pbdb_check.py (register-deposits) lists R binaries but does not
-# read them. This walks every data frame and list in each file and takes any
+# read them. This walks every data frame and list in each file (lists to 40
+# levels; not S4 objects, environments, matrices or list-columns) and takes any
 # column whose name ends in occurrence_no or occurrence.no (optionally with a
 # .x suffix), or an oid column of occ: identifiers. Each file with such a
 # column gets OUT_DIR/PREFIX__rNNN.ids (one number per line, NNN its position

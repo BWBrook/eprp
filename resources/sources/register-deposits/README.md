@@ -40,7 +40,7 @@ versioning:
 mirror:
   path: deep-server:/data/paleodata/register-deposits
   policy: "newest version of every open deposit the registers, ideation notes, literature notes, proposals and data READMEs cite, and the data of papers they cite without a deposit identifier, except those another entry holds; records over 5 GB indexed only"
-  state: "87 deposits at 90 versions, 1,346 files on disk (17.8 GB), each with a manifest; provider checksums verified on download (PANGAEA and the two publisher supplements: sha256 recorded only), and every deposit re-verified on 23 or 24 October"
+  state: "87 deposits at 90 versions, 1,346 files on disk (17.8 GB), each with a manifest; provider checksums verified on download (PANGAEA and the two publisher supplements: sha256 recorded only), and every deposit re-verified on 23 or 24 October except the two publisher supplements, added on 25 October"
 lineage:
   upstream:
     - "supporting data and code of papers 2015-2026"
@@ -261,7 +261,7 @@ each snapshot as `provider-checksums-<snapshot>.tsv`.
 | Rozzi et al. 2023: code and results (`rozzi2023-island-mammals-code`, GitHub RobRozzi/Island_mammals at 2023-03-08) | Q-034 | 706 files: R scripts, model tables, PyRate logs and rate tables, figures, and 506 TACT trees; no licence stated | 218.9 MB |
 | Aze et al. 2011, Cenozoic macroperforate planktonic foraminiferal phylogeny (`aze2011-paleotree-cran`, paleotree 3.4.7) | Q-012 | Appendix S5 as paleotree carries it (package licence CC0; the tables' own terms are not stated): morphospecies (339 rows) and lineage (210 rows) trees with ancestors and first and last appearances, and their fully bifurcating forms (677 and 369 rows); written to CSV in `derived/` by [aze_paleotree_tables.R](aze_paleotree_tables.R) | 1.0 MB |
 | Knope et al. 2015, functional differentiation in early animal diversification: Supplementary Data 1 (`knope2015-guild-coding`, Nature Communications ESM, doi:10.1038/ncomms7455) | B-001 (*reassembly contract*; `data/b001-support/`) | one sheet (named `supplementary_data_file_2.txt`): 18,317 marine animal genera with phylum, class, first and last appearance (age and interval), tiering, motility and feeding codes, the combined ecological mode and its source reference; CC BY 4.0 (Crossref, version of record). Added by the [data/raw audit](../data-raw-audit/README.md), 25 October; two byte-identical snapshots | 3.9 MB |
-| Cao et al. 2022, late Permian to Early Triassic warmth and reverse weathering: Supplementary Table S1 and supplementary PDF (`cao2022-reverse-weathering-esm`, Nature Geoscience ESM, doi:10.1038/s41561-022-01009-x) | Q-021 (`data/q021-shangsi-support/`, `data/q021-recovery-support/`) | the lithium-isotope workbook (Shangsi carbonate δ7Li with ages and stages) and the supplementary information PDF; both sha256 values match those Codex pinned in the Q-021 notes. Springer Nature TDM licence, not open access: held privately under Barry's 23 October decision. Added by the data/raw audit, 25 October | 1.6 MB |
+| Cao et al. 2022, late Permian to Early Triassic warmth and reverse weathering: Supplementary Table S1 and supplementary PDF (`cao2022-reverse-weathering-esm`, Nature Geoscience ESM, doi:10.1038/s41561-022-01009-x) | Q-021 (`data/q021-shangsi-support/`, `data/q021-recovery-support/`) | Table S1, 108 carbonate samples with section, depth, conodont zone, formation, stage, ages and δ7Li (Q-021 uses the six Shangsi rows), and the supplementary information PDF; both sha256 values match those Codex pinned in the Q-021 notes. Springer Nature TDM licence, not open access: held privately under Barry's 23 October decision. Added by the data/raw audit, 25 October | 1.6 MB |
 | Aze et al. 2011: corrected tree, July 2018 (`aze2011-anu-datapacks`, ANU Data Commons anudc:5981) | Q-012 | four TimeScale Creator datapacks of the integrated species–phenon tree (by ecogroup and morphogroup, with and without labels) and their settings file (open access, CC BY) | 48.3 MB |
 
 ### PANGAEA: IODP Site U1313 (Q-050)
@@ -293,7 +293,8 @@ with PANGAEA's metadata header:
 
 [Detail withheld pending disclosure to the data custodian.]
 - Kocsis, Gavirneni, Couzens and Cribb et al. kept no query, so their route
-  is unknown. BioDeepTime records its PBDB export dates (`inputversions.csv`:
+  is unknown. Cribb et al. 2026's scripts give the access date of their
+  PBDB data (1 November 2023). BioDeepTime records its PBDB export dates (`inputversions.csv`:
   2022-10-21, then 2022-12-09) but no query; its PBDB filtering code calls
   chronosphere's `fetch("pbdb", ver="20220510")`.
 
@@ -345,8 +346,9 @@ are inventoried; macOS resource-fork entries are skipped and counted;
 tar.gz, RAR and 7z archives are not opened. The committed profile is
 compacted by [compact_profile.py](compact_profile.py): zips of more than 250
 members are summarised by extension, and the rows for Benson et al.'s bundled
-R package library (890 rows) are dropped, leaving 19,305 rows (3.1 MB). The
-full profile (1,765,364 rows, 450 MB, most of them the 791,281 files of Xiong
+R package library (890 rows) are dropped, leaving 19,330 rows (3.1 MB; the
+two publisher supplements added on 25 October were profiled on their own
+and merged in). The full profile (1,765,364 rows, 450 MB, most of them the 791,281 files of Xiong
 and Mallet's simulation zip) is in the mirror at
 `derived/2026-10-23/register_deposits_profile_full.tsv`.
 
@@ -362,7 +364,7 @@ and Mallet's simulation zip) is in the mirror at
   of identically named README files, which land as one file each, so 151 are
   on disk.
 - **Refresh.** [register_deposits_snapshot.sh](register_deposits_snapshot.sh)
-  `[dryad] [zenodo] [figshare] [pangaea] [index] [other] [github] [cran]` runs
+  `[dryad] [zenodo] [figshare] [pangaea] [esm] [index] [other] [github] [cran]` runs
   `data_mirror.py` for
   each deposit (Dryad with the API account on deep-server; Zenodo four at a
   time, since Zenodo serves about 0.3 MB/s per connection). `--latest` takes
@@ -377,17 +379,18 @@ and Mallet's simulation zip) is in the mirror at
   EXPECTED` writes the file list for `data_mirror.py url --specs-file SPECS`,
   and `other_repos.py check VERSION_DIR EXPECTED` verifies the result against
   the provider's MD5s.
-- **Main checkout copies.** Barry's hand-supplied files for Close, Benson,
-  Monarrez and Brombacher and the Walton and Korn workbook are identical, file
-  by file, to the mirror (sha256). The main checkout also holds
-  Cantalapiedra et al.'s Nexus files (not compared).
+- **Main checkout copies.** Every data file in the main checkout's
+  `data/raw`, Barry's hand-supplied Dryad downloads and Cantalapiedra et
+  al.'s files among them, is identical to the mirror (sha256); see the
+  [data/raw audit](../data-raw-audit/README.md).
 
 ## Strengths
 
 - One place for the deposits the project's questions and notes cite, at fixed
   versions with checksums, so analyses can cite exactly what they used.
 - Eleven archived PBDB downloads with occurrence numbers, from July 2017 to
-  2024, and at least three more without them, for data-vintage work (Q-045)
+  2024, and at least two more without them (Malanoski et al. 2026, Dunhill
+  et al. 2018), for data-vintage work (Q-045)
   and for reproducing published analyses.
 - Code alongside data for most papers, sometimes with a pinned environment
   (Benson et al.'s code record ships an `renv` library).
@@ -400,8 +403,8 @@ and Mallet's simulation zip) is in the mirror at
   the 6,562 genera is stored as numbers. 5,291 of them have become floating
   point (`1.1099999999999999E+47`), and every history has lost its leading
   zeros, so the stage positions cannot be recovered. Use instead the Dryad
-  deposit's `encounter_history_bs_gr_5class_Big5.Rdata` (an R binary, not
-  read here), or rebuild the histories from its `genera_range_through.txt`
+  deposit's `encounter_history_bs_gr_5class_Big5.Rdata` (an R binary of
+  6,562 rows × 272 columns, read by the data/raw audit), or rebuild the histories from its `genera_range_through.txt`
   with the code repository. Flagged by
   the main Claude session (board 76/2371); checked here 2026-10-24.
 - **Two copies can differ.** Craffey et al.'s journal copy (Figshare) and
@@ -458,7 +461,7 @@ and Mallet's simulation zip) is in the mirror at
 
 ## Overlap with other sources
 
-- **PBDB** ([pbdb](../pbdb/README.md)): past PBDB downloads here (eight
+- **PBDB** ([pbdb](../pbdb/README.md)): past PBDB downloads here (eleven
   with occurrence numbers, from 2017 to 2024, and Malanoski et al.'s of 2025
   without); the catalogue's global snapshot is the current public one.
 - **Climate forcing** ([climate-forcing](../climate-forcing/README.md)) holds

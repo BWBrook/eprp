@@ -44,6 +44,14 @@ scp -q "$WORK"/ids/*.ids "deep-server:$D/ids/"
 ssh -n deep-server "cd $D && python3 -I tools/ids_pbdb_check.py $SNAP 12 20261025 ids_pbdb_check.tsv ids/*.ids"
 scp -q "deep-server:$D/ids_pbdb_check.tsv" "$WORK/"
 
+# 4b. The same scans over the main checkout's scratch/ (next to data/), when present (local, read only)
+SCR=$(dirname "$(dirname "$RAW")")/scratch
+if [ -d "$SCR" ]; then
+  rm -rf "$WORK/scratch_scan"
+  python3 -I "$HERE/csv_occurrence_ids.py" "$SCR" "$WORK/scratch_scan/text"
+  python3 -I "$HERE/rbin_scan.py" "$SCR" "$WORK/scratch_scan/rbin" "$WORK/scratch_scan/work"
+fi
+
 # 5. R binaries across the whole mirror, which embedded_pbdb_check.py lists but does not read (deep-server)
 ssh -n deep-server "cd $D && rm -rf rbin_mirror rbin_work && python3 -I tools/rbin_scan.py /data/paleodata rbin_mirror rbin_work > rbin_mirror.log 2>&1 \
   && python3 -I tools/ids_pbdb_check.py $SNAP 12 20261025 rbin_mirror_check.tsv rbin_mirror/*.ids && rm -rf rbin_work"
@@ -56,3 +64,7 @@ cp "$WORK/raw_inventory.tsv" "$WORK/raw_join.tsv" "$WORK/stated_hashes.tsv" "$WO
 cp "$WORK/ids/ids_files.tsv" "$HERE/profile/text_ids_files.tsv"
 sed "s|$WORK/rbin_work/[^/]*/||; s|$RAW/||" "$WORK/ids/rdata_objects.tsv" > "$HERE/profile/raw_rdata_objects.tsv"
 sed "s|$D/rbin_work/[^/]*/||; s|/data/paleodata/||" "$WORK/rbin_mirror_files.tsv" > "$HERE/profile/rbin_mirror_files.tsv"
+if [ -d "$WORK/scratch_scan" ]; then
+  cp "$WORK/scratch_scan/text/ids_files.tsv" "$HERE/profile/scratch_text_ids_files.tsv"
+  sed "s|$WORK/scratch_scan/work/[^/]*/||; s|$SCR/||" "$WORK/scratch_scan/rbin/rdata_files.tsv" > "$HERE/profile/scratch_rdata_files.tsv"
+fi

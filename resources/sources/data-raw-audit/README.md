@@ -4,13 +4,17 @@
 
 ## Result
 
-- **Provenance.** `data/raw` holds 192 files (2.95 GB) in 13 holdings.
-  Every data file is in the catalogue's mirror byte for byte: 184 files,
-  matched by sha256 against the mirror's manifests and zip members. That
-  count includes Knope et al. 2015's supplement, which the audit found
-  uncatalogued and mirrored. The other eight files are the main agents' own
-  retrieval records (four), three publication copies, and a PBDB intervals
-  download whose content matches the catalogue's intervals snapshot. All 192
+- **Provenance.** `data/raw` holds 192 files (2.95 GB) in 13 holdings,
+  after the 206 editor and OS files are set aside (note below). Every data
+  file is in the catalogue's mirror byte for byte, by sha256: 179 match a
+  mirror file or zip member directly, and five more match through their
+  contents. Those five are the three Dryad download zips, all 373 of whose
+  members match, and the two loose Triton binaries, which are members of the
+  matched `Triton.zip`. The 179 include Knope et al. 2015's supplement, which
+  the audit found uncatalogued and mirrored. The other eight files are the
+  main agents' own retrieval records (four), three publication copies, and a
+  PBDB intervals download whose content matches the catalogue's intervals
+  snapshot. All 192
   files are accounted for.
 - **Licences.** The data are open (CC0, CC BY 4.0) except the PhanDA and
   PhanSST repositories, which state none. The three publication copies are
@@ -20,15 +24,23 @@
 - [Detail withheld pending disclosure to the data custodian.]
 - **One missing input.** `data/q021-shangsi-support/build.py` reads
   `data/raw/cao2022/41561_2022_1009_MOESM2_ESM.xlsx`, which is not in
-  `data/raw`. It is the only path that tracked files name under `data/raw`
-  and that does not exist. The catalogue now holds that workbook and its
-  supplementary PDF (below). Both match the sha256 values Codex pinned.
+  `data/raw`. Apart from the deliberately deleted PBDB extracts
+  (`data/raw/pbdb/b001/`, `data/raw/pbdb/q042/`), it is the only path that
+  tracked files name under `data/raw` and that does not exist. The
+  catalogue now holds that workbook and its supplementary PDF (below). Both match the sha256 values Codex pinned.
 - [Detail withheld pending disclosure to the data custodian.]
 
 ## Holdings
 
 Matched means the file's sha256 equals a file or zip member in the mirror
-([raw_join.tsv](profile/raw_join.tsv)).
+([raw_join.tsv](profile/raw_join.tsv)). That table lists 179 direct matches;
+the five matched through their contents show there as unmatched files whose
+members (the Dryad zips) or container (`Triton.zip`) match.
+
+The inventory sets aside 206 files: `.Rproj.user/` (190), `.DS_Store` (17)
+and `.Rhistory` (2), three of them in two classes. With them, `data/raw`
+holds 398 files. Zip-member hashing skips `__MACOSX` and `.DS_Store`
+entries (435 in the Close et al. zip, all macOS metadata).
 
 | Holding | Files | MB | In the mirror | Catalogue entry | Licence (catalogue) | Main agents' note |
 | --- | ---: | ---: | --- | --- | --- | --- |
@@ -98,8 +110,9 @@ match. The 19 that do not are:
 ## [Detail withheld pending disclosure to the data custodian.]
 
 [csv_occurrence_ids.py](csv_occurrence_ids.py) reads every `.csv`, `.tsv` and
-`.txt` file and zip member with an `occurrence_no` column (the
-register-deposits check's rule). [rbin_scan.py](rbin_scan.py) with
+`.txt` file and zip member with an `occurrence_no` column, or failing that an
+`oid` column of `occ:` identifiers (the register-deposits check's rule; no
+file here has the second form). [rbin_scan.py](rbin_scan.py) with
 [rdata_occurrence_ids.R](rdata_occurrence_ids.R) reads the R binaries,
 including those inside zips. [Detail withheld pending disclosure to the data
 custodian.] The scan read the main agents' files themselves; their hashes
@@ -110,9 +123,11 @@ the counts agree.
 
 No other holding has occurrence numbers. Triton, the Close et al. `geoMST`
 workspace and Monarrez et al.'s encounter histories were read and hold none.
-The main checkout's `scratch/` (3.6 GB) has no table with an
-`occurrence_no` column and no R binary with one; its only PBDB records are
-two in an 831-byte Q-045 check (`scratch/q045-vintage/`).
+The main checkout's `scratch/` (3.6 GB), scanned the same way, has no text
+table with occurrence numbers and 69 R binaries in three directories, none
+with any ([scratch_text_ids_files.tsv](profile/scratch_text_ids_files.tsv),
+[scratch_rdata_files.tsv](profile/scratch_rdata_files.tsv)). Its only PBDB
+records are two in an 831-byte Q-045 check JSON (`scratch/q045-vintage/`).
 
 [Detail withheld pending disclosure to the data custodian.]
 
@@ -132,9 +147,14 @@ register-deposits entry now flags them, its counts read eleven downloads in
 twelve deposits, and Carrillo et al.'s download date and query, which their
 script records, replace "not stated". The other 19 holdings' binaries have no
 occurrence-number column. Two gaps remain, each recorded per file: AusTraits
-7.0.0's full `.rds` has 603 lists nested deeper than 40 levels that the walk
+7.0.0's full `.rds` has 603 nodes nested deeper than 40 levels that the walk
 skips (a plant-trait database, not PBDB), and a `tidytree` object in two Penn
-et al. 2023 binaries could not be read without that package.
+et al. 2023 binaries could not be read without that package. The walk finds
+data frames, including those inside lists. It does not descend into S4
+objects, environments, matrices or list-columns, so a PBDB table stored only
+in such a form would be missed; the reviewer's spot checks found none. One
+binary holds PBDB rows without occurrence numbers: Kocsis et al.'s
+`171204_paleoDB_stages.RData` (508,561 rows with collection numbers).
 
 ## Changes to the catalogue
 
@@ -145,9 +165,14 @@ et al. 2023 binaries could not be read without that package.
   mirror rule keeps both.
 - **Cao et al. 2022, Table S1 and supplementary PDF**
   (`register-deposits/cao2022-reverse-weathering-esm`): the input Q-021's
-  Shangsi build expects at `data/raw/cao2022/`. Springer Nature TDM licence,
-  not open access; held privately under Barry's 23 October decision:
-  "Mirroring locally is always okay for us".
+  Shangsi build expects at `data/raw/cao2022/`: Table S1 (108 carbonate
+  samples, among them the six Shangsi rows Q-021 uses) and the
+  supplementary PDF. Springer Nature TDM licence, not open access; held
+  privately under Barry's decision (Claude chat, 23 October 2026):
+  "Licence overrides confirmed, universally for the EPRP. Mirroring locally
+  is always okay for us: we're not hosting anything here for public use,
+  except perhaps later for the frameworks, but not the actual source
+  files."
 - [Detail withheld pending disclosure to the data custodian.]
 
 ## For the main agents and the other side sessions
@@ -167,7 +192,8 @@ The audit changes nothing outside this worktree and the mirror. Open items:
 ## Reproducing
 
 [run_audit.sh](run_audit.sh) runs every step: inventory and sha256 join,
-intervals comparison, occurrence numbers and the public-snapshot check, and
+stated checksums, intervals comparison, occurrence numbers and the
+public-snapshot check, the same scans over the main checkout's `scratch/`, and
 the mirror-wide R-binary scan. `bash run_audit.sh /path/to/main/data/raw WORK`
 writes to `WORK` and copies the outputs to [profile/](profile/). Local steps
 read only the given `data/raw`; deep-server steps read `/data/paleodata` and
@@ -186,4 +212,15 @@ script. [Detail withheld pending disclosure to the data custodian.]
 | [rbin_scan.py](rbin_scan.py), [rdata_occurrence_ids.R](rdata_occurrence_ids.R) | occurrence numbers in R binaries, loose and in zips |
 | [Detail withheld pending disclosure to the data custodian.] | [Detail withheld pending disclosure to the data custodian.] |
 
-Review: REVIEW_PLACEHOLDER
+**Review.** An independent Claude Sonnet subagent reviewed commit `b518edb`.
+It recomputed the key numbers with its own code: Benson et al.'s 712,947 and
+116,387; the `dryad-downloads` union of 1,001,079 and 139,877; Monarrez et
+al.'s, Close et al.'s and BioDeepTime's counts; all five Cribb et al. 2026
+binaries; the inventory and the stated-hash tally. [Detail withheld pending
+disclosure to the data custodian.] Its findings are applied: a false "only
+missing path" claim; stale statements in register-deposits; Cribb et al.
+2026's stated access date (1 November 2023); the text-table rule, which now
+also reads `oid` columns (outputs unchanged); the direct and transitive match
+counts and the files set aside; the Carrillo et al. file name; the walk's
+limits; the scratch scan, now in the runner; the register-deposits profile,
+which now includes the two new deposits.
