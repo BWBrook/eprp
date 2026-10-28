@@ -330,3 +330,20 @@ article's Figure 4. Calculate means, rank-split R-hat and bulk ESS for those
 exact slices using the A8 locked environment. This analysis was identified
 after seeing A8 results and is exploratory; preserve the main all-chain
 diagnostics and all excluded chain values.
+
+## Amendment A11 (28 October 2026, before fixed-proposal sampler control)
+
+The A6 historical failure combines a prior defect and native adaptation.
+To isolate the proposed-prior calculation on the same flat-likelihood
+target, load the SHA-256-verified 4 June sampler and create two explicitly
+modified in-memory experimental variants. In both, correct the initial
+prior and hold every proposal scale at its initial value. In one, retain
+the historical proposed-prior expression; in the other, evaluate that
+expression at the proposed state. No other sampler logic changes. Use the
+A6 priors, bounded parameter space, constant forward stub, starting values
+and proposal scales, four paired seeds 34101–34104, 50,001 iterations and
+discard 5,000. Report each chain's retained Q10 mean, variance and one-sigma
+tails with 1,000-draw batch standard errors, as well as acceptance and the
+recorded range of proposal scales. The known target remains N(2, 0.08²)
+truncated to [1, 3.5]. This is a control on modified code, not a rerun of
+the deposited analysis; no pass threshold or claim about the paper is set.
