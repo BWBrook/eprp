@@ -87,6 +87,12 @@ exit, input hashes and post-run landscape manifest, then audits config 22's
 final state. Its success branch was exercised with config 18 and a small
 test manifest, and its failure branch rejected a simulated timeout. The
 actual config 22 receipt remains pending until that run completes.
+The [collector](../bench/collect_t5_g3_22.sh) is also running on the laptop
+and will copy a successful audit or failure status to the ignored
+`scratch/g3-config22-collected/` directory. Its success and failure paths
+were checked on the same fixtures. If the laptop is unavailable, the
+remote audit remains under the task's `audit/` directory for later pickup;
+neither outcome is committed or interpreted automatically.
 
 ## Pitfalls and relevance
 
