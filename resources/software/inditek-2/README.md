@@ -77,6 +77,9 @@ the rerun's scores. The saved residual arrays are all zero, so they cannot
 resolve the difference. At nominal reference parameters the rerun also
 does not reproduce the separately deposited `D_proof` reference map. The
 archive's observation and generating-code provenance remains unresolved.
+The `food` sensitivity variant disables the direct food-limitation term in
+speciation but retains food-dependent carrying capacity; it is not a
+complete removal of food dependence.
 
 Analyses of all six saved chains after the notebook's 2,000-state burn-in
 show poor convergence for several parameters. For example, proof Q10 has

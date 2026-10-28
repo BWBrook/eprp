@@ -33,6 +33,16 @@ not a test of whether that environmental assumption is biologically right.
 The [receipt](../../bench/results/t5/inditek_forward_controls_20261028.json)
 records source hash, cases and errors.
 
+The archive's `food` sensitivity variant sets the direct food-limitation
+factor in the speciation-rate function to one, but still calculates
+carrying capacity from food availability. The notebook describes the
+intervention correctly as removing food's influence on speciation, although
+its shorter “no food dependence” label is broader. The comparison tests
+removal of one food pathway, with food-dependent capacity retained; it
+cannot by itself measure the effect of removing all food dependence.
+F1 does not test extinction insertion, intermediate-time filling, missing
+inputs or degenerate constant-food fields.
+
 In [F2](../../bench/validate/t5_inditek_forward_replay.py), three
 preselected proof-chain **proposals**, including rejected proposals, were
 re-evaluated from the deposited inputs. Each saved vector of 2,978 diversity
@@ -150,8 +160,10 @@ An independent Codex subagent (GPT-6.1 Sol, 28 October) re-scored the three
 saved proposal vectors directly against the deposited observations,
 checked the proposal and next-state array alignment, manually reproduced
 proof Q10 rank-split R-hat, verified all-zero residual arrays and inspected
-the notebook's figure-specific slices. It found no numerical error in F2,
-F3 or the main A8 diagnostics. Its strongest qualification is retained:
+the notebook's figure-specific slices. It separately reran F1 and identified
+the retained food-dependent capacity in the `food` variant. It found no
+numerical error in F1–F3 or the main A8 diagnostics. Its strongest
+qualification is retained:
 the proof means are close to the nominal reference and the five nominal
 values fall inside the recorded marginal intervals, so these results do not
 demonstrate failure to recover the chosen point values. The issue is whether
