@@ -1,0 +1,43 @@
+{
+  "input_sha256": {
+    "893899": "8b6e57a894b91e430ef2e26a372cc9b25e56927b9d2f6fbfb068462e623b5906",
+    "893919": "945a2aeadafd9efdb02c80ec31f41a3c5a851fb9c3e0b61abaff4232aefd0756",
+    "997794": "83d25fa79835ec511d368cbc426f5c807820cf0ef349288df7451bb16596d829",
+    "997781": "60d0a282d2e9f3116778762254ee651a301344763a48806857f94b700122423e",
+    "997793": "4fe3a83d071598333abe4b339e0c2e8d6eb7392015d591368b70e43d25cf9ec0"
+  },
+  "source_rows": {
+    "893899": 997,
+    "893919": 990,
+    "997794": 199,
+    "997781": 186,
+    "997793": 186
+  },
+  "el_kef_unique_raw": 199,
+  "el_kef_dated": 186,
+  "el_kef_raw_without_age": 13,
+  "age_model_difference_kyr_max": 15.166729999990025,
+  "age_model_difference_kyr_median": 0.8896399999969162,
+  "age_model_difference_nonzero": 105,
+  "max_count_percentage_error": "4.98316498316498316E-9",
+  "alvarez_sample_events": {
+    "198-1209A": 343,
+    "198-1209B": 346,
+    "198-1209C": 290,
+    "198-1210A": 11
+  },
+  "aligned_taxa": [
+    "Neobiscutum",
+    "Praeprinsius",
+    "Cruciplacolithus",
+    "Coccolithus"
+  ],
+  "qualifications": [
+    "ODP ages remain ka BP; Jones ages remain source Ma values",
+    "ODP data interpolated, selected taxa only; percentages need not sum to 100",
+    "El Kef undated rows retained with blank percentages and ages",
+    "Cruciplacolithus ODP small and large size classes combined when both present",
+    "PANGAEA.893899 is CC BY-NC-ND 3.0; derived data kept private",
+    "no sample matching or ecological hypothesis test between sites"
+  ]
+}

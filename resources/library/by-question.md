@@ -9,7 +9,7 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 - **M** Bambach et al. 2007. AUTECOLOGY AND THE FILLING OF ECOSPACE: KEY METAZOAN RADIATIONS. *Palaeontology*. [doi](https://doi.org/10.1111/j.1475-4983.2006.00611.x)
 - Knoll et al. 2007. Paleophysiology and end-Permian mass extinction. *Earth and Planetary Science Letters*. [doi](https://doi.org/10.1016/j.epsl.2007.02.018)
 - **M** Chao & Jost 2012. Coverage‐based rarefaction and extrapolation: standardizing samples by completeness rather than size. *Ecology*. [doi](https://doi.org/10.1890/11-1952.1)
-- Chen & Benton 2012. The timing and pattern of biotic recovery following the end-Permian mass extinction. *Nature Geoscience*. [doi](https://doi.org/10.1038/ngeo1475)
+- **T** Chen & Benton 2012. The timing and pattern of biotic recovery following the end-Permian mass extinction. *Nature Geoscience*. [doi](https://doi.org/10.1038/ngeo1475)
 - Foster & Twitchett 2014. Functional diversity of marine ecosystems after the Late Permian mass extinction event. *Nature Geoscience*. [doi](https://doi.org/10.1038/ngeo2079)
 - **T** Knope et al. 2015. Limited role of functional differentiation in early diversification of animals. *Nature Communications*. [doi](https://doi.org/10.1038/ncomms7455)
 - Bürkner 2017. brms : An R Package for Bayesian Multilevel Models Using Stan. *Journal of Statistical Software*. [doi](https://doi.org/10.18637/jss.v080.i01)
@@ -419,7 +419,7 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 
 ## Q-019 (12)
 
-- Benton 2009. The Red Queen and the Court Jester: Species Diversity and the Role of Biotic and Abiotic Factors Through Time. *Science*. [doi](https://doi.org/10.1126/science.1157719)
+- **T** Benton 2009. The Red Queen and the Court Jester: Species Diversity and the Role of Biotic and Abiotic Factors Through Time. *Science*. [doi](https://doi.org/10.1126/science.1157719)
 - Ezard et al. 2011. Interplay Between Changing Climate and Species’ Ecology Drives Macroevolutionary Dynamics. *Science*. [doi](https://doi.org/10.1126/science.1203060)
 - Hannisdal & Peters 2011. Phanerozoic Earth System Evolution and Marine Biodiversity. *Science*. [doi](https://doi.org/10.1126/science.1210695)
 - Mayhew et al. 2012. Biodiversity tracks temperature over time. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.1200844109)
@@ -724,7 +724,7 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 
 - Rosenzweig & McCord 1991. Incumbent replacement: evidence for long-term evolutionary progress. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300010563)
 - Losos et al. 1998. Contingency and Determinism in Replicated Adaptive Radiations of Island Lizards. *Science*. [doi](https://doi.org/10.1126/science.279.5359.2115)
-- Brusatte et al. 2008. Superiority, Competition, and Opportunism in the Evolutionary Radiation of Dinosaurs. *Science*. [doi](https://doi.org/10.1126/science.1161833)
+- **T** Brusatte et al. 2008. Superiority, Competition, and Opportunism in the Evolutionary Radiation of Dinosaurs. *Science*. [doi](https://doi.org/10.1126/science.1161833)
 - **M** Jablonski 2008. BIOTIC INTERACTIONS AND MACROEVOLUTION: EXTENSIONS AND MISMATCHES ACROSS SCALES AND LEVELS. *Evolution*. [doi](https://doi.org/10.1111/j.1558-5646.2008.00317.x)
 - Sherratt et al. 2015. Amber fossils demonstrate deep-time stability of Caribbean lizard communities. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.1506516112)
 - Muschick et al. 2018. Arrival order and release from competition does not explain why haplochromine cichlids radiated in Lake Victoria. *Proceedings of the Royal Society B Biological Sciences*. [doi](https://doi.org/10.1098/rspb.2018.0462)
@@ -884,7 +884,7 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 
 - Raup & Sepkoski 1984. Periodicity of extinctions in the geologic past.. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.81.3.801)
 - Stigler & Wagner 1987. A Substantial Bias in Nonparametric Tests for Periodicity in Geophysical Data. *Science*. [doi](https://doi.org/10.1126/science.238.4829.940)
-- Benton 1995. Diversification and Extinction in the History of Life. *Science*. [doi](https://doi.org/10.1126/science.7701342)
+- **S** Benton 1995. Diversification and Extinction in the History of Life. *Science*. [doi](https://doi.org/10.1126/science.7701342)
 - **T** Bailer‐Jones 2011. Bayesian time series analysis of terrestrial impact cratering. *Monthly Notices of the Royal Astronomical Society*. [doi](https://doi.org/10.1111/j.1365-2966.2011.19112.x)
 - **T** Feng & Bailer‐Jones 2013. ASSESSING THE INFLUENCE OF THE SOLAR ORBIT ON TERRESTRIAL BIODIVERSITY. *The Astrophysical Journal*. [doi](https://doi.org/10.1088/0004-637x/768/2/152)
 - **T** Melott & Bambach 2014. Analysis of periodicity of extinction using the 2012 geological timescale. *Paleobiology*. [doi](https://doi.org/10.1666/13047)
@@ -919,10 +919,10 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 
 - Norris 1991. Biased extinction and evolutionary trends. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300010721)
 - Sepkoski 1993. Ten years in the library: new data confirm paleontological patterns. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300012306)
-- Benton & Storrs 1994. Testing the quality of the fossil record: Paleontological knowledge is improving. *Geology*. [doi](https://doi.org/10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2)
-- Benton 1995. Diversification and Extinction in the History of Life. *Science*. [doi](https://doi.org/10.1126/science.7701342)
+- **S** Benton & Storrs 1994. Testing the quality of the fossil record: Paleontological knowledge is improving. *Geology*. [doi](https://doi.org/10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2)
+- **S** Benton 1995. Diversification and Extinction in the History of Life. *Science*. [doi](https://doi.org/10.1126/science.7701342)
 - Lieberman et al. 1995. A study of stasis and change in two species lineages from the Middle Devonian of New York state. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300013051)
-- Benton 1996. Testing the roles of competition and expansion in tetrapod evolution. *Proceedings of the Royal Society B Biological Sciences*. [doi](https://doi.org/10.1098/rspb.1996.0096)
+- **S** Benton 1996. Testing the roles of competition and expansion in tetrapod evolution. *Proceedings of the Royal Society B Biological Sciences*. [doi](https://doi.org/10.1098/rspb.1996.0096)
 - D'Hondt & Zachos 1998. Cretaceous foraminifera and the evolutionary history of planktic photosymbiosis. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300020133)
 - Foote 1999. Morphological Diversity In The Evolutionary Radiation Of Paleozoic and Post-Paleozoic Crinoids. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300020236)
 - **M** Benton 2001. Biodiversity on land and in the sea. *Geological Journal*. [doi](https://doi.org/10.1002/gj.877)
@@ -984,8 +984,8 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 ## Q-045 (10)
 
 - Sepkoski 1993. Ten years in the library: new data confirm paleontological patterns. *Paleobiology*. [doi](https://doi.org/10.1017/s0094837300012306)
-- Benton & Storrs 1994. Testing the quality of the fossil record: Paleontological knowledge is improving. *Geology*. [doi](https://doi.org/10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2)
-- Benton et al. 2000. Quality of the fossil record through time. *Nature*. [doi](https://doi.org/10.1038/35000558)
+- **S** Benton & Storrs 1994. Testing the quality of the fossil record: Paleontological knowledge is improving. *Geology*. [doi](https://doi.org/10.1130/0091-7613(1994)022<0111:ttqotf>2.3.co;2)
+- **T** Benton et al. 2000. Quality of the fossil record through time. *Nature*. [doi](https://doi.org/10.1038/35000558)
 - Alroy et al. 2001. Effects of sampling standardization on estimates of Phanerozoic marine diversification. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.111144698)
 - Alroy et al. 2008. Phanerozoic Trends in the Global Diversity of Marine Invertebrates. *Science*. [doi](https://doi.org/10.1126/science.1156963)
 - **T** Dunhill et al. 2014. Disentangling rock record bias and common-cause from redundancy in the British fossil record. *Nature Communications*. [doi](https://doi.org/10.1038/ncomms5818)
@@ -1108,7 +1108,7 @@ Full text: **T** open copy held and title-checked, **S** open scan held, **M** p
 
 ## src:classic-compendia (2)
 
-- Benton 1995. Diversification and Extinction in the History of Life. *Science*. [doi](https://doi.org/10.1126/science.7701342)
+- **S** Benton 1995. Diversification and Extinction in the History of Life. *Science*. [doi](https://doi.org/10.1126/science.7701342)
 - Jones 2022. sepkoski: Sepkoski's Fossil Marine Animal Genera Compendium. **. [doi](https://doi.org/10.32614/cran.package.sepkoski)
 
 ## src:fossahul (4)

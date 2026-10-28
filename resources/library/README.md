@@ -16,7 +16,7 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | frontier | journal | match | fetch | withdraw | index | textindex | search
+  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
@@ -191,6 +191,12 @@ works the core references, so a few are recent.
   longer takes unflagged locations; CORE reaches such repository copies
   instead. One copy that came from cambridge.org through an unflagged
   location was withdrawn on 23 October 2026.
+- **Author-hosted copies, 28 October.** Barry asked Codex to import the
+  individually identified Bristol and Yale author-site copies in the
+  [staging record](notes/2026-10-28-codex-author-site-recovery.md). They are
+  private research copies with the source and unverified licence/version
+  recorded; public availability is not a redistribution licence. Future
+  author-site candidates require individual source and identity checks.
 - **Requests are polite and honest.** The tool identifies itself, waits 3 s
   between downloads or Semantic Scholar lookups on the same host, follows
   http and https links only, and records every attempt. It does not evade bot
@@ -253,13 +259,15 @@ works the core references, so a few are recent.
     common short words) must appear in its first three pages. A title with
     fewer than two content words must appear whole.
   - A PDF that fails the title check goes to `quarantine/`.
-  - A scan without a text layer is kept with status `no_text`. Its title is
-    unchecked, and it awaits OCR.
+  - A scan without a usable text layer is kept with status `no_text`. Older
+    scans may have an unchecked title; `import-staged` checks first-page OCR.
+    Neither status means the full text has been OCRed. See the manifest note.
 
 ## Running it
 
 `library.py` needs Python 3.9+ (standard library only) and poppler's
-`pdftotext` and `pdfinfo`.
+`pdftotext` and `pdfinfo`. `import-staged` additionally needs `pdftoppm` and
+Tesseract for scans.
 
 ```bash
 python3 resources/library/library.py harvest .
@@ -278,6 +286,14 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
 - `fetch` skips works already held and URLs that failed permanently. Errors,
   timeouts, truncated downloads and HTTP 408, 429 and 5xx are retried on the
   next run. `--retry-failed` retries everything.
+- `import-staged MANIFEST DIRECTORY` imports individually reviewed local PDFs
+  with their source URLs and hashes. It locks the store, verifies the batch
+  and DOI identities before writing, checks titles using embedded text or
+  first-page OCR, never replaces existing or withdrawn records, and records
+  uncertain licences and versions as such. A scan gets `no_text`; OCR checks
+  its identity but is not a full-text transcription. Rerunning an intact
+  imported batch is idempotent. An interrupted partial write requires inspection,
+  not automatic overwriting.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
 - `search QUERY` searches the whole library: every work's title and abstract
@@ -293,7 +309,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   - From any machine:
     `ssh deep-server 'python3 /data/paleodata/library/_tools/library.py search "age-dependent extinction"'`.
   - `textindex` rebuilds the indexes in about a minute. Run it after
-    `resolve`, `fetch` or `withdraw` changes works or texts.
+    `resolve`, `fetch`, `import-staged` or `withdraw` changes works or texts.
     - `search.sqlite` holds titles, abstracts and open texts.
     - `tdm/search-tdm.sqlite` holds TDM texts in a contentless index. It
       stores no readable text and gives no passages, and it sits under `tdm/`
@@ -306,7 +322,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
     [the 2003 note](notes/barry-2003.md), where 892 of 904 citations
     resolved exactly.
   - Add the resolved rows to a seed file to make a tier.
-- `resolve`, `fetch` and `withdraw` take a lock on the store, so two writers
+- `resolve`, `fetch`, `import-staged` and `withdraw` take a lock on the store, so two writers
   cannot run at once.
 - Run anything longer than a few minutes on `deep-server`, never on the
   laptop.

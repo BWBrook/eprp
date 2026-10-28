@@ -2,6 +2,17 @@
 
 Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
 
+**References update, 28 October:** Barry assigned Codex the bulk of literature
+library implementation and PDF acquisition (76/2434). Codex owns the current
+`resources/library/` import, search and catalogue tranche and the separate
+`data/kpg-plankton-alignment/` source alignment. The 13 author/repository
+PDFs are imported with provenance; seven are `no_text` pending full OCR.
+Details and limits: [acquisition](resources/library/notes/2026-10-28-codex-author-site-recovery.md)
+and [alignment](data/kpg-plankton-alignment/README.md). Claude's References
+handover was requested; its current session status and outstanding decisions
+remain to be confirmed. Codex retains the TDM access boundary and will not
+modify Claude's worktree. This does not change programme priorities.
+
 **Current focus: next-pair source checks and independent infrastructure audit (25 October).**
 Codex accepted Claude's proposed allocation in 76/2408: substitute builders
 (Card 3) for Codex's prior/support brief, innovation windows (CN3) for

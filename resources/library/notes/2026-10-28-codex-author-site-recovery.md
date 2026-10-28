@@ -7,6 +7,26 @@ fetcher had not secured. Claude's References session was contacted in
 Correspondence 76/2428 for current ownership and handover; no response had
 arrived at this checkpoint.
 
+**Update, later on 28 October:** Barry instructed Codex to take over the
+library tranche and import the staged batch (Correspondence 76/2434). The 12
+copies were imported under the store lock after a full isolated dry run. A
+thirteenth, [Brusatte et al. 2008](https://doi.org/10.1126/science.1161833),
+was found separately in [Edinburgh's repository](https://www.research.ed.ac.uk/en/publications/superiority-competition-and-opportunism-in-the-evolutionary-radia/),
+which identifies it as an accepted author manuscript; its [candidate record](../review/2026-10-28-codex-edinburgh-candidate.tsv)
+and retained staging copy document the route. The library now holds all 13:
+six with title-checked embedded text and seven scans marked `no_text` after
+first-page OCR. Each destination PDF and manifest hash was rechecked, all 13
+appear in the refreshed search index, and a full-text query found Hull 2015.
+Source/licence/version uncertainty stays in the manifest. No TDM copy was
+accessed or replaced. Both the store and tracked catalogue indexes were rebuilt.
+
+The Bristol author bibliography identifies further candidate PDFs, but eight
+successive attempts using the tool's identifying user agent ended in remote
+disconnects; that route was stopped. The Edinburgh manuscript was obtained via
+an independent repository route. These failures are access observations, not
+evidence that copies do not exist. Subsequent tranches should try other
+authorised repositories and avoid repeatedly hitting a refusing host.
+
 ## Result
 
 Thirteen candidates were taken from the 25 October `works.tsv` snapshot,
@@ -63,7 +83,7 @@ of this record.
   but much of the subsequent embedded text is garbled. This observation does
   not establish how often that problem affects the collection.
 
-## Next action
+## Next action at the initial staging checkpoint (superseded by update above)
 
 Agree the handover and allowed acquisition route with the References owner,
 then import the individually accepted files using a provenance-preserving,

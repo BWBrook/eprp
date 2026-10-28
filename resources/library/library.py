@@ -13,6 +13,7 @@ Usage:
   python3 library.py textindex [--store DIR]
   python3 library.py search QUERY... [--limit N] [--tier T ...] [--part abstract fulltext tdm] [--tsv]
   python3 library.py fetch [--store DIR] [--tier TIER ...] [--workers N] [--retry-failed] [--limit N]
+  python3 library.py import-staged MANIFEST DIRECTORY [--store DIR]
   python3 library.py withdraw W [W ...] --reason TEXT [--store DIR]
   python3 library.py index [--store DIR] [--out DIR]
 
@@ -1262,6 +1263,99 @@ def held(store, manifest, statuses=OPEN_HELD):
             if r["status"] in statuses and (store / (r.get("path") or f"pdf/{w}.pdf")).exists()}
 
 
+def import_staged(store, manifest_path, directory):
+    """Import checked author-hosted PDFs without replacing existing or withdrawn copies."""
+    lock_file = store_lock(store)
+    try:
+        for d in ("pdf", "text", "tmp"):
+            (store / d).mkdir(parents=True, exist_ok=True)
+        existing = load_manifest(store)
+        rows = [r for r in read_tsv(manifest_path) if r.get("outcome") == "staged"]
+        if not rows or len({r["openalex_id"] for r in rows}) != len(rows):
+            raise ValueError("empty batch or duplicate work ID")
+        checked = []
+        for r in rows:
+            wid = r["openalex_id"]
+            if not re.fullmatch(r"W\d+", wid):
+                raise ValueError(f"invalid work ID: {wid}")
+            if urllib.parse.urlsplit(r["url"]).scheme != "https":
+                raise ValueError(f"source URL must be HTTPS for {wid}")
+            rec_path = store / "openalex" / f"{wid}.json"
+            rec = json.loads(rec_path.read_text(encoding="utf-8"))
+            if norm_doi(rec.get("doi")) != norm_doi(r["doi"]):
+                raise ValueError(f"DOI mismatch for {wid}")
+            source = directory / f"{wid}.pdf"
+            if (not source.resolve().is_relative_to(directory.resolve())
+                    or source.resolve().is_relative_to((store / "tdm").resolve())):
+                raise ValueError(f"source outside staging directory or inside TDM store: {wid}")
+            data = source.read_bytes()
+            digest = hashlib.sha256(data).hexdigest()
+            if not data.startswith(b"%PDF-") or digest != r["sha256"] or len(data) != int(r["bytes"]):
+                raise ValueError(f"file or checksum mismatch for {wid}")
+            if wid in existing:
+                prior = store / existing[wid].get("path", "")
+                prior_text = store / "text" / f"{wid}.txt"
+                if (existing[wid].get("sha256") == digest and existing[wid].get("status") in OPEN_HELD
+                        and prior.is_file() and prior_text.is_file()
+                        and hashlib.sha256(prior.read_bytes()).hexdigest() == digest):
+                    print(f"{wid}: already imported")
+                    continue
+                raise ValueError(f"existing manifest entry for {wid}; inspect before importing")
+            if (store / "pdf" / f"{wid}.pdf").exists() or (store / "text" / f"{wid}.txt").exists():
+                raise ValueError(f"unregistered destination exists for {wid}")
+            pages = pdf_pages(source)
+            first = pdf_text(source, last_page=3)
+            if not pages or first is None:
+                raise ValueError(f"invalid or unreadable PDF for {wid}")
+            score = title_match(rec.get("title"), first)
+            scanned = r.get("verification", "").startswith("first-page OCR")
+            if scanned:
+                with tempfile.TemporaryDirectory(dir=store / "tmp") as temp:
+                    image = Path(temp) / "first"
+                    subprocess.run(["pdftoppm", "-f", "1", "-l", "1", "-r", "170", "-singlefile",
+                                    "-png", str(source), str(image)], check=True, capture_output=True, timeout=120)
+                    result = subprocess.run(["tesseract", str(image) + ".png", "stdout"], check=True,
+                                            capture_output=True, timeout=120)
+                    score = title_match(rec.get("title"), result.stdout.decode("utf-8", "replace"))
+                if score < 0.9:
+                    raise ValueError(f"OCR title mismatch for {wid}: {score:.2f}")
+                full, status = "", "no_text"
+            else:
+                if score < 0.9:
+                    raise ValueError(f"embedded title mismatch for {wid}: {score:.2f}")
+                full = pdf_text(source)
+                if not full:
+                    raise ValueError(f"full text extraction failed for {wid}")
+                status = "ok"
+            checked.append((r, data, digest, pages, score, full, status))
+        tool_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+        for r, data, digest, pages, score, full, status in checked:
+            wid = r["openalex_id"]
+            pdf = store / "pdf" / f"{wid}.pdf"
+            txt = store / "text" / f"{wid}.txt"
+            with pdf.open("xb") as f:
+                f.write(data)
+            pdf.chmod(0o444)
+            with txt.open("x", encoding="utf-8") as f:
+                f.write(full)
+            note = "Author-affiliated site; "
+            note += "licence not independently established. " if not r.get("license") else "licence recorded from staging. "
+            note += "Publication version not independently established." if not r.get("version") else "Publication version recorded from staging."
+            if status == "no_text":
+                note += " First-page title checked by OCR; full text not OCRed."
+            append_tsv(store / "manifest.tsv", {
+                "openalex_id": wid, "doi": norm_doi(r["doi"]), "status": status,
+                "url": r.get("final_url") or r["url"], "host": urllib.parse.urlsplit(r["url"]).hostname,
+                "version": r.get("version", ""), "license": r.get("license", ""), "sha256": digest, "bytes": len(data), "pages": pages,
+                "text_chars": len(full), "title_match": f"{score:.2f}", "retrieved": now(),
+                "tool_sha256": tool_sha, "note": note, "path": f"pdf/{wid}.pdf"}, MANIFEST_FIELDS,
+                threading.Lock())
+            print(f"{wid}: {status}", flush=True)
+        print(f"{len(checked)} imported; rebuild catalogue and text indexes")
+    finally:
+        lock_file.close()
+
+
 def fetch(store, tiers, workers, retry_failed, limit=None):
     lock_file = store_lock(store)
     for d in ("pdf", "text", "tmp", "quarantine"):
@@ -1460,10 +1554,10 @@ def write_index_md(out, rows, unresolved):
         f"Generated by `library.py index` on {now()[:10]}. Do not edit by hand.",
         "",
         f"**{len(rows)} works**; open full text held for **{held_n}** ({ft['ok']} with a text layer checked "
-        f"against the title, {ft['no_text']} scans without one), and publisher TDM copies for **{tdm_n}** more "
+        f"against the title, {ft['no_text']} without a usable embedded text layer), and publisher TDM copies for **{tdm_n}** more "
         f"(local search and mining only). {len(unresolved)} seed rows are unresolved (see `unresolved.tsv`).",
         "",
-        "Full-text status: `ok` open copy held and title-checked; `no_text` open scan held, title unchecked; "
+        "Full-text status: `ok` open copy held and title-checked; `no_text` copy held without searchable full text (see manifest for title checks); "
         "`tdm_ok`, `tdm_no_text` the same for a publisher TDM copy; `failed` copies tried, none usable; "
         "`no_copy` no copy known; `not_tried` not yet attempted; `withdrawn` removed with a recorded reason; "
         "`skipped_type` datasets, errata and similar.",
@@ -1685,6 +1779,10 @@ def main():
     p.add_argument("wids", nargs="+")
     p.add_argument("--reason", required=True)
     p.add_argument("--store", type=Path, default=DEFAULT_STORE)
+    p = sub.add_parser("import-staged")
+    p.add_argument("manifest", type=Path)
+    p.add_argument("directory", type=Path)
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     for name in ("resolve", "fetch", "index"):
         p = sub.add_parser(name)
         p.add_argument("--store", type=Path, default=DEFAULT_STORE)
@@ -1718,6 +1816,8 @@ def main():
         fetch(a.store, a.tier, a.workers, a.retry_failed, a.limit)
     elif a.cmd == "withdraw":
         withdraw(a.store, a.wids, a.reason)
+    elif a.cmd == "import-staged":
+        import_staged(a.store, a.manifest, a.directory)
     else:
         index(a.store, a.out)
 
