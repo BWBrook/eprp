@@ -16,7 +16,7 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | verify-embedded | withdraw | index | textindex | search
+  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | verify-embedded | reject-incomplete | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
@@ -39,6 +39,7 @@ The store is on `deep-server`, beside the data-source mirror:
   ocr/<W>.txt             searchable machine OCR of a scan, kept separately from the original extraction
   ocr/<W>.json            source and OCR hashes, engine, page coverage and other provenance
   quarantine/             PDFs whose first pages did not contain the work's title
+  quarantine/rejected/    files verified to be incomplete or not the work; retained with their history
   quarantine/withdrawn/   copies removed by `withdraw`, with the reason in manifest.tsv
   tdm/<publisher>/pdf/    publisher text-and-data-mining copies (local search and mining only; see below)
   tdm/<publisher>/text/   their extracted text
@@ -297,7 +298,8 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   first-page OCR, never replaces an existing open or withdrawn record, and
   records uncertain licences and versions as such. A verified open copy may
   supersede a TDM record in the catalogue while leaving that TDM copy intact
-  under `tdm/` with its historical manifest entry. A scan gets `no_text`; OCR checks
+  under `tdm/` with its historical manifest entry. It can also replace a
+  specifically rejected incomplete file, which remains in quarantine. A scan gets `no_text`; OCR checks
   its identity but is not a full-text transcription. Rerunning an intact
   imported batch is idempotent. An interrupted partial write requires inspection,
   not automatic overwriting.
@@ -317,6 +319,12 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   file. `--title-pages` selects a different title-check window.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
+- `reject-incomplete W… --reason TEXT` moves an open `no_text` copy known to
+  be an incomplete document or unrelated figure into `quarantine/rejected/`.
+  It preserves the file and manifest history; a separately checked complete
+  copy can then be imported. Automatic `fetch` skips rejected works, including
+  on retry, so it cannot silently reacquire the same incomplete file. A regular
+  withdrawal cannot be replaced through `import-staged`.
 - `search QUERY` searches the whole library: every work's title and abstract
   (reconstructed from OpenAlex), and the extracted text of every held copy.
   It is SQLite FTS5 with BM25 ranking (titles weighted 5), Porter stemming
@@ -330,7 +338,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   - From any machine:
     `ssh deep-server 'python3 /data/paleodata/library/_tools/library.py search "age-dependent extinction"'`.
   - `textindex` rebuilds the indexes in about a minute. Run it after
-    `resolve`, `fetch`, `import-staged`, `ocr`, `verify-embedded` or `withdraw` changes works or texts.
+    `resolve`, `fetch`, `import-staged`, `ocr`, `verify-embedded`, `reject-incomplete` or `withdraw` changes works or texts.
     - `search.sqlite` holds titles, abstracts and open texts.
     - `tdm/search-tdm.sqlite` holds TDM texts in a contentless index. It
       stores no readable text and gives no passages, and it sits under `tdm/`
@@ -343,7 +351,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
     [the 2003 note](notes/barry-2003.md), where 892 of 904 citations
     resolved exactly.
   - Add the resolved rows to a seed file to make a tier.
-- `resolve`, `fetch`, `import-staged`, `ocr`, `verify-embedded` and `withdraw` take a lock on the store, so two writers
+- `resolve`, `fetch`, `import-staged`, `ocr`, `verify-embedded`, `reject-incomplete` and `withdraw` take a lock on the store, so two writers
   cannot run at once.
 - Run anything longer than a few minutes on `deep-server`, never on the
   laptop.

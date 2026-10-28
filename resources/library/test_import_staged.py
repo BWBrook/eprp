@@ -108,6 +108,45 @@ class ImportStagedTests(unittest.TestCase):
         self.assertFalse((self.store / 'pdf' / 'W1.pdf').exists())
         self.assertFalse((self.store / 'pdf' / 'W2.pdf').exists())
 
+    def test_rejected_figure_is_retained_and_replaced_by_verified_article(self):
+        (self.store / 'pdf').mkdir()
+        (self.store / 'text').mkdir()
+        original = b'%PDF-only-a-figure'
+        (self.store / 'pdf' / 'W1.pdf').write_bytes(original)
+        (self.store / 'text' / 'W1.txt').write_text('plot', encoding='utf-8')
+        prior = {k: '' for k in library.MANIFEST_FIELDS}
+        prior.update(openalex_id='W1', status='no_text', path='pdf/W1.pdf',
+                     sha256=hashlib.sha256(original).hexdigest())
+        library.append_tsv(self.store / 'manifest.tsv', prior, library.MANIFEST_FIELDS, threading.Lock())
+        library.withdraw(self.store, ['W1'], 'figure rather than article', rejected=True)
+        self.run_import()
+        self.assertEqual((self.store / 'quarantine' / 'rejected' / 'W1.pdf').read_bytes(), original)
+        self.assertEqual((self.store / 'pdf' / 'W1.pdf').read_bytes(), (self.stage / 'W1.pdf').read_bytes())
+        self.assertIn('rejected incomplete copy', library.load_manifest(self.store)['W1']['note'])
+
+    def test_regular_withdrawal_is_not_eligible_for_replacement(self):
+        prior = {k: '' for k in library.MANIFEST_FIELDS}
+        prior.update(openalex_id='W1', status='withdrawn', path='quarantine/withdrawn/W1.pdf')
+        library.append_tsv(self.store / 'manifest.tsv', prior, library.MANIFEST_FIELDS, threading.Lock())
+        with self.assertRaisesRegex(ValueError, 'existing manifest'):
+            self.run_import()
+
+    def test_fetch_does_not_reacquire_a_rejected_work_even_on_retry(self):
+        prior = {k: '' for k in library.MANIFEST_FIELDS}
+        prior.update(openalex_id='W1', status='rejected', path='quarantine/rejected/W1.pdf',
+                     url='https://example.org/figure.pdf')
+        library.append_tsv(self.store / 'manifest.tsv', prior, library.MANIFEST_FIELDS, threading.Lock())
+        with patch.object(library, 'load_records', return_value={'W1': {'id': 'W1', 'type': 'article'}}), \
+             patch.object(library, 'load_aliases', return_value={}), \
+             patch.object(library, 'load_seeds', return_value={'canon': [{'key': 'W1'}]}), \
+             patch.object(library, 'seed_wid', return_value='W1'), \
+             patch.object(library, 'load_attempts', return_value=[]), \
+             patch.object(library, 'duplicate_map', return_value={}), \
+             patch.object(library, 'fetch_one') as fetch_one:
+            for retry in (False, True):
+                library.fetch(self.store, None, 1, retry)
+            fetch_one.assert_not_called()
+
 
 if __name__ == '__main__':
     unittest.main()

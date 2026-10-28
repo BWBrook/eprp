@@ -42,6 +42,8 @@ _provenance/           read-only working files of the curated seed tiers
   verified transcription; use the PDF to check wording, figures and tables.
 - `python3 _tools/library.py verify-embedded W` checks an open copy whose
   title and existing embedded text were missed during the initial scan check.
+- `python3 _tools/library.py reject-incomplete W --reason TEXT` quarantines
+  a verified incomplete open copy so a complete replacement can be imported.
 - The library search index combines open extracted and OCR text. Map a `W`
   id to its work with `openalex/<W>.json` or the repository's `works.tsv`.
 

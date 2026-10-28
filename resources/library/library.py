@@ -1293,7 +1293,7 @@ def import_staged(store, manifest_path, directory):
             digest = hashlib.sha256(data).hexdigest()
             if not data.startswith(b"%PDF-") or digest != r["sha256"] or len(data) != int(r["bytes"]):
                 raise ValueError(f"file or checksum mismatch for {wid}")
-            prior_tdm = ""
+            prior_tdm, prior_rejected = "", ""
             if wid in existing and existing[wid].get("status") in TDM_HELD:
                 tdm_path = Path(existing[wid].get("path") or "")
                 if (len(tdm_path.parts) != 4 or tdm_path.parts[0] != "tdm" or
@@ -1301,6 +1301,13 @@ def import_staged(store, manifest_path, directory):
                         not (store / tdm_path).is_file()):
                     raise ValueError(f"existing TDM path missing or invalid for {wid}")
                 prior_tdm = str(tdm_path)
+            elif wid in existing and existing[wid].get("status") == "rejected":
+                prior_rejected = existing[wid].get("path") or ""
+                if prior_rejected != f"quarantine/rejected/{wid}.pdf" or not (store / prior_rejected).is_file():
+                    raise ValueError(f"rejected copy missing or invalid for {wid}")
+                if (hashlib.sha256((store / prior_rejected).read_bytes()).hexdigest() != existing[wid].get("sha256")
+                        or digest == existing[wid].get("sha256")):
+                    raise ValueError(f"rejected copy corrupted or reoffered for {wid}")
             elif wid in existing:
                 prior = store / existing[wid].get("path", "")
                 prior_text = store / "text" / f"{wid}.txt"
@@ -1336,9 +1343,9 @@ def import_staged(store, manifest_path, directory):
                 if not full:
                     raise ValueError(f"full text extraction failed for {wid}")
                 status = "ok"
-            checked.append((r, data, digest, pages, score, full, status, prior_tdm))
+            checked.append((r, data, digest, pages, score, full, status, prior_tdm, prior_rejected))
         tool_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-        for r, data, digest, pages, score, full, status, prior_tdm in checked:
+        for r, data, digest, pages, score, full, status, prior_tdm, prior_rejected in checked:
             wid = r["openalex_id"]
             pdf = store / "pdf" / f"{wid}.pdf"
             txt = store / "text" / f"{wid}.txt"
@@ -1354,6 +1361,8 @@ def import_staged(store, manifest_path, directory):
                 note += " First-page title checked by OCR; full text not OCRed."
             if prior_tdm:
                 note += f" Open copy supersedes, but does not alter, the prior TDM copy at {prior_tdm}."
+            if prior_rejected:
+                note += f" Previously rejected incomplete copy retained at {prior_rejected}."
             append_tsv(store / "manifest.tsv", {
                 "openalex_id": wid, "doi": norm_doi(r["doi"]), "status": status,
                 "url": r.get("final_url") or r["url"], "host": urllib.parse.urlsplit(r["url"]).hostname,
@@ -1525,11 +1534,12 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
         if is_lookup(r["outcome"]):
             found_urls[r["url"]] = r["detail"].split() if r["outcome"].endswith("_found") else []
     tried = set() if retry_failed else {u for u, o in latest.items() if not transient(o)}
-    tried |= {r["url"] for r in manifest.values() if r["status"] == "withdrawn"}
+    tried |= {r["url"] for r in manifest.values() if r["status"] in ("withdrawn", "rejected")}
     # TDM-held works are revisited when a lookup is still pending (e.g. skipped for rate limits), so an open copy
     # found later replaces the TDM copy; --retry-failed revisits them all.
     pending = {w for w in tdm_done if w in recs and any((k := key(recs[w])) and k not in tried for *_, key in LOOKUPS)}
-    skip = done | (set() if retry_failed else tdm_done - pending)
+    rejected = {w for w, r in manifest.items() if r["status"] == "rejected"}
+    skip = done | rejected | (set() if retry_failed else tdm_done - pending)
     dups = duplicate_map(recs, set(order) | done | tdm_done, done | tdm_done)
     skip |= {w for w, canon in dups.items() if canon in set(order) | done | tdm_done}  # fetch one record per work
     todo = [recs[w] for w in sorted(set(order) - skip, key=order.get) if recs[w].get("type") not in SKIP_TYPES]
@@ -1554,7 +1564,7 @@ def fetch(store, tiers, workers, retry_failed, limit=None):
 
 # ---------------------------------------------------------------- withdraw
 
-def withdraw(store, wids, reason):
+def withdraw(store, wids, reason, rejected=False):
     """Remove held copies: move PDF and text to quarantine/withdrawn/ (a TDM copy to tdm/<publisher>/withdrawn/,
     so everything obtained under a TDM licence stays under tdm/) and append a manifest row."""
     lock_file = store_lock(store)
@@ -1567,7 +1577,10 @@ def withdraw(store, wids, reason):
                 print(f"{w}: no held copy", file=sys.stderr)
                 continue
             pdf = Path(row.get("path") or f"pdf/{w}.pdf")
-            dest = Path(*pdf.parts[:2], "withdrawn") if pdf.parts[0] == "tdm" else Path("quarantine", "withdrawn")
+            if rejected and (row["status"] != "no_text" or pdf != Path("pdf") / f"{w}.pdf"):
+                raise ValueError(f"{w}: only open no_text copies may be rejected as incomplete")
+            dest = (Path("quarantine", "rejected") if rejected else
+                    Path(*pdf.parts[:2], "withdrawn") if pdf.parts[0] == "tdm" else Path("quarantine", "withdrawn"))
             (store / dest).mkdir(parents=True, exist_ok=True)
             sources = [(store / p, store / dest / p.name) for p in (pdf, text_path(pdf))]
             if row["status"] == "ocr_ok":
@@ -1580,9 +1593,9 @@ def withdraw(store, wids, reason):
             for src, target in sources:
                 if src.exists():
                     os.replace(src, target)
-            append_tsv(store / "manifest.tsv", dict(row, status="withdrawn", retrieved=now(), note=reason,
+            append_tsv(store / "manifest.tsv", dict(row, status="rejected" if rejected else "withdrawn", retrieved=now(), note=reason,
                                                     path=str(dest / pdf.name)), MANIFEST_FIELDS, lock)
-            print(f"{w}: withdrawn")
+            print(f"{w}: {'rejected as incomplete' if rejected else 'withdrawn'}")
     finally:
         lock_file.close()
 
@@ -1716,6 +1729,7 @@ def write_index_md(out, rows, unresolved):
         "`no_text` copy held without searchable full text (see manifest for title checks); "
         "`tdm_ok`, `tdm_no_text` the same for a publisher TDM copy; `failed` copies tried, none usable; "
         "`no_copy` no copy known; `not_tried` not yet attempted; `withdrawn` removed with a recorded reason; "
+        "`rejected` an incomplete copy preserved in quarantine; "
         "`skipped_type` datasets, errata and similar.",
         "",
         "## By tier", "", "\n".join(tier_lines), "",
@@ -1938,6 +1952,10 @@ def main():
     p.add_argument("wids", nargs="+")
     p.add_argument("--reason", required=True)
     p.add_argument("--store", type=Path, default=DEFAULT_STORE)
+    p = sub.add_parser("reject-incomplete")
+    p.add_argument("wids", nargs="+")
+    p.add_argument("--reason", required=True)
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     p = sub.add_parser("import-staged")
     p.add_argument("manifest", type=Path)
     p.add_argument("directory", type=Path)
@@ -1984,6 +2002,8 @@ def main():
         fetch(a.store, a.tier, a.workers, a.retry_failed, a.limit)
     elif a.cmd == "withdraw":
         withdraw(a.store, a.wids, a.reason)
+    elif a.cmd == "reject-incomplete":
+        withdraw(a.store, a.wids, a.reason, rejected=True)
     elif a.cmd == "import-staged":
         import_staged(a.store, a.manifest, a.directory)
     elif a.cmd == "ocr":
