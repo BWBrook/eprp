@@ -70,7 +70,7 @@ def fetch(url, path, payload=None):
 
 def parse_table(path):
     data = path.read_bytes().decode("utf-8-sig")
-    rows = list(csv.reader(io.StringIO(data), delimiter="\t"))
+    rows = list(csv.reader(io.StringIO(data, newline=""), delimiter="\t", quoting=csv.QUOTE_NONE))
     if not rows or "<html" in data[:500].lower():
         raise ValueError(f"{path.name}: no TSV header")
     return rows[0], rows[1:]

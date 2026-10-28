@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Regression fixtures for lossless assembly, unresolved links and QC semantics."""
 
-import csv
-import io
 import json
 from pathlib import Path
 import sqlite3
@@ -22,11 +20,7 @@ HEADERS = {
 
 
 def tsv(header, rows):
-    stream = io.StringIO(newline="")
-    writer = csv.writer(stream, delimiter="\t", lineterminator="\r\n")
-    writer.writerow(header)
-    writer.writerows(rows)
-    return stream.getvalue().encode("utf-8")
+    return ("\r\n".join("\t".join(row) for row in [header, *rows]) + "\r\n").encode("utf-8")
 
 
 class AssemblyTests(unittest.TestCase):
@@ -41,8 +35,8 @@ class AssemblyTests(unittest.TestCase):
         self.sheets = {
             "01-first": {
                 "register": [
-                    ["r1", "s1", "Name", "First", "A", "cf.", "alpha", "9", 'MNI café\nsecond line  '],
-                    ["r1", "s1", "Name", "First", "A", "cf.", "alpha", "9", 'MNI café\nsecond line  '],
+                    ["r1", "s1", "Name", "First", "A", "cf.", "alpha", "9", 'MNI café; second line  '],
+                    ["r1", "s1", "Name", "First", "A", "cf.", "alpha", "9", 'MNI café; second line  '],
                     ["r1", "s1", "Name", "First", "A", "cf.", "alpha", "1", "NISP"],
                     ["rCross", "s4", "Fourth", "First", "B", "aff.", "beta", "0.1", ""],
                     ["missing", "s4", "Fourth", "First", "B", "?", "indet.", "0.2", ""],
@@ -125,9 +119,9 @@ class AssemblyTests(unittest.TestCase):
             actual = [json.loads(r[0]) for r in db.execute('SELECT values_json FROM source_rows WHERE file_id=? ORDER BY record_number', (file_id,))]
             self.assertEqual(actual, self.sheets[directory][table])
         first = db.execute('SELECT line_start,line_end,values_json FROM source_rows WHERE row_id=?', ('01-first/attempt-1/register.txt#1',)).fetchone()
-        self.assertEqual(first[:2], (2, 3))
-        self.assertEqual(json.loads(first[2])[-1], 'MNI café\nsecond line  ')
-        row_ids = db.execute('SELECT _fw_row_id FROM register_rows WHERE comments=?', ('MNI café\nsecond line  ',)).fetchall()
+        self.assertEqual(first[:2], (2, 2))
+        self.assertEqual(json.loads(first[2])[-1], 'MNI café; second line  ')
+        row_ids = db.execute('SELECT _fw_row_id FROM register_rows WHERE comments=?', ('MNI café; second line  ',)).fetchall()
         self.assertEqual(len(set(row_ids)), 2)
         self.assertEqual(db.execute('SELECT qualifier FROM register_rows WHERE _fw_row_id=?', ('01-first/attempt-1/register.txt#4',)).fetchone()[0], 'aff.')
         self.assertEqual(db.execute('PRAGMA foreign_key_check').fetchall(), [])
@@ -230,10 +224,57 @@ class AssemblyTests(unittest.TestCase):
             self.run_assembly()
         self.assertFalse(self.output.exists())
 
+    def test_literal_quotes_and_apparent_quoted_fields_are_preserved(self):
+        comments = ['"Felis caracal"', '"Tamias spp." tentatively referred',
+                    '"ssp.1\'\'', '"Naemorhedus sumatraensis"', 'embedded "quote"; ""doubled""']
+        for row, comment in zip(self.sheets['01-first']['register'], comments):
+            row[-1] = comment
+        self.write_fixture()
+        self.run_assembly()
+        db = self.connect()
+        actual = [r[0] for r in db.execute("SELECT comments FROM register_rows WHERE _fw_interval_id='01-first' ORDER BY _fw_row_id")]
+        self.assertEqual(actual[:len(comments)], comments)
+        self.assertEqual(db.execute("SELECT count(*) FROM register_rows").fetchone()[0], 8)
+
+    def test_historical_csv_row_merging_is_reported_not_repeated(self):
+        import csv
+        import io
+        raw = b'ref no\tsample no\tcomments\n4570\t4922\t"ssp.1\'\'\n4570\t4922\t"Naemorhedus sumatraensis"\n'
+        old = list(csv.reader(io.StringIO(raw.decode()), delimiter='\t'))
+        self.assertEqual(len(old), 2)
+        header, rows = assemble.parse(raw, 'retained-example.txt')
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0][-1][-1], '"ssp.1\'\'')
+        self.assertEqual(rows[1][-1][-1], '"Naemorhedus sumatraensis"')
+        self.assertEqual(rows[1][1:3], (3, 3))
+        audit = json.loads(self.audit_path.read_bytes())
+        audit['intervals'][0]['validation']['rows']['register'] -= 1
+        self.audit_path.write_text(json.dumps(audit))
+        self.audit_sha = assemble.digest(self.audit_path.read_bytes())
+        summary = self.run_assembly()
+        self.assertEqual(summary['historical_row_count_disagreements'], [{
+            'file_id': '01-first/attempt-1/register.txt', 'observed_literal_rows': 7,
+            'historical_csv_audit_rows': 6}])
+        db = self.connect()
+        self.assertEqual(db.execute("SELECT row_count,historical_csv_audit_row_count,row_count_matches_historical_audit FROM source_files WHERE file_id='01-first/attempt-1/register.txt'").fetchone(), (7, 6, 0))
+
+    def test_embedded_newlines_and_tabs_fail_without_guessing_quote_syntax(self):
+        for comment in ('unquoted\nnewline', '"quoted\nnewline"', 'literal\ttab'):
+            self.sheets['01-first']['register'][0][-1] = comment
+            self.write_fixture()
+            with self.assertRaisesRegex(ValueError, 'Ragged physical record'):
+                self.run_assembly()
+            self.assertFalse(self.output.exists())
+
+    def test_literal_parser_handles_crlf_bom_no_final_newline_and_inner_carriage_return(self):
+        header, rows = assemble.parse(b'\xef\xbb\xbfleft\tright\r\n"quoted"\tliteral\rreturn', 'example.txt')
+        self.assertEqual(header, ['left', 'right'])
+        self.assertEqual(rows, [(1, 2, 2, ['"quoted"', 'literal\rreturn'])])
+
     def test_ragged_sources_fail_without_partial_database(self):
         self.sheets['01-first']['register'][0].pop()
         self.write_fixture()
-        with self.assertRaisesRegex(ValueError, 'Ragged record'):
+        with self.assertRaisesRegex(ValueError, 'Ragged physical record'):
             self.run_assembly()
         self.assertFalse(self.output.exists())
         self.assertEqual(list(self.root.glob('.fossilworks-*')), [])

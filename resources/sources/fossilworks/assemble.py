@@ -8,10 +8,8 @@ source rows are neither biological occurrence IDs nor deduplicated observations.
 
 import argparse
 from collections import Counter, defaultdict
-import csv
 from decimal import Decimal, InvalidOperation
 import hashlib
-import io
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -94,17 +92,24 @@ def verify(snapshot, audit_path, manifest_sha256, audit_sha256):
 
 
 def parse(data, key):
-    reader = csv.reader(io.StringIO(data.decode("utf-8-sig"), newline=""), delimiter="\t", strict=True)
-    header = next(reader, None)
+    text = data.decode("utf-8-sig")
+    physical_lines = text.split("\n")
+    terminated = text.endswith("\n")
+    if terminated:
+        physical_lines.pop()
+    records = []
+    for index, line in enumerate(physical_lines):
+        if (index < len(physical_lines) - 1 or terminated) and line.endswith("\r"):
+            line = line[:-1]
+        records.append(line.split("\t"))
+    header = records[0] if records else None
     if not header or any(not column for column in header):
         raise ValueError(f"Missing or empty header: {key}")
-    previous = reader.line_num
     rows = []
-    for ordinal, values in enumerate(reader, 1):
+    for ordinal, values in enumerate(records[1:], 1):
         if len(values) != len(header):
-            raise ValueError(f"Ragged record {ordinal}: {key}")
-        rows.append((ordinal, previous + 1, reader.line_num, values))
-        previous = reader.line_num
+            raise ValueError(f"Ragged physical record {ordinal}: {key}")
+        rows.append((ordinal, ordinal + 1, ordinal + 1, values))
     return header, rows
 
 
@@ -112,11 +117,12 @@ SCHEMA = """
 CREATE TABLE metadata (key TEXT PRIMARY KEY, value_json TEXT NOT NULL);
 CREATE TABLE intervals (interval_id TEXT PRIMARY KEY, ordinal INTEGER UNIQUE NOT NULL,
  label TEXT NOT NULL, source_attempt TEXT UNIQUE NOT NULL, request_json TEXT NOT NULL,
- receipts_json TEXT NOT NULL, acquisition_classification TEXT NOT NULL,
- declared_rows_json TEXT NOT NULL, audit_json TEXT NOT NULL);
+ receipts_json TEXT NOT NULL, historical_acquisition_classification TEXT NOT NULL,
+ historical_declared_rows_json TEXT NOT NULL, historical_csv_audit_json TEXT NOT NULL);
 CREATE TABLE source_files (file_id TEXT PRIMARY KEY, interval_id TEXT NOT NULL REFERENCES intervals,
  table_name TEXT NOT NULL, sha256 TEXT NOT NULL, size_bytes INTEGER NOT NULL,
- header_json TEXT NOT NULL, row_count INTEGER NOT NULL, manifest_record_json TEXT NOT NULL,
+ header_json TEXT NOT NULL, row_count INTEGER NOT NULL, historical_csv_audit_row_count INTEGER NOT NULL,
+ row_count_matches_historical_audit INTEGER NOT NULL, manifest_record_json TEXT NOT NULL,
  UNIQUE(interval_id, table_name));
 CREATE TABLE source_rows (row_id TEXT PRIMARY KEY, file_id TEXT NOT NULL REFERENCES source_files,
  record_number INTEGER NOT NULL, line_start INTEGER NOT NULL, line_end INTEGER NOT NULL,
@@ -174,8 +180,7 @@ def store_sources(connection, audit, files, payloads):
         for table in TABLES:
             key = f"{attempt}/{table}.txt"
             header, rows = parse(payloads[key], key)
-            if len(rows) != selection["validation"]["rows"][table]:
-                raise ValueError(f"Audited row-count mismatch: {key}")
+            historical_count = selection["validation"]["rows"][table]
             if table != "matrix":
                 if len(set(header)) != len(header) or any(c.startswith("_fw_") for c in header):
                     raise ValueError(f"Duplicate or reserved source column: {key}")
@@ -187,9 +192,10 @@ def store_sources(connection, audit, files, payloads):
                                        f"_fw_interval_id TEXT NOT NULL REFERENCES intervals,{columns})")
                 elif headers[table] != header:
                     raise ValueError(f"Cross-interval source schema differs: {key}")
-            connection.execute("INSERT INTO source_files VALUES (?,?,?,?,?,?,?,?)", (
+            connection.execute("INSERT INTO source_files VALUES (?,?,?,?,?,?,?,?,?,?)", (
                 key, interval, table, files[key]["sha256"], files[key]["size"],
-                encoded(header), len(rows), encoded(files[key])))
+                encoded(header), len(rows), historical_count, int(len(rows) == historical_count),
+                encoded(files[key])))
             matrix_rows = []
             for number, start, end, values in rows:
                 row_id = f"{key}#{number}"
@@ -381,13 +387,14 @@ def assemble(snapshot, output, audit_path=AUDIT_PATH, *, manifest_sha256=MANIFES
         with connection:
             metadata = {
                 "schema_version": 1, "manifest_sha256": manifest_sha256,
-                "selection_audit_sha256": audit_sha256,
+                "historical_selection_audit_sha256": audit_sha256,
                 "assembly_tool_sha256": digest(Path(__file__).read_bytes()),
-                "manifest": json.loads(manifest_bytes), "selection_audit": audit,
+                "manifest": json.loads(manifest_bytes), "historical_selection_audit": audit,
                 "source_snapshot": str(snapshot.resolve()),
                 "semantics": {
-                    "source_rows": "Original 1-based data-record numbers; headers are not data rows; physical line spans retained. No biological occurrence identity is asserted.",
-                    "values": "Unmodified UTF-8 TSV field strings; ordered arrays plus exact original header names. File hashes pin original lexical bytes, quoting and line endings.",
+                    "source_rows": "Original 1-based physical data-record numbers; header is not a data row. Literal LF/CRLF records and tab delimiters; double quotes are ordinary characters, never quoting syntax. Every source line must independently have the header field count; embedded record delimiters or tabs inside a field are unsupported and fail closed on ragged records. No biological occurrence identity is asserted.",
+                    "values": "Unmodified UTF-8 literal-TSV field strings; ordered arrays plus exact original header names. Quotes and literal carriage returns inside a line are retained. UTF-8 BOM is removed only at file start. File hashes pin original lexical bytes and line endings.",
+                    "historical_audit": "Pinned selection audit used quote-aware CSV parsing. Its original classifications and counts are retained as historical evidence in explicitly historical interval columns and metadata; they are not current data-QC results. Literal physical rows define assembled row identities and observed counts; source_files separately reports literal physical row counts, historical_csv_audit_row_count and their agreement. Audit count disagreement never changes source values or suppresses rows.",
                     "links": "Exact text identifier candidates; other-interval candidates never resolve a missing same-interval record. Duplicate targets retained. Empty identifiers never matched.",
                     "identity_groups": "Comparisons of full source rows within/cross interval, including original interval and summary fields. Differing values do not establish an error or distinct biological observations.",
                     "sample_qc": "Each retained sample summary compared with the sum of same-interval register rows sharing its exact sample ID. Repeated source summary rows each retained and compared separately; counts have provider-defined units, not necessarily individuals.",
@@ -405,6 +412,7 @@ def assemble(snapshot, output, audit_path=AUDIT_PATH, *, manifest_sha256=MANIFES
         if connection.execute("PRAGMA foreign_key_check").fetchall() or connection.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
             raise ValueError("Assembled SQLite integrity failure")
         summary = {table: len(rows) for table, rows in tables.items()}
+        summary["historical_row_count_disagreements"] = [dict(zip(("file_id", "observed_literal_rows", "historical_csv_audit_rows"), row)) for row in connection.execute("SELECT file_id,row_count,historical_csv_audit_row_count FROM source_files WHERE row_count_matches_historical_audit=0 ORDER BY file_id")]
         summary["matrix_qc"] = connection.execute("SELECT count(*) FROM matrix_qc").fetchone()[0]
         connection.close()
         connection = None
