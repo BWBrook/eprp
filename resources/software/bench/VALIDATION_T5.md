@@ -239,3 +239,42 @@ No pass threshold is declared: this is a diagnostic of a simplified model,
 with approximate Monte Carlo errors and no claim about published chains.
 No parameters or seeds will be changed after the results are seen. Source
 and test hashes are recorded with the results.
+
+## Amendment A7 (28 October 2026, before forward-model evaluation)
+
+Test the checksum-verified Zenodo 22079167 INDITEK-2.0 forward code in the
+locked Python 3.12 environment under `../inditek-2/env/`; no MCMC is run.
+Retain the deposited inputs and outputs unchanged. The outcome is evidence
+about the tested implementation and saved outputs, not biological recovery.
+
+1. **F1: deterministic rate controls.** Run `inditek_rhonet` on five
+   synthetic points and three time slices with independently calculated
+   food, temperature and carrying-capacity functions. Check `proof`, `food`,
+   `temp` and `expo` cases at every supplied time; verify that adding a
+   uniform 10 °C to each point of each time slice leaves the temperature
+   factor unchanged. Use absolute tolerance 1e-12. Inputs and formulas are
+   fixed in `validate/t5_inditek_forward_controls.py`.
+2. **F2: deposited-output replay.** In the `proof` output, use parameter
+   proposals for zero-based (chain, iteration) `(0, 50)`, `(0, 500)` and
+   `(5, 5000)`, all with finite saved proposed RSS. These represent early
+   and later points in two chains, fixed before evaluating the forward
+   model. Saved `D[k]` corresponds to proposal at iteration `50*k`, not
+   necessarily an accepted state. Compare each new 2,978-cell prediction
+   and its RSS with the stored proposal output and RSS. Criteria are max
+   absolute prediction difference ≤ 1e-9 and absolute RSS difference ≤
+   1e-6; nonfinite, missing or differently sized output fails explicitly.
+   Compare predictions only where the saved and reconstructed maps have the
+   same target and ordering; report any inability to establish that mapping.
+3. **F3: independent RSS check.** At each F2 point, calculate the RSS from
+   the returned prediction and the finite observed map in row-major order,
+   only after checking a common 2,978-cell mask. Compare with the model's
+   RSS at absolute tolerance 1e-6. This is a calculation check, not proof
+   that the observations or residual distribution are scientifically valid.
+
+Run the controls first, then the three deposited proposals, sequentially on
+deep-server with BLAS threads limited to one and a 15-minute wall-clock
+ceiling. Preserve errors, all three individual results and input hashes; no
+threshold will be changed after observing them. The archived chain's exact
+generating code and the final article's individual figure provenance remain
+unresolved, so a replay discrepancy must not be assigned a cause without
+additional evidence.
