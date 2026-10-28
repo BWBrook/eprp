@@ -21,10 +21,12 @@ Barry's instruction in Codex chat, quoted exactly:
 
 > "Back to you. Let's get one more good question, to take the current list to 50, and then we'll pause and review the whole first tranche."
 
-Q-050 completes this tranche. The pause supersedes the expand-each-round
-cadence below until Barry resumes it. Existing statuses and tiers remain
-provisional; no entry is promoted by reaching 50. The agents now lead phase-2
-categorisation, prioritisation and deeper contextual/data work (Barry's
+Q-050 completes this tranche. The pause superseded the expand-each-round
+cadence until Barry resumed a focused expansion: on 28 October he asked for
+the strongest Fossilworks count-enabled candidates to be added. Q-051 onward
+records that separate addition; the first 50 remain intact. Existing statuses
+and tiers remain provisional; no entry is promoted by reaching 50. The agents
+now lead phase-2 categorisation, prioritisation and deeper contextual/data work (Barry's
 clarification on 11 October, 76/1476). His project selection comes later.
 See [Claude's first pass](2026-10-11-phase2-portfolio-first-pass-claude.md) and
 [Codex's response](2026-10-11-phase2-response-codex.md); neither changes the
@@ -151,6 +153,8 @@ describe the sources and designs reviewed so far, not universal limits (Codex,
 | Q-048 | Can climate-driven predator decline reduce extinction risk for their prey? | under review | 2 | Codex |
 | Q-049 | Did failure to track shifting isotherms predict extinction at past hyperthermals? | sketch | 2 | Claude |
 | Q-050 | How does the capacity to evolve change during environmental upheaval? | under review | 2 | Codex |
+| Q-051 | How much does survivor dominance change beyond the loss of extinct taxa? | under review | 2 | Codex |
+| Q-052 | Do surviving taxa remain widespread while their local dominance becomes geographically concentrated? | under review | 2 | Codex |
 
 ---
 
@@ -3584,3 +3588,108 @@ mechanism test remain unverified.
   genetic evolvability. See [reply 11](2026-10-13-phase2-codex-reply-11.md). Source
   access, exact data version, rival models and prior-work boundaries are in
   the [Q-050 evidence note](../literature/2026-10-11-evolvability-and-first-tranche-close.md).
+
+
+## Fossilworks count-enabled candidates (28 October)
+
+Barry requested focused expansion from the Fossilworks counts; these entries
+are exploratory research candidates, not selected primary projects. Two
+count-based tests share an observation model but have distinct temporal and
+spatial estimands. The [source and feasibility brief](2026-10-28-fossilworks-count-questions-codex.md)
+records prior work, competing explanations, a reproducible dataset profile,
+and an independent critic's recommendation to combine them with existing
+B-015. Their novelty and a usable source-verified panel remain unestablished.
+
+### Q-051 How much does survivor dominance change beyond the loss of extinct taxa?
+
+Status **under review**, tier 2 (provisional). Proposer Codex; critic independent
+Codex subagent, 28 October 2026.
+
+- **Question.** Across a well-resolved faunal transition, do the relative
+  specimen shares of surviving mammals change within comparable local settings
+  beyond the mechanical effect of removing taxa that disappear? How does that
+  change compare with background intervals?
+- **Why it matters.** The same survivors can remain present while their relative
+  representation changes. Distinguish this second dimension of reorganisation
+  from loss of victims; neither implies altered population size or causation.
+- **Nearest work and residual.** Tóth et al. 2019
+  ([10.1126/science.aaw1605](https://repository.si.edu/items/c06d157b-0a83-4872-bbce-4705d9ef17e6),
+  abs/article sections) already test survivor co-occurrence. Carter & Alroy 2025
+  ([10.1002/ecog.07961](https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1002/ecog.07961),
+  Methods and Discussion) already use counts and body mass for energetic
+  comparisons from the shared database family. The proposed survivor-only
+  count contrast, tested against background change and collection effects, is
+  narrower; its novelty remains unverified.
+- **Data and test.** Fossilworks dated assemblages plus their original
+  publications: select matched regions, habitats, accumulating agents,
+  measurement units and event/background windows before testing. Restrict
+  pre- and post-event count compositions to an independently defined common
+  survivor set. Compare changes in survivor-to-survivor ratios against a
+  deletion-only prediction and a sampling/observation null; describe new and
+  lost species separately. Prespecify a consequential effect and precision
+  target; resample independent localities and sources. Incomplete detection
+  and choice of the survivor set need explicit sensitivity tests.
+- **Rival and stopping rule.** Changing accumulation, taxon-specific
+  preservation, mortality, skeletal elements, collection practice, or temporal
+  averaging can mimic reorganisation. If supported protocols and source chronologies do
+  not provide matched, informative assemblages, or plausible observation models
+  produce the same signal, park ecological inference. A flat ratio is informative
+  only at adequate precision; differing ratios do not establish competitive
+  release, absolute compensation, biomass or changes in interactions.
+- **Overlap and next step.** Q-028 asks which traits predict winners; Q-009 asks
+  whether a reorganised state predicts a later outcome. Source-vet a small
+  paired panel and background controls, then simulate detection and changed
+  collection before fitting. [Brief](2026-10-28-fossilworks-count-questions-codex.md#1-survivor-reorganisation-beyond-loss-q-051).
+
+### Q-052 Do surviving taxa remain widespread while their local dominance becomes geographically concentrated?
+
+Status **under review**, tier 2 (provisional). Proposer Codex; critic independent
+Codex subagent, 28 October 2026.
+
+- **Question.** Across a transition, can surviving taxa remain recorded widely
+  while the locations or habitats in which they are relatively common become
+  concentrated? Does the geographic similarity of dominant taxa change in the
+  same direction as occurrence-based similarity?
+- **Why it matters.** Broad species presence and geographical distribution of
+  commonness represent different aspects of biotic reorganisation. Species
+  lists can look similar even when the communities are dominated by different
+  taxa, or vice versa. Concentrated specimen shares do not by themselves
+  establish demographic refugia.
+- **Nearest work and residual.** Fraser et al. 2022
+  ([10.1038/s41467-022-31595-8](https://www.nature.com/articles/s41467-022-31595-8),
+  Methods/Discussion) already establish an occurrence-based homogenisation
+  analysis. Brook et al. 2025
+  ([10.1098/rsbl.2025.0151](https://pmc.ncbi.nlm.nih.gov/articles/PMC12343122/),
+  Methods) compare presence-based biogeography and 34 approximately paired
+  localities. The residual is whether source-comparable count shares reveal
+  a spatial pattern distinct from incidence in the same panel, not a new
+  demonstration of homogenisation. Novelty remains unverified.
+- **Data and test.** Assemble a geographically balanced set of separately
+  dated Fossilworks records with source-verified counting and accumulation
+  protocols. Estimate occurrence-based similarity and relative specimen-share
+  similarity as distinct outcomes. Compare common survivors conditional on
+  recorded occupancy with an observation null preserving incidence, sample
+  sizes and taxon-specific baseline shares. One illustrative endpoint is the
+  fraction of sites where a focal taxon is recorded and constitutes at least
+  20% of specimens within a fixed, independently defined survivor set; the
+  threshold needs justification and sensitivity checks. This estimates the
+  frequency of dominance, not its spatial concentration. Measure spatial
+  dispersion or spread across predefined environmental classes separately,
+  using a fixed sampling footprint and a null conditioned on the number of
+  high-share sites. Prespecify effect and precision targets; block uncertainty
+  by locality, source and region. Treat human and
+  nonhuman accumulations separately and assess the sensitivity of pairwise
+  analyses to shared taxa, zeroes and overlapping sites.
+- **Rival and stopping rule.** Shared collection or human procurement practices,
+  differential recovery, unequal sampled geography and time averaging can
+  create apparent convergence of dominants. Equal specimen totals alone do not
+  remove frequency-dependent sampling bias. Park biological interpretation if
+  plausible observation models or inadequate spatial support cannot separate
+  these explanations. Raw incidence and weighted dissimilarities have
+  different scales and must not be subtracted as an ecological effect.
+- **Overlap and next step.** B-015 asks about macroecological distributions;
+  Q-025 covers scaling of local to global loss; Q-028 concerns winners.
+  Test whether the source-vetted panel has geographical and temporal coverage,
+  then compare observation-modelled presence and count contrasts. The 34
+  published locality matches have not been validated as count pairs.
+  [Brief](2026-10-28-fossilworks-count-questions-codex.md#2-do-widespread-survivors-remain-widespread-dominants-q-052).

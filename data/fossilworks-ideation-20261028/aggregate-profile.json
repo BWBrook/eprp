@@ -1,0 +1,1628 @@
+{
+  "definitions": {
+    "ages": "Literal numeric provider Ma and bounds; no calibration, midpoint assignment, or repair; widths are uncertainty envelopes, not measured durations",
+    "context": "Literal substring retrieval; categories overlap and do not identify formation mechanisms",
+    "coordinates": "Exact modern coordinate strings, not paleocoordinates or proof of independence",
+    "count_sum": "Sum of all retained register counts for a sample; mixed or unknown units; duplicate register rows retained",
+    "overlap": "Strict interval overlap within same reference, conditional on both valid bounds; identical bounds include zero-width pairs; no probabilistic age interpretation",
+    "quantiles": "Python statistics.quantiles(n=4, method=exclusive)",
+    "richness": "Provider richness, not independent species-level taxonomic adjudication",
+    "sample": "Exact provider sample no; 22 duplicate summaries checked identical except _fw_row_id, then represented once for summaries only",
+    "scope": "20 retained public interval exports, not provider census or PBDB-held records"
+  },
+  "input_hashes_verified_before_and_after": true,
+  "inputs": {
+    "annotations_sha256": "ebac4771b4b0f400c7cb91b9c4e8499ba781731374148f3f77aac672737f66b6",
+    "assembly_sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610"
+  },
+  "queries": {
+    "age_basis": {
+      "result": [
+        {
+          "age basis": "",
+          "samples": 483
+        },
+        {
+          "age basis": "radiocarbon (uncalibrated)",
+          "samples": 361
+        },
+        {
+          "age basis": "other",
+          "samples": 224
+        },
+        {
+          "age basis": "zone",
+          "samples": 141
+        },
+        {
+          "age basis": "paleomag",
+          "samples": 122
+        },
+        {
+          "age basis": "radiocarbon (calibrated)",
+          "samples": 65
+        },
+        {
+          "age basis": "Ar-Ar",
+          "samples": 57
+        },
+        {
+          "age basis": "OSL",
+          "samples": 52
+        },
+        {
+          "age basis": "AEO",
+          "samples": 49
+        },
+        {
+          "age basis": "U/Th",
+          "samples": 28
+        },
+        {
+          "age basis": "ESR",
+          "samples": 25
+        },
+        {
+          "age basis": "radiocarbon",
+          "samples": 23
+        },
+        {
+          "age basis": "U-Pb",
+          "samples": 15
+        },
+        {
+          "age basis": "stage",
+          "samples": 11
+        },
+        {
+          "age basis": "K-Ar",
+          "samples": 10
+        },
+        {
+          "age basis": "thermoluminescence",
+          "samples": 7
+        },
+        {
+          "age basis": "fission track",
+          "samples": 1
+        },
+        {
+          "age basis": "subepoch",
+          "samples": 1
+        }
+      ],
+      "sql": "SELECT \"age basis\",count(DISTINCT \"sample no\") samples\n FROM samples_rows GROUP BY \"age basis\" ORDER BY samples DESC,\"age basis\""
+    },
+    "bluegrass_sampling_contrast": {
+      "result": [
+        {
+          "counted_units": 10,
+          "life form": "birds",
+          "register_rows": 3,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 9,
+          "life form": "bony fishes",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 94,
+          "life form": "carnivores",
+          "register_rows": 6,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 132,
+          "life form": "clams",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 3,
+          "life form": "crustaceans",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 6,
+          "life form": "fishes",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 2,
+          "life form": "frogs",
+          "register_rows": 2,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 30,
+          "life form": "marsupials",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 30,
+          "life form": "other small mammals",
+          "register_rows": 2,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 115,
+          "life form": "rodents",
+          "register_rows": 8,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 1,
+          "life form": "salamanders",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 28,
+          "life form": "snakes",
+          "register_rows": 8,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 65,
+          "life form": "turtles",
+          "register_rows": 4,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 582,
+          "life form": "ungulates",
+          "register_rows": 1,
+          "sample no": "3423"
+        },
+        {
+          "counted_units": 2,
+          "life form": "birds",
+          "register_rows": 1,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 1,
+          "life form": "bony fishes",
+          "register_rows": 1,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 8,
+          "life form": "carnivores",
+          "register_rows": 3,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 3,
+          "life form": "clams",
+          "register_rows": 1,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 16,
+          "life form": "crustaceans",
+          "register_rows": 1,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 8,
+          "life form": "fishes",
+          "register_rows": 4,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 6,
+          "life form": "frogs",
+          "register_rows": 4,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 4,
+          "life form": "marsupials",
+          "register_rows": 1,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 8,
+          "life form": "other small mammals",
+          "register_rows": 4,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 61,
+          "life form": "rodents",
+          "register_rows": 4,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 7,
+          "life form": "salamanders",
+          "register_rows": 2,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 18,
+          "life form": "snakes",
+          "register_rows": 9,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 5,
+          "life form": "turtles",
+          "register_rows": 4,
+          "sample no": "3424"
+        },
+        {
+          "counted_units": 22,
+          "life form": "ungulates",
+          "register_rows": 1,
+          "sample no": "3424"
+        }
+      ],
+      "sql": "SELECT \"sample no\",\"life form\",count(*) register_rows,\n sum(CAST(count AS INT)) counted_units FROM register_rows WHERE \"sample no\" IN ('3423','3424')\n GROUP BY \"sample no\",\"life form\" ORDER BY \"sample no\",\"life form\""
+    },
+    "candidate_citations": {
+      "result": [
+        {
+          "authors": "M. Vianey-Liaud",
+          "doi": "10.1016/j.crpv.2014.12.008",
+          "ref_no": "2390",
+          "title": "Parallelism in the evolution of dental pattern and systematic implications: The case of Protechimys major Schlosser, 1884 (Theridomyinae, Rodentia, Mammalia) and its associated rodents",
+          "year": "2015"
+        },
+        {
+          "authors": "C. R. Stafford, R. L. Richards, C. M. Anslinger",
+          "doi": "",
+          "ref_no": "3135",
+          "title": "The Bluegrass fauna and changes in middle Holocene hunter-gatherer foraging in the southern Midwest",
+          "year": "2000"
+        },
+        {
+          "authors": "S. J. Adams, M. C. McDowell, G. J. Prideaux",
+          "doi": "10.1016/j.jasrep.2015.08.006",
+          "ref_no": "3692",
+          "title": "Understanding accumulation bias in the ecological interpretation of archaeological and paleontological sites on Kangaroo Island, South Australia",
+          "year": "2016"
+        },
+        {
+          "authors": "D. Gaffney, G. R. Summerhayes, S. Luu, J. Menzies, K. Douglass, M. Spitzer, S. Bulmer",
+          "doi": "10.1016/j.quascirev.2020.106742",
+          "ref_no": "3701",
+          "title": "Small game hunting in montane rainforests: Specialised capture and broad spectrum foraging in the Late Pleistocene to Holocene New Guinea Highlands",
+          "year": "2021"
+        },
+        {
+          "authors": "I. Plug, P. Mitchell",
+          "doi": "",
+          "ref_no": "3742",
+          "title": "Sehonghong: hunter-gatherer utilization of animal resources in the highlands of Lesotho",
+          "year": "2008"
+        },
+        {
+          "authors": "J. T. Faith",
+          "doi": "10.1016/j.jhevol.2013.09.001",
+          "ref_no": "3779",
+          "title": "Taphonomic and paleoecological change in the large mammal sequence from Boomplaas Cave, western Cape, South Africa",
+          "year": "2013"
+        },
+        {
+          "authors": "T. V. Strukova, O. P. Bachura, A. V. Borodin, V. V. Stefanovskii",
+          "doi": "",
+          "ref_no": "3798",
+          "title": "Mammal fauna first found in alluvial-speleogenic formations of the late Neopleistocene and Holocene, northern Urals, locality Cheremukhovo-1",
+          "year": "2006"
+        },
+        {
+          "authors": "J. Clark, K. K. Kietzke",
+          "doi": "",
+          "ref_no": "4473",
+          "title": "Paleoecology of the Lower Nodular Zone, Brule Formation, in the Big Badlands of South Dakota",
+          "year": "1967"
+        }
+      ],
+      "sql": "SELECT DISTINCT ref_no,authors,year,title,doi FROM references_rows\n WHERE ref_no IN ('2390','3135','3692','3701','3742','3779','3798','4050','4300','4473')\n ORDER BY ref_no"
+    },
+    "candidate_series": {
+      "result": [
+        {
+          "bound_pairs_including_blank": 1,
+          "contexts": "",
+          "distinct_ma": 1,
+          "intervals": "Early Oligocene",
+          "max_richness": 9,
+          "max_units": 81,
+          "methods": "screenwash",
+          "min_richness": 2,
+          "min_units": 7,
+          "missing_bounds": 9,
+          "ref no": "2390",
+          "samples": 9
+        },
+        {
+          "bound_pairs_including_blank": 1,
+          "contexts": "human accumulation,midden,settlement",
+          "distinct_ma": 1,
+          "intervals": "Holocene",
+          "max_richness": 40,
+          "max_units": 1107,
+          "methods": "quarry,screenwash",
+          "min_richness": 40,
+          "min_units": 169,
+          "missing_bounds": 0,
+          "ref no": "3135",
+          "samples": 2
+        },
+        {
+          "bound_pairs_including_blank": 6,
+          "contexts": "bird accumulation,cave,pitfall trap",
+          "distinct_ma": 7,
+          "intervals": "Holocene,Pleistocene - Holocene,Late Pleistocene",
+          "max_richness": 18,
+          "max_units": 401,
+          "methods": "quarry,screenwash",
+          "min_richness": 8,
+          "min_units": 35,
+          "missing_bounds": 2,
+          "ref no": "3692",
+          "samples": 10
+        },
+        {
+          "bound_pairs_including_blank": 7,
+          "contexts": "human accumulation,rock shelter",
+          "distinct_ma": 7,
+          "intervals": "Holocene,Pleistocene - Holocene,Late Pleistocene",
+          "max_richness": 26,
+          "max_units": 468,
+          "methods": "quarry",
+          "min_richness": 12,
+          "min_units": 54,
+          "missing_bounds": 0,
+          "ref no": "3701",
+          "samples": 11
+        },
+        {
+          "bound_pairs_including_blank": 8,
+          "contexts": "human accumulation,rock shelter",
+          "distinct_ma": 11,
+          "intervals": "Holocene,Late Pleistocene",
+          "max_richness": 39,
+          "max_units": 1668,
+          "methods": "quarry,screenwash",
+          "min_richness": 8,
+          "min_units": 25,
+          "missing_bounds": 4,
+          "ref no": "3742",
+          "samples": 11
+        },
+        {
+          "bound_pairs_including_blank": 11,
+          "contexts": "cave,human accumulation,bird accumulation,carnivore accumulation,cave,human accumulation,carnivore accumulation,cave,human accumulation,bird accumulation,carnivore accumulation,cave",
+          "distinct_ma": 12,
+          "intervals": "Holocene,Pleistocene - Holocene,Late Pleistocene",
+          "max_richness": 24,
+          "max_units": 1888,
+          "methods": "quarry",
+          "min_richness": 12,
+          "min_units": 51,
+          "missing_bounds": 2,
+          "ref no": "3779",
+          "samples": 13
+        },
+        {
+          "bound_pairs_including_blank": 3,
+          "contexts": "cave",
+          "distinct_ma": 3,
+          "intervals": "Holocene,Pleistocene - Holocene,Late Pleistocene",
+          "max_richness": 29,
+          "max_units": 5282,
+          "methods": "quarry",
+          "min_richness": 12,
+          "min_units": 124,
+          "missing_bounds": 0,
+          "ref no": "3798",
+          "samples": 11
+        },
+        {
+          "bound_pairs_including_blank": 1,
+          "contexts": "lake deposit,lake deposit,paleosol,lagoon deposit",
+          "distinct_ma": 1,
+          "intervals": "Late Oligocene",
+          "max_richness": 11,
+          "max_units": 534,
+          "methods": "screenwash",
+          "min_richness": 2,
+          "min_units": 11,
+          "missing_bounds": 0,
+          "ref no": "4050",
+          "samples": 9
+        },
+        {
+          "bound_pairs_including_blank": 1,
+          "contexts": "fluvial deposit",
+          "distinct_ma": 1,
+          "intervals": "Early Miocene",
+          "max_richness": 8,
+          "max_units": 49,
+          "methods": "",
+          "min_richness": 1,
+          "min_units": 1,
+          "missing_bounds": 0,
+          "ref no": "4300",
+          "samples": 14
+        },
+        {
+          "bound_pairs_including_blank": 1,
+          "contexts": "overbank deposit,lake deposit",
+          "distinct_ma": 1,
+          "intervals": "Early Oligocene",
+          "max_richness": 26,
+          "max_units": 529,
+          "methods": "surface",
+          "min_richness": 7,
+          "min_units": 47,
+          "missing_bounds": 9,
+          "ref no": "4473",
+          "samples": 9
+        }
+      ],
+      "sql": "WITH s AS (SELECT * FROM samples_rows WHERE _fw_row_id IN\n (SELECT MIN(_fw_row_id) FROM samples_rows GROUP BY \"sample no\")),g AS (SELECT \"sample no\" sn,sum(CAST(count AS INTEGER)) n,count(*) r\n FROM register_rows GROUP BY \"sample no\")\n SELECT s.\"ref no\",count(*) samples,count(DISTINCT s.Ma) distinct_ma,\n count(DISTINCT s.\"max Ma\"||'|'||s.\"min Ma\") bound_pairs_including_blank,\n min(g.n) min_units,max(g.n) max_units,min(CAST(s.richness AS INT)) min_richness,\n max(CAST(s.richness AS INT)) max_richness,\n sum(s.\"max Ma\"='' OR s.\"min Ma\"='') missing_bounds,\n group_concat(DISTINCT s.\"time interval\") intervals,\n group_concat(DISTINCT s.\"sampling methods\") methods,\n group_concat(DISTINCT s.\"taphonomic context\") contexts\n FROM s JOIN g ON g.sn=s.\"sample no\"\n WHERE s.\"ref no\" IN ('2390','3135','3692','3701','3742','3779','3798','4050','4300','4473')\n GROUP BY s.\"ref no\" ORDER BY s.\"ref no\""
+    },
+    "coordinate_reuse": {
+      "result": [
+        {
+          "coordinate_groups": 232,
+          "largest": 13,
+          "samples": 696
+        }
+      ],
+      "sql": "WITH s AS (SELECT DISTINCT \"sample no\",latitude,longitude FROM samples_rows),\n g AS (SELECT latitude,longitude,count(*) n FROM s GROUP BY latitude,longitude HAVING n>1)\n SELECT count(*) coordinate_groups,sum(n) samples,max(n) largest FROM g"
+    },
+    "count_units": {
+      "result": [
+        {
+          "count_unit": "unknown",
+          "register_rows": 25980,
+          "review_level": "not_reviewed",
+          "samples": 1673
+        },
+        {
+          "count_unit": "skeletal_elements",
+          "register_rows": 15,
+          "review_level": "primary_source_checked",
+          "samples": 2
+        },
+        {
+          "count_unit": "individual_association",
+          "register_rows": 14,
+          "review_level": "provider_comment_reviewed",
+          "samples": 13
+        },
+        {
+          "count_unit": "catalogued_specimens",
+          "register_rows": 8,
+          "review_level": "primary_source_checked",
+          "samples": 1
+        },
+        {
+          "count_unit": "unknown",
+          "register_rows": 8,
+          "review_level": "provider_comment_reviewed",
+          "samples": 8
+        },
+        {
+          "count_unit": "minimum_individuals",
+          "register_rows": 7,
+          "review_level": "provider_comment_reviewed",
+          "samples": 5
+        },
+        {
+          "count_unit": "identified_specimens",
+          "register_rows": 4,
+          "review_level": "provider_comment_reviewed",
+          "samples": 2
+        },
+        {
+          "count_unit": "jaws_maxillae_plus_mandibles",
+          "register_rows": 2,
+          "review_level": "provider_comment_reviewed",
+          "samples": 1
+        },
+        {
+          "count_unit": "minimum_individuals",
+          "register_rows": 2,
+          "review_level": "primary_source_checked",
+          "samples": 1
+        },
+        {
+          "count_unit": "mixed_individual_and_element",
+          "register_rows": 2,
+          "review_level": "provider_comment_reviewed",
+          "samples": 2
+        },
+        {
+          "count_unit": "burial_association",
+          "register_rows": 1,
+          "review_level": "provider_comment_reviewed",
+          "samples": 1
+        },
+        {
+          "count_unit": "mollusc_specimen",
+          "register_rows": 1,
+          "review_level": "primary_source_checked",
+          "samples": 1
+        },
+        {
+          "count_unit": "specimens_association_adjusted",
+          "register_rows": 1,
+          "review_level": "provider_comment_reviewed",
+          "samples": 1
+        },
+        {
+          "count_unit": "specimens_association_uncertain",
+          "register_rows": 1,
+          "review_level": "provider_comment_reviewed",
+          "samples": 1
+        }
+      ],
+      "sql": "SELECT count_unit,review_level,count(*) register_rows,\n count(DISTINCT sample_no) samples FROM annotations.register_count_evidence\n GROUP BY count_unit,review_level ORDER BY register_rows DESC,count_unit,review_level"
+    },
+    "countries": {
+      "result": [
+        {
+          "country": "United States",
+          "samples": 362
+        },
+        {
+          "country": "Spain",
+          "samples": 164
+        },
+        {
+          "country": "France",
+          "samples": 136
+        },
+        {
+          "country": "Canada",
+          "samples": 75
+        },
+        {
+          "country": "China",
+          "samples": 74
+        },
+        {
+          "country": "Australia",
+          "samples": 63
+        },
+        {
+          "country": "Turkey",
+          "samples": 53
+        },
+        {
+          "country": "Germany",
+          "samples": 52
+        },
+        {
+          "country": "South Africa",
+          "samples": 51
+        },
+        {
+          "country": "Italy",
+          "samples": 50
+        },
+        {
+          "country": "Russia",
+          "samples": 48
+        },
+        {
+          "country": "India",
+          "samples": 33
+        },
+        {
+          "country": "Greece",
+          "samples": 23
+        },
+        {
+          "country": "Kenya",
+          "samples": 23
+        },
+        {
+          "country": "Poland",
+          "samples": 22
+        },
+        {
+          "country": "Israel",
+          "samples": 20
+        },
+        {
+          "country": "Morocco",
+          "samples": 20
+        },
+        {
+          "country": "Papua New Guinea",
+          "samples": 18
+        },
+        {
+          "country": "Portugal",
+          "samples": 18
+        },
+        {
+          "country": "Argentina",
+          "samples": 17
+        },
+        {
+          "country": "Mexico",
+          "samples": 16
+        },
+        {
+          "country": "Brazil",
+          "samples": 15
+        },
+        {
+          "country": "Kazakhstan",
+          "samples": 14
+        },
+        {
+          "country": "Ethiopia",
+          "samples": 12
+        },
+        {
+          "country": "Thailand",
+          "samples": 12
+        },
+        {
+          "country": "United Kingdom",
+          "samples": 12
+        },
+        {
+          "country": "Egypt",
+          "samples": 11
+        },
+        {
+          "country": "Hungary",
+          "samples": 11
+        },
+        {
+          "country": "Lesotho",
+          "samples": 11
+        },
+        {
+          "country": "Romania",
+          "samples": 11
+        },
+        {
+          "country": "Chile",
+          "samples": 10
+        },
+        {
+          "country": "Ukraine",
+          "samples": 10
+        },
+        {
+          "country": "Vietnam",
+          "samples": 9
+        },
+        {
+          "country": "Algeria",
+          "samples": 8
+        },
+        {
+          "country": "Austria",
+          "samples": 8
+        },
+        {
+          "country": "Tanzania",
+          "samples": 8
+        },
+        {
+          "country": "Ecuador",
+          "samples": 7
+        },
+        {
+          "country": "Indonesia",
+          "samples": 7
+        },
+        {
+          "country": "Mongolia",
+          "samples": 7
+        },
+        {
+          "country": "Switzerland",
+          "samples": 7
+        },
+        {
+          "country": "Sudan",
+          "samples": 6
+        },
+        {
+          "country": "Bulgaria",
+          "samples": 5
+        },
+        {
+          "country": "Georgia",
+          "samples": 5
+        },
+        {
+          "country": "Iran",
+          "samples": 5
+        },
+        {
+          "country": "Jordan",
+          "samples": 5
+        },
+        {
+          "country": "Mali",
+          "samples": 5
+        },
+        {
+          "country": "New Zealand",
+          "samples": 5
+        },
+        {
+          "country": "Pakistan",
+          "samples": 5
+        },
+        {
+          "country": "Tunisia",
+          "samples": 5
+        },
+        {
+          "country": "Armenia",
+          "samples": 4
+        },
+        {
+          "country": "Cameroon",
+          "samples": 4
+        },
+        {
+          "country": "Croatia",
+          "samples": 4
+        },
+        {
+          "country": "Czech Republic",
+          "samples": 4
+        },
+        {
+          "country": "Denmark",
+          "samples": 4
+        },
+        {
+          "country": "Peru",
+          "samples": 4
+        },
+        {
+          "country": "Serbia",
+          "samples": 4
+        },
+        {
+          "country": "Slovakia",
+          "samples": 4
+        },
+        {
+          "country": "Sri Lanka",
+          "samples": 4
+        },
+        {
+          "country": "Venezuela",
+          "samples": 4
+        },
+        {
+          "country": "Bosnia and Herzegovina",
+          "samples": 3
+        },
+        {
+          "country": "Democratic Republic of the Congo",
+          "samples": 3
+        },
+        {
+          "country": "Eritrea",
+          "samples": 3
+        },
+        {
+          "country": "Japan",
+          "samples": 3
+        },
+        {
+          "country": "United Arab Emirates",
+          "samples": 3
+        },
+        {
+          "country": "Belgium",
+          "samples": 2
+        },
+        {
+          "country": "Bolivia",
+          "samples": 2
+        },
+        {
+          "country": "Cambodia",
+          "samples": 2
+        },
+        {
+          "country": "Iraq",
+          "samples": 2
+        },
+        {
+          "country": "Kyrgyzstan",
+          "samples": 2
+        },
+        {
+          "country": "Laos",
+          "samples": 2
+        },
+        {
+          "country": "Mauritania",
+          "samples": 2
+        },
+        {
+          "country": "Montenegro",
+          "samples": 2
+        },
+        {
+          "country": "Niger",
+          "samples": 2
+        },
+        {
+          "country": "Nigeria",
+          "samples": 2
+        },
+        {
+          "country": "Uganda",
+          "samples": 2
+        },
+        {
+          "country": "Uruguay",
+          "samples": 2
+        },
+        {
+          "country": "Uzbekistan",
+          "samples": 2
+        },
+        {
+          "country": "Zambia",
+          "samples": 2
+        },
+        {
+          "country": "Afghanistan",
+          "samples": 1
+        },
+        {
+          "country": "Belize",
+          "samples": 1
+        },
+        {
+          "country": "Botswana",
+          "samples": 1
+        },
+        {
+          "country": "Colombia",
+          "samples": 1
+        },
+        {
+          "country": "Guatemala",
+          "samples": 1
+        },
+        {
+          "country": "Honduras",
+          "samples": 1
+        },
+        {
+          "country": "Lebanon",
+          "samples": 1
+        },
+        {
+          "country": "Libya",
+          "samples": 1
+        },
+        {
+          "country": "Malawi",
+          "samples": 1
+        },
+        {
+          "country": "Morrocco",
+          "samples": 1
+        },
+        {
+          "country": "Myanmar",
+          "samples": 1
+        },
+        {
+          "country": "Namibia",
+          "samples": 1
+        },
+        {
+          "country": "North Korea",
+          "samples": 1
+        },
+        {
+          "country": "Panama",
+          "samples": 1
+        },
+        {
+          "country": "Saudi Arabia",
+          "samples": 1
+        },
+        {
+          "country": "Senegal",
+          "samples": 1
+        },
+        {
+          "country": "Syria",
+          "samples": 1
+        },
+        {
+          "country": "Turkmenistan",
+          "samples": 1
+        }
+      ],
+      "sql": "SELECT country,count(DISTINCT \"sample no\") samples\n FROM samples_rows GROUP BY country ORDER BY samples DESC,country"
+    },
+    "country_rodent_support": {
+      "result": [
+        {
+          "counted_units": 237,
+          "country": "France",
+          "refs": 4,
+          "register_rows": 10,
+          "samples": 4,
+          "time interval": "Early Eocene"
+        },
+        {
+          "counted_units": 2984,
+          "country": "France",
+          "refs": 14,
+          "register_rows": 202,
+          "samples": 23,
+          "time interval": "Early Miocene"
+        },
+        {
+          "counted_units": 5837,
+          "country": "France",
+          "refs": 8,
+          "register_rows": 111,
+          "samples": 18,
+          "time interval": "Early Oligocene"
+        },
+        {
+          "counted_units": 38,
+          "country": "France",
+          "refs": 1,
+          "register_rows": 5,
+          "samples": 1,
+          "time interval": "Late Eocene"
+        },
+        {
+          "counted_units": 1680,
+          "country": "France",
+          "refs": 5,
+          "register_rows": 45,
+          "samples": 5,
+          "time interval": "Late Miocene"
+        },
+        {
+          "counted_units": 1027,
+          "country": "France",
+          "refs": 7,
+          "register_rows": 44,
+          "samples": 10,
+          "time interval": "Middle Eocene"
+        },
+        {
+          "counted_units": 620,
+          "country": "France",
+          "refs": 5,
+          "register_rows": 62,
+          "samples": 8,
+          "time interval": "Middle Miocene"
+        },
+        {
+          "counted_units": 3183,
+          "country": "Spain",
+          "refs": 7,
+          "register_rows": 83,
+          "samples": 13,
+          "time interval": "Early Miocene"
+        },
+        {
+          "counted_units": 979,
+          "country": "Spain",
+          "refs": 6,
+          "register_rows": 45,
+          "samples": 8,
+          "time interval": "Early Oligocene"
+        },
+        {
+          "counted_units": 70,
+          "country": "Spain",
+          "refs": 2,
+          "register_rows": 10,
+          "samples": 3,
+          "time interval": "Late Eocene"
+        },
+        {
+          "counted_units": 978,
+          "country": "Spain",
+          "refs": 10,
+          "register_rows": 66,
+          "samples": 13,
+          "time interval": "Late Miocene"
+        },
+        {
+          "counted_units": 205,
+          "country": "Spain",
+          "refs": 2,
+          "register_rows": 6,
+          "samples": 2,
+          "time interval": "Middle Eocene"
+        },
+        {
+          "counted_units": 4088,
+          "country": "Spain",
+          "refs": 11,
+          "register_rows": 101,
+          "samples": 16,
+          "time interval": "Middle Miocene"
+        },
+        {
+          "counted_units": 890,
+          "country": "United States",
+          "refs": 12,
+          "register_rows": 128,
+          "samples": 23,
+          "time interval": "Early Eocene"
+        },
+        {
+          "counted_units": 8409,
+          "country": "United States",
+          "refs": 8,
+          "register_rows": 75,
+          "samples": 11,
+          "time interval": "Early Miocene"
+        },
+        {
+          "counted_units": 2541,
+          "country": "United States",
+          "refs": 9,
+          "register_rows": 123,
+          "samples": 21,
+          "time interval": "Early Oligocene"
+        },
+        {
+          "counted_units": 22,
+          "country": "United States",
+          "refs": 3,
+          "register_rows": 10,
+          "samples": 3,
+          "time interval": "Late Eocene"
+        },
+        {
+          "counted_units": 673,
+          "country": "United States",
+          "refs": 10,
+          "register_rows": 65,
+          "samples": 11,
+          "time interval": "Late Miocene"
+        },
+        {
+          "counted_units": 976,
+          "country": "United States",
+          "refs": 10,
+          "register_rows": 90,
+          "samples": 19,
+          "time interval": "Middle Eocene"
+        },
+        {
+          "counted_units": 960,
+          "country": "United States",
+          "refs": 8,
+          "register_rows": 66,
+          "samples": 11,
+          "time interval": "Middle Miocene"
+        }
+      ],
+      "sql": "SELECT country,\"time interval\",count(DISTINCT \"sample no\") samples,\n count(DISTINCT \"ref no\") refs,count(*) register_rows,sum(CAST(count AS INT)) counted_units\n FROM register_rows WHERE country IN ('United States','France','Spain')\n AND \"time interval\" IN ('Early Miocene','Middle Miocene','Late Miocene','Early Oligocene',\n 'Late Eocene','Middle Eocene','Early Eocene') AND \"life form\"='rodents'\n GROUP BY country,\"time interval\" ORDER BY country,\"time interval\""
+    },
+    "duplicate_taxon_keys": {
+      "result": [
+        {
+          "excess_rows": 39,
+          "keys": 38
+        }
+      ],
+      "sql": "SELECT count(*) keys,sum(n-1) excess_rows FROM\n (SELECT \"sample no\",genus,qualifier,species,count(*) n FROM register_rows\n GROUP BY \"sample no\",genus,qualifier,species HAVING n>1)"
+    },
+    "hell_creek": {
+      "result": [
+        {
+          "counted_units": 229,
+          "register_rows": 42,
+          "samples": 4,
+          "time interval": "Early Palaeocene"
+        },
+        {
+          "counted_units": 7198,
+          "register_rows": 169,
+          "samples": 22,
+          "time interval": "Maastrichtian"
+        }
+      ],
+      "sql": "SELECT \"time interval\",count(DISTINCT \"sample no\") samples,\n count(*) register_rows,sum(CAST(count AS INT)) counted_units FROM register_rows\n WHERE formation='Hell Creek' GROUP BY \"time interval\" ORDER BY \"time interval\""
+    },
+    "interval_support": {
+      "result": [
+        {
+          "n200_richness10": 190,
+          "n500_richness20": 80,
+          "samples": 359,
+          "time interval": "Holocene",
+          "valid_width_le_100kyr": 354
+        },
+        {
+          "n200_richness10": 162,
+          "n500_richness20": 75,
+          "samples": 336,
+          "time interval": "Late Pleistocene",
+          "valid_width_le_100kyr": 189
+        },
+        {
+          "n200_richness10": 40,
+          "n500_richness20": 10,
+          "samples": 124,
+          "time interval": "Early Miocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 23,
+          "n500_richness20": 6,
+          "samples": 114,
+          "time interval": "Late Miocene",
+          "valid_width_le_100kyr": 7
+        },
+        {
+          "n200_richness10": 19,
+          "n500_richness20": 3,
+          "samples": 89,
+          "time interval": "Middle Miocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 29,
+          "n500_richness20": 13,
+          "samples": 87,
+          "time interval": "Early Pleistocene",
+          "valid_width_le_100kyr": 10
+        },
+        {
+          "n200_richness10": 49,
+          "n500_richness20": 19,
+          "samples": 80,
+          "time interval": "Middle Pleistocene",
+          "valid_width_le_100kyr": 39
+        },
+        {
+          "n200_richness10": 17,
+          "n500_richness20": 7,
+          "samples": 79,
+          "time interval": "Early Oligocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 6,
+          "n500_richness20": 2,
+          "samples": 61,
+          "time interval": "Campanian",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 9,
+          "n500_richness20": 2,
+          "samples": 55,
+          "time interval": "Maastrichtian",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 14,
+          "n500_richness20": 5,
+          "samples": 50,
+          "time interval": "Late Oligocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 9,
+          "n500_richness20": 3,
+          "samples": 48,
+          "time interval": "Middle Eocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 14,
+          "n500_richness20": 2,
+          "samples": 42,
+          "time interval": "Early Eocene",
+          "valid_width_le_100kyr": 1
+        },
+        {
+          "n200_richness10": 5,
+          "n500_richness20": 2,
+          "samples": 29,
+          "time interval": "Late Eocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 12,
+          "n500_richness20": 7,
+          "samples": 29,
+          "time interval": "Early Pliocene",
+          "valid_width_le_100kyr": 5
+        },
+        {
+          "n200_richness10": 4,
+          "n500_richness20": 3,
+          "samples": 25,
+          "time interval": "Early Palaeocene",
+          "valid_width_le_100kyr": 4
+        },
+        {
+          "n200_richness10": 10,
+          "n500_richness20": 4,
+          "samples": 23,
+          "time interval": "Pleistocene - Holocene",
+          "valid_width_le_100kyr": 21
+        },
+        {
+          "n200_richness10": 5,
+          "n500_richness20": 3,
+          "samples": 19,
+          "time interval": "Late Pliocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 7,
+          "n500_richness20": 4,
+          "samples": 17,
+          "time interval": "Late Palaeocene",
+          "valid_width_le_100kyr": 0
+        },
+        {
+          "n200_richness10": 4,
+          "n500_richness20": 1,
+          "samples": 9,
+          "time interval": "Middle Palaeocene",
+          "valid_width_le_100kyr": 0
+        }
+      ],
+      "sql": "WITH s AS (SELECT * FROM samples_rows WHERE _fw_row_id IN\n (SELECT MIN(_fw_row_id) FROM samples_rows GROUP BY \"sample no\")),g AS (SELECT \"sample no\" sn,sum(CAST(count AS INTEGER)) n,count(*) r\n FROM register_rows GROUP BY \"sample no\")\n SELECT s.\"time interval\",count(*) samples,\n sum(g.n>=200 AND CAST(s.richness AS INT)>=10) n200_richness10,\n sum(g.n>=500 AND CAST(s.richness AS INT)>=20) n500_richness20,\n sum(s.\"max Ma\"<>'' AND s.\"min Ma\"<>'' AND\n CAST(s.\"max Ma\" AS REAL)-CAST(s.\"min Ma\" AS REAL) BETWEEN 0 AND 0.1) valid_width_le_100kyr\n FROM s JOIN g ON g.sn=s.\"sample no\" GROUP BY s.\"time interval\" ORDER BY samples DESC"
+    },
+    "life_forms": {
+      "result": [
+        {
+          "life form": "ungulates",
+          "register_rows": 6395,
+          "samples": 1072
+        },
+        {
+          "life form": "rodents",
+          "register_rows": 5500,
+          "samples": 1031
+        },
+        {
+          "life form": "carnivores",
+          "register_rows": 3079,
+          "samples": 836
+        },
+        {
+          "life form": "other small mammals",
+          "register_rows": 2163,
+          "samples": 785
+        },
+        {
+          "life form": "birds",
+          "register_rows": 1389,
+          "samples": 414
+        },
+        {
+          "life form": "marsupials",
+          "register_rows": 1156,
+          "samples": 225
+        },
+        {
+          "life form": "fishes",
+          "register_rows": 782,
+          "samples": 217
+        },
+        {
+          "life form": "other large mammals",
+          "register_rows": 670,
+          "samples": 420
+        },
+        {
+          "life form": "primates",
+          "register_rows": 670,
+          "samples": 287
+        },
+        {
+          "life form": "leaves",
+          "register_rows": 511,
+          "samples": 23
+        },
+        {
+          "life form": "snakes",
+          "register_rows": 497,
+          "samples": 196
+        },
+        {
+          "life form": "turtles",
+          "register_rows": 478,
+          "samples": 252
+        },
+        {
+          "life form": "bats",
+          "register_rows": 429,
+          "samples": 184
+        },
+        {
+          "life form": "snails",
+          "register_rows": 402,
+          "samples": 76
+        },
+        {
+          "life form": "lizards",
+          "register_rows": 400,
+          "samples": 185
+        },
+        {
+          "life form": "frogs",
+          "register_rows": 315,
+          "samples": 170
+        },
+        {
+          "life form": "multituberculates",
+          "register_rows": 223,
+          "samples": 61
+        },
+        {
+          "life form": "clams",
+          "register_rows": 198,
+          "samples": 68
+        },
+        {
+          "life form": "ornithischians",
+          "register_rows": 130,
+          "samples": 78
+        },
+        {
+          "life form": "theropods",
+          "register_rows": 112,
+          "samples": 53
+        },
+        {
+          "life form": "bony fishes",
+          "register_rows": 110,
+          "samples": 47
+        },
+        {
+          "life form": "crocodilians",
+          "register_rows": 108,
+          "samples": 81
+        },
+        {
+          "life form": "salamanders",
+          "register_rows": 104,
+          "samples": 58
+        },
+        {
+          "life form": "marine mammals",
+          "register_rows": 72,
+          "samples": 41
+        },
+        {
+          "life form": "sharks",
+          "register_rows": 39,
+          "samples": 8
+        },
+        {
+          "life form": "crustaceans",
+          "register_rows": 29,
+          "samples": 23
+        },
+        {
+          "life form": "other reptiles",
+          "register_rows": 24,
+          "samples": 22
+        },
+        {
+          "life form": "rays",
+          "register_rows": 17,
+          "samples": 10
+        },
+        {
+          "life form": "amphibians",
+          "register_rows": 16,
+          "samples": 9
+        },
+        {
+          "life form": "herbs",
+          "register_rows": 9,
+          "samples": 1
+        },
+        {
+          "life form": "other invertebrates",
+          "register_rows": 9,
+          "samples": 7
+        },
+        {
+          "life form": "sauropods",
+          "register_rows": 5,
+          "samples": 5
+        },
+        {
+          "life form": "marine reptiles",
+          "register_rows": 3,
+          "samples": 2
+        },
+        {
+          "life form": "other arthropods",
+          "register_rows": 1,
+          "samples": 1
+        },
+        {
+          "life form": "scarab beetles",
+          "register_rows": 1,
+          "samples": 1
+        }
+      ],
+      "sql": "SELECT \"life form\",count(*) register_rows,\n count(DISTINCT \"sample no\") samples FROM register_rows GROUP BY \"life form\"\n ORDER BY register_rows DESC,\"life form\""
+    },
+    "sample_qc": {
+      "result": [
+        {
+          "samples": 1631,
+          "status": "equal",
+          "summary_rows": 1652
+        },
+        {
+          "samples": 44,
+          "status": "summary_lower",
+          "summary_rows": 45
+        }
+      ],
+      "sql": "SELECT status,count(*) summary_rows,count(DISTINCT s.\"sample no\") samples\n FROM sample_qc q JOIN samples_rows s ON s._fw_row_id=q.sample_row_id GROUP BY status ORDER BY status"
+    },
+    "sampling_methods": {
+      "result": [
+        {
+          "samples": 535,
+          "sampling methods": "quarry"
+        },
+        {
+          "samples": 450,
+          "sampling methods": "quarry,screenwash"
+        },
+        {
+          "samples": 331,
+          "sampling methods": ""
+        },
+        {
+          "samples": 255,
+          "sampling methods": "screenwash"
+        },
+        {
+          "samples": 47,
+          "sampling methods": "surface"
+        },
+        {
+          "samples": 23,
+          "sampling methods": "screenwash,surface"
+        },
+        {
+          "samples": 21,
+          "sampling methods": "quarry,screenwash,surface"
+        },
+        {
+          "samples": 13,
+          "sampling methods": "quarry,surface"
+        }
+      ],
+      "sql": "SELECT \"sampling methods\",count(DISTINCT \"sample no\") samples\n FROM samples_rows GROUP BY \"sampling methods\" ORDER BY samples DESC,\"sampling methods\""
+    },
+    "source_reuse": {
+      "result": [
+        {
+          "largest": 14,
+          "multisample_refs": 287,
+          "refs": 1027,
+          "samples_in_multisample_refs": 935
+        }
+      ],
+      "sql": "WITH g AS (SELECT \"ref no\",count(DISTINCT \"sample no\") n\n FROM samples_rows GROUP BY \"ref no\") SELECT count(*) refs,sum(n>1) multisample_refs,\n sum(CASE WHEN n>1 THEN n ELSE 0 END) samples_in_multisample_refs,max(n) largest FROM g"
+    },
+    "taphonomic_tokens": {
+      "result": [
+        {
+          "bird": 86,
+          "blank": 485,
+          "carnivore": 106,
+          "cave": 333,
+          "human": 493,
+          "pitfall": 55
+        }
+      ],
+      "sql": "SELECT\n count(DISTINCT CASE WHEN \"taphonomic context\"='' THEN \"sample no\" END) blank,\n count(DISTINCT CASE WHEN \"taphonomic context\" LIKE '%human accumulation%' THEN \"sample no\" END) human,\n count(DISTINCT CASE WHEN \"taphonomic context\" LIKE '%bird accumulation%' THEN \"sample no\" END) bird,\n count(DISTINCT CASE WHEN \"taphonomic context\" LIKE '%carnivore accumulation%' THEN \"sample no\" END) carnivore,\n count(DISTINCT CASE WHEN \"taphonomic context\" LIKE '%pitfall trap%' THEN \"sample no\" END) pitfall,\n count(DISTINCT CASE WHEN \"taphonomic context\" LIKE '%cave%' THEN \"sample no\" END) cave FROM samples_rows"
+    },
+    "within_reference_age_overlap": {
+      "result": [
+        {
+          "identical_bounds_pairs": 561,
+          "pairs_with_both_valid_bounds": 1263,
+          "strict_overlap_pairs": 702
+        }
+      ],
+      "sql": "WITH s AS (SELECT * FROM samples_rows WHERE _fw_row_id IN\n (SELECT MIN(_fw_row_id) FROM samples_rows GROUP BY \"sample no\")),v AS (SELECT *,\n CAST(\"max Ma\" AS REAL) hi,CAST(\"min Ma\" AS REAL) lo FROM s WHERE \"max Ma\"<>''\n AND \"min Ma\"<>'' AND CAST(\"max Ma\" AS REAL)>=CAST(\"min Ma\" AS REAL))\n SELECT count(*) pairs_with_both_valid_bounds,\n sum(a.lo<b.hi AND b.lo<a.hi) strict_overlap_pairs,\n sum(a.lo=b.lo AND a.hi=b.hi) identical_bounds_pairs\n FROM v a JOIN v b ON a.\"ref no\"=b.\"ref no\" AND a.\"sample no\"<b.\"sample no\""
+    }
+  },
+  "summary": {
+    "missing_age_bounds": 291,
+    "missing_coordinates": 0,
+    "provider_richness": {
+      "maximum": 129,
+      "median": 12,
+      "minimum": 1,
+      "n": 1675,
+      "q25": 7.0,
+      "q75": 20.0
+    },
+    "register_count_sum": {
+      "maximum": 78407,
+      "median": 140,
+      "minimum": 1,
+      "n": 1675,
+      "q25": 40.0,
+      "q75": 537.0
+    },
+    "register_rows_per_sample": {
+      "maximum": 129,
+      "median": 12,
+      "minimum": 1,
+      "n": 1675,
+      "q25": 7.0,
+      "q75": 21.0
+    },
+    "reversed_age_bounds": [
+      {
+        "Ma": "9.45",
+        "max Ma": "9.11",
+        "min Ma": "9.79",
+        "sample no": "4918"
+      }
+    ],
+    "sample_count_sum_ge": {
+      "100": 951,
+      "1000": 258,
+      "200": 720,
+      "50": 1196,
+      "500": 439
+    },
+    "sample_ids": 1675,
+    "sample_summary_rows": 1697,
+    "samples_repeated_across_selected_intervals": 0,
+    "valid_age_width_Ma": {
+      "maximum": 11.5,
+      "median": 0.1173,
+      "minimum": 0.0,
+      "n": 1383,
+      "q25": 0.0026320000000000002,
+      "q75": 1.3900000000000006
+    },
+    "valid_age_width_le_Ma": {
+      "0": 6,
+      "0.001": 256,
+      "0.01": 423,
+      "0.1": 630,
+      "1": 971,
+      "5": 1296
+    }
+  }
+}
