@@ -1,0 +1,21 @@
+{
+  "ref_no": "4144",
+  "request_method": "GET",
+  "url": "https://fossilworks.org/?a=getRefs&ref_no=4144",
+  "requested_utc": "2026-10-28T02:53:42.574404+00:00",
+  "status": 200,
+  "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4144",
+  "response_headers": {
+    "Date": "Wed, 28 Oct 2026 02:53:42 GMT",
+    "Server": "Apache/2.4.67 (Debian)",
+    "Vary": "Accept-Encoding",
+    "Content-Type": "text/html",
+    "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+    "Content-Length": "6112",
+    "Connection": "close"
+  },
+  "body_file": "ref-4144.html",
+  "size": 6112,
+  "sha256": "4684139dc8ee662671ea10f93c4b134cfa4b0919ec08c1290595dbe09decbc57",
+  "completed_utc": "2026-10-28T02:53:42.947858+00:00"
+}

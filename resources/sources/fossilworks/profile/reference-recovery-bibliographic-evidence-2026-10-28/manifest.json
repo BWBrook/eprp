@@ -1,0 +1,90 @@
+{
+  "provider": "original journal hosting service, publisher-deposited Crossref metadata and BHL digitized publication metadata",
+  "receipts": [
+    {
+      "url": "https://hrcak.srce.hr/en/314667",
+      "request_method": "GET",
+      "requested_utc": "2026-10-28T02:57:02.343378+00:00",
+      "status": 200,
+      "final_url": "https://hrcak.srce.hr/en/314667",
+      "response_headers": {
+        "Date": "Wed, 28 Oct 2026 02:57:07 GMT",
+        "Server": "Apache",
+        "Cache-Control": "no-cache, private",
+        "X-XSS-Protection": "1; mode=block",
+        "x-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "body_file": "4030-journal.html",
+      "size": 28952,
+      "sha256": "acd3ef8850051b74486dbe80563aba0fde90acb46d8335c37218573333bb4f82",
+      "completed_utc": "2026-10-28T02:57:08.135009+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.4154/gc.2024.03",
+      "request_method": "GET",
+      "requested_utc": "2026-10-28T02:57:09.135143+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.4154/gc.2024.03",
+      "response_headers": {
+        "Date": "Wed, 28 Oct 2026 02:57:09 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "access-control-expose-headers": "Link",
+        "access-control-allow-headers": "X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language, Accept-Ranges, Cache-Control",
+        "access-control-allow-origin": "*",
+        "server": "Jetty(9.4.40.v20210413)",
+        "x-rate-limit-limit": "5",
+        "x-rate-limit-interval": "1s",
+        "x-concurrency-limit": "1",
+        "x-api-pool": "public-single",
+        "permissions-policy": "interest-cohort=()",
+        "strict-transport-security": "max-age=31536000;"
+      },
+      "body_file": "4030-crossref.json",
+      "size": 4290,
+      "sha256": "d0bfd0c2e805458ebdb1dab9dca3128b6fb4716a02059c416a979a1898c2b84b",
+      "completed_utc": "2026-10-28T02:57:10.022047+00:00"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1007/s12542-015-0275-3",
+      "request_method": "GET",
+      "requested_utc": "2026-10-28T02:57:11.022228+00:00",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1007/s12542-015-0275-3",
+      "response_headers": {
+        "Date": "Wed, 28 Oct 2026 02:57:11 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "access-control-expose-headers": "Link",
+        "access-control-allow-headers": "X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language, Accept-Ranges, Cache-Control",
+        "access-control-allow-origin": "*",
+        "server": "Jetty(9.4.40.v20210413)",
+        "x-rate-limit-limit": "5",
+        "x-rate-limit-interval": "1s",
+        "x-concurrency-limit": "1",
+        "x-api-pool": "public-single",
+        "permissions-policy": "interest-cohort=()",
+        "strict-transport-security": "max-age=31536000;"
+      },
+      "body_file": "3996-crossref.json",
+      "size": 42331,
+      "sha256": "fdb5750b962c4aa339927954444541503ad9f8c8a4794ce4d1c0dcc08bc12d8e",
+      "completed_utc": "2026-10-28T02:57:12.415235+00:00"
+    },
+    {
+      "url": "https://www.biodiversitylibrary.org/part/79354",
+      "request_method": "GET",
+      "requested_utc": "2026-10-28T02:57:13.415416+00:00",
+      "access_error": "HTTP Error 403: Forbidden",
+      "completed_utc": "2026-10-28T02:57:13.724894+00:00"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "verified_utc": "2026-10-28T03:17:40.319548+00:00",
+  "host": "nectar-codex-ts",
+  "base_path": "/data/codex/artifacts/eprp-fossilworks-assembly/2026-10-28-assembly-v1/fossilworks.sqlite",
+  "base_sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+  "sidecar_path": "/data/codex/artifacts/eprp-fossilworks-annotations/2026-10-28-annotations-v1/fossilworks-annotations.sqlite",
+  "sidecar_sha256": "ebac4771b4b0f400c7cb91b9c4e8499ba781731374148f3f77aac672737f66b6",
+  "sidecar_bytes": 12165120,
+  "checks": {
+    "integrity_check": "ok",
+    "foreign_key_check": "no errors",
+    "register_join_rows": 26046,
+    "count_unit_unknown_rows": 25988,
+    "recovered_unresolved_register_rows": 1266
+  },
+  "publication_evidence_path": "/data/codex/artifacts/eprp-fossilworks-annotations/count-evidence-2026-10-28",
+  "publication_evidence_manifest_sha256": "56b6e0eb9e4275365193df62fae51468104a2df84844e83e735d79ba37f60739",
+  "publication_evidence_payloads_verified": 9
+}

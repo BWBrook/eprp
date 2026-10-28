@@ -72,8 +72,9 @@ Observed in these exports:
   that an entry should be deleted.
 - 58 reference IDs are absent from the selected reference sheets, affecting
   1,266 register rows and 96 distinct samples. No missing ID was found in
-  another selected interval. These remain unresolved; no external source has
-  been consulted to supply them.
+  another selected interval. They remain unresolved in this original assembly;
+  subsequent provider citation recovery is retained separately in the
+  [annotation sidecar](annotations.md).
 - 44 distinct samples have a provider total below the sum of their retained
   register counts. Both values and the contributing original rows are kept.
 - 34 matrix cells differ from register sums. Each matrix value matches the

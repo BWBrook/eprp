@@ -1,0 +1,2329 @@
+{
+  "kind": "separate missing-reference metadata overlay; original assembly unchanged",
+  "database_sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+  "input_sha256": "bcaec315a948343663827f804520457c751006720df3ec5fcb42428908b377fd",
+  "evidence_manifest_sha256": "d58b24c9f55de45c7ceb7403e8cbd002d55fb585072e34cd94f0e2cc3dfcebc3",
+  "evidence_directory": "reference-recovery-evidence-2026-10-28",
+  "supplemental_manifest_sha256": "191adcec8d80fc3421a2a252e4a0e08ce7dd32948a08c02cefee0acb09819efa",
+  "supplemental_directory": "reference-recovery-supplement-2026-10-28",
+  "provider": "Fossilworks / Ecological Register",
+  "access_depth": "full provider reference pages; bibliographic metadata only",
+  "counts": {
+    "provider_metadata_recovered": 58
+  },
+  "references": [
+    {
+      "ref_no": "3996",
+      "affected_register_rows": 10,
+      "affected_sample_ids": [
+        "4412"
+      ],
+      "source": {
+        "ref_no": "3996",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=3996",
+        "requested_utc": "2026-10-28T02:53:12.563772+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=3996",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:12 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6201",
+          "Connection": "close"
+        },
+        "body_file": "ref-3996.html",
+        "size": 6201,
+        "sha256": "ff2871b565cfddec9a2b8506e432c2da87d7ba5689acc76d518f4a42bf16aa05",
+        "completed_utc": "2026-10-28T02:53:13.053012+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "B. Mennecart, B. Yerly, P.-O. Mojon, C. Angelone, O. Maridet, M. Böhme, and C. Pirkenseer. 2015. A new Late Agenian (MN2a, Early Miocene) fossil assemblage from Wallenried (Molasse Basin, Canton Fribourg, Switzerland). Paläontologische Zeitschrift 90:101-123 [ER 3996]",
+      "provider_sample_ids": [
+        "4412"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-10-28 23:17:06",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4010",
+      "affected_register_rows": 28,
+      "affected_sample_ids": [
+        "4423"
+      ],
+      "source": {
+        "ref_no": "4010",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4010",
+        "requested_utc": "2026-10-28T02:53:14.053396+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4010",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:14 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6306",
+          "Connection": "close"
+        },
+        "body_file": "ref-4010.html",
+        "size": 6306,
+        "sha256": "67709fcda36e8759654e6912511fc969c92a5ca20904286428d5abe16931cb04",
+        "completed_utc": "2026-10-28T02:53:14.555182+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "D. Vasilyan, A. Cernansky, Z. Szyndlar, and T. Mörs. 2022. Amphibian and reptilian fauna from the early Miocene of Echzell, Germany. Fossil Record 25(1):99-145 [ER 4010]",
+      "provider_sample_ids": [
+        "4423"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-04 00:44:12",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4013",
+      "affected_register_rows": 6,
+      "affected_sample_ids": [
+        "4441"
+      ],
+      "source": {
+        "ref_no": "4013",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4013",
+        "requested_utc": "2026-10-28T02:53:15.555406+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4013",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:15 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6349",
+          "Connection": "close"
+        },
+        "body_file": "ref-4013.html",
+        "size": 6349,
+        "sha256": "778cedba963b5db54b16c379b04453364d35feb86ab29c3adcbb68ea5949e44e",
+        "completed_utc": "2026-10-28T02:53:15.962196+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "J.-C. Rage and I. G. Danilov. 2008. A new Miocene fauna of snakes from eastern Siberia, Russia. Was the snake fauna largely homogenous in Eurasia during the Miocene?. Comptes Rendus Palevol 7:383-390 [ER 4013]",
+      "provider_sample_ids": [
+        "4441"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-05 09:30:59",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4026",
+      "affected_register_rows": 14,
+      "affected_sample_ids": [
+        "4442"
+      ],
+      "source": {
+        "ref_no": "4026",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4026",
+        "requested_utc": "2026-10-28T02:53:16.962973+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4026",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:17 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6345",
+          "Connection": "close"
+        },
+        "body_file": "ref-4026.html",
+        "size": 6345,
+        "sha256": "e09c02c5492d8f99c719fa8df8a9935896b10ed8a52481226faf557bd913bb07",
+        "completed_utc": "2026-10-28T02:53:17.498333+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "V. A. Codrea, M. Bordeianu, and M. Venczel. 2022. Amphibians and squamate reptiles from the late Miocene of Falciu (Eastern Romania). Palaeontologia Electronica 25(2):a19- [ER 4026]",
+      "provider_sample_ids": [
+        "4442"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-10 06:43:42",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4027",
+      "affected_register_rows": 39,
+      "affected_sample_ids": [
+        "4443"
+      ],
+      "source": {
+        "ref_no": "4027",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4027",
+        "requested_utc": "2026-10-28T02:53:18.499437+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4027",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:18 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6440",
+          "Connection": "close"
+        },
+        "body_file": "ref-4027.html",
+        "size": 6440,
+        "sha256": "cfe175cd59e1325173bea8e28f21cd529e81479dd4332b6f5a6b27fb7d933de5",
+        "completed_utc": "2026-10-28T02:53:18.935183+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "A. Villa, G. Carnevale, M. Pavia, L. Rook, M. Sami, Z. Szyndlar, and M. Delfino. 2021. An overview of the late miocene vertebrates from the fissure fillings of Monticino quarry (Brisighella, Italy), with new data on non-mammalian taxa. Rivista Italiana di Paleontologia e Stratigrafia 127(2):297-354 [ER 4027]",
+      "provider_sample_ids": [
+        "4443"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-10 09:47:53",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4028",
+      "affected_register_rows": 11,
+      "affected_sample_ids": [
+        "4444"
+      ],
+      "source": {
+        "ref_no": "4028",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4028",
+        "requested_utc": "2026-10-28T02:53:19.935477+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4028",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:20 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6103",
+          "Connection": "close"
+        },
+        "body_file": "ref-4028.html",
+        "size": 6103,
+        "sha256": "899b3950869d5fb4fffcb3c951167239305343eb531762d6de276dc1b00e4a8d",
+        "completed_utc": "2026-10-28T02:53:20.431119+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Ivanov. 2002. The oldest known Miocene snake fauna from Central Europe: Merkur-North locality, Czech Republic. Acta Palaeontologica Polonica 47(3):513-534 [ER 4028]",
+      "provider_sample_ids": [
+        "4444"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-10 11:28:15",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4030",
+      "affected_register_rows": 16,
+      "affected_sample_ids": [
+        "4469"
+      ],
+      "source": {
+        "ref_no": "4030",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4030",
+        "requested_utc": "2026-10-28T02:53:21.431459+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4030",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:21 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6085",
+          "Connection": "close"
+        },
+        "body_file": "ref-4030.html",
+        "size": 6085,
+        "sha256": "7066d05b48a3926b32017bc2e745e5361f5b70aba871551bb5960b213439e420",
+        "completed_utc": "2026-10-28T02:53:21.845327+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "J. Hirs, M. Venczel, and K. Sebe. 2015. Middle Miocene (Late Badenian) microvertebrates from Hidas, SW Hungary. Geologia Croatica 77(1):15-28 [ER 4030]",
+      "provider_sample_ids": [
+        "4469"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-10 11:55:40",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4031",
+      "affected_register_rows": 26,
+      "affected_sample_ids": [
+        "4446"
+      ],
+      "source": {
+        "ref_no": "4031",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4031",
+        "requested_utc": "2026-10-28T02:53:22.846098+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4031",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:23 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6130",
+          "Connection": "close"
+        },
+        "body_file": "ref-4031.html",
+        "size": 6130,
+        "sha256": "c345f2b3812b96b048c485183f09b063cd7c61ed581c57bf1999a1f7b668e9ec",
+        "completed_utc": "2026-10-28T02:53:23.282705+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "A. Cenansky, Z. Szyndlar, and T. Mörs. 2017. Fossil squamate faunas from the Neogene of Hambach (northwestern Germany). Palaeobiodiversity and Palaeoenvironments 97:329-354 [ER 4031]",
+      "provider_sample_ids": [
+        "4446"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-11 00:25:54",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4032",
+      "affected_register_rows": 15,
+      "affected_sample_ids": [
+        "4447",
+        "4448"
+      ],
+      "source": {
+        "ref_no": "4032",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4032",
+        "requested_utc": "2026-10-28T02:53:24.282976+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4032",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:24 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6416",
+          "Connection": "close"
+        },
+        "body_file": "ref-4032.html",
+        "size": 6416,
+        "sha256": "aca9bf8958d363c3bd964c677575453ee95184548127a5adf9330dee8f20a44e",
+        "completed_utc": "2026-10-28T02:53:24.905492+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. L. Georgalis, A. Villa, and M. Delfino. 2017. Fossil lizards and snakes from Ano Metochi - a diverse squamate fauna from the latest Miocene of northern Greece. Historical Biology 29(6):730-742 [ER 4032]",
+      "provider_sample_ids": [
+        "4447",
+        "4448"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-11 01:06:55",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4033",
+      "affected_register_rows": 4,
+      "affected_sample_ids": [
+        "4449"
+      ],
+      "source": {
+        "ref_no": "4033",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4033",
+        "requested_utc": "2026-10-28T02:53:25.905938+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4033",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:26 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "5819",
+          "Connection": "close"
+        },
+        "body_file": "ref-4033.html",
+        "size": 5819,
+        "sha256": "3cf0d81cd007cef9c9845b2b98287e70555aa1efbe82f0176f2f34cdbc685546",
+        "completed_utc": "2026-10-28T02:53:26.541355+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. F. Gunnell, A. J. Winkler, E. R. Miller, J. J. Head, A. N. El-Barkooky, M. A. Gawad, W. J. Sanders, and P. D. Gingerich. 2016. Small vertebrates from Khasm El-Raqaba, late Middle Miocene, Eastern Desert, Egypt. Historical Biology 28(1-2):159-171 [ER 4033]",
+      "provider_sample_ids": [
+        "4449"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-11 01:43:47",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4034",
+      "affected_register_rows": 20,
+      "affected_sample_ids": [
+        "4466",
+        "4467"
+      ],
+      "source": {
+        "ref_no": "4034",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4034",
+        "requested_utc": "2026-10-28T02:53:27.541643+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4034",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:27 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6097",
+          "Connection": "close"
+        },
+        "body_file": "ref-4034.html",
+        "size": 6097,
+        "sha256": "9a0b80ec128dccb76c74fdbdd327b59cc6c2e501772255ec8b49bc09a8385c16",
+        "completed_utc": "2026-10-28T02:53:27.949769+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Ivanov and M. Böhme. 2011. Snakes from Griesbeckerzell (Langhian, Early Badenian), North Alpine Foreland Basin (Germany), with comments on the evolution of snake faunas in Central Europe during the Miocene Climatic Optimum. Geodiversitas 33(3):411-449 [ER 4034]",
+      "provider_sample_ids": [
+        "4466",
+        "4467"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-11 04:12:22",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4047",
+      "affected_register_rows": 18,
+      "affected_sample_ids": [
+        "4462",
+        "4463",
+        "4464"
+      ],
+      "source": {
+        "ref_no": "4047",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4047",
+        "requested_utc": "2026-10-28T02:53:28.950133+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4047",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:29 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6295",
+          "Connection": "close"
+        },
+        "body_file": "ref-4047.html",
+        "size": 6295,
+        "sha256": "b6486b49058621f5fec49797599cea618170844c01eb922924ba9ebfec61680b",
+        "completed_utc": "2026-10-28T02:53:29.382262+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Ivanov, D. Vasilyan, M. Böhme, and V. S. Zazhigin. 2019. Miocene snakes from northeastern Kazakhstan: new data on the evolution of snake assemblages in Siberia. Historical Biology 31(10):1284-1303 [ER 4047]",
+      "provider_sample_ids": [
+        "4462",
+        "4463",
+        "4464"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-14 07:39:06",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4048",
+      "affected_register_rows": 6,
+      "affected_sample_ids": [
+        "4465"
+      ],
+      "source": {
+        "ref_no": "4048",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4048",
+        "requested_utc": "2026-10-28T02:53:30.382586+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4048",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:30 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6283",
+          "Connection": "close"
+        },
+        "body_file": "ref-4048.html",
+        "size": 6283,
+        "sha256": "5e34f73e32c18f317816ef9788e8d922094f7048625f0824268fd1b33875697f",
+        "completed_utc": "2026-10-28T02:53:31.053261+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. L. Georgalis. 2019. Poor but classic: The squamate fauna from the late Miocene of Pikermi, near Athens, Greece. Comptes Rendus Palevol 18:801-815 [ER 4048]",
+      "provider_sample_ids": [
+        "4465"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-14 08:55:29",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4050",
+      "affected_register_rows": 69,
+      "affected_sample_ids": [
+        "4472",
+        "4473",
+        "4474",
+        "4475",
+        "4476",
+        "4477",
+        "4478",
+        "4479",
+        "4480"
+      ],
+      "source": {
+        "ref_no": "4050",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4050",
+        "requested_utc": "2026-10-28T02:53:32.053526+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4050",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:32 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6659",
+          "Connection": "close"
+        },
+        "body_file": "ref-4050.html",
+        "size": 6659,
+        "sha256": "5784391230e1b0a80e18ad186a60dd73517ece001261d0b650845075d463d2a8",
+        "completed_utc": "2026-10-28T02:53:32.501878+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "D. Vasilyan, Z. Rocek, A. Ayvazyan, and L. Claessens. 2019. Fish, amphibian and reptilian faunas from latest Oligocene to middle Miocene localities from Central Turkey. Palaeobiodiversity and Palaeoenvironments 99(6):723-757 [ER 4050]",
+      "provider_sample_ids": [
+        "4472",
+        "4473",
+        "4474",
+        "4475",
+        "4476",
+        "4477",
+        "4478",
+        "4479",
+        "4480"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-14 09:37:39",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4062",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "4470"
+      ],
+      "source": {
+        "ref_no": "4062",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4062",
+        "requested_utc": "2026-10-28T02:53:33.502192+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4062",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:33 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6511",
+          "Connection": "close"
+        },
+        "body_file": "ref-4062.html",
+        "size": 6511,
+        "sha256": "47085a688d48bb276cab4f3cd67390b1d35188ab70b7b5be8b4e0d7c81240a10",
+        "completed_utc": "2026-10-28T02:53:34.018925+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "D. Vasilyan. 2020. Fish, amphibian and reptilian assemblage from the middle Miocene locality Gracanica-Bugojno palaeolake, Bosnia and Herzegovina. Palaeobiodiversity and Palaeoenvironments 100:437-455 [ER 4062]",
+      "provider_sample_ids": [
+        "4470"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-15 02:19:25",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4063",
+      "affected_register_rows": 21,
+      "affected_sample_ids": [
+        "4471"
+      ],
+      "source": {
+        "ref_no": "4063",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4063",
+        "requested_utc": "2026-10-28T02:53:35.019189+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4063",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:35 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6408",
+          "Connection": "close"
+        },
+        "body_file": "ref-4063.html",
+        "size": 6408,
+        "sha256": "d9da395b59d2a96a4b71cd39927a4a81ca08f57160621ef6ba3d6c93ca5a0c53",
+        "completed_utc": "2026-10-28T02:53:35.573803+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Ivanov, A. Cernansky, I. Bonilla-Salomon, and A. H. Lujon. 2020. Early Miocene squamate assemblage from the Mokrá-Western Quarry (Czech Republic) and its palaeobiogeographical and palaeoenvironmental implications. Geodiversitas 42(20):343-376 [ER 4063]",
+      "provider_sample_ids": [
+        "4471"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-15 04:53:23",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4064",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "4481",
+        "4482",
+        "4483"
+      ],
+      "source": {
+        "ref_no": "4064",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4064",
+        "requested_utc": "2026-10-28T02:53:36.574232+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4064",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:36 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6531",
+          "Connection": "close"
+        },
+        "body_file": "ref-4064.html",
+        "size": 6531,
+        "sha256": "26f631b4cb76b3220d9801e641c582de92b19d554e2ead486b3de1053223dd33",
+        "completed_utc": "2026-10-28T02:53:37.100321+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "A. Solórzano, A. D. Rincón, G. M. Cidade, M. Núñez Flores, and L. Sánchez. 2018. Lower Miocene alligatoroids (Crocodylia) from the Castillo Formation, northwest of Venezuela. Palaeobiodiversity and Palaeoenvironments 99:241-259 [ER 4064]",
+      "provider_sample_ids": [
+        "4481",
+        "4482",
+        "4483"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-15 22:06:43",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4065",
+      "affected_register_rows": 116,
+      "affected_sample_ids": [
+        "4484",
+        "4485",
+        "4498",
+        "4499"
+      ],
+      "source": {
+        "ref_no": "4065",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4065",
+        "requested_utc": "2026-10-28T02:53:38.100674+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4065",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:38 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6778",
+          "Connection": "close"
+        },
+        "body_file": "ref-4065.html",
+        "size": 6778,
+        "sha256": "940610251f772cd875386d3985812cfb24b1a944f87b27d6cf9a1d42d605fa0c",
+        "completed_utc": "2026-10-28T02:53:38.470865+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "S. R. May. 2019. The Lapara Creek Fauna: Early Clarendonian of south Texas, USA. Palaeontologia Electronica 22.1.15A:1-129 [ER 4065]",
+      "provider_sample_ids": [
+        "4484",
+        "4485",
+        "4498",
+        "4499"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2024-11-15 22:48:40",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4138",
+      "affected_register_rows": 21,
+      "affected_sample_ids": [
+        "4595"
+      ],
+      "source": {
+        "ref_no": "4138",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4138",
+        "requested_utc": "2026-10-28T02:53:39.471404+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4138",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:39 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6384",
+          "Connection": "close"
+        },
+        "body_file": "ref-4138.html",
+        "size": 6384,
+        "sha256": "d411a5966ba6e4480fae9acbca2d107afae2d8c5c6db02b8cb3717b5c1797996",
+        "completed_utc": "2026-10-28T02:53:40.061343+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "J. Sudre, B. Sigé, J. A. Remy, B. Marandat, J.-L. Hartenberger, M. Godinot, and J.-Y. Crochet. 1990. Une faune du niveau d'Egerkingen (MP 14; Bartonien inferieur) dans les Phosphorites du Quercy (Sud de la France). Palaeovertebrata 20(1):1-32 [ER 4138]",
+      "provider_sample_ids": [
+        "4595"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-09 23:43:56",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4143",
+      "affected_register_rows": 10,
+      "affected_sample_ids": [
+        "4599"
+      ],
+      "source": {
+        "ref_no": "4143",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4143",
+        "requested_utc": "2026-10-28T02:53:41.061700+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4143",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:41 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6118",
+          "Connection": "close"
+        },
+        "body_file": "ref-4143.html",
+        "size": 6118,
+        "sha256": "0c618cd29a194ac146faa8c795b58f6b8e76c9a4ccb402a10bd5c8ca18229463",
+        "completed_utc": "2026-10-28T02:53:41.574013+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "T. Kaya, D. Geraads, and V. Tuna. 2005. A new Late Miocene mammalian fauna in Karaburun Peninsula (W Turkey). Neues Jahrbuch für Geologie und Paläontologie - Abhandlungen 236(3):321-349 [ER 4143]",
+      "provider_sample_ids": [
+        "4599"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-12 05:30:40",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4144",
+      "affected_register_rows": 19,
+      "affected_sample_ids": [
+        "4600"
+      ],
+      "source": {
+        "ref_no": "4144",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4144",
+        "requested_utc": "2026-10-28T02:53:42.574404+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4144",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:42 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6112",
+          "Connection": "close"
+        },
+        "body_file": "ref-4144.html",
+        "size": 6112,
+        "sha256": "4684139dc8ee662671ea10f93c4b134cfa4b0919ec08c1290595dbe09decbc57",
+        "completed_utc": "2026-10-28T02:53:42.947858+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "B. Azanza, E. Cerdeño, L. Ginsburg, J. van der Made, J. Morales, and P. Tassy. 1993. Les grands mammifères du Miocene inférieur d Artesilla, bassin de Calatayud-Teruel (province de Saragosse, Espagne). Bulletin du Museum national d'histoire naturelle. Section C, Sciences de la terre, paléontologie, géologie, minéralogie 15(1):105-153 [ER 4144]",
+      "provider_sample_ids": [
+        "4600"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-12 06:07:19",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4147",
+      "affected_register_rows": 38,
+      "affected_sample_ids": [
+        "4605"
+      ],
+      "source": {
+        "ref_no": "4147",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4147",
+        "requested_utc": "2026-10-28T02:53:43.948299+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4147",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:44 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6277",
+          "Connection": "close"
+        },
+        "body_file": "ref-4147.html",
+        "size": 6277,
+        "sha256": "57101720fec94efd98f3742180f259a170ad8f8f1bc22c12f5a68f30db9fc98b",
+        "completed_utc": "2026-10-28T02:53:44.648017+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Vianey-Liaud, F. Lihoreau, F. Solé, K. Gernelle, Q. Vautrin, C. Bronnert, H. Bourget, D. Vidalenc, and R. Tabuce. 2024. A revision of the late early Eocene mammal faunas from Mas de Gimel and Naples (Montpellier, Southern France) and the description of a new theridomorph rodent. Geodiversitas 46(10):387-422 [ER 4147]",
+      "provider_sample_ids": [
+        "4605"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-13 00:06:49",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4155",
+      "affected_register_rows": 7,
+      "affected_sample_ids": [
+        "4614"
+      ],
+      "source": {
+        "ref_no": "4155",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4155",
+        "requested_utc": "2026-10-28T02:53:45.648473+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4155",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:45 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6534",
+          "Connection": "close"
+        },
+        "body_file": "ref-4155.html",
+        "size": 6534,
+        "sha256": "4748db908a948ee39ff6a32dd2c435110b772614970c0e76c375c73628c0e596",
+        "completed_utc": "2026-10-28T02:53:46.061198+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "J. J. Hooker. 1996. Mammals from the Early (late Ypresian) to Middle (Lutetian) Eocene Bracklesham Group, southern England. Tertiary Research 16(1-4):141-174 [ER 4155]",
+      "provider_sample_ids": [
+        "4614"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-17 16:26:37",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4156",
+      "affected_register_rows": 32,
+      "affected_sample_ids": [
+        "4615"
+      ],
+      "source": {
+        "ref_no": "4156",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4156",
+        "requested_utc": "2026-10-28T02:53:47.061554+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4156",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:47 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "5995",
+          "Connection": "close"
+        },
+        "body_file": "ref-4156.html",
+        "size": 5995,
+        "sha256": "62146868cce02ce1bfd8ace8307824c34bc2fbfe37a1007aab65989e373b51dc",
+        "completed_utc": "2026-10-28T02:53:47.461059+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "V. J. Sach and E. J. Heizmann. 2001. Stratigraphie und Säugetierfaunen der Brackwassermolasse in der Umgebung von Ulm (Südwestdeutschland). Stuttgarter Beiträge zur Naturkunde. Serie B, Geologie und Paläontologie 310:1-96 [ER 4156]",
+      "provider_sample_ids": [
+        "4615"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-17 17:38:10",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4163",
+      "affected_register_rows": 20,
+      "affected_sample_ids": [
+        "4622"
+      ],
+      "source": {
+        "ref_no": "4163",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4163",
+        "requested_utc": "2026-10-28T02:53:48.461375+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4163",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:48 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6300",
+          "Connection": "close"
+        },
+        "body_file": "ref-4163.html",
+        "size": 6300,
+        "sha256": "7797836efce0ff40abe4e5884d553905c99256a968e8b32f9b352e21a61b3b61",
+        "completed_utc": "2026-10-28T02:53:48.869422+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "D. Geraads, N. Spassov, L. Hristova, and G. N. Markov. 2011. Upper Miocene mammals from Strumyani, South-Western Bulgaria. Geodiversitas 33(3):451-484 [ER 4163]",
+      "provider_sample_ids": [
+        "4622"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-21 22:00:35",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4164",
+      "affected_register_rows": 97,
+      "affected_sample_ids": [
+        "4623"
+      ],
+      "source": {
+        "ref_no": "4164",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4164",
+        "requested_utc": "2026-10-28T02:53:49.869694+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4164",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:50 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6352",
+          "Connection": "close"
+        },
+        "body_file": "ref-4164.html",
+        "size": 6352,
+        "sha256": "404056cd06e4ab306ec0ea7b7967ff22a5fa6d798c2022ffb8123f22a84e1c6f",
+        "completed_utc": "2026-10-28T02:53:50.221135+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Augé, L. Ginsburg, F. Lapparent de Broin, M. Makinsky, C. Mourer, D. Pouit, and S. Sen. 2002. Les Vertébrés du Miocène moyen de Contres (Loir-et-Cher, France). Revue Paléobiol., Geuève 21(2):819-852 [ER 4164]",
+      "provider_sample_ids": [
+        "4623"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-21 23:13:03",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4165",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "4624"
+      ],
+      "source": {
+        "ref_no": "4165",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4165",
+        "requested_utc": "2026-10-28T02:53:51.221437+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4165",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:51 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6336",
+          "Connection": "close"
+        },
+        "body_file": "ref-4165.html",
+        "size": 6336,
+        "sha256": "b01efedc8e65605e7ea7137b9e567abfecb70e27aa9791ae2b8aff118ae36fae",
+        "completed_utc": "2026-10-28T02:53:51.590797+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "P. Kampouridis, J. Hartung, and M. Böhme. 2022. Large mammals from the late Middle Miocene of Markt Rettenbach (Bavaria, Germany). N. Jb. Geol. Paläont. Abh 304(3):299-312 [ER 4165]",
+      "provider_sample_ids": [
+        "4624"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-25 20:06:33",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4166",
+      "affected_register_rows": 14,
+      "affected_sample_ids": [
+        "4625"
+      ],
+      "source": {
+        "ref_no": "4166",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4166",
+        "requested_utc": "2026-10-28T02:53:52.591194+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4166",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:52 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6266",
+          "Connection": "close"
+        },
+        "body_file": "ref-4166.html",
+        "size": 6266,
+        "sha256": "8dbd36f7d86baa21109d364dab1e090f607457b56a08e76cb40d41d9693afc6d",
+        "completed_utc": "2026-10-28T02:53:52.971992+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "Y. Jehenne. 1970. Etude du gisement de Saint-Capraise d'Eymet en Dordogne. Bulletin des Sciences de la Terre de l'Universite de Poitiers 10:1-42 [ER 4166]",
+      "provider_sample_ids": [
+        "4625"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2024-12-25 20:38:26",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4253",
+      "affected_register_rows": 4,
+      "affected_sample_ids": [
+        "4655"
+      ],
+      "source": {
+        "ref_no": "4253",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4253",
+        "requested_utc": "2026-10-28T02:53:53.972288+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4253",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:54 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6323",
+          "Connection": "close"
+        },
+        "body_file": "ref-4253.html",
+        "size": 6323,
+        "sha256": "63ab70ec1fbf8a24c6ad72fad478b65a53cb767a225d6095736465c68f8b5039",
+        "completed_utc": "2026-10-28T02:53:54.396218+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "S. Sen, M. Delfino, and N. Kazanci. 2017. Cestepe, a new early Pliocene vertebrate locality in Central Anatolia and its stratigraphic context. Annales de Paléontologie 103:149-163 [ER 4253]",
+      "provider_sample_ids": [
+        "4655"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2025-02-04 03:33:34",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4262",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "4656"
+      ],
+      "source": {
+        "ref_no": "4262",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4262",
+        "requested_utc": "2026-10-28T02:53:55.396473+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4262",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:55 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6258",
+          "Connection": "close"
+        },
+        "body_file": "ref-4262.html",
+        "size": 6258,
+        "sha256": "b98e68f9f4eb02922ab0246d0e544a2cf700644fc7da4cfd348c246335aea49a",
+        "completed_utc": "2026-10-28T02:53:55.883159+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "H.-A. Blain, J. Agustí, J. M. López-García, H. Haddoumi, H. Aouraghe, K. E. Hammouti, A. Pérez-González, M. G. Chacón, and R. Sala. 2013. Amphibians and squamate reptiles from the Late Miocene (Vallesian) of eastern Morrocco (Guefaït-1, Jerada Province). Journal of Vertebrate Paleontology 33(4):804-816 [ER 4262]",
+      "provider_sample_ids": [
+        "4656"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2025-02-05 03:57:24",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4263",
+      "affected_register_rows": 25,
+      "affected_sample_ids": [
+        "4657"
+      ],
+      "source": {
+        "ref_no": "4263",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4263",
+        "requested_utc": "2026-10-28T02:53:56.883399+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4263",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:57 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Connection": "close",
+          "Transfer-Encoding": "chunked"
+        },
+        "body_file": "ref-4263.html",
+        "size": 6168,
+        "sha256": "fb6de1caca85cee36412bcc7ad04eb1f71fafe18ee96a50a1fca0d76d0efaa1e",
+        "completed_utc": "2026-10-28T02:53:57.325809+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "D. Parmley and K. B. Hunter. 2010. Fossil Snakes of the Clarendonian (Late Miocene) Pratt Slide Local Fauna of Nebraska, with the Description of a New Natricine Colubrid. Journal of Herpetology 44(4):526-543 [ER 4263]",
+      "provider_sample_ids": [
+        "4657"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2025-02-05 04:56:31",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4268",
+      "affected_register_rows": 37,
+      "affected_sample_ids": [
+        "4658"
+      ],
+      "source": {
+        "ref_no": "4268",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4268",
+        "requested_utc": "2026-10-28T02:53:58.326047+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4268",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:58 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6180",
+          "Connection": "close"
+        },
+        "body_file": "ref-4268.html",
+        "size": 6180,
+        "sha256": "4da80e1386353b4a0544b8f760c2a0d852e56741db4f897a5e0646ca887bb183",
+        "completed_utc": "2026-10-28T02:53:58.720250+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Böhme. 2010. Ectothermic vertebrates (Actinopterygii, Allocaudata, Urodela, Anura, Crocodylia, Squamata) from the Miocene of Sandelzhausen (Germany, Bavaria) and their implications for environment reconstruction and palaeoclimate. Paläontol Z 84:3-41 [ER 4268]",
+      "provider_sample_ids": [
+        "4658"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2025-02-06 04:18:45",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4276",
+      "affected_register_rows": 13,
+      "affected_sample_ids": [
+        "4659"
+      ],
+      "source": {
+        "ref_no": "4276",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4276",
+        "requested_utc": "2026-10-28T02:53:59.720490+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4276",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:53:59 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6348",
+          "Connection": "close"
+        },
+        "body_file": "ref-4276.html",
+        "size": 6348,
+        "sha256": "5774e975118170d1e2abc7cf19bceb72da76ccc493648833a927eecf68d829e5",
+        "completed_utc": "2026-10-28T02:54:00.199369+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Ivanov. 2008. Early Miocene Amphibians (Caudata, Salientia) from the Mokrá-Western Quarry (Czech Republic) with comments on the evolution of Early Miocene amphibian assemblages in Central Europe. Geobios 41:465-492 [ER 4276]",
+      "provider_sample_ids": [
+        "4659"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2025-02-08 03:31:25",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4300",
+      "affected_register_rows": 57,
+      "affected_sample_ids": [
+        "4660",
+        "4661",
+        "4662",
+        "4663",
+        "4664",
+        "4665",
+        "4666",
+        "4667",
+        "4668",
+        "4669",
+        "4670",
+        "4671",
+        "4672",
+        "4673"
+      ],
+      "source": {
+        "ref_no": "4300",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4300",
+        "requested_utc": "2026-10-28T02:54:01.199719+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4300",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:01 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "7278",
+          "Connection": "close"
+        },
+        "body_file": "ref-4300.html",
+        "size": 7278,
+        "sha256": "7f5ef90c6048d6a3b0f0dc93915c92f6158a7df1d982805a4f268b157a7567d8",
+        "completed_utc": "2026-10-28T02:54:01.575100+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "X. Murelaga, X. P. Suberbiola, F. de Lapparent de Broin, J.-C. Rage, S. Duffaud, H. Astibia, and A. Badiola. 2002. Amphibians and reptiles from the Early Miocene of the Bardenas Reales of Navarre (Ebro Basin, Iberian Peninsula). Geobios 35:347-365 [ER 4300]",
+      "provider_sample_ids": [
+        "4660",
+        "4661",
+        "4662",
+        "4663",
+        "4664",
+        "4665",
+        "4666",
+        "4667",
+        "4668",
+        "4669",
+        "4670",
+        "4671",
+        "4672",
+        "4673"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Nicholas Vine on 2025-02-13 22:55:23",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4414",
+      "affected_register_rows": 14,
+      "affected_sample_ids": [
+        "4697"
+      ],
+      "source": {
+        "ref_no": "4414",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=sampleResults&sample_no=4697",
+        "requested_utc": "2026-10-28T02:56:11.974721+00:00",
+        "sample_page_id": "4697",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=sampleResults&sample_no=4697",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:56:12 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Connection": "close",
+          "Transfer-Encoding": "chunked"
+        },
+        "body_file": "ref-4414.html",
+        "size": 15723,
+        "sha256": "153ab5d0a54b771ff5371d37cb4f8cb7dbef51cedef72ad600608f0008fd23de",
+        "completed_utc": "2026-10-28T02:56:12.499848+00:00"
+      },
+      "source_collection": "sample_page_supplement",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "D. C. Christophel, L. J. Scriven, and D. R. Greenwood. 1992. An Eocene megafossil flora from Nelly Creek, South Australia. Transactions of the Royal Society of South Australia 116(2):65-76 [ER 4414]",
+      "provider_sample_ids": [
+        "4697"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "initial_reference_page_result": {
+        "status": "unresolved_no_unique_exact_id",
+        "source": {
+          "ref_no": "4414",
+          "request_method": "GET",
+          "url": "https://fossilworks.org/?a=getRefs&ref_no=4414",
+          "requested_utc": "2026-10-28T02:54:02.575438+00:00",
+          "status": 200,
+          "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4414",
+          "response_headers": {
+            "Date": "Wed, 28 Oct 2026 02:54:02 GMT",
+            "Server": "Apache/2.4.67 (Debian)",
+            "Vary": "Accept-Encoding",
+            "Content-Type": "text/html",
+            "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+            "Content-Length": "7531",
+            "Connection": "close"
+          },
+          "body_file": "ref-4414.html",
+          "size": 7531,
+          "sha256": "42f392f5aaa65776ac2ee79cf26615a75f6d03198a5b5c7fec3a64a83a38bce9",
+          "completed_utc": "2026-10-28T02:54:02.972276+00:00"
+        },
+        "provider_access_message": "No matching references were found"
+      },
+      "provider_contribution_statement": null,
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained",
+      "recovery_route": "original_sample_page_with_explicit_sample_id_and_exact_reference_id"
+    },
+    {
+      "ref_no": "4429",
+      "affected_register_rows": 26,
+      "affected_sample_ids": [
+        "4716",
+        "4717",
+        "4718"
+      ],
+      "source": {
+        "ref_no": "4429",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4429",
+        "requested_utc": "2026-10-28T02:54:03.972600+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4429",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:04 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6279",
+          "Connection": "close"
+        },
+        "body_file": "ref-4429.html",
+        "size": 6279,
+        "sha256": "84a4faf62bdf042a6b8734ea3c1c1fd8d6f3c3339b2fad88b82d04493bbd72bb",
+        "completed_utc": "2026-10-28T02:54:04.486934+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "T. H. Worthy, A. J. Tennyson, C. Jones, J. A. McNamara, and B. J. Douglas. 2007. Miocene waterfowl and other birds from central Otago, New Zealand. Journal of Systematic Palaeontology 5(1):1-39 [ER 4429]",
+      "provider_sample_ids": [
+        "4716",
+        "4717",
+        "4718"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2025-11-25 22:41:18",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4434",
+      "affected_register_rows": 38,
+      "affected_sample_ids": [
+        "4719",
+        "4720",
+        "4721"
+      ],
+      "source": {
+        "ref_no": "4434",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4434",
+        "requested_utc": "2026-10-28T02:54:05.487168+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4434",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:05 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6264",
+          "Connection": "close"
+        },
+        "body_file": "ref-4434.html",
+        "size": 6264,
+        "sha256": "a36528a7dd089c03583d08ff41bd405ef52fcdcf2da53635a6a3c2e0e7f31ffd",
+        "completed_utc": "2026-10-28T02:54:06.074264+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "B. Marandat. 1991. Mammifères de l'Ilerdian moyen (Eocène inférieur) des Corbières et du Minervois (Bas-Languedoc, France). Systématique, Biostratigraphie, Corrélations. Palaeovertebrata 20(2-3):55-145 [ER 4434]",
+      "provider_sample_ids": [
+        "4719",
+        "4720",
+        "4721"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2025-12-14 21:52:58",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4439",
+      "affected_register_rows": 13,
+      "affected_sample_ids": [
+        "4735"
+      ],
+      "source": {
+        "ref_no": "4439",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4439",
+        "requested_utc": "2026-10-28T02:54:07.076816+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4439",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:07 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6140",
+          "Connection": "close"
+        },
+        "body_file": "ref-4439.html",
+        "size": 6140,
+        "sha256": "9eb367926245d040e0f62637c85ac19155e02ab6f6adf9f93a172f0b57c349e8",
+        "completed_utc": "2026-10-28T02:54:07.461419+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Pavia and C. Bedetti. 2013. Early Pleistocene fossil birds from Cava Sud, Soave (Verona, North-Eastern Italy). Society of Avian Paleontology and Evolution Proceedings 2013 8:171-183 [ER 4439]",
+      "provider_sample_ids": [
+        "4735"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2025-12-18 23:51:47",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4445",
+      "affected_register_rows": 19,
+      "affected_sample_ids": [
+        "4736"
+      ],
+      "source": {
+        "ref_no": "4445",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4445",
+        "requested_utc": "2026-10-28T02:54:08.461979+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4445",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:08 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6178",
+          "Connection": "close"
+        },
+        "body_file": "ref-4445.html",
+        "size": 6178,
+        "sha256": "684f3d436a69357eec2ad4a1be01ebe492c175d7a83004c48ffd8a0b1b41aff9",
+        "completed_utc": "2026-10-28T02:54:08.863726+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "C. Núñez-Lahuerta, G. Cuenca-Bescós, and R. Huguet. 2016. First report on the birds (Aves) from level TE7 of Sima del Elefante (Early Pleistocene) of Atapuerca (Spain). Quaternary International 421:12-22 [ER 4445]",
+      "provider_sample_ids": [
+        "4736"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2025-12-22 02:29:50",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4446",
+      "affected_register_rows": 10,
+      "affected_sample_ids": [
+        "4737"
+      ],
+      "source": {
+        "ref_no": "4446",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4446",
+        "requested_utc": "2026-10-28T02:54:09.864017+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4446",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:10 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6122",
+          "Connection": "close"
+        },
+        "body_file": "ref-4446.html",
+        "size": 6122,
+        "sha256": "fe1e72c8ae18b30a66fbf631854bee0038a0bca7f5e10130f2ff012176686c68",
+        "completed_utc": "2026-10-28T02:54:10.309319+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "M. Pavia, C. Bedetti, and L. Carrera. 2018. A new Middle Pleistocene bird assemblage from Cava di Breccia di Casal Selce (Ponte Galeria, Rome, Italy). Avocetta 42(1):31-38 [ER 4446]",
+      "provider_sample_ids": [
+        "4737"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2025-12-22 02:44:24",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4488",
+      "affected_register_rows": 12,
+      "affected_sample_ids": [
+        "4799"
+      ],
+      "source": {
+        "ref_no": "4488",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4488",
+        "requested_utc": "2026-10-28T02:54:11.310111+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4488",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:11 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6217",
+          "Connection": "close"
+        },
+        "body_file": "ref-4488.html",
+        "size": 6217,
+        "sha256": "2e5f0225899597985676205f4b1803e13f5b0e20e0dfee0660d00b45d7f91432",
+        "completed_utc": "2026-10-28T02:54:11.715294+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "A. Sánchez Marco. 2005. Aves del Plioceno superior de la meseta sur ibérica: una asociación ornítica aparentemente cuaternaria. [Upper Pliocene birds from the southern Iberian plateau: a Quaternary avian association]. Revista Española de Paleontología 20(2):143-157 [ER 4488]",
+      "provider_sample_ids": [
+        "4799"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2026-01-09 00:02:11",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4508",
+      "affected_register_rows": 10,
+      "affected_sample_ids": [
+        "4830"
+      ],
+      "source": {
+        "ref_no": "4508",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4508",
+        "requested_utc": "2026-10-28T02:54:12.715616+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4508",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:12 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6137",
+          "Connection": "close"
+        },
+        "body_file": "ref-4508.html",
+        "size": 6137,
+        "sha256": "78d4b5b31e59dea0cd7f9bdebf793cf2549d2e919634c13d6361ea74c1281038",
+        "completed_utc": "2026-10-28T02:54:13.097925+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. Zucchetta, S. Gentili, and M. Pavia. 2003. A new early Pleistocene bird association from Pietrafitta (Perugia, Central Italy). Rivista Italiana di Paleontologia e Stratigrafia 109(3):527-538 [ER 4508]",
+      "provider_sample_ids": [
+        "4830"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2026-01-15 00:23:36",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4509",
+      "affected_register_rows": 53,
+      "affected_sample_ids": [
+        "4834"
+      ],
+      "source": {
+        "ref_no": "4509",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4509",
+        "requested_utc": "2026-10-28T02:54:14.098238+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4509",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:14 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6283",
+          "Connection": "close"
+        },
+        "body_file": "ref-4509.html",
+        "size": 6283,
+        "sha256": "98010f8c77f3c4f85fac393f5831512556bcb810257db8e3c8d50eea211cb7e9",
+        "completed_utc": "2026-10-28T02:54:14.537194+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "T. L. Ritchie. 1980. Two Mid-Pleistocene Avifaunas from Coleman, Florida. Bulletin of the Florida State Museum, Biological Sciences 26(1):1-36 [ER 4509]",
+      "provider_sample_ids": [
+        "4834"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Jack Nesbitt on 2026-01-15 02:30:25",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4525",
+      "affected_register_rows": 19,
+      "affected_sample_ids": [
+        "4864"
+      ],
+      "source": {
+        "ref_no": "4525",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4525",
+        "requested_utc": "2026-10-28T02:54:15.537460+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4525",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:15 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6227",
+          "Connection": "close"
+        },
+        "body_file": "ref-4525.html",
+        "size": 6227,
+        "sha256": "d0f68055b50c7262366ef1f1ad2d3acc158e90e63164135d6db3f3358d75376b",
+        "completed_utc": "2026-10-28T02:54:16.058272+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "F. Fanti and T. Miyashita. 2009. A high latitude vertebrate fossil assemblage from the Late Cretaceous of west-central Alberta, Canada: evidence for dinosaur nesting and vertebrate latitudinal gradient. Palaeogeography, Palaeoclimatology, Palaeoecology 275(1-4):37-53 [ER 4525]",
+      "provider_sample_ids": [
+        "4864"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-03-17 00:21:48",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4527",
+      "affected_register_rows": 13,
+      "affected_sample_ids": [
+        "4868"
+      ],
+      "source": {
+        "ref_no": "4527",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4527",
+        "requested_utc": "2026-10-28T02:54:17.058780+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4527",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:17 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6441",
+          "Connection": "close"
+        },
+        "body_file": "ref-4527.html",
+        "size": 6441,
+        "sha256": "3ba0fdac5721e475c71054657d55072ba684276cf7b3075176708b706fecc83e",
+        "completed_utc": "2026-10-28T02:54:17.522573+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "J. Marmi, A. Blanco, V. Fondevilla, F. M. D. Vecchia, A. G. Selles, A. Vicente, C. Martín-Closas, O. Oms, and A. Galobart. 2015. The Molí del Baro-1 site, a diverse fossil assemblage from the uppermost Maastrichtian of the southern Pyrenees (north-eastern Iberia). Cretaceous Research 57:519-539 [ER 4527]",
+      "provider_sample_ids": [
+        "4868"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-03-31 02:51:53",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4529",
+      "affected_register_rows": 8,
+      "affected_sample_ids": [
+        "4871"
+      ],
+      "source": {
+        "ref_no": "4529",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4529",
+        "requested_utc": "2026-10-28T02:54:18.523247+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4529",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:18 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6272",
+          "Connection": "close"
+        },
+        "body_file": "ref-4529.html",
+        "size": 6272,
+        "sha256": "e66da0edfba3425fccb59cddc5038edbe64c57b1a031689dac2d70342e604030",
+        "completed_utc": "2026-10-28T02:54:18.975083+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "R. C. Freitas, A. Batezelli, F. P. Muniz, D. C. Ribeiro, J. V. Ruiz, Y. M. Alves, C. Geroto, M. C. Castro, G. G. Barbosa, M. C. Langer, and F. C. Montefeltro. 2023. A microvertebrate assemblage from the Adamantina Formation (Bauru Group, Upper Cretaceous) in Sao Paulo State, Brazil. Cretaceous Research 150:1-19 [ER 4529]",
+      "provider_sample_ids": [
+        "4871"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-04-18 06:08:18",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4530",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "4872"
+      ],
+      "source": {
+        "ref_no": "4530",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4530",
+        "requested_utc": "2026-10-28T02:54:19.975742+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4530",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:20 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6393",
+          "Connection": "close"
+        },
+        "body_file": "ref-4530.html",
+        "size": 6393,
+        "sha256": "701b28d6f8af043905e2f84a0f2dfd081bc3b7b447d2ef4ce9d19cddbab696a6",
+        "completed_utc": "2026-10-28T02:54:20.613979+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. V. R. Prasad, O. Verma, J. J. Flynn, and A. Goswami. 2013. A new Late Cretaceous vertebrate fauna from the Cauvery Basin, South India: Implications for Gondwanan paleobiogeography. Journal of Vertebrate Paleontology 33(6):1260-1268 [ER 4530]",
+      "provider_sample_ids": [
+        "4872"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-04-22 02:50:50",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4532",
+      "affected_register_rows": 17,
+      "affected_sample_ids": [
+        "4870",
+        "4874"
+      ],
+      "source": {
+        "ref_no": "4532",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4532",
+        "requested_utc": "2026-10-28T02:54:21.615140+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4532",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:21 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6354",
+          "Connection": "close"
+        },
+        "body_file": "ref-4532.html",
+        "size": 6354,
+        "sha256": "4523951d58d021496f61e2d4a32c1307bd8c0466f68760d3a9f4f0d66f5e48d2",
+        "completed_utc": "2026-10-28T02:54:22.102095+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "O. Jansen, G. Garcia, O. Otero, M. Augé, B. Gomez, and X. Valentin. 2026. Freshwater amphibians and squamates from Villeveyrac (lower Campanian; Hérault, France): palaeodiversity, palaeoenvironment and implications for the Late Cretaceous palaeobiogeography of the European herpetofauna. Papers in Palaeontology 12(1):1-45 [ER 4532]",
+      "provider_sample_ids": [
+        "4870",
+        "4874"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-04-28 04:01:02",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4533",
+      "affected_register_rows": 20,
+      "affected_sample_ids": [
+        "4875"
+      ],
+      "source": {
+        "ref_no": "4533",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4533",
+        "requested_utc": "2026-10-28T02:54:23.102876+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4533",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:23 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6681",
+          "Connection": "close"
+        },
+        "body_file": "ref-4533.html",
+        "size": 6681,
+        "sha256": "c00a4528100e5b39f93aeacf1b6675c14963e142138b0156514f88543978cd89",
+        "completed_utc": "2026-10-28T02:54:23.581676+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. Botfalvai, Z. Csiki-Sava, J. Magyar, B. Páll-Gergely, L. Koczó, D. Tabara, G. Konecsni, and S. Budai. 2025. Paleontological and paleoecological significance of the oldest highly productive Upper Cretaceous (lowermost Maastrichtian) bonebed of Hateg Basin (western Romania; Densuş-Ciula Formation). PLOS One 20(11):1-77 [ER 4533]",
+      "provider_sample_ids": [
+        "4875"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-05-04 06:46:26",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4534",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "4876"
+      ],
+      "source": {
+        "ref_no": "4534",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4534",
+        "requested_utc": "2026-10-28T02:54:24.582140+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4534",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:24 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6034",
+          "Connection": "close"
+        },
+        "body_file": "ref-4534.html",
+        "size": 6034,
+        "sha256": "4567d1d54ac6b577664098ed95f5541faa0f7f071b069d6dc99bc9a4cd5e6dd0",
+        "completed_utc": "2026-10-28T02:54:25.300992+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "Z. Markovic, M. Milivojevic, R. J. Butler, P. M. Barrett, S. Wills, A. A. van de Weerd, W. Wessels, and P. Radovic. 2025. First dinosaur remains from Serbia: Sauropod and theropod material from the uppermost Cretaceous (Maastrichtian) of Osmakovo. Cretaceous Research 176:1-13 [ER 4534]",
+      "provider_sample_ids": [
+        "4876"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-05-06 03:35:52",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4538",
+      "affected_register_rows": 12,
+      "affected_sample_ids": [
+        "4881",
+        "4888"
+      ],
+      "source": {
+        "ref_no": "4538",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4538",
+        "requested_utc": "2026-10-28T02:54:26.301644+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4538",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:26 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6271",
+          "Connection": "close"
+        },
+        "body_file": "ref-4538.html",
+        "size": 6271,
+        "sha256": "c1cdc2e13a0f5c3cf6dc702f8d5c18a15430494fd299f501257bf761a756d4f8",
+        "completed_utc": "2026-10-28T02:54:26.993453+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "Q. Li, F.-Y. Mao, and Y.-Q. Wang. 2018. First record of Eocene fossil rodent assemblages from the lower part of the Erden Obo Section, Erlian Basin (Nei Mongol, China) and its biochronological implications. Palaeobiodiversity and Palaeoenvironments 98(2):259-276 [ER 4538]",
+      "provider_sample_ids": [
+        "4881",
+        "4888"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-05-18 06:07:51",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4539",
+      "affected_register_rows": 2,
+      "affected_sample_ids": [
+        "4886"
+      ],
+      "source": {
+        "ref_no": "4539",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4539",
+        "requested_utc": "2026-10-28T02:54:27.993834+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4539",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:28 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6398",
+          "Connection": "close"
+        },
+        "body_file": "ref-4539.html",
+        "size": 6398,
+        "sha256": "615e59fba4b41c3de1d6e585e83d819271c066b004337a537a54d22ca5213134",
+        "completed_utc": "2026-10-28T02:54:28.665742+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "F. P. Muniz, M. C. Bissaro-Júnior, E. Guilherme, J. P. De Souza-Filho, F. R. Negri, and A. S. Hsiou. 2021. Fossil frogs from the Upper Miocene of Southwestern Brazilian Amazonia (Solimões Formation, Acre Basin). Journal of Vertebrate Paleontology 41(6):1-11 [ER 4539]",
+      "provider_sample_ids": [
+        "4886"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-05-18 07:16:35",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4540",
+      "affected_register_rows": 10,
+      "affected_sample_ids": [
+        "4882"
+      ],
+      "source": {
+        "ref_no": "4540",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4540",
+        "requested_utc": "2026-10-28T02:54:29.668640+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4540",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:29 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6236",
+          "Connection": "close"
+        },
+        "body_file": "ref-4540.html",
+        "size": 6236,
+        "sha256": "cb1ffcd574d83efd7637055b917d81c7da34541bbd02b9b7e0aada2e40731813",
+        "completed_utc": "2026-10-28T02:54:30.167620+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "S. Zouhri, B. Khalloufi, E. Bourdon, F. de Lapparent de Broin, J.-C. Rage, L. M'haidrat, P. D. Gingerich, and N. Elboudali. 2017. Marine vertebrate fauna from the late Eocene Samlat Formation of Ad-Dakhla, southwestern Morocco. Geological Magazine 155(7):1596-1620- [ER 4540]",
+      "provider_sample_ids": [
+        "4882"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-05-19 04:20:08",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4541",
+      "affected_register_rows": 36,
+      "affected_sample_ids": [
+        "4883",
+        "4884",
+        "4885"
+      ],
+      "source": {
+        "ref_no": "4541",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4541",
+        "requested_utc": "2026-10-28T02:54:31.167902+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4541",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:31 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6391",
+          "Connection": "close"
+        },
+        "body_file": "ref-4541.html",
+        "size": 6391,
+        "sha256": "ad972922e2df170eb386ca1dba7cd6ec0701ab5b5b3ab4cb43fa651fe0a85f8b",
+        "completed_utc": "2026-10-28T02:54:31.567734+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "J. R. Claytor, L. N. Weaver, T. S. Tobin, and G. P. W. Mantilla. 2022. New mammalian local faunas from the first ca. 80 ka of the Paleocene in northeastern Montana and a revised model of biotic recovery from the Cretaceous-Paleogene mass extinction. Journal of Vertebrate Paleontology 42(6):1-24 [ER 4541]",
+      "provider_sample_ids": [
+        "4883",
+        "4884",
+        "4885"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Chad Jacobsen on 2026-05-20 02:43:58",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4547",
+      "affected_register_rows": 17,
+      "affected_sample_ids": [
+        "4894"
+      ],
+      "source": {
+        "ref_no": "4547",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4547",
+        "requested_utc": "2026-10-28T02:54:32.568514+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4547",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:32 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6261",
+          "Connection": "close"
+        },
+        "body_file": "ref-4547.html",
+        "size": 6261,
+        "sha256": "7c8d089513228b97256e29ef91934e35e1f06da4c6905819e745a080f80cc0ea",
+        "completed_utc": "2026-10-28T02:54:33.031529+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "W. Anyonge. 1991. Fauna from a new lower Miocene locality west of Lake Turkana, Kenya. Journal of Vertebrate Paleontology 11(3):378-390 [ER 4547]",
+      "provider_sample_ids": [
+        "4894"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2026-06-17 04:03:34",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4550",
+      "affected_register_rows": 19,
+      "affected_sample_ids": [
+        "4896"
+      ],
+      "source": {
+        "ref_no": "4550",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4550",
+        "requested_utc": "2026-10-28T02:54:34.032141+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4550",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:34 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6307",
+          "Connection": "close"
+        },
+        "body_file": "ref-4550.html",
+        "size": 6307,
+        "sha256": "2c4eed109c7f322d4ebdef45a5fec4b5a02258ada6be1c141c0c5d83dd7ed661",
+        "completed_utc": "2026-10-28T02:54:34.459130+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "A. Hill, M. Leakey, J. Kingston, and S. Ward. 2002. New cercopithecoids and a hominoid from 12-5 Ma in the Tugen Hills succession, Kenya. Journal of Human Evolution 42:75-93 [ER 4550]",
+      "provider_sample_ids": [
+        "4896"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2026-06-22 13:50:47",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4551",
+      "affected_register_rows": 50,
+      "affected_sample_ids": [
+        "4897"
+      ],
+      "source": {
+        "ref_no": "4551",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4551",
+        "requested_utc": "2026-10-28T02:54:35.459774+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4551",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:35 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6353",
+          "Connection": "close"
+        },
+        "body_file": "ref-4551.html",
+        "size": 6353,
+        "sha256": "4ddf3b0eea9dc468566974ca0d304a70c112b0d45ff1c5494e7241c37c139b04",
+        "completed_utc": "2026-10-28T02:54:35.948569+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "G. J. Retallack, J. G. Wynn, B. R. Benefit, and M. L. McCrossin. 2002. Paleosols and paleoenvironments of the middle Miocene, Maboko Formation, Kenya. Journal of Human Evolution 42:659-703 [ER 4551]",
+      "provider_sample_ids": [
+        "4897"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Harrison Wu on 2026-06-25 06:41:16",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    },
+    {
+      "ref_no": "4669",
+      "affected_register_rows": 5,
+      "affected_sample_ids": [
+        "5037"
+      ],
+      "source": {
+        "ref_no": "4669",
+        "request_method": "GET",
+        "url": "https://fossilworks.org/?a=getRefs&ref_no=4669",
+        "requested_utc": "2026-10-28T02:54:36.949061+00:00",
+        "status": 200,
+        "final_url": "https://fossilworks.org/?a=getRefs&ref_no=4669",
+        "response_headers": {
+          "Date": "Wed, 28 Oct 2026 02:54:37 GMT",
+          "Server": "Apache/2.4.67 (Debian)",
+          "Vary": "Accept-Encoding",
+          "Content-Type": "text/html",
+          "Via": "1.1 ecoregister.org (Apache/2.4.68)",
+          "Content-Length": "6353",
+          "Connection": "close"
+        },
+        "body_file": "ref-4669.html",
+        "size": 6353,
+        "sha256": "fbf259a781dd70e516d453b180ac7a2522a8ee78cea654436ddfd3676e2d8591",
+        "completed_utc": "2026-10-28T02:54:37.370023+00:00"
+      },
+      "source_collection": "initial_reference_pages",
+      "status": "provider_metadata_recovered",
+      "provider_citation": "A. Solomon and V. Codrea. 2015. Some Maastrichtian vertebrates from fluvial channel fill deposits at Pui (Hateg Basin). Studii si comunicari. stiintele Naturii 31(2):26-36 [ER 4669]",
+      "provider_sample_ids": [
+        "5037"
+      ],
+      "expected_sample_ids_missing_on_page": [],
+      "external_bibliographic_verification": "not_performed",
+      "provider_contribution_statement": "Contributed by John Alroy, entered by Alexander Goodman on 2026-09-28 05:24:01",
+      "bibliographic_fields_review": "provider_rendered_text_with_collapsed_whitespace_original_html_retained"
+    }
+  ],
+  "limitations": [
+    "Provider metadata recovery does not independently verify bibliographic accuracy or source contents.",
+    "Missing original reference-sheet rows remain missing; join this overlay explicitly by ref_no.",
+    "Sample links are supporting identity checks, not evidence of independent communities.",
+    "Current provider pages are later observations, not corrections to the retained interval exports."
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-28T03:05:44.338632+00:00",
+  "purpose": "Private retained evidence for bounded count-convention checks. No public redistribution authorised.",
+  "access_and_reuse": {
+    "faq": "Public web access; FAQ states data CC0, website/software separately copyrighted. Retain only privately.",
+    "davis1974": "Public Persée article/page/image access. No separate reuse licence verified; preserve privately, do not infer open redistribution permission.",
+    "mcgee2010": "Public author-posted institutional PDF. No reuse licence established from the downloaded PDF. Preserve privately, no licence inference from open access."
+  },
+  "scope": "Only five Davis HTML pages used for claims, two images used for visual checks, one original McGee PDF needed for tables/context, and FAQ. No additional article copies or unrelated sources.",
+  "files": [
+    {
+      "path": "faq.html",
+      "source_id": "faq",
+      "requested_url": "https://fossilworks.org/?page=works_FAQ",
+      "final_url": "https://fossilworks.org/?page=works_FAQ",
+      "request_started_utc": "2026-10-28T03:05:09.107900+00:00",
+      "response_completed_utc": "2026-10-28T03:05:09.642370+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "bytes": 15463,
+      "sha256": "687ae2e1fbb8edc59492288c5a6b8b3400e5df7141f9c6d8be6dd1d4acdebfcc"
+    },
+    {
+      "path": "mcgee2010/article.pdf",
+      "source_id": "mcgee2010",
+      "requested_url": "https://www.sjsu.edu/people/elizabeth.mcgee/publications/McGee%20and%20Turnbull%202010.pdf",
+      "final_url": "https://www.sjsu.edu/people/elizabeth.mcgee/publications/McGee%20and%20Turnbull%202010.pdf",
+      "request_started_utc": "2026-10-28T03:05:09.642714+00:00",
+      "response_completed_utc": "2026-10-28T03:05:27.633509+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Thu, 23 Feb 2023 00:29:18 GMT",
+        "ETag": "\"14d778-5f5531a6d1380\"",
+        "Content-Length": "1365880"
+      },
+      "bytes": 1365880,
+      "sha256": "c82456c4c36ed09a919c943f835cf255c61f3f2145fce0d619d78306962bfeae"
+    },
+    {
+      "path": "davis1974/page-453.html",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/doc/paleo_0153-9345_1974_num_2_2_4873",
+      "final_url": "https://www.persee.fr/doc/paleo_0153-9345_1974_num_2_2_4873",
+      "request_started_utc": "2026-10-28T03:05:27.639383+00:00",
+      "response_completed_utc": "2026-10-28T03:05:30.281637+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "bytes": 86391,
+      "sha256": "06999875e3636f53daf3b8964c963e4388a7ab90460c3802aab0ebbbffe1ea39"
+    },
+    {
+      "path": "davis1974/page-458.html",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0458_0000",
+      "final_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0458_0000",
+      "request_started_utc": "2026-10-28T03:05:30.282398+00:00",
+      "response_completed_utc": "2026-10-28T03:05:32.098323+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "bytes": 7163,
+      "sha256": "73f5a5cf3584250074b64d52fb83e42a374c71d4b28536f9435473575ab89021"
+    },
+    {
+      "path": "davis1974/page-459.html",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0459_0000",
+      "final_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0459_0000",
+      "request_started_utc": "2026-10-28T03:05:32.098577+00:00",
+      "response_completed_utc": "2026-10-28T03:05:33.866296+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "bytes": 5021,
+      "sha256": "448c3f6cad71697d6cd44a0a2fb727bc4b1e2a8e84fec5c0013fa48cd1bbad51"
+    },
+    {
+      "path": "davis1974/page-460.html",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0460_0000",
+      "final_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0460_0000",
+      "request_started_utc": "2026-10-28T03:05:33.866858+00:00",
+      "response_completed_utc": "2026-10-28T03:05:35.596918+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "bytes": 2895,
+      "sha256": "c862ee95d53665964dfaa997afca3353917973eb8677141891023aa42cd14386"
+    },
+    {
+      "path": "davis1974/page-461.html",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0461_0000",
+      "final_url": "https://www.persee.fr/doc/page/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0461_0000",
+      "request_started_utc": "2026-10-28T03:05:35.597114+00:00",
+      "response_completed_utc": "2026-10-28T03:05:37.356175+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "bytes": 2625,
+      "sha256": "35fc4cb0c99f396ba9b91e6607add4b8cb3a3d2c70d5a1826d1cbdc3104638ae"
+    },
+    {
+      "path": "davis1974/page-458.jpg",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/renderPage/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0458_0000_1200.jpg",
+      "final_url": "https://www.persee.fr/renderPage/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0458_0000_1200.jpg",
+      "request_started_utc": "2026-10-28T03:05:37.356360+00:00",
+      "response_completed_utc": "2026-10-28T03:05:41.248237+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "image/png",
+        "Last-Modified": "Mon, 29 Dec 2014 23:00:00 GMT",
+        "ETag": "8e7cf05d093cd840ae737abd6cb34989",
+        "Content-Length": "339242"
+      },
+      "bytes": 339242,
+      "sha256": "1d5466c4e8a6cf49c2f1b85c1d832e9b20d4e412f2e467fbe160c65c652fcc2b"
+    },
+    {
+      "path": "davis1974/table-I.png",
+      "source_id": "davis1974",
+      "requested_url": "https://www.persee.fr/renderIllustration/paleo_0153-9345_1974_num_2_2_T1_0460_0000_2.png",
+      "final_url": "https://www.persee.fr/renderIllustration/paleo_0153-9345_1974_num_2_2_T1_0460_0000_2.png",
+      "request_started_utc": "2026-10-28T03:05:41.249410+00:00",
+      "response_completed_utc": "2026-10-28T03:05:44.338021+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "image/png",
+        "Last-Modified": "Wed, 22 Sep 2021 22:00:00 GMT",
+        "ETag": "2b2246212ae53329957d3e0847493858",
+        "Content-Length": "137282"
+      },
+      "bytes": 137282,
+      "sha256": "d5c05383f6cabcfde1dda524005bb8beb5b8f7a6a3d8907096d10fba28b0add6"
+    }
+  ]
+}

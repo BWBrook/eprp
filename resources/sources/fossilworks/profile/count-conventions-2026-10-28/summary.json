@@ -1,0 +1,120 @@
+{
+  "assembly_sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+  "script_sha256": "6c635f500bb5e2e20c85a232ee21aab3d4d6ce57b7a3b9044d225356989c936b",
+  "review_sha256": "a052e0c7261b79d6dd26e0b9654e136d4fdeca3aa0dbdc47ffa0c27468c7612b",
+  "register_rows": 26046,
+  "sample_source_rows": 1697,
+  "distinct_interval_sample_keys": 1675,
+  "reviewed_rows": 66,
+  "source_checked_rows": 26,
+  "unit_counts": {
+    "unknown": 25988,
+    "mixed_individual_and_element": 2,
+    "burial_association": 1,
+    "minimum_individuals": 9,
+    "individual_association": 14,
+    "skeletal_elements": 15,
+    "mollusc_specimen": 1,
+    "identified_specimens": 4,
+    "jaws_maxillae_plus_mandibles": 2,
+    "specimens_association_adjusted": 1,
+    "specimens_association_uncertain": 1,
+    "catalogued_specimens": 8
+  },
+  "review_level_counts": {
+    "not_reviewed": 25980,
+    "provider_comment_reviewed": 40,
+    "primary_source_checked": 26
+  },
+  "life_form_row_counts": {
+    "other small mammals": 2163,
+    "carnivores": 3079,
+    "snakes": 497,
+    "crocodilians": 108,
+    "frogs": 315,
+    "salamanders": 104,
+    "fishes": 782,
+    "marsupials": 1156,
+    "birds": 1389,
+    "rodents": 5500,
+    "primates": 670,
+    "ungulates": 6395,
+    "turtles": 478,
+    "lizards": 400,
+    "bony fishes": 110,
+    "snails": 402,
+    "clams": 198,
+    "crustaceans": 29,
+    "other large mammals": 670,
+    "bats": 429,
+    "marine mammals": 72,
+    "other reptiles": 24,
+    "other invertebrates": 9,
+    "herbs": 9,
+    "other arthropods": 1,
+    "scarab beetles": 1,
+    "leaves": 511,
+    "rays": 17,
+    "sharks": 39,
+    "multituberculates": 223,
+    "ornithischians": 130,
+    "theropods": 112,
+    "sauropods": 5,
+    "amphibians": 16,
+    "marine reptiles": 3
+  },
+  "literal_flag_row_counts": {
+    "material_mention": 213,
+    "association_mention": 32,
+    "specimen_mention": 210,
+    "approximation_mention": 107,
+    "bound_mention": 107,
+    "inclusion_exclusion_mention": 458,
+    "mni_mention": 8,
+    "individual_mention": 24,
+    "nisp_mention": 5
+  },
+  "rows_with_any_literal_flag": 817,
+  "numeric_checks": {
+    "nonpositive_rows": [],
+    "noninteger_rows": [],
+    "nonnumeric_rows": []
+  },
+  "sample_metadata_nonempty_source_rows": {
+    "taphonomic context": 1207,
+    "preservation": 86,
+    "archaeology": 576,
+    "sampling methods": 1363
+  },
+  "multiple_reviewed_unit_sample_keys": [
+    [
+      "03-late-pleistocene",
+      "4400"
+    ],
+    [
+      "07-early-pliocene",
+      "4295"
+    ],
+    [
+      "15-early-eocene",
+      "4903"
+    ]
+  ],
+  "limits": [
+    "Literal flags are retrieval aids with no precision or recall claim.",
+    "No unit propagates from one row to a sample or reference.",
+    "Unknown is not NISP, MNI, or validated specimen equivalence.",
+    "Taphonomic and sampling fields are source metadata, not quantitative corrections.",
+    "Source checks assess reported counting protocols, not ecological abundance validity."
+  ],
+  "outputs": {
+    "register-count-evidence.tsv": {
+      "sha256": "c22d062575f154aafe59b4a69aefa3dcda69b7b4d07601142b49ba7ac7bde077",
+      "bytes": 4662465
+    },
+    "sample-count-evidence.tsv": {
+      "sha256": "c9bfd12548973b74693d23e36dde4f3224123ca6a20d20977ec414b8ae2e2181",
+      "bytes": 287780
+    }
+  }
+}

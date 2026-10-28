@@ -1,0 +1,1443 @@
+{
+  "schema_version": 1,
+  "assembly_sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+  "review_date": "2026-10-28",
+  "reviewer": "Codex",
+  "review_policy": "Manual bounded row reviews. Literal text matching never assigns count units. Primary-source checked denotes counting information corroboration, not biological validation or nomenclature adjudication. Unmentioned rows remain unknown.",
+  "sources": [
+    {
+      "source_id": "faq",
+      "url": "https://fossilworks.org/?page=works_FAQ",
+      "access_depth": "Live public HTML read with curl; web opener inaccessible.",
+      "finding": "Every identification has specimen counts; no MNI/NISP harmonisation rule found.",
+      "retrieved_payload_sha256": {
+        "faq.html": "687ae2e1fbb8edc59492288c5a6b8b3400e5df7141f9c6d8be6dd1d4acdebfcc"
+      },
+      "doi": null,
+      "doi_status": "not applicable",
+      "retained_evidence_files": [
+        "faq.html"
+      ],
+      "retrieval_window_utc": {
+        "start": "2026-10-28T03:05:09.107900+00:00",
+        "end": "2026-10-28T03:05:09.642370+00:00"
+      },
+      "evidence_manifest": "count-conventions-source-evidence-manifest-2026-10-28.json"
+    },
+    {
+      "source_id": "davis1974",
+      "ref_no": "3985",
+      "url": "https://www.persee.fr/doc/paleo_0153-9345_1974_num_2_2_4873",
+      "doi": "10.3406/paleo.1974.4873",
+      "access_depth": "Public full article HTML pages453-462. TableI and hare paragraph visually checked against page images; p458-461 counting text checked.",
+      "sample_no": "4400",
+      "finding": "TableI distinguishes bone totals and MNI; small taxa additionally use mandible, bone, mollusc specimen and minimum-individual counts. Hare export7 conflicts with printed11.",
+      "source_counting_context": "p453 dry sieving; p461 differential preservation and human destruction discussed.",
+      "checked_image_urls": [
+        "https://www.persee.fr/renderPage/paleo_0153-9345_1974_num_2_2_4873/paleo_0153-9345_1974_num_2_2_T1_0458_0000_1200.jpg",
+        "https://www.persee.fr/renderIllustration/paleo_0153-9345_1974_num_2_2_T1_0460_0000_2.png"
+      ],
+      "retrieved_payload_sha256": {
+        "davis1974/page-453.html": "06999875e3636f53daf3b8964c963e4388a7ab90460c3802aab0ebbbffe1ea39",
+        "davis1974/page-458.html": "73f5a5cf3584250074b64d52fb83e42a374c71d4b28536f9435473575ab89021",
+        "davis1974/page-459.html": "448c3f6cad71697d6cd44a0a2fb727bc4b1e2a8e84fec5c0013fa48cd1bbad51",
+        "davis1974/page-460.html": "c862ee95d53665964dfaa997afca3353917973eb8677141891023aa42cd14386",
+        "davis1974/page-461.html": "35fc4cb0c99f396ba9b91e6607add4b8cb3a3d2c70d5a1826d1cbdc3104638ae",
+        "davis1974/page-458.jpg": "1d5466c4e8a6cf49c2f1b85c1d832e9b20d4e412f2e467fbe160c65c652fcc2b",
+        "davis1974/table-I.png": "d5c05383f6cabcfde1dda524005bb8beb5b8f7a6a3d8907096d10fba28b0add6"
+      },
+      "retained_evidence_files": [
+        "davis1974/page-453.html",
+        "davis1974/page-458.html",
+        "davis1974/page-459.html",
+        "davis1974/page-460.html",
+        "davis1974/page-461.html",
+        "davis1974/page-458.jpg",
+        "davis1974/table-I.png"
+      ],
+      "retrieval_window_utc": {
+        "start": "2026-10-28T03:05:27.639383+00:00",
+        "end": "2026-10-28T03:05:44.338021+00:00"
+      },
+      "evidence_manifest": "count-conventions-source-evidence-manifest-2026-10-28.json"
+    },
+    {
+      "source_id": "mcgee2010",
+      "ref_no": "4556",
+      "url": "https://www.sjsu.edu/people/elizabeth.mcgee/publications/McGee%20and%20Turnbull%202010.pdf",
+      "access_depth": "Open author-posted institutional PDF. pp1-3 text read, Table1 visually checked and summed; whole PDF downloaded but not exhaustively reviewed.",
+      "sample_no": "4903",
+      "finding": "Table1 postcranial counts sum806; MNI12 differs from comment14. Other mammal counts match catalogue-ID list on p3.",
+      "source_counting_context": "p2 over600 additional fragments, preservation and transport; p3 rapid burial and minimal reworking are authors interpretations.",
+      "bibliographic_issue": "Source dated January8,2010; export reference year2009 retained.",
+      "retrieved_payload_sha256": {
+        "mcgee2010/article.pdf": "c82456c4c36ed09a919c943f835cf255c61f3f2145fce0d619d78306962bfeae"
+      },
+      "doi": null,
+      "doi_status": "not identified in this bounded check",
+      "retained_evidence_files": [
+        "mcgee2010/article.pdf"
+      ],
+      "retrieval_window_utc": {
+        "start": "2026-10-28T03:05:09.642714+00:00",
+        "end": "2026-10-28T03:05:27.633509+00:00"
+      },
+      "evidence_manifest": "count-conventions-source-evidence-manifest-2026-10-28.json"
+    },
+    {
+      "source_id": "evans2015",
+      "ref_no": "4572",
+      "url": "https://doi.org/10.1139/cjes-2014-0184",
+      "access_depth": "Metadata located; publisher PDF returned403. No full-text inference or row unit determination.",
+      "doi": "10.1139/cjes-2014-0184",
+      "doi_status": "known"
+    },
+    {
+      "source_id": "miller1976",
+      "ref_no": "3111",
+      "url": "https://scholarsarchive.byu.edu/gbn/vol36/iss4/1/",
+      "access_depth": "Located institutional PDF route; download returned HTML rather than PDF. Only provider-comment interpretation used.",
+      "doi": null,
+      "doi_status": "not identified in this bounded check"
+    }
+  ],
+  "sample_reviews": [
+    {
+      "sample_no": "4400",
+      "interval_id": "03-late-pleistocene",
+      "source_id": "davis1974",
+      "interpretation": "Mixed bone and minimum-individual units confirmed. Eight TableI large-mammal rows share a counted-element table protocol; do not use full sample as a common-unit abundance vector. Source specifies dry sieving; provider screenwash category does not preserve wet/dry detail.",
+      "comparable_scope_row_ids": [
+        "03-late-pleistocene/attempt-1/register.txt#5925",
+        "03-late-pleistocene/attempt-1/register.txt#5926",
+        "03-late-pleistocene/attempt-1/register.txt#5927",
+        "03-late-pleistocene/attempt-1/register.txt#5928",
+        "03-late-pleistocene/attempt-1/register.txt#5929",
+        "03-late-pleistocene/attempt-1/register.txt#5930",
+        "03-late-pleistocene/attempt-1/register.txt#5931",
+        "03-late-pleistocene/attempt-1/register.txt#5932"
+      ],
+      "comparable_scope_limit": "Counts are reported bones/epiphyses, not animal abundance; TableI gives taxon-specific representation and no equal-recovery assumption is validated."
+    },
+    {
+      "sample_no": "4903",
+      "interval_id": "15-early-eocene",
+      "source_id": "mcgee2010",
+      "interpretation": "Postcranial elements for dominant taxon combined with catalogue-ID counts for associates; source count protocols differ within sample. Empty taphonomic-context export is not evidence of no bonebed or reworking.",
+      "comparable_scope_row_ids": [],
+      "comparable_scope_limit": "No all-taxon common-unit vector established."
+    }
+  ],
+  "rows": [
+    {
+      "review_id": "C001",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5925",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Gazella",
+        "species": "gazella",
+        "count": "365",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "365",
+        "reported_MNI": 30
+      }
+    },
+    {
+      "review_id": "C002",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5926",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Dama",
+        "species": "dama",
+        "count": "207",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "207",
+        "reported_MNI": 19
+      }
+    },
+    {
+      "review_id": "C003",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5927",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Capra",
+        "species": "aegagrus",
+        "count": "123",
+        "comments": "not domesticated"
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "123",
+        "reported_MNI": 13
+      }
+    },
+    {
+      "review_id": "C004",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5928",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Bos",
+        "species": "primigenius",
+        "count": "29",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "29",
+        "reported_MNI": 2
+      }
+    },
+    {
+      "review_id": "C005",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5929",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Capreolus",
+        "species": "capreolus",
+        "count": "11",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "11",
+        "reported_MNI": 2
+      }
+    },
+    {
+      "review_id": "C006",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5930",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Cervus",
+        "species": "elaphus",
+        "count": "51",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "51",
+        "reported_MNI": 5
+      }
+    },
+    {
+      "review_id": "C007",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5931",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Sus",
+        "species": "scrofa",
+        "count": "6",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "6",
+        "reported_MNI": 2
+      }
+    },
+    {
+      "review_id": "C008",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5932",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Equus",
+        "species": "hydruntinus",
+        "count": "1",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table I bone-total row; separate MNI row is not used.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "1",
+        "reported_MNI": 1
+      }
+    },
+    {
+      "review_id": "C009",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5933",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Lepus",
+        "species": "capensis",
+        "count": "7",
+        "comments": "MNI based on \"jaw fragments\""
+      },
+      "unit": "minimum_individuals",
+      "level": "primary_source_checked",
+      "interpretation": "p458 hare MNI differs from export.",
+      "issues": [
+        "count_conflicts_with_primary_source"
+      ],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_MNI": 11,
+        "export_count": 7
+      }
+    },
+    {
+      "review_id": "C010",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5934",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Felis",
+        "species": "lybica",
+        "count": "2",
+        "comments": "\"Felis silvestris\": species assignment based on geography"
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "p458 two cat mandibles.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "2"
+      }
+    },
+    {
+      "review_id": "C011",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5935",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Vulpes",
+        "species": "vulpes",
+        "count": "12",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "p459 seven left plus five right fox mandible fragments.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "12"
+      }
+    },
+    {
+      "review_id": "C012",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5936",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Buteo",
+        "species": "sp.",
+        "count": "1",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "p459 enumerated bird bones.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "1"
+      }
+    },
+    {
+      "review_id": "C013",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5937",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Aquila",
+        "species": "sp.",
+        "count": "2",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "p459 enumerated bird bones.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "2"
+      }
+    },
+    {
+      "review_id": "C014",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5938",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Cygnus",
+        "species": "sp.",
+        "count": "1",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "p459 enumerated bird bones.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "1"
+      }
+    },
+    {
+      "review_id": "C015",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5939",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Anser",
+        "species": "sp.",
+        "count": "1",
+        "comments": ""
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "p459 enumerated bird bones.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "1"
+      }
+    },
+    {
+      "review_id": "C016",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5940",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Testudo",
+        "species": "sp.",
+        "count": "7",
+        "comments": "MNI based on anterior plastron osteoderms"
+      },
+      "unit": "minimum_individuals",
+      "level": "primary_source_checked",
+      "interpretation": "p460 anterior plastron method agrees.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "7"
+      }
+    },
+    {
+      "review_id": "C017",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5941",
+      "expected": {
+        "sample no": "4400",
+        "ref no": "3985",
+        "genus": "Conus",
+        "species": "sp.",
+        "count": "1",
+        "comments": ""
+      },
+      "unit": "mollusc_specimen",
+      "level": "primary_source_checked",
+      "interpretation": "p460 one Conus specimen.",
+      "issues": [],
+      "source_id": "davis1974",
+      "source_values": {
+        "reported_count": "1"
+      }
+    },
+    {
+      "review_id": "C018",
+      "row_id": "15-early-eocene/attempt-1/register.txt#934",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Coryphodon",
+        "species": "lobatus",
+        "count": "806",
+        "comments": "see Table 1: MNI is 14"
+      },
+      "unit": "skeletal_elements",
+      "level": "primary_source_checked",
+      "interpretation": "Table1 assemblage column sums806; count supported, comment MNI14 conflicts with source MNI12.",
+      "issues": [
+        "comment_alternative_metric_conflicts_with_primary_source"
+      ],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "postcranial_counts": [
+          23,
+          14,
+          11,
+          13,
+          14,
+          11,
+          12,
+          5,
+          259,
+          207,
+          7,
+          225,
+          3,
+          2
+        ],
+        "postcranial_sum": 806,
+        "mandibular_maxillary_MNI": 10,
+        "right_humerus_MNI": 12,
+        "export_comment_MNI": 14
+      }
+    },
+    {
+      "review_id": "C019",
+      "row_id": "15-early-eocene/attempt-1/register.txt#935",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Cantius",
+        "species": "abditus",
+        "count": "3",
+        "comments": ""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P26477",
+          "P26656",
+          "P26660"
+        ],
+        "catalogue_count": 3,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C020",
+      "row_id": "15-early-eocene/attempt-1/register.txt#936",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Paramys",
+        "species": "copei",
+        "count": "1",
+        "comments": ""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P26659"
+        ],
+        "catalogue_count": 1,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C021",
+      "row_id": "15-early-eocene/attempt-1/register.txt#937",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Oxyaena",
+        "species": "intermedia",
+        "count": "1",
+        "comments": "\"Oxyaena forcipata\": see Gunnell and Gingerich (1991)"
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P26647"
+        ],
+        "catalogue_count": 1,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C022",
+      "row_id": "15-early-eocene/attempt-1/register.txt#938",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Didymictis",
+        "species": "sp.",
+        "count": "1",
+        "comments": "\"Didymictis protenus\""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P26649"
+        ],
+        "catalogue_count": 1,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C023",
+      "row_id": "15-early-eocene/attempt-1/register.txt#939",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Phenacodus",
+        "species": "sp.",
+        "count": "1",
+        "comments": "\"Phenacodus primaevus\""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P15697"
+        ],
+        "catalogue_count": 1,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C024",
+      "row_id": "15-early-eocene/attempt-1/register.txt#940",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Hyopsodus",
+        "species": "sp.",
+        "count": "2",
+        "comments": "\"nr. H. latidens\""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P26650",
+          "P26697"
+        ],
+        "catalogue_count": 2,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C025",
+      "row_id": "15-early-eocene/attempt-1/register.txt#941",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Meniscotherium",
+        "species": "tapiacitum",
+        "count": "1",
+        "comments": "\"Meniscotherium tapiacitis\""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P26658"
+        ],
+        "catalogue_count": 1,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C026",
+      "row_id": "15-early-eocene/attempt-1/register.txt#942",
+      "expected": {
+        "sample no": "4903",
+        "ref no": "4556",
+        "genus": "Eohippus",
+        "species": "angustidens",
+        "count": "11",
+        "comments": "Froehlich (2002, p. 177): \"Hyracotherium sp. C sensu Kihm 1984\""
+      },
+      "unit": "catalogued_specimens",
+      "level": "primary_source_checked",
+      "interpretation": "p3 enumerated catalogue identifiers; not an individual count.",
+      "issues": [],
+      "source_id": "mcgee2010",
+      "source_values": {
+        "catalogue_identifiers": [
+          "P15705",
+          "P26516",
+          "P26566",
+          "P26567",
+          "P26646",
+          "P26651",
+          "P26655",
+          "P26657",
+          "P26661",
+          "P26664",
+          "P26665"
+        ],
+        "catalogue_count": 11,
+        "taxonomic_crosswalk_validated": false
+      }
+    },
+    {
+      "review_id": "C027",
+      "row_id": "01-holocene/attempt-1/register.txt#1680",
+      "expected": {
+        "sample no": "3502",
+        "ref no": "3193",
+        "genus": "Homo",
+        "species": "sapiens",
+        "count": "2",
+        "comments": "a \"newborn infant burial\" and a frontal bone"
+      },
+      "unit": "mixed_individual_and_element",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Two count units comprise infant burial and frontal bone.",
+      "issues": [
+        "composite_count_unit"
+      ]
+    },
+    {
+      "review_id": "C028",
+      "row_id": "01-holocene/attempt-1/register.txt#1685",
+      "expected": {
+        "sample no": "3503",
+        "ref no": "3194",
+        "genus": "Canis",
+        "species": "lupus",
+        "count": "1",
+        "comments": "\"Canis familiaris\": eight specimens interpreted as a single burial"
+      },
+      "unit": "burial_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Eight specimens counted as one burial; individual interpretation remains curator inference.",
+      "issues": [
+        "associated_material_collapsed"
+      ]
+    },
+    {
+      "review_id": "C029",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#1175",
+      "expected": {
+        "sample no": "3398",
+        "ref no": "3111",
+        "genus": "Rana",
+        "species": "pipiens",
+        "count": "115",
+        "comments": "MNI"
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit row comment MNI.",
+      "issues": []
+    },
+    {
+      "review_id": "C030",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#1189",
+      "expected": {
+        "sample no": "3398",
+        "ref no": "3111",
+        "genus": "Microtus",
+        "species": "montanus",
+        "count": "200",
+        "comments": "count is a minimum"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Minimum count is not evidence of minimum individuals.",
+      "issues": [
+        "bound_not_unit"
+      ]
+    },
+    {
+      "review_id": "C031",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#2072",
+      "expected": {
+        "sample no": "3538",
+        "ref no": "3218",
+        "genus": "Lepus",
+        "species": "americanus",
+        "count": "211",
+        "comments": "teeth are fully inventoried, but there is \"skeletal material representing at least 49 animals\" (included in the count)"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "The comment states that teeth and skeletal material are included but does not identify how the 49-animal minimum enters count211. Skeletal specimens may be counted rather than individuals; stored unit and arithmetic remain unresolved.",
+      "issues": [
+        "count_unit_ambiguous",
+        "arithmetic_unresolved"
+      ],
+      "review_correction": "Independent review identified an unsupported inference: material representing at least49 animals does not demonstrate that49 individuals were added to a tooth tally. The previous mixed-individual-and-element assignment was withdrawn; count211 and original comment are unchanged."
+    },
+    {
+      "review_id": "C032",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#2104",
+      "expected": {
+        "sample no": "3539",
+        "ref no": "3219",
+        "genus": "Neotoma",
+        "species": "floridana",
+        "count": "37",
+        "comments": "minimum estimate (\"at least 37 individuals\")"
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit minimum37 individuals.",
+      "issues": []
+    },
+    {
+      "review_id": "C033",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5894",
+      "expected": {
+        "sample no": "4392",
+        "ref no": "3979",
+        "genus": "Homo",
+        "species": "neanderthalensis",
+        "count": "2",
+        "comments": "see Garralda et al. 2020): this does not include two teeth of an associated individual because the other five teeth are from the underlying layer 10"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Associated-individual mention describes excluded teeth, not stored unit.",
+      "issues": [
+        "incidental_unit_mention"
+      ]
+    },
+    {
+      "review_id": "C034",
+      "row_id": "03-late-pleistocene/attempt-1/register.txt#5904",
+      "expected": {
+        "sample no": "3975",
+        "ref no": "3740",
+        "genus": "Homo",
+        "species": "neanderthalensis",
+        "count": "1",
+        "comments": "complete Neanderthal infant skeleton: see also Skinner et al. (2005)"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "One complete infant skeleton.",
+      "issues": []
+    },
+    {
+      "review_id": "C035",
+      "row_id": "04-middle-pleistocene/attempt-1/register.txt#32",
+      "expected": {
+        "sample no": "2547",
+        "ref no": "2369",
+        "genus": "Arvicola",
+        "species": "sp.",
+        "count": "4",
+        "comments": "\"or juvenile individuals of Mimomys\""
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Individual mention is a taxonomic alternative.",
+      "issues": [
+        "incidental_unit_mention"
+      ]
+    },
+    {
+      "review_id": "C036",
+      "row_id": "04-middle-pleistocene/attempt-1/register.txt#158",
+      "expected": {
+        "sample no": "2626",
+        "ref no": "2412",
+        "genus": "Palaeoloxodon",
+        "species": "antiquus",
+        "count": "1",
+        "comments": "\"Mammuthus cf. meridionalis\": numerous tooth fragments (potentially one individual); see Demuro et al. (2015)"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Numerous fragments collapsed as potentially one individual.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C037",
+      "row_id": "04-middle-pleistocene/attempt-1/register.txt#1808",
+      "expected": {
+        "sample no": "4834",
+        "ref no": "4509",
+        "genus": "Sylvilagus",
+        "species": "sp.",
+        "count": "34",
+        "comments": "minimum nisp due to \"isolated teeth\""
+      },
+      "unit": "identified_specimens",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit minimum NISP, isolated teeth.",
+      "issues": [
+        "lower_bound"
+      ]
+    },
+    {
+      "review_id": "C038",
+      "row_id": "04-middle-pleistocene/attempt-1/register.txt#1811",
+      "expected": {
+        "sample no": "4834",
+        "ref no": "4509",
+        "genus": "Geomys",
+        "species": "pinetis",
+        "count": "62",
+        "comments": "minimum nisp due to \"isolated teeth\""
+      },
+      "unit": "identified_specimens",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit minimum NISP, isolated teeth.",
+      "issues": [
+        "lower_bound"
+      ]
+    },
+    {
+      "review_id": "C039",
+      "row_id": "04-middle-pleistocene/attempt-1/register.txt#1816",
+      "expected": {
+        "sample no": "4834",
+        "ref no": "4509",
+        "genus": "Sigmodon",
+        "species": "bakeri",
+        "count": "29",
+        "comments": "S. hispidus group, minimum nisp due to \"isolated teeth\""
+      },
+      "unit": "identified_specimens",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit minimum NISP, isolated teeth.",
+      "issues": [
+        "lower_bound"
+      ]
+    },
+    {
+      "review_id": "C040",
+      "row_id": "05-early-pleistocene/attempt-1/register.txt#16",
+      "expected": {
+        "sample no": "2539",
+        "ref no": "2366",
+        "genus": "Suncus",
+        "species": "barbarus",
+        "count": "24",
+        "comments": "new: count is of the minimum number of maxillae (7) and mandibles (17) based on measurements"
+      },
+      "unit": "jaws_maxillae_plus_mandibles",
+      "level": "provider_comment_reviewed",
+      "interpretation": "7 maxillae plus17 mandibles; minimum anatomical-element tally is not MNI.",
+      "issues": [
+        "bound_not_MNI"
+      ]
+    },
+    {
+      "review_id": "C041",
+      "row_id": "05-early-pleistocene/attempt-1/register.txt#17",
+      "expected": {
+        "sample no": "2539",
+        "ref no": "2366",
+        "genus": "Asoriculus",
+        "species": "maghrebiensis",
+        "count": "29",
+        "comments": "\"Episoriculus maghrebiensis\": count is of the minimum number of maxillae (17) and mandibles (12)"
+      },
+      "unit": "jaws_maxillae_plus_mandibles",
+      "level": "provider_comment_reviewed",
+      "interpretation": "17 maxillae plus12 mandibles; minimum anatomical-element tally is not MNI.",
+      "issues": [
+        "bound_not_MNI"
+      ]
+    },
+    {
+      "review_id": "C042",
+      "row_id": "07-early-pliocene/attempt-1/register.txt#241",
+      "expected": {
+        "sample no": "4414",
+        "ref no": "3999",
+        "genus": "Felis",
+        "species": "sp.",
+        "count": "1",
+        "comments": "compared to F. lybica: possibly two individuals"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Count1 but comment possibly2 individuals; relation unresolved.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C043",
+      "row_id": "07-early-pliocene/attempt-1/register.txt#245",
+      "expected": {
+        "sample no": "4295",
+        "ref no": "3906",
+        "genus": "Mammut",
+        "species": "borsoni",
+        "count": "3",
+        "comments": "there are five molars, but they belong to three individuals"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Five molars attributed to3 individuals; count3.",
+      "issues": []
+    },
+    {
+      "review_id": "C044",
+      "row_id": "07-early-pliocene/attempt-1/register.txt#249",
+      "expected": {
+        "sample no": "4295",
+        "ref no": "3906",
+        "genus": "Antilope",
+        "species": "sp.",
+        "count": "14",
+        "comments": "compared to A. subtorta: 15 specimens are listed, but two belong to one individual"
+      },
+      "unit": "specimens_association_adjusted",
+      "level": "provider_comment_reviewed",
+      "interpretation": "15 listed specimens minus one association gives14; not necessarily14 individuals.",
+      "issues": [
+        "associated_material_collapsed"
+      ]
+    },
+    {
+      "review_id": "C045",
+      "row_id": "07-early-pliocene/attempt-1/register.txt#287",
+      "expected": {
+        "sample no": "4439",
+        "ref no": "4023",
+        "genus": "Pliorhinus",
+        "species": "miguelcrusafonti",
+        "count": "1",
+        "comments": "7 specimens presumed to represent one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Seven specimens presumed one individual, count1.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C046",
+      "row_id": "08-late-miocene/attempt-1/register.txt#400",
+      "expected": {
+        "sample no": "4420",
+        "ref no": "4007",
+        "genus": "Hippotherium",
+        "species": "primigenium",
+        "count": "9",
+        "comments": "minimum count: more than one individual may be represented by a set of \"jugal teeth\" and \"some\" (at least two) phalanges"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Minimum material tally is not identified as MNI.",
+      "issues": [
+        "bound_not_unit"
+      ]
+    },
+    {
+      "review_id": "C047",
+      "row_id": "08-late-miocene/attempt-1/register.txt#1179",
+      "expected": {
+        "sample no": "4680",
+        "ref no": "4403",
+        "genus": "Hystrix",
+        "species": "sp.",
+        "count": "3",
+        "comments": "the three specimens may belong to one individual"
+      },
+      "unit": "specimens_association_uncertain",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Three specimens counted3 although possibly one individual.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C048",
+      "row_id": "08-late-miocene/attempt-1/register.txt#1343",
+      "expected": {
+        "sample no": "4821",
+        "ref no": "4501",
+        "genus": "Cervavitus",
+        "species": "novorossiae",
+        "count": "1",
+        "comments": "three specimens probably of one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Three specimens probably one individual, count1.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C049",
+      "row_id": "09-middle-miocene/attempt-1/register.txt#434",
+      "expected": {
+        "sample no": "4440",
+        "ref no": "4024",
+        "genus": "Eotragus",
+        "species": "clavatus",
+        "count": "1",
+        "comments": "3 teeth of probably one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Three teeth probably one individual, count1.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C050",
+      "row_id": "09-middle-miocene/attempt-1/register.txt#491",
+      "expected": {
+        "sample no": "4457",
+        "ref no": "4042",
+        "genus": "Gomphotherium",
+        "species": "angustidens",
+        "count": "1",
+        "comments": "\"défenses\" (tusks, possibly of one individual)"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Tusks possibly one individual, count1.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C051",
+      "row_id": "09-middle-miocene/attempt-1/register.txt#508",
+      "expected": {
+        "sample no": "4461",
+        "ref no": "4046",
+        "genus": "Prohyrax",
+        "species": "hendeyi",
+        "count": "40",
+        "comments": "Pickford et al. 1996: \"Prohyrax sp.\" said to be new; minimum count of \"individuals\""
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit minimum count of individuals.",
+      "issues": []
+    },
+    {
+      "review_id": "C052",
+      "row_id": "10-early-miocene/attempt-1/register.txt#1188",
+      "expected": {
+        "sample no": "4654",
+        "ref no": "4189",
+        "genus": "Proheteromys",
+        "species": "sulculus",
+        "count": "34",
+        "comments": "type: may or may not include Stratimus strobeli of Korth et al. (1990); presumed to include \"Mookomys cf. formicorum\" (NISP 5) based on Black (1963) and Gawne (1975); presumed to include \"? Florentiamys sp.\" (NISP 1) based on Black (1963)"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "NISP5 and1 concern presumed included taxa; no full-row NISP protocol verified.",
+      "issues": [
+        "incidental_unit_mention",
+        "taxonomic_aggregation_uncertain"
+      ]
+    },
+    {
+      "review_id": "C053",
+      "row_id": "10-early-miocene/attempt-1/register.txt#1194",
+      "expected": {
+        "sample no": "4654",
+        "ref no": "4189",
+        "genus": "Parahippus",
+        "species": "pawniensis",
+        "count": "5",
+        "comments": "NISP based on Galbreath (1953)"
+      },
+      "unit": "identified_specimens",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit NISP based on cited1953 source.",
+      "issues": []
+    },
+    {
+      "review_id": "C054",
+      "row_id": "10-early-miocene/attempt-1/register.txt#1478",
+      "expected": {
+        "sample no": "4842",
+        "ref no": "4514",
+        "genus": "Brachyodus",
+        "species": "onoideus",
+        "count": "1",
+        "comments": "dental and postcranial elements of one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Dental and postcranial elements one individual.",
+      "issues": []
+    },
+    {
+      "review_id": "C055",
+      "row_id": "10-early-miocene/attempt-1/register.txt#1486",
+      "expected": {
+        "sample no": "4842",
+        "ref no": "4514",
+        "genus": "Plesiaceratherium",
+        "species": "fahlbuschi",
+        "count": "1",
+        "comments": "\"Dromoceratherium cf. fahlbuschi\": dental, cranial, and postcranial elements of one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Dental,cranial,postcranial elements one individual.",
+      "issues": []
+    },
+    {
+      "review_id": "C056",
+      "row_id": "11-late-oligocene/attempt-1/register.txt#408",
+      "expected": {
+        "sample no": "4747",
+        "ref no": "4455",
+        "genus": "Mirrabella",
+        "species": "hansoulii",
+        "count": "2",
+        "comments": "\"Mirabella hansoulii\" type: three teeth representing two individuals"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Three teeth represent two individuals, count2.",
+      "issues": []
+    },
+    {
+      "review_id": "C057",
+      "row_id": "11-late-oligocene/attempt-1/register.txt#497",
+      "expected": {
+        "sample no": "4801",
+        "ref no": "4490",
+        "genus": "Glirudinus",
+        "species": "glirulus",
+        "count": "2",
+        "comments": "15 teeth belonging to one individual plus one milk tooth"
+      },
+      "unit": "mixed_individual_and_element",
+      "level": "provider_comment_reviewed",
+      "interpretation": "15 teeth one individual plus one milk tooth, count2.",
+      "issues": [
+        "composite_count_unit"
+      ]
+    },
+    {
+      "review_id": "C058",
+      "row_id": "12-early-oligocene/attempt-1/register.txt#795",
+      "expected": {
+        "sample no": "4822",
+        "ref no": "4502",
+        "genus": "Eggysodon",
+        "species": "gaudryi",
+        "count": "1",
+        "comments": "6 specimens belonging to one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Six specimens one individual, count1.",
+      "issues": []
+    },
+    {
+      "review_id": "C059",
+      "row_id": "12-early-oligocene/attempt-1/register.txt#859",
+      "expected": {
+        "sample no": "4837",
+        "ref no": "4513",
+        "genus": "Pseudosciurus",
+        "species": "suevicus",
+        "count": "10",
+        "comments": "minimum of 10 individuals"
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit minimum10 individuals.",
+      "issues": []
+    },
+    {
+      "review_id": "C060",
+      "row_id": "12-early-oligocene/attempt-1/register.txt#868",
+      "expected": {
+        "sample no": "4838",
+        "ref no": "4513",
+        "genus": "Melissiodon",
+        "species": "schaubi",
+        "count": "1",
+        "comments": "type: a referred specimen is \"probably\" of the same individual, so they are counted together"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Two probable associated specimens counted together.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C061",
+      "row_id": "13-late-eocene/attempt-1/register.txt#202",
+      "expected": {
+        "sample no": "4765",
+        "ref no": "4470",
+        "genus": "Adjidaumo",
+        "species": "minutus",
+        "count": "2",
+        "comments": "subgenus Gymnoptychus: \"two lower jaws\" with one catalogue number, presumed to be of two individuals"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Two jaws under one catalogue number counted2 presumed individuals.",
+      "issues": [
+        "uncertain_association"
+      ]
+    },
+    {
+      "review_id": "C062",
+      "row_id": "15-early-eocene/attempt-1/register.txt#310",
+      "expected": {
+        "sample no": "4574",
+        "ref no": "4129",
+        "genus": "Viverravidae",
+        "species": "indet.",
+        "count": "1",
+        "comments": "two numbered specimens representing one individual"
+      },
+      "unit": "individual_association",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Two numbered specimens one individual, count1.",
+      "issues": []
+    },
+    {
+      "review_id": "C063",
+      "row_id": "19-maastrichtian/attempt-1/register.txt#164",
+      "expected": {
+        "sample no": "4815",
+        "ref no": "4495",
+        "genus": "Hypacrosaurus",
+        "species": "altispinus",
+        "count": "2",
+        "comments": "see the text for the species name: MNI, this is a bonebed"
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit MNI in row comment.",
+      "issues": []
+    },
+    {
+      "review_id": "C064",
+      "row_id": "19-maastrichtian/attempt-1/register.txt#165",
+      "expected": {
+        "sample no": "4815",
+        "ref no": "4495",
+        "genus": "Albertosaurus",
+        "species": "sarcophagus",
+        "count": "12",
+        "comments": "MNI"
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit row comment MNI.",
+      "issues": []
+    },
+    {
+      "review_id": "C065",
+      "row_id": "19-maastrichtian/attempt-1/register.txt#168",
+      "expected": {
+        "sample no": "4815",
+        "ref no": "4495",
+        "genus": "Albertonykus",
+        "species": "sp.",
+        "count": "13",
+        "comments": "MNI"
+      },
+      "unit": "minimum_individuals",
+      "level": "provider_comment_reviewed",
+      "interpretation": "Explicit row comment MNI.",
+      "issues": []
+    },
+    {
+      "review_id": "C066",
+      "row_id": "20-campanian/attempt-1/register.txt#131",
+      "expected": {
+        "sample no": "4925",
+        "ref no": "4572",
+        "genus": "Hadrosaurinae",
+        "species": "indet.",
+        "count": "257",
+        "comments": "plus many out of 1408 dinosaurian fragments: MNI 2"
+      },
+      "unit": "unknown",
+      "level": "provider_comment_reviewed",
+      "interpretation": "MNI2 is an alternative to stored257; primary full text inaccessible.",
+      "issues": [
+        "alternative_metric_not_stored_count",
+        "additional_fragment_pool"
+      ]
+    }
+  ],
+  "independent_review_corrections": [
+    {
+      "review_id": "C031",
+      "change": "withdrew unsupported mixed-individual-and-element unit; retained unknown and explicit arithmetic ambiguity"
+    },
+    {
+      "scope": "primary_source_retention",
+      "change": "retained only required counting pages, visual evidence and original PDF with exact request receipts and hashes; primary PDF/images identical to original inspected files"
+    }
+  ],
+  "source_evidence_archive": {
+    "location": "deep-server:/data/paleodata/fossilworks/evidence/2026-10-28-count-conventions-v2",
+    "manifest": "MANIFEST.json",
+    "manifest_sha256": "56b6e0eb9e4275365193df62fae51468104a2df84844e83e735d79ba37f60739",
+    "repository_manifest_copy": "count-conventions-source-evidence-manifest-2026-10-28.json",
+    "payload_files": 9,
+    "verification": "Parent Codex independently checked all nine payload hashes and mirrored bundle read-only. Original inspected PDF and two images match retained payloads byte-for-byte; counting statements checked in fresh retained HTML.",
+    "reuse": "Private evidence retention only; no publication or redistribution authorisation inferred."
+  }
+}

@@ -1,0 +1,385 @@
+<html>
+<head>
+<title>
+Fossilworks: Nelly Creek
+</title>
+
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="/html/works.css">
+<link rel="icon" href="/html/huntsman-ico.tiff" type="image/x-icon">
+<link rel="shortcut icon" href="/html/huntsman-ico.tiff" type="image/x-icon">
+
+<meta name="keywords" content="ecology, biodiversity, species diversity, abundance distributions, database">
+<meta name="description" content="">
+
+</head>
+
+<body>
+
+<div id="banner">
+
+<div style="position: relative; top: 5px; left: 4px;">
+<a class="bannerLink" href="?page=works_home" style="color: White;">
+<img alt="thylacine" src="/images/thylacine_outline.png" height="50px" style="border: 0;">
+</a>
+</div>
+
+<div style="position: relative; top: -38px; margin-left: 115px; margin-bottom: -82px; font-family: Palatino, Garamond, serif; font-size: 2.5em; color: #0055CC;">
+<a class="bannerLink" href="?page=works_home">
+<span class="bannerLink">
+<img src="/images/Fossilworks_logo.png" style="height: 44px; margin-top: -4px; border: 0;">
+</span>
+</a>
+</div>
+
+<div style="position: relative; overflow: hidden; height: 58px; width: 28em; top: -8px; margin-left: 26em;">
+<div class="bannerGenus" style="margin-top: 14px; margin-right: 0.0em; font-size: 0.9980010924412924em;"><a href="?a=map&amp;genus=Peromyscus"><span style="color: #DDDDDD;">Peromyscus</span></a></div>
+<div class="bannerGenus" style="margin-top: 23px; margin-right: 0.5em; font-size: 1.1852710051279103em;"><a href="?a=map&amp;genus=Rattus"><span style="color: #DDDDDD;">Rattus</span></a></div>
+<div class="bannerGenus" style="margin-top: 3px; margin-right: 1.0em; font-size: 1.2606511765414292em;"><a href="?a=map&amp;genus=Hipposideros"><span style="color: #DDDDDD;">Hipposideros</span></a></div>
+
+</div>
+
+</div>
+
+<div id="navBar">
+
+<div class="navBarLink">
+  <a href="/?a=sampleSearchForm">Samples</a>
+</div>
+<div class="navBarLink">
+  <a href="/?a=taxonSearch">Species</a>
+</div>
+<div class="navBarLink">
+  <a href="/?page=search_refs">References</a>
+</div>
+
+<div class="navBarLink bannerLink">
+<form method="POST" action="">
+<input type="text" name="pot" id="pot" style="display: none;" tabindex="-1" z-index: -1 autocomplete="off"> <input type="hidden" name="a" value="map"> <input type="text" id="quickMapSearch" name="quickMapSearch" value="Map search" onFocus="document.getElementById('quickMapSearch').value ='';" onBlur="document.getElementById('quickMapSearch').value ='Map search';" style="position: absolute; field-sizing: content; width: 7em; padding-left: 0.2em; font-family: Palatino, Garamond, serif; font-size: 1em; background: White; color: #0055CC; border: 0px; margin: 0px; padding: 0px;" tabindex="0"> <button type="submit" style="display: none;"></button>
+</form>
+</div>
+
+<div class="navBarLink" style="position: relative; left: 5em;">
+<a href="?a=timeScale&taxon=vertebrates&time_interval=fossil record">Time scales</a>
+</div>
+
+<div class="navBarLink bannerLink" style="position: relative; left: 5em;">
+<form method="POST" action="">
+<input type="text" name="pot" id="pot" style="display: none;" tabindex="-1" z-index: -1 autocomplete="off"> <input type="hidden" name="a" value="quickSearch"> <input type="text" id="quick_search" name="quick_search" value="Page search" onFocus="document.getElementById('quick_search').value ='';" onBlur="document.getElementById('quick_search').value ='Page search';" style="position: absolute; field-sizing: content; width: 7em; padding-left: 0.2em; font-family: Palatino, Garamond, serif; font-size: 1em; background: White; color: #0055CC; border: 0px; margin: 0px; padding: 0px;" tabindex="0"> <button type="submit" style="display: none;"></button>
+</form>
+</div>
+
+<div class="navBarLink" style="position: relative; left: 10.25em;">
+<a href="?a=downloadForm">Download</a>
+</div>
+<div class="navBarLink" style="position: relative; left: 10.25em;">
+<a href="?page=works_FAQ">FAQ</a>
+</div>
+<div class="navBarLink" style="position: relative; left: 10.25em;">
+<a class="bannerLink" href="/?page=login">Log in</a>
+</div>
+
+</div>
+
+
+
+<div id="mainPanel">
+
+<style>
+<!--
+.myPanel	{
+	width: 95%;
+}
+.not_comment	{
+	float: left;
+	clear: none;
+	white-space: nowrap;
+}
+.comment	{
+	float: left;
+	clear: left;
+	margin-left: 1em;
+	text-indent: -1em;
+	line-height: 1.25em;
+}
+.field	{
+	margin-right: 0.2em;
+}
+.value	{
+	margin-right: 1.5em;
+	padding-left: 0.25em;
+}
+.first	{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.notFirst	{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-top: 1px solid LightGray;
+}
+.countCell	{
+	padding-left: 3em;
+}
+.commentCell	{
+	display: block;
+	padding-left: 1em;
+	padding-bottom: 0.5em;
+	padding-top: 0em;
+	line-height: 1.5em;
+}
+
+-->
+</style>
+
+<div class="panel" style="width: 93%; margin-top: 1em; line-height: 1.5em;">
+
+<div class="title" style="text-align: center; margin-top: 0.5em;">Nelly Creek </div>
+
+
+
+
+
+
+
+<div class="panelHeader">Basic information</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+
+<div style="padding-bottom: 0.25em;">
+<div class="comment"><b>Content:</b>
+Middle Eocene leaves from Australia</div>
+<div class="value" style="clear: left; padding-bottom: 0.5em;">245 specimens, 14 observed species, estimated <a href="?page=richness">total richness</a> 42.9
+</div>
+</div>
+
+
+
+<div class="comment"><span class="field"><b>Reference:</b></span> <span class="value">D. C. Christophel, L. J. Scriven,  and D. R. Greenwood. 1992. An Eocene megafossil flora from Nelly Creek, South Australia. <i>Transactions of the Royal Society of South Australia</i> <b>116</b>(2):65-76 [ER 4414]</span></div>
+
+</div>
+
+<div class="panelHeader">Geography</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+<div style="float: left; clear: none; width: 50%;">
+<div class="comment"><b>Country</b>: Australia</div><br>
+<div class="comment"><b>State</b>: South Australia</div><br>
+
+<span class="not_comment"><span class="field">Coordinate:</span> <span class="value">-29&deg; 0' S, 137&deg; 0' E</span></span>
+
+<div class="comment"><b>Latlng basis</b>: stated in text</div><br>
+<div class="comment"><b>Scale</b>: quarry</div><br>
+
+
+<div class="comment"><b>Time interval</b>: Middle Eocene</div><br>
+
+<div class="comment"><b>Section</b>: 4414</div><br>
+
+
+
+
+
+
+<div class="comment"><b>Geography comments</b>: "approximately 1 km south of the southern shore of Lake Eyre South"
+<br>the associated "palynoflora correlates with the Lower Nothofagidites asperus Zone of Stover and Partridge (1973) and with the Proteacidites pachypolus Zone of Harris (1971)" and is Middle Eocene</div><br>
+</div>
+
+<div style="position: relative; float: left; clear: right; margin-left: 2em; height: 180px; width: 270px; overflow: hidden;">
+<img src="/images/large_world_map.png" style="position: absolute; bottom: -10px; left: -340px; height: 360px;">
+<div style="position: absolute; bottom: 80px; left: 125px;"><span style="font-size: 30px; color: DodgerBlue;">&bull;</span></div>
+</div>
+
+</div>
+
+<div class="panelHeader">Environment</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+
+
+
+
+<div class="comment"><b>Lithology</b>: claystone</div><br>
+
+
+
+
+
+
+
+
+
+
+<div class="comment"><b>Habitat comments</b>: from a "fossilferous clay" that is apparently carbonaceous</div><br>
+</div>
+
+<div class="panelHeader">Methods</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+
+
+
+
+
+
+
+<div class="comment"><b>Sampled by</b>: R. Callen</div><br>
+<div class="comment"><b>Years</b>: 1986</div><br>
+
+
+
+
+
+
+
+
+
+
+
+<div class="comment"><b>Basal area status</b>: not applicable</div><br>
+
+<div class="comment"><b>Sampling comments</b>: material was "freshly excavated" and macerated
+<br>the museum repository is not indicated</div><br>
+</div>
+
+<div class="panelHeader">Metadata</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+<div class="comment"><b>Sample no</b>: 4697</div><br>
+<div class="comment"><b>Contributor no</b>: John Alroy</div><br>
+<div class="comment"><b>Enterer</b>: John Alroy</div><br>
+
+<div class="comment"><b>Created</b>: 2025-11-22 06:41:09</div><br>
+<div class="comment"><b>Modified</b>: 2025-11-22 06:41:09</div><br>
+</div>
+
+<div class="panelHeader">Abundance distribution</div>
+<div class="panelHeaderRight" style="float: left; clear: both;">
+<div style="border-color: green; margin-left: 2em; height: 97.2124171522018px; position: relative; float: left; clear: both; width: 168px;">
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 55px; width: 7px; position: absolute; bottom: 0px; left: 0px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 36px; width: 7px; position: absolute; bottom: 0px; left: 9px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 31px; width: 7px; position: absolute; bottom: 0px; left: 18px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 31px; width: 7px; position: absolute; bottom: 0px; left: 27px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 14px; width: 7px; position: absolute; bottom: 0px; left: 36px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 14px; width: 7px; position: absolute; bottom: 0px; left: 45px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 14px; width: 7px; position: absolute; bottom: 0px; left: 54px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 10px; width: 7px; position: absolute; bottom: 0px; left: 63px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 4px; width: 7px; position: absolute; bottom: 0px; left: 72px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 4px; width: 7px; position: absolute; bottom: 0px; left: 81px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 4px; width: 7px; position: absolute; bottom: 0px; left: 90px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 4px; width: 7px; position: absolute; bottom: 0px; left: 99px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 4px; width: 7px; position: absolute; bottom: 0px; left: 108px; background-color: red; border: none;"></div>
+</div>
+<div style="height: 77.2124171522018;">
+<div style="float: left; height: 4px; width: 7px; position: absolute; bottom: 0px; left: 117px; background-color: red; border: none;"></div>
+</div>
+
+</div>
+<div style="float: left; clear: both; padding-left: 1em; margin-top: 10px; margin-bottom: 1em; width: 600px; font-size: 0.9em;">
+<i>Each square represents a species. Square sizes are proportional to counts. Values are logged.</i>
+</div>
+
+</div>
+
+
+<div class="panelHeader" style="margin-left: 0em; margin-top: 117.2124171522018px; padding-top: 1em;">Statistics</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+<div style="float: left; clear: none; margin-top: 1em; width: 20em;">
+<div style="line-height: 1.5em;">14 species</div>
+<div style="line-height: 1.5em;">6 singletons</div>
+<div style="line-height: 1.5em;">total count 245</div>
+<div style="line-height: 1.5em;">geometric Weibull estimate: 42.9</div>
+<div style="line-height: 1.5em;">geometric series index: 31.0</div>
+</div>
+<div style="float: left; clear: right; margin-top: 1em; width: 20em;">
+<div style="line-height: 1.5em;">Fisher's &alpha;: 3.223</div>
+<div style="line-height: 1.5em;">geometric series <i>k</i>: 0.673</div>
+<div style="line-height: 1.5em;">Hurlbert's PIE: 0.486</div>
+<div style="line-height: 1.5em;">Shannon's H: 1.1662</div>
+<div style="line-height: 1.5em;">Good's <i>u</i>: 0.9755</div>
+</div>
+		
+
+<!--
+<div style="float: left; clear: both; margin-left: 2em;">
+
+
+
+</div>
+-->
+
+<div class="panelHeader" style="margin-left: -1em; margin-top: 1em;">Register</div>
+<div class="panelHeaderRight"></div>
+<div class="panel panelFloat myPanel">
+<table style="margin-left: -1em; margin-top: 1em; border-collapse: collapse; font-size: 0.95em;">
+<tr><td class="first">Angiospermae  indet. 1</td><td class="countCell first">172</td><td class="countCell first"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Proteacae  indet. 1</td><td class="countCell notFirst">16</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst"><a href="?a=taxonPage&amp;genus=Myrtaciphyllum&amp;species=eremeaensis" rel="nofollow"><i>Myrtaciphyllum</i>  <i>eremeaensis </i></a></td><td class="countCell notFirst">15</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell">type</td></tr>
+<tr><td class="notFirst"><a href="?a=taxonPage&amp;genus=Agathis" rel="nofollow"><i>Agathis</i>  <i>sp. </i></a></td><td class="countCell notFirst">3</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Lauraceae  indet.</td><td class="countCell notFirst">1</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst"><a href="?a=taxonPage&amp;genus=Brachychiton" rel="nofollow"><i>Brachychiton</i>  <i>sp. </i></a></td><td class="countCell notFirst">1</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Proteaceae  indet. 2</td><td class="countCell notFirst">2</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Monocots  indet.</td><td class="countCell notFirst">3</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Proteaceae  indet. 3</td><td class="countCell notFirst">3</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Angiospermae  indet. 2</td><td class="countCell notFirst">1</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Angiospermae  indet. 3</td><td class="countCell notFirst">1</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Proteaceae  indet. 4</td><td class="countCell notFirst">1</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Angiospermae  indet. 4</td><td class="countCell notFirst">1</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+<tr><td class="notFirst">Podocarpaceae  indet.</td><td class="countCell notFirst">25</td><td class="countCell notFirst"></td></tr>
+<tr><td colspan="2" class="commentCell"></td></tr>
+
+</table>
+</div>
+
+</div>
+
+<div style="clear: both; margin-left: auto; margin-right: auto; width: 100%; padding-top: 0.5em; padding-bottom: 0.5em; border-top: 1px solid WhiteSmoke; text-align: center; font-size: 1.2em;">
+
+
+</div>
+
+</div>
+
+</body>
+</html>
+

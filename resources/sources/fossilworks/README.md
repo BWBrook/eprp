@@ -5,7 +5,7 @@ kind: database
 status: active
 last_update: "live; all 20 visible fossil interval exports privately mirrored and audited 2026-10-28"
 scope:
-  taxa: ["terrestrial fossil animals, presently focused on Cenozoic and Cretaceous vertebrates"]
+  taxa: ["fossil assemblages focused on Cenozoic and Cretaceous terrestrial vertebrates; the retained exports also include plants and invertebrates"]
   time: "Cretaceous to Holocene in the public fossil download form; coverage concentrated in the Cenozoic, especially Pleistocene and Holocene"
   space: "global terrestrial sites; geographic and taxonomic coverage are uneven and not yet profiled"
   record_unit: "a taxon identification with a specimen count in a fossil sample; samples are linked to publications"
@@ -25,7 +25,7 @@ versioning:
   notes: "live database; no fixed release or version archive established. Save dated exports and the exact request to make an analysis reproducible"
 mirror:
   path: "deep-server:/data/paleodata/fossilworks/raw/2026-10-28-intervals-v2"
-  policy: "private dated source exports; retain each interval separately, with exact requests, UTC times and hashes; do not assemble before resolving source structure"
+  policy: "private dated source exports; retain each interval separately, with exact requests, UTC times and hashes; derived assemblies and annotations preserve the originals"
   state: "all 20 visible selections, 100 selected original sheets, stable repeated hashes and a verified read-only manifest; 15 interval bundles retain source count/reference inconsistencies"
 lineage:
   upstream:
@@ -48,9 +48,10 @@ entry:
 
 ## Summary
 
-The current Fossilworks is John Alroy's public database of terrestrial fossil
-assemblages. It focuses on Cenozoic and Cretaceous vertebrates and is especially
-rich in Pleistocene and Holocene sites. Each entered taxon identification in a
+The current Fossilworks is John Alroy's public database of fossil assemblages.
+It focuses on terrestrial Cenozoic and Cretaceous vertebrates and is especially
+rich in Pleistocene and Holocene sites; the retained exports also contain plant
+and invertebrate records. Each entered taxon identification in a
 fossil list has a specimen count, according to the [FAQ](https://fossilworks.org/?page=works_FAQ).
 Counts make it a useful lead for questions about local abundance distributions,
 community composition and sampling-standardised diversity. They are not
@@ -96,7 +97,7 @@ least one time interval for fossil data. On 28 October 2026 we retrieved all
 filter. Each retains the five original sheets, request parameters, result
 page, per-request UTC times and response headers, SHA256 checksums, and a
 second copy of every sheet to test stability. The original source snapshot is
-read-only; no datasets have been assembled or deduplicated. The
+read-only; source records have not been deduplicated. The
 [acquisition receipt](profile/acquisition-2026-10-28.md) and
 [corrected interval table](profile/interval-download-literal-2026-10-28.tsv)
 describe the files.
@@ -111,7 +112,7 @@ The database is live: the dated files are retained observations of public
 exports, with no fixed provider release or historical-query replay established.
 The [sample and register assembly](assembly.md) provides a queryable,
 provenance-preserving SQLite representation, with unresolved source issues
-retained rather than corrected.
+retained rather than corrected. The separate [reference and count annotations](annotations.md) link recovered citations and documented count conventions without altering the assembly.
 
 The FAQ states that data are CC0, while Alroy retains copyright in the site
 and its software. It encourages acknowledgement of both the database and its

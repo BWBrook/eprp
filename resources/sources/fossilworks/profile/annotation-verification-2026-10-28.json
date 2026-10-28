@@ -1,0 +1,608 @@
+{
+  "verified_utc": "2026-10-28T03:17:58.172942+00:00",
+  "host": "deep-server",
+  "base_path": "/data/paleodata/fossilworks/derived/2026-10-28-assembly-v1/fossilworks.sqlite",
+  "sidecar_path": "/data/paleodata/fossilworks/derived/2026-10-28-annotations-v1/fossilworks-annotations.sqlite",
+  "verification_script_sha256": "303e5b4e63bbbd981f7904122bea39d1ce25cf7beba8da205c0053500d1d7f7b",
+  "before": {
+    "base": {
+      "sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+      "bytes": 80089088,
+      "mtime_ns": 1793155482496932340,
+      "mode": "0o444"
+    },
+    "sidecar": {
+      "sha256": "ebac4771b4b0f400c7cb91b9c4e8499ba781731374148f3f77aac672737f66b6",
+      "bytes": 12165120,
+      "mtime_ns": 1793157365027576168,
+      "mode": "0o444"
+    }
+  },
+  "after": {
+    "base": {
+      "sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+      "bytes": 80089088,
+      "mtime_ns": 1793155482496932340,
+      "mode": "0o444"
+    },
+    "sidecar": {
+      "sha256": "ebac4771b4b0f400c7cb91b9c4e8499ba781731374148f3f77aac672737f66b6",
+      "bytes": 12165120,
+      "mtime_ns": 1793157365027576168,
+      "mode": "0o444"
+    }
+  },
+  "sqlite_integrity": "ok",
+  "sqlite_foreign_keys": "ok",
+  "cardinalities": {
+    "register_count_evidence": 26046,
+    "sample_count_evidence": 1697,
+    "reference_recovery": 58,
+    "bibliographic_checks": 3
+  },
+  "register_join_rows": 26046,
+  "sample_join_rows": 1697,
+  "raw_field_mismatches": {
+    "register_count_evidence": 0,
+    "sample_count_evidence": 0
+  },
+  "recovered_reference_ids": 58,
+  "recovered_register_rows": 1266,
+  "recovered_sample_ids": 96,
+  "input_documents": {
+    "reference_recovery": {
+      "sha256": "46e6d0dc2278740a93c51c5c1312bca770147ca0344fdeb8b4d7d95f6a534baa",
+      "bytes": 104215
+    },
+    "bibliographic_checks": {
+      "sha256": "39ceee6d5f910254032cd14238b058944f6710b04d35133771f30b7d7ac63050",
+      "bytes": 2844
+    },
+    "count_register": {
+      "sha256": "c22d062575f154aafe59b4a69aefa3dcda69b7b4d07601142b49ba7ac7bde077",
+      "bytes": 4662465
+    },
+    "count_samples": {
+      "sha256": "c9bfd12548973b74693d23e36dde4f3224123ca6a20d20977ec414b8ae2e2181",
+      "bytes": 287780
+    },
+    "count_summary": {
+      "sha256": "5577792915f86af058eaa78ca8931de5e942ce700bb34106c260bd6b1bdb8f90",
+      "bytes": 3318
+    },
+    "count_review": {
+      "sha256": "a052e0c7261b79d6dd26e0b9654e136d4fdeca3aa0dbdc47ffa0c27468c7612b",
+      "bytes": 48090
+    }
+  },
+  "count_units": {
+    "burial_association": 1,
+    "catalogued_specimens": 8,
+    "identified_specimens": 4,
+    "individual_association": 14,
+    "jaws_maxillae_plus_mandibles": 2,
+    "minimum_individuals": 9,
+    "mixed_individual_and_element": 2,
+    "mollusc_specimen": 1,
+    "skeletal_elements": 15,
+    "specimens_association_adjusted": 1,
+    "specimens_association_uncertain": 1,
+    "unknown": 25988
+  },
+  "C031": {
+    "row_id": "03-late-pleistocene/attempt-1/register.txt#2072",
+    "count_raw": "211",
+    "count_unit": "unknown",
+    "review_level": "provider_comment_reviewed",
+    "issues": "[\"count_unit_ambiguous\",\"arithmetic_unresolved\"]"
+  },
+  "raw_source_verification": {
+    "scope": "All selected source_files represented by original assembly; raw acquisition files not selected into assembly were not rehashed. No raw file was opened for writing.",
+    "files_checked": 100,
+    "bytes_checked": 9760109,
+    "all_match_original_assembly_source_hashes": true,
+    "files": [
+      {
+        "file_id": "01-holocene/attempt-1/matrix.txt",
+        "sha256": "4b0cbe1ee81a19fc514a199b1cd03a13ba818026be1034917800aa7019f606e8",
+        "bytes": 977680
+      },
+      {
+        "file_id": "01-holocene/attempt-1/references.txt",
+        "sha256": "d3eb94f2c8f5741545af24612b9046021560fb3257b1b9a471a65237099a4db2",
+        "bytes": 59432
+      },
+      {
+        "file_id": "01-holocene/attempt-1/register.txt",
+        "sha256": "7f55324596b47857e7709b1ef358f65a1a8099dd85688949aee653fa40f07399",
+        "bytes": 1497453
+      },
+      {
+        "file_id": "01-holocene/attempt-1/samples.txt",
+        "sha256": "9e1601aaa4e1aaef5c309754a5746d86b37b57f77d76bc472bc9a30ffb5a46a3",
+        "bytes": 105987
+      },
+      {
+        "file_id": "01-holocene/attempt-1/species.txt",
+        "sha256": "654987d1ca0a4403a3b75902a21c84cc0ab43654dbca5317b454435a28f15a8e",
+        "bytes": 101703
+      },
+      {
+        "file_id": "02-pleistocene-holocene/attempt-1/matrix.txt",
+        "sha256": "6a1b4baa4a1cdb922e5495ab20a25bd281fbc544fd67a722d4d8691c260aed67",
+        "bytes": 16531
+      },
+      {
+        "file_id": "02-pleistocene-holocene/attempt-1/references.txt",
+        "sha256": "7a11c54e808680968d0319dc069f770dc85687d4cedcb72dce890658a0590a74",
+        "bytes": 5492
+      },
+      {
+        "file_id": "02-pleistocene-holocene/attempt-1/register.txt",
+        "sha256": "5f2694ab151a2fa6c05f6296c6068c847e37c3292469a501aeb73fe41faaf898",
+        "bytes": 115782
+      },
+      {
+        "file_id": "02-pleistocene-holocene/attempt-1/samples.txt",
+        "sha256": "94dce9d8fbe822e506bdf7ca815a88995c495e1030b4fa3fe1f17a3cd5b63167",
+        "bytes": 7579
+      },
+      {
+        "file_id": "02-pleistocene-holocene/attempt-1/species.txt",
+        "sha256": "3e6608dbdf048e6a88343fd47d62ca8656b8ce55ad33db0b5e305f25a335b529",
+        "bytes": 24772
+      },
+      {
+        "file_id": "03-late-pleistocene/attempt-1/matrix.txt",
+        "sha256": "f41bdf692b9520ddfe7b9fda17ed3f0d905a2d9885ff7dfffa96703f917c23ee",
+        "bytes": 804092
+      },
+      {
+        "file_id": "03-late-pleistocene/attempt-1/references.txt",
+        "sha256": "77078376805d6744fed51fb98b2f60ad2eb8493807b8e81332009316e08cebf9",
+        "bytes": 61533
+      },
+      {
+        "file_id": "03-late-pleistocene/attempt-1/register.txt",
+        "sha256": "f7166868eb6d81a2e6fbf84ee53852a27a01e4ed9781a6111bfa4d923ca803f8",
+        "bytes": 1423290
+      },
+      {
+        "file_id": "03-late-pleistocene/attempt-1/samples.txt",
+        "sha256": "de13fe9ab71bce705fb1eb994c18987db2231cd5b646e1ca36b73a2cec10c7bc",
+        "bytes": 92265
+      },
+      {
+        "file_id": "03-late-pleistocene/attempt-1/species.txt",
+        "sha256": "7db8bac8b4514b782067dd6781b119691288d001774c0c92adebb19655b9bf76",
+        "bytes": 102745
+      },
+      {
+        "file_id": "04-middle-pleistocene/attempt-1/matrix.txt",
+        "sha256": "232bdc07b0bbbebf157d73ea43c0682a814685d5ea2844337956ac5f69004648",
+        "bytes": 105842
+      },
+      {
+        "file_id": "04-middle-pleistocene/attempt-1/references.txt",
+        "sha256": "260a7f306e30ecda5fb11724be2f75802d15a9c488e1eab5f94d5bd9b59bc378",
+        "bytes": 19503
+      },
+      {
+        "file_id": "04-middle-pleistocene/attempt-1/register.txt",
+        "sha256": "6d6ef794541d042d5844c2b91615413799202d0abe706d624dffd120d4c1c9d8",
+        "bytes": 401841
+      },
+      {
+        "file_id": "04-middle-pleistocene/attempt-1/samples.txt",
+        "sha256": "6d11d177d78e2cf56d2298744af40d28ee3bf01e23ff45b36327e1f8ca64ba61",
+        "bytes": 20539
+      },
+      {
+        "file_id": "04-middle-pleistocene/attempt-1/species.txt",
+        "sha256": "8a4a60e9b9c4790532b51ed8ce860123fbdf1582597989f32238b0502a050048",
+        "bytes": 51510
+      },
+      {
+        "file_id": "05-early-pleistocene/attempt-1/matrix.txt",
+        "sha256": "df558770d9662f5b5f245bf5bfca39388e0ae4f131ec8ef1a0cb78f24333cc45",
+        "bytes": 68490
+      },
+      {
+        "file_id": "05-early-pleistocene/attempt-1/references.txt",
+        "sha256": "73f1cdb704e80738133b3e7ad17a78493df67c1d007316452b54c66ca8c83d3a",
+        "bytes": 18011
+      },
+      {
+        "file_id": "05-early-pleistocene/attempt-1/register.txt",
+        "sha256": "21c9ebc381d4183d326e25bd5c71c8a580e64aa05a64f996b4e96ba88ff66d70",
+        "bytes": 256647
+      },
+      {
+        "file_id": "05-early-pleistocene/attempt-1/samples.txt",
+        "sha256": "1f0237e37386aab589e1e2181fc125717f3a9a119b2005d64e6741c4c3947ece",
+        "bytes": 20812
+      },
+      {
+        "file_id": "05-early-pleistocene/attempt-1/species.txt",
+        "sha256": "6d8e85b7274ceeef100b1707104a42e06d63bfdcf3eda856c31967036f4318f5",
+        "bytes": 28667
+      },
+      {
+        "file_id": "06-late-pliocene/attempt-1/matrix.txt",
+        "sha256": "14cf6c2bc49edc423aa5c9ccfa86aea92f02d3fc7e58463eecc25b5e4c630cc7",
+        "bytes": 9164
+      },
+      {
+        "file_id": "06-late-pliocene/attempt-1/references.txt",
+        "sha256": "fb07f50c5f51ae823dd62cad5b4933c48abda1f069155ee658d90cef3236d6cb",
+        "bytes": 4777
+      },
+      {
+        "file_id": "06-late-pliocene/attempt-1/register.txt",
+        "sha256": "ec2a38ed213a26840b2b7cc40a28a1eb733e43f39700367410b8a97fe26ae579",
+        "bytes": 65506
+      },
+      {
+        "file_id": "06-late-pliocene/attempt-1/samples.txt",
+        "sha256": "d45081ab818a9096ec79b31bdb3b43c108d7a7b386b808c81d8eb109fb20ce5e",
+        "bytes": 4381
+      },
+      {
+        "file_id": "06-late-pliocene/attempt-1/species.txt",
+        "sha256": "25997b511d28db0075e9b3645d71c55d645181730a65e98cf3660ae781436455",
+        "bytes": 11428
+      },
+      {
+        "file_id": "07-early-pliocene/attempt-1/matrix.txt",
+        "sha256": "08e7af905709664073225119212141873a8bb14f0ae00ac8dd5c0a2e19b2feea",
+        "bytes": 19936
+      },
+      {
+        "file_id": "07-early-pliocene/attempt-1/references.txt",
+        "sha256": "7fa2b8a99cefda6c7f95e736397a891defe25464fe1afc1a2d93fa6c4f79340e",
+        "bytes": 7231
+      },
+      {
+        "file_id": "07-early-pliocene/attempt-1/register.txt",
+        "sha256": "04daa19d37c491648ada3b0db25fa1d4d2bd2198a5f9d36453b94a3b9bf10b76",
+        "bytes": 106872
+      },
+      {
+        "file_id": "07-early-pliocene/attempt-1/samples.txt",
+        "sha256": "5f7fef73f89105fb2be758f6471a12345d827cd4b00d6e89dad78bea7746496e",
+        "bytes": 6932
+      },
+      {
+        "file_id": "07-early-pliocene/attempt-1/species.txt",
+        "sha256": "135cbe7ee073a80b76fc4ce68e9b96898b35968da36ab7ecaece08224815a7ef",
+        "bytes": 18661
+      },
+      {
+        "file_id": "08-late-miocene/attempt-1/matrix.txt",
+        "sha256": "592b82498a6488c4c2c63e7e786bb0989b290d1f03cfc2d2f675df8d4f2959eb",
+        "bytes": 126508
+      },
+      {
+        "file_id": "08-late-miocene/attempt-1/references.txt",
+        "sha256": "0bf2a18e43515eef38a66d5397b648a6ea3574f7b6871045a8021076a9a28307",
+        "bytes": 22257
+      },
+      {
+        "file_id": "08-late-miocene/attempt-1/register.txt",
+        "sha256": "236f08383af35f85962f45fa94a24643d9a3352ab71f2f462849958ca2b62d20",
+        "bytes": 299226
+      },
+      {
+        "file_id": "08-late-miocene/attempt-1/samples.txt",
+        "sha256": "f18560e12410d5bc63bc80315767592ebc3e326e97b4e96b9b26ae2514dd33b5",
+        "bytes": 24422
+      },
+      {
+        "file_id": "08-late-miocene/attempt-1/species.txt",
+        "sha256": "db75b3ad4cf2b4af64faa6ca7fce8787e4e7eadc609cb5c3694bf0c6bade0413",
+        "bytes": 37442
+      },
+      {
+        "file_id": "09-middle-miocene/attempt-1/matrix.txt",
+        "sha256": "8fcc08eed5db3049bc7c809316c66721e4efd4c5493354f1dadbb78a83d6f2ad",
+        "bytes": 85073
+      },
+      {
+        "file_id": "09-middle-miocene/attempt-1/references.txt",
+        "sha256": "e61b700ad2208b3f059616ed57b90a39a546630bd2e113210d034640a75becee",
+        "bytes": 13790
+      },
+      {
+        "file_id": "09-middle-miocene/attempt-1/register.txt",
+        "sha256": "32ed70993b85d39ea5a590df105a1552c2a009b3021f85f8e8d4b5de1d37882d",
+        "bytes": 256533
+      },
+      {
+        "file_id": "09-middle-miocene/attempt-1/samples.txt",
+        "sha256": "64fbd60f93ce1ea970851782720a78d946277f68c9e5a1a9f4ae931a09ec3904",
+        "bytes": 19156
+      },
+      {
+        "file_id": "09-middle-miocene/attempt-1/species.txt",
+        "sha256": "9f41641d0b297603d10a077797335c6ce06d11c0841108fb255153f7b5711e82",
+        "bytes": 29301
+      },
+      {
+        "file_id": "10-early-miocene/attempt-1/matrix.txt",
+        "sha256": "12dafff282c215a0302391c0d09c41fe036809a779fe5201270d42ddf9dfa3f4",
+        "bytes": 145470
+      },
+      {
+        "file_id": "10-early-miocene/attempt-1/references.txt",
+        "sha256": "fb9aade01d84273a1a51a556e99b56e7a17ad3c4f2b546784348aa2c21653e64",
+        "bytes": 17975
+      },
+      {
+        "file_id": "10-early-miocene/attempt-1/register.txt",
+        "sha256": "1ab4563c4e7a5376a1ca04a1c0f77ddabf8215652ee24167529ad7715542de6a",
+        "bytes": 319023
+      },
+      {
+        "file_id": "10-early-miocene/attempt-1/samples.txt",
+        "sha256": "b58c2ea7d57dfe3ece4b9a44ee01f9b2b4813222b1e6c9ed7dd3c7181344c728",
+        "bytes": 26383
+      },
+      {
+        "file_id": "10-early-miocene/attempt-1/species.txt",
+        "sha256": "fcdcb8a716daf79c3ec22c9971a6f5d4f8aa14ecc6b7bb41a10ec80a62caf1c2",
+        "bytes": 37096
+      },
+      {
+        "file_id": "11-late-oligocene/attempt-1/matrix.txt",
+        "sha256": "84e38a0fe94588f55578c03ce5c4e00774fed72f545925d05251e40838513e12",
+        "bytes": 28666
+      },
+      {
+        "file_id": "11-late-oligocene/attempt-1/references.txt",
+        "sha256": "1503986e8bd1eaf3a3e35767237b84d89d503b4557c34146d349a27045678797",
+        "bytes": 7101
+      },
+      {
+        "file_id": "11-late-oligocene/attempt-1/register.txt",
+        "sha256": "40e979c240be1e61513026fcd81894be7f5f902c95f4d5d6dd7b347715a039b2",
+        "bytes": 132795
+      },
+      {
+        "file_id": "11-late-oligocene/attempt-1/samples.txt",
+        "sha256": "f4d97e0de8a6761ced5738ae0af271f5f081fe83ddfbab3370baa770fbd8bf9e",
+        "bytes": 10781
+      },
+      {
+        "file_id": "11-late-oligocene/attempt-1/species.txt",
+        "sha256": "43987481002b57a5d0c3dcb554225577790857bae713dad6ac5c633ca741abd6",
+        "bytes": 16958
+      },
+      {
+        "file_id": "12-early-oligocene/attempt-1/matrix.txt",
+        "sha256": "b5182c1f3388906b0a5227bf0ed13301868180f7c1e46d0ccd264becc0fb9f16",
+        "bytes": 50769
+      },
+      {
+        "file_id": "12-early-oligocene/attempt-1/references.txt",
+        "sha256": "81dc8cdd13140004e30468b45b4ee6c941f5f9a60d93163f722642a958c9f87c",
+        "bytes": 11097
+      },
+      {
+        "file_id": "12-early-oligocene/attempt-1/register.txt",
+        "sha256": "7209e43bdbb675b864d9e70143f91b3c5d91a62f3c6d00b4dd3ea7d6bd48f11f",
+        "bytes": 211934
+      },
+      {
+        "file_id": "12-early-oligocene/attempt-1/samples.txt",
+        "sha256": "3e389163a8238ebfc5fabea344e74e92cadb48c84047c1ab1675d0a98cd5fd48",
+        "bytes": 17134
+      },
+      {
+        "file_id": "12-early-oligocene/attempt-1/species.txt",
+        "sha256": "d108729550cedb9b250d1b849bb2c90415c61a4b84fedadc9b16099b0b21256e",
+        "bytes": 20200
+      },
+      {
+        "file_id": "13-late-eocene/attempt-1/matrix.txt",
+        "sha256": "d7328b33e805a9c27e1e6f29718c342fe4f9b3f3c053171559d8b8e8dbf07624",
+        "bytes": 12242
+      },
+      {
+        "file_id": "13-late-eocene/attempt-1/references.txt",
+        "sha256": "f535e3e16e1239dbff904fcb2a8746a20bcb8168a9e55c1e119b08192ca040f6",
+        "bytes": 5345
+      },
+      {
+        "file_id": "13-late-eocene/attempt-1/register.txt",
+        "sha256": "99cd32b41cbec0005e1e1a5ab5643ff21c7e56bca2c35397e18c0a6bc6da266a",
+        "bytes": 78195
+      },
+      {
+        "file_id": "13-late-eocene/attempt-1/samples.txt",
+        "sha256": "779554f6d31953b1dc4e57edd3182a17500fd45a161dc85b41f558aa7ee1320c",
+        "bytes": 6711
+      },
+      {
+        "file_id": "13-late-eocene/attempt-1/species.txt",
+        "sha256": "97623b606ff1d2d269e601c7e57ded6fa5a6a3cca8ab6adbfa6af5348ddecaee",
+        "bytes": 10532
+      },
+      {
+        "file_id": "14-middle-eocene/attempt-1/matrix.txt",
+        "sha256": "598777d6e48509f3fa251384cf68155024887fabeb04ecad41c00d30d35e8309",
+        "bytes": 32973
+      },
+      {
+        "file_id": "14-middle-eocene/attempt-1/references.txt",
+        "sha256": "fdf48e24c9669b8bf46dc3e72030974a0f32bcc3c86e11528799d7489a62a47f",
+        "bytes": 7621
+      },
+      {
+        "file_id": "14-middle-eocene/attempt-1/register.txt",
+        "sha256": "cb9d5201eb0f38b977491cd77e88f1f041562a039983888209bf6b556a1ab813",
+        "bytes": 147624
+      },
+      {
+        "file_id": "14-middle-eocene/attempt-1/samples.txt",
+        "sha256": "bef601dda2dd81174849731c1afa5134a34bcc58b29bdb54aa20e4051f83d2ee",
+        "bytes": 11090
+      },
+      {
+        "file_id": "14-middle-eocene/attempt-1/species.txt",
+        "sha256": "aa83f2793cd520b898c9def421e25c92edf82d4030a52735ca6f3b6641eec11e",
+        "bytes": 19396
+      },
+      {
+        "file_id": "15-early-eocene/attempt-1/matrix.txt",
+        "sha256": "bb7d155a327b1683cc47fc3174cca0eafa6b9ce9a1fe09a995ba17dfd858b74f",
+        "bytes": 36177
+      },
+      {
+        "file_id": "15-early-eocene/attempt-1/references.txt",
+        "sha256": "c08034a62b8b9f71c9772332c9dd9d11a5abc7781c1df444f639452121af8f66",
+        "bytes": 7183
+      },
+      {
+        "file_id": "15-early-eocene/attempt-1/register.txt",
+        "sha256": "931ef8e1eb68ba4f18a1e54c733fcb4c563ad76ca0d4630de2c6e59bfd481d73",
+        "bytes": 209228
+      },
+      {
+        "file_id": "15-early-eocene/attempt-1/samples.txt",
+        "sha256": "1697f02f2d72850d5c2eb26421184562032742b78edc19837c7304b164f51ddf",
+        "bytes": 9858
+      },
+      {
+        "file_id": "15-early-eocene/attempt-1/species.txt",
+        "sha256": "0b5016e0069231750b38f2e19c3b615394a79d38b8b9b58525d096a24ed10466",
+        "bytes": 24436
+      },
+      {
+        "file_id": "16-late-palaeocene/attempt-1/matrix.txt",
+        "sha256": "219966ed088c292824bdff176e8279fa9ce7b501f31030818067b0d74fa8a4ea",
+        "bytes": 10125
+      },
+      {
+        "file_id": "16-late-palaeocene/attempt-1/references.txt",
+        "sha256": "c8e6234ec451bbc24fca4204370b34333ac70edcc95c3671171919c96a11320c",
+        "bytes": 3865
+      },
+      {
+        "file_id": "16-late-palaeocene/attempt-1/register.txt",
+        "sha256": "9d775aefcf81ae5834df1febdbad57560dfe73db20e46c7de13b8bc8cd259fbf",
+        "bytes": 87464
+      },
+      {
+        "file_id": "16-late-palaeocene/attempt-1/samples.txt",
+        "sha256": "32deeb8a8a6fc78e256bff2e58390d3eff88cc8f2dcf8c7b0b7f04f14dbb33c2",
+        "bytes": 5042
+      },
+      {
+        "file_id": "16-late-palaeocene/attempt-1/species.txt",
+        "sha256": "83a20c815cc1cdd2ce695aae5c75863d8e95d4433dd41763014fd9f859cdba3e",
+        "bytes": 13116
+      },
+      {
+        "file_id": "17-middle-palaeocene/attempt-1/matrix.txt",
+        "sha256": "8b2cb95ecafca428a6f2ac258c6d35b5d2502a2a80a9c0cb50b78ac5e1349f68",
+        "bytes": 3784
+      },
+      {
+        "file_id": "17-middle-palaeocene/attempt-1/references.txt",
+        "sha256": "93d4c5be24cbd1feda485312046fb356611aa1d43c78d1358b04538c4b8714be",
+        "bytes": 2021
+      },
+      {
+        "file_id": "17-middle-palaeocene/attempt-1/register.txt",
+        "sha256": "8a49a5f4257c6a3182a9db3062e330f0c4547e52336ef2b9829c6cca79024735",
+        "bytes": 46058
+      },
+      {
+        "file_id": "17-middle-palaeocene/attempt-1/samples.txt",
+        "sha256": "715d218468c81ae99002afef163d9ce80abf3fc90bfd1f532de346a13007a5fc",
+        "bytes": 2324
+      },
+      {
+        "file_id": "17-middle-palaeocene/attempt-1/species.txt",
+        "sha256": "c1c1bdd0db6a1c7885d1df7a2cf6d20e8e939b3428fbfaa9c277d69696513030",
+        "bytes": 7329
+      },
+      {
+        "file_id": "18-early-palaeocene/attempt-1/matrix.txt",
+        "sha256": "4b5b20e9e3a92db3ec4d15f783dc7c5091c11608d2fd70f64a79779ffca97daf",
+        "bytes": 11058
+      },
+      {
+        "file_id": "18-early-palaeocene/attempt-1/references.txt",
+        "sha256": "0e4616862c51711d6249b7f9ea272473de82f0c4a67f778ffe91bcaf5068bff9",
+        "bytes": 2145
+      },
+      {
+        "file_id": "18-early-palaeocene/attempt-1/register.txt",
+        "sha256": "8ed6afdeb68b4a732e6e30d26cfa251780be0e5177bbc24706c0555f837b5fa5",
+        "bytes": 95492
+      },
+      {
+        "file_id": "18-early-palaeocene/attempt-1/samples.txt",
+        "sha256": "8d7995ca23b4313f5d4513714715104cd93420563ece6e2548ebd8ccdb1d2804",
+        "bytes": 6083
+      },
+      {
+        "file_id": "18-early-palaeocene/attempt-1/species.txt",
+        "sha256": "52c3b3431f4d9e79d6d0149e933c9c5c53501bb97bd591ea6a7d80f455e76b1f",
+        "bytes": 11772
+      },
+      {
+        "file_id": "19-maastrichtian/attempt-1/matrix.txt",
+        "sha256": "c84b26809d5f68641b3b502abde3ffbd0df79c3f6bf485744904396e176761e6",
+        "bytes": 12876
+      },
+      {
+        "file_id": "19-maastrichtian/attempt-1/references.txt",
+        "sha256": "b68d3e1384da2d65e662ad0ddd5e4989ac67c6b4762fb52d36da586accaca552",
+        "bytes": 11339
+      },
+      {
+        "file_id": "19-maastrichtian/attempt-1/register.txt",
+        "sha256": "cfd68f8f3adfbee441c18c7a5d37b24e4e8bbe29f82f879ff206d825d2779f6c",
+        "bytes": 77330
+      },
+      {
+        "file_id": "19-maastrichtian/attempt-1/samples.txt",
+        "sha256": "7c4831027faf8d17d4a7a455b2084d5dd2d4856021e2b8720f31808159a32ecb",
+        "bytes": 13196
+      },
+      {
+        "file_id": "19-maastrichtian/attempt-1/species.txt",
+        "sha256": "6c36904c564dae4d5b878387d845d27a5df0055ea6d6a34e4b7da262d20a82ef",
+        "bytes": 7610
+      },
+      {
+        "file_id": "20-campanian/attempt-1/matrix.txt",
+        "sha256": "33befdbd42a05ad59a7129b477023b1960e188da10e2489bff8c9879acd1e689",
+        "bytes": 9079
+      },
+      {
+        "file_id": "20-campanian/attempt-1/references.txt",
+        "sha256": "3fe8b8c43706438ec8019c6eb4c319270d08077c85b63dbd58b42152095dc7b3",
+        "bytes": 13553
+      },
+      {
+        "file_id": "20-campanian/attempt-1/register.txt",
+        "sha256": "f15ba81ff0898426a14e9ab6fe67784232ec32df061928b46e4f786cd70e9524",
+        "bytes": 59080
+      },
+      {
+        "file_id": "20-campanian/attempt-1/samples.txt",
+        "sha256": "a6cab408c2193835add3f50c6d6894c12764686d45c4660d5c135cfc6d8629dc",
+        "bytes": 14586
+      },
+      {
+        "file_id": "20-campanian/attempt-1/species.txt",
+        "sha256": "035a322d0854fedd9ef9e8885542b6603de1fb85f129c4f939601d1cb3cad17a",
+        "bytes": 4995
+      }
+    ]
+  },
+  "verification_level": "Artifact integrity, exact-source/overlay retention, scoped recovery linkage and join cardinality; no new scientific validation or bibliographic adjudication."
+}

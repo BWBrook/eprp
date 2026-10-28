@@ -1,0 +1,62 @@
+{
+  "kind": "separate bibliographic annotations; no replacement of recovered provider citation",
+  "accessed_utc": "2026-10-28",
+  "evidence_manifest": "reference-recovery-bibliographic-evidence-2026-10-28/manifest.json",
+  "evidence_manifest_sha256": "6fc35fd547353a47640e968e9214979bdcef89fcb28d5cda1095d599c1bfd011",
+  "checks": [
+    {
+      "ref_no": "4030",
+      "status": "provider_year_and_name_discrepancy_confirmed",
+      "provider_values": {
+        "year": "2015",
+        "first_author": "J. Hirs",
+        "pages": "15-28"
+      },
+      "journal_observed_values": {
+        "year": "2024",
+        "first_author": "János Hir",
+        "volume": "77",
+        "issue": "1",
+        "pages": "15-28",
+        "doi": "10.4154/gc.2024.03"
+      },
+      "primary_url": "https://hrcak.srce.hr/en/314667",
+      "evidence_body": "4030-journal.html",
+      "additional_registered_metadata": "4030-crossref.json",
+      "interpretation": "The identical title, journal, volume, issue and other authors identify the same work. Retain provider values and expose journal year/name separately. The journal landing page uses Hir.",
+      "additional_limit": "Crossref registration itself gives pages 15-18 and includes affiliation strings among authors; do not promote its complete record as an error-free replacement."
+    },
+    {
+      "ref_no": "3996",
+      "status": "online_and_print_years_distinguished",
+      "provider_year": "2015",
+      "registered_online_date": [
+        2015,
+        10,
+        22
+      ],
+      "registered_print_date": [
+        2016,
+        3
+      ],
+      "volume": "90",
+      "issue": "1",
+      "pages": "101-123",
+      "doi": "10.1007/s12542-015-0275-3",
+      "primary_url": "https://api.crossref.org/works/10.1007/s12542-015-0275-3",
+      "evidence_body": "3996-crossref.json",
+      "interpretation": "Provider 2015 agrees with online publication; the volume/issue print citation is 2016. Preserve both conventions rather than treating 2015 as an established error."
+    },
+    {
+      "ref_no": "4414",
+      "status": "external_bhl_direct_access_failed",
+      "primary_url": "https://www.biodiversitylibrary.org/part/79354",
+      "access_limit": "Direct GET HTTP403; browser retrieval timed out. Search-service metadata agrees with Christophel, Scriven and Greenwood 1992, volume116 pages65-76, but was used only as discovery. The recovered ID-to-citation link rests on the full provider sample4697 page, not that search result."
+    }
+  ],
+  "limitations": [
+    "Only selected bibliographic anomalies were checked. This is not validation of all 58 citations or of specimen counts.",
+    "No source text, author list, year, page range or original database field is overwritten.",
+    "Response receipt headers omit Set-Cookie. These are anonymous public requests, without login."
+  ]
+}
