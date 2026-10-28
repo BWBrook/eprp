@@ -491,7 +491,9 @@ amendments; individual findings and limitations are in the tool entries.
   but their generating provenance is not uniquely established. In a
   prespecified flat-likelihood diagnostic the historical sampler's four
   chains diverged from the known target and two stalled; the deposited
-  sampler tracked that simple target. Specified analytic forward controls
+  sampler tracked that simple target. A fixed-proposal controlled comparison
+  shows that the historical proposed-prior expression can fail without
+  adaptive proposal scales. Specified analytic forward controls
   pass, and three archived proposal diversity vectors replay, but their RSS
   values do not, so the declared combined replay fails. The recorded chains
   have poor convergence diagnostics, including proof Q10 R-hat 1.623 and

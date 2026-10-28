@@ -195,6 +195,45 @@ adaptive scheme on this target**. The comparison does not isolate the prior
 defect from adaptation, establish convergence of the deposited sampler in
 other settings, or quantify effects on the published analysis.
 
+## Fixed-proposal follow-up
+
+Amendment A11 isolates the proposed-prior expression using two modified
+variants of the checksum-verified historical source. Both correct its
+initial prior and hold proposal scales fixed. The first retains the
+historical proposed-prior calculation; the second evaluates it at the
+proposed state. Otherwise they use the same constant-likelihood target,
+initial settings and paired seeds. This is a controlled experiment on
+modified code, not a rerun of the archived analysis.
+
+Across four chains, the variant retaining the historical expression had
+Q10 means of 2.494, 2.688, 2.724 and 1.343 against the known target mean
+2.000. Its retained acceptance fractions were 0.0163, 0.00018, 0 and 0;
+the last two traces were constant. The corrected variant's means were
+2.001, 2.003, 1.996 and 2.001, with variances 0.00611–0.00682 against
+the known 0.0064. All recorded proposal scales remained fixed as intended.
+Zero Monte Carlo error estimates for constant traces do not indicate
+precision. The exact state slice is `[5001:50001]`: each saved state is the
+state before its indexed proposal. The acceptance slice has a one-proposal
+offset from those states; paired seed labels do not ensure aligned random
+draws after the two variants diverge. Results and seed-specific diagnostics
+are in the [receipt](../../bench/results/t5/inditek_fixed_proposal_20261028.json);
+the source transformations and execution are in the
+[control](../../bench/validate/t5_inditek_fixed_proposal.py).
+
+This comparison demonstrates that the proposed-prior defect can cause
+severe failure even without adaptive proposal scales in this simple target.
+It does not establish that the saved paper-related chains used this exact
+source, that a corrected sampler is generally calibrated, or how any
+published result would change.
+
+A GPT-6.1 Sol subagent independently compared the two modified sources,
+confirmed that their only difference is the proposed-prior expression, and
+checked the truncated-normal target and reported values. It noted that
+batch error estimates require sufficiently mixed, approximately stationary
+traces and are particularly misleading for stalled chains. Amendment A12
+adds the variance error that A11's wording also called for and checks that
+the other reported results reproduce.
+
 ## Next checks
 
 Check the implications of the historical sampler's lagged prior and trace

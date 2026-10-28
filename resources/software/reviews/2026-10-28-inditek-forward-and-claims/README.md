@@ -116,11 +116,14 @@ established a wrong first-transition prior calculation in the deposited
 sampler. The saved chains cannot have followed that sampler under its stated
 settings, whereas an earlier candidate rule and settings satisfy a necessary
 acceptance check. That candidate also has a demonstrated prior-calculation
-defect and fails a simple known-target diagnostic with its adaptation. This
-is evidence against assuming either sampler or saved chains are validated;
-the exact generating source and random draws remain unknown. Do not assign
-the recorded mixing problems to a specific coding defect without a causal
-test.
+defect and fails a simple known-target diagnostic with its adaptation. In a
+further controlled comparison that fixes proposal scales and initialisation,
+retaining just that historical proposed-prior expression still produces
+severely displaced or stalled chains; the corrected expression samples the
+simple target in the tested runs. See the sampler review for the modified
+code and receipts. This identifies a mechanism capable of producing poor
+sampling, but does not establish that it caused the archived traces: the
+exact generating source and random draws remain unknown.
 
 The paper's recovery claim is a proof of concept using synthetic observations,
 not independent verification of evolutionary history. Even if those

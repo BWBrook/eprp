@@ -1,0 +1,241 @@
+{
+  "source_sha256": "79256783eda56ae30fa653e8f1350a172cd6eb7201eefa2944347192ce4efedf",
+  "iterations": 50001,
+  "burn_discard": 5000,
+  "target": {
+    "mean": 2,
+    "variance": 0.0064,
+    "tail_at_one_sd": 0.1586552539
+  },
+  "modifications_shared": [
+    "correct initial Gaussian prior",
+    "hold proposal scales fixed"
+  ],
+  "corrected_variant_additional_modification": "evaluate proposed prior at proposed parameters",
+  "records": [
+    {
+      "variant": "historical_prior",
+      "seed": 34101,
+      "draws": 45000,
+      "mean": 2.4942850344232705,
+      "mean_mcse_batch1000": 0.009525893336610596,
+      "variance": 0.006281463187920406,
+      "variance_mcse_batch1000": 0.0028202035955560622,
+      "lower_tail": 0.005177777777777778,
+      "lower_mcse_batch1000": 0.005177777777777777,
+      "upper_tail": 0.9934222222222222,
+      "upper_mcse_batch1000": 0.005933511138712145,
+      "acceptance": 0.016266666666666665,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "historical_prior",
+      "seed": 34102,
+      "draws": 45000,
+      "mean": 2.6876426176214565,
+      "mean_mcse_batch1000": 0.014889957500928442,
+      "variance": 0.009864779300916128,
+      "variance_mcse_batch1000": 0.0022350895518404162,
+      "lower_tail": 0.0,
+      "lower_mcse_batch1000": 0.0,
+      "upper_tail": 1.0,
+      "upper_mcse_batch1000": 0.0,
+      "acceptance": 0.00017777777777777779,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "historical_prior",
+      "seed": 34103,
+      "draws": 45000,
+      "mean": 2.723968126843726,
+      "mean_mcse_batch1000": 6.69489673871845e-17,
+      "variance": 0.0,
+      "variance_mcse_batch1000": 0.0,
+      "lower_tail": 0.0,
+      "lower_mcse_batch1000": 0.0,
+      "upper_tail": 1.0,
+      "upper_mcse_batch1000": 0.0,
+      "acceptance": 0.0,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "historical_prior",
+      "seed": 34104,
+      "draws": 45000,
+      "mean": 1.3433133642044657,
+      "mean_mcse_batch1000": 3.347448369359225e-17,
+      "variance": 1.9721960896322993e-31,
+      "variance_mcse_batch1000": 0.0,
+      "lower_tail": 1.0,
+      "lower_mcse_batch1000": 0.0,
+      "upper_tail": 0.0,
+      "upper_mcse_batch1000": 0.0,
+      "acceptance": 0.0,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "corrected_prior",
+      "seed": 34101,
+      "draws": 45000,
+      "mean": 2.000916626700759,
+      "mean_mcse_batch1000": 0.002693672251477106,
+      "variance": 0.006112938277465915,
+      "variance_mcse_batch1000": 0.00022514598258743348,
+      "lower_tail": 0.1516222222222222,
+      "lower_mcse_batch1000": 0.01179690461407674,
+      "upper_tail": 0.16104444444444443,
+      "upper_mcse_batch1000": 0.008453494618691012,
+      "acceptance": 0.9376888888888889,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "corrected_prior",
+      "seed": 34102,
+      "draws": 45000,
+      "mean": 2.0029009480146014,
+      "mean_mcse_batch1000": 0.0025323719206768345,
+      "variance": 0.006239092428191877,
+      "variance_mcse_batch1000": 0.00020061621321235807,
+      "lower_tail": 0.15333333333333332,
+      "lower_mcse_batch1000": 0.008699471712742565,
+      "upper_tail": 0.16368888888888888,
+      "upper_mcse_batch1000": 0.009323253335060643,
+      "acceptance": 0.9404444444444444,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "corrected_prior",
+      "seed": 34103,
+      "draws": 45000,
+      "mean": 1.9962806626006528,
+      "mean_mcse_batch1000": 0.002513023696709808,
+      "variance": 0.0066113328165124585,
+      "variance_mcse_batch1000": 0.0002281510252153376,
+      "lower_tail": 0.1812888888888889,
+      "lower_mcse_batch1000": 0.010207771955979179,
+      "upper_tail": 0.1542888888888889,
+      "upper_mcse_batch1000": 0.008630613952330612,
+      "acceptance": 0.9383111111111111,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    },
+    {
+      "variant": "corrected_prior",
+      "seed": 34104,
+      "draws": 45000,
+      "mean": 2.0005473056360272,
+      "mean_mcse_batch1000": 0.002041821820941166,
+      "variance": 0.006823514715801064,
+      "variance_mcse_batch1000": 0.0003118985305410276,
+      "lower_tail": 0.16562222222222223,
+      "lower_mcse_batch1000": 0.008720594971413552,
+      "upper_tail": 0.16455555555555557,
+      "upper_mcse_batch1000": 0.009561050804192976,
+      "acceptance": 0.9381333333333334,
+      "proposal_scale_min": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ],
+      "proposal_scale_max": [
+        8.0,
+        1.9,
+        0.00035,
+        0.0003,
+        0.08
+      ]
+    }
+  ]
+}

@@ -60,7 +60,12 @@ In a prespecified flat-likelihood synthetic diagnostic, its four chains
 departed markedly from the known Gaussian target and two stalled; this tests
 the historical implementation and its adaptation together, not the published
 biological conclusions. The later sampler tracked the simple target in the
-same diagnostic.
+same diagnostic. A follow-up held proposal scales fixed and corrected the
+initial prior in two experimental variants of the historical code; retaining
+the historical proposed-prior expression still produced displaced or stalled
+chains, while correcting that expression tracked the known target. This
+isolates a failure mechanism on that synthetic target, not its effect on the
+published results.
 
 ## Forward model and retained chains
 
