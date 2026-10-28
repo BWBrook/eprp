@@ -55,6 +55,7 @@ for version in ("historical_prior", "corrected_prior"):
         records.append({"variant": version, "seed": seed, "draws": int(q.size),
                         "mean": float(np.mean(q)), "mean_mcse_batch1000": batch_mcse(q),
                         "variance": float(np.var(q, ddof=1)),
+                        "variance_mcse_batch1000": batch_mcse((q - np.mean(q)) ** 2),
                         "lower_tail": float(np.mean(lower)), "lower_mcse_batch1000": batch_mcse(lower),
                         "upper_tail": float(np.mean(upper)), "upper_mcse_batch1000": batch_mcse(upper),
                         "acceptance": float(np.mean(output["acceptance_history"][5001:50001])),

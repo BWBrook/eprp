@@ -347,3 +347,14 @@ tails with 1,000-draw batch standard errors, as well as acceptance and the
 recorded range of proposal scales. The known target remains N(2, 0.08²)
 truncated to [1, 3.5]. This is a control on modified code, not a rerun of
 the deposited analysis; no pass threshold or claim about the paper is set.
+
+## Amendment A12 (28 October 2026, after A11 results)
+
+A11 asks for batch errors alongside means, variances and tails, but its
+first script reports errors only for means and tails. Repeat the same
+fixed-seed A11 calculations to add a 1,000-draw batch error for variance,
+using the squared deviation from each chain's overall mean as the variance
+influence series. Verify that all previously reported numerical results
+are reproduced. These approximate errors assume adequate mixing and batch
+length; zero for a stalled trace is not evidence of precision. This is a
+reporting completion, not a new target or a new inferential threshold.
