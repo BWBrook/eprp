@@ -16,7 +16,7 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | withdraw | index | textindex | search
+  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | verify-embedded | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
@@ -294,8 +294,10 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
 - `import-staged MANIFEST DIRECTORY` imports individually reviewed local PDFs
   with their source URLs and hashes. It locks the store, verifies the batch
   and DOI identities before writing, checks titles using embedded text or
-  first-page OCR, never replaces existing or withdrawn records, and records
-  uncertain licences and versions as such. A scan gets `no_text`; OCR checks
+  first-page OCR, never replaces an existing open or withdrawn record, and
+  records uncertain licences and versions as such. A verified open copy may
+  supersede a TDM record in the catalogue while leaving that TDM copy intact
+  under `tdm/` with its historical manifest entry. A scan gets `no_text`; OCR checks
   its identity but is not a full-text transcription. Rerunning an intact
   imported batch is idempotent. An interrupted partial write requires inspection,
   not automatic overwriting.
@@ -305,7 +307,14 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   PDF and its original text extraction, and records page-level counts and
   checksums in `ocr/`. It does not process publisher TDM copies. An intact
   completed run is idempotent; unregistered output from an interrupted run
-  requires inspection before retrying.
+  requires inspection before retrying. `--language por`, for example, selects
+  an installed Tesseract language; when `TESSDATA_PREFIX` identifies a model
+  directory its model hashes are recorded in the receipt.
+- `verify-embedded W…` rechecks an open `no_text` copy whose stored extraction
+  has usable embedded text despite its first pages. It verifies the PDF hash,
+  page count, title within the first 15 pages, and agreement between a fresh
+  extraction and the stored text, then records `ok` without changing either
+  file. `--title-pages` selects a different title-check window.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
 - `search QUERY` searches the whole library: every work's title and abstract
@@ -321,7 +330,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   - From any machine:
     `ssh deep-server 'python3 /data/paleodata/library/_tools/library.py search "age-dependent extinction"'`.
   - `textindex` rebuilds the indexes in about a minute. Run it after
-    `resolve`, `fetch`, `import-staged`, `ocr` or `withdraw` changes works or texts.
+    `resolve`, `fetch`, `import-staged`, `ocr`, `verify-embedded` or `withdraw` changes works or texts.
     - `search.sqlite` holds titles, abstracts and open texts.
     - `tdm/search-tdm.sqlite` holds TDM texts in a contentless index. It
       stores no readable text and gives no passages, and it sits under `tdm/`
@@ -334,7 +343,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
     [the 2003 note](notes/barry-2003.md), where 892 of 904 citations
     resolved exactly.
   - Add the resolved rows to a seed file to make a tier.
-- `resolve`, `fetch`, `import-staged`, `ocr` and `withdraw` take a lock on the store, so two writers
+- `resolve`, `fetch`, `import-staged`, `ocr`, `verify-embedded` and `withdraw` take a lock on the store, so two writers
   cannot run at once.
 - Run anything longer than a few minutes on `deep-server`, never on the
   laptop.

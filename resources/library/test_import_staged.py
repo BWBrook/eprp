@@ -2,6 +2,7 @@ import csv
 import hashlib
 import json
 import tempfile
+import threading
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -78,6 +79,34 @@ class ImportStagedTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'existing manifest'):
             self.run_import()
         self.assertEqual(pdf.read_bytes(), b'changed')
+
+    def test_open_import_supersedes_but_preserves_tdm_copy(self):
+        tdm = self.store / 'tdm' / 'wiley' / 'pdf' / 'W1.pdf'
+        tdm.parent.mkdir(parents=True)
+        tdm.write_bytes(b'licensed copy')
+        tdm_text = self.store / 'tdm' / 'wiley' / 'text' / 'W1.txt'
+        tdm_text.parent.mkdir(parents=True)
+        tdm_text.write_text('licensed text', encoding='utf-8')
+        prior = {k: '' for k in library.MANIFEST_FIELDS}
+        prior.update(openalex_id='W1', status='tdm_ok', path='tdm/wiley/pdf/W1.pdf')
+        library.append_tsv(self.store / 'manifest.tsv', prior, library.MANIFEST_FIELDS, threading.Lock())
+        self.run_import()
+        self.assertEqual(tdm.read_bytes(), b'licensed copy')
+        self.assertEqual(tdm_text.read_text(), 'licensed text')
+        current = library.load_manifest(self.store)['W1']
+        self.assertEqual(current['status'], 'ok')
+        self.assertIn('does not alter', current['note'])
+        self.run_import()
+        self.assertEqual(len(library.read_tsv(self.store / 'manifest.tsv')), 3)
+
+    def test_missing_tdm_copy_aborts_batch_before_import(self):
+        prior = {k: '' for k in library.MANIFEST_FIELDS}
+        prior.update(openalex_id='W1', status='tdm_ok', path='tdm/wiley/pdf/W1.pdf')
+        library.append_tsv(self.store / 'manifest.tsv', prior, library.MANIFEST_FIELDS, threading.Lock())
+        with self.assertRaisesRegex(ValueError, 'TDM path missing or invalid'):
+            self.run_import()
+        self.assertFalse((self.store / 'pdf' / 'W1.pdf').exists())
+        self.assertFalse((self.store / 'pdf' / 'W2.pdf').exists())
 
 
 if __name__ == '__main__':

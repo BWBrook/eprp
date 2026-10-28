@@ -31,7 +31,7 @@ class OCRTests(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def run_ocr(self, body=None):
+    def run_ocr(self, body=None, language='eng'):
         def run(args, **kwargs):
             if args[:2] == ['tesseract', '--version']:
                 return SimpleNamespace(stdout='tesseract test\n')
@@ -40,7 +40,7 @@ class OCRTests(unittest.TestCase):
                 return SimpleNamespace(stdout=text.encode())
             return SimpleNamespace(stdout=b'')
         with patch.object(library, 'pdf_pages', return_value=2), patch.object(library.subprocess, 'run', side_effect=run):
-            library.ocr(self.store, ['W1'])
+            library.ocr(self.store, ['W1'], language=language)
 
     def test_ocr_preserves_source_and_is_idempotent(self):
         self.run_ocr()
@@ -66,6 +66,24 @@ class OCRTests(unittest.TestCase):
             self.run_ocr('Triassic marine ecological recovery')
         self.assertEqual(library.load_manifest(self.store)['W1']['status'], 'no_text')
         self.assertFalse((self.store / 'ocr' / 'W1.txt').exists())
+
+    def test_selected_language_is_recorded(self):
+        self.run_ocr(language='por')
+        receipt = json.loads((self.store / 'ocr' / 'W1.json').read_text())
+        self.assertEqual(receipt['language'], 'por')
+        with self.assertRaisesRegex(ValueError, 'different language'):
+            self.run_ocr()
+
+    def test_changed_ocr_and_receipt_do_not_override_manifest_hash(self):
+        self.run_ocr()
+        out = self.store / 'ocr' / 'W1.txt'
+        out.write_text('changed', encoding='utf-8')
+        receipt = self.store / 'ocr' / 'W1.json'
+        details = json.loads(receipt.read_text())
+        details['ocr_sha256'] = hashlib.sha256(out.read_bytes()).hexdigest()
+        receipt.write_text(json.dumps(details), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'receipt checksum'):
+            self.run_ocr()
 
     def test_withdraw_moves_derived_ocr_and_preserves_manifest_history(self):
         self.run_ocr()
@@ -98,6 +116,29 @@ class OCRTests(unittest.TestCase):
         self.assertEqual(db.execute("select count(*) from docs where docs match 'fossil' and part='fulltext'").fetchone()[0], 1)
         self.assertEqual(db.execute("select count(*) from docs where docs match 'original' and part='fulltext'").fetchone()[0], 0)
         db.close()
+
+    def test_verify_embedded_preserves_pdf_and_existing_text(self):
+        body = 'Triassic marine ecological recovery ' + 'fossil extinction recovery ' * 35
+        self.original.write_text(body, encoding='utf-8')
+        with patch.object(library, 'pdf_pages', return_value=2), \
+             patch.object(library, 'pdf_text', return_value=body):
+            library.verify_embedded(self.store, ['W1'])
+            library.verify_embedded(self.store, ['W1'])
+        self.assertEqual(self.pdf.read_bytes(), b'%PDF-test')
+        self.assertEqual(self.original.read_text(), body)
+        self.assertEqual(library.load_manifest(self.store)['W1']['status'], 'ok')
+        self.assertEqual(len(library.read_tsv(self.store / 'manifest.tsv')), 2)
+        self.original.write_text('changed', encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'checksum'):
+            library.verify_embedded(self.store, ['W1'])
+
+    def test_verify_embedded_refuses_different_extraction(self):
+        body = 'Triassic marine ecological recovery ' + 'fossil extinction recovery ' * 35
+        with patch.object(library, 'pdf_pages', return_value=2), \
+             patch.object(library, 'pdf_text', return_value=body):
+            with self.assertRaisesRegex(ValueError, 'stored extraction differs'):
+                library.verify_embedded(self.store, ['W1'])
+        self.assertEqual(library.load_manifest(self.store)['W1']['status'], 'no_text')
 
 
 if __name__ == '__main__':

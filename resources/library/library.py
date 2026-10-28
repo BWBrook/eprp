@@ -1293,7 +1293,15 @@ def import_staged(store, manifest_path, directory):
             digest = hashlib.sha256(data).hexdigest()
             if not data.startswith(b"%PDF-") or digest != r["sha256"] or len(data) != int(r["bytes"]):
                 raise ValueError(f"file or checksum mismatch for {wid}")
-            if wid in existing:
+            prior_tdm = ""
+            if wid in existing and existing[wid].get("status") in TDM_HELD:
+                tdm_path = Path(existing[wid].get("path") or "")
+                if (len(tdm_path.parts) != 4 or tdm_path.parts[0] != "tdm" or
+                        tdm_path.parts[1] not in TDM_ROUTES or tdm_path.parts[2:] != ("pdf", f"{wid}.pdf") or
+                        not (store / tdm_path).is_file()):
+                    raise ValueError(f"existing TDM path missing or invalid for {wid}")
+                prior_tdm = str(tdm_path)
+            elif wid in existing:
                 prior = store / existing[wid].get("path", "")
                 prior_text = store / "text" / f"{wid}.txt"
                 if (existing[wid].get("sha256") == digest and existing[wid].get("status") in OPEN_HELD
@@ -1328,9 +1336,9 @@ def import_staged(store, manifest_path, directory):
                 if not full:
                     raise ValueError(f"full text extraction failed for {wid}")
                 status = "ok"
-            checked.append((r, data, digest, pages, score, full, status))
+            checked.append((r, data, digest, pages, score, full, status, prior_tdm))
         tool_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-        for r, data, digest, pages, score, full, status in checked:
+        for r, data, digest, pages, score, full, status, prior_tdm in checked:
             wid = r["openalex_id"]
             pdf = store / "pdf" / f"{wid}.pdf"
             txt = store / "text" / f"{wid}.txt"
@@ -1344,6 +1352,8 @@ def import_staged(store, manifest_path, directory):
             note += "Publication version not independently established." if not r.get("version") else "Publication version recorded from staging."
             if status == "no_text":
                 note += " First-page title checked by OCR; full text not OCRed."
+            if prior_tdm:
+                note += f" Open copy supersedes, but does not alter, the prior TDM copy at {prior_tdm}."
             append_tsv(store / "manifest.tsv", {
                 "openalex_id": wid, "doi": norm_doi(r["doi"]), "status": status,
                 "url": r.get("final_url") or r["url"], "host": urllib.parse.urlsplit(r["url"]).hostname,
@@ -1357,10 +1367,58 @@ def import_staged(store, manifest_path, directory):
         lock_file.close()
 
 
-def ocr(store, wids, max_pages=40):
+def verify_embedded(store, wids, title_pages=15):
+    """Validate embedded text already retained for an open no_text record."""
+    if title_pages < 1:
+        raise ValueError("title-pages must be positive")
+    lock_file = store_lock(store)
+    try:
+        manifest = load_manifest(store)
+        tool_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+        for wid in map(short_wid, wids):
+            if not re.fullmatch(r"W\d+", wid):
+                raise ValueError(f"invalid work ID: {wid}")
+            row = manifest.get(wid)
+            verified = row and row.get("status") == "ok" and "Embedded full text reverified" in row.get("note", "")
+            if not row or (row.get("status") != "no_text" and not verified) or row.get("path") != f"pdf/{wid}.pdf":
+                raise ValueError(f"{wid}: only held open no_text copies are eligible")
+            pdf, original = store / "pdf" / f"{wid}.pdf", store / "text" / f"{wid}.txt"
+            if not pdf.is_file() or hashlib.sha256(pdf.read_bytes()).hexdigest() != row.get("sha256"):
+                raise ValueError(f"{wid}: PDF missing or checksum mismatch")
+            if verified:
+                match = re.search(r"embedded_text_sha256=([0-9a-f]{64})", row.get("note", ""))
+                if not match or not original.is_file() or hashlib.sha256(original.read_bytes()).hexdigest() != match[1]:
+                    raise ValueError(f"{wid}: stored extraction checksum mismatch")
+                print(f"{wid}: embedded text already verified")
+                continue
+            pages = pdf_pages(pdf)
+            rec = json.loads((store / "openalex" / f"{wid}.json").read_text(encoding="utf-8"))
+            first, full = pdf_text(pdf, last_page=title_pages), pdf_text(pdf)
+            if not pages or pages != int(row["pages"]) or first is None or full is None:
+                raise ValueError(f"{wid}: PDF extraction or page count failed")
+            score = title_match(rec.get("title"), first)
+            if score < 0.9 or len(tokens(full)) < 50:
+                raise ValueError(f"{wid}: embedded title or minimum text coverage failed")
+            if not original.is_file() or original.read_text(encoding="utf-8") != full:
+                raise ValueError(f"{wid}: stored extraction differs; inspect before promotion")
+            text_sha = hashlib.sha256(original.read_bytes()).hexdigest()
+            note = row.get("note", "") + (f" Embedded full text reverified; title checked within first {title_pages} pages; "
+                                           f"embedded_text_sha256={text_sha}.")
+            append_tsv(store / "manifest.tsv", dict(row, status="ok", text_chars=len(full),
+                                                      title_match=f"{score:.2f}", retrieved=now(),
+                                                      tool_sha256=tool_sha, note=note), MANIFEST_FIELDS,
+                       threading.Lock())
+            print(f"{wid}: verified embedded text, {pages} pages", flush=True)
+    finally:
+        lock_file.close()
+
+
+def ocr(store, wids, max_pages=40, language="eng"):
     """OCR selected open scans into separate files; preserve the PDF and original extraction."""
     if max_pages < 1:
         raise ValueError("max-pages must be positive")
+    if not re.fullmatch(r"[a-z][a-z0-9_]*(?:\+[a-z][a-z0-9_]*)*", language):
+        raise ValueError("invalid OCR language")
     lock_file = store_lock(store)
     try:
         manifest = load_manifest(store)
@@ -1370,6 +1428,9 @@ def ocr(store, wids, max_pages=40):
         version = subprocess.run(["tesseract", "--version"], capture_output=True, text=True,
                                  check=True, timeout=30).stdout.splitlines()[0]
         env = dict(os.environ, OMP_THREAD_LIMIT="1")
+        prefix = Path(env["TESSDATA_PREFIX"]) if env.get("TESSDATA_PREFIX") else None
+        models = {name: hashlib.sha256((prefix / f"{name}.traineddata").read_bytes()).hexdigest()
+                  for name in language.split("+") if prefix and (prefix / f"{name}.traineddata").is_file()}
         for wid in map(short_wid, wids):
             if not re.fullmatch(r"W\d+", wid):
                 raise ValueError(f"invalid work ID: {wid}")
@@ -1387,9 +1448,13 @@ def ocr(store, wids, max_pages=40):
                 if not out.is_file() or not receipt.is_file():
                     raise ValueError(f"{wid}: OCR output or receipt missing")
                 prior = json.loads(receipt.read_text(encoding="utf-8"))
-                if (prior.get("pdf_sha256") != row["sha256"] or
+                recorded = re.search(r"ocr_sha256=([0-9a-f]{64})", row.get("note", ""))
+                if (not recorded or prior.get("ocr_sha256") != recorded[1] or
+                        prior.get("pdf_sha256") != row["sha256"] or
                         hashlib.sha256(out.read_bytes()).hexdigest() != prior.get("ocr_sha256")):
                     raise ValueError(f"{wid}: OCR receipt checksum mismatch")
+                if prior.get("language") != language:
+                    raise ValueError(f"{wid}: existing OCR uses a different language; inspect before replacing")
                 print(f"{wid}: OCR already present")
                 continue
             if out.exists() or receipt.exists():
@@ -1405,7 +1470,7 @@ def ocr(store, wids, max_pages=40):
                     subprocess.run(["pdftoppm", "-f", str(page), "-l", str(page), "-r", "180",
                                     "-gray", "-singlefile", "-png", str(pdf), str(image)], check=True,
                                    capture_output=True, timeout=120)
-                    result = subprocess.run(["tesseract", str(image) + ".png", "stdout", "-l", "eng"],
+                    result = subprocess.run(["tesseract", str(image) + ".png", "stdout", "-l", language],
                                             check=True, capture_output=True, timeout=180, env=env)
                     text = result.stdout.decode("utf-8", "replace")
                     texts.append(text)
@@ -1416,7 +1481,8 @@ def ocr(store, wids, max_pages=40):
             data = "\f".join(texts).encode("utf-8")
             ocr_sha = hashlib.sha256(data).hexdigest()
             details = {"openalex_id": wid, "pdf_sha256": row["sha256"], "ocr_sha256": ocr_sha,
-                       "ocr_engine": version, "language": "eng", "dpi": 180, "pages": pages,
+                       "ocr_engine": version, "language": language, "language_model_sha256": models,
+                       "dpi": 180, "pages": pages,
                        "content_word_counts_by_page": word_counts, "first_page_title_match": score,
                        "tool_sha256": tool_sha, "created": now(),
                        "quality": "Machine OCR, not a verified transcription; inspect source for exact claims."}
@@ -1879,6 +1945,11 @@ def main():
     p = sub.add_parser("ocr")
     p.add_argument("wids", nargs="+")
     p.add_argument("--max-pages", type=int, default=40)
+    p.add_argument("--language", default="eng", help="installed Tesseract language code, e.g. eng or por")
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
+    p = sub.add_parser("verify-embedded")
+    p.add_argument("wids", nargs="+")
+    p.add_argument("--title-pages", type=int, default=15)
     p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     for name in ("resolve", "fetch", "index"):
         p = sub.add_parser(name)
@@ -1916,7 +1987,9 @@ def main():
     elif a.cmd == "import-staged":
         import_staged(a.store, a.manifest, a.directory)
     elif a.cmd == "ocr":
-        ocr(a.store, a.wids, a.max_pages)
+        ocr(a.store, a.wids, a.max_pages, a.language)
+    elif a.cmd == "verify-embedded":
+        verify_embedded(a.store, a.wids, a.title_pages)
     else:
         index(a.store, a.out)
 

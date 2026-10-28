@@ -40,6 +40,8 @@ _provenance/           read-only working files of the curated seed tiers
 - `python3 _tools/library.py ocr W` processes a selected open scan, preserving
   its original PDF and extraction. Machine OCR is searchable but not a
   verified transcription; use the PDF to check wording, figures and tables.
+- `python3 _tools/library.py verify-embedded W` checks an open copy whose
+  title and existing embedded text were missed during the initial scan check.
 - The library search index combines open extracted and OCR text. Map a `W`
   id to its work with `openalex/<W>.json` or the repository's `works.tsv`.
 
