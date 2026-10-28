@@ -1,0 +1,63 @@
+{
+  "mode": "develop",
+  "elapsed_seconds": 112.11638646689244,
+  "host": "deep-server",
+  "source_sha256": {
+    "data/q012-information-screen/screen.py": "bb775b1161c543674e8c0e1d409065b0df8add8226be9a7628ef3e3202e671da",
+    "data/q012-information-screen/protocol.json": "d32a476a5cd98091781950486f15a507e012d837ecd5e454bf62eb19e8d433d5",
+    "data/q012-information-screen/PROTOCOL.md": "6156eca31593ed1229119690550b9f454e192ba2670d8dc68ff97193cb49188e",
+    "data/q012-prototype/prototype.py": "afb001d47d9761ae092003ac2f2a45aa423aaac0223bcb461126444813016067",
+    "data/q012-prototype/config.json": "619242a767012849b6f2758c3809e1f7bfced47d2aadd19937ecc51b58e20d4a",
+    "data/q012-prototype/quadrature.py": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
+    "data/q012-information-screen/recorded.py": "9082437a13d1e8611c6c7e0f8001eda6b0ee780e1cf315ee84d448d3a6e1f0da",
+    "data/q012-information-screen/recorded-protocol.json": "3c02129372dd7b956a8519590c1bc3892f1a61761088adf91c764a7611ebbbfe",
+    "data/q012-information-screen/recorded-design.md": "2a677e663c2515e32415d3ecbb5a08edae564a07b73b67018c36254dd9b60071"
+  },
+  "coefficients_sha256": null,
+  "results": {
+    "marginal_reference": {
+      "development_null": {
+        "n": 1000,
+        "capped": 0,
+        "recorded_quantiles": {
+          "q05": 32.95,
+          "median": 92.0,
+          "q95": 210.0999999999999
+        },
+        "pooled_present_share": 0.3442787818428581
+      },
+      "development_alternative": {
+        "n": 1000,
+        "capped": 0,
+        "recorded_quantiles": {
+          "q05": 33.0,
+          "median": 99.0,
+          "q95": 235.04999999999995
+        },
+        "pooled_present_share": 0.3679504628336052
+      }
+    },
+    "historical_size_calibrated": {
+      "development_null": {
+        "n": 1000,
+        "capped": 0,
+        "recorded_quantiles": {
+          "q05": 70.95,
+          "median": 279.5,
+          "q95": 702.7999999999993
+        },
+        "pooled_present_share": 0.43388990574377745
+      },
+      "development_alternative": {
+        "n": 1000,
+        "capped": 0,
+        "recorded_quantiles": {
+          "q05": 82.95,
+          "median": 299.5,
+          "q95": 750.2499999999998
+        },
+        "pooled_present_share": 0.45144947016717724
+      }
+    }
+  }
+}
