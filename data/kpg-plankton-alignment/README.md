@@ -78,6 +78,14 @@ records cite the original papers and need citation in downstream work.
   source workbook and Table E contain 990 rows; the difference is unresolved.
   Workbook contributor codes cover 741, 238 and 11 samples, spanning different
   time intervals; investigator and time are therefore potentially confounded.
+- A further source check retrieved the supplementary files for
+  [Gibbs et al. 2020](https://doi.org/10.1126/sciadv.abc9123) from Europe PMC
+  into the private artifact directory (`gibbs-2020-supplement.*` and
+  `gibbs-2020-data-S1.xlsx`). Its Figure 2 workbook describes interpolated
+  cell percentages for the Site 1209 Danian series, plus percentage data for
+  other records including the Site 1210 Cretaceous. It is not a replacement
+  for integer counts; the present alignment does not use it. The paper states
+  CC BY-NC 4.0, with source-specific terms to be checked before reuse.
 - Four labels are selected for the preliminary table: *Neobiscutum*,
   *Praeprinsius*, *Cruciplacolithus* and *Coccolithus*. For Alvarez only,
   the reported small and large *Cruciplacolithus* percentages are summed when

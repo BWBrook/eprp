@@ -20,9 +20,23 @@ Several kinds of source set out research questions explicitly:
 This note catalogues those sources and extracts the questions they pose,
 verbatim. It ends with a shortlist of questions EPRP could take up.
 
+**28 October acquisition update.** Three formerly inaccessible works are now in
+the private library: Patiño et al. 2017 via the University of La Laguna,
+Kiessling et al. 2019 via the Oxford Research Archive, and Sutherland et al.
+2013 via the Warwick Research Archive. The latter is an open accepted
+manuscript; its existing Wiley TDM copy remains untouched. Their entries in
+`sources.tsv` record the newly held copies. Their question-level extraction
+has not yet been checked or added: the existing item totals below remain the
+previous snapshot. Neither copy establishes permission to put verbatim question
+wording in the repository. Fifty numbered Patiño candidates have been captured
+from the PDF into `deep-server:/data/codex/artifacts/eprp/library-ocr-20261028/patino-questions-candidates-private.tsv`
+with source page numbers; they await source and thematic review and are not yet
+in the question totals. See the
+[acquisition receipt](../review/2026-10-28-codex-question-list-repositories.tsv).
+
 ## What the hunt found
 
-- **392 sources catalogued**: 369 OpenAlex works, which form the `agendas` tier, and 23 grey documents. 213 of the works are held as open text.
+- **392 sources catalogued**: 369 OpenAlex works, which form the `agendas` tier, and 23 grey documents. 216 of the works are held as open text.
 - **1,224 verified items from 148 sources**: 790 questions and 434 research challenges. The wording of 938 can sit in the repository under their licences (see Files).
 - **By theme** (a row can carry two): BD 322, CPB 317, CPP 243, AIO 229, SEP 228, AFR 179, ED 132, BST 132, PTS 102, LIO 77, FI 74. The pool leans towards drivers, conservation and climate. That reflects the conservation-heavy horizon-scanning tradition as much as the field.
 
@@ -157,12 +171,9 @@ can read:
 
 | Source | Questions | Why |
 | --- | --- | --- |
-| Sutherland et al. 2013, *J Ecol*, 100 fundamental ecological questions (10.1111/1365-2745.12025) | 100 | Wiley TDM copy only |
 | Sutherland et al. 2009, *Conserv Biol*, 100 conservation questions (10.1111/j.1523-1739.2009.01212.x) | 100 | Wiley TDM copy only |
-| Patiño et al. 2017, *J Biogeogr*, 50 island-biology questions (10.1111/jbi.12986) | 50 | free to read at Wiley; no fetchable copy |
 | Labandeira 2026, *Ichnos*, ten major questions on arthropod–plant interactions (10.1080/10420940.2026.2671783) | 10 | free to read at Taylor & Francis; no fetchable copy. Bears on Q-032 |
 | Sauquet & Magallón 2018, *New Phytol*, key questions in angiosperm macroevolution (10.1111/nph.15104) | 6 + 3 challenges | Wiley TDM copy only |
-| Kiessling et al. 2019, *Phil Trans B*, conservation priority questions met with palaeontological data (10.1098/rstb.2019.0222) | maps the 100 of Sutherland et al. 2009 | Royal Society; no open copy found |
 | *Cell* 2016, "Big Questions in Evolution" (10.1016/j.cell.2016.07.021) | — | free to read at Cell Press; no fetchable copy |
 | López-García & Moreira 2015, TREE, open questions on the origin of eukaryotes (10.1016/j.tree.2015.09.005) | — | Elsevier; repository copy not fetched |
 | Silcox & López-Torres 2017, *AREPS*, major questions on primate origins (10.1146/annurev-earth-063016-015637) | — | closed |
@@ -174,5 +185,5 @@ can read:
 | Gastaldo 1998, *PALAIOS*, report of the 1997 "Paleontology in the 21st Century" workshop (10.2307/3515284) | — | closed (JSTOR) |
 
 The Wiley rows are held as TDM copies, which are local mining only under the
-access policy. The rest need the UTAS Library request that Barry has in hand,
-or a reading by Barry himself.
+access policy. Other routes include institutional repositories, the pending
+UTAS Library request, or a reading by Barry himself.
