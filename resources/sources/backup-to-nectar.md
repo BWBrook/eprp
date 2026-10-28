@@ -151,3 +151,46 @@ traversal refusal. A synthetic cross-host smoke transferred four files
 SHA256, and restored all four independently with a passing SQLite integrity
 and schema check. The production mirror transfer is a separate gated action;
 no production-backup completion is claimed by these tests.
+
+### First production backup: completed 28 October 2026
+
+The first production generation completed with exit status 0 before the final
+state check at **13:19 AEDT on 28 October 2026**. Fossilworks' owner confirmed
+all writes finished before launch. The deployed script from commit `995e1a2`
+matched SHA256
+`17aa126bc3945ac7a36bca83e163edbb24ebe094467e00745fa11815cbe37037`
+on the controlling checkout, deep-server and Nectar.
+
+- Completed VM generation:
+  `/data/codex/artifacts/eprp-paleodata-backup/snapshots/20261028T015047.271965Z`.
+  Its `paleodata/` contains **51,456 files, 2,138 directories and
+  75,910,524,400 payload bytes**. All file sizes and SHA256 hashes match the
+  captured source manifest. Fossilworks contributes 513 files and 32,221,387
+  bytes. This verifies copying against the captured source, not provider
+  manifests or scientific validity.
+- `verification.json` and `restore-test.json` in that generation are the
+  detailed receipts. The two online library database copies passed
+  `integrity_check` and a schema query: 7 tables in `library/search.sqlite`,
+  6 in `library/tdm/search-tdm.sqlite`. Their separate capture intervals were
+  01:57:57.826–01:58:07.826 UTC and 01:58:07.826–01:58:08.572 UTC.
+- Fresh sample recovery at
+  `/data/codex/artifacts/eprp-paleodata-backup/restore-tests/20261028T015047.271965Z`
+  checked **42 files and 505,275,835 bytes**, including both library databases.
+  Every copied hash matched and both SQLite checks passed. This was a sample
+  restore; a full production restore has not been run.
+- A separate final metadata check confirmed identical before/after ordinary
+  source signatures, directory paths, live database paths and source modes;
+  every retained file and directory has no write bits; every regular file has
+  link count 1; all 42 restored files have independent inodes and their
+  original modes. `latest` resolves to this completed `paleodata/`, and the
+  corresponding `.partial` path is absent. The backup root is private mode
+  700. Final available VM data-volume capacity was 374,249,578,496 bytes.
+- Deep-server's persistent run was `tmux` session
+  `eprp-backup-20261028T015047Z`. Its log and numeric exit receipt remain at
+  `/data/codex/scratch/eprp-paleodata-backup/production-20261028T015047Z.log`
+  and the same stem with `.exit`. Source-side manifests, inventories and
+  `result.json` remain under
+  `/data/codex/scratch/eprp-paleodata-backup/20261028T015047.271965Z/`.
+
+The production run reported no source drift or transfer failure. No source,
+previous generation or other data was deleted. No periodic schedule was added.
