@@ -1,0 +1,62 @@
+{
+  "proof": {
+    "input_sha256": "7c47afef83c85baff6a0cddaee20a28bce926261f41e221a03f5928cea8ccd64",
+    "residual_shape": [
+      101,
+      2978,
+      6
+    ],
+    "finite_residual_values": 1804668,
+    "nonzero_finite_residual_values": 0,
+    "positive_finite_sampled_proposed_rss": 600,
+    "sampled_proposed_rss_count": 600
+  },
+  "open": {
+    "input_sha256": "d654f148679db4c5c2d87ec5274fdc0a2ebc93bd58826454727c1fcc45fe94f6",
+    "residual_shape": [
+      101,
+      2978,
+      6
+    ],
+    "finite_residual_values": 1804668,
+    "nonzero_finite_residual_values": 0,
+    "positive_finite_sampled_proposed_rss": 595,
+    "sampled_proposed_rss_count": 600
+  },
+  "expo": {
+    "input_sha256": "56f087ace5256126b20abb1c918dd193b0986328ccddce16a8fe36b296682e54",
+    "residual_shape": [
+      101,
+      2978,
+      6
+    ],
+    "finite_residual_values": 1804668,
+    "nonzero_finite_residual_values": 0,
+    "positive_finite_sampled_proposed_rss": 560,
+    "sampled_proposed_rss_count": 600
+  },
+  "food": {
+    "input_sha256": "1407a17c33e49ae8a6635f6b4227b9850833681b5dbd627454f20e56d859e608",
+    "residual_shape": [
+      101,
+      2978,
+      6
+    ],
+    "finite_residual_values": 1804668,
+    "nonzero_finite_residual_values": 0,
+    "positive_finite_sampled_proposed_rss": 591,
+    "sampled_proposed_rss_count": 600
+  },
+  "temp": {
+    "input_sha256": "6d78eee2e2493d04c9c6cd96bfd52580f32ff6ee6f610e7762b4dfe2374edd91",
+    "residual_shape": [
+      101,
+      2978,
+      6
+    ],
+    "finite_residual_values": 1804668,
+    "nonzero_finite_residual_values": 0,
+    "positive_finite_sampled_proposed_rss": 573,
+    "sampled_proposed_rss_count": 600
+  }
+}

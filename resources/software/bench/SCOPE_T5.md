@@ -91,10 +91,16 @@ last (no deposited outputs; its only reference is MATLAB).
   `requirements.txt` pins numpy 2.4.6, pandas 3.0.3, scipy 1.17.1, which
   need Python ≥ 3.11; the README says 3.9 (`checked`). The MCMC and the
   synthetic-data generator are unseeded.
-- The deposited proof chains (6 × 5,002 iterations) cover all five true
-  parameters after burn-in (computed). `D_proof.npz` is not the noise-free
-  source of `observed_D.npz` (r = 0.96, slope 0.92), so a rerun forward
-  model must serve as truth.
+- The deposited proof chains (6 × 5,002 iterations) have pooled intervals
+  that include the five nominal parameters in the deposited generator script
+  (computed). **28 October correction:** this is not calibrated coverage,
+  and the exact generating values are not established; saved-chain
+  diagnostics show poor mixing. The earlier conclusion here that
+  `D_proof.npz` was not the noise-free source of `observed_D.npz` was too
+  strong: their correlation and slope cannot establish provenance. A
+  subsequent nominal-parameter forward rerun does not reproduce that
+  reference map; its precise role and the actual observation generation remain
+  unresolved. See the [forward review](../reviews/2026-10-28-inditek-forward-and-claims/README.md).
 - Proposed: **N1** forward-model reproduction of stored chain states
   (1e−9 relative on one stack); **N2** coverage and R-hat on the deposited
   chains; **N3** calibration on 10 seeded synthetic datasets (about

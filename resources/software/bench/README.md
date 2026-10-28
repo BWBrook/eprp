@@ -491,5 +491,11 @@ amendments; individual findings and limitations are in the tool entries.
   but their generating provenance is not uniquely established. In a
   prespecified flat-likelihood diagnostic the historical sampler's four
   chains diverged from the known target and two stalled; the deposited
-  sampler tracked that simple target. See the [entry](../inditek-2/README.md)
-  and [review](../reviews/2026-10-28-inditek-sampler/README.md).
+  sampler tracked that simple target. Specified analytic forward controls
+  pass, and three archived proposal diversity vectors replay, but their RSS
+  values do not, so the declared combined replay fails. The recorded chains
+  have poor convergence diagnostics, including proof Q10 R-hat 1.623 and
+  bulk ESS 10. Their connection to the paper's exact figures is unresolved.
+  See the [entry](../inditek-2/README.md),
+  [sampler review](../reviews/2026-10-28-inditek-sampler/README.md) and
+  [forward and claims review](../reviews/2026-10-28-inditek-forward-and-claims/README.md).

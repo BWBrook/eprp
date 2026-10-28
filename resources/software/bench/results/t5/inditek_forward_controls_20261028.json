@@ -1,0 +1,35 @@
+{
+  "source_sha256": "70a45d9b803a179de007226fccf1e093d717a4ce424c0bff9b07eac9887d80b2",
+  "time_slices": [
+    541,
+    270,
+    0
+  ],
+  "results": {
+    "proof": {
+      "rate_max_abs_error": 3.469446951953614e-18,
+      "capacity_max_abs_error": 0.0,
+      "uniform_shift_max_abs_error": 3.469446951953614e-18,
+      "pass": true
+    },
+    "food": {
+      "rate_max_abs_error": 5.204170427930421e-18,
+      "capacity_max_abs_error": 0.0,
+      "uniform_shift_max_abs_error": 6.938893903907228e-18,
+      "pass": true
+    },
+    "temp": {
+      "rate_max_abs_error": 6.938893903907228e-18,
+      "capacity_max_abs_error": 0.0,
+      "uniform_shift_max_abs_error": 0.0,
+      "pass": true
+    },
+    "expo": {
+      "rate_max_abs_error": 3.469446951953614e-18,
+      "capacity_max_abs_error": null,
+      "uniform_shift_max_abs_error": 3.469446951953614e-18,
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

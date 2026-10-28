@@ -319,3 +319,14 @@ Independently inspect the archived `residuals` arrays in all five saved-chain
 files. Report finite and nonzero counts and the number of 50-iteration
 snapshots with positive finite proposed RSS. This post-hoc archive audit does
 not assume that the arrays were used in the published analysis.
+
+## Amendment A10 (28 October 2026, post-hoc figure-pipeline audit)
+
+An independent review found that the notebook labels a combined density plot
+as Figure 4 and uses variant-specific slices: `proof` and `food` all chains
+from index 2,000, `open` all from 3,000, `temp` chains 1–4 from 2,000, and
+`expo` chains 0, 1, 2, 4 and 5 from 2,000. This figure need not be the
+article's Figure 4. Calculate means, rank-split R-hat and bulk ESS for those
+exact slices using the A8 locked environment. This analysis was identified
+after seeing A8 results and is exploratory; preserve the main all-chain
+diagnostics and all excluded chain values.
