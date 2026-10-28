@@ -1,0 +1,34 @@
+{
+  "database": "/data/paleodata/fossilworks/derived/2026-10-28-assembly-v1/fossilworks.sqlite",
+  "database_sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610",
+  "database_bytes": 80089088,
+  "snapshot_manifest_sha256": "07463922820e97aa5bc44f2394236085fdb54d6e1f403f5a1cd086dad8a2d1e6",
+  "source_files_checked": 100,
+  "source_rows_checked_field_by_field": 43378,
+  "sqlite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "tables": {
+    "intervals": 20,
+    "source_files": 100,
+    "source_rows": 43378,
+    "register_rows": 26046,
+    "register_linked": 26046,
+    "samples_rows": 1697,
+    "references_rows": 1053,
+    "species_rows": 7291,
+    "matrix_qc": 34
+  },
+  "checks": {
+    "distinct_sample_ids": 1675,
+    "register_rows_missing_within_interval_reference": 1266,
+    "missing_reference_ids": 58,
+    "sample_ids_with_missing_reference": 96,
+    "sample_rows_with_identical_multiple_candidates": 547,
+    "sample_ids_with_total_discrepancy": 44,
+    "matrix_cells_differing_from_register_sum": 34,
+    "matrix_cells_differing_from_last_register_row": 0,
+    "species_rows_with_mass_field_absent": 2765,
+    "species_rows_with_mass_field_present_empty": 3169,
+    "species_rows_with_mass_field_present_nonempty": 1357
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "derived Fossilworks interval assembly",
+  "created_utc": "2026-10-28T02:46:21.093255+00:00",
+  "source_snapshot": "deep-server:/data/paleodata/fossilworks/raw/2026-10-28-intervals-v2",
+  "source_manifest_sha256": "07463922820e97aa5bc44f2394236085fdb54d6e1f403f5a1cd086dad8a2d1e6",
+  "selection_audit": "profile/interval-download-2026-10-28.json",
+  "selection_audit_sha256": "56bcbd97040b7fbfd14cc877dcd1c50f898a8310b60c56c634ed869e150dbed2",
+  "corrected_audit": "profile/interval-download-literal-2026-10-28.json",
+  "corrected_audit_sha256": "eeeb60e2d5b827ab0e19f7a959bafbe0662fc2a4d07225b2642497ebd9227811",
+  "assembler": "resources/sources/fossilworks/assemble.py",
+  "assembler_sha256": "3b9c7211c6889e84343c970bf5ed974277a5f07f6b90edf715d89e6a8c45b37e",
+  "assembler_git_commit": "1d4083c",
+  "verifier": "resources/sources/fossilworks/verify_assembly.py",
+  "verifier_sha256": "69b0fe079dd78434884605a467989b0fbb0b43f561933a2cb6807b8ead6dda5a",
+  "files": [
+    {
+      "key": "fossilworks.sqlite",
+      "size": 80089088,
+      "sha256": "ae1fdeb113ade4a72d9fd23a08d9082720c308d0b0c593f6bf9fb4ed36861610"
+    }
+  ],
+  "limitations": [
+    "Source exports are separate dated interval selections, not an atomic provider snapshot.",
+    "Original text and rows are retained; no taxonomic or counting-unit harmonisation has been performed.",
+    "Unresolved references and register/matrix and summary discrepancies require interpretation before analysis."
+  ]
+}

@@ -109,6 +109,9 @@ A broad request previously returned HTTP 504 and subsequent small requests
 produced mixed files; the sequential interval procedure avoided that failure.
 The database is live: the dated files are retained observations of public
 exports, with no fixed provider release or historical-query replay established.
+The [sample and register assembly](assembly.md) provides a queryable,
+provenance-preserving SQLite representation, with unresolved source issues
+retained rather than corrected.
 
 The FAQ states that data are CC0, while Alroy retains copyright in the site
 and its software. It encourages acknowledgement of both the database and its
