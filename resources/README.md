@@ -1,6 +1,16 @@
 # Resource orientation
 
-[catalogue.tsv](catalogue.tsv) is a small register of sources worth examining.
+Start with the developed [data source index](sources/INDEX.md) to find
+catalogued databases, compilations and deposited datasets. The
+[catalogue guide](sources/README.md) explains entry conventions, access,
+provenance and private mirroring. Each entry records its checks and limits;
+inclusion does not establish fitness for a particular research question.
+
+## Foundation register (7 October 2026)
+
+[catalogue.tsv](catalogue.tsv) retains the foundation register and later
+question-specific audit rows. The notes below preserve the 7 October
+foundation pass; use the developed catalogue for subsequent source coverage.
 It is deliberately incomplete and is not an endorsement, quality ranking or
 inventory of data ready for analysis. The seed selection favours accessible
 infrastructure; later orientation must challenge that selection.
@@ -36,11 +46,12 @@ resources should answer an active question rather than merely enlarge the list.
 No fossil observations were downloaded in this foundation pass. Documentation
 and service metadata establish a route to investigate, not scientific fitness.
 
-## Gaps to address when relevant
+## Foundation gaps recorded on 7 October 2026
 
 The initial register has no dedicated taxonomic authority, geochronological
 standard, trait/body-size resource, climate/environment reconstruction, modern
 biodiversity comparator, or full sampling/preservation-methods map. Regional
 and clade-specific resources, museum data and less digitised evidence may be
-essential. Select additions against the questions being developed and record
+essential. Consult the developed catalogue for subsequent coverage. Select
+additions against the questions being developed and record
 overlap between aggregators; do not assume a global database is representative.

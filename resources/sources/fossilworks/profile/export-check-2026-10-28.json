@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-28",
+  "broad_request": "All 20 visible fossil interval checkboxes, no taxon or geographic filter",
+  "broad_response": "HTTP 504 Gateway Timeout",
+  "bounded_requests": "Late Pleistocene, Australia, 37.5–37 S and 144.5–145 E, with and without genus Diprotodon",
+  "research_subagent_initial_observation": {
+    "filtered_register_rows": 2,
+    "unfiltered_register_rows": 18,
+    "sample_count": 2,
+    "filtered_totals": [4, 28],
+    "unfiltered_totals": [101, 320],
+    "filtered_richness": [1, 1],
+    "unfiltered_richness": [6, 12]
+  },
+  "parent_repeat_1": "The unfiltered register had 26045 rows while the sample table had 2 rows; the original script did not check cross-table identifiers.",
+  "parent_repeat_2": "The amended script rejected the register and sample tables because their sample identifier sets differed.",
+  "subsequent_gets": "Register had 18 rows and 2 sample identifiers; sample table had 1701 rows and 1675 distinct sample identifiers. Both plain and cache-busting URLs returned the same counts.",
+  "limitation": "Generic export files changed asynchronously; the cause and scope of overwrites are not established. The observations do not establish a coherent full export."
+}
