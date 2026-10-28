@@ -36,6 +36,13 @@ def unique(rows, label):
     return result
 
 
+def in_published_weathered_interval(hole, depth):
+    limits = {'E': Decimal('51.32'), 'C': Decimal('17.47')}
+    if hole not in limits or not depth:
+        return None
+    return Decimal(depth) < limits[hole]
+
+
 def save(path, rows, fields):
     with path.open('w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fields, delimiter='\t', lineterminator='\n')
@@ -57,9 +64,11 @@ def build(input_dir, output_dir):
     max_pct_error = Decimal(0)
     for k, raw_row in raw.items():
         c, p = counts.get(k), percentages.get(k)
+        weathered = in_published_weathered_interval(k[0], raw_row['Depth comp r [rmcd]'])
         row = {'hole': k[0], 'core': k[1], 'depth_section_cm': k[2],
                'source_depth_composite_rmcd': raw_row['Depth comp r [rmcd]'],
-               'source_age_model_1_ma': '', 'source_age_model_2_ma': '', 'paired_dominant_table': str(bool(c)).lower()}
+               'source_age_model_1_ma': '', 'source_age_model_2_ma': '', 'paired_dominant_table': str(bool(c)).lower(),
+               'inside_jones_weathered_interval': '' if weathered is None else str(weathered).lower()}
         row.update({taxon + '_pct': '' for taxon in TAXA})
         if c:
             for a in age_cols:
@@ -92,9 +101,15 @@ def build(input_dir, output_dir):
     events = {}
     for r in data['893919']:
         events[r['Event']] = events.get(r['Event'], 0) + 1
+    flagged = {k for k, r in raw.items() if in_published_weathered_interval(k[0], r['Depth comp r [rmcd]']) is True}
+    unpaired = raw.keys() - counts.keys()
     result = {'input_sha256': hashes, 'source_rows': {k: len(v) for k, v in data.items()},
               'el_kef_unique_raw': len(raw), 'el_kef_dated': len(counts),
               'el_kef_raw_without_age': len(raw.keys() - counts.keys()),
+              'el_kef_weathered_threshold_flagged': len(flagged),
+              'el_kef_unpaired_inside_weathered_interval': len(flagged & unpaired),
+              'el_kef_dated_inside_weathered_interval': len(flagged & counts.keys()),
+              'el_kef_unpaired_outside_weathered_interval': len(unpaired - flagged),
               'age_model_difference_kyr_max': max(differences),
               'age_model_difference_kyr_median': statistics.median(differences),
               'age_model_difference_nonzero': sum(d > 1e-8 for d in differences),
@@ -103,6 +118,7 @@ def build(input_dir, output_dir):
               'qualifications': ['ODP ages remain ka BP; Jones ages remain source Ma values',
                  'ODP data interpolated, selected taxa only; percentages need not sum to 100',
                  'El Kef undated rows retained with blank percentages and ages',
+                 'Weathered flag applies published depth thresholds; matching the omission is an inference',
                  'Cruciplacolithus ODP small and large size classes combined when both present',
                  'PANGAEA.893899 is CC BY-NC-ND 3.0; derived data kept private',
                  'no sample matching or ecological hypothesis test between sites']}

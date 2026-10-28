@@ -59,6 +59,13 @@ class AlignmentTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'duplicate'):
             self.run_build()
 
+    def test_weathered_depth_boundaries_are_hole_specific_and_missing_is_unknown(self):
+        self.assertTrue(align.in_published_weathered_interval('E', '51.27'))
+        self.assertFalse(align.in_published_weathered_interval('E', '51.32'))
+        self.assertTrue(align.in_published_weathered_interval('C', '17.46'))
+        self.assertIsNone(align.in_published_weathered_interval('E', ''))
+        self.assertIsNone(align.in_published_weathered_interval('X', '1'))
+
 
 if __name__ == '__main__':
     unittest.main()

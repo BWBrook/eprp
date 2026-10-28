@@ -1,0 +1,45 @@
+{
+  "workbook_sha256": "5fc615afdf94fa7842375e9c34b98d1f87f41e29700ef97da11b149eb59c7caa",
+  "pangaea_893919_sha256": "945a2aeadafd9efdb02c80ec31f41a3c5a851fb9c3e0b61abaff4232aefd0756",
+  "original_samples": 990,
+  "workbook_abundance_columns": 60,
+  "sample_events": {
+    "198-1209A": 343,
+    "198-1209B": 346,
+    "198-1209C": 290,
+    "198-1210A": 11
+  },
+  "source_investigators": {
+    "SG": 238,
+    "SA": 741,
+    "PB": 11
+  },
+  "source_abundance_blanks": 31159,
+  "source_abundance_explicit_zeroes": 15867,
+  "matching_checks": {
+    "mbsf": {
+      "compared": 979,
+      "max_absolute_difference": "0.00500000000003"
+    },
+    "rmcd": {
+      "compared": 990,
+      "max_absolute_difference": "0.00500000000003"
+    },
+    "armcd": {
+      "compared": 990,
+      "max_absolute_difference": "0.00500000000001"
+    },
+    "age_ka": {
+      "compared": 990,
+      "max_absolute_difference": "0.500000000002000"
+    }
+  },
+  "qualifications": [
+    "Original observations are percentages, not integer counts",
+    "Excel floating artifacts normalized only while constructing sample-label join keys",
+    "Blanks are preserved, not replaced by zero; original workbook fields are retained",
+    "Comparable names are a provisional crosswalk, not validated taxonomic equivalence",
+    "Private derived table includes source material with unconfirmed redistribution rights",
+    "No cross-site age harmonization or ecological hypothesis test"
+  ]
+}

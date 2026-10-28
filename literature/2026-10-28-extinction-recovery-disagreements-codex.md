@@ -149,6 +149,17 @@ or a completed join. PANGAEA labels the inspected Alvarez Table A
 CC BY-NC-ND 3.0 and the Jones all-taxa file CC BY 4.0; preserve the original
 files and assess terms separately before sharing derived products.
 
+**Later alignment update, 28 October:** The
+[Nature Figure 1 source workbook](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-019-1590-8/MediaObjects/41586_2019_1590_MOESM2_ESM.xlsx)
+contains original, non-interpolated percentage abundances for all 990 Table E
+samples; 11 are from Site 1210. Integer counts and per-sample denominators
+remain unlocated. The 13 unmatched El Kef samples all fall in the weathered
+hole-E interval excluded in Jones et al.'s methods, and no matched sample
+falls within the corresponding excluded intervals. The match supports that
+exclusion as the explanation; it is not individual author confirmation. Full
+checks, chronological caveats and private data custody are in the
+[alignment record](../data/kpg-plankton-alignment/README.md).
+
 ### 3. Did biological damage prolong the environmental crisis?
 
 [Hull (2015)](https://doi.org/10.1016/j.cub.2015.08.053), full review,

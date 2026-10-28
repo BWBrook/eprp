@@ -16,6 +16,10 @@
   "el_kef_unique_raw": 199,
   "el_kef_dated": 186,
   "el_kef_raw_without_age": 13,
+  "el_kef_weathered_threshold_flagged": 13,
+  "el_kef_unpaired_inside_weathered_interval": 13,
+  "el_kef_dated_inside_weathered_interval": 0,
+  "el_kef_unpaired_outside_weathered_interval": 0,
   "age_model_difference_kyr_max": 15.166729999990025,
   "age_model_difference_kyr_median": 0.8896399999969162,
   "age_model_difference_nonzero": 105,
@@ -36,6 +40,7 @@
     "ODP ages remain ka BP; Jones ages remain source Ma values",
     "ODP data interpolated, selected taxa only; percentages need not sum to 100",
     "El Kef undated rows retained with blank percentages and ages",
+    "Weathered flag applies published depth thresholds; matching the omission is an inference",
     "Cruciplacolithus ODP small and large size classes combined when both present",
     "PANGAEA.893899 is CC BY-NC-ND 3.0; derived data kept private",
     "no sample matching or ecological hypothesis test between sites"
