@@ -217,3 +217,25 @@ or non-OK result explicitly; do not change the selected configuration after
 seeing its result. Preserve seed, config file and input hashes with the
 receipt. Audit the retained nine and the additional result separately; the
 deposit's occupancy and extinction column meanings remain unconfirmed.
+
+## Amendment A6 (28 October 2026, before the synthetic sampler test)
+
+The current and 4 June 2026 INDITEK samplers have different controlled prior
+defects ([review](../reviews/2026-10-28-inditek-sampler/README.md)). Test
+their behaviour on the same **flat-likelihood** synthetic target, not on
+empirical data: Q10 has a Gaussian prior N(2, 0.08²), bounded to [1, 3.5];
+the other parameters have bounded uniform priors. Use the 4 June proof
+starting values and proposal scales for both implementations, seed pairs
+34101–34104, 25,001 iterations per chain, and discard the first 5,000.
+The model function is replaced by a constant-RSS stub. Both samplers retain
+their own ongoing adaptation; this is a comparison of their implementations,
+not an isolated effect of the prior bug or an established stationary sample.
+
+The analytic reference has mean essentially 2, variance 0.0064, and
+P(Q10 < 1.92) = P(Q10 > 2.08) ≈ 0.158655; truncation is negligible at
+these bounds. Report each chain's mean, variance and tails, plus 1,000-draw
+batch-based Monte Carlo standard errors for the mean and tail frequencies.
+No pass threshold is declared: this is a diagnostic of a simplified model,
+with approximate Monte Carlo errors and no claim about published chains.
+No parameters or seeds will be changed after the results are seen. Source
+and test hashes are recorded with the results.
