@@ -84,7 +84,9 @@ An [independent single-run recount](../bench/validate/t5_g3_single_audit.R)
 has been checked against retained config 18. The
 [completion watcher](../bench/watch_t5_g3_22.sh) checks the simulation's
 exit, input hashes and post-run landscape manifest, then audits config 22's
-final state. Its receipt remains pending until that run completes.
+final state. Its success branch was exercised with config 18 and a small
+test manifest, and its failure branch rejected a simulated timeout. The
+actual config 22 receipt remains pending until that run completes.
 
 ## Pitfalls and relevance
 

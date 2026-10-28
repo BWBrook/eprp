@@ -10,6 +10,9 @@ trap 'report "audit failed at line $LINENO"' ERR
 report 'waiting for the simulation completion receipt'
 while ! grep -q 'finished config 22; exit=' "$task_dir/status.txt"; do
   if ! tmux has-session -t eprp-g3-22 2>/dev/null; then
+    if grep -q 'finished config 22; exit=' "$task_dir/status.txt"; then
+      break
+    fi
     report 'simulation session ended without a completion receipt'
     exit 1
   fi
