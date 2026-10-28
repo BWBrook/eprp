@@ -168,7 +168,22 @@ CREATE INDEX links_status ON row_links(kind,status);
 
 
 def store_sources(connection, audit, files, payloads):
-    headers, by_table, matrix = {}, defaultdict(list), {}
+    headers, parsed, by_table, matrix = {}, {}, defaultdict(list), {}
+    for selection in audit["intervals"]:
+        for table in TABLES:
+            key = f"{selection['source_attempt']}/{table}.txt"
+            header, rows = parse(payloads[key], key)
+            parsed[key] = (header, rows)
+            if table != "matrix":
+                if len(set(header)) != len(header) or any(c.startswith("_fw_") for c in header):
+                    raise ValueError(f"Duplicate or reserved source column: {key}")
+                union = headers.setdefault(table, [])
+                union.extend(column for column in header if column not in union)
+    for table, header in headers.items():
+        columns = ",".join(f"{quote(c)} TEXT" for c in header)
+        connection.execute(f"CREATE TABLE {quote(table + '_rows')} "
+                           f"(_fw_row_id TEXT PRIMARY KEY REFERENCES source_rows,"
+                           f"_fw_interval_id TEXT NOT NULL REFERENCES intervals,{columns})")
     for ordinal, selection in enumerate(audit["intervals"], 1):
         attempt = selection["source_attempt"]
         interval = attempt.split("/")[0]
@@ -179,19 +194,8 @@ def store_sources(connection, audit, files, payloads):
             encoded(selection["expected_rows"]), encoded(selection)))
         for table in TABLES:
             key = f"{attempt}/{table}.txt"
-            header, rows = parse(payloads[key], key)
+            header, rows = parsed[key]
             historical_count = selection["validation"]["rows"][table]
-            if table != "matrix":
-                if len(set(header)) != len(header) or any(c.startswith("_fw_") for c in header):
-                    raise ValueError(f"Duplicate or reserved source column: {key}")
-                if table not in headers:
-                    headers[table] = header
-                    columns = ",".join(f"{quote(c)} TEXT NOT NULL" for c in header)
-                    connection.execute(f"CREATE TABLE {quote(table + '_rows')} "
-                                       f"(_fw_row_id TEXT PRIMARY KEY REFERENCES source_rows,"
-                                       f"_fw_interval_id TEXT NOT NULL REFERENCES intervals,{columns})")
-                elif headers[table] != header:
-                    raise ValueError(f"Cross-interval source schema differs: {key}")
             connection.execute("INSERT INTO source_files VALUES (?,?,?,?,?,?,?,?,?,?)", (
                 key, interval, table, files[key]["sha256"], files[key]["size"],
                 encoded(header), len(rows), historical_count, int(len(rows) == historical_count),
@@ -205,11 +209,14 @@ def store_sources(connection, audit, files, payloads):
                 if table == "matrix":
                     matrix_rows.append((row_id, values))
                 else:
-                    marks = ",".join("?" for _ in range(2 + len(header)))
+                    named_values = dict(zip(header, values))
+                    union_values = [named_values.get(column) for column in headers[table]]
+                    marks = ",".join("?" for _ in range(2 + len(union_values)))
                     connection.execute(f"INSERT INTO {quote(table + '_rows')} VALUES ({marks})",
-                                       [row_id, interval, *values])
+                                       [row_id, interval, *union_values])
+                    value_fingerprint = digest(encoded(sorted(named_values.items())).encode("utf-8"))
                     by_table[table].append({"row_id": row_id, "interval": interval,
-                                            "values": dict(zip(header, values)), "fingerprint": fingerprint})
+                                            "values": named_values, "fingerprint": value_fingerprint})
             if table == "matrix":
                 matrix[interval] = (key, header, matrix_rows)
     return by_table, matrix, headers
@@ -230,7 +237,7 @@ def identities(connection, tables, headers):
                 continue
             variants = len({r["fingerprint"] for r in members})
             changed = [column for column in headers[table]
-                       if len({r["values"][column] for r in members}) > 1]
+                       if len({r["values"].get(column) for r in members}) > 1]
             classification = "unique" if len(members) == 1 else (
                 "repeated_identical" if variants == 1 else "differing_source_values")
             cursor = connection.execute("INSERT INTO identity_groups VALUES (NULL,?,?,?,?,?,?,?,?,?)", (
@@ -394,9 +401,10 @@ def assemble(snapshot, output, audit_path=AUDIT_PATH, *, manifest_sha256=MANIFES
                 "semantics": {
                     "source_rows": "Original 1-based physical data-record numbers; header is not a data row. Literal LF/CRLF records and tab delimiters; double quotes are ordinary characters, never quoting syntax. Every source line must independently have the header field count; embedded record delimiters or tabs inside a field are unsupported and fail closed on ragged records. No biological occurrence identity is asserted.",
                     "values": "Unmodified UTF-8 literal-TSV field strings; ordered arrays plus exact original header names. Quotes and literal carriage returns inside a line are retained. UTF-8 BOM is removed only at file start. File hashes pin original lexical bytes and line endings.",
+                    "structured_columns": "Native tables use the union of source column names, ordered by first appearance. SQL NULL means the field is absent from that row's source-file header; an empty string means a supplied empty field. source_files.header_json and source_rows.values_json preserve each file's exact header order and source values without union padding.",
                     "historical_audit": "Pinned selection audit used quote-aware CSV parsing. Its original classifications and counts are retained as historical evidence in explicitly historical interval columns and metadata; they are not current data-QC results. Literal physical rows define assembled row identities and observed counts; source_files separately reports literal physical row counts, historical_csv_audit_row_count and their agreement. Audit count disagreement never changes source values or suppresses rows.",
                     "links": "Exact text identifier candidates; other-interval candidates never resolve a missing same-interval record. Duplicate targets retained. Empty identifiers never matched.",
-                    "identity_groups": "Comparisons of full source rows within/cross interval, including original interval and summary fields. Differing values do not establish an error or distinct biological observations.",
+                    "identity_groups": "Comparisons of full named source values within/cross interval, including original interval and summary fields; field-order changes alone are ignored, while absent and supplied-empty fields differ. Differing values do not establish an error or distinct biological observations.",
                     "sample_qc": "Each retained sample summary compared with the sum of same-interval register rows sharing its exact sample ID. Repeated source summary rows each retained and compared separately; counts have provider-defined units, not necessarily individuals.",
                     "register_key": "Diagnostic grouping by sample/ref/genus/qualifier/species, never a primary occurrence key. Members and original count strings retained.",
                     "matrix_qc": "QC only: exact genus-space-species and sample-name matching. Blank numeric cells treated as zero only for comparison. Sum and last-row statistics are diagnostics, never replacement counts. Only differing or uncomparable cells stored here; every original matrix row retained in source_rows. Qualifiers are not taxonomically resolved.",

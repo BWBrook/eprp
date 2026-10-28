@@ -98,7 +98,8 @@ page, per-request UTC times and response headers, SHA256 checksums, and a
 second copy of every sheet to test stability. The original source snapshot is
 read-only; no datasets have been assembled or deduplicated. The
 [acquisition receipt](profile/acquisition-2026-10-28.md) and
-[interval table](profile/interval-download-2026-10-28.tsv) describe the files.
+[corrected interval table](profile/interval-download-literal-2026-10-28.tsv)
+describe the files.
 
 Export links use generic filenames without a request or version identifier;
 submitting another interval changes their contents. Stable repeated hashes,
@@ -121,14 +122,15 @@ authorisation to contact him; communication remains Barry's decision.
 - All 20 interval bundles were downloaded with stable five-sheet hashes. Five
   satisfy result-page counts and sample/reference identifier checks; 15 retain
   references used by register/sample records but absent from the reference
-  sheet. Middle Pleistocene additionally has 1,842 register rows against 1,843
-  declared by its result page. These are retained source inconsistencies,
-  rather than repaired values or evidence of failed file transmission.
+  sheet. These are retained source inconsistencies, rather than repaired values
+  or evidence of failed file transmission. A previous claim that the Middle
+  Pleistocene register lacked a row was a parser error, corrected below.
 - The provider matrix is not a safe substitute for summing the register.
   Across retained interval exports, some cells differ from summed repeated
   taxon/sample rows and match the last such row instead. This is an observed
-  pattern, not a verified account of provider code. Middle Pleistocene also
-  has a matrix count absent from its register. Per-interval
+  pattern, not a verified account of provider code. The previously reported
+  Middle Pleistocene matrix count is present in its register; the earlier
+  audit incorrectly merged two rows. The historical per-interval
   [cell comparisons](profile/interval-matrix-comparisons-2026-10-28/) preserve
   the discrepancies. No source counts have been changed.
 - The count unit, reporting protocol, collection and preservation processes,
@@ -164,13 +166,23 @@ analysed abundance.
 
 ## Verification log
 
+- **Correction, 28 October 2026:** provider TSV fields contain literal double
+  quotes, not CSV quoting. Parsing them as quoted CSV merged two Middle
+  Pleistocene rows and changed quoted comments in other rows. The corrected
+  literal-TSV audit gives 26,046 register rows across selections, 34
+  matrix-versus-register-sum differences, and no missing Middle Pleistocene
+  register/matrix row. That interval has 1,843 register rows, matching its
+  results page; its reference sheet still contains 61 of 63 stated references.
+  The [corrected audit](profile/interval-download-literal-2026-10-28.json)
+  supersedes the original CSV-derived counts; the earlier audit remains linked
+  as a historical record. Neither count is a count of independent observations.
 - **Acquisition complete, 28 October 2026:** all 20 visible fossil interval
   inputs, including the mixed `Pleistocene - Holocene` selection and the
   Maastrichtian/Campanian stages, were submitted separately. All returned
   nonempty five-sheet exports; no visible selection was omitted. The
-  [full audit](profile/interval-download-2026-10-28.json) verifies all 432 files
-  in the frozen manifest and records the selected 100 original sheets, their
-  hashes, counts and identifier checks. Source acquisition is complete;
+  [original audit](profile/interval-download-2026-10-28.json) verifies all 432
+  file hashes and records the selected 100 original sheets. Its parsed counts
+  are superseded by the corrected audit above. Source acquisition is complete;
   scientific readiness and a rational assembly remain subsequent work.
 - **Checked, 28 October 2026:** read the current Fossilworks FAQ, home page and
   download form over HTTPS; recorded the stated CC0 terms, entry and lineage

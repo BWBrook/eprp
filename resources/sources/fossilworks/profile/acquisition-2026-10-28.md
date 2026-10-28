@@ -1,5 +1,19 @@
 # Fossilworks interval acquisition, 28 October 2026
 
+**Parser correction, 28 October:** the acquisition audit below interpreted
+literal double quotes as CSV quoting. The provider files are literal tab- and
+line-delimited text; an independent recheck found every selected sheet
+rectangular under that interpretation. The old parser merged two Middle
+Pleistocene register rows and changed quoted text elsewhere. Correcting it
+gives 26,046 register rows across the selections, not 26,045; the Middle
+Pleistocene register has all 1,843 declared rows, including the
+*Capricornis* count previously described below as absent. There are 34 matrix
+cells differing from register sums, not 35. The Middle Pleistocene reference
+sheet still lacks two references. The historical audit and its numbers are
+retained below as the original record, not as current findings. See the
+[corrected interval audit](interval-download-literal-2026-10-28.json) and
+[corrected interval table](interval-download-literal-2026-10-28.tsv).
+
 All 20 fossil interval selections visible in the public download form were
 retrieved sequentially. Each retained its original register, species, samples,
 references and matrix sheets: **100 selected source sheets**, with no empty

@@ -32,6 +32,7 @@ class AssemblyTests(unittest.TestCase):
         self.snapshot.mkdir()
         self.output = self.root / "assembled.sqlite"
         self.audit_path = self.root / "selection.json"
+        self.headers = {}
         self.sheets = {
             "01-first": {
                 "register": [
@@ -74,7 +75,7 @@ class AssemblyTests(unittest.TestCase):
             work.mkdir(parents=True, exist_ok=True)
             selected = []
             for table in assemble.TABLES:
-                data = tsv(HEADERS[table], tables[table])
+                data = tsv(self.headers.get((directory, table), HEADERS[table]), tables[table])
                 key = f"{attempt}/{table}.txt"
                 (self.snapshot / key).write_bytes(data)
                 record = {"key": key, "size": len(data), "sha256": assemble.digest(data)}
@@ -223,6 +224,37 @@ class AssemblyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'outside the source snapshot'):
             self.run_assembly()
         self.assertFalse(self.output.exists())
+
+    def test_union_columns_preserve_absent_empty_nonempty_and_original_order(self):
+        self.headers[('01-first', 'species')] = ['species', 'mass (g)', 'total count']
+        self.sheets['01-first']['species'] = [['A alpha', '', '19'], ['B beta', '0012.30', '2']]
+        self.headers[('02-second', 'species')] = ['total count', 'countries', 'species']
+        self.sheets['02-second']['species'] = [['4', 'literal country', 'A alpha']]
+        self.write_fixture()
+        self.run_assembly()
+        db = self.connect()
+        native = db.execute('SELECT _fw_interval_id,species,"mass (g)","total count",countries FROM species_rows ORDER BY _fw_row_id').fetchall()
+        self.assertEqual(native, [('01-first', 'A alpha', '', '19', None),
+                                  ('01-first', 'B beta', '0012.30', '2', None),
+                                  ('02-second', 'A alpha', None, '4', 'literal country')])
+        for directory in self.sheets:
+            file_id = f'{directory}/attempt-1/species.txt'
+            header = json.loads(db.execute('SELECT header_json FROM source_files WHERE file_id=?', (file_id,)).fetchone()[0])
+            self.assertEqual(header, self.headers[(directory, 'species')])
+            values = [json.loads(r[0]) for r in db.execute('SELECT values_json FROM source_rows WHERE file_id=? ORDER BY record_number', (file_id,))]
+            self.assertEqual(values, self.sheets[directory]['species'])
+        self.assertEqual(db.execute('PRAGMA foreign_key_check').fetchall(), [])
+
+    def test_header_reordering_does_not_create_false_identity_differences(self):
+        self.headers[('02-second', 'references')] = ['title', 'ref_no']
+        self.sheets['02-second']['references'] = [['Original', 'r1'], ['Elsewhere only', 'rCross']]
+        self.write_fixture()
+        self.run_assembly()
+        db = self.connect()
+        row = db.execute("SELECT classification,variant_count,changed_columns_json FROM identity_groups WHERE kind='reference' AND scope='cross_interval' AND source_key_json=?", ('["r1"]',)).fetchone()
+        self.assertEqual(row, ('repeated_identical', 1, '[]'))
+        native = db.execute('SELECT ref_no,title FROM references_rows WHERE _fw_interval_id=? ORDER BY _fw_row_id', ('02-second',)).fetchall()
+        self.assertEqual(native, [('r1', 'Original'), ('rCross', 'Elsewhere only')])
 
     def test_literal_quotes_and_apparent_quoted_fields_are_preserved(self):
         comments = ['"Felis caracal"', '"Tamias spp." tentatively referred',
