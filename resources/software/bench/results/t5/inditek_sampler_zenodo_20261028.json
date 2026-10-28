@@ -1,0 +1,47 @@
+{
+  "source_sha256": "ede1421d4a6db9d2883fd0f2d9152240afcaadcd730f0269602defa41cf9933c",
+  "results": {
+    "at_prior_mean": {
+      "initial_q10": 2.0,
+      "proposed": [
+        163.0,
+        19.0,
+        0.035,
+        0.002,
+        2.0
+      ],
+      "uniform_draw": 0.5,
+      "accepted": 1,
+      "correct_log_acceptance_ratio": 0.0,
+      "correct_acceptance": 1
+    },
+    "away_from_prior_mean": {
+      "initial_q10": 3.0,
+      "proposed": [
+        163.0,
+        19.0,
+        0.035,
+        0.002,
+        3.0
+      ],
+      "uniform_draw": 0.5,
+      "accepted": 0,
+      "correct_log_acceptance_ratio": 0.0,
+      "correct_acceptance": 1
+    },
+    "within_proof_initial_range": {
+      "initial_q10": 2.3,
+      "proposed": [
+        161.0,
+        19.0,
+        0.035,
+        0.002,
+        2.5
+      ],
+      "uniform_draw": 0.8,
+      "accepted": 1,
+      "correct_log_acceptance_ratio": -0.5000000000000003,
+      "correct_acceptance": 0
+    }
+  }
+}

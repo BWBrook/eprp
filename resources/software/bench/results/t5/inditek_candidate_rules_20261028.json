@@ -1,0 +1,119 @@
+{
+  "scope": "conditional replay: Q10 mean 2, sigma 0.08 in June 4 code and sigma 0.4 in deposited code; uniform draws unrecorded",
+  "models": {
+    "proof": {
+      "sha256": "7c47afef83c85baff6a0cddaee20a28bce926261f41e221a03f5928cea8ccd64",
+      "old_rule_impossible_rejections": 0,
+      "deposited_rule_impossible_rejections": 1,
+      "old_rule_accepted_below_minus_30": 0,
+      "deposited_rule_accepted_below_minus_30": 0,
+      "finite_steps": 30004,
+      "examples": {
+        "old_rule": [],
+        "deposited_rule": [
+          {
+            "chain_index_zero_based": 2,
+            "iteration": 4,
+            "log_ratio": 2.718870824313414
+          }
+        ]
+      }
+    },
+    "open": {
+      "sha256": "d654f148679db4c5c2d87ec5274fdc0a2ebc93bd58826454727c1fcc45fe94f6",
+      "old_rule_impossible_rejections": 0,
+      "deposited_rule_impossible_rejections": 26,
+      "old_rule_accepted_below_minus_30": 0,
+      "deposited_rule_accepted_below_minus_30": 0,
+      "finite_steps": 29712,
+      "examples": {
+        "old_rule": [],
+        "deposited_rule": [
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 390,
+            "log_ratio": 2.849772327184837
+          },
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 522,
+            "log_ratio": 1.0910656253578699
+          },
+          {
+            "chain_index_zero_based": 1,
+            "iteration": 2338,
+            "log_ratio": 0.045237845343308436
+          }
+        ]
+      }
+    },
+    "expo": {
+      "sha256": "56f087ace5256126b20abb1c918dd193b0986328ccddce16a8fe36b296682e54",
+      "old_rule_impossible_rejections": 0,
+      "deposited_rule_impossible_rejections": 1592,
+      "old_rule_accepted_below_minus_30": 0,
+      "deposited_rule_accepted_below_minus_30": 0,
+      "finite_steps": 28638,
+      "examples": {
+        "old_rule": [],
+        "deposited_rule": [
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 619,
+            "log_ratio": 0.5858349236230396
+          },
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 846,
+            "log_ratio": 0.4702287652960786
+          },
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 893,
+            "log_ratio": 0.1725112558343156
+          }
+        ]
+      }
+    },
+    "food": {
+      "sha256": "1407a17c33e49ae8a6635f6b4227b9850833681b5dbd627454f20e56d859e608",
+      "old_rule_impossible_rejections": 0,
+      "deposited_rule_impossible_rejections": 272,
+      "old_rule_accepted_below_minus_30": 0,
+      "deposited_rule_accepted_below_minus_30": 0,
+      "finite_steps": 29638,
+      "examples": {
+        "old_rule": [],
+        "deposited_rule": [
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 27,
+            "log_ratio": 3.2350577976028445
+          },
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 28,
+            "log_ratio": 0.7732994861999032
+          },
+          {
+            "chain_index_zero_based": 0,
+            "iteration": 29,
+            "log_ratio": 0.8450101900252776
+          }
+        ]
+      }
+    },
+    "temp": {
+      "sha256": "6d78eee2e2493d04c9c6cd96bfd52580f32ff6ee6f610e7762b4dfe2374edd91",
+      "old_rule_impossible_rejections": 0,
+      "deposited_rule_impossible_rejections": 0,
+      "old_rule_accepted_below_minus_30": 0,
+      "deposited_rule_accepted_below_minus_30": 0,
+      "finite_steps": 28294,
+      "examples": {
+        "old_rule": [],
+        "deposited_rule": []
+      }
+    }
+  }
+}

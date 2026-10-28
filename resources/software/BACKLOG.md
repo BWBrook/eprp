@@ -56,11 +56,17 @@ a day on its free cores; nothing long on the laptop.
    preservation.
 5. **In progress from 25 October 2026 ([bench/VALIDATION_T5.md](bench/VALIDATION_T5.md)).**
    **Earth-system and spatial simulators.** cGENIE.muffin, pySCION,
-   INDITEK-2.0 (licence first), gen3sis with goSPL, and the metabolic-index
+   INDITEK-2.0, gen3sis with goSPL, and the metabolic-index
    implementations (L-012 to L-015; B-005, Q-001, Q-021, Q-049). Scoped on
    24 October 2026 ([bench/SCOPE_T5.md](bench/SCOPE_T5.md)): start cGENIE's
    long runs first, then metabolic index, gen3sis, INDITEK-2.0, goSPL and
-   pySCION.
+   pySCION. Update 28 October: cGENIE and metabolic-index results have been
+   integrated; nine gen3sis G3 records were independently recounted and
+   config 22 is running. The Zenodo INDITEK code-and-data deposit declares
+   CC BY 4.0, whereas GitHub has no licence. A controlled sampler
+   [counterexample](reviews/2026-10-28-inditek-sampler/README.md) applies to
+   both the GitHub and deposited sampler file; saved-chain provenance remains
+   to be checked before interpreting its implications.
 6. **Trait, disparity and comparative tools.** paleoTS and evoTS, mvMORPH,
    dispRity, Claddis, BioGeoBEARS (GitHub), BEAST2 2.7.8 with SA and BDMM.
 7. **Food webs.** cheddar's cascade workflow (Dunhill et al. 2024 code), ATNr,

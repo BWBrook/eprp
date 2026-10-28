@@ -56,7 +56,9 @@ running the 1.6.0 package. See [A3–A5](../bench/VALIDATION_T5.md).
   These are comparisons between versions and input representations, not an
   isolated estimate of version effects. The original selected config 9 is
   absent from the deposit and failed to run. Config 22, selected under the
-  prospective A5 amendment, is running; no result is inferred yet.
+  prospective A5 amendment, was running at 14:17 AEDT on 28 October; no
+  result is inferred yet. Output and status are under
+  `deep-server:/data/codex/artifacts/eprp/g3-config22-20261028/`.
 
 The [independent recount](../bench/results/t5/g3_retained_audit_20261028.tsv)
 has the nine pairs, occupancy counts and source-object hashes; its
@@ -64,6 +66,12 @@ has the nine pairs, occupancy counts and source-object hashes; its
 `deep-server`. The corresponding deposited `fraction_colonized` and
 `perc_extinction` definitions are not independently established. Equal
 numbers alone do not establish that their meanings coincide.
+
+For config 22, [input hashes](../bench/results/t5/g3_config22_input_sha256_20261028.txt)
+were saved before the run; the compiled-landscape
+[file manifest](../bench/results/t5/g3_config22_landscape_sha256_20261028.txt)
+was captured during it. The run mounts those inputs read-only, though a
+post-start manifest cannot by itself prove their state at launch.
 
 ## Pitfalls and relevance
 

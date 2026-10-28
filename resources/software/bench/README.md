@@ -484,3 +484,12 @@ amendments; individual findings and limitations are in the tool entries.
   is absent, and config 22 is running as the prospectively declared
   replacement; no result is claimed for it. See the
   [entry](../gen3sis/README.md).
+- **INDITEK-2.0:** the checksum-verified deposit's sampler has an initial
+  prior defect, and its saved chains are incompatible with that sampler's
+  acceptance rule under its stated settings. A historical rule and settings
+  are compatible with all 146,286 finite-RSS recorded transitions checked,
+  but their generating provenance is not uniquely established. In a
+  prespecified flat-likelihood diagnostic the historical sampler's four
+  chains diverged from the known target and two stalled; the deposited
+  sampler tracked that simple target. See the [entry](../inditek-2/README.md)
+  and [review](../reviews/2026-10-28-inditek-sampler/README.md).

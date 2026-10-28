@@ -1,0 +1,37 @@
+{
+  "proof": {
+    "finite_steps": 30004,
+    "old_impossible": 0,
+    "deposited_impossible": 1,
+    "old_accepted_below_minus_30": 0,
+    "deposited_accepted_below_minus_30": 0
+  },
+  "open": {
+    "finite_steps": 29712,
+    "old_impossible": 0,
+    "deposited_impossible": 26,
+    "old_accepted_below_minus_30": 0,
+    "deposited_accepted_below_minus_30": 0
+  },
+  "expo": {
+    "finite_steps": 28638,
+    "old_impossible": 0,
+    "deposited_impossible": 1592,
+    "old_accepted_below_minus_30": 0,
+    "deposited_accepted_below_minus_30": 0
+  },
+  "food": {
+    "finite_steps": 29638,
+    "old_impossible": 0,
+    "deposited_impossible": 272,
+    "old_accepted_below_minus_30": 0,
+    "deposited_accepted_below_minus_30": 0
+  },
+  "temp": {
+    "finite_steps": 28294,
+    "old_impossible": 0,
+    "deposited_impossible": 0,
+    "old_accepted_below_minus_30": 0,
+    "deposited_accepted_below_minus_30": 0
+  }
+}

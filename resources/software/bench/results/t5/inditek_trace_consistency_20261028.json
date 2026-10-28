@@ -1,0 +1,378 @@
+{
+  "scope": "after first recorded acceptance; finite RSS, unchanged Q10, one non-Q10 parameter changed, RSS improves by more than 1e-7",
+  "models": {
+    "proof": {
+      "sha256": "7c47afef83c85baff6a0cddaee20a28bce926261f41e221a03f5928cea8ccd64",
+      "eligible_steps": 4888,
+      "rejected_improving_steps": 0,
+      "next_state_parameter_mismatches": 0,
+      "next_state_rss_mismatches": 0,
+      "examples": []
+    },
+    "open": {
+      "sha256": "d654f148679db4c5c2d87ec5274fdc0a2ebc93bd58826454727c1fcc45fe94f6",
+      "eligible_steps": 5877,
+      "rejected_improving_steps": 24,
+      "next_state_parameter_mismatches": 0,
+      "next_state_rss_mismatches": 0,
+      "examples": [
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 390,
+          "changed_parameter_index": 1,
+          "current_rss": 8704.635411218671,
+          "proposed_rss": 8698.935866564301,
+          "current_parameters": [
+            100.60378421006273,
+            50.26885216332439,
+            0.027408201142899154,
+            0.006641673827296761,
+            2.432912744201801
+          ],
+          "proposed_parameters": [
+            100.60378421006273,
+            50.72585524458812,
+            0.027408201142899154,
+            0.006641673827296761,
+            2.432912744201801
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 1,
+          "iteration": 2338,
+          "changed_parameter_index": 0,
+          "current_rss": 2758.5179295077905,
+          "proposed_rss": 2758.427453817104,
+          "current_parameters": [
+            160.7006142942485,
+            18.93090767375552,
+            0.03506905632371815,
+            0.002818550273447739,
+            2.1395854761615327
+          ],
+          "proposed_parameters": [
+            160.88856762753417,
+            18.93090767375552,
+            0.03506905632371815,
+            0.002818550273447739,
+            2.1395854761615327
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 2,
+          "iteration": 421,
+          "changed_parameter_index": 2,
+          "current_rss": 3273.8203332556823,
+          "proposed_rss": 3273.1498159156085,
+          "current_parameters": [
+            200.896397779801,
+            16.178821206686962,
+            0.033618048393485,
+            0.005126638587536192,
+            2.570578444009758
+          ],
+          "proposed_parameters": [
+            200.896397779801,
+            16.178821206686962,
+            0.033607178195558154,
+            0.005126638587536192,
+            2.570578444009758
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 3,
+          "iteration": 81,
+          "changed_parameter_index": 0,
+          "current_rss": 67087.96355386943,
+          "proposed_rss": 67084.22799612835,
+          "current_parameters": [
+            360.89090142368383,
+            38.890311548471395,
+            0.012677848781600854,
+            0.007133897809117847,
+            1.1305922704017668
+          ],
+          "proposed_parameters": [
+            361.642156113389,
+            38.890311548471395,
+            0.012677848781600854,
+            0.007133897809117847,
+            1.1305922704017668
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 3,
+          "iteration": 642,
+          "changed_parameter_index": 3,
+          "current_rss": 8751.281727217021,
+          "proposed_rss": 8751.133513750112,
+          "current_parameters": [
+            543.7717840194196,
+            16.36656477033766,
+            0.02393845621587484,
+            0.007778223103299914,
+            2.3173729383898523
+          ],
+          "proposed_parameters": [
+            543.7717840194196,
+            16.36656477033766,
+            0.02393845621587484,
+            0.007791988628863511,
+            2.3173729383898523
+          ],
+          "next_state_unchanged": true
+        }
+      ]
+    },
+    "expo": {
+      "sha256": "56f087ace5256126b20abb1c918dd193b0986328ccddce16a8fe36b296682e54",
+      "eligible_steps": 5741,
+      "rejected_improving_steps": 1126,
+      "next_state_parameter_mismatches": 0,
+      "next_state_rss_mismatches": 0,
+      "examples": [
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 1078,
+          "changed_parameter_index": 3,
+          "current_rss": 12372.002482976175,
+          "proposed_rss": 12370.777082038869,
+          "current_parameters": [
+            null,
+            null,
+            0.025567087296749228,
+            0.005924107695872853,
+            3.413631531077565
+          ],
+          "proposed_parameters": [
+            null,
+            null,
+            0.025567087296749228,
+            0.005924934874946198,
+            3.413631531077565
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 1199,
+          "changed_parameter_index": 3,
+          "current_rss": 11740.801874422445,
+          "proposed_rss": 11740.190035410444,
+          "current_parameters": [
+            null,
+            null,
+            0.025172437545336573,
+            0.006399126339052614,
+            3.4998612697397253
+          ],
+          "proposed_parameters": [
+            null,
+            null,
+            0.025172437545336573,
+            0.00639971634578155,
+            3.4998612697397253
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 1214,
+          "changed_parameter_index": 2,
+          "current_rss": 11706.263105490321,
+          "proposed_rss": 11705.091624491068,
+          "current_parameters": [
+            null,
+            null,
+            0.025137843699893483,
+            0.0064337997791861275,
+            3.495981378862662
+          ],
+          "proposed_parameters": [
+            null,
+            null,
+            0.025118073546175113,
+            0.0064337997791861275,
+            3.495981378862662
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 2080,
+          "changed_parameter_index": 2,
+          "current_rss": 11324.633279072095,
+          "proposed_rss": 11324.257341212322,
+          "current_parameters": [
+            null,
+            null,
+            0.024301724382165758,
+            0.007111612076880973,
+            3.499467181976108
+          ],
+          "proposed_parameters": [
+            null,
+            null,
+            0.02429281173209072,
+            0.007111612076880973,
+            3.499467181976108
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 2578,
+          "changed_parameter_index": 2,
+          "current_rss": 11326.090211650786,
+          "proposed_rss": 11326.020419678258,
+          "current_parameters": [
+            null,
+            null,
+            0.02426769738089853,
+            0.007114534677733305,
+            3.498156565198427
+          ],
+          "proposed_parameters": [
+            null,
+            null,
+            0.024268434191165367,
+            0.007114534677733305,
+            3.498156565198427
+          ],
+          "next_state_unchanged": true
+        }
+      ]
+    },
+    "food": {
+      "sha256": "1407a17c33e49ae8a6635f6b4227b9850833681b5dbd627454f20e56d859e608",
+      "eligible_steps": 6275,
+      "rejected_improving_steps": 205,
+      "next_state_parameter_mismatches": 0,
+      "next_state_rss_mismatches": 0,
+      "examples": [
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 28,
+          "changed_parameter_index": 3,
+          "current_rss": 22448.59483779318,
+          "proposed_rss": 22447.048238820782,
+          "current_parameters": [
+            138.35632355830475,
+            4.680098788124146,
+            0.05578100767576153,
+            0.001684951528433362,
+            2.740313164798796
+          ],
+          "proposed_parameters": [
+            138.35632355830475,
+            4.680098788124146,
+            0.05578100767576153,
+            0.0016694381390540435,
+            2.740313164798796
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 29,
+          "changed_parameter_index": 3,
+          "current_rss": 22448.59483779318,
+          "proposed_rss": 22446.90481741313,
+          "current_parameters": [
+            138.35632355830475,
+            4.680098788124146,
+            0.05578100767576153,
+            0.001684951528433362,
+            2.740313164798796
+          ],
+          "proposed_parameters": [
+            138.35632355830475,
+            4.680098788124146,
+            0.05578100767576153,
+            0.001667967755145118,
+            2.740313164798796
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 71,
+          "changed_parameter_index": 2,
+          "current_rss": 21560.22375842574,
+          "proposed_rss": 21545.738382087264,
+          "current_parameters": [
+            145.19757500886996,
+            4.750381090249339,
+            0.05372540771090531,
+            0.0016808343416589793,
+            2.937468366577512
+          ],
+          "proposed_parameters": [
+            145.19757500886996,
+            4.750381090249339,
+            0.05365353988909832,
+            0.0016808343416589793,
+            2.937468366577512
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 72,
+          "changed_parameter_index": 3,
+          "current_rss": 21560.22375842574,
+          "proposed_rss": 21560.194568024723,
+          "current_parameters": [
+            145.19757500886996,
+            4.750381090249339,
+            0.05372540771090531,
+            0.0016808343416589793,
+            2.937468366577512
+          ],
+          "proposed_parameters": [
+            145.19757500886996,
+            4.750381090249339,
+            0.05372540771090531,
+            0.0016822141572319527,
+            2.937468366577512
+          ],
+          "next_state_unchanged": true
+        },
+        {
+          "chain_index_zero_based": 0,
+          "iteration": 75,
+          "changed_parameter_index": 0,
+          "current_rss": 21560.22375842574,
+          "proposed_rss": 21533.20355134255,
+          "current_parameters": [
+            145.19757500886996,
+            4.750381090249339,
+            0.05372540771090531,
+            0.0016808343416589793,
+            2.937468366577512
+          ],
+          "proposed_parameters": [
+            149.57734799602002,
+            4.750381090249339,
+            0.05372540771090531,
+            0.0016808343416589793,
+            2.937468366577512
+          ],
+          "next_state_unchanged": true
+        }
+      ]
+    },
+    "temp": {
+      "sha256": "6d78eee2e2493d04c9c6cd96bfd52580f32ff6ee6f610e7762b4dfe2374edd91",
+      "eligible_steps": 7164,
+      "rejected_improving_steps": 0,
+      "next_state_parameter_mismatches": 0,
+      "next_state_rss_mismatches": 0,
+      "examples": []
+    }
+  }
+}

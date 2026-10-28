@@ -69,6 +69,7 @@ describing the data twice.
 | [cGENIE.muffin](cgenie-muffin/README.md) | T2 | 540 Ma cold-baseline volume means and field correlations against deposited output; local discrepancies remain |
 | [cGENIE metabolic index](cgenie-metabolic-index-pohl/README.md) | T2 | viability and oxygen partial pressure for one deposited field and configuration; mask missing values by evaluation domain |
 | [gen3sis](gen3sis/README.md) | T2 | one-step Weibull dispersal and a two-cell speciation check; a deposited-run comparison is in progress |
+| [INDITEK-2.0](inditek-2/README.md) | T0 | no validated use yet; sampler and proof-chain provenance require investigation |
 
 Entries through tranche 4 were reviewed independently (Claude Sonnet subagent,
 one review per tranche) and the findings applied. The tranche 5 entries have

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "79256783eda56ae30fa653e8f1350a172cd6eb7201eefa2944347192ce4efedf",
+  "first_step_accepted": 1,
+  "initial_q10_second_step": 2.0,
+  "proposed_q10_second_step": 2.2,
+  "uniform_draw": 0.5,
+  "correct_log_acceptance_ratio": -3.1250000000000053,
+  "observed_second_acceptance": 1,
+  "correct_second_acceptance": 0
+}
