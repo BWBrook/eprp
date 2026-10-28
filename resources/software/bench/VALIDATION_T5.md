@@ -195,3 +195,25 @@ R 3.6.1, so a bit-identical rerun is not expected.
    The first selection of configs let an `NA` row through (an unfinished
    config compared with `==`); the corrected list is configs 1, 2, 8, 9,
    10, 12, 13, 15, 16 and 18.
+
+## Amendment A5 (28 October 2026, before the additional G3 run)
+
+G3's original selection included config 9, but its M1 configuration file is
+absent from `config.zip`; the attempt failed without producing a simulation.
+Keep that failure and the nine completed results. For the tenth **deposited**
+configuration, select the next finished M1 row with one of the two declared
+landscapes and an actual M1 config file: **config 22**, scotese_4d, seed
+66770, with deposited final alive count 3,003. This is a post-hoc selection
+repair before running config 22, not a claim that the original selection ran.
+The existing G3 outputs remain characterisation, with no pass criterion.
+
+Do not reconstruct config 9 for this tranche: the deposited R1 and R2 M1
+templates both differ structurally from the actual M1 config files, and the
+summary's seed, shape, scale and divergence threshold do not establish all
+the original code. A reconstruction would not be the deposited experiment.
+Use the retained compiled landscape and pinned gen3sis 1.6.0 image, with an
+isolated output directory and a 12-hour wall-clock ceiling. Report a timeout
+or non-OK result explicitly; do not change the selected configuration after
+seeing its result. Preserve seed, config file and input hashes with the
+receipt. Audit the retained nine and the additional result separately; the
+deposit's occupancy and extinction column meanings remain unconfirmed.
