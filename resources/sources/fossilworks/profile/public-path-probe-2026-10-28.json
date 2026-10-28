@@ -1,0 +1,28 @@
+{
+  "probe": {
+    "status": 200,
+    "response_url": "https://fossilworks.org/eco/downloads/register.txt",
+    "headers": {
+      "Date": "Wed, 28 Oct 2026 01:50:56 GMT",
+      "Server": "Apache/2.4.67 (Debian)",
+      "Vary": "Accept-Encoding",
+      "Content-Type": "text/plain",
+      "Via": "1.1 ecoregister.org (Apache/2.4.65)",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "url": "https://fossilworks.org/eco/downloads/register.txt",
+    "method": "GET",
+    "request_parameters": null,
+    "started_utc": "2026-10-28T01:50:56+00:00",
+    "finished_utc": "2026-10-28T01:50:56+00:00",
+    "key": "fw-public-path-probe.txt",
+    "size": 59080,
+    "sha256": "f15ba81ff0898426a14e9ab6fe67784232ec32df061928b46e4f786cd70e9524",
+    "checksum": "none supplied by provider"
+  },
+  "client": "WSL local, no cookies or authentication; acquisition client was deep-server, also no cookies or authentication",
+  "matches_campanian_download": true,
+  "campanian_download_sha256": "f15ba81ff0898426a14e9ab6fe67784232ec32df061928b46e4f786cd70e9524",
+  "inference": "A second cookie-free client can retrieve the same currently generated file from the generic public path. Sequential interval requests changed these paths. Concurrent-user writes remain uncontrolled; no test intentionally overlapped POST requests."
+}

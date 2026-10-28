@@ -1,0 +1,20 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Niptomomys doreenae",
+      "sample_name": "Holly's Microsite",
+      "matrix_count": 2.0,
+      "summed_register_count": 5.0,
+      "last_register_count": 2.0
+    },
+    {
+      "species": "Tinimomys graybulliensis",
+      "sample_name": "Holly's Microsite",
+      "matrix_count": 3.0,
+      "summed_register_count": 5.0,
+      "last_register_count": 3.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

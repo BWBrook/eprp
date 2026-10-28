@@ -1,0 +1,13 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Bettongia lesueur",
+      "sample_name": "Noala Cave",
+      "matrix_count": 4.0,
+      "summed_register_count": 103.0,
+      "last_register_count": 4.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

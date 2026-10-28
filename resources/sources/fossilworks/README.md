@@ -3,7 +3,7 @@ id: fossilworks
 name: Fossilworks, terrestrial fossil assemblages with specimen counts
 kind: database
 status: active
-last_update: "live; site documentation and a bounded export checked 2026-10-28"
+last_update: "live; all 20 visible fossil interval exports privately mirrored and audited 2026-10-28"
 scope:
   taxa: ["terrestrial fossil animals, presently focused on Cenozoic and Cretaceous vertebrates"]
   time: "Cretaceous to Holocene in the public fossil download form; coverage concentrated in the Cenozoic, especially Pleistocene and Holocene"
@@ -18,15 +18,15 @@ access:
   routes:
     - {type: web, url: "https://fossilworks.org/?page=works_home", state: "fossil home, search and sample browser", checked: 2026-10-28}
     - {type: documentation, url: "https://fossilworks.org/?page=works_FAQ", state: "current FAQ: provenance, count requirement, terms and relationship to PBDB and the Ecological Register", checked: 2026-10-28}
-    - {type: download, url: "https://fossilworks.org/?a=downloadForm", state: "public form offers taxon, geographic and time filters; requires at least one fossil time interval; broad export returned 504 and subsequent files were inconsistent", checked: 2026-10-28}
+    - {type: download, url: "https://fossilworks.org/?a=downloadForm", state: "all 20 visible fossil intervals downloaded separately, each retaining five original sheets; stable files retain source count and reference omissions", checked: 2026-10-28}
   api: "no documented public API identified; the website provides a download form"
 versioning:
   replay: none
   notes: "live database; no fixed release or version archive established. Save dated exports and the exact request to make an analysis reproducible"
 mirror:
-  path: none
-  policy: "a dated public export is desirable; establish its scope and reproducibility before treating it as a database snapshot"
-  state: "not mirrored: broad export timed out and subsequent generated files were inconsistent"
+  path: "deep-server:/data/paleodata/fossilworks/raw/2026-10-28-intervals-v2"
+  policy: "private dated source exports; retain each interval separately, with exact requests, UTC times and hashes; do not assemble before resolving source structure"
+  state: "all 20 visible selections, 100 selected original sheets, stable repeated hashes and a verified read-only manifest; 15 interval bundles retain source count/reference inconsistencies"
 lineage:
   upstream:
     - "published fossil lists, entered and checked under John Alroy's supervision; current FAQ says PBDB was not consulted when building this database"
@@ -41,7 +41,7 @@ entry:
   created: 2026-10-28
   updated: 2026-10-28
   by: Codex (OpenAI), with a Codex research subagent
-  reviewed: "independent Codex subagent checked current FAQ, home page and form, 2026-10-28; export outcomes not independently replayed by reviewer"
+  reviewed: "independent Codex agents checked documentation and verified all 100 selected sheets against manifest hashes and repeat-GET copies; reviewer independently reproduced Holocene matrix differences and Middle Pleistocene count discrepancies, 2026-10-28; no live export replay by reviewer"
 ---
 
 # Fossilworks: count-based fossil assemblages
@@ -78,7 +78,10 @@ sample and reference identifiers, fossil age fields, coordinates, taxon,
 count and comments; the sample table adds collection, preservation,
 archaeology and sampling information and summary diversity estimates.
 The matrix includes only identifications with proper Linnaean species names,
-according to the results page. Complete schemas, keys, units, coverage and
+according to the results page. The retained matrix columns use sample names,
+and their order can differ from the sample table. Several sample tables repeat
+identical summary rows for one sample identifier; the matrix contains one
+column for that identifier. Complete schemas, keys, units, coverage and
 their relationship to the underlying database remain to be checked. The live site
 also includes contemporary inventories and body-size data; a fossil-only
 export must be explicitly delimited and must not be described as the entire
@@ -88,15 +91,23 @@ shared backend.
 
 The [download form](https://fossilworks.org/?a=downloadForm) filters by life
 form, genus, country, bounding coordinates and time interval. It requires at
-least one time interval for fossil data. A bounded public export was checked on
-28 October 2026; see the verification log below. Export links use generic
-filenames without a request or version identifier; a subsequent test request
-changed their contents. A broad request returned HTTP 504; afterwards, two
-small requests yielded mutually inconsistent register and sample files, so
-their retrieval is not yet a reliable snapshot procedure. Whether separate
-users can overwrite one another's exports has not been established. The
-database is live: no fixed version history or reproducible historical query
-has been established.
+least one time interval for fossil data. On 28 October 2026 we retrieved all
+20 visible fossil selections sequentially, with no taxonomic or geographic
+filter. Each retains the five original sheets, request parameters, result
+page, per-request UTC times and response headers, SHA256 checksums, and a
+second copy of every sheet to test stability. The original source snapshot is
+read-only; no datasets have been assembled or deduplicated. The
+[acquisition receipt](profile/acquisition-2026-10-28.md) and
+[interval table](profile/interval-download-2026-10-28.tsv) describe the files.
+
+Export links use generic filenames without a request or version identifier;
+submitting another interval changes their contents. Stable repeated hashes,
+matching selected interval labels and cross-table identifiers provide checks
+against mixed downloads. They cannot exclude uncontrolled concurrent writers.
+A broad request previously returned HTTP 504 and subsequent small requests
+produced mixed files; the sequential interval procedure avoided that failure.
+The database is live: the dated files are retained observations of public
+exports, with no fixed provider release or historical-query replay established.
 
 The FAQ states that data are CC0, while Alroy retains copyright in the site
 and its software. It encourages acknowledgement of both the database and its
@@ -107,6 +118,19 @@ authorisation to contact him; communication remains Barry's decision.
 
 - Specimen counts are integral to the database's entry criteria, providing a
   route beyond treating each occurrence as one interchangeable observation.
+- All 20 interval bundles were downloaded with stable five-sheet hashes. Five
+  satisfy result-page counts and sample/reference identifier checks; 15 retain
+  references used by register/sample records but absent from the reference
+  sheet. Middle Pleistocene additionally has 1,842 register rows against 1,843
+  declared by its result page. These are retained source inconsistencies,
+  rather than repaired values or evidence of failed file transmission.
+- The provider matrix is not a safe substitute for summing the register.
+  Across retained interval exports, some cells differ from summed repeated
+  taxon/sample rows and match the last such row instead. This is an observed
+  pattern, not a verified account of provider code. Middle Pleistocene also
+  has a matrix count absent from its register. Per-interval
+  [cell comparisons](profile/interval-matrix-comparisons-2026-10-28/) preserve
+  the discrepancies. No source counts have been changed.
 - The count unit, reporting protocol, collection and preservation processes,
   identification history, duplicate samples and age uncertainty must be
   examined for the question at hand. A list of specimens is not necessarily a
@@ -140,6 +164,14 @@ analysed abundance.
 
 ## Verification log
 
+- **Acquisition complete, 28 October 2026:** all 20 visible fossil interval
+  inputs, including the mixed `Pleistocene - Holocene` selection and the
+  Maastrichtian/Campanian stages, were submitted separately. All returned
+  nonempty five-sheet exports; no visible selection was omitted. The
+  [full audit](profile/interval-download-2026-10-28.json) verifies all 432 files
+  in the frozen manifest and records the selected 100 original sheets, their
+  hashes, counts and identifier checks. Source acquisition is complete;
+  scientific readiness and a rational assembly remain subsequent work.
 - **Checked, 28 October 2026:** read the current Fossilworks FAQ, home page and
   download form over HTTPS; recorded the stated CC0 terms, entry and lineage
   policies, and visible filter controls. An independent research subagent's
@@ -158,7 +190,8 @@ analysed abundance.
   [comparison script](check_filtered_export.py) rejects tables with different
   sample-ID sets; its current run failed that check. An
   [aggregate receipt](profile/export-check-2026-10-28.json) records the
-  observations. No comprehensive database download or profiling has been completed.
+  observations. This earlier failure is superseded for acquisition by the
+  interval downloads above; it remains evidence about the mutable export path.
 - **Source claim:** Alroy's September 2026 public post reports over 5,000 site
   inventories and specimen counts. The current FAQ reports counts for every
   identification and independent entry from published sources.

@@ -1,0 +1,1730 @@
+{
+  "audited_utc": "2026-10-28T01:49:27+00:00",
+  "snapshot": "/data/paleodata/fossilworks/raw/2026-10-28-intervals-v2",
+  "manifest_sha256": "07463922820e97aa5bc44f2394236085fdb54d6e1f403f5a1cd086dad8a2d1e6",
+  "audit_tool_sha256": "af22a437b7b85ea7cc773e560795a8c5419db394045dd4cac8b01e3c7f7f2457",
+  "manifest_hash_failures": [],
+  "visible_intervals": 20,
+  "stable_five_table_bundles": 20,
+  "coherent_bundles": 5,
+  "intervals": [
+    {
+      "interval": "Holocene",
+      "source_attempt": "01-holocene/attempt-1",
+      "expected_rows": {
+        "register": 6436,
+        "species": 1313,
+        "samples": 359,
+        "references": 216
+      },
+      "validation": {
+        "passed": true,
+        "checks": {
+          "result_page_counts": true,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": true,
+          "sample_reference_id_sets": true,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 6436,
+          "species": 1313,
+          "samples": 359,
+          "references": 216,
+          "matrix": 1313
+        },
+        "distinct_sample_ids": 359,
+        "interval_labels": {
+          "Holocene": 6436
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 359,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 19,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "coherent_export",
+      "source_files": [
+        {
+          "key": "01-holocene/attempt-1/register.txt",
+          "size": 1497453,
+          "sha256": "7f55324596b47857e7709b1ef358f65a1a8099dd85688949aee653fa40f07399"
+        },
+        {
+          "key": "01-holocene/attempt-1/species.txt",
+          "size": 101703,
+          "sha256": "654987d1ca0a4403a3b75902a21c84cc0ab43654dbca5317b454435a28f15a8e"
+        },
+        {
+          "key": "01-holocene/attempt-1/samples.txt",
+          "size": 105987,
+          "sha256": "9e1601aaa4e1aaef5c309754a5746d86b37b57f77d76bc472bc9a30ffb5a46a3"
+        },
+        {
+          "key": "01-holocene/attempt-1/references.txt",
+          "size": 59432,
+          "sha256": "d3eb94f2c8f5741545af24612b9046021560fb3257b1b9a471a65237099a4db2"
+        },
+        {
+          "key": "01-holocene/attempt-1/matrix.txt",
+          "size": 977680,
+          "sha256": "4b0cbe1ee81a19fc514a199b1cd03a13ba818026be1034917800aa7019f606e8"
+        }
+      ],
+      "state": "coherent_export",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Pleistocene - Holocene",
+      "source_attempt": "02-pleistocene-holocene/attempt-1",
+      "expected_rows": {
+        "register": 440,
+        "species": 242,
+        "samples": 24,
+        "references": 19
+      },
+      "validation": {
+        "passed": true,
+        "checks": {
+          "result_page_counts": true,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": true,
+          "sample_reference_id_sets": true,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 440,
+          "species": 242,
+          "samples": 24,
+          "references": 19,
+          "matrix": 242
+        },
+        "distinct_sample_ids": 23,
+        "interval_labels": {
+          "Pleistocene - Holocene": 440
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 23,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 1,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "inconsistent_or_mutated_export",
+      "source_files": [
+        {
+          "key": "02-pleistocene-holocene/attempt-1/register.txt",
+          "size": 115782,
+          "sha256": "5f2694ab151a2fa6c05f6296c6068c847e37c3292469a501aeb73fe41faaf898"
+        },
+        {
+          "key": "02-pleistocene-holocene/attempt-1/species.txt",
+          "size": 24772,
+          "sha256": "3e6608dbdf048e6a88343fd47d62ca8656b8ce55ad33db0b5e305f25a335b529"
+        },
+        {
+          "key": "02-pleistocene-holocene/attempt-1/samples.txt",
+          "size": 7579,
+          "sha256": "94dce9d8fbe822e506bdf7ca815a88995c495e1030b4fa3fe1f17a3cd5b63167"
+        },
+        {
+          "key": "02-pleistocene-holocene/attempt-1/references.txt",
+          "size": 5492,
+          "sha256": "7a11c54e808680968d0319dc069f770dc85687d4cedcb72dce890658a0590a74"
+        },
+        {
+          "key": "02-pleistocene-holocene/attempt-1/matrix.txt",
+          "size": 16531,
+          "sha256": "6a1b4baa4a1cdb922e5495ab20a25bd281fbc544fd67a722d4d8691c260aed67"
+        }
+      ],
+      "state": "coherent_export",
+      "attempts_retained": 2,
+      "repeat_download_hashes_identical": true
+    },
+    {
+      "interval": "Late Pleistocene",
+      "source_attempt": "03-late-pleistocene/attempt-1",
+      "expected_rows": {
+        "register": 5986,
+        "species": 1149,
+        "samples": 342,
+        "references": 210
+      },
+      "validation": {
+        "passed": true,
+        "checks": {
+          "result_page_counts": true,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": true,
+          "sample_reference_id_sets": true,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 5986,
+          "species": 1149,
+          "samples": 342,
+          "references": 210,
+          "matrix": 1149
+        },
+        "distinct_sample_ids": 336,
+        "interval_labels": {
+          "Late Pleistocene": 5986
+        },
+        "repeated_sample_summary_rows": 6,
+        "matrix_sample_columns": 336,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 1,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "inconsistent_or_mutated_export",
+      "source_files": [
+        {
+          "key": "03-late-pleistocene/attempt-1/register.txt",
+          "size": 1423290,
+          "sha256": "f7166868eb6d81a2e6fbf84ee53852a27a01e4ed9781a6111bfa4d923ca803f8"
+        },
+        {
+          "key": "03-late-pleistocene/attempt-1/species.txt",
+          "size": 102745,
+          "sha256": "7db8bac8b4514b782067dd6781b119691288d001774c0c92adebb19655b9bf76"
+        },
+        {
+          "key": "03-late-pleistocene/attempt-1/samples.txt",
+          "size": 92265,
+          "sha256": "de13fe9ab71bce705fb1eb994c18987db2231cd5b646e1ca36b73a2cec10c7bc"
+        },
+        {
+          "key": "03-late-pleistocene/attempt-1/references.txt",
+          "size": 61533,
+          "sha256": "77078376805d6744fed51fb98b2f60ad2eb8493807b8e81332009316e08cebf9"
+        },
+        {
+          "key": "03-late-pleistocene/attempt-1/matrix.txt",
+          "size": 804092,
+          "sha256": "f41bdf692b9520ddfe7b9fda17ed3f0d905a2d9885ff7dfffa96703f917c23ee"
+        }
+      ],
+      "state": "coherent_export",
+      "attempts_retained": 2,
+      "repeat_download_hashes_identical": true
+    },
+    {
+      "interval": "Middle Pleistocene",
+      "source_attempt": "04-middle-pleistocene/attempt-1",
+      "expected_rows": {
+        "register": 1843,
+        "species": 580,
+        "samples": 81,
+        "references": 63
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 1842,
+          "species": 580,
+          "samples": 81,
+          "references": 61,
+          "matrix": 580
+        },
+        "distinct_sample_ids": 80,
+        "interval_labels": {
+          "Middle Pleistocene": 1842
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 80,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 1,
+        "matrix_cells_differing_from_last_register_row": 1,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4446",
+        "4509"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "inconsistent_or_mutated_export",
+      "source_files": [
+        {
+          "key": "04-middle-pleistocene/attempt-1/register.txt",
+          "size": 401841,
+          "sha256": "6d6ef794541d042d5844c2b91615413799202d0abe706d624dffd120d4c1c9d8"
+        },
+        {
+          "key": "04-middle-pleistocene/attempt-1/species.txt",
+          "size": 51510,
+          "sha256": "8a4a60e9b9c4790532b51ed8ce860123fbdf1582597989f32238b0502a050048"
+        },
+        {
+          "key": "04-middle-pleistocene/attempt-1/samples.txt",
+          "size": 20539,
+          "sha256": "6d11d177d78e2cf56d2298744af40d28ee3bf01e23ff45b36327e1f8ca64ba61"
+        },
+        {
+          "key": "04-middle-pleistocene/attempt-1/references.txt",
+          "size": 19503,
+          "sha256": "260a7f306e30ecda5fb11724be2f75802d15a9c488e1eab5f94d5bd9b59bc378"
+        },
+        {
+          "key": "04-middle-pleistocene/attempt-1/matrix.txt",
+          "size": 105842,
+          "sha256": "232bdc07b0bbbebf157d73ea43c0682a814685d5ea2844337956ac5f69004648"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 3,
+      "repeat_download_hashes_identical": true
+    },
+    {
+      "interval": "Early Pleistocene",
+      "source_attempt": "05-early-pleistocene/attempt-1",
+      "expected_rows": {
+        "register": 1184,
+        "species": 344,
+        "samples": 88,
+        "references": 57
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 1184,
+          "species": 344,
+          "samples": 88,
+          "references": 54,
+          "matrix": 344
+        },
+        "distinct_sample_ids": 87,
+        "interval_labels": {
+          "Early Pleistocene": 1184
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 87,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4439",
+        "4445",
+        "4508"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "inconsistent_or_mutated_export",
+      "source_files": [
+        {
+          "key": "05-early-pleistocene/attempt-1/register.txt",
+          "size": 256647,
+          "sha256": "21c9ebc381d4183d326e25bd5c71c8a580e64aa05a64f996b4e96ba88ff66d70"
+        },
+        {
+          "key": "05-early-pleistocene/attempt-1/species.txt",
+          "size": 28667,
+          "sha256": "6d8e85b7274ceeef100b1707104a42e06d63bfdcf3eda856c31967036f4318f5"
+        },
+        {
+          "key": "05-early-pleistocene/attempt-1/samples.txt",
+          "size": 20812,
+          "sha256": "1f0237e37386aab589e1e2181fc125717f3a9a119b2005d64e6741c4c3947ece"
+        },
+        {
+          "key": "05-early-pleistocene/attempt-1/references.txt",
+          "size": 18011,
+          "sha256": "73f1cdb704e80738133b3e7ad17a78493df67c1d007316452b54c66ca8c83d3a"
+        },
+        {
+          "key": "05-early-pleistocene/attempt-1/matrix.txt",
+          "size": 68490,
+          "sha256": "df558770d9662f5b5f245bf5bfca39388e0ae4f131ec8ef1a0cb78f24333cc45"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 2,
+      "repeat_download_hashes_identical": true
+    },
+    {
+      "interval": "Late Pliocene",
+      "source_attempt": "06-late-pliocene/attempt-1",
+      "expected_rows": {
+        "register": 316,
+        "species": 151,
+        "samples": 19,
+        "references": 17
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 316,
+          "species": 151,
+          "samples": 19,
+          "references": 16,
+          "matrix": 151
+        },
+        "distinct_sample_ids": 19,
+        "interval_labels": {
+          "Late Pliocene": 316
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 19,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": true,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4488"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "inconsistent_or_mutated_export",
+      "source_files": [
+        {
+          "key": "06-late-pliocene/attempt-1/register.txt",
+          "size": 65506,
+          "sha256": "ec2a38ed213a26840b2b7cc40a28a1eb733e43f39700367410b8a97fe26ae579"
+        },
+        {
+          "key": "06-late-pliocene/attempt-1/species.txt",
+          "size": 11428,
+          "sha256": "25997b511d28db0075e9b3645d71c55d645181730a65e98cf3660ae781436455"
+        },
+        {
+          "key": "06-late-pliocene/attempt-1/samples.txt",
+          "size": 4381,
+          "sha256": "d45081ab818a9096ec79b31bdb3b43c108d7a7b386b808c81d8eb109fb20ce5e"
+        },
+        {
+          "key": "06-late-pliocene/attempt-1/references.txt",
+          "size": 4777,
+          "sha256": "fb07f50c5f51ae823dd62cad5b4933c48abda1f069155ee658d90cef3236d6cb"
+        },
+        {
+          "key": "06-late-pliocene/attempt-1/matrix.txt",
+          "size": 9164,
+          "sha256": "14cf6c2bc49edc423aa5c9ccfa86aea92f02d3fc7e58463eecc25b5e4c630cc7"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 2,
+      "repeat_download_hashes_identical": true
+    },
+    {
+      "interval": "Early Pliocene",
+      "source_attempt": "07-early-pliocene/attempt-1",
+      "expected_rows": {
+        "register": 518,
+        "species": 248,
+        "samples": 32,
+        "references": 25
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 518,
+          "species": 248,
+          "samples": 32,
+          "references": 24,
+          "matrix": 248
+        },
+        "distinct_sample_ids": 29,
+        "interval_labels": {
+          "Early Pliocene": 518
+        },
+        "repeated_sample_summary_rows": 3,
+        "matrix_sample_columns": 29,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4253"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "inconsistent_or_mutated_export",
+      "source_files": [
+        {
+          "key": "07-early-pliocene/attempt-1/register.txt",
+          "size": 106872,
+          "sha256": "04daa19d37c491648ada3b0db25fa1d4d2bd2198a5f9d36453b94a3b9bf10b76"
+        },
+        {
+          "key": "07-early-pliocene/attempt-1/species.txt",
+          "size": 18661,
+          "sha256": "135cbe7ee073a80b76fc4ce68e9b96898b35968da36ab7ecaece08224815a7ef"
+        },
+        {
+          "key": "07-early-pliocene/attempt-1/samples.txt",
+          "size": 6932,
+          "sha256": "5f7fef73f89105fb2be758f6471a12345d827cd4b00d6e89dad78bea7746496e"
+        },
+        {
+          "key": "07-early-pliocene/attempt-1/references.txt",
+          "size": 7231,
+          "sha256": "7fa2b8a99cefda6c7f95e736397a891defe25464fe1afc1a2d93fa6c4f79340e"
+        },
+        {
+          "key": "07-early-pliocene/attempt-1/matrix.txt",
+          "size": 19936,
+          "sha256": "08e7af905709664073225119212141873a8bb14f0ae00ac8dd5c0a2e19b2feea"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Late Miocene",
+      "source_attempt": "08-late-miocene/attempt-1",
+      "expected_rows": {
+        "register": 1416,
+        "species": 499,
+        "samples": 115,
+        "references": 91
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 1416,
+          "species": 499,
+          "samples": 115,
+          "references": 81,
+          "matrix": 499
+        },
+        "distinct_sample_ids": 114,
+        "interval_labels": {
+          "Late Miocene": 1416
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 114,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4026",
+        "4027",
+        "4032",
+        "4048",
+        "4065",
+        "4143",
+        "4163",
+        "4262",
+        "4263",
+        "4539"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "08-late-miocene/attempt-1/register.txt",
+          "size": 299226,
+          "sha256": "236f08383af35f85962f45fa94a24643d9a3352ab71f2f462849958ca2b62d20"
+        },
+        {
+          "key": "08-late-miocene/attempt-1/species.txt",
+          "size": 37442,
+          "sha256": "db75b3ad4cf2b4af64faa6ca7fce8787e4e7eadc609cb5c3694bf0c6bade0413"
+        },
+        {
+          "key": "08-late-miocene/attempt-1/samples.txt",
+          "size": 24422,
+          "sha256": "f18560e12410d5bc63bc80315767592ebc3e326e97b4e96b9b26ae2514dd33b5"
+        },
+        {
+          "key": "08-late-miocene/attempt-1/references.txt",
+          "size": 22257,
+          "sha256": "0bf2a18e43515eef38a66d5397b648a6ea3574f7b6871045a8021076a9a28307"
+        },
+        {
+          "key": "08-late-miocene/attempt-1/matrix.txt",
+          "size": 126508,
+          "sha256": "592b82498a6488c4c2c63e7e786bb0989b290d1f03cfc2d2f675df8d4f2959eb"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Middle Miocene",
+      "source_attempt": "09-middle-miocene/attempt-1",
+      "expected_rows": {
+        "register": 1191,
+        "species": 418,
+        "samples": 89,
+        "references": 64
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 1191,
+          "species": 418,
+          "samples": 89,
+          "references": 51,
+          "matrix": 418
+        },
+        "distinct_sample_ids": 89,
+        "interval_labels": {
+          "Middle Miocene": 1191
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 89,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4030",
+        "4031",
+        "4033",
+        "4034",
+        "4047",
+        "4062",
+        "4065",
+        "4164",
+        "4165",
+        "4429",
+        "4434",
+        "4550",
+        "4551"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "09-middle-miocene/attempt-1/register.txt",
+          "size": 256533,
+          "sha256": "32ed70993b85d39ea5a590df105a1552c2a009b3021f85f8e8d4b5de1d37882d"
+        },
+        {
+          "key": "09-middle-miocene/attempt-1/species.txt",
+          "size": 29301,
+          "sha256": "9f41641d0b297603d10a077797335c6ce06d11c0841108fb255153f7b5711e82"
+        },
+        {
+          "key": "09-middle-miocene/attempt-1/samples.txt",
+          "size": 19156,
+          "sha256": "64fbd60f93ce1ea970851782720a78d946277f68c9e5a1a9f4ae931a09ec3904"
+        },
+        {
+          "key": "09-middle-miocene/attempt-1/references.txt",
+          "size": 13790,
+          "sha256": "e61b700ad2208b3f059616ed57b90a39a546630bd2e113210d034640a75becee"
+        },
+        {
+          "key": "09-middle-miocene/attempt-1/matrix.txt",
+          "size": 85073,
+          "sha256": "8fcc08eed5db3049bc7c809316c66721e4efd4c5493354f1dadbb78a83d6f2ad"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Early Miocene",
+      "source_attempt": "10-early-miocene/attempt-1",
+      "expected_rows": {
+        "register": 1530,
+        "species": 531,
+        "samples": 125,
+        "references": 77
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 1530,
+          "species": 531,
+          "samples": 125,
+          "references": 64,
+          "matrix": 531
+        },
+        "distinct_sample_ids": 124,
+        "interval_labels": {
+          "Early Miocene": 1530
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 124,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 2,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "3996",
+        "4010",
+        "4013",
+        "4028",
+        "4047",
+        "4063",
+        "4064",
+        "4144",
+        "4156",
+        "4268",
+        "4276",
+        "4300",
+        "4547"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "10-early-miocene/attempt-1/register.txt",
+          "size": 319023,
+          "sha256": "1ab4563c4e7a5376a1ca04a1c0f77ddabf8215652ee24167529ad7715542de6a"
+        },
+        {
+          "key": "10-early-miocene/attempt-1/species.txt",
+          "size": 37096,
+          "sha256": "fcdcb8a716daf79c3ec22c9971a6f5d4f8aa14ecc6b7bb41a10ec80a62caf1c2"
+        },
+        {
+          "key": "10-early-miocene/attempt-1/samples.txt",
+          "size": 26383,
+          "sha256": "b58c2ea7d57dfe3ece4b9a44ee01f9b2b4813222b1e6c9ed7dd3c7181344c728"
+        },
+        {
+          "key": "10-early-miocene/attempt-1/references.txt",
+          "size": 17975,
+          "sha256": "fb9aade01d84273a1a51a556e99b56e7a17ad3c4f2b546784348aa2c21653e64"
+        },
+        {
+          "key": "10-early-miocene/attempt-1/matrix.txt",
+          "size": 145470,
+          "sha256": "12dafff282c215a0302391c0d09c41fe036809a779fe5201270d42ddf9dfa3f4"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Late Oligocene",
+      "source_attempt": "11-late-oligocene/attempt-1",
+      "expected_rows": {
+        "register": 646,
+        "species": 229,
+        "samples": 51,
+        "references": 27
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 646,
+          "species": 229,
+          "samples": 51,
+          "references": 26,
+          "matrix": 229
+        },
+        "distinct_sample_ids": 50,
+        "interval_labels": {
+          "Late Oligocene": 646
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 50,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4050"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "11-late-oligocene/attempt-1/register.txt",
+          "size": 132795,
+          "sha256": "40e979c240be1e61513026fcd81894be7f5f902c95f4d5d6dd7b347715a039b2"
+        },
+        {
+          "key": "11-late-oligocene/attempt-1/species.txt",
+          "size": 16958,
+          "sha256": "43987481002b57a5d0c3dcb554225577790857bae713dad6ac5c633ca741abd6"
+        },
+        {
+          "key": "11-late-oligocene/attempt-1/samples.txt",
+          "size": 10781,
+          "sha256": "f4d97e0de8a6761ced5738ae0af271f5f081fe83ddfbab3370baa770fbd8bf9e"
+        },
+        {
+          "key": "11-late-oligocene/attempt-1/references.txt",
+          "size": 7101,
+          "sha256": "1503986e8bd1eaf3a3e35767237b84d89d503b4557c34146d349a27045678797"
+        },
+        {
+          "key": "11-late-oligocene/attempt-1/matrix.txt",
+          "size": 28666,
+          "sha256": "84e38a0fe94588f55578c03ce5c4e00774fed72f545925d05251e40838513e12"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Early Oligocene",
+      "source_attempt": "12-early-oligocene/attempt-1",
+      "expected_rows": {
+        "register": 982,
+        "species": 273,
+        "samples": 79,
+        "references": 39
+      },
+      "validation": {
+        "passed": true,
+        "checks": {
+          "result_page_counts": true,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": true,
+          "sample_reference_id_sets": true,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 982,
+          "species": 273,
+          "samples": 79,
+          "references": 39,
+          "matrix": 273
+        },
+        "distinct_sample_ids": 79,
+        "interval_labels": {
+          "Early Oligocene": 982
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 79,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": true,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "coherent_export",
+      "source_files": [
+        {
+          "key": "12-early-oligocene/attempt-1/register.txt",
+          "size": 211934,
+          "sha256": "7209e43bdbb675b864d9e70143f91b3c5d91a62f3c6d00b4dd3ea7d6bd48f11f"
+        },
+        {
+          "key": "12-early-oligocene/attempt-1/species.txt",
+          "size": 20200,
+          "sha256": "d108729550cedb9b250d1b849bb2c90415c61a4b84fedadc9b16099b0b21256e"
+        },
+        {
+          "key": "12-early-oligocene/attempt-1/samples.txt",
+          "size": 17134,
+          "sha256": "3e389163a8238ebfc5fabea344e74e92cadb48c84047c1ab1675d0a98cd5fd48"
+        },
+        {
+          "key": "12-early-oligocene/attempt-1/references.txt",
+          "size": 11097,
+          "sha256": "81dc8cdd13140004e30468b45b4ee6c941f5f9a60d93163f722642a958c9f87c"
+        },
+        {
+          "key": "12-early-oligocene/attempt-1/matrix.txt",
+          "size": 50769,
+          "sha256": "b5182c1f3388906b0a5227bf0ed13301868180f7c1e46d0ccd264becc0fb9f16"
+        }
+      ],
+      "state": "coherent_export",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Late Eocene",
+      "source_attempt": "13-late-eocene/attempt-1",
+      "expected_rows": {
+        "register": 364,
+        "species": 147,
+        "samples": 30,
+        "references": 22
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 364,
+          "species": 147,
+          "samples": 30,
+          "references": 20,
+          "matrix": 147
+        },
+        "distinct_sample_ids": 29,
+        "interval_labels": {
+          "Late Eocene": 364
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 29,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 2,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4166",
+        "4540"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "13-late-eocene/attempt-1/register.txt",
+          "size": 78195,
+          "sha256": "99cd32b41cbec0005e1e1a5ab5643ff21c7e56bca2c35397e18c0a6bc6da266a"
+        },
+        {
+          "key": "13-late-eocene/attempt-1/species.txt",
+          "size": 10532,
+          "sha256": "97623b606ff1d2d269e601c7e57ded6fa5a6a3cca8ab6adbfa6af5348ddecaee"
+        },
+        {
+          "key": "13-late-eocene/attempt-1/samples.txt",
+          "size": 6711,
+          "sha256": "779554f6d31953b1dc4e57edd3182a17500fd45a161dc85b41f558aa7ee1320c"
+        },
+        {
+          "key": "13-late-eocene/attempt-1/references.txt",
+          "size": 5345,
+          "sha256": "f535e3e16e1239dbff904fcb2a8746a20bcb8168a9e55c1e119b08192ca040f6"
+        },
+        {
+          "key": "13-late-eocene/attempt-1/matrix.txt",
+          "size": 12242,
+          "sha256": "d7328b33e805a9c27e1e6f29718c342fe4f9b3f3c053171559d8b8e8dbf07624"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Middle Eocene",
+      "source_attempt": "14-middle-eocene/attempt-1",
+      "expected_rows": {
+        "register": 674,
+        "species": 271,
+        "samples": 49,
+        "references": 32
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 674,
+          "species": 271,
+          "samples": 49,
+          "references": 29,
+          "matrix": 271
+        },
+        "distinct_sample_ids": 48,
+        "interval_labels": {
+          "Middle Eocene": 674
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 48,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 3,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4138",
+        "4414",
+        "4538"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "14-middle-eocene/attempt-1/register.txt",
+          "size": 147624,
+          "sha256": "cb9d5201eb0f38b977491cd77e88f1f041562a039983888209bf6b556a1ab813"
+        },
+        {
+          "key": "14-middle-eocene/attempt-1/species.txt",
+          "size": 19396,
+          "sha256": "aa83f2793cd520b898c9def421e25c92edf82d4030a52735ca6f3b6641eec11e"
+        },
+        {
+          "key": "14-middle-eocene/attempt-1/samples.txt",
+          "size": 11090,
+          "sha256": "bef601dda2dd81174849731c1afa5134a34bcc58b29bdb54aa20e4051f83d2ee"
+        },
+        {
+          "key": "14-middle-eocene/attempt-1/references.txt",
+          "size": 7621,
+          "sha256": "fdf48e24c9669b8bf46dc3e72030974a0f32bcc3c86e11528799d7489a62a47f"
+        },
+        {
+          "key": "14-middle-eocene/attempt-1/matrix.txt",
+          "size": 32973,
+          "sha256": "598777d6e48509f3fa251384cf68155024887fabeb04ecad41c00d30d35e8309"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Early Eocene",
+      "source_attempt": "15-early-eocene/attempt-1",
+      "expected_rows": {
+        "register": 942,
+        "species": 339,
+        "samples": 43,
+        "references": 29
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 942,
+          "species": 339,
+          "samples": 43,
+          "references": 26,
+          "matrix": 339
+        },
+        "distinct_sample_ids": 42,
+        "interval_labels": {
+          "Early Eocene": 942
+        },
+        "repeated_sample_summary_rows": 1,
+        "matrix_sample_columns": 42,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 2,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4147",
+        "4155",
+        "4434"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "15-early-eocene/attempt-1/register.txt",
+          "size": 209228,
+          "sha256": "931ef8e1eb68ba4f18a1e54c733fcb4c563ad76ca0d4630de2c6e59bfd481d73"
+        },
+        {
+          "key": "15-early-eocene/attempt-1/species.txt",
+          "size": 24436,
+          "sha256": "0b5016e0069231750b38f2e19c3b615394a79d38b8b9b58525d096a24ed10466"
+        },
+        {
+          "key": "15-early-eocene/attempt-1/samples.txt",
+          "size": 9858,
+          "sha256": "1697f02f2d72850d5c2eb26421184562032742b78edc19837c7304b164f51ddf"
+        },
+        {
+          "key": "15-early-eocene/attempt-1/references.txt",
+          "size": 7183,
+          "sha256": "c08034a62b8b9f71c9772332c9dd9d11a5abc7781c1df444f639452121af8f66"
+        },
+        {
+          "key": "15-early-eocene/attempt-1/matrix.txt",
+          "size": 36177,
+          "sha256": "bb7d155a327b1683cc47fc3174cca0eafa6b9ce9a1fe09a995ba17dfd858b74f"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Late Palaeocene",
+      "source_attempt": "16-late-palaeocene/attempt-1",
+      "expected_rows": {
+        "register": 377,
+        "species": 178,
+        "samples": 21,
+        "references": 15
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 377,
+          "species": 178,
+          "samples": 21,
+          "references": 14,
+          "matrix": 178
+        },
+        "distinct_sample_ids": 17,
+        "interval_labels": {
+          "Late Palaeocene": 377
+        },
+        "repeated_sample_summary_rows": 4,
+        "matrix_sample_columns": 17,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 2,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4434"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "16-late-palaeocene/attempt-1/register.txt",
+          "size": 87464,
+          "sha256": "9d775aefcf81ae5834df1febdbad57560dfe73db20e46c7de13b8bc8cd259fbf"
+        },
+        {
+          "key": "16-late-palaeocene/attempt-1/species.txt",
+          "size": 13116,
+          "sha256": "83a20c815cc1cdd2ce695aae5c75863d8e95d4433dd41763014fd9f859cdba3e"
+        },
+        {
+          "key": "16-late-palaeocene/attempt-1/samples.txt",
+          "size": 5042,
+          "sha256": "32deeb8a8a6fc78e256bff2e58390d3eff88cc8f2dcf8c7b0b7f04f14dbb33c2"
+        },
+        {
+          "key": "16-late-palaeocene/attempt-1/references.txt",
+          "size": 3865,
+          "sha256": "c8e6234ec451bbc24fca4204370b34333ac70edcc95c3671171919c96a11320c"
+        },
+        {
+          "key": "16-late-palaeocene/attempt-1/matrix.txt",
+          "size": 10125,
+          "sha256": "219966ed088c292824bdff176e8279fa9ce7b501f31030818067b0d74fa8a4ea"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Middle Palaeocene",
+      "source_attempt": "17-middle-palaeocene/attempt-1",
+      "expected_rows": {
+        "register": 189,
+        "species": 92,
+        "samples": 9,
+        "references": 8
+      },
+      "validation": {
+        "passed": true,
+        "checks": {
+          "result_page_counts": true,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": true,
+          "sample_reference_id_sets": true,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 189,
+          "species": 92,
+          "samples": 9,
+          "references": 8,
+          "matrix": 92
+        },
+        "distinct_sample_ids": 9,
+        "interval_labels": {
+          "Middle Palaeocene": 189
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 9,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": true,
+        "matrix_cells_differing_from_summed_register": 1,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "coherent_export",
+      "source_files": [
+        {
+          "key": "17-middle-palaeocene/attempt-1/register.txt",
+          "size": 46058,
+          "sha256": "8a49a5f4257c6a3182a9db3062e330f0c4547e52336ef2b9829c6cca79024735"
+        },
+        {
+          "key": "17-middle-palaeocene/attempt-1/species.txt",
+          "size": 7329,
+          "sha256": "c1c1bdd0db6a1c7885d1df7a2cf6d20e8e939b3428fbfaa9c277d69696513030"
+        },
+        {
+          "key": "17-middle-palaeocene/attempt-1/samples.txt",
+          "size": 2324,
+          "sha256": "715d218468c81ae99002afef163d9ce80abf3fc90bfd1f532de346a13007a5fc"
+        },
+        {
+          "key": "17-middle-palaeocene/attempt-1/references.txt",
+          "size": 2021,
+          "sha256": "93d4c5be24cbd1feda485312046fb356611aa1d43c78d1358b04538c4b8714be"
+        },
+        {
+          "key": "17-middle-palaeocene/attempt-1/matrix.txt",
+          "size": 3784,
+          "sha256": "8b2cb95ecafca428a6f2ac258c6d35b5d2502a2a80a9c0cb50b78ac5e1349f68"
+        }
+      ],
+      "state": "coherent_export",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Early Palaeocene",
+      "source_attempt": "18-early-palaeocene/attempt-1",
+      "expected_rows": {
+        "register": 402,
+        "species": 148,
+        "samples": 25,
+        "references": 9
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 402,
+          "species": 148,
+          "samples": 25,
+          "references": 8,
+          "matrix": 148
+        },
+        "distinct_sample_ids": 25,
+        "interval_labels": {
+          "Early Palaeocene": 402
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 25,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": true,
+        "matrix_cells_differing_from_summed_register": 1,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4541"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "18-early-palaeocene/attempt-1/register.txt",
+          "size": 95492,
+          "sha256": "8ed6afdeb68b4a732e6e30d26cfa251780be0e5177bbc24706c0555f837b5fa5"
+        },
+        {
+          "key": "18-early-palaeocene/attempt-1/species.txt",
+          "size": 11772,
+          "sha256": "52c3b3431f4d9e79d6d0149e933c9c5c53501bb97bd591ea6a7d80f455e76b1f"
+        },
+        {
+          "key": "18-early-palaeocene/attempt-1/samples.txt",
+          "size": 6083,
+          "sha256": "8d7995ca23b4313f5d4513714715104cd93420563ece6e2548ebd8ccdb1d2804"
+        },
+        {
+          "key": "18-early-palaeocene/attempt-1/references.txt",
+          "size": 2145,
+          "sha256": "0e4616862c51711d6249b7f9ea272473de82f0c4a67f778ffe91bcaf5068bff9"
+        },
+        {
+          "key": "18-early-palaeocene/attempt-1/matrix.txt",
+          "size": 11058,
+          "sha256": "4b5b20e9e3a92db3ec4d15f783dc7c5091c11608d2fd70f64a79779ffca97daf"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Maastrichtian",
+      "source_attempt": "19-maastrichtian/attempt-1",
+      "expected_rows": {
+        "register": 347,
+        "species": 88,
+        "samples": 55,
+        "references": 47
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 347,
+          "species": 88,
+          "samples": 55,
+          "references": 42,
+          "matrix": 88
+        },
+        "distinct_sample_ids": 55,
+        "interval_labels": {
+          "Maastrichtian": 347
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 55,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": true,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4527",
+        "4530",
+        "4533",
+        "4534",
+        "4669"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "19-maastrichtian/attempt-1/register.txt",
+          "size": 77330,
+          "sha256": "cfd68f8f3adfbee441c18c7a5d37b24e4e8bbe29f82f879ff206d825d2779f6c"
+        },
+        {
+          "key": "19-maastrichtian/attempt-1/species.txt",
+          "size": 7610,
+          "sha256": "6c36904c564dae4d5b878387d845d27a5df0055ea6d6a34e4b7da262d20a82ef"
+        },
+        {
+          "key": "19-maastrichtian/attempt-1/samples.txt",
+          "size": 13196,
+          "sha256": "7c4831027faf8d17d4a7a455b2084d5dd2d4856021e2b8720f31808159a32ecb"
+        },
+        {
+          "key": "19-maastrichtian/attempt-1/references.txt",
+          "size": 11339,
+          "sha256": "b68d3e1384da2d65e662ad0ddd5e4989ac67c6b4762fb52d36da586accaca552"
+        },
+        {
+          "key": "19-maastrichtian/attempt-1/matrix.txt",
+          "size": 12876,
+          "sha256": "c84b26809d5f68641b3b502abde3ffbd0df79c3f6bf485744904396e176761e6"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    },
+    {
+      "interval": "Campanian",
+      "source_attempt": "20-campanian/attempt-1",
+      "expected_rows": {
+        "register": 263,
+        "species": 51,
+        "samples": 61,
+        "references": 48
+      },
+      "validation": {
+        "passed": false,
+        "checks": {
+          "result_page_counts": false,
+          "rectangular_tables": true,
+          "register_sample_id_sets": true,
+          "register_reference_id_sets": false,
+          "sample_reference_id_sets": false,
+          "selected_interval_labels": true,
+          "matrix_sample_names_known": true,
+          "matrix_species_set": true
+        },
+        "rows": {
+          "register": 263,
+          "species": 51,
+          "samples": 61,
+          "references": 45,
+          "matrix": 51
+        },
+        "distinct_sample_ids": 61,
+        "interval_labels": {
+          "Campanian": 263
+        },
+        "repeated_sample_summary_rows": 0,
+        "matrix_sample_columns": 61,
+        "sample_names_absent_from_matrix": [],
+        "duplicate_sample_names": 0,
+        "matrix_columns_in_sample_table_order": false,
+        "matrix_cells_differing_from_summed_register": 0,
+        "matrix_cells_differing_from_last_register_row": 0,
+        "matrix_limitation": "Provider matrix excludes non-species names; observed matrix cells can differ from summed repeated species/sample rows and agree with last-row values. Duplicate sample names make identity matching ambiguous. Original files retained."
+      },
+      "stable_second_get": {
+        "register": true,
+        "species": true,
+        "samples": true,
+        "references": true,
+        "matrix": true
+      },
+      "reference_ids_absent_from_reference_table": [
+        "4525",
+        "4529",
+        "4532"
+      ],
+      "reference_ids_without_register_rows": [],
+      "original_acquisition_state": "downloaded_source_inconsistency",
+      "source_files": [
+        {
+          "key": "20-campanian/attempt-1/register.txt",
+          "size": 59080,
+          "sha256": "f15ba81ff0898426a14e9ab6fe67784232ec32df061928b46e4f786cd70e9524"
+        },
+        {
+          "key": "20-campanian/attempt-1/species.txt",
+          "size": 4995,
+          "sha256": "035a322d0854fedd9ef9e8885542b6603de1fb85f129c4f939601d1cb3cad17a"
+        },
+        {
+          "key": "20-campanian/attempt-1/samples.txt",
+          "size": 14586,
+          "sha256": "a6cab408c2193835add3f50c6d6894c12764686d45c4660d5c135cfc6d8629dc"
+        },
+        {
+          "key": "20-campanian/attempt-1/references.txt",
+          "size": 13553,
+          "sha256": "3fe8b8c43706438ec8019c6eb4c319270d08077c85b63dbd58b42152095dc7b3"
+        },
+        {
+          "key": "20-campanian/attempt-1/matrix.txt",
+          "size": 9079,
+          "sha256": "33befdbd42a05ad59a7129b477023b1960e188da10e2489bff8c9879acd1e689"
+        }
+      ],
+      "state": "downloaded_source_inconsistency",
+      "attempts_retained": 1,
+      "repeat_download_hashes_identical": null
+    }
+  ],
+  "scope": "Acquisition and cross-table integrity audit only. No data assembly, deduplication, harmonization or scientific suitability validation."
+}

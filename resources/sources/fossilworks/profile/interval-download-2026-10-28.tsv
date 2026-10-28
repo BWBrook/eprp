@@ -1,0 +1,21 @@
+interval	state	source_attempt	register	species	samples	references	matrix	distinct_sample_ids	duplicate_sample_summary_rows	matrix_sample_columns	matrix_cells_different_from_sum	matrix_cells_different_from_last	missing_reference_records
+Holocene	coherent_export	01-holocene/attempt-1	6436	1313	359	216	1313	359	0	359	19	0	0
+Pleistocene - Holocene	coherent_export	02-pleistocene-holocene/attempt-1	440	242	24	19	242	23	1	23	1	0	0
+Late Pleistocene	coherent_export	03-late-pleistocene/attempt-1	5986	1149	342	210	1149	336	6	336	1	0	0
+Middle Pleistocene	downloaded_source_inconsistency	04-middle-pleistocene/attempt-1	1842	580	81	61	580	80	1	80	1	1	2
+Early Pleistocene	downloaded_source_inconsistency	05-early-pleistocene/attempt-1	1184	344	88	54	344	87	1	87	0	0	3
+Late Pliocene	downloaded_source_inconsistency	06-late-pliocene/attempt-1	316	151	19	16	151	19	0	19	0	0	1
+Early Pliocene	downloaded_source_inconsistency	07-early-pliocene/attempt-1	518	248	32	24	248	29	3	29	0	0	1
+Late Miocene	downloaded_source_inconsistency	08-late-miocene/attempt-1	1416	499	115	81	499	114	1	114	0	0	10
+Middle Miocene	downloaded_source_inconsistency	09-middle-miocene/attempt-1	1191	418	89	51	418	89	0	89	0	0	13
+Early Miocene	downloaded_source_inconsistency	10-early-miocene/attempt-1	1530	531	125	64	531	124	1	124	2	0	13
+Late Oligocene	downloaded_source_inconsistency	11-late-oligocene/attempt-1	646	229	51	26	229	50	1	50	0	0	1
+Early Oligocene	coherent_export	12-early-oligocene/attempt-1	982	273	79	39	273	79	0	79	0	0	0
+Late Eocene	downloaded_source_inconsistency	13-late-eocene/attempt-1	364	147	30	20	147	29	1	29	2	0	2
+Middle Eocene	downloaded_source_inconsistency	14-middle-eocene/attempt-1	674	271	49	29	271	48	1	48	3	0	3
+Early Eocene	downloaded_source_inconsistency	15-early-eocene/attempt-1	942	339	43	26	339	42	1	42	2	0	3
+Late Palaeocene	downloaded_source_inconsistency	16-late-palaeocene/attempt-1	377	178	21	14	178	17	4	17	2	0	1
+Middle Palaeocene	coherent_export	17-middle-palaeocene/attempt-1	189	92	9	8	92	9	0	9	1	0	0
+Early Palaeocene	downloaded_source_inconsistency	18-early-palaeocene/attempt-1	402	148	25	8	148	25	0	25	1	0	1
+Maastrichtian	downloaded_source_inconsistency	19-maastrichtian/attempt-1	347	88	55	42	88	55	0	55	0	0	5
+Campanian	downloaded_source_inconsistency	20-campanian/attempt-1	263	51	61	45	51	61	0	61	0	0	3

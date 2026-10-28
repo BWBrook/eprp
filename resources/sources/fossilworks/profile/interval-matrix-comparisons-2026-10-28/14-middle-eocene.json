@@ -1,0 +1,27 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Protadjidaumo typus",
+      "sample_name": "Dry Gulch Creek Member (SDSNH Locality 5939)",
+      "matrix_count": 6.0,
+      "summed_register_count": 16.0,
+      "last_register_count": 6.0
+    },
+    {
+      "species": "Robiacina minuta",
+      "sample_name": "Robiac (Tourment Collection)",
+      "matrix_count": 1.0,
+      "summed_register_count": 15.0,
+      "last_register_count": 1.0
+    },
+    {
+      "species": "Steinhauera subglobosa",
+      "sample_name": "Profen",
+      "matrix_count": 93.0,
+      "summed_register_count": 146.0,
+      "last_register_count": 93.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

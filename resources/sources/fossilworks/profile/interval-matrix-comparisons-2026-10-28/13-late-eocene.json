@@ -1,0 +1,20 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Palaeotherium curtum",
+      "sample_name": "St. Capraise d'Eymet (Tourment Collection)",
+      "matrix_count": 3.0,
+      "summed_register_count": 4.0,
+      "last_register_count": 3.0
+    },
+    {
+      "species": "Palaeotherium medium",
+      "sample_name": "La Débruge (Tourment Collection)",
+      "matrix_count": 3.0,
+      "summed_register_count": 11.0,
+      "last_register_count": 3.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

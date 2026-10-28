@@ -50,6 +50,8 @@ The mirror on `deep-server` uses the same `<id>`:
 identifier and DOI, version, licence, retrieval time, every file's size, the
 provider's checksum, our sha256, and the sha256 of the tool that fetched it.
 Verify with `python3 resources/tools/data_mirror.py verify <dest>`.
+The [Nectar backup guide](backup-to-nectar.md) covers retained private copies,
+verification, restore checks and the read-only VM view.
 Anything under `derived/` must be rebuildable from `raw/` by committed code,
 and its entry says which script writes it (for NSB, `nsb_profile.py` unzips
 the SQLite and `age_check.py` writes recomputed ages). Deploy a tool to

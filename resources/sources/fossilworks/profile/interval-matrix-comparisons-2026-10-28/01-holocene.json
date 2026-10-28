@@ -1,0 +1,139 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Canis lupus",
+      "sample_name": "McNichol Creek (midden)",
+      "matrix_count": 1.0,
+      "summed_register_count": 10.0,
+      "last_register_count": 1.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Guard",
+      "matrix_count": 5.0,
+      "summed_register_count": 20.0,
+      "last_register_count": 5.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Muzhuzhuliang",
+      "matrix_count": 1.0,
+      "summed_register_count": 175.0,
+      "last_register_count": 1.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Fortress of Vilars (sector 7/1)",
+      "matrix_count": 1.0,
+      "summed_register_count": 11.0,
+      "last_register_count": 1.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Fortress of Vilars (sector 7/3)",
+      "matrix_count": 1.0,
+      "summed_register_count": 2.0,
+      "last_register_count": 1.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Godedzor Level II C",
+      "matrix_count": 3.0,
+      "summed_register_count": 23.0,
+      "last_register_count": 3.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Godedzor Level II B",
+      "matrix_count": 2.0,
+      "summed_register_count": 23.0,
+      "last_register_count": 2.0
+    },
+    {
+      "species": "Canis lupus",
+      "sample_name": "Can Roqueta II",
+      "matrix_count": 2.0,
+      "summed_register_count": 1241.0,
+      "last_register_count": 2.0
+    },
+    {
+      "species": "Capra aegagrus",
+      "sample_name": "Qasr-e Ahmad",
+      "matrix_count": 28.0,
+      "summed_register_count": 320.0,
+      "last_register_count": 28.0
+    },
+    {
+      "species": "Columba livia",
+      "sample_name": "Meninx",
+      "matrix_count": 32.0,
+      "summed_register_count": 33.0,
+      "last_register_count": 32.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Muzhuzhuliang",
+      "matrix_count": 484.0,
+      "summed_register_count": 496.0,
+      "last_register_count": 484.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Garicin Grad (southeast corner tower, first phase)",
+      "matrix_count": 25.0,
+      "summed_register_count": 248.0,
+      "last_register_count": 25.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Contrada Castro (Period B)",
+      "matrix_count": 3.0,
+      "summed_register_count": 119.0,
+      "last_register_count": 3.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Godedzor Level II C",
+      "matrix_count": 9.0,
+      "summed_register_count": 11.0,
+      "last_register_count": 9.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Godedzor Level II B",
+      "matrix_count": 2.0,
+      "summed_register_count": 13.0,
+      "last_register_count": 2.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Vale do Mouro (Stage 3)",
+      "matrix_count": 1.0,
+      "summed_register_count": 98.0,
+      "last_register_count": 1.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Oltovány Castle",
+      "matrix_count": 78.0,
+      "summed_register_count": 905.0,
+      "last_register_count": 78.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Noviodunum (TPF sector, Roman period)",
+      "matrix_count": 15.0,
+      "summed_register_count": 72.0,
+      "last_register_count": 15.0
+    },
+    {
+      "species": "Sus scrofa",
+      "sample_name": "Noviodunum (TPF sector, Middle Ages)",
+      "matrix_count": 176.0,
+      "summed_register_count": 506.0,
+      "last_register_count": 176.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

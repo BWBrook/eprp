@@ -1,0 +1,13 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Capricornis sumatraensis",
+      "sample_name": "Tam Hang South (2007)",
+      "matrix_count": 4.0,
+      "summed_register_count": 0,
+      "last_register_count": 0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

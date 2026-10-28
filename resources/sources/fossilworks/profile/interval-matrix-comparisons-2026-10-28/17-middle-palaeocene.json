@@ -1,0 +1,13 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Thryptacodon orthogonius",
+      "sample_name": "Douglass Quarry",
+      "matrix_count": 399.0,
+      "summed_register_count": 406.0,
+      "last_register_count": 399.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}

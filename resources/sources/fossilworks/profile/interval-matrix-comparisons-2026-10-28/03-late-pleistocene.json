@@ -1,0 +1,13 @@
+{
+  "duplicate_sample_names": 0,
+  "differing_cells": [
+    {
+      "species": "Canis lupus",
+      "sample_name": "Polecat Creek (alluvial gravel)",
+      "matrix_count": 1.0,
+      "summed_register_count": 2.0,
+      "last_register_count": 1.0
+    }
+  ],
+  "interpretation": "Observed comparisons only; agreement with last-row values does not establish provider implementation."
+}
