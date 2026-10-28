@@ -16,7 +16,7 @@ a work is not a judgment of its quality or of its relevance to a question.
 ```text
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
-  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | withdraw | index | textindex | search
+  library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | withdraw | index | textindex | search
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
@@ -36,6 +36,8 @@ The store is on `deep-server`, beside the data-source mirror:
   openalex/<W>.json       full OpenAlex record: metadata, abstract index, references, locations
   pdf/<W>.pdf             open-access full text, read-only
   text/<W>.txt            pdftotext output of pdf/<W>.pdf (derived; rebuildable)
+  ocr/<W>.txt             searchable machine OCR of a scan, kept separately from the original extraction
+  ocr/<W>.json            source and OCR hashes, engine, page coverage and other provenance
   quarantine/             PDFs whose first pages did not contain the work's title
   quarantine/withdrawn/   copies removed by `withdraw`, with the reason in manifest.tsv
   tdm/<publisher>/pdf/    publisher text-and-data-mining copies (local search and mining only; see below)
@@ -262,12 +264,15 @@ works the core references, so a few are recent.
   - A scan without a usable text layer is kept with status `no_text`. Older
     scans may have an unchecked title; `import-staged` checks first-page OCR.
     Neither status means the full text has been OCRed. See the manifest note.
+  - `ocr_ok` means an open scan has machine OCR passing an identity and basic
+    page-coverage check. It is not a verified transcription: inspect the PDF
+    for exact wording, figures, tables and claims.
 
 ## Running it
 
 `library.py` needs Python 3.9+ (standard library only) and poppler's
-`pdftotext` and `pdfinfo`. `import-staged` additionally needs `pdftoppm` and
-Tesseract for scans.
+`pdftotext` and `pdfinfo`. `import-staged` for scans and `ocr` additionally
+need `pdftoppm` and Tesseract with English language data.
 
 ```bash
 python3 resources/library/library.py harvest .
@@ -294,6 +299,13 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   its identity but is not a full-text transcription. Rerunning an intact
   imported batch is idempotent. An interrupted partial write requires inspection,
   not automatic overwriting.
+- `ocr W…` processes explicitly selected open `no_text` scans, at most 40
+  pages per work unless `--max-pages` is set. It verifies the original PDF
+  hash, checks the first-page title and minimum text coverage, preserves the
+  PDF and its original text extraction, and records page-level counts and
+  checksums in `ocr/`. It does not process publisher TDM copies. An intact
+  completed run is idempotent; unregistered output from an interrupted run
+  requires inspection before retrying.
 - `withdraw W… --reason TEXT` removes held copies, for example at the end of
   a TDM project, and records why.
 - `search QUERY` searches the whole library: every work's title and abstract
@@ -309,7 +321,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
   - From any machine:
     `ssh deep-server 'python3 /data/paleodata/library/_tools/library.py search "age-dependent extinction"'`.
   - `textindex` rebuilds the indexes in about a minute. Run it after
-    `resolve`, `fetch`, `import-staged` or `withdraw` changes works or texts.
+    `resolve`, `fetch`, `import-staged`, `ocr` or `withdraw` changes works or texts.
     - `search.sqlite` holds titles, abstracts and open texts.
     - `tdm/search-tdm.sqlite` holds TDM texts in a contentless index. It
       stores no readable text and gives no passages, and it sits under `tdm/`
@@ -322,7 +334,7 @@ scp 'deep-server:/tmp/library-index/*' resources/library/
     [the 2003 note](notes/barry-2003.md), where 892 of 904 citations
     resolved exactly.
   - Add the resolved rows to a seed file to make a tier.
-- `resolve`, `fetch`, `import-staged` and `withdraw` take a lock on the store, so two writers
+- `resolve`, `fetch`, `import-staged`, `ocr` and `withdraw` take a lock on the store, so two writers
   cannot run at once.
 - Run anything longer than a few minutes on `deep-server`, never on the
   laptop.

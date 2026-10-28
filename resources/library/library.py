@@ -14,6 +14,7 @@ Usage:
   python3 library.py search QUERY... [--limit N] [--tier T ...] [--part abstract fulltext tdm] [--tsv]
   python3 library.py fetch [--store DIR] [--tier TIER ...] [--workers N] [--retry-failed] [--limit N]
   python3 library.py import-staged MANIFEST DIRECTORY [--store DIR]
+  python3 library.py ocr W [W ...] [--store DIR] [--max-pages N]
   python3 library.py withdraw W [W ...] --reason TEXT [--store DIR]
   python3 library.py index [--store DIR] [--out DIR]
 
@@ -1016,7 +1017,7 @@ def pdf_pages(path):
 MANIFEST_FIELDS = ["openalex_id", "doi", "status", "url", "host", "version", "license", "sha256", "bytes",
                    "pages", "text_chars", "title_match", "retrieved", "tool_sha256", "note", "path"]
 ATTEMPT_FIELDS = ["openalex_id", "url", "host", "outcome", "detail", "when"]
-OPEN_HELD = ("ok", "no_text")
+OPEN_HELD = ("ok", "no_text", "ocr_ok")
 TDM_HELD = ("tdm_ok", "tdm_no_text")
 TDM_NOTE = "TDM copy: local search and mining only until UTAS confirms AI-service processing is licensed"
 
@@ -1356,6 +1357,84 @@ def import_staged(store, manifest_path, directory):
         lock_file.close()
 
 
+def ocr(store, wids, max_pages=40):
+    """OCR selected open scans into separate files; preserve the PDF and original extraction."""
+    if max_pages < 1:
+        raise ValueError("max-pages must be positive")
+    lock_file = store_lock(store)
+    try:
+        manifest = load_manifest(store)
+        (store / "ocr").mkdir(parents=True, exist_ok=True)
+        (store / "tmp").mkdir(parents=True, exist_ok=True)
+        tool_sha = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+        version = subprocess.run(["tesseract", "--version"], capture_output=True, text=True,
+                                 check=True, timeout=30).stdout.splitlines()[0]
+        env = dict(os.environ, OMP_THREAD_LIMIT="1")
+        for wid in map(short_wid, wids):
+            if not re.fullmatch(r"W\d+", wid):
+                raise ValueError(f"invalid work ID: {wid}")
+            row = manifest.get(wid)
+            if not row or row.get("status") not in ("no_text", "ocr_ok"):
+                raise ValueError(f"{wid}: only held open no_text scans are eligible")
+            pdf_rel = Path(row.get("path") or "")
+            if pdf_rel != Path("pdf") / f"{wid}.pdf":
+                raise ValueError(f"{wid}: not an open-store PDF path")
+            pdf = store / pdf_rel
+            if not pdf.is_file() or hashlib.sha256(pdf.read_bytes()).hexdigest() != row.get("sha256"):
+                raise ValueError(f"{wid}: PDF missing or checksum mismatch")
+            out, receipt = store / "ocr" / f"{wid}.txt", store / "ocr" / f"{wid}.json"
+            if row["status"] == "ocr_ok":
+                if not out.is_file() or not receipt.is_file():
+                    raise ValueError(f"{wid}: OCR output or receipt missing")
+                prior = json.loads(receipt.read_text(encoding="utf-8"))
+                if (prior.get("pdf_sha256") != row["sha256"] or
+                        hashlib.sha256(out.read_bytes()).hexdigest() != prior.get("ocr_sha256")):
+                    raise ValueError(f"{wid}: OCR receipt checksum mismatch")
+                print(f"{wid}: OCR already present")
+                continue
+            if out.exists() or receipt.exists():
+                raise ValueError(f"{wid}: unregistered OCR output exists; inspect before retry")
+            pages = pdf_pages(pdf)
+            if not pages or pages != int(row["pages"]) or pages > max_pages:
+                raise ValueError(f"{wid}: invalid page count or exceeds {max_pages} pages")
+            rec = json.loads((store / "openalex" / f"{wid}.json").read_text(encoding="utf-8"))
+            texts, word_counts = [], []
+            with tempfile.TemporaryDirectory(dir=store / "tmp") as temp:
+                for page in range(1, pages + 1):
+                    image = Path(temp) / "page"
+                    subprocess.run(["pdftoppm", "-f", str(page), "-l", str(page), "-r", "180",
+                                    "-gray", "-singlefile", "-png", str(pdf), str(image)], check=True,
+                                   capture_output=True, timeout=120)
+                    result = subprocess.run(["tesseract", str(image) + ".png", "stdout", "-l", "eng"],
+                                            check=True, capture_output=True, timeout=180, env=env)
+                    text = result.stdout.decode("utf-8", "replace")
+                    texts.append(text)
+                    word_counts.append(len(tokens(text)))
+            score = title_match(rec.get("title"), texts[0])
+            if score < 0.9 or sum(word_counts) < 50 or sum(n >= 25 for n in word_counts) * 2 < pages:
+                raise ValueError(f"{wid}: OCR identity or minimum text coverage failed; inspect scan")
+            data = "\f".join(texts).encode("utf-8")
+            ocr_sha = hashlib.sha256(data).hexdigest()
+            details = {"openalex_id": wid, "pdf_sha256": row["sha256"], "ocr_sha256": ocr_sha,
+                       "ocr_engine": version, "language": "eng", "dpi": 180, "pages": pages,
+                       "content_word_counts_by_page": word_counts, "first_page_title_match": score,
+                       "tool_sha256": tool_sha, "created": now(),
+                       "quality": "Machine OCR, not a verified transcription; inspect source for exact claims."}
+            with out.open("xb") as f:
+                f.write(data)
+            with receipt.open("x", encoding="utf-8") as f:
+                json.dump(details, f, indent=2)
+                f.write("\n")
+            note = row.get("note", "") + f" Full OCR generated: ocr_sha256={ocr_sha}; see ocr/{wid}.json."
+            append_tsv(store / "manifest.tsv", dict(row, status="ocr_ok", text_chars=len(data.decode('utf-8')),
+                                                      title_match=f"{score:.2f}", retrieved=now(),
+                                                      tool_sha256=tool_sha, note=note), MANIFEST_FIELDS,
+                       threading.Lock())
+            print(f"{wid}: OCR {pages} pages, {sum(word_counts)} content words", flush=True)
+    finally:
+        lock_file.close()
+
+
 def fetch(store, tiers, workers, retry_failed, limit=None):
     lock_file = store_lock(store)
     for d in ("pdf", "text", "tmp", "quarantine"):
@@ -1413,23 +1492,33 @@ def withdraw(store, wids, reason):
     """Remove held copies: move PDF and text to quarantine/withdrawn/ (a TDM copy to tdm/<publisher>/withdrawn/,
     so everything obtained under a TDM licence stays under tdm/) and append a manifest row."""
     lock_file = store_lock(store)
-    manifest = load_manifest(store)
-    lock = threading.Lock()
-    for w in map(short_wid, wids):
-        row = manifest.get(w)
-        if not row or row["status"] not in OPEN_HELD + TDM_HELD:
-            print(f"{w}: no held copy", file=sys.stderr)
-            continue
-        pdf = Path(row.get("path") or f"pdf/{w}.pdf")
-        dest = Path(*pdf.parts[:2], "withdrawn") if pdf.parts[0] == "tdm" else Path("quarantine", "withdrawn")
-        (store / dest).mkdir(parents=True, exist_ok=True)
-        for src in (store / pdf, store / text_path(pdf)):
-            if src.exists():
-                os.replace(src, store / dest / src.name)
-        append_tsv(store / "manifest.tsv", dict(row, status="withdrawn", retrieved=now(), note=reason,
-                                                path=str(dest / pdf.name)), MANIFEST_FIELDS, lock)
-        print(f"{w}: withdrawn")
-    lock_file.close()
+    try:
+        manifest = load_manifest(store)
+        lock = threading.Lock()
+        for w in map(short_wid, wids):
+            row = manifest.get(w)
+            if not row or row["status"] not in OPEN_HELD + TDM_HELD:
+                print(f"{w}: no held copy", file=sys.stderr)
+                continue
+            pdf = Path(row.get("path") or f"pdf/{w}.pdf")
+            dest = Path(*pdf.parts[:2], "withdrawn") if pdf.parts[0] == "tdm" else Path("quarantine", "withdrawn")
+            (store / dest).mkdir(parents=True, exist_ok=True)
+            sources = [(store / p, store / dest / p.name) for p in (pdf, text_path(pdf))]
+            if row["status"] == "ocr_ok":
+                sources.extend((store / "ocr" / f"{w}.{s}", store / dest / f"{w}.ocr.{s}")
+                               for s in ("txt", "json"))
+                if not all(src.is_file() for src, _ in sources[-2:]):
+                    raise ValueError(f"{w}: OCR output or receipt missing; inspect before withdrawal")
+            if any(target.exists() for src, target in sources if src.exists()):
+                raise ValueError(f"{w}: withdrawal destination exists; inspect before withdrawal")
+            for src, target in sources:
+                if src.exists():
+                    os.replace(src, target)
+            append_tsv(store / "manifest.tsv", dict(row, status="withdrawn", retrieved=now(), note=reason,
+                                                    path=str(dest / pdf.name)), MANIFEST_FIELDS, lock)
+            print(f"{w}: withdrawn")
+    finally:
+        lock_file.close()
 
 
 # ---------------------------------------------------------------- index
@@ -1545,7 +1634,7 @@ def write_index_md(out, rows, unresolved):
     types = Counter(r["type"] for r in rows)
     decades = Counter((f"{(int(r['year']) // 10) * 10}s" if r["year"] else "") for r in rows)
     venues = Counter(r["venue"] for r in rows if r["venue"])
-    held_n, tdm_n = ft["ok"] + ft["no_text"], ft["tdm_ok"] + ft["tdm_no_text"]
+    held_n, tdm_n = sum(ft[s] for s in OPEN_HELD), ft["tdm_ok"] + ft["tdm_no_text"]
     tier_lines = ["| Tier | Works | Open copy held | TDM copy held |", "| --- | ---: | ---: | ---: |"]
     tier_lines += [f"| {t} | {n} | {held_by_tier[t]} | {tdm_by_tier[t]} |" for t, n in sorted(tiers.items())]
     text = [
@@ -1553,11 +1642,12 @@ def write_index_md(out, rows, unresolved):
         "",
         f"Generated by `library.py index` on {now()[:10]}. Do not edit by hand.",
         "",
-        f"**{len(rows)} works**; open full text held for **{held_n}** ({ft['ok']} with a text layer checked "
-        f"against the title, {ft['no_text']} without a usable embedded text layer), and publisher TDM copies for **{tdm_n}** more "
+        f"**{len(rows)} works**; open full text held for **{held_n}** ({ft['ok']} with title-checked embedded text, "
+        f"{ft['ocr_ok']} machine OCR, {ft['no_text']} without searchable full text), and publisher TDM copies for **{tdm_n}** more "
         f"(local search and mining only). {len(unresolved)} seed rows are unresolved (see `unresolved.tsv`).",
         "",
-        "Full-text status: `ok` open copy held and title-checked; `no_text` copy held without searchable full text (see manifest for title checks); "
+        "Full-text status: `ok` open copy held and title-checked; `ocr_ok` searchable machine OCR (verify against the scan); "
+        "`no_text` copy held without searchable full text (see manifest for title checks); "
         "`tdm_ok`, `tdm_no_text` the same for a publisher TDM copy; `failed` copies tried, none usable; "
         "`no_copy` no copy known; `not_tried` not yet attempted; `withdrawn` removed with a recorded reason; "
         "`skipped_type` datasets, errata and similar.",
@@ -1586,12 +1676,12 @@ def write_by_question(out, rows):
             "Works the repository cites (tiers `cited-ids` and `cited-authoryear`), grouped by the questions "
             "(Q-, B-) and catalogue entries (src:) whose sections or files cite them. Generated by "
             "`library.py index`; do not edit by hand.",
-            "Full text: **T** open copy held and title-checked, **S** open scan held, **M** publisher TDM copy "
+            "Full text: **T** open copy with embedded text, **O** machine OCR, **S** open scan held, **M** publisher TDM copy "
             "(local search and mining only), blank not held.", ""]
     for q in sorted(byq, key=order):
         text += [f"## {q} ({len(byq[q])})", ""]
         for r in sorted(byq[q], key=lambda r: (r["year"] or 0, r["first_author"])):
-            mark = {"ok": "**T** ", "no_text": "**S** ", "tdm_ok": "**M** ", "tdm_no_text": "**M** "}.get(r["fulltext"], "")
+            mark = {"ok": "**T** ", "ocr_ok": "**O** ", "no_text": "**S** ", "tdm_ok": "**M** ", "tdm_no_text": "**M** "}.get(r["fulltext"], "")
             doi = f" [doi](https://doi.org/{r['doi']})" if r["doi"] else ""
             text.append(f"- {mark}{r['first_author']} {r['year']}. {r['title']}. *{r['venue']}*.{doi}")
         text.append("")
@@ -1645,10 +1735,13 @@ def textindex(store):
         n["abstracts"] += bool(abstract)
         m = manifest.get(wid)
         if m and m["status"] in OPEN_HELD + TDM_HELD:
-            text = store / text_path(Path(m.get("path") or f"pdf/{wid}.pdf"))
+            text = (store / "ocr" / f"{wid}.txt" if m["status"] == "ocr_ok"
+                    else store / text_path(Path(m.get("path") or f"pdf/{wid}.pdf")))
             if not text.exists():
                 continue
             body = text.read_text(encoding="utf-8", errors="replace")
+            if not body.strip():
+                continue
             if m["status"] in TDM_HELD:
                 n["tdm"] += 1
                 tdm.execute("INSERT INTO ids VALUES (?,?)", (n["tdm"], wid))
@@ -1783,6 +1876,10 @@ def main():
     p.add_argument("manifest", type=Path)
     p.add_argument("directory", type=Path)
     p.add_argument("--store", type=Path, default=DEFAULT_STORE)
+    p = sub.add_parser("ocr")
+    p.add_argument("wids", nargs="+")
+    p.add_argument("--max-pages", type=int, default=40)
+    p.add_argument("--store", type=Path, default=DEFAULT_STORE)
     for name in ("resolve", "fetch", "index"):
         p = sub.add_parser(name)
         p.add_argument("--store", type=Path, default=DEFAULT_STORE)
@@ -1818,6 +1915,8 @@ def main():
         withdraw(a.store, a.wids, a.reason)
     elif a.cmd == "import-staged":
         import_staged(a.store, a.manifest, a.directory)
+    elif a.cmd == "ocr":
+        ocr(a.store, a.wids, a.max_pages)
     else:
         index(a.store, a.out)
 

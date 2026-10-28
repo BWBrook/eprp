@@ -12,6 +12,8 @@ access policy and tool are in the private repository `BWBrook/eprp` under
 openalex/<W>.json      full OpenAlex record for work W (metadata, abstract index, references)
 pdf/<W>.pdf            open-access full text (read-only)
 text/<W>.txt           plain text extracted from pdf/<W>.pdf
+ocr/<W>.txt            separately generated machine OCR for open scans
+ocr/<W>.json           OCR provenance, page coverage and source/output hashes
 quarantine/            downloaded PDFs that failed the title check; not part of the library
 quarantine/withdrawn/  copies removed with a recorded reason
 tdm/<publisher>/       publisher text-and-data-mining copies (pdf/, text/): local search and mining only
@@ -32,11 +34,14 @@ _provenance/           read-only working files of the curated seed tiers
   them locally. Until UTAS Library confirms the licences allow it, do not
   read their text in an AI agent session, and that includes grep output;
   counts and aggregates are fine. Delete them when the project ends.
-- Change `pdf/`, `text/`, `tdm/` and `manifest.tsv` only through `library.py`. To
+- Change `pdf/`, `text/`, `ocr/`, `tdm/` and `manifest.tsv` only through `library.py`. To
   remove a copy, run `python3 _tools/library.py withdraw W --reason TEXT`.
 - To rebuild a text file, run `pdftotext -enc UTF-8 pdf/W.pdf text/W.txt` (or the same under `tdm/<publisher>/`).
-- `grep -ril 'term' text/` searches every held full text. Map a `W` id to
-  its work with `openalex/<W>.json` or the repository's `works.tsv`.
+- `python3 _tools/library.py ocr W` processes a selected open scan, preserving
+  its original PDF and extraction. Machine OCR is searchable but not a
+  verified transcription; use the PDF to check wording, figures and tables.
+- The library search index combines open extracted and OCR text. Map a `W`
+  id to its work with `openalex/<W>.json` or the repository's `works.tsv`.
 
 Maintained by EPRP agents (Claude, Codex) for Barry W. Brook. Created
 23 October 2026.
