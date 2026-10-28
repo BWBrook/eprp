@@ -1,0 +1,321 @@
+{
+  "mode": "frozen_oracle_evaluation",
+  "elapsed_seconds": 262.05030917399563,
+  "host": "deep-server",
+  "python": "3.12.3",
+  "numpy": "2.1.3",
+  "source_sha256": {
+    "data/q012-information-screen/screen.py": "bb775b1161c543674e8c0e1d409065b0df8add8226be9a7628ef3e3202e671da",
+    "data/q012-information-screen/protocol.json": "d32a476a5cd98091781950486f15a507e012d837ecd5e454bf62eb19e8d433d5",
+    "data/q012-information-screen/PROTOCOL.md": "6156eca31593ed1229119690550b9f454e192ba2670d8dc68ff97193cb49188e",
+    "data/q012-prototype/prototype.py": "afb001d47d9761ae092003ac2f2a45aa423aaac0223bcb461126444813016067",
+    "data/q012-prototype/config.json": "619242a767012849b6f2758c3809e1f7bfced47d2aadd19937ecc51b58e20d4a",
+    "data/q012-prototype/quadrature.py": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94"
+  },
+  "results": {
+    "marginal_reference": {
+      "thresholds": {
+        "lower": 0.20397558129066673,
+        "upper": 1.0891131962664542,
+        "nominal": 0.6357554232768087,
+        "lower_rank": 1872,
+        "upper_rank": 1927,
+        "nominal_rank": 1901,
+        "exact_bracket_coverage": 0.9952874219176757
+      },
+      "optimal_power_at_population_size_005": {
+        "simultaneous_interval": [
+          0.8226234920409027,
+          0.9307622966520465
+        ],
+        "lower_threshold_successes": 1834,
+        "upper_threshold_successes": 1685,
+        "n": 2000
+      },
+      "nominal_threshold_alt": {
+        "successes": 1754,
+        "n": 2000,
+        "estimate": 0.877,
+        "descriptive_cp95": [
+          0.8618011694538267,
+          0.8910835827597099
+        ]
+      },
+      "nominal_threshold_null": {
+        "successes": 94,
+        "n": 2000,
+        "estimate": 0.047,
+        "descriptive_cp95": [
+          0.038145040664180424,
+          0.05721123196146301
+        ]
+      },
+      "conclusion": "permits_fresh_recorded_data_test",
+      "ensembles": {
+        "calibration_null": {
+          "n": 2000,
+          "capped": 0,
+          "true_lineages": {
+            "q05": 32.0,
+            "median": 96.0,
+            "q95": 224.0
+          },
+          "true_edges": {
+            "q05": 21.0,
+            "median": 85.0,
+            "q95": 213.0
+          },
+          "recorded": {
+            "q05": 31.0,
+            "median": 91.0,
+            "q95": 212.0
+          },
+          "recorded_lineage_Myr": {
+            "q05": 334.5145,
+            "median": 1010.3199999999999,
+            "q95": 2286.3544999999995
+          },
+          "recorded_label_totals": {
+            "ext": 116654,
+            "bif": 13584,
+            "single": 3142,
+            "present": 69433
+          },
+          "pooled_recorded_label_shares": {
+            "ext": 0.5751800920059364,
+            "bif": 0.06697795506205223,
+            "single": 0.015492103563381045,
+            "present": 0.3423498493686302
+          },
+          "pooled_true_censor_share": 0.3404067484748094
+        },
+        "evaluation_null": {
+          "n": 2000,
+          "capped": 0,
+          "true_lineages": {
+            "q05": 32.0,
+            "median": 92.0,
+            "q95": 215.0
+          },
+          "true_edges": {
+            "q05": 21.0,
+            "median": 81.0,
+            "q95": 204.0
+          },
+          "recorded": {
+            "q05": 30.0,
+            "median": 87.0,
+            "q95": 202.0
+          },
+          "recorded_lineage_Myr": {
+            "q05": 341.23850000000004,
+            "median": 974.675,
+            "q95": 2221.7685
+          },
+          "recorded_label_totals": {
+            "ext": 114368,
+            "bif": 13223,
+            "single": 3027,
+            "present": 67290
+          },
+          "pooled_recorded_label_shares": {
+            "ext": 0.5778846736867636,
+            "bif": 0.06681387311275946,
+            "single": 0.015294985548840876,
+            "present": 0.3400064676516361
+          },
+          "pooled_true_censor_share": 0.33794880588341764
+        },
+        "evaluation_alternative": {
+          "n": 2000,
+          "capped": 0,
+          "true_lineages": {
+            "q05": 35.0,
+            "median": 105.0,
+            "q95": 246.04999999999995
+          },
+          "true_edges": {
+            "q05": 24.0,
+            "median": 94.0,
+            "q95": 235.04999999999995
+          },
+          "recorded": {
+            "q05": 33.0,
+            "median": 99.0,
+            "q95": 232.0
+          },
+          "recorded_lineage_Myr": {
+            "q05": 344.656,
+            "median": 1105.495,
+            "q95": 2533.738
+          },
+          "recorded_label_totals": {
+            "ext": 122235,
+            "bif": 14861,
+            "single": 3484,
+            "present": 80748
+          },
+          "pooled_recorded_label_shares": {
+            "ext": 0.5522798742138365,
+            "bif": 0.0671446902334996,
+            "single": 0.01574134316489554,
+            "present": 0.36483409238776837
+          },
+          "pooled_true_censor_share": 0.36260793296660254
+        }
+      }
+    },
+    "historical_size_calibrated": {
+      "thresholds": {
+        "lower": -2.4225293103158374,
+        "upper": -1.2320762307760857,
+        "nominal": -1.8443918376607387,
+        "lower_rank": 1872,
+        "upper_rank": 1927,
+        "nominal_rank": 1901,
+        "exact_bracket_coverage": 0.9952874219176757
+      },
+      "optimal_power_at_population_size_005": {
+        "simultaneous_interval": [
+          0.9892832104281714,
+          0.9993600114522521
+        ],
+        "lower_threshold_successes": 1995,
+        "upper_threshold_successes": 1989,
+        "n": 2000
+      },
+      "nominal_threshold_alt": {
+        "successes": 1990,
+        "n": 2000,
+        "estimate": 0.995,
+        "descriptive_cp95": [
+          0.9908241049299802,
+          0.9975997802443343
+        ]
+      },
+      "nominal_threshold_null": {
+        "successes": 82,
+        "n": 2000,
+        "estimate": 0.041,
+        "descriptive_cp95": [
+          0.03273891410988626,
+          0.05063840339803214
+        ]
+      },
+      "conclusion": "permits_fresh_recorded_data_test",
+      "ensembles": {
+        "calibration_null": {
+          "n": 2000,
+          "capped": 0,
+          "true_lineages": {
+            "q05": 76.0,
+            "median": 299.5,
+            "q95": 722.05
+          },
+          "true_edges": {
+            "q05": 65.0,
+            "median": 288.5,
+            "q95": 711.05
+          },
+          "recorded": {
+            "q05": 70.0,
+            "median": 279.0,
+            "q95": 669.0
+          },
+          "recorded_lineage_Myr": {
+            "q05": 680.745,
+            "median": 2589.0275,
+            "q95": 6136.87
+          },
+          "recorded_label_totals": {
+            "ext": 308482,
+            "bif": 33941,
+            "single": 8768,
+            "present": 266257
+          },
+          "pooled_recorded_label_shares": {
+            "ext": 0.4996080641608686,
+            "bif": 0.054969811222969386,
+            "single": 0.014200386105388632,
+            "present": 0.4312217385107734
+          },
+          "pooled_true_censor_share": 0.42925062839438455
+        },
+        "evaluation_null": {
+          "n": 2000,
+          "capped": 0,
+          "true_lineages": {
+            "q05": 79.0,
+            "median": 295.0,
+            "q95": 736.1499999999999
+          },
+          "true_edges": {
+            "q05": 68.0,
+            "median": 284.0,
+            "q95": 725.1499999999999
+          },
+          "recorded": {
+            "q05": 74.0,
+            "median": 274.5,
+            "q95": 687.0
+          },
+          "recorded_lineage_Myr": {
+            "q05": 675.5275,
+            "median": 2563.6499999999996,
+            "q95": 6313.999499999999
+          },
+          "recorded_label_totals": {
+            "ext": 310661,
+            "bif": 34065,
+            "single": 8512,
+            "present": 269331
+          },
+          "pooled_recorded_label_shares": {
+            "ext": 0.4989985045834277,
+            "bif": 0.05471682656862131,
+            "single": 0.013672380089596495,
+            "present": 0.4326122887583545
+          },
+          "pooled_true_censor_share": 0.4307839053686148
+        },
+        "evaluation_alternative": {
+          "n": 2000,
+          "capped": 0,
+          "true_lineages": {
+            "q05": 77.0,
+            "median": 317.5,
+            "q95": 777.1499999999999
+          },
+          "true_edges": {
+            "q05": 66.0,
+            "median": 306.5,
+            "q95": 766.1499999999999
+          },
+          "recorded": {
+            "q05": 73.9,
+            "median": 294.0,
+            "q95": 725.05
+          },
+          "recorded_lineage_Myr": {
+            "q05": 700.5335,
+            "median": 2769.1075,
+            "q95": 6737.45575
+          },
+          "recorded_label_totals": {
+            "ext": 325222,
+            "bif": 37213,
+            "single": 9399,
+            "present": 306300
+          },
+          "pooled_recorded_label_shares": {
+            "ext": 0.4795836811013752,
+            "bif": 0.054875585061359554,
+            "single": 0.013860092548080467,
+            "present": 0.4516806412891847
+          },
+          "pooled_true_censor_share": 0.44989494788591206
+        }
+      }
+    }
+  }
+}

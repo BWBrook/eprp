@@ -1,0 +1,31 @@
+{
+  "version": "2026-10-28-recorded-v1",
+  "frozen_before_development": true,
+  "sigma": 0.5,
+  "alpha": 0.05,
+  "quadrature_nodes": 40,
+  "quadrature_control": {"comparison_nodes": 80, "hazards": [0, 0.01, 0.1, 0.5, 1, 2, 5, 10, 20], "absolute_tolerance": 0.000001},
+  "covariance_regularization": {"empirical_weight": 0.9, "identity_weight": 0.1},
+  "ensembles": [
+    {"name": "marginal_reference", "lambda0": 0.0708, "seed_base": 283000000},
+    {"name": "historical_size_calibrated", "lambda0": 0.096, "seed_base": 284000000}
+  ],
+  "panels": {
+    "development_null": {"seed_offset": 10000, "n": 1000, "eta": 0.05},
+    "development_alternative": {"seed_offset": 20000, "n": 1000, "eta": 0.2},
+    "calibration_null": {"seed_offset": 30000, "n": 2000, "eta": 0.05},
+    "calibration_zero": {"seed_offset": 40000, "n": 2000, "eta": 0},
+    "evaluation_null": {"seed_offset": 50000, "n": 2000, "eta": 0.05},
+    "evaluation_zero": {"seed_offset": 60000, "n": 2000, "eta": 0},
+    "evaluation_alternative": {"seed_offset": 70000, "n": 2000, "eta": 0.2}
+  },
+  "smoke": {"seed_start": 280910000, "n_per_ensemble_per_hypothesis": 5},
+  "simultaneous_error_budget": {
+    "total": 0.05,
+    "per_null_upper_quantile_failure": 0.0025,
+    "per_ensemble_power_lower_failure": 0.01,
+    "per_ensemble_power_upper_failure": 0.01
+  },
+  "features": ["edge_risk_product", "centered_edge_risk_product", "sister_risk_product", "log1p_recorded_count", "present_fraction", "extinction_label_fraction", "mean_risk_proxy", "risk_proxy_second_moment"],
+  "decision": "Contract-inspired detector-only target: evaluated positive power >=0.8 and simultaneous lower bound >=0.75, each endpoint-null evaluated false support <=0.05 and descriptive exact95% upper bound <=0.07. Also report stronger power lower-bound >0.8 criterion. Failure of this approximate recorded detector cannot establish impossibility; no posterior/interval/negative/prediction contract fulfillment or sampler restart."
+}
