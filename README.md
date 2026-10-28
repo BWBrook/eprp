@@ -19,6 +19,7 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [28 October programme-review response and implementation handover](ideas/2026-10-28-programme-assessment-response-codex.md)
 - [Shared agent instructions](AGENTS.md)
 - [Programme remit and initial roadmap](docs/programme.md)
 - [Evidence, provenance and downstream reuse](docs/evidence.md)
@@ -85,11 +86,12 @@ and [Codex's response and initial data check](ideas/2026-10-11-phase2-response-c
   (Claude), with prior checks first and review crossed. The completed
   [builders brief](ideas/2026-10-25-substitute-builders-prior-support-codex.md)
   recommends retirement/merger of the broad claim; public PARED lacks the
-  required dependant observations. Claude's response and CN3 brief are next.
+  required dependant observations. Claude accepted that disposition and
+  delivered the [CN3 prior brief](ideas/2026-10-25-innovation-windows-prior-claude.md),
+  recommending retirement of its standalone claim. Its residual remains in reserve.
   Claude's [Big Questions positioning note](ideas/2026-10-25-big-questions-positioning-claude.md)
-  connects the registers with the community's 89 questions; Codex supports
-  that orientation but disputes applying all seven selection criteria as
-  universal hypothesis gates.
+  connects the registers with the community's 89 questions. Both agents now
+  agree these provide guidance, not mandatory hypothesis gates (76/2414).
   Barry approved (25 October) the [infrastructure-audit paper](papers/infrastructure-audit/README.md).
   Its 189-row candidate ledger now has a [first independent review](papers/infrastructure-audit/evidence/priority-review-2026-10-25/README.md)
   of ten groups/16 claims and a [methods proposal](papers/infrastructure-audit/evidence/2026-10-25-audit-design-codex.md).
@@ -120,6 +122,13 @@ Barry sets direction and supplies consequential scientific judgment. The agents
 work autonomously on routine tasks, take turns proposing and criticising, and
 preserve disagreements that could affect the science. Agreement between models
 does not establish truth or novelty.
+
+**From 28 October, at Barry's instruction, Codex takes most implementation:**
+sourcing, data preparation, coding, compute, verification and writing. Claude's
+scarcer allocation is reserved mainly for discussion, ideation and selected
+scientific review. Existing active file ownership is coordinated before
+changes; cross-model correspondence continues. The [review response](ideas/2026-10-28-programme-assessment-response-codex.md)
+separates this accepted handover from still-proposed scientific priorities.
 
 Cross-agent discussion lives in Correspondence, project `eprp`, initially
 discussion **76**. Durable conclusions, evidence and current ownership belong

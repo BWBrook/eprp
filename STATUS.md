@@ -1,70 +1,75 @@
 # EPRP current status
 
-Updated: 25 October 2026, Australia/Hobart. Maintainer of this snapshot: Codex.
+Updated: 28 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**References update, 28 October:** Barry assigned Codex the bulk of literature
-library implementation and PDF acquisition (76/2434). Codex owns the current
-`resources/library/` import, search and catalogue tranche and the separate
-`data/kpg-plankton-alignment/` source alignment. The 13 author/repository
-PDFs are imported with provenance; seven are `no_text` pending full OCR.
-Details and limits: [acquisition](resources/library/notes/2026-10-28-codex-author-site-recovery.md)
-and [alignment](data/kpg-plankton-alignment/README.md). Claude's References
-handover was requested; its current session status and outstanding decisions
-remain to be confirmed. Codex retains the TDM access boundary and will not
-modify Claude's worktree. This does not change programme priorities.
+**Current focus: programme-review response and Codex implementation handover.**
+Barry asked main Codex to assess the separate Codex/Astra and Fable reviews
+and to take over most action-oriented EPRP work. The
+[response](ideas/2026-10-28-programme-assessment-response-codex.md) is complete.
+It recommends the integrated 25–50-question ranking and a small Q-012
+information screen before further sampler engineering, then a bounded
+biological development slot. These allocation changes remain recommendations;
+no primary investigation or new compute campaign has been selected.
 
-**Current focus: next-pair source checks and independent infrastructure audit (25 October).**
-Codex accepted Claude's proposed allocation in 76/2408: substitute builders
-(Card 3) for Codex's prior/support brief, innovation windows (CN3) for
-Claude's, with review crossed. Cue reliability stays in reserve. The
-[Codex response](ideas/2026-10-25-new-directions-response-codex.md) accepts
-nearest-prior-first but rejects making all seven Big Questions selection
-criteria mandatory hypothesis gates: conditional mechanisms can be informative.
+**Material review findings.** Fable's three Q-012 intervals are not three
+real-scale experiments: v4 and R00 replay the same 264-lineage tree; P11 has
+19 recorded lineages. Existing Fisher machinery evaluates a score through
+Fisher's identity, not an information bound. An independent Codex check
+confirmed the correction and the proposed oracle screen's limited stopping
+logic. A simpler Q-038 predictor could answer an observed-record question;
+it would not establish biological victim prediction. An earlier 44-entry
+ranking exists, but the integrated ranking remains unfinished.
 
-**Substitute builders:** the [completed prior/support brief](ideas/2026-10-25-substitute-builders-prior-support-codex.md)
-recommends retiring the broad standalone claim and retaining a service-specific
-residual under Q-010/B-001. Close priors already cover replacement engineers
-and new reef ecologies. PARED's documented composition/guild/diversity fields
-concern builders and exclude the required dependant composition; the proposed
-public-PARED test fails its joint-support gate. The residual's novelty and
-empirical support remain unestablished. Claude is next to review this
-recommendation and deliver its CN3 prior brief; no new model or data build
-has begun.
+**Next-work recommendation.** Compare Q-027, Q-016 and B-005 near the allocation
+boundary, without excluding the rest of the portfolio. The new Q-009 source
+lead and Q-040 instrumental application remain useful distinct options;
+Q-042 is not made empirically ready by the richness benchmark. Keep the
+infrastructure paper a selected case series, rather than completing all
+189 ledger rows. Main Codex owns preparation and implementation; Claude's
+next useful contribution is a compact challenge to the scientific choices.
 
-**Both first-pair standalone claims are retired by agreement (76/2402, 2408).**
-Recoverability becomes Q-009 support; life history becomes Q-028 support.
-The updated [life-history contract](ideas/2026-10-25-contract-life-history-codex.md)
-records the full Valentine–Jablonski source check: larval survival was 11/28
-versus 9/23; the printed size-test significance is not reproduced from the
-summary counts. Neither this source nor the toy identifies historical adult
-mortality. The toy also permits winner changes within one route, so Claude's
-fixed-sign summary needs correction. [Reproducible closure checks](data/life-history-contract/closure-checks.json)
-preserve the evidence. Murray's final citation remains 2026. Codex requested
-correction of contradictory older recoverability passages in 76/2410; the
-retirement decision does not validate them.
+**Implementation ownership, authorised by Barry on 28 October.**
+- Main Codex: programme coordination, synthesis, most coding/data preparation,
+  analyses, verification and writing, using bounded Codex subagents where useful.
+- Claude: discussion, ideation and selected scientific review/adjudication;
+  routine legwork should not consume the scarcer Anthropic allocation.
+- Existing Codex References and Packages sessions retain their accepted
+  work; their handover requests are in 76/2428–2429. Active library/Fossilworks
+  files in the shared checkout belong to their current sessions. A general
+  role change does not authorise overwriting another session's files.
+- Barry retains primary-project selection, provider/author contact and release
+  decisions. Cross-model correspondence continues.
 
-**Infrastructure-audit paper: approved preparation; first independent tranche complete.**
-The [scaffold](papers/infrastructure-audit/README.md) holds Barry's approval
-and 189 candidate-claim rows. Codex's [priority review](papers/infrastructure-audit/evidence/priority-review-2026-10-25/README.md)
-covers ten groups/16 rows, with saved-output recalculations and explicit
-limits on original implementation replay. It finds an off-by-one headline,
-a conflated sample/probe maximum, a declared/executed hiatus discrepancy,
-and missing differential replay evidence for C045. The [methods proposal](papers/infrastructure-audit/evidence/2026-10-25-audit-design-codex.md)
-distinguishes case-specific improvements from untested claims of AI superiority.
-The 189 rows are not 189 independent defects; 173 remain outside this tranche.
-Packages PR #18 (`efbd8f6`) is integrated; its additional T4/T5 findings were
-reported in 76/2409 but are outside this independent audit.
+**Recent science and source checkpoints.**
+- Claude accepted “guidance, not gates,” the first-pair wording repairs,
+  substitute-builders merger into Q-010/B-001, and the audit's case-series
+  thesis in 76/2414. Those disagreements are closed.
+- The [CN3 prior brief](ideas/2026-10-25-innovation-windows-prior-claude.md)
+  proposes retiring its standalone claim. Codex recommends no standalone
+  model now; the residual remains in reserve, with persistence distinguished
+  from transmission mode. No new empirical support or novelty verdict follows.
+- The [extinction/recovery synthesis](literature/2026-10-28-extinction-recovery-disagreements-codex.md)
+  identifies live comparisons and the unresolved El Kef/Site 1209 support
+  questions. The separate References Codex session owns the associated
+  acquisition/import work; main Codex will use its result rather than duplicate it.
+- The [independent T5 review](resources/software/reviews/2026-10-28-tranche5-codex/README.md)
+  reports complete declared cGENIE graded comparisons, spatial qualifications,
+  the evaluated-cell boundary for missing ecotype values, and an incomplete
+  gen3sis G3 record. Packages Codex owns follow-through and coordination.
+- Q-012 engineering remains queued; the proposed information screen has not
+  run. Q-038's stopped estimator campaign remains parked.
 
-[Detail withheld pending disclosure to the data custodian.]
+**Outstanding boundaries.** The infrastructure audit has independently
+reviewed 16 of its initial 189 claim rows, with explicit limits on original
+implementation replay. The current-tree and historical PBDB sensitivity flags,
+SahulArch protections, provider disclosure and public release remain unresolved
+unless their owning source records explicitly close them. No identifiers were
+inspected for this review. Source-use holds and negative results are preserved.
 
-**Accepted ownership:** Codex owns its dated response/builders brief,
-life-history source/control follow-up, separate audit evidence, README and
-this status. Claude owns its CN3 brief, contract corrections, scaffold and
-ledger. Databases/Packages and Q-012/Q-007 owners retain their source and
-analysis files. Claude is next to integrate or challenge the audit findings
-and coordinate the named owner replays; Codex then reviews corrected evidence.
-No registers or primary-project selections changed. Q-012 remains queued;
-Q-038 remains parked.
+**Next responder:** main Claude for a focused scientific challenge; main
+Codex for the bulk of subsequent execution. The full historical handoffs below
+are superseded as current state; a separate history archive and shorter STATUS
+are recommended in the response, not performed in this review-only tranche.
 
 **Earlier checkpoint, superseded by the closure above: first contract pair drafted (25 October).**
 Barry explicitly instructed Codex to close the round, prepare the closing map
