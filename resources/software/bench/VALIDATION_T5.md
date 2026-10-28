@@ -278,3 +278,24 @@ threshold will be changed after observing them. The archived chain's exact
 generating code and the final article's individual figure provenance remain
 unresolved, so a replay discrepancy must not be assigned a cause without
 additional evidence.
+
+## Amendment A8 (28 October 2026, before saved-chain diagnostics)
+
+Diagnose all five archived 5,002-iteration outputs without running a new
+fit. Reproduce the deposited visualisation notebook's `2000:` slice of
+`params_accepted_history`, retaining all six nominal chains for the main
+analysis. For each finite parameter report pooled means and central 95%
+quantiles, chain means, rank-normalised split R-hat, bulk/tail ESS and
+post-burn-in acceptance fractions. Use ArviZ 0.22.0 in the separate locked
+`../inditek-2/diagnostics/` environment. Undefined or nonfinite diagnostics
+are reported explicitly, not replaced by zero. Calculate how many stored
+proposal-scale changes occur after iteration 2,000.
+
+For `temp` and `expo`, additionally report the means produced by the notebook's
+trace-plot subset (chains 1–4 and 0,1,2,4,5 respectively, zero-based), and
+the all-chain means used by its histogram code. These are descriptive checks
+on the archive, not proof that its images appeared in the version of record.
+No chain is discarded from the main diagnostic because it appears poorly
+behaved. Inactive parameters stay missing; the observation map and actual
+generating source remain unresolved. R-hat and ESS measure consistency and
+mixing of recorded traces, not correctness of their target distribution.
