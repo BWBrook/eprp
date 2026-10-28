@@ -39,9 +39,16 @@ for ib, t in enumerate(np.asarray(b["time"][:])):
     slices.append(row)
 
 graded = [s for s in slices if s["graded"]]
+required_times = [float(t) for t in np.asarray(b["time"][:]) if t > 100]
+ungraded_times = [float(t) for t in np.asarray(b["time"][:]) if t <= 100]
+compared_times = {s["time"] for s in slices}
+missing_required = [t for t in required_times if t not in compared_times]
+missing_ungraded = [t for t in ungraded_times if t not in compared_times]
 res = {"run": run, "units": units, "slices": slices, "slices_compared": len(slices),
        "slices_expected": int(b["time"].size), "pass_so_far": all(s["pass"] for s in graded) if graded else None,
-       "complete": len(slices) == int(b["time"].size)}
+       "graded_slices_expected": len(required_times), "graded_slices_compared": len(graded),
+       "missing_graded_times": missing_required, "missing_ungraded_times": missing_ungraded,
+       "complete": bool(required_times) and not missing_required, "ungraded_complete": not missing_ungraded}
 json.dump(res, open(out, "w"), indent=2)
 for s in slices:
     print("%8.1f  dT %+.4f  r_T %.5f  dO2 %+.3f  r_O2 %.5f  %s" % (s["time"], s["ocn_temp"]["diff"], s["ocn_temp"]["r"],

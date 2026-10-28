@@ -16,7 +16,7 @@ environment: {route: docker, lockfile: ../bench/env/Dockerfile.r5, image: "eprp-
 blockers: []
 related_sources: []
 eprp_questions: [Q-001, Q-049, Q-021]
-entry: {created: 2026-10-25, updated: 2026-10-25, by: Claude (Opus 5.5), reviewed: not yet}
+entry: {created: 2026-10-25, updated: 2026-10-28, by: Claude (Opus 5.5), reviewed: "Codex, 28 October 2026, retained-output review"}
 ---
 
 # cGENIE-based metabolic index (Pohl; Stockey)
@@ -76,10 +76,9 @@ poles excluded, 10,000 ecotypes, seed 1993: 524 evaluated cells
 
 ## Strengths
 
-- The viability calculation is exactly what the paper describes: its
-  output matches the analytic distribution of viability within sampling
-  error, and its pO₂ matches an independent seawater library to better
-  than 0.1%.
+- For the tested field and options, viability matches the analytic
+  distribution within the declared sampling tolerance, and positive pO₂
+  matches the seawater-library calculation within 0.1%.
 - One command line from cGENIE output to netCDF maps of viability, with a
   seed for reproducibility.
 - Fast: 90 s for 10,000 ecotypes on the upper-ocean shelves.
@@ -88,9 +87,11 @@ poles excluded, 10,000 ecotypes, seed 1993: 524 evaluated cells
 
 - **The pO₂ variable in the output is labelled "matm" but holds atm**
   (values 0 to 0.25); `doMI.R` itself uses it correctly as atm.
-- **`ecotype_viability` stores 1 for viable and leaves the rest missing**,
-  not 0: 3.0 million of the 5.2 million entries here. Read missing as
-  "not viable", not as "no data".
+- **Within an evaluated cell**, `ecotype_viability` stores 1 for viable
+  and leaves non-viable entries missing: 3.0 million of 5.2 million entries
+  here. Unevaluated cells also contain missing values. Define the evaluation
+  domain from `habitat_viability` and the input masks first; treat missing
+  as nonviable only inside that domain.
 - **Two cells had slightly negative O₂** (−0.04 µmol/kg, a numerical
   artefact of the model) and so negative pO₂, which the code silently
   treats as uninhabitable; filter or report such cells.
@@ -113,10 +114,10 @@ cGENIE runs themselves are benchmarked in tranche 5
 ## EPRP relevance
 
 The aerobic-habitat step for Q-001 and Q-049 style questions and for
-pairing physiology with cGENIE palaeogeographies (lead L-013). Its
-calculation is now trustworthy on known answers; the remaining
-uncertainty is in the cGENIE states and the trait distributions, not the
-code.
+pairing physiology with cGENIE palaeogeographies (lead L-013). The tests
+support the stated calculations for one field and set of options; other
+configurations, masks, boundaries and scientific assumptions need their own
+checks. See the [independent review](../reviews/2026-10-28-tranche5-codex/README.md).
 
 ## Citation and licence
 

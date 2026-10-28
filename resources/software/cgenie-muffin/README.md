@@ -10,13 +10,13 @@ paper: [10.1126/sciadv.adg7679]
 licence: MIT
 release: {version: "v0.9.78 (tag commit 3d6846c); v0.9.35 (Zenodo 7545805) also tested", date: 2026-10-16, checked: 2026-10-25}
 maintenance: {state: active, last_commit: 2026-10-16, checked: 2026-10-25}
-tier: T1
-validated_uses: []
+tier: T2
+validated_uses: ["540 Ma cold-baseline temperature and oxygen volume means and field correlations against deposited output at ten times"]
 environment: {route: docker, lockfile: ../bench/env/Dockerfile.cgenie, image: "eprp-sw/bench-cgenie:t5 (Ubuntu 22.04, gfortran 11; sha256:caa05fb8…) and eprp-sw/bench-cgenie20:t5 (Ubuntu 20.04, gfortran 9; sha256:75846569…)", host: deep-server}
 blockers: ["new palaeogeographies need the MATLAB muffingen generator"]
 related_sources: []
 eprp_questions: [Q-001, Q-021, Q-049, B-005]
-entry: {created: 2026-10-25, updated: 2026-10-25, by: Claude (Opus 5.5), reviewed: not yet}
+entry: {created: 2026-10-25, updated: 2026-10-28, by: Claude (Opus 5.5), reviewed: "Codex, 28 October 2026, retained-output review"}
 ---
 
 # cGENIE.muffin
@@ -66,8 +66,16 @@ and v0.9.78 with gfortran 9.
 | Test | Result |
 | --- | --- |
 | C1: `make testbiogem` against the shipped `genie-knowngood` output | **pass** in all three builds (`**TEST OK**`; `bench/results/t5/c1_*`) |
-| C2: rerun Pohl et al.'s 540 Ma cold baseline (`AP.540ebP2_.bg.PO4.Tdep.pCO2FKr_x0.5.PO4PD.pO2PD_radfor.SPIN`) for 10,000 yr at v0.9.35 and match the deposited output (volume means within 0.05 °C and 1 µmol/kg O₂, r ≥ 0.99, at every slice from 999.5 yr) | running (to about 21:30 AEDT 26 Oct). At 999.5 yr: **pass**, ΔT_vol < 10⁻⁴ °C, ΔO₂_vol −0.001 µmol/kg, r = 1.0000; not bitwise identical (largest cell differences 0.13 °C and 5.6 µmol/kg, in the southernmost rows) |
-| C3: the same at v0.9.78 | running. At 999.5 yr: **pass**, ΔT_vol < 10⁻⁴ °C, ΔO₂_vol −0.045 µmol/kg. gfortran 9 and 11 give bitwise-identical v0.9.78 fields, so the drift is the code version, not the compiler |
+| C2: rerun Pohl et al.'s 540 Ma cold baseline (`AP.540ebP2_.bg.PO4.Tdep.pCO2FKr_x0.5.PO4PD.pO2PD_radfor.SPIN`) for 10,000 yr at v0.9.35 and match the deposited output (volume means within 0.05 °C and 1 µmol/kg O₂, r ≥ 0.99, at every slice from 999.5 yr) | **pass** at all ten graded times; maximum absolute mean differences 0.00145 °C and 0.326 µmol/kg, minimum correlations 0.99985 and 0.99946. Not bitwise identical to the deposit. |
+| C3: the same at v0.9.78 | **pass** at all ten graded times for both compilers. The two output netCDF files are byte-identical in this experiment. |
+
+The completed-slice calculations and source hashes are in the independent
+[retained-output review](../reviews/2026-10-28-tranche5-codex/README.md).
+Global agreement does not establish local equivalence: at 9,999.5 years
+the v0.9.35 run differs from the deposit by up to 73.22 µmol/kg O₂ in a
+cell; 154 of 13,868 wet cells differ by over 10 µmol/kg. These post-hoc
+cellwise diagnostics were not a declared gate. Assess differences in the
+locations and derived quantities relevant to any spatial application.
 
 The deposit's readme runs this experiment for 8,000 yr; its deposited
 output runs to 10,000 yr and includes a 9.5-yr slice that our 10,000-yr
@@ -100,3 +108,5 @@ v0.9.35).
 - 2026-10-25 `checked`: tag v0.9.78 cloned (commit `3d6846c`); v0.9.35
   from Zenodo 7545805 (sha256 b94659cf…); `runmuffin.sh`, `genie.job`,
   `makefile.arc` and `user.mak` read; C1 on `deep-server`.
+- 2026-10-28 `checked`: independent recalculation of retained C2/C3 fields
+  at all ten declared times; see review for hashes, limits and reproduction.

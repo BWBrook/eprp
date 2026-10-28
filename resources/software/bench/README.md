@@ -461,3 +461,26 @@ M).
   run correctly (A1): `extant_sp` without present diversity, `s_species`
   for a window that opens on a diverse clade, and a TensorFlow pin
   ([deepdive](../deepdive/README.md)).
+
+# Tranche 5: Earth-system and spatial simulators
+
+In progress. [VALIDATION_T5.md](VALIDATION_T5.md) declares the tests and
+amendments; individual findings and limitations are in the tool entries.
+
+- **cGENIE:** C1 passed in three fresh builds. C2/C3 pass their declared
+  global-mean and correlation criteria at all ten graded times in the
+  retained runs; local differences matter for spatial applications. The
+  final comparison receipts have `_complete_20261028` in their names;
+  the older one-slice files remain as historical interim evidence.
+  See the [cGENIE entry](../cgenie-muffin/README.md) and
+  [independent review](../reviews/2026-10-28-tranche5-codex/README.md).
+- **Metabolic index:** M1 and M3 passed; M2 did not meet its declared
+  float32-incompatible tolerance. A post-hoc ecotype matrix check agrees
+  inside evaluated cells. Missing values outside that domain remain missing.
+  See the [entry](../cgenie-metabolic-index-pohl/README.md).
+- **gen3sis:** G1 is not met and G2a/G2b pass. Independent recount of nine
+  G3 runs reproduces the retained living-species and occupancy summaries;
+  seven of nine living-species counts match the deposit. Config 9's file
+  is absent, and config 22 is running as the prospectively declared
+  replacement; no result is claimed for it. See the
+  [entry](../gen3sis/README.md).

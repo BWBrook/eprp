@@ -66,9 +66,14 @@ describing the data twice.
 | [iNEXT](inext/README.md) | T2 | coverage-standardised richness under fewer collections; K5 failed under smaller collections; biased by evenness change |
 | [DeepDive and DeepDiveR](deepdive/README.md) | T1 | runs after three configuration fixes; characterised only (overestimates, misreads evenness) |
 | [richness (Alroy)](alroy-richness/README.md) | T2 | CEGS (the geometric Weibull, on our inference) under its own model; lowest absolute error on the tranche-4 records (characterised, one generator family) |
+| [cGENIE.muffin](cgenie-muffin/README.md) | T2 | 540 Ma cold-baseline volume means and field correlations against deposited output; local discrepancies remain |
+| [cGENIE metabolic index](cgenie-metabolic-index-pohl/README.md) | T2 | viability and oxygen partial pressure for one deposited field and configuration; mask missing values by evaluation domain |
+| [gen3sis](gen3sis/README.md) | T2 | one-step Weibull dispersal and a two-cell speciation check; a deposited-run comparison is in progress |
 
-Every entry was reviewed independently (Claude Sonnet subagent, one review
-per tranche) and the findings applied. The two generators stay at T2: their
+Entries through tranche 4 were reviewed independently (Claude Sonnet subagent,
+one review per tranche) and the findings applied. The tranche 5 entries have
+a separate [Codex retained-output review](reviews/2026-10-28-tranche5-codex/README.md).
+The two generators stay at T2: their
 cross-check had little power, so T3 waits for a larger comparison.
 
 The harness and results of every tranche: [bench/](bench/README.md).
