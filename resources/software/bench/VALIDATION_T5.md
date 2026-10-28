@@ -299,3 +299,23 @@ No chain is discarded from the main diagnostic because it appears poorly
 behaved. Inactive parameters stay missing; the observation map and actual
 generating source remain unresolved. R-hat and ESS measure consistency and
 mixing of recorded traces, not correctness of their target distribution.
+
+## Amendment A9 (28 October 2026, exploratory follow-up)
+
+After observing the F2 score discrepancies, evaluate the `proof` forward
+model once at `[161, 19, 0.035, 0.002, 2]`, the active reference parameters
+in the deposited `synthetic_data.py`, in the same locked environment as A7.
+Compare its output grid with the archive's `output_data/D_proof.npz`,
+including masks and maximum absolute difference. The notebook uses that file
+as a reference in its sensitivity figures; its role in generating
+`observed_D.npz` is not established. Also describe, without presuming a
+known random seed or generation route, the difference between the deposited
+observation map and this reference on common cells, including cells where
+the reference is at least 10 to reduce any clipping effect. Record all input
+hashes. A match or mismatch alone cannot establish what data were used to
+generate the saved chains.
+
+Independently inspect the archived `residuals` arrays in all five saved-chain
+files. Report finite and nonzero counts and the number of 50-iteration
+snapshots with positive finite proposed RSS. This post-hoc archive audit does
+not assume that the arrays were used in the published analysis.
