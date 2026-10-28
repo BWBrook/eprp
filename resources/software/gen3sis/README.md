@@ -67,11 +67,24 @@ has the nine pairs, occupancy counts and source-object hashes; its
 `perc_extinction` definitions are not independently established. Equal
 numbers alone do not establish that their meanings coincide.
 
+The deposit's `numerical_values/METADATA.txt` describes the S1 simulation
+summary's `occupancy` as the proportion of inhabited terrestrial sites, but
+does not equate that quantity to the S3 CSV's `fraction_colonized` or define
+`perc_extinction`. A targeted search of the deposited Scripts and global
+case-study note found no definition of those two CSV fields. Their meanings
+remain open despite the matching occupancy values.
+
 For config 22, [input hashes](../bench/results/t5/g3_config22_input_sha256_20261028.txt)
 were saved before the run; the compiled-landscape
 [file manifest](../bench/results/t5/g3_config22_landscape_sha256_20261028.txt)
 was captured during it. The run mounts those inputs read-only, though a
 post-start manifest cannot by itself prove their state at launch.
+
+An [independent single-run recount](../bench/validate/t5_g3_single_audit.R)
+has been checked against retained config 18. The
+[completion watcher](../bench/watch_t5_g3_22.sh) checks the simulation's
+exit, input hashes and post-run landscape manifest, then audits config 22's
+final state. Its receipt remains pending until that run completes.
 
 ## Pitfalls and relevance
 
