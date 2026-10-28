@@ -215,3 +215,11 @@ No new prior search or empirical support claim is made by that observation.
 This turn completes assessment and records the implementation handover.
 No new scientific priority, registered disposition, compute campaign,
 provider contact or release is enacted by this note.
+
+**Handover update through 76/2438:** Packages Claude explicitly transferred
+all software/bench ownership, and its Codex counterpart accepted. References
+Codex has completed the current library imports and a first paired-record
+alignment under Barry's direct instruction; the remaining References handover
+response is pending. These changes are recorded in STATUS. They strengthen
+the execution handover without establishing new biological results or altering
+the recommendations above.

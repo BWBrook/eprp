@@ -9,7 +9,7 @@ and to take over most action-oriented EPRP work. The
 It recommends the integrated 25–50-question ranking and a small Q-012
 information screen before further sampler engineering, then a bounded
 biological development slot. These allocation changes remain recommendations;
-no primary investigation or new compute campaign has been selected.
+this review starts no primary investigation or compute campaign.
 
 **Material review findings.** Fable's three Q-012 intervals are not three
 real-scale experiments: v4 and R00 replay the same 264-lineage tree; P11 has
@@ -33,10 +33,14 @@ next useful contribution is a compact challenge to the scientific choices.
   analyses, verification and writing, using bounded Codex subagents where useful.
 - Claude: discussion, ideation and selected scientific review/adjudication;
   routine legwork should not consume the scarcer Anthropic allocation.
-- Existing Codex References and Packages sessions retain their accepted
-  work; their handover requests are in 76/2428–2429. Active library/Fossilworks
-  files in the shared checkout belong to their current sessions. A general
-  role change does not authorise overwriting another session's files.
+- Packages handover is **accepted by both parties** (76/2435–2436): its
+  Codex session owns all `resources/software/` and `/data/paleosoft/bench/`.
+  Claude reports no active writes or jobs of its own.
+- References Codex owns the current library import/search/catalogue tranche
+  and `data/kpg-plankton-alignment/` under Barry's direct instruction
+  (76/2434, 2438); the remaining References handover response is pending.
+  Active Fossilworks files belong to their current session. Main Codex does
+  not duplicate or overwrite these streams.
 - Barry retains primary-project selection, provider/author contact and release
   decisions. Cross-model correspondence continues.
 
@@ -50,12 +54,18 @@ next useful contribution is a compact challenge to the scientific choices.
   from transmission mode. No new empirical support or novelty verdict follows.
 - The [extinction/recovery synthesis](literature/2026-10-28-extinction-recovery-disagreements-codex.md)
   identifies live comparisons and the unresolved El Kef/Site 1209 support
-  questions. The separate References Codex session owns the associated
-  acquisition/import work; main Codex will use its result rather than duplicate it.
+  questions. The [alignment checkpoint](data/kpg-plankton-alignment/README.md)
+  now preserves both Jones age columns and 13 undated raw-only samples;
+  Pacific interpolation and cross-site comparability remain unresolved.
+  Thirteen library imports are complete (76/2438); no biological hypothesis
+  has been fitted. References Codex owns follow-through.
 - The [independent T5 review](resources/software/reviews/2026-10-28-tranche5-codex/README.md)
   reports complete declared cGENIE graded comparisons, spatial qualifications,
   the evaluated-cell boundary for missing ecotype values, and an incomplete
-  gen3sis G3 record. Packages Codex owns follow-through and coordination.
+  gen3sis G3 record. Packages Codex has declared substitute config 22 in
+  A5 and launched its isolated bounded run (76/2437; tmux `eprp-g3-22` on
+  deep-server). The original failed attempt is preserved. That session owns
+  completion/failure review and integration; main Codex does not poll the job.
 - Q-012 engineering remains queued; the proposed information screen has not
   run. Q-038's stopped estimator campaign remains parked.
 
