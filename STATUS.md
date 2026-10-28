@@ -2,14 +2,26 @@
 
 Updated: 28 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: programme-review response and Codex implementation handover.**
+**Current focus: integrated ranking and Q-012 information screen in execution.**
+Barry authorised both tasks in main Codex chat on 28 October, following the
+[review response](ideas/2026-10-28-programme-assessment-response-codex.md).
+Main Codex owns the new integrated-ranking note and
+`data/q012-information-screen/`, with two bounded GPT-6.1 Sol delegates in
+disjoint files and main Codex integrating and checking the scientific claims.
+The screen starts with a generator-only complete-data likelihood-ratio
+comparison; no old sampler campaign resumes. The ranking will recommend a
+protected biological development slot; primary-project selection remains
+Barry's. Claude will receive a focused Board critique request against the
+completed packet, and Barry will be told explicitly when to wake Claude.
+
+**Completed assessment and handover.**
 Barry asked main Codex to assess the separate Codex/Astra and Fable reviews
 and to take over most action-oriented EPRP work. The
 [response](ideas/2026-10-28-programme-assessment-response-codex.md) is complete.
 It recommends the integrated 25–50-question ranking and a small Q-012
 information screen before further sampler engineering, then a bounded
-biological development slot. These allocation changes remain recommendations;
-this review starts no primary investigation or compute campaign.
+biological development slot. The ranking and information screen are now
+authorised; the biological allocation remains a recommendation.
 
 **Material review findings.** Fable's three Q-012 intervals are not three
 real-scale experiments: v4 and R00 replay the same 264-lineage tree; P11 has
@@ -36,11 +48,14 @@ next useful contribution is a compact challenge to the scientific choices.
 - Packages handover is **accepted by both parties** (76/2435–2436): its
   Codex session owns all `resources/software/` and `/data/paleosoft/bench/`.
   Claude reports no active writes or jobs of its own.
-- References Codex owns the current library import/search/catalogue tranche
-  and `data/kpg-plankton-alignment/` under Barry's direct instruction
-  (76/2434, 2438); the remaining References handover response is pending.
-  Active Fossilworks files belong to their current session. Main Codex does
-  not duplicate or overwrite these streams.
+- References handover is **accepted by both parties** (76/2444–2445): its
+  Codex session owns `resources/library/`, the remote library store, and
+  `data/kpg-plankton-alignment/` under Barry's direct instruction.
+- Databases handover is **accepted by both parties** (76/2443, 2446): its
+  Codex session owns `resources/sources/`, `resources/tools/data_mirror.py`,
+  and `/data/paleodata` except the library. Its current tranche also owns
+  Fossilworks additions to `ideas/register.md`. Main Codex does not duplicate
+  or overwrite these active streams.
 - Barry retains primary-project selection, provider/author contact and release
   decisions. Cross-model correspondence continues.
 
@@ -66,8 +81,8 @@ next useful contribution is a compact challenge to the scientific choices.
   A5 and launched its isolated bounded run (76/2437; tmux `eprp-g3-22` on
   deep-server). The original failed attempt is preserved. That session owns
   completion/failure review and integration; main Codex does not poll the job.
-- Q-012 engineering remains queued; the proposed information screen has not
-  run. Q-038's stopped estimator campaign remains parked.
+- Q-012 sampler engineering remains queued while the information screen is
+  prepared and run. Q-038's stopped estimator campaign remains parked.
 
 **Outstanding boundaries.** The infrastructure audit has independently
 reviewed 16 of its initial 189 claim rows, with explicit limits on original

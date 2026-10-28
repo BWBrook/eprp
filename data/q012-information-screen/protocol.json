@@ -1,0 +1,27 @@
+{
+  "version": "2026-10-28-oracle-v1",
+  "frozen_before_evaluation": true,
+  "hypotheses": {"eta_null": 0.05, "eta_alternative": 0.2, "sigma": 0.5},
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "ensembles": [
+    {"name": "marginal_reference", "lambda0": 0.0708, "seed_base": 281000000},
+    {"name": "historical_size_calibrated", "lambda0": 0.096, "seed_base": 282000000}
+  ],
+  "panels": {
+    "calibration_null": {"seed_offset": 10000, "n": 2000, "hypothesis": "null"},
+    "evaluation_null": {"seed_offset": 20000, "n": 2000, "hypothesis": "null"},
+    "evaluation_alternative": {"seed_offset": 30000, "n": 2000, "hypothesis": "alternative"}
+  },
+  "smoke": {"seed_start": 280900000, "n_per_ensemble_per_hypothesis": 5},
+  "simultaneous_error_budget": {
+    "total": 0.05,
+    "per_ensemble_quantile_bracket_failure": 0.005,
+    "per_ensemble_power_lower_failure": 0.01,
+    "per_ensemble_power_upper_failure": 0.01,
+    "evaluation_null_descriptive_interval_confidence": 0.95
+  },
+  "selection": "Accept original forced-cohort survival conditioning; no selection on tree size, censoring, score or cap. Retain capped outputs. Rejection-attempt counts and RNG innovations are excluded from the oracle experiment.",
+  "nuisance_settings": "Use generator/config.json values from ../q012-prototype/config.json, changing ONLY rho=eta/sigma and each declared ensemble lambda0. sigma remains the pre-selection marginal SD 0.5; survival-selected cohort marginals need not have that SD.",
+  "stopping": "For each ensemble only a simultaneous upper bound below 0.8 on optimal complete-data power at population size 0.05 rules out target recorded-data power for that generator experiment. A lower bound above 0.8 justifies a fresh frozen recorded-data test. Otherwise inconclusive. No sampler restart follows from oracle success."
+}
