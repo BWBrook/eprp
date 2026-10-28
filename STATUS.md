@@ -2,17 +2,30 @@
 
 Updated: 28 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: integrated ranking and Q-012 information screen in execution.**
+**Current focus: ranking and Q-012 information screen complete; focused critique next.**
 Barry authorised both tasks in main Codex chat on 28 October, following the
 [review response](ideas/2026-10-28-programme-assessment-response-codex.md).
 Main Codex owns the new integrated-ranking note and
-`data/q012-information-screen/`, with two bounded GPT-6.1 Sol delegates in
+`data/q012-information-screen/`, with bounded GPT-6.1 Sol delegates in
 disjoint files and main Codex integrating and checking the scientific claims.
-The screen starts with a generator-only complete-data likelihood-ratio
-comparison; no old sampler campaign resumes. The ranking will recommend a
-protected biological development slot; primary-project selection remains
-Barry's. Claude will receive a focused Board critique request against the
-completed packet, and Barry will be told explicitly when to wake Claude.
+The [49-card integrated ranking](ideas/2026-10-28-integrated-ranking-codex.md)
+is complete and recommends Q-027 for a finite protected development slot,
+with Q-016 and B-005 as the closest alternatives. The
+[Q-012 complete-data screen](data/q012-information-screen/README.md)
+passes both simulated ensembles, but the frozen recorded-data detector fails
+the power target. Simultaneous 95% complete-data power bounds at size 0.05 are 0.823–0.931 and
+0.989–0.999; the cheap detector's evaluated power is 0.126 and 0.1785, with
+all four endpoint-null rejection rates below 0.05. Its failure does not bound all
+recorded-data methods. These are fixed-nuisance simulator results, not real
+record power or biological-inheritance evidence. No old sampler campaign
+resumes. Primary-project selection remains Barry's. Claude receives the
+completed packet in **Correspondence discussion 96** (request 2460) for
+focused critique; Barry is asked explicitly to wake Claude.
+
+Twelve controls pass. Separate numerical reaggregation checks reproduce all
+36,000 histories' panel summaries, fitted coefficients, saved scores and
+reported bounds. Production used 908.41 seconds on one deep-server CPU
+across the three stages; source and coefficient freezes precede evaluation.
 
 **Completed assessment and handover.**
 Barry asked main Codex to assess the separate Codex/Astra and Fable reviews
@@ -29,11 +42,15 @@ real-scale experiments: v4 and R00 replay the same 264-lineage tree; P11 has
 Fisher's identity, not an information bound. An independent Codex check
 confirmed the correction and the proposed oracle screen's limited stopping
 logic. A simpler Q-038 predictor could answer an observed-record question;
-it would not establish biological victim prediction. An earlier 44-entry
-ranking exists, but the integrated ranking remains unfinished.
+it would not establish biological victim prediction. The integrated ranking
+now supersedes the earlier 44-entry comparison for this allocation discussion.
 
-**Next-work recommendation.** Compare Q-027, Q-016 and B-005 near the allocation
-boundary, without excluding the rest of the portfolio. The new Q-009 source
+**Next-work recommendation.** Give Q-027 a bounded first check: a matched
+taxonomic/time-domain shape contrast that adds to existing regional controls,
+with an admissible estimator-specific support table. Proposed first ceiling:
+one research day/four allocated core-hours; total development ceiling sixteen
+core-hours. If no distinct supported contrast survives, return to the
+Q-016/B-005 allocation comparison. This remains a recommendation. The Q-009 source
 lead and Q-040 instrumental application remain useful distinct options;
 Q-042 is not made empirically ready by the richness benchmark. Keep the
 infrastructure paper a selected case series, rather than completing all
@@ -70,10 +87,11 @@ next useful contribution is a compact challenge to the scientific choices.
 - The [extinction/recovery synthesis](literature/2026-10-28-extinction-recovery-disagreements-codex.md)
   identifies live comparisons and the unresolved El Kef/Site 1209 support
   questions. The [alignment checkpoint](data/kpg-plankton-alignment/README.md)
-  now preserves both Jones age columns and 13 undated raw-only samples;
-  Pacific interpolation and cross-site comparability remain unresolved.
-  Thirteen library imports are complete (76/2438); no biological hypothesis
-  has been fitted. References Codex owns follow-through.
+  now preserves both Jones age columns and the 13 raw-only samples matching
+  the published weathering exclusion. References reports 990 original Pacific
+  percentage records joined to sample metadata (76/2452); integer counts and
+  denominators, the published sample-total discrepancy and cross-site
+  comparability remain unresolved. References Codex owns follow-through.
 - The [independent T5 review](resources/software/reviews/2026-10-28-tranche5-codex/README.md)
   reports complete declared cGENIE graded comparisons, spatial qualifications,
   the evaluated-cell boundary for missing ecotype values, and an incomplete
@@ -81,8 +99,8 @@ next useful contribution is a compact challenge to the scientific choices.
   A5 and launched its isolated bounded run (76/2437; tmux `eprp-g3-22` on
   deep-server). The original failed attempt is preserved. That session owns
   completion/failure review and integration; main Codex does not poll the job.
-- Q-012 sampler engineering remains queued while the information screen is
-  prepared and run. Q-038's stopped estimator campaign remains parked.
+- Q-012 sampler engineering remains queued after the completed information
+  screen. Q-038's stopped estimator campaign remains parked.
 
 **Outstanding boundaries.** The infrastructure audit has independently
 reviewed 16 of its initial 189 claim rows, with explicit limits on original
@@ -91,10 +109,10 @@ SahulArch protections, provider disclosure and public release remain unresolved
 unless their owning source records explicitly close them. No identifiers were
 inspected for this review. Source-use holds and negative results are preserved.
 
-**Next responder:** main Claude for a focused scientific challenge; main
+**Next responder:** main Claude in discussion 96 for the focused scientific challenge; main
 Codex for the bulk of subsequent execution. The full historical handoffs below
 are superseded as current state; a separate history archive and shorter STATUS
-are recommended in the response, not performed in this review-only tranche.
+are recommended in the response and have not been performed in this tranche.
 
 **Earlier checkpoint, superseded by the closure above: first contract pair drafted (25 October).**
 Barry explicitly instructed Codex to close the round, prepare the closing map

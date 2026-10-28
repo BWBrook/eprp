@@ -1,0 +1,506 @@
+{
+  "purpose": "Independent saved-feature LDA reconstruction and recorded-result reaggregation, without importing recorded.py or screen.py or rerunning the generator",
+  "method": "Recomputed pooled moments, covariance via class covariance matrices and Cholesky solve; all 20k scores; explicit Binomial CDF/SF threshold rank search; numerical inversion of Binomial tails for CP endpoints",
+  "python": "3.12.13",
+  "numpy": "2.1.3",
+  "scipy": "1.15.3",
+  "development_row_count": 4000,
+  "calibration_evaluation_row_count": 20000,
+  "total_unique_seed_count": 24000,
+  "cap_count": 0,
+  "disjoint_from_oracle": true,
+  "file_sha256": {
+    "data/q012-information-screen/results-recorded-development-v1/rows.jsonl": "c299e13eb4f3d5e7b058ba82b4382c3ae6ea3bc25d55fd99d1d5f0346f44844e",
+    "data/q012-information-screen/results-recorded-development-v1/coefficients.json": "3ac0cea54874ddadd1b3107c4a816fe5cac72d1d1967eb0352e7873b0d7e4d5b",
+    "data/q012-information-screen/results-recorded-development-v1/summary.json": "f6442e421ddeb17a076005df76558485f3dccfbfd99c83db9dc3b389c4b1de58",
+    "data/q012-information-screen/results-recorded-v1/rows.jsonl": "c126f7fa76f9bbc614d28f1338b493a48ebbb4ffc567753832e2f307f0a6e538",
+    "data/q012-information-screen/results-recorded-v1/summary.json": "e25ff2e1a0fa0840f5806445b478b6bd488fd0c1a23006ac485e8bf495e10048"
+  },
+  "source_checks": {
+    "data/q012-information-screen/screen.py": {
+      "expected": "bb775b1161c543674e8c0e1d409065b0df8add8226be9a7628ef3e3202e671da",
+      "current": "bb775b1161c543674e8c0e1d409065b0df8add8226be9a7628ef3e3202e671da",
+      "match": true
+    },
+    "data/q012-information-screen/protocol.json": {
+      "expected": "d32a476a5cd98091781950486f15a507e012d837ecd5e454bf62eb19e8d433d5",
+      "current": "d32a476a5cd98091781950486f15a507e012d837ecd5e454bf62eb19e8d433d5",
+      "match": true
+    },
+    "data/q012-information-screen/PROTOCOL.md": {
+      "expected": "6156eca31593ed1229119690550b9f454e192ba2670d8dc68ff97193cb49188e",
+      "current": "6156eca31593ed1229119690550b9f454e192ba2670d8dc68ff97193cb49188e",
+      "match": true
+    },
+    "data/q012-prototype/prototype.py": {
+      "expected": "afb001d47d9761ae092003ac2f2a45aa423aaac0223bcb461126444813016067",
+      "current": "afb001d47d9761ae092003ac2f2a45aa423aaac0223bcb461126444813016067",
+      "match": true
+    },
+    "data/q012-prototype/config.json": {
+      "expected": "619242a767012849b6f2758c3809e1f7bfced47d2aadd19937ecc51b58e20d4a",
+      "current": "619242a767012849b6f2758c3809e1f7bfced47d2aadd19937ecc51b58e20d4a",
+      "match": true
+    },
+    "data/q012-prototype/quadrature.py": {
+      "expected": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
+      "current": "ed02cfd804958024dd18a99e724a275eb9ed7d3808a5a4bf15c7a4ab5c3f3f94",
+      "match": true
+    },
+    "data/q012-information-screen/recorded.py": {
+      "expected": "9082437a13d1e8611c6c7e0f8001eda6b0ee780e1cf315ee84d448d3a6e1f0da",
+      "current": "9082437a13d1e8611c6c7e0f8001eda6b0ee780e1cf315ee84d448d3a6e1f0da",
+      "match": true
+    },
+    "data/q012-information-screen/recorded-protocol.json": {
+      "expected": "3c02129372dd7b956a8519590c1bc3892f1a61761088adf91c764a7611ebbbfe",
+      "current": "3c02129372dd7b956a8519590c1bc3892f1a61761088adf91c764a7611ebbbfe",
+      "match": true
+    },
+    "data/q012-information-screen/recorded-design.md": {
+      "expected": "2a677e663c2515e32415d3ecbb5a08edae564a07b73b67018c36254dd9b60071",
+      "current": "2a677e663c2515e32415d3ecbb5a08edae564a07b73b67018c36254dd9b60071",
+      "match": true
+    }
+  },
+  "design_identity_review": {
+    "initial_review_sha256": "594fbd79da2749732a7547505009d5d43c231394e447a7a6885bd93baa9dc308",
+    "current_reviewed_sha256": "2a677e663c2515e32415d3ecbb5a08edae564a07b73b67018c36254dd9b60071",
+    "initial_intro_plus_current_scientific_body_sha256": "594fbd79da2749732a7547505009d5d43c231394e447a7a6885bd93baa9dc308",
+    "finding": "Only introductory implementation/freeze status prose changed; scientific-method body identical to initially reviewed version."
+  },
+  "seed_panels": [
+    {
+      "ensemble": "marginal_reference",
+      "panel": "development_null",
+      "n": 1000,
+      "first": 283010000,
+      "last": 283010999,
+      "capped": 0
+    },
+    {
+      "ensemble": "marginal_reference",
+      "panel": "development_alternative",
+      "n": 1000,
+      "first": 283020000,
+      "last": 283020999,
+      "capped": 0
+    },
+    {
+      "ensemble": "marginal_reference",
+      "panel": "calibration_null",
+      "n": 2000,
+      "first": 283030000,
+      "last": 283031999,
+      "capped": 0
+    },
+    {
+      "ensemble": "marginal_reference",
+      "panel": "calibration_zero",
+      "n": 2000,
+      "first": 283040000,
+      "last": 283041999,
+      "capped": 0
+    },
+    {
+      "ensemble": "marginal_reference",
+      "panel": "evaluation_null",
+      "n": 2000,
+      "first": 283050000,
+      "last": 283051999,
+      "capped": 0
+    },
+    {
+      "ensemble": "marginal_reference",
+      "panel": "evaluation_zero",
+      "n": 2000,
+      "first": 283060000,
+      "last": 283061999,
+      "capped": 0
+    },
+    {
+      "ensemble": "marginal_reference",
+      "panel": "evaluation_alternative",
+      "n": 2000,
+      "first": 283070000,
+      "last": 283071999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "development_null",
+      "n": 1000,
+      "first": 284010000,
+      "last": 284010999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "development_alternative",
+      "n": 1000,
+      "first": 284020000,
+      "last": 284020999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "calibration_null",
+      "n": 2000,
+      "first": 284030000,
+      "last": 284031999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "calibration_zero",
+      "n": 2000,
+      "first": 284040000,
+      "last": 284041999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "evaluation_null",
+      "n": 2000,
+      "first": 284050000,
+      "last": 284051999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "evaluation_zero",
+      "n": 2000,
+      "first": 284060000,
+      "last": 284061999,
+      "capped": 0
+    },
+    {
+      "ensemble": "historical_size_calibrated",
+      "panel": "evaluation_alternative",
+      "n": 2000,
+      "first": 284070000,
+      "last": 284071999,
+      "capped": 0
+    }
+  ],
+  "reconstructed_coefficients": {
+    "marginal_reference": {
+      "location": [
+        0.09763978709467666,
+        0.004888629697711284,
+        0.018351938854277033,
+        4.526952355741551,
+        0.33794808977110885,
+        0.5838878935993495,
+        -0.025939667118969435,
+        0.11540448279638507
+      ],
+      "scale": [
+        0.17763445382812154,
+        0.12872395426397493,
+        0.12873732419199543,
+        0.5693086259210937,
+        0.08030200421861093,
+        0.08668004922247839,
+        0.040419238187672346,
+        0.016516355395517976
+      ],
+      "weights": [
+        0.4559722213032101,
+        0.010656952878784123,
+        0.11087992547872792,
+        -0.09493923489816213,
+        0.05384141963574992,
+        -0.029749101716884486,
+        -0.057050820457984916,
+        -0.06209717215311373
+      ],
+      "standardized_null_mean": [
+        -0.2429995814112222,
+        -0.16686462117078835,
+        -0.10378308076947326,
+        -0.05958313691518903,
+        -0.13683744007882848,
+        0.13309936903422803,
+        0.15076829644759018,
+        -0.014657470128457537
+      ],
+      "standardized_alternative_mean": [
+        0.24299958141122363,
+        0.16686462117078874,
+        0.10378308076947347,
+        0.059583136915159714,
+        0.13683744007882703,
+        -0.1330993690342133,
+        -0.15076829644758968,
+        0.01465747012844423
+      ]
+    },
+    "historical_size_calibrated": {
+      "location": [
+        0.14837836243343802,
+        0.0314036323945593,
+        0.029691731624614186,
+        5.593940878998267,
+        0.42959892243609354,
+        0.5035081827043049,
+        -0.02237045992726557,
+        0.10295807123237226
+      ],
+      "scale": [
+        0.17574632232022763,
+        0.12304884381552417,
+        0.12335946589087753,
+        0.68716783781615,
+        0.05582861388885953,
+        0.058505755188985806,
+        0.02537575799601273,
+        0.008879777005202493
+      ],
+      "weights": [
+        0.6244691882014717,
+        0.05738615420104218,
+        0.03323400205276477,
+        -0.19867029723848684,
+        -0.02345301769499691,
+        0.004038357230302578,
+        -0.14900452182790613,
+        -0.11261152778490932
+      ],
+      "standardized_null_mean": [
+        -0.2966351429235612,
+        -0.22554834480080138,
+        -0.08804847453010785,
+        -0.04901342196226448,
+        -0.1435448321615432,
+        0.14202908464569144,
+        0.17011256670267544,
+        0.03177792692139104
+      ],
+      "standardized_alternative_mean": [
+        0.2966351429235626,
+        0.22554834480080116,
+        0.08804847453010789,
+        0.04901342196229005,
+        0.14354483216154632,
+        -0.14202908464570066,
+        -0.17011256670267869,
+        -0.03177792692139397
+      ]
+    }
+  },
+  "max_absolute_score_error": 1.1657341758564144e-15,
+  "comparison_tolerance": 1e-11,
+  "results": {
+    "marginal_reference": {
+      "threshold": 0.7673605533224982,
+      "calibration": {
+        "calibration_null": {
+          "upper_threshold": 0.7673605533224982,
+          "rank": 1927,
+          "n": 2000,
+          "exact_upper_quantile_coverage": 0.9976822185330317
+        },
+        "calibration_zero": {
+          "upper_threshold": 0.7242268139229135,
+          "rank": 1927,
+          "n": 2000,
+          "exact_upper_quantile_coverage": 0.9976822185330317
+        }
+      },
+      "evaluation_null": {
+        "successes": 85,
+        "n": 2000,
+        "estimate": 0.0425,
+        "descriptive_cp95": [
+          0.03408607459315085,
+          0.052285913242376025
+        ]
+      },
+      "evaluation_zero": {
+        "successes": 56,
+        "n": 2000,
+        "estimate": 0.028,
+        "descriptive_cp95": [
+          0.021218680819088776,
+          0.03620772910588802
+        ]
+      },
+      "evaluation_alternative": {
+        "successes": 252,
+        "n": 2000,
+        "estimate": 0.126,
+        "descriptive_cp95": [
+          0.11176256289935853,
+          0.14134355929784792
+        ],
+        "simultaneous_power_interval": [
+          0.10924366006419561,
+          0.1442578111471992
+        ]
+      },
+      "contract_inspired_detector_targets_pass": false,
+      "stronger_power_lower_bound_gt_08": false,
+      "interpretation": "This fixed recorded detector does not meet all declared detector-only targets; this is not an impossibility result.",
+      "panels": {
+        "calibration_null": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 33.0,
+            "median": 91.0,
+            "q95": 204.0
+          },
+          "pooled_present_share": 0.3435091820360942
+        },
+        "calibration_zero": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 33.0,
+            "median": 90.0,
+            "q95": 207.0
+          },
+          "pooled_present_share": 0.3383102658568157
+        },
+        "evaluation_null": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 31.0,
+            "median": 89.0,
+            "q95": 212.0
+          },
+          "pooled_present_share": 0.3438593731566322
+        },
+        "evaluation_zero": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 33.0,
+            "median": 91.0,
+            "q95": 204.0
+          },
+          "pooled_present_share": 0.34034459499672665
+        },
+        "evaluation_alternative": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 33.0,
+            "median": 95.0,
+            "q95": 232.04999999999995
+          },
+          "pooled_present_share": 0.36523671559692
+        }
+      }
+    },
+    "historical_size_calibrated": {
+      "threshold": 0.8859034703222373,
+      "calibration": {
+        "calibration_null": {
+          "upper_threshold": 0.8859034703222373,
+          "rank": 1927,
+          "n": 2000,
+          "exact_upper_quantile_coverage": 0.9976822185330317
+        },
+        "calibration_zero": {
+          "upper_threshold": 0.7611178636108433,
+          "rank": 1927,
+          "n": 2000,
+          "exact_upper_quantile_coverage": 0.9976822185330317
+        }
+      },
+      "evaluation_null": {
+        "successes": 92,
+        "n": 2000,
+        "estimate": 0.046,
+        "descriptive_cp95": [
+          0.03724090203436901,
+          0.05611883054343633
+        ]
+      },
+      "evaluation_zero": {
+        "successes": 59,
+        "n": 2000,
+        "estimate": 0.0295,
+        "descriptive_cp95": [
+          0.022530967865736197,
+          0.03788941929919164
+        ]
+      },
+      "evaluation_alternative": {
+        "successes": 357,
+        "n": 2000,
+        "estimate": 0.1785,
+        "descriptive_cp95": [
+          0.16194824454532947,
+          0.19599983195341697
+        ],
+        "simultaneous_power_interval": [
+          0.1589847108601518,
+          0.19930274146988933
+        ]
+      },
+      "contract_inspired_detector_targets_pass": false,
+      "stronger_power_lower_bound_gt_08": false,
+      "interpretation": "This fixed recorded detector does not meet all declared detector-only targets; this is not an impossibility result.",
+      "panels": {
+        "calibration_null": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 71.0,
+            "median": 273.5,
+            "q95": 678.05
+          },
+          "pooled_present_share": 0.4321732070015171
+        },
+        "calibration_zero": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 68.0,
+            "median": 267.5,
+            "q95": 636.1499999999999
+          },
+          "pooled_present_share": 0.4274582731888103
+        },
+        "evaluation_null": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 79.95,
+            "median": 270.0,
+            "q95": 685.0
+          },
+          "pooled_present_share": 0.4338775223768238
+        },
+        "evaluation_zero": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 69.95,
+            "median": 262.0,
+            "q95": 653.05
+          },
+          "pooled_present_share": 0.42909222444849693
+        },
+        "evaluation_alternative": {
+          "n": 2000,
+          "capped": 0,
+          "recorded_quantiles": {
+            "q05": 77.95,
+            "median": 297.5,
+            "q95": 733.0
+          },
+          "pooled_present_share": 0.4543482185977485
+        }
+      }
+    }
+  },
+  "simultaneous_error_budget_sum": 0.05,
+  "all_checks_passed": true,
+  "errors": [],
+  "limits": "Checks saved-feature fit/scoring, result aggregation, seed completeness and source receipts; does not replay feature extraction or generation and does not bound the optimum observed-data test."
+}

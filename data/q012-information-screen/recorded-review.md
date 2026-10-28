@@ -82,3 +82,57 @@ from the oracle results.
 
 The tests were inspected but not executed by this reviewer. This is static
 clearance for the reviewed identities, not a runtime pass or result audit.
+
+## Final source identity and independent result audit
+
+Following the frozen production run, independently inspected the final design
+and reaggregated the saved development and calibration/evaluation rows. The
+implementation and machine-readable protocol retain the reviewed hashes above.
+The final `recorded-design.md` SHA256 is
+`2a677e663c2515e32415d3ecbb5a08edae564a07b73b67018c36254dd9b60071`.
+Its introductory paragraph now records implementation, control checks and the
+freeze before production development/calibration/evaluation. Its scientific
+method body is unchanged: reconstructing the initially reviewed introductory
+paragraph followed by the current text from `## Scientific statistic` onward
+reproduces the initial design SHA256
+`594fbd79da2749732a7547505009d5d43c231394e447a7a6885bd93baa9dc308`.
+This status-prose change introduces no feature, estimator, threshold, seed or
+decision change. The final identity is the one bound into both development
+and evaluation receipts.
+
+The independent calculation imported neither implementation module and did
+not rerun the generator. It reconstructed both discriminants from all 4,000
+saved development feature vectors, using independently calculated pooled
+moments, class covariance matrices and a Cholesky solve. All coefficient
+fields agree within 1e-11. All 20,000 saved calibration/evaluation scores
+were reproduced, with maximum absolute difference 1.17e-15. Explicit
+Binomial CDF/SF searches reproduce upper threshold ranks of 1927; numerical
+inversion of Binomial tails reproduces the Clopper-Pearson endpoints. Both
+saved threshold files and every development/evaluation summary leaf agree
+within 1e-11.
+
+All 24,000 recorded-experiment seeds are unique, complete in their declared
+panels, assigned the declared hypotheses and disjoint from all oracle seeds.
+All nine current source hashes match the identical source dictionaries in
+the development summary, frozen coefficient artifact and evaluation summary.
+The coefficient-file SHA256 matches the evaluation receipt; the development
+row SHA256 matches the frozen artifact. There are no capped histories.
+
+| Ensemble | Alternative rejections | Estimated power | Simultaneous power interval | eta=.05 / eta=0 null rejections |
+| --- | --- | --- | --- | --- |
+| marginal_reference | 252/2000 | .126 | [.10924, .14426] | 85/2000 / 56/2000 |
+| historical_size_calibrated | 357/2000 | .1785 | [.15898, .19930] | 92/2000 / 59/2000 |
+
+Both frozen detectors fail the specified power target while their endpoint
+null evaluations meet the specified false-support targets. These intervals
+bound only the power of the fitted fixed detector at its frozen calibrated
+threshold. They do not bound the optimum test on recorded observations and
+do not overturn the complete-data oracle result. No tuning or feature
+revision follows from this audit.
+
+The full receipt is
+[results-recorded-v1/independent-reaggregation.json](results-recorded-v1/independent-reaggregation.json).
+Its checks cover saved-feature fitting/scoring, aggregation, seeds and hash
+receipts. It does not independently replay generation or feature extraction,
+establish empirical validity, or establish biological inheritance. Main Codex
+owns final integration and handoff.

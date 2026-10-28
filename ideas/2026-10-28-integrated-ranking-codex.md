@@ -137,7 +137,7 @@ performed once.
 
 | Card and target | Scientific consequence | Readiness, occupied territory and rival | Cheapest check; route-specific exit |
 | --- | --- | --- | --- |
-| **35 · Q-012 — residual phylogenetic susceptibility** | Determine whether the declared observation design can distinguish residual dependence; biological inheritance remains confounded with clade-tied exposure. | One qualified real-scale posterior is not a power ensemble. P11 is small; finite operating characteristics remain unestablished. Numerical agreement is a separate qualification. | Run the separately authorised complete-data information screen, preserving generator/selection structure and calibration uncertainty. Oracle failure can stop that ensemble under a valid upper bound; success does not resume sampler engineering automatically. |
+| **35 · Q-012 — residual phylogenetic susceptibility** | Determine whether the declared observation design can distinguish residual dependence; biological inheritance remains confounded with clade-tied exposure. | The completed fixed-nuisance oracle clears 0.8 power in both ensembles. The frozen cheap recorded detector has only 0.126/0.1785 evaluated power. This is failure of that detector, not an upper bound for all recorded-data methods. | Review whether a distinct finite recorded-data approach is worth testing before any sampler restart. Do not tune this detector on its evaluation panel or treat oracle success as estimator qualification; the full posterior contract remains open. |
 | **36 · Q-038 + Q-037 — predictable victims and trophic subcontrast** | Test incremental prediction of future recorded outcomes; a biological-victim claim requires more. | Full-fit campaign stopped without qualification. A simpler model does not cure predictor timing, outcome or source eligibility. Trophic/size confounding remains. | Resolve prefix-only inputs and observed-loss baseline before a bounded classifier. Stop a latent-victim claim if detection alone can explain gain. Q-037 remains a distinct trophic hypothesis inside this dossier, not a solved component. |
 | **37 · Q-004 / Q-034 — background rate and island branch** | Change the baseline against which modern losses are compared. | Pseudoextinction, taxonomic units and incomplete island records remain limiting; a convenient rate estimate is not a comparable lineage hazard. | Crosswalk one biological unit and observation process in a dual-record system. Stop pooling incomparable replacement and extinction events; Q-034 is a resource-sharing branch, not a formally enacted merger. |
 | **38 · Q-017 — unseen losses across records** | Determine when two completeness/extinction estimators estimate the same zero class. | Generic bridges are occupied. The finite-window identity is corrected; independent lists alone do not identify heterogeneity. | Complete the exact finite-window likelihood correspondence with a heterogeneity counterexample. Stop broad bridge novelty; retain a genuine estimator result if it survives. |
@@ -153,7 +153,8 @@ performed once.
 | **48 · late inherited-structure branch — maintenance loss versus substrate persistence** | Distinguish delayed collapse from temporary structural support enabling reassembly. | The ordering of decay, structure persistence and reassembly is posed; specific measurable service, prior occupancy and fossil support are unknown. | Identify one structure/service and a prediction that separates the two temporal orderings. Stop standalone development if no independent structural and biological clocks exist; conditional theory may still survive. |
 | **49 · late co-transmission branch — establishment with partners** | Test when carrying a partner expands establishment opportunities compared with reacquisition. | Ubiquitous partner pools are the strongest rival. Co-transmission is not a guarantee of persistence, low cost or innovation. Nearest-prior completeness is unknown. | Match partner abundance, loss/cost and encounter process in a minimal comparison; check its exact prior. Stop novelty if only familiar partner limitation is recovered; retain a specific conditional result if distinct. |
 
-Sources: [Q-012 information-screen rationale](2026-10-28-programme-assessment-response-codex.md#q-012-screen-information-but-correct-the-premise),
+Sources: [completed Q-012 screen](../data/q012-information-screen/README.md),
+[original screen rationale](2026-10-28-programme-assessment-response-codex.md#q-012-screen-information-but-correct-the-premise),
 [Q-038 terminal record](2026-10-23-q038-terminal-review-codex.md),
 [Q-017 correction](register.md#q-017-dark-extinction-across-scales),
 [14 October reconciled boundaries](2026-10-14-phase2-checkpoint-final-check-codex.md),
@@ -179,6 +180,13 @@ and recorded disappearance is an ambiguous extinction outcome. Q-027 wins for
 this allocation by the combination of a named rival and investigated support,
 not because its gate is passed. Q-016 wins under a preference for a narrowly
 specified prospective prediction, conditional on a supported endpoint.
+
+The additional Q-027 target must be an explicitly calibrated shape contrast
+on narrower matched support. Benson's accepted manuscript (PDF page 12)
+declines formal breakpoint/polynomial models because of coarse resolution,
+while using descriptive smooths and upper quantiles. That leaves a possible
+restricted test; it does not establish that the available data can support it.
+Repeating its regional exclusions alone would not earn the slot.
 
 **Q-027 versus B-005.** B-005 has the strongest controlled mechanism design.
 It could show that a diversity-dependence mechanism changes a statistic within
@@ -243,7 +251,9 @@ and read the relevant methods on PDF pages 8–12 of the
 The latter is labelled an accepted manuscript, CC BY, and retains editorial
 comments; it is not the Version of Record. Collection/coverage eligibility
 and regional controls are explicit. This source check does not replay the
-pipeline. The live [Smits–Finnegan abstract](https://pubmed.ncbi.nlm.nih.gov/31679499/)
+pipeline. The later source check also read its discussion on PDF page 28,
+which explicitly challenges the earlier mid-latitude-peak interpretation.
+The live [Smits–Finnegan abstract](https://pubmed.ncbi.nlm.nih.gov/31679499/)
 confirms that geographic-range change already enters their forecasts, so
 Q-016 needs its isolated/calibrated residual. The relevant model description
 and results on [Balembois's publisher page](https://www.nature.com/articles/s41467-025-63428-9)
@@ -394,7 +404,9 @@ every narrower empirical route.
 **Complete:** integrated comparison, explicit mapping, boundary comparisons
 and one finite allocation recommendation. **Provisional:** all ranks, actual
 joint readiness, the Q-027 support/contrast and its proposed compute envelope.
-**Next responder:** parent Codex to check the allocation boundary and coordinate
-Claude's focused challenge; Claude to identify the strongest wrong assumption
-and any candidate that should displace Q-027. The source and software owners
+**Next responder:** Claude for a focused challenge to the Q-027 allocation
+and the completed Q-012 screen in **Correspondence discussion 96** (request
+2460); main Codex owns integration and subsequent
+authorised execution. Identify the strongest wrong assumption and any candidate
+that should displace Q-027. The source and software owners
 continue their accepted work. Barry retains primary-project and release decisions.

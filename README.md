@@ -19,6 +19,8 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [Integrated 49-card comparison and protected development recommendation](ideas/2026-10-28-integrated-ranking-codex.md)
+- [Q-012 information screen: frozen designs, results and independent checks](data/q012-information-screen/README.md)
 - [28 October programme-review response and implementation handover](ideas/2026-10-28-programme-assessment-response-codex.md)
 - [Shared agent instructions](AGENTS.md)
 - [Programme remit and initial roadmap](docs/programme.md)
@@ -29,9 +31,10 @@ when they establish whether a resource or idea is usable.
 - [Data storage and preparation](data/README.md)
 - [Launch record](logs/2026-10-07-foundation.md)
 
-The first tranche contains [50 questions](ideas/register.md), supported by
+The applied register contains [52 questions](ideas/register.md), supported by
 literature checks, source audits and bounded feasibility probes.
-- Its expansion is paused. Phase 2 (from 11 October 2026) categorised,
+- The initial 50-question tranche paused expansion. Barry authorised two
+  count-enabled Fossilworks additions on 28 October. Phase 2 (from 11 October 2026) categorised,
   prioritised and deepened the portfolio; the checkpoint decisions were taken
   on 14 October.
 - A separate [blue-sky register](ideas/register-blue-sky.md) of pure

@@ -1,0 +1,17 @@
+{
+  "threshold": 0.7673605533224982,
+  "calibration": {
+    "calibration_null": {
+      "upper_threshold": 0.7673605533224982,
+      "rank": 1927,
+      "n": 2000,
+      "exact_upper_quantile_coverage": 0.9976822185330317
+    },
+    "calibration_zero": {
+      "upper_threshold": 0.7242268139229135,
+      "rank": 1927,
+      "n": 2000,
+      "exact_upper_quantile_coverage": 0.9976822185330317
+    }
+  }
+}
