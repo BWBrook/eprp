@@ -1,1 +1,1 @@
-*.tsv -text
+*.tsv -text whitespace=cr-at-eol
