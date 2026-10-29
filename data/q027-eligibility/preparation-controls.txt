@@ -1,0 +1,9 @@
+original rows= 21437 metadata= 6304 depth_zero= 12960 depth_one= 8477 mollusca_pass= 14417 
+
+   Albian Campanian 
+     5927      8490 
+dated_public_member rows= 19878 metadata= 5813 depth_zero= 12479 depth_one= 7399 mollusca_pass= 13544 
+
+   Albian Campanian 
+     5587      7957 
+Independent base-R source-semantic controls and aggregate incidence checks: PASS

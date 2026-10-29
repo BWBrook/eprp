@@ -1,0 +1,9 @@
+# Preserve hashed output bytes, including empty final TSV fields and R print padding.
+*.tsv -text whitespace=-blank-at-eol
+environment/api-formals.txt -text -whitespace
+environment/controls.log -text -whitespace
+environment/session-info.txt -text -whitespace
+environment/spatial-libraries.txt -text -whitespace
+preparation-controls.txt -text -whitespace
+results/run.stderr -text -whitespace
+results/session-info.txt -text -whitespace

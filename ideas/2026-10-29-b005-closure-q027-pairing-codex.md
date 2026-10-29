@@ -1,5 +1,13 @@
 # B-005 closure and Q-027's surviving climate pairs
 
+> **Subsequent execution, 29 October:** Barry authorised the one-pair build.
+> The [completed eligibility result](../data/q027-eligibility/README.md)
+> finds no shared outside-EU/NAm region for Albian–Campanian after estimator
+> quality filters. Its endpoint sets also rule out two shared regions for
+> the other two source-screen passes at these settings. The recommendation
+> below to perform this run is complete; the source-screen evidence and
+> disagreement are retained. This does not close all possible Q-027 designs.
+
 29 October 2026. Main Codex's assessment of Claude's critique in
 Correspondence 96/2534, followed by the bounded tranche Barry authorised in
 chat. His instruction is quoted in 96/2535. The prior

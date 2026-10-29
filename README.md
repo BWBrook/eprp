@@ -19,6 +19,7 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [Q-027 estimator result: selected climate pairs lack the required regional support](data/q027-eligibility/README.md)
 - [B-005 closure and Q-027 climate-pairing result: response to Claude's critique](ideas/2026-10-29-b005-closure-q027-pairing-codex.md)
 - [Q-027 climate pairs and one-pair estimator contract](data/q027-climate-pairing/README.md)
 - [B-005 design contract: executable capacity contrast, spatial profile and scientific limits](ideas/2026-10-29-b005-design-contract-codex.md)

@@ -1,0 +1,1 @@
+PASS: strict >10 rows, reference quality, individual cell eligibility, both-stage both-band within-region intersection

@@ -1,0 +1,212 @@
+{
+  "cells": 459,
+  "cheap_pair_results_sha256": "a14c64b481a1e8716c0a72a1ff692453dc43c66dd9e87393b79955f6a252e039",
+  "cheap_screen_primary_pair_endpoint_bounds": [
+    {
+      "cold_stage": "Maastrichtian",
+      "computed_endpoint_regions": {
+        "Albian": [
+          "AF"
+        ]
+      },
+      "excludes_two_shared_regions": true,
+      "hot_stage": "Albian",
+      "shared_region_upper_bound": 1
+    },
+    {
+      "cold_stage": "Campanian",
+      "computed_endpoint_regions": {
+        "Albian": [
+          "AF"
+        ],
+        "Campanian": [
+          "AS"
+        ]
+      },
+      "excludes_two_shared_regions": true,
+      "hot_stage": "Albian",
+      "shared_region_upper_bound": 0
+    },
+    {
+      "cold_stage": "Campanian",
+      "computed_endpoint_regions": {
+        "Campanian": [
+          "AS"
+        ]
+      },
+      "excludes_two_shared_regions": true,
+      "hot_stage": "Barremian",
+      "shared_region_upper_bound": 1
+    }
+  ],
+  "checks": {
+    "cell_logical_flags": 2754,
+    "overlap_values": 156,
+    "regional_numeric_values": 1092
+  },
+  "current_sources_vs_run_freeze": {
+    "environment/legacy_geometry.R": {
+      "current_sha256": "fa4e6e6808bf1c44435cca8ed3af2d6f5e49867ee76196736575e9e079c5db6b",
+      "frozen_sha256": "fa4e6e6808bf1c44435cca8ed3af2d6f5e49867ee76196736575e9e079c5db6b",
+      "matches": true
+    },
+    "prepare.py": {
+      "current_sha256": "a7dc2b4a2629a56ebfa110c06aadccb58278408e9016d7e3de93c773593e85bb",
+      "frozen_sha256": "c9db9dbd381c78ad2b4d349ee40709f49e022b4571da2c871597202ffee61d23",
+      "matches": false
+    },
+    "run.R": {
+      "current_sha256": "9fa398b9e5797e6ca67b26118552aaf4bd69d2ea3bf133c71a6a69a4af0f29de",
+      "frozen_sha256": "9fa398b9e5797e6ca67b26118552aaf4bd69d2ea3bf133c71a6a69a4af0f29de",
+      "matches": true
+    }
+  },
+  "endpoint_both_band_outside_regions": {
+    "dated_public_member:Albian": [
+      "AF"
+    ],
+    "dated_public_member:Campanian": [
+      "AS"
+    ],
+    "original:Albian": [
+      "AF"
+    ],
+    "original:Campanian": [
+      "AS"
+    ]
+  },
+  "endpoint_bound_assumptions": [
+    "Fixed dated-public subset, per-stage eligibility contract, fixed grid and modal-region definition.",
+    "Gate requires at least two identical named outside-EU/NAm/UNKNOWN regions, each supporting both bands in both stages.",
+    "Pairing does not pool cells or alter endpoint eligibility; intersection cardinality is bounded by either endpoint set.",
+    "No conclusion about other unscreened pairs or a different estimator/contract follows."
+  ],
+  "estimator_status_counts": {
+    "dated_public_member:Albian:above_2T": 28,
+    "dated_public_member:Albian:finite_within_cap": 30,
+    "dated_public_member:Albian:not_run_le10_rows": 57,
+    "dated_public_member:Campanian:above_2T": 20,
+    "dated_public_member:Campanian:finite_within_cap": 34,
+    "dated_public_member:Campanian:not_run_le10_rows": 56,
+    "original:Albian:above_2T": 30,
+    "original:Albian:finite_within_cap": 30,
+    "original:Albian:not_run_le10_rows": 59,
+    "original:Campanian:above_2T": 25,
+    "original:Campanian:finite_within_cap": 38,
+    "original:Campanian:not_run_le10_rows": 52
+  },
+  "limitations": [
+    "Does not independently recompute qD, t, or returned SC; the 2T acceptance boundary is independently checked from incidence frequencies.",
+    "Preparation replay provenance compares recorded CSV SHA256 chains; remote incidence CSV bytes were not locally rehashed.",
+    "Does not reconstruct frequency vectors, distinct metadata rows, reference counts or modal regions from raw records.",
+    "Does not independently validate the geometry, historical package equivalence, source cleaning or reconstruction joins.",
+    "Counts are eligibility support, not power, independent regional replication, empirical gradients or biological effects."
+  ],
+  "method": "Independent Python standard-library reconstruction from anonymous frequencies and saved diagnostics; no runner import and no raw records",
+  "numerical_cap_check": {
+    "accepted": 132,
+    "formula": "Q0=(T-1)/T*(Q1^2/(2Q2) if Q2>0 else Q1*(Q1-1)/2); A=T*Q0/(T*Q0+Q1) if Q1>0 else 1; C(2T)=1-(Q1/U)*A^(T+1)",
+    "formula_provenance": "Parent inspected installed iNEXT:::Chat.Sam; verifier independently implements the supplied analytic 2T coverage formula.",
+    "minimum_absolute_coverage_margin": 0.0020554496800199162,
+    "nearest_boundary": {
+      "absolute_margin": 0.0020554496800199162,
+      "cell_id": "18",
+      "coverage_at_2T": 0.8979445503199801,
+      "stage": "Albian",
+      "subset": "dated_public_member",
+      "within_cap": false
+    },
+    "rejected": 103,
+    "vectors": 235
+  },
+  "output_sha256": {
+    "cells.tsv": "200138f039ca25749a835a4dd83595c06967c4a594291741fd7405e61d00a6f7",
+    "region-overlap.tsv": "30126f536b32c6da3d051fcff5b6a7e717eb51b86bdd7578cd916193469126f6",
+    "regional-support.tsv": "8c86eec117e96e6cb97b8d4ee75bbbe778a0194df3dece3edec721c370471357"
+  },
+  "passing_outside_regions": {
+    "dated_public_member": [],
+    "original": []
+  },
+  "preparation_replay_provenance": {
+    "amendment": "Diagnostics, source-member hashing, stronger validation guards and RSS reporting; final replay yields identical incidence CSVs.",
+    "evidence_sha256": {
+      "preparation-replay-receipt.json": "31857c98461f4bf58fc9aaee470cb984876b68013758bdea39d7258c05a7f5c1",
+      "preparation-summary.json": "efcafed11ace3e64d2890ccb3ea094d4651df8899398ffa9036acad1b0dec2b6",
+      "prepare-initial.py": "c9db9dbd381c78ad2b4d349ee40709f49e022b4571da2c871597202ffee61d23",
+      "prepare.py": "a7dc2b4a2629a56ebfa110c06aadccb58278408e9016d7e3de93c773593e85bb"
+    },
+    "final_adapter_sha256": "a7dc2b4a2629a56ebfa110c06aadccb58278408e9016d7e3de93c773593e85bb",
+    "final_replay_csv_hashes_match_run_freeze": {
+      "dated_public_member.csv": {
+        "all_recorded_hashes_match": true,
+        "frozen_initial_and_final_sha256": "95f09242ae294709abf41a4e9cc1f2055b0d74b9b9465e2176d4719d38ef0272"
+      },
+      "original.csv": {
+        "all_recorded_hashes_match": true,
+        "frozen_initial_and_final_sha256": "00e04f7db2d6c12a397b70818339eec3d3b9ff7fbafab8028026b81021a954af"
+      }
+    },
+    "initial_adapter_matches_run_freeze": true,
+    "initial_adapter_sha256": "c9db9dbd381c78ad2b4d349ee40709f49e022b4571da2c871597202ffee61d23",
+    "replay_inputs_match_final_summary": true,
+    "status": "pass",
+    "verification_scope": "Local source-file hashes and independent comparison of recorded CSV hash chains; raw CSVs remain remote and were not opened or rehashed by this verifier."
+  },
+  "provenance_reconciled_at": "2026-10-29T16:30:03.583510+11:00",
+  "region_overlap_rows": 26,
+  "regional_support_rows": 156,
+  "run_input_freeze_sha256": "42dab403ca57b34bb93c6f2e575a03f55bd189a9120b4ba30588296956c706c8",
+  "source_sha256": {
+    "/home/bwbrook/git/eprp/data/q027-eligibility/environment/controls.R": "0356be734bd7790e04977f0a7a12500e39c63af93abb34d76366e208f70b4196",
+    "/home/bwbrook/git/eprp/data/q027-eligibility/environment/legacy_geometry.R": "fa4e6e6808bf1c44435cca8ed3af2d6f5e49867ee76196736575e9e079c5db6b",
+    "/home/bwbrook/git/eprp/data/q027-eligibility/preparation-replay-receipt.json": "31857c98461f4bf58fc9aaee470cb984876b68013758bdea39d7258c05a7f5c1",
+    "/home/bwbrook/git/eprp/data/q027-eligibility/preparation-summary.json": "efcafed11ace3e64d2890ccb3ea094d4651df8899398ffa9036acad1b0dec2b6",
+    "/home/bwbrook/git/eprp/data/q027-eligibility/prepare-initial.py": "c9db9dbd381c78ad2b4d349ee40709f49e022b4571da2c871597202ffee61d23",
+    "/home/bwbrook/git/eprp/data/q027-eligibility/prepare.py": "a7dc2b4a2629a56ebfa110c06aadccb58278408e9016d7e3de93c773593e85bb",
+    "/home/bwbrook/git/eprp/data/q027-eligibility/run.R": "9fa398b9e5797e6ca67b26118552aaf4bd69d2ea3bf133c71a6a69a4af0f29de",
+    "/home/bwbrook/git/eprp/scratch/q027-independent-audit/source/functions/run_SQS_iNEXT_simple.R": "fe23cece5d6597e4a996cce158d3ad9cfa9c8d5a236d038076f50516ee49c1ec",
+    "/home/bwbrook/git/eprp/scratch/q027-independent-audit/source/subscripts/rscript-run-grid-cell-subsampling-analysis-100km-dggridR-cells.R": "e137ab6a9472101a5027bcb179960ab51b19365dee73bfc511de990a6251e3f7"
+  },
+  "status": "pass",
+  "totals": {
+    "dated_public_member:Albian": {
+      "cells_after_quality": 34,
+      "cells_eligible": 25,
+      "cells_gt10_mollusca": 58,
+      "cells_with_mollusca": 104,
+      "cells_with_pool": 115,
+      "quality_passing_above_2T": 9,
+      "quality_passing_estimator_error": 0
+    },
+    "dated_public_member:Campanian": {
+      "cells_after_quality": 26,
+      "cells_eligible": 20,
+      "cells_gt10_mollusca": 54,
+      "cells_with_mollusca": 89,
+      "cells_with_pool": 110,
+      "quality_passing_above_2T": 6,
+      "quality_passing_estimator_error": 0
+    },
+    "original:Albian": {
+      "cells_after_quality": 33,
+      "cells_eligible": 24,
+      "cells_gt10_mollusca": 60,
+      "cells_with_mollusca": 107,
+      "cells_with_pool": 119,
+      "quality_passing_above_2T": 9,
+      "quality_passing_estimator_error": 0
+    },
+    "original:Campanian": {
+      "cells_after_quality": 31,
+      "cells_eligible": 23,
+      "cells_gt10_mollusca": 63,
+      "cells_with_mollusca": 92,
+      "cells_with_pool": 115,
+      "quality_passing_above_2T": 8,
+      "quality_passing_estimator_error": 0
+    }
+  },
+  "verified_at": "2026-10-29T16:28:19.075394+11:00",
+  "verifier_sha256": "cf4cb2f890e81479e913fa2c67b34667bfcdd14e6506810868e65d42904ceb7e"
+}

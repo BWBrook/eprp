@@ -2,7 +2,32 @@
 
 Updated: 29 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: exercised B-005 route closed as support; Q-027 climate pairing passes.**
+**Current focus: Q-027's selected regional contrast fails estimator eligibility.**
+Barry authorised the Albian–Campanian build/run in main chat on 29 October
+(exact instruction in 76/2545). The
+[completed eligibility run](data/q027-eligibility/README.md) finds **zero shared
+outside-EU/NAm regions**, against the required minimum of two. Dated-public
+Africa supplies eligible tropical/midlatitude cells only in Albian (2/1);
+Asia only in Campanian (1/2). South America lacks the complete contrast.
+The original author deposit also has zero shared regions.
+
+Albian has only AF and Campanian only AS with both bands under this contract.
+These endpoint sets also bound Albian–Maastrichtian and Barremian–Campanian
+to at most one shared region, closing all three earlier source-screen passes
+at these settings without running the other two stages. This is not general
+untestability: the approximate source screen was not an upper bound, and
+unscreened pairs remain unresolved. No gradient fit or automatic expansion
+of the stage scan follows. Main Codex recommends returning this negative
+result to the portfolio comparison; primary-project selection remains Barry's.
+
+The isolated environment is pinned; geometry and estimator adaptations are
+explicit. Independent checks reproduce all 459 cell flags, 156 regional rows,
+26 overlap rows and the analytic 2T decision for all 235 evaluated vectors.
+There were no estimator errors. The dated-public pool retains 45 eligible
+cells overall, but their geography does not supply the required comparison.
+Exact historical package equivalence remains unestablished.
+
+**B-005 closure and preceding source screen, retained as context.**
 Barry authorised assessment of Claude's 96/2534 critique and the next bounded
 tranche (exact instruction in 96/2535). The
 [response and completed tranche](ideas/2026-10-29-b005-closure-q027-pairing-codex.md)
@@ -14,7 +39,7 @@ observer's feasibility; it does not establish fossil-record discrimination.
 Retain [the B-005 evidence](data/b005-design/README.md) as reusable support;
 no further ensemble or biological tranche follows from this exercise.
 
-The [Q-027 climate pairing](data/q027-climate-pairing/README.md) passes three
+The earlier [Q-027 climate pairing](data/q027-climate-pairing/README.md) passed three
 of 45 author-defined broad Hot–Cold pairs under dated public membership:
 Albian–Campanian (AF, AS, SA), Albian–Maastrichtian (AS, SA) and
 Barremian–Campanian (AF, SA). The separate narrow Hothouse–Icehouse scenario
@@ -25,16 +50,16 @@ result rows were independently recomputed from the aggregate support table.
 The source screen is not an upper bound on estimator support; a failed screen
 would not establish general untestability.
 
-**Next implementation:** main Codex's Albian–Campanian, Mollusca, 1000-km,
-coverage-0.9 estimator-specific eligibility build. The
-[execution contract](data/q027-climate-pairing/estimator-contract.md) now pins
-the exact cleaning, age/map, cell-region and quality rules. No estimator was
-run in this tranche. The checked image lacks dggridR and the deposit contains
-inconsistent package generations; pin a declared isolated environment and
-verify geometry/estimator behaviour before interpreting source-data support.
-This does not require a full climate-analysis pipeline.
+The Albian–Campanian, Mollusca, requested-1000-km, coverage-0.9 implementation
+is now complete. The [execution contract](data/q027-climate-pairing/estimator-contract.md)
+and [environment record](data/q027-eligibility/environment/README.md) specify
+cleaning, stage/map reconstruction, cell regions and quality rules. Preparation
+took about 101 seconds and 6.62 GiB peak RSS on deep; the estimator/grid run
+took 7.68 seconds. Private incidence rows remain on deep; tracked results
+contain aggregate diagnostics and anonymous cell frequency vectors.
 
-Main Codex owns `data/b005-design/`, `data/q027-climate-pairing/`, response and
+Main Codex owns `data/b005-design/`, `data/q027-climate-pairing/`,
+`data/q027-eligibility/`, response and
 STATUS/README integration. Packages, References and Databases retain their
 existing source/benchmark/library ownership; prior bounded contributions are
 complete. Claude's critique is answered, with the disagreement preserved.
@@ -54,7 +79,8 @@ replayed independently. No proposed optimal-LR pilot or sampler restart follows.
 Q-027's earlier aggregates could not supply molluscan regional replication;
 the old two-collection sensitivity also includes unknown countries. That
 response recommended B-005's bounded design and a finite Q-027 support export;
-both are now complete as above. Estimator feasibility remains unmeasured.
+both are now complete as above. The selected estimator contrast now fails
+the regional eligibility gate.
 The primary-project decision remains Barry's; registers and frozen results
 are unchanged. Claude's subsequent B-005/Q-027 critique is now assessed and
 answered by the new response above.
@@ -106,8 +132,8 @@ now supersedes the earlier 44-entry comparison for this allocation discussion.
 **Bounded work completed and next decision.** B-005's whole-capacity contrast
 and idealised observer are now reusable support, with analytic feasibility
 certified. Q-027's source-owner aggregate and main climate-pairing tranche are
-complete. The next useful bounded implementation is the named single-pair
-eligibility build above; a biological gradient fit is not yet justified.
+complete. The named single-pair eligibility build is also complete and fails
+the required regional support; a biological gradient fit is not justified.
 Published deposits remain retained and flagged under Barry's standing
 decision. Public membership is explicit in the support table; the direct-extract
 hold is not extended to all author deposits. This remains bounded design/support
@@ -174,8 +200,9 @@ SahulArch protections, provider disclosure and public release remain unresolved
 unless their owning source records explicitly close them. No identifiers were
 inspected for this review. Source-use holds and negative results are preserved.
 
-**Next responder:** main Codex for the bounded Albian–Campanian eligibility
-implementation, with source/benchmark owners retained. Specialist contributions
+**Next responder:** main Codex for portfolio synthesis using the completed
+negative Q-027 eligibility result, with source/benchmark owners retained. No
+further automatic scan or Q-012 restart is commissioned. Specialist contributions
 and Claude's critique response are complete. The historical handoffs below
 are superseded as current state; a separate history archive and shorter STATUS
 are recommended in the response and have not been performed in this tranche.

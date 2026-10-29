@@ -1,0 +1,30 @@
+Resolution: 4, Area (km^2): 629710.644103813, Spacing (km): 783.739159045648, CLS (km): 895.60184164835
+Warning message:
+`fortify(<SpatialPolygons>)` was deprecated in ggplot2 3.4.4.
+ℹ Please migrate to sf. 
+PASS: package pins; deterministic mapping and antimeridian; wrapped polygon schema;
+coverage point estimates unchanged by bootstrap/conf; 2T eligibility; conf=NULL failure.
+  Assemblage                   t        Method Order.q                 SC
+1       site   6.765734226096161   Rarefaction       0 0.9000003023681449
+2       site  27.341953362938533 Extrapolation       0 0.9000000000000000
+3       site  49.172124286215990 Extrapolation       0 0.9000000000000000
+4       site 435.766841707719038 Extrapolation       0 0.9000000000000000
+5       site  19.999926319706159   Rarefaction       0 1.0000000000000000
+                   qD              qD.LCL              qD.UCL
+1   6.417714974625561   6.417714974625561   6.417714974625561
+2   9.274999999999997   9.274999999999997   9.274999999999997
+3  16.490000000000002  16.490000000000002  16.490000000000002
+4 182.350000000000847 182.350000000000847 182.350000000000847
+5   3.000000000000000   3.000000000000000   3.000000000000000
+                         case  T           SC_at_2T eligible_2T
+1                 rarefaction 20 0.9976030981285132        TRUE
+2    extrapolation_inside_cap 20 0.9353723355780326        TRUE
+3 insufficient_coverage_at_2T 20 0.8789428170349681       FALSE
+4              all_singletons 20 0.1095447182901726       FALSE
+5               no_singletons 20 1.0000000000000000        TRUE
+        accepted_qD
+1 6.417714974625561
+2 9.274999999999997
+3                NA
+4                NA
+5 3.000000000000000

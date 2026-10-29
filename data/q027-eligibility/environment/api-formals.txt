@@ -1,0 +1,89 @@
+$dgconstruct
+$dgconstruct$projection
+[1] "ISEA"
+
+$dgconstruct$aperture
+[1] 3
+
+$dgconstruct$topology
+[1] "HEXAGON"
+
+$dgconstruct$res
+[1] NA
+
+$dgconstruct$precision
+[1] 7
+
+$dgconstruct$area
+[1] NA
+
+$dgconstruct$spacing
+[1] NA
+
+$dgconstruct$cls
+[1] NA
+
+$dgconstruct$resround
+[1] "nearest"
+
+$dgconstruct$metric
+[1] TRUE
+
+$dgconstruct$show_info
+[1] TRUE
+
+$dgconstruct$azimuth_deg
+[1] 0
+
+$dgconstruct$pole_lat_deg
+[1] 58.28252559
+
+$dgconstruct$pole_lon_deg
+[1] 11.25
+
+
+$dgGEO_to_SEQNUM
+$dgGEO_to_SEQNUM$dggs
+
+
+$dgGEO_to_SEQNUM$in_lon_deg
+
+
+$dgGEO_to_SEQNUM$in_lat_deg
+
+
+
+$dgcellstogrid
+$dgcellstogrid$dggs
+
+
+$dgcellstogrid$cells
+
+
+$dgcellstogrid$savegrid
+[1] NA
+
+
+$estimateD
+$estimateD$x
+
+
+$estimateD$q
+c(0, 1, 2)
+
+$estimateD$datatype
+[1] "abundance"
+
+$estimateD$base
+[1] "size"
+
+$estimateD$level
+NULL
+
+$estimateD$nboot
+[1] 50
+
+$estimateD$conf
+[1] 0.95
+
+

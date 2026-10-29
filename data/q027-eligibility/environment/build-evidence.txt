@@ -1,0 +1,39 @@
+2b793e16c3840364983e046729e9bbc9b37774ccba0998e897c1184406d2ca94  build-attempt1-cxx20.log
+3cc57456ae56bcfa7de76af05359abbcd43f1433fcb91fb379a1fecf0addf543  build.log
+[0m[91mmake: *** [/usr/local/lib/R/etc/Makeconf:199: DgBoundedHexC2RF2D.o] Error 1
+make: *** Waiting for unfinished jobs....
+[0m[91mIn file included from DgBoundedRF2D.h:34,
+                 from DgBoundedHexC3RF2D.h:33,
+                 from DgBoundedHexC3C2RF2D.h:33,
+                 from DgBoundedHexC3C2RF2D.cpp:32:
+DgBoundedRF.h:44:30: error: expected unqualified-id before ‘const’
+   44 |       DgBoundedRF<A, B, DB> (const DgDiscRF<A, B, DB>& rfIn,
+      |                              ^~~~~
+DgBoundedRF.h:44:30: error: expected ‘)’ before ‘const’
+   44 |       DgBoundedRF<A, B, DB> (const DgDiscRF<A, B, DB>& rfIn,
+      |                             ~^~~~~
+      |                              )
+[0m[91mIn file included from DgBoundedRF.h:163:
+DgBoundedRF_hpp.h:29:1: error: no declaration matches ‘DgBoundedRF<A, B, DB>::DgBoundedRF(const DgDiscRF<A, B, DB>&, const A&, const A&, const A&, bool)’
+   29 | DgBoundedRF<A, B, DB>::DgBoundedRF (const DgDiscRF<A, B, DB>& rfIn,
+      | ^~~~~~~~~~~~~~~~~~~~~
+DgBoundedRF_hpp.h:29:1: note: no functions named ‘DgBoundedRF<A, B, DB>::DgBoundedRF(const DgDiscRF<A, B, DB>&, const A&, const A&, const A&, bool)’
+DgBoundedRF.h:39:44: note: ‘class DgBoundedRF<A, B, DB>’ defined here
+   39 | template<class A, class B, class DB> class DgBoundedRF
+      |                                            ^~~~~~~~~~~
+[0m[91mmake: *** [/usr/local/lib/R/etc/Makeconf:199: DgBoundedHexC3C2RF2D.o] Error 1
+[0m[91mERROR: compilation failed for package ‘dggridR’
+[0m[91m* removing ‘/usr/local/lib/R/site-library/dggridR’
+[0mThe command '/bin/sh -c echo '73f03473e61e89f3c0c1a96ac6e17e81a075637963d1d6b156dc9c969b2dbc93  /tmp/q027-source/sp_2.2-4.tar.gz' | sha256sum -c -  && echo '4aa6e58b31209a4578626661bc7583bfad2f1a96fd8ce804d0d6701f10a325a4  /tmp/q027-source/dggridR_3.0.0.tar.gz' | sha256sum -c -  && R CMD INSTALL /tmp/q027-source/sp_2.2-4.tar.gz  && R CMD INSTALL /tmp/q027-source/dggridR_3.0.0.tar.gz  && rm -rf /tmp/q027-source' returned a non-zero code: 1
+[0m[91m*** installing help indices
+[0m[91m** building package indices
+[0m[91m** installing vignettes
+[0m[91m** testing if installed package can be loaded from temporary location
+[0m[91m** checking absolute paths in shared objects and dynamic libraries
+[0m[91m** testing if installed package can be loaded from final location
+[0m[91m** testing if installed package keeps a record of temporary installation path
+[0m[91m* DONE (dggridR)
+[0m ---> Removed intermediate container fbd37320a16e
+ ---> b7d5a9f9b91b
+Successfully built b7d5a9f9b91b
+Successfully tagged eprp-q027-eligibility:20261029

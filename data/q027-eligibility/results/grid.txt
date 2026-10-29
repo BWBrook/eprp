@@ -1,0 +1,9 @@
+List of 8
+ $ pole_lon_deg: num 11.2
+ $ pole_lat_deg: num 58.3
+ $ azimuth_deg : num 0
+ $ aperture    : num 3
+ $ res         : int 4
+ $ topology    : chr "HEXAGON"
+ $ projection  : chr "ISEA"
+ $ precision   : num 7
