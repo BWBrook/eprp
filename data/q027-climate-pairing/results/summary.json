@@ -1,0 +1,56 @@
+{
+  "plan_sha256": "2c260e83de596acad4f59d7c562bf71bb5eafe119b875e746b6619c17fcdce84",
+  "script_sha256": "983bbdb3d845c538fa62f99e854a09b8fc84da243b5d73ec70e28a61d850b78a",
+  "overlap_sha256": "fd4af48211df496480bd03c068d1c8c3c2782a079d68e418cc316e6672f91cec",
+  "rows": 206,
+  "pass_counts": {
+    "literal_hot_cold:dated_public_member": 3,
+    "literal_hot_cold:original": 7,
+    "label_implied_sensitivity:dated_public_member": 3,
+    "label_implied_sensitivity:original": 9,
+    "source_extreme_class:dated_public_member": 0,
+    "source_extreme_class:original": 2
+  },
+  "passing_primary_pairs": [
+    {
+      "scenario": "literal_hot_cold",
+      "period": "Cretaceous",
+      "hot_stage": "Albian",
+      "cold_stage": "Maastrichtian",
+      "subset": "dated_public_member",
+      "hot_regions": "AF,AS,SA",
+      "cold_regions": "AOC,AS,SA",
+      "shared_regions": "AS,SA",
+      "n_shared_regions": 2,
+      "passes": 1
+    },
+    {
+      "scenario": "literal_hot_cold",
+      "period": "Cretaceous",
+      "hot_stage": "Albian",
+      "cold_stage": "Campanian",
+      "subset": "dated_public_member",
+      "hot_regions": "AF,AS,SA",
+      "cold_regions": "AF,AS,SA",
+      "shared_regions": "AF,AS,SA",
+      "n_shared_regions": 3,
+      "passes": 1
+    },
+    {
+      "scenario": "literal_hot_cold",
+      "period": "Cretaceous",
+      "hot_stage": "Barremian",
+      "cold_stage": "Campanian",
+      "subset": "dated_public_member",
+      "hot_regions": "AF,SA",
+      "cold_regions": "AF,AS,SA",
+      "shared_regions": "AF,SA",
+      "n_shared_regions": 2,
+      "passes": 1
+    }
+  ],
+  "output_sha256": {
+    "stage-regions.tsv": "2baf3f3755770e663b4b764a666abb06e570d14fa937a24a3588d34b4667c157",
+    "pair-results.tsv": "a14c64b481a1e8716c0a72a1ff692453dc43c66dd9e87393b79955f6a252e039"
+  }
+}

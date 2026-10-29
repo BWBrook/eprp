@@ -1,0 +1,36 @@
+{
+  "primary": "literal_hot_cold",
+  "secondary": [
+    "label_implied_sensitivity",
+    "source_extreme_class"
+  ],
+  "pair_rule": "All opposite-class stage pairs within the same geological period; no cross-period pairs",
+  "support_rule": "At least two shared source regions each with >=1 qualifying tropical and midlatitude cell in both stages",
+  "bands": [
+    "0-20",
+    "20-40"
+  ],
+  "excluded_regions": [
+    "EU",
+    "NAm",
+    "UNKNOWN"
+  ],
+  "primary_subset": "dated_public_member",
+  "sensitivity_subset": "original",
+  "focal_pair": [
+    "Albian",
+    "Campanian"
+  ],
+  "focal_pair_basis": "Named before joined evaluation from prior known overlap and verified opposite author classes; not a blind selection",
+  "failure_scope": "Failure is confined to this conservative presence screen, not an upper bound on estimator support",
+  "pass_scope": "A pass permits checking estimator-specific eligibility; it does not establish power, independence or novelty",
+  "source_sha256": {
+    "scratch/q027-independent-audit/source/subscripts/define-time-ints.R": "57d45a486d945029c21415ca679b94e3ce0d8b9cc91d2e8b74f62c5d9ba95958",
+    "data/raw/benson2025/pbdb_time_int.csv": "023c31855b30247b324a2fb2c2edeb493eef84f898c082c359d647da3c3f9765",
+    "data/q027-regional-support/summary.json": "dbaf2761d779b6d14f63a89d8aa7041f77c960db888b23061bd71db24ed75b5f"
+  },
+  "declaration_sha256": {
+    "source-classes.tsv": "0355db594c18d7bd228dd694f90130b020b09240fd0b33b46d5067a3496228e8",
+    "candidate-pairs.tsv": "c33be34bc46cd7dd1eb67664f43a2451fed050d6ca7274d7b346c6399b3a0d1e"
+  }
+}

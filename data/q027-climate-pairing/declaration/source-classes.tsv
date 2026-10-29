@@ -1,0 +1,22 @@
+stage	period	base_ma	top_ma	literal_regime_label	literal_hot_cold	label_implied_sensitivity	source_extreme_class
+Chattian	Paleogene	28.1	23.03	Priabonian to Holocene (Cold)	Cold	Cold	Ignore
+Rupelian	Paleogene	33.9	28.1	Priabonian to Holocene (Cold)	Cold	Cold	Icehouse
+Priabonian	Paleogene	38.0	33.9	Priabonian to Holocene (Cold)	Cold	Cold	Ignore
+Bartonian	Paleogene	41.3	38.0	Thanetian to Bartonian (Hot)	Hot	Hot	Ignore
+Lutetian	Paleogene	47.8	41.3	Thanetian to Bartonian (Hot)	Hot	Hot	Hothouse
+Ypresian	Paleogene	56.0	47.8	NA	NA	Hot	Hothouse
+Thanetian	Paleogene	59.2	56.0	NA	NA	Hot	Hothouse
+Selandian	Paleogene	61.6	59.2	Campanian to Selandian (Cold)	Cold	Cold	Ignore
+Danian	Paleogene	66.0	61.6	Campanian to Selandian (Cold)	Cold	Cold	Ignore
+Maastrichtian	Cretaceous	72.1	66.0	Campanian to Selandian (Cold)	Cold	Cold	Ignore
+Campanian	Cretaceous	83.6	72.1	Campanian to Selandian (Cold)	Cold	Cold	Ignore
+Santonian	Cretaceous	86.3	83.6	Barremian to Santonian (Hot)	Hot	Hot	Hothouse
+Coniacian	Cretaceous	89.8	86.3	Barremian to Santonian (Hot)	Hot	Hot	Hothouse
+Turonian	Cretaceous	93.9	89.8	Barremian to Santonian (Hot)	Hot	Hot	Hothouse
+Cenomanian	Cretaceous	100.5	93.9	Barremian to Santonian (Hot)	Hot	Hot	Hothouse
+Albian	Cretaceous	113.0	100.5	Barremian to Santonian (Hot)	Hot	Hot	Hothouse
+Aptian	Cretaceous	125.0	113.0	Barremian to Santonian (Hot)	Hot	Hot	Ignore
+Barremian	Cretaceous	129.4	125.0	Barremian to Santonian (Hot)	Hot	Hot	Ignore
+Hauterivian	Cretaceous	132.9	129.4	Aalenian to Hauterivian (Cold)	Cold	Cold	Ignore
+Valanginian	Cretaceous	139.8	132.9	Aalenian to Hauterivian (Cold)	Cold	Cold	Ignore
+Berriasian	Cretaceous	145.0	139.8	Aalenian to Hauterivian (Cold)	Cold	Cold	Ignore

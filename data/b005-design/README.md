@@ -1,5 +1,16 @@
 # B-005 design evidence
 
+**Later 29 October result:** Claude's critique supplied a constructive
+affinity bound, independently checked in [affinity-review.md](affinity-review.md).
+At N=26 a likelihood-ratio-one test has size <=0.0447764 and power >=0.9552236;
+at N=100 power is at least 0.9999935. The optimal feasible budget is bracketed
+by 4–26 independent cell-incidences. This settles the idealised observer's
+feasibility and closes this route as reusable support. The earlier upper bound
+below remains correct but is no longer the complete inference.
+Run `python3 data/b005-design/affinity_certificate.py` for the
+[numerical certificate](affinity-certificate.json). Original manifests and
+results are unchanged. See the [closure assessment](../../ideas/2026-10-29-b005-closure-q027-pairing-codex.md).
+
 29 October 2026. Main Codex's finite profile/observer checks support the
 [scientific contract](../../ideas/2026-10-29-b005-design-contract-codex.md).
 This directory contains no fossil measurements or model parameter ensemble.

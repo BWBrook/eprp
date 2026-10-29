@@ -1,0 +1,92 @@
+{
+  "archive": "/data/paleodata/register-deposits/close2025-marine-latitudinal-diversity-code/raw/15269137/marine-lbg-ms-code-submission-2025-04-22 2.zip",
+  "archive_sha256_manifest": "45f89554de79a34b5f2de70c60fc71a3dbd126d1b7072c559be9b8ea6a815bdf",
+  "mirror_manifest_sha256": "dbe500eb70f5b4b2cadf6ca5f72ebbe144284062d1399468dee010a113c53997",
+  "members": [
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/functions/multitonRatio.R",
+      "bytes": 112,
+      "sha256": "e7c034e99c7da35c353cd2059e7f9dcff66cad01549da841e519181972f7f892"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/renv.lock",
+      "bytes": 88409,
+      "sha256": "e37fe74a58fedf974c2297ef2af028fb049d01b0a649f5f8435b339f352e80ef"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/subscripts/compute-clade-specific-env-vars.R",
+      "bytes": 2864,
+      "sha256": "1477ba21d228756dce5e76562769613b59b14aad56e51ccc67980c29413f0dae"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/subscripts/load-offline-paleocoord-reconstructions.R",
+      "bytes": 2518,
+      "sha256": "bb6fce58da5053a9039a922250ce49f2f18dad50eca137b2603b0d397b854d47"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/subscripts/load-packages.R",
+      "bytes": 6573,
+      "sha256": "7160de67cc5be52a3c44a53984c6fa18d5e179be5daf12efc556dec9fa0aee43"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/subscripts/plotting-preamble.R",
+      "bytes": 2272,
+      "sha256": "fa71cff125310c071e98c0671f6d1b0ac04a66c884278a29d951f97dcaa31ec2"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/subscripts/load-scotese-paleodems.R",
+      "bytes": 5247,
+      "sha256": "520829998c692f6a49c7c6140ce56c6904a172ff230c5aa6569e602f386b18bb"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/subscripts/assign-occurrences-using-bin-schemes.R",
+      "bytes": 3556,
+      "sha256": "d7524cc2b91700b1beb1b136eb8fcbfb6c03a3f4d2610e2e766e8b0caf16a13f"
+    }
+  ],
+  "package_descriptions": [
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/renv/library/R-4.1/x86_64-pc-linux-gnu/dggridR/DESCRIPTION",
+      "output": "package-descriptions/R-4.1/x86_64-pc-linux-gnu/dggridR/DESCRIPTION",
+      "bytes": 1752,
+      "sha256": "4037d2bc6e6522a3ac1fbbb425c6951373941bbde3f1dc28500e78e8a11d353f"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/renv/library/R-4.1/x86_64-pc-linux-gnu/iNEXT/DESCRIPTION",
+      "output": "package-descriptions/R-4.1/x86_64-pc-linux-gnu/iNEXT/DESCRIPTION",
+      "bytes": 1020,
+      "sha256": "dedd94aedf2824b0ba7346e04188ac5c9c32fa47687a184eb88c53196f9c6d76"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/renv/library/R-4.3/x86_64-pc-linux-gnu/dggridR/DESCRIPTION",
+      "output": "package-descriptions/R-4.3/x86_64-pc-linux-gnu/dggridR/DESCRIPTION",
+      "bytes": 1941,
+      "sha256": "557a34e35d4c9ac77bf27878677d1fe35d42657bc4e1bb2081cf2daaa1df16e7"
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/renv/library/R-4.3/x86_64-pc-linux-gnu/iNEXT/DESCRIPTION",
+      "output": "package-descriptions/R-4.3/x86_64-pc-linux-gnu/iNEXT/DESCRIPTION",
+      "bytes": 1213,
+      "sha256": "eec4db0b957cfc0ad2630731feb7d1afda475def91ce42e5e3c35d7a76231365"
+    }
+  ],
+  "input_member_existence_only": [
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/input/PaleoDEMS netcdf/stages_scotese_lookup_table.csv",
+      "present": true
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/input/PaleoDEMS netcdf/PaleoAtlasTimeIntervalsv22b copy.csv",
+      "present": true
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/input/marine_inverts/PBDB_CSV_data_downloads/2022-05-23-14-15-24/offline_gplates_reconstructions.csv",
+      "present": true
+    },
+    {
+      "member": "marine-lbg-ms-code-submission-2025-04-22 2/input/exclude-terms/terrestrial_and_freshwater_taxa.R",
+      "present": true
+    }
+  ],
+  "probe_image": "eprp-sw/bench-r4:t4"
+}

@@ -19,6 +19,8 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [B-005 closure and Q-027 climate-pairing result: response to Claude's critique](ideas/2026-10-29-b005-closure-q027-pairing-codex.md)
+- [Q-027 climate pairs and one-pair estimator contract](data/q027-climate-pairing/README.md)
 - [B-005 design contract: executable capacity contrast, spatial profile and scientific limits](ideas/2026-10-29-b005-design-contract-codex.md)
 - [Q-027 regional support: dated public membership and region–latitude overlap](data/q027-regional-support/README.md)
 - [29 October critique response: likelihood applicability, regional support and revised allocation](ideas/2026-10-29-focused-critique-response-codex.md)

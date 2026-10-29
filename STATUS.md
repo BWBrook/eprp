@@ -2,40 +2,44 @@
 
 Updated: 29 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: B-005 design and Q-027 regional support complete; Claude critique next.**
-Barry authorised the bounded task and specialist orchestration on 29 October
-(exact instruction in Correspondence 76/2508). The
-[B-005 contract](ideas/2026-10-29-b005-design-contract-codex.md) adopts native
-INDITEK-2 `proof` versus `expo`: removal of the whole finite-capacity mechanism,
-including hard caps. Two fixed-parameter full-history calls completed in
-27.488 seconds on one `deep` CPU. Both have the same 2,978 present-day supported
-shelf cells. The area-weighted profile distance is H²=0.1126044, independently
-reaggregated from the raw maps. Thus the intervention changes spatial shape,
-not only scale. The idealised fixed-N incidence observer is not a fossil
-sampling model; its power ceiling at N=100 is 1.0 and inconclusive. Attained
-power remains unevaluated. Sixteen small observer fixtures pass independent
-enumeration. [Evidence and replay](data/b005-design/README.md).
+**Current focus: exercised B-005 route closed as support; Q-027 climate pairing passes.**
+Barry authorised assessment of Claude's 96/2534 critique and the next bounded
+tranche (exact instruction in 96/2535). The
+[response and completed tranche](ideas/2026-10-29-b005-closure-q027-pairing-codex.md)
+accept Claude's constructive B-005 bound: the likelihood-ratio-one rule has
+size <=0.0447764 and power >=0.9552236 at N=26, and power >=0.9999935 at N=100.
+The unknown minimum feasible budget lies in **4–26 independent incidences**.
+The earlier upper bound was correct but incomplete. This settles the idealised
+observer's feasibility; it does not establish fossil-record discrimination.
+Retain [the B-005 evidence](data/b005-design/README.md) as reusable support;
+no further ensemble or biological tranche follows from this exercise.
 
-References finds the broad spatial-mechanism comparison occupied; the residual
-has limited standalone payoff without a justified observation domain. Main
-Codex recommends a focused scientific critique before allocating further
-development, not a parameter ensemble or primary-project promotion.
-The [Q-027 table](data/q027-regional-support/README.md) is also complete:
-under dated public membership, 12 of 21 stages have three outside-EU/NAm
-regions with qualifying tropical cells, but only Albian has three regions
-each spanning all three latitude bands. Estimator-specific and warm/cool
-comparison feasibility remain unmeasured. Independent raw-source calculation
-reproduces all 1,638 support and 546 overlap rows.
+The [Q-027 climate pairing](data/q027-climate-pairing/README.md) passes three
+of 45 author-defined broad Hot–Cold pairs under dated public membership:
+Albian–Campanian (AF, AS, SA), Albian–Maastrichtian (AS, SA) and
+Barremian–Campanian (AF, SA). The separate narrow Hothouse–Icehouse scenario
+has no public-subset pass. A source label/code discrepancy leaves Thanetian
+and Ypresian NA in the literal broad definition; the explicit label-implied
+sensitivity does not change the three public passes. All 206 scenario/subset
+result rows were independently recomputed from the aggregate support table.
+The source screen is not an upper bound on estimator support; a failed screen
+would not establish general untestability.
 
-Main Codex owns the scientific contract, `data/b005-design/`, STATUS/README
-and execution. Accepted specialist contributions are complete (76/2520,
-2525–2526): Packages retains `resources/software/`; References retains its
-library and prior-check note; Databases retains sources and
-`data/q027-regional-support/`. Existing ownership remains intact.
-Claude is asked for scientific judgement on the next bounded tranche in
-**Correspondence 96/2531**; Barry's wake is requested.
-No production ensemble or Q-012 restart is allocated; primary-project selection
-remains Barry's.
+**Next implementation:** main Codex's Albian–Campanian, Mollusca, 1000-km,
+coverage-0.9 estimator-specific eligibility build. The
+[execution contract](data/q027-climate-pairing/estimator-contract.md) now pins
+the exact cleaning, age/map, cell-region and quality rules. No estimator was
+run in this tranche. The checked image lacks dggridR and the deposit contains
+inconsistent package generations; pin a declared isolated environment and
+verify geometry/estimator behaviour before interpreting source-data support.
+This does not require a full climate-analysis pipeline.
+
+Main Codex owns `data/b005-design/`, `data/q027-climate-pairing/`, response and
+STATUS/README integration. Packages, References and Databases retain their
+existing source/benchmark/library ownership; prior bounded contributions are
+complete. Claude's critique is answered, with the disagreement preserved.
+No further wake is needed for this checkpoint. Q-012 does not resume
+automatically; primary-project selection remains Barry's.
 
 **Compute notice:** `deep` updates/reboots on 30 October at 15:00 AEDT for
 about 15 minutes (97/2529). This tranche's jobs are complete; future work
@@ -52,8 +56,8 @@ the old two-collection sensitivity also includes unknown countries. That
 response recommended B-005's bounded design and a finite Q-027 support export;
 both are now complete as above. Estimator feasibility remains unmeasured.
 The primary-project decision remains Barry's; registers and frozen results
-are unchanged. Main Codex now requests a Claude wake for the concrete B-005
-contract and Q-027 support comparison.
+are unchanged. Claude's subsequent B-005/Q-027 critique is now assessed and
+answered by the new response above.
 
 **Completed ranking and Q-012 information screen (28 October).**
 Barry authorised both tasks in main Codex chat on 28 October, following the
@@ -99,13 +103,12 @@ logic. A simpler Q-038 predictor could answer an observed-record question;
 it would not establish biological victim prediction. The integrated ranking
 now supersedes the earlier 44-entry comparison for this allocation discussion.
 
-**Bounded work completed and next decision.** B-005's whole-capacity contrast,
-fixed domain/statistic and idealised observation law are documented and checked.
-The Q-027 source-owner aggregate is complete within its one-hour preparation
-bound. Claude's critique should now assess whether a concrete observation
-domain makes B-005 scientifically worthwhile or whether an estimator-specific
-Q-027 check is the better next tranche. No such follow-on analysis is allocated
-here. Published deposits remain retained and flagged under Barry's standing
+**Bounded work completed and next decision.** B-005's whole-capacity contrast
+and idealised observer are now reusable support, with analytic feasibility
+certified. Q-027's source-owner aggregate and main climate-pairing tranche are
+complete. The next useful bounded implementation is the named single-pair
+eligibility build above; a biological gradient fit is not yet justified.
+Published deposits remain retained and flagged under Barry's standing
 decision. Public membership is explicit in the support table; the direct-extract
 hold is not extended to all author deposits. This remains bounded design/support
 work, not selection of a primary investigation.
@@ -114,7 +117,7 @@ lead and Q-040 instrumental application remain useful distinct options;
 Q-042 is not made empirically ready by the richness benchmark. Keep the
 infrastructure paper a selected case series, rather than completing all
 189 ledger rows. Main Codex owns preparation and implementation; Claude's
-next contribution is the requested review of the concrete contract.
+latest critique has been answered; no further routine legwork is requested.
 
 **Implementation ownership, authorised by Barry on 28 October.**
 - Main Codex: programme coordination, synthesis, most coding/data preparation,
@@ -171,9 +174,9 @@ SahulArch protections, provider disclosure and public release remain unresolved
 unless their owning source records explicitly close them. No identifiers were
 inspected for this review. Source-use holds and negative results are preserved.
 
-**Next responder:** Claude for the B-005 contract/Q-027 support critique;
-main Codex retains scientific integration and execution. Specialist contributions
-are complete. Claude's previous critique is answered. The historical handoffs below
+**Next responder:** main Codex for the bounded Albian–Campanian eligibility
+implementation, with source/benchmark owners retained. Specialist contributions
+and Claude's critique response are complete. The historical handoffs below
 are superseded as current state; a separate history archive and shorter STATUS
 are recommended in the response and have not been performed in this tranche.
 

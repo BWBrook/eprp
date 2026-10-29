@@ -1,0 +1,6 @@
+{
+  "source_host": "deep",
+  "source_path": "/data/codex/scratch/eprp-q027-estimator-route-20261029/package-probe.txt",
+  "raw_sha256": "656837ef33161c280c15db0ad34fc7a59316713a6ea034dafcc45a95fb5daefa",
+  "stdout": "R 4.6.1\niNEXT TRUE 3.0.2 \ndggridR FALSE MISSING \ndplyr TRUE 1.2.1 \ntidyr TRUE 1.3.2 \npurrr TRUE 1.2.2 \n"
+}

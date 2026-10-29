@@ -1,0 +1,207 @@
+scenario	period	hot_stage	cold_stage	subset	hot_regions	cold_regions	shared_regions	n_shared_regions	passes
+literal_hot_cold	Paleogene	Bartonian	Chattian	dated_public_member	AS	AS	AS	1	0
+literal_hot_cold	Paleogene	Bartonian	Chattian	original	AS	AS	AS	1	0
+literal_hot_cold	Paleogene	Bartonian	Rupelian	dated_public_member	AS			0	0
+literal_hot_cold	Paleogene	Bartonian	Rupelian	original	AS	AF,AS	AS	1	0
+literal_hot_cold	Paleogene	Bartonian	Priabonian	dated_public_member	AS	AS,SA	AS	1	0
+literal_hot_cold	Paleogene	Bartonian	Priabonian	original	AS	AF,AS,SA	AS	1	0
+literal_hot_cold	Paleogene	Bartonian	Selandian	dated_public_member	AS			0	0
+literal_hot_cold	Paleogene	Bartonian	Selandian	original	AS			0	0
+literal_hot_cold	Paleogene	Bartonian	Danian	dated_public_member	AS			0	0
+literal_hot_cold	Paleogene	Bartonian	Danian	original	AS			0	0
+literal_hot_cold	Paleogene	Lutetian	Chattian	dated_public_member	AF,AS	AS	AS	1	0
+literal_hot_cold	Paleogene	Lutetian	Chattian	original	AF,AS	AS	AS	1	0
+literal_hot_cold	Paleogene	Lutetian	Rupelian	dated_public_member	AF,AS			0	0
+literal_hot_cold	Paleogene	Lutetian	Rupelian	original	AF,AS	AF,AS	AF,AS	2	1
+literal_hot_cold	Paleogene	Lutetian	Priabonian	dated_public_member	AF,AS	AS,SA	AS	1	0
+literal_hot_cold	Paleogene	Lutetian	Priabonian	original	AF,AS	AF,AS,SA	AF,AS	2	1
+literal_hot_cold	Paleogene	Lutetian	Selandian	dated_public_member	AF,AS			0	0
+literal_hot_cold	Paleogene	Lutetian	Selandian	original	AF,AS			0	0
+literal_hot_cold	Paleogene	Lutetian	Danian	dated_public_member	AF,AS			0	0
+literal_hot_cold	Paleogene	Lutetian	Danian	original	AF,AS			0	0
+literal_hot_cold	Cretaceous	Santonian	Maastrichtian	dated_public_member		AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Maastrichtian	original	AF	AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Campanian	dated_public_member		AF,AS,SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Campanian	original	AF	AF,AS,SA	AF	1	0
+literal_hot_cold	Cretaceous	Santonian	Hauterivian	dated_public_member		SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Hauterivian	original	AF	SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Valanginian	dated_public_member		SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Valanginian	original	AF	SA		0	0
+literal_hot_cold	Cretaceous	Santonian	Berriasian	dated_public_member		AS		0	0
+literal_hot_cold	Cretaceous	Santonian	Berriasian	original	AF	AS,SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Maastrichtian	dated_public_member		AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Maastrichtian	original		AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Campanian	dated_public_member		AF,AS,SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Campanian	original		AF,AS,SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Hauterivian	dated_public_member		SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Hauterivian	original		SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Valanginian	dated_public_member		SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Valanginian	original		SA		0	0
+literal_hot_cold	Cretaceous	Coniacian	Berriasian	dated_public_member		AS		0	0
+literal_hot_cold	Cretaceous	Coniacian	Berriasian	original		AS,SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Maastrichtian	dated_public_member	AF	AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Maastrichtian	original	AF	AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Campanian	dated_public_member	AF	AF,AS,SA	AF	1	0
+literal_hot_cold	Cretaceous	Turonian	Campanian	original	AF	AF,AS,SA	AF	1	0
+literal_hot_cold	Cretaceous	Turonian	Hauterivian	dated_public_member	AF	SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Hauterivian	original	AF	SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Valanginian	dated_public_member	AF	SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Valanginian	original	AF	SA		0	0
+literal_hot_cold	Cretaceous	Turonian	Berriasian	dated_public_member	AF	AS		0	0
+literal_hot_cold	Cretaceous	Turonian	Berriasian	original	AF	AS,SA		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Maastrichtian	dated_public_member	AF	AOC,AS,SA		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Maastrichtian	original	AF,AS	AOC,AS,SA	AS	1	0
+literal_hot_cold	Cretaceous	Cenomanian	Campanian	dated_public_member	AF	AF,AS,SA	AF	1	0
+literal_hot_cold	Cretaceous	Cenomanian	Campanian	original	AF,AS	AF,AS,SA	AF,AS	2	1
+literal_hot_cold	Cretaceous	Cenomanian	Hauterivian	dated_public_member	AF	SA		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Hauterivian	original	AF,AS	SA		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Valanginian	dated_public_member	AF	SA		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Valanginian	original	AF,AS	SA		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Berriasian	dated_public_member	AF	AS		0	0
+literal_hot_cold	Cretaceous	Cenomanian	Berriasian	original	AF,AS	AS,SA	AS	1	0
+literal_hot_cold	Cretaceous	Albian	Maastrichtian	dated_public_member	AF,AS,SA	AOC,AS,SA	AS,SA	2	1
+literal_hot_cold	Cretaceous	Albian	Maastrichtian	original	AF,AS,SA	AOC,AS,SA	AS,SA	2	1
+literal_hot_cold	Cretaceous	Albian	Campanian	dated_public_member	AF,AS,SA	AF,AS,SA	AF,AS,SA	3	1
+literal_hot_cold	Cretaceous	Albian	Campanian	original	AF,AS,SA	AF,AS,SA	AF,AS,SA	3	1
+literal_hot_cold	Cretaceous	Albian	Hauterivian	dated_public_member	AF,AS,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Albian	Hauterivian	original	AF,AS,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Albian	Valanginian	dated_public_member	AF,AS,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Albian	Valanginian	original	AF,AS,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Albian	Berriasian	dated_public_member	AF,AS,SA	AS	AS	1	0
+literal_hot_cold	Cretaceous	Albian	Berriasian	original	AF,AS,SA	AS,SA	AS,SA	2	1
+literal_hot_cold	Cretaceous	Aptian	Maastrichtian	dated_public_member	SA	AOC,AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Maastrichtian	original	SA	AOC,AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Campanian	dated_public_member	SA	AF,AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Campanian	original	SA	AF,AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Hauterivian	dated_public_member	SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Hauterivian	original	SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Valanginian	dated_public_member	SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Valanginian	original	SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Aptian	Berriasian	dated_public_member	SA	AS		0	0
+literal_hot_cold	Cretaceous	Aptian	Berriasian	original	SA	AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Maastrichtian	dated_public_member	AF,SA	AOC,AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Maastrichtian	original	AF,SA	AOC,AS,SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Campanian	dated_public_member	AF,SA	AF,AS,SA	AF,SA	2	1
+literal_hot_cold	Cretaceous	Barremian	Campanian	original	AF,SA	AF,AS,SA	AF,SA	2	1
+literal_hot_cold	Cretaceous	Barremian	Hauterivian	dated_public_member	AF,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Hauterivian	original	AF,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Valanginian	dated_public_member	AF,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Valanginian	original	AF,SA	SA	SA	1	0
+literal_hot_cold	Cretaceous	Barremian	Berriasian	dated_public_member	AF,SA	AS		0	0
+literal_hot_cold	Cretaceous	Barremian	Berriasian	original	AF,SA	AS,SA	SA	1	0
+label_implied_sensitivity	Paleogene	Bartonian	Chattian	dated_public_member	AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Bartonian	Chattian	original	AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Bartonian	Rupelian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Bartonian	Rupelian	original	AS	AF,AS	AS	1	0
+label_implied_sensitivity	Paleogene	Bartonian	Priabonian	dated_public_member	AS	AS,SA	AS	1	0
+label_implied_sensitivity	Paleogene	Bartonian	Priabonian	original	AS	AF,AS,SA	AS	1	0
+label_implied_sensitivity	Paleogene	Bartonian	Selandian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Bartonian	Selandian	original	AS			0	0
+label_implied_sensitivity	Paleogene	Bartonian	Danian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Bartonian	Danian	original	AS			0	0
+label_implied_sensitivity	Paleogene	Lutetian	Chattian	dated_public_member	AF,AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Lutetian	Chattian	original	AF,AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Lutetian	Rupelian	dated_public_member	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Lutetian	Rupelian	original	AF,AS	AF,AS	AF,AS	2	1
+label_implied_sensitivity	Paleogene	Lutetian	Priabonian	dated_public_member	AF,AS	AS,SA	AS	1	0
+label_implied_sensitivity	Paleogene	Lutetian	Priabonian	original	AF,AS	AF,AS,SA	AF,AS	2	1
+label_implied_sensitivity	Paleogene	Lutetian	Selandian	dated_public_member	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Lutetian	Selandian	original	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Lutetian	Danian	dated_public_member	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Lutetian	Danian	original	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Ypresian	Chattian	dated_public_member	AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Ypresian	Chattian	original	AF,AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Ypresian	Rupelian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Ypresian	Rupelian	original	AF,AS	AF,AS	AF,AS	2	1
+label_implied_sensitivity	Paleogene	Ypresian	Priabonian	dated_public_member	AS	AS,SA	AS	1	0
+label_implied_sensitivity	Paleogene	Ypresian	Priabonian	original	AF,AS	AF,AS,SA	AF,AS	2	1
+label_implied_sensitivity	Paleogene	Ypresian	Selandian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Ypresian	Selandian	original	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Ypresian	Danian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Ypresian	Danian	original	AF,AS			0	0
+label_implied_sensitivity	Paleogene	Thanetian	Chattian	dated_public_member	AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Thanetian	Chattian	original	AS	AS	AS	1	0
+label_implied_sensitivity	Paleogene	Thanetian	Rupelian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Thanetian	Rupelian	original	AS	AF,AS	AS	1	0
+label_implied_sensitivity	Paleogene	Thanetian	Priabonian	dated_public_member	AS	AS,SA	AS	1	0
+label_implied_sensitivity	Paleogene	Thanetian	Priabonian	original	AS	AF,AS,SA	AS	1	0
+label_implied_sensitivity	Paleogene	Thanetian	Selandian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Thanetian	Selandian	original	AS			0	0
+label_implied_sensitivity	Paleogene	Thanetian	Danian	dated_public_member	AS			0	0
+label_implied_sensitivity	Paleogene	Thanetian	Danian	original	AS			0	0
+label_implied_sensitivity	Cretaceous	Santonian	Maastrichtian	dated_public_member		AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Maastrichtian	original	AF	AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Campanian	dated_public_member		AF,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Campanian	original	AF	AF,AS,SA	AF	1	0
+label_implied_sensitivity	Cretaceous	Santonian	Hauterivian	dated_public_member		SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Hauterivian	original	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Valanginian	dated_public_member		SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Valanginian	original	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Berriasian	dated_public_member		AS		0	0
+label_implied_sensitivity	Cretaceous	Santonian	Berriasian	original	AF	AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Maastrichtian	dated_public_member		AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Maastrichtian	original		AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Campanian	dated_public_member		AF,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Campanian	original		AF,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Hauterivian	dated_public_member		SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Hauterivian	original		SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Valanginian	dated_public_member		SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Valanginian	original		SA		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Berriasian	dated_public_member		AS		0	0
+label_implied_sensitivity	Cretaceous	Coniacian	Berriasian	original		AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Maastrichtian	dated_public_member	AF	AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Maastrichtian	original	AF	AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Campanian	dated_public_member	AF	AF,AS,SA	AF	1	0
+label_implied_sensitivity	Cretaceous	Turonian	Campanian	original	AF	AF,AS,SA	AF	1	0
+label_implied_sensitivity	Cretaceous	Turonian	Hauterivian	dated_public_member	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Hauterivian	original	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Valanginian	dated_public_member	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Valanginian	original	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Berriasian	dated_public_member	AF	AS		0	0
+label_implied_sensitivity	Cretaceous	Turonian	Berriasian	original	AF	AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Maastrichtian	dated_public_member	AF	AOC,AS,SA		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Maastrichtian	original	AF,AS	AOC,AS,SA	AS	1	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Campanian	dated_public_member	AF	AF,AS,SA	AF	1	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Campanian	original	AF,AS	AF,AS,SA	AF,AS	2	1
+label_implied_sensitivity	Cretaceous	Cenomanian	Hauterivian	dated_public_member	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Hauterivian	original	AF,AS	SA		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Valanginian	dated_public_member	AF	SA		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Valanginian	original	AF,AS	SA		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Berriasian	dated_public_member	AF	AS		0	0
+label_implied_sensitivity	Cretaceous	Cenomanian	Berriasian	original	AF,AS	AS,SA	AS	1	0
+label_implied_sensitivity	Cretaceous	Albian	Maastrichtian	dated_public_member	AF,AS,SA	AOC,AS,SA	AS,SA	2	1
+label_implied_sensitivity	Cretaceous	Albian	Maastrichtian	original	AF,AS,SA	AOC,AS,SA	AS,SA	2	1
+label_implied_sensitivity	Cretaceous	Albian	Campanian	dated_public_member	AF,AS,SA	AF,AS,SA	AF,AS,SA	3	1
+label_implied_sensitivity	Cretaceous	Albian	Campanian	original	AF,AS,SA	AF,AS,SA	AF,AS,SA	3	1
+label_implied_sensitivity	Cretaceous	Albian	Hauterivian	dated_public_member	AF,AS,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Albian	Hauterivian	original	AF,AS,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Albian	Valanginian	dated_public_member	AF,AS,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Albian	Valanginian	original	AF,AS,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Albian	Berriasian	dated_public_member	AF,AS,SA	AS	AS	1	0
+label_implied_sensitivity	Cretaceous	Albian	Berriasian	original	AF,AS,SA	AS,SA	AS,SA	2	1
+label_implied_sensitivity	Cretaceous	Aptian	Maastrichtian	dated_public_member	SA	AOC,AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Maastrichtian	original	SA	AOC,AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Campanian	dated_public_member	SA	AF,AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Campanian	original	SA	AF,AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Hauterivian	dated_public_member	SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Hauterivian	original	SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Valanginian	dated_public_member	SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Valanginian	original	SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Aptian	Berriasian	dated_public_member	SA	AS		0	0
+label_implied_sensitivity	Cretaceous	Aptian	Berriasian	original	SA	AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Maastrichtian	dated_public_member	AF,SA	AOC,AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Maastrichtian	original	AF,SA	AOC,AS,SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Campanian	dated_public_member	AF,SA	AF,AS,SA	AF,SA	2	1
+label_implied_sensitivity	Cretaceous	Barremian	Campanian	original	AF,SA	AF,AS,SA	AF,SA	2	1
+label_implied_sensitivity	Cretaceous	Barremian	Hauterivian	dated_public_member	AF,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Hauterivian	original	AF,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Valanginian	dated_public_member	AF,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Valanginian	original	AF,SA	SA	SA	1	0
+label_implied_sensitivity	Cretaceous	Barremian	Berriasian	dated_public_member	AF,SA	AS		0	0
+label_implied_sensitivity	Cretaceous	Barremian	Berriasian	original	AF,SA	AS,SA	SA	1	0
+source_extreme_class	Paleogene	Lutetian	Rupelian	dated_public_member	AF,AS			0	0
+source_extreme_class	Paleogene	Lutetian	Rupelian	original	AF,AS	AF,AS	AF,AS	2	1
+source_extreme_class	Paleogene	Ypresian	Rupelian	dated_public_member	AS			0	0
+source_extreme_class	Paleogene	Ypresian	Rupelian	original	AF,AS	AF,AS	AF,AS	2	1
+source_extreme_class	Paleogene	Thanetian	Rupelian	dated_public_member	AS			0	0
+source_extreme_class	Paleogene	Thanetian	Rupelian	original	AS	AF,AS	AS	1	0

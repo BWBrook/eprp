@@ -1,0 +1,43 @@
+subset	stage	paired_band_regions	n_regions
+dated_public_member	Albian	AF,AS,SA	3
+dated_public_member	Aptian	SA	1
+dated_public_member	Barremian	AF,SA	2
+dated_public_member	Bartonian	AS	1
+dated_public_member	Berriasian	AS	1
+dated_public_member	Campanian	AF,AS,SA	3
+dated_public_member	Cenomanian	AF	1
+dated_public_member	Chattian	AS	1
+dated_public_member	Coniacian		0
+dated_public_member	Danian		0
+dated_public_member	Hauterivian	SA	1
+dated_public_member	Lutetian	AF,AS	2
+dated_public_member	Maastrichtian	AOC,AS,SA	3
+dated_public_member	Priabonian	AS,SA	2
+dated_public_member	Rupelian		0
+dated_public_member	Santonian		0
+dated_public_member	Selandian		0
+dated_public_member	Thanetian	AS	1
+dated_public_member	Turonian	AF	1
+dated_public_member	Valanginian	SA	1
+dated_public_member	Ypresian	AS	1
+original	Albian	AF,AS,SA	3
+original	Aptian	SA	1
+original	Barremian	AF,SA	2
+original	Bartonian	AS	1
+original	Berriasian	AS,SA	2
+original	Campanian	AF,AS,SA	3
+original	Cenomanian	AF,AS	2
+original	Chattian	AS	1
+original	Coniacian		0
+original	Danian		0
+original	Hauterivian	SA	1
+original	Lutetian	AF,AS	2
+original	Maastrichtian	AOC,AS,SA	3
+original	Priabonian	AF,AS,SA	3
+original	Rupelian	AF,AS	2
+original	Santonian	AF	1
+original	Selandian		0
+original	Thanetian	AS	1
+original	Turonian	AF	1
+original	Valanginian	SA	1
+original	Ypresian	AF,AS	2

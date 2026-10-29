@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b16be17b30d0e364bbd9db3687de457cf24fb12e5a7a21bacf79e5f1128ad809",
+  "script_sha256": "1b56d264637b504a9a1cbfed437ba1c664f97f6477621163bb5a787a03910f9e",
+  "observer": "Frozen multinomial independent cell-incidence law",
+  "rule": "Reject P0 when P1/P0 > 1, equivalently log ratio > 0; ties accepted",
+  "theorem": "size + false-negative probability = sum min(P0,P1) <= affinity**n",
+  "affinity": 0.8873956068630543,
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "necessary_n": 4,
+  "sufficient_n": 26,
+  "rows": [
+    {
+      "n": 25,
+      "error_sum_upper": 0.050458212246379266,
+      "size_upper": 0.050458212246379266,
+      "power_lower": 0.9495417877536207,
+      "certifies_declared_targets": false
+    },
+    {
+      "n": 26,
+      "error_sum_upper": 0.044776395877600524,
+      "size_upper": 0.044776395877600524,
+      "power_lower": 0.9552236041223995,
+      "certifies_declared_targets": true
+    },
+    {
+      "n": 100,
+      "error_sum_upper": 6.482274785320938e-06,
+      "size_upper": 6.482274785320938e-06,
+      "power_lower": 0.9999935177252147,
+      "certifies_declared_targets": true
+    }
+  ],
+  "exact_optimal_n_computed": false,
+  "meaning": "Analytic operating-characteristic bounds, not zero realised error or an empirical fossil result"
+}
