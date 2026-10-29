@@ -2,19 +2,58 @@
 
 Updated: 29 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: Claude's focused critique answered; two proposed shortcuts checked.**
+**Current focus: B-005 design and Q-027 regional support complete; Claude critique next.**
+Barry authorised the bounded task and specialist orchestration on 29 October
+(exact instruction in Correspondence 76/2508). The
+[B-005 contract](ideas/2026-10-29-b005-design-contract-codex.md) adopts native
+INDITEK-2 `proof` versus `expo`: removal of the whole finite-capacity mechanism,
+including hard caps. Two fixed-parameter full-history calls completed in
+27.488 seconds on one `deep` CPU. Both have the same 2,978 present-day supported
+shelf cells. The area-weighted profile distance is H²=0.1126044, independently
+reaggregated from the raw maps. Thus the intervention changes spatial shape,
+not only scale. The idealised fixed-N incidence observer is not a fossil
+sampling model; its power ceiling at N=100 is 1.0 and inconclusive. Attained
+power remains unevaluated. Sixteen small observer fixtures pass independent
+enumeration. [Evidence and replay](data/b005-design/README.md).
+
+References finds the broad spatial-mechanism comparison occupied; the residual
+has limited standalone payoff without a justified observation domain. Main
+Codex recommends a focused scientific critique before allocating further
+development, not a parameter ensemble or primary-project promotion.
+The [Q-027 table](data/q027-regional-support/README.md) is also complete:
+under dated public membership, 12 of 21 stages have three outside-EU/NAm
+regions with qualifying tropical cells, but only Albian has three regions
+each spanning all three latitude bands. Estimator-specific and warm/cool
+comparison feasibility remain unmeasured. Independent raw-source calculation
+reproduces all 1,638 support and 546 overlap rows.
+
+Main Codex owns the scientific contract, `data/b005-design/`, STATUS/README
+and execution. Accepted specialist contributions are complete (76/2520,
+2525–2526): Packages retains `resources/software/`; References retains its
+library and prior-check note; Databases retains sources and
+`data/q027-regional-support/`. Existing ownership remains intact.
+Claude is asked for scientific judgement on the next bounded tranche in
+**Correspondence 96/2531**; Barry's wake is requested.
+No production ensemble or Q-012 restart is allocated; primary-project selection
+remains Barry's.
+
+**Compute notice:** `deep` updates/reboots on 30 October at 15:00 AEDT for
+about 15 minutes (97/2529). This tranche's jobs are complete; future work
+must avoid that window. Data stores are retained.
+
+**Completed critique response and applicability checks.**
 The [29 October response](ideas/2026-10-29-focused-critique-response-codex.md)
 integrates two bounded Codex audits. Q-012's observation map removes lineages
 and reconnects ancestry; P11 is a complete-ascertainment working likelihood,
 not the exact recorded-data marginal. A deterministic synthetic fixture was
 replayed independently. No proposed optimal-LR pilot or sampler restart follows.
-Q-027's existing aggregates cannot supply molluscan regional replication;
-the old two-collection sensitivity also includes unknown countries. Regional
-feasibility is unmeasured, not failed. Main Codex now recommends **B-005 for
-the next bounded design task**, while inviting Databases Codex to accept a
-small aggregate support export for Q-027. That invitation is not yet accepted.
+Q-027's earlier aggregates could not supply molluscan regional replication;
+the old two-collection sensitivity also includes unknown countries. That
+response recommended B-005's bounded design and a finite Q-027 support export;
+both are now complete as above. Estimator feasibility remains unmeasured.
 The primary-project decision remains Barry's; registers and frozen results
-are unchanged. No further Claude wake is needed at this checkpoint.
+are unchanged. Main Codex now requests a Claude wake for the concrete B-005
+contract and Q-027 support comparison.
 
 **Completed ranking and Q-012 information screen (28 October).**
 Barry authorised both tasks in main Codex chat on 28 October, following the
@@ -48,7 +87,8 @@ and to take over most action-oriented EPRP work. The
 It recommends the integrated 25–50-question ranking and a small Q-012
 information screen before further sampler engineering, then a bounded
 biological development slot. The ranking and information screen are now
-authorised; the biological allocation remains a recommendation.
+authorised and complete; B-005's bounded design is also complete, while
+primary-investigation selection remains separate.
 
 **Material review findings.** Fable's three Q-012 intervals are not three
 real-scale experiments: v4 and R00 replay the same 264-lineage tree; P11 has
@@ -59,21 +99,22 @@ logic. A simpler Q-038 predictor could answer an observed-record question;
 it would not establish biological victim prediction. The integrated ranking
 now supersedes the earlier 44-entry comparison for this allocation discussion.
 
-**Next-work recommendation.** Specify B-005's distinct within-implementation
-diversity-dependence contrast, coordinating with Packages Codex's ownership.
-One statistic/domain, shared forcing/nuisance assumptions, positive controls
-and a fixed observation model are needed before a run. For Q-027, request
-the finite source-owner aggregate described in the response, capped at one
-hour of preparation; no broad rebuild or estimator replay. Published deposits
-remain retained and flagged under Barry's standing decision. Public membership
-must be explicit in the proposed analysis; the direct-extract hold is not
-extended to all author deposits. Both allocations remain recommendations.
+**Bounded work completed and next decision.** B-005's whole-capacity contrast,
+fixed domain/statistic and idealised observation law are documented and checked.
+The Q-027 source-owner aggregate is complete within its one-hour preparation
+bound. Claude's critique should now assess whether a concrete observation
+domain makes B-005 scientifically worthwhile or whether an estimator-specific
+Q-027 check is the better next tranche. No such follow-on analysis is allocated
+here. Published deposits remain retained and flagged under Barry's standing
+decision. Public membership is explicit in the support table; the direct-extract
+hold is not extended to all author deposits. This remains bounded design/support
+work, not selection of a primary investigation.
 The Q-009 source
 lead and Q-040 instrumental application remain useful distinct options;
 Q-042 is not made empirically ready by the richness benchmark. Keep the
 infrastructure paper a selected case series, rather than completing all
 189 ledger rows. Main Codex owns preparation and implementation; Claude's
-next useful contribution is review of a concrete contract when needed.
+next contribution is the requested review of the concrete contract.
 
 **Implementation ownership, authorised by Barry on 28 October.**
 - Main Codex: programme coordination, synthesis, most coding/data preparation,
@@ -113,12 +154,13 @@ next useful contribution is review of a concrete contract when needed.
 - The [independent T5 review](resources/software/reviews/2026-10-28-tranche5-codex/README.md)
   reports complete declared cGENIE graded comparisons, spatial qualifications,
   the evaluated-cell boundary for missing ecotype values, and an incomplete
-  gen3sis G3 record. Packages Codex has declared substitute config 22 in
-  A5 and launched its isolated bounded run (76/2437; tmux `eprp-g3-22` on
-  deep). The host-maintenance notice reports normal completion at 17:28 on
-  28 October (97/2464); main Codex has not independently checked the result.
-  The original failed attempt is preserved. The Packages session owns
-  completion/failure review and integration; main Codex does not poll the job.
+  gen3sis G3 record at that checkpoint. Packages has now closed the declared
+  config-22 substitute: normal completion, independent living-species recount
+  3,003 matching the deposit, with 1,560/1,562 occupied cells (76/2526).
+  Eight of ten deposited living counts match; the other differences are +9
+  and +4. Main Codex reports the Packages receipt without a further rerun.
+  The original failed attempt is preserved. This does not validate a
+  diversity-feedback toggle or empirical inference.
 - Q-012 sampler engineering remains queued after the completed information
   screen. Q-038's stopped estimator campaign remains parked.
 
@@ -129,9 +171,9 @@ SahulArch protections, provider disclosure and public release remain unresolved
 unless their owning source records explicitly close them. No identifiers were
 inspected for this review. Source-use holds and negative results are preserved.
 
-**Next responder:** Databases Codex for acceptance of the narrow Q-027 source
-task; main Codex for scientific integration and subsequent execution.
-Claude's current critique is answered. The full historical handoffs below
+**Next responder:** Claude for the B-005 contract/Q-027 support critique;
+main Codex retains scientific integration and execution. Specialist contributions
+are complete. Claude's previous critique is answered. The historical handoffs below
 are superseded as current state; a separate history archive and shorter STATUS
 are recommended in the response and have not been performed in this tranche.
 

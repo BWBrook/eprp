@@ -1,0 +1,187 @@
+{
+  "scope": "Synthetic design controls only; no INDITEK or empirical evaluation",
+  "alpha": 0.05,
+  "rows": [
+    {
+      "fixture": "pure_multiplicative_change",
+      "n": 0,
+      "affinity": 1.0,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 1
+    },
+    {
+      "fixture": "pure_multiplicative_change",
+      "n": 1,
+      "affinity": 1.0,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 3
+    },
+    {
+      "fixture": "pure_multiplicative_change",
+      "n": 4,
+      "affinity": 1.0,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 0.9999999999999994,
+      "alternative_mass": 0.9999999999999994,
+      "outcomes": 15
+    },
+    {
+      "fixture": "pure_multiplicative_change",
+      "n": 8,
+      "affinity": 1.0,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 0.9999999999999989,
+      "alternative_mass": 0.9999999999999989,
+      "outcomes": 45
+    },
+    {
+      "fixture": "shared_dominant_cell",
+      "n": 0,
+      "affinity": 0.9707106781186547,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 1
+    },
+    {
+      "fixture": "shared_dominant_cell",
+      "n": 1,
+      "affinity": 0.9707106781186547,
+      "power_upper": 0.2902514919546213,
+      "size": 0.05,
+      "power": 0.1,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 3
+    },
+    {
+      "fixture": "shared_dominant_cell",
+      "n": 4,
+      "affinity": 0.9707106781186547,
+      "power_upper": 0.5100555594258795,
+      "size": 0.05000000000000001,
+      "power": 0.12708750000000005,
+      "null_mass": 0.9999999999999997,
+      "alternative_mass": 0.9999999999999998,
+      "outcomes": 15
+    },
+    {
+      "fixture": "shared_dominant_cell",
+      "n": 8,
+      "affinity": 0.9707106781186547,
+      "power_upper": 0.665228445269583,
+      "size": 0.05,
+      "power": 0.2036263474218749,
+      "null_mass": 0.9999999999999993,
+      "alternative_mass": 0.9999999999999993,
+      "outcomes": 45
+    },
+    {
+      "fixture": "masked_shared_cell",
+      "n": 0,
+      "affinity": 0.7071067811865476,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 1
+    },
+    {
+      "fixture": "masked_shared_cell",
+      "n": 1,
+      "affinity": 0.7071067811865476,
+      "power_upper": 0.7571067811865475,
+      "size": 0.05,
+      "power": 0.1,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 2
+    },
+    {
+      "fixture": "masked_shared_cell",
+      "n": 4,
+      "affinity": 0.7071067811865476,
+      "power_upper": 1.0,
+      "size": 0.05,
+      "power": 0.8,
+      "null_mass": 0.9999999999999994,
+      "alternative_mass": 1.0,
+      "outcomes": 5
+    },
+    {
+      "fixture": "masked_shared_cell",
+      "n": 8,
+      "affinity": 0.7071067811865476,
+      "power_upper": 1.0,
+      "size": 0.05,
+      "power": 1.0,
+      "null_mass": 0.9999999999999989,
+      "alternative_mass": 1.0,
+      "outcomes": 9
+    },
+    {
+      "fixture": "disjoint_support",
+      "n": 0,
+      "affinity": 0.0,
+      "power_upper": 0.05,
+      "size": 0.05,
+      "power": 0.05,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 1
+    },
+    {
+      "fixture": "disjoint_support",
+      "n": 1,
+      "affinity": 0.0,
+      "power_upper": 1.0,
+      "size": 0.05,
+      "power": 1.0,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 2
+    },
+    {
+      "fixture": "disjoint_support",
+      "n": 4,
+      "affinity": 0.0,
+      "power_upper": 1.0,
+      "size": 0.05,
+      "power": 1.0,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 2
+    },
+    {
+      "fixture": "disjoint_support",
+      "n": 8,
+      "affinity": 0.0,
+      "power_upper": 1.0,
+      "size": 0.05,
+      "power": 1.0,
+      "null_mass": 1.0,
+      "alternative_mass": 1.0,
+      "outcomes": 2
+    }
+  ],
+  "invalid_profiles_rejected": 4,
+  "squared_hellinger_full": 0.029289321881345254,
+  "squared_hellinger_masked": 0.2928932188134524,
+  "conditional_mask_amplification": 9.999999999999996,
+  "all_pass": true
+}

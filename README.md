@@ -19,6 +19,8 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [B-005 design contract: executable capacity contrast, spatial profile and scientific limits](ideas/2026-10-29-b005-design-contract-codex.md)
+- [Q-027 regional support: dated public membership and region–latitude overlap](data/q027-regional-support/README.md)
 - [29 October critique response: likelihood applicability, regional support and revised allocation](ideas/2026-10-29-focused-critique-response-codex.md)
 - [Integrated 49-card comparison and protected development recommendation](ideas/2026-10-28-integrated-ranking-codex.md)
 - [Q-012 information screen: frozen designs, results and independent checks](data/q012-information-screen/README.md)

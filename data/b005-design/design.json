@@ -1,0 +1,24 @@
+{
+  "scope": "One fixed-profile design check, not a fossil observation model or parameter ensemble",
+  "endpoint_ma": 0,
+  "history_ma": [541, 0],
+  "parameters": [161, 19, 0.035, 0.002, 2],
+  "null_arm": "expo",
+  "alternative_arm": "proof",
+  "intervention": "Whole finite-capacity mechanism versus uncapped growth",
+  "grid_shape": [360, 720],
+  "expected_supported_cells": 2978,
+  "support": "All common native finite endpoint cells; reject unequal masks, infinities or coordinates",
+  "spatial_weights": "cos(latitude at centre of the native 0.5 degree latitude bin), normalized across supported cells",
+  "effort_weights": "One on every supported cell",
+  "primary_statistic": "Squared Hellinger distance between normalized weighted local-richness profiles",
+  "observer": "Multinomial cell-incidence counts conditional on a fixed detected total; independent draws with replacement",
+  "n": 100,
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "gate": "If affinity-based upper power bound is below target, this observer fails at this budget; otherwise inconclusive",
+  "map_sha256": {
+    "proof": "81769f0be286176c871897953c9ada70bdf359fc2e5adfcf53fa8082f2718611",
+    "expo": "a55f64a8ae01b598510bfca0e8f8d9242d229e94d6efaa3d0b2d76a3a25d4a0d"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "scope": "One fixed-profile design check, not a fossil observation model or parameter ensemble",
+  "design_sha256": "e95e0bc823beafe14cc35a84c6170acad2a244dd528d3142173df04a434254ba",
+  "script_sha256": "a9b7c7626ef331f90ac0e1eeae1299a266f94be0f431c36c6882d390338ebda3",
+  "map_sha256": {
+    "proof": "81769f0be286176c871897953c9ada70bdf359fc2e5adfcf53fa8082f2718611",
+    "expo": "a55f64a8ae01b598510bfca0e8f8d9242d229e94d6efaa3d0b2d76a3a25d4a0d"
+  },
+  "numpy_version": "2.4.6",
+  "exact_mask_and_coordinates_equal": true,
+  "supported_cells": 2978,
+  "arm_summaries": {
+    "expo": {
+      "weighted_mean_local_richness": 52.46502491650206,
+      "sum_local_richness": 121768.48994702612,
+      "retained_weighted_mass_fraction": 1.0
+    },
+    "proof": {
+      "weighted_mean_local_richness": 10.914797158464719,
+      "sum_local_richness": 27499.95178460191,
+      "retained_weighted_mass_fraction": 1.0
+    }
+  },
+  "squared_hellinger": 0.11260439313694576,
+  "affinity": 0.8873956068630543,
+  "n": 100,
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "power_upper": 1.0,
+  "necessary_n_lower_bound": 4,
+  "gate": "inconclusive",
+  "attained_power_evaluated": false
+}
