@@ -7,6 +7,13 @@ four endpoint-null false-support rates meet the declared limits. This is a
 negative result for this fixed detector, not an information limit for all
 recorded-data methods. These results do not justify a sampler restart.
 
+**29 October follow-up:** the [P11 applicability audit](lr-applicability-review.md)
+finds that the proposed existing-code shortcut does not compute the exact
+recorded-data likelihood. The observation map drops lineages and reconnects
+ancestry; the P11 target assumes complete ascertainment on the supplied graph.
+A synthetic counterexample was independently replayed. No new simulation
+panel or sampler run follows; all frozen results below are unchanged.
+
 The simple comparison is eta=0.05 versus 0.20, with fixed unselected marginal
 frailty SD sigma=0.5 and all other nuisances known. The exact likelihood-ratio
 ordering uses every generated inheritance edge, including the forced cohort

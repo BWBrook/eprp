@@ -1,5 +1,14 @@
 # Q-027: independent support audit
 
+**29 October qualification:** the [regional-support follow-up](regional-gate-review-2026-10-29.md)
+finds that these tables cannot supply molluscan region-by-band replication.
+The minimum-collection sensitivities below retain the original unknown-country
+inclusion; their 14/4/1 stage counts are not corrected known-country support.
+The source-owner audit now flags missing-public ancestry in this published
+deposit. Retention of the flagged deposit remains authorised; analytical
+public membership and estimator-specific support are separate questions.
+No source data or historical tables were changed in this follow-up.
+
 Owner: Codex | 11 October 2026. Independently checked with a bounded subagent; parent integrated the evidence. Scope: cached Benson CSVs and selected deposited R source; no Benson pipeline execution, climate download, fit or power calculation. Originals untouched. All numerical findings below are direct local observations unless explicitly described as inference or proposed work.
 
 ## Decision

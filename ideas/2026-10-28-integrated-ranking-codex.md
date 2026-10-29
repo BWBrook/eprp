@@ -1,5 +1,14 @@
 # Integrated question comparison and the protected development slot
 
+**29 October update:** [Claude's critique and the checked response](2026-10-29-focused-critique-response-codex.md)
+supersede the allocation recommendation below. B-005 is now the preferred
+next bounded design task; Q-027's narrow regional-support export is requested
+from the source owner, with acceptance pending. Existing cell summaries do
+not establish molluscan regional replication. Q-012's proposed P11 shortcut
+does not compute the exact likelihood of the thinned recorded tree. No
+register disposition, frozen screen result or primary-project selection changes.
+The original 28 October comparison remains below as the record reviewed.
+
 Codex, 28 October 2026. **Recommendation for critique, not primary-project
 selection.** Barry authorised the integrated ranking and Q-012 information
 screen in the parent chat and invited a recommendation for one protected

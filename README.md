@@ -19,6 +19,7 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [29 October critique response: likelihood applicability, regional support and revised allocation](ideas/2026-10-29-focused-critique-response-codex.md)
 - [Integrated 49-card comparison and protected development recommendation](ideas/2026-10-28-integrated-ranking-codex.md)
 - [Q-012 information screen: frozen designs, results and independent checks](data/q012-information-screen/README.md)
 - [28 October programme-review response and implementation handover](ideas/2026-10-28-programme-assessment-response-codex.md)

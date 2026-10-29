@@ -1,16 +1,30 @@
 # EPRP current status
 
-Updated: 28 October 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 29 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: ranking and Q-012 information screen complete; focused critique next.**
+**Current focus: Claude's focused critique answered; two proposed shortcuts checked.**
+The [29 October response](ideas/2026-10-29-focused-critique-response-codex.md)
+integrates two bounded Codex audits. Q-012's observation map removes lineages
+and reconnects ancestry; P11 is a complete-ascertainment working likelihood,
+not the exact recorded-data marginal. A deterministic synthetic fixture was
+replayed independently. No proposed optimal-LR pilot or sampler restart follows.
+Q-027's existing aggregates cannot supply molluscan regional replication;
+the old two-collection sensitivity also includes unknown countries. Regional
+feasibility is unmeasured, not failed. Main Codex now recommends **B-005 for
+the next bounded design task**, while inviting Databases Codex to accept a
+small aggregate support export for Q-027. That invitation is not yet accepted.
+The primary-project decision remains Barry's; registers and frozen results
+are unchanged. No further Claude wake is needed at this checkpoint.
+
+**Completed ranking and Q-012 information screen (28 October).**
 Barry authorised both tasks in main Codex chat on 28 October, following the
 [review response](ideas/2026-10-28-programme-assessment-response-codex.md).
 Main Codex owns the new integrated-ranking note and
 `data/q012-information-screen/`, with bounded GPT-6.1 Sol delegates in
 disjoint files and main Codex integrating and checking the scientific claims.
 The [49-card integrated ranking](ideas/2026-10-28-integrated-ranking-codex.md)
-is complete and recommends Q-027 for a finite protected development slot,
-with Q-016 and B-005 as the closest alternatives. The
+is complete; its original Q-027 recommendation is superseded by the response
+above, with the full comparison preserved. The
 [Q-012 complete-data screen](data/q012-information-screen/README.md)
 passes both simulated ensembles, but the frozen recorded-data detector fails
 the power target. Simultaneous 95% complete-data power bounds at size 0.05 are 0.823–0.931 and
@@ -18,9 +32,9 @@ the power target. Simultaneous 95% complete-data power bounds at size 0.05 are 0
 all four endpoint-null rejection rates below 0.05. Its failure does not bound all
 recorded-data methods. These are fixed-nuisance simulator results, not real
 record power or biological-inheritance evidence. No old sampler campaign
-resumes. Primary-project selection remains Barry's. Claude receives the
-completed packet in **Correspondence discussion 96** (request 2460) for
-focused critique; Barry is asked explicitly to wake Claude.
+resumes. Primary-project selection remains Barry's. Claude's focused critique
+in **Correspondence discussion 96**, message 2463, has now been checked and
+answered by main Codex.
 
 Twelve controls pass. Separate numerical reaggregation checks reproduce all
 36,000 histories' panel summaries, fitted coefficients, saved scores and
@@ -45,17 +59,21 @@ logic. A simpler Q-038 predictor could answer an observed-record question;
 it would not establish biological victim prediction. The integrated ranking
 now supersedes the earlier 44-entry comparison for this allocation discussion.
 
-**Next-work recommendation.** Give Q-027 a bounded first check: a matched
-taxonomic/time-domain shape contrast that adds to existing regional controls,
-with an admissible estimator-specific support table. Proposed first ceiling:
-one research day/four allocated core-hours; total development ceiling sixteen
-core-hours. If no distinct supported contrast survives, return to the
-Q-016/B-005 allocation comparison. This remains a recommendation. The Q-009 source
+**Next-work recommendation.** Specify B-005's distinct within-implementation
+diversity-dependence contrast, coordinating with Packages Codex's ownership.
+One statistic/domain, shared forcing/nuisance assumptions, positive controls
+and a fixed observation model are needed before a run. For Q-027, request
+the finite source-owner aggregate described in the response, capped at one
+hour of preparation; no broad rebuild or estimator replay. Published deposits
+remain retained and flagged under Barry's standing decision. Public membership
+must be explicit in the proposed analysis; the direct-extract hold is not
+extended to all author deposits. Both allocations remain recommendations.
+The Q-009 source
 lead and Q-040 instrumental application remain useful distinct options;
 Q-042 is not made empirically ready by the richness benchmark. Keep the
 infrastructure paper a selected case series, rather than completing all
 189 ledger rows. Main Codex owns preparation and implementation; Claude's
-next useful contribution is a compact challenge to the scientific choices.
+next useful contribution is review of a concrete contract when needed.
 
 **Implementation ownership, authorised by Barry on 28 October.**
 - Main Codex: programme coordination, synthesis, most coding/data preparation,
@@ -97,7 +115,9 @@ next useful contribution is a compact challenge to the scientific choices.
   the evaluated-cell boundary for missing ecotype values, and an incomplete
   gen3sis G3 record. Packages Codex has declared substitute config 22 in
   A5 and launched its isolated bounded run (76/2437; tmux `eprp-g3-22` on
-  deep-server). The original failed attempt is preserved. That session owns
+  deep). The host-maintenance notice reports normal completion at 17:28 on
+  28 October (97/2464); main Codex has not independently checked the result.
+  The original failed attempt is preserved. The Packages session owns
   completion/failure review and integration; main Codex does not poll the job.
 - Q-012 sampler engineering remains queued after the completed information
   screen. Q-038's stopped estimator campaign remains parked.
@@ -109,8 +129,9 @@ SahulArch protections, provider disclosure and public release remain unresolved
 unless their owning source records explicitly close them. No identifiers were
 inspected for this review. Source-use holds and negative results are preserved.
 
-**Next responder:** main Claude in discussion 96 for the focused scientific challenge; main
-Codex for the bulk of subsequent execution. The full historical handoffs below
+**Next responder:** Databases Codex for acceptance of the narrow Q-027 source
+task; main Codex for scientific integration and subsequent execution.
+Claude's current critique is answered. The full historical handoffs below
 are superseded as current state; a separate history archive and shorter STATUS
 are recommended in the response and have not been performed in this tranche.
 
