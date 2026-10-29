@@ -51,13 +51,13 @@ conversion to living abundance or comparability across sites.
 
 The sidecar SQLite is stored separately from the base assembly:
 
-- `deep-server:/data/paleodata/fossilworks/derived/2026-10-28-annotations-v1/fossilworks-annotations.sqlite`
-- `nectar-codex-ts:/data/codex/artifacts/eprp-fossilworks-annotations/2026-10-28-annotations-v1/fossilworks-annotations.sqlite`
+- `deep:/data/paleodata/fossilworks/derived/2026-10-28-annotations-v1/fossilworks-annotations.sqlite`
+- `nectar:/data/codex/artifacts/eprp-fossilworks-annotations/2026-10-28-annotations-v1/fossilworks-annotations.sqlite`
 
 The sidecar is 12,165,120 bytes, SHA256
 `ebac4771b4b0f400c7cb91b9c4e8499ba781731374148f3f77aac672737f66b6`.
 The [build receipt](profile/annotation-build-receipt-2026-10-28.json),
-[deep-server verification](profile/annotation-verification-2026-10-28.json),
+[deep verification](profile/annotation-verification-2026-10-28.json),
 and [VM verification](profile/annotation-vm-verification-2026-10-28.json)
 record the input hashes, integrity checks and join results. The 100 selected
 original sheets were rehashed against the source manifest; an independent
@@ -82,7 +82,7 @@ python3 resources/sources/fossilworks/build_annotations.py \
 
 The citation-page responses and retrieval receipts are retained in this private
 repository. The nine-payload source-publication evidence bundle is retained
-privately on deep-server and verified separately on the Nectar VM; its
+privately on deep and verified separately on the Nectar VM; its
 [manifest](profile/count-conventions-source-evidence-manifest-2026-10-28.json)
 records the source URLs, retrievals and hashes. Public access to the papers does
 not itself establish permission to redistribute their full text.

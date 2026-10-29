@@ -54,9 +54,9 @@ to Evans et al. 2015 failed; Miller 1976's PDF route returned HTML. Neither is
 treated as a full-text source check.
 
 The required source evidence is retained read-only at
-`deep-server:/data/paleodata/fossilworks/evidence/2026-10-28-count-conventions-v2`.
+`deep:/data/paleodata/fossilworks/evidence/2026-10-28-count-conventions-v2`.
 A separately verified private copy is at
-`nectar-codex-ts:/data/codex/artifacts/eprp-fossilworks-annotations/count-evidence-2026-10-28`.
+`nectar:/data/codex/artifacts/eprp-fossilworks-annotations/count-evidence-2026-10-28`.
 The nine-payload bundle contains the FAQ, original McGee PDF, Davis counting
 pages 453/458/459/460/461, and the two images used for visual checks. Its
 `MANIFEST.json` has SHA256

@@ -298,7 +298,7 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     snap = commands.add_parser("snapshot")
     snap.add_argument("--source", type=Path, default=Path("/data/paleodata"))
-    snap.add_argument("--host", default="nectar-codex-ts")
+    snap.add_argument("--host", default="nectar")
     snap.add_argument("--root", type=Path, default=Path("/data/codex/artifacts/eprp-paleodata-backup"))
     snap.add_argument("--stage", type=Path, default=Path("/data/codex/scratch/eprp-paleodata-backup"))
     snap.add_argument("--reserve-gib", type=int, default=20)

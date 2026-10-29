@@ -4,7 +4,7 @@ Barry authorised the settled VM `/data` volume for this backup on 28 October
 2026: “Yes, the VM's /data volume is settled then. Let's go with your
 recommendation: proceed at your discretion (now or later; I assume we can have
 a sync script at some point?).” This procedure implements a private second
-copy of `deep-server:/data/paleodata`, retaining independent dated generations.
+copy of `deep:/data/paleodata`, retaining independent dated generations.
 It does not publish data, change source licences or clear PBDB empirical holds.
 The [mirror terms and boundaries](paleodata-README.md) travel with the files.
 
@@ -14,9 +14,11 @@ standard library plus system SSH, SCP and rsync. Tests:
 
 ## Location and retention
 
-Source remains `deep-server:/data/paleodata`. Run the script there; transfer
-travels directly over the mesh to `nectar-codex-ts`, with no large payload on
-the laptop. Source-side state and temporary online database copies go under
+Source remains `deep:/data/paleodata`. Run the script there; transfer
+travels from `deep` over public SSH to `nectar` (`131.217.178.240`),
+with no large payload on the laptop. The `nectar` SSH alias selects this route;
+`deep` and WSL are off Tailscale. Source-side state and temporary online
+database copies go under
 `/data/codex/scratch/eprp-paleodata-backup/`. VM storage is:
 
 ```text
@@ -109,13 +111,13 @@ project's current correspondence and machine readiness before use. Deploy
 the reviewed script to the source host, then run it there:
 
 ```bash
-ssh deep-server 'mkdir -p /data/codex/scratch/eprp-paleodata-backup'
-scp resources/tools/paleodata_backup.py deep-server:/data/codex/scratch/eprp-paleodata-backup/
-ssh deep-server 'python3 /data/codex/scratch/eprp-paleodata-backup/paleodata_backup.py snapshot'
+ssh deep 'mkdir -p /data/codex/scratch/eprp-paleodata-backup'
+scp resources/tools/paleodata_backup.py deep:/data/codex/scratch/eprp-paleodata-backup/
+ssh deep 'python3 /data/codex/scratch/eprp-paleodata-backup/paleodata_backup.py snapshot'
 ```
 
 For a long transfer run that last command in an owned `tmux` session or with
-an explicitly retained log on deep-server so a laptop disconnect does not
+an explicitly retained log on deep so a laptop disconnect does not
 end the job. The script prints inventory, transfer and completion receipts.
 Only a completed result with a non-`.partial` generation and matching
 verification and restore receipts supports a completed-backup claim.
@@ -136,7 +138,7 @@ For recovery to another host, copy the selected generation and its manifest
 together, verify it there, then restore to a new directory. Do not overwrite
 the primary mirror during a drill. The VM data volume is separate from its
 root-disk image: an instance snapshot alone does not back it up. This copy
-provides separation from deep-server storage, not separation from Barry's
+provides separation from deep storage, not separation from Barry's
 administrative credentials or a complete disaster-recovery service.
 
 ## Verification record

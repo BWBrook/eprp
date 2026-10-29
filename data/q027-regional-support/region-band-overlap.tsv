@@ -1,0 +1,547 @@
+subset	period	stage	region	bands_with_eligible_cells	n_bands	tropical_mid_overlap	all_three_overlap
+original	Paleogene	Chattian	AF		0	0	0
+original	Paleogene	Chattian	AOC		0	0	0
+original	Paleogene	Chattian	AS	0-20,20-40,>=40	3	1	1
+original	Paleogene	Chattian	ATA		0	0	0
+original	Paleogene	Chattian	AUS	>=40	1	0	0
+original	Paleogene	Chattian	CAm		0	0	0
+original	Paleogene	Chattian	EU	20-40,>=40	2	0	0
+original	Paleogene	Chattian	IOC		0	0	0
+original	Paleogene	Chattian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Chattian	POC		0	0	0
+original	Paleogene	Chattian	RoW		0	0	0
+original	Paleogene	Chattian	SA	>=40	1	0	0
+original	Paleogene	Chattian	UNKNOWN		0	0	0
+original	Paleogene	Rupelian	AF	0-20,20-40	2	1	0
+original	Paleogene	Rupelian	AOC	0-20	1	0	0
+original	Paleogene	Rupelian	AS	0-20,20-40,>=40	3	1	1
+original	Paleogene	Rupelian	ATA		0	0	0
+original	Paleogene	Rupelian	AUS	>=40	1	0	0
+original	Paleogene	Rupelian	CAm		0	0	0
+original	Paleogene	Rupelian	EU	>=40	1	0	0
+original	Paleogene	Rupelian	IOC		0	0	0
+original	Paleogene	Rupelian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Rupelian	POC		0	0	0
+original	Paleogene	Rupelian	RoW		0	0	0
+original	Paleogene	Rupelian	SA	0-20,>=40	2	0	0
+original	Paleogene	Rupelian	UNKNOWN		0	0	0
+original	Paleogene	Priabonian	AF	0-20,20-40	2	1	0
+original	Paleogene	Priabonian	AOC	0-20	1	0	0
+original	Paleogene	Priabonian	AS	0-20,20-40,>=40	3	1	1
+original	Paleogene	Priabonian	ATA	>=40	1	0	0
+original	Paleogene	Priabonian	AUS	>=40	1	0	0
+original	Paleogene	Priabonian	CAm	0-20	1	0	0
+original	Paleogene	Priabonian	EU	20-40,>=40	2	0	0
+original	Paleogene	Priabonian	IOC		0	0	0
+original	Paleogene	Priabonian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Priabonian	POC	0-20	1	0	0
+original	Paleogene	Priabonian	RoW	>=40	1	0	0
+original	Paleogene	Priabonian	SA	0-20,20-40	2	1	0
+original	Paleogene	Priabonian	UNKNOWN		0	0	0
+original	Paleogene	Bartonian	AF	20-40	1	0	0
+original	Paleogene	Bartonian	AOC	0-20	1	0	0
+original	Paleogene	Bartonian	AS	0-20,20-40,>=40	3	1	1
+original	Paleogene	Bartonian	ATA	>=40	1	0	0
+original	Paleogene	Bartonian	AUS	>=40	1	0	0
+original	Paleogene	Bartonian	CAm		0	0	0
+original	Paleogene	Bartonian	EU	20-40,>=40	2	0	0
+original	Paleogene	Bartonian	IOC		0	0	0
+original	Paleogene	Bartonian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Bartonian	POC		0	0	0
+original	Paleogene	Bartonian	RoW		0	0	0
+original	Paleogene	Bartonian	SA	0-20	1	0	0
+original	Paleogene	Bartonian	UNKNOWN	0-20	1	0	0
+original	Paleogene	Lutetian	AF	0-20,20-40	2	1	0
+original	Paleogene	Lutetian	AOC	0-20	1	0	0
+original	Paleogene	Lutetian	AS	0-20,20-40,>=40	3	1	1
+original	Paleogene	Lutetian	ATA	>=40	1	0	0
+original	Paleogene	Lutetian	AUS	>=40	1	0	0
+original	Paleogene	Lutetian	CAm		0	0	0
+original	Paleogene	Lutetian	EU	20-40,>=40	2	0	0
+original	Paleogene	Lutetian	IOC		0	0	0
+original	Paleogene	Lutetian	NAm	0-20,20-40,>=40	3	1	1
+original	Paleogene	Lutetian	POC		0	0	0
+original	Paleogene	Lutetian	RoW		0	0	0
+original	Paleogene	Lutetian	SA	0-20,>=40	2	0	0
+original	Paleogene	Lutetian	UNKNOWN		0	0	0
+original	Paleogene	Ypresian	AF	0-20,20-40	2	1	0
+original	Paleogene	Ypresian	AOC		0	0	0
+original	Paleogene	Ypresian	AS	0-20,20-40,>=40	3	1	1
+original	Paleogene	Ypresian	ATA	>=40	1	0	0
+original	Paleogene	Ypresian	AUS	>=40	1	0	0
+original	Paleogene	Ypresian	CAm		0	0	0
+original	Paleogene	Ypresian	EU	20-40,>=40	2	0	0
+original	Paleogene	Ypresian	IOC		0	0	0
+original	Paleogene	Ypresian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Ypresian	POC		0	0	0
+original	Paleogene	Ypresian	RoW		0	0	0
+original	Paleogene	Ypresian	SA	0-20	1	0	0
+original	Paleogene	Ypresian	UNKNOWN		0	0	0
+original	Paleogene	Thanetian	AF	0-20	1	0	0
+original	Paleogene	Thanetian	AOC	0-20	1	0	0
+original	Paleogene	Thanetian	AS	0-20,20-40	2	1	0
+original	Paleogene	Thanetian	ATA		0	0	0
+original	Paleogene	Thanetian	AUS	>=40	1	0	0
+original	Paleogene	Thanetian	CAm		0	0	0
+original	Paleogene	Thanetian	EU	20-40,>=40	2	0	0
+original	Paleogene	Thanetian	IOC		0	0	0
+original	Paleogene	Thanetian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Thanetian	POC		0	0	0
+original	Paleogene	Thanetian	RoW		0	0	0
+original	Paleogene	Thanetian	SA		0	0	0
+original	Paleogene	Thanetian	UNKNOWN		0	0	0
+original	Paleogene	Selandian	AF	0-20	1	0	0
+original	Paleogene	Selandian	AOC		0	0	0
+original	Paleogene	Selandian	AS	0-20	1	0	0
+original	Paleogene	Selandian	ATA		0	0	0
+original	Paleogene	Selandian	AUS		0	0	0
+original	Paleogene	Selandian	CAm		0	0	0
+original	Paleogene	Selandian	EU	>=40	1	0	0
+original	Paleogene	Selandian	IOC		0	0	0
+original	Paleogene	Selandian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Selandian	POC		0	0	0
+original	Paleogene	Selandian	RoW	>=40	1	0	0
+original	Paleogene	Selandian	SA		0	0	0
+original	Paleogene	Selandian	UNKNOWN		0	0	0
+original	Paleogene	Danian	AF	0-20	1	0	0
+original	Paleogene	Danian	AOC		0	0	0
+original	Paleogene	Danian	AS	20-40	1	0	0
+original	Paleogene	Danian	ATA	>=40	1	0	0
+original	Paleogene	Danian	AUS	>=40	1	0	0
+original	Paleogene	Danian	CAm		0	0	0
+original	Paleogene	Danian	EU	0-20,20-40,>=40	3	1	1
+original	Paleogene	Danian	IOC		0	0	0
+original	Paleogene	Danian	NAm	20-40,>=40	2	0	0
+original	Paleogene	Danian	POC		0	0	0
+original	Paleogene	Danian	RoW		0	0	0
+original	Paleogene	Danian	SA	20-40,>=40	2	0	0
+original	Paleogene	Danian	UNKNOWN		0	0	0
+original	Cretaceous	Maastrichtian	AF	0-20,>=40	2	0	0
+original	Cretaceous	Maastrichtian	AOC	0-20,20-40	2	1	0
+original	Cretaceous	Maastrichtian	AS	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Maastrichtian	ATA	>=40	1	0	0
+original	Cretaceous	Maastrichtian	AUS	>=40	1	0	0
+original	Cretaceous	Maastrichtian	CAm		0	0	0
+original	Cretaceous	Maastrichtian	EU	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Maastrichtian	IOC		0	0	0
+original	Cretaceous	Maastrichtian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Maastrichtian	POC		0	0	0
+original	Cretaceous	Maastrichtian	RoW	>=40	1	0	0
+original	Cretaceous	Maastrichtian	SA	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Maastrichtian	UNKNOWN	0-20	1	0	0
+original	Cretaceous	Campanian	AF	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Campanian	AOC	0-20	1	0	0
+original	Cretaceous	Campanian	AS	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Campanian	ATA	>=40	1	0	0
+original	Cretaceous	Campanian	AUS	>=40	1	0	0
+original	Cretaceous	Campanian	CAm	0-20	1	0	0
+original	Cretaceous	Campanian	EU	20-40,>=40	2	0	0
+original	Cretaceous	Campanian	IOC		0	0	0
+original	Cretaceous	Campanian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Campanian	POC		0	0	0
+original	Cretaceous	Campanian	RoW		0	0	0
+original	Cretaceous	Campanian	SA	0-20,20-40	2	1	0
+original	Cretaceous	Campanian	UNKNOWN		0	0	0
+original	Cretaceous	Santonian	AF	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Santonian	AOC	0-20	1	0	0
+original	Cretaceous	Santonian	AS	>=40	1	0	0
+original	Cretaceous	Santonian	ATA	>=40	1	0	0
+original	Cretaceous	Santonian	AUS		0	0	0
+original	Cretaceous	Santonian	CAm		0	0	0
+original	Cretaceous	Santonian	EU	20-40,>=40	2	0	0
+original	Cretaceous	Santonian	IOC		0	0	0
+original	Cretaceous	Santonian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Santonian	POC		0	0	0
+original	Cretaceous	Santonian	RoW		0	0	0
+original	Cretaceous	Santonian	SA	0-20	1	0	0
+original	Cretaceous	Santonian	UNKNOWN		0	0	0
+original	Cretaceous	Coniacian	AF	0-20,>=40	2	0	0
+original	Cretaceous	Coniacian	AOC	0-20	1	0	0
+original	Cretaceous	Coniacian	AS	0-20,>=40	2	0	0
+original	Cretaceous	Coniacian	ATA	>=40	1	0	0
+original	Cretaceous	Coniacian	AUS		0	0	0
+original	Cretaceous	Coniacian	CAm		0	0	0
+original	Cretaceous	Coniacian	EU	20-40,>=40	2	0	0
+original	Cretaceous	Coniacian	IOC		0	0	0
+original	Cretaceous	Coniacian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Coniacian	POC		0	0	0
+original	Cretaceous	Coniacian	RoW	>=40	1	0	0
+original	Cretaceous	Coniacian	SA	0-20	1	0	0
+original	Cretaceous	Coniacian	UNKNOWN		0	0	0
+original	Cretaceous	Turonian	AF	0-20,20-40	2	1	0
+original	Cretaceous	Turonian	AOC		0	0	0
+original	Cretaceous	Turonian	AS	20-40,>=40	2	0	0
+original	Cretaceous	Turonian	ATA	>=40	1	0	0
+original	Cretaceous	Turonian	AUS		0	0	0
+original	Cretaceous	Turonian	CAm		0	0	0
+original	Cretaceous	Turonian	EU	20-40,>=40	2	0	0
+original	Cretaceous	Turonian	IOC		0	0	0
+original	Cretaceous	Turonian	NAm	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Turonian	POC		0	0	0
+original	Cretaceous	Turonian	RoW		0	0	0
+original	Cretaceous	Turonian	SA	0-20	1	0	0
+original	Cretaceous	Turonian	UNKNOWN		0	0	0
+original	Cretaceous	Cenomanian	AF	0-20,20-40	2	1	0
+original	Cretaceous	Cenomanian	AOC		0	0	0
+original	Cretaceous	Cenomanian	AS	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Cenomanian	ATA	>=40	1	0	0
+original	Cretaceous	Cenomanian	AUS	20-40,>=40	2	0	0
+original	Cretaceous	Cenomanian	CAm		0	0	0
+original	Cretaceous	Cenomanian	EU	20-40,>=40	2	0	0
+original	Cretaceous	Cenomanian	IOC		0	0	0
+original	Cretaceous	Cenomanian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Cenomanian	POC		0	0	0
+original	Cretaceous	Cenomanian	RoW		0	0	0
+original	Cretaceous	Cenomanian	SA	0-20	1	0	0
+original	Cretaceous	Cenomanian	UNKNOWN		0	0	0
+original	Cretaceous	Albian	AF	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Albian	AOC	0-20	1	0	0
+original	Cretaceous	Albian	AS	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Albian	ATA	>=40	1	0	0
+original	Cretaceous	Albian	AUS	>=40	1	0	0
+original	Cretaceous	Albian	CAm		0	0	0
+original	Cretaceous	Albian	EU	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Albian	IOC		0	0	0
+original	Cretaceous	Albian	NAm	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Albian	POC		0	0	0
+original	Cretaceous	Albian	RoW	>=40	1	0	0
+original	Cretaceous	Albian	SA	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Albian	UNKNOWN		0	0	0
+original	Cretaceous	Aptian	AF	0-20	1	0	0
+original	Cretaceous	Aptian	AOC	0-20	1	0	0
+original	Cretaceous	Aptian	AS	20-40,>=40	2	0	0
+original	Cretaceous	Aptian	ATA	>=40	1	0	0
+original	Cretaceous	Aptian	AUS	>=40	1	0	0
+original	Cretaceous	Aptian	CAm		0	0	0
+original	Cretaceous	Aptian	EU	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Aptian	IOC		0	0	0
+original	Cretaceous	Aptian	NAm	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Aptian	POC		0	0	0
+original	Cretaceous	Aptian	RoW	>=40	1	0	0
+original	Cretaceous	Aptian	SA	0-20,20-40	2	1	0
+original	Cretaceous	Aptian	UNKNOWN		0	0	0
+original	Cretaceous	Barremian	AF	0-20,20-40	2	1	0
+original	Cretaceous	Barremian	AOC	0-20	1	0	0
+original	Cretaceous	Barremian	AS	20-40,>=40	2	0	0
+original	Cretaceous	Barremian	ATA		0	0	0
+original	Cretaceous	Barremian	AUS		0	0	0
+original	Cretaceous	Barremian	CAm		0	0	0
+original	Cretaceous	Barremian	EU	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Barremian	IOC		0	0	0
+original	Cretaceous	Barremian	NAm	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Barremian	POC		0	0	0
+original	Cretaceous	Barremian	RoW		0	0	0
+original	Cretaceous	Barremian	SA	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Barremian	UNKNOWN		0	0	0
+original	Cretaceous	Hauterivian	AF	20-40	1	0	0
+original	Cretaceous	Hauterivian	AOC		0	0	0
+original	Cretaceous	Hauterivian	AS	20-40,>=40	2	0	0
+original	Cretaceous	Hauterivian	ATA		0	0	0
+original	Cretaceous	Hauterivian	AUS	>=40	1	0	0
+original	Cretaceous	Hauterivian	CAm		0	0	0
+original	Cretaceous	Hauterivian	EU	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Hauterivian	IOC		0	0	0
+original	Cretaceous	Hauterivian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Hauterivian	POC		0	0	0
+original	Cretaceous	Hauterivian	RoW	>=40	1	0	0
+original	Cretaceous	Hauterivian	SA	0-20,20-40	2	1	0
+original	Cretaceous	Hauterivian	UNKNOWN		0	0	0
+original	Cretaceous	Valanginian	AF	20-40	1	0	0
+original	Cretaceous	Valanginian	AOC		0	0	0
+original	Cretaceous	Valanginian	AS	>=40	1	0	0
+original	Cretaceous	Valanginian	ATA		0	0	0
+original	Cretaceous	Valanginian	AUS		0	0	0
+original	Cretaceous	Valanginian	CAm		0	0	0
+original	Cretaceous	Valanginian	EU	0-20,20-40	2	1	0
+original	Cretaceous	Valanginian	IOC		0	0	0
+original	Cretaceous	Valanginian	NAm	20-40,>=40	2	0	0
+original	Cretaceous	Valanginian	POC		0	0	0
+original	Cretaceous	Valanginian	RoW	>=40	1	0	0
+original	Cretaceous	Valanginian	SA	0-20,20-40	2	1	0
+original	Cretaceous	Valanginian	UNKNOWN		0	0	0
+original	Cretaceous	Berriasian	AF	20-40	1	0	0
+original	Cretaceous	Berriasian	AOC		0	0	0
+original	Cretaceous	Berriasian	AS	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Berriasian	ATA	>=40	1	0	0
+original	Cretaceous	Berriasian	AUS		0	0	0
+original	Cretaceous	Berriasian	CAm		0	0	0
+original	Cretaceous	Berriasian	EU	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Berriasian	IOC		0	0	0
+original	Cretaceous	Berriasian	NAm	0-20,20-40,>=40	3	1	1
+original	Cretaceous	Berriasian	POC		0	0	0
+original	Cretaceous	Berriasian	RoW	>=40	1	0	0
+original	Cretaceous	Berriasian	SA	0-20,20-40	2	1	0
+original	Cretaceous	Berriasian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Chattian	AF		0	0	0
+dated_public_member	Paleogene	Chattian	AOC		0	0	0
+dated_public_member	Paleogene	Chattian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Chattian	ATA		0	0	0
+dated_public_member	Paleogene	Chattian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Chattian	CAm		0	0	0
+dated_public_member	Paleogene	Chattian	EU	>=40	1	0	0
+dated_public_member	Paleogene	Chattian	IOC		0	0	0
+dated_public_member	Paleogene	Chattian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Chattian	POC		0	0	0
+dated_public_member	Paleogene	Chattian	RoW		0	0	0
+dated_public_member	Paleogene	Chattian	SA	>=40	1	0	0
+dated_public_member	Paleogene	Chattian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Rupelian	AF	20-40	1	0	0
+dated_public_member	Paleogene	Rupelian	AOC	0-20	1	0	0
+dated_public_member	Paleogene	Rupelian	AS	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Rupelian	ATA		0	0	0
+dated_public_member	Paleogene	Rupelian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Rupelian	CAm		0	0	0
+dated_public_member	Paleogene	Rupelian	EU	>=40	1	0	0
+dated_public_member	Paleogene	Rupelian	IOC		0	0	0
+dated_public_member	Paleogene	Rupelian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Rupelian	POC		0	0	0
+dated_public_member	Paleogene	Rupelian	RoW		0	0	0
+dated_public_member	Paleogene	Rupelian	SA	0-20	1	0	0
+dated_public_member	Paleogene	Rupelian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Priabonian	AF	20-40	1	0	0
+dated_public_member	Paleogene	Priabonian	AOC	0-20	1	0	0
+dated_public_member	Paleogene	Priabonian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Priabonian	ATA	>=40	1	0	0
+dated_public_member	Paleogene	Priabonian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Priabonian	CAm	0-20	1	0	0
+dated_public_member	Paleogene	Priabonian	EU	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Priabonian	IOC		0	0	0
+dated_public_member	Paleogene	Priabonian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Priabonian	POC	0-20	1	0	0
+dated_public_member	Paleogene	Priabonian	RoW	>=40	1	0	0
+dated_public_member	Paleogene	Priabonian	SA	0-20,20-40	2	1	0
+dated_public_member	Paleogene	Priabonian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Bartonian	AF	20-40	1	0	0
+dated_public_member	Paleogene	Bartonian	AOC	0-20	1	0	0
+dated_public_member	Paleogene	Bartonian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Bartonian	ATA	>=40	1	0	0
+dated_public_member	Paleogene	Bartonian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Bartonian	CAm		0	0	0
+dated_public_member	Paleogene	Bartonian	EU	>=40	1	0	0
+dated_public_member	Paleogene	Bartonian	IOC		0	0	0
+dated_public_member	Paleogene	Bartonian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Bartonian	POC		0	0	0
+dated_public_member	Paleogene	Bartonian	RoW		0	0	0
+dated_public_member	Paleogene	Bartonian	SA	0-20	1	0	0
+dated_public_member	Paleogene	Bartonian	UNKNOWN	0-20	1	0	0
+dated_public_member	Paleogene	Lutetian	AF	0-20,20-40	2	1	0
+dated_public_member	Paleogene	Lutetian	AOC	0-20	1	0	0
+dated_public_member	Paleogene	Lutetian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Lutetian	ATA	>=40	1	0	0
+dated_public_member	Paleogene	Lutetian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Lutetian	CAm		0	0	0
+dated_public_member	Paleogene	Lutetian	EU	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Lutetian	IOC		0	0	0
+dated_public_member	Paleogene	Lutetian	NAm	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Lutetian	POC		0	0	0
+dated_public_member	Paleogene	Lutetian	RoW		0	0	0
+dated_public_member	Paleogene	Lutetian	SA	0-20,>=40	2	0	0
+dated_public_member	Paleogene	Lutetian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Ypresian	AF	0-20	1	0	0
+dated_public_member	Paleogene	Ypresian	AOC		0	0	0
+dated_public_member	Paleogene	Ypresian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Ypresian	ATA	>=40	1	0	0
+dated_public_member	Paleogene	Ypresian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Ypresian	CAm		0	0	0
+dated_public_member	Paleogene	Ypresian	EU	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Ypresian	IOC		0	0	0
+dated_public_member	Paleogene	Ypresian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Ypresian	POC		0	0	0
+dated_public_member	Paleogene	Ypresian	RoW		0	0	0
+dated_public_member	Paleogene	Ypresian	SA	0-20	1	0	0
+dated_public_member	Paleogene	Ypresian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Thanetian	AF	0-20	1	0	0
+dated_public_member	Paleogene	Thanetian	AOC	0-20	1	0	0
+dated_public_member	Paleogene	Thanetian	AS	0-20,20-40	2	1	0
+dated_public_member	Paleogene	Thanetian	ATA		0	0	0
+dated_public_member	Paleogene	Thanetian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Thanetian	CAm		0	0	0
+dated_public_member	Paleogene	Thanetian	EU	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Thanetian	IOC		0	0	0
+dated_public_member	Paleogene	Thanetian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Thanetian	POC		0	0	0
+dated_public_member	Paleogene	Thanetian	RoW		0	0	0
+dated_public_member	Paleogene	Thanetian	SA		0	0	0
+dated_public_member	Paleogene	Thanetian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Selandian	AF	0-20	1	0	0
+dated_public_member	Paleogene	Selandian	AOC		0	0	0
+dated_public_member	Paleogene	Selandian	AS	0-20	1	0	0
+dated_public_member	Paleogene	Selandian	ATA		0	0	0
+dated_public_member	Paleogene	Selandian	AUS		0	0	0
+dated_public_member	Paleogene	Selandian	CAm		0	0	0
+dated_public_member	Paleogene	Selandian	EU	>=40	1	0	0
+dated_public_member	Paleogene	Selandian	IOC		0	0	0
+dated_public_member	Paleogene	Selandian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Selandian	POC		0	0	0
+dated_public_member	Paleogene	Selandian	RoW	>=40	1	0	0
+dated_public_member	Paleogene	Selandian	SA		0	0	0
+dated_public_member	Paleogene	Selandian	UNKNOWN		0	0	0
+dated_public_member	Paleogene	Danian	AF	0-20	1	0	0
+dated_public_member	Paleogene	Danian	AOC		0	0	0
+dated_public_member	Paleogene	Danian	AS	20-40	1	0	0
+dated_public_member	Paleogene	Danian	ATA	>=40	1	0	0
+dated_public_member	Paleogene	Danian	AUS	>=40	1	0	0
+dated_public_member	Paleogene	Danian	CAm		0	0	0
+dated_public_member	Paleogene	Danian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Paleogene	Danian	IOC		0	0	0
+dated_public_member	Paleogene	Danian	NAm	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Danian	POC		0	0	0
+dated_public_member	Paleogene	Danian	RoW		0	0	0
+dated_public_member	Paleogene	Danian	SA	20-40,>=40	2	0	0
+dated_public_member	Paleogene	Danian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Maastrichtian	AF	0-20,>=40	2	0	0
+dated_public_member	Cretaceous	Maastrichtian	AOC	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Maastrichtian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Maastrichtian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Maastrichtian	AUS	>=40	1	0	0
+dated_public_member	Cretaceous	Maastrichtian	CAm		0	0	0
+dated_public_member	Cretaceous	Maastrichtian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Maastrichtian	IOC		0	0	0
+dated_public_member	Cretaceous	Maastrichtian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Maastrichtian	POC		0	0	0
+dated_public_member	Cretaceous	Maastrichtian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Maastrichtian	SA	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Maastrichtian	UNKNOWN	0-20	1	0	0
+dated_public_member	Cretaceous	Campanian	AF	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Campanian	AOC	0-20	1	0	0
+dated_public_member	Cretaceous	Campanian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Campanian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Campanian	AUS	>=40	1	0	0
+dated_public_member	Cretaceous	Campanian	CAm	0-20	1	0	0
+dated_public_member	Cretaceous	Campanian	EU	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Campanian	IOC		0	0	0
+dated_public_member	Cretaceous	Campanian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Campanian	POC		0	0	0
+dated_public_member	Cretaceous	Campanian	RoW		0	0	0
+dated_public_member	Cretaceous	Campanian	SA	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Campanian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Santonian	AF	0-20,>=40	2	0	0
+dated_public_member	Cretaceous	Santonian	AOC	0-20	1	0	0
+dated_public_member	Cretaceous	Santonian	AS	>=40	1	0	0
+dated_public_member	Cretaceous	Santonian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Santonian	AUS		0	0	0
+dated_public_member	Cretaceous	Santonian	CAm		0	0	0
+dated_public_member	Cretaceous	Santonian	EU	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Santonian	IOC		0	0	0
+dated_public_member	Cretaceous	Santonian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Santonian	POC		0	0	0
+dated_public_member	Cretaceous	Santonian	RoW		0	0	0
+dated_public_member	Cretaceous	Santonian	SA	0-20	1	0	0
+dated_public_member	Cretaceous	Santonian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Coniacian	AF	0-20,>=40	2	0	0
+dated_public_member	Cretaceous	Coniacian	AOC	0-20	1	0	0
+dated_public_member	Cretaceous	Coniacian	AS	0-20,>=40	2	0	0
+dated_public_member	Cretaceous	Coniacian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Coniacian	AUS		0	0	0
+dated_public_member	Cretaceous	Coniacian	CAm		0	0	0
+dated_public_member	Cretaceous	Coniacian	EU	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Coniacian	IOC		0	0	0
+dated_public_member	Cretaceous	Coniacian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Coniacian	POC		0	0	0
+dated_public_member	Cretaceous	Coniacian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Coniacian	SA	0-20	1	0	0
+dated_public_member	Cretaceous	Coniacian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Turonian	AF	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Turonian	AOC		0	0	0
+dated_public_member	Cretaceous	Turonian	AS	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Turonian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Turonian	AUS		0	0	0
+dated_public_member	Cretaceous	Turonian	CAm		0	0	0
+dated_public_member	Cretaceous	Turonian	EU	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Turonian	IOC		0	0	0
+dated_public_member	Cretaceous	Turonian	NAm	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Turonian	POC		0	0	0
+dated_public_member	Cretaceous	Turonian	RoW		0	0	0
+dated_public_member	Cretaceous	Turonian	SA	0-20	1	0	0
+dated_public_member	Cretaceous	Turonian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Cenomanian	AF	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Cenomanian	AOC		0	0	0
+dated_public_member	Cretaceous	Cenomanian	AS	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Cenomanian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Cenomanian	AUS	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Cenomanian	CAm		0	0	0
+dated_public_member	Cretaceous	Cenomanian	EU	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Cenomanian	IOC		0	0	0
+dated_public_member	Cretaceous	Cenomanian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Cenomanian	POC		0	0	0
+dated_public_member	Cretaceous	Cenomanian	RoW		0	0	0
+dated_public_member	Cretaceous	Cenomanian	SA	0-20	1	0	0
+dated_public_member	Cretaceous	Cenomanian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Albian	AF	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Albian	AOC	0-20	1	0	0
+dated_public_member	Cretaceous	Albian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Albian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Albian	AUS	>=40	1	0	0
+dated_public_member	Cretaceous	Albian	CAm		0	0	0
+dated_public_member	Cretaceous	Albian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Albian	IOC		0	0	0
+dated_public_member	Cretaceous	Albian	NAm	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Albian	POC		0	0	0
+dated_public_member	Cretaceous	Albian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Albian	SA	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Albian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Aptian	AF	0-20	1	0	0
+dated_public_member	Cretaceous	Aptian	AOC	0-20	1	0	0
+dated_public_member	Cretaceous	Aptian	AS	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Aptian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Aptian	AUS	>=40	1	0	0
+dated_public_member	Cretaceous	Aptian	CAm		0	0	0
+dated_public_member	Cretaceous	Aptian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Aptian	IOC		0	0	0
+dated_public_member	Cretaceous	Aptian	NAm	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Aptian	POC		0	0	0
+dated_public_member	Cretaceous	Aptian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Aptian	SA	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Aptian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Barremian	AF	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Barremian	AOC	0-20	1	0	0
+dated_public_member	Cretaceous	Barremian	AS	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Barremian	ATA		0	0	0
+dated_public_member	Cretaceous	Barremian	AUS		0	0	0
+dated_public_member	Cretaceous	Barremian	CAm		0	0	0
+dated_public_member	Cretaceous	Barremian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Barremian	IOC		0	0	0
+dated_public_member	Cretaceous	Barremian	NAm	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Barremian	POC		0	0	0
+dated_public_member	Cretaceous	Barremian	RoW		0	0	0
+dated_public_member	Cretaceous	Barremian	SA	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Barremian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Hauterivian	AF	20-40	1	0	0
+dated_public_member	Cretaceous	Hauterivian	AOC		0	0	0
+dated_public_member	Cretaceous	Hauterivian	AS	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Hauterivian	ATA		0	0	0
+dated_public_member	Cretaceous	Hauterivian	AUS	>=40	1	0	0
+dated_public_member	Cretaceous	Hauterivian	CAm		0	0	0
+dated_public_member	Cretaceous	Hauterivian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Hauterivian	IOC		0	0	0
+dated_public_member	Cretaceous	Hauterivian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Hauterivian	POC		0	0	0
+dated_public_member	Cretaceous	Hauterivian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Hauterivian	SA	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Hauterivian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Valanginian	AF	20-40	1	0	0
+dated_public_member	Cretaceous	Valanginian	AOC		0	0	0
+dated_public_member	Cretaceous	Valanginian	AS	>=40	1	0	0
+dated_public_member	Cretaceous	Valanginian	ATA		0	0	0
+dated_public_member	Cretaceous	Valanginian	AUS		0	0	0
+dated_public_member	Cretaceous	Valanginian	CAm		0	0	0
+dated_public_member	Cretaceous	Valanginian	EU	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Valanginian	IOC		0	0	0
+dated_public_member	Cretaceous	Valanginian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Valanginian	POC		0	0	0
+dated_public_member	Cretaceous	Valanginian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Valanginian	SA	0-20,20-40	2	1	0
+dated_public_member	Cretaceous	Valanginian	UNKNOWN		0	0	0
+dated_public_member	Cretaceous	Berriasian	AF	20-40	1	0	0
+dated_public_member	Cretaceous	Berriasian	AOC		0	0	0
+dated_public_member	Cretaceous	Berriasian	AS	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Berriasian	ATA	>=40	1	0	0
+dated_public_member	Cretaceous	Berriasian	AUS		0	0	0
+dated_public_member	Cretaceous	Berriasian	CAm		0	0	0
+dated_public_member	Cretaceous	Berriasian	EU	0-20,20-40,>=40	3	1	1
+dated_public_member	Cretaceous	Berriasian	IOC		0	0	0
+dated_public_member	Cretaceous	Berriasian	NAm	20-40,>=40	2	0	0
+dated_public_member	Cretaceous	Berriasian	POC		0	0	0
+dated_public_member	Cretaceous	Berriasian	RoW	>=40	1	0	0
+dated_public_member	Cretaceous	Berriasian	SA	20-40	1	0	0
+dated_public_member	Cretaceous	Berriasian	UNKNOWN		0	0	0

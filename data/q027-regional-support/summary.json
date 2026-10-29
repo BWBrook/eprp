@@ -1,0 +1,197 @@
+{
+  "archive_members_sha256": {
+    "marine-lbg-ms-dryad-repo/PBDB_CSV_data_downloads/2022-05-23-14-15-24/Animalia^Chordata_data.csv": "c5da9359fced2285e0d50f20626a1ab562738d80ff12cece2bb0af530746670d",
+    "marine-lbg-ms-dryad-repo/PBDB_CSV_data_downloads/2022-05-23-14-15-24/Mollusca_data.csv": "70746ba481299eb73478b8817c2619eb0dc2c13224cd827c8501c44233aecb2e"
+  },
+  "builder_sha256": "b4c4703ff63ed7c2aa6e4e0433f95ec7e820e51a59f9a68e2975f373ff19fe37",
+  "counts": {
+    "coordinate_age_valid": 312271,
+    "dated_public_member_region_band_cells_ge2": 727,
+    "dated_public_member_selected_collections": 9180,
+    "dated_public_member_selected_occurrences": 60103,
+    "dated_public_member_stage_cells": 1068,
+    "dated_public_member_stage_cells_ge2": 726,
+    "joined_mollusca": 368760,
+    "joined_phylum_not_mollusca": 0,
+    "joined_public": 297657,
+    "mollusca_member_distinct": 368760,
+    "mollusca_member_public": 297657,
+    "mollusca_member_rows": 368760,
+    "mollusca_not_in_geographic_member": 0,
+    "original_region_band_cells_ge2": 816,
+    "original_selected_collections": 11208,
+    "original_selected_occurrences": 69931,
+    "original_stage_cells": 1194,
+    "original_stage_cells_ge2": 811,
+    "rank_genus_lithification_pass": 312271,
+    "selected_unmapped_nonempty_country": 0
+  },
+  "input_sha256": {
+    "/data/codex/scratch/eprp-q027-regional-20261029/static/country_codes.csv": "58d27a780d919a9fa9d027e65f1f54b9e8126ce1384b4ca6696ee4d8f43a7f3a",
+    "/data/codex/scratch/eprp-q027-regional-20261029/static/marine_regions.csv": "0c43e3c1bb171b36c4fc9b332ea41202754c7e257d23d6ee76c5e25653f35719",
+    "/data/codex/scratch/eprp-q027-regional-20261029/static/pbdb_time_int.csv": "023c31855b30247b324a2fb2c2edeb493eef84f898c082c359d647da3c3f9765",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p01.csv": "488b8979780ae2e45dbbb4b4593b2d8578cbc2c5d5d7ea44525b1f070c2c4a38",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p02.csv": "e0ce986a51e2470dbded3a0eb286e29616a5b9ae4bf2afabee4d84529ec9af67",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p03.csv": "e40e19781029e1ea7c2e5d5ca4d2b1315a310739438217516ccd3be546fe9f24",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p04.csv": "7e40f57d9023c738855ffacd4732037788615f6befed8ca7fc88ba976f6b99b5",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p05.csv": "301f2a1da422d44647e2180b669cb98ca0e371fc28e726ec1407f6b073402f15",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p06.csv": "e25b6cbeaaeb9d1fe907a253e6bb3ab0da7a277e12e6b2dd85cf77bbd75ac1cd",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p07.csv": "02167631c87205375a0d6001a1c8ec980670a71aac2dc6eccf2d0b78f2a831f7",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p08.csv": "d5122b12d6f0400d9fa37edb5dcca5cbf9db6ef2c9e40750c8e26c8f9e8e6f67",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p09.csv": "17f80dc7cbf1f481798dda06f20e11b70d221ebc1ee2e03b4ca449c2316fe2dc",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p10.csv": "7b8f6b0b4eb37cfd2f905f6d4071777b572c92aa79368ba6a45c5d9481babccc",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p11_000000.csv": "4b71274a0ddda16b6f804fc4f2c509b005785241963c3b742e78642edfb94f86",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p11_080000.csv": "14dcc6b32ac2c711927d65788d165ba8450546b5195809af7ded983ddcd4280a",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p11_160000.csv": "c24f0af6d5db76689e4702e22d4f0ef4a3e53f58cd705430286773448859c6a2",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p11_240000.csv": "e3bbcb64cafdc903f275540cd4394c7718e160200ec504f3b791ce9e719278b3",
+    "/data/paleodata/pbdb/global/raw/2026-10-23T0329Z_url/occurrences__p12.csv": "09e303bde39fcf6af4ad5b24daedbdfe1dd7f4d74378396c7e01cadd2995c8a0",
+    "/data/paleodata/register-deposits/benson2025-marine-latitudinal-diversity/raw/v4_361737/marine-lbg-ms-dryad-repo.zip": "7536adf67816407559698b59efc6a25f686ac48bd6b49a95590de94a320e0fe1"
+  },
+  "output_sha256": {
+    "region-band-overlap.tsv": "fd4af48211df496480bd03c068d1c8c3c2782a079d68e418cc316e6672f91cec",
+    "support.tsv": "8f253a64ddd2dfb2230df35e1be02fb8da5b818e1c8a7dfdc95adfaddeab3459"
+  },
+  "public_snapshot_unique_occurrences": 1782649,
+  "region_codes": [
+    "AF",
+    "AOC",
+    "AS",
+    "ATA",
+    "AUS",
+    "CAm",
+    "EU",
+    "IOC",
+    "NAm",
+    "POC",
+    "RoW",
+    "SA"
+  ],
+  "stages": [
+    [
+      "Chattian",
+      28.1,
+      23.03,
+      "Paleogene"
+    ],
+    [
+      "Rupelian",
+      33.9,
+      28.1,
+      "Paleogene"
+    ],
+    [
+      "Priabonian",
+      38.0,
+      33.9,
+      "Paleogene"
+    ],
+    [
+      "Bartonian",
+      41.3,
+      38.0,
+      "Paleogene"
+    ],
+    [
+      "Lutetian",
+      47.8,
+      41.3,
+      "Paleogene"
+    ],
+    [
+      "Ypresian",
+      56.0,
+      47.8,
+      "Paleogene"
+    ],
+    [
+      "Thanetian",
+      59.2,
+      56.0,
+      "Paleogene"
+    ],
+    [
+      "Selandian",
+      61.6,
+      59.2,
+      "Paleogene"
+    ],
+    [
+      "Danian",
+      66.0,
+      61.6,
+      "Paleogene"
+    ],
+    [
+      "Maastrichtian",
+      72.1,
+      66.0,
+      "Cretaceous"
+    ],
+    [
+      "Campanian",
+      83.6,
+      72.1,
+      "Cretaceous"
+    ],
+    [
+      "Santonian",
+      86.3,
+      83.6,
+      "Cretaceous"
+    ],
+    [
+      "Coniacian",
+      89.8,
+      86.3,
+      "Cretaceous"
+    ],
+    [
+      "Turonian",
+      93.9,
+      89.8,
+      "Cretaceous"
+    ],
+    [
+      "Cenomanian",
+      100.5,
+      93.9,
+      "Cretaceous"
+    ],
+    [
+      "Albian",
+      113.0,
+      100.5,
+      "Cretaceous"
+    ],
+    [
+      "Aptian",
+      125.0,
+      113.0,
+      "Cretaceous"
+    ],
+    [
+      "Barremian",
+      129.4,
+      125.0,
+      "Cretaceous"
+    ],
+    [
+      "Hauterivian",
+      132.9,
+      129.4,
+      "Cretaceous"
+    ],
+    [
+      "Valanginian",
+      139.8,
+      132.9,
+      "Cretaceous"
+    ],
+    [
+      "Berriasian",
+      145.0,
+      139.8,
+      "Cretaceous"
+    ]
+  ]
+}

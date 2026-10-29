@@ -7,12 +7,12 @@ or a validated measure of living-community abundance.
 
 ## Location and inputs
 
-- Database: `deep-server:/data/paleodata/fossilworks/derived/2026-10-28-assembly-v1/fossilworks.sqlite` (80,089,088 bytes; read-only).
-- Separately verified read-only VM copy: `nectar-codex-ts:/data/codex/artifacts/eprp-fossilworks-assembly/2026-10-28-assembly-v1/fossilworks.sqlite`. Its database, manifest and verification receipt all match the deep-server copy by SHA256.
+- Database: `deep:/data/paleodata/fossilworks/derived/2026-10-28-assembly-v1/fossilworks.sqlite` (80,089,088 bytes; read-only).
+- Separately verified read-only VM copy: `nectar:/data/codex/artifacts/eprp-fossilworks-assembly/2026-10-28-assembly-v1/fossilworks.sqlite`. Its database, manifest and verification receipt all match the deep copy by SHA256.
 - Its [manifest](profile/assembly-manifest-2026-10-28.json) pins the source,
   selected-sheet audit, assembler and output SHA256 values. The derived
   directory also contains `MANIFEST.json` and `verification.json`.
-- Source: `deep-server:/data/paleodata/fossilworks/raw/2026-10-28-intervals-v2/`.
+- Source: `deep:/data/paleodata/fossilworks/raw/2026-10-28-intervals-v2/`.
   The source consists of 20 sequential public requests, not an atomic
   provider snapshot. See the [acquisition record](profile/acquisition-2026-10-28.md).
 - Selection: the first retained attempt for each of the 20 intervals, using

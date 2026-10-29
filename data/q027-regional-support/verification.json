@@ -1,0 +1,43 @@
+{
+  "ambiguous_stage_assignments": 0,
+  "checked_files_sha256": {
+    "build.py": "b4c4703ff63ed7c2aa6e4e0433f95ec7e820e51a59f9a68e2975f373ff19fe37",
+    "region-band-overlap.tsv": "fd4af48211df496480bd03c068d1c8c3c2782a079d68e418cc316e6672f91cec",
+    "summary.json": "dbaf2761d779b6d14f63a89d8aa7041f77c960db888b23061bd71db24ed75b5f",
+    "support.tsv": "8f253a64ddd2dfb2230df35e1be02fb8da5b818e1c8a7dfdc95adfaddeab3459"
+  },
+  "exact_pole_or_dateline_coordinates": 0,
+  "historical_geographic_member_sha256_matches": true,
+  "independent_audit_archive": {
+    "archived_after_execution": true,
+    "host": "deep",
+    "path": "/data/codex/scratch/eprp-q027-regional-20261029/independent-audit/",
+    "sha256": {
+      "receipt.json": "b3dde9e69386fe11f7e330736ce4ccc113da3b5cd511a682065feda9ff025fec",
+      "stdout.json": "5cca5b00e2e8f0fd5ddcca6400f5ac33715772fe9f85df042c407ff5c27be658",
+      "verify.py": "6300b8bc9988b3a0018eff2843954525a00ef5a2f77e4bf0637a3096787db40b"
+    }
+  },
+  "level": "Independent aggregate recomputation from retained source; not estimator or biological validation",
+  "mismatched_rows": 0,
+  "mixed_region_stage_cells": {
+    "dated_public_member": 5,
+    "original": 8
+  },
+  "outside_tropical_regions_ge3_stages": {
+    "dated_public_member": 12,
+    "original": 14
+  },
+  "overlap_rows_compared": 546,
+  "reviewer": "Independent Codex GPT-6.1 Sol subagent; parent checked output dimensions and hashes",
+  "selected_collection_ids_blank": 0,
+  "selected_collection_spans_multiple_groups": 0,
+  "stages_losing_three_region_threshold": [
+    "Cenomanian",
+    "Rupelian"
+  ],
+  "subset_metrics_bounded_by_original": true,
+  "support_rows_compared": 1638,
+  "unmapped_nonempty_countries": 0,
+  "verified_utc": "2026-10-29T03:18:50.868826+00:00"
+}
