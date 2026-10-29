@@ -49,16 +49,16 @@ running the 1.6.0 package. See [A3–A5](../bench/VALIDATION_T5.md).
   the declared tolerance; the isolated two-cell speciation case reaches
   two species at the expected sixth step. Receipts are in
   [`t5_gen3sis_checks.json`](../bench/results/t5/t5_gen3sis_checks.json).
-- **G3: nine retained runs audited; one replacement running.** Direct
-  recounts from saved final species and landscape objects agree with the
-  nine retained run summaries. Seven final living-species counts equal the
-  deposited values; configs 2 and 10 differ by +9 and +4 respectively.
-  These are comparisons between versions and input representations, not an
-  isolated estimate of version effects. The original selected config 9 is
-  absent from the deposit and failed to run. Config 22, selected under the
-  prospective A5 amendment, was running at 14:17 AEDT on 28 October; no
-  result is inferred yet. Output and status are under
-  `deep-server:/data/codex/artifacts/eprp/g3-config22-20261028/`.
+- **G3: ten deposited configurations completed and audited.** The nine
+  retained outputs and substitute config 22 have internally consistent
+  living-species and occupancy recounts. Eight of ten final living-species
+  counts match the deposit; configs 2 and 10 differ by +9 and +4. The
+  original selected config 9 remains missing from the deposit and its failed
+  attempt is preserved. Config 22 was selected prospectively under A5 and
+  finished normally at 17:28 AEDT on 28 October after 3.483 hours. It has
+  **3,003 living species**, matching the deposit, and 1,560 occupied cells
+  of 1,562 habitable cells. This compares different versions and landscape
+  representations, not an isolated version-effect test.
 
 The [independent recount](../bench/results/t5/g3_retained_audit_20261028.tsv)
 has the nine pairs, occupancy counts and source-object hashes; its
@@ -80,19 +80,18 @@ were saved before the run; the compiled-landscape
 was captured during it. The run mounts those inputs read-only, though a
 post-start manifest cannot by itself prove their state at launch.
 
-An [independent single-run recount](../bench/validate/t5_g3_single_audit.R)
-has been checked against retained config 18. The
-[completion watcher](../bench/watch_t5_g3_22.sh) checks the simulation's
-exit, input hashes and post-run landscape manifest, then audits config 22's
-final state. Its success branch was exercised with config 18 and a small
-test manifest, and its failure branch rejected a simulated timeout. The
-actual config 22 receipt remains pending until that run completes.
-The [collector](../bench/collect_t5_g3_22.sh) is also running on the laptop
-and will copy a successful audit or failure status to the ignored
-`scratch/g3-config22-collected/` directory. Its success and failure paths
-were checked on the same fixtures. If the laptop is unavailable, the
-remote audit remains under the task's `audit/` directory for later pickup;
-neither outcome is committed or interpreted automatically.
+The [single-run recount](../bench/validate/t5_g3_single_audit.R) and
+[completion watcher](../bench/watch_t5_g3_22.sh) checked config 22's final
+state, source hashes and unchanged landscape manifest. The
+[final audit](../bench/results/t5/g3_config22_audit_20261029.tsv),
+[run receipt](../bench/results/t5/g3_m1_22_20261029.csv),
+[completion status](../bench/results/t5/g3_config22_status_20261029.txt) and
+[audit status](../bench/results/t5/g3_config22_audit_status_20261029.txt)
+were collected on 29 October. Species, landscape and summary hashes are
+in the audit. The extinct fraction is 28/3,031 = 0.009238; the deposit's
+`perc_extinction` is 0.01, whose exact definition remains unconfirmed.
+Remote evidence remains at
+`deep:/data/codex/artifacts/eprp/g3-config22-20261028/`.
 
 ## Pitfalls and relevance
 
@@ -113,6 +112,7 @@ neither outcome is committed or interpreted automatically.
 Hagen et al. (2021), *PLOS Biology*, DOI: 10.1371/journal.pbio.3001340;
 the simulation input and output deposit is Zenodo 5006413 (CC BY 4.0).
 On 28 October Codex recounted all nine retained final states and independently
-checked the source fields used in the comparison. The two new G3 completion
-and interpretation results remain open until the running config and the
-deposit definitions are examined.
+checked the source fields used in the comparison. Config 22 was independently
+recounted on completion and collected on 29 October. The G3 completion audit
+is closed; interpretation of the deposit's occupancy and extinction fields
+remains qualified as above.

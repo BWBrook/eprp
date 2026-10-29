@@ -68,7 +68,7 @@ describing the data twice.
 | [richness (Alroy)](alroy-richness/README.md) | T2 | CEGS (the geometric Weibull, on our inference) under its own model; lowest absolute error on the tranche-4 records (characterised, one generator family) |
 | [cGENIE.muffin](cgenie-muffin/README.md) | T2 | 540 Ma cold-baseline volume means and field correlations against deposited output; local discrepancies remain |
 | [cGENIE metabolic index](cgenie-metabolic-index-pohl/README.md) | T2 | viability and oxygen partial pressure for one deposited field and configuration; mask missing values by evaluation domain |
-| [gen3sis](gen3sis/README.md) | T2 | one-step Weibull dispersal and a two-cell speciation check; a deposited-run comparison is in progress |
+| [gen3sis](gen3sis/README.md) | T2 | one-step Weibull dispersal and a two-cell speciation check; ten deposited configurations audited, eight living-species counts match |
 | [INDITEK-2.0](inditek-2/README.md) | T2 | specified rate/capacity controls and three proof-proposal diversity vectors; saved scores and inverse sampler remain unresolved |
 
 Entries through tranche 4 were reviewed independently (Claude Sonnet subagent,

@@ -480,9 +480,10 @@ amendments; individual findings and limitations are in the tool entries.
   See the [entry](../cgenie-metabolic-index-pohl/README.md).
 - **gen3sis:** G1 is not met and G2a/G2b pass. Independent recount of nine
   G3 runs reproduces the retained living-species and occupancy summaries;
-  seven of nine living-species counts match the deposit. Config 9's file
-  is absent, and config 22 is running as the prospectively declared
-  replacement; no result is claimed for it. See the
+  seven of nine retained living-species counts match the deposit. Config 22
+  completed normally and its independent audit finds 3,003 living species,
+  matching the deposit: eight matches across ten completed configurations.
+  Config 9 remains missing; config 22 is the A5 replacement. See the
   [entry](../gen3sis/README.md).
 - **INDITEK-2.0:** the checksum-verified deposit's sampler has an initial
   prior defect, and its saved chains are incompatible with that sampler's

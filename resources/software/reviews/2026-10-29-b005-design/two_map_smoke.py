@@ -32,7 +32,7 @@ paths = ["data/Point_foodtemp.mat", "data/Point_ages_xyz.mat", "data/LonDeg.mat"
          "data/landShelfOceanMask.mat", "data/rhoExt.csv", "data/observed_D.npz",
          "output_data/inditekMCMCoutput_5002_proof.npz", "inditek_main_2.py",
          "inditek_rhonet_2.py", "inditek_alphadiv_2.py", "inditek_gridding_alphadiv_2.py",
-         "inditek_model_proof.py"]
+         "inditek_model_proof.py", "alphadiv_expo.py"]
 hashes = {name: sha256(root / name) for name in paths}
 with contextlib.redirect_stdout(sys.stderr):
     fields = scipy.io.loadmat(root / "data/Point_foodtemp.mat")

@@ -67,15 +67,17 @@ for label, extinction in [('constant', False), ('forced_extinction', True)]:
         repeated = evaluate(capacity, r, ext)
         results['deterministic'] = all(np.array_equal(a,b) for a,b in zip((bounded,unbounded),repeated))
         grids = []
+        masks = []
         for d in [bounded, unbounded]:
             x, y, grid = inditek_gridding_alphadiv(d, points, np.arange(-89.75,90,.5),
                                                    np.arange(-179.75,180,.5), np.ones((720,360,3)))
             keep = np.isfinite(grid)
+            masks.append(keep.copy())
             slope = np.polyfit(np.abs(y[keep]), np.log1p(grid[keep]), 1)[0]
             grids.append({'finite_cells': int(keep.sum()), 'diversities': grid[keep].tolist(),
                           'slope_log1p_per_latitude_degree': float(slope)})
         results['gridding'] = {'bounded': grids[0], 'unbounded': grids[1]}
-        results['common_finite_mask'] = grids[0]['finite_cells'] == grids[1]['finite_cells'] == 3
+        results['common_finite_mask'] = bool(np.array_equal(*masks) and grids[0]['finite_cells'] == 3)
 
 b, u = evaluate(np.full_like(capacity,1e30), rates, np.array([], dtype=int))
 results['large_finite_capacity_max_difference'] = float(np.max(np.abs(b-u)))

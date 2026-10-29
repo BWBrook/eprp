@@ -1,0 +1,2 @@
+config	seed	landscape	flag	alive	deposited_alive	alive_difference	total_species	extinct_fraction	deposited_perc_extinction	occupied_cells	habitable_cells	occupancy	deposited_fraction_colonized	species_md5	landscape_md5	summary_md5
+22	66770	scotese_4d	OK	3003	3003	0	3031	0.0092378752886836	0.01	1560	1562	0.998719590268886	0.998719590268886	ecf86259a9f21056a533b15a72e1920d	257563b2b924893ae73fde7fbe114541	cfb723c94854f62cdc525f612017cd23

@@ -1,0 +1,64 @@
+{
+  "parameters": [
+    161,
+    19,
+    0.035,
+    0.002,
+    2.0
+  ],
+  "source_and_input_sha256": {
+    "data/Point_foodtemp.mat": "4bd91acd85849d4c8833269a36d29394003f7a082c69ec9270f7caf05534cc2f",
+    "data/Point_ages_xyz.mat": "ce7bbfa315d29bda8ab2ce1e00d5fe2085e2c35e92d6ae1c0eea4c1ed103ccfb",
+    "data/LonDeg.mat": "26c1291d289c859acf55c675096436c00e02b24f3863c2341a661df910c818b3",
+    "data/landShelfOceanMask.mat": "006f43c7866f1e292b02d8ef1b9b814ad9e2f30d21b595398cc004eba3e3abb9",
+    "data/rhoExt.csv": "ccc416b57ccb90dfd385175ec6c59bb98419870413ab9139b5195db306ec9b3a",
+    "data/observed_D.npz": "b75fdecc2fa702ddcc6ea5f3d00c68fcffdfb4207969459195d1d1f138028c59",
+    "output_data/inditekMCMCoutput_5002_proof.npz": "7c47afef83c85baff6a0cddaee20a28bce926261f41e221a03f5928cea8ccd64",
+    "inditek_main_2.py": "78360cd039e1bf24b363ab1bfb1411d58c58c1d6800d9b58570f93e1e821b77f",
+    "inditek_rhonet_2.py": "70a45d9b803a179de007226fccf1e093d717a4ce424c0bff9b07eac9887d80b2",
+    "inditek_alphadiv_2.py": "15533e5584960e22760844fe2a0dcb20b8940905ebedaa527d16b9eb9deed81c",
+    "inditek_gridding_alphadiv_2.py": "f9ab162de611897aa5f87c5e136b27c92053a939aa763d2292b414300e7b1e59",
+    "inditek_model_proof.py": "06771521fe3922ecbf38b2296de1d7a83d22fca033cb0f937a26f1e6c68e243b",
+    "alphadiv_expo.py": "94bb9c6d3cf9a2d308b34b97bbce11f031e481b2245d5933e2d15483334dc2a8"
+  },
+  "python_version": "3.12.3",
+  "numpy_version": "2.4.6",
+  "spatial_grid": "native 0.5 degree present continental shelf endpoint",
+  "history": "full deposited time slices, forcing, initial D0=1",
+  "results": [
+    {
+      "model": "proof",
+      "shape": [
+        360,
+        720
+      ],
+      "finite_cells": 2978,
+      "nan_cells": 256222,
+      "inf_cells": 0,
+      "all_native_values_finite": true,
+      "minimum_finite": 1.0195414138332912,
+      "maximum_finite": 50.705303515033705,
+      "sum_finite_local_richness": 27499.95178460191,
+      "map_path": "/data/codex/artifacts/eprp/b005-native-smoke-20261029/proof.npz",
+      "map_sha256": "81769f0be286176c871897953c9ada70bdf359fc2e5adfcf53fa8082f2718611",
+      "elapsed_seconds": 14.38
+    },
+    {
+      "model": "expo",
+      "shape": [
+        360,
+        720
+      ],
+      "finite_cells": 2978,
+      "nan_cells": 256222,
+      "inf_cells": 0,
+      "all_native_values_finite": true,
+      "minimum_finite": 1.0202821370679744,
+      "maximum_finite": 1187.6391429099222,
+      "sum_finite_local_richness": 121768.48994702613,
+      "map_path": "/data/codex/artifacts/eprp/b005-native-smoke-20261029/expo.npz",
+      "map_sha256": "a55f64a8ae01b598510bfca0e8f8d9242d229e94d6efaa3d0b2d76a3a25d4a0d",
+      "elapsed_seconds": 13.108
+    }
+  ]
+}

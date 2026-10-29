@@ -1,0 +1,117 @@
+{
+  "source_sha256": {
+    "inditek_main_2.py": "78360cd039e1bf24b363ab1bfb1411d58c58c1d6800d9b58570f93e1e821b77f",
+    "inditek_rhonet_2.py": "70a45d9b803a179de007226fccf1e093d717a4ce424c0bff9b07eac9887d80b2",
+    "inditek_alphadiv_2.py": "15533e5584960e22760844fe2a0dcb20b8940905ebedaa527d16b9eb9deed81c",
+    "alphadiv_expo.py": "94bb9c6d3cf9a2d308b34b97bbce11f031e481b2245d5933e2d15483334dc2a8",
+    "inditek_gridding_alphadiv_2.py": "f9ab162de611897aa5f87c5e136b27c92053a939aa763d2292b414300e7b1e59"
+  },
+  "numpy_version": "2.4.6",
+  "python_version": "3.12.3",
+  "results": {
+    "constant": {
+      "bounded": [
+        [
+          1.0,
+          1.4621499745236166,
+          1.7621266714654407
+        ],
+        [
+          1.0,
+          2.0196330275587635,
+          3.2397027465942596
+        ],
+        [
+          1.0,
+          2.3129798408418445,
+          4.492908939166735
+        ]
+      ],
+      "unbounded": [
+        [
+          1.0,
+          2.705563422272645,
+          7.320073431939666
+        ],
+        [
+          1.0,
+          2.705563422272645,
+          7.320073431939666
+        ],
+        [
+          1.0,
+          2.705563422272645,
+          7.320073431939666
+        ]
+      ],
+      "bounded_max_error": 0.0,
+      "unbounded_max_error": 0.0,
+      "pass": true
+    },
+    "deterministic": true,
+    "gridding": {
+      "bounded": {
+        "finite_cells": 3,
+        "diversities": [
+          1.7621266714654407,
+          3.2397027465942596,
+          4.492908939166735
+        ],
+        "slope_log1p_per_latitude_degree": 0.017186426511217375
+      },
+      "unbounded": {
+        "finite_cells": 3,
+        "diversities": [
+          7.320073431939666,
+          7.320073431939666,
+          7.320073431939666
+        ],
+        "slope_log1p_per_latitude_degree": -9.41852870514252e-18
+      }
+    },
+    "common_finite_mask": true,
+    "forced_extinction": {
+      "bounded": [
+        [
+          1.0,
+          1.4621499745236166,
+          1.2462952230286242
+        ],
+        [
+          1.0,
+          2.0196330275587635,
+          1.7687469972419878
+        ],
+        [
+          1.0,
+          2.3129798408418445,
+          2.280932693470466
+        ]
+      ],
+      "unbounded": [
+        [
+          1.0,
+          2.705563422272645,
+          3.18978851220092
+        ],
+        [
+          1.0,
+          2.705563422272645,
+          3.18978851220092
+        ],
+        [
+          1.0,
+          2.705563422272645,
+          3.18978851220092
+        ]
+      ],
+      "bounded_max_error": 0.0,
+      "unbounded_max_error": 0.0,
+      "pass": true
+    },
+    "large_finite_capacity_max_difference": 0.0,
+    "zero_rate_common_control": true,
+    "infinite_capacity_bounded_nonfinite_count": 6,
+    "all_declared_controls_pass": true
+  }
+}
