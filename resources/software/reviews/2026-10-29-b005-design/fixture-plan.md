@@ -18,3 +18,13 @@ repeat-call determinism. Exercise native endpoint gridding on synthetic
 of log(1+gridded diversity) against absolute latitude. This checks a downstream
 calculation, not palaeobiological sampling or identification. Retain every
 outcome and source hashes. No altered sampler or source is used.
+
+## Full-history viability supplement (before its two evaluations)
+
+Board 76/2521 authorises exactly one proof and one expo forward call using
+[161,19,0.035,0.002,2], the archived full history/forcing, D0=1 and native
+endpoint grid. No fit, horizon change or rescue after a failure. Use the
+existing locked environment, one CPU and a one-core-hour ceiling; preserve
+errors/nonfinite values. Save raw X/Y/diversity grids on deep, hashes,
+finite/NaN/Inf counts and small descriptive endpoint summaries. RSS from
+the existing wrapper is incidental and is not an observation law for B005.
