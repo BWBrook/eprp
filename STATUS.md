@@ -2,28 +2,41 @@
 
 Updated: 30 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: portfolio synthesis complete; B-002 leads the proposed next
-bounded development work.** Barry requested the synthesis in main chat on
-30 October. The [new comparison](ideas/2026-10-30-portfolio-synthesis-codex.md)
-recommends one source-grounded physical comparison of complete ammonoid growth
-programmes: can earlier-stage requirements obstruct a route that terminal
-requirements permit? Existing route mathematics is complete; physical support
-and closest-prior novelty remain provisional. No primary project is selected.
+**Current focus: B-002's held-source feasibility tranche is complete; its
+proposed physical route calculation lacks the required stage inputs.** Barry
+authorised assessment of Claude's 96/2581 critique and the next recommended
+bounded tranche in main chat (exact instruction in 96/2582). The
+[response](ideas/2026-10-30-b002-critique-response-codex.md) and
+[result bundle](data/b002-feasibility/README.md) close the proposed
+coupling/thickness shortcut without rejecting developmental constraints.
 
-Q-009 remains the strongest conditional empirical alternative, pending a
-valid later outcome and comparison windows. Q-016 merits an exact prior/support
-check; its closest studies already forecast later blocks and favour a
-range-by-contraction interaction. Q-012 method development remains queued:
-the weak recorded detector is not an information ceiling, and P11 does not
-compute the required recorded likelihood. B-005's exercised route is closed
-as reusable support; the selected Q-027 comparisons fail their fixed contract.
-Other register dispositions and frozen results remain unchanged.
+The workbook supplies 178 native-size pairs at 2→10 and 124 at 5→20; their
+descriptive associations cannot identify independent developmental control.
+Naglik's held tables supply chamber/septum volumes and three reconstructed
+endpoints, not the proposed thickness series or complete animals through
+growth. Endpoint loading fractions replay at 0.3791, 0.3550 and 0.3132 under
+the stated idealised capacity envelope. Earlier body chambers, wall/displaced
+geometry and physiological loading rules remain missing. No route search or
+empirical barrier test follows. The critique's valid convexity/bypass checks
+are retained, with counterexamples to its broader automatic stop rules.
 
-Main Codex owns the synthesis and proposed implementation, with two bounded
-GPT-6.1 Sol contributions integrated. Packages, References and Databases retain
-their existing ownership. Claude is the next proposed responder for a focused
-allocation critique, not routine legwork; acceptance remains pending. Barry
-retains consequential programme and primary-investigation selection.
+Q-009 now has the preferred next empirical support check. References was
+invited in 76/2583 to identify a later response, information windows, forcing
+coverage and usable comparison blocks; acceptance is pending. Main Codex
+does not duplicate its alignment work. Q-016 remains a narrower conditional
+alternative; Q-012 method development stays queued. The
+[portfolio synthesis](ideas/2026-10-30-portfolio-synthesis-codex.md) retains
+the wider comparison, with its B-002 recommendation now superseded by this
+support result. No primary investigation is selected.
+
+Main Codex owns `data/b002-feasibility/`, the response and integration.
+Two bounded GPT-6.1 Sol audits informed the tranche. Source-table images,
+independent XML extraction, separate R calculations and five interpolation
+controls support the numerical checks. Packages, References and Databases
+retain their existing source ownership. Next responder is References on the
+finite Q-009 invitation; no further Claude cycle is needed to close this
+support check. Barry retains consequential programme and primary-project
+selection. Registers and earlier frozen results are unchanged.
 
 **Completed Q-027 result: the selected regional contrast fails estimator eligibility.**
 Barry authorised the Albian–Campanian build/run in main chat on 29 October

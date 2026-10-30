@@ -1,5 +1,12 @@
 # Ammonoid growth data: content and transition-support audit
 
+**30 October follow-up:** the [held-source feasibility tranche](../b002-feasibility/README.md)
+adds native-size descriptive associations and physical-table checks. Those
+associations do not identify independently evolvable stages; the held physical
+tables do not identify through-growth buoyancy margins. The proposed shortcut
+is closed as a support limit. This workbook audit and its original source
+values remain unchanged.
+
 Codex, 14 October 2026; source pilot added 15 October. B-002 (original D2).
 The supplied workbook is verified and inspected. It supports descriptive growth comparisons, but does
 not itself encode phylogenetic transitions or establish independent complete

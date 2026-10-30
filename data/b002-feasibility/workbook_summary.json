@@ -1,0 +1,146 @@
+{
+  "source_sha256": "fbe2012f1d420ef7b292141ae0ed0ea8d046c4c15303663565dc72e0727ebe40",
+  "source_rows": 179,
+  "source_unchanged": true,
+  "python": "3.12.13",
+  "numpy": "2.1.3",
+  "openpyxl": "3.1.5",
+  "protocol_sha256": "f6e012e95eac6c9123d3bc140e72687391751cd074b63abba1a8b5b5e27f14f9",
+  "script_sha256": "b476f71f1cb4078086d371180343db137c5f9a1c5fa30cf9f195e1315ce273fb",
+  "pairs": {
+    "2_to_10": {
+      "n_rows": 178,
+      "n_source_family_labels": 41,
+      "ratios": {
+        "CWI": {
+          "linear_in_sample_r2": 0.3762300335371559,
+          "same_ratio_pearson_r": 0.4487327004976888,
+          "design_rank": 4,
+          "coefficients_intercept_CWI_UWI_WER": [
+            0.6092256001336465,
+            0.43672990995493854,
+            -0.5711098845331316,
+            -0.04758330698555713
+          ],
+          "early_range": [
+            0.3453882696763374,
+            1.3338156970918242
+          ],
+          "late_range": [
+            0.43299611583407205,
+            1.14941312486006
+          ]
+        },
+        "UWI": {
+          "linear_in_sample_r2": 0.2147155693495233,
+          "same_ratio_pearson_r": 0.4619902195056165,
+          "design_rank": 4,
+          "coefficients_intercept_CWI_UWI_WER": [
+            0.2893969719425983,
+            0.014334649661532757,
+            0.413196034330048,
+            -0.02035946326139935
+          ],
+          "early_range": [
+            0.10333460883410944,
+            0.6111121752956707
+          ],
+          "late_range": [
+            0.01099355845990933,
+            0.6344045059560497
+          ]
+        },
+        "WER": {
+          "linear_in_sample_r2": 0.19373075860979727,
+          "same_ratio_pearson_r": 0.3996645168890526,
+          "design_rank": 4,
+          "coefficients_intercept_CWI_UWI_WER": [
+            1.0182209049753026,
+            0.008827187130826697,
+            0.19415876813095917,
+            0.36000625264637454
+          ],
+          "early_range": [
+            1.3878380878997576,
+            2.107831997583989
+          ],
+          "late_range": [
+            1.3986300193962693,
+            2.2381227899421217
+          ]
+        }
+      },
+      "eligibility_counts": {
+        "outside_joint_coverage / ok": 1,
+        "ok / ok": 178
+      }
+    },
+    "5_to_20": {
+      "n_rows": 124,
+      "n_source_family_labels": 37,
+      "ratios": {
+        "CWI": {
+          "linear_in_sample_r2": 0.5741335379546062,
+          "same_ratio_pearson_r": 0.5960413897491559,
+          "design_rank": 4,
+          "coefficients_intercept_CWI_UWI_WER": [
+            0.6367110528932332,
+            0.6673648412824081,
+            -0.6337698121025246,
+            -0.11875905442416523
+          ],
+          "early_range": [
+            0.3501034228016265,
+            1.184384582160769
+          ],
+          "late_range": [
+            0.4361825277755304,
+            1.0478255604035631
+          ]
+        },
+        "UWI": {
+          "linear_in_sample_r2": 0.479314589093108,
+          "same_ratio_pearson_r": 0.6899818694852948,
+          "design_rank": 4,
+          "coefficients_intercept_CWI_UWI_WER": [
+            0.23282418854964168,
+            -0.09106606333771917,
+            0.8123895899524253,
+            -0.026669827719292785
+          ],
+          "early_range": [
+            0.04368348190001497,
+            0.6651267859290377
+          ],
+          "late_range": [
+            0.012189213460048554,
+            0.516344366446
+          ]
+        },
+        "WER": {
+          "linear_in_sample_r2": 0.38047497123955476,
+          "same_ratio_pearson_r": 0.6131892668407988,
+          "design_rank": 4,
+          "coefficients_intercept_CWI_UWI_WER": [
+            0.5951847523914979,
+            0.0985191265574007,
+            -0.04254747325923293,
+            0.5940724476862846
+          ],
+          "early_range": [
+            1.3445275862726693,
+            2.2363931055989763
+          ],
+          "late_range": [
+            1.3908205701053624,
+            2.3365786900834675
+          ]
+        }
+      },
+      "eligibility_counts": {
+        "ok / ok": 124,
+        "ok / outside_joint_coverage": 55
+      }
+    }
+  }
+}

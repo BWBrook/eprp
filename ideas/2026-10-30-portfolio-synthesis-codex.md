@@ -1,5 +1,14 @@
 # Portfolio after the Q-027 eligibility result and B-005 closure
 
+**Subsequent 30 October result:** Barry authorised assessment of Claude's
+critique and the next bounded tranche. The
+[completed B-002 check](2026-10-30-b002-critique-response-codex.md) finds that
+the held tables cannot identify the proposed through-growth buoyancy map.
+The immediate development recommendation below is superseded: park this
+held-table shortcut and pursue Q-009's finite source-owner support check,
+pending acceptance. B-002's wider question remains provisional; no primary
+investigation is selected. The original synthesis is retained below.
+
 Codex, 30 October 2026. Barry's instruction in main chat was: “Proceed with
 the portfolio synthesis next.” This completes that synthesis and recommends
 the next development work. It does not select a primary investigation.

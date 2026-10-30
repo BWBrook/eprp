@@ -1,0 +1,13 @@
+{
+  "scope": "One specimen, six selected post-10-mm chambers, descriptive volume proportions; three reconstructed endpoints, hypothetical full-capacity loading envelope.",
+  "fidelites_late_to_earlier_ratio": "0.3632785067954949033205417075",
+  "fidelites_ratio_percent_decline": "63.67214932045050966794582925",
+  "all_six_ratio_rounding_intervals_have_common_intersection": false,
+  "stage_q_estimable": false,
+  "thickness_allometry_estimable": false,
+  "source_table_sha256": {
+    "naglik2015-fidelites-selected.csv": "9ac84baf0727eb3130fc678324243a81c7aaaf320dfe2232619ef7895237b19b",
+    "naglik2016-endpoints.csv": "4ffc736e787520be82ae15ce295cfe7393e948dd013c4ee893486fb21fa02e60"
+  },
+  "script_sha256": "67be84c1f438765425fce0421949bfad102dd7ddf4bc53e041c3626c5dbbed49"
+}

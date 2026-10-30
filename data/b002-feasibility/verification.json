@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-30",
+  "controls_passed": 5,
+  "independent_workbook_xml": {
+    "source_sha256": "fbe2012f1d420ef7b292141ae0ed0ea8d046c4c15303663565dc72e0727ebe40",
+    "source_rows": 179,
+    "paired_records_checked": 302,
+    "ratio_values_checked": 1812,
+    "max_abs_difference": 4.440892098500626e-16,
+    "method": "independent ZIP/XML extraction and log interpolation"
+  },
+  "independent_R_refits": {
+    "n_fits": 6,
+    "max_abs_difference_R2_and_r": 4.996003610813204e-16,
+    "results": [
+      {
+        "pair": "5_to_20",
+        "ratio": "CWI",
+        "n": "124",
+        "r2": "0.574133537954606",
+        "r": "0.596041389749156"
+      },
+      {
+        "pair": "5_to_20",
+        "ratio": "UWI",
+        "n": "124",
+        "r2": "0.479314589093108",
+        "r": "0.689981869485295"
+      },
+      {
+        "pair": "5_to_20",
+        "ratio": "WER",
+        "n": "124",
+        "r2": "0.380474971239555",
+        "r": "0.613189266840799"
+      },
+      {
+        "pair": "2_to_10",
+        "ratio": "CWI",
+        "n": "178",
+        "r2": "0.376230033537156",
+        "r": "0.448732700497689"
+      },
+      {
+        "pair": "2_to_10",
+        "ratio": "UWI",
+        "n": "178",
+        "r2": "0.214715569349523",
+        "r": "0.461990219505617"
+      },
+      {
+        "pair": "2_to_10",
+        "ratio": "WER",
+        "n": "178",
+        "r2": "0.193730758609797",
+        "r": "0.399664516889053"
+      }
+    ]
+  },
+  "physical_checks": {
+    "main_original_table_images_checked": [
+      "Naglik 2015 Table 2 printed p32",
+      "Naglik 2016 Table 1 printed p5"
+    ],
+    "main_decimal_replay": "passed",
+    "delegate_independent_R_q_tolerance": 1e-12,
+    "delegate_independent_R_ratio_decline_tolerance": 1e-10
+  },
+  "independent_review": "No material defect found in integrated source, statistical and mathematical claims; GPT-6.1 Sol, 30 October 2026",
+  "scratch_check_script_sha256": {
+    "verify_xml.py": "ba0a6b5189a108333fd8585a833a444bdc1c5031312a9849ee1dcf13cd5d886b",
+    "refit.R": "64c5cfe4b07094cb34d54e75e7cbe8af0f9eacd8f65b235991f8894397dbd95d"
+  }
+}
