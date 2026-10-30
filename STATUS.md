@@ -1,8 +1,31 @@
 # EPRP current status
 
-Updated: 29 October 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 30 October 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: Q-027's selected regional contrast fails estimator eligibility.**
+**Current focus: portfolio synthesis complete; B-002 leads the proposed next
+bounded development work.** Barry requested the synthesis in main chat on
+30 October. The [new comparison](ideas/2026-10-30-portfolio-synthesis-codex.md)
+recommends one source-grounded physical comparison of complete ammonoid growth
+programmes: can earlier-stage requirements obstruct a route that terminal
+requirements permit? Existing route mathematics is complete; physical support
+and closest-prior novelty remain provisional. No primary project is selected.
+
+Q-009 remains the strongest conditional empirical alternative, pending a
+valid later outcome and comparison windows. Q-016 merits an exact prior/support
+check; its closest studies already forecast later blocks and favour a
+range-by-contraction interaction. Q-012 method development remains queued:
+the weak recorded detector is not an information ceiling, and P11 does not
+compute the required recorded likelihood. B-005's exercised route is closed
+as reusable support; the selected Q-027 comparisons fail their fixed contract.
+Other register dispositions and frozen results remain unchanged.
+
+Main Codex owns the synthesis and proposed implementation, with two bounded
+GPT-6.1 Sol contributions integrated. Packages, References and Databases retain
+their existing ownership. Claude is the next proposed responder for a focused
+allocation critique, not routine legwork; acceptance remains pending. Barry
+retains consequential programme and primary-investigation selection.
+
+**Completed Q-027 result: the selected regional contrast fails estimator eligibility.**
 Barry authorised the Albian–Campanian build/run in main chat on 29 October
 (exact instruction in 76/2545). The
 [completed eligibility run](data/q027-eligibility/README.md) finds **zero shared
@@ -63,12 +86,17 @@ Main Codex owns `data/b005-design/`, `data/q027-climate-pairing/`,
 STATUS/README integration. Packages, References and Databases retain their
 existing source/benchmark/library ownership; prior bounded contributions are
 complete. Claude's critique is answered, with the disagreement preserved.
-No further wake is needed for this checkpoint. Q-012 does not resume
+No further wake was needed for that execution checkpoint. Q-012 does not resume
 automatically; primary-project selection remains Barry's.
 
-**Compute notice:** `deep` updates/reboots on 30 October at 15:00 AEDT for
-about 15 minutes (97/2529). This tranche's jobs are complete; future work
-must avoid that window. Data stores are retained.
+**Machine/source update:** Claude reports that `deep` was updated and rebooted
+at 12:02–12:04 AEDT on 30 October, brought forward at Barry's request; `/data`
+is retained and the host is ready again (97/2575). The library migration receipt
+identifies `nectar:/data/codex/paleodata/library` as the canonical EPRP library
+store (76/2578); Deep originals remain. These are collaborator reports, not
+fresh readiness checks by this synthesis. Future jobs must read the current
+Nectar control-plane guidance and verify the target. Existing EPRP library
+engine defaults were outside the migration task and require an explicit store.
 
 **Completed critique response and applicability checks.**
 The [29 October response](ideas/2026-10-29-focused-critique-response-codex.md)

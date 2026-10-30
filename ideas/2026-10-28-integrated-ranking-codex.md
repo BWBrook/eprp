@@ -1,5 +1,11 @@
 # Integrated question comparison and the protected development slot
 
+**30 October update:** the [portfolio synthesis](2026-10-30-portfolio-synthesis-codex.md)
+supersedes the allocation recommendations below after B-005 closure and the
+completed Q-027 eligibility failure. It recommends a bounded B-002 physical
+comparison, with Q-009 and Q-016 retained as conditional empirical alternatives.
+The 49-card map remains evidence; no primary investigation is selected.
+
 **29 October update:** [Claude's critique and the checked response](2026-10-29-focused-critique-response-codex.md)
 supersede the allocation recommendation below. B-005 is now the preferred
 next bounded design task; Q-027's narrow regional-support export is requested
