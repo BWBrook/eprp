@@ -151,7 +151,7 @@ nasuta*.
      name for an extinct bandicoot. Over the same years BioNet's *P. nasuta*
      records fell from 3,387 (2024) to 818 (2025) and 76 (2026 so far),
      which suggests a recent name or concept change in BioNet (inferred;
-     queued as [CONTACTS.md](../CONTACTS.md) C19).
+     queued as CONTACTS.md (queue held back) C19).
   2. *A resurrection.* *Pseudomys gouldii* (965 records, 957 in Western
      Australia; 812 from AWC monitoring, 738 dated in the 2020s) is the living
      Shark Bay mouse under its resurrected name (Roycroft et al. 2021; see

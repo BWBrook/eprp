@@ -276,7 +276,7 @@ CC BY 4.0 on every PANGAEA record. Cite the ESSD papers (Herzschuh et al.
 2022; Li et al. 2022), the *Climate of the Past* paper for 2.0, the PANGAEA
 DOIs of the versions used, and the original records' publications (the 1.0
 metadata table and LegacyAge S7). Queued for the compilers:
-[CONTACTS.md](../CONTACTS.md) C35.
+CONTACTS.md (queue held back) C35.
 
 ## Verification log
 

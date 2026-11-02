@@ -61,7 +61,7 @@ taxonomy (400 genera, 5,000 occurrences) with injected errors:
   default `jw = 0.1`, and it compares only names in the same family that
   share a first letter. Tune `jw`, and review the synonym list rather than
   applying it (`bench/results/t3/t3_checks_r.json`).
-- Queued for the authors as [CONTACTS](../CONTACTS.md) S10.
+- Queued for the authors as CONTACTS (queue held back) S10.
 
 ## Citation and licence
 

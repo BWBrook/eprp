@@ -239,7 +239,7 @@ An empty project returns a two-byte CSV.
     inherits them. Recount from public PBDB data under the main project's
     PBDB hold ([pbdb](../pbdb/README.md)). The units' own
     `pbdb_occurrences` was not compared. Queued for both providers
-    ([CONTACTS.md](../CONTACTS.md) C10 (k), C34).
+    (CONTACTS.md (queue held back) C10 (k), C34).
 - **Routes that leave things out.** The fossils route skips obsolete
   columns, and the sections route skips some packages (Structure). The
   default `units?all` returns a subset (no obsolete columns), so request

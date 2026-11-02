@@ -189,7 +189,7 @@ Body sections, in order:
 7. Have the entry reviewed independently before treating it as settled.
 8. Add any issue that needs a provider or custodian to act (errors, stale
    documentation, licence conflicts, access problems) to
-   [CONTACTS.md](CONTACTS.md). Never contact them directly; Barry handles the
+   CONTACTS.md (queue held back). Never contact them directly; Barry handles the
    queue as one tranche.
 
 ## Lessons so far
@@ -624,7 +624,7 @@ the workflow when they generalise.
 
 - *Queue contacts; send them as one tranche.* Cataloguing keeps turning up
   issues only providers can fix. Collect them per recipient in
-  [CONTACTS.md](CONTACTS.md), so that one message goes to each party and
+  CONTACTS.md (queue held back), so that one message goes to each party and
   replies are tracked in one place.
 
 **Both pilots.**

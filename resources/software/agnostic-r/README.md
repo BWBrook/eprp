@@ -59,7 +59,7 @@ series, so this is a characterisation, not a calibration test.
   `if (missing(total) || total == '')`, applies `||` to a vector, now an
   error. Unequal sampling effort, the method's main input, is unusable
   as distributed; `identical(total, '')` would fix it. Queued as
-  [CONTACTS](../CONTACTS.md) S2.
+  CONTACTS (queue held back) S2.
 - Returns `NA` when fewer than two bins have data, and all zeros when the
   last bin is occupied.
 - No licence stated; we fetch it by URL with a pinned sha256 rather than

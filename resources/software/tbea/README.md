@@ -56,7 +56,7 @@ times (see [EDE](../ede/README.md)).
   fossils; `bench/validate/t2_checks.R`): `.upperBound` rejects an index
   equal to the number of gaps, so the largest gap can never be the bound,
   which would otherwise need only 72 gaps. Possibly an off-by-one;
-  queued as [CONTACTS](../CONTACTS.md) S9. The largest record here had 30
+  queued as CONTACTS (queue held back) S9. The largest record here had 30
   fossils. The function warns and returns the lower bracket with `NA` as
   the upper.
 - `endpoint = "first"` is the larger value and `"last"` the smaller: with

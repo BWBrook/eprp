@@ -165,7 +165,7 @@ Body sections, in order:
 4. Run, commit scripts and outputs, and write the entry.
 5. Commission an independent review before calling the entry settled.
 6. Add any bug or documentation issue for the authors to `CONTACTS.md`
-   here. It joins [the data catalogue's queue](../sources/CONTACTS.md) in
+   here. It joins the data catalogue's queue (held back) in
    the same tranche; it is kept separate so the two side sessions never edit
    one file. Never contact authors directly; Barry sends the queue.
 7. Record in `LEADS.md` anything the tool makes possible that bears on a

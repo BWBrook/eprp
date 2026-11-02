@@ -203,7 +203,7 @@ harness.
   cores (about 90 core-hours of allocation); the intended use across 20
   replicates of three scenarios would take about 5,000 core-hours, a
   kunanyi-scale job.
-- Queued for the authors as [CONTACTS](../CONTACTS.md) S12.
+- Queued for the authors as CONTACTS (queue held back) S12.
 
 ## Alternatives and overlap
 

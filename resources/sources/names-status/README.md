@@ -92,7 +92,7 @@ Counts are our own ([profile](profile/names_profile.tsv)).
 **Not mirrored.** The Australian Faunal Directory (AFD) has per-taxon CSV
 exports but no licence statement of its own, and refuses exports above 1,000
 taxa (birds and reptiles) without an email address; a full extract and licence
-are queued as [CONTACTS.md](../CONTACTS.md) C17. AFD's extinction flags are
+are queued as CONTACTS.md (queue held back) C17. AFD's extinction flags are
 free text (5 mammal species against EPBC's 39 entries; source scan), so it is
 not a status source anyway. The BirdLife Australia Working List states no
 licence. The IUCN Red List needs registration and forbids redistribution

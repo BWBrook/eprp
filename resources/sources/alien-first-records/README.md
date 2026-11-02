@@ -146,7 +146,7 @@ read it with replacement, as the profiler does.
 - **Restricted early versions.** v1.1 to v2, behind the 2017 and 2018 papers,
   are restricted on Zenodo, so those analyses cannot be replayed from public
   data. Records without sharing permission are left out of every public file.
-  Both are queued for the compilers ([CONTACTS.md](../CONTACTS.md) C32).
+  Both are queued for the compilers (CONTACTS.md (queue held back) C32).
 - **Locations are mixed units, and 5% have none.** Countries, islands and
   sub-national regions. 4,633 rows have a blank location identifier, with
   verbatim locations such as "USACanada" (2,854), "Channel Is" (636),

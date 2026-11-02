@@ -40,7 +40,7 @@ closest thing to a PBDB history that exists (lead L-005).
 - Licence metadata conflict: CRAN says CC BY 4.0, the repository GPL-3.0.
 - Series change columns (for example `geological_group` in `occs4`,
   `stratgroup` in `occs2`); check names before joining.
-- Queued for the maintainer as [CONTACTS](../CONTACTS.md) S7.
+- Queued for the maintainer as CONTACTS (queue held back) S7.
 
 ## EPRP relevance
 

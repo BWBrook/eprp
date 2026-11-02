@@ -102,7 +102,7 @@ twice; their Triton v4 files match this mirror's manifest.
 - **Museums Victoria Collections API**: blocked to scripts (Cloudflare 403);
   retry from another host.
 - **Queensland Museum palaeontology CSV**: dead link; queued for the museum
-  as [CONTACTS.md](CONTACTS.md) C6.
+  as CONTACTS.md (queue held back) C6.
 - **Australian Faunal Directory**: per-taxon CSV exports, no licence of its
   own, and a 1,000-taxon export limit; full extract and licence queued as C17.
 - **BirdLife Australia Working List**: no licence found.

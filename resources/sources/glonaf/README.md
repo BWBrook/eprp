@@ -178,7 +178,7 @@ and says (checked 2026-10-24): "If you plan to use the GloNAF dataset, we
 encourage you to contact the GloNAF core team to check whether there have
 been recent updates of the dataset" and "If GloNAF is a major part of the data
 analyzed in your study, you should consider inviting the GloNAF core team as
-collaborators." Queued as a courtesy contact ([CONTACTS.md](../CONTACTS.md)
+collaborators." Queued as a courtesy contact (CONTACTS.md (queue held back)
 C33).
 
 ## Verification log

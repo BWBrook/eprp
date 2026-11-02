@@ -93,7 +93,7 @@ two mirrored tables; before 2024 those are four months to a year apart.
 So the steps of 2024 and 2025 brought several boundaries onto ICS chart
 values. The step of August 2026 moved three of them (Olenekian, Anisian,
 Wuchiapingian) back off the chart, to the values queried in
-[CONTACTS.md](../CONTACTS.md) C10 (i). The interval counts are for
+CONTACTS.md (queue held back) C10 (i). The interval counts are for
 intervals with 50 or more single-interval rows in the whole tables. A
 vintage comparison must separate these changes of time scale from
 reassignment of occurrences to intervals.
@@ -262,7 +262,7 @@ from May 2021, 147 by December 2023, 150 by January 2025 and 152 in 2026.
 - **Licence statements differ.** Zenodo says CC BY 4.0 for every version.
   PBDB's own header said CC BY in downloads up to 17 February 2025 and CC0
   from 24 February 2025, which dates the change queried in
-  [CONTACTS.md](../CONTACTS.md) C10 (a).
+  CONTACTS.md (queue held back) C10 (a).
 - **The CSV is R's.** Missing values are the string `NA`, repeated column
   names are suffixed (`formation.1`), and the columns differ by period
   (Structure).

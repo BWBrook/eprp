@@ -278,7 +278,7 @@ Code vocabularies, with counts:
   checked picks. By class, dinocyst zones overlap in 1,141 of 1,485 picks,
   spore-pollen 786 of 961, planktonic foraminifera 398 of 556 and benthic
   foraminifera 61 of 108. ASUD ranges can be wide, and ASUD ages are rounded and
-  carry known errors ([CONTACTS.md](../CONTACTS.md), C9), so overlap is a
+  carry known errors (CONTACTS.md (queue held back), C9), so overlap is a
   necessary check, not proof. ASUD snapshot used: 2026-10-22T0604Z.
 - **Time scale: documented as GTS2012, not uniformly applied.** The schema says
   the ages are on GTS2012 (source claim) and the catalogue record says zones "can

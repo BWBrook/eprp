@@ -272,7 +272,7 @@ public map service's header says "These map data are released free under
 the Creative Commons Attribution 3.0 New Zealand (CC-BY 3.0) Licence" but
 does not name FRED. Whether the locality skeleton may be archived or shared
 is unresolved; settling it means asking the custodian (the published FRED role address).
-That question is parked in [CONTACTS.md](../CONTACTS.md) as C8.
+That question is parked in CONTACTS.md (queue held back) as C8.
 
 ## Verification log
 

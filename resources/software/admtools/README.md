@@ -73,7 +73,7 @@ Tests in [bench/VALIDATION_T2.md](../bench/VALIDATION_T2.md); results in
   2.7 Myr early.
 - Until fixed, do not use `strat_to_time` (or functions that call it) on
   models with hiatuses; invert `time_to_strat` directly instead. Queued
-  for the authors as [CONTACTS](../CONTACTS.md) S1.
+  for the authors as CONTACTS (queue held back) S1.
 - Data come first and the model second: `time_to_strat(times, adm)`,
   `strat_to_time(heights, adm)`; passing the model first fails with "no
   applicable method".
