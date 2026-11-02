@@ -237,7 +237,6 @@ there.
    publications, and northern and south-eastern Australia.
 9. **Grey literature is restricted.** 77 source documents in the Zenodo
    community are restricted-access copies.
-10. [Detail withheld pending disclosure to the data custodian.]
 
 ## Overlap with other sources
 
@@ -254,7 +253,6 @@ there.
   These are the sites where human and faunal chronologies meet; the same date
   can enter both databases, though 447 FosSahul records differ by more than
   1% in age from the SahulArch row with their code.
-- [Detail withheld pending disclosure to the data custodian.]
 
 ## EPRP relevance
 
@@ -265,7 +263,11 @@ the Australian backlog.
 
 ## Citation and terms
 
-[Detail withheld pending disclosure to the data custodian.]
+Cite Saktura et al. (2023), Codilean et al. (2022) and the collection DOI
+with version stamp and retrieval date. Respect the cultural-safety intent:
+do not attempt to recover true locations. The licence is CC BY 4.0
+(confirmed by A. T. Codilean, 2 November 2026); the radiocarbon DOI's
+DataCite record still states CC BY-NC 4.0.
 
 ## Verification log
 
@@ -278,7 +280,7 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | 2021 Zenodo deposits mirrored (md5 verified); all 2021 IDs live with unchanged ages | checked |
 | 2026-10-22 | 14 luminescence ages note that they supersede their siblings | checked |
 | 2026-10-22 | Applicable-denominator completeness | checked |
-| 2026-10-22 | AustArch lab-code link (98%); [Detail withheld pending disclosure to the data custodian.] | checked (independent review) |
+| 2026-10-22 | AustArch lab-code link (98%) | checked (independent review) |
 | 2026-10-22 | Entry reviewed adversarially: 7 major and 17 minor findings across the Sahul entries, applied | checked (Claude Sonnet subagent) |
 | 2026-10-22 | 2022 DOIs metadata-only; licence conflict; authorship | checked (documentation scan: Figshare, DataCite, JCU record) |
 | 2026-10-22 | Structure, QA approach, obfuscation, lineage, uses, critiques | source claim (Saktura et al. 2023, Codilean et al. 2022, OCTOPUS docs) |

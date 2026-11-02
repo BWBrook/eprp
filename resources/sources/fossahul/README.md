@@ -306,7 +306,7 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | FosSahul 1 TERN files mirrored (md5 match the documentation scan's) | checked |
 | 2026-10-22 | Profiles of the 2019 and 2021 CSVs; 2019-to-2021 comparison; OCTOPUS copy coverage | checked |
 | 2026-10-22 | Rating script re-run: 2021 reproduces exactly; 2019 has 61 disagreements | checked |
-| 2026-10-22 | [Detail withheld pending disclosure to the data custodian.] | checked (documentation scan, from the same files) |
+| 2026-10-22 | (row withdrawn) | checked (documentation scan, from the same files) |
 | 2026-10-22 | Lineage, authorship, rating scheme, coordinate treatments, uses and critiques | source claim (FS1, FS2, addendum, OCTOPUS paper) |
 | 2026-10-22 | Barry's authorisation of the GitHub copy | checked (side-session chat, 22 Oct 2026) |
 | 2026-10-22 | Entry reviewed adversarially (with SahulArch, AustArch, OCTOPUS): findings applied, incl. record and lab-code counts, coordinate lineage, name collisions | checked (Claude Sonnet subagent) |

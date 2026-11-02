@@ -131,7 +131,6 @@ cosmogenic "Download Collection" asks for name, email and intended use.
    restructured into OCTOPUS fields and blurred to 25 km.
 3. **Fragile transport.** HTTP only for the WFS subdomain; DOIs for some
    collections are metadata-only or "TBA".
-4. [Detail withheld pending disclosure to the data custodian.]
 
 ## Overlap with other sources
 
@@ -162,4 +161,4 @@ Labels as in the [catalogue conventions](../README.md).
 | 2026-10-22 | WFS capabilities, 25 layers, hit counts | checked (documentation scan) |
 | 2026-10-22 | SahulArch and FosSahul layer snapshots | checked |
 | 2026-10-22 | Platform history, schema, licence statements | source claim (Codilean et al. 2022; OCTOPUS documentation) |
-| 2026-10-22 | Which layers are blurred; [Detail withheld pending disclosure to the data custodian.] | checked (independent review) |
+| 2026-10-22 | Which layers are blurred | checked (independent review) |
