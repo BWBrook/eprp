@@ -1,5 +1,7 @@
 # Extinction and Paleontology Research Programme (EPRP)
 
+> **Status:** developed in the open as a working record. This is work in progress: contents may change, and nothing here is peer-reviewed unless stated.
+
 EPRP is a shared research-development workspace for Barry W. Brook, OpenAI
 models through Codex, and Anthropic models through Claude Code. It supports
 quantitative palaeobiology through literature and data orientation, critical
@@ -152,3 +154,7 @@ The repository currently requires no installed software environment. Add a
 project-specific environment when executable work needs one. No repository
 licence or public-release posture has been chosen; source resources retain
 their own terms.
+
+## Licence
+
+Code is released under the [MIT Licence](LICENSE). Text, figures and data created for this project are released under [CC BY-SA 4.0](LICENSE-CONTENT). Third-party material keeps its own terms where stated: see [THIRD_PARTY.md](THIRD_PARTY.md) for the bundled sources, including the question texts from non-commercial sources that CC BY-SA 4.0 does not cover.
