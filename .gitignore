@@ -34,3 +34,26 @@ data/q038-probe/model_stz
 data/q038-probe/model_ctr
 data/q038-probe/pilot/_v1_stz
 data/q038-probe/pilot/_v1_stz.stan
+
+# Held back from the public repository; kept locally, untracked
+resources/sources/CONTACTS.md
+resources/software/CONTACTS.md
+data/q038-monarrez-contract/author-email-draft.md
+resources/software/bench/results/t3/c1_queries_occs2_20201001.tsv
+resources/software/bench/results/t3/c1_queries_occs3_20230814.tsv
+resources/software/bench/results/t3/c1_queries_occs4_20261018.tsv
+resources/software/bench/results/t3/c1_chronosphere.json
+resources/software/bench/validate/t3_chronosphere.R
+resources/sources/pbdb/profile/pbdb_access_global.tsv
+resources/sources/pbdb/profile/pbdb_access_region.tsv
+resources/sources/pbdb/pbdb_access_check.py
+resources/sources/pbdb/pbdb_snapshot.sh
+resources/sources/register-deposits/embedded_pbdb_check.py
+resources/sources/register-deposits/profile/embedded_pbdb_check.tsv
+resources/sources/data-raw-audit/ids_pbdb_check.py
+resources/sources/data-raw-audit/profile/ids_pbdb_check.tsv
+resources/sources/data-raw-audit/profile/rbin_mirror_check.tsv
+resources/sources/pbdb-chronosphere/pbdb_chronosphere_profile.py
+resources/sources/pbdb-chronosphere/profile/pbdb_chronosphere_profile.tsv
+resources/sources/pbdb-chronosphere/plot_series.py
+resources/sources/pbdb-chronosphere/profile/pbdb_chronosphere_series.png

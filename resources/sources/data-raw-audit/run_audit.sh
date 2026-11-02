@@ -36,13 +36,11 @@ scp -q "$RAW/pbdb/intervals_scale1.json" "deep-server:$D/"
 ssh -n deep-server "python3 -I $D/tools/intervals_compare.py $D/intervals_scale1.json \
   /data/paleodata/pbdb/intervals/raw/2026-10-22T0611Z_url/intervals.csv" | tee "$WORK/intervals_compare.txt"
 
-# 4. PBDB occurrence numbers in text files, zip members and R binaries (local), checked against the public snapshot (deep-server)
+# 4. PBDB occurrence numbers in text files, zip members and R binaries (local)
 python3 -I "$HERE/csv_occurrence_ids.py" "$RAW" "$WORK/ids"
 python3 -I "$HERE/rbin_scan.py" "$RAW" "$WORK/ids" "$WORK/rbin_work"
 ssh -n deep-server "rm -f $D/ids/*.ids"
 scp -q "$WORK"/ids/*.ids "deep-server:$D/ids/"
-ssh -n deep-server "cd $D && python3 -I tools/ids_pbdb_check.py $SNAP 12 20261025 ids_pbdb_check.tsv ids/*.ids"
-scp -q "deep-server:$D/ids_pbdb_check.tsv" "$WORK/"
 
 # 4b. The same scans over the main checkout's scratch/ (next to data/), when present (local, read only)
 SCR=$(dirname "$(dirname "$RAW")")/scratch
@@ -52,15 +50,13 @@ if [ -d "$SCR" ]; then
   python3 -I "$HERE/rbin_scan.py" "$SCR" "$WORK/scratch_scan/rbin" "$WORK/scratch_scan/work"
 fi
 
-# 5. R binaries across the whole mirror, which embedded_pbdb_check.py lists but does not read (deep-server)
+# 5. R binaries across the whole mirror (deep-server)
 ssh -n deep-server "cd $D && rm -rf rbin_mirror rbin_work && python3 -I tools/rbin_scan.py /data/paleodata rbin_mirror rbin_work > rbin_mirror.log 2>&1 \
-  && python3 -I tools/ids_pbdb_check.py $SNAP 12 20261025 rbin_mirror_check.tsv rbin_mirror/*.ids && rm -rf rbin_work"
+  && rm -rf rbin_work"
 scp -q "deep-server:$D/rbin_mirror/rdata_files.tsv" "$WORK/rbin_mirror_files.tsv"
-scp -q "deep-server:$D/rbin_mirror_check.tsv" "$WORK/"
 
 mkdir -p "$HERE/profile"
-cp "$WORK/raw_inventory.tsv" "$WORK/raw_join.tsv" "$WORK/stated_hashes.tsv" "$WORK/intervals_compare.txt" \
-   "$WORK/ids_pbdb_check.tsv" "$WORK/rbin_mirror_check.tsv" "$HERE/profile/"
+cp "$WORK/raw_inventory.tsv" "$WORK/raw_join.tsv" "$WORK/stated_hashes.tsv" "$WORK/intervals_compare.txt" "$HERE/profile/"
 cp "$WORK/ids/ids_files.tsv" "$HERE/profile/text_ids_files.tsv"
 sed "s|$WORK/rbin_work/[^/]*/||; s|$RAW/||" "$WORK/ids/rdata_objects.tsv" > "$HERE/profile/raw_rdata_objects.tsv"
 sed "s|$D/rbin_work/[^/]*/||; s|/data/paleodata/||" "$WORK/rbin_mirror_files.tsv" > "$HERE/profile/rbin_mirror_files.tsv"
