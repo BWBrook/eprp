@@ -242,11 +242,14 @@ works the core references, so a few are recent.
     (Wiley allows 60 per 10 minutes). It covers DOI prefixes 10.1111, 10.1002,
     10.1029 (AGU), 10.1046, 10.1034 and 10.1890 (ESA), including back files
     such as *Evolution* 1949.
-  - **Elsevier**: the key works for Scopus abstracts and ScienceDirect search,
-    but Article Retrieval refuses every request, open-access articles included
-    (HTTP 403, "Requestor configuration settings insufficient"). New Elsevier
-    keys carry no content access until Elsevier API Support verifies the
-    institution's entitlement, so there is no Elsevier route yet.
+  - **Elsevier**: Article Retrieval access was enabled by API Support and
+    [verified on 4 November 2026](notes/2026-11-04-elsevier-entitlement-probe.md).
+    One non-open-access article returned full-text XML with HTTP 200 both
+    through the laptop's GlobalProtect connection and directly on campus.
+    This establishes access for that article and those requests; other
+    subscription entitlements remain article-specific. The library engine
+    has no Elsevier retrieval route yet. API access does not resolve the
+    separate permission for processing subscription text in AI sessions.
 - **Rate limits and refusals.** An HTTP 429 from a lookup service or TDM API,
   or a 401 or 403 from a lookup service (a key problem), pauses that host for
   the rest of the run, with no failure recorded; the next run continues where
