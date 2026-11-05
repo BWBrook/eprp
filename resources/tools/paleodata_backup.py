@@ -17,7 +17,7 @@ import subprocess
 import sys
 import time
 
-LIVE_SQLITE = {"library/search.sqlite", "library/tdm/search-tdm.sqlite"}
+LIVE_SQLITE = {"library/search.sqlite"}
 PROTECTED_NAMES = {"pbdb_access_global.tsv", "pbdb_access_region.tsv"}
 RESERVE = 20 * 1024**3
 
@@ -57,6 +57,24 @@ def auxiliary(path):
     return any(path == db + tail for db in LIVE_SQLITE for tail in ("-wal", "-shm", "-journal"))
 
 
+def restricted(path):
+    parts = Path(path).parts
+    for i in range(len(parts) - 1):
+        if parts[i] == "tdm":
+            name = parts[i + 1]
+            if name == "elsevier" or name in {
+                    "search-tdm.sqlite", "search-tdm.sqlite-wal",
+                    "search-tdm.sqlite-shm", "search-tdm.sqlite-journal"}:
+                return True
+    return False
+
+
+def check_inventory_root(root):
+    resolved = root.resolve()
+    if resolved.name == "tdm" or restricted(resolved.as_posix()):
+        raise RuntimeError("Restricted TDM source root; select a parent above tdm: " + str(root))
+
+
 def signature(path):
     s = path.stat(follow_symlinks=False)
     return [s.st_dev, s.st_ino, s.st_size, s.st_mtime_ns, s.st_ctime_ns,
@@ -64,13 +82,20 @@ def signature(path):
 
 
 def inventory(root):
+    check_inventory_root(root)
     files, dirs, databases, omitted, modes = {}, [], [], [], {}
+    omitted_restricted = []
     def fail(error):
         raise error
     for directory, dirnames, filenames in os.walk(root, followlinks=False, onerror=fail):
         for name in sorted(dirnames + filenames):
             path = Path(directory) / name
             rel = path.relative_to(root).as_posix()
+            if restricted(rel):
+                omitted_restricted.append(rel)
+                if name in dirnames:
+                    dirnames.remove(name)
+                continue
             if protected(rel):
                 raise RuntimeError("Protected PBDB receipt/history or Git path found; no payload read: " + rel)
             s = path.lstat()
@@ -87,6 +112,7 @@ def inventory(root):
                 files[rel] = signature(path)
     return {"files": files, "dirs": sorted(dirs), "databases": sorted(databases),
             "omitted_sqlite_sidecars": sorted(omitted),
+            "omitted_restricted": sorted(omitted_restricted),
             "modes": {k: v for k, v in modes.items() if not auxiliary(k)}}
 
 
@@ -131,6 +157,8 @@ def verify(generation):
     manifest = json.loads((generation / "manifest.json").read_text())
     root = generation / "paleodata"
     found = inventory(root)
+    if found["omitted_restricted"] or any(restricted(rel) for rel in manifest["files"]):
+        raise RuntimeError("Restricted Elsevier/TDM paths found in backup generation")
     actual = set(found["files"]) | set(found["databases"])
     if actual != set(manifest["files"]):
         raise RuntimeError("Destination file inventory differs from manifest")
@@ -151,6 +179,8 @@ def verify(generation):
 
 def restore(generation, destination, sample=False):
     manifest = json.loads((generation / "manifest.json").read_text())
+    if any(restricted(rel) for rel in [*manifest["files"], *manifest["directories"]]):
+        raise RuntimeError("Restricted Elsevier/TDM paths found in restore manifest")
     if destination.exists():
         raise RuntimeError("Restore target must be new: " + str(destination))
     destination.mkdir(parents=True, mode=0o700)
@@ -224,6 +254,7 @@ def publish(root, generation):
 
 def snapshot(args):
     source = args.source.resolve()
+    check_inventory_root(source)
     if not source.is_dir():
         raise RuntimeError("Source missing")
     if args.stage.resolve().is_relative_to(source) or args.root.is_relative_to(source):
@@ -258,6 +289,7 @@ def snapshot(args):
                     "source": str(source), "files": files, "directories": before["dirs"],
                     "source_modes": before["modes"],
                     "sqlite_snapshots": sqlite_meta, "omitted_sqlite_sidecars": before["omitted_sqlite_sidecars"],
+                    "omitted_restricted": before["omitted_restricted"],
                     "consistency": "Ordinary files stable by metadata across capture and SHA256 against destination; online SQLite backups are individually consistent, not one atomic tree transaction."}
         write_json(stage / "manifest.json", manifest)
         remote_script = args.root / "paleodata_backup.py"

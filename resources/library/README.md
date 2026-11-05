@@ -17,6 +17,8 @@ a work is not a judgment of its quality or of its relevance to a question.
 resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
   library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | verify-embedded | reject-incomplete | withdraw | index | textindex | search
+  elsevier.py             restricted XML fetch | approval-gated, DOI-attributed query
+  mine_elsevier.py         private agenda-question candidates and keyword themes
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
@@ -29,10 +31,14 @@ resources/library/
   eprp-library-README.md  installed as /data/paleodata/library/README.md
 ```
 
-The store is on `deep-server`, beside the data-source mirror:
+The canonical open/Wiley store moved to
+`nectar:/data/codex/paleodata/library` on 30 October 2026. The retained
+`deep:/data/paleodata/library` copy is historical. Use an explicit `--store`
+with `library.py`; its old default has not followed the migration. The layout
+below is relative to the chosen store:
 
 ```text
-/data/paleodata/library/
+STORE/
   openalex/<W>.json       full OpenAlex record: metadata, abstract index, references, locations
   pdf/<W>.pdf             open-access full text, read-only
   text/<W>.txt            pdftotext output of pdf/<W>.pdf (derived; rebuildable)
@@ -53,6 +59,14 @@ The store is on `deep-server`, beside the data-source mirror:
   tdm/search-tdm.sqlite   contentless search index of TDM texts (no readable text; rebuildable)
   frontier-counts-*.tsv   every post-SINCE citer of the core, with its count of core references (`frontier`)
 ```
+
+Elsevier subscription material has a separate, campus-only store at
+`deep:/data/codex/paleodata/elsevier-library`. Its `catalogue.tsv` is a dated
+metadata snapshot; all XML, extracted text, retrieval manifests, excerpt
+accounting, question candidates and private approval records live beneath
+`tdm/elsevier/`. This store does not change the canonical open/Wiley manifest.
+Do not copy it to Nectar. The [5 November acquisition record](notes/2026-11-05-elsevier-acquisition.md)
+gives the run, resumption and evidence boundaries.
 
 `W` is the OpenAlex work id, the library's primary key. It covers works without
 DOIs, including many books and pre-1990 papers. A seed resolves to the work
@@ -216,17 +230,16 @@ works the core references, so a few are recent.
   - The OpenAlex key raises the daily budget to 10,000 credits.
   - The CORE key enables the CORE route.
 - **Publisher text-and-data-mining (TDM) copies** are a separate class.
-  - The publisher terms limit TDM to non-commercial academic research. They
-    also require deleting downloaded copies when the project ends, and
-    Elsevier's restrict third-party processing, which covers sending text to an
-    AI service.
+  - The publisher terms limit TDM to non-commercial academic research and
+    require deleting downloaded copies when the project ends. Corpus access
+    and permission to send material to an AI service are separate.
   - TDM copies are therefore kept apart, under `tdm/<publisher>/`, with
     manifest status `tdm_ok` and a note, and are used for local search and
     mining only. Until UTAS Library confirms that its licences allow
-    processing by AI services that do not train on the content, agents do not
-    read their text in a session, and that includes grep output. Whatever
-    enters the conversation goes to the AI provider. Counts and aggregate
-    statistics from scripts are fine.
+    processing by AI services that do not train on the content, Wiley text
+    stays out of agent sessions, including grep output. Counts and aggregate
+    statistics from scripts are fine. The bounded Elsevier output exception
+    below follows Barry's 5 November instruction; it does not apply to Wiley.
   - Everything obtained under a TDM licence stays under `tdm/`, including
     rejected downloads (`tdm/<publisher>/quarantine/`) and withdrawn copies
     (`tdm/<publisher>/withdrawn/`). Deleting `tdm/` therefore discharges the
@@ -247,9 +260,20 @@ works the core references, so a few are recent.
     One non-open-access article returned full-text XML with HTTP 200 both
     through the laptop's GlobalProtect connection and directly on campus.
     This establishes access for that article and those requests; other
-    subscription entitlements remain article-specific. The library engine
-    has no Elsevier retrieval route yet. API access does not resolve the
-    separate permission for processing subscription text in AI sessions.
+    subscription entitlements remain article-specific. `elsevier.py` now
+    retrieves XML through that API on `deep`, with at least three seconds
+    between calls, durable quota pauses, hashes and resumable manifests.
+    Open copies are retained in preference to new subscription copies.
+    Barry authorised the user-reported approved use case on 5 November:
+    agents may receive extracted facts/numbers, metadata and short snippets
+    with a DOI. `elsevier.py query` requires a private approval receipt and
+    enforces a conservative cumulative limit of 200 excerpt characters per
+    DOI across calls, source credit, DOI link and the required rights notice.
+    Bulk text, unrestricted passages and question wording stay in the
+    restricted store. The forwarded approval/use-case excerpts are archived
+    there; the original MIME approval has not been independently recovered.
+    This is a publisher-specific output exception, not permission to send
+    the corpus to an AI service.
 - **Rate limits and refusals.** An HTTP 429 from a lookup service or TDM API,
   or a 401 or 403 from a lookup service (a key problem), pauses that host for
   the rest of the run, with no failure recorded; the next run continues where

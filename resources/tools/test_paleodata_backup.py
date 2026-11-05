@@ -2,9 +2,12 @@
 """Bounded integrity and recovery checks for retained private backup generations."""
 
 from contextlib import closing
+import argparse
 import importlib.util
+import json
 from pathlib import Path
 import sqlite3
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -132,6 +135,147 @@ class BackupChecks(unittest.TestCase):
             backup.restore(generation, self.root)
         with self.assertRaisesRegex(RuntimeError, "Invalid"):
             backup.safe_relative("../outside")
+
+
+    def restricted_source(self):
+        source = self.root / "source"
+        kept, omitted = [], []
+        for prefix in ("", "nested/archive/"):
+            for rel in ("library/tdm/elsevier/xml/article.xml",
+                        "library/tdm/elsevier/text/article.txt",
+                        "library/tdm/elsevier/provenance/correspondence.json",
+                        "library/tdm/search-tdm.sqlite",
+                        "library/tdm/search-tdm.sqlite-wal",
+                        "library/tdm/search-tdm.sqlite-shm",
+                        "library/tdm/search-tdm.sqlite-journal"):
+                path = source / (prefix + rel)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("synthetic restricted fixture")
+                omitted.append(prefix + rel)
+            for rel in ("library/tdm/wiley/xml/article.xml",
+                        "library/tdm/wiley/provenance.json",
+                        "library/tdm/elsevier-open-access-note.txt",
+                        "library/text/open.txt"):
+                path = source / (prefix + rel)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("synthetic permitted fixture")
+                kept.append(prefix + rel)
+        return source, kept, omitted
+
+    def test_restricted_nested_trees_and_combined_index_pruned(self):
+        source, kept, omitted = self.restricted_source()
+        (source / "library/tdm/elsevier/escape").symlink_to("/does-not-exist")
+        found = backup.inventory(source)
+        self.assertEqual(set(found["files"]), set(kept))
+        self.assertFalse(found["databases"])
+        self.assertFalse(found["omitted_sqlite_sidecars"])
+        self.assertEqual(len(found["omitted_restricted"]), 10)
+        for rel in omitted:
+            self.assertTrue(backup.restricted(rel))
+        for rel in [*found["files"], *found["dirs"], *found["modes"]]:
+            self.assertFalse(backup.restricted(rel), rel)
+
+    def test_overlay_and_store_relative_exclusions(self):
+        for prefix in ("", "elsevier-library/", "nested/elsevier-library/"):
+            with self.subTest(prefix=prefix):
+                source = self.root / ("fixture-" + str(len(prefix)))
+                tdm = source / prefix / "tdm"
+                for rel in ("elsevier/xml/article.xml",
+                            "elsevier/provenance/correspondence.json",
+                            "search-tdm.sqlite", "search-tdm.sqlite-wal",
+                            "search-tdm.sqlite-shm", "search-tdm.sqlite-journal",
+                            "wiley/xml/article.xml"):
+                    path = tdm / rel
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text("synthetic fixture")
+                found = backup.inventory(source)
+                self.assertEqual(set(found["files"]), {prefix + "tdm/wiley/xml/article.xml"})
+                self.assertEqual(set(found["omitted_restricted"]),
+                                 {prefix + "tdm/" + name for name in (
+                                     "elsevier", "search-tdm.sqlite", "search-tdm.sqlite-wal",
+                                     "search-tdm.sqlite-shm", "search-tdm.sqlite-journal")})
+                self.assertFalse(found["databases"])
+                self.assertTrue(all(not backup.restricted(rel)
+                                    for rel in [*found["dirs"], *found["modes"]]))
+
+    def test_source_root_cannot_bypass_restrictions(self):
+        overlay = self.root / "elsevier-library"
+        subtree = overlay / "tdm/elsevier/xml"
+        subtree.mkdir(parents=True)
+        (subtree / "article.xml").write_text("synthetic restricted fixture")
+        alias = self.root / "innocuous-alias"
+        alias.symlink_to(subtree, target_is_directory=True)
+        for source in (overlay / "tdm", subtree.parent, subtree, alias):
+            with self.subTest(source=source), \
+                    patch.object(backup.os, "walk", side_effect=AssertionError("payload traversal")), \
+                    patch.object(backup, "digest", side_effect=AssertionError("payload hashing")), \
+                    patch.object(backup, "sqlite_snapshot", side_effect=AssertionError("SQLite read")), \
+                    patch.object(backup, "remote", side_effect=AssertionError("remote action")), \
+                    patch.object(backup, "run", side_effect=AssertionError("transfer action")):
+                with self.assertRaisesRegex(RuntimeError, "Restricted TDM source root"):
+                    backup.inventory(source)
+                args = argparse.Namespace(source=source, stage=self.root / "stage",
+                                          root=Path("/synthetic/backup"), host="nectar", reserve_gib=20)
+                with self.assertRaisesRegex(RuntimeError, "Restricted TDM source root"):
+                    backup.snapshot(args)
+                self.assertFalse(args.stage.exists())
+
+    def test_snapshot_transfers_only_permitted_paths(self):
+        source, kept, omitted = self.restricted_source()
+        args = argparse.Namespace(source=source, stage=self.root / "stage",
+                                  root=Path("/synthetic/backup"), host="nectar", reserve_gib=20)
+        transfers = []
+        destination = self.root / "transferred"
+        destination.mkdir()
+        real_run = subprocess.run
+        def transfer(command, **kwargs):
+            if command[0] == "rsync":
+                transfers.append(command)
+                list_arg = next(a for a in command if a.startswith("--files-from="))
+                listed = Path(list_arg.split("=", 1)[1]).read_bytes().split(b"\0")
+                self.assertTrue(all(not backup.restricted(p.decode()) for p in listed if p))
+                self.assertNotIn("-r", command)
+                self.assertNotIn("-rtp", command)
+                return real_run([*command[:-1], str(destination) + "/"], check=True)
+            return subprocess.CompletedProcess(command, 0)
+        def remote(host, script, command, *other, **kwargs):
+            return {"partial": "/synthetic/backup/snapshots/one.partial"} if command == "_prepare" else {}
+        real_record = backup.file_record
+        def record(path):
+            self.assertFalse(backup.restricted(path.as_posix()), str(path))
+            return real_record(path)
+        with patch.object(backup, "run"), patch.object(backup, "remote", remote), \
+                patch.object(backup.subprocess, "run", transfer), \
+                patch.object(backup, "file_record", record), \
+                patch.object(backup, "sqlite_snapshot", side_effect=AssertionError("restricted SQLite read")):
+            backup.snapshot(args)
+        self.assertEqual(len(transfers), 1)
+        manifest = json.loads(next(args.stage.glob("*/manifest.json")).read_text())
+        self.assertEqual(set(manifest["files"]), set(kept))
+        self.assertEqual({p.relative_to(destination).as_posix()
+                          for p in destination.rglob("*") if p.is_file()}, set(kept))
+        self.assertEqual(len(manifest["omitted_restricted"]), 10)
+        self.assertFalse(manifest["sqlite_snapshots"])
+
+    def test_verify_rejects_restricted_destination_and_manifest(self):
+        generation = self.generation()
+        restricted = generation / "paleodata/library/tdm/elsevier/text/leak.txt"
+        restricted.parent.mkdir(parents=True)
+        restricted.write_text("synthetic restricted fixture")
+        with self.assertRaisesRegex(RuntimeError, "Restricted"):
+            backup.verify(generation)
+        restricted.unlink()
+        restricted.parent.rmdir()
+        restricted.parent.parent.rmdir()
+        restricted.parent.parent.parent.rmdir()
+        manifest = json.loads((generation / "manifest.json").read_text())
+        manifest["files"]["library/tdm/search-tdm.sqlite"] = {"bytes": 0, "sha256": "unused"}
+        backup.write_json(generation / "manifest.json", manifest)
+        with self.assertRaisesRegex(RuntimeError, "Restricted"):
+            backup.verify(generation)
+        with self.assertRaisesRegex(RuntimeError, "Restricted"):
+            backup.restore(generation, self.root / "restore-restricted")
+        self.assertFalse((self.root / "restore-restricted").exists())
 
 
 if __name__ == "__main__":

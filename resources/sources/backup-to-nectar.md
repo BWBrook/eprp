@@ -4,7 +4,7 @@ Barry authorised the settled VM `/data` volume for this backup on 28 October
 2026: “Yes, the VM's /data volume is settled then. Let's go with your
 recommendation: proceed at your discretion (now or later; I assume we can have
 a sync script at some point?).” This procedure implements a private second
-copy of `deep:/data/paleodata`, retaining independent dated generations.
+copy of permitted content in `deep:/data/paleodata`, retaining independent dated generations.
 It does not publish data, change source licences or clear PBDB empirical holds.
 The [mirror terms and boundaries](paleodata-README.md) travel with the files.
 
@@ -15,9 +15,8 @@ standard library plus system SSH, SCP and rsync. Tests:
 ## Location and retention
 
 Source remains `deep:/data/paleodata`. Run the script there; transfer
-travels from `deep` over public SSH to `nectar` (`131.217.178.240`),
-with no large payload on the laptop. The `nectar` SSH alias selects this route;
-`deep` and WSL are off Tailscale. Source-side state and temporary online
+travels from `deep` to `nectar` through the configured SSH aliases,
+with no large payload on the laptop. Source-side state and temporary online
 database copies go under
 `/data/codex/scratch/eprp-paleodata-backup/`. VM storage is:
 
@@ -49,7 +48,63 @@ Nothing is pruned automatically, and source or backup files are never deleted
 by this tool. New runs create new generations. A failed run leaves its staging
 for diagnosis and does not replace `latest`; rerun to create a fresh generation.
 Review capacity and failed staging deliberately before subsequent backups.
-No periodic job has been installed.
+No periodic job has been installed by this tool.
+
+The open/Wiley library's canonical store moved to
+`nectar:/data/codex/paleodata/library` on 30 October. The retained backup of
+the older source tree does not make that older library canonical.
+
+## Elsevier custody exclusion (5 November 2026)
+
+Elsevier subscription full text and its derived material must remain on UTAS
+internal systems. The restricted overlay is
+`deep:/data/codex/paleodata/elsevier-library/tdm/elsevier`. New backups exclude
+every `tdm/elsevier` subtree,
+including XML, text, indexes, retrieval records and restricted correspondence
+stored beneath it. This rule applies both when `tdm/` is directly beneath
+the source root and when it is nested beneath any directory, including
+`library/` or `elsevier-library/`. Keep all such restricted provenance
+inside that subtree; this is a path boundary, not content classification.
+
+The combined `tdm/search-tdm.sqlite` index and its `-wal`, `-shm` and
+`-journal` sidecars are also excluded, including nested copies: they may
+contain Elsevier-derived text. Wiley-specific files and open-library content
+remain eligible. A publisher-specific Elsevier index must live beneath the
+excluded Elsevier subtree.
+
+Inventory prunes excluded directories before descending or reading payloads.
+Inventory and snapshot also resolve and check the source root: a root named
+`tdm`, or any root beneath `tdm/elsevier`, is refused before traversal,
+hashing or transfer. This includes symlink aliases to such roots. Select the
+library store or another parent above `tdm` so relative paths retain the
+custody boundary.
+The source inventories and generation manifest record `omitted_restricted`
+paths, with one entry for each pruned subtree rather than its contents.
+Excluded paths enter neither the hash list, online database captures nor the
+explicit transfer list. Destination verification rejects restricted paths if
+they appear in a new generation, and restore rejects a manifest that lists
+them. This patch neither alters nor deletes existing generations. A historical
+generation containing the combined index fails the new custody check; its
+historical receipts remain evidence of the earlier capture.
+
+A read-only deployment check on 5 November located the source executable at
+`deep:/data/codex/scratch/eprp-paleodata-backup/paleodata_backup.py`. Its
+SHA256 was still the original production version recorded below, without
+these exclusions. No recurring paleodata transfer was found in user/root
+crontabs, the checked system/user timer lists, system cron directories or
+system unit and local executable definitions. No active paleodata backup or
+transfer was found. This check does not cover arbitrary independently invoked
+transfer commands: direct recursive rsync would bypass the Python inventory
+boundary. Install the reviewed exclusion patch on the source before any
+Elsevier collection or subsequent backup; the local patch alone does not
+change the deployed executable. No backup or deployment was run for this check.
+
+References Codex subsequently deployed the reviewed helper before acquisition
+on 5 November. Its SHA256 is
+`cd117a01b98b6bce88c9bf7bbccc8d356de5ba0005f7665f51931b2345f2762e`.
+The deployed smoke rejected direct restricted roots and descendants and
+preserved Wiley eligibility. Twelve tests pass, including a real local rsync
+transfer check; no full backup was run for this tranche.
 
 Live preflight on 28 October found 75,878,303,013 source bytes and
 450,824,081,408 bytes free on the VM's separate `/dev/vdb` `/data` filesystem.
@@ -73,23 +128,22 @@ prevents publication. Three rsync attempts can resume a transport failure
 within a run; a final source-drift failure requires a new run. Empty
 directories and file names containing spaces are preserved.
 
-The two mutable library databases, `library/search.sqlite` and
-`library/tdm/search-tdm.sqlite`, are captured with SQLite's online backup API.
-Each has its own start/end UTC times and an `integrity_check`; WAL, SHM and
-journal sidecars for those two paths are omitted. Only these generated
+The mutable open-library database, `library/search.sqlite`, is captured with
+SQLite's online backup API. It has start/end UTC times and an
+`integrity_check`; its WAL, SHM and journal sidecars are omitted. Only generated
 SQLite copies are made standalone with DELETE journal mode. Source databases
 are opened read-only. Immutable raw database bytes are never re-encoded.
 Other files must remain stable while these captures and the transfer proceed.
 
-This establishes individually consistent library databases and a stable
+This establishes an individually consistent library database and a stable
 ordinary-file capture. It does not establish one atomic transaction across
-the whole tree or between the databases and their text/PDF side files. For
+the whole tree or between the database and its text/PDF side files. For
 application-level consistency during a library re-index or bulk update,
 coordinate a quiet interval with its owner before running. The script does
 not stop another owner's processes or declare mutable library content frozen.
 
 Before promotion, every destination payload file must match its captured
-source SHA256 and byte size, with exact file/directory inventories. This
+source SHA256 and byte size, with exact permitted file/directory inventories. This
 checks transfer and recovery integrity; it does not verify the source against
 provider manifests or establish scientific validity. Provider-manifest
 verification remains the mirror's separate `data_mirror.py verify` operation.

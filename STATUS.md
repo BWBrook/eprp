@@ -1,6 +1,19 @@
 # EPRP current status
 
-Updated: 30 October 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 5 November 2026, Australia/Hobart. Maintainer: main Codex.
+
+**Library acquisition in execution (References Codex):** Barry authorised the
+Elsevier tranche on 5 November. The [acquisition record](resources/library/notes/2026-11-05-elsevier-acquisition.md)
+documents a 1,317-work selection and detached tmux run on `deep`, started
+14:31 AEDT. The finite test retrieved eight priority full-text XML bodies,
+including all three agendas; Kelley 2001 remains outside established
+entitlement. Elsevier text and derivatives stay in a separate campus-only
+store, excluded from Nectar backups. Wiley remains count-only; Elsevier
+excerpt exports require the private approval receipt and a persistent
+200-character-per-DOI budget. Agenda candidates are unreviewed; claim checks
+are partial. References Codex owns completion inspection, curation and the
+remaining source checks. The scientific focus and allocations below remain
+unchanged.
 
 **Current focus: B-002's held-source feasibility tranche is complete; its
 proposed physical route calculation lacks the required stage inputs.** Barry

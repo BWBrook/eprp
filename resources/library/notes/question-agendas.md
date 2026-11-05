@@ -174,12 +174,12 @@ can read:
 | Sutherland et al. 2009, *Conserv Biol*, 100 conservation questions (10.1111/j.1523-1739.2009.01212.x) | 100 | Wiley TDM copy only |
 | Labandeira 2026, *Ichnos*, ten major questions on arthropod–plant interactions (10.1080/10420940.2026.2671783) | 10 | free to read at Taylor & Francis; no fetchable copy. Bears on Q-032 |
 | Sauquet & Magallón 2018, *New Phytol*, key questions in angiosperm macroevolution (10.1111/nph.15104) | 6 + 3 challenges | Wiley TDM copy only |
-| *Cell* 2016, "Big Questions in Evolution" (10.1016/j.cell.2016.07.021) | — | free to read at Cell Press; no fetchable copy |
-| López-García & Moreira 2015, TREE, open questions on the origin of eukaryotes (10.1016/j.tree.2015.09.005) | — | Elsevier; repository copy not fetched |
+| *Cell* 2016, "Big Questions in Evolution" (10.1016/j.cell.2016.07.021) | — | Elsevier XML held 5 November; private candidate queue, wording restricted |
+| López-García & Moreira 2015, TREE, open questions on the origin of eukaryotes (10.1016/j.tree.2015.09.005) | — | Elsevier XML held 5 November; private candidate queue, wording restricted |
 | Silcox & López-Torres 2017, *AREPS*, major questions on primate origins (10.1146/annurev-earth-063016-015637) | — | closed |
 | Beck et al. 2012, *Ecography*, horizon of macroecology (10.1111/j.1600-0587.2012.07364.x) | — | Wiley TDM copy only |
 | Peterson et al. 2010, *Syst Biodivers*, big questions for biodiversity informatics (10.1080/14772001003739369) | — | repository copy not fetched |
-| Abdelhady et al. 2024, *J Afr Earth Sci*, horizon scan of new technologies in palaeontology (10.1016/j.jafrearsci.2023.105155) | — | Elsevier, closed |
+| Abdelhady et al. 2024, *J Afr Earth Sci*, horizon scan of new technologies in palaeontology (10.1016/j.jafrearsci.2023.105155) | — | Elsevier XML held 5 November; private candidate queue, wording restricted |
 | Schweitzer et al. 2014, *Anal Chem*, ancient-protein pitfalls and possibilities (10.1021/ac500803w) | — | closed |
 | May 1999, *Phil Trans B*, "Unanswered questions in ecology" (10.1098/rstb.1999.0534) | — | Royal Society; no open copy found |
 | Gastaldo 1998, *PALAIOS*, report of the 1997 "Paleontology in the 21st Century" workshop (10.2307/3515284) | — | closed (JSTOR) |
