@@ -3,6 +3,17 @@
 Codex, 5 November 2026, Australia/Hobart. Acquisition is in execution;
 scientific re-reading remains partial.
 
+**Closeout, verified 6 November:** the original batch finished on 5 November
+at 15:55 AEDT with 1,130 held works. The
+[failure diagnosis](2026-11-06-elsevier-failure-diagnosis.md) subsequently
+recovered 16 chapter bodies from cached XML, taking the original cohort to
+1,146/1,317; a further complete-PDF recovery takes it to **1,147/1,317**.
+A separate final-version source check added Schachat outside
+that denominator. The launch and interim receipts below remain historical.
+See the [curated agendas](../../../literature/2026-11-06-three-agendas-curation.md)
+and [register-claim check](../../../literature/2026-11-06-register-claims-after-elsevier.md)
+for the completed follow-through and its remaining limits.
+
 Barry authorised proceeding on Claude's suggested library tranche, including
 Elsevier acquisition, agenda classification and source checks, with downloads
 in tmux on the campus server so the laptop can disconnect. Board 76/2895

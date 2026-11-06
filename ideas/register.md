@@ -1779,11 +1779,14 @@ on 10 October after a prior-work check: partly occupied.
       to incorrectly infer a mid-latitude diversity peak during warm
       intervals".
     - No lag was tested.
-  - **Boag, Gearty & Stockey 2021** (10.1016/j.cub.2021.04.021; abstract checked
-    by Claude, full text by scout): molluscs over 145 Myr. Diversity is a
+  - **Boag, Gearty & Stockey 2021** (10.1016/j.cub.2021.04.021; open journal
+    PDF and STAR Methods checked 6 November): molluscs over 145 Myr. Diversity is a
     non-monotonic function of temperature, matching a model that combines
-    metabolic kinetics with the Metabolic Index. Spatial sampling bias was not
-    modelled.
+    metabolic kinetics with the Metabolic Index. They examine geographic
+    coverage, SQS, estimators/binning/quorums and sampling cutoffs. Regional
+    reweighting or region effects were not specified in the inspected
+    regression candidates; that narrower control remains unresolved. See the
+    [qualified source check](../literature/2026-11-06-boag-schachat-checks.md).
   - **Marcot et al. 2016** (10.1073/pnas.1524750113): for Cenozoic North
     American mammals, LDG strength varies with global temperature and is
     weakest in warm periods.
@@ -2209,8 +2212,14 @@ check.
      10.3389/fevo.2023.1338865). That is contrary evidence for the hypothesis,
      not a missing test.
 - **What remains, small.** Schachat et al. 2022
-  (10.1016/j.revpalbo.2021.104564) propose, but do not run, a test of whether
-  change after an event exceeds expected change without it. It could be run on
+  (10.1016/j.revpalbo.2021.104564) propose a test of whether change after an
+  event exceeds expected change without it. The 6 November check of the
+  preprint and targeted published passages supports that proposal; execution
+  of this ordinary-change test was not verified in the inspected sections.
+  They do perform a before/after coverage-based rarefaction analysis, which
+  is a different contrast. See the
+  [version-qualified check](../literature/2026-11-06-register-claims-after-elsevier.md).
+  The proposed test could be run on
   open census data: Currano 2021 on Zenodo (10.5281/zenodo.7242861), and Xiao
   et al. 2025 (10.1073/pnas.2412036122) on Dryad.
 - **Host-continuity precedent** (added 11 October, external review F-05).
@@ -2808,8 +2817,14 @@ Status **under review**, tier 2. Tractability is unresolved (Codex, 76/1420).
     trials, not a model comparison.
   - Bailer-Jones 2011 (10.1111/j.1365-2966.2011.19112.x): Bayesian tests on
     craters disfavour periodicity.
-  - Rampino & Caldeira 2025 (10.1016/j.earscirev.2025.105100, meta only), on
-    stage-boundary cyclicity, should be read first.
+  - Rampino & Caldeira 2025 (10.1016/j.earscirev.2025.105100; author-posted
+    journal PDF checked 6 November): reports 30.7/31-Myr peaks for 28 major
+    sequence boundaries and their 28 matching stage boundaries, not all 47.
+    Its interval-permutation significance is described per period. The
+    separate printed binomial probability does not reproduce from its stated
+    parameters (standard tail 0.315864, reported 3.4e-16); see the
+    [source and arithmetic check](../literature/2026-11-06-register-claims-after-elsevier.md).
+    That discrepancy does not refute the separate spectral result.
 - **Deeper check (11 October; round-9 note).**
   - No published test was found that combines GTS2020, correlated monotone
     age uncertainty and model comparison on extinction timing.
@@ -2829,8 +2844,9 @@ Status **under review**, tier 2. Tractability is unresolved (Codex, 76/1420).
     - Mantle–slab tectono-eustasy (Boulila et al. 2023).
     - A 26-Myr oceanic crustal carbon cycle (Müller & Dutkiewicz 2018,
       10.1126/sciadv.aaq0500).
-    - Sea-level hiatuses at stage boundaries (Rampino & Caldeira 2025, closed
-      access; only relayed content seen).
+    - Sequence–stage correspondence and chronology reuse (Rampino & Caldeira
+      2025, §§2–4 checked). Their physical-coincidence argument does not by
+      itself establish independent dates or identify a geological pacemaker.
     - Chronostratigraphic artefact (Stigler & Wagner 1987).
 - **Design (revised).**
   1. **Age model.** Use GTS2020 spline Monte Carlo replicates with shared

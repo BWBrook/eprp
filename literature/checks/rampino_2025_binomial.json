@@ -1,0 +1,17 @@
+{
+  "different_all_success_contract_n28": 5.3722387591935407e-08,
+  "doi": "10.1016/j.earscirev.2025.105100",
+  "exact_tail_denominator": 351843720888320000000000000000000000000000000000000000000000,
+  "exact_tail_numerator": 111134774211426417649010250086283164884364804258913066639701,
+  "limits": "The printed equation uses choose(n,k) within a sum over j; the standard binomial prose contract uses choose(n,j). Neither this arithmetic nor the window-width check establishes an appropriate geological null or refutes periodicity.",
+  "literal_constant_choose_sum": 23.600490342264482,
+  "printed_window_total_myr": 141,
+  "reported_probability": 3.4e-16,
+  "source_location": "Section 3, printed pages 3-4; rendered page 4 checked",
+  "source_pdf_sha256": "7ba178cce4c5359152e474f027171faae2d317b931e124ba9ddef5e63c20fc71",
+  "standard_binomial_probability_at_least_k": 0.31586402602507185,
+  "stated_k": 28,
+  "stated_n": 47,
+  "stated_p": 0.55,
+  "sum_widths_of_47_plus_minus_1_myr_windows": 94
+}

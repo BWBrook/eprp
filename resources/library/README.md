@@ -18,7 +18,8 @@ resources/library/
   README.md               this file: conventions, tiers, access policy, lessons
   library.py              harvest | resolve | expand | frontier | journal | match | fetch | import-staged | ocr | verify-embedded | reject-incomplete | withdraw | index | textindex | search
   elsevier.py             restricted XML fetch | approval-gated, DOI-attributed query
-  mine_elsevier.py         private agenda-question candidates and keyword themes
+  diagnose_elsevier.py     per-work access/format diagnosis and cached chapter recovery
+  mine_elsevier.py         private candidates | reviewed, typed agenda units (--curate)
   seeds/<tier>.tsv        seed lists, one file per tier; rows give openalex_id, doi or pmid
   topics.md               the canon's topic tree (ids such as extinction/selectivity)
   notes/                  method records for curated tiers (canon, author-year seeds, Barry's 2003 materials with their build scripts) and source notes (the community's Big Questions, 2025; published question lists and agendas)
@@ -67,6 +68,10 @@ accounting, question candidates and private approval records live beneath
 `tdm/elsevier/`. This store does not change the canonical open/Wiley manifest.
 Do not copy it to Nectar. The [5 November acquisition record](notes/2026-11-05-elsevier-acquisition.md)
 gives the run, resumption and evidence boundaries.
+The [6 November diagnosis](notes/2026-11-06-elsevier-failure-diagnosis.md)
+records completed batch counts, per-work access evidence and the recovered
+chapter format. The [curation](../../literature/2026-11-06-three-agendas-curation.md)
+preserves unlike agenda units and their confidence levels.
 
 `W` is the OpenAlex work id, the library's primary key. It covers works without
 DOIs, including many books and pre-1990 papers. A seed resolves to the work
@@ -263,6 +268,8 @@ works the core references, so a few are recent.
     subscription entitlements remain article-specific. `elsevier.py` now
     retrieves XML through that API on `deep`, with at least three seconds
     between calls, durable quota pauses, hashes and resumable manifests.
+    It recognises structured article bodies, rawtext and an unambiguous
+    chapter/sections hierarchy. Metadata and back matter do not qualify.
     Open copies are retained in preference to new subscription copies.
     Barry authorised the user-reported approved use case on 5 November:
     agents may receive extracted facts/numbers, metadata and short snippets

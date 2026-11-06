@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-11-06T04:26:09.609077+00:00",
+  "xml_records_verified": 1147,
+  "xml_and_text_files_verified": 2294,
+  "xml_and_text_bytes_verified": 655402178,
+  "pdf_identity_page_and_hash_checks": [
+    {
+      "doi": "10.1006/jtbi.1997.0508",
+      "verified_full_pdf": true
+    },
+    {
+      "doi": "10.1006/jasc.2000.0556",
+      "verified_full_pdf": false
+    },
+    {
+      "doi": "10.1006/bijl.1998.0255",
+      "verified_full_pdf": false
+    }
+  ],
+  "snippet_budgets_within_200": true,
+  "snippet_ledger_dois": 9,
+  "elsevier_tool_sha256": "629d652395e8e983e2a03d03ee3fad953d2617ad97dc72ff01b21a0bc90c03e4"
+}

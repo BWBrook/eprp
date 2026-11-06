@@ -25,7 +25,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 
-from library import OPEN_HELD, key_file, norm_doi, now, read_tsv
+from library import OPEN_HELD, key_file, norm_doi, now, pdf_pages, read_tsv
 
 API = "https://api.elsevier.com/content/article/doi/"
 PREFIXES = ("10.1016/", "10.1006/")
@@ -148,7 +148,9 @@ def parse_article(data, doi):
     original = [n for n in root.iter() if local_name(n) == "originaltext"]
     bodies = [n for o in original for n in o.iter() if local_name(n) == "body"]
     raw = [n for o in original for n in o.iter() if local_name(n) == "rawtext"]
-    selected = bodies or raw
+    chapters = [n for o in original for n in o.iter() if local_name(n) == "chapter"]
+    chapter_sections = [n for n in chapters[0] if local_name(n) == "sections"] if len(chapters) == 1 else []
+    selected = bodies or raw or chapter_sections
     if not selected:
         raise Rejected("metadata_only")
     try:
@@ -158,12 +160,15 @@ def parse_article(data, doi):
     text = "\n".join(" ".join(line.split()) for line in text.splitlines() if line.strip())
     if len(text) < 200 or len(text.split()) < 30:
         raise Rejected("insufficient_body_text")
-    counts = {"mode": "body" if bodies else "rawtext", "bodies": len(bodies),
+    mode = "body" if bodies else "rawtext" if raw else "chapter_sections"
+    counts = {"mode": mode, "bodies": len(bodies),
               "sections": names["section"] + names["sec"], "paragraphs": names["para"] + names["p"],
               "figures": names["figure"] + names["fig"], "tables": names["table"],
               "references": names["bib-reference"] + names["ref"],
               "chars": len(text), "words": len(text.split()),
-              "completeness": "structured_body_present_not_content_verified" if bodies else "rawtext_unsegmented_not_content_verified"}
+              "completeness": {"body": "structured_body_present_not_content_verified",
+                               "rawtext": "rawtext_unsegmented_not_content_verified",
+                               "chapter_sections": "chapter_sections_present_not_content_verified"}[mode]}
     return text, counts
 
 
@@ -359,6 +364,53 @@ def approval_receipt(path):
     return sha(data)
 
 
+def verified_pdf(root, rows, doi):
+    inventory = root / "diagnostics/20261106/pdf-format.json"
+    check_ancestors(inventory)
+    if not inventory.exists():
+        return None
+    ids = {r["openalex_id"] for r in rows}
+    matches = [r for r in json.loads(inventory.read_text()) if r["openalex_id"] in ids
+               and r["status"] == "pdf_recovered_verified_identity_and_pages"]
+    if not matches:
+        return None
+    row = matches[0]
+    wid = row["openalex_id"]
+    if not re.fullmatch(r"W\d+", wid) or any(not re.fullmatch(r"[0-9a-f]{64}", row.get(k, ""))
+            for k in ("sha256", "text_sha256", "source_xml_sha256")):
+        raise ValueError("invalid_pdf_identity_or_hash")
+    if norm_doi(row["doi"]) != doi:
+        raise ValueError("held_doi_changed")
+    if row.get("doi_metadata_verified") is not True:
+        raise ValueError("pdf_identity_not_verified")
+    expected_paths = {"path": f"diagnostics/20261106/pdf-candidates/{wid}-{row['sha256']}.pdf",
+                      "text_path": f"diagnostics/20261106/pdf-candidates/{wid}-{row['sha256']}.txt",
+                      "source_xml_path": f"quarantine/{wid}-{row['source_xml_sha256']}.xml"}
+    for field, expected in expected_paths.items():
+        if row[field] != expected:
+            raise ValueError("invalid_pdf_inventory_path")
+        path = root / expected
+        check_ancestors(path)
+        digest = row[{"path": "sha256", "text_path": "text_sha256", "source_xml_path": "source_xml_sha256"}[field]]
+        if not path.is_file() or sha(path.read_bytes()) != digest:
+            raise ValueError("pdf_inventory_checksum_failure")
+    data = (root / row["source_xml_path"]).read_bytes()
+    declarations = data.replace(b"\0", b"").upper()
+    if len(data) > MAX_BYTES or b"<!DOCTYPE" in declarations or b"<!ENTITY" in declarations:
+        raise ValueError("unsafe_pdf_identity_xml")
+    xml = ET.fromstring(data)
+    dois = {norm_doi(n.text) for c in xml if local_name(c) == "coredata" for n in c if local_name(n) == "doi"}
+    expected = {int(n.text) for n in xml.iter() if local_name(n) == "web-pdf-page-count" and (n.text or "").isdigit()}
+    if dois != {doi} or len(expected) != 1:
+        raise ValueError("pdf_source_identity_mismatch")
+    pages = next(iter(expected))
+    if (type(row["pages"]) is not int or row["pages"] != pages or row["expected_pages"] != pages
+            or row.get("page_coverage") != 1.0 or pdf_pages(root / row["path"]) != pages
+            or row.get("first_page_title_match", 0) < 0.8 or row.get("novel_tokens_beyond_cached_xml", 0) < 100):
+        raise ValueError("pdf_page_coverage_or_identity_failure")
+    return dict(row, source_format="pdf", pdf_sha256=row["sha256"])
+
+
 def query(catalogue, store, doi, needle, approval, chars=200):
     approval_hash = approval_receipt(approval)
     doi = norm_doi(doi)
@@ -383,12 +435,13 @@ def query(catalogue, store, doi, needle, approval, chars=200):
             return {"doi": doi, "status": "budget_exhausted", "remaining_chars": 0}
         manifests = latest(root / "manifest.tsv")
         matches = [manifests[r["openalex_id"]] for r in rows if r["openalex_id"] in manifests]
-        if not matches:
+        row = matches[0] if matches else verified_pdf(root, rows, doi)
+        if not row:
             return {"doi": doi, "status": "not_held"}
-        row = matches[0]
         if norm_doi(row["doi"]) != doi:
             raise ValueError("held_doi_changed")
-        held(root, row)
+        if row.get("source_format") != "pdf":
+            held(root, row)
         text = " ".join((root / row["text_path"]).read_text(encoding="utf-8").split())
         match = re.search(re.escape(needle), text, re.IGNORECASE)
         if not match:
@@ -407,6 +460,7 @@ def query(catalogue, store, doi, needle, approval, chars=200):
                 "credit": f"{source.get('first_author') or 'Author not listed in catalogue'}, {source.get('year', '')}; {source.get('venue', '')}; Elsevier",
                 "notice": NOTICE, "excerpt": excerpt, "excerpt_chars": len(excerpt),
                 "text_sha256": row["text_sha256"], "start_character": start,
+                "source_format": row.get("source_format", "xml"),
                 "remaining_chars": 200 - used - len(excerpt)}
 
 

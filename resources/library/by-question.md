@@ -456,7 +456,7 @@ Full text: **T** open copy with embedded text, **O** machine OCR, **S** open sca
 - **T** Grasby et al. 2021. Transient Permian-Triassic euxinia in the southern Panthalassa deep ocean. *Geology*. [doi](https://doi.org/10.1130/g48928.1)
 - Cao et al. 2022. Persistent late Permian to Early Triassic warmth linked to enhanced reverse weathering. *Nature Geoscience*. [doi](https://doi.org/10.1038/s41561-022-01009-x)
 - **T** Isson et al. 2022. Marine siliceous ecosystem decline led to sustained anomalous Early Triassic warmth. *Nature Communications*. [doi](https://doi.org/10.1038/s41467-022-31128-3)
-- Yang et al. 2022. Collapse of Late Permian chert factories in the equatorial Tethys and the nature of the Early Triassic chert gap. *Earth and Planetary Science Letters*. [doi](https://doi.org/10.1016/j.epsl.2022.117861)
+- **T** Yang et al. 2022. Collapse of Late Permian chert factories in the equatorial Tethys and the nature of the Early Triassic chert gap. *Earth and Planetary Science Letters*. [doi](https://doi.org/10.1016/j.epsl.2022.117861)
 - **T** Foster et al. 2023. Response of Siliceous Marine Organisms to the Permian‐Triassic Climate Crisis Based on New Findings From Central Spitsbergen, Svalbard. *Paleoceanography and Paleoclimatology*. [doi](https://doi.org/10.1029/2023pa004766)
 - **T** Monarrez et al. 2023. Reduced strength and increased variability of extinction selectivity during mass extinctions. *Royal Society Open Science*. [doi](https://doi.org/10.1098/rsos.230795)
 - **T** Rauzi et al. 2024. Lithium isotopic evidence for enhanced reverse weathering during the Early Triassic warm period. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.2318860121)
@@ -591,7 +591,7 @@ Full text: **T** open copy with embedded text, **O** machine OCR, **S** open sca
 - Marcot et al. 2016. Late Cenozoic onset of the latitudinal diversity gradient of North American mammals. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.1524750113)
 - **T** Westerhold et al. 2020. An astronomically dated record of Earth’s climate and its predictability over the last 66 million years. *Science*. [doi](https://doi.org/10.1126/science.aba6853)
 - Yasuhara et al. 2020. Past and future decline of tropical pelagic biodiversity. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.1916923117)
-- Boag et al. 2021. Metabolic tradeoffs control biodiversity gradients through geological time. *Current Biology*. [doi](https://doi.org/10.1016/j.cub.2021.04.021)
+- **T** Boag et al. 2021. Metabolic tradeoffs control biodiversity gradients through geological time. *Current Biology*. [doi](https://doi.org/10.1016/j.cub.2021.04.021)
 - **T** Chaudhary et al. 2021. Global warming is causing a more pronounced dip in marine species richness around the equator. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.2015094118)
 - **T** Fenton et al. 2021. Triton, a new species-level database of Cenozoic planktonic foraminiferal occurrences. *Scientific Data*. [doi](https://doi.org/10.1038/s41597-021-00942-7)
 - **T** Jones et al. 2021. Spatial sampling heterogeneity limits the detectability of deep time latitudinal biodiversity gradients. *Proceedings of the Royal Society B Biological Sciences*. [doi](https://doi.org/10.1098/rspb.2020.2762)
@@ -894,7 +894,7 @@ Full text: **T** open copy with embedded text, **O** machine OCR, **S** open sca
 - Rampino & Prokoph 2020. Are Impact Craters and Extinction Episodes Periodic? Implications for Planetary Science and Astrobiology. *Astrobiology*. [doi](https://doi.org/10.1089/ast.2019.2043)
 - Rampino et al. 2021. A pulse of the Earth: A 27.5-Myr underlying cycle in coordinated geological events over the last 260 Myr. *Geoscience Frontiers*. [doi](https://doi.org/10.1016/j.gsf.2021.101245)
 - **T** Boulila et al. 2023. Earth’s interior dynamics drive marine fossil diversity cycles of tens of millions of years. *Proceedings of the National Academy of Sciences*. [doi](https://doi.org/10.1073/pnas.2221149120)
-- Rampino & Caldeira 2025. Correlation and cyclicity of stratigraphic sequence boundaries and chronostratigraphic stage boundaries of the last 253 My: Synchrony of tectonism, sea level, climate and biotic change. *Earth-Science Reviews*. [doi](https://doi.org/10.1016/j.earscirev.2025.105100)
+- **T** Rampino & Caldeira 2025. Correlation and cyclicity of stratigraphic sequence boundaries and chronostratigraphic stage boundaries of the last 253 My: Synchrony of tectonism, sea level, climate and biotic change. *Earth-Science Reviews*. [doi](https://doi.org/10.1016/j.earscirev.2025.105100)
 
 ## Q-042 (16)
 

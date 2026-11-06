@@ -131,3 +131,13 @@ All are in session scratch and are not committed.
 | Heim et al. 2015 data file | `5b911416208d2500e63f3f40b81b6f3396127608fe8ac5619522aba3d3ed0f62` |
 
 Dietl 2003 was read as HTML, so it has no file hash.
+
+## Source clarification, 6 November 2026
+
+Kelley et al. (2001) remains unavailable in full through the API, but its
+public publisher abstract now identifies the named indices as incomplete
+and multiple drilling outcomes. The title-only uncertainty in the historical
+table is therefore resolved at abstract level. No independent predator body
+measurement was verified; the B-003 support hold remains. See the
+[dated claim check](2026-11-06-register-claims-after-elsevier.md#kelley-et-al-2001-measure-identified-despite-the-entitlement-gap)
+for access depth, contrary outcomes and the remaining limits.

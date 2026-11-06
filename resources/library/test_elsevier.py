@@ -72,6 +72,28 @@ class XMLTests(unittest.TestCase):
         self.assertEqual(counts["mode"], "rawtext")
         self.assertIn("unsegmented", counts["completeness"])
 
+    def test_chapter_sections_preserve_body_boundary(self):
+        data = article().replace(b"<body>", b"<doc><nonserial-item><chapter><info>PRIVATEINFO</info><head>PRIVATEHEAD</head><sections>")
+        data = data.replace(b"</body>", b"</sections><bibliography>PRIVATEBIBLIOGRAPHY</bibliography></chapter></nonserial-item></doc>")
+        text, counts = elsevier.parse_article(data, DOI)
+        self.assertIn("Synthetic fossil", text)
+        for excluded in ["PRIVATEINFO", "PRIVATEHEAD", "PRIVATEBIBLIOGRAPHY", "OMITTEDREFERENCE"]:
+            self.assertNotIn(excluded, text)
+        self.assertEqual(counts["mode"], "chapter_sections")
+        self.assertEqual(counts["bodies"], 0)
+        self.assertIn("not_content_verified", counts["completeness"])
+        with self.assertRaisesRegex(elsevier.Rejected, "doi_mismatch"):
+            elsevier.parse_article(data, "10.1016/wrong")
+
+    def test_head_only_and_ambiguous_multiple_chapters_rejected(self):
+        for replacement in ["<chapter><head>" + BODY + "</head><bibliography>" + BODY + "</bibliography></chapter>",
+                            ("<chapter><sections>" + BODY + "</sections></chapter>") * 2]:
+            data = article().decode()
+            start, end = data.index("<originalText>"), data.index("</originalText>")
+            data = (data[:start] + "<originalText>" + replacement + data[end:]).encode()
+            with self.assertRaisesRegex(elsevier.Rejected, "metadata_only"):
+                elsevier.parse_article(data, DOI)
+
     def test_rejects_wrong_doi_metadata_only_and_malformed(self):
         for data, expected in [(article("10.1016/wrong"), "doi_mismatch"),
                                (article().split(b"<originalText>")[0] + b"</full-text-retrieval-response>", "metadata_only"),
@@ -338,6 +360,72 @@ class StoreTests(unittest.TestCase):
         with patch.object(elsevier.time, "time", return_value=1003.1):
             self.assertEqual(self.fetch(opener, limit=1)["fetched"], 1)
         self.assertEqual(len(opener.calls), 2)
+
+    def install_pdf_inventory(self, status="pdf_recovered_verified_identity_and_pages"):
+        with elsevier.locked(self.store):
+            pdf = b"%PDF-synthetic-complete"
+            text = BODY.encode()
+            source = (f'<full-text-retrieval-response><coredata><doi>{DOI}</doi></coredata>'
+                      '<originalText><doc><meta><web-pdf-page-count>2</web-pdf-page-count></meta>'
+                      '</doc></originalText></full-text-retrieval-response>').encode()
+            digest, sourcehash = elsevier.sha(pdf), elsevier.sha(source)
+            row = {"openalex_id": "W1", "doi": DOI, "status": status, "sha256": digest,
+                   "text_sha256": elsevier.sha(text), "source_xml_sha256": sourcehash,
+                   "path": f"diagnostics/20261106/pdf-candidates/W1-{digest}.pdf",
+                   "text_path": f"diagnostics/20261106/pdf-candidates/W1-{digest}.txt",
+                   "source_xml_path": f"quarantine/W1-{sourcehash}.xml", "pages": 2, "expected_pages": 2,
+                   "page_coverage": 1.0, "first_page_title_match": 1.0, "novel_tokens_beyond_cached_xml": 150,
+                   "doi_metadata_verified": True}
+            for key, data in [("path", pdf), ("text_path", text), ("source_xml_path", source)]:
+                elsevier.atomic(self.root / row[key], data, 0o400)
+            inventory = self.root / "diagnostics/20261106/pdf-format.json"
+            elsevier.atomic(inventory, json.dumps([row]).encode())
+            elsevier.atomic(self.root / "snippet-exports.json", b'{"version":1,"exports":{}}')
+            return inventory, row
+
+    def test_complete_pdf_query_uses_same_cumulative_doi_budget(self):
+        self.install_pdf_inventory()
+        with patch.object(elsevier, "pdf_pages", return_value=2):
+            first = self.query(chars=90)
+            second = self.query(chars=200)
+            exhausted = self.query()
+        self.assertEqual(first["source_format"], "pdf")
+        self.assertEqual(first["excerpt_chars"], 90)
+        self.assertEqual(second["excerpt_chars"], 110)
+        self.assertEqual(exhausted["status"], "budget_exhausted")
+        self.assertFalse((self.root / "manifest.tsv").exists())
+
+    def test_pdf_preview_is_not_held_and_does_not_spend_budget(self):
+        self.install_pdf_inventory(status="pdf_incomplete_preview")
+        ledger = self.root / "snippet-exports.json"
+        before = ledger.read_bytes()
+        self.assertEqual(self.query()["status"], "not_held")
+        self.assertEqual(ledger.read_bytes(), before)
+
+    def test_pdf_query_rejects_changed_doi_and_expected_page_count(self):
+        inventory, row = self.install_pdf_inventory()
+        ledger = self.root / "snippet-exports.json"
+        before = ledger.read_bytes()
+        for update, expected in [({"doi": "10.1016/wrong"}, "held_doi_changed"),
+                                 ({"expected_pages": 1}, "page_coverage")]:
+            inventory.write_text(json.dumps([dict(row, **update)]))
+            with patch.object(elsevier, "pdf_pages", return_value=2), self.assertRaisesRegex(ValueError, expected):
+                self.query()
+            self.assertEqual(ledger.read_bytes(), before)
+
+    def test_pdf_query_checks_pdf_text_and_identity_source_hashes(self):
+        _, row = self.install_pdf_inventory()
+        ledger = self.root / "snippet-exports.json"
+        before = ledger.read_bytes()
+        for field in ["path", "text_path", "source_xml_path"]:
+            path = self.root / row[field]
+            saved = path.read_bytes()
+            path.chmod(0o600)
+            path.write_bytes(b"altered")
+            with self.assertRaisesRegex(ValueError, "checksum"):
+                self.query()
+            self.assertEqual(ledger.read_bytes(), before)
+            path.write_bytes(saved)
 
 
 if __name__ == "__main__":

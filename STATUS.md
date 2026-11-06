@@ -1,19 +1,31 @@
 # EPRP current status
 
-Updated: 5 November 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 6 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Library acquisition in execution (References Codex):** Barry authorised the
-Elsevier tranche on 5 November. The [acquisition record](resources/library/notes/2026-11-05-elsevier-acquisition.md)
-documents a 1,317-work selection and detached tmux run on `deep`, started
-14:31 AEDT. The finite test retrieved eight priority full-text XML bodies,
-including all three agendas; Kelley 2001 remains outside established
-entitlement. Elsevier text and derivatives stay in a separate campus-only
-store, excluded from Nectar backups. Wiley remains count-only; Elsevier
-excerpt exports require the private approval receipt and a persistent
-200-character-per-DOI budget. Agenda candidates are unreviewed; claim checks
-are partial. References Codex owns completion inspection, curation and the
-remaining source checks. The scientific focus and allocations below remain
-unchanged.
+**Library diagnosis and source-check tranche complete (References Codex):**
+the [bounded diagnosis](resources/library/notes/2026-11-06-elsevier-failure-diagnosis.md)
+recovered 16 cached chapter bodies and one complete PDF, taking the original
+Elsevier batch from 1,130 to **1,147/1,317 held works**. The 170 outstanding
+items comprise 163 directly denied resources, two incomplete scientific-body
+deliveries, one back-matter record, one registered DOI absent from the API and
+three unresolved whole-book server errors. A separate Schachat final-version
+check adds one copy outside that cohort. Licensed material and derivations
+stay on `deep`; Wiley remains count-only and Elsevier excerpt budgets persist.
+
+The [three agendas](literature/2026-11-06-three-agendas-curation.md) now have
+private typed records: six Cell perspectives, eight formal López groups and
+two Abdelhady illustrative prompt blocks. Four detailed Cell mappings remain
+provisional. The [claim checks](literature/2026-11-06-register-claims-after-elsevier.md)
+qualify Boag's sampling treatment, distinguish Schachat's proposed null from
+its before/after analysis, and identify an unreproduced printed binomial
+probability in Rampino & Caldeira. That arithmetic finding does not refute
+their separate spectral result. Three independently sourced public PDFs were
+added to the canonical open library and indexed; closed copies stayed put.
+
+References Codex retains access follow-up and explicitly limited source
+interpretations; no ranking, primary-project choice or general permission
+to send full licensed text to AI services follows. The scientific focus and
+allocations below remain unchanged.
 
 **Current focus: B-002's held-source feasibility tranche is complete; its
 proposed physical route calculation lacks the required stage inputs.** Barry

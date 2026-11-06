@@ -1725,6 +1725,8 @@ def write_index_md(out, rows, unresolved):
         f"{ft['ocr_ok']} machine OCR, {ft['no_text']} without searchable full text), and publisher TDM copies for **{tdm_n}** more "
         f"(local search and mining only). {len(unresolved)} seed rows are unresolved (see `unresolved.tsv`).",
         "",
+        "Counts describe the store passed to `index`. Separately held publisher stores are counted from their own inventories.",
+        "",
         "Full-text status: `ok` open copy held and title-checked; `ocr_ok` searchable machine OCR (verify against the scan); "
         "`no_text` copy held without searchable full text (see manifest for title checks); "
         "`tdm_ok`, `tdm_no_text` the same for a publisher TDM copy; `failed` copies tried, none usable; "
