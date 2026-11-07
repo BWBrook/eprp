@@ -1,5 +1,13 @@
 # Q-009 outcome and information-window table
 
+**8 November follow-up:** the [counting-noise and precision screen](../q009-noise-precision/README.md)
+finds that the specified fixed-six-taxon summed-CV forecast has no defined
+outcome in any of its seven prospective evaluation windows. A fixed-scale
+variance alternative is defined, but its precision and noise control remain
+uncertified. The sparse Walvis source cannot directly replicate the 150-kyr
+design. This supersedes immediate development of that summed-CV endpoint;
+the table below retains the broader source possibilities and their limits.
+
 7 November 2026. Completed by main Codex under Barry's direct assignment
 (76/2964), integrating two bounded GPT-6.1 Sol primary-source audits and
 an independent numerical check. References retains the library and original

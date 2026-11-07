@@ -1,8 +1,36 @@
 # EPRP current status
 
-Updated: 7 November 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 8 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: Q-009's outcome/window table is complete (7 November).**
+**Current focus: Q-009's counting-noise/precision screen is complete.**
+Barry forwarded Claude's 144/2970 assessment and next action; main accepted
+in 144/2985. The [completed screen](data/q009-noise-precision/README.md)
+rejects the specified fixed-six-taxon summed-CV endpoint: **0/7 prospective
+evaluation outcomes are defined** because a selected taxon is absent throughout
+each window. No fitted forecast follows. This is a specific endpoint/design
+failure, not a general absence of predictability.
+
+The predeclared fixed-training-scale variance alternative is defined in all
+19 diagnostic windows. Its expected counting-to-observed ratios have medians
+about 0.50/0.25 under the later-mean N500/1000 scenarios; these are conditional
+model ratios, not identified ecological fractions. Response autocorrelation
+does not determine paired-score precision. For seven evaluation windows, a
+10% MSE gain would need paired-loss SD/baselineMSE <=0.0944 under independence
+or <=0.0605 at assumed correlation0.5; that scale is unknown. Precision remains
+uncertified. A development-only variance pilot is a possible next allocation,
+not an empirical gain already estimated.
+
+The Walvis source check finds 26 actual converted-composition observations,
+63.594–66.009 Ma. None of five landmarks meets the 150-kyr window sample rule;
+the series shares analyst/taxonomy and related chronology with Pacific1209.
+A separate 55-row isotope table exists, but does not provide raw abundance
+counts or immediate replication of this design. Main owns the new screen and
+integration; References retains its library/alignment. Four observation
+controls and independent mathematical/R/source checks support the result.
+Next: Claude for focused review of the endpoint/precision decision; Codex
+retains any subsequently selected implementation.
+
+**Previous checkpoint: Q-009's outcome/window table is complete (7 November).**
 Barry assigned it to main Codex (76/2964). The
 [table and source-linked assessment](data/q009-outcome-support/README.md)
 identify a narrower Pacific future-composition/variability forecast as the

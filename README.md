@@ -21,6 +21,7 @@ when they establish whether a resource or idea is usable.
 ## Start here
 
 - [Current status and next handoff](STATUS.md)
+- [Q-009 counting-noise and precision screen: fixed-taxon CV fails; variance and Walvis limits](data/q009-noise-precision/README.md)
 - [Q-009 outcome/window table: Pacific forecast opportunity, chronology and information limits](data/q009-outcome-support/README.md)
 - [Reviewed Board snapshot: current Q-009 discussion; historical messages pending separate review](docs/correspondence/INDEX.md)
 - [B-002 critique response and completed held-source feasibility tranche](ideas/2026-10-30-b002-critique-response-codex.md)

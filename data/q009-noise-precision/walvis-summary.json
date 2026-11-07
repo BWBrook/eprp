@@ -1,0 +1,43 @@
+{
+  "source_sha256": "fefb143d84e84137250347fec393dae061214b4b1eb9004efbae02c83beb5a78",
+  "sheet": "Figure 1 data",
+  "source_rows_inclusive": [
+    791,
+    816
+  ],
+  "rows": 26,
+  "age_ma_min": 63.594024999999995,
+  "age_ma_max": 66.0093023255814,
+  "median_age_gap_kyr": 94.51453488371442,
+  "max_age_gap_kyr": 294.2102941176543,
+  "timing_census_before_gap_or_boundary_exclusions": [
+    {
+      "landmark_ma": 64.0,
+      "older_rows": 1,
+      "younger_rows": 2
+    },
+    {
+      "landmark_ma": 64.5,
+      "older_rows": 3,
+      "younger_rows": 1
+    },
+    {
+      "landmark_ma": 65.0,
+      "older_rows": 2,
+      "younger_rows": 1
+    },
+    {
+      "landmark_ma": 65.5,
+      "older_rows": 2,
+      "younger_rows": 2
+    },
+    {
+      "landmark_ma": 66.0,
+      "older_rows": 2,
+      "younger_rows": 1
+    }
+  ],
+  "landmarks_with_at_least_three_rows_each_window": 0,
+  "qualification": "Converted cellular percentages; source age estimates; no exact raw lith denominators or independent observer assumed",
+  "script_sha256": "dda23708854b17691cdd5d342e9386c260352db23647f52c87520d7a47af513c"
+}

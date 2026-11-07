@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-08",
+  "source_sha256": "5fc615afdf94fa7842375e9c34b98d1f87f41e29700ef97da11b149eb59c7caa",
+  "source_unchanged": true,
+  "observation_controls_passed": 4,
+  "independent_method_audit": {
+    "model": "gpt-6.1-sol",
+    "R_precision_examples": {
+      "n7_rho0_c025_detectable_gain": 0.26472492013862725,
+      "n7_rho05_c025_detectable_gain": 0.4129229942781262,
+      "n7_rho0_max_c_for_10pct": 0.09443765243902376,
+      "n7_rho05_max_c_for_10pct": 0.06054397635013064
+    },
+    "dirichlet_multinomial_variance_multiplier_verified": 2,
+    "all_SA_source_rows_numeric_nonnegative_simplex_checked": 741,
+    "largest_selected_probability_sum": 0.9797794118,
+    "audited_Monte_Carlo_V_mean_max_approx_relative_error": 0.014,
+    "final_readonly_interpretation_review": "No material repair; endpoint stop, conditionalSCVselection,scenarioVratios and conditionalprecision retained"
+  },
+  "raw_scv_evaluation_defined": 0,
+  "possible_evaluation_windows": 7,
+  "variance_precision_clearance": "not certified; paired loss scale/covariance unknown",
+  "forecast_model_fitted": false,
+  "private_window_and_scenario_hashes": {
+    "window-diagnostics.json": "8af58673c7b4aa0ad215fb38f32dc71549590fa2f3c3628e3240cebe8200ee88",
+    "counting-window-results.json": "b4032f2c34d16a8a288a55633f6e31b2fa379b025ff7de3ef4c1ccdc736efc20"
+  }
+}
