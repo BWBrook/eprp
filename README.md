@@ -22,6 +22,7 @@ when they establish whether a resource or idea is usable.
 
 - [Current status and next handoff](STATUS.md)
 - [Q-009 outcome/window table: Pacific forecast opportunity, chronology and information limits](data/q009-outcome-support/README.md)
+- [Reviewed Board snapshot: current Q-009 discussion; historical messages pending separate review](docs/correspondence/INDEX.md)
 - [B-002 critique response and completed held-source feasibility tranche](ideas/2026-10-30-b002-critique-response-codex.md)
 - [30 October portfolio synthesis: B-002 physical comparison, empirical alternatives and Q-012 disagreement](ideas/2026-10-30-portfolio-synthesis-codex.md)
 - [Q-027 estimator result: selected climate pairs lack the required regional support](data/q027-eligibility/README.md)
