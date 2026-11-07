@@ -1,7 +1,7 @@
 # Empty prefix flags every nonempty message: each needs explicit review.
 project = "eprp"
 flag_terms = [""]
-cleared = [2965, 2966]
+cleared = [2965, 2966, 2970, 2985, 2989]
 redact = [['\b(?:mini|deep-server|nectar|wsl|macbook)\b', '[host]']]
 
 [withheld]
