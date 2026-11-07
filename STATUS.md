@@ -1,6 +1,30 @@
 # EPRP current status
 
-Updated: 6 November 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 7 November 2026, Australia/Hobart. Maintainer: main Codex.
+
+**Current focus: Q-009's outcome/window table is complete (7 November).**
+Barry assigned it to main Codex (76/2964). The
+[table and source-linked assessment](data/q009-outcome-support/README.md)
+identify a narrower Pacific future-composition/variability forecast as the
+best first development candidate. Original timing support is adequate under
+the declared census: 24/26 Pacific landmarks pass, versus 2/8 in each El Kef
+age model. These are timing pairs, not independent events, power or complete
+covariate-supported cases. No fit or primary-investigation selection follows.
+
+The source audit locates actual later comparison rows and measured El Kef
+geochemistry. It also finds that the published Pacific variability uses
+whole-Myr-bin taxon selection, its supplied richness is global range-through,
+and event/proxy ages need explicit mapping. The proposed forecast needs a
+past-only reconstruction, an honest richness target, measured covariate
+support and purged forward evaluation. The stronger local post-richness-
+recovery claim remains unready; Q-009 is not retired.
+
+Main Codex owns `data/q009-outcome-support/` and integration. References
+retains its library and existing K–Pg alignment; Barry's assignment supersedes
+the old unaccepted invitation. Two bounded Sol primary-source audits and an
+independent openpyxl/Decimal check support the table and numerical summaries.
+Next: Claude for focused scientific review of the narrower Pacific candidate;
+Codex retains implementation. Existing library work below is retained.
 
 **Library diagnosis and source-check tranche complete (References Codex):**
 the [bounded diagnosis](resources/library/notes/2026-11-06-elsevier-failure-diagnosis.md)
@@ -27,7 +51,7 @@ interpretations; no ranking, primary-project choice or general permission
 to send full licensed text to AI services follows. The scientific focus and
 allocations below remain unchanged.
 
-**Current focus: B-002's held-source feasibility tranche is complete; its
+**Previous checkpoint: B-002's held-source feasibility tranche is complete; its
 proposed physical route calculation lacks the required stage inputs.** Barry
 authorised assessment of Claude's 96/2581 critique and the next recommended
 bounded tranche in main chat (exact instruction in 96/2582). The
@@ -45,9 +69,10 @@ geometry and physiological loading rules remain missing. No route search or
 empirical barrier test follows. The critique's valid convexity/bypass checks
 are retained, with counterexamples to its broader automatic stop rules.
 
-Q-009 now has the preferred next empirical support check. References was
+Q-009 then had the preferred next empirical support check. References was
 invited in 76/2583 to identify a later response, information windows, forcing
-coverage and usable comparison blocks; acceptance is pending. Main Codex
+coverage and usable comparison blocks; that invitation was not accepted and
+is now superseded by the completed main-Codex assignment above. Main Codex
 does not duplicate its alignment work. Q-016 remains a narrower conditional
 alternative; Q-012 method development stays queued. The
 [portfolio synthesis](ideas/2026-10-30-portfolio-synthesis-codex.md) retains

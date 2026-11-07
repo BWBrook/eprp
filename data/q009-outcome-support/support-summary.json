@@ -1,0 +1,168 @@
+{
+  "source_sha256": {
+    "41586_2019_1590_MOESM2_ESM.xlsx": "5fc615afdf94fa7842375e9c34b98d1f87f41e29700ef97da11b149eb59c7caa",
+    "pangaea-893899.txt": "8b6e57a894b91e430ef2e26a372cc9b25e56927b9d2f6fbfb068462e623b5906",
+    "pangaea-893919.txt": "945a2aeadafd9efdb02c80ec31f41a3c5a851fb9c3e0b61abaff4232aefd0756",
+    "pangaea-997781.txt": "60d0a282d2e9f3116778762254ee651a301344763a48806857f94b700122423e",
+    "alvarez-fig2.xlsx": "a2b55b1bcdca2e59731ccfa25c9b3353bcdaacb7c1740253140bb9642cd2fd1c"
+  },
+  "pacific_original": {
+    "rows": 990,
+    "distinct_age_values": 990,
+    "age_ma_min": 53.086199,
+    "age_ma_max": 66.24725,
+    "median_distinct_age_gap_kyr": 12.152000000000385,
+    "largest_distinct_age_gap_kyr": 81.31199999999694,
+    "source_investigator_counts": {
+      "SG": 238,
+      "SA": 741,
+      "PB": 11
+    },
+    "four_selected_taxa_nonblank_rows": 752
+  },
+  "pacific_richness_separate_series": {
+    "rows": 53,
+    "distinct_age_values": 53,
+    "age_ma_min": 53.0,
+    "age_ma_max": 66.0,
+    "median_distinct_age_gap_kyr": 250.0,
+    "largest_distinct_age_gap_kyr": 250.0
+  },
+  "pacific_published_variability_separate_series": {
+    "rows": 986,
+    "distinct_age_values": 986,
+    "age_ma_min": 53.36150983,
+    "age_ma_max": 66.16923341,
+    "median_distinct_age_gap_kyr": 13.002769999999941,
+    "largest_distinct_age_gap_kyr": 13.002770000007047
+  },
+  "el_kef_age_columns": {
+    "Age [Ma] (Wade et al., 2011)": {
+      "rows": 186,
+      "distinct_age_values": 186,
+      "age_ma_min": 62.35081897,
+      "age_ma_max": 66.01584,
+      "median_distinct_age_gap_kyr": 5.756730000001653,
+      "largest_distinct_age_gap_kyr": 501.69784999999933
+    },
+    "Age [Ma] (Wade et al., 2011 w/ shorter ...)": {
+      "rows": 186,
+      "distinct_age_values": 186,
+      "age_ma_min": 62.35081897,
+      "age_ma_max": 66.01757317,
+      "median_distinct_age_gap_kyr": 6.048320000004992,
+      "largest_distinct_age_gap_kyr": 501.69784999999933
+    }
+  },
+  "qualifications": [
+    "Age gaps are source-spacing diagnostics, not independent replicates or uncertainty bounds",
+    "Workbook series use their own age columns; rows are not joined by spreadsheet row number",
+    "Absolute one-Myr bins describe coverage only; no cross-site or cross-calibration age equivalence asserted",
+    "Four-taxon nonblank support does not validate richness or a compositional closure",
+    "No response model, effect estimate, outcome-defined event selection or power calculation"
+  ],
+  "pacific_fig2_comparison_rows": 94,
+  "pacific_fig2_labelled_rows": [
+    {
+      "source_excel_row": 4,
+      "literal_label": "I2",
+      "source_age_ma_W18": "53.45033875",
+      "interpretation": "published comparison row; date is not established as event onset"
+    },
+    {
+      "source_excel_row": 5,
+      "literal_label": "I1",
+      "source_age_ma_W18": "53.684428590000003",
+      "interpretation": "published comparison row; date is not established as event onset"
+    },
+    {
+      "source_excel_row": 6,
+      "literal_label": "HI",
+      "source_age_ma_W18": "54.074578320000001",
+      "interpretation": "published comparison row; date is not established as event onset"
+    },
+    {
+      "source_excel_row": 8,
+      "literal_label": "PETM",
+      "source_age_ma_W18": "55.921287059999997",
+      "interpretation": "published comparison row; date is not established as event onset"
+    },
+    {
+      "source_excel_row": 10,
+      "literal_label": "ELPE",
+      "source_age_ma_W18": "59.211549810000001",
+      "interpretation": "published comparison row; date is not established as event onset"
+    },
+    {
+      "source_excel_row": 14,
+      "literal_label": "LDE",
+      "source_age_ma_W18": "61.968607929999997",
+      "interpretation": "published comparison row; date is not established as event onset"
+    },
+    {
+      "source_excel_row": 16,
+      "literal_label": "LDE",
+      "source_age_ma_W18": "62.319742689999998",
+      "interpretation": "published comparison row; date is not established as event onset"
+    }
+  ],
+  "timing_rule_counts_only": {
+    "El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)": {
+      "candidate_landmarks": 8,
+      "passes": 2
+    },
+    "El_Kef_Age [Ma] (Wade et al., 2011)": {
+      "candidate_landmarks": 8,
+      "passes": 2
+    },
+    "Pacific_original": {
+      "candidate_landmarks": 26,
+      "passes": 24
+    }
+  },
+  "source_field_names": {
+    "pacific_sample_metadata": [
+      "initials",
+      "site",
+      "hole",
+      "core",
+      "type",
+      "section",
+      "top_cm",
+      "bot_cm",
+      "mid_cm",
+      "depth_mbsf",
+      "depth_rmcd",
+      "depth_rmcd_adj",
+      "Age_(Myr_ago)"
+    ],
+    "el_kef_count_table": [
+      "Biozone (Planktic foraminiferal biozone)",
+      "H",
+      "Core",
+      "Depth sect [cm]",
+      "Depth sed [m] (Curated core depth (mbs))",
+      "Depth comp [mcd] (mcd)",
+      "Age [Ma] (Wade et al., 2011)",
+      "Age [Ma] (Wade et al., 2011 w/ shorter ...)",
+      "Cervisiella [#]",
+      "Braarudosphaera [#]",
+      "Neobiscutum [#]",
+      "Futyania [#]",
+      "Praeprinsius [#]",
+      "Cruciplacolithus [#]",
+      "Coccolithus [#]",
+      "Nannos oth [#]"
+    ],
+    "pacific_metadata_table": [
+      "Event",
+      "Investigator",
+      "Sample label",
+      "Depth sed [m]",
+      "Depth comp r [rmcd]",
+      "Depth adj rmcd [armcd]",
+      "Age [ka BP]"
+    ]
+  },
+  "audit_script_sha256": "31c25a701c92e4788ecf31ac362f15d59b0e51a3b1906c97b1f2b6f0fd939c8b"
+}

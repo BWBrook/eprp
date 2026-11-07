@@ -1,0 +1,43 @@
+landmark_ma	past_rows_older	future_rows_younger	passes_timing_rules_only	failures	investigator_codes	series
+53.5	13	10	True		SG	Pacific_original
+54.0	23	14	True		SG	Pacific_original
+54.5	8	7	True		SG	Pacific_original
+55.0	10	12	True		SG	Pacific_original
+55.5	9	8	True		SG	Pacific_original
+56.0	17	36	False	window_crosses_investigator_codes	SA;SG	Pacific_original
+56.5	9	10	True		SA	Pacific_original
+57.0	11	12	True		SA	Pacific_original
+57.5	11	14	True		SA	Pacific_original
+58.0	13	14	True		SA	Pacific_original
+58.5	11	14	True		SA	Pacific_original
+59.0	12	13	True		SA	Pacific_original
+59.5	9	10	True		SA	Pacific_original
+60.0	12	15	True		SA	Pacific_original
+60.5	11	14	True		SA	Pacific_original
+61.0	12	13	True		SA	Pacific_original
+61.5	15	14	True		SA	Pacific_original
+62.0	12	12	True		SA	Pacific_original
+62.5	15	13	True		SA	Pacific_original
+63.0	11	11	True		SA	Pacific_original
+63.5	15	8	True		SA	Pacific_original
+64.0	12	16	True		SA	Pacific_original
+64.5	9	7	True		SA	Pacific_original
+65.0	15	9	True		SA	Pacific_original
+65.5	6	6	True		SA	Pacific_original
+66.0	9	5	False	window_crosses_investigator_codes	PB;SA	Pacific_original
+62.5	31	53	False	window_outside_source_range;window_enters_poor_chronology_interval		El_Kef_Age [Ma] (Wade et al., 2011)
+63.0	3	3	True			El_Kef_Age [Ma] (Wade et al., 2011)
+63.5	0	0	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011)
+64.0	7	3	True			El_Kef_Age [Ma] (Wade et al., 2011)
+64.5	1	3	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011)
+65.0	1	2	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011)
+65.5	4	1	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011)
+66.0	4	21	False	window_outside_source_range		El_Kef_Age [Ma] (Wade et al., 2011)
+62.5	31	53	False	window_outside_source_range;window_enters_poor_chronology_interval		El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+63.0	3	3	True			El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+63.5	0	0	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+64.0	7	3	True			El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+64.5	1	3	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+65.0	1	2	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+65.5	4	1	False	fewer_than_three_rows_in_a_window;window_intersects_gap_over_100kyr		El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
+66.0	6	20	False	window_outside_source_range		El_Kef_Age [Ma] (Wade et al., 2011 w/ shorter ...)
