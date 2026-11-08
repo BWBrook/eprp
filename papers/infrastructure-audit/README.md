@@ -1,8 +1,10 @@
 # With receipts: an agentic audit of quantitative palaeobiology's infrastructure
 
 Status: **four products drafted; semantic revision required (8 November
-2026).** The [wording review](docs/audits/2026-11-08-wording-review.md)
-gives checked findings and proposed replacements for Claude. The
+2026).** The [revision verification](docs/audits/2026-11-08-wording-verification.md)
+closes thirteen findings and identifies four residuals. The
+[initial wording review](docs/audits/2026-11-08-wording-review.md) retains the
+original findings. The
 [selection](case-selection.md) and
 [replay bundle](evidence/replay-20261108/README.md) lead to the single
 [manuscript claims ledger](manuscript/claims.csv).

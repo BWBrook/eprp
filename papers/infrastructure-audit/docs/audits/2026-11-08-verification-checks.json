@@ -1,0 +1,134 @@
+{
+  "reviewed_commit": "646353b090c6d6f68b4a4ec11ce9be71b4c12950",
+  "source_sha256": {
+    "manuscript/estimands.md": "a10c0b25dbd7a0f7d5256e494a81988c41d78984aebd27dbb3a753e0b88b1d7b",
+    "manuscript/claims.csv": "7360a03c0fdf1e104ef65646b7e6c6ad58f56bd4bfa3bbed33eb36ceed023260",
+    "manuscript/text/main.md": "1c2d9312a67b64cf4b11aeb0f60894535c383ec4d52eceb0a6eea4dc717bd6c6",
+    "manuscript/text/supplement.md": "7b03965505c1b3e8d98f09b798689a0e686421f9be71a124aae15fcdedfcf369",
+    "manuscript/text/brief.md": "8bcc130d1e3b0437ee43811648a1e8b5dd74f4be431a78f3a3a7decdca1fb034",
+    "manuscript/text/for-agents.md": "2432bcbf5004dba44970754ee802e4cf28a85b7b54b1c99d94d3d60b2d83bf32",
+    "references/dois.txt": "ac4d7d70c17cd009ce464ee26a5f7c724d4dd48de60b3c0392024e260308db3a",
+    "references/refs.yaml": "7594759b3b94ec628f6f305dfe1846c96faafd57019dbae16e4ef34872488b36",
+    "manuscript/build/brief.pdf": "a48c0cab452dda649847f53b2cc528ac3dca4aa990f2444d3cab61b2f5de0c45",
+    "manuscript/build/manuscript.pdf": "1387f84664136dac493b11712303069892e036da5c88a053dcdf751831bad54b",
+    "manuscript/build/supplement.pdf": "dfde97965a79b4e9c7a184cfe23a2014e98dbfa60a5ddabe1b036d7ecf3b3f86"
+  },
+  "root_gitleaks_sha256": "23247d601a1b594446fbc7907fbcfdb6a1d359421a6ed5cd369640e8b47a36fb",
+  "canonical_check": {
+    "command": "make -C papers/infrastructure-audit/manuscript check",
+    "exit": 0,
+    "claims": 22,
+    "errors": 0,
+    "warnings": 0
+  },
+  "pages": {
+    "brief": 2,
+    "article": 9,
+    "supplement": 4
+  },
+  "ledger_additions": {
+    "C096_sparse_max": 2.995776523137465,
+    "C040_comparable": 56387,
+    "evidence_commit": "501f17d"
+  },
+  "closed": [
+    "W01",
+    "W02",
+    "W03",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W15"
+  ],
+  "partial": [
+    "W04",
+    "W10",
+    "W16",
+    "W17"
+  ],
+  "scanner_default_and_revised": {
+    "default": {
+      "exit": 1,
+      "findings": [
+        {
+          "file": "control.yaml",
+          "rule": "github-pat"
+        },
+        {
+          "file": "citation-only.yaml",
+          "rule": "generic-api-key"
+        },
+        {
+          "file": "generic-control.yaml",
+          "rule": "generic-api-key"
+        },
+        {
+          "file": "references/refs.yaml",
+          "rule": "github-pat"
+        },
+        {
+          "file": "references/refs.yaml",
+          "rule": "generic-api-key"
+        }
+      ]
+    },
+    "revised": {
+      "exit": 1,
+      "findings": [
+        {
+          "file": "control.yaml",
+          "rule": "github-pat"
+        },
+        {
+          "file": "references/refs.yaml",
+          "rule": "github-pat"
+        }
+      ]
+    },
+    "scope": "Deterministic non-live synthetic tokens; metadata only retained in verification summary."
+  },
+  "scanner_proposal_probe": {
+    "findings": {
+      "reviewed": [
+        [
+          "provider-control.yaml",
+          "github-pat"
+        ],
+        [
+          "refs.yaml",
+          "github-pat"
+        ]
+      ],
+      "proposed": [
+        [
+          "bare-key-control.yaml",
+          "generic-api-key"
+        ],
+        [
+          "generic-control.yaml",
+          "generic-api-key"
+        ],
+        [
+          "provider-control.yaml",
+          "github-pat"
+        ],
+        [
+          "refs.yaml",
+          "github-pat"
+        ]
+      ]
+    },
+    "active_configuration_changed": false,
+    "reviewed_generic_controls_detected": false,
+    "proposed_generic_controls_detected": true,
+    "meaning": "Provider controls must remain detected in both configurations. Generic-control booleans expose whether non-citation matches are suppressed. No live credential or external request."
+  },
+  "scope": "Verification only. Proposed scanner TOML is separate; active manuscript, ledger, references, scanner configuration and PDFs unchanged.",
+  "independent_verification": "Original products reviewer checked the partial-closure record and independently ran the scanner probe: active generic controls false, proposed true; no material error found."
+}

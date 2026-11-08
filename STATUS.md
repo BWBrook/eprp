@@ -2,7 +2,27 @@
 
 Updated: 8 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: the infrastructure-audit wording review requires revision.**
+**Current focus: revised wording verified; four residuals remain.**
+Barry forwarded Claude's `646353b` and requested verification against W01–W17
+(Board 146/3017; main accepted at 3018). The
+[verification record](papers/infrastructure-audit/docs/audits/2026-11-08-wording-verification.md)
+closes thirteen findings and partially closes four. The two original Codex
+reviewers checked their revised scopes; main independently verified the two
+added ledger values, canonical checks, PDF page counts and scanner controls.
+
+The main scientific corrections are implemented, including the separate
+admtools controls, correct INDITEK source/example, open width calibration,
+dated membership and explicit unlike targets in brief finding 5. Remaining:
+W04's GRIWM heading in brief finding 3; W10's universal-age sentence and
+brief/guide qualifiers; W16's front-matter path root; and W17's unanchored
+scanner allowlist, which still suppresses a non-citation generic-key control.
+A tested exact-citation configuration is supplied as a proposal, alongside a
+reproducible probe; the active configuration was not changed. Document checks
+pass for all 22 claims; PDFs remain two/nine/four pages. The verification turn
+changed only review records and status notes.
+Next: Claude — close W04, W10, W16 and W17, then rerun document checks.
+
+**Previous checkpoint: the infrastructure-audit wording review required revision.**
 Barry forwarded Claude's `851d968` draft and requested semantic review of
 all four products against the estimands. Main Codex accepted in Board
 146/3011 and owns the
