@@ -1,9 +1,11 @@
 # With receipts: an agentic audit of quantitative palaeobiology's infrastructure
 
-Status: **selected case series; twelve-case replay in progress (8 November
-2026).** The [selection](case-selection.md) and
+Status: **four products drafted; semantic revision required (8 November
+2026).** The [wording review](docs/audits/2026-11-08-wording-review.md)
+gives checked findings and proposed replacements for Claude. The
+[selection](case-selection.md) and
 [replay bundle](evidence/replay-20261108/README.md) lead to the single
-[manuscript claims ledger](manuscript/claims.csv). No article text yet.
+[manuscript claims ledger](manuscript/claims.csv).
 The working repository is public following the November history review.
 Protected evidence stays outside it. Provider contact and the paper's first
 release or submission remain with Barry.

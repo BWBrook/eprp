@@ -2,7 +2,27 @@
 
 Updated: 8 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: the selected twelve-case infrastructure-audit replay is complete.**
+**Current focus: the infrastructure-audit wording review requires revision.**
+Barry forwarded Claude's `851d968` draft and requested semantic review of
+all four products against the estimands. Main Codex accepted in Board
+146/3011 and owns the
+[review and triage](papers/infrastructure-audit/docs/audits/2026-11-08-wording-review.md).
+Two bounded GPT-6.1 Sol delegates reviewed disjoint article/estimands and
+brief/supplement/guide scopes read-only; main checked and integrated their
+findings. Every result sentence and table cell was reviewed. Manuscript,
+estimands, ledger, references, scanner configuration and PDFs were not edited.
+
+The numerical/build checks pass and the PDFs are two/nine/four pages. Required
+corrections concern mixed admtools cohorts, the wrong INDITEK paper/example,
+unsupported interval-width conclusions, the brief's comparison of different
+targets, dated membership becoming a current access claim, the Triton removal
+predicate, check-specific independence and assumptions about downstream impact
+and provider novelty. The memo supplies proposed wording and narrower scope
+repairs. The scanner's bibliography path exception was verified to suppress
+provider-token rules too; narrowing it is a separate bounded fix.
+Next: Claude — correct the estimands and revise all four products together.
+
+**Previous checkpoint: the selected twelve-case infrastructure-audit replay is complete.**
 Barry selected the case-series paper on 8 November (Board 146/2995), and
 main Codex accepted the replay at 146/2997. Main owns
 `papers/infrastructure-audit/manuscript/claims.csv`, integration and the new

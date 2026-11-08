@@ -1,0 +1,260 @@
+{
+  "reviewed_commit": "851d968271b6e0293d4b6d206ba7a71013706a25",
+  "source_sha256": {
+    "manuscript/estimands.md": "01896890844956f93fd7526674e1ffdddd43fc1ebb00906bc2dc0e386c2bf042",
+    "manuscript/claims.csv": "15d09c04c8250678500b2377475af689fb80f42c5f5e30cad5e5dac90fdeb55a",
+    "manuscript/text/main.md": "f13f6d9a7291dd74d8bb12128beeb770044ca86d257ea26bd8d3f0e682bbaf13",
+    "manuscript/text/supplement.md": "004a618c935bfe52c3fe122288ea1fe3e3fa2f78ec55ba7ca925708417b8396f",
+    "manuscript/text/brief.md": "0ab60d206c314c2d3e7d1de5acf6c2208f56d4cd464d46f340e1c603167959aa",
+    "manuscript/text/for-agents.md": "5bf2f904c8164db499fee0197105b178772041e064005f79e064eb48bea17050",
+    "manuscript/makedoc.lock.json": "4e314b87da20e4366a84a0712fec693f8d5ad6ea35b91abf6379cf10ed15341b",
+    "references/dois.txt": "428759ee93525f7bca56eb988c9064b55cf7d315e645582fc0696dd6a8124db0",
+    "references/refs.yaml": "ff7cc30ddb17ca0b6772d93eaf2c60a140410f2da2790d579284104203341636",
+    "manuscript/build/brief.pdf": "f06f690ff8e705f86bc0ac26d984103eb7dea893ac1bc2b87256cc21f6c10081",
+    "manuscript/build/manuscript.pdf": "a80cdcc9c0d8206eda1a680b1e745a891afaa19dac3017fc99f8713137606200",
+    "manuscript/build/supplement.pdf": "4b2ea6d8e480f7cb7e176798bd9f4ede44f0dc646dbacef0b3a4dfa77b753fd8"
+  },
+  "reviewers": [
+    "main Codex",
+    "gpt-6.1-sol article/estimands reviewer",
+    "gpt-6.1-sol brief/supplement/agent-guide reviewer"
+  ],
+  "checks": {
+    "canonical_command": "make -C papers/infrastructure-audit/manuscript check",
+    "canonical_exit": 0,
+    "claims": 22,
+    "claim_errors": 0,
+    "claim_warnings": 0,
+    "pages": {
+      "brief": 2,
+      "article": 9,
+      "supplement": 4
+    },
+    "bib_doi_input_lines": 12,
+    "bib_generated_records": 12,
+    "makedoc_pin_and_clean_checkout_match": true,
+    "forbidden_phrase_navigation": {
+      "phrases": [
+        "28,832 duplicated observations",
+        "5,291 histories are corrupted",
+        "AI auditing outperforms human auditing",
+        "Benson et al.'s results change",
+        "Cerme\u00f1o et al.'s conclusions are affected",
+        "GRIWM is invalid",
+        "INDITEK cannot be reproduced",
+        "PBDB ages are wrong",
+        "PBDB keeps no versions",
+        "PyRate is biased",
+        "PyRate's intervals are too narrow",
+        "because two models reviewed each other",
+        "catches more errors",
+        "classical methods are calibrated",
+        "common",
+        "commonly mistaken",
+        "deleted",
+        "duplicates",
+        "embargoed",
+        "error",
+        "every point above a hiatus",
+        "fails silently",
+        "fossilbrush cleaning is unreliable",
+        "in the ideal arm of two simulated clades",
+        "leaked",
+        "most packages",
+        "restricted",
+        "results using GRIWM are biased",
+        "silently",
+        "stale",
+        "the calibration is wrong",
+        "the correct frame is",
+        "the deposit cannot be reproduced",
+        "the infrastructure is unreliable",
+        "the paper is wrong",
+        "the periodicity result is refuted",
+        "the published results are affected",
+        "the recomputed ages are right",
+        "the stored ages are wrong",
+        "uncertainty in palaeolatitude is X degrees",
+        "under the specified key",
+        "users misread it",
+        "widespread",
+        "withheld",
+        "wrong above every hiatus"
+      ],
+      "hits": [
+        {
+          "file": "manuscript/text/main.md",
+          "line": 32,
+          "phrase": "common"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 95,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 111,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 114,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 141,
+          "phrase": "duplicates"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 160,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 161,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 162,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 162,
+          "phrase": "every point above a hiatus"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 172,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 204,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 236,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 242,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 242,
+          "phrase": "wrong above every hiatus"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 249,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 251,
+          "phrase": "catches more errors"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 251,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 284,
+          "phrase": "common"
+        },
+        {
+          "file": "manuscript/text/main.md",
+          "line": 284,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/supplement.md",
+          "line": 18,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/supplement.md",
+          "line": 60,
+          "phrase": "error"
+        },
+        {
+          "file": "manuscript/text/supplement.md",
+          "line": 63,
+          "phrase": "withheld"
+        },
+        {
+          "file": "manuscript/text/brief.md",
+          "line": 56,
+          "phrase": "common"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 74,
+          "phrase": "withheld"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 76,
+          "phrase": "duplicates"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 79,
+          "phrase": "wrong above every hiatus"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 80,
+          "phrase": "PyRate's intervals are too narrow"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 83,
+          "phrase": "classical methods are calibrated"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 83,
+          "phrase": "in the ideal arm of two simulated clades"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 86,
+          "phrase": "INDITEK cannot be reproduced"
+        },
+        {
+          "file": "manuscript/text/for-agents.md",
+          "line": 117,
+          "phrase": "restricted"
+        }
+      ],
+      "meaning": "Navigation only; negated statements and audit-trail quotations require contextual review."
+    },
+    "scanner_probe": {
+      "exit_code": 1,
+      "findings": [
+        {
+          "file": "control.yaml",
+          "rule": "github-pat"
+        }
+      ],
+      "meaning": "Deterministic synthetic non-live GitHub-token control, no real credential used."
+    }
+  },
+  "primary_metadata_source": {
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210x.70422",
+    "checked": "Article identity and 2026 authorship; full scientific article not used to extend audited conclusions."
+  },
+  "scope": "Review only; no manuscript, estimand, claims, bibliography, scanner config, figure or PDF changes.",
+  "integration_review": "Article reviewer rechecked the integrated memo, including parent-only Triton predicate, assumptions and scanner findings; no material error found."
+}
