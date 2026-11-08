@@ -4,8 +4,10 @@
 
 ## S1. Case selection
 
-The candidate pool is `papers/infrastructure-audit/evidence/claims.tsv`: 189 findings compiled read-only
-on 25 October 2026 from the programme's database, package and reference catalogues. The twelve cases were
+The initial candidate catalogue is `papers/infrastructure-audit/evidence/claims.tsv`: 189 candidate
+findings, including positive controls and intended behaviours, compiled read-only on 25 October 2026 from
+the programme's database, package and reference catalogues. Later programme findings were added to the
+pool, including cases 11 and 12. The twelve cases were
 chosen on 8 November 2026 (`case-selection.md`) by five rules:
 
 1. consequence for inference before defect status;
@@ -30,9 +32,9 @@ Each case was replayed on 8 November 2026 from pinned inputs. The replay records
 
 Each record states:
 
-- the input hashes;
-- the command;
-- the separate route by which a different actor rederived the result:
+- the required inputs and their hashes;
+- the replay command;
+- the checks made by a different actor, which are specific to each case:
   - a fresh raw-data calculation;
   - a fresh pinned implementation;
   - reaggregation of retained outputs;
@@ -41,11 +43,16 @@ Each record states:
 The `basis` column of the claims ledger names the route for each proposition, and the `limit` column
 states what it does not show.
 
-**What counts as independent.** The original findings were made in one set of sessions. The replays and
-their checks were made by other actors using separate aggregation, interpolation, geometry or scoring
-code. Some of those actors use the same model family as the original auditors. The checks are therefore
-independent computational routes, not independent biological datasets, and they are not evidence that
-using two model families helps.
+**What counts as independent.** Independence is check-specific. The replays were made by actors other than
+the original finders, combined with separate aggregation, interpolation, geometry or scoring code where
+the receipt records it. Not every proposition was rederived by a fully separate route: the INDITEK forward
+run reused the original pinned harness, and only its scoring was separately implemented. Some reviewers
+used the same model family and shared inputs. The checks are not independent biological datasets, and
+they are not evidence that using two model families helps.
+
+**Availability.** Some required inputs are retained locally rather than published: two content-pinned
+container images, retained posterior logs and source archives. A cold rebuild from public inputs alone was
+not validated.
 
 **Software environment.** R 4.6.1 with admtools 0.7.0, fossilbrush 1.0.6 and Rextinct 1.1.0;
 pyGPlates 1.0.0; content-pinned container images for the software runner. Full versions are recorded in
@@ -58,9 +65,13 @@ each replay record.
 | 3 | 1,454 changed means, 423 by at least one degree; two per-bin class flips; 11–13% sample inflation | Codex replay, 8 Nov 2026 | [1,388]{.C045} changed means, [411]{.C045} by at least one degree; class flips as in C045 | `evidence/replay-20261108/data/README.md` |
 | 4 | Sample count including a header row | Codex parent count | [61,862]{.C040} samples | `evidence/replay-20261108/main/nsb_count_review.json` |
 | 5 | "Wrong times above every hiatus" | Codex replay | Errors in affected interpolation segments only | C096 limit |
-| 7 | PyRate intervals "too narrow" | Codex replay | Undercoverage from location bias; widths not too narrow | C107 limit |
+| 7 | PyRate intervals "too narrow" | Codex replay | Undercoverage with upward-shifted intervals; width comparisons do not support "too narrow" and do not establish calibrated widths | C107 limit |
 | 10 | 5,291 damaged histories | Codex replay | [2,967]{.C035} altered histories; 5,291 is the count of cells in scientific notation | C035 limit |
 | 1 | Records described as "withheld" | Codex replay | Absent from a dated public snapshot; cause not established | C191 limit |
+| 5 | First draft joined the sparse-model count with the dense-model maximum | Codex wording review, 8 Nov 2026 | Each control reported separately | `docs/audits/2026-11-08-wording-review.md` W01 |
+| 12 | First draft attributed the INDITEK archive to Cermeño et al. (2022) and said predictions "replay exactly" | Codex wording review | Herrero-Gascón et al. (2026) synthetic proof example; vectors within about $5 \times 10^{-14}$ | W02 |
+| 7 | First draft said the PyRate intervals "are not too narrow" | Codex wording review | Width calibration not established either way | W03 |
+| all | First draft said every proposition was rederived by a separate route, and that anyone can rerun every case | Codex wording review | Check-specific independence; locally retained inputs named | W07, W08 |
 
 ## S4. Reproduction
 

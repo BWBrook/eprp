@@ -55,40 +55,6 @@ references:
   page: 14–19
   publisher: Elsevier BV
   DOI: 10.1016/j.quascirev.2011.11.021
-- id: cermeno2022PostextinctionRecoveryPhanerozoic
-  citation-key: cermeno2022PostextinctionRecoveryPhanerozoic
-  type: article-journal
-  title: Post-extinction recovery of the Phanerozoic oceans and biodiversity hotspots
-  author:
-  - family: Cermeño
-    given: Pedro
-  - family: García-Comas
-    given: Carmen
-  - family: Pohl
-    given: Alexandre
-  - family: Williams
-    given: Simon
-  - family: Benton
-    given: Michael J.
-  - family: Chaudhary
-    given: Chhaya
-  - family: Le Gland
-    given: Guillaume
-  - family: Müller
-    given: R. Dietmar
-  - family: Ridgwell
-    given: Andy
-  - family: Vallina
-    given: Sergio M.
-  issued:
-    date-parts:
-    - - 2022
-  container-title: Nature
-  volume: '607'
-  issue: '7919'
-  page: 507–511
-  publisher: Springer Science and Business Media LLC
-  DOI: 10.1038/s41586-022-04932-6
 - id: fenton2021TritonSpecieslevelDatabase
   citation-key: fenton2021TritonSpecieslevelDatabase
   type: article-journal
@@ -119,6 +85,34 @@ references:
   article-number: '160'
   publisher: Springer Science and Business Media LLC
   DOI: 10.1038/s41597-021-00942-7
+- id: herrerogascon2026Inditek20
+  citation-key: herrerogascon2026Inditek20
+  type: article-journal
+  title: "INDITEK\n                    ‐2.0: A Bayesian inverse modelling framework for mechanistic evolutionary processes"
+  author:
+  - family: Herrero‐Gascón
+    given: Gloria
+  - family: García‐Comas
+    given: Carmen
+  - family: Bodin
+    given: Thomas
+  - family: Benton
+    given: Michael J.
+  - family: Gurung
+    given: Khushboo
+  - family: Mills
+    given: Benjamin
+  - family: Pohl
+    given: Alexandre
+  - family: Cermeño
+    given: Pedro
+  issued:
+    date-parts:
+    - - 2026
+  container-title: Methods in Ecology and Evolution
+  article-number: 2041-210x.70422
+  publisher: Wiley
+  DOI: 10.1111/2041-210x.70422
 - id: matthews2016GlobalPlateBoundary
   citation-key: matthews2016GlobalPlateBoundary
   type: article-journal
