@@ -1,7 +1,7 @@
 # Empty prefix flags every nonempty message: each needs explicit review.
 project = "eprp"
 flag_terms = [""]
-cleared = [2965, 2966, 2970, 2985, 2989]
+cleared = [2965, 2966, 2970, 2985, 2989, 2997, 3004, 3005]
 redact = [['\b(?:mini|deep-server|nectar|wsl|macbook)\b', '[host]']]
 
 [withheld]
@@ -472,3 +472,5 @@ redact = [['\b(?:mini|deep-server|nectar|wsl|macbook)\b', '[host]']]
 2911 = "Historical discussion outside the reviewed Q-009 snapshot; pending a separate publication review."
 2963 = "Historical discussion outside the reviewed Q-009 snapshot; pending a separate publication review."
 2964 = "Historical discussion outside the reviewed Q-009 snapshot; pending a separate publication review."
+2994 = "Outside the reviewed Q-009 and infrastructure-replay snapshot; pending a separate publication review."
+2995 = "Outside the reviewed Q-009 and infrastructure-replay snapshot; pending a separate publication review."
