@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-11-08T03:27:50.482447+00:00",
+  "source_revision": "bc7e1d81b2f36954ca517639cf4f789ad362d658",
+  "source_files_sha256": {
+    "papers/infrastructure-audit/evidence/replay-20261108/software/replay_packages.R": "f13e0ee35a041e5ec41b0f02b5f8e998f06a3039c066b8308ac44eb4879710f9",
+    "papers/infrastructure-audit/evidence/replay-20261108/software/replay_plate.py": "d1210d238265beef3b13099d77261f7253c4b993cf26702b5176a3c8e202b98c",
+    "papers/infrastructure-audit/evidence/replay-20261108/software/run.sh": "3d3547dbe5be5d240ce1cd528be499692dd51254c1575f8cc0fc7ee52a8b11d2",
+    "papers/infrastructure-audit/evidence/replay-20261108/software/receipt.py": "bf3f5579210a8f1bfb53daec14194d9802879a9403812b40d81a1d16446e0ace",
+    "resources/software/bench/validate/t2_checks.R": "8708655d893b33660f370471d7c03ce0c90d5b03779e25b91ad5555f7b0dce45",
+    "resources/software/bench/validate/t2_strat.R": "b1f7b61d3ebe066b4f0bf0cf9e42347fa67b8670aa45262b4caedaf48daafcb5",
+    "resources/software/bench/validate/t2_extinction.R": "c0a2fcf7e63fc19d246ae77df6f42a52369b4a951552615a38fabfd736b0c435",
+    "resources/software/bench/validate/t3_checks.py": "1edfe6717122312fd8bf32c801a55d687e782d1520015a283bafb17a070c53fd",
+    "resources/software/bench/validate/t3_checks.R": "f6de168aed8272dcaf2d80185c683c9edef3457bffd025ce13eef79ef358a343",
+    "resources/software/bench/validate/t3_palaeoverse.R": "cbfe683dfa46b089ed36fb48f04cba47b113799d74616bd3365624a741e00691",
+    "resources/software/bench/validate/t3_rotate.py": "8ee5f78eda8b5aa613c30fe1b974a4f83b74404e26a25143f2e16aed77a1474d",
+    "resources/software/bench/env/Dockerfile.r3": "160d335600f960f201ef09939df84c4b3a6a6aa68809bb7e59844121807f7c08",
+    "resources/software/bench/env/Dockerfile.py3": "04963691753d12a13be4d051c67f195e98bd4b41bac82f7494470d832692215d"
+  },
+  "images": {
+    "R": "sha256:44432c896c3622e92c68f11716d639745b0fa2b4d6c47124538461389f6daab6",
+    "Python": "sha256:8c333ab2e7a7d6f54f42730c047227acd4c70688c702ca288a873c88ad975bac"
+  },
+  "evidence_type": "Fresh direct-package and raw-model runs against independently coded mathematical/control routes",
+  "notes": "New replay scripts were uncommitted at execution; their exact bytes are pinned by the hashes above. No host identity or absolute infrastructure path is required to interpret these results. R fixed synthetic inputs are embedded in the hashed script and repeated in the result files.",
+  "wrapper_execution": {
+    "status": "passed",
+    "exit_code": 0,
+    "command": "bash papers/infrastructure-audit/evidence/replay-20261108/software/run.sh \"$REPO_ROOT\" \"$RAW_MODEL_DIR\" \"$OUTPUT_DIR\"",
+    "completed_utc": "2026-11-08T03:28:17.103537+00:00",
+    "staging": "Fresh output directory and minimal source tree with shallow Git metadata for the workspace source_revision; 15 source/input SHA-256 hashes checked against workspace before transfer and on execution host. No stale clone used.",
+    "result_comparison": "All five scientific/environment JSON receipts equal the earlier direct-run receipts.",
+    "source_and_input_hashes": {
+      "papers/infrastructure-audit/evidence/replay-20261108/software/replay_packages.R": "f13e0ee35a041e5ec41b0f02b5f8e998f06a3039c066b8308ac44eb4879710f9",
+      "papers/infrastructure-audit/evidence/replay-20261108/software/replay_plate.py": "d1210d238265beef3b13099d77261f7253c4b993cf26702b5176a3c8e202b98c",
+      "papers/infrastructure-audit/evidence/replay-20261108/software/run.sh": "3d3547dbe5be5d240ce1cd528be499692dd51254c1575f8cc0fc7ee52a8b11d2",
+      "papers/infrastructure-audit/evidence/replay-20261108/software/receipt.py": "bf3f5579210a8f1bfb53daec14194d9802879a9403812b40d81a1d16446e0ace",
+      "resources/software/bench/validate/t2_checks.R": "8708655d893b33660f370471d7c03ce0c90d5b03779e25b91ad5555f7b0dce45",
+      "resources/software/bench/validate/t2_strat.R": "b1f7b61d3ebe066b4f0bf0cf9e42347fa67b8670aa45262b4caedaf48daafcb5",
+      "resources/software/bench/validate/t2_extinction.R": "c0a2fcf7e63fc19d246ae77df6f42a52369b4a951552615a38fabfd736b0c435",
+      "resources/software/bench/validate/t3_checks.py": "1edfe6717122312fd8bf32c801a55d687e782d1520015a283bafb17a070c53fd",
+      "resources/software/bench/validate/t3_checks.R": "f6de168aed8272dcaf2d80185c683c9edef3457bffd025ce13eef79ef358a343",
+      "resources/software/bench/validate/t3_palaeoverse.R": "cbfe683dfa46b089ed36fb48f04cba47b113799d74616bd3365624a741e00691",
+      "resources/software/bench/validate/t3_rotate.py": "8ee5f78eda8b5aa613c30fe1b974a4f83b74404e26a25143f2e16aed77a1474d",
+      "resources/software/bench/env/Dockerfile.r3": "160d335600f960f201ef09939df84c4b3a6a6aa68809bb7e59844121807f7c08",
+      "resources/software/bench/env/Dockerfile.py3": "04963691753d12a13be4d051c67f195e98bd4b41bac82f7494470d832692215d",
+      "resources/software/bench/results/t3/v6_points.tsv": "b57bea9192327f4cac3a3237d4d0e87cc05574aec21518822019a7e4f52e6524",
+      "resources/software/bench/results/t3/v6_merged.tsv": "11b7a9c7abb648e409f149776116514f44102ad6a3ac2d72dca57dbb02a2844e"
+    }
+  }
+}

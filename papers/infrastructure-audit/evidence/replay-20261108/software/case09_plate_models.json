@@ -1,0 +1,289 @@
+{
+  "case": 9,
+  "claims": [
+    "C123",
+    "C125"
+  ],
+  "environment": {
+    "python": "3.12.15",
+    "numpy": "2.5.4",
+    "pygplates": "1.0.0"
+  },
+  "inputs": {
+    "model_archive_sha256": {
+      "merdith2021__Rotations.zip": "73e679b63181b0fe63c12628bb15c0085268a06ba8d8b4d327f8a9a4cb307a0b",
+      "merdith2021__StaticPolygons.zip": "2a2d1243f3fcefcfe070b8e49aa9a2c130e0d04cfaa68478a46c3e855b33b05a",
+      "paleomap__Rotations.zip": "67d7a815bc1085adc6c8fdd751fa323fe857b1098b2195790208221d914ed5a0",
+      "paleomap__StaticPolygons.zip": "1efe421252ba07250b4eb37ac7aba5baa5c5804ff23460f2229b26ffe40c4fe9",
+      "torsvikcocks2017__Rotations.zip": "598bd8cedc38152622372b78c34d4de3ef843a887bf71a63c8c20807548f1825",
+      "torsvikcocks2017__StaticPolygons.zip": "9544c922c0c86a3e05f3f23c47c4a6a1e5ed53ff37a3c07c2301b0b04dcd6b25",
+      "matthews2016_pmag_ref__Rotations.zip": "f3609132e0bc6732e09b8d7be215528325b0d62445826fd269e1b3dc07aeb6fc",
+      "matthews2016_pmag_ref__StaticPolygons.zip": "1634fcc552744db1e8f41e98bf0e052710fd0b76f07d154ad6f7a534b3d132b1"
+    },
+    "points_sha256": "b57bea9192327f4cac3a3237d4d0e87cc05574aec21518822019a7e4f52e6524",
+    "archived_routes_sha256": "11b7a9c7abb648e409f149776116514f44102ad6a3ac2d72dca57dbb02a2844e",
+    "original_script_sha256": "8ee5f78eda8b5aa613c30fe1b974a4f83b74404e26a25143f2e16aed77a1474d"
+  },
+  "raw_model_replay": {
+    "rows": 7200,
+    "fresh_tsv_sha256": "a09a4d3c9906f36f3e70e3c3beea332da260ebe67dfefa8fbfd126f19c494f07",
+    "max_coordinate_delta_from_retained": 0.0,
+    "missing_pattern_agrees": true
+  },
+  "independent_route": "Two-point oriented orthonormal basis rotation and all-pair dot-product invariance, no least-squares/SVD; plain-Python latitude spread census",
+  "frame_fit": {
+    "TorsvikCocks2017": {
+      "10": {
+        "n": 243,
+        "selected_pair": [
+          0,
+          92
+        ],
+        "max_residual_deg": 0.0001168440232374024,
+        "median_residual_deg": 5.9038149907868745e-05,
+        "rotation_deg": 3.130009994633561,
+        "max_pairwise_dot_change": 1.941185966358727e-06,
+        "determinant": 1.0,
+        "median_offset_before_deg": 2.6924552046946313
+      },
+      "50": {
+        "n": 236,
+        "selected_pair": [
+          0,
+          142
+        ],
+        "max_residual_deg": 0.00010788356651590484,
+        "median_residual_deg": 5.8404164518722605e-05,
+        "rotation_deg": 9.580003943320715,
+        "max_pairwise_dot_change": 1.918967540974481e-06,
+        "determinant": 1.0,
+        "median_offset_before_deg": 7.6245222312921275
+      },
+      "100": {
+        "n": 234,
+        "selected_pair": [
+          0,
+          141
+        ],
+        "max_residual_deg": 7.121944033463395e-05,
+        "median_residual_deg": 3.606912811862538e-05,
+        "rotation_deg": 2.5100048497179004,
+        "max_pairwise_dot_change": 1.869826711353717e-06,
+        "determinant": 1.0000000000000002,
+        "median_offset_before_deg": 2.265776071024775
+      },
+      "200": {
+        "n": 218,
+        "selected_pair": [
+          0,
+          118
+        ],
+        "max_residual_deg": 0.00010453134810350409,
+        "median_residual_deg": 4.7288698944393016e-05,
+        "rotation_deg": 22.00001848923414,
+        "max_pairwise_dot_change": 1.8701337664572826e-06,
+        "determinant": 1.0000000000000002,
+        "median_offset_before_deg": 18.150565218462333
+      },
+      "300": {
+        "n": 212,
+        "selected_pair": [
+          0,
+          141
+        ],
+        "max_residual_deg": 9.92120041378015e-05,
+        "median_residual_deg": 4.672884176943183e-05,
+        "rotation_deg": 6.999950480178691,
+        "max_pairwise_dot_change": 1.828707705070487e-06,
+        "determinant": 1.0000000000000002,
+        "median_offset_before_deg": 6.105854544890688
+      },
+      "400": {
+        "n": 172,
+        "selected_pair": [
+          0,
+          107
+        ],
+        "max_residual_deg": 9.608706291552873e-05,
+        "median_residual_deg": 3.969849306382363e-05,
+        "rotation_deg": 27.999968432040532,
+        "max_pairwise_dot_change": 2.0544352875573324e-06,
+        "determinant": 1.0000000000000004,
+        "median_offset_before_deg": 24.37335472053505
+      }
+    },
+    "MERDITH2021": {
+      "10": {
+        "n": 298,
+        "selected_pair": [
+          0,
+          120
+        ],
+        "max_residual_deg": 8.577482270632866e-05,
+        "median_residual_deg": 3.6453181875813304e-05,
+        "rotation_deg": 2.9178580924908405e-05,
+        "max_pairwise_dot_change": 1.9943855968790336e-06,
+        "determinant": 1.0,
+        "median_offset_before_deg": 3.3157070330577294e-05
+      },
+      "50": {
+        "n": 280,
+        "selected_pair": [
+          0,
+          175
+        ],
+        "max_residual_deg": 0.00010492313060557952,
+        "median_residual_deg": 5.734859354225443e-05,
+        "rotation_deg": 5.593357803978813e-05,
+        "max_pairwise_dot_change": 2.0149654069434586e-06,
+        "determinant": 0.9999999999999999,
+        "median_offset_before_deg": 3.360022704092445e-05
+      },
+      "100": {
+        "n": 269,
+        "selected_pair": [
+          0,
+          170
+        ],
+        "max_residual_deg": 9.500762400347054e-05,
+        "median_residual_deg": 4.405460034471785e-05,
+        "rotation_deg": 4.7872269178744986e-05,
+        "max_pairwise_dot_change": 1.9395032919145017e-06,
+        "determinant": 1.0000000000000002,
+        "median_offset_before_deg": 3.4141471949301394e-05
+      },
+      "200": {
+        "n": 261,
+        "selected_pair": [
+          0,
+          149
+        ],
+        "max_residual_deg": 0.00010543120388414789,
+        "median_residual_deg": 4.850111458175778e-05,
+        "rotation_deg": 5.598568198964213e-05,
+        "max_pairwise_dot_change": 1.9061834654610088e-06,
+        "determinant": 0.9999999999999998,
+        "median_offset_before_deg": 3.6959569643320635e-05
+      },
+      "300": {
+        "n": 249,
+        "selected_pair": [
+          0,
+          176
+        ],
+        "max_residual_deg": 0.00011369934229496614,
+        "median_residual_deg": 5.905663356367872e-05,
+        "rotation_deg": 5.619361467190398e-05,
+        "max_pairwise_dot_change": 1.8131273551791685e-06,
+        "determinant": 1.0000000000000004,
+        "median_offset_before_deg": 4.039561248532168e-05
+      },
+      "400": {
+        "n": 218,
+        "selected_pair": [
+          0,
+          61
+        ],
+        "max_residual_deg": 9.964233613208218e-05,
+        "median_residual_deg": 4.8274130904862456e-05,
+        "rotation_deg": 4.101669349533124e-05,
+        "max_pairwise_dot_change": 1.7935460616957943e-06,
+        "determinant": 1.0,
+        "median_offset_before_deg": 3.4418788093434894e-05
+      }
+    }
+  },
+  "frame_controls": {
+    "rigid_positive": {
+      "n": 4,
+      "selected_pair": [
+        0,
+        2
+      ],
+      "max_residual_deg": 3.975693351829395e-15,
+      "median_residual_deg": 2.253852209979568e-15,
+      "rotation_deg": 22.99999999999998,
+      "max_pairwise_dot_change": 2.220446049250313e-16,
+      "determinant": 1.0000000000000002
+    },
+    "nonrigid_negative": {
+      "n": 4,
+      "selected_pair": [
+        0,
+        2
+      ],
+      "max_residual_deg": 9.999999999999991,
+      "median_residual_deg": 3.4654199430785212e-15,
+      "rotation_deg": 22.99999999999998,
+      "max_pairwise_dot_change": 0.15729361455304397,
+      "determinant": 1.0000000000000002
+    }
+  },
+  "spread_three_models": {
+    "all_reconstructable": {
+      "10": {
+        "n": 269,
+        "median_deg": 2.8852389999999986,
+        "q90_deg": 4.989919399999998
+      },
+      "50": {
+        "n": 260,
+        "median_deg": 5.65437,
+        "q90_deg": 6.977739500000001
+      },
+      "100": {
+        "n": 255,
+        "median_deg": 4.316856999999999,
+        "q90_deg": 7.5229338
+      },
+      "200": {
+        "n": 247,
+        "median_deg": 5.494681000000002,
+        "q90_deg": 14.4537828
+      },
+      "300": {
+        "n": 217,
+        "median_deg": 4.730341000000001,
+        "q90_deg": 12.655178199999998
+      },
+      "400": {
+        "n": 194,
+        "median_deg": 13.554269000000001,
+        "q90_deg": 19.461387799999997
+      }
+    },
+    "reconstructable_at_all_ages": {
+      "10": {
+        "n": 194,
+        "median_deg": 2.7814139999999963,
+        "q90_deg": 4.977816299999999
+      },
+      "50": {
+        "n": 194,
+        "median_deg": 5.692528499999998,
+        "q90_deg": 6.9970421
+      },
+      "100": {
+        "n": 194,
+        "median_deg": 4.502943999999999,
+        "q90_deg": 6.289729
+      },
+      "200": {
+        "n": 194,
+        "median_deg": 5.489888500000001,
+        "q90_deg": 11.046393400000005
+      },
+      "300": {
+        "n": 194,
+        "median_deg": 4.71097,
+        "q90_deg": 12.501646400000006
+      },
+      "400": {
+        "n": 194,
+        "median_deg": 13.554269000000001,
+        "q90_deg": 19.461387799999997
+      }
+    }
+  },
+  "limits": "Raw model reconstructions replayed in pyGPlates 1.0.0. Frame comparison uses fixed archived web-service coordinates; no fresh web-service request or independent plate partition implementation. Near-rigid differences established only for these sampled ages and points, not a proof of globally identical relative plate motions. Neither frame is identified as incorrect. Spread is structural model choice, not calibrated error."
+}

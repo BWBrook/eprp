@@ -1,0 +1,15 @@
+args <- commandArgs(trailingOnly = TRUE)
+src <- args[1]; dest <- args[2]
+e <- new.env(); load(src, e)
+p <- get(grep("\\.pres$", ls(e), value = TRUE), e)
+cols <- c("species", "abundance", "sample.depth", "latitude", "longitude", "db.source", "trim", "age", "pal.lat", "holeID")
+z <- p[, cols]
+z$latitude_key <- round(p$latitude, 3)
+z$longitude_key <- round(p$longitude, 3)
+z$row_index <- seq_len(nrow(p))
+for (k in names(z)) if (is.numeric(z[[k]])) z[[k]] <- ifelse(is.na(z[[k]]), "", sprintf("%.17g", z[[k]]))
+options(digits = 17)
+con <- gzfile(file.path(dest, "projection.tsv.gz"), "w")
+write.table(z, con, sep = "\t", quote = TRUE, row.names = FALSE, na = "")
+close(con)
+cat("presence rows", nrow(p), "\n")

@@ -1,0 +1,23 @@
+{
+  "reviewer": "main Codex",
+  "route": "Independent CSV joins and exact Decimal comparisons of displayed values",
+  "total_bin_rows": 3184,
+  "comparable_displayed_means": 2267,
+  "changed_displayed_means": 1385,
+  "absolute_change_at_least_one_degree": 411,
+  "newly_missing_observed_means": 4,
+  "pair_rows": 491,
+  "pair_class_flips": {
+    "E_class": 8,
+    "E_systematic_class": 8,
+    "used_systematic_class": 2,
+    "used_perbin_class": 1
+  },
+  "input_sha256": {
+    "before_bins": "b83a174a6f90b67a3fa0be187bf817cbff6b9fcb5ff502908f9bb49d74f930cc",
+    "after_bins": "ead03fd3e9234ceefa6bd47b0ce839b41269b8ff3472ded6e947a0c0b0be4eaa",
+    "before_pairs": "9875225739cb7330e1efb0cd146089393f89693767871f24cfa1b95f1dcea088",
+    "after_pairs": "0ed3aea133ad2c58a21d8d5040b8b95020ae13adecca68378490e1e83ee5f75a"
+  },
+  "limit": "Checks displayed outputs and classification counts, not new raw-mean calculations or biological inference."
+}

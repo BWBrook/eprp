@@ -1,0 +1,18 @@
+{
+  "R_pbinom_tail": 0.3158640260250713,
+  "R_version": "4.6.2",
+  "case": 11,
+  "direct_floating_tail": 0.31586402602507274,
+  "doi": "10.1016/j.earscirev.2025.105100",
+  "exact_complement_recurrence_tail": 0.31586402602507185,
+  "exact_denominator": "351843720888320000000000000000000000000000000000000000000000",
+  "exact_numerator": "111134774211426417649010250086283164884364804258913066639701",
+  "k": 28,
+  "limit": "Checks the binomial contract stated in the paper. It does not choose a geological null, rerun spectral tests or refute periodicity.",
+  "n": 47,
+  "original_check_sha256": "aca3deb045f15abd28ce6e84481b37b49c862482dfec8fc85c0576b26a9721cb",
+  "p": 0.55,
+  "reported_probability": 3.4e-16,
+  "source_location": "Printed pages 3-4; page 4 visually checked again in this replay",
+  "source_pdf_sha256": "7ba178cce4c5359152e474f027171faae2d317b931e124ba9ddef5e63c20fc71"
+}

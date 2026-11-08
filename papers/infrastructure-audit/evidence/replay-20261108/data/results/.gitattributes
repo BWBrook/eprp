@@ -1,0 +1,3 @@
+# Preserve emitted builder bytes, including empty terminal fields and R print spacing.
+before/** -text whitespace=-blank-at-eol
+after/** -text whitespace=-blank-at-eol

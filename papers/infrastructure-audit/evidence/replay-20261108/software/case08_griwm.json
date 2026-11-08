@@ -1,0 +1,36 @@
+{
+  "case": 8,
+  "claims": ["C110", "C098"],
+  "input_ages_BP": [1000, 1300, 1800, 2400, 3100, 4000],
+  "resample": 100,
+  "input_sha256": "2d7052d0e1af77d1356cb1e9586a3176ac6a1176b59957c521b21a065664b108",
+  "controls": [
+    {
+      "biased": true,
+      "zero_sigma_quantiles": [288, 288, 288],
+      "zero_sigma_independent_point": 288,
+      "sigma50_quantiles": [-12, 281, 566],
+      "independent_resample_max_difference": 0,
+      "distinct_zero_sigma_resamples": 1,
+      "distinct_sigma50_resamples": 90
+    },
+    {
+      "biased": false,
+      "zero_sigma_quantiles": [762, 762, 762],
+      "zero_sigma_independent_point": 762,
+      "sigma50_quantiles": [596, 756, 912],
+      "independent_resample_max_difference": 0,
+      "distinct_zero_sigma_resamples": 1,
+      "distinct_sigma50_resamples": 85
+    }
+  ],
+  "RNG": {
+    "caller_seeds": [721, 829],
+    "next_uniforms_a": [0.2803538399748504, 0.3984879015479237, 0.7625510822981596, 0.6690217123832554, 0.2046121619641781],
+    "next_uniforms_b": [0.2803538399748504, 0.3984879015479237, 0.7625510822981596, 0.6690217123832554, 0.2046121619641781],
+    "predicted_from_final_iteration": [0.2803538399748504, 0.3984879015479237, 0.7625510822981596, 0.6690217123832554, 0.2046121619641781],
+    "different_seeds_without_call_differ": true
+  },
+  "independent_route": "Closed-form weighted prefix estimate plus separately coded dating-error draws; caller RNG sentinels",
+  "limits": "Demonstrates conditional dating-error quantiles and deterministic RNG reset for this input. No fresh population coverage simulation or universal claim about statistical validity. Zero uncertainty is a limiting control; original bench used sigma 0.001 Myr, not zero."
+}

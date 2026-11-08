@@ -1,0 +1,66 @@
+{
+  "dedup": {
+    "within_source_groups": 6086,
+    "within_source_excess_rows": 12565,
+    "cross_source_groups": 16256,
+    "cross_source_excess_rows": 16267,
+    "rows_in": 541846,
+    "rows_dropped": 16260,
+    "rows_out": 525586,
+    "duplicate_excess_total": 28832,
+    "by_source_dropped": {
+      "Fentonetal2016": 2282,
+      "Pangaea": 13858,
+      "Neptune": 120
+    }
+  },
+  "source_priority": [
+    "ForCenS",
+    "IODP",
+    "Neptune",
+    "Pangaea",
+    "Lloydetal2012",
+    "Fentonetal2016"
+  ],
+  "q012_independent_checks": {
+    "before": {
+      "rows": 3184,
+      "independent_python_mismatches": {},
+      "three_decimal_tie_rounding_differences": {
+        "observed_mean_abs_pal_lat": 14,
+        "used_value": 13
+      },
+      "verification_tolerance_degrees": 0.000500001,
+      "tolerance_reason": "R outputs to 3 decimal places. Independent full-precision means/lagged means must lie within half that display unit; occurrence counts exact."
+    },
+    "after": {
+      "rows": 3184,
+      "independent_python_mismatches": {},
+      "three_decimal_tie_rounding_differences": {
+        "observed_mean_abs_pal_lat": 19,
+        "used_value": 18
+      },
+      "verification_tolerance_degrees": 0.000500001,
+      "tolerance_reason": "R outputs to 3 decimal places. Independent full-precision means/lagged means must lie within half that display unit; occurrence counts exact."
+    }
+  },
+  "q012_bin_differences": {
+    "observed_mean_abs_pal_lat": {
+      "paired_nonmissing_bins": 2267,
+      "changed_gt_1e-9": 1388,
+      "changed_ge_1degree": 411,
+      "max_absolute_change_degrees": 26.899249999999995
+    },
+    "used_value": {
+      "paired_nonmissing_bins": 2122,
+      "changed_gt_1e-9": 1320,
+      "changed_ge_1degree": 394,
+      "max_absolute_change_degrees": 26.899249999999995
+    }
+  },
+  "route": "Python numeric-tuple grouping and species-lineage bin membership/full-precision means/older-bin lag independently implemented. R only loads raw RData; paired R builds use original builder body.",
+  "limitations": [
+    "Key collisions are not themselves proof of duplicate physical observations.",
+    "EPRP support quantities, no fitted biological outcome or external published analysis."
+  ]
+}

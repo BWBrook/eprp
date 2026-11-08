@@ -1,0 +1,10 @@
+metric	value
+v1_rows	512941
+v3_rows	541846
+v4_rows	541846
+v1_key_duplicate_excess	0
+units_changed_presence	1520
+units_Count_to_Number_per_gram	1520
+shared_v1_rows	512941
+Fenton_rows_age_change_gt_1e_6	4792
+Fenton_max_abs_age_change_Myr	1.18460954

@@ -1,0 +1,104 @@
+{
+  "source_and_input_sha256": {
+    "data/Point_foodtemp.mat": "4bd91acd85849d4c8833269a36d29394003f7a082c69ec9270f7caf05534cc2f",
+    "data/Point_ages_xyz.mat": "ce7bbfa315d29bda8ab2ce1e00d5fe2085e2c35e92d6ae1c0eea4c1ed103ccfb",
+    "data/LonDeg.mat": "26c1291d289c859acf55c675096436c00e02b24f3863c2341a661df910c818b3",
+    "data/landShelfOceanMask.mat": "006f43c7866f1e292b02d8ef1b9b814ad9e2f30d21b595398cc004eba3e3abb9",
+    "data/rhoExt.csv": "ccc416b57ccb90dfd385175ec6c59bb98419870413ab9139b5195db306ec9b3a",
+    "data/observed_D.npz": "b75fdecc2fa702ddcc6ea5f3d00c68fcffdfb4207969459195d1d1f138028c59",
+    "output_data/inditekMCMCoutput_5002_proof.npz": "7c47afef83c85baff6a0cddaee20a28bce926261f41e221a03f5928cea8ccd64",
+    "inditek_main_2.py": "78360cd039e1bf24b363ab1bfb1411d58c58c1d6800d9b58570f93e1e821b77f",
+    "inditek_rhonet_2.py": "70a45d9b803a179de007226fccf1e093d717a4ce424c0bff9b07eac9887d80b2",
+    "inditek_alphadiv_2.py": "15533e5584960e22760844fe2a0dcb20b8940905ebedaa527d16b9eb9deed81c",
+    "inditek_gridding_alphadiv_2.py": "f9ab162de611897aa5f87c5e136b27c92053a939aa763d2292b414300e7b1e59",
+    "inditek_model_proof.py": "06771521fe3922ecbf38b2296de1d7a83d22fca033cb0f937a26f1e6c68e243b"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "3.0.3"
+  },
+  "results": [
+    {
+      "chain_index_zero_based": 0,
+      "iteration": 50,
+      "saved_d_index": 1,
+      "parameters": [
+        181.577787162268,
+        20.90053258183386,
+        0.031761844905455215,
+        0.0033693580461554803,
+        1.9455537307101798
+      ],
+      "saved_acceptance": 0,
+      "saved_rss": 3347.632514158171,
+      "replayed_rss": 3305.2728726342157,
+      "rss_abs_difference": 42.35964152395536,
+      "prediction_max_abs_difference": 4.263256414560601e-14,
+      "prediction_rmse": 3.3960687354466095e-15,
+      "prediction_correlation": 1.0,
+      "model_and_observed_map_masks_identical": true,
+      "F2_pass": false,
+      "independent_rss": 3305.2728726342157,
+      "independent_rss_abs_difference": 0.0,
+      "residual_max_abs_difference": 0.0,
+      "F3_pass": true,
+      "elapsed_seconds": 15.657
+    },
+    {
+      "chain_index_zero_based": 0,
+      "iteration": 500,
+      "saved_d_index": 10,
+      "parameters": [
+        171.60948803050596,
+        18.748568899651072,
+        0.03334019375293846,
+        0.0030111079592046864,
+        2.0483392729384606
+      ],
+      "saved_acceptance": 0,
+      "saved_rss": 2860.3163519602967,
+      "replayed_rss": 2842.847905656028,
+      "rss_abs_difference": 17.468446304268582,
+      "prediction_max_abs_difference": 4.973799150320701e-14,
+      "prediction_rmse": 3.4898377270404396e-15,
+      "prediction_correlation": 0.9999999999999998,
+      "model_and_observed_map_masks_identical": true,
+      "F2_pass": false,
+      "independent_rss": 2842.847905656028,
+      "independent_rss_abs_difference": 0.0,
+      "residual_max_abs_difference": 0.0,
+      "F3_pass": true,
+      "elapsed_seconds": 15.203
+    },
+    {
+      "chain_index_zero_based": 5,
+      "iteration": 5000,
+      "saved_d_index": 100,
+      "parameters": [
+        159.97858316057466,
+        18.745952410700273,
+        0.035015992168387106,
+        0.0017206594845855922,
+        1.9491571227333686
+      ],
+      "saved_acceptance": 0,
+      "saved_rss": 2732.9608236645413,
+      "replayed_rss": 2721.024013909283,
+      "rss_abs_difference": 11.93680975525831,
+      "prediction_max_abs_difference": 2.842170943040401e-14,
+      "prediction_rmse": 3.1899694390131032e-15,
+      "prediction_correlation": 0.9999999999999998,
+      "model_and_observed_map_masks_identical": true,
+      "F2_pass": false,
+      "independent_rss": 2721.024013909283,
+      "independent_rss_abs_difference": 0.0,
+      "residual_max_abs_difference": 0.0,
+      "F3_pass": true,
+      "elapsed_seconds": 15.03
+    }
+  ],
+  "F2_all_pass": false,
+  "F3_all_pass": true
+}

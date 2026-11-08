@@ -1,0 +1,19 @@
+{
+  "completed_at_utc": "2026-11-08T03:36:49.939612+00:00",
+  "source_checkout_revision": "bc7e1d81b2f36954ca517639cf4f789ad362d658",
+  "scope": "cases 2,3,4,10; new evidence only; source resources read-only; no staging/commit/push",
+  "checks": {
+    "scripts_parse": true,
+    "JSON_receipts_parse": true,
+    "key_script_digests_match_remote_runtime_manifest": true,
+    "R_Python_unrounded_mean_census_agree": true,
+    "R_Python_conservative_deletion_membership_agree": true
+  },
+  "case_results": {
+    "2": "Raw full-snapshot modal-base changes; broader unversioned premise unconfirmed",
+    "3": "Raw deduplication and paired Q012/Q007 builds with independent Python arithmetic and separate unrounded R census",
+    "4": "Raw NSB stored/current-model comparison, exact-depth tie sensitivity, stored-age drift",
+    "10": "Raw OOXML FR2 shift and Monarrez Decimal-versus-intact-history comparison"
+  },
+  "remaining": "Main integrates provisional claims; independent scientific wording review follows"
+}

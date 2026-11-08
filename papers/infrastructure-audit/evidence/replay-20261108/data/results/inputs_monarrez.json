@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "encounter_history_bs_gr_5class_Big5.Rdata": {
+      "bytes": 372369,
+      "sha256": "1d0787508c568abdeeb132b06cd4659491b235c7081c4ac4f76600aa2b4a43f0"
+    },
+    "monarrez_histories.tsv": {
+      "bytes": 655673,
+      "sha256": "f02e983918ccb5ccb7615526d5e4190168d9a9f9fc7f42cdfd3940a774eca745"
+    },
+    "register-deposits/monarrez2023-selectivity-zenodo/raw/8341743/ESM_Dataset_S1.xlsx": {
+      "bytes": 5626404,
+      "sha256": "7c07077c6bd63177a02396d381ebe4be86a416cb01687a6842e06b46199d6d2d"
+    }
+  },
+  "python": "3.12.3"
+}

@@ -1,0 +1,178 @@
+{
+  "comparisons": [
+    {
+      "changed_with_both_n_ge50": 1,
+      "changed_with_later_n_ge50": 1,
+      "from": "20240107_10466717",
+      "named_boundaries": {
+        "Anisian": [
+          247.2,
+          247.2
+        ],
+        "Olenekian": [
+          251.2,
+          251.2
+        ],
+        "Paibian": [
+          501.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.9,
+          259.9
+        ]
+      },
+      "to": "20240331_10931491"
+    },
+    {
+      "changed_with_both_n_ge50": 460,
+      "changed_with_later_n_ge50": 460,
+      "from": "20240331_10931491",
+      "named_boundaries": {
+        "Anisian": [
+          247.2,
+          247.2
+        ],
+        "Olenekian": [
+          251.2,
+          251.2
+        ],
+        "Paibian": [
+          497.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.9,
+          259.51
+        ]
+      },
+      "to": "20240401_10931518"
+    },
+    {
+      "changed_with_both_n_ge50": 0,
+      "changed_with_later_n_ge50": 0,
+      "from": "20240401_10931518",
+      "named_boundaries": {
+        "Anisian": [
+          247.2,
+          247.2
+        ],
+        "Olenekian": [
+          251.2,
+          251.2
+        ],
+        "Paibian": [
+          497.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.51,
+          259.51
+        ]
+      },
+      "to": "20250331_15111554"
+    },
+    {
+      "changed_with_both_n_ge50": 316,
+      "changed_with_later_n_ge50": 317,
+      "from": "20250331_15111554",
+      "named_boundaries": {
+        "Anisian": [
+          247.2,
+          246.7
+        ],
+        "Olenekian": [
+          251.2,
+          249.9
+        ],
+        "Paibian": [
+          497.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.51,
+          259.51
+        ]
+      },
+      "to": "20250410_15187705"
+    },
+    {
+      "changed_with_both_n_ge50": 10,
+      "changed_with_later_n_ge50": 10,
+      "from": "20250410_15187705",
+      "named_boundaries": {
+        "Anisian": [
+          246.7,
+          246.7
+        ],
+        "Olenekian": [
+          249.9,
+          249.9
+        ],
+        "Paibian": [
+          497.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.51,
+          259.51
+        ]
+      },
+      "to": "20260227_18803370"
+    },
+    {
+      "changed_with_both_n_ge50": 0,
+      "changed_with_later_n_ge50": 0,
+      "from": "20260227_18803370",
+      "named_boundaries": {
+        "Anisian": [
+          246.7,
+          246.7
+        ],
+        "Olenekian": [
+          249.9,
+          249.9
+        ],
+        "Paibian": [
+          497.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.51,
+          259.51
+        ]
+      },
+      "to": "20260802_21869245"
+    },
+    {
+      "changed_with_both_n_ge50": 17,
+      "changed_with_later_n_ge50": 17,
+      "from": "20260802_21869245",
+      "named_boundaries": {
+        "Anisian": [
+          246.7,
+          247.0
+        ],
+        "Olenekian": [
+          249.9,
+          250.8
+        ],
+        "Paibian": [
+          497.0,
+          497.0
+        ],
+        "Wuchiapingian": [
+          259.51,
+          259.857
+        ]
+      },
+      "to": "20260809_21869343"
+    }
+  ],
+  "limitations": [
+    "No live API request, so C021 historic-query example not replayed.",
+    "Coarse saved-snapshot brackets only; fine adjacent-download bracket scans not rerun.",
+    "C075 ICS chart comparison not replayed here."
+  ],
+  "route": "Full ZIP CSV streaming to interval/base-age frequency tables; occurrence IDs never selected, stored or output."
+}

@@ -1,0 +1,68 @@
+{
+  "archive_sha256": "850b86383fd8ce87511eee67524808021e2f636121ed18caa25b4321cb912b80",
+  "member_sha256": {
+    "INDITEK_2.0/data/observed_D.npz": "b75fdecc2fa702ddcc6ea5f3d00c68fcffdfb4207969459195d1d1f138028c59",
+    "INDITEK_2.0/output_data/inditekMCMCoutput_5002_proof.npz": "7c47afef83c85baff6a0cddaee20a28bce926261f41e221a03f5928cea8ccd64"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.4.6"
+  },
+  "method": "Read NPZ members directly from pinned ZIP; fsum of squared residuals divided by 4 on deposited finite observed cells; no model import",
+  "results": [
+    {
+      "chain_zero_based": 0,
+      "iteration": 50,
+      "saved_prediction_index": 1,
+      "acceptance_flag": 0,
+      "parameters": [
+        181.577787162268,
+        20.90053258183386,
+        0.031761844905455215,
+        0.0033693580461554803,
+        1.9455537307101798
+      ],
+      "finite_cells": 2978,
+      "saved_rss": 3347.632514158171,
+      "saved_vector_rescored_with_fsum": 3305.2728726342157,
+      "saved_score_minus_independent_rescore": 42.35964152395536,
+      "parameters_differ_from_next_accepted_state": true
+    },
+    {
+      "chain_zero_based": 0,
+      "iteration": 500,
+      "saved_prediction_index": 10,
+      "acceptance_flag": 0,
+      "parameters": [
+        171.60948803050596,
+        18.748568899651072,
+        0.03334019375293846,
+        0.0030111079592046864,
+        2.0483392729384606
+      ],
+      "finite_cells": 2978,
+      "saved_rss": 2860.3163519602967,
+      "saved_vector_rescored_with_fsum": 2842.847905656028,
+      "saved_score_minus_independent_rescore": 17.468446304268582,
+      "parameters_differ_from_next_accepted_state": true
+    },
+    {
+      "chain_zero_based": 5,
+      "iteration": 5000,
+      "saved_prediction_index": 100,
+      "acceptance_flag": 0,
+      "parameters": [
+        159.97858316057466,
+        18.745952410700273,
+        0.035015992168387106,
+        0.0017206594845855922,
+        1.9491571227333686
+      ],
+      "finite_cells": 2978,
+      "saved_rss": 2732.9608236645413,
+      "saved_vector_rescored_with_fsum": 2721.024013909283,
+      "saved_score_minus_independent_rescore": 11.93680975525831,
+      "parameters_differ_from_next_accepted_state": true
+    }
+  ]
+}

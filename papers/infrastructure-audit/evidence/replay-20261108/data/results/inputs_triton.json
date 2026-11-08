@@ -1,0 +1,106 @@
+{
+  "R": "R version 4.6.1 (2026-06-24)",
+  "completed_at_UTC": "2026-11-08T03:36:21.942842+00:00",
+  "execution_surface": "Authorised Linux data host; fixed-source files opened read-only; no live provider calls.",
+  "inputs": {
+    "PhanSST_32cc98ed53_CSV": {
+      "bytes": 42453391,
+      "sha256": "c46913f8501d6f8f95d5e27884c4f4055d68accc08d0cd3a060a93a50e33833b"
+    },
+    "Triton_code_v1_ZIP": {
+      "bytes": 74507,
+      "sha256": "f9ce094486f41fc6ba33dc75c3189edb175390c9414b188350588c33b01993b5"
+    },
+    "Triton_code_v3_ZIP": {
+      "bytes": 379071,
+      "sha256": "35b9f212199b58a9839a2b13bca32f35a053945a9028301ece8d956b90880ef2"
+    },
+    "Triton_v1_RData": {
+      "bytes": 193980230,
+      "sha256": "b82fea3aee6897a72fed6dfab343c3d66403617e84782cc6140066cf417ca293"
+    },
+    "Triton_v3_RData": {
+      "bytes": 213734540,
+      "sha256": "1a6473c6a879ff82ee2b194b51b989234e5eff9260dad2e7059ec59ca2149934"
+    },
+    "Triton_v4_RData": {
+      "bytes": 213694369,
+      "sha256": "7275120da2727e37b7d951632ea15364b0135d4aeaa5e67dee64a4a3d738af46"
+    },
+    "inputs/lineage_edges.tsv": {
+      "bytes": 30529,
+      "sha256": "ea616c1a73678879f5d55f6b384254e475c0affaa3ee310f59b4dbcf79a710bb"
+    },
+    "inputs/name_crosswalk.tsv": {
+      "bytes": 22441,
+      "sha256": "0b935bdf497e926d0c7ead29cc183844b40e238d02ca8be52f5bfb4bde9b0682"
+    },
+    "inputs/species.tsv": {
+      "bytes": 39687,
+      "sha256": "654bed448487179e3cd7b8d35cd872bf618fb75f516d21d276fee1c0f56d4420"
+    },
+    "scripts/check_dedup_membership.R": {
+      "bytes": 1023,
+      "sha256": "7630ef1c52c5d252d59805ce6386c77c99a5a4bf16dd1ae076aa0fecd279900a"
+    },
+    "scripts/compare_builds.py": {
+      "bytes": 4996,
+      "sha256": "75e66478475d646d1eefff5380f08aff54f2dde77ccf7bcc20e52d885d69a4ef"
+    },
+    "scripts/input_manifest.py": {
+      "bytes": 2435,
+      "sha256": "1d78035e40f3136272165020b456671af7cb91ae0abcfc168622631a504c19d4"
+    },
+    "scripts/monarrez_extract.R": {
+      "bytes": 246,
+      "sha256": "1d8c588444110a3e5257c888afedf19b3a846cfea51a01ae84805d8126e03d94"
+    },
+    "scripts/q007_original.R": {
+      "bytes": 4663,
+      "sha256": "c00cd73964d4e4dafa66c804b3e7dade367d20d0d918119aaaa459fe8035c36c"
+    },
+    "scripts/q012_original.R": {
+      "bytes": 11253,
+      "sha256": "1ea8d57d5fe70ac58112f6c3e472201effc45e186a3b58ff1fdabc5f65707e5b"
+    },
+    "scripts/raw_mean_check.R": {
+      "bytes": 1879,
+      "sha256": "05eb23d55b5f235b694b425655f5db990a64ede99b24cb8ac4a65d3e6734771a"
+    },
+    "scripts/replay.py": {
+      "bytes": 13085,
+      "sha256": "9f98f7ba2ab5f09abaa7539b20128e372873ed28749816f1a5528ac181daa987"
+    },
+    "scripts/triton_builds.R": {
+      "bytes": 1427,
+      "sha256": "f44d835b7544de7486dbc7e3a2f55dfed1a2923e2bec427aebbc7ff6e9991be4"
+    },
+    "scripts/triton_independent.py": {
+      "bytes": 5999,
+      "sha256": "cfe40a469fcd315b9687620fa69e7608b2459c022f692672e899325b845cae90"
+    },
+    "scripts/triton_prepare.R": {
+      "bytes": 709,
+      "sha256": "4d764e624845bee1716a0f9627c21df1323e79bf3ad808c21b894d7dc13726a6"
+    },
+    "scripts/triton_versions.R": {
+      "bytes": 1253,
+      "sha256": "0ce61b1b0bc0121734f784cf2ff6f4c96144a1390a68b7d0ff8c17ba30b9e8b1"
+    }
+  },
+  "python": "3.12.3",
+  "source_deduplication_operations": {
+    "v1": {
+      "active_duplicated_calls": 1,
+      "member": "Triton_code/Triton_6CombinedData.R",
+      "member_sha256": "c78350b82f38d4ec390ca9dfdbc7b0d8e5c226cd02ace9bd41f661d9b354aa7e"
+    },
+    "v3": {
+      "active_duplicated_calls": 0,
+      "member": "Triton_6CombinedData.R",
+      "member_sha256": "845f5fd923fd5fb5e6c92797a3d21ec00e80be6db47ae494af868199f5d19936"
+    }
+  },
+  "source_revision": "bc7e1d81b2f36954ca517639cf4f789ad362d658",
+  "source_revision_scope": "EPRP checkout at task start; original q012/q007 builders and frozen support tables copied read-only. Script hashes identify replay code."
+}

@@ -1,0 +1,130 @@
+{
+  "case": 6,
+  "claims": "C102",
+  "threshold": 5,
+  "input_sha256": "6d89c337e353fd5a7e855926b367730661c97ee8cf2fec7c7bf849ec1ec5f43e",
+  "older_probes": [
+    {
+      "delta": 0,
+      "numeric_expected": false,
+      "package_flag": false,
+      "returned_difference": null
+    },
+    {
+      "delta": 1,
+      "numeric_expected": false,
+      "package_flag": false,
+      "returned_difference": 1
+    },
+    {
+      "delta": 4.9,
+      "numeric_expected": false,
+      "package_flag": false,
+      "returned_difference": 4.9
+    },
+    {
+      "delta": 5,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 5
+    },
+    {
+      "delta": 5.1,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 5.1
+    },
+    {
+      "delta": 6,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 6
+    },
+    {
+      "delta": 9,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 9
+    },
+    {
+      "delta": 9.9,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 9.9
+    },
+    {
+      "delta": 10,
+      "numeric_expected": true,
+      "package_flag": false,
+      "returned_difference": 10
+    },
+    {
+      "delta": 20,
+      "numeric_expected": true,
+      "package_flag": false,
+      "returned_difference": 20
+    },
+    {
+      "delta": 49.899999999999999,
+      "numeric_expected": true,
+      "package_flag": false,
+      "returned_difference": 49.899999999999999
+    },
+    {
+      "delta": 50,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 50
+    },
+    {
+      "delta": 99,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 99
+    },
+    {
+      "delta": 100,
+      "numeric_expected": true,
+      "package_flag": false,
+      "returned_difference": 100
+    },
+    {
+      "delta": 499,
+      "numeric_expected": true,
+      "package_flag": false,
+      "returned_difference": 499
+    },
+    {
+      "delta": 500,
+      "numeric_expected": true,
+      "package_flag": true,
+      "returned_difference": 500
+    }
+  ],
+  "false_negatives": 5,
+  "false_positives": 0,
+  "younger_probes": [
+    {
+      "true_excess": 1,
+      "returned_difference": 21,
+      "package_flag": 0
+    },
+    {
+      "true_excess": 5,
+      "returned_difference": 25,
+      "package_flag": 0
+    },
+    {
+      "true_excess": 10,
+      "returned_difference": 30,
+      "package_flag": 0
+    },
+    {
+      "true_excess": 30,
+      "returned_difference": 50,
+      "package_flag": 1
+    }
+  ],
+  "independent_route": "Numeric input-age minus reference-FAD, compared with numeric threshold",
+  "limits": "Synthetic deterministic grid, not real-world failure prevalence. Character comparison diagnosis applies to fossilbrush 1.0.6; LAD differences additionally include reference range length."
+}

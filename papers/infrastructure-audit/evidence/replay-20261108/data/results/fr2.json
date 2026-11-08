@@ -1,0 +1,27 @@
+{
+  "chapters": 45,
+  "classes": {
+    "NFR_into_Holocene": 106,
+    "habitat_and_range_shift": 2,
+    "identical": 6888,
+    "name_spacing": 1,
+    "range_shift": 112
+  },
+  "diagnostics": {
+    "literal_nonempty_Holocene_gain": 106,
+    "valid_code_Holocene_gain": 0
+  },
+  "limitation": "Earliest Wayback copies not decoded in this replay. NFR is not a valid presence code: apparent Holocene inflation depends on parser.",
+  "route": "Direct OOXML cell vectors, aligned family names; exact shifted-tail equality. No original profiler imported.",
+  "rows": 7109,
+  "shifted_by_chapter": {
+    "6": 1,
+    "25": 56,
+    "26": 6,
+    "28": 1,
+    "29": 4,
+    "43": 1,
+    "44": 45,
+    "45": 106
+  }
+}

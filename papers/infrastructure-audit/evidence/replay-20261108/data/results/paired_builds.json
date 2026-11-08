@@ -1,0 +1,172 @@
+{
+  "q012/lineage_bin_E.tsv": {
+    "rows": 3184,
+    "changed_rows": 2215,
+    "changed_by_column": {
+      "n_occ": 1395,
+      "observed_mean_abs_pal_lat": 1389,
+      "used_value": 1321,
+      "used_source": 5,
+      "E_standardised": 2123
+    },
+    "before_sha256": "b83a174a6f90b67a3fa0be187bf817cbff6b9fcb5ff502908f9bb49d74f930cc",
+    "after_sha256": "ead03fd3e9234ceefa6bd47b0ce839b41269b8ff3472ded6e947a0c0b0be4eaa"
+  },
+  "q012/lineage_coverage.tsv": {
+    "rows": 268,
+    "changed_rows": 183,
+    "changed_by_column": {
+      "n_members": 0,
+      "n_occurrences": 183,
+      "n_bins": 0,
+      "bins_with_data": 4,
+      "coverage": 4,
+      "covered": 0
+    },
+    "before_sha256": "ba1f9913dc72ad2c1d15652b4c325887155b5071b8bbbc18987bd4d1cc9c3902",
+    "after_sha256": "24cc886d4e589683a8a0847868c8cf5b7c1a9383861cfbc8fc455c32e47b4287"
+  },
+  "q012/pair_exposure.tsv": {
+    "rows": 491,
+    "changed_rows": 304,
+    "changed_by_column": {
+      "shared_members": 0,
+      "coexisting_bins": 0,
+      "jaccard_joint_bins": 3,
+      "jaccard": 58,
+      "jaccard_class": 0,
+      "E_joint_bins": 4,
+      "E_mean_abs_diff_deg": 300,
+      "E_class": 8,
+      "E_abs_mean_diff_deg": 298,
+      "E_systematic_class": 8,
+      "used_joint_bins": 3,
+      "used_abs_mean_diff_deg": 250,
+      "used_systematic_class": 2,
+      "used_mean_abs_diff_deg": 251,
+      "used_perbin_class": 1
+    },
+    "before_sha256": "9875225739cb7330e1efb0cd146089393f89693767871f24cfa1b95f1dcea088",
+    "after_sha256": "0ed3aea133ad2c58a21d8d5040b8b95020ae13adecca68378490e1e83ee5f75a"
+  },
+  "q012/bin_sites.tsv": {
+    "rows": 66,
+    "changed_rows": 34,
+    "changed_by_column": {
+      "sites_with_matched_occurrences": 34
+    },
+    "before_sha256": "0e49cb78add360a46c271f57b30c1b387c75e6478265651eba3c348cc714fa0c",
+    "after_sha256": "7f9723316ba9d01311ca61aae4cf4230408425d256147eac7eb2111b00793e9f"
+  },
+  "q007/event_sites.tsv": {
+    "rows": 226,
+    "changed_rows": 15,
+    "changed_by_column": {
+      "samples_older": 6,
+      "samples_younger": 13,
+      "samples_per_myr": 15,
+      "n_samples": 15,
+      "n_zone_ages": 6,
+      "n_quant_abundance": 0,
+      "n_meta_conflict": 0,
+      "share_zone_ages": 7,
+      "share_quant_abundance": 2,
+      "age_anchor_counts": 15,
+      "abundance_unit_counts": 15,
+      "temp_older": 0,
+      "temp_younger": 0,
+      "temp_good_older": 0,
+      "temp_good_younger": 0,
+      "temp_proxies": 0,
+      "biota_ok": 2,
+      "ages_ok": 1,
+      "temp_ok": 0,
+      "temp_good_ok": 0
+    },
+    "before_sha256": "af54f5f43fd2c63ce441ceb2cfedb9c26b6d731ae60efc2c6818e8547adaca25",
+    "after_sha256": "e1c31f7fb724ef5591827a6786c7b052216aacd96606119f5ec6ae27282b18ab"
+  },
+  "q007/event_summary.tsv": {
+    "rows": 5,
+    "changed_rows": 1,
+    "changed_by_column": {
+      "sites_any": 0,
+      "biota": 1,
+      "biota_nonzone": 1,
+      "biota_nonzone_quant": 0,
+      "plus_temp": 0,
+      "plus_temp_good": 0,
+      "gate_sites": 0
+    },
+    "before_sha256": "529c8520525a1e9e17ae60863a8408a38b4de2732c80939c12d2027397cb9263",
+    "after_sha256": "252544bdb95eb2687da7dcf1abe2d5f867a2464931cae6f7d572ae4b3e7a65ed"
+  },
+  "q007_sample_totals": {
+    "EOT": {
+      "before": 585,
+      "after": 561,
+      "inflation_relative_to_dedup_pct": 4.278074866310155
+    },
+    "ETM2": {
+      "before": 101,
+      "after": 101,
+      "inflation_relative_to_dedup_pct": 0.0
+    },
+    "ETM3": {
+      "before": 64,
+      "after": 62,
+      "inflation_relative_to_dedup_pct": 3.2258064516129004
+    },
+    "K-Pg (post only)": {
+      "before": 649,
+      "after": 599,
+      "inflation_relative_to_dedup_pct": 8.347245409015036
+    },
+    "PETM": {
+      "before": 403,
+      "after": 400,
+      "inflation_relative_to_dedup_pct": 0.7500000000000062
+    }
+  },
+  "q012_displayed_numeric_comparison": {
+    "observed_mean_abs_pal_lat": {
+      "before_nonmissing": 2271,
+      "after_nonmissing": 2267,
+      "paired_nonmissing": 2267,
+      "paired_changed_gt_1e_9": 1385,
+      "paired_absolute_change_ge_1": 411,
+      "max_abs_paired_change": 26.899,
+      "missingness_changed": 4
+    },
+    "used_value": {
+      "before_nonmissing": 2124,
+      "after_nonmissing": 2122,
+      "paired_nonmissing": 2122,
+      "paired_changed_gt_1e_9": 1319,
+      "paired_absolute_change_ge_1": 394,
+      "max_abs_paired_change": 26.899,
+      "missingness_changed": 2
+    },
+    "E_standardised": {
+      "before_nonmissing": 2124,
+      "after_nonmissing": 2122,
+      "paired_nonmissing": 2122,
+      "paired_changed_gt_1e_9": 2121,
+      "paired_absolute_change_ge_1": 5,
+      "max_abs_paired_change": 2.0302000000000002,
+      "missingness_changed": 2
+    }
+  },
+  "independent_pair_class_reaggregation": {
+    "before": {
+      "rows": 491,
+      "class_mismatches": {},
+      "route": "Python means of joined three-decimal bin values, then original 5-degree and 3-bin rules; no original pair-comparison code called."
+    },
+    "after": {
+      "rows": 491,
+      "class_mismatches": {},
+      "route": "Python means of joined three-decimal bin values, then original 5-degree and 3-bin rules; no original pair-comparison code called."
+    }
+  }
+}

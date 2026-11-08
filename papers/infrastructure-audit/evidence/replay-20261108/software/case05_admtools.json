@@ -1,0 +1,97 @@
+{
+  "case": 5,
+  "claims": "C096",
+  "inputs": {
+    "t": [0, 4, 6, 12, 15, 21, 24, 30],
+    "h": [0, 8, 8, 14, 14, 26, 32, 38],
+    "seed": 901
+  },
+  "input_sha256": "95b7e9421cf090ae321da6b34297cca8c8d5c7d7aabdefca6f490e34bd68d79f",
+  "independent_route": "Explicit linear segment algebra; zero-height increments are nondeposition",
+  "probes": [
+    {
+      "height": 2,
+      "analytic_time": 1,
+      "returned_time": 1,
+      "error": 0
+    },
+    {
+      "height": 4,
+      "analytic_time": 2,
+      "returned_time": 2,
+      "error": 0
+    },
+    {
+      "height": 8.000999999999999,
+      "analytic_time": 6.000999999999999,
+      "returned_time": 4.001333333333332,
+      "error": -1.999666666666667
+    },
+    {
+      "height": 9,
+      "analytic_time": 7,
+      "returned_time": 5.333333333333333,
+      "error": -1.666666666666667
+    },
+    {
+      "height": 11,
+      "analytic_time": 9,
+      "returned_time": 8,
+      "error": -1
+    },
+    {
+      "height": 14.000999999999999,
+      "analytic_time": 15.000499999999999,
+      "returned_time": 12.00075,
+      "error": -2.999749999999999
+    },
+    {
+      "height": 15,
+      "analytic_time": 15.5,
+      "returned_time": 12.75,
+      "error": -2.75
+    },
+    {
+      "height": 20,
+      "analytic_time": 18,
+      "returned_time": 16.5,
+      "error": -1.5
+    },
+    {
+      "height": 27,
+      "analytic_time": 21.5,
+      "returned_time": 21.5,
+      "error": 0
+    },
+    {
+      "height": 35,
+      "analytic_time": 27,
+      "returned_time": 27,
+      "error": 0
+    }
+  ],
+  "n_deposited": 8282,
+  "sparse_n_wrong": 3972,
+  "sparse_max_error": 2.995776523137465,
+  "dense_n_wrong": 6,
+  "dense_max_random_error": 0.4659138824790183,
+  "dense_near_hiatus": [
+    {
+      "time": 6.001,
+      "error": -1.79999999999975
+    },
+    {
+      "time": 6.005,
+      "error": -1.000000000000179
+    },
+    {
+      "time": 15.000999999999999,
+      "error": -2.700000000000159
+    },
+    {
+      "time": 15.005000000000001,
+      "error": -1.499999999999734
+    }
+  ],
+  "limits": "Two-hiatus synthetic model in admtools 0.7.0. Errors local to affected interpolation segments; later segments are correct. No universal every-height-above-hiatus claim. No StratPal wrapper replay."
+}

@@ -1,0 +1,54 @@
+{
+  "README.md": {
+    "sha256": "3fc458589d9f4c0ecb5552835bb7b712f66433853c11c195ec88aae1468e91cd",
+    "bytes": 10391
+  },
+  "classical_reaggregate.json": {
+    "sha256": "85e91a3e24bad4264e06b6d4745e35c7e64cd8fe272b4dadf3ffb667f8412045",
+    "bytes": 5929
+  },
+  "classical_reaggregate.py": {
+    "sha256": "873f14655a019f347bb491b7f9d8edfbc4561f6ed3bda988f6ded6dc87842025",
+    "bytes": 3208
+  },
+  "generator_reaggregate.json": {
+    "sha256": "e9214667bf2e0b089ede862214c9d60b1469d0a4a1776c9be091630054899f07",
+    "bytes": 1365
+  },
+  "generator_reaggregate.py": {
+    "sha256": "ac8976bfa9e94eb6f50eaac82957d2d8349b5629396b66e3e2b682f8d0cfaf2f",
+    "bytes": 1617
+  },
+  "inditek_forward.json": {
+    "sha256": "6024d2daaf5fe901c24276f29313cf06bf2b903d56c4903158c3a2e409a237fd",
+    "bytes": 3956
+  },
+  "inditek_saved_score.json": {
+    "sha256": "19cc89a3700429e89262ee4a2be6336e0dd1b9b14a638685350fc6612070c6c5",
+    "bytes": 2251
+  },
+  "inditek_saved_score.py": {
+    "sha256": "392cbc1dc3d2a8eb1af356298520c235258bdf88e62b4492353e18b67d7ae19b",
+    "bytes": 1905
+  },
+  "provenance.json": {
+    "sha256": "d61ca6a28cc8739375cafea1f1a100dbe2f4601df176bcc71960856ce8a8521a",
+    "bytes": 5282
+  },
+  "pyrate_raw.json": {
+    "sha256": "852b4d0e66596446540ce90e3278c776d065c8dd76f7e0ead5a075802b753fca",
+    "bytes": 80716
+  },
+  "pyrate_raw_check.py": {
+    "sha256": "66b1a876c945d7ec2476a71baf96e6ea04eb11919e3f03974bba559357de2bd0",
+    "bytes": 5168
+  },
+  "pyrate_raw_per_replicate.json": {
+    "sha256": "721cf89620618a52e703fbb39a8876e7f6dbb6040add6f932f0e8ca724154507",
+    "bytes": 130558
+  },
+  "suggested-claims.md": {
+    "sha256": "f7d9954b007cd3485ddb3e86b74decab340d113701949447aea8a2a1ff2042cd",
+    "bytes": 4323
+  }
+}

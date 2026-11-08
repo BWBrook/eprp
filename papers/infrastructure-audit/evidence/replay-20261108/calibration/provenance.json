@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-08",
+  "delegate": "Codex GPT-6.1 Sol",
+  "independence": "Different actor and separate aggregation and scalar scoring code; same model family as the original review; fresh forward replay reuses the original replay script.",
+  "repository_head_at_start": "bc7e1d81b2f36954ca517639cf4f789ad362d658",
+  "source_files": [
+    {
+      "path": "resources/software/bench/validate/pyrate_sim.R",
+      "sha256": "e2bedb5d400415d4b9ae2c36f582cdd6bfc0b7ccdd3d98972b7a715dbdf635de",
+      "bytes": 2087,
+      "last_touch_commit": "5add843772e538cc1b574d43e44c3a6018f96593"
+    },
+    {
+      "path": "resources/software/bench/validate/pyrate_run.sh",
+      "sha256": "e7cc8bc56459816f2085849ea03e6ab8fe21560205254ecfbec875ebc8ee3cbd",
+      "bytes": 897,
+      "last_touch_commit": "5add843772e538cc1b574d43e44c3a6018f96593"
+    },
+    {
+      "path": "resources/software/bench/validate/pyrate_summary.py",
+      "sha256": "e7c5632a456f97b3e050c5ba2e72be7837d5b6b62689399a9fd13db8aa845fa3",
+      "bytes": 2932,
+      "last_touch_commit": "01dadd91d3627ec6382e1a14669c58d81e32a339"
+    },
+    {
+      "path": "resources/software/bench/validate/t2_extinction.R",
+      "sha256": "c0a2fcf7e63fc19d246ae77df6f42a52369b4a951552615a38fabfd736b0c435",
+      "bytes": 7207,
+      "last_touch_commit": "7d8e76b2e88326dc91454c53873ae0cf10290d81"
+    },
+    {
+      "path": "resources/software/bench/validate/t2_summary.R",
+      "sha256": "618f6b2855ab1c4b153653e45f332579942f78a5aa0d0c31e6d6e5d862e3f019",
+      "bytes": 6133,
+      "last_touch_commit": "7d8e76b2e88326dc91454c53873ae0cf10290d81"
+    },
+    {
+      "path": "resources/software/bench/validate/generators.R",
+      "sha256": "6bb9bd642e408b7c6c7db925f046304a522c519063c111be505bf7e0e18ccff2",
+      "bytes": 5993,
+      "last_touch_commit": "5add843772e538cc1b574d43e44c3a6018f96593"
+    },
+    {
+      "path": "resources/software/bench/validate/t5_inditek_forward_replay.py",
+      "sha256": "16c6b8e9132f49cd4547410f74b94deb9c7acde3fc4a6361cde29cb455d958a2",
+      "bytes": 5313,
+      "last_touch_commit": "5dfbc0870d1eeb8aed73dbed2a2ee7794b618bd3"
+    },
+    {
+      "path": "resources/software/bench/VALIDATION.md",
+      "sha256": "863d860e7657e50e6009cbb66e1486cc5e66e224e0c52734c5d73358fc695a08",
+      "bytes": 8781,
+      "last_touch_commit": "4c5f1206b86ca523059696683040e7999b9ba0d1"
+    },
+    {
+      "path": "resources/software/bench/VALIDATION_T2.md",
+      "sha256": "4f5c6ca939dc9321d9ffdd2bc285d3d592bc70c387e1d0e1f5449ac4cae0ba4a",
+      "bytes": 8812,
+      "last_touch_commit": "73bff35fee9a09259188ffb66a82de9838d2963c"
+    },
+    {
+      "path": "resources/software/bench/env/Dockerfile.pyrate",
+      "sha256": "17c6200cd967ee2fccafd20bc66971666266040ad680e86f68e2bfe57a092a29",
+      "bytes": 478,
+      "last_touch_commit": "af024d14068f557ed2884dd4a587493cc3e588c6"
+    },
+    {
+      "path": "resources/software/inditek-2/env/pyproject.toml",
+      "sha256": "8b365df1a4cb9fbc447eb9dc58cc5857f6fee55ab73debb85e8031b7f057165e",
+      "bytes": 244,
+      "last_touch_commit": "5dfbc0870d1eeb8aed73dbed2a2ee7794b618bd3"
+    },
+    {
+      "path": "resources/software/inditek-2/env/uv.lock",
+      "sha256": "73f605b010e096d3653cdd7a9c2e33257ca425030b32858d2e3dbe0678cdd5ee",
+      "bytes": 42435,
+      "last_touch_commit": "5dfbc0870d1eeb8aed73dbed2a2ee7794b618bd3"
+    },
+    {
+      "path": "resources/software/bench/results/t2/t2_extinction_meta.json",
+      "sha256": "ee386ae158eb5b0358c0bcaa4711a7c9200a4e13f937cc0a5a7b5c571502cd44",
+      "bytes": 387,
+      "last_touch_commit": "7d8e76b2e88326dc91454c53873ae0cf10290d81"
+    },
+    {
+      "path": "resources/software/bench/results/generators/generators.json",
+      "sha256": "b23c0a00aba16a25defd9d503e27642bdf14c4f6f0b2ba2aab603d349e7eb26d",
+      "bytes": 1664,
+      "last_touch_commit": "cdb3b4eef1f485b6ec6d131e454268ba481949bb"
+    }
+  ],
+  "pyrate_existing_image_inspection": {
+    "id": "sha256:8df170712806bd58be65d1481fe1bd9218f983789844999372a37e0f260fe2fd",
+    "python": "3.12.15",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pyrate_commit": "6a27efb78c487a9d284d727558b7bd26ff674592",
+    "PyRate_py_sha256": "4a1b52b0b071056c1ad0109d54b6dc6883bbde8e857baff4d607b9c510f468b2",
+    "meaning": "Existing immutable image inspected using a no-network container; no fresh PyRate fit. This is an inspection of the retained image, not inferred only from Dockerfile."
+  },
+  "raw_reaggregation_versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4"
+  },
+  "inditek_versions": {
+    "python": "3.12.3",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "3.0.3"
+  },
+  "verification": {
+    "fresh_inditek_input_hashes_equal_20261028_receipt": true,
+    "fresh_inditek_versions_equal_20261028_receipt": true,
+    "fresh_inditek_rss_equal_20261028_receipt": true,
+    "all_raw_quantiles_medians_ess_round_to_original_tsv": true,
+    "all_450_raw_coverage_flags_equal_tsv": true,
+    "retained_remote_pyrate_summary_sha256_equals_tracked_local_summary": true,
+    "q_posterior_width_vs_replicate_spread_recomputed_from_raw_logs": true
+  },
+  "runtime_inputs_note": "Source paths in manifests are archive members or synthetic bench filenames. Access routes and original host/private logs are excluded."
+}

@@ -1,0 +1,16 @@
+{
+  "source_revision": "bc7e1d81b2f36954ca517639cf4f789ad362d658",
+  "source_file_sha256": {
+    "data/q027-regional-support/build.py": "b4c4703ff63ed7c2aa6e4e0433f95ec7e820e51a59f9a68e2975f373ff19fe37",
+    "data/q027-regional-support/support.tsv": "8f253a64ddd2dfb2230df35e1be02fb8da5b818e1c8a7dfdc95adfaddeab3459",
+    "literature/checks/rampino_2025_binomial.py": "aca3deb045f15abd28ce6e84481b37b49c862482dfec8fc85c0576b26a9721cb"
+  },
+  "parent_review_python": "3.14.4",
+  "actors": {
+    "parent": "main Codex; exact model identifier not supplied by current runtime",
+    "delegates": "three bounded gpt-6.1-sol agents"
+  },
+  "independence": "Different actors and computational routes; some same model family. No independent biological dataset or causal comparison of auditing systems.",
+  "source_pdf_sha256": "7ba178cce4c5359152e474f027171faae2d317b931e124ba9ddef5e63c20fc71",
+  "source_pdf_access": "Previously retrieved public author copy, rendered printed page4 visually checked again; no PDF/image redistribution."
+}

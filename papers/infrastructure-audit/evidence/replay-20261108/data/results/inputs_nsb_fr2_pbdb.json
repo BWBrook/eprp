@@ -1,0 +1,237 @@
+{
+  "inputs": {
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/1-Monera.xlsx": {
+      "bytes": 11789,
+      "sha256": "69600a0ce2f280f01bd14e811b49b3fe0dbe7b9c08da71ea203dedfea11cd6f8"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/10-Mollusca-4.xlsx": {
+      "bytes": 15822,
+      "sha256": "e0257a99355d4225df6e182a4936761eab06427adab2e6398987c867fddc32ee"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/11-Mollusca-5.xlsx": {
+      "bytes": 13999,
+      "sha256": "1047c55a735be101fc574f66c2135e5ea0fe2a11f6a811acf8b36fc5ccbd04a8"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/12-Mollusca-6.xlsx": {
+      "bytes": 12448,
+      "sha256": "f90760c25afbd10e42a1d13e40478ee8a71bb1765b922a7d167a03801185e276"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/13-Mollusca-7.xlsx": {
+      "bytes": 30807,
+      "sha256": "47f3991bd75bee3816400fa20b3034a519820ffb8b9c7e0819770dc34a7817e0"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/14-Mollusca-8.xlsx": {
+      "bytes": 11982,
+      "sha256": "9fc31b899bc4b9b46147dd45b208d1391a7a34de4b59ebf1d94236918ee572e8"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/15-Annelida.xlsx": {
+      "bytes": 16487,
+      "sha256": "e664eaab76f6348bd146b1b8f903c48ed6327870e3d1335f87381f457338f5bb"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/16-Trilobita.xlsx": {
+      "bytes": 17197,
+      "sha256": "6f18be73c93eb4edea9a90ce5b4016a2fd804e536375d92c2b88e2893440d7c2"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/17-Aglaspidida.xlsx": {
+      "bytes": 22475,
+      "sha256": "b4d1a200e3b75e6ef00e6959a2223bed06949160b45a6a4d7691b61bd44bed79"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/18-Crustacea.xlsx": {
+      "bytes": 25316,
+      "sha256": "5a0c3fb2c3345674b947c094e74477040e8e5838df9c0bf39ff62655c752cc74"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/19-Ostracoda.xlsx": {
+      "bytes": 19168,
+      "sha256": "e30911c2ba5376e41c7a827ae0a251f6f668388cb8425695f95ade1076beef8a"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/2-Fungi.xlsx": {
+      "bytes": 11105,
+      "sha256": "d9a33e5e31c484bfe902ee682880aa18fbe4408af6c06ee0e46922b5caaa1073"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/20-Myriapoda.xlsx": {
+      "bytes": 12058,
+      "sha256": "c829029b4479c84cb466db751bef5ef7ec808ea924c491c56f0779a956ab7092"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/21-Hexapoda.xlsx": {
+      "bytes": 91395,
+      "sha256": "5644778c8bf10c5536a858504d16a023ee013e03341789d6796027a843d61ca3"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/22-Brachiopoda.xlsx": {
+      "bytes": 28046,
+      "sha256": "4192534d9628df8b31245fbc9475e62492d45af42733c214b843a7b08f465f5d"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/23-Phoronida.xlsx": {
+      "bytes": 9893,
+      "sha256": "ea5afe6cb87c720f0f3944c771b6870f460a6f8b764c80827abf73cc6616878e"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/24-Bryozoa.xlsx": {
+      "bytes": 24905,
+      "sha256": "5722b511ea5d8a96e66ce471946c3e6d99db30cf1b029c2da92c08efcbe49463"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/25-Echinodermata.xlsx": {
+      "bytes": 32805,
+      "sha256": "ae4137e995c022e56f5620e76a7054dbbf9fb420e395582cca44341bc924542f"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/26-Deuterostomes.xlsx": {
+      "bytes": 12119,
+      "sha256": "2113b7144e22fd6a9e6ef0d27b42e85e01cd6f4610696842dc519ad4e5a14616"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/27-Graptolithina.xlsx": {
+      "bytes": 11136,
+      "sha256": "16dfd0cbd4dda38df2653ed0b15a67b57bfd9ca642023774d471dff1bdadf1c9"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/28-Problematica.xlsx": {
+      "bytes": 13203,
+      "sha256": "7e7d4de5b238a546488eca4ca58359609509be77a5b7ddcd6c06c990c3c9ebdf"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/29-Miscellania.xlsx": {
+      "bytes": 12471,
+      "sha256": "196caeacd8210f3166d3f8231c90a54a87e412811e028fd86e0f25d804bf385d"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/3-Algae.xlsx": {
+      "bytes": 23024,
+      "sha256": "1f06e632158b7d393c4e73c9324781b3a919ccac15e1d213960622dfc3e74307"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/30-Conodonta.xlsx": {
+      "bytes": 12624,
+      "sha256": "b0d57da848dcced15e21480ae664b07359cef84114d731a1acd24edaca0ae13c"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/31-Agnatha.xlsx": {
+      "bytes": 12905,
+      "sha256": "052f11f8dd5150221672413cb2059f5787118931352cd224e55067451b17f937"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/32-Placodermi.xlsx": {
+      "bytes": 11757,
+      "sha256": "4ce11115f0169e043e594691ef2b7903344e41b8765ca79cdf247a803213c4de"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/33-Acanthodii.xlsx": {
+      "bytes": 10319,
+      "sha256": "b872359f47d786354f1b9f9834dc273e044478fc5a6cad86a1edab7ffffbdcd8"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/34-Chondrichthyes.xlsx": {
+      "bytes": 16535,
+      "sha256": "d83515a8aa99a27b878f3d0ef1ad10033e55d46b718faa55659f2673b8d1c1dd"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/35-Osteichthyes.xlsx": {
+      "bytes": 13433,
+      "sha256": "fab4582c856b8f6d55a069d57835214724721235370e6b91ccb9aa5594c73f7b"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/36-Teleostei.xlsx": {
+      "bytes": 27790,
+      "sha256": "f9eff09af6290219d9f6f65e4deaa7147100c0ebc94f2a2643a1df412471be8b"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/37-Sarcopterygii.xlsx": {
+      "bytes": 11919,
+      "sha256": "2dd71030e3ac6dfe815a1da851dcf1d0ba50d6f58dc362c25fdd6fa7bff12385"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/38-Amphibia.xlsx": {
+      "bytes": 15772,
+      "sha256": "d3902aa31b6b3a637c57e4c64f3f3f5a72b537e070fd63463170ab09fed93737"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/39-Reptilia.xlsx": {
+      "bytes": 26136,
+      "sha256": "ee775acb9137b20aec75ce7c156fa3d4d6e414c47d141e65203f3f2267e2e898"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/4-Protozoa.xlsx": {
+      "bytes": 37818,
+      "sha256": "0b480160b3083534437720e09a2ed83342e271965d89c6f17953f0a9fbc8793b"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/40-Aves.xlsx": {
+      "bytes": 20048,
+      "sha256": "1310a395396a026cc781689901929731a1cf850dd4d5bce081ebf207f09fcdcf"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/41-Mammalia.xlsx": {
+      "bytes": 28531,
+      "sha256": "fad15121320b97d796f9cd7071734005e37fb26a7e387c8641a548b6498cd972"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/42-Bryophyta.xlsx": {
+      "bytes": 10901,
+      "sha256": "c08349f5b8d4f64f1dcb8712864c5f9d487ea373d1c997188f185a7969b741ef"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/43-Pteridophyta.xlsx": {
+      "bytes": 14585,
+      "sha256": "b345398876dc151cfed9831766f5490b38de266b92053afdae38aa7e4eb18d91"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/44-Gymnospermophyta.xlsx": {
+      "bytes": 13198,
+      "sha256": "0d85837ab2ebd0ca08f9dc2c5b1413f9ffab642b0416103684488ecb4e0b37db"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/45-Magnoliophyta.xlsx": {
+      "bytes": 25579,
+      "sha256": "ee0914ff82da560e26458c80f5e41d0a56e88e27f16f74baafcf736d2c7379c4"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/5-Porifera.xlsx": {
+      "bytes": 27614,
+      "sha256": "c444b902a2f63ce2142cdf700bab2037faabc13d223098bdd423129d8d131c30"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/6-Coelenterata.xlsx": {
+      "bytes": 27184,
+      "sha256": "cb3c837ec59e233a07a969a81306c1523e30426e67988b9753fcad5a5ff5383e"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/7-Mollusca-1.xlsx": {
+      "bytes": 12245,
+      "sha256": "d0d33d8571bfb0644cb1b801169f4cad6f727355854e5eea81c3285293d8a16d"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/8-Mollusca-2.xlsx": {
+      "bytes": 38148,
+      "sha256": "a521e5f5ab21afb7e573b2789812c8aed17967cff6e0217b23b6f944f68bd192"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/9-Mollusca-3.xlsx": {
+      "bytes": 16986,
+      "sha256": "b5ded7b9740ecad3cf53302d4b828916a8f03c649d1a800d7146614eee5a347c"
+    },
+    "classic-compendia/fr2/bristol/raw/2026-10-23T0505Z_url/All-Life.xlsx": {
+      "bytes": 2001510,
+      "sha256": "c05c0b4b815544324e4d8835921c8317b66a7ee564fc743499c986a52edd6a8f"
+    },
+    "nsb/derived/2014-08-16_8238614/nsb.sqlite": {
+      "bytes": 21180416,
+      "sha256": "b6866854f4c5502cdbb022c0e518d890894f571e5b49261fa453a86de83958af"
+    },
+    "nsb/derived/2019-08-30_10059743/nsb.sqlite": {
+      "bytes": 73744384,
+      "sha256": "98f776448bf2f1a31a3663b4e3b96bfe1bc6fd0fc9846606bec93458735e8c84"
+    },
+    "nsb/derived/2022-10-06_10063084/nsb.sqlite": {
+      "bytes": 75010048,
+      "sha256": "856a9059672b7ff1f12d727e257ff1ea282799326202288f081bfa59d0a19f70"
+    },
+    "nsb/derived/2023-06-05_10063218/nsb.sqlite": {
+      "bytes": 75096064,
+      "sha256": "3fee4add2459c80529ab8cd018cdf2db2e60117b16fbdd2fb4be6a218d7a5a49"
+    },
+    "pbdb-chronosphere/tables/raw/20240107_10466717/pbdb_csv.zip": {
+      "bytes": 173736605,
+      "sha256": "86b5d8ffd57c15df93db980c3c450214dc8e262db556780905ee19b09f3194b1"
+    },
+    "pbdb-chronosphere/tables/raw/20240331_10931491/pbdb_csv.zip": {
+      "bytes": 174701704,
+      "sha256": "47aea679ff634e1b62a4a0cbf82b3067688c5e415b2ebdd957bd1b72594a0e16"
+    },
+    "pbdb-chronosphere/tables/raw/20240401_10931518/pbdb_csv.zip": {
+      "bytes": 172187196,
+      "sha256": "602d55151e68c07bc6330ef4e1e64095a5568962b602f90bff40b17efd1712f3"
+    },
+    "pbdb-chronosphere/tables/raw/20250331_15111554/pbdb_csv.zip": {
+      "bytes": 179878810,
+      "sha256": "b7dc526ba2229a08145208188726cafb4e3dfdee2ebb2534091ba5e876965fa8"
+    },
+    "pbdb-chronosphere/tables/raw/20250410_15187705/pbdb_csv.zip": {
+      "bytes": 180086048,
+      "sha256": "8dec4562d441c9698011078d2e8bbc099fe3885d04849d8a7e78a9efcae22c60"
+    },
+    "pbdb-chronosphere/tables/raw/20260227_18803370/pbdb_csv.zip": {
+      "bytes": 196449216,
+      "sha256": "9761ef91318696c74e82cf1fa7c636aec432dd87109f908b23b85a79dc2ae3cd"
+    },
+    "pbdb-chronosphere/tables/raw/20260802_21869245/pbdb_csv.zip": {
+      "bytes": 207755684,
+      "sha256": "6acf39c1b783c6bd27a82f6ca049a53ac4eee0d26d1e32cb99d92534db2fbb7d"
+    },
+    "pbdb-chronosphere/tables/raw/20260809_21869343/pbdb_csv.zip": {
+      "bytes": 207880576,
+      "sha256": "a5f733563d89373454e9730f9e7addf33a7f73d3cefdc9938e19b25c3c5c6eaf"
+    }
+  },
+  "python": "3.12.3"
+}

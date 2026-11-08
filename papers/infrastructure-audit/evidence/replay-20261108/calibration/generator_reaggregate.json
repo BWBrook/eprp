@@ -1,0 +1,46 @@
+{
+  "python_version": "3.14.4",
+  "source_scope": "Retained G1/G2 tables only; no generator execution; G3/G3b/G5 not replayed",
+  "inputs": {
+    "g1_paleobuddy.tsv": {
+      "sha256": "718134822abf99d3bd20ed0688e9a1d1a6c09e3a8e4137d65dad606f4c0bd3c5",
+      "bytes": 479980
+    },
+    "g1_treesim.tsv": {
+      "sha256": "8a305576539ae46bed5ca7dd010c5b4962d80141506265c8b14bf25da801c0a0",
+      "bytes": 447358
+    }
+  },
+  "generators": {
+    "paleobuddy": {
+      "n": 20000,
+      "mean_extant": 4.52345,
+      "truth_mean": 4.481689070338063,
+      "z_mean": 0.6574238702476137,
+      "survival": 0.39335,
+      "truth_survival": 0.3915825907972911,
+      "z_survival": 0.5120821126076592,
+      "G1_pass": true,
+      "G2_poisson_usable": 20000,
+      "G2_poisson_z": -0.2891289777708045,
+      "G2_dispersion": 0.9942761957131337,
+      "G2_tolerance": 0.03,
+      "G2_pass": true
+    },
+    "treesim": {
+      "n": 20000,
+      "mean_extant": 4.6063,
+      "truth_mean": 4.481689070338063,
+      "z_mean": 1.9508253457722244,
+      "survival": 0.39525,
+      "truth_survival": 0.3915825907972911,
+      "z_survival": 1.0625805554489165,
+      "G1_pass": true,
+      "G2_poisson_usable": 7895,
+      "G2_poisson_z": -0.48350373817112363,
+      "G2_dispersion": 0.9903591701047976,
+      "G2_tolerance": 0.04774854974272254,
+      "G2_pass": true
+    }
+  }
+}

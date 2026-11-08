@@ -1,0 +1,2 @@
+event	sites_any_before	sites_any_after	biota_before	biota_after	biota_nonzone_before	biota_nonzone_after	biota_nonzone_quant_before	biota_nonzone_quant_after	plus_temp_before	plus_temp_after	plus_temp_good_before	plus_temp_good_after	gate_sites_before	gate_sites_after
+EOT	77	77	14	12	13	11	0	0	6	6	2	2	277,511,689,744,803,1090	277,511,689,744,803,1090

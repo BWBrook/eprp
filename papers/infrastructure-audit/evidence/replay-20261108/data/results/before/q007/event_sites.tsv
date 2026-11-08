@@ -1,0 +1,227 @@
+event	site	samples_older	samples_younger	samples_per_myr	n_samples	n_zone_ages	n_quant_abundance	n_meta_conflict	share_zone_ages	share_quant_abundance	age_anchor_counts	abundance_unit_counts	temp_older	temp_younger	temp_good_older	temp_good_younger	temp_proxies	biota_ok	ages_ok	temp_ok	temp_good_ok
+K-Pg (post only)	47	0	3	0.8	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	77	0	17	4.2	17	2	0	0	0.118	0	Interp:0;Magneto:0;Model:15;Orig:0;Zone:2	Relative abundance:0;Count:0;Number per gram:0;Binned:17;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	95	0	3	0.8	3	0	3	0	0	1	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:3;Count:0;Number per gram:0;Binned:0;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	208	0	17	4.2	17	0	0	0	0	0	Interp:0;Magneto:0;Model:17;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:17;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	217	0	5	1.2	5	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:5;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:5;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	356	0	4	1	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:4;Mixed:0	3	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	357	0	1	0.2	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	1	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	398	0	2	0.5	2	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	516	0	21	5.2	21	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:21;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:21;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	524	0	4	1	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	525	0	3	0.8	3	0	2	0	0	0.667	Interp:0;Magneto:0;Model:0;Orig:3;Zone:0	Relative abundance:2;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	82	1	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	527	0	2	0.5	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	8	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	536	0	7	1.8	7	0	7	0	0	1	Interp:1;Magneto:0;Model:6;Orig:0;Zone:0	Relative abundance:0;Count:7;Number per gram:0;Binned:0;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	548	0	1	0.2	1	1	0	0	1	0	Interp:0;Magneto:0;Model:0;Orig:0;Zone:1	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+K-Pg (post only)	605	0	9	2.2	9	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:9;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:9;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	689	0	18	4.5	18	0	0	0	0	0	Interp:0;Magneto:0;Model:7;Orig:11;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:18;P/A:0;Mixed:0	15	8	0	0	d18c	TRUE	TRUE	TRUE	FALSE
+K-Pg (post only)	690	0	8	2	8	2	0	0	0.25	0	Interp:0;Magneto:0;Model:6;Orig:0;Zone:2	Relative abundance:0;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	202	10	0	0	d18c	TRUE	TRUE	TRUE	FALSE
+K-Pg (post only)	700	0	19	4.8	19	11	0	0	0.579	0	Interp:0;Magneto:0;Model:0;Orig:8;Zone:11	Relative abundance:0;Count:0;Number per gram:0;Binned:19;P/A:0;Mixed:0	0	0	0	0		TRUE	FALSE	FALSE	FALSE
+K-Pg (post only)	738	0	35	8.8	35	26	23	0	0.743	0.657	Interp:0;Magneto:0;Model:0;Orig:9;Zone:26	Relative abundance:0;Count:23;Number per gram:0;Binned:12;P/A:0;Mixed:0	17	16	0	0	d18c	TRUE	FALSE	TRUE	FALSE
+K-Pg (post only)	747	0	18	4.5	18	4	0	0	0.222	0	Interp:0;Magneto:0;Model:0;Orig:14;Zone:4	Relative abundance:0;Count:0;Number per gram:0;Binned:15;P/A:3;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	750	0	11	2.8	11	11	0	0	1	0	Interp:0;Magneto:0;Model:0;Orig:0;Zone:11	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:11;Mixed:0	10	2	0	0	d18c	TRUE	FALSE	FALSE	FALSE
+K-Pg (post only)	762	0	2	0.5	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:2;Mixed:0	26	7	26	7	d18c	FALSE	TRUE	TRUE	TRUE
+K-Pg (post only)	1050	0	5	1.2	5	0	0	0	0	0	Interp:0;Magneto:0;Model:5;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:5;P/A:0;Mixed:0	401	0	0	0	d18c	TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	1052	0	2	0.5	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	56	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	1069	0	8	2	8	7	0	0	0.875	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:7	Relative abundance:0;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	0	0	0	0		TRUE	FALSE	FALSE	FALSE
+K-Pg (post only)	1138	0	4	1	4	0	4	0	0	1	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:4;Number per gram:0;Binned:0;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	1209	0	221	55.2	221	64	0	0	0.29	0	Interp:0;Magneto:0;Model:49;Orig:108;Zone:64	Relative abundance:0;Count:0;Number per gram:0;Binned:221;P/A:0;Mixed:0	3	97	0	9	d18c+mg	TRUE	TRUE	TRUE	FALSE
+K-Pg (post only)	1210	0	3	0.8	3	1	0	0	0.333	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:1	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	24	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	1211	0	156	39	156	76	0	0	0.487	0	Interp:0;Magneto:0;Model:5;Orig:75;Zone:76	Relative abundance:0;Count:0;Number per gram:0;Binned:156;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	1259	0	13	3.2	13	0	0	0	0	0	Interp:11;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:13;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	1262	0	7	1.8	7	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:7;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:7;P/A:0;Mixed:0	14	68	0	0	d18c	TRUE	TRUE	TRUE	FALSE
+K-Pg (post only)	1267	0	7	1.8	7	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:7;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:7;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	1403	0	10	2.5	10	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:6;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:10;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+K-Pg (post only)	1407	0	2	0.5	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+K-Pg (post only)	1514	0	1	0.2	1	0	0	0	0	0	Interp:0;Magneto:1;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	47	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	77	2	1	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	146	2	2	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:4;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	213	0	4	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	215	0	4	2	4	0	0	0	0	0	Interp:4;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	216	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	217	0	2	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:2;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	259	0	13	6.5	13	0	0	0	0	0	Interp:13;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:13;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	277	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	13	38	6	26	d18c+mg	FALSE	TRUE	TRUE	TRUE
+PETM	305	1	2	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	354	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	363	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	364	1	2	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	398	0	2	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	516	4	3	3.5	7	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:7;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:7;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	524	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	525	1	3	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	7	6	0	0	d18c	FALSE	TRUE	TRUE	FALSE
+PETM	527	2	2	2	4	0	0	0	0	0	Interp:4;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	18	72	0	0	d18c+mg	FALSE	TRUE	TRUE	FALSE
+PETM	548	0	4	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	549	7	1	4	8	7	0	0	0.875	0	Interp:1;Magneto:0;Model:0;Orig:0;Zone:7	Relative abundance:0;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	6	45	0	0	d18c	FALSE	FALSE	TRUE	FALSE
+PETM	550	3	4	3.5	7	0	0	0	0	0	Interp:2;Magneto:0;Model:5;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:7;P/A:0;Mixed:0	27	47	0	0	d18c	FALSE	TRUE	TRUE	FALSE
+PETM	605	15	4	9.5	19	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:19;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:19;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	689	4	5	4.5	9	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:8;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:9;P/A:0;Mixed:0	39	36	0	0	d18c	FALSE	TRUE	TRUE	FALSE
+PETM	690	9	8	8.5	17	0	0	0	0	0	Interp:9;Magneto:0;Model:0;Orig:8;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:17;P/A:0;Mixed:0	29	842	0	140	d18c+mg	TRUE	TRUE	TRUE	FALSE
+PETM	698	1	3	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	699	1	9	5	10	6	0	0	0.6	0	Interp:0;Magneto:0;Model:1;Orig:3;Zone:6	Relative abundance:0;Count:0;Number per gram:0;Binned:10;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+PETM	700	8	5	6.5	13	0	0	0	0	0	Interp:1;Magneto:0;Model:9;Orig:3;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:13;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+PETM	702	0	3	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	738	8	14	11	22	0	14	0	0	0.636	Interp:4;Magneto:0;Model:0;Orig:18;Zone:0	Relative abundance:14;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	1	1	0	0	d18c	TRUE	TRUE	FALSE	FALSE
+PETM	748	1	2	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:3;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	900	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	929	2	2	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	1	0	0	tex	FALSE	TRUE	FALSE	FALSE
+PETM	1050	1	1	1	2	0	0	0	0	0	Interp:1;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1051	4	2	3	6	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:6;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:6;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1068	4	1	2.5	5	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:5;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:5;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1069	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1209	10	43	26.5	53	10	42	0	0.189	0.792	Interp:0;Magneto:0;Model:1;Orig:42;Zone:10	Relative abundance:0;Count:42;Number per gram:0;Binned:11;P/A:0;Mixed:0	41	220	0	0	d18c+mg	TRUE	TRUE	TRUE	FALSE
+PETM	1210	18	43	30.5	61	14	40	0	0.23	0.656	Interp:0;Magneto:0;Model:1;Orig:46;Zone:14	Relative abundance:0;Count:40;Number per gram:0;Binned:21;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+PETM	1211	7	5	6	12	3	0	0	0.25	0	Interp:3;Magneto:0;Model:2;Orig:4;Zone:3	Relative abundance:0;Count:0;Number per gram:0;Binned:12;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+PETM	1262	3	10	6.5	13	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:13;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:13;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1263	3	11	7	14	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:14;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:14;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1265	4	8	6	12	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:12;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:12;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1266	3	11	7	14	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:14;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:14;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1267	8	2	5	10	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:10;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:10;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1403	0	4	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1407	0	4	2	4	0	0	0	0	0	Interp:0;Magneto:2;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1408	2	1	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1508	0	1	0.5	1	0	0	0	0	0	Interp:1;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+PETM	1514	0	2	1	2	0	0	0	0	0	Interp:0;Magneto:2;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	47	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	77	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	213	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:2;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	215	2	2	6.7	4	0	0	0	0	0	Interp:4;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:2;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	216	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	259	4	0	6.7	4	0	0	0	0	0	Interp:4;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:4;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	277	0	2	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:2;Mixed:0	0	9	0	6	d18c+mg	FALSE	TRUE	FALSE	FALSE
+ETM2	305	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	401	3	31	56.7	34	0	34	0	0	1	Interp:0;Magneto:0;Model:34;Orig:0;Zone:0	Relative abundance:0;Count:34;Number per gram:0;Binned:0;P/A:0;Mixed:0	23	15	2	0	d18c	FALSE	TRUE	TRUE	FALSE
+ETM2	525	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	527	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	1	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+ETM2	528	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	548	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	549	0	1	1.7	1	0	0	0	0	0	Interp:1;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	550	1	0	1.7	1	0	0	0	0	0	Interp:1;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	6	8	0	0	d18c	FALSE	TRUE	TRUE	FALSE
+ETM2	690	4	0	6.7	4	0	0	0	0	0	Interp:2;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	2	1	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+ETM2	698	3	0	5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	699	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	700	0	2	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	702	2	0	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	748	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1050	1	1	3.3	2	0	0	0	0	0	Interp:1;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1051	2	0	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1067	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1069	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1210	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	26	0	13	d18c+mg	FALSE	TRUE	FALSE	FALSE
+ETM2	1211	2	1	5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:3;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1262	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1263	2	0	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1265	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	136	0	68	d18c+mg	FALSE	TRUE	FALSE	FALSE
+ETM2	1266	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1267	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1403	3	1	6.7	4	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1406	1	1	3.3	2	0	0	0	0	0	Interp:1;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1408	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1409	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	1	0	1	mg	FALSE	TRUE	FALSE	FALSE
+ETM2	1509	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM2	1514	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:1;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	213	2	3	8.3	5	0	0	0	0	0	Interp:0;Magneto:0;Model:5;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	216	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	277	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	5	6	5	6	mg	FALSE	TRUE	TRUE	TRUE
+ETM3	305	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	401	1	1	3.3	2	0	2	0	0	1	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:2;Number per gram:0;Binned:0;P/A:0;Mixed:0	4	3	0	0	d18c	FALSE	TRUE	TRUE	FALSE
+ETM3	525	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	9	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+ETM3	548	2	1	5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	549	1	2	5	3	0	0	0	0	0	Interp:3;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	550	0	1	1.7	1	0	0	0	0	0	Interp:1;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	690	7	4	18.3	11	0	0	0	0	0	Interp:2;Magneto:0;Model:0;Orig:9;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:11;P/A:0;Mixed:0	9	2	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+ETM3	698	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	700	0	2	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	702	2	4	10	6	0	0	0	0	0	Interp:0;Magneto:0;Model:6;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:6;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	738	5	6	18.3	11	0	9	0	0	0.818	Interp:0;Magneto:0;Model:0;Orig:11;Zone:0	Relative abundance:9;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	5	0	0	0	d18c	TRUE	TRUE	FALSE	FALSE
+ETM3	747	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1050	0	1	1.7	1	1	0	0	1	0	Interp:0;Magneto:0;Model:0;Orig:0;Zone:1	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+ETM3	1051	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1067	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1210	1	1	3.3	2	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1211	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1263	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	180	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+ETM3	1265	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1267	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1403	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1406	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1408	1	0	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+ETM3	1409	0	1	1.7	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	2	0	2	0	mg	FALSE	TRUE	FALSE	FALSE
+EOT	10	1	2	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	44	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	64	0	3	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:3;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:3;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	77	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	144	0	11	5.5	11	0	0	0	0	0	Interp:0;Magneto:0;Model:11;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:11;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	165	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	167	3	2	2.5	5	0	0	0	0	0	Interp:0;Magneto:0;Model:5;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:5;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	214	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	216	0	2	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	217	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	219	6	6	6	12	0	0	0	0	0	Interp:0;Magneto:0;Model:12;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:12;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+EOT	220	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	223	2	2	2	4	0	0	0	0	0	Interp:1;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	237	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	277	5	5	5	10	0	0	0	0	0	Interp:0;Magneto:0;Model:10;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:10;Mixed:0	4	22	0	0	tex+uk	TRUE	TRUE	TRUE	FALSE
+EOT	282	5	0	2.5	5	0	0	0	0	0	Interp:0;Magneto:0;Model:5;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:5;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	305	2	2	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:4;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	313	0	1	0.5	1	1	0	0	1	0	Interp:0;Magneto:0;Model:0;Orig:0;Zone:1	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:1;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+EOT	357	4	0	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	360	7	2	4.5	9	0	0	0	0	0	Interp:0;Magneto:0;Model:9;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:9;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	363	9	2	5.5	11	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:11;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:11;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	369	0	4	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:0;P/A:4;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	398	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	511	5	20	12.5	25	0	0	0	0	0	Interp:25;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:25;P/A:0;Mixed:0	24	42	0	0	tex+uk	TRUE	TRUE	TRUE	FALSE
+EOT	513	0	2	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	516	14	19	16.5	33	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:33;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:33;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+EOT	522	0	3	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:3;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	7	11	0	0	d18c	FALSE	TRUE	TRUE	FALSE
+EOT	523	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	529	5	3	4	8	0	0	0	0	0	Interp:0;Magneto:0;Model:8;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	5	0	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+EOT	548	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	549	11	1	6	12	8	0	0	0.667	0	Interp:4;Magneto:0;Model:0;Orig:0;Zone:8	Relative abundance:0;Count:0;Number per gram:0;Binned:12;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+EOT	573	0	3	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	574	0	8	4	8	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:5;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	592	1	4	2.5	5	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:5;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:5;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	593	1	9	5	10	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:10;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:10;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	628	4	2	3	6	3	0	0	0.5	0	Interp:3;Magneto:0;Model:0;Orig:0;Zone:3	Relative abundance:0;Count:0;Number per gram:0;Binned:6;P/A:0;Mixed:0	2	6	0	0	tex	FALSE	FALSE	FALSE	FALSE
+EOT	689	7	16	11.5	23	8	0	0	0.348	0	Interp:8;Magneto:0;Model:0;Orig:7;Zone:8	Relative abundance:0;Count:0;Number per gram:0;Binned:23;P/A:0;Mixed:0	83	99	37	43	d18c+mg	TRUE	TRUE	TRUE	TRUE
+EOT	690	1	12	6.5	13	7	0	0	0.538	0	Interp:5;Magneto:0;Model:1;Orig:0;Zone:7	Relative abundance:0;Count:0;Number per gram:0;Binned:13;P/A:0;Mixed:0	0	1	0	0	d18c	FALSE	FALSE	FALSE	FALSE
+EOT	699	0	6	3	6	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:6;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:6;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	703	3	7	5	10	0	0	0	0	0	Interp:0;Magneto:0;Model:10;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:10;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	707	0	3	1.5	3	2	0	0	0.667	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:2	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+EOT	738	12	28	20	40	20	0	0	0.5	0	Interp:0;Magneto:0;Model:4;Orig:16;Zone:20	Relative abundance:0;Count:0;Number per gram:0;Binned:40;P/A:0;Mixed:0	86	150	43	72	d18c+mg	TRUE	FALSE	TRUE	TRUE
+EOT	744	12	17	14.5	29	0	0	0	0	0	Interp:0;Magneto:0;Model:16;Orig:13;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:29;P/A:0;Mixed:0	86	139	47	68	d18c+mg	TRUE	TRUE	TRUE	TRUE
+EOT	747	5	3	4	8	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:8;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:8;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	748	4	5	4.5	9	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:9;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:9;P/A:0;Mixed:0	136	145	71	75	d18c+mg	FALSE	TRUE	TRUE	TRUE
+EOT	749	11	0	5.5	11	0	9	0	0	0.818	Interp:0;Magneto:0;Model:0;Orig:11;Zone:0	Relative abundance:0;Count:9;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	1	0	0	d18c	FALSE	TRUE	FALSE	FALSE
+EOT	786	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	803	6	5	5.5	11	3	0	0	0.273	0	Interp:7;Magneto:0;Model:1;Orig:0;Zone:3	Relative abundance:0;Count:0;Number per gram:0;Binned:11;P/A:0;Mixed:0	6	8	0	0	tex	TRUE	TRUE	TRUE	FALSE
+EOT	841	4	18	11	22	18	22	0	0.818	1	Interp:0;Magneto:0;Model:4;Orig:0;Zone:18	Relative abundance:11;Count:11;Number per gram:0;Binned:0;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+EOT	883	4	5	4.5	9	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:9;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:9;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	897	2	0	1	2	0	0	0	0	0	Interp:2;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	925	4	0	2	4	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:4;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:4;P/A:0;Mixed:0	5	18	0	0	tex+uk	FALSE	TRUE	TRUE	FALSE
+EOT	1090	10	13	11.5	23	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:19;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:23;P/A:0;Mixed:0	3	7	0	0	uk	TRUE	TRUE	TRUE	FALSE
+EOT	1126	1	0	0.5	1	0	0	0	0	0	Interp:1;Magneto:0;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1128	2	0	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1134	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1209	6	8	7	14	6	0	0	0.429	0	Interp:0;Magneto:0;Model:2;Orig:6;Zone:6	Relative abundance:0;Count:0;Number per gram:0;Binned:14;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+EOT	1210	10	4	7	14	0	0	0	0	0	Interp:0;Magneto:0;Model:4;Orig:10;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:14;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1211	6	12	9	18	2	0	0	0.111	0	Interp:0;Magneto:0;Model:2;Orig:14;Zone:2	Relative abundance:0;Count:0;Number per gram:0;Binned:18;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+EOT	1263	1	2	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:3;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1265	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1266	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:2;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1267	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1332	5	9	7	14	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:14;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:14;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+EOT	1333	2	7	4.5	9	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:9;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:6;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1334	2	4	3	6	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:6;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:6;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1406	13	5	9	18	0	0	0	0	0	Interp:0;Magneto:10;Model:0;Orig:8;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:18;P/A:0;Mixed:0	0	0	0	0		TRUE	TRUE	FALSE	FALSE
+EOT	1407	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:0;Orig:1;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1408	1	0	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1411	15	11	13	26	0	0	0	0	0	Interp:0;Magneto:13;Model:0;Orig:13;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:26;P/A:0;Mixed:0	0	6	0	0	tex	TRUE	TRUE	FALSE	FALSE
+EOT	1435	0	1	0.5	1	1	0	0	1	0	Interp:0;Magneto:0;Model:0;Orig:0;Zone:1	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	FALSE	FALSE	FALSE
+EOT	1438	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:1;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1501	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:0;Model:2;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1508	2	1	1.5	3	0	0	0	0	0	Interp:0;Magneto:0;Model:3;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:3;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1509	0	1	0.5	1	0	0	0	0	0	Interp:0;Magneto:0;Model:1;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:1;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1514	1	1	1	2	0	0	0	0	0	Interp:0;Magneto:2;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE
+EOT	1516	0	2	1	2	0	0	0	0	0	Interp:0;Magneto:2;Model:0;Orig:0;Zone:0	Relative abundance:0;Count:0;Number per gram:0;Binned:2;P/A:0;Mixed:0	0	0	0	0		FALSE	TRUE	FALSE	FALSE

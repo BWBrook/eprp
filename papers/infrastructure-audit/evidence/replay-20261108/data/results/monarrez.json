@@ -1,0 +1,23 @@
+{
+  "classes": {
+    "binary_but_wrong_after_padding": 1498,
+    "different_integer_value": 2967,
+    "fully_recoverable_by_width_padding": 3595,
+    "intact_leading_zero": 6288,
+    "leading_zero_lost_in_numeric": 6288,
+    "nonbinary_after_padding": 1469,
+    "numeric_xml": 6562,
+    "rows": 6562,
+    "same_integer_after_discarding_leading_zeros": 3595,
+    "scientific_notation_xml": 5291
+  },
+  "duplicate_genus_extra_rows_identical_history": 8,
+  "intact_history_length": 86,
+  "intact_rows": 6562,
+  "limitations": [
+    "R is used only to deserialize deposited binary; Python compares values. No raw histories or genus identifiers emitted.",
+    "Fixed known width repairs leading-zero loss for exact integers; it cannot repair altered internal digits. No CMR fit rerun."
+  ],
+  "route": "OOXML numeric cell strings decoded with arbitrary-precision Decimal and matched by genus to R-binary character histories.",
+  "unique_genus_keys": 6554
+}

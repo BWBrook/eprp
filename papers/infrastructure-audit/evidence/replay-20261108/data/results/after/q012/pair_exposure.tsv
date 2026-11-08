@@ -1,0 +1,492 @@
+type	lineage_a	lineage_b	shared_members	coexisting_bins	jaccard_joint_bins	jaccard	jaccard_class	E_joint_bins	E_mean_abs_diff_deg	E_class	E_abs_mean_diff_deg	E_systematic_class	used_joint_bins	used_abs_mean_diff_deg	used_systematic_class	used_mean_abs_diff_deg	used_perbin_class
+parent_daughter_overlap	N126-T127	L_`Dentoglobigerina` eotripartita	1	6	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Zeauvigerina	L_`Zeauvigerina`	0	9	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1013-T1014	L_Antarcticella	0	36	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Berggrenia pumilio	L_Berggrenia praepumilio	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N315-T_316	L_Berggrenia pumilio	0	13	2	0.1	insufficient	2	37.97	insufficient	37.97	insufficient	1	37.1	insufficient	37.1	insufficient
+parent_daughter_overlap	T321	L_Ciperoella anguliofficinalis	0	8	4	0.043	different	4	22.59	E_different	22.59	E_systematic_different	5	12.48	used_systematic_different	16.48	used_perbin_different
+parent_daughter_overlap	N1009-T1010	L_Dentigloborotalia	0	12	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	L_first Globigerinoides	1	2	2	0.13	insufficient	2	19.25	insufficient	19.25	insufficient	1	16.64	insufficient	16.64	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella clavaticamerata	0	15	7	0.25	different	7	9.96	E_different	9.96	E_systematic_different	8	11.29	used_systematic_different	11.29	used_perbin_different
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella radians	0	8	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella roeglina	0	14	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	L_Globigerinella wagneri	0	8	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1015-N1027-N1029-N1031-N1033-T1035	L_Globigerinita glutinata	1	28	0	NA	insufficient	28	0.86	E_similar	0.71	E_systematic_similar	27	0.73	used_systematic_similar	0.89	used_perbin_similar
+parent_daughter_overlap	L_Globigerinita glutinata	L_Globigerinita minuta	0	28	1	0.2	insufficient	1	7.01	insufficient	7.01	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Globigerinita minuta	L_Globigerinita uvula	0	23	1	0.214	insufficient	1	1.26	insufficient	1.26	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	T331	L_Globigerinoides elongatus	1	3	2	0.632	insufficient	3	2.43	E_similar	0.37	E_systematic_similar	2	0.27	insufficient	2.81	insufficient
+parent_daughter_overlap	L_first Globigerinoides	L_Globigerinoides joli	0	2	1	0.2	insufficient	1	5.51	insufficient	5.51	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	T328	L_Globigerinoides rublobatus	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1001-T1003	L_Globoconusa	0	4	2	0.625	insufficient	2	20.92	insufficient	20.92	insufficient	3	21.25	used_systematic_different	21.25	used_perbin_different
+parent_daughter_overlap	N319-T320	L_Globoturborotalita barbula	0	5	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N314-N318	L_Globoturborotalita occlusa	0	5	1	0.333	insufficient	1	30.79	insufficient	30.79	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Globoturborotalita occlusa	L_Globoturborotalita pseudopraebulloides	0	24	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	L_Hastigerina	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Hastigerina	L_Hastigerinella	0	7	5	0.185	different	5	24.03	E_different	24.03	E_systematic_different	4	29.53	used_systematic_different	29.53	used_perbin_different
+parent_daughter_overlap	T29	L_Neoacarinina	1	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N23-N156-N157-N160-T161	L_Neogloboquadrina incompta	2	9	0	NA	insufficient	9	9.36	E_different	9.36	E_systematic_different	8	9.89	used_systematic_different	9.89	used_perbin_different
+parent_daughter_overlap	N315-T_316	L_Orcadia	0	5	2	0.2	insufficient	2	15.39	insufficient	14.8	insufficient	1	0.59	insufficient	0.59	insufficient
+parent_daughter_overlap	L_Paragloborotalia incognita	L_Paragloborotalia acrostoma	1	8	0	NA	insufficient	8	10.86	E_different	8.32	E_systematic_different	7	8.95	used_systematic_different	11.85	used_perbin_different
+parent_daughter_overlap	N193-N195-T197	L_Paragloborotalia birnageae	1	11	0	NA	insufficient	10	5.86	E_different	2.44	E_systematic_similar	9	1.7	used_systematic_similar	5.51	used_perbin_different
+parent_daughter_overlap	N193-N195-T197	L_Paragloborotalia incognita	0	15	15	0.571	similar	15	8.67	E_different	3.48	E_systematic_similar	14	1.8	used_systematic_similar	7.36	used_perbin_different
+parent_daughter_overlap	L_Paragloborotalia incognita	L_Paragloborotalia semivera	1	13	0	NA	insufficient	13	4.63	E_similar	4.63	E_systematic_similar	12	4.36	used_systematic_similar	4.36	used_perbin_similar
+parent_daughter_overlap	N1001-T1003	L_Parvularugoglobigerina	0	6	1	0.714	insufficient	1	0.58	insufficient	0.58	insufficient	3	6.5	used_systematic_different	12.19	used_perbin_different
+parent_daughter_overlap	N103-N109-N115-N117-T118	L_Pearsonites	0	9	9	0.74	similar	9	3.59	E_similar	2.8	E_systematic_similar	8	3.59	used_systematic_similar	3.59	used_perbin_similar
+parent_daughter_overlap	L_Globigerinella roeglina	L_Quiltyella clavacella	0	13	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	T373	L_Soldaniella	0	9	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1015-N1027-N1029-N1031-N1033-T1035	L_Tenuitella brasilensis	1	16	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	T287	L_Trilobatus altospiralis	0	5	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1001-T1003	L_Woodringina	0	6	2	0.692	insufficient	2	3.8	insufficient	3.8	insufficient	3	1.51	used_systematic_similar	3.56	used_perbin_similar
+parent_daughter_overlap	L_Woodringina	N1005	0	6	5	0.447	different	5	5.38	E_different	5.38	E_systematic_different	5	5.38	used_systematic_different	5.38	used_perbin_different
+parent_daughter_boundary	N1005	N1007	1	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N1007	N1009-T1010	1	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1013-T1014	N1015-N1027-N1029-N1031-N1033-T1035	1	11	2	0.133	insufficient	2	13.71	insufficient	13.71	insufficient	4	16.99	used_systematic_different	16.99	used_perbin_different
+parent_daughter_overlap	N99-N125	N102-T100	0	4	4	0.71	similar	4	6.9	E_different	6.9	E_systematic_different	3	7.47	used_systematic_different	7.47	used_perbin_different
+parent_daughter_overlap	N102-T100	N103-N109-N115-N117-T118	1	4	3	0.458	different	4	2.91	E_similar	2	E_systematic_similar	3	3.27	used_systematic_similar	3.27	used_perbin_similar
+parent_daughter_overlap	N103-N109-N115-N117-T118	N104-T105	1	7	0	NA	insufficient	7	5.03	E_different	3.17	E_systematic_similar	6	1.71	used_systematic_similar	3.88	used_perbin_similar
+parent_daughter_overlap	N104-T105	N106-T107	0	1	1	0	insufficient	1	15.08	insufficient	15.08	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N103-N109-N115-N117-T118	N110-N112-T113	1	5	5	0.769	similar	5	4.82	E_similar	4.82	E_systematic_similar	4	4.16	used_systematic_similar	4.16	used_perbin_similar
+parent_daughter_overlap	N103-N109-N115-N117-T118	N119-T120	1	3	3	0.25	different	3	6.08	E_different	6.08	E_systematic_different	2	7.05	insufficient	7.05	insufficient
+parent_daughter_boundary	N99-N125	N126-T127	1	1	0	NA	insufficient	1	11.09	insufficient	11.09	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N99-N125	N128-T129	0	1	1	0.429	insufficient	1	2.22	insufficient	2.22	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N128-T129	N130-N131-N136-N142-N144-T148	1	6	5	0.417	different	6	5.11	E_different	0.32	E_systematic_similar	5	2.45	used_systematic_similar	3.29	used_perbin_similar
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	N133-T135	3	8	0	NA	insufficient	8	2.4	E_similar	1.71	E_systematic_similar	7	1.42	used_systematic_similar	2.21	used_perbin_similar
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	N137-N139-T143	3	6	0	NA	insufficient	6	6.61	E_different	1.46	E_systematic_similar	5	3.09	used_systematic_similar	3.09	used_perbin_similar
+parent_daughter_overlap	N5-N6-N8-T9	N13-T14	0	13	13	0.272	different	13	15.21	E_different	15.21	E_systematic_different	12	16.15	used_systematic_different	16.15	used_perbin_different
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	N145-T146	2	2	0	NA	insufficient	2	2.14	insufficient	2.14	insufficient	1	1.33	insufficient	1.33	insufficient
+parent_daughter_overlap	N77-T266	N149-N163	1	8	8	0.457	different	8	5.24	E_different	3.81	E_systematic_similar	7	5.12	used_systematic_different	5.22	used_perbin_different
+parent_daughter_overlap	N193-N195-T197	N150-N151-T153	0	5	5	0.61	similar	5	4.84	E_similar	4.84	E_systematic_similar	4	5.01	used_systematic_different	5.01	used_perbin_different
+parent_daughter_overlap	N150-N151-T153	N152-T154	0	1	1	0.222	insufficient	1	25.54	insufficient	25.54	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N13-T14	N15-N17	0	6	6	0.074	different	6	22.35	E_different	22.35	E_systematic_different	5	23.52	used_systematic_different	23.52	used_perbin_different
+parent_daughter_boundary	N149-N163	N165	2	1	0	NA	insufficient	1	11.07	insufficient	11.07	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N165	N166-T167	0	1	1	0.444	insufficient	1	5.27	insufficient	5.27	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N166-T167	N168	1	9	2	0.364	insufficient	9	1.72	E_similar	1.33	E_systematic_similar	8	1.43	used_systematic_similar	1.86	used_perbin_similar
+parent_daughter_boundary	N165	N171	3	1	0	NA	insufficient	1	1.62	insufficient	1.62	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N171	N172-T174	2	1	0	NA	insufficient	1	3.95	insufficient	3.95	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N171	N175	2	1	0	NA	insufficient	1	0.77	insufficient	0.77	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N175	N177-T176	2	1	0	NA	insufficient	1	1.79	insufficient	1.79	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N175	N179-T180	0	1	1	0.167	insufficient	1	3.25	insufficient	3.25	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	N182-T183	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N182-T183	N184-N186-N187-N188-T189	1	4	2	0.133	insufficient	4	3.46	E_similar	3.21	E_systematic_similar	3	2	used_systematic_similar	2.32	used_perbin_similar
+parent_daughter_boundary	N15-N17	N18-T19	3	1	0	NA	insufficient	1	2.34	insufficient	2.34	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N310-T313	N190-N199-T200	0	29	26	0.689	similar	26	7.94	E_different	7	E_systematic_different	25	6.77	used_systematic_different	7.75	used_perbin_different
+parent_daughter_overlap	N184-N186-N187-N188-T189	N191-T192	1	23	9	0.209	different	10	13.82	E_different	7.19	E_systematic_different	11	5.11	used_systematic_different	13.98	used_perbin_different
+parent_daughter_overlap	N191-T192	N193-N195-T197	1	14	0	NA	insufficient	9	0.55	E_similar	0.46	E_systematic_similar	8	0.57	used_systematic_similar	0.57	used_perbin_similar
+parent_daughter_overlap	N190-N199-T200	N201-N998-N295-N203-T204	1	30	15	0.421	different	16	10.84	E_different	7.83	E_systematic_different	16	6.02	used_systematic_different	12	used_perbin_different
+parent_daughter_overlap	N190-N199-T200	N206-N210-N212-T213	1	40	24	0.78	similar	39	3.57	E_similar	3.42	E_systematic_similar	38	3.46	used_systematic_similar	3.61	used_perbin_similar
+parent_daughter_overlap	N206-N210-N212-T213	N207-T208	1	11	5	0.245	different	10	9.24	E_different	9.24	E_systematic_different	9	10.1	used_systematic_different	10.1	used_perbin_different
+parent_daughter_overlap	N184-N186-N187-N188-T189	N215-N217-N231-N235-T236	0	11	11	0.38	different	11	14.11	E_different	11.92	E_systematic_different	10	12.01	used_systematic_different	14.42	used_perbin_different
+parent_daughter_overlap	N215-N217-N231-N235-T236	N218-T219	0	5	2	0.143	insufficient	2	13.78	insufficient	10.14	insufficient	3	10.72	used_systematic_different	13.14	used_perbin_different
+parent_daughter_boundary	N15-N17	N21-T24	2	1	0	NA	insufficient	1	4.92	insufficient	4.92	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N218-T219	N220-N221-T362	0	5	1	0	insufficient	1	34.54	insufficient	34.54	insufficient	4	22.96	used_systematic_different	22.96	used_perbin_different
+parent_daughter_overlap	N220-N221-T362	N223-N225-N227-T228	0	11	7	0.18	different	7	18.06	E_different	14.38	E_systematic_different	8	9.51	used_systematic_different	14.56	used_perbin_different
+parent_daughter_overlap	N215-N217-N231-N235-T236	N232-T233	2	3	0	NA	insufficient	2	7.88	insufficient	3.92	insufficient	1	3.96	insufficient	3.96	insufficient
+parent_daughter_overlap	N215-N217-N231-N235-T236	N237-T238	0	8	6	0.571	similar	6	7.06	E_different	0.63	E_systematic_similar	5	0.88	used_systematic_similar	8.34	used_perbin_different
+parent_daughter_overlap	N237-T238	N239-N240-N244-N246-T247	5	3	2	0.409	insufficient	3	3.53	E_similar	3.53	E_systematic_similar	2	2.75	insufficient	2.75	insufficient
+parent_daughter_overlap	N193-N195-T197	N23-N156-N157-N160-T161	0	7	7	0.588	similar	7	3.2	E_similar	0.09	E_systematic_similar	6	0.12	used_systematic_similar	3.72	used_perbin_similar
+parent_daughter_overlap	N239-N240-N244-N246-T247	N241-T242	1	8	0	NA	insufficient	8	2.79	E_similar	2.68	E_systematic_similar	7	1.93	used_systematic_similar	2.06	used_perbin_similar
+parent_daughter_overlap	N239-N240-N244-N246-T247	N248-T249	1	8	0	NA	insufficient	8	5.04	E_different	4.83	E_systematic_similar	7	5.64	used_systematic_different	5.64	used_perbin_different
+parent_daughter_overlap	N23-N156-N157-N160-T161	N25	0	3	3	0.588	similar	3	18.07	E_different	18.07	E_systematic_different	2	19.31	insufficient	19.31	insufficient
+parent_daughter_overlap	N239-N240-N244-N246-T247	N251-T252	2	7	0	NA	insufficient	7	5.36	E_different	5.36	E_systematic_different	6	5.2	used_systematic_different	5.2	used_perbin_different
+parent_daughter_overlap	N251-T252	N253-T254	1	5	4	0.364	different	5	9.74	E_different	9.29	E_systematic_different	4	4.27	used_systematic_similar	4.84	used_perbin_similar
+parent_daughter_overlap	N1-N3	N256-N2-N198-T67	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	N257	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N257	N259-N261-N262-T263	1	1	1	0.75	insufficient	1	5.67	insufficient	5.67	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N259-N261-N262-T263	N264-N265-N276-N278-N281-N283-T284	0	2	1	0.25	insufficient	1	15.21	insufficient	15.21	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N267	1	5	5	0.325	different	5	2.57	E_similar	2.57	E_systematic_similar	4	2.68	used_systematic_similar	2.68	used_perbin_similar
+parent_daughter_boundary	N267	N269	1	1	0	NA	insufficient	1	6.83	insufficient	6.83	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N25	N26-N32	1	1	0	NA	insufficient	1	5.48	insufficient	5.48	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N25	N27	0	1	1	0.545	insufficient	1	4.99	insufficient	4.99	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N269	N271-T272	1	1	0	NA	insufficient	1	0.4	insufficient	0.4	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Ciperoella anguliofficinalis	N279-T280	0	9	8	0.813	similar	8	1.48	E_similar	0.24	E_systematic_similar	8	0.24	used_systematic_similar	1.48	used_perbin_similar
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N285-N286-T288	1	9	7	0.179	different	7	23.18	E_different	19.9	E_systematic_different	7	19.9	used_systematic_different	23.18	used_perbin_different
+parent_daughter_overlap	N285-N286-T288	N291-T372	1	24	0	NA	insufficient	18	14.7	E_different	4.54	E_systematic_similar	21	6.26	used_systematic_different	15.42	used_perbin_different
+parent_daughter_overlap	N366-N298-N300-T304	N292-T299	1	11	5	0.767	similar	11	8.69	E_different	8.09	E_systematic_different	10	9.06	used_systematic_different	9.4	used_perbin_different
+parent_daughter_boundary	N26-N32	N30	1	1	0	NA	insufficient	1	0.53	insufficient	0.53	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	N301-T303	1	4	0	NA	insufficient	4	5.6	E_different	5.6	E_systematic_different	3	7.17	used_systematic_different	7.17	used_perbin_different
+parent_daughter_overlap	N259-N261-N262-T263	N305	0	3	3	0.391	different	3	13.99	E_different	13.99	E_systematic_different	2	15.35	insufficient	15.35	insufficient
+parent_daughter_boundary	N305	N306-T307	1	1	0	NA	insufficient	1	1.36	insufficient	1.36	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N306-T307	N308-T309	1	1	0	NA	insufficient	1	1.77	insufficient	1.77	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N305	N310-T313	1	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N308-T309	N314-N318	1	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N256-N2-N198-T67	N315-T_316	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N314-N318	N319-T320	1	10	0	NA	insufficient	9	0.54	E_similar	0.54	E_systematic_similar	8	0.37	used_systematic_similar	0.37	used_perbin_similar
+parent_daughter_overlap	N314-N318	N322	0	11	8	0.406	different	8	4.43	E_similar	1.52	E_systematic_similar	8	0.62	used_systematic_similar	6.57	used_perbin_different
+parent_daughter_overlap	N325-T361	N324-N336-N342-N344-N348-N352-N354-T356	0	13	12	0.422	different	12	11.23	E_different	1.17	E_systematic_similar	11	2.02	used_systematic_similar	11.5	used_perbin_different
+parent_daughter_overlap	L_Globoturborotalita occlusa	N325-T361	0	13	13	0.339	different	13	12.76	E_different	6.75	E_systematic_different	12	6.01	used_systematic_different	12.52	used_perbin_different
+parent_daughter_boundary	L_first Globigerinoides	N326-N332-N334-T360	1	1	1	1	insufficient	1	4.35	insufficient	4.35	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Globigerinoides joli	N327-N329-T330	2	5	0	NA	insufficient	5	0.95	E_similar	0.95	E_systematic_similar	4	0.82	used_systematic_similar	0.82	used_perbin_similar
+parent_daughter_overlap	T287	N337-N339-T341	4	5	2	0.133	insufficient	5	1.57	E_similar	1.29	E_systematic_similar	4	1.22	used_systematic_similar	1.57	used_perbin_similar
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	N345-T347	1	17	16	0.768	similar	17	8.4	E_different	8.4	E_systematic_different	16	8.57	used_systematic_different	8.57	used_perbin_different
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	N349-T350	1	10	3	0.714	similar	10	2.07	E_similar	0.53	E_systematic_similar	9	0.11	used_systematic_similar	1.81	used_perbin_similar
+parent_daughter_boundary	N30	N34-N40-T44	0	1	1	0.375	insufficient	1	5.57	insufficient	5.57	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N223-N225-N227-T228	N358-T229	2	5	0	NA	insufficient	5	0.82	E_similar	0.82	E_systematic_similar	4	1.02	used_systematic_similar	1.02	used_perbin_similar
+parent_daughter_overlap	N34-N40-T44	N35-N37-T39	1	9	6	0.676	similar	9	2.51	E_similar	0.74	E_systematic_similar	8	0.65	used_systematic_similar	2.64	used_perbin_similar
+parent_daughter_overlap	N23-N156-N157-N160-T161	N364	0	2	2	0.464	insufficient	2	13.48	insufficient	13.48	insufficient	1	12.12	insufficient	12.12	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N366-N298-N300-T304	0	14	13	0.325	different	13	7.41	E_different	2.12	E_systematic_similar	13	2.12	used_systematic_similar	7.41	used_perbin_different
+parent_daughter_overlap	N34-N40-T44	N42-T41	1	8	6	0.765	similar	8	4.72	E_similar	4.72	E_systematic_similar	7	4.16	used_systematic_similar	4.16	used_perbin_similar
+parent_daughter_overlap	N42-T41	N45-T43	0	3	3	0.806	similar	3	1.51	E_similar	1.51	E_systematic_similar	2	0.32	insufficient	0.32	insufficient
+parent_daughter_boundary	N26-N32	N47	3	1	0	NA	insufficient	1	6.84	insufficient	6.84	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N47	N48-T50	1	1	0	NA	insufficient	1	12.62	insufficient	12.62	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N1-N3	N4-T12	1	1	1	0.4	insufficient	1	6.88	insufficient	6.88	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N47	N51-N122-T123	1	1	0	NA	insufficient	1	0.37	insufficient	0.37	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N47	N52-N54-T53	0	2	2	0.423	insufficient	2	2	insufficient	0.66	insufficient	1	1.34	insufficient	1.34	insufficient
+parent_daughter_overlap	N52-N54-T53	N56-N58-N59-T61	0	2	2	0.75	insufficient	2	11.05	insufficient	11.05	insufficient	1	13.77	insufficient	13.77	insufficient
+parent_daughter_boundary	N1-N3	N5-N6-N8-T9	0	1	1	0.143	insufficient	1	9.7	insufficient	9.7	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N56-N58-N59-T61	N62-T63	0	4	4	0.863	similar	4	4.75	E_similar	4.13	E_systematic_similar	3	5.92	used_systematic_different	5.92	used_perbin_different
+parent_daughter_overlap	N62-T63	N64-T66	3	2	1	0.727	insufficient	2	2.96	insufficient	2.96	insufficient	1	1.02	insufficient	1.02	insufficient
+parent_daughter_boundary	N256-N2-N198-T67	N68-N69-N70-T71	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N68-N69-N70-T71	N72	0	1	1	0.444	insufficient	1	12.13	insufficient	12.13	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N68-N69-N70-T71	N76-N101	0	1	1	0.7	insufficient	1	11.34	insufficient	11.34	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	N77-T266	2	25	21	0.457	different	25	5.9	E_different	4.88	E_systematic_similar	24	5.15	used_systematic_different	6.08	used_perbin_different
+parent_daughter_overlap	N80-N368-N370-T78	N79	3	2	0	NA	insufficient	2	2.25	insufficient	2.25	insufficient	1	3.48	insufficient	3.48	insufficient
+parent_daughter_boundary	N76-N101	N80-N368-N370-T78	1	1	1	0.5	insufficient	1	4.33	insufficient	4.33	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N76-N101	N83-N84-T85	1	1	0	NA	insufficient	1	5.29	insufficient	5.29	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N83-N84-T85	N86-T87	1	3	0	NA	insufficient	3	12.44	E_different	12.44	E_systematic_different	2	14.62	insufficient	14.62	insufficient
+parent_daughter_overlap	N83-N84-T85	N88-N89-N90-T93	0	4	4	0.829	similar	4	5.01	E_different	2.44	E_systematic_similar	3	3.98	used_systematic_similar	5.96	used_perbin_different
+parent_daughter_overlap	N88-N89-N90-T93	N94-T95	0	4	4	0.677	similar	4	2.09	E_similar	1.54	E_systematic_similar	3	1.96	used_systematic_similar	2.7	used_perbin_similar
+parent_daughter_overlap	N94-T95	N98-T96	1	10	7	0.531	similar	10	5.98	E_different	5.98	E_systematic_different	9	5.26	used_systematic_different	5.26	used_perbin_different
+parent_daughter_overlap	N76-N101	N99-N125	0	1	1	0.6	insufficient	1	17.37	insufficient	17.37	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N5-N6-N8-T9	T10	0	5	5	0.392	different	5	8.62	E_different	4.92	E_systematic_similar	4	8.47	used_systematic_different	8.47	used_perbin_different
+parent_daughter_overlap	N1001-T1003	T1002	1	7	0	NA	insufficient	7	2.58	E_similar	1.78	E_systematic_similar	6	0.35	used_systematic_similar	1.29	used_perbin_similar
+parent_daughter_boundary	N1005	T1006	1	1	0	NA	insufficient	1	1.71	insufficient	1.71	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N1007	T1008	1	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1009-T1010	T1011	1	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N1015-N1027-N1029-N1031-N1033-T1035	T1019	1	12	11	0.363	different	11	10.45	E_different	10.3	E_systematic_different	11	10.3	used_systematic_different	10.45	used_perbin_different
+parent_daughter_overlap	L_Globigerinita glutinata	T1021	1	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1025	1	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1028	1	5	4	0.4	different	4	16.71	E_different	16.71	E_systematic_different	3	18.13	used_systematic_different	18.13	used_perbin_different
+parent_daughter_overlap	L_Globigerinita glutinata	T1030	1	6	0	NA	insufficient	3	22.58	E_different	22.58	E_systematic_different	3	22.58	used_systematic_different	22.58	used_perbin_different
+parent_daughter_overlap	L_Globigerinita glutinata	T1032	1	12	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Globigerinita glutinata	T1034	0	11	9	0.542	similar	9	12.86	E_different	12.86	E_systematic_different	8	12.27	used_systematic_different	12.27	used_perbin_different
+parent_daughter_overlap	N106-T107	T108	0	1	1	1	insufficient	1	0	insufficient	0	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N4-T12	T11	1	4	0	NA	insufficient	4	3.04	E_similar	2.55	E_systematic_similar	3	1.79	used_systematic_similar	2.44	used_perbin_similar
+parent_daughter_overlap	N110-N112-T113	T111	1	2	0	NA	insufficient	2	12.86	insufficient	12.86	insufficient	1	7.24	insufficient	7.24	insufficient
+parent_daughter_overlap	N110-N112-T113	T114	1	14	0	NA	insufficient	6	4.29	E_similar	1.01	E_systematic_similar	7	3.28	used_systematic_similar	6.08	used_perbin_different
+parent_daughter_overlap	N103-N109-N115-N117-T118	T116	2	4	0	NA	insufficient	4	2.19	E_similar	1.94	E_systematic_similar	3	2.65	used_systematic_similar	2.86	used_perbin_similar
+parent_daughter_overlap	N119-T120	T121	0	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	1	8.01	insufficient	8.01	insufficient
+parent_daughter_overlap	N51-N122-T123	T124	0	2	2	0.345	insufficient	2	5.93	insufficient	5.93	insufficient	1	1.67	insufficient	1.67	insufficient
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	T132	1	4	0	NA	insufficient	4	4.6	E_similar	3.05	E_systematic_similar	3	1.45	used_systematic_similar	3.51	used_perbin_similar
+parent_daughter_overlap	N133-T135	T134	1	5	0	NA	insufficient	4	27.28	E_different	27.28	E_systematic_different	3	27.98	used_systematic_different	27.98	used_perbin_different
+parent_daughter_overlap	N137-N139-T143	T138	0	4	4	0.526	similar	4	2.36	E_similar	1.99	E_systematic_similar	3	0.13	used_systematic_similar	0.62	used_perbin_similar
+parent_daughter_overlap	N130-N131-N136-N142-N144-T148	T140	1	6	0	NA	insufficient	2	26.79	insufficient	26.79	insufficient	2	21.03	insufficient	21.03	insufficient
+parent_daughter_overlap	N137-N139-T143	T141	1	3	0	NA	insufficient	3	6.84	E_different	0.95	E_systematic_similar	2	5.84	insufficient	5.84	insufficient
+parent_daughter_overlap	N145-T146	T147	1	1	0	NA	insufficient	1	10.22	insufficient	10.22	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N152-T154	T155	0	3	3	0.786	similar	3	11.63	E_different	11.63	E_systematic_different	2	11.96	insufficient	11.96	insufficient
+parent_daughter_overlap	N23-N156-N157-N160-T161	T158	2	8	7	0.612	similar	8	5.2	E_different	3.14	E_systematic_similar	7	1.74	used_systematic_similar	4.09	used_perbin_similar
+parent_daughter_overlap	L_Neogloboquadrina incompta	T159	1	10	0	NA	insufficient	10	2.05	E_similar	1.81	E_systematic_similar	9	1.66	used_systematic_similar	1.94	used_perbin_similar
+parent_daughter_overlap	N15-N17	T16	1	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N364	T162	1	1	0	NA	insufficient	1	2.3	insufficient	2.3	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N149-N163	T164	1	1	0	NA	insufficient	1	1.15	insufficient	1.15	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N168	T169	1	1	0	NA	insufficient	1	0.55	insufficient	0.55	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N168	T170	1	1	0	NA	insufficient	1	0	insufficient	0	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_`Dentoglobigerina` eotripartita	T173	0	7	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N179-T180	T178	0	23	23	0.573	similar	23	7.73	E_different	3.51	E_systematic_similar	22	3.18	used_systematic_similar	7.59	used_perbin_different
+parent_daughter_overlap	N179-T180	T181	1	14	0	NA	insufficient	14	0.76	E_similar	0.23	E_systematic_similar	13	0.28	used_systematic_similar	0.79	used_perbin_similar
+parent_daughter_overlap	N184-N186-N187-N188-T189	T185	1	2	0	NA	insufficient	1	0.83	insufficient	0.83	insufficient	1	0.83	insufficient	0.83	insufficient
+parent_daughter_overlap	N193-N195-T197	T194	1	12	8	0.48	different	12	2.97	E_similar	2.4	E_systematic_similar	11	2.27	used_systematic_similar	2.89	used_perbin_similar
+parent_daughter_overlap	N193-N195-T197	T196	1	4	0	NA	insufficient	4	1.86	E_similar	1.75	E_systematic_similar	3	2.41	used_systematic_similar	2.41	used_perbin_similar
+parent_daughter_overlap	N18-T19	T20	1	1	1	0.2	insufficient	1	13.94	insufficient	13.94	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N201-N998-N295-N203-T204	T202	0	7	7	0.158	different	7	29.95	E_different	29.95	E_systematic_different	6	29.04	used_systematic_different	29.04	used_perbin_different
+parent_daughter_overlap	N207-T208	T209	1	4	0	NA	insufficient	4	7.07	E_different	2.45	E_systematic_similar	3	2.38	used_systematic_similar	3.78	used_perbin_similar
+parent_daughter_overlap	N206-N210-N212-T213	T211	1	6	0	NA	insufficient	5	9.41	E_different	6.49	E_systematic_different	5	6.49	used_systematic_different	9.41	used_perbin_different
+parent_daughter_overlap	N201-N998-N295-N203-T204	T214	1	11	0	NA	insufficient	11	5.98	E_different	0.01	E_systematic_similar	10	0.93	used_systematic_similar	5.63	used_perbin_different
+parent_daughter_overlap	N215-N217-N231-N235-T236	T216	1	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N21-T24	T22	1	3	0	NA	insufficient	3	2.41	E_similar	2.41	E_systematic_similar	2	2.8	insufficient	2.8	insufficient
+parent_daughter_overlap	N220-N221-T362	T222	3	6	0	NA	insufficient	2	13.95	insufficient	13.95	insufficient	3	10.12	used_systematic_different	10.12	used_perbin_different
+parent_daughter_overlap	N223-N225-N227-T228	T224	1	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N223-N225-N227-T228	T226	1	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N358-T229	T230	1	4	4	0.5	similar	4	5.7	E_different	2.53	E_systematic_similar	3	0.44	used_systematic_similar	3.79	used_perbin_similar
+parent_daughter_overlap	N232-T233	T234	1	4	0	NA	insufficient	2	2.55	insufficient	2.55	insufficient	2	2.55	insufficient	2.55	insufficient
+parent_daughter_overlap	N241-T242	T243	0	2	2	0.562	insufficient	2	3.1	insufficient	0.07	insufficient	1	3.17	insufficient	3.17	insufficient
+parent_daughter_overlap	N239-N240-N244-N246-T247	T245	1	8	0	NA	insufficient	8	7.3	E_different	7.3	E_systematic_different	7	6.04	used_systematic_different	6.04	used_perbin_different
+parent_daughter_overlap	N248-T249	T250	0	6	6	0.582	similar	6	13.11	E_different	13.11	E_systematic_different	5	13.59	used_systematic_different	13.59	used_perbin_different
+parent_daughter_overlap	N253-T254	T255	0	2	2	0.083	insufficient	2	21.9	insufficient	21.9	insufficient	1	18.13	insufficient	18.13	insufficient
+parent_daughter_boundary	N257	T258	2	1	0	NA	insufficient	1	1.2	insufficient	1.2	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N259-N261-N262-T263	T260	1	8	0	NA	insufficient	8	3.68	E_similar	0.75	E_systematic_similar	7	2.53	used_systematic_similar	2.53	used_perbin_similar
+parent_daughter_boundary	N267	T268	1	1	0	NA	insufficient	1	1.8	insufficient	1.8	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N269	T270	1	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N271-T272	T275	1	9	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N264-N265-N276-N278-N281-N283-T284	T277	1	11	0	NA	insufficient	11	3.02	E_similar	2.95	E_systematic_similar	10	2.78	used_systematic_similar	2.87	used_perbin_similar
+parent_daughter_boundary	N27	T28	2	1	0	NA	insufficient	1	1.37	insufficient	1.37	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	L_Ciperoella anguliofficinalis	T282	1	8	0	NA	insufficient	8	2.94	E_similar	0.74	E_systematic_similar	7	0.8	used_systematic_similar	3.32	used_perbin_similar
+parent_daughter_overlap	L_Globoturborotalita occlusa	T287	4	6	0	NA	insufficient	6	0.28	E_similar	0.11	E_systematic_similar	5	0.08	used_systematic_similar	0.28	used_perbin_similar
+parent_daughter_boundary	N27	T29	1	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N285-N286-T288	T294	1	1	0	NA	insufficient	1	35.73	insufficient	35.73	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N201-N998-N295-N203-T204	T297	0	2	2	0.364	insufficient	2	8.94	insufficient	8.94	insufficient	1	7.13	insufficient	7.13	insufficient
+parent_daughter_overlap	N301-T303	T302	0	1	1	0.429	insufficient	1	7.8	insufficient	7.8	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N30	T31	2	1	0	NA	insufficient	1	10.1	insufficient	10.1	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N315-T_316	T317	1	5	3	0.15	different	5	21.82	E_different	21.82	E_systematic_different	4	23	used_systematic_different	23	used_perbin_different
+parent_daughter_overlap	N319-T320	T321	1	8	0	NA	insufficient	5	16.82	E_different	7.09	E_systematic_different	6	1.46	used_systematic_similar	13.17	used_perbin_different
+parent_daughter_overlap	N314-N318	T323	0	16	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N327-N329-T330	T328	1	6	6	0.881	similar	6	1.13	E_similar	0.58	E_systematic_similar	5	1.03	used_systematic_similar	1.03	used_perbin_similar
+parent_daughter_overlap	N47	T33	0	3	1	0.077	insufficient	1	21.51	insufficient	21.51	insufficient	1	21.51	insufficient	21.51	insufficient
+parent_daughter_overlap	N327-N329-T330	T331	2	3	0	NA	insufficient	3	2.22	E_similar	2.22	E_systematic_similar	2	1.97	insufficient	1.97	insufficient
+parent_daughter_overlap	N326-N332-N334-T360	T333	1	6	0	NA	insufficient	6	6.13	E_different	6.13	E_systematic_different	5	6.49	used_systematic_different	6.49	used_perbin_different
+parent_daughter_overlap	N326-N332-N334-T360	T335	0	5	5	0.608	similar	5	6.04	E_different	6.04	E_systematic_different	4	6.72	used_systematic_different	6.72	used_perbin_different
+parent_daughter_overlap	N337-N339-T341	T338	1	17	17	0.869	similar	17	4.31	E_similar	2.55	E_systematic_similar	16	2.24	used_systematic_similar	4.11	used_perbin_similar
+parent_daughter_overlap	N337-N339-T341	T340	1	3	0	NA	insufficient	3	7.04	E_different	7.04	E_systematic_different	2	7.64	insufficient	7.64	insufficient
+parent_daughter_boundary	L_first Globigerinoides	T343	2	1	0	NA	insufficient	1	0.3	insufficient	0.3	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N345-T347	T346	1	8	0	NA	insufficient	8	2.36	E_similar	2.18	E_systematic_similar	7	2.04	used_systematic_similar	2.24	used_perbin_similar
+parent_daughter_overlap	L_Globigerinoides elongatus	T351	1	2	0	NA	insufficient	2	0.36	insufficient	0.36	insufficient	1	0.61	insufficient	0.61	insufficient
+parent_daughter_overlap	N326-N332-N334-T360	T353	1	2	0	NA	insufficient	2	3.55	insufficient	3.55	insufficient	1	3.48	insufficient	3.48	insufficient
+parent_daughter_overlap	T373	T355	0	8	8	0.697	similar	8	3.19	E_similar	0.44	E_systematic_similar	7	0.85	used_systematic_similar	3.3	used_perbin_similar
+parent_daughter_overlap	N86-T87	T357	0	4	2	0.545	insufficient	2	13.94	insufficient	13.94	insufficient	2	17.3	insufficient	17.3	insufficient
+parent_daughter_overlap	N310-T313	T359	2	10	0	NA	insufficient	10	2.02	E_similar	2.02	E_systematic_similar	9	2.05	used_systematic_similar	2.05	used_perbin_similar
+parent_daughter_overlap	N35-N37-T39	T36	0	5	5	0.765	similar	5	6.79	E_different	6.79	E_systematic_different	4	5.7	used_systematic_different	5.7	used_perbin_different
+parent_daughter_overlap	N77-T266	T363	1	7	0	NA	insufficient	6	6.11	E_different	6.11	E_systematic_different	6	6.11	used_systematic_different	6.11	used_perbin_different
+parent_daughter_boundary	N364	T365	1	1	1	0.286	insufficient	1	4.56	insufficient	4.56	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N366-N298-N300-T304	T367	0	26	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N80-N368-N370-T78	T369	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N80-N368-N370-T78	T371	0	1	1	0.444	insufficient	1	1.69	insufficient	1.69	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N324-N336-N342-N344-N348-N352-N354-T356	T373	0	20	18	0.533	similar	18	6.14	E_different	1.83	E_systematic_similar	18	1.34	used_systematic_similar	6.64	used_perbin_different
+parent_daughter_overlap	N35-N37-T39	T38	0	3	3	0.625	similar	3	6.35	E_different	6.35	E_systematic_different	2	7.76	insufficient	7.76	insufficient
+parent_daughter_overlap	N45-T43	T46	1	4	0	NA	insufficient	4	4.59	E_similar	3.45	E_systematic_similar	3	5.36	used_systematic_different	5.36	used_perbin_different
+parent_daughter_overlap	N48-T50	T49	1	4	0	NA	insufficient	4	16.2	E_different	16.2	E_systematic_different	3	16.22	used_systematic_different	16.22	used_perbin_different
+parent_daughter_overlap	N52-N54-T53	T55	1	2	0	NA	insufficient	2	9.17	insufficient	9.17	insufficient	1	13.22	insufficient	13.22	insufficient
+parent_daughter_overlap	N56-N58-N59-T61	T57	0	2	1	0.154	insufficient	1	11.91	insufficient	11.91	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N56-N58-N59-T61	T60	1	2	0	NA	insufficient	2	8.23	insufficient	6.61	insufficient	1	14.84	insufficient	14.84	insufficient
+parent_daughter_overlap	N64-T66	T65	1	1	0	NA	insufficient	1	2.13	insufficient	2.13	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N5-N6-N8-T9	T7	1	7	0	NA	insufficient	4	15.8	E_different	10.83	E_systematic_different	4	7.42	used_systematic_different	12.44	used_perbin_different
+parent_daughter_boundary	N72	T73	0	1	1	0.6	insufficient	1	5.55	insufficient	5.55	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N72	T74	2	1	0	NA	insufficient	1	12.54	insufficient	12.54	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N184-N186-N187-N188-T189	T75	0	13	13	0.293	different	13	15.82	E_different	13.03	E_systematic_different	12	13.58	used_systematic_different	16.6	used_perbin_different
+parent_daughter_boundary	N79	T81	1	1	0	NA	insufficient	1	2.66	insufficient	2.66	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_boundary	N79	T82	2	1	0	NA	insufficient	1	2.93	insufficient	2.93	insufficient	0	NA	insufficient	NA	insufficient
+parent_daughter_overlap	N88-N89-N90-T93	T91	1	2	0	NA	insufficient	2	1.08	insufficient	1.08	insufficient	1	0.08	insufficient	0.08	insufficient
+parent_daughter_overlap	N88-N89-N90-T93	T92	1	5	4	0.548	similar	5	8.34	E_different	8.34	E_systematic_different	4	10.05	used_systematic_different	10.05	used_perbin_different
+parent_daughter_overlap	N98-T96	T97	1	4	0	NA	insufficient	4	4.55	E_similar	4.55	E_systematic_similar	3	4.24	used_systematic_similar	4.24	used_perbin_similar
+sister	N279-T280	T282	0	7	6	0.685	similar	6	4.62	E_similar	1.55	E_systematic_similar	6	1.55	used_systematic_similar	4.62	used_perbin_similar
+sister	L_Globigerinoides joli	N326-N332-N334-T360	0	6	6	0.733	similar	6	5.83	E_different	5.44	E_systematic_different	5	5.05	used_systematic_different	5.51	used_perbin_different
+sister	L_Globigerinoides joli	T343	0	6	6	0.233	different	6	8.48	E_different	1.08	E_systematic_similar	5	3.69	used_systematic_similar	7.78	used_perbin_different
+sister	N326-N332-N334-T360	T343	0	11	9	0.217	different	9	9.93	E_different	7.66	E_systematic_different	10	7.51	used_systematic_different	9.55	used_perbin_different
+sister	L_Globigerinita minuta	T1021	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita minuta	T1025	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita minuta	T1028	0	5	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita minuta	T1030	0	6	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita minuta	T1032	0	12	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita minuta	T1034	0	11	1	0.2	insufficient	1	24.58	insufficient	24.58	insufficient	0	NA	insufficient	NA	insufficient
+sister	T1021	T1025	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	T1021	T1028	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1021	T1030	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1021	T1032	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	T1021	T1034	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	T1025	T1028	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1025	T1030	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1025	T1032	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	T1025	T1034	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	T1028	T1030	0	5	3	0.294	different	3	6.65	E_different	6.65	E_systematic_different	2	6.53	insufficient	6.53	insufficient
+sister	T1028	T1032	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1028	T1034	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1030	T1032	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1030	T1034	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T1032	T1034	0	11	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globoturborotalita pseudopraebulloides	N325-T361	0	13	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globoturborotalita pseudopraebulloides	T287	0	6	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N325-T361	T287	0	6	6	0.279	different	6	19.87	E_different	19.87	E_systematic_different	5	20.67	used_systematic_different	20.67	used_perbin_different
+sister	L_Paragloborotalia acrostoma	L_Paragloborotalia semivera	0	7	7	0.212	different	7	16.98	E_different	14.94	E_systematic_different	6	16.33	used_systematic_different	18.71	used_perbin_different
+sister	N256-N2-N198-T67	N4-T12	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N256-N2-N198-T67	N5-N6-N8-T9	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N4-T12	N5-N6-N8-T9	0	18	17	0.488	different	17	8.1	E_different	2.59	E_systematic_similar	17	3.87	used_systematic_similar	9.38	used_perbin_different
+sister	L_Globoconusa	L_Parvularugoglobigerina	0	4	3	0.316	different	3	11.09	E_different	5.01	E_systematic_different	3	14.75	used_systematic_different	18.83	used_perbin_different
+sister	L_Globoconusa	L_Woodringina	0	4	4	0.483	different	4	18.2	E_different	15.94	E_systematic_different	3	22.76	used_systematic_different	22.76	used_perbin_different
+sister	L_Globoconusa	T1002	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Parvularugoglobigerina	L_Woodringina	0	5	4	0.4	different	4	15.11	E_different	14.35	E_systematic_different	4	5.63	used_systematic_different	7.22	used_perbin_different
+sister	L_Parvularugoglobigerina	T1002	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Woodringina	T1002	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N1007	T1006	0	7	1	0.125	insufficient	1	40.93	insufficient	40.93	insufficient	0	NA	insufficient	NA	insufficient
+sister	N1009-T1010	T1008	0	7	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Dentigloborotalia	T1011	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Antarcticella	N1015-N1027-N1029-N1031-N1033-T1035	0	30	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita glutinata	L_Tenuitella brasilensis	0	16	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinita glutinata	T1019	0	12	11	0.366	different	11	10.58	E_different	10.08	E_systematic_different	11	10.08	used_systematic_different	10.58	used_perbin_different
+sister	L_Tenuitella brasilensis	T1019	0	6	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Pearsonites	N104-T105	0	7	7	0.288	different	7	3.92	E_similar	0.36	E_systematic_similar	6	1.87	used_systematic_similar	3.13	used_perbin_similar
+sister	L_Pearsonites	N110-N112-T113	0	10	10	0.63	similar	10	11.88	E_different	11.88	E_systematic_different	9	11.41	used_systematic_different	11.41	used_perbin_different
+sister	L_Pearsonites	N119-T120	0	8	8	0.294	different	8	6.6	E_different	0.82	E_systematic_similar	7	1.95	used_systematic_similar	6.53	used_perbin_different
+sister	L_Pearsonites	T116	0	9	9	0.641	similar	9	3.55	E_similar	0.06	E_systematic_similar	8	0.88	used_systematic_similar	3.18	used_perbin_similar
+sister	N104-T105	N110-N112-T113	0	3	3	0.318	different	3	11.74	E_different	11.74	E_systematic_different	2	10.03	insufficient	10.03	insufficient
+sister	N104-T105	N119-T120	0	1	1	0.5	insufficient	1	17.54	insufficient	17.54	insufficient	0	NA	insufficient	NA	insufficient
+sister	N104-T105	T116	0	2	2	0.462	insufficient	2	7.59	insufficient	4.67	insufficient	1	2.92	insufficient	2.92	insufficient
+sister	N110-N112-T113	N119-T120	0	10	8	0.267	different	8	14.01	E_different	12	E_systematic_different	9	13.09	used_systematic_different	14.88	used_perbin_different
+sister	N110-N112-T113	T116	0	9	9	0.583	similar	9	12.11	E_different	12.11	E_systematic_different	8	10.78	used_systematic_different	10.78	used_perbin_different
+sister	N119-T120	T116	0	8	8	0.444	different	8	6.11	E_different	0.17	E_systematic_similar	7	0.28	used_systematic_similar	6.9	used_perbin_different
+sister	T111	T114	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N133-T135	N137-N139-T143	0	5	5	0.678	similar	5	6.17	E_different	6.17	E_systematic_different	4	6.52	used_systematic_different	6.52	used_perbin_different
+sister	N133-T135	N145-T146	0	2	2	0.5	insufficient	2	2.02	insufficient	2.02	insufficient	1	3.25	insufficient	3.25	insufficient
+sister	N133-T135	T132	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N133-T135	T140	0	5	1	0.083	insufficient	1	14.55	insufficient	14.55	insufficient	2	16.9	insufficient	16.9	insufficient
+sister	N137-N139-T143	N145-T146	0	2	2	0.455	insufficient	2	3.49	insufficient	3.49	insufficient	1	3.04	insufficient	3.04	insufficient
+sister	N137-N139-T143	T132	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N137-N139-T143	T140	0	7	2	0.059	insufficient	2	16.61	insufficient	16.61	insufficient	3	19.59	used_systematic_different	19.59	used_perbin_different
+sister	N145-T146	T132	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N145-T146	T140	0	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	1	22.5	insufficient	22.5	insufficient
+sister	T132	T140	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T138	T141	0	3	3	0.25	different	3	7.35	E_different	0.82	E_systematic_similar	2	6.13	insufficient	6.13	insufficient
+sister	N165	T164	0	1	1	0.222	insufficient	1	9.92	insufficient	9.92	insufficient	0	NA	insufficient	NA	insufficient
+sister	N18-T19	N21-T24	0	4	4	0.639	similar	4	5.87	E_different	5.87	E_systematic_different	3	5.51	used_systematic_different	5.51	used_perbin_different
+sister	N18-T19	T16	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N21-T24	T16	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N166-T167	N171	0	3	3	0.697	similar	3	6.05	E_different	6.05	E_systematic_different	2	6.5	insufficient	6.5	insufficient
+sister	T169	T170	0	9	9	0.509	similar	9	4.57	E_similar	1.24	E_systematic_similar	8	0.66	used_systematic_similar	3.09	used_perbin_similar
+sister	N172-T174	N175	0	2	2	0.75	insufficient	2	4.56	insufficient	4.56	insufficient	1	3.18	insufficient	3.18	insufficient
+sister	N177-T176	N179-T180	0	24	24	0.675	similar	24	6.07	E_different	1.71	E_systematic_similar	23	1.4	used_systematic_similar	5.94	used_perbin_different
+sister	T178	T181	0	17	17	0.59	similar	17	7.16	E_different	7.16	E_systematic_different	16	7.39	used_systematic_different	7.39	used_perbin_different
+sister	N191-T192	N215-N217-N231-N235-T236	0	11	1	0.125	insufficient	1	22.87	insufficient	22.87	insufficient	1	22.87	insufficient	22.87	insufficient
+sister	N191-T192	T185	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N191-T192	T75	0	13	2	0	insufficient	2	32.28	insufficient	1.71	insufficient	2	29.74	insufficient	29.74	insufficient
+sister	N215-N217-N231-N235-T236	T185	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N215-N217-N231-N235-T236	T75	0	10	10	0.532	similar	10	8.48	E_different	2.88	E_systematic_similar	9	2.95	used_systematic_similar	9.17	used_perbin_different
+sister	T185	T75	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N201-N998-N295-N203-T204	N206-N210-N212-T213	0	38	24	0.388	different	24	9.38	E_different	6.3	E_systematic_different	24	4.47	used_systematic_similar	9.94	used_perbin_different
+sister	L_Paragloborotalia birnageae	L_Paragloborotalia incognita	0	13	12	0.321	different	12	17.83	E_different	12.69	E_systematic_different	11	11.3	used_systematic_different	16.91	used_perbin_different
+sister	L_Paragloborotalia birnageae	N150-N151-T153	0	5	5	0.366	different	5	3.43	E_similar	1.46	E_systematic_similar	4	1.99	used_systematic_similar	4.11	used_perbin_similar
+sister	L_Paragloborotalia birnageae	N23-N156-N157-N160-T161	0	17	15	0.298	different	15	9.43	E_different	8.05	E_systematic_different	16	9.22	used_systematic_different	10.52	used_perbin_different
+sister	L_Paragloborotalia birnageae	T194	0	18	16	0.36	different	16	5.05	E_different	1.47	E_systematic_similar	16	1.47	used_systematic_similar	5.05	used_perbin_different
+sister	L_Paragloborotalia birnageae	T196	0	2	1	0.143	insufficient	1	13.75	insufficient	13.75	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Paragloborotalia incognita	N150-N151-T153	0	5	5	0.588	similar	5	5.17	E_different	3.71	E_systematic_similar	4	2.67	used_systematic_similar	4.5	used_perbin_similar
+sister	L_Paragloborotalia incognita	N23-N156-N157-N160-T161	0	9	9	0.554	similar	9	15.8	E_different	15.71	E_systematic_different	8	13.58	used_systematic_different	13.68	used_perbin_different
+sister	L_Paragloborotalia incognita	T194	0	14	14	0.535	similar	14	13.38	E_different	10.1	E_systematic_different	13	8.79	used_systematic_different	12.32	used_perbin_different
+sister	L_Paragloborotalia incognita	T196	0	4	4	0.5	similar	4	3.8	E_similar	3.8	E_systematic_similar	3	4.66	used_systematic_similar	4.66	used_perbin_similar
+sister	N150-N151-T153	N23-N156-N157-N160-T161	0	3	3	0.567	similar	3	2.39	E_similar	0.12	E_systematic_similar	2	1.7	insufficient	1.7	insufficient
+sister	N150-N151-T153	T194	0	5	5	0.654	similar	5	2	E_similar	1.04	E_systematic_similar	4	1.61	used_systematic_similar	2.19	used_perbin_similar
+sister	N150-N151-T153	T196	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N23-N156-N157-N160-T161	T194	0	14	14	0.669	similar	14	5.05	E_different	2.93	E_systematic_similar	13	2.45	used_systematic_similar	4.73	used_perbin_similar
+sister	N23-N156-N157-N160-T161	T196	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T194	T196	0	3	3	0.733	similar	3	1.94	E_similar	0.86	E_systematic_similar	2	1.63	insufficient	2.58	insufficient
+sister	T202	T214	0	5	5	0.13	different	5	25.58	E_different	25.58	E_systematic_different	4	23.13	used_systematic_different	23.13	used_perbin_different
+sister	T202	T297	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T214	T297	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N207-T208	T211	0	6	5	0.391	different	5	12.64	E_different	6.78	E_systematic_different	5	6.78	used_systematic_different	12.64	used_perbin_different
+sister	N218-T219	N232-T233	0	5	2	0.167	insufficient	2	5.64	insufficient	5.32	insufficient	3	9.96	used_systematic_different	10.18	used_perbin_different
+sister	N218-T219	N237-T238	0	7	3	0.2	different	3	6.54	E_different	1.66	E_systematic_similar	5	0.5	used_systematic_similar	7.14	used_perbin_different
+sister	N218-T219	T216	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N232-T233	N237-T238	0	7	6	0.263	different	6	10.33	E_different	1.71	E_systematic_similar	5	2.99	used_systematic_similar	11.46	used_perbin_different
+sister	N232-T233	T216	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N237-T238	T216	0	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N223-N225-N227-T228	T222	0	3	1	0.143	insufficient	1	21.51	insufficient	21.51	insufficient	1	21.51	insufficient	21.51	insufficient
+sister	N358-T229	T224	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N358-T229	T226	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T224	T226	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Neogloboquadrina incompta	N25	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Neogloboquadrina incompta	N364	0	2	2	0.5	insufficient	2	24.85	insufficient	24.85	insufficient	1	26.16	insufficient	26.16	insufficient
+sister	L_Neogloboquadrina incompta	T158	0	9	9	0.723	similar	9	13	E_different	13	E_systematic_different	8	12.08	used_systematic_different	12.08	used_perbin_different
+sister	N25	N364	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N25	T158	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N364	T158	0	2	2	0.542	insufficient	2	11.69	insufficient	11.69	insufficient	1	12.32	insufficient	12.32	insufficient
+sister	N241-T242	N248-T249	0	7	7	0.558	similar	7	8.76	E_different	8.76	E_systematic_different	6	8.24	used_systematic_different	8.24	used_perbin_different
+sister	N241-T242	N251-T252	0	7	7	0.431	different	7	3.63	E_similar	3.43	E_systematic_similar	6	3.64	used_systematic_similar	3.87	used_perbin_similar
+sister	N241-T242	T245	0	8	8	0.649	similar	8	4.62	E_similar	4.62	E_systematic_similar	7	4.11	used_systematic_similar	4.11	used_perbin_similar
+sister	N248-T249	N251-T252	0	6	6	0.373	different	6	11.18	E_different	11.18	E_systematic_different	5	11.74	used_systematic_different	11.74	used_perbin_different
+sister	N248-T249	T245	0	7	7	0.544	similar	7	13.55	E_different	13.55	E_systematic_different	6	12.46	used_systematic_different	12.46	used_perbin_different
+sister	N251-T252	T245	0	7	7	0.434	different	7	2.25	E_similar	0.68	E_systematic_similar	6	1.07	used_systematic_similar	2.35	used_perbin_similar
+sister	N26-N32	N27	0	3	3	0.528	similar	3	19.28	E_different	19.28	E_systematic_different	2	17.34	insufficient	17.34	insufficient
+sister	L_Hastigerina	N182-T183	0	7	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Hastigerina	N257	0	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Hastigerina	N315-T_316	0	67	7	0.276	different	7	11.96	E_different	11.17	E_systematic_different	8	11.69	used_systematic_different	12.38	used_perbin_different
+sister	L_Hastigerina	N68-N69-N70-T71	0	5	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N182-T183	N257	0	2	1	0.875	insufficient	1	5.74	insufficient	5.74	insufficient	0	NA	insufficient	NA	insufficient
+sister	N182-T183	N315-T_316	0	7	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N182-T183	N68-N69-N70-T71	0	5	4	0.838	similar	4	6.4	E_different	6.4	E_systematic_different	3	8.05	used_systematic_different	8.05	used_perbin_different
+sister	N257	N315-T_316	0	2	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N257	N68-N69-N70-T71	0	2	1	0.5	insufficient	1	9.51	insufficient	9.51	insufficient	0	NA	insufficient	NA	insufficient
+sister	N315-T_316	N68-N69-N70-T71	0	5	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N259-N261-N262-T263	T258	0	4	4	0.649	similar	4	13.19	E_different	13.19	E_systematic_different	3	12.07	used_systematic_different	12.07	used_perbin_different
+sister	N264-N265-N276-N278-N281-N283-T284	N305	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N264-N265-N276-N278-N281-N283-T284	T260	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N305	T260	0	3	3	0.391	different	3	10.92	E_different	10.92	E_systematic_different	2	11.89	insufficient	11.89	insufficient
+sister	N30	N47	0	1	1	0.364	insufficient	1	7.38	insufficient	7.38	insufficient	0	NA	insufficient	NA	insufficient
+sister	N267	N285-N286-T288	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N267	N366-N298-N300-T304	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N267	N77-T266	0	4	4	0.5	similar	4	2.97	E_similar	0.71	E_systematic_similar	3	2.46	used_systematic_similar	2.46	used_perbin_similar
+sister	N267	T277	0	3	3	0.63	similar	3	6.32	E_different	6.32	E_systematic_different	2	5.6	insufficient	5.6	insufficient
+sister	N285-N286-T288	N366-N298-N300-T304	0	29	28	0.624	similar	28	16.62	E_different	16.62	E_systematic_different	27	16.83	used_systematic_different	16.83	used_perbin_different
+sister	N285-N286-T288	N77-T266	0	5	4	0.158	different	4	25.16	E_different	25.16	E_systematic_different	3	26.14	used_systematic_different	26.14	used_perbin_different
+sister	N285-N286-T288	T277	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N366-N298-N300-T304	N77-T266	0	10	10	0.362	different	10	6.69	E_different	6.36	E_systematic_different	9	7.25	used_systematic_different	7.25	used_perbin_different
+sister	N366-N298-N300-T304	T277	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N77-T266	T277	0	11	11	0.541	similar	11	3.94	E_similar	2.05	E_systematic_similar	10	2.09	used_systematic_similar	4.17	used_perbin_similar
+sister	N269	T268	0	4	4	0.594	similar	4	4.96	E_similar	4.37	E_systematic_similar	3	3.73	used_systematic_similar	4.51	used_perbin_similar
+sister	N271-T272	T270	0	10	7	0.125	different	7	20.78	E_different	8.05	E_systematic_different	8	5.78	used_systematic_different	19.44	used_perbin_different
+sister	T28	T29	0	2	1	0.417	insufficient	1	1.57	insufficient	1.57	insufficient	0	NA	insufficient	NA	insufficient
+sister	N291-T372	T294	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N34-N40-T44	T31	0	5	2	0.389	insufficient	2	5.05	insufficient	5.05	insufficient	3	5.72	used_systematic_different	5.72	used_perbin_different
+sister	N306-T307	N310-T313	0	6	4	0.448	different	4	8.38	E_different	8.38	E_systematic_different	3	7.69	used_systematic_different	7.69	used_perbin_different
+sister	N190-N199-T200	T359	0	10	10	0.826	similar	10	5.75	E_different	5.2	E_systematic_different	9	4.17	used_systematic_similar	4.77	used_perbin_similar
+sister	L_Globoturborotalita occlusa	N319-T320	0	17	12	0.365	different	12	8.63	E_different	0.7	E_systematic_similar	12	0.72	used_systematic_similar	8.64	used_perbin_different
+sister	L_Globoturborotalita occlusa	N322	0	12	7	0.387	different	7	12.21	E_different	0.54	E_systematic_similar	7	2.54	used_systematic_similar	10.21	used_perbin_different
+sister	L_Globoturborotalita occlusa	T323	0	23	11	0.132	different	11	32.15	E_different	32.15	E_systematic_different	13	32.84	used_systematic_different	32.84	used_perbin_different
+sister	N319-T320	N322	0	17	15	0.353	different	15	5.09	E_different	0.14	E_systematic_similar	15	1.08	used_systematic_similar	6.31	used_perbin_different
+sister	N319-T320	T323	0	22	12	0.15	different	12	36.38	E_different	36.38	E_systematic_different	11	35.49	used_systematic_different	35.49	used_perbin_different
+sister	N322	T323	0	18	7	0.024	different	7	37.25	E_different	37.25	E_systematic_different	6	36.05	used_systematic_different	36.05	used_perbin_different
+sister	L_Berggrenia pumilio	L_Orcadia	0	5	2	0	insufficient	2	23.17	insufficient	23.17	insufficient	1	37.69	insufficient	37.69	insufficient
+sister	L_Berggrenia pumilio	T317	0	5	2	0.15	insufficient	2	16.86	insufficient	16.85	insufficient	1	11.96	insufficient	11.96	insufficient
+sister	L_Orcadia	T317	0	5	2	0.238	insufficient	2	19.41	insufficient	6.32	insufficient	1	25.73	insufficient	25.73	insufficient
+sister	L_Globoturborotalita barbula	T321	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_first Globigerinoides	N345-T347	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_first Globigerinoides	N349-T350	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_first Globigerinoides	T373	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N345-T347	N349-T350	0	11	11	0.865	similar	11	6.5	E_different	6.5	E_systematic_different	10	6.51	used_systematic_different	6.51	used_perbin_different
+sister	N345-T347	T373	0	18	17	0.642	similar	17	5.83	E_different	5.39	E_systematic_different	17	5.39	used_systematic_different	5.83	used_perbin_different
+sister	N349-T350	T373	0	11	10	0.513	similar	10	5.41	E_different	0.23	E_systematic_similar	10	0.23	used_systematic_similar	5.41	used_perbin_different
+sister	T333	T335	0	4	4	0.444	different	4	1.53	E_similar	0.74	E_systematic_similar	3	1.51	used_systematic_similar	1.51	used_perbin_similar
+sister	T333	T353	0	1	1	0.333	insufficient	1	7.82	insufficient	7.82	insufficient	0	NA	insufficient	NA	insufficient
+sister	T335	T353	0	10	10	0.495	different	10	9.87	E_different	7.23	E_systematic_different	9	6.99	used_systematic_different	9.92	used_perbin_different
+sister	T328	T331	0	3	3	0.848	similar	3	1.99	E_similar	1.99	E_systematic_similar	2	2.44	insufficient	2.44	insufficient
+sister	T338	T340	0	3	3	0.676	similar	3	13.57	E_different	13.57	E_systematic_different	2	13.44	insufficient	13.44	insufficient
+sister	N35-N37-T39	N42-T41	0	8	8	0.671	similar	8	5.45	E_different	5.36	E_systematic_different	7	4.66	used_systematic_similar	4.76	used_perbin_similar
+sister	T36	T38	0	3	3	0.68	similar	3	4.88	E_similar	0.2	E_systematic_similar	2	3.51	insufficient	3.51	insufficient
+sister	T162	T365	0	2	2	0.444	insufficient	2	7.39	insufficient	7.39	insufficient	1	6.86	insufficient	6.86	insufficient
+sister	L_Globigerinella clavaticamerata	L_Globigerinella radians	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella clavaticamerata	L_Globigerinella roeglina	0	13	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella clavaticamerata	L_Globigerinella wagneri	0	3	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella clavaticamerata	N292-T299	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella clavaticamerata	N301-T303	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella clavaticamerata	T367	0	15	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella radians	L_Globigerinella roeglina	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella radians	L_Globigerinella wagneri	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella radians	N292-T299	0	8	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella radians	N301-T303	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella radians	T367	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella roeglina	L_Globigerinella wagneri	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella roeglina	N292-T299	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella roeglina	N301-T303	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella roeglina	T367	0	14	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Globigerinella wagneri	N292-T299	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella wagneri	N301-T303	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	L_Globigerinella wagneri	T367	0	4	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N292-T299	N301-T303	0	4	4	0.837	similar	4	5.66	E_different	5.28	E_systematic_different	3	7.29	used_systematic_different	7.29	used_perbin_different
+sister	N292-T299	T367	0	7	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N301-T303	T367	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N48-T50	N51-N122-T123	0	9	9	0.737	similar	9	6.94	E_different	6.94	E_systematic_different	8	7.51	used_systematic_different	7.51	used_perbin_different
+sister	N48-T50	N52-N54-T53	0	5	5	0.765	similar	5	4.17	E_similar	2.66	E_systematic_similar	4	3.4	used_systematic_similar	5.14	used_perbin_different
+sister	N48-T50	T33	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N51-N122-T123	N52-N54-T53	0	5	5	0.758	similar	5	4.12	E_similar	4.12	E_systematic_similar	4	3.42	used_systematic_similar	3.42	used_perbin_similar
+sister	N51-N122-T123	T33	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N52-N54-T53	T33	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N13-T14	T10	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N13-T14	T7	0	3	1	0.333	insufficient	1	6	insufficient	6	insufficient	0	NA	insufficient	NA	insufficient
+sister	T10	T7	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N56-N58-N59-T61	T55	0	6	6	0.736	similar	6	6.27	E_different	5.02	E_systematic_different	5	2.56	used_systematic_similar	4.06	used_perbin_similar
+sister	N62-T63	T57	0	1	1	0.1	insufficient	1	17.37	insufficient	17.37	insufficient	0	NA	insufficient	NA	insufficient
+sister	N62-T63	T60	0	2	2	0.375	insufficient	2	5.16	insufficient	4.78	insufficient	1	9.94	insufficient	9.94	insufficient
+sister	T57	T60	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N72	N76-N101	0	2	2	0.615	insufficient	2	2.92	insufficient	2.92	insufficient	1	0.79	insufficient	0.79	insufficient
+sister	T73	T74	0	5	5	0.5	similar	5	4.32	E_similar	4.17	E_systematic_similar	4	4.93	used_systematic_similar	5.12	used_perbin_different
+sister	N80-N368-N370-T78	N83-N84-T85	0	7	7	0.702	similar	7	2.55	E_similar	2.54	E_systematic_similar	6	2.52	used_systematic_similar	2.54	used_perbin_similar
+sister	N80-N368-N370-T78	N99-N125	0	5	5	0.615	similar	5	14.19	E_different	14.19	E_systematic_different	4	15.09	used_systematic_different	15.09	used_perbin_different
+sister	N83-N84-T85	N99-N125	0	5	5	0.562	similar	5	11.15	E_different	11.15	E_systematic_different	4	11.47	used_systematic_different	11.47	used_perbin_different
+sister	N149-N163	T363	0	3	2	0.083	insufficient	2	3.7	insufficient	1.12	insufficient	2	1.12	insufficient	3.7	insufficient
+sister	T81	T82	0	5	5	0.5	similar	5	3.77	E_similar	3.77	E_systematic_similar	4	3.99	used_systematic_similar	3.99	used_perbin_similar
+sister	N79	T369	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	N79	T371	0	0	0	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence	0	NA	no_coexistence	NA	no_coexistence
+sister	T369	T371	0	1	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	N86-T87	N88-N89-N90-T93	0	6	6	0.553	similar	6	10.08	E_different	9.54	E_systematic_different	5	11.1	used_systematic_different	11.75	used_perbin_different
+sister	N94-T95	T91	0	2	2	0.714	insufficient	2	1.38	insufficient	0.19	insufficient	1	1.18	insufficient	1.18	insufficient
+sister	N94-T95	T92	0	5	5	0.722	similar	5	1.93	E_similar	1.51	E_systematic_similar	4	1.15	used_systematic_similar	1.67	used_perbin_similar
+sister	T91	T92	0	2	2	0.8	insufficient	2	0.87	insufficient	0.87	insufficient	1	1.2	insufficient	1.2	insufficient
+sister	N102-T100	N126-T127	0	4	4	0.737	similar	4	3.9	E_similar	2.76	E_systematic_similar	3	4.44	used_systematic_similar	4.44	used_perbin_similar
+sister	N102-T100	N128-T129	0	4	4	0.73	similar	4	4.3	E_similar	4.3	E_systematic_similar	3	4.07	used_systematic_similar	4.07	used_perbin_similar
+sister	N126-T127	N128-T129	0	8	8	0.694	similar	8	6.29	E_different	1.68	E_systematic_similar	7	4.45	used_systematic_similar	4.67	used_perbin_similar
+sister	L_Trilobatus altospiralis	N337-N339-T341	0	15	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient
+sister	L_Soldaniella	T355	0	7	0	NA	insufficient	0	NA	insufficient	NA	insufficient	0	NA	insufficient	NA	insufficient

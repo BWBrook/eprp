@@ -1,0 +1,58 @@
+in-scope S1 species: 480 | Triton species (inc): 392 | S1 species reached by crosswalk: 379 
+
+backticks     exact      none     tree1 
+        1       340       101        38 
+kept occurrences: 477144 | species with >=1 kept: 371 
+lineages: 268 | with any data: 235 | covered (>=0.5 of bins): 213 
+median lineage coverage: 1 
+lineage-bins: 3184 | E used source:
+
+       missing older_bin_lag1 older_bin_lag2 
+          1062           2065             57 
+E standardisation: mean 26.403 sd 13.221 
+Jaccard classes:
+                          
+                           different insufficient no_coexistence similar
+  parent_daughter_boundary         0           49              0       0
+  parent_daughter_overlap         31          141              0      36
+  sister                          42           78             59      55
+E classes (>= 5 degrees):
+                          
+                           E_different E_similar insufficient no_coexistence
+  parent_daughter_boundary           0         0           49              0
+  parent_daughter_overlap           70        51           87              0
+  sister                            71        26           78             59
+E systematic classes (|difference of means| >= 5 degrees):
+                          
+                           E_systematic_different E_systematic_similar
+  parent_daughter_boundary                      0                    0
+  parent_daughter_overlap                      49                   72
+  sister                                       54                   43
+                          
+                           insufficient no_coexistence
+  parent_daughter_boundary           49              0
+  parent_daughter_overlap            87              0
+  sister                             78             59
+USED (lagged, model input) systematic classes:
+                          
+                           insufficient no_coexistence
+  parent_daughter_boundary           49              0
+  parent_daughter_overlap            93              0
+  sister                             87             59
+                          
+                           used_systematic_different used_systematic_similar
+  parent_daughter_boundary                         0                       0
+  parent_daughter_overlap                         54                      61
+  sister                                          46                      42
+USED (lagged, model input) per-bin classes:
+                          
+                           insufficient no_coexistence used_perbin_different
+  parent_daughter_boundary           49              0                     0
+  parent_daughter_overlap            93              0                    66
+  sister                             87             59                    62
+                          
+                           used_perbin_similar
+  parent_daughter_boundary                   0
+  parent_daughter_overlap                   49
+  sister                                    26
+pairs with shared members: 157 

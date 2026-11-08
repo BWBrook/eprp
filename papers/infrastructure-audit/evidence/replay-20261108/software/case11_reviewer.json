@@ -1,0 +1,19 @@
+{
+  "case": 11,
+  "status": "independent computational review passed",
+  "files_sha256": {
+    "papers/infrastructure-audit/evidence/replay-20261108/main/check_case11.py": "fdb831e2dcc6755af833e7b0716f58db06309dec0105415dc30b27392bf59545",
+    "literature/checks/rampino_2025_binomial.py": "aca3deb045f15abd28ce6e84481b37b49c862482dfec8fc85c0576b26a9721cb",
+    "papers/infrastructure-audit/evidence/replay-20261108/software/review_case11.py": "2fb862ea9972c59f48c06e7651f74c77943d0c9fb1d9c7ad04b90db0374d713a"
+  },
+  "independent_route": "47-fold integer polynomial convolution of (9 + 11*x), tail coefficients from x^28 onward, divided by 20^47",
+  "exact_numerator": "111134774211426417649010250086283164884364804258913066639701",
+  "exact_denominator": "351843720888320000000000000000000000000000000000000000000000",
+  "exact_decimal_p055_tail": 0.31586402602507185,
+  "references_tail": 0.31586402602507185,
+  "main_recurrence_tail": 0.31586402602507185,
+  "R_pbinom_tail": 0.3158640260250713,
+  "R_version": "4.6.2",
+  "R_minus_exact": -5.551115123125783e-16,
+  "limits": "Independent review of the stated n=47, k>=28, p=0.55 binomial calculation only. The exact route treats decimal 0.55 as rational 11/20; R uses binary floating-point and its numerical tail algorithm. Small rounding differences do not change the claim. Source PDFs, geological null, spectral evidence and periodicity were not re-reviewed."
+}

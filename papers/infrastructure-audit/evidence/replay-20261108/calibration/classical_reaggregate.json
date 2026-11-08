@@ -1,0 +1,204 @@
+{
+  "method": "Python CSV and scalar arithmetic; analytic continuous Strauss-Sadler one-sided bound from n, range, last",
+  "python_version": "3.14.4",
+  "inputs": {
+    "t2_extinction_A.tsv": {
+      "sha256": "0af55b4567c46190fb224936e32fde81aa73f039ca471f3eca5873d377763a7f",
+      "bytes": 589595
+    },
+    "t2_extinction_B.tsv": {
+      "sha256": "bab5ba2f0e3e3e5f6e75a8d6ca1dbe8bf6dba187cdbfef58ec2052d1ae87a8fa",
+      "bytes": 473062
+    },
+    "t2_extinction_C.tsv": {
+      "sha256": "d446203759f60d80c13a67b38e53da48ee902b24f5377cffbe79833764b8889f",
+      "bytes": 589598
+    }
+  },
+  "arms": {
+    "A": {
+      "original_cases": 2000,
+      "retained": 2000,
+      "dropped": 0,
+      "methods": {
+        "tbea_ss_upper": {
+          "covered": 1895,
+          "n": 2000,
+          "coverage": 0.9475,
+          "wilson95_casewise_descriptive": [
+            0.9368392097083899,
+            0.9564450329748887
+          ],
+          "casewise_binomial_mc_se": 0.004987171041783106
+        },
+        "ede_ss_upper": {
+          "covered": 1899,
+          "n": 2000,
+          "coverage": 0.9495,
+          "wilson95_casewise_descriptive": [
+            0.9390120477558316,
+            0.958264526738322
+          ],
+          "casewise_binomial_mc_se": 0.0048964145045124596
+        },
+        "ede_robson_upper": {
+          "covered": 1909,
+          "n": 2000,
+          "coverage": 0.9545,
+          "wilson95_casewise_descriptive": [
+            0.9444626753715425,
+            0.9627947286497985
+          ],
+          "casewise_binomial_mc_se": 0.004659922209651143
+        }
+      },
+      "continuous_ss_analytic_max_abs_difference": 1.1368683772161603e-13,
+      "ss_agreement_within_0_02": 0.91,
+      "discretised_ss_agreement_within_1e_6": 0.9735
+    },
+    "B": {
+      "original_cases": 2000,
+      "retained": 1272,
+      "dropped": 728,
+      "methods": {
+        "tbea_ss_upper": {
+          "covered": 1125,
+          "n": 1272,
+          "coverage": 0.8844339622641509,
+          "wilson95_casewise_descriptive": [
+            0.8656955711085678,
+            0.9008573522491669
+          ],
+          "casewise_binomial_mc_se": 0.008964049821171832
+        },
+        "ede_ss_upper": {
+          "covered": 1127,
+          "n": 1272,
+          "coverage": 0.8860062893081762,
+          "wilson95_casewise_descriptive": [
+            0.8673668891055393,
+            0.9023212200327997
+          ],
+          "casewise_binomial_mc_se": 0.008910771192799125
+        },
+        "ede_robson_upper": {
+          "covered": 1171,
+          "n": 1272,
+          "coverage": 0.9205974842767296,
+          "wilson95_casewise_descriptive": [
+            0.9044416603158033,
+            0.9342205359958288
+          ],
+          "casewise_binomial_mc_se": 0.007580685291001061
+        }
+      },
+      "continuous_ss_analytic_max_abs_difference": 1.2789769243681803e-13,
+      "ss_agreement_within_0_02": 0.8938679245283019,
+      "discretised_ss_agreement_within_1e_6": 0.9811320754716981,
+      "by_extinction_class": {
+        "elsewhere": {
+          "n": 598,
+          "tbea_ss": {
+            "covered": 564,
+            "n": 598,
+            "coverage": 0.9431438127090301,
+            "wilson95_casewise_descriptive": [
+              0.9215997617783459,
+              0.9590308299368425
+            ],
+            "casewise_binomial_mc_se": 0.009469504058814611
+          }
+        },
+        "in_hiatus": {
+          "n": 445,
+          "tbea_ss": {
+            "covered": 369,
+            "n": 445,
+            "coverage": 0.8292134831460675,
+            "wilson95_casewise_descriptive": [
+              0.791467429055144,
+              0.861324317878932
+            ],
+            "casewise_binomial_mc_se": 0.01783938846856055
+          }
+        },
+        "within_1_after": {
+          "n": 229,
+          "tbea_ss": {
+            "covered": 192,
+            "n": 229,
+            "coverage": 0.8384279475982532,
+            "wilson95_casewise_descriptive": [
+              0.7852406698545732,
+              0.8804483392465162
+            ],
+            "casewise_binomial_mc_se": 0.024321942245727726
+          }
+        }
+      }
+    },
+    "C": {
+      "original_cases": 2000,
+      "retained": 2000,
+      "dropped": 0,
+      "methods": {
+        "tbea_ss_upper": {
+          "covered": 1905,
+          "n": 2000,
+          "coverage": 0.9525,
+          "wilson95_casewise_descriptive": [
+            0.9422790928066445,
+            0.9609859794038216
+          ],
+          "casewise_binomial_mc_se": 0.00475624589355933
+        },
+        "ede_ss_upper": {
+          "covered": 1909,
+          "n": 2000,
+          "coverage": 0.9545,
+          "wilson95_casewise_descriptive": [
+            0.9444626753715425,
+            0.9627947286497985
+          ],
+          "casewise_binomial_mc_se": 0.004659922209651143
+        },
+        "ede_robson_upper": {
+          "covered": 1918,
+          "n": 2000,
+          "coverage": 0.959,
+          "wilson95_casewise_descriptive": [
+            0.9493936413450841,
+            0.9668465092507255
+          ],
+          "casewise_binomial_mc_se": 0.00443390347211123
+        }
+      },
+      "continuous_ss_analytic_max_abs_difference": 1.0658141036401503e-13,
+      "ss_agreement_within_0_02": 0.9145,
+      "discretised_ss_agreement_within_1e_6": 0.9675
+    }
+  },
+  "E4": {
+    "nominal_99pct_binomial_acceptance_band": [
+      0.937,
+      0.962
+    ],
+    "both_ss_coverages_in_band": true,
+    "ss_agreement_99pct": false,
+    "overall_pass": false
+  },
+  "paired_arm_A_for_retained_B": {
+    "tbea_ss": {
+      "covered": 1196,
+      "n": 1272,
+      "coverage": 0.940251572327044,
+      "wilson95_casewise_descriptive": [
+        0.9258528939066438,
+        0.9519991246625411
+      ],
+      "casewise_binomial_mc_se": 0.006645715096061763
+    },
+    "mean_fossils_A": 7.617924528301887,
+    "mean_fossils_B": 4.966194968553459
+  }
+}

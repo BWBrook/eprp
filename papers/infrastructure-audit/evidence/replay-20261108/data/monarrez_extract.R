@@ -1,0 +1,5 @@
+args <- commandArgs(trailingOnly = TRUE)
+e <- new.env(); objects <- load(args[1], e)
+d <- get(objects[1], e)
+stopifnot(is.character(d$ch))
+write.table(data.frame(genus = d$genus, ch = d$ch), args[2], sep = "\t", quote = FALSE, row.names = FALSE)

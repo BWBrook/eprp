@@ -1,0 +1,28 @@
+{
+  "R": "R version 4.6.1 (2026-06-24)",
+  "locale": "LC_CTYPE=en_US.UTF-8;LC_NUMERIC=C;LC_TIME=en_US.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=C",
+  "RNGkind": ["Mersenne-Twister", "Inversion", "Rejection"],
+  "packages": [
+    {
+      "package": "admtools",
+      "version": "0.7.0",
+      "remote_sha": null
+    },
+    {
+      "package": "fossilbrush",
+      "version": "1.0.6",
+      "remote_sha": null
+    },
+    {
+      "package": "Rextinct",
+      "version": "1.1.0",
+      "remote_sha": "508d3c90698b88efcb8c2f1c17a6837a42fd7691"
+    }
+  ],
+  "function_sha256": {
+    "strat_to_time": "255527ce722a39dd2f310bcb6750894ed423d2e6c73cc2754e619c2186a5454d",
+    "get_time_adm": "36bcb8349c6dee914610b76efabfb82bf28bd5287632ec694e739a2e7bd2cdbb",
+    "flag_ranges": "4adc95019d057112f524d1f0a064cef5d10e151d3d153d82978416023260a668",
+    "griwm": "95fed0a9fa7972b77270055162f1e2ce6d9b3f10727e4b14fd0d01b693c173a5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "classes": {
+    "agree (<=0.01 Myr)": 52276,
+    "both undated": 4712,
+    "differ 0.01-0.5 Myr": 2475,
+    "differ 0.5-1 Myr": 683,
+    "differ >1 Myr": 953,
+    "stored dated, model cannot": 294,
+    "stored undated, model dates it": 469
+  },
+  "duplicate_tie_depths": 387,
+  "exact_duplicate_depth_sensitivity": {
+    "agreement_class_changes_first_vs_last": 8,
+    "samples_differing_gt_001_first_tie": 8,
+    "samples_differing_gt_001_last_tie": 0
+  },
+  "holes_disagreeing": 56,
+  "route": "SQL current-revision join and independent weighted-endpoint interpolation, no extrapolation; first age at exact duplicate depth.",
+  "samples": 61862,
+  "samples_at_conflicting_tie_age": 8,
+  "samples_at_duplicate_depth": 8
+}

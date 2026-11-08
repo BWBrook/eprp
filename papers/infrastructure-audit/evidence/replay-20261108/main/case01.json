@@ -1,0 +1,41 @@
+{
+  "case": 1,
+  "deposit_mollusca_absent_from_snapshot": 71103,
+  "deposit_mollusca_distinct_occurrences": 368760,
+  "deposit_mollusca_present_in_snapshot": 297657,
+  "limit": "Membership is dated 2026-10-23; absence alone does not establish restriction status or a current access failure. Support is the cheap presence diagnostic, not estimator eligibility. No identifiers exported.",
+  "mollusca_absent_fraction": 0.19281646599414254,
+  "public_snapshot_chunk_sha256": {
+    "occurrences__p01.csv": "488b8979780ae2e45dbbb4b4593b2d8578cbc2c5d5d7ea44525b1f070c2c4a38",
+    "occurrences__p02.csv": "e0ce986a51e2470dbded3a0eb286e29616a5b9ae4bf2afabee4d84529ec9af67",
+    "occurrences__p03.csv": "e40e19781029e1ea7c2e5d5ca4d2b1315a310739438217516ccd3be546fe9f24",
+    "occurrences__p04.csv": "7e40f57d9023c738855ffacd4732037788615f6befed8ca7fc88ba976f6b99b5",
+    "occurrences__p05.csv": "301f2a1da422d44647e2180b669cb98ca0e371fc28e726ec1407f6b073402f15",
+    "occurrences__p06.csv": "e25b6cbeaaeb9d1fe907a253e6bb3ab0da7a277e12e6b2dd85cf77bbd75ac1cd",
+    "occurrences__p07.csv": "02167631c87205375a0d6001a1c8ec980670a71aac2dc6eccf2d0b78f2a831f7",
+    "occurrences__p08.csv": "d5122b12d6f0400d9fa37edb5dcca5cbf9db6ef2c9e40750c8e26c8f9e8e6f67",
+    "occurrences__p09.csv": "17f80dc7cbf1f481798dda06f20e11b70d221ebc1ee2e03b4ca449c2316fe2dc",
+    "occurrences__p10.csv": "7b8f6b0b4eb37cfd2f905f6d4071777b572c92aa79368ba6a45c5d9481babccc",
+    "occurrences__p11_000000.csv": "4b71274a0ddda16b6f804fc4f2c509b005785241963c3b742e78642edfb94f86",
+    "occurrences__p11_080000.csv": "14dcc6b32ac2c711927d65788d165ba8450546b5195809af7ded983ddcd4280a",
+    "occurrences__p11_160000.csv": "c24f0af6d5db76689e4702e22d4f0ef4a3e53f58cd705430286773448859c6a2",
+    "occurrences__p11_240000.csv": "e3bbcb64cafdc903f275540cd4394c7718e160200ec504f3b791ce9e719278b3",
+    "occurrences__p12.csv": "09e303bde39fcf6af4ad5b24daedbdfe1dd7f4d74378396c7e01cadd2995c8a0"
+  },
+  "public_snapshot_distinct_occurrences": 1782649,
+  "python": "3.12.3",
+  "replayed_support_sha256": "8f253a64ddd2dfb2230df35e1be02fb8da5b818e1c8a7dfdc95adfaddeab3459",
+  "selected_occurrences": {
+    "dated_public_member": 60103,
+    "original": 69931
+  },
+  "source_archive_sha256": "7536adf67816407559698b59efc6a25f686ac48bd6b49a95590de94a320e0fe1",
+  "stages_tested": 21,
+  "stages_with_three_outside_tropical_regions": {
+    "dated_public_member": 12,
+    "original": 14
+  },
+  "support_matches_committed_table": true,
+  "support_rows": 1638,
+  "taxon_member_sha256": "70746ba481299eb73478b8817c2619eb0dc2c13224cd827c8501c44233aecb2e"
+}

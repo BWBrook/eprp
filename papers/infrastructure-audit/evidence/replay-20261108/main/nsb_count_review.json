@@ -1,0 +1,8 @@
+{
+  "reviewer": "main Codex",
+  "route": "SQLite aggregate count(*) independent of exported TSV line count and delegate interpolation loop",
+  "sample_table_rows": 61862,
+  "joined_rows": 61862,
+  "header_is_data": false,
+  "snapshot": "2023-06-05"
+}
