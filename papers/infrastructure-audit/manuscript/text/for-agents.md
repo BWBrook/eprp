@@ -1,68 +1,111 @@
 ---
 document: agent-facing paper
-study: ONE-LINE STUDY NAME
+study: Infrastructure-audit case series (twelve checked cases from agent-assisted audits of palaeobiology's data and software)
 status: internal draft
 human_paper: manuscript/text/main.md (+ supplement.md, brief.md)
 claims_ledger: manuscript/claims.csv (single source for all renderings; checked by tools/claims.py)
-interpretation: manuscript/estimands.md (what each analysis bounds; allowed and forbidden phrasings)
-governing_docs: [docs/charter.md, docs/decisions.md]
-authority: Barry W. Brook decides public release, submission and any correspondence outside the collaboration
+interpretation: manuscript/estimands.md (what each case establishes; allowed and forbidden phrasings)
+governing_docs: [papers/infrastructure-audit/README.md, papers/infrastructure-audit/case-selection.md, papers/infrastructure-audit/evidence/replay-20261108/README.md]
+authority: Barry W. Brook decides provider and author contact, public release of the paper, submission and any correspondence outside the collaboration
 updated: 2026-11-08
 ---
 
-# STUDY for agents: what this study established, how to verify it, and how not to break it
+# Infrastructure-audit case series for agents: what was established, how to verify it, and how not to break it
 
-This is the version of the paper written for an agent arriving cold. The human paper argues; this one
-indexes. It says what is claimed, where each number lives, which commands regenerate it, what has been
-superseded, and where the open edges are. When this file and a primary artefact disagree, the artefact
-wins and this file is wrong: fix it in the same commit.
+This is the paper written for an agent arriving cold. The human paper argues; this one indexes. Paths are
+relative to `papers/infrastructure-audit/` unless they start with `data/`, `resources/` or `docs/`, which
+are relative to the repository root. When this file and a primary artefact disagree, the artefact wins
+and this file is wrong: fix it in the same commit.
 
 ## 1. Read order and trust
 
 1. This file, then `manuscript/estimands.md`, then `manuscript/claims.csv`. Quote a claim only with its
    limit.
-2. `manuscript/text/main.md` for the argument; `supplement.md` for the machinery.
-3. `docs/decisions.md` (newest first) for what was settled, by whom and why.
+2. `evidence/replay-20261108/README.md` and its four subdirectories for how each case was replayed.
+3. `manuscript/text/main.md` for the argument; `supplement.md` for selection, replay and the audit trail.
+4. `evidence/claims.tsv` is the 189-row candidate pool from 25 October. It records discovery, not
+   clearance. Never cite a number from it without a matching supported row in `manuscript/claims.csv`.
 
-`status` is *supported* (checked against its evidence by an agent or person other than its author),
-*provisional* (awaiting that check), *refuted* or *superseded*. `basis` says what kind of result it is.
+`status` is *supported* (checked against its evidence by a different actor along a separate route),
+*provisional*, *refuted* or *superseded*. All 22 rows were supported on 8 November 2026.
 
 ## 2. The answer, as claims
 
-<!-- One bullet per question, citing claim IDs and binding the key numbers. -->
+- **Case 1.** Deposited records absent from a dated public snapshot: C191, C192. [71,103]{.C191} of
+  [368,760]{.C191}; regional screen [14]{.C192} to [12]{.C192} of [21]{.C192} stages.
+- **Case 2.** Interval base ages change between archived snapshots: C076. [460]{.C076}/[317]{.C076}/[17]{.C076}.
+- **Case 3.** Excess rows in Triton's update and their effect on Q-012: C043, C045. [1,388]{.C045} of
+  [2,267]{.C045} means changed.
+- **Case 4.** Stored NSB ages against recomputation: C040. [4,111]{.C040} of [61,862]{.C040}.
+- **Case 5.** admtools height-to-time conversion: C096.
+- **Case 6.** fossilbrush text comparison: C102.
+- **Case 7.** PyRate calibration with positive controls: C107, C194, C196, C105, C111.
+- **Case 8.** GRIWM semantics and random-number state: C110, C098.
+- **Case 9.** Plate-model spread and reconstruction routes: C125, C123.
+- **Case 10.** Published spreadsheets: C035, C048.
+- **Case 11.** A printed binomial probability: C190, [0.316]{.C190}.
+- **Case 12.** INDITEK archived scores: C195, C193.
 
 ## 3. Vocabulary that the files use
 
 | Term | Meaning |
 |---|---|
-| | |
+| dated public member | an occurrence present in the public PBDB snapshot of 23 October 2026; absence is not evidence of withholding |
+| excess rows under the key | rows beyond the first sharing a specified Triton key; not necessarily repeated observations |
+| first-tie convention | taking the first age when two NSB tie points share a depth |
+| E4 | the declared overall agreement gate in the range-end calibration benchmark; it failed |
+| arm | a simulation design condition (e.g. ideal, hiatus; psi 1.0, psi 0.25) |
+| rejected proposal | an INDITEK calibration state the sampler did not accept; not a posterior draw |
+| route | a computational path to a result; independence requires a different actor and route |
 
 ## 4. Provenance map
 
-| Result | Inputs | Code | Output | Claims |
-|---|---|---|---|---|
-| | | | | |
+| Result | Inputs | Code and receipts | Claims |
+|---|---|---|---|
+| Cases 1, 11 | Benson deposit and PBDB snapshot (hashes in receipts, not redistributed); published paper | `evidence/replay-20261108/main/` | C191, C192, C190 |
+| Cases 2, 3, 4, 10 | Archived PBDB query products; Triton RData; NSB SQLite; Monarrez and Fossil Record 2 deposits | `evidence/replay-20261108/data/` | C076, C043, C045, C040, C035, C048 |
+| Cases 5, 6, 8, 9 | Content-pinned package images; raw plate-model archives | `evidence/replay-20261108/software/` | C096, C102, C110, C098, C125, C123 |
+| Cases 7, 12 | Retained posterior logs and benchmark tables; INDITEK-2 archive | `evidence/replay-20261108/calibration/` | C107, C194, C196, C105, C111, C195, C193 |
 
-<!-- Name the exact row filters that select the primary result; most misquotations drop one. -->
+Each ledger row's `reproduce` field is the exact command; its `commit` pins the verified evidence bytes.
 
 ## 5. Traps: superseded results and known misreadings
 
-<!-- Numbered. Each trap: the tempting misreading in bold, then why it is wrong and the claim that
-governs. Add one whenever a review catches a misreading. -->
+1. **"Withheld PBDB records."** The checked object is absence from a dated snapshot. Cause is not
+   established (C191).
+2. **"28,832 duplicates."** They are excess rows under a key (C043).
+3. **"1,454 changed means, 423 by a degree or more."** Not reproduced; use C045's [1,388]{.C045} and
+   [411]{.C045}.
+4. **"admtools is wrong above every hiatus."** False; only affected segments (C096).
+5. **"PyRate's intervals are too narrow."** Not supported; the misses come from location bias (C107).
+6. **"5,291 damaged histories."** That is the scientific-notation cell count; altered histories number
+   [2,967]{.C035} (C035).
+7. **"The classical methods are calibrated."** Only in the ideal arm of two simulated clades, and the
+   overall E4 gate failed (C194, C196).
+8. **"Rampino and Caldeira's periodicity is refuted."** Only the printed binomial tail is checked (C190).
+9. **"INDITEK cannot be reproduced."** Predictions replay; three saved scores do not (C195, C193).
+10. **Any prevalence or method-superiority statement.** The series is a set of cases, with no
+    comparison (`estimands.md`, cross-cutting rules).
 
 ## 6. Checks before and after any change
 
 ```sh
 uv run tools/refs.py build        # bibliography from references/dois.txt
 make -C manuscript check          # claims, glyphs, makedoc lint and citation audit
-make -C manuscript                # PDF and DOCX into manuscript/build/, then the brief page check
+TMPDIR=$PWD/manuscript/build/tmp make -C manuscript   # PDF and DOCX; TMPDIR avoids a cross-device rename
 ```
 
-<!-- Invariants worth asserting when touching the analysis code, bound to the ledger. -->
+Invariants: every cited number matches its ledger value; all 22 supported rows are cited; no text uses a
+phrasing listed as not allowed in `estimands.md`.
 
 ## 7. Open edges
 
-<!-- Each open question, what would move it, and what has been tried. -->
+- **Disclosure.** Provider and author contacts are queued (Barry's decision). Their replies may show a
+  finding is known, intended or fixed; update the case and its limit if so.
+- **Downstream consequence.** No published analysis was rerun. Rerunning one that uses an affected layer
+  would measure consequence directly.
+- **Comparison.** Nothing here compares agent-assisted with human auditing.
+- **Figure.** The article and brief still need one figure each.
 
 ## 8. Conduct in this repository
 
@@ -71,5 +114,6 @@ make -C manuscript                # PDF and DOCX into manuscript/build/, then th
 - To add or change a claim: edit `manuscript/claims.csv`, reverify the evidence, run
   `python3 tools/claims.py stamp manuscript/claims.csv ID`, then make every document pass the check.
 - Change `manuscript/estimands.md` before changing how a result is described.
+- Restricted PBDB material: counts only, no identifiers, no access mechanism.
 - Do not edit generated artefacts by hand: `references/refs.yaml`, marked table blocks, `figures/`,
   `build/`.

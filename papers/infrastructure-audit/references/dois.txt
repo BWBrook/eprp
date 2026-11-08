@@ -1,1 +1,13 @@
 # One DOI per line, each checked against Crossref. Rebuild with: uv run tools/refs.py build
+10.1017/pab.2025.10042
+10.1111/pala.70006
+10.1038/s41597-021-00942-7
+10.26879/1032
+10.1098/rsos.230795
+10.1111/2041-210X.12263
+10.1016/j.quascirev.2011.11.021
+10.1007/bf00897326
+10.1016/j.earscirev.2020.103477
+10.1016/j.gloplacha.2016.10.002
+10.1016/j.earscirev.2025.105100
+10.1038/s41586-022-04932-6

@@ -1,3 +1,540 @@
 ---
-references: []
+references:
+- id: benson2025MarineAnimalDiversity
+  citation-key: benson2025MarineAnimalDiversity
+  type: article-journal
+  title: Marine animal diversity across latitudinal and temperature gradients during the Phanerozoic
+  author:
+  - family: Benson
+    given: Roger B.J.
+  - family: Close
+    given: Roger A.
+  - family: Antell
+    given: Gawain T.
+  - family: Whittaker
+    given: Robert J.
+  - family: Valdes
+    given: Paul
+  - family: Farnsworth
+    given: Alex
+  - family: Lunt
+    given: Daniel J.
+  - family: Shen
+    given: Shuzhong
+  - family: Fan
+    given: Junxuan
+  - family: Saupe
+    given: Erin E.
+  issued:
+    date-parts:
+    - - 2025
+  container-title: Palaeontology
+  volume: '68'
+  issue: '3'
+  article-number: e70006
+  publisher: Wiley
+  DOI: 10.1111/pala.70006
+- id: bradshaw2012RobustEstimatesExtinction
+  citation-key: bradshaw2012RobustEstimatesExtinction
+  type: article-journal
+  title: Robust estimates of extinction time in the geological record
+  author:
+  - family: Bradshaw
+    given: C.J.A.
+  - family: Cooper
+    given: A.
+  - family: Turney
+    given: C.S.M.
+  - family: Brook
+    given: B.W.
+  issued:
+    date-parts:
+    - - 2012
+  container-title: Quaternary Science Reviews
+  volume: '33'
+  page: 14–19
+  publisher: Elsevier BV
+  DOI: 10.1016/j.quascirev.2011.11.021
+- id: cermeno2022PostextinctionRecoveryPhanerozoic
+  citation-key: cermeno2022PostextinctionRecoveryPhanerozoic
+  type: article-journal
+  title: Post-extinction recovery of the Phanerozoic oceans and biodiversity hotspots
+  author:
+  - family: Cermeño
+    given: Pedro
+  - family: García-Comas
+    given: Carmen
+  - family: Pohl
+    given: Alexandre
+  - family: Williams
+    given: Simon
+  - family: Benton
+    given: Michael J.
+  - family: Chaudhary
+    given: Chhaya
+  - family: Le Gland
+    given: Guillaume
+  - family: Müller
+    given: R. Dietmar
+  - family: Ridgwell
+    given: Andy
+  - family: Vallina
+    given: Sergio M.
+  issued:
+    date-parts:
+    - - 2022
+  container-title: Nature
+  volume: '607'
+  issue: '7919'
+  page: 507–511
+  publisher: Springer Science and Business Media LLC
+  DOI: 10.1038/s41586-022-04932-6
+- id: fenton2021TritonSpecieslevelDatabase
+  citation-key: fenton2021TritonSpecieslevelDatabase
+  type: article-journal
+  title: Triton, a new species-level database of Cenozoic planktonic foraminiferal occurrences
+  author:
+  - family: Fenton
+    given: Isabel S.
+  - family: Woodhouse
+    given: Adam
+  - family: Aze
+    given: Tracy
+  - family: Lazarus
+    given: David
+  - family: Renaudie
+    given: Johan
+  - family: Dunhill
+    given: Alexander M.
+  - family: Young
+    given: Jeremy R.
+  - family: Saupe
+    given: Erin E.
+  issued:
+    date-parts:
+    - - 2021
+  container-title: Scientific Data
+  volume: '8'
+  issue: '1'
+  article-number: '160'
+  publisher: Springer Science and Business Media LLC
+  DOI: 10.1038/s41597-021-00942-7
+- id: matthews2016GlobalPlateBoundary
+  citation-key: matthews2016GlobalPlateBoundary
+  type: article-journal
+  title: Global plate boundary evolution and kinematics since the late Paleozoic
+  author:
+  - family: Matthews
+    given: Kara J.
+  - family: Maloney
+    given: Kayla T.
+  - family: Zahirovic
+    given: Sabin
+  - family: Williams
+    given: Simon E.
+  - family: Seton
+    given: Maria
+  - family: Müller
+    given: R. Dietmar
+  issued:
+    date-parts:
+    - - 2016
+  container-title: Global and Planetary Change
+  volume: '146'
+  page: 226–250
+  publisher: Elsevier BV
+  DOI: 10.1016/j.gloplacha.2016.10.002
+- id: merdith2021ExtendingFullplateTectonic
+  citation-key: merdith2021ExtendingFullplateTectonic
+  type: article-journal
+  title: 'Extending full-plate tectonic models into deep time: Linking the Neoproterozoic and the Phanerozoic'
+  author:
+  - family: Merdith
+    given: Andrew S.
+  - family: Williams
+    given: Simon E.
+  - family: Collins
+    given: Alan S.
+  - family: Tetley
+    given: Michael G.
+  - family: Mulder
+    given: Jacob A.
+  - family: Blades
+    given: Morgan L.
+  - family: Young
+    given: Alexander
+  - family: Armistead
+    given: Sheree E.
+  - family: Cannon
+    given: John
+  - family: Zahirovic
+    given: Sabin
+  - family: Müller
+    given: R. Dietmar
+  issued:
+    date-parts:
+    - - 2021
+  container-title: Earth-Science Reviews
+  volume: '214'
+  page: '103477'
+  article-number: '103477'
+  publisher: Elsevier BV
+  DOI: 10.1016/j.earscirev.2020.103477
+- id: monarrez2023ReducedStrengthIncreased
+  citation-key: monarrez2023ReducedStrengthIncreased
+  type: article-journal
+  title: Reduced strength and increased variability of extinction selectivity during mass extinctions
+  author:
+  - family: Monarrez
+    given: Pedro M.
+  - family: Heim
+    given: Noel A.
+  - family: Payne
+    given: Jonathan L.
+  issued:
+    date-parts:
+    - - 2023
+  container-title: Royal Society Open Science
+  volume: '10'
+  issue: '9'
+  article-number: '230795'
+  publisher: The Royal Society
+  DOI: 10.1098/rsos.230795
+- id: rampino2025CorrelationCyclicityStratigraphic
+  citation-key: rampino2025CorrelationCyclicityStratigraphic
+  type: article-journal
+  title: 'Correlation and cyclicity of stratigraphic sequence boundaries and chronostratigraphic stage boundaries of the last 253 My: Synchrony of tectonism, sea level, climate and biotic change'
+  author:
+  - family: Rampino
+    given: Michael R.
+  - family: Caldeira
+    given: Ken
+  issued:
+    date-parts:
+    - - 2025
+  container-title: Earth-Science Reviews
+  volume: '265'
+  page: '105100'
+  article-number: '105100'
+  publisher: Elsevier BV
+  DOI: 10.1016/j.earscirev.2025.105100
+- id: renaudie2020NsbNeptuneSandbox
+  citation-key: renaudie2020NsbNeptuneSandbox
+  type: article-journal
+  title: 'NSB (Neptune Sandbox Berlin): An expanded and improved database of marine planktonic microfossil data and deep-sea stratigraphy'
+  author:
+  - family: Renaudie
+    given: Johan
+  - family: Lazarus
+    given: David
+  - family: Diver
+    given: Patrick
+  issued:
+    date-parts:
+    - - 2020
+  container-title: Palaeontologia Electronica
+  publisher: Coquina Press
+  DOI: 10.26879/1032
+- id: silvestro2014PyrateProgramEstimate
+  citation-key: silvestro2014PyrateProgramEstimate
+  type: article-journal
+  title: 'PyRate: a new program to estimate speciation and extinction rates from incomplete fossil data'
+  author:
+  - family: Silvestro
+    given: Daniele
+  - family: Salamin
+    given: Nicolas
+  - family: Schnitzler
+    given: Jan
+  issued:
+    date-parts:
+    - - 2014
+  container-title: Methods in Ecology and Evolution
+  volume: '5'
+  issue: '10'
+  page: 1126–1131
+  publisher: Wiley
+  DOI: 10.1111/2041-210x.12263
+- id: smith2025IdentifyingBigQuestions
+  citation-key: smith2025IdentifyingBigQuestions
+  type: article-journal
+  title: 'Identifying the Big Questions in paleontology: a community-driven project'
+  author:
+  - family: Smith
+    given: Jansen A.
+  - family: Dowding
+    given: Elizabeth M.
+  - family: Abdelhady
+    given: Ahmed A.
+  - family: Abondio
+    given: Paolo
+  - family: Araújo
+    given: Ricardo
+  - family: Aze
+    given: Tracy
+  - family: Balisi
+    given: Mairin A.
+  - family: Buatois
+    given: Luis A.
+  - family: Carvajal-Chitty
+    given: Humberto
+  - family: Chattopadhyay
+    given: Devapriya
+  - family: Coiro
+    given: Mario
+  - family: Dietl
+    given: Gregory P.
+  - family: González Arango
+    given: Catalina
+  - family: Kevrekidis
+    given: Charalampos
+  - family: Kimmig
+    given: Julien
+  - family: Mychajliw
+    given: Alexis M.
+  - family: Pimiento
+    given: Catalina
+  - family: Regalado Fernández
+    given: Omar Rafael
+  - family: Schroeder
+    given: Katlin M.
+  - family: Warnock
+    given: Rachel C. M.
+  - family: Yang
+    given: Tzu-Ruei
+  - family: Yasuhara
+    given: Moriaki
+  - family: Akita
+    given: Lailah Gifty
+  - family: Allen
+    given: Bethany J.
+  - family: Anderson
+    given: Brendan M.
+  - family: Andréoletti
+    given: Jérémy
+  - family: Archuby
+    given: Fernando M.
+  - family: Ballen
+    given: Gustavo A.
+  - family: Bari
+    given: Md. Ibrahimul
+  - family: Benton
+    given: Michael J.
+  - family: Bergh
+    given: Eugene W.
+  - family: Brambilla
+    given: Luciano
+  - family: Brombacher
+    given: Anieke
+  - family: Chan
+    given: Yong Kit Samuel
+  - family: Chiarenza
+    given: Alfio Alessandro
+  - family: Chinzorig
+    given: Tsogtbaatar
+  - family: Coates
+    given: Kadane M.
+  - family: Cordie
+    given: David R.
+  - family: Cortés-Sánchez
+    given: Miguel
+  - family: Cruz-Vega
+    given: Eduardo J.
+  - family: Cybulski
+    given: Jonathan D.
+  - family: De Baets
+    given: Kenneth
+  - family: De Entrambasaguas
+    given: Julia
+  - family: Dillon
+    given: Erin M.
+  - family: Du
+    given: Andrew
+  - family: Dunhill
+    given: Alexander M.
+  - family: Erlandson
+    given: Jon M.
+  - family: Forel
+    given: Marie-Béatrice
+  - family: Foster
+    given: William J.
+  - family: Gates
+    given: Terry A.
+  - family: Gavryushkina
+    given: Alexandra
+  - family: Grace
+    given: Molly K.
+  - family: Grossart
+    given: Hans-Peter
+  - family: Hänsel
+    given: Patrick
+  - family: Harnik
+    given: Paul G.
+  - family: Hopkins
+    given: Melanie Jane
+  - family: Hopkins
+    given: Samantha S. B.
+  - family: Hu
+    given: Keyi
+  - family: Huang
+    given: Huai-Hsuan M.
+  - family: Irmis
+    given: Randall B.
+  - family: Jaques
+    given: Victory A. J.
+  - family: Jenkins
+    given: Xavier A.
+  - family: Jukar
+    given: Advait M.
+  - family: Kelley
+    given: Patricia H.
+  - family: Kihn
+    given: Romina G.
+  - family: Klompmaker
+    given: Adiël A.
+  - family: Kocsis
+    given: Ádám T.
+  - family: Kriwet
+    given: Jürgen
+  - family: Lazarus
+    given: David
+  - family: Liao
+    given: Chun-Chi
+  - family: Lin
+    given: Chien-Hsiang
+  - family: Louys
+    given: Julien
+  - family: Lozano-Fernandez
+    given: Jesus
+  - family: Lozano-Francisco
+    given: María Carmen
+  - family: Lueders-Dumont
+    given: Jessica A.
+  - family: Malvé
+    given: Mariano E.
+  - family: Martindale
+    given: Rowan C.
+  - family: Mazzini
+    given: Ilaria
+  - family: Modenini
+    given: Giorgia
+  - family: Mondal
+    given: Subhronil
+  - family: Mondini
+    given: Mariana
+  - family: Monferran
+    given: Mateo D.
+  - family: Mulvey
+    given: Laura P. A.
+  - family: Nanglu
+    given: Karma
+  - family: Nguyen
+    given: Jacqueline M. T.
+  - family: Norris
+    given: Richard
+  - family: O’Dea
+    given: Aaron
+  - family: Ollendorf
+    given: Amy L.
+  - family: Orihuela
+    given: Johanset
+  - family: Pandolfi
+    given: John M.
+  - family: Pereira
+    given: Telmo
+  - family: Piro
+    given: Alejandra
+  - family: Plotnick
+    given: Roy E.
+  - family: Plaza-Torres
+    given: Stephanie M.
+  - family: Porto
+    given: Arthur
+  - family: Prieto-Márquez
+    given: Albert
+  - family: Punyasena
+    given: Surangi W.
+  - family: Quental
+    given: Tiago B.
+  - family: Raja
+    given: Nussaïbah B.
+  - family: Ranaivosoa
+    given: Voajanahary
+  - family: Ribas-Deulofeu
+    given: Lauriane
+  - family: Rivals
+    given: Florent
+  - family: Roden
+    given: Vanessa Julie
+  - family: Rosso
+    given: Antonietta
+  - family: Saleh
+    given: Farid
+  - family: Salvador
+    given: Rodrigo Brincalepe
+  - family: Saupe
+    given: Erin E.
+  - family: Schneider
+    given: Simon
+  - family: Sclafani
+    given: Judith A.
+  - family: Smith
+    given: Martin R.
+  - family: Souron
+    given: Antoine
+  - family: Steinbauer
+    given: Manuel J.
+  - family: Stewart
+    given: Mathew
+  - family: Tambussi
+    given: Claudia P.
+  - family: Thomas
+    given: Ellen
+  - family: Tschopp
+    given: Emanuel
+  - family: Tütken
+    given: Thomas
+  - family: Varela
+    given: Sara
+  - family: Vezzosi
+    given: Raúl I.
+  - family: Villaseñor
+    given: Amelia
+  - family: Weinkauf
+    given: Manuel F. G.
+  - family: Zanno
+    given: Lindsay E.
+  - family: Zhang
+    given: Chi
+  - family: Zhao
+    given: Qi
+  - family: Kiessling
+    given: Wolfgang
+  issued:
+    date-parts:
+    - - 2025
+  container-title: Paleobiology
+  volume: '51'
+  issue: '3'
+  page: 408–431
+  publisher: Cambridge University Press (CUP)
+  DOI: 10.1017/pab.2025.10042
+- id: strauss1989ClassicalConfidenceIntervals
+  citation-key: strauss1989ClassicalConfidenceIntervals
+  type: article-journal
+  title: Classical confidence intervals and Bayesian probability estimates for ends of local taxon ranges
+  author:
+  - family: Strauss
+    given: David
+  - family: Sadler
+    given: Peter M.
+  issued:
+    date-parts:
+    - - 1989
+  container-title: Mathematical Geology
+  volume: '21'
+  issue: '4'
+  page: 411–427
+  publisher: Springer Science and Business Media LLC
+  DOI: 10.1007/bf00897326
 ...

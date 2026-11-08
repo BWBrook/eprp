@@ -1,0 +1,7 @@
+# Citation keys in generated bibliographies (key: authorYearTitleWords) trip generic-api-key.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Generated CSL-YAML bibliographies"
+paths = ['''(^|/)references/refs\.yaml$''']
