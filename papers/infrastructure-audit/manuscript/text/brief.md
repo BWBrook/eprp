@@ -34,9 +34,10 @@ detailed work.
    database as it stood on 23 October 2026. We do not know why, and we report only counts.
 2. **Fossil ages can shift between downloads.** Between two archived downloads, the most common recorded
    starting age of [460]{.C076} time intervals changed. In another database, stored ages disagreed with the database's
-   own reference points for [4,111]{.C040} of [56,387]{.C040} samples that could be compared. Recording the
+   own reference points, under our interpolation rule, for [4,111]{.C040} of [56,387]{.C040} samples that
+   could be compared. Recording the
    date and version of every download matters.
-3. **Some software gives wrong answers in specific situations.** One package converted rock thickness to
+3. **Software checks found errors and clarified what outputs mean.** One package converted rock thickness to
    time wrongly in some layers above gaps in the record: in one test, [3,972]{.C096} of [8,282]{.C096}
    points were wrong, by up to about [3.0]{.C096} million years. Another compared numbers as if they were
    words, so at a threshold of 5 it treated a difference of 100 as too small to flag. A third reports a

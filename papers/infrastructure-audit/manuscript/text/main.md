@@ -150,8 +150,8 @@ rules[]{.C045}. An earlier internal report of 1,454 and 423 changed means did no
 recipe and is withdrawn (Supplement S3).
 
 **Case 4.** The final snapshot of the Neptune Sandbox Berlin database [@renaudie2020NsbNeptuneSandbox]
-holds [61,862]{.C040} samples, each with a stored age. We recomputed each age from its hole's current tie
-points by linear interpolation. [56,387]{.C040} samples have both a stored and a recomputed numeric age. Of
+holds [61,862]{.C040} samples. We recomputed ages by linear interpolation from each hole's current tie
+points, where those tie points permitted. [56,387]{.C040} samples have both a stored and a recomputed numeric age. Of
 these, [4,111]{.C040} in [56]{.C040} holes differ by more than 0.01 Myr[]{.C040}. The recomputation takes
 the first age where two tie points share a depth; with the other choice, [8]{.C040} of the differences
 disappear. That sensitivity concerns exact ties only, not other interpolation models. Neither set of ages

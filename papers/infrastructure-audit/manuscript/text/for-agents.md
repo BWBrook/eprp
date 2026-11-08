@@ -2,9 +2,9 @@
 document: agent-facing paper
 study: Infrastructure-audit case series (twelve checked cases from agent-assisted audits of palaeobiology's data and software)
 status: internal draft
-human_paper: manuscript/text/main.md (+ supplement.md, brief.md)
-claims_ledger: manuscript/claims.csv (single source for all renderings; checked by tools/claims.py)
-interpretation: manuscript/estimands.md (what each case establishes; allowed and forbidden phrasings)
+human_paper: papers/infrastructure-audit/manuscript/text/main.md (+ supplement.md, brief.md)
+claims_ledger: papers/infrastructure-audit/manuscript/claims.csv (single source for all renderings; checked by tools/claims.py)
+interpretation: papers/infrastructure-audit/manuscript/estimands.md (what each case establishes; allowed and forbidden phrasings)
 governing_docs: [papers/infrastructure-audit/README.md, papers/infrastructure-audit/case-selection.md, papers/infrastructure-audit/evidence/replay-20261108/README.md]
 authority: Barry W. Brook decides provider and author contact, public release of the paper, submission and any correspondence outside the collaboration
 updated: 2026-11-08
@@ -39,7 +39,9 @@ supported on 8 November 2026.
 - **Case 3.** Excess rows in Triton's update and their effect on Q-012: C043, C045. [1,388]{.C045} of
   [2,267]{.C045} means changed.
 - **Case 4.** Stored NSB ages against recomputation: C040. [4,111]{.C040} of [56,387]{.C040} comparable
-  samples (of [61,862]{.C040} in the snapshot).
+  samples (of [61,862]{.C040} in the snapshot) differ by more than 0.01 Myr, under linear interpolation from
+  current tie points with the first age at exact depth ties. Eight disappear with the other exact-tie choice;
+  that does not test other interpolation between ties.
 - **Case 5.** admtools height-to-time conversion: C096.
 - **Case 6.** fossilbrush text comparison: C102.
 - **Case 7.** PyRate calibration with positive controls: C107, C194, C196, C105, C111.
@@ -126,6 +128,8 @@ allowed); `docs/audits/` holds the triage of every review.
 
 ## 8. Conduct in this repository
 
+- When adding a DOI, review the generated citation key and add it exactly to the repository's
+  `.gitleaks.toml` allowlist; no pattern-based exemption.
 - Read `AGENTS.md` (or `CLAUDE.md`). Facts and citations come from sources read in the task; every DOI
   is checked against Crossref.
 - To add or change a claim: edit `manuscript/claims.csv`, reverify the evidence, run

@@ -1,10 +1,9 @@
-# Citation keys in generated bibliographies (citation-key: authorYearTitleWords) trip generic-api-key.
-# The exemption matches only key-name matches of that shape, so provider-token rules still apply to the rest
-# of every file, including the bibliography.
+# Exact-match allowlist for the verified public citation keys in papers/infrastructure-audit/references/refs.yaml.
+# When a DOI is added there, review the generated key and add it here exactly; other generic-key matches stay detected.
 [extend]
 useDefault = true
 
 [allowlist]
-description = "Citation keys (authorYearTitleWords) in generated CSL-YAML bibliographies"
+description = "Exact verified citation-key matches"
 regexTarget = "match"
-regexes = ['''key:\s*[a-z]+\d{4}[A-Z][A-Za-z0-9]*''']
+regexes = ['''^key:\s*(?:benson2025MarineAnimalDiversity|bradshaw2012RobustEstimatesExtinction|fenton2021TritonSpecieslevelDatabase|herrerogascon2026Inditek20|matthews2016GlobalPlateBoundary|merdith2021ExtendingFullplateTectonic|monarrez2023ReducedStrengthIncreased|rampino2025CorrelationCyclicityStratigraphic|renaudie2020NsbNeptuneSandbox|silvestro2014PyrateProgramEstimate|smith2025IdentifyingBigQuestions|strauss1989ClassicalConfidenceIntervals)$''']
