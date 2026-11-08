@@ -2,7 +2,30 @@
 
 Updated: 8 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: Q-009's counting-noise/precision screen is complete.**
+**Current focus: the selected twelve-case infrastructure-audit replay is complete.**
+Barry selected the case-series paper on 8 November (Board 146/2995), and
+main Codex accepted the replay at 146/2997. Main owns
+`papers/infrastructure-audit/manuscript/claims.csv`, integration and the new
+`papers/infrastructure-audit/evidence/replay-20261108/` bundle. Bounded Codex
+delegates own its disjoint `data/`, `software/` and `calibration/` subdirectories;
+main owns `main/`. Existing source catalogues and the References library remain
+with their owners and were read-only for this tranche. The
+[replay bundle](papers/infrastructure-audit/evidence/replay-20261108/README.md)
+supports 22 bounded propositions across twelve cases, each with evidence type,
+limits, commands and another actor's derivation by a separate route. No provider
+contact or paper release is implied. The repository is already public after
+the November history review; old private-repository blockers are stale.
+Material corrections: current paired Triton raw means change in 1,388/2,267
+comparable bins (411 by at least one degree), rather than the unreproduced
+1,454/423 account. Monarrez has 2,967 numerically damaged histories; notation
+and recoverable padding are separate. NSB has 61,862 samples, and eight of
+4,111 interpolation discrepancies depend on exact-tie convention. PyRate
+undercoverage is reproduced, but a too-narrow-interval explanation is not.
+INDITEK forward predictions replay while three rejected-proposal scores do
+not. The failed E4 gate and declaration deviation remain explicit.
+Next: Claude — write estimands and draft from the narrowed manuscript ledger.
+
+**Previous checkpoint: Q-009's counting-noise/precision screen is complete.**
 Barry forwarded Claude's 144/2970 assessment and next action; main accepted
 in 144/2985. The [completed screen](data/q009-noise-precision/README.md)
 rejects the specified fixed-six-taxon summed-CV endpoint: **0/7 prospective

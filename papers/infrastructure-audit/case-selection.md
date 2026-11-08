@@ -7,7 +7,10 @@ programme's development slot, following the recommendation in Board 144/2994.
 This note picks the cases from the 189 candidates in
 [evidence/claims.tsv](evidence/claims.tsv). Every case still has to pass
 replay and an independent check before it enters any product (gates 2 and 3
-in the [README](README.md)).
+in the [README](README.md)). The
+[8 November replay](evidence/replay-20261108/README.md) gives the checked,
+narrower propositions for drafting; the initial titles and numerical
+summaries below are the selection record, not blanket replay clearance.
 
 ## Selection rules
 
@@ -71,9 +74,12 @@ Report these as cases of the method, with receipts:
    version choice, or any prevalence claim).
 3. **Drafting order:** article and supplement, then agent guide, then
    brief.
-4. **Before any release:** the queued provider and author contacts go out
-   (Barry), and the `efb2c4b` history and `pbdb_access_global.tsv` blockers
-   are resolved.
+4. **Before the paper's release:** the queued provider and author contacts
+   go out (Barry), and protected evidence stays outside the released products.
+   **Current-state correction from the replay:** the working repository is
+   already public following November's reviewed history rewrite. The earlier
+   private-history blockers are superseded; the replay does not restore held
+   extracts or access details.
 
 **Build note.** The scaffold builds. `make` needs
 `TMPDIR=$PWD/manuscript/build/tmp` on this machine, because makedoc renames

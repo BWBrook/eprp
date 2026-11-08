@@ -1,9 +1,12 @@
 # With receipts: an agentic audit of quantitative palaeobiology's infrastructure
 
-Status: **scaffold only (started 25 October 2026).** No manuscript text yet.
-The release of anything outside the private repository, including a
-preprint, submission or contact with providers, is a one-way door that Barry
-opens.
+Status: **selected case series; twelve-case replay in progress (8 November
+2026).** The [selection](case-selection.md) and
+[replay bundle](evidence/replay-20261108/README.md) lead to the single
+[manuscript claims ledger](manuscript/claims.csv). No article text yet.
+The working repository is public following the November history review.
+Protected evidence stays outside it. Provider contact and the paper's first
+release or submission remain with Barry.
 
 Barry, Claude chat, 25 October 2026 (exact):
 
@@ -79,11 +82,11 @@ Barry suggests *Palaeontologia Electronica*.
    from the stated script or inputs. The owning side session replays it, or
    this session does, and Codex audits independently: the audit of the
    audit.
-3. **Responsible disclosure before release.** Data providers and software
-   authors are told about defects before anything is made public. Barry has
-   already queued those contacts in the catalogues' CONTACTS files. The paper
-   should report their responses and any fixes. Contact is Barry's
-   decision.
+3. **Responsible disclosure before the paper's release.** Barry manages the
+   queued provider and author contacts. The paper should report responses
+   and fixes. The working repository is already public; protected evidence
+   and undisclosed sensitive details stay outside it. Contact remains
+   Barry's decision.
 4. **Sensitivity.**
    - [Detail withheld pending disclosure to the data custodian.]
    - **Personal data in downloaded files:** never reproduced.
@@ -98,13 +101,13 @@ Barry suggests *Palaeontologia Electronica*.
    The exact model identifiers per session are to be confirmed from the
    records.
 
-## Who does what (proposed; Barry decides how the side sessions are used)
+## Current allocation (Board 146)
 
 | Role | Who |
 | --- | --- |
-| Scaffold, ledger, drafting | Claude, main session |
-| Replaying and correcting their own findings | The Databases, Packages/Sims and References side sessions, each for its own catalogue |
-| Independent adversarial review of every claim and of the method section | Codex |
+| Case selection, estimands and drafting | Claude, main session |
+| Selected-case replay, independent checks and manuscript claims ledger | Codex, main session, with bounded delegates |
+| Source catalogues and library | Databases, Packages/Sims and References retain ownership; replay uses them read-only |
 | Disclosure to providers and authors, venue, final review | Barry |
 
 ## Files
