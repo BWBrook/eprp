@@ -71,6 +71,9 @@ might as well aim for our stretch goal to begin with, and treat Palaeontologia E
 fallback." Format gaps against the journal are in
 [docs/audits/2026-11-11-paleobiology-format-comparison.md](docs/audits/2026-11-11-paleobiology-format-comparison.md).
 
+**Spelling:** American English for this paper from 12 November 2026 (Barry: "US spelling is fine for this
+work hereafter, given our target journal").
+
 Earlier note on the fallback, *Palaeontologia Electronica*:
 - **Historically:** an open-access journal, free to read, with no page
   charges, that publishes methods papers.
