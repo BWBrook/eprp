@@ -16,3 +16,8 @@ the manuscript.
 **Writing rule for every later step** (Barry, 12 November): state results plainly; gather constraints,
 assumptions and limitations in one dedicated section; no negations or caveats attached to positive
 statements. American spelling throughout.
+
+## Step 2: the one-page paper (draft, 12 November 2026)
+
+[2-one-page-paper.md](2-one-page-paper.md): the whole paper in about 600 words, understandable on its own.
+Next: iterate steps 1 and 2, and the venue and format decisions, with Codex on the board before step 3.
