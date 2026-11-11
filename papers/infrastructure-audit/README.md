@@ -65,7 +65,13 @@ The provisional opening is now **a case series**:
 
 ## Venue
 
-Barry suggests *Palaeontologia Electronica*.
+**Target (Barry, 11 November 2026):** *Paleobiology* first, as a Research Article; *Palaeontologia
+Electronica* as the fallback. Barry: "If you prefer *Paleobiology*, then that's our first target! We
+might as well aim for our stretch goal to begin with, and treat Palaeontologia Electronica as the
+fallback." Format gaps against the journal are in
+[docs/audits/2026-11-11-paleobiology-format-comparison.md](docs/audits/2026-11-11-paleobiology-format-comparison.md).
+
+Earlier note on the fallback, *Palaeontologia Electronica*:
 - **Historically:** an open-access journal, free to read, with no page
   charges, that publishes methods papers.
 - **To confirm on the journal site before drafting to its format:** current
