@@ -1,6 +1,6 @@
-# Step 2: tight abstract (single paragraph, under 150 words)
+# Step 1b: tight abstract (single paragraph, under 150 words)
 
-Written 12 November 2026 from `01-working-abstract.md`. American spelling, for *Paleobiology*. Numbers
+Written 12 November 2026 from `1a-working-abstract.md`. American spelling, for *Paleobiology*. Numbers
 follow `manuscript/claims.csv`; wording stays within `manuscript/estimands.md`.
 
 Debate about inference from the fossil record has centered on sampling bias in the rocks, but the shared

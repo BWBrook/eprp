@@ -1,6 +1,6 @@
-# Step 4: display items
+# Step 1d: display items
 
-12 November 2026. The plan serves the main message (`03-main-message.md`) and its four lines of evidence.
+12 November 2026. The plan serves the main message (`1c-main-message.md`) and its four lines of evidence.
 
 **Budget: three figures and two tables in the main text; everything else in the supplement.** Twelve
 cases already ask a lot of a reader. One figure per case would bury the message, and a result the reader

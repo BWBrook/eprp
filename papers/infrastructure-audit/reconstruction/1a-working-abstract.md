@@ -1,4 +1,4 @@
-# Step 1: working abstract (key questions)
+# Step 1a: working abstract (key questions)
 
 Reconstruction pass, 12 November 2026. Not for submission: the reference point for every later step.
 Main message (agreed in chat, 11 November): *agent-assisted replay of palaeobiology's shared data and

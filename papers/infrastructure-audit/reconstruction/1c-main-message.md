@@ -1,6 +1,6 @@
-# Step 3: the main message (25 words or fewer)
+# Step 1c: the main message (25 words or fewer)
 
-12 November 2026, distilled from `01-working-abstract.md` and `02-abstract.md`.
+12 November 2026, distilled from `1a-working-abstract.md` and `1b-abstract.md`.
 
 > **AI agents can systematically check the databases and software behind fossil-record research; they found
 > verifiable errors and pitfalls that researchers need to know about.** (24 words)
