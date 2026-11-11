@@ -2,10 +2,26 @@
 
 12 November 2026, distilled from `01-working-abstract.md` and `02-abstract.md`.
 
-> **AI agents can systematically replay the shared data and software beneath big paleobiology, exposing
-> documented, checkable findings that change what researchers should trust.** (23 words)
+> **AI agents can systematically check the databases and software behind fossil-record research; they found
+> verifiable errors and pitfalls that researchers need to know about.** (24 words)
+
+Revised the same day after Barry's comment that the first version was not clear to a new reader ("too much
+wood for trees. Don't assume anything of your reader"). The first version was: "AI agents can
+systematically replay the shared data and software beneath big paleobiology, exposing documented,
+checkable findings that change what researchers should trust."
 
 ## Why this wording
+
+- **Plain words for a reader new to the topic.** "Check" replaces "replay". "The databases and software
+  behind fossil-record research" replaces "shared data and software beneath big paleobiology", and
+  "verifiable errors and pitfalls" replaces "documented, checkable findings". The paper can introduce the
+  technical terms later.
+- **"Errors and pitfalls"** covers the whole series. Some cases are errors (package defects, a
+  misprinted probability, corrupted spreadsheets). Others are intended choices that trip users up (interval
+  re-dating, plate-model disagreement, what an interval measures).
+- **"Verifiable"** carries the receipts: every finding has a command and pinned inputs.
+
+The notes below on the first version still apply where relevant:
 
 - **The agents are the subject.** Barry, 12 November: "the agent aspect here is notable, because we're
   highlighting a potentially valuable new approach to 'big paleo'." The 11 November version made replay the
