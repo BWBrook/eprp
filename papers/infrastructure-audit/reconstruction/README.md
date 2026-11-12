@@ -29,3 +29,4 @@ Barry accepted steps 1–2 on 12 November, including organizing questions in pla
 | Part | File | Content |
 |---|---|---|
 | 3a | [3a-section-abstracts.md](3a-section-abstracts.md) | Introduction, Methods, Results and Discussion, each in at most 300 words |
+| 3b | [3b-paragraph-abstracts.md](3b-paragraph-abstracts.md) | 24 paragraphs: framework, ordering check and 3–4-sentence abstracts with citation signposts |
