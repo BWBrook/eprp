@@ -141,9 +141,9 @@ allowed); `docs/audits/` holds the triage of every review.
 - **Downstream consequence.** No published analysis was rerun. Rerunning one that uses an affected layer
   would measure consequence directly.
 - **Comparison.** Nothing here compares agent-assisted with human auditing.
-- **Figures.** Captions for Figures 1–3 are in `main.md`; none is drawn. Three extractions come first:
-  full-precision Triton per-bin means (Fig. 2C), signed NSB per-sample differences (Fig. 2D) and a rerun of
-  the admtools curve (Fig. 3A). The brief still needs its one figure.
+- **Figures.** Figures 1–3 are drawn by `manuscript/figures.py` (`uv run manuscript/figures.py` from the
+  paper root) from the replay receipts and the checked tables in `evidence/figure-data-20261112/`; the
+  script asserts every plotted count against its ledger value. The brief still needs its one figure.
 - **Sources.** Raup 1972 and the original Robson–Whitlock passages are unread; GTS2020 is cited only as
   the named reference work (`resources/library/notes/2026-11-12-infrastructure-audit-citations.md`).
 - **Declarations.** Acknowledgments, funding and competing interests await Barry.

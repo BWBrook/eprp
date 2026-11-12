@@ -355,7 +355,7 @@ particular findings change.
   and release.
 
 In line with *Paleobiology*'s policy, the AI systems are not authors. Their analytical roles are
-described in Methods and their role in writing the text here; any role in producing a figure will be
+described in Methods and their role in writing the text here; their role in producing each figure is
 stated in its caption.
 
 ## Acknowledgments
@@ -378,26 +378,31 @@ release will be archived on Zenodo with a DOI.
 ## Figure Captions
 
 **Figure 1.** The checked dependencies and the audit workflow. **A**, The twelve cases placed along the
-path from rocks to a published result (collection, database or deposit, time scale and age model, plate
-model, analysis package, published number), colored by primary family of check. **B**, The workflow: 189
-initial candidate findings and later additions, twelve selected cases, replay from pinned inputs, a
-second check and 22 supported propositions. Cases whose initial accounts were corrected are marked.
+path from rocks to a published result, colored by primary family of check; case 8 also carries a
+computation finding. **B**, The workflow, from 189 initial candidate findings and later additions to 22
+supported propositions; the six cases whose initial accounts were corrected are listed. Drawn by
+`manuscript/figures.py`, written by Claude (Anthropic).
 
 **Figure 2.** Findings in data provenance and transformation. **A**, Deposited molluscan occurrences
 present in ([297,657]{.C191}) and absent from ([71,103]{.C191}) the PBDB snapshot of 23 October 2026.
-**B**, Intervals with a changed modal base age in each of three snapshot pairs (at least 50
-single-interval occurrences in the later snapshot). **C**, Full-precision change in mean absolute
-paleolatitude for the [2,267]{.C045} comparable lineage-bins when excess Triton rows are removed.
-**D**, Stored minus interpolated NSB sample ages for the [56,387]{.C040} comparable samples, with
-$\pm$0.01 Myr marked.
+**B**, Intervals with a changed modal base age in three archived snapshot pairs, counting intervals with at
+least 50 single-interval occurrences in the later snapshot. **C**, Full-precision changes in mean absolute
+paleolatitude for the [1,388]{.C045} of [2,267]{.C045} comparable lineage-bins whose mean changed when
+excess Triton rows were removed (count on a log scale; dashed lines at $\pm$1°). **D**, Stored minus
+interpolated age for the [56,387]{.C040} comparable NSB samples (symmetric log scale; count on a log
+scale; dashed lines at $\pm$0.01 Myr). Drawn by `manuscript/figures.py`, written by Claude (Anthropic),
+from the checked tables in `evidence/figure-data-20261112/` and the replay receipts.
 
 **Figure 3.** Findings in computation, model sensitivity and output interpretation. **A**, admtools 0.7.0
-time error against height in the sparse synthetic model; vertical lines mark the two hiatuses. **B**,
-fossilbrush 1.0.6 flag decisions across the test grid, against numeric truth and text order, at a
-threshold of [5]{.C102}. **C**, Observed coverage against the 95% nominal line, for PyRate
-preservation-rate intervals (two arms) and for range-end bounds (three implementations). **D**, Median
-paleolatitude spread among three plate models by age, over the points reconstructable in all three at
-each age.
+time error against height for the [8,282]{.C096} sampled heights of the sparse synthetic model; dashed
+lines mark the two hiatuses. **B**, fossilbrush 1.0.6 flag decisions across the test grid at a threshold of
+[5]{.C102}: filled circles are flagged, and shaded columns mark where the package differs from numeric
+truth. **C**, Observed coverage of the true value against the nominal 95%: PyRate preservation-rate
+intervals in two simulation arms (top) and range-end bounds in the ideal arm of two simulated clades
+(bottom; Strauss–Sadler in the tbea and EDE implementations, Robson–Whitlock in EDE 0.2.0). **D**, Median
+paleolatitude spread among three plate models by age; numbers in parentheses are the points
+reconstructable in all three models at that age. Drawn by `manuscript/figures.py`, written by Claude
+(Anthropic).
 
 ## Tables
 
