@@ -21,3 +21,11 @@ statements. American spelling throughout.
 
 [2-one-page-paper.md](2-one-page-paper.md): the whole paper in about 600 words, understandable on its own.
 Next: iterate steps 1 and 2, and the venue and format decisions, with Codex on the board before step 3.
+
+## Step 3: expansion stages
+
+Barry accepted steps 1–2 on 12 November, including organizing questions in place of post hoc hypotheses.
+
+| Part | File | Content |
+|---|---|---|
+| 3a | [3a-section-abstracts.md](3a-section-abstracts.md) | Introduction, Methods, Results and Discussion, each in at most 300 words |
