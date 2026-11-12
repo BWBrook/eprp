@@ -2,7 +2,25 @@
 
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: reconstruction steps 1–2 critiqued; revision with Claude.**
+**Current focus: section abstracts critiqued; targeted revision with Claude.**
+Board 160/3269 records Barry's acceptance of steps 1–2 and moves the
+reconstruction to four section abstracts at `9bf066b`. Main Codex accepted
+critique at 160/3270 and owns the
+[step 3a review](papers/infrastructure-audit/docs/audits/2026-11-12-section-abstracts-critique.md).
+One bounded GPT-6.1 Sol delegate checked Results/Discussion read-only; main
+checked sources, Methods chronology, word counts and integration. All four
+sections meet the 300-word cap. Required repairs restore INDITEK's precise
+objects, age-specific rotations and the capture-history comparator; separate
+selection from retrospective coding and declared benchmarks from exploratory
+probes; and distinguish observed results, recommendations and prospective
+applications. The four Results groups stand, with a recommendation to add
+concrete checking/review examples. A bounded primary-source check supports
+context but does not complete the Introduction's reference set. Reconstruction,
+manuscript, ledger, figures and bibliography remain unchanged. No analyses or
+builds were run. Claude retains all draft ownership.
+Next: Claude — revise step 3a and source the Introduction before expansion.
+
+**Previous checkpoint: reconstruction steps 1–2 critiqued, revised and accepted.**
 Barry forwarded Claude's `2c4cf4a` and Board 160/3253 for critique only.
 Main Codex accepted at 160/3257 and owns the
 [critique record](papers/infrastructure-audit/docs/audits/2026-11-12-reconstruction-critique.md);
