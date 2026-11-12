@@ -1,0 +1,92 @@
+{
+  "admtools_C096": {
+    "deposited": 8282,
+    "max_abs_error_myr": 2.995776523137465,
+    "max_first_tie_interpolation_difference_myr": 0.0,
+    "max_independent_truth_difference_myr": 0.0,
+    "wrong_gt_1e_9_myr": 3972
+  },
+  "checked_by": "main Codex; saved-table arithmetic and receipt/hash comparison",
+  "checker_sha256": "bdd6cd2605d4b2fe5a60ae1c21e79835fe82c75d5afe3f5f83e2d8c6b94717cb",
+  "files": {
+    "admtools/README.md": {
+      "bytes": 2280,
+      "sha256": "e81b3936b84a509ad63c397a8197dbb42ad4505001bc645e6d65b149d12395a2"
+    },
+    "admtools/extract_admtools.R": {
+      "bytes": 5694,
+      "sha256": "b6b22981ce7313c637a97a17df6606f60a5757f656d7b691a50333be8052197a"
+    },
+    "admtools/receipt.json": {
+      "bytes": 2254,
+      "sha256": "8682eb19638034062d7cc48e230e4e4ca2b6c6d5649f322e9954c519c4436a6c"
+    },
+    "admtools/sparse_curve.tsv": {
+      "bytes": 617043,
+      "sha256": "c221b90ea4b595ff31222da2bba6383b813436517a85befaf17a5baadaeb4c71"
+    },
+    "admtools/tie_points.tsv": {
+      "bytes": 58,
+      "sha256": "94c3a38fb8550a9b2b455f0fbbc2ede70661dbffaa7a93131472cdaca2973d5d"
+    },
+    "nsb/README.md": {
+      "bytes": 2268,
+      "sha256": "6b8e20db362597547343d819a8f12fa917944d11159c6a655dc178f80fc885ae"
+    },
+    "nsb/extract_nsb.py": {
+      "bytes": 10112,
+      "sha256": "261c90e596d5155a37d9eefd271e18ab4d3b325672d0747c156cee950990fc55"
+    },
+    "nsb/nsb_signed_age_differences.tsv.gz": {
+      "bytes": 705672,
+      "sha256": "60cc12dd0b83de013f720314e843ae3cce879960c25dfa49d53c829086370872"
+    },
+    "nsb/receipt.json": {
+      "bytes": 2516,
+      "sha256": "b49bb1f40412a81d782acb43da75a75bff03248700196d4bd3cc213d43cd7c7f"
+    },
+    "triton/README.md": {
+      "bytes": 3318,
+      "sha256": "3b5f653cae4ddf28f7cf006d385386004713ea602317599ee2650e470ce954d3"
+    },
+    "triton/comparable.tsv": {
+      "bytes": 147927,
+      "sha256": "38fabc689eb589294ee1b61586425e0576393114376b6680723ef72e6cb9e512"
+    },
+    "triton/extract.R": {
+      "bytes": 3149,
+      "sha256": "d7dc2f8d647bc1b66a53e795dd77b062146e954a26c59789469d4142b0d79d01"
+    },
+    "triton/newly_missing.tsv": {
+      "bytes": 225,
+      "sha256": "be02475a1517be90d333827e594f7e6bdd0494000eac7aa4baf191eed8464bf7"
+    },
+    "triton/r_summary.tsv": {
+      "bytes": 250,
+      "sha256": "8c435192d2aa6e1b5685a6e6c31a2c0becdb66e95ec999ac8fd582a5d37d1480"
+    },
+    "triton/receipt.json": {
+      "bytes": 4153,
+      "sha256": "871bbc8339f0c3c50e8b310697945b3584de68932679a2323c3b7ff5751fa54f"
+    },
+    "triton/reproduce.py": {
+      "bytes": 8280,
+      "sha256": "015c17758ccb868c81deaf0c5c2361c5857d840a47ab3c32ec1b836edfd69dc3"
+    }
+  },
+  "limits": "Plotting values reproduce the bounded claims. No new biological analysis, causal attribution or figure rendering.",
+  "nsb_C040": {
+    "abs_delta_gt_0_01_myr": 4111,
+    "comparable": 56387,
+    "holes_disagreeing": 56,
+    "noncomparable_excluded": 5475
+  },
+  "source_revision": "5c37437",
+  "triton_C045": {
+    "change_ge_one_degree_with_tolerance": 411,
+    "changed_gt_1e_9": 1388,
+    "comparable": 2267,
+    "max_abs_delta_deg": 26.899249999999995,
+    "newly_missing_separate": 4
+  }
+}

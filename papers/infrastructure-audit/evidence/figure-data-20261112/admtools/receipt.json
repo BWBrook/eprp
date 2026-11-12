@@ -1,0 +1,54 @@
+{
+  "panel": "Figure 3A",
+  "claim": "C096",
+  "source_revision": "5c37437",
+  "method": "Fresh admtools 0.7.0 strat_to_time on the original seed-901 deposited sample; explicit linear-segment truth.",
+  "sign": "estimated_time_myr minus truth_time_myr",
+  "environment": {
+    "R": "R version 4.6.1 (2026-06-24)",
+    "admtools": "0.7.0",
+    "RNGkind": ["Mersenne-Twister", "Inversion", "Rejection"],
+    "function_sha256": {
+      "strat_to_time": "255527ce722a39dd2f310bcb6750894ed423d2e6c73cc2754e619c2186a5454d",
+      "get_time_adm": "36bcb8349c6dee914610b76efabfb82bf28bd5287632ec694e739a2e7bd2cdbb"
+    },
+    "image": "sha256:44432c896c3622e92c68f11716d639745b0fa2b4d6c47124538461389f6daab6"
+  },
+  "inputs": {
+    "t": [0, 4, 6, 12, 15, 21, 24, 30],
+    "h": [0, 8, 8, 14, 14, 26, 32, 38],
+    "seed": 901,
+    "random_draws": 10000,
+    "input_sha256": "95b7e9421cf090ae321da6b34297cca8c8d5c7d7aabdefca6f490e34bd68d79f",
+    "prior_case": {
+      "file": "case05_admtools.json",
+      "sha256": "2d2999d89349b3ee4490814d12a86fab457ded26c174be31821e24291b62421d"
+    },
+    "prior_environment": {
+      "file": "package_environment.json",
+      "sha256": "8b9e2a59070db00c3c79f6076ec472098f46b2fb2500ae0e13eb895cd003a641"
+    }
+  },
+  "script_sha256": "b6b22981ce7313c637a97a17df6606f60a5757f656d7b691a50333be8052197a",
+  "output_sha256": {
+    "sparse_curve_tsv": "c221b90ea4b595ff31222da2bba6383b813436517a85befaf17a5baadaeb4c71",
+    "tie_points_tsv": "94c3a38fb8550a9b2b455f0fbbc2ede70661dbffaa7a93131472cdaca2973d5d"
+  },
+  "checks": {
+    "n_deposited": 8282,
+    "n_non_deposited": 1718,
+    "error_tolerance_myr": 1.0000000000000001e-09,
+    "n_wrong": 3972,
+    "max_abs_error_myr": 2.9957765231374651,
+    "min_signed_error_myr": -2.9957765231374651,
+    "max_signed_error_myr": 0,
+    "full_precision_round_trip": true,
+    "independent_linear_segment_truth": true
+  },
+  "hiatuses": {
+    "height": [8, 14],
+    "time_start_myr": [4, 12],
+    "time_end_myr": [6, 15]
+  },
+  "limits": "Sparse two-hiatus synthetic model only. All 8,282 original deposited draws are included, sorted by height; this is not a new regular grid or the dense-model near-hiatus probe. Segment labels permit plotting without joining across hiatus jumps."
+}

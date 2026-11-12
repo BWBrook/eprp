@@ -1,0 +1,11 @@
+field	value
+R	R version 4.6.1 (2026-06-24)
+total_lineage_bins	3184
+before_nonmissing	2271
+after_nonmissing	2267
+paired_nonmissing	2267
+newly_missing	4
+both_missing	913
+changed_gt_1e_9	1388
+change_ge_1_degree	411
+max_abs_change_deg	26.899249999999995

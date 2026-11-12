@@ -1,0 +1,58 @@
+{
+  "checks": "Pinned input hash before/after; exact prior receipt categories/counts/tie sensitivity; gzip readback, unique sample IDs and threshold count. Noncomparable samples remain in classes only.",
+  "claim": "C040",
+  "classes": {
+    "agree (<=0.01 Myr)": 52276,
+    "both undated": 4712,
+    "differ 0.01-0.5 Myr": 2475,
+    "differ 0.5-1 Myr": 683,
+    "differ >1 Myr": 953,
+    "stored dated, model cannot": 294,
+    "stored undated, model dates it": 469
+  },
+  "duplicate_tie_depths": 387,
+  "exact_duplicate_depth_sensitivity": {
+    "agreement_class_changes_first_vs_last": 8,
+    "samples_differing_gt_001_first_tie": 8,
+    "samples_differing_gt_001_last_tie": 0
+  },
+  "figure": "Fig2D",
+  "float_export": ".17g",
+  "gzip": "empty filename, mtime=0, compression level 9",
+  "holes_disagreeing": 56,
+  "independent_check": {
+    "comparable_category_mismatches": 0,
+    "maximum_absolute_interpolated_age_difference_myr": 2.842170943040401e-14,
+    "model_dated_samples_checked": 56856,
+    "route": "Collapse equal-depth ties into min/max ages; bisect_right on unique depths; 50-digit Decimal slope interpolation from exact binary-float values. Independent arithmetic and tie lookup; shared source SQL."
+  },
+  "input": {
+    "bytes": 75096064,
+    "file": "nsb.sqlite",
+    "sha256": "3fee4add2459c80529ab8cd018cdf2db2e60117b16fbdd2fb4be6a218d7a5a49"
+  },
+  "input_release": "2023-06-05_10063218",
+  "interpolation": "Current_flag='Y' revision join; sort (depth,age). bisect_left selects first age at exact depth. Between depths use last lower tie and first upper tie, weighted endpoints. No extrapolation.",
+  "limits": "Frozen database comparison under the recorded first-tie convention; not a claim of true sample ages or downstream analytical effect. Exact conflicting-depth classification is convention-sensitive.",
+  "output": {
+    "bytes": 705672,
+    "file": "nsb_signed_age_differences.tsv.gz",
+    "sha256": "60cc12dd0b83de013f720314e843ae3cce879960c25dfa49d53c829086370872"
+  },
+  "plotted_comparable_samples": 56387,
+  "sample_order": "sample_id ascending",
+  "samples_abs_difference_gt_0_01": 4111,
+  "samples_at_conflicting_tie_age": 8,
+  "samples_at_duplicate_depth": 8,
+  "script": {
+    "file": "extract_nsb.py",
+    "sha256": "261c90e596d5155a37d9eefd271e18ab4d3b325672d0747c156cee950990fc55"
+  },
+  "sign": "stored sample age minus interpolated current-model age",
+  "total_samples": 61862,
+  "units": "Myr",
+  "versions": {
+    "python": "3.12.3",
+    "sqlite": "3.45.1"
+  }
+}

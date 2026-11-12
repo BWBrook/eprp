@@ -1,0 +1,116 @@
+{
+  "claim": "C045",
+  "independent_python_check": {
+    "changed_tolerance_deg": 1e-09,
+    "comparable_values_checked": 2267,
+    "deletion_membership_matches_retained": true,
+    "max_abs_R_minus_python_deg": {
+      "after_mean_deg": 7.105427357601002e-15,
+      "before_mean_deg": 7.105427357601002e-15,
+      "delta_after_minus_before_deg": 1.4210854715202004e-14
+    },
+    "newly_missing_values_checked": 4,
+    "one_degree_predicate": "abs(delta) >= 1 - 1e-9",
+    "raw_presence_rows": 541846,
+    "route": "Numeric-tuple duplicate grouping, deletion membership, species/lineage/range/bin selection and statistics.fmean from retained 17-significant-digit raw projection, independently of original R emat builder.",
+    "rows_removed": 16260,
+    "verification_tolerance_deg": 1e-12
+  },
+  "inputs": {
+    "drop_rows.txt": {
+      "bytes": 108003,
+      "sha256": "8356eee8cf6378bf6040048a69f446273d23b7b3a7e206d99182d8164238c92c"
+    },
+    "inputs/lineage_edges.tsv": {
+      "bytes": 30529,
+      "sha256": "ea616c1a73678879f5d55f6b384254e475c0affaa3ee310f59b4dbcf79a710bb"
+    },
+    "inputs/name_crosswalk.tsv": {
+      "bytes": 22441,
+      "sha256": "0b935bdf497e926d0c7ead29cc183844b40e238d02ca8be52f5bfb4bde9b0682"
+    },
+    "inputs/species.tsv": {
+      "bytes": 39687,
+      "sha256": "654bed448487179e3cd7b8d35cd872bf618fb75f516d21d276fee1c0f56d4420"
+    },
+    "projection.tsv.gz": {
+      "bytes": 14829852,
+      "sha256": "fe4f53fd8eb3379540a8755e323cc3018dfee2a222acea12095a4da9d17ffd0c"
+    },
+    "scripts/q012_original.R": {
+      "bytes": 11253,
+      "sha256": "1ea8d57d5fe70ac58112f6c3e472201effc45e186a3b58ff1fdabc5f65707e5b"
+    },
+    "scripts/raw_mean_check.R": {
+      "bytes": 1879,
+      "sha256": "05eb23d55b5f235b694b425655f5db990a64ede99b24cb8ac4a65d3e6734771a"
+    },
+    "scripts/triton_independent.py": {
+      "bytes": 5999,
+      "sha256": "cfe40a469fcd315b9687620fa69e7608b2459c022f692672e899325b845cae90"
+    },
+    "scripts/triton_prepare.R": {
+      "bytes": 709,
+      "sha256": "4d764e624845bee1716a0f9627c21df1323e79bf3ad808c21b894d7dc13726a6"
+    },
+    "triton_update_2023.RData": {
+      "bytes": 213694369,
+      "sha256": "7275120da2727e37b7d951632ea15364b0135d4aeaa5e67dee64a4a3d738af46"
+    }
+  },
+  "limitations": [
+    "Key collisions do not establish duplicate physical observations.",
+    "This is an EPRP descriptive support covariate, not a fitted biological outcome or a correction of an external published result.",
+    "The independent Python route shares the raw RData projection, support tables and source-priority policy; it independently implements grouping and means."
+  ],
+  "outputs": {
+    "comparable.tsv": {
+      "bytes": 147927,
+      "sha256": "38fabc689eb589294ee1b61586425e0576393114376b6680723ef72e6cb9e512"
+    },
+    "newly_missing.tsv": {
+      "bytes": 225,
+      "sha256": "be02475a1517be90d333827e594f7e6bdd0494000eac7aa4baf191eed8464bf7"
+    },
+    "r_summary.tsv": {
+      "bytes": 250,
+      "sha256": "8c435192d2aa6e1b5685a6e6c31a2c0becdb66e95ec999ac8fd582a5d37d1480"
+    }
+  },
+  "precision": "R binary64 means exported with sprintf(%.17g); no three-decimal tables used.",
+  "quantity": "Observed mean absolute palaeolatitude per lineage and 1-Myr bin; before/after conservative cross-source removal. Unlagged, unstandardised.",
+  "r_summary": {
+    "after_nonmissing": 2267,
+    "before_nonmissing": 2271,
+    "both_missing": 913,
+    "change_ge_1_degree": 411,
+    "changed_gt_1e_9": 1388,
+    "max_abs_change_deg": 26.899249999999995,
+    "newly_missing": 4,
+    "paired_nonmissing": 2267,
+    "total_lineage_bins": 3184
+  },
+  "scripts": {
+    "extract.R": {
+      "bytes": 3149,
+      "sha256": "d7dc2f8d647bc1b66a53e795dd77b062146e954a26c59789469d4142b0d79d01"
+    },
+    "reproduce.py": {
+      "bytes": 8280,
+      "sha256": "015c17758ccb868c81deaf0c5c2361c5857d840a47ab3c32ec1b836edfd69dc3"
+    }
+  },
+  "source_priority": [
+    "ForCenS",
+    "IODP",
+    "Neptune",
+    "Pangaea",
+    "Lloydetal2012",
+    "Fentonetal2016"
+  ],
+  "source_revision": "5c37437",
+  "versions": {
+    "R": "R version 4.6.1 (2026-06-24)",
+    "python": "3.12.3"
+  }
+}
