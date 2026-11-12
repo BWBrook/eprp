@@ -1,13 +1,13 @@
 ---
 document: agent-facing paper
-study: Infrastructure-audit case series (twelve checked cases from agent-assisted audits of palaeobiology's data and software)
+study: Infrastructure-audit case series (twelve checked cases from agent-assisted audits of paleobiology's data and software; target journal Paleobiology)
 status: internal draft
 human_paper: papers/infrastructure-audit/manuscript/text/main.md (+ supplement.md, brief.md)
 claims_ledger: papers/infrastructure-audit/manuscript/claims.csv (single source for all renderings; checked by tools/claims.py)
 interpretation: papers/infrastructure-audit/manuscript/estimands.md (what each case establishes; allowed and forbidden phrasings)
 governing_docs: [papers/infrastructure-audit/README.md, papers/infrastructure-audit/case-selection.md, papers/infrastructure-audit/evidence/replay-20261108/README.md]
 authority: Barry W. Brook decides provider and author contact, public release of the paper, submission and any correspondence outside the collaboration
-updated: 2026-11-08
+updated: 2026-11-12
 ---
 
 # Infrastructure-audit case series for agents: what was established, how to verify it, and how not to break it
@@ -23,7 +23,9 @@ and this file is wrong: fix it in the same commit.
 1. This file, then `manuscript/estimands.md`, then `manuscript/claims.csv`. Quote a claim only with its
    limit.
 2. `evidence/replay-20261108/README.md` and its four subdirectories for how each case was replayed.
-3. `manuscript/text/main.md` for the argument; `supplement.md` for selection, replay and the audit trail.
+3. `manuscript/text/main.md` for the argument; `supplement.md` for selection, replay, case notes and the
+   audit trail. `reconstruction/` records how the article was rebuilt from first principles (working
+   abstract to full draft, 12 November 2026), with Codex's critique of each step in `docs/audits/`.
 4. `evidence/claims.tsv` is the 189-row candidate pool from 25 October. It records discovery, not
    clearance. Never cite a number from it without a matching supported row in `manuscript/claims.csv`.
 
@@ -32,6 +34,11 @@ independence is check-specific, see `basis`), *provisional*, *refuted* or *super
 supported on 8 November 2026.
 
 ## 2. The answer, as claims
+
+Each case is coded by the family of check that established it (Methods; Table 1): **DP** data provenance
+and transformation, **CI** computation and implementation, **MS** model sensitivity, **OI** output
+interpretation and calibration. Cases 1–4 and 10 are DP; 5, 6, 11 and 12 are CI; 7 is OI; 8 is OI with CI;
+9 is MS. The families are defined by what was compared, not by cause.
 
 - **Case 1.** Deposited records absent from a dated public snapshot: C191, C192. [71,103]{.C191} of
   [368,760]{.C191}; regional screen [14]{.C192} to [12]{.C192} of [21]{.C192} stages.
@@ -61,7 +68,9 @@ supported on 8 November 2026.
 | E4 | the declared overall agreement gate in the range-end calibration benchmark; it failed |
 | arm | a simulation design condition (e.g. ideal, hiatus; psi 1.0, psi 0.25) |
 | rejected proposal | an INDITEK calibration state the sampler did not accept; not a posterior draw |
-| route | a computational path to a result; independence requires a different actor and route |
+| route | a computational path to a result; independence is check-specific (see each row's `basis`) |
+| replay team | main Codex with GPT-6.1 Sol subagents, 8 November 2026; Codex also first recorded cases 11 and 12 |
+| DP, CI, MS, OI | the four families of check; see section 2 |
 
 ## 4. Provenance map
 
@@ -101,6 +110,14 @@ Each ledger row's `reproduce` field is the exact command; its `commit` pins the 
     is check-specific, and some inputs are retained locally (review W07, W08).
 14. **Any prevalence, cost or method-superiority statement.** The series is a set of cases, with no
     comparison (`estimands.md`, cross-cutting rules).
+15. **"Each case was replayed by an agent other than its original finder."** False for cases 11 and 12,
+    which Codex first recorded and Codex's replay team checked (`docs/audits/2026-11-12-full-draft-provenance.md`).
+16. **"The TorsvikCocks2017 routes use the authors' two documented frames."** The geometry is consistent
+    with a reference-frame difference; the archived service's frame setting is not identified (C123;
+    review S4-01).
+17. **The seven-class scheme of the 8 November draft** (implementation defect, data inconsistency,
+    calibration failure, semantic finding, intended choice, membership, replay failure). Superseded by the
+    four families of check in section 2.
 
 ## 6. Checks before and after any change
 
@@ -124,10 +141,17 @@ allowed); `docs/audits/` holds the triage of every review.
 - **Downstream consequence.** No published analysis was rerun. Rerunning one that uses an affected layer
   would measure consequence directly.
 - **Comparison.** Nothing here compares agent-assisted with human auditing.
-- **Figure.** The article and brief still need one figure each.
+- **Figures.** Captions for Figures 1–3 are in `main.md`; none is drawn. Three extractions come first:
+  full-precision Triton per-bin means (Fig. 2C), signed NSB per-sample differences (Fig. 2D) and a rerun of
+  the admtools curve (Fig. 3A). The brief still needs its one figure.
+- **Sources.** Raup 1972 and the original Robson–Whitlock passages are unread; GTS2020 is cited only as
+  the named reference work (`resources/library/notes/2026-11-12-infrastructure-audit-citations.md`).
+- **Declarations.** Acknowledgments, funding and competing interests await Barry.
 
 ## 8. Conduct in this repository
 
+- Works without a usable Crossref record go in `references/manual.yaml`; edited books carry their
+  editors as one literal author string so the Paleobiology CSL renders them as books.
 - When adding a DOI, review the generated citation key and add it exactly to the repository's
   `.gitleaks.toml` allowlist; no pattern-based exemption.
 - Read `AGENTS.md` (or `CLAUDE.md`). Facts and citations come from sources read in the task; every DOI
