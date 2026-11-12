@@ -120,11 +120,11 @@
 
   <!-- Finding cards -->
   <g fill="#fdf1eb">
-    <rect x="288" y="496" width="264" height="276" rx="14"/>
-    <rect x="568" y="496" width="264" height="276" rx="14"/>
-    <rect x="848" y="496" width="264" height="276" rx="14"/>
-    <rect x="1128" y="496" width="264" height="276" rx="14"/>
-    <rect x="1408" y="496" width="264" height="276" rx="14"/>
+    <rect x="288" y="496" width="264" height="302" rx="14"/>
+    <rect x="568" y="496" width="264" height="302" rx="14"/>
+    <rect x="848" y="496" width="264" height="302" rx="14"/>
+    <rect x="1128" y="496" width="264" height="302" rx="14"/>
+    <rect x="1408" y="496" width="264" height="302" rx="14"/>
   </g>
   <g fill="#eb6834">
     <rect x="288" y="496" width="264" height="7" rx="3"/>
@@ -135,8 +135,8 @@
   </g>
 
   <text x="420" y="580" class="big">1 in 5</text>
-  <text x="420" y="636" class="card">of deposited</text>
-  <text x="420" y="670" class="card">mollusk records</text>
+  <text x="420" y="636" class="card">mollusk records in</text>
+  <text x="420" y="670" class="card">one study's deposit</text>
   <text x="420" y="704" class="card">absent from a dated</text>
   <text x="420" y="738" class="card">public snapshot</text>
 
@@ -147,15 +147,16 @@
 
   <text x="980" y="580" class="big">13.6°</text>
   <text x="980" y="636" class="card">median spread in</text>
-  <text x="980" y="670" class="card">ancient latitude</text>
-  <text x="980" y="704" class="card">among three maps,</text>
-  <text x="980" y="738" class="card">400 Myr ago</text>
+  <text x="980" y="670" class="card">ancient latitude of</text>
+  <text x="980" y="704" class="card">tested sites among</text>
+  <text x="980" y="738" class="card">three maps, 400</text>
+  <text x="980" y="772" class="card">million years ago</text>
 
   <text x="1260" y="580" class="big">3,972</text>
-  <text x="1260" y="636" class="card">of 8,282 heights</text>
-  <text x="1260" y="670" class="card">given the wrong age</text>
-  <text x="1260" y="704" class="card">in a test with</text>
-  <text x="1260" y="738" class="card">known answers</text>
+  <text x="1260" y="636" class="card">of 8,282 layer</text>
+  <text x="1260" y="670" class="card">positions given the</text>
+  <text x="1260" y="704" class="card">wrong age in a test</text>
+  <text x="1260" y="738" class="card">with known answers</text>
 
   <text x="1540" y="578" class="big" style="font-size:46px">3.4×10<tspan baseline-shift="super" style="font-size:28px">−16</tspan></text>
   <text x="1540" y="636" class="card">a printed</text>

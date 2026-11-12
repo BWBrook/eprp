@@ -400,7 +400,7 @@ lines mark the two hiatuses. **B**, fossilbrush 1.0.6 flag decisions across the 
 truth. **C**, Observed coverage of the true value against the nominal 95%: PyRate preservation-rate
 intervals in two simulation arms (top) and range-end bounds in the ideal arm of two simulated clades
 (bottom; Strauss–Sadler in the tbea and EDE implementations, Robson–Whitlock in EDE 0.2.0). **D**, Median
-paleolatitude spread among three plate models by age; numbers in parentheses are the points
+paleolatitude spread among three plate models by age; the row labeled *n* gives the points
 reconstructable in all three models at that age. Drawn by `manuscript/figures.py`, written by Claude
 (Anthropic).
 
