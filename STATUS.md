@@ -3,7 +3,8 @@
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
 **Current focus: full reconstruction draft reviewed; targeted revision before porting.**
-Barry forwarded `5577dd8` and Board 160/3294; main accepted at 3296.
+Barry forwarded `5577dd8` and Board 160/3294; main accepted at 3296 and
+returned the critique at 160/3300 (`1d811b4`).
 Main owns the [step 3c critique](papers/infrastructure-audit/docs/audits/2026-11-12-full-draft-critique.md)
 and [discovery/actor appendix](papers/infrastructure-audit/docs/audits/2026-11-12-full-draft-provenance.md).
 Two bounded GPT-6.1 Sol reviewers checked disjoint scientific/editorial
