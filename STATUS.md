@@ -3,7 +3,8 @@
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
 **Current focus: step 4 manuscript reviewed; one targeted wording repair.**
-Main accepted Board 160/3303 at 3306 against `8ad22d8` and integrated two
+Main accepted Board 160/3303 at 3306 against `8ad22d8`, returned the review
+at 160/3308 (`0cfd466`), and integrated two
 bounded GPT-6.1 Sol reviews in the
 [step 4 adversarial review](papers/infrastructure-audit/docs/audits/2026-11-12-step4-adversarial-review.md).
 The hard edit preserves the estimands; the repeated main message and caveat
