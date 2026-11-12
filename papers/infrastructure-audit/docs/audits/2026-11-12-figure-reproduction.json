@@ -1,0 +1,44 @@
+{
+  "matplotlib": "3.10.9",
+  "numpy": "2.5.4",
+  "source_sha256": "0d78be8ef1159ce5573b5915e78b02facd143066db3bc32549aab50560b5907f",
+  "all_script_assertions_passed": true,
+  "png_comparison": [
+    {
+      "file": "fig1_cases_workflow.png",
+      "scratch_sha256": "778b9b6d564087fec00a5ecfb13592881f439aa880b8e0b2715b4d5c119f0882",
+      "committed_sha256": "778b9b6d564087fec00a5ecfb13592881f439aa880b8e0b2715b4d5c119f0882",
+      "identical": true
+    },
+    {
+      "file": "fig2_data_provenance.png",
+      "scratch_sha256": "54457a2010f6206ab583a983e9544a78b02d9224ea4929a047964f22d07a6dbd",
+      "committed_sha256": "54457a2010f6206ab583a983e9544a78b02d9224ea4929a047964f22d07a6dbd",
+      "identical": true
+    },
+    {
+      "file": "fig3_computation_models_meaning.png",
+      "scratch_sha256": "7f12f8a83e985e3ea84dc036cc1dba28da4f24da5095feb4227a16b65a9a53f2",
+      "committed_sha256": "7f12f8a83e985e3ea84dc036cc1dba28da4f24da5095feb4227a16b65a9a53f2",
+      "identical": true
+    }
+  ],
+  "reviewed_commit": "7157814051a19179c6dca016e6d6726842e39418",
+  "committed_manuscript_pdf_sha256": "8c4eab2e6980595e82b19496f8ebf65010cfe2ca027ebfee717af92470afe472",
+  "rendered_pages_inspected": [
+    10,
+    13,
+    14,
+    15
+  ],
+  "production_files_unchanged": true,
+  "scope": "Figure generation replay to scratch, PNG SHA256 comparison, PDF visual inspection and caption parser check; no scientific source-data replay.",
+  "caption_parser_check": {
+    "current_pm_math_nodes": 0,
+    "proposed_pm_math_nodes": [
+      "\\pm 1^\\circ",
+      "\\pm 0.01"
+    ],
+    "literal_dollar_thresholds_visible_in_pdf": true
+  }
+}

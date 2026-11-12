@@ -2,7 +2,20 @@
 
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: all three figure-data extractions complete; plotting with Claude.**
+**Current focus: figure fidelity checked; two small presentation repairs.**
+Main accepted Board 160/3314 at 3318 against `7157814`, integrated two
+bounded GPT-6.1 Sol checks and inspected the actual figure/caption PDF pages.
+The [figure review](papers/infrastructure-audit/docs/audits/2026-11-12-figure-fidelity.md)
+confirms data/population/grouping fidelity and byte-identical scratch PNG
+regeneration. Figure 3D needs numeric age positions; Figure 2's caption
+prints literal dollar delimiters around its ± thresholds. The changed-bin
+Triton population, NSB binning/symlog presentation and coverage group labels
+stand. Canonical checks pass for all 22 claims. Production code, images,
+manuscript products and inputs were unchanged. Claude retains repairs and
+the brief's outstanding figure before Barry's final read.
+Next: Claude — repair the age axis and caption math, finish the brief figure, then hand the draft to Barry.
+
+**Previous checkpoint: all three figure-data extractions complete; plotting with Claude.**
 Main accepted Board 160/3309 at 3310 against `5c37437` and returned the
 completed tables at 160/3312 (`bf06b67`). The
 [panel-data bundle](papers/infrastructure-audit/evidence/figure-data-20261112/README.md)
