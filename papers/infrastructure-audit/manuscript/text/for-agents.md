@@ -143,7 +143,10 @@ allowed); `docs/audits/` holds the triage of every review.
 - **Comparison.** Nothing here compares agent-assisted with human auditing.
 - **Figures.** Figures 1–3 are drawn by `manuscript/figures.py` (`uv run manuscript/figures.py` from the
   paper root) from the replay receipts and the checked tables in `evidence/figure-data-20261112/`; the
-  script asserts every plotted count against its ledger value. The brief figure, `figB1_brief`, comes from the same script.
+  script asserts every plotted count against its ledger value. The brief's graphical abstract is hand-written SVG,
+  `manuscript/graphical-abstract/graphical_abstract.svg`, rendered with Inkscape to `figures/graphical_abstract.{png,pdf}`
+  (commands in its `<desc>`); its numbers trace to C191, C076, C125, C096 and C190. makedoc does not
+  rebuild when only a figure changes: delete `build/<profile>*` before rebuilding.
 - **Sources.** Raup 1972 and the original Robson–Whitlock passages are unread; GTS2020 is cited only as
   the named reference work (`resources/library/notes/2026-11-12-infrastructure-audit-citations.md`).
 - **Declarations.** Acknowledgments, funding and competing interests await Barry.

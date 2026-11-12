@@ -295,31 +295,7 @@ def figure3():
     save(fig, "fig3_computation_models_meaning")
 
 
-def brief_figure():
-    fig, ax = plt.subplots(figsize=(7.2, 1.75))
-    ax.set_xlim(0, 5)
-    ax.set_ylim(-0.95, 0.92)
-    ax.axis("off")
-    links = [("Fossil database\nor data file", "Records missing\nfrom the public\ndatabase; ages\nthat shift", "DP"),
-             ("Time scale and\nage model", "Stored ages that\ndisagree with\ntheir own\nreference points", "DP"),
-             ("Map of past\ncontinents", "Three maps place\nthe same sites a\nmedian 13.6° apart\nat 400 Ma", "MS"),
-             ("Analysis\nsoftware", "Numbers compared\nas words; ranges\nthat miss the\ntruth too often", "CI"),
-             ("Published\nnumber", "A probability\nits own stated\ntest does not\nreproduce", "CI")]
-    for i, (name, finding, fam) in enumerate(links):
-        ax.add_patch(FancyBboxPatch((i + 0.07, 0.3), 0.86, 0.56, boxstyle="round,pad=0,rounding_size=0.06",
-                                    fc="#f4f3ef", ec=MUTED, lw=0.6))
-        ax.text(i + 0.5, 0.58, name, ha="center", va="center", fontsize=7)
-        if i < 4:
-            ax.annotate("", xy=(i + 1.07, 0.58), xytext=(i + 0.93, 0.58),
-                        arrowprops=dict(arrowstyle="-|>", color=MUTED, lw=0.7, mutation_scale=7))
-        ax.plot([i + 0.5, i + 0.5], [0.28, 0.13], color=FAMILY[fam], lw=1.5)
-        ax.scatter(i + 0.5, 0.1, s=25, color=FAMILY[fam], zorder=3)
-        ax.text(i + 0.5, 0.0, finding, ha="center", va="top", fontsize=6.4)
-    save(fig, "figB1_brief")
-
-
 if __name__ == "__main__":
-    brief_figure()
     figure1()
     figure2()
     figure3()
