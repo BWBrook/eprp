@@ -1,0 +1,1187 @@
+{
+  "source_draft_commit": "48e55e3",
+  "checked": "2026-11-12",
+  "records": [
+    {
+      "id": "pbdb_api",
+      "slots": [
+        "S01"
+      ],
+      "identifier": "10.1017/pab.2015.39",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1017/pab.2015.39",
+      "title": [
+        "The Paleobiology Database application programming interface"
+      ],
+      "creators": [
+        {
+          "given": "Shanan E.",
+          "family": "Peters"
+        },
+        {
+          "given": "Michael",
+          "family": "McClennen"
+        }
+      ],
+      "publisher": null,
+      "container_title": [
+        "Paleobiology"
+      ],
+      "volume": "42",
+      "issue": "1",
+      "page": "1-7",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              12,
+              23
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              2
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "7f8a4cba5798b72d93f0c92fc1d733821bd297b65ed6bc0860954f30debe9d67",
+      "optional": false
+    },
+    {
+      "id": "gts2020",
+      "slots": [
+        "S02"
+      ],
+      "identifier": "10.1016/c2020-1-02369-3",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1016/c2020-1-02369-3",
+      "title": [
+        "Geologic Time Scale 2020"
+      ],
+      "creators": [],
+      "publisher": null,
+      "container_title": [],
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "ISBN": [
+        "9780128243602"
+      ],
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2020
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2020
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "8dead511298752e582c08fc6d800de896ace3af88e51b48c3c4afa48862da978",
+      "optional": false
+    },
+    {
+      "id": "gts2020_introduction",
+      "slots": [
+        "S02"
+      ],
+      "identifier": "10.1016/b978-0-12-824360-2.00001-2",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1016/b978-0-12-824360-2.00001-2",
+      "title": [
+        "Introduction"
+      ],
+      "creators": [
+        {
+          "given": "F.M.",
+          "family": "Gradstein"
+        }
+      ],
+      "publisher": null,
+      "container_title": [
+        "Geologic Time Scale 2020"
+      ],
+      "volume": null,
+      "issue": null,
+      "page": "3-20",
+      "ISBN": [
+        "9780128243602"
+      ],
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2020
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "c8f78410d5f0be35041cb041bfc24364822cf99d30f2bd138e1fed2b94977e3d",
+      "optional": false
+    },
+    {
+      "id": "dillon2023",
+      "slots": [
+        "S03"
+      ],
+      "identifier": "10.1017/pab.2023.3",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1017/pab.2023.3",
+      "title": [
+        "Challenges and directions in analytical paleobiology"
+      ],
+      "creators": [
+        {
+          "given": "Erin M.",
+          "family": "Dillon"
+        },
+        {
+          "given": "Emma M.",
+          "family": "Dunne"
+        },
+        {
+          "given": "Tom M.",
+          "family": "Womack"
+        },
+        {
+          "given": "Miranta",
+          "family": "Kouvari"
+        },
+        {
+          "given": "Ekaterina",
+          "family": "Larina"
+        },
+        {
+          "given": "Jordan Ray",
+          "family": "Claytor"
+        },
+        {
+          "given": "Angelina",
+          "family": "Ivkić"
+        },
+        {
+          "given": "Mark",
+          "family": "Juhn"
+        },
+        {
+          "given": "Pablo S.",
+          "family": "Milla Carmona"
+        },
+        {
+          "given": "Selina Viktor",
+          "family": "Robson"
+        },
+        {
+          "given": "Anwesha",
+          "family": "Saha"
+        },
+        {
+          "given": "Jaime A.",
+          "family": "Villafaña"
+        },
+        {
+          "given": "Michelle E.",
+          "family": "Zill"
+        }
+      ],
+      "publisher": null,
+      "container_title": [
+        "Paleobiology"
+      ],
+      "volume": "49",
+      "issue": "3",
+      "page": "377-393",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              27
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              8
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "e1f84d95b9b23d7609e5d7b7618d02c8b14de53e5154dd3a36699323444e9b6a",
+      "optional": false
+    },
+    {
+      "id": "admtools_method",
+      "slots": [
+        "S05"
+      ],
+      "identifier": "10.5194/gchron-7-427-2025",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.5194/gchron-7-427-2025",
+      "title": [
+        "Nonparametric estimation of age–depth models from sedimentological and stratigraphic information"
+      ],
+      "creators": [
+        {
+          "given": "Niklas",
+          "family": "Hohmann"
+        },
+        {
+          "given": "David",
+          "family": "De Vleeschouwer"
+        },
+        {
+          "given": "Sietske",
+          "family": "Batenburg"
+        },
+        {
+          "given": "Emilia",
+          "family": "Jarochowska"
+        }
+      ],
+      "publisher": "Copernicus GmbH",
+      "container_title": [
+        "Geochronology"
+      ],
+      "volume": "7",
+      "issue": "3",
+      "page": "427-448",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              16
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              16
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              16
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "013f78b16f44123036f323fd4130e5f8f859f1296465d028f2e620d66cda4bb9",
+      "optional": false
+    },
+    {
+      "id": "admtools_software",
+      "slots": [
+        "S05"
+      ],
+      "identifier": "10.32614/cran.package.admtools",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.32614/cran.package.admtools",
+      "title": [
+        "admtools: Estimate and Manipulate Age-Depth Models"
+      ],
+      "creators": [
+        {
+          "given": "Niklas",
+          "family": "Hohmann"
+        }
+      ],
+      "publisher": "The R Foundation",
+      "container_title": [
+        "CRAN: Contributed Packages"
+      ],
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              29
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              29
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              29
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "6cb4a44283c47e574747cc752f409ed8a22d7e7a0fb85228825271d86f153654",
+      "optional": false
+    },
+    {
+      "id": "fossilbrush_method",
+      "slots": [
+        "S06"
+      ],
+      "identifier": "10.1111/2041-210x.13966",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1111/2041-210x.13966",
+      "title": [
+        "<i>fossilbrush</i>\n                    : An R package for automated detection and resolution of anomalies in palaeontological occurrence data"
+      ],
+      "creators": [
+        {
+          "given": "Joseph T.",
+          "family": "Flannery‐Sutherland"
+        },
+        {
+          "given": "Nussaïbah B.",
+          "family": "Raja"
+        },
+        {
+          "given": "Ádám T.",
+          "family": "Kocsis"
+        },
+        {
+          "given": "Wolfgang",
+          "family": "Kiessling"
+        }
+      ],
+      "publisher": "Wiley",
+      "container_title": [
+        "Methods in Ecology and Evolution"
+      ],
+      "volume": "13",
+      "issue": "11",
+      "page": "2404-2418",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              8,
+              26
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              11
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              8,
+              26
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              8,
+              26
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "db961ba8b97d488c064e0919373cd70581a0928e43ed9d9a88f0a7f81d89769f",
+      "optional": false
+    },
+    {
+      "id": "fossilbrush_software",
+      "slots": [
+        "S06"
+      ],
+      "identifier": "10.32614/cran.package.fossilbrush",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.32614/cran.package.fossilbrush",
+      "title": [
+        "fossilbrush: Automated Cleaning of Fossil Occurrence Data"
+      ],
+      "creators": [
+        {
+          "given": "Joe",
+          "family": "Flannery-Sutherland"
+        },
+        {
+          "given": "Nussaïbah",
+          "family": "Raja-Schoob"
+        },
+        {
+          "given": "Ádam",
+          "family": "Kocsis"
+        },
+        {
+          "given": "Wolfgang",
+          "family": "Kiessling"
+        }
+      ],
+      "publisher": "The R Foundation",
+      "container_title": [
+        "CRAN: Contributed Packages"
+      ],
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              5,
+              9
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              5,
+              9
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              5,
+              9
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "5cbaad1f154ed02d9469d5618ce68240a32fd336070f838ffe7cfc3dda03c46f",
+      "optional": false
+    },
+    {
+      "id": "robson_whitlock",
+      "slots": [
+        "S08"
+      ],
+      "identifier": "10.1093/biomet/51.1-2.33",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1093/biomet/51.1-2.33",
+      "title": [
+        "Estimation of a truncation point"
+      ],
+      "creators": [
+        {
+          "given": "D. S.",
+          "family": "ROBSON"
+        },
+        {
+          "given": "J. H.",
+          "family": "WHITLOCK"
+        }
+      ],
+      "publisher": "Oxford University Press (OUP)",
+      "container_title": [
+        "Biometrika"
+      ],
+      "volume": "51",
+      "issue": "1-2",
+      "page": "33-39",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              1964
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1964
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1964
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "89f93418f2c7d99fdf2e6a38de243747eafc60311a6b9e007c49c83fd33d44dc",
+      "optional": false
+    },
+    {
+      "id": "torsvik_cocks_book",
+      "slots": [
+        "S10"
+      ],
+      "identifier": "10.1017/9781316225523",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1017/9781316225523",
+      "title": [
+        "Earth History and Palaeogeography"
+      ],
+      "creators": [
+        {
+          "given": "Trond H.",
+          "family": "Torsvik"
+        },
+        {
+          "given": "L. Robin M.",
+          "family": "Cocks"
+        }
+      ],
+      "publisher": "Cambridge University Press",
+      "container_title": [],
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "ISBN": [
+        "9781316225523",
+        "9781107105324"
+      ],
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              10,
+              31
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              10,
+              31
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              24
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              10,
+              31
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "807e025c28277ce2cd9eda3257800ce9bec17d5ec138cb45d939d0c87931e8b2",
+      "optional": false
+    },
+    {
+      "id": "van_hinsbergen2015",
+      "slots": [
+        "S11"
+      ],
+      "identifier": "10.1371/journal.pone.0126946",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1371/journal.pone.0126946",
+      "title": [
+        "A Paleolatitude Calculator for Paleoclimate Studies"
+      ],
+      "creators": [
+        {
+          "given": "Douwe J. J.",
+          "family": "van Hinsbergen"
+        },
+        {
+          "given": "Lennart V.",
+          "family": "de Groot"
+        },
+        {
+          "given": "Sebastiaan J.",
+          "family": "van Schaik"
+        },
+        {
+          "given": "Wim",
+          "family": "Spakman"
+        },
+        {
+          "given": "Peter K.",
+          "family": "Bijl"
+        },
+        {
+          "given": "Appy",
+          "family": "Sluijs"
+        },
+        {
+          "given": "Cor G.",
+          "family": "Langereis"
+        },
+        {
+          "given": "Henk",
+          "family": "Brinkhuis"
+        }
+      ],
+      "publisher": "Public Library of Science (PLoS)",
+      "container_title": [
+        "PLOS ONE"
+      ],
+      "volume": "10",
+      "issue": "6",
+      "page": "e0126946",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              6,
+              10
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2015,
+              6,
+              10
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2015,
+              6,
+              10
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "78c5ae354d9a82255d5d831a314510c1e4e11ec11cca4afe880b351d098fd148",
+      "optional": false
+    },
+    {
+      "id": "bradshaw2012",
+      "slots": [
+        "S12"
+      ],
+      "identifier": "10.1016/j.quascirev.2011.11.021",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1016/j.quascirev.2011.11.021",
+      "title": [
+        "Robust estimates of extinction time in the geological record"
+      ],
+      "creators": [
+        {
+          "given": "C.J.A.",
+          "family": "Bradshaw"
+        },
+        {
+          "given": "A.",
+          "family": "Cooper"
+        },
+        {
+          "given": "C.S.M.",
+          "family": "Turney"
+        },
+        {
+          "given": "B.W.",
+          "family": "Brook"
+        }
+      ],
+      "publisher": "Elsevier BV",
+      "container_title": [
+        "Quaternary Science Reviews"
+      ],
+      "volume": "33",
+      "issue": null,
+      "page": "14-19",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2012,
+              2
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2012,
+              2
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2012,
+              2
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "79d522fc40e47df4617c52fd877cb34bb99f9fbbe4059139a8354142b298454d",
+      "optional": false
+    },
+    {
+      "id": "solow2006_optional",
+      "slots": [
+        "S12"
+      ],
+      "identifier": "10.1073/pnas.0509480103",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1073/pnas.0509480103",
+      "title": [
+        "On the Pleistocene extinctions of Alaskan mammoths and horses"
+      ],
+      "creators": [
+        {
+          "given": "Andrew R.",
+          "family": "Solow"
+        },
+        {
+          "given": "David L.",
+          "family": "Roberts"
+        },
+        {
+          "given": "Karen M.",
+          "family": "Robbirt"
+        }
+      ],
+      "publisher": "National Academy of Sciences",
+      "container_title": [
+        "Proceedings of the National Academy of Sciences"
+      ],
+      "volume": "103",
+      "issue": "19",
+      "page": "7351-7353",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2006,
+              5,
+              9
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2006,
+              5,
+              9
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2006,
+              5,
+              9
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2006,
+              5,
+              9
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "6f7077a3ea6561d0952870de2a567e1ffb319b846cd85e5291d1cc5efe3584b4",
+      "optional": true
+    },
+    {
+      "id": "yesson2007",
+      "slots": [
+        "S14"
+      ],
+      "identifier": "10.1371/journal.pone.0001124",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1371/journal.pone.0001124",
+      "title": [
+        "How Global Is the Global Biodiversity Information Facility?"
+      ],
+      "creators": [
+        {
+          "given": "Chris",
+          "family": "Yesson"
+        },
+        {
+          "given": "Peter W.",
+          "family": "Brewer"
+        },
+        {
+          "given": "Tim",
+          "family": "Sutton"
+        },
+        {
+          "given": "Neil",
+          "family": "Caithness"
+        },
+        {
+          "given": "Jaspreet S.",
+          "family": "Pahwa"
+        },
+        {
+          "given": "Mikhaila",
+          "family": "Burgess"
+        },
+        {
+          "given": "W. Alec",
+          "family": "Gray"
+        },
+        {
+          "given": "Richard J.",
+          "family": "White"
+        },
+        {
+          "given": "Andrew C.",
+          "family": "Jones"
+        },
+        {
+          "given": "Frank A.",
+          "family": "Bisby"
+        },
+        {
+          "given": "Alastair",
+          "family": "Culham"
+        }
+      ],
+      "publisher": "Public Library of Science (PLoS)",
+      "container_title": [
+        "PLoS ONE"
+      ],
+      "volume": "2",
+      "issue": "11",
+      "page": "e1124",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              11,
+              7
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2007,
+              11,
+              7
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2007,
+              11,
+              7
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "d823c1f8790bc62ec1395bdb33edc1d4cf9ea7e48cf52e54429eb1bacd47a17e",
+      "optional": false
+    },
+    {
+      "id": "raup1972",
+      "slots": [
+        "P01"
+      ],
+      "identifier": "10.1126/science.177.4054.1065",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1126/science.177.4054.1065",
+      "title": [
+        "Taxonomic Diversity during the Phanerozoic"
+      ],
+      "creators": [
+        {
+          "given": "David M.",
+          "family": "Raup"
+        }
+      ],
+      "publisher": null,
+      "container_title": [
+        "Science"
+      ],
+      "volume": "177",
+      "issue": "4054",
+      "page": "1065-1071",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              1972,
+              9,
+              22
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1972,
+              9,
+              22
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "b39eeb8e7fd9fd16e777e8898910f085a24b5cc3c8c46f400269b8d517fc31c1",
+      "optional": false
+    },
+    {
+      "id": "smith2001",
+      "slots": [
+        "P02"
+      ],
+      "identifier": "10.1098/rstb.2000.0768",
+      "authority": "Crossref",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.crossref.org/works/10.1098/rstb.2000.0768",
+      "title": [
+        "Large–scale heterogeneity of the fossil record: implications for Phanerozoic biodiversity studies"
+      ],
+      "creators": [
+        {
+          "given": "Andrew B.",
+          "family": "Smith"
+        }
+      ],
+      "publisher": null,
+      "container_title": [
+        "Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences"
+      ],
+      "volume": "356",
+      "issue": "1407",
+      "page": "351-367",
+      "ISBN": null,
+      "dates": {
+        "published": {
+          "date-parts": [
+            [
+              2001,
+              3,
+              29
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2001,
+              3,
+              29
+            ]
+          ]
+        }
+      },
+      "raw_response_sha256": "a7d4a578794f47d463ee890a5af15436e079d785260db8895c087a43f53bb5e4",
+      "optional": false
+    },
+    {
+      "id": "paleomap_v3",
+      "slots": [
+        "S09"
+      ],
+      "identifier": "10.5281/zenodo.10596610",
+      "authority": "DataCite",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://api.datacite.org/dois/10.5281/zenodo.10596610",
+      "title": [
+        {
+          "title": "PALEOMAP PaleoAtlas for GPlates"
+        }
+      ],
+      "creators": [
+        {
+          "name": "Scotese, Christopher"
+        }
+      ],
+      "publication_year": 2016,
+      "version": "v3",
+      "dates": [
+        {
+          "date": "2016-02-16",
+          "dateType": "Issued"
+        }
+      ],
+      "related_identifiers": [
+        {
+          "relationType": "IsVersionOf",
+          "relatedIdentifier": "10.5281/zenodo.10596609",
+          "relatedIdentifierType": "DOI"
+        }
+      ],
+      "raw_response_sha256": "88ae9423db30418274685303a1482fc220a822d032c2bb83606fdb711427703d"
+    },
+    {
+      "id": "corebench_v2",
+      "slots": [
+        "S04"
+      ],
+      "identifier": "arXiv:2409.11363v2",
+      "authority": "arXiv API",
+      "retrieved": "2026-11-12",
+      "metadata_url": "https://export.arxiv.org/api/query?id_list=2409.11363",
+      "title": "CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark",
+      "creators": [
+        {
+          "name": "Zachary S. Siegel"
+        },
+        {
+          "name": "Sayash Kapoor"
+        },
+        {
+          "name": "Nitya Nadgir"
+        },
+        {
+          "name": "Benedikt Stroebl"
+        },
+        {
+          "name": "Arvind Narayanan"
+        }
+      ],
+      "published": "2024-09-17T17:13:19Z",
+      "updated": "2026-06-22T22:36:12Z",
+      "raw_response_sha256": "1b31b81e19335076aeb27c3c511e7dff72c821490c3afbf28411e292d6b7f061"
+    },
+    {
+      "id": "fossil_record2_book",
+      "slots": [
+        "S07"
+      ],
+      "identifier": "ISBN:9780412393808",
+      "authority": "Publisher catalogue and Open British National Bibliography",
+      "retrieved": "2026-11-12",
+      "title": "The Fossil Record 2",
+      "editor": "M. J. Benton",
+      "publication_year": 1993,
+      "publisher": "Chapman & Hall, London",
+      "metadata_urls": [
+        "https://link.springer.com/book/9780412393808",
+        "https://obnb.uk/p9087300-the-fossil-record-2"
+      ],
+      "note": "No DOI established. Original imprint/year distinguished from current migrated catalogue copyright/imprint fields."
+    },
+    {
+      "id": "gbif_documentation",
+      "slots": [
+        "S13"
+      ],
+      "identifier": "official URLs, no DOI claimed",
+      "authority": "GBIF Secretariat",
+      "retrieved": "2026-11-12",
+      "title": [
+        "API Downloads",
+        "Citation",
+        "Occurrence download formats"
+      ],
+      "metadata_urls": [
+        "https://techdocs.gbif.org/en/data-use/api-downloads",
+        "https://techdocs.gbif.org/en/data-use/citation",
+        "https://techdocs.gbif.org/en/data-use/download-formats"
+      ]
+    }
+  ],
+  "scope": "Registered identity metadata only; source passages and limitations are in the companion Markdown note. Raw responses/full text stay outside public Git.",
+  "software_artifacts": [
+    {
+      "package": "admtools",
+      "version": "0.7.0",
+      "url": "https://cran.r-project.org/src/contrib/admtools_0.7.0.tar.gz",
+      "sha256": "ce11b36751f7f10dc6d06779b8c5d9dd5aab81d24091ca4c3bd1fed20b548ef4"
+    },
+    {
+      "package": "fossilbrush",
+      "version": "1.0.6",
+      "url": "https://cran.r-project.org/src/contrib/fossilbrush_1.0.6.tar.gz",
+      "sha256": "ecaabde818ec96e603d759cb63c568b3687a23151cadc5eac238d73ecd4d7177"
+    },
+    {
+      "package": "EDE",
+      "version": "0.2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/EDE/EDE_0.2.0.tar.gz",
+      "sha256": "8b8e674711e0cbfb57defbd554964192d74da7671278d51ef349e51e86a9ed97"
+    }
+  ]
+}

@@ -4,7 +4,8 @@
 to the existing References/library lane through discussion 76. Source draft:
 `reconstruction/3b-paragraph-abstracts.md` at `0834983`.
 
-**Status: routed at Board 76/3280; acceptance and completion remain pending.**
+**Status: accepted at Board 76/3287; the bounded [source-check return](../../../../resources/library/notes/2026-11-12-infrastructure-audit-citations.md)
+is complete against revision `48e55e3` (76/3285), with explicit access limits.**
 References/library ownership is recorded in 76/2444–2445. This brief assigns no
 manuscript, bibliography or reconstruction edits. Claude owns those files.
 

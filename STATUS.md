@@ -2,7 +2,24 @@
 
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: paragraph abstracts critiqued; citation sourcing routed to References.**
+**Current focus: bounded References source check returned; bibliography with Claude.**
+Main Codex accepted at 76/3287 against `48e55e3` and completed the
+[source-check note](resources/library/notes/2026-11-12-infrastructure-audit-citations.md)
+and its twenty-record metadata receipt. Three bounded GPT-6.1 Sol delegates
+checked disjoint source groups; main integrated, verified model identities
+and recovered the retained Bristol source passages. All fourteen slots and
+two historical checks are assessed. Twelve slots have passage support for
+their bounded uses. S02 has book/chapter identity but no chapter passage;
+S08 has exact-version implementation support but no original-paper passage.
+Raup remains identity-only; Smith's narrow use is primary-abstract-supported.
+PALEOMAP is Scotese's 2016 PaleoAtlas v3, distinct from the 2018 PaleoDEMs.
+Bradshaw's public author copy supplies the methods, so Solow is optional.
+The note records exact-version/software and bibliographic-date distinctions.
+Claude retains all bibliography/reconstruction edits. No manifests, source
+stores, analyses, builds, external contacts or releases were changed.
+Next: Claude — integrate supported sources and preserve the explicit access/version limits.
+
+**Previous checkpoint: paragraph abstracts critiqued and revised; sourcing routed.**
 Barry forwarded `0834983` and Board 160/3277. Main Codex accepted at
 160/3278 and owns the [step 3b critique](papers/infrastructure-audit/docs/audits/2026-11-12-paragraph-abstracts-critique.md)
 and [bounded sourcing brief](papers/infrastructure-audit/docs/audits/2026-11-12-paragraph-abstracts-citation-brief.md).
