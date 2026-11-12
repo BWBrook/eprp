@@ -1,5 +1,89 @@
 ---
 references:
+- id: alroy2008PhanerozoicTrendsGlobal
+  citation-key: alroy2008PhanerozoicTrendsGlobal
+  type: article-journal
+  title: Phanerozoic Trends in the Global Diversity of Marine Invertebrates
+  author:
+  - family: Alroy
+    given: John
+  - family: Aberhan
+    given: Martin
+  - family: Bottjer
+    given: David J.
+  - family: Foote
+    given: Michael
+  - family: Fürsich
+    given: Franz T.
+  - family: Harries
+    given: Peter J.
+  - family: Hendy
+    given: Austin J. W.
+  - family: Holland
+    given: Steven M.
+  - family: Ivany
+    given: Linda C.
+  - family: Kiessling
+    given: Wolfgang
+  - family: Kosnik
+    given: Matthew A.
+  - family: Marshall
+    given: Charles R.
+  - family: McGowan
+    given: Alistair J.
+  - family: Miller
+    given: Arnold I.
+  - family: Olszewski
+    given: Thomas D.
+  - family: Patzkowsky
+    given: Mark E.
+  - family: Peters
+    given: Shanan E.
+  - family: Villier
+    given: Loïc
+  - family: Wagner
+    given: Peter J.
+  - family: Bonuso
+    given: Nicole
+  - family: Borkow
+    given: Philip S.
+  - family: Brenneis
+    given: Benjamin
+  - family: Clapham
+    given: Matthew E.
+  - family: Fall
+    given: Leigh M.
+  - family: Ferguson
+    given: Chad A.
+  - family: Hanson
+    given: Victoria L.
+  - family: Krug
+    given: Andrew Z.
+  - family: Layou
+    given: Karen M.
+  - family: Leckey
+    given: Erin H.
+  - family: Nürnberg
+    given: Sabine
+  - family: Powers
+    given: Catherine M.
+  - family: Sessa
+    given: Jocelyn A.
+  - family: Simpson
+    given: Carl
+  - family: Tomašových
+    given: Adam
+  - family: Visaggi
+    given: Christy C.
+  issued:
+    date-parts:
+    - - 2008
+  container-title: Science
+  volume: '321'
+  issue: '5885'
+  page: 97–100
+  publisher: American Association for the Advancement of Science (AAAS)
+  DOI: 10.1126/science.1156963
 - id: benson2025MarineAnimalDiversity
   citation-key: benson2025MarineAnimalDiversity
   type: article-journal
@@ -34,6 +118,19 @@ references:
   article-number: e70006
   publisher: Wiley
   DOI: 10.1111/pala.70006
+- id: benton1993FossilRecord2
+  citation-key: benton1993FossilRecord2
+  type: book
+  title: The Fossil Record 2
+  editor:
+  - family: Benton
+    given: M. J.
+  issued:
+    date-parts:
+    - - 1993
+  publisher: Chapman & Hall
+  publisher-place: London
+  ISBN: '9780412393808'
 - id: bradshaw2012RobustEstimatesExtinction
   citation-key: bradshaw2012RobustEstimatesExtinction
   type: article-journal
@@ -55,6 +152,46 @@ references:
   page: 14–19
   publisher: Elsevier BV
   DOI: 10.1016/j.quascirev.2011.11.021
+- id: dillon2023ChallengesDirectionsAnalytical
+  citation-key: dillon2023ChallengesDirectionsAnalytical
+  type: article-journal
+  title: Challenges and directions in analytical paleobiology
+  author:
+  - family: Dillon
+    given: Erin M.
+  - family: Dunne
+    given: Emma M.
+  - family: Womack
+    given: Tom M.
+  - family: Kouvari
+    given: Miranta
+  - family: Larina
+    given: Ekaterina
+  - family: Claytor
+    given: Jordan Ray
+  - family: Ivkić
+    given: Angelina
+  - family: Juhn
+    given: Mark
+  - family: Milla Carmona
+    given: Pablo S.
+  - family: Robson
+    given: Selina Viktor
+  - family: Saha
+    given: Anwesha
+  - family: Villafaña
+    given: Jaime A.
+  - family: Zill
+    given: Michelle E.
+  issued:
+    date-parts:
+    - - 2023
+  container-title: Paleobiology
+  volume: '49'
+  issue: '3'
+  page: 377–393
+  publisher: Cambridge University Press (CUP)
+  DOI: 10.1017/pab.2023.3
 - id: fenton2021TritonSpecieslevelDatabase
   citation-key: fenton2021TritonSpecieslevelDatabase
   type: article-journal
@@ -85,6 +222,99 @@ references:
   article-number: '160'
   publisher: Springer Science and Business Media LLC
   DOI: 10.1038/s41597-021-00942-7
+- id: flannery-sutherland2022FossilbrushAutomatedCleaning
+  citation-key: flannery-sutherland2022FossilbrushAutomatedCleaning
+  type: dataset
+  title: 'fossilbrush: Automated Cleaning of Fossil Occurrence Data'
+  author:
+  - family: Flannery-Sutherland
+    given: Joe
+  - family: Raja-Schoob
+    given: Nussaïbah
+  - family: Kocsis
+    given: Ádam
+  - family: Kiessling
+    given: Wolfgang
+  issued:
+    date-parts:
+    - - 2022
+  container-title: 'CRAN: Contributed Packages'
+  publisher: The R Foundation
+  DOI: 10.32614/cran.package.fossilbrush
+- id: flannerysutherland2022FossilbrushRPackage
+  citation-key: flannerysutherland2022FossilbrushRPackage
+  type: article-journal
+  title: "*fossilbrush*\n                    : An R package for automated detection and resolution of anomalies in palaeontological occurrence data"
+  author:
+  - family: Flannery‐Sutherland
+    given: Joseph T.
+  - family: Raja
+    given: Nussaïbah B.
+  - family: Kocsis
+    given: Ádám T.
+  - family: Kiessling
+    given: Wolfgang
+  issued:
+    date-parts:
+    - - 2022
+  container-title: Methods in Ecology and Evolution
+  volume: '13'
+  issue: '11'
+  page: 2404–2418
+  publisher: Wiley
+  DOI: 10.1111/2041-210x.13966
+- id: gbif2026ApiDownloads
+  citation-key: gbif2026ApiDownloads
+  type: webpage
+  title: API downloads
+  container-title: GBIF technical documentation
+  author:
+  - literal: GBIF Secretariat
+  issued:
+    date-parts:
+    - - 2026
+  accessed:
+    date-parts:
+    - - 2026
+      - 11
+      - 12
+  URL: https://techdocs.gbif.org/en/data-use/api-downloads
+- id: gbif2026Citation
+  citation-key: gbif2026Citation
+  type: webpage
+  title: Citation
+  container-title: GBIF technical documentation
+  author:
+  - literal: GBIF Secretariat
+  issued:
+    date-parts:
+    - - 2026
+  accessed:
+    date-parts:
+    - - 2026
+      - 11
+      - 12
+  URL: https://techdocs.gbif.org/en/data-use/citation
+- id: gradstein2020GeologicTimeScale
+  citation-key: gradstein2020GeologicTimeScale
+  type: book
+  title: Geologic Time Scale 2020
+  editor:
+  - family: Gradstein
+    given: Felix M.
+  - family: Ogg
+    given: James G.
+  - family: Schmitz
+    given: Mark D.
+  - family: Ogg
+    given: Gabi M.
+  issued:
+    date-parts:
+    - - 2020
+  publisher: Elsevier
+  publisher-place: Amsterdam
+  ISBN: '9780128243602'
+  DOI: 10.1016/c2020-1-02369-3
 - id: herrerogascon2026Inditek20
   citation-key: herrerogascon2026Inditek20
   type: article-journal
@@ -113,6 +343,41 @@ references:
   article-number: 2041-210x.70422
   publisher: Wiley
   DOI: 10.1111/2041-210x.70422
+- id: hohmann2023AdmtoolsEstimateManipulate
+  citation-key: hohmann2023AdmtoolsEstimateManipulate
+  type: dataset
+  title: 'admtools: Estimate and Manipulate Age-Depth Models'
+  author:
+  - family: Hohmann
+    given: Niklas
+  issued:
+    date-parts:
+    - - 2023
+  container-title: 'CRAN: Contributed Packages'
+  publisher: The R Foundation
+  DOI: 10.32614/cran.package.admtools
+- id: hohmann2025NonparametricEstimationAgedepth
+  citation-key: hohmann2025NonparametricEstimationAgedepth
+  type: article-journal
+  title: Nonparametric estimation of age–depth models from sedimentological and stratigraphic information
+  author:
+  - family: Hohmann
+    given: Niklas
+  - family: De Vleeschouwer
+    given: David
+  - family: Batenburg
+    given: Sietske
+  - family: Jarochowska
+    given: Emilia
+  issued:
+    date-parts:
+    - - 2025
+  container-title: Geochronology
+  volume: '7'
+  issue: '3'
+  page: 427–448
+  publisher: Copernicus GmbH
+  DOI: 10.5194/gchron-7-427-2025
 - id: matthews2016GlobalPlateBoundary
   citation-key: matthews2016GlobalPlateBoundary
   type: article-journal
@@ -194,6 +459,23 @@ references:
   article-number: '230795'
   publisher: The Royal Society
   DOI: 10.1098/rsos.230795
+- id: peters2016PaleobiologyDatabaseApplication
+  citation-key: peters2016PaleobiologyDatabaseApplication
+  type: article-journal
+  title: The Paleobiology Database application programming interface
+  author:
+  - family: Peters
+    given: Shanan E.
+  - family: McClennen
+    given: Michael
+  issued:
+    date-parts:
+    - - 2016
+  container-title: Paleobiology
+  volume: '42'
+  issue: '1'
+  page: 1–7
+  DOI: 10.1017/pab.2015.39
 - id: rampino2025CorrelationCyclicityStratigraphic
   citation-key: rampino2025CorrelationCyclicityStratigraphic
   type: article-journal
@@ -212,6 +494,22 @@ references:
   article-number: '105100'
   publisher: Elsevier BV
   DOI: 10.1016/j.earscirev.2025.105100
+- id: raup1972TaxonomicDiversityPhanerozoic
+  citation-key: raup1972TaxonomicDiversityPhanerozoic
+  type: article-journal
+  title: Taxonomic Diversity during the Phanerozoic
+  author:
+  - family: Raup
+    given: David M.
+  issued:
+    date-parts:
+    - - 1972
+  container-title: Science
+  volume: '177'
+  issue: '4054'
+  page: 1065–1071
+  publisher: American Association for the Advancement of Science (AAAS)
+  DOI: 10.1126/science.177.4054.1065
 - id: renaudie2020NsbNeptuneSandbox
   citation-key: renaudie2020NsbNeptuneSandbox
   type: article-journal
@@ -229,6 +527,80 @@ references:
   container-title: Palaeontologia Electronica
   publisher: Coquina Press
   DOI: 10.26879/1032
+- id: robson1964EstimationTruncationPoint
+  citation-key: robson1964EstimationTruncationPoint
+  type: article-journal
+  title: Estimation of a truncation point
+  author:
+  - family: ROBSON
+    given: D. S.
+  - family: WHITLOCK
+    given: J. H.
+  issued:
+    date-parts:
+    - - 1964
+  container-title: Biometrika
+  volume: '51'
+  issue: 1-2
+  page: 33–39
+  publisher: Oxford University Press (OUP)
+  DOI: 10.1093/biomet/51.1-2.33
+- id: sandve2013TenSimpleRules
+  citation-key: sandve2013TenSimpleRules
+  type: article-journal
+  title: Ten Simple Rules for Reproducible Computational Research
+  author:
+  - family: Sandve
+    given: Geir Kjetil
+  - family: Nekrutenko
+    given: Anton
+  - family: Taylor
+    given: James
+  - family: Hovig
+    given: Eivind
+  issued:
+    date-parts:
+    - - 2013
+  container-title: PLoS Computational Biology
+  volume: '9'
+  issue: '10'
+  page: e1003285
+  publisher: Public Library of Science (PLoS)
+  DOI: 10.1371/journal.pcbi.1003285
+- id: scotese2016PaleomapPaleoatlasGplates
+  citation-key: scotese2016PaleomapPaleoatlasGplates
+  type: dataset
+  title: PALEOMAP PaleoAtlas for GPlates
+  author:
+  - family: Scotese
+    given: Christopher
+  issued:
+    date-parts:
+    - - 2016
+  version: v3
+  publisher: Zenodo
+  DOI: 10.5281/zenodo.10596610
+- id: siegel2024CorebenchFosteringCredibility
+  citation-key: siegel2024CorebenchFosteringCredibility
+  type: article
+  title: 'CORE-Bench: fostering the credibility of published research through a computational reproducibility agent benchmark'
+  author:
+  - family: Siegel
+    given: Zachary S.
+  - family: Kapoor
+    given: Sayash
+  - family: Nadgir
+    given: Nitya
+  - family: Stroebl
+    given: Benedikt
+  - family: Narayanan
+    given: Arvind
+  issued:
+    date-parts:
+    - - 2024
+  container-title: arXiv
+  number: 2409.11363v2
+  URL: https://arxiv.org/abs/2409.11363v2
 - id: silvestro2014PyrateProgramEstimate
   citation-key: silvestro2014PyrateProgramEstimate
   type: article-journal
@@ -249,6 +621,22 @@ references:
   page: 1126–1131
   publisher: Wiley
   DOI: 10.1111/2041-210x.12263
+- id: smith2001LargescaleHeterogeneityFossil
+  citation-key: smith2001LargescaleHeterogeneityFossil
+  type: article-journal
+  title: 'Large–scale heterogeneity of the fossil record: implications for Phanerozoic biodiversity studies'
+  author:
+  - family: Smith
+    given: Andrew B.
+  issued:
+    date-parts:
+    - - 2001
+  container-title: 'Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences'
+  volume: '356'
+  issue: '1407'
+  page: 351–367
+  publisher: The Royal Society
+  DOI: 10.1098/rstb.2000.0768
 - id: smith2025IdentifyingBigQuestions
   citation-key: smith2025IdentifyingBigQuestions
   type: article-journal
@@ -531,4 +919,84 @@ references:
   page: 411–427
   publisher: Springer Science and Business Media LLC
   DOI: 10.1007/bf00897326
+- id: torsvik2016EarthHistoryPalaeogeography
+  citation-key: torsvik2016EarthHistoryPalaeogeography
+  type: book
+  title: Earth History and Palaeogeography
+  author:
+  - family: Torsvik
+    given: Trond H.
+  - family: Cocks
+    given: L. Robin M.
+  issued:
+    date-parts:
+    - - 2016
+  publisher: Cambridge University Press
+  DOI: 10.1017/9781316225523
+- id: vanhinsbergen2015PaleolatitudeCalculatorPaleoclimate
+  citation-key: vanhinsbergen2015PaleolatitudeCalculatorPaleoclimate
+  type: article-journal
+  title: A Paleolatitude Calculator for Paleoclimate Studies
+  author:
+  - family: van Hinsbergen
+    given: Douwe J. J.
+  - family: de Groot
+    given: Lennart V.
+  - family: van Schaik
+    given: Sebastiaan J.
+  - family: Spakman
+    given: Wim
+  - family: Bijl
+    given: Peter K.
+  - family: Sluijs
+    given: Appy
+  - family: Langereis
+    given: Cor G.
+  - family: Brinkhuis
+    given: Henk
+  issued:
+    date-parts:
+    - - 2015
+  container-title: PLOS ONE
+  volume: '10'
+  issue: '6'
+  page: e0126946
+  publisher: Public Library of Science (PLoS)
+  DOI: 10.1371/journal.pone.0126946
+- id: yesson2007HowGlobalGlobal
+  citation-key: yesson2007HowGlobalGlobal
+  type: article-journal
+  title: How Global Is the Global Biodiversity Information Facility?
+  author:
+  - family: Yesson
+    given: Chris
+  - family: Brewer
+    given: Peter W.
+  - family: Sutton
+    given: Tim
+  - family: Caithness
+    given: Neil
+  - family: Pahwa
+    given: Jaspreet S.
+  - family: Burgess
+    given: Mikhaila
+  - family: Gray
+    given: W. Alec
+  - family: White
+    given: Richard J.
+  - family: Jones
+    given: Andrew C.
+  - family: Bisby
+    given: Frank A.
+  - family: Culham
+    given: Alastair
+  issued:
+    date-parts:
+    - - 2007
+  container-title: PLoS ONE
+  volume: '2'
+  issue: '11'
+  page: e1124
+  publisher: Public Library of Science (PLoS)
+  DOI: 10.1371/journal.pone.0001124
 ...

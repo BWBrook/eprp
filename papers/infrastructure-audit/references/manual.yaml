@@ -1,2 +1,78 @@
-# Works without a DOI, as CSL-JSON-style YAML entries with an explicit id.
-references: []
+# Works without a usable Crossref record, as CSL-JSON-style YAML entries with an explicit id.
+# Identities checked 12 November 2026: resources/library/notes/2026-11-12-infrastructure-audit-citations.md
+references:
+- id: gradstein2020GeologicTimeScale
+  type: book
+  title: Geologic Time Scale 2020
+  editor:
+  - {family: Gradstein, given: Felix M.}
+  - {family: Ogg, given: James G.}
+  - {family: Schmitz, given: Mark D.}
+  - {family: Ogg, given: Gabi M.}
+  issued: {date-parts: [[2020]]}
+  publisher: Elsevier
+  publisher-place: Amsterdam
+  ISBN: '9780128243602'
+  DOI: 10.1016/c2020-1-02369-3
+- id: benton1993FossilRecord2
+  type: book
+  title: The Fossil Record 2
+  editor:
+  - {family: Benton, given: M. J.}
+  issued: {date-parts: [[1993]]}
+  publisher: Chapman & Hall
+  publisher-place: London
+  ISBN: '9780412393808'
+- id: scotese2016PaleomapPaleoatlasGplates
+  type: dataset
+  title: PALEOMAP PaleoAtlas for GPlates
+  author:
+  - {family: Scotese, given: Christopher}
+  issued: {date-parts: [[2016]]}
+  version: v3
+  publisher: Zenodo
+  DOI: 10.5281/zenodo.10596610
+- id: siegel2024CorebenchFosteringCredibility
+  type: article
+  title: 'CORE-Bench: fostering the credibility of published research through a computational reproducibility agent benchmark'
+  author:
+  - {family: Siegel, given: Zachary S.}
+  - {family: Kapoor, given: Sayash}
+  - {family: Nadgir, given: Nitya}
+  - {family: Stroebl, given: Benedikt}
+  - {family: Narayanan, given: Arvind}
+  issued: {date-parts: [[2024]]}
+  container-title: arXiv
+  number: 2409.11363v2
+  URL: https://arxiv.org/abs/2409.11363v2
+- id: gbif2026ApiDownloads
+  type: webpage
+  title: API downloads
+  container-title: GBIF technical documentation
+  author:
+  - {literal: GBIF Secretariat}
+  issued: {date-parts: [[2026]]}
+  accessed: {date-parts: [[2026, 11, 12]]}
+  URL: https://techdocs.gbif.org/en/data-use/api-downloads
+- id: gbif2026Citation
+  type: webpage
+  title: Citation
+  container-title: GBIF technical documentation
+  author:
+  - {literal: GBIF Secretariat}
+  issued: {date-parts: [[2026]]}
+  accessed: {date-parts: [[2026, 11, 12]]}
+  URL: https://techdocs.gbif.org/en/data-use/citation
+# Crossref issued is the 2015 online date; cited by the 2016 paginated issue.
+- id: peters2016PaleobiologyDatabaseApplication
+  type: article-journal
+  title: The Paleobiology Database application programming interface
+  author:
+  - {family: Peters, given: Shanan E.}
+  - {family: McClennen, given: Michael}
+  issued: {date-parts: [[2016]]}
+  container-title: Paleobiology
+  volume: '42'
+  issue: '1'
+  page: 1–7
+  DOI: 10.1017/pab.2015.39
