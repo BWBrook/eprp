@@ -2,7 +2,21 @@
 
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: figure fidelity checked; two small presentation repairs.**
+**Current focus: graphical/brief critique complete; bounded-claim repairs with Claude.**
+Main accepted Board 160/3327 at 3328 against `9ded788`, integrated two
+bounded GPT-6.1 Sol semantic reviews and inspected the printed artifacts.
+The [graphical/brief critique](papers/infrastructure-audit/docs/audits/2026-11-12-graphical-brief-critique.md)
+supports the design but requires the one-deposit denominator, tested-site
+scope, NSB threshold, descriptive selection wording and separate calibration
+targets with the failed control gate. The collective agent loop and C096's
+known-answer “wrong age” wording stand. Current PDF images match source PNGs;
+the earlier age-axis and ± repairs are visible. Align the article's stale
+“parentheses” label with its n row. Canonical checks pass all 22 claims;
+production sources/artifacts remain unchanged. Claude retains all edits.
+The makedoc image-dependency problem remains a separate follow-up.
+Next: Claude — revise the bounded claims and small label/layout residuals, then hand the package to Barry.
+
+**Previous checkpoint: figure fidelity checked; two small presentation repairs.**
 Main accepted Board 160/3314 at 3318 against `7157814`, returned the review
 at 160/3320 (`4a19c81`), integrated two
 bounded GPT-6.1 Sol checks and inspected the actual figure/caption PDF pages.

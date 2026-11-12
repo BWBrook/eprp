@@ -1,0 +1,54 @@
+{
+  "reviewed_commit": "9ded788e251446cbd9c1b353618691b3834c44be",
+  "source_svg_sha256": "15a2a8e3fed9ac60953e3fbdb45f7b91625caed975a0f6539a3a235dd314c181",
+  "committed_png_sha256": "2c4e0d61cacf84a86e4d7c39c7b3b6755ace4f6edfd3abdf1793d0ac4385df1f",
+  "scratch_png_sha256": "2c4e0d61cacf84a86e4d7c39c7b3b6755ace4f6edfd3abdf1793d0ac4385df1f",
+  "svg_to_png_byte_identical": true,
+  "font_resolved": "IBM Plex Sans Regular; IBMPlexSans-Regular.ttf",
+  "graphical_pdf_fonts_listed": 0,
+  "png_pixels": [
+    2008,
+    1311
+  ],
+  "brief_pdf_sha256": "eb2cdfc22f86ae19210891dd3b18d18f324ee8a6947cb11efc7eb3be2ac05122",
+  "manuscript_pdf_sha256": "1f2810ffca6b1ebbc8f77e8b62af3dc90bea55db4598f201a90bf28dfeb32d6b",
+  "embedded_rgb_image_comparisons": [
+    {
+      "source": "graphical_abstract.png",
+      "embedded_file": "embedded-brief-000.png",
+      "dimensions": "2008x1311",
+      "pixel_difference_count": "0 (0)",
+      "identical": true
+    },
+    {
+      "source": "fig3_computation_models_meaning.png",
+      "embedded_file": "embedded-main-004.png",
+      "dimensions": "4409x2961",
+      "pixel_difference_count": "0 (0)",
+      "identical": true
+    }
+  ],
+  "pdf_soft_masks": "Separate alpha-mask images excluded from RGB-to-source comparisons.",
+  "brief_pages": 2,
+  "visual_pages_inspected": {
+    "brief": [
+      1,
+      2
+    ],
+    "manuscript": [
+      10,
+      15
+    ],
+    "graphical_abstract": [
+      1
+    ]
+  },
+  "prior_repairs": {
+    "numeric_age_axis_visible_in_current_pdf": true,
+    "literal_dollar_pm_thresholds_absent_from_current_pdf": true,
+    "caption_parentheses_wording_still_needs_alignment": true
+  },
+  "checks": "SVG XML parses; source-to-PNG byte identity; embedded RGB pixels match current source PNGs; canonical make check passes22claims and source/reference checks.",
+  "limitations": "Semantic critique recorded separately; no production source/build mutation or scientific analysis rerun.",
+  "inkscape_version": "Inkscape 1.4.2 (ebf0e94, 2025-05-08)"
+}
