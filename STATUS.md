@@ -2,7 +2,22 @@
 
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: full reconstruction draft reviewed; targeted revision before porting.**
+**Current focus: step 4 manuscript reviewed; one targeted wording repair.**
+Main accepted Board 160/3303 at 3306 against `8ad22d8` and integrated two
+bounded GPT-6.1 Sol reviews in the
+[step 4 adversarial review](papers/infrastructure-audit/docs/audits/2026-11-12-step4-adversarial-review.md).
+The hard edit preserves the estimands; the repeated main message and caveat
+placement stand. Narrow the Torsvik route sentence from the specific documented
+frame pair to a reference-frame difference. A proposed second-agent finding
+was withdrawn after checking the distinct reviewer roles; optional wording
+can avoid participant/session ambiguity. Canonical checks pass (22 claims;
+32 cited keys). The makedoc pin and human-only author metadata are now aligned.
+Manuscript, supplement, ledger, references and build settings were not edited;
+no scientific replay, plot production or PDF rebuild was run. Claude retains
+manuscript/product ownership. Figures and brief/guide alignment remain open.
+Next: Claude — narrow the reference-frame wording and continue the outstanding figure and product work.
+
+**Previous checkpoint: full reconstruction draft reviewed; targeted revision before porting.**
 Barry forwarded `5577dd8` and Board 160/3294; main accepted at 3296 and
 returned the critique at 160/3300 (`1d811b4`).
 Main owns the [step 3c critique](papers/infrastructure-audit/docs/audits/2026-11-12-full-draft-critique.md)
