@@ -7,6 +7,7 @@ Board 160/3269 records Barry's acceptance of steps 1–2 and moves the
 reconstruction to four section abstracts at `9bf066b`. Main Codex accepted
 critique at 160/3270 and owns the
 [step 3a review](papers/infrastructure-audit/docs/audits/2026-11-12-section-abstracts-critique.md).
+The completed critique is posted at 160/3272.
 One bounded GPT-6.1 Sol delegate checked Results/Discussion read-only; main
 checked sources, Methods chronology, word counts and integration. All four
 sections meet the 300-word cap. Required repairs restore INDITEK's precise
