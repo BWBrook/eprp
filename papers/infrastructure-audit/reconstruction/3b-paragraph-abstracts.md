@@ -1,10 +1,12 @@
 # Step 3b: paragraph abstracts
 
-12 November 2026, expanded from `3a-section-abstracts.md` (revision `283465d`). For each section: the
+12 November 2026, expanded from `3a-section-abstracts.md` (revision `283465d`); revised the same day after
+Codex's critique (160/3281, `docs/audits/2026-11-12-paragraph-abstracts-critique.md`). For each section: the
 paragraph framework as one-sentence summaries, an ordering and coverage check, then each paragraph as 3–4
 short sentences. Bracketed comments signpost citations:
 - `[cite: key]` is in the bibliography or verified (status table at the end of 3a);
-- `[to source: …]` is still to be found and checked.
+- `[to source: Snn]` is still to be found and checked, under slot Snn of the References brief
+  (`docs/audits/2026-11-12-paragraph-abstracts-citation-brief.md`, routed at 76/3280).
 
 ## Introduction (five paragraphs)
 
@@ -13,7 +15,7 @@ short sentences. Bracketed comments signpost citations:
 2. That chain adds a second set of dependencies to the rock-record biases the field already studies.
 3. The community has named parts of this layer as priorities, and reproducibility guidance says what
    checking it involves.
-4. AI agents can now carry out that checking across a research program and record every step.
+4. In this program, two AI agents carried out that checking and recorded the evidence for each check.
 5. This paper reports twelve such checks as a case series organized by three questions.
 
 **Check.** The order runs from the problem (1–2), through why it matters now (3) and how it can be
@@ -25,14 +27,13 @@ questions with their deliverables.
 occurrence databases, published deposits, time scales, age models, plate reconstructions and analysis
 packages. Global diversity studies show how such a chain is built, from database occurrences and explicit
 choices about sampling and analysis. Each link is maintained by others and changes over time.
-[cite: alroy2008] [to source: a PBDB data-model or overview paper; a time-scale paper, e.g. GTS2020]
+[cite: alroy2008] [to source: S01 PBDB overview; S02 GTS2020]
 
 **I2. A second set of dependencies.** Paleobiology has a long literature on how the rock record distorts
 inference, through sampling, preservation and rock availability. The shared infrastructure adds a second
 set of dependencies: data transformations, software implementations, model choices and the meaning of what
 each tool reports. These sit between the rocks and the result in every large-scale analysis.
-[cite: raup1972; smith2001] [to source: one recent sampling-standardization review, e.g. Close et al. or
-Benson et al.]
+[cite: raup1972; smith2001 (passage checks pending)] [to source: S03 sampling-standardization review]
 
 **I3. Why now.** Among the 89 Big Questions in paleontology are questions on data-entry bias, lost
 historical information, reporting and data integration. Guidance on computational reproducibility
@@ -42,17 +43,13 @@ smith2025IdentifyingBigQuestions (AFR2–AFR4, FI1); sandve2013]
 
 **I4. Agents as auditors.** Checking the layer means comparing data with their sources, running software
 against known answers, inspecting code and recomputing published numbers. That work is broad and detailed.
-AI agents can now carry it out across a whole research program, keeping a record of each step that others
-can rerun. [to source: two or three recent papers on agentic AI in scientific research, preferably with
-verification or reproducibility tasks]
+In this program, two AI agents did it for every database, deposit and package they used, recording the
+evidence, command and input hashes for each check. [to source: S04, up to three agent-assisted research
+papers, as context for the design]
 
 **I5. This study.** We report twelve findings from two agents building a paleobiology research program in
-October–November 2026. Three questions organize them:
-1. Where did each finding arise?
-2. What checks established it?
-3. What changed when a second agent re-examined it?
-
-Each case comes with the evidence and command needed to verify it, and with actions for researchers,
+October–November 2026. Three questions organize them: where each finding arose, what checks established it,
+and what changed when a second agent re-examined it. Each case comes with the evidence and command needed to verify it, and with actions for researchers,
 maintainers, journals and agent-based programs.
 
 ## Methods (five paragraphs)
@@ -81,7 +78,7 @@ plate models with checksums. They benchmarked packages against simulations with 
 declared validation tests with dated amendments and through exploratory follow-up probes, and they
 recomputed published numbers. Three working sessions logged 189 initial candidate findings, including
 positive controls and intended behaviors, and later additions joined as the program ran. [cite: package
-papers and versions in Table S1] [to source: a PBDB API or data-access reference]
+papers and versions in Table S1] [to source: S01 PBDB data access]
 
 **M3. Selection and coding.** On 8 November 2026 we selected twelve cases for consequence to inference,
 variety of finding class and inclusion of positive controls, excluding licensing and bibliographic
@@ -96,8 +93,8 @@ entered a claims ledger with its value, evidence, verifying commit, reproduce co
 
 **M5. Review and record.** A second review checked every draft sentence against an interpretation
 specification stating what each case licenses. Corrections at each stage were logged with who found them
-and what replaced them. Versions, environments and input hashes accompany each replay, in a public
-repository with an archived release. [to source: Zenodo DOI at release]
+and what replaced them. Versions, environments and input hashes accompany each replay in the program's public
+repository. A tagged snapshot will be archived with a DOI at release.
 
 ## Results (seven paragraphs)
 
@@ -105,36 +102,39 @@ repository with an archived release. [to source: Zenodo DOI at release]
 1. Overview: twelve cases across four kinds of dependency.
 2. Data transformations in the Paleobiology Database: deposit membership and interval re-dating.
 3. Data transformations in microfossil databases: excess Triton rows and NSB stored ages.
-4. Implementation defects in analysis packages.
+4. Analysis packages.
 5. Published products that differ from their sources or stated tests.
 6. Model choices and output meaning.
 7. Checks and review.
 
-**Check.** The order follows the four kinds of dependency (1–6), then the second and third questions (7).
-The order within data transformations runs from the most widely used database outward. Implementations
-split into packages (4) and published products (5), because those audiences differ. Everything in the 3a
-Results is covered, including the Triton ≥1° count, which returns here with Table 1 support.
+**Check.** Paragraphs 2–6 group the cases by resource (databases, packages, published products, models),
+because that is how a reader meets them; the formal primary and secondary dependency codes sit in Table 1.
+Paragraph 7 answers the second and third questions. The order within databases runs from the most widely
+used outward. Everything in the 3a Results is covered, with two additions: the Triton ≥1° count and GRIWM's
+random-number finding (C098), omitted from 3a.
 
 **R1. Overview.** The twelve cases cover four kinds of dependency (Table 1). They sit along the whole chain
 from deposit to published number (Fig. 1A). Each rests on a replay from pinned inputs and a second agent's
 check (Fig. 1B).
 
 **R2. Paleobiology Database.** Of 368,760 molluscan occurrences in a published deposit, 71,103 were absent
-from the public snapshot of 23 October 2026. Keeping only snapshot members cut the stages passing our
-regional presence screen from 14 to 12 of 21 (Fig. 2A). Across three archived snapshot pairs, 460, 317 and
-17 intervals changed their modal base age (Fig. 2B). [cite: benson2025MarineAnimalDiversity] [to source:
-PBDB time-scale documentation]
+from the public snapshot of 23 October 2026 (Fig. 2A). Keeping only snapshot members cut the stages passing
+our regional presence screen from 14 to 12 of 21 (Table 1). Across three archived snapshot pairs, 460, 317
+and 17 intervals changed their modal base age (Fig. 2B). [cite: benson2025MarineAnimalDiversity] [to
+source: S01 PBDB interval documentation]
 
 **R3. Microfossil databases.** Removing 16,260 excess rows from the 2023 Triton update changed 1,388 of
-2,267 mean absolute paleolatitudes in our analysis, 411 by at least one degree (Fig. 2C). In Neptune
+2,267 mean absolute paleolatitudes in our analysis (Fig. 2C). 411 of those changes were at least one
+degree. In Neptune
 Sandbox Berlin, 4,111 of 56,387 stored sample ages differed by more than 0.01 Myr from ages interpolated
 from the database's tie points (Fig. 2D). [cite: fenton2021TritonSpecieslevelDatabase;
 renaudie2020NsbNeptuneSandbox]
 
 **R4. Analysis packages.** admtools 0.7.0 mis-converted 3,972 of 8,282 heights to times in a synthetic
 two-hiatus model, by up to 3.0 Myr (Fig. 3A). fossilbrush 1.0.6 compared numbers as text, so at a
-threshold of 5 it passed differences of 10, 100 and 499 (Fig. 3B). [to source: admtools paper or CRAN
-citation; fossilbrush paper (Flannery-Sutherland et al. 2022?)]
+threshold of 5 it passed differences of 10, 100 and 499 (Fig. 3B). GRIWM in Rextinct 1.1.0 overwrote the
+caller's random-number state. [cite: bradshaw2012RobustEstimatesExtinction] [to source: S05 admtools; S06
+fossilbrush]
 
 **R5. Published products.**
 - 2,967 of 6,562 capture histories in a published spreadsheet differed numerically from the intact
@@ -145,7 +145,7 @@ citation; fossilbrush paper (Flannery-Sutherland et al. 2022?)]
   while their saved residual-sum-of-squares scores differed from rescoring by up to 42.4.
 
 [cite: monarrez2023ReducedStrengthIncreased; rampino2025CorrelationCyclicityStratigraphic;
-herrerogascon2026Inditek20] [to source: Fossil Record 2 (Benton 1993)]
+herrerogascon2026Inditek20] [to source: S07 Fossil Record 2]
 
 **R6. Model choices and output meaning.** PyRate's 95% preservation-rate intervals covered the true value
 in 81 of 100 and 33 of 50 simulated datasets, while extinction-time range-end bounds covered it in
@@ -154,7 +154,7 @@ to dating error. Three plate models disagreed on paleolatitude by a median of 2.
 400 Ma (Fig. 3D), and two routes to one model differed by age-specific near-rigid rotations. [cite:
 silvestro2014PyrateProgramEstimate; strauss1989ClassicalConfidenceIntervals;
 bradshaw2012RobustEstimatesExtinction; merdith2021ExtendingFullplateTectonic;
-matthews2016GlobalPlateBoundary] [to source: Robson & Whitlock 1964; PALEOMAP (Scotese); Torsvik & Cocks
+matthews2016GlobalPlateBoundary] [to source: S08 Robson & Whitlock 1964; S09 PALEOMAP; S10 Torsvik & Cocks
 2017]
 
 **R7. Checks and review.** Each finding rests on its own mix of re-execution, recomputation from source,
@@ -167,8 +167,9 @@ written rescoring. Replay corrected the initial accounts of six cases. PyRate's,
 **Framework.**
 1. The principal finding: agents checked four kinds of dependency, with consequences for what researchers
    record, test and interpret.
-2. Data transformations and implementations: inputs and outputs change before and during analysis.
-3. Model choices and output meaning: structural spread and what an interval represents.
+2. Discrepancies against a specified source or known answer: what direct comparison establishes, and what
+   makes it possible.
+3. Model sensitivity and interval meaning: two different judgments a researcher has to make.
 4. Actions for each audience.
 5. The agents' own record, and the proposal for other fields.
 6. Limitations.
@@ -182,18 +183,20 @@ future-work sentence, which moves to Conclusions.
 research program. Every case changes what a researcher should record, test or interpret. Each check is
 documented with its evidence, pinned inputs and command.
 
-**D2. Inputs and code.** Data transformations altered the inputs to analysis before any model ran: which
-records are present, what age an interval carries, how many rows a sample contributes. Implementation
-defects altered conversions, flags and published numbers. Both were found by comparing a result with its
-source or with a known answer, and by inspecting intermediate results as reproducibility guidance
-recommends. [cite: sandve2013]
-[to source: data-versioning practice in large databases, e.g. GBIF or PBDB download citation guidance]
+**D2. Comparison with a source.** Where a source or known answer is specified, a direct comparison
+establishes a discrepancy: in records present, interval ages, row counts, conversions, flags or published
+numbers. Such a check is possible only when the query date, version and intermediate products are kept, so
+recording them lets a researcher test inputs before any biological model is fitted. Locating a
+discrepancy and explaining its cause are separate steps; INDITEK's score mismatch, for one, is located and
+its cause open. [cite: sandve2013] [to source: S13 data-versioning or download-citation guidance]
 
-**D3. Models and meaning.** Plate reconstructions disagree by degrees of paleolatitude, so model choice is
-a source of structural spread in any latitudinal analysis. Output meaning determines which uncertainty an
-interval represents: GRIWM's interval represents dating error. Both are legitimate features of the tools,
-and both need stating when results are reported. [to source: a paleolatitude-uncertainty study (e.g.
-Buffan et al. or Jones et al.); an extinction-time estimation review (e.g. Saltré et al. or Marshall)]
+**D3. Models and meaning.** The three tested plate models placed the same points degrees apart, so an
+analysis whose result depends on paleolatitude should state its model and cohort and report the spread
+among alternatives. An interval needs two other judgments: which uncertainty process it propagates, and how
+often it covers the truth. GRIWM's interval propagates dating error, and PyRate's preservation-rate intervals
+covered the truth less often than nominal in simulation. Both kinds of finding change how a result is read.
+[to source: S11
+paleolatitude-uncertainty study; S12 extinction-time estimation review]
 
 **D4. Actions.** Users can record query dates and versions, compare plate models and replay published
 numbers before reuse. Maintainers can version changes and document what outputs measure. Journals and
@@ -203,8 +206,8 @@ finding with a second check, as the corrections here motivate, and publish their
 **D5. The agents' record.** Replay corrected six initial accounts, and wording review corrected this
 paper's first draft, so the record documents the auditors' errors as well as the infrastructure's. The
 same source comparison and known-answer checks could serve other fields built on community databases and
-shared code, such as biodiversity informatics. We offer that as a proposal for future work. [to source: one
-biodiversity-informatics data-quality paper, as motivation only]
+shared code, such as biodiversity informatics. We offer that as a proposal for future work. [to source: S14
+biodiversity-informatics data-quality paper, as motivation]
 
 **D6. Limitations.** The cases were selected for consequence, so they describe kinds of finding, not their
 frequency. We replayed published calculations and part of one deposited model, not whole downstream
@@ -213,26 +216,15 @@ on two simulated clades with one failed agreement gate. Some inputs are held loc
 is untested, and providers and authors had not been contacted at the time of writing.
 
 **C1. Conclusions.** AI agents can systematically check the databases and software behind fossil-record
-research, and they found verifiable errors and pitfalls that researchers need to know about. Future work
-could audit a defined population of dependencies, compare agent and human auditors, and replay downstream
-studies. Each step would turn this case series into estimates.
+research, and they found verifiable errors and pitfalls that researchers need to know about. Three
+studies would extend it, each with its own payoff. An audit of a defined population of dependencies would
+estimate how often such findings occur; a matched comparison of agent and human auditors would measure
+their relative performance; and replay of downstream studies would test what particular findings change.
 
 ## Citations still to source before 3c
 
-The list is also in the paragraph comments above:
-- a PBDB overview or data-access reference;
-- a time-scale reference (GTS2020);
-- a recent sampling-standardization review;
-- two or three agentic-AI-in-research papers;
-- the admtools and fossilbrush papers;
-- Fossil Record 2 (Benton 1993);
-- Robson & Whitlock 1964;
-- PALEOMAP;
-- Torsvik & Cocks 2017;
-- a paleolatitude-uncertainty study;
-- an extinction-time estimation review;
-- a data-versioning or download-citation reference;
-- one biodiversity-informatics data-quality paper.
-
-These suit a References-lane source check: identities from DOI metadata, and passage locations for each
-use.
+Fourteen slots (S01–S14), plus the Raup 1972 and Smith 2001 passage checks, are set out in
+`docs/audits/2026-11-12-paragraph-abstracts-citation-brief.md` and routed to References at 76/3280. A slot
+may resolve to more than one source. Each return gives verified metadata, the statement supported, version
+and access depth, passage location and limits. Claude integrates the returns into `references/dois.txt` and
+these paragraphs.
