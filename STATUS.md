@@ -6,7 +6,8 @@ Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 Barry forwarded Claude's `2c4cf4a` and Board 160/3253 for critique only.
 Main Codex accepted at 160/3257 and owns the
 [critique record](papers/infrastructure-audit/docs/audits/2026-11-12-reconstruction-critique.md);
-Claude retains reconstruction and manuscript ownership. Two bounded GPT-6.1 Sol
+the completed review is posted at 160/3260. Claude retains reconstruction and
+manuscript ownership. Two bounded GPT-6.1 Sol
 delegates examined scientific framing and display-input availability read-only.
 The main message and adopted writing rule stand. Required revisions replace
 retrospective expectations with descriptive questions, identify the exact
