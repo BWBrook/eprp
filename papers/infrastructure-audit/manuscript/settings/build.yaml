@@ -1,12 +1,12 @@
 # makedoc profiles (https://github.com/BWBrook/makedoc). Build with `make -C manuscript` from the repo root.
-# Paths are relative to this file. The CSL is a placeholder until a journal is chosen:
+# Paths are relative to this file. CSL: Paleobiology (CSL repository), fetched 12 November 2026 with:
 #   make -C ~/work/makedoc csl-source JOURNAL="Journal Name" CSL_DEST_DIR="$PWD/manuscript/csl"
 default_profile: main
 
 common: &common
   bibliography: ../../references/refs.yaml
-  csl: ../csl/chicago-author-date.csl
-  journal: Undecided
+  csl: ../csl/paleobiology.csl
+  journal: Paleobiology
   csl_search_dirs:
     - ../csl
   output_dir: ../build

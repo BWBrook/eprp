@@ -1,359 +1,432 @@
-# With receipts: twelve checked cases from agent-assisted audits of palaeobiology's data and software
+# AI agents as auditors of paleobiology's shared infrastructure: twelve verified cases
 
 <div id="authors"></div>
 
+## Non-technical Summary
+
+Studies of the fossil record rest on shared resources: online databases of fossil finds, data files
+published with papers, geological time scales, maps of past continents, and software that estimates
+rates and ages. An error in one of these resources, or a result that means something different from what
+its users assume, can carry into the studies that rely on it. While building a research program, two AI
+systems checked these resources against their sources and against known answers. We report twelve
+findings they made and confirmed. Each comes with the evidence needed to check it and a practical step
+that researchers, database maintainers or journals can take.
+
 ## Abstract
 
-Quantitative palaeobiology rests on shared infrastructure: occurrence databases, published data
-deposits, time scales, plate models and analysis packages. Problems in these layers can pass into
-published inference unnoticed. During the first month of a research programme run by two AI systems
-(Anthropic's Claude and OpenAI's Codex) with a human facilitator, agent-assisted audits produced candidate
-findings about this infrastructure. We report twelve as a case series. Each was chosen for its consequence
-for inference, replayed from pinned inputs by a different actor, and checked by the computational or
-mathematical routes recorded in its receipt. The cases include:
+Large-scale paleobiology depends on shared databases, data deposits, time scales, plate models and
+analysis packages, so errors or misreadings there can affect the analyses built on them. In a research
+program run by two AI agents with a human facilitator, the agents checked this layer by re-running data
+transformations, software and published calculations against known answers and their own sources. We
+report twelve cases, each rerun from fixed, checksummed inputs and checked by a second agent. They include
+deposited records absent from a dated public database snapshot, interval ages that change between
+database versions, defects in age–depth conversion and data-cleaning software, simulated preservation-rate
+intervals that miss the true value too often, plate models that disagree on paleolatitude by a median of
+[2.9]{.C125}–[13.6]{.C125}°, and a printed probability of $3.4 \times 10^{-16}$ that its stated test puts
+at [0.32]{.C190}. Review corrected the initial accounts of six cases. AI agents can audit this shared
+layer systematically, and each finding gives researchers a specific, verifiable action.
 
-- deposited occurrences absent from a dated public database snapshot ([71,103]{.C191} of
-  [368,760]{.C191} molluscan records);
-- interval ages that change between archived database snapshots;
-- excess rows in a database update that changed [1,388]{.C045} of [2,267]{.C045} exposure means in one of
-  our own analyses;
-- stored sample ages that disagree with their own tie points;
-- three implementation defects in analysis packages;
-- a preservation-rate calibration failure, reported beside retained positive controls;
-- an extinction-time interval that measures dating sensitivity only;
-- model-dependent palaeolatitudes;
-- two published spreadsheets that differ from their sources;
-- a printed significance value that its stated test does not reproduce ([0.316]{.C190}, not
-  $3.4 \times 10^{-16}$);
-- archived calibration scores that do not replay.
+## Introduction
 
-Every proposition is bounded to the version, design and convention tested. Replay narrowed or withdrew
-several of the original statements, and we report those corrections. The series does not estimate how
-common such problems are, does not show that agent-assisted auditing is better or cheaper than other
-auditing, and does not test whether any published conclusion changes. It records, with commands and input
-hashes, the kinds of problem that systematic replay exposed in one programme and what each one does and
-does not change.
+A diversity curve, an extinction rate or a paleolatitudinal gradient is the last link in a long chain.
+Fossils become occurrence records in databases such as the Paleobiology Database (PBDB) and in data
+deposits published with papers. A geologic time scale and age models place the records in time, plate
+reconstructions place them in space, and analysis packages turn them into estimates
+[@peters2016PaleobiologyDatabaseApplication; @gradstein2020GeologicTimeScale]. Global diversity studies
+show how such a chain is assembled, from database occurrences through explicit choices about
+preservation, sampling and analysis [@alroy2008PhanerozoicTrendsGlobal]. Each link is maintained by
+others, and each changes over time.
 
-## 1. Introduction
+Paleobiologists have long studied how the rock record distorts inference through sampling, preservation
+and the availability of rock [@smith2001LargescaleHeterogeneityFossil;
+@dillon2023ChallengesDirectionsAnalytical]. The shared infrastructure adds a second set of dependencies,
+of four kinds: the transformations that turn sources into data products, the software that implements
+each calculation, the models chosen where several are defensible, and the meaning of what each tool
+reports. These dependencies lie between the rocks and the result in every large-scale analysis.
 
-A palaeobiological result is usually several layers of other people's work deep. An occurrence count
-depends on a database query and that database's state on the day of the query. An age depends on a time
-scale and an age model. A palaeolatitude depends on a plate model and its reference frame. A rate depends
-on an estimator and on the package that implements it. Each layer is maintained by others and changes over
-time.
+The community has named parts of this layer as priorities. Among 89 "Big Questions" in paleontology are
+questions on finding and correcting data-entry bias, recovering lost historical information, reporting,
+and integrating data (AFR2–AFR4, FI1) [@smith2025IdentifyingBigQuestions]. Guidance on computational
+reproducibility asks researchers to record how each result was produced, keep versions and inspect
+intermediate results [@sandve2013TenSimpleRules].
 
-The community has asked for scrutiny of exactly this layer. In a recent community survey of open
-questions in palaeontology [@smith2025IdentifyingBigQuestions], several priorities concern it:
-quantifying collecting and preservation biases, finding and correcting data-entry biases, accounting for
-data loss, and making data open and combinable. Audits of the infrastructure bear directly on those
-priorities.
+Checking the layer means comparing data with their sources, running software against known answers,
+inspecting code and recomputing published numbers. The work is broad and exacting. In this program,
+two AI agents did it and recorded the evidence, command and input hashes for each check. A benchmark of agents reproducing the computations of published
+papers is a relevant precedent [@siegel2024CorebenchFosteringCredibility].
 
-During October and November 2026, the Extinction and Palaeontology Research Programme (EPRP) used two AI
-systems, with a human facilitator, to vet research questions against the data that could answer them.
-Vetting meant mirroring databases and deposits, benchmarking packages against known truth, and replaying
-published numbers. That work produced an initial catalogue of 189 candidate findings about the
-infrastructure itself, and later findings as the programme continued.
+Here we report twelve findings made by two AI agents while they built a paleobiology research program
+in October and November 2026. Three questions organize them: where each finding arose, what checks
+established it, and what changed when a second agent re-examined it. The cases show agents auditing the
+shared layer at the scale of a whole program, with findings specific enough for researchers,
+maintainers, journals and other agent-based programs to act on.
 
-This paper reports twelve of them as a case series. For each case we state the checked proposition, the
-evidence and how it was replayed, what it changes, and what it does not show. We also report what the
-auditing agents themselves got wrong. The aim is not a rate or a ranking. It is a set of inspectable
-cases, each with a recorded replay command.
+## Methods
 
-## 2. How the cases were found, chosen and checked
+### Setting
 
-**Finding.** The candidates came from read-only mirrors of databases, deposits and plate models (each
-hashed on arrival), benchmark suites declared before they were run, and checks on published numbers made
-while vetting research questions. Three working sessions, for databases, packages and references,
-recorded each finding with its evidence location and the checks it had received. Candidates include
-positive controls and intended behaviours as well as suspected problems.
+The Extinction and Paleontology Research Programme (EPRP) began in October 2026. Two AI agents,
+Anthropic's Claude and OpenAI's Codex, run it with a human facilitator (B.W.B.), who sets direction and
+holds every external decision, including contact with data providers and authors, release and
+submission. The agents work in a public repository and coordinate through a written correspondence
+board. Their contributions are listed by system, version and task under Roles of AI Systems.
 
-**Choosing.** From the initial catalogue and subsequent programme findings we chose twelve cases by
-consequence for inference: what each would change in an analysis someone plausibly runs. Being a defect
-was not enough on its own. We also wanted the selection to cover the kinds of finding in the pool, and we
-retained positive controls. Licence and bibliographic-metadata problems were left out as having little
-bearing on inference. Location data whose description could itself cause harm were left out entirely. The
-selection note, with reserves, is in the repository (Supplement S1).
+### How Candidate Findings Arose
 
-**Checking.** Each case was replayed from pinned inputs on 8 November 2026 by a different actor from the
-one who made the original finding, combined with the checks specified in its receipt. These included
-separate aggregation, interpolation, geometry and scoring code, recounts from raw files and closed-form
-calculations. Independence is check-specific. For example, the INDITEK forward run reused the original
-pinned harness, and only its scoring was separately implemented. Some reviewers used the same model family
-and shared inputs. Each proposition is a row in one claims ledger, with its value, evidence files, the
-commit at which the evidence was verified, a replay command, and a statement of what it does not show.
-Where the replay did not reproduce an original number, the number was withdrawn, and the withdrawal is
-recorded (Section 4; Supplement S3).
+The program's first task was to vet research questions against the data and software that could answer
+them. To do so, the agents:
 
-**Classes.** Each case is classified by what kind of finding it is:
+- mirrored databases, data deposits and plate models, recording a SHA-256 checksum for every file on
+  arrival, and queried the PBDB through its public interface [@peters2016PaleobiologyDatabaseApplication];
+- benchmarked analysis packages against simulations with known answers, in validation tests declared
+  before they were run (with dated amendments and recorded deviations) and in exploratory follow-up
+  probes;
+- recomputed numbers printed in published papers from their stated inputs and methods.
 
-- an implementation defect;
-- a data inconsistency;
-- a calibration failure under a stated model;
-- a semantic finding (what a quantity actually measures);
-- an intended version or model choice that users need to know about;
-- a snapshot-membership or provenance finding;
-- a replay failure.
+Three working sessions, for databases, packages and references, logged each finding with its evidence
+and the checks it had received. The resulting catalogue held 189 initial candidate findings, including
+positive controls and intended behaviors; later findings joined as the program continued.
 
-These classes matter. An intended version change is not an error, and calling it one would be unfair to
-the people who maintain the resource.
+### Selection and Coding
 
-## 3. The cases
+On 8 November 2026 we selected twelve cases for their consequence for inference (what each would change
+in an analysis someone plausibly runs), their variety, and the inclusion of positive controls. Licensing
+problems, bibliographic metadata and findings involving sensitive location data were excluded.
+Supplement S1 gives the selection record and its reserves.
 
-**Table 1.** The twelve cases. Values are from the claims ledger; each row's conditions are in the text.
+On 12 November we coded each case by the family of check that established it. The four families follow
+the four kinds of dependency and are defined by what was compared:
 
-| # | Case | Class | Checked proposition | Claims |
-|--|--------------|----------|----------------------------------|---------|
-| 1 | Deposited records absent from a dated public snapshot | membership and provenance | [71,103]{.C191} of [368,760]{.C191} molluscan occurrences in a published deposit are not in a public snapshot of 23 October 2026 | C191, C192 |
-| 2 | Interval ages change between archived snapshots | intended version choice | [460]{.C076}, [317]{.C076} and [17]{.C076} intervals changed modal base age across three snapshot brackets | C076 |
-| 3 | Excess rows in a database update | data inconsistency | [28,832]{.C043} excess rows under a specified key; removing [16,260]{.C043} changed [1,388]{.C045} of [2,267]{.C045} exposure means | C043, C045 |
-| 4 | Stored ages disagree with their tie points | data inconsistency | [4,111]{.C040} of [56,387]{.C040} comparable samples differ by more than 0.01 Myr | C040 |
-| 5 | Age–depth conversion above hiatuses | implementation defect | sparse model: [3,972]{.C096} of [8,282]{.C096} query points mis-converted, maximum error about [3.0]{.C096} Myr | C096 |
-| 6 | Numbers compared as text | implementation defect | at a threshold of [5]{.C102}, differences of [10]{.C102}, [20]{.C102}, [49.9]{.C102}, [100]{.C102} and [499]{.C102} were not flagged | C102 |
-| 7 | Preservation-rate calibration, with retained controls | calibration failure | intervals covered the truth in [81]{.C107} of [100]{.C107} and [33]{.C107} of [50]{.C107} replicates, shifted high | C107, C194, C196, C105, C111 |
-| 8 | What an extinction-time interval measures | semantic finding and defect | the interval reflects resampled dating error only; the call overwrites the caller's random-number state | C110, C098 |
-| 9 | Plate-model palaeolatitudes | intended model choice | median spread among three models, age dependent, from [2.9]{.C125} degrees at 10 Ma to [13.6]{.C125} at 400 Ma | C125, C123 |
-| 10 | Published spreadsheets differ from their sources | data inconsistency | [2,967]{.C035} of [6,562]{.C035} capture histories altered; [220]{.C048} rows shifted one column | C035, C048 |
-| 11 | A printed probability | arithmetic error in a published claim | the stated binomial test gives [0.316]{.C190}, not $3.4 \times 10^{-16}$ | C190 |
-| 12 | Archived calibration scores | replay failure | three saved scores differ from rescored values by [42.4]{.C193}, [17.5]{.C193} and [11.9]{.C193} | C195, C193 |
+- **data provenance and transformation (DP):** membership or values compared across identified sources,
+  versions or derived products;
+- **computation and implementation (CI):** retained or published numbers compared with a specified
+  calculation under identified reference inputs;
+- **model sensitivity (MS):** named alternative models compared on shared inputs;
+- **output interpretation and calibration (OI):** the quantity or uncertainty process a reported output
+  targets, and its operating characteristics in a stated test design.
 
-### 3.1 Data membership and provenance
+Each case has one primary family and, where needed, a secondary one. Its discovery route comes from dated
+records in the repository and correspondence (Table 1).
 
-**Case 1.** A published global analysis of marine latitudinal diversity [@benson2025MarineAnimalDiversity]
-deposited its occurrence data. Of the [368,760]{.C191} occurrences in the deposit's molluscan member,
-[71,103]{.C191} are not present in a public Paleobiology Database snapshot taken on 23 October
-2026[]{.C191}. Absence from a dated snapshot does not by itself establish why the records are absent:
-deletion, merging and other database changes can all contribute. Rebuilding from that dated snapshot
-would omit these deposited identifiers. The consequence showed up in our own work. A simple presence screen for
-tropical support outside Europe and North America passed in [14]{.C192} of [21]{.C192} stages with the full
-deposit, and in [12]{.C192} with snapshot members only[]{.C192}. We report these records as counts only.
+### Replay and Checks
 
-**Case 2.** Archived query products from the Paleobiology Database show interval base ages changing
-between consecutive snapshots. Across three main brackets, [460]{.C076}, [317]{.C076} and [17]{.C076}
-intervals changed their modal base age, counting intervals with at least 50 single-interval occurrences in
-the later snapshot[]{.C076}. If the threshold must hold in both snapshots, the middle count is
-[316]{.C076}. The statistic is the modal base age of an interval, not every record's age. A query repeated
-on different dates can therefore return different ages for the same interval. We have not shown whether
-the database keeps historical versions accessible, and we make no comparison with the international
-chronostratigraphic chart. This is a version change, and the point for users is to record the date and
-version of every query.
+On 8 November 2026 Codex's replay team (the main Codex session and GPT-6.1 Sol subagents) replayed each
+case from pinned inputs (the exact files used, identified by checksum), by fresh software calls, recalculation from source tables or
+reaggregation of retained outputs. Cases 11 and 12 were first recorded by Codex's reference and package
+sessions; their November checks added a complement recurrence and integer-polynomial convolution (case
+11) and a separately written scorer (case 12). Where possible, key numbers were rederived by a separate
+route: independent aggregation, interpolation, geometry or scoring code, recounts from raw files, or
+closed-form arithmetic. Each verified proposition entered a claims ledger with its value, evidence files,
+verifying commit, reproduce command and scope. The ledger holds 22 propositions, and every number in the
+Results is tagged to one of them.
 
-**Case 3.** The 2023 update of the Triton planktonic-foraminifera database
-[@fenton2021TritonSpecieslevelDatabase] contains [28,832]{.C043} excess rows under the key we specified.
-Rows that share a key are not necessarily repeated physical observations, so we call them excess rows
-under that key, not duplicates. A conservative recipe removes lower-priority-source rows only from
-cross-source groups with recorded depth, retaining every row from the highest-priority source; it removes
-[16,260]{.C043} rows[]{.C043}. The consequence is measured in one of our own analyses. Rebuilding EPRP's
-exposure index with and without the removal changed [1,388]{.C045} of [2,267]{.C045} comparable unrounded
-lineage-bin means, [411]{.C045} of them by at least one degree. Of 491 lineage-pair rows, [8]{.C045},
-[8]{.C045}, [2]{.C045} and [1]{.C045} changed their classification under four different classification
-rules[]{.C045}. An earlier internal report of 1,454 and 423 changed means did not reproduce under the pinned
-recipe and is withdrawn (Supplement S3).
+### Review and Record
 
-**Case 4.** The final snapshot of the Neptune Sandbox Berlin database [@renaudie2020NsbNeptuneSandbox]
-holds [61,862]{.C040} samples. We recomputed ages by linear interpolation from each hole's current tie
-points, where those tie points permitted. [56,387]{.C040} samples have both a stored and a recomputed numeric age. Of
-these, [4,111]{.C040} in [56]{.C040} holes differ by more than 0.01 Myr[]{.C040}. The recomputation takes
-the first age where two tie points share a depth; with the other choice, [8]{.C040} of the differences
-disappear. That sensitivity concerns exact ties only, not other interpolation models. Neither set of ages
-is thereby shown to be right. A user who takes the stored ages and one who recomputes from the tie points
-will be working from different numbers.
+A wording review checked every draft sentence against an interpretation specification that states what
+each case establishes. Corrections at each stage were logged with their finder and replacement
+(Supplement S3). Versions, environments and input hashes accompany each replay in the public repository,
+together with reviewed snapshots of the correspondence. A tagged snapshot will be archived with a DOI at
+release.
 
-### 3.2 Software correctness and semantics
+## Results
 
-**Case 5.** admtools 0.7.0 converts stratigraphic height to time. We tested it on one synthetic age–depth
-model with two hiatuses, in two versions, against exact linear-segment truth. In the sparse tie-point
-version, [3,972]{.C096} of [8,282]{.C096} query points were mis-converted, with maximum error about
-[3.0]{.C096} Myr. In the dense version, [6]{.C096} of the same queries were mis-converted, with maximum
-error [0.466]{.C096} Myr, and a targeted probe near a hiatus gave about [2.7]{.C096} Myr[]{.C096}. The
-errors fall in affected interpolation segments; later segments can be correct.
+### Overview
 
-**Case 6.** fossilbrush 1.0.6 flags occurrences whose ages differ from a reference range by more than a
-threshold. It compares the differences with the threshold as text. At a threshold of [5]{.C102}, it failed
-to flag differences of [10]{.C102}, [20]{.C102}, [49.9]{.C102}, [100]{.C102} and [499]{.C102}, while
-flagging others on the grid, including 50 and 99. Character order predicts every flag on the test
-grid[]{.C102}. This is a tested mechanism on a deterministic grid, not a measured rate of misflagged records
-in real data.
+The agents' checks reached links all along the chain, from deposit to published number (Fig. 1A), and
+made findings in each of the four families (Table 1): five cases of data provenance and
+transformation, four of computation and implementation, two of output interpretation and calibration,
+and one of model sensitivity. The GRIWM case also carries a computation finding. Every case was replayed
+from pinned inputs and checked a second time (Fig. 1B). We present the cases by resource, as a reader
+meets them.
 
-**Case 8.** The GRIWM estimator of extinction time [@bradshaw2012RobustEstimatesExtinction], as implemented
-in Rextinct 1.1.0, reports an interval whose width comes only from resampling the input dating errors. With
-zero dating error, the interval collapses to a point[]{.C110}. The interval therefore measures the
-sensitivity of the estimate to uncertain dates, conditional on the records. It does not quantify
-uncertainty from the fossil-sampling process. Separately, the implementation overwrites the calling
-program's random-number state[]{.C098}, so any analysis that draws random numbers after calling it inherits
-a stream it did not choose. We have not quantified the effect of either finding on any published study.
+### The Paleobiology Database
 
-### 3.3 Calibration, with retained controls
+A published global analysis of marine latitudinal diversity [@benson2025MarineAnimalDiversity] deposited
+its occurrence data. Of the [368,760]{.C191} occurrences in the deposit's molluscan member,
+[71,103]{.C191} were absent from a public PBDB snapshot taken on 23 October 2026, and [297,657]{.C191}
+were present (Fig. 2A). The difference reached our own analysis: a presence screen for tropical support
+outside Europe and North America passed in [14]{.C192} of [21]{.C192} stages with the full deposit and
+in [12]{.C192} with snapshot members only. We report these records as counts.
 
-**Case 7.** We simulated fossil records under a declared constant-rate, homogeneous-Poisson design and asked
-whether PyRate's [@silvestro2014PyrateProgramEstimate] 95% intervals for the preservation rate covered the
-true value. They covered it in [81]{.C107} of [100]{.C107} replicates in one arm and [33]{.C107} of
-[50]{.C107} in a lower-preservation arm. Posterior medians sat above the truth, with median relative bias
-[0.0895]{.C107} and [0.458]{.C107}[]{.C107}. Every miss lies below the lower endpoint: the intervals are
-shifted high. The retained width comparisons do not support an earlier diagnosis that the intervals were
-too narrow. They do not establish calibrated widths or the cause of the shift.
+Archived PBDB query products show interval ages changing between snapshots. Across three bracketed
+snapshot pairs, [460]{.C076}, [317]{.C076} and [17]{.C076} intervals changed their modal base age (the
+most common base age among their records),
+counting intervals with at least 50 single-interval occurrences in the later snapshot (Fig. 2B);
+applying the threshold to both snapshots changes the middle count to [316]{.C076}. The database serves
+base and top ages, in Ma, as fields of each interval record [@pbdb2026IntervalsList], so the same query
+run on different dates can return different ages for the same interval. Recording the date and version
+of each query makes the change visible.
 
-The benchmark also retained positive controls, in a different design with a different target: range-end
-bounds for retained species in two simulated clades. Under homogeneous sampling, the classical
-Strauss–Sadler bound [@strauss1989ClassicalConfidenceIntervals] covered the truth in [1,895]{.C194} and
-[1,899]{.C194} of [2,000]{.C194} cases in two implementations, and the Robson–Whitlock bound in
-[1,909]{.C194}[]{.C194}. The G1 and G2 generator moment controls matched their analytic
-expectations[]{.C105}. Two qualifications travel with these controls:
+### Microfossil Databases
 
-- **A declared gate failed.** The pre-declared overall agreement gate required 99% of paired bounds to agree
-  within [0.02]{.C196} Myr; [0.91]{.C196} did[]{.C196}.
-- **The hiatus arm deviated from its declaration.** Its executed windows were shifted one Myr from the
-  declared design. In that arm, Strauss–Sadler coverage fell to [1,125]{.C111} of [1,272]{.C111} retained
-  cases, with [728]{.C111} cases dropped[]{.C111}.
+The 2023 update of the Triton planktonic foraminifera database [@fenton2021TritonSpecieslevelDatabase]
+contains [28,832]{.C043} excess rows under the key we specified (Supplement S2). A conservative recipe
+removes lower-priority-source rows from cross-source groups with recorded depth, keeping every row from
+the highest-priority source; it removes [16,260]{.C043} rows. One of our own analyses averages each
+lineage's absolute paleolatitude within each time bin; the removal changed [1,388]{.C045} of
+[2,267]{.C045} comparable means (Fig. 2C), [411]{.C045} of them by at least one degree. Lineage-pair classifications
+changed in [8]{.C045}, [8]{.C045}, [2]{.C045} and [1]{.C045} of 491 pairs under four classification
+rules.
 
-These controls show that the benchmark did not report failure everywhere. They do not rank the classical
-bounds against PyRate, which target a different quantity.
+The final Neptune Sandbox Berlin (NSB) database [@renaudie2020NsbNeptuneSandbox] contains
+[61,862]{.C040} sample records and, for each drill hole, a set of depth–age tie points. We recomputed
+each sample's age by linear interpolation between its hole's tie points, taking the first age where two
+tie points share a depth. Of [56,387]{.C040} samples with both a stored and a recomputed age,
+[4,111]{.C040}, in [56]{.C040} holes, differ by more than 0.01 Myr (Fig. 2D). Taking the last age at
+shared depths instead removes [8]{.C040} of these differences. A user who takes the stored ages and one
+who recomputes them from the tie points work from different numbers.
 
-### 3.4 Spatial models
+### Analysis Packages
 
-**Case 9.** We reconstructed a starting pool of [300]{.C125} public points at six ages in three plate
-models: MERDITH2021 [@merdith2021ExtendingFullplateTectonic], PALEOMAP and MATTHEWS2016_pmag_ref
-[@matthews2016GlobalPlateBoundary]. At each age, the median spread of palaeolatitude among the three models
-is taken over the points reconstructable in all three; [194]{.C125} points are reconstructable at every age.
-The median spread is age dependent and not monotonic: [2.9]{.C125} degrees at 10 Ma, [5.7]{.C125} at 50 Ma,
-[4.3]{.C125} at 100 Ma, and the largest, [13.6]{.C125}, at 400 Ma[]{.C125}. This is structural disagreement
-among models, not calibrated error, and model choice can change the latitude-band assignments of a
-diversity-gradient analysis. Separately, two routes to reconstructing TorsvikCocks2017 differ by an
-approximately rigid, age-specific rotation. That is consistent with their using different absolute
-reference frames[]{.C123}. We do not identify either frame as correct. A model name alone does not fix the
-coordinates.
+admtools converts stratigraphic height to time through an age–depth model
+[@hohmann2025NonparametricEstimationAgedepth; @hohmann2023AdmtoolsEstimateManipulate]. We tested
+version 0.7.0 on a synthetic model with two hiatuses, against exact linear-segment truth. With sparse tie
+points, it mis-converted [3,972]{.C096} of [8,282]{.C096} heights, by up to [3.0]{.C096} Myr (Fig. 3A).
+With dense tie points, it mis-converted [6]{.C096} of the same heights, by up to [0.466]{.C096} Myr, and
+a targeted probe near a hiatus gave an error of about [2.7]{.C096} Myr. The errors lie in the
+interpolation segments adjoining the hiatuses.
 
-### 3.5 Published deposits and published numbers
+fossilbrush flags occurrences whose ages fall outside a reference range by at least a threshold in Myr
+[@flannerysutherland2022FossilbrushRPackage; @flannery-sutherland2022FossilbrushAutomatedCleaning].
+Version 1.0.6 compared those differences with the threshold as text. At the default threshold of
+[5]{.C102}, it left differences of [10]{.C102}, [20]{.C102}, [49.9]{.C102}, [100]{.C102} and
+[499]{.C102} unflagged while flagging 50 and 99; character order predicted every decision on the test
+grid (Fig. 3B).
 
-**Case 10.** The electronic supplement of a study of extinction selectivity
-[@monarrez2023ReducedStrengthIncreased] provides capture histories in a spreadsheet as well as an intact
-binary file. Comparing the two, we found [2,967]{.C035} of [6,562]{.C035} histories in the spreadsheet with
-altered values. A further [3,595]{.C035} can be restored exactly by padding to the known width of
-[86]{.C035} characters[]{.C035}. We did not establish how the spreadsheet was produced. Separately, the
-one-file All-Life table of the Fossil Record 2 compilation has [220]{.C048} rows shifted one column left
-relative to its chapter workbooks. Of these, [112]{.C048} shift ranges only, [2]{.C048} shift habitat and
-range, and [106]{.C048} move a not-found-in-record flag[]{.C048}. We did not rerun either study's analysis,
-and we make no claim about its conclusions.
+The Gaussian-resampled, inverse-weighted McInerny method (GRIWM) estimates extinction time from dated
+records [@bradshaw2012RobustEstimatesExtinction]. Its
+implementation in Rextinct 1.1.0 overwrote the caller's random-number state: after a call, the calling
+program's random stream was the same whatever seed it had set beforehand. Any analysis that draws random
+numbers after the call continues from a stream the package chose.
 
-**Case 11.** A recent analysis of cyclicity in stratigraphic boundaries
-[@rampino2025CorrelationCyclicityStratigraphic] states a binomial test with n = [47]{.C190}, k =
-[28]{.C190} and p = [0.55]{.C190}, and prints a tail probability of $3.4 \times 10^{-16}$. The stated test
-gives [0.316]{.C190}[]{.C190}. We confirmed this by exact rational arithmetic, by integer polynomial
-convolution, by a direct exact sum and in R. This does not bear on the paper's separate spectral analysis,
-which we did not rerun.
+### Published Products
 
-**Case 12.** INDITEK-2.0 [@herrerogascon2026Inditek20] deposits a proof example that uses synthetic
-observations, with archived calibration proposals. We reran three archived rejected proposals with the
-original pinned harness. Their prediction vectors reproduce within about $5 \times 10^{-14}$ across
-[2,978]{.C195} cells[]{.C195}. Their saved residual sums of squares, however, differ from rescoring under
-the deposited observations and scorer by [42.4]{.C193}, [17.5]{.C193} and [11.9]{.C193}, and a separately
-implemented, model-free scorer agrees with the rescored values[]{.C193}. These are rejected proposals, not
-accepted draws. The cause, and any connection to published figures, are unresolved.
+Four published products differed from their sources or stated tests.
 
-## 4. What the auditing agents got wrong
+- **Capture histories.** A study of extinction selectivity [@monarrez2023ReducedStrengthIncreased]
+  deposited its capture histories (each genus's record of presence and absence through time) both as an
+  intact binary file and in a spreadsheet. [2,967]{.C035} of
+  the [6,562]{.C035} spreadsheet histories differed numerically from the binary deposit. A further
+  [3,595]{.C035} are restored exactly by padding to the known width of [86]{.C035} characters.
+- **Fossil Record 2.** The one-file All-Life table of the digital Fossil Record 2 compilation
+  [@benton1993FossilRecord2] held [220]{.C048} rows whose cell tails were shifted one column left of
+  their chapter workbooks: [112]{.C048} shift ranges, [2]{.C048} shift habitat and range, and
+  [106]{.C048} move a not-found-in-record flag into the Holocene column.
+- **A printed probability.** An analysis of cyclicity in stratigraphic boundaries
+  [@rampino2025CorrelationCyclicityStratigraphic] states a binomial test with n = [47]{.C190}, k =
+  [28]{.C190} and p = [0.55]{.C190} and prints a tail probability of $3.4 \times 10^{-16}$. The stated
+  test gives [0.316]{.C190}, by exact rational arithmetic, integer-polynomial convolution, a direct exact
+  sum and R.
+- **Archived calibration scores.** INDITEK-2.0 [@herrerogascon2026Inditek20] deposits a synthetic
+  demonstration with archived calibration proposals. Rerun through the pinned harness, three rejected
+  proposals reproduced their prediction vectors to within about $5 \times 10^{-14}$ across
+  [2,978]{.C195} cells. Their saved residual sums of squares differed from rescoring under the deposited
+  observations by [42.4]{.C193}, [17.5]{.C193} and [11.9]{.C193}, and a separately written, model-free
+  scorer agreed with the rescored values.
 
-The agents' own errors are part of the record. Replay withdrew or narrowed several original statements:
+### Model Choices and Output Meaning
 
-- **Case 3.** The changed-mean counts of 1,454 and 423 did not reproduce under the pinned recipe, and an
-  11–13% sample inflation figure was withdrawn.
-- **Case 4.** A sample count that included a header row was corrected to [61,862]{.C040}.
-- **Case 5.** "Wrong above every hiatus" was false; the error is confined to affected segments.
-- **Case 7.** The "too narrow" diagnosis of PyRate's intervals was not supported.
-- **Case 10.** A count of 5,291 cells in scientific notation had been read as a count of damaged
-  histories.
+We simulated fossil records under a declared constant-rate, homogeneous-Poisson design and asked how
+often the 95% intervals for the preservation rate from PyRate, a Bayesian program for estimating
+speciation, extinction and preservation rates [@silvestro2014PyrateProgramEstimate], covered the true
+value. They covered it in [81]{.C107} of [100]{.C107} replicates in one
+arm and [33]{.C107} of [50]{.C107} in a lower-preservation arm (Fig. 3C). Posterior medians sat above
+the truth, with median relative bias of [0.0895]{.C107} and [0.458]{.C107}, and every miss fell below the
+lower endpoint: the intervals were shifted high.
 
-The draft of this paper was itself corrected in review. Among other things, the first draft joined the
-admtools count from one control with the maximum from another, and attributed the INDITEK archive to the
-wrong paper.
+The same benchmark carried positive controls for a different target: confidence bounds on the true end
+of each retained species' range, in two simulated clades. Under homogeneous sampling, the classical Strauss–Sadler bound
+[@strauss1989ClassicalConfidenceIntervals] covered the truth in [1,895]{.C194} and [1,899]{.C194} of
+[2,000]{.C194} cases in two implementations, and the Robson–Whitlock bound
+[@robson1964EstimationTruncationPoint], as implemented in EDE 0.2.0, in [1,909]{.C194} (Fig. 3C). In a
+hiatus arm, Strauss–Sadler coverage fell to [1,125]{.C111} of [1,272]{.C111} retained cases.
 
-Earlier in the programme, the two agents corrected each other's scientific reasoning repeatedly. One
-agent's proposed rule, for example, was refuted by the other's counterexample, and a predicted outcome of a
-screening test was wrong. These errors were identified during rechecking by a different actor. The series
-contains no comparison that could show whether this arrangement catches more errors than any other.
+GRIWM's interval in Rextinct 1.1.0 comes from resampling the input dating errors, and with zero dating
+error it collapses to a point. It therefore measures how sensitive the estimated extinction time is to
+uncertain dates, given the records [@bradshaw2012RobustEstimatesExtinction].
 
-## 5. Recommendations
+We reconstructed [300]{.C125} public occurrence points at six ages in three plate models: MERDITH2021
+[@merdith2021ExtendingFullplateTectonic], PALEOMAP [@scotese2016PaleomapPaleoatlasGplates] and
+MATTHEWS2016_pmag_ref [@matthews2016GlobalPlateBoundary]. Over the points reconstructable in all three
+models at each age, the median spread in paleolatitude was [2.9]{.C125}° at 10 Ma, [5.7]{.C125}° at
+50 Ma, [4.3]{.C125}° at 100 Ma, [5.5]{.C125}° at 200 Ma, [4.7]{.C125}° at 300 Ma and [13.6]{.C125}° at
+400 Ma (Fig. 3D); [194]{.C125} points are reconstructable at every age. Two routes to the
+TorsvikCocks2017 model [@torsvik2016EarthHistoryPalaeogeography] differed by an approximately rigid,
+age-specific rotation, consistent with the two reference frames its authors distinguish (Supplement S2).
 
-- **For database providers:** expose versions and change logs for interval ages and records, and say in
-  query results when records have been removed or merged.
-- **For package authors:** test against known truth, including hiatuses and boundary cases; compare numbers
-  as numbers; do not reset the caller's random-number state; document what each reported interval
-  measures.
-- **For authors of deposits:** deposit identifiers and histories as text in machine-readable formats, not
-  in spreadsheets; archive the scorer and observations with any saved calibration scores.
-- **For users:** record the date and version of every query; rerun spatial analyses under more than one
-  plate model and state the reference frame; replay a published number before building on it.
-- **For programmes that use AI agents:** declare tests before running them, keep failed gates, have a
-  different actor recheck each finding, and publish reviewed correspondence.
+### Checks and Review
 
-## 6. Discussion
+Each finding rests on its own mix of re-execution, recomputation from source, code inspection and
+arithmetic (Table 1). The INDITEK case paired a forward replay through the original harness with
+separately written rescoring; the printed probability was confirmed four ways. The recorded replay and
+review trail corrected the initial accounts of six cases (Table 1; Supplement S3):
 
-### 6.1 What follows
+- PyRate's intervals moved from "too narrow" to "shifted high";
+- admtools errors moved from "above every hiatus" to the adjoining segments;
+- the Triton counts of changed means were recomputed under the pinned recipe;
+- PBDB records described as "withheld" became records absent from a dated snapshot;
+- a count of spreadsheet cells in scientific notation was separated from the count of altered histories;
+- the NSB sample count was corrected for a header row.
 
-Each case is small on its own. Together they show problems of several distinct kinds in the layer beneath
-published palaeobiology: version changes users need to know about, inconsistencies within a resource,
-implementation defects, intervals whose meaning is narrower than their label suggests, and published
-numbers that do not survive replay. None needed new data or new theory to find. Each needed a layer to be
-replayed against known truth or against its own source.
+## Discussion
 
-### 6.2 Which conclusions depend on which assumptions
+Systematic checks by two AI agents turned up verifiable findings in all four kinds of dependency on which
+large-scale paleobiology relies. Each case changes what a researcher should record, test
+or interpret, and each comes with its evidence, pinned inputs and command. Because the findings concern
+named versions of named resources, they are actionable: a maintainer has a specified check to run, and a
+user can test whether a finding touches their own analysis.
 
-**Table 2.** Dependence of the main conclusions on their assumptions.
+### Comparison with a Source
 
-| Conclusion | Rests on | Fails or narrows if |
-|----------------|----------------|----------------|
-| Each case's proposition holds for the version tested | Pinned inputs and the stated convention | The replay is wrong for those inputs; another version only restricts scope |
-| The measured changes are real | The support counts, inputs and EPRP analyses named in each case | The named downstream calculation was misreplayed; effects on published conclusions were not tested |
-| The checks add information | A different actor and the routes recorded in each receipt | The routes share an error, such as a common input misread |
-| Provider knowledge | Not established | Open: providers may already have documented a behaviour |
+Where a source or known answer is specified, a direct comparison establishes a discrepancy in the records
+present, interval ages, row counts, conversions, flags or published numbers. The comparison needs the
+query date, the version and the intermediate products, so recording them lets a researcher test inputs
+before fitting any biological model [@sandve2013TenSimpleRules]. GBIF builds this into its downloads:
+each records its query predicate and receives a DOI that identifies the extract
+[@gbif2026ApiDownloads; @gbif2026Citation]. Locating a discrepancy and explaining its cause are separate
+steps, and the first is what makes the second possible.
 
-### 6.3 What would sharpen the answer
+### Model Sensitivity and Interval Meaning
 
-- **Disclosure responses.** Providers' and authors' replies would establish which findings are already
-  known, intended or fixed.
-- **A controlled comparison.** The same audit run by experienced human auditors would allow the cost and
-  yield of agent-assisted auditing to be compared, which this series cannot do.
-- **Downstream replays.** Rerunning published analyses that use the affected layers would measure
-  consequence for published conclusions directly.
-- **A cold public rebuild.** Rebuilding every case from public inputs alone would test how far the
-  recorded commands suffice without locally retained images and archives.
+The three plate models placed the same points degrees apart, so an analysis whose result depends on
+paleolatitude should state its model and cohort and report the spread among alternatives. Published
+paleolatitude tools propagate uncertainty in paleomagnetic poles and ages, and treat the choice of
+reference frame as a separate decision [@vanhinsbergen2015PaleolatitudeCalculatorPaleoclimate]; our
+comparison measures sensitivity to the choice of reconstruction model. An interval calls for two further
+judgments: which uncertainty process it propagates, and how often it covers the truth. GRIWM's interval
+propagates dating error, and PyRate's preservation-rate intervals covered the truth less often than
+nominal in simulation. Both kinds of finding change how a result should be read.
 
-## 7. Conclusions
+### Actions
 
-Systematic replay of palaeobiology's shared infrastructure, in one programme, exposed problems of several
-kinds. The twelve cases here are each bounded and recorded with a replay command, required inputs and
-their hashes, and each was rechecked by a different actor. They are a sample of what one programme found,
-not a measure of how often such problems occur. Providers, authors and users can act on them.
+Each finding points to a step that a specific audience can take (Table 2). Most are small changes to
+existing practice, such as recording a query date, comparing numbers as numbers or archiving a scorer
+with its scores.
 
-## Methods in brief
+### The Agents' Own Record
 
-Supplement S1 gives the case selection and its rules. S2 gives the replay and checks for each case, with
-commands. S3 is the audit trail of withdrawn and narrowed statements.
+The audit applied to the auditors too. Replay corrected six initial accounts, and wording review
+corrected this paper's first draft, which had joined a count from one admtools control with the maximum
+from another and attributed the INDITEK archive to the wrong paper (Supplement S3). The same source
+comparisons and known-answer checks could serve other fields built on community databases and shared
+code. Biodiversity informatics is one: taxonomic checks and coordinate validation against reference
+distributions have long been part of its data-quality practice [@yesson2007HowGlobalGlobal]. We offer
+that application as a proposal.
 
-## Roles of AI systems and humans
+### Limitations
 
-- **Codex (OpenAI), with GPT-6.1 Sol delegates**
-  - took over the programme's database, reference and package work from 28 October;
-  - made some original findings, including cases 11 and 12;
-  - replayed all twelve cases, built the claims ledger and reviewed this paper's wording.
-- **Claude (Anthropic)**, Opus 5.5 in the main session and Claude Sonnet subagents:
-  - ran the database, package and reference sessions that made most of the original findings, before
-    28 October;
-  - compiled the initial 189-row candidate catalogue;
-  - chose the twelve cases;
-  - wrote the interpretation specification and drafted this paper.
-- **Barry W. Brook** facilitated the programme, approved the paper on 25 October 2026, chose this case
-  series for development on 8 November 2026, and holds decisions on provider contact, submission and
-  release.
+- **Selection.** The cases were selected for consequence, so they describe kinds of finding, not their
+  frequency in the infrastructure.
+- **Downstream scope.** We replayed published calculations and part of one deposited model, not whole
+  downstream studies; measured consequences are to support counts, inputs and our own analyses.
+- **Independence.** Checks vary in independence. The INDITEK forward run reused the original harness, and
+  some checks shared inputs or model family.
+- **Calibration controls.** These rest on two simulated clades. One declared agreement gate failed: it
+  required at least [0.99]{.C196} of paired range-end bounds to agree within [0.02]{.C196} Myr, and
+  [0.91]{.C196} did. The executed hiatus windows were shifted one Myr from the declared design.
+- **Causes and status.** The causes of the PBDB absences, the NSB disagreements and the INDITEK score
+  mismatch are unresolved. Neither the stored nor the recomputed NSB ages are certified, and the
+  plate-model spread is structural disagreement among models, not calibrated error.
+- **Reproduction.** Some inputs (container images, posterior logs, source archives) are held locally, and
+  a cold rebuild from public inputs alone is untested.
+- **Disclosure.** Providers and authors had not been contacted at the time of writing, and whether they
+  already knew of a finding is unresolved.
 
-The two AI systems reviewed each other's work throughout. Reviewed snapshots of their correspondence are
-published in the repository (`docs/correspondence/`), with withheld messages left as placeholders.
+## Conclusions
 
-## Data and code
+AI agents can systematically check the databases and software behind fossil-record research, and in
+doing so they found verifiable errors and pitfalls that researchers need to know about. Three studies
+would extend this case series, each with its own payoff. An audit of a defined population of
+dependencies would estimate how often such findings occur; a matched comparison of agent and human
+auditors would measure their relative performance; and replay of downstream studies would show what
+particular findings change.
 
-The repository is public at <https://github.com/BWBrook/eprp>; code is MIT-licensed and text, figures and
-data are CC BY-SA 4.0. The claims ledger (`papers/infrastructure-audit/manuscript/claims.csv`) gives, for
-each proposition, the evidence files, the commit at which they were verified and the replay command. Each
-replay record names its required inputs and their hashes; some are retained locally (container images,
-posterior logs, source archives) and are not redistributed. Third-party sources keep their own licences.
-Records absent from public database snapshots are reported as counts only.
+## Roles of AI Systems
 
-## References
+- **Codex (OpenAI)**, with GPT-6.1 Sol subagents, took over the program's database, reference
+  and package work from 28 October 2026; first recorded cases 11 and 12; replayed all twelve cases;
+  built the claims ledger; reviewed this paper's wording and reconstruction; and checked its cited
+  sources.
+- **Claude (Anthropic)**, Opus 5.5 in the main session with Sonnet subagents, ran the database, package
+  and reference sessions until 28 October; compiled the 189-row catalogue; selected the twelve cases;
+  wrote the interpretation specification; and drafted this paper.
+- **Barry W. Brook** facilitated the program, endorsed developing the paper idea on 25 October 2026,
+  chose the case series for development on 8 November 2026, and holds decisions on contact, submission
+  and release.
+
+In line with *Paleobiology*'s policy, the AI systems are not authors. Their analytical roles are
+described in Methods and their role in writing the text here; any role in producing a figure will be
+stated in its caption.
+
+## Acknowledgments
+
+[To be supplied by B.W.B.: acknowledgments, funding and competing interests.]
+
+## Data Availability Statement
+
+The repository is public at <https://github.com/BWBrook/eprp>; code is MIT-licensed, and text, figures
+and data are CC BY-SA 4.0. The claims ledger (`papers/infrastructure-audit/manuscript/claims.csv`) gives
+each proposition's evidence files, verifying commit and reproduce command. Third-party sources keep their
+own licenses. Records absent from public database snapshots are reported as counts only. A tagged
+release will be archived on Zenodo with a DOI.
+
+## Literature Cited
+
+::: {#refs}
+:::
+
+## Figure Captions
+
+**Figure 1.** The checked dependencies and the audit workflow. **A**, The twelve cases placed along the
+path from rocks to a published result (collection, database or deposit, time scale and age model, plate
+model, analysis package, published number), colored by primary family of check. **B**, The workflow: 189
+initial candidate findings and later additions, twelve selected cases, replay from pinned inputs, a
+second check and 22 supported propositions. Cases whose initial accounts were corrected are marked.
+
+**Figure 2.** Findings in data provenance and transformation. **A**, Deposited molluscan occurrences
+present in ([297,657]{.C191}) and absent from ([71,103]{.C191}) the PBDB snapshot of 23 October 2026.
+**B**, Intervals with a changed modal base age in each of three snapshot pairs (at least 50
+single-interval occurrences in the later snapshot). **C**, Full-precision change in mean absolute
+paleolatitude for the [2,267]{.C045} comparable lineage-bins when excess Triton rows are removed.
+**D**, Stored minus interpolated NSB sample ages for the [56,387]{.C040} comparable samples, with
+$\pm$0.01 Myr marked.
+
+**Figure 3.** Findings in computation, model sensitivity and output interpretation. **A**, admtools 0.7.0
+time error against height in the sparse synthetic model; vertical lines mark the two hiatuses. **B**,
+fossilbrush 1.0.6 flag decisions across the test grid, against numeric truth and text order, at a
+threshold of [5]{.C102}. **C**, Observed coverage against the 95% nominal line, for PyRate
+preservation-rate intervals (two arms) and for range-end bounds (three implementations). **D**, Median
+paleolatitude spread among three plate models by age, over the points reconstructable in all three at
+each age.
+
+## Tables
+
+**Table 1.** The twelve cases. Families of check: DP, data provenance and transformation; CI, computation
+and implementation; MS, model sensitivity; OI, output interpretation and calibration; primary family
+first. Discovery: the route in the dated records. Review: what the replay and review trail changed in the
+initial account.
+
+| # | Resource | Family | Discovery | Check | Result | Review | Claims |
+|--|-----|---|------|------|---------|-----|---|
+| 1 | Published PBDB deposit | DP | Source-membership audit; regional-support follow-up | Identifier comparison with a dated snapshot | [71,103]{.C191} of [368,760]{.C191} absent; screen passes [14]{.C192} then [12]{.C192} of 21 stages | "withheld" became "absent from a dated snapshot" | C191, C192 |
+| 2 | PBDB interval ages | DP | Comparison of archived snapshots | Recount from archived query products | [460]{.C076}, [317]{.C076}, [17]{.C076} changed modal base ages | none | C076 |
+| 3 | Triton 2023 update | DP | Duplicate-key profiling; exposure rebuild | Key grouping; rebuild with and without removal | [1,388]{.C045} of [2,267]{.C045} means changed | counts recomputed | C043, C045 |
+| 4 | NSB stored ages | DP | Recomputation from tie points | Interpolation from tie points | [4,111]{.C040} of [56,387]{.C040} differ by > 0.01 Myr | header row removed | C040 |
+| 5 | admtools 0.7.0 | CI | Round-trip probe; declared hiatus benchmark | Exact linear-segment truth | [3,972]{.C096} of [8,282]{.C096} heights mis-converted (sparse model) | "every hiatus" became adjoining segments | C096 |
+| 6 | fossilbrush 1.0.6 | CI | Smoke-test failure; source inspection | Deterministic grid; numeric truth and text order | differences of [10]{.C102}, [20]{.C102}, [49.9]{.C102}, [100]{.C102} and [499]{.C102} unflagged at a threshold of [5]{.C102} | none | C102 |
+| 7 | PyRate preservation rates | OI | Declared coverage benchmark | Simulation coverage, with positive controls | [81]{.C107}/[100]{.C107} and [33]{.C107}/[50]{.C107} covered | "too narrow" became "shifted high" | C107, C194, C196, C105, C111 |
+| 8 | GRIWM, Rextinct 1.1.0 | OI, CI | Smoke run (interval); repeated draws (random state) | Zero-error control; weighted-prefix formula; seed sentinels | interval reflects dating error; caller's random state overwritten | none | C110, C098 |
+| 9 | Three plate models | MS | Cross-route comparison; three-model follow-up | Reconstruction of shared points; geometry of two routes | median spread [2.9]{.C125}–[13.6]{.C125}° | none | C125, C123 |
+| 10 | Published spreadsheets | DP | Format inspection; table-to-workbook comparison | Comparison with intact binary and chapter workbooks | [2,967]{.C035} of [6,562]{.C035} histories differ numerically from the binary deposit; [220]{.C048} shifted rows | cell count separated from history count | C035, C048 |
+| 11 | Printed probability | CI | Reading the printed test; exact calculation | Exact arithmetic, four routes | [0.316]{.C190} against $3.4 \times 10^{-16}$ | none | C190 |
+| 12 | INDITEK-2.0 scores | CI | Declared forward replay; rescoring | Forward replay; separately written rescoring | vectors replay; saved scores differ from rescoring under deposited observations by up to [42.4]{.C193} | none | C195, C193 |
+
+**Table 2.** Recommended actions, by audience.
+
+| Audience | Actions | Cases |
+|------|------------------------|----|
+| Users | Record query dates and versions; check deposited records against the snapshot used; compare plate models and state the reference frame; replay a published number before building on it | 1, 2, 9, 11 |
+| Database maintainers | Version interval ages and records, with change logs; document how stored values derive from their sources | 1–4 |
+| Package maintainers | Test against known truth at boundary cases; compare numbers as numbers; leave the caller's random-number state intact; document what each interval measures | 5–8 |
+| Journals and depositors | Require machine-readable deposits; archive scoring code and observations with saved scores | 10–12 |
+| Programs using AI agents | Pair each finding with a second check; declare tests before running them and keep failed gates; publish receipts and reviewed correspondence | all |

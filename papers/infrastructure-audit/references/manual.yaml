@@ -4,11 +4,9 @@ references:
 - id: gradstein2020GeologicTimeScale
   type: book
   title: Geologic Time Scale 2020
-  editor:
-  - {family: Gradstein, given: Felix M.}
-  - {family: Ogg, given: James G.}
-  - {family: Schmitz, given: Mark D.}
-  - {family: Ogg, given: Gabi M.}
+  # Editors as one literal name so the Paleobiology CSL renders an edited book, not a chapter.
+  author:
+  - {literal: 'Gradstein, F. M., J. G. Ogg, M. D. Schmitz, and G. M. Ogg, eds.'}
   issued: {date-parts: [[2020]]}
   publisher: Elsevier
   publisher-place: Amsterdam
@@ -17,8 +15,8 @@ references:
 - id: benton1993FossilRecord2
   type: book
   title: The Fossil Record 2
-  editor:
-  - {family: Benton, given: M. J.}
+  author:
+  - {literal: 'Benton, M. J., ed.'}
   issued: {date-parts: [[1993]]}
   publisher: Chapman & Hall
   publisher-place: London

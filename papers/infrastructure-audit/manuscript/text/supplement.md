@@ -5,8 +5,8 @@
 ## S1. Case selection
 
 The initial candidate catalogue is `papers/infrastructure-audit/evidence/claims.tsv`: 189 candidate
-findings, including positive controls and intended behaviours, compiled read-only on 25 October 2026 from
-the programme's database, package and reference catalogues. Later programme findings were added to the
+findings, including positive controls and intended behaviors, compiled read-only on 25 October 2026 from
+the program's database, package and reference catalogues. Later program findings were added to the
 pool, including cases 11 and 12. The twelve cases were
 chosen on 8 November 2026 (`case-selection.md`) by five rules:
 
@@ -16,7 +16,7 @@ chosen on 8 November 2026 (`case-selection.md`) by five rules:
 4. disclosure must be feasible;
 5. findings of little consequence, and anything whose description could cause harm, are left out.
 
-Four reserves were named in case a case failed replay: RevBayes's disabled fossilised birth–death range
+Four reserves were named in case a case failed replay: RevBayes's disabled fossilized birth–death range
 process, the optimal linear estimation interval's undercoverage in one package, a join error in a scraped
 diversity table, and a silent identity rotation in a reconstruction library. None was needed.
 
@@ -43,8 +43,8 @@ Each record states:
 The `basis` column of the claims ledger names the route for each proposition, and the `limit` column
 states what it does not show.
 
-**What counts as independent.** Independence is check-specific. The replays were made by actors other than
-the original finders, combined with separate aggregation, interpolation, geometry or scoring code where
+**What counts as independent.** Independence is check-specific. The replays were made by Codex's replay team (the main Codex session and bounded
+GPT-6.1 Sol delegates), combined with separate aggregation, interpolation, geometry or scoring code where
 the receipt records it. Not every proposition was rederived by a fully separate route: the INDITEK forward
 run reused the original pinned harness, and only its scoring was separately implemented. Some reviewers
 used the same model family and shared inputs. The checks are not independent biological datasets, and
@@ -57,6 +57,26 @@ not validated.
 **Software environment.** R 4.6.1 with admtools 0.7.0, fossilbrush 1.0.6 and Rextinct 1.1.0;
 pyGPlates 1.0.0; content-pinned container images for the software runner. Full versions are recorded in
 each replay record.
+
+**Case notes.** Details that the main text cites to this section:
+
+- **Case 3 (Triton).** The row key and the source-priority recipe are defined in
+  `evidence/replay-20261108/data/results/paired_builds.json`. Python and the original R deletion
+  memberships agree exactly.
+- **Case 7 (calibration controls).** In the retained [20,000]{.C105}-row tables, the G1 birth–death mean and
+  survival and the G2 Poisson-sampling moments agree with their analytic expectations; the paleobuddy and
+  FossilSim dispersions are [0.9942762]{.C105} and [0.9903592]{.C105}[]{.C105}. The
+  declared overall agreement gate (E4) failed, and the executed hiatus windows were shifted one Myr from
+  the declaration; in that arm [728]{.C111} cases were excluded, leaving [1,272]{.C111}.
+- **Case 9 (plate models).** The TorsvikCocks2017 model's authors document a hybrid mantle frame (anchor
+  plate 0) and a paleomagnetic frame (anchor plate 1); the replay's rotation routine uses anchor 0. The
+  observed route difference is consistent with a frame difference; the archived service's parameters
+  were not established.
+- **Case 11 (printed probability).** Four routes: the original direct exact-rational upper-tail sum and R
+  (Codex reference session, 6 November), a complement recurrence and R (main Codex, 8 November), and
+  integer-polynomial convolution (a bounded Codex reviewer).
+- **Case 12 (INDITEK).** The forward replay reused the original pinned harness at the three proposal
+  states; the model-free scorer was written separately.
 
 ## S3. Statements withdrawn or narrowed during replay
 
