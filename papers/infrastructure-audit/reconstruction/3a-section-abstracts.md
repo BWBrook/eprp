@@ -93,7 +93,7 @@ Twelve cases span four kinds of dependency (Table 1; Fig. 1).
   routes to one model differed by a near-rigid rotation.
 
 **Checks and review.** Re-execution, recomputation from source, code inspection and arithmetic
-established the findings, often combined (Table 1). Replay corrected the initial accounts of six cases.
+established the findings, often combined (Table 1). Replay corrected six cases' initial accounts.
 
 ## Discussion
 
