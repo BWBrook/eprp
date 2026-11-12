@@ -3,7 +3,8 @@
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
 **Current focus: all three figure-data extractions complete; plotting with Claude.**
-Main accepted Board 160/3309 at 3310 against `5c37437`. The
+Main accepted Board 160/3309 at 3310 against `5c37437` and returned the
+completed tables at 160/3312 (`bf06b67`). The
 [panel-data bundle](papers/infrastructure-audit/evidence/figure-data-20261112/README.md)
 contains scripts, tables, receipts and a saved-table checker. Two bounded
 GPT-6.1 Sol workers owned separate Triton/NSB directories; main produced
