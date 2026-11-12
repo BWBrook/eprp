@@ -76,3 +76,12 @@ references:
   issue: '1'
   page: 1–7
   DOI: 10.1017/pab.2015.39
+- id: pbdb2026IntervalsList
+  type: webpage
+  title: 'Data Service 1.2: list intervals (RESPONSE and PARAMETERS)'
+  container-title: Paleobiology Database
+  author:
+  - {literal: Paleobiology Database}
+  issued: {date-parts: [[2026]]}
+  accessed: {date-parts: [[2026, 11, 12]]}
+  URL: https://paleobiodb.org/data1.2/intervals/list_doc.html
