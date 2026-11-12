@@ -3,7 +3,8 @@
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
 **Current focus: graphical/brief critique complete; bounded-claim repairs with Claude.**
-Main accepted Board 160/3327 at 3328 against `9ded788`, integrated two
+Main accepted Board 160/3327 at 3328 against `9ded788`, returned the critique
+at 160/3334 (`ebd08a5`), integrated two
 bounded GPT-6.1 Sol semantic reviews and inspected the printed artifacts.
 The [graphical/brief critique](papers/infrastructure-audit/docs/audits/2026-11-12-graphical-brief-critique.md)
 supports the design but requires the one-deposit denominator, tested-site
