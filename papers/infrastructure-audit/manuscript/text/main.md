@@ -252,7 +252,7 @@ models at each age, the median spread in paleolatitude was [2.9]{.C125}° at 10 
 50 Ma, [4.3]{.C125}° at 100 Ma, [5.5]{.C125}° at 200 Ma, [4.7]{.C125}° at 300 Ma and [13.6]{.C125}° at
 400 Ma (Fig. 3D); [194]{.C125} points are reconstructable at every age. Two routes to the
 TorsvikCocks2017 model [@torsvik2016EarthHistoryPalaeogeography] differed by an approximately rigid,
-age-specific rotation, consistent with the two reference frames its authors distinguish (Supplement S2).
+age-specific rotation, consistent with a reference-frame difference (Supplement S2).
 
 ### Checks and Review
 
