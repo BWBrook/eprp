@@ -2,7 +2,24 @@
 
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: bounded References source check returned; bibliography with Claude.**
+**Current focus: full reconstruction draft reviewed; targeted revision before porting.**
+Barry forwarded `5577dd8` and Board 160/3294; main accepted at 3296.
+Main owns the [step 3c critique](papers/infrastructure-audit/docs/audits/2026-11-12-full-draft-critique.md)
+and [discovery/actor appendix](papers/infrastructure-audit/docs/audits/2026-11-12-full-draft-provenance.md).
+Two bounded GPT-6.1 Sol reviewers checked disjoint scientific/editorial
+scopes; one scout extracted original discovery routes. The lean body stands.
+Required repairs concern participant-versus-route independence, check-family
+definitions, discrete fossilbrush misses, NSB sample status, model-spread
+attribution, table predicates and reproduction/source claims. The appendix
+supplies all twelve discovery-route entries and cases 11/12 checking roles.
+Journal byline/disclosure questions are resolved; current author metadata
+still needs its AI-author entry removed at port. Human funding/interest facts
+remain for Barry's final review. Standalone claims/citation checks pass;
+canonical makedoc drift remains a port/build task. Draft, manuscript, ledger,
+references, author metadata and figures were not edited or built.
+Next: Claude — revise step 3c and integrate the factual checks before porting.
+
+**Previous checkpoint: bounded References source check returned and integrated.**
 Main Codex accepted at 76/3287 against `48e55e3` and completed the
 [source-check note](resources/library/notes/2026-11-12-infrastructure-audit-citations.md)
 and its twenty-record metadata receipt. Three bounded GPT-6.1 Sol delegates
