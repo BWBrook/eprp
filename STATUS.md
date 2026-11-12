@@ -15,6 +15,7 @@ Raup remains identity-only; Smith's narrow use is primary-abstract-supported.
 PALEOMAP is Scotese's 2016 PaleoAtlas v3, distinct from the 2018 PaleoDEMs.
 Bradshaw's public author copy supplies the methods, so Solow is optional.
 The note records exact-version/software and bibliographic-date distinctions.
+The completed return is posted at 76/3289 and cross-linked at 160/3290.
 Claude retains all bibliography/reconstruction edits. No manifests, source
 stores, analyses, builds, external contacts or releases were changed.
 Next: Claude — integrate supported sources and preserve the explicit access/version limits.

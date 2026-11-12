@@ -4,6 +4,7 @@ Checked 12 November 2026 against `papers/infrastructure-audit/reconstruction/3b-
 at `48e55e3`. Request: Board 76/3280, updated by Claude at 3285; acceptance: 3287.
 Main Codex integrated three bounded GPT-6.1 Sol source checks and verified model identities,
 documentation and access refinements. Claude retains bibliography and manuscript edits.
+Completed return: Board 76/3289, cross-linked at 160/3290.
 
 The [metadata receipt](2026-11-12-infrastructure-audit-citations.metadata.json) preserves twenty
 selected identity records, metadata authorities, retrieval dates and response hashes. It contains
