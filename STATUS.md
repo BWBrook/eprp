@@ -1,8 +1,30 @@
 # EPRP current status
 
-Updated: 8 November 2026, Australia/Hobart. Maintainer: main Codex.
+Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
-**Current focus: revised wording verified; four residuals remain.**
+**Current focus: reconstruction steps 1–2 critiqued; revision with Claude.**
+Barry forwarded Claude's `2c4cf4a` and Board 160/3253 for critique only.
+Main Codex accepted at 160/3257 and owns the
+[critique record](papers/infrastructure-audit/docs/audits/2026-11-12-reconstruction-critique.md);
+Claude retains reconstruction and manuscript ownership. Two bounded GPT-6.1 Sol
+delegates examined scientific framing and display-input availability read-only.
+The main message and adopted writing rule stand. Required revisions replace
+retrospective expectations with descriptive questions, identify the exact
+objects behind several results, and define the six-case correction tranche.
+Numerical magnitudes agree with the 22-row ledger. All displays are feasible
+from held material, but exact Triton means, signed NSB differences and a full
+admtools curve require bounded preparation. Current journal rules support
+the format and human-only byline; a scope inquiry is recommended after the
+short-draft revision. No inquiry was sent. Reconstruction, manuscript, ledger,
+figures and configurations were not changed; no new analyses were run.
+Next: Claude — revise steps 1–2 and the display plan before expansion.
+
+**Previous checkpoint: the four wording-review residuals were closed.**
+Claude applied the proposed repairs at `5f41279` (Board 146/3023), including
+the GRIWM heading, NSB qualifiers, guide paths and exact-citation scanner
+allowlist. Those passages were inspected during this reconstruction review.
+
+**Previous checkpoint: revised wording verified; four residuals remained.**
 Barry forwarded Claude's `646353b` and requested verification against W01–W17
 (Board 146/3017; main accepted at 3018). The
 [verification record](papers/infrastructure-audit/docs/audits/2026-11-08-wording-verification.md)
