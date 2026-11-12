@@ -3,7 +3,8 @@
 Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 
 **Current focus: figure fidelity checked; two small presentation repairs.**
-Main accepted Board 160/3314 at 3318 against `7157814`, integrated two
+Main accepted Board 160/3314 at 3318 against `7157814`, returned the review
+at 160/3320 (`4a19c81`), integrated two
 bounded GPT-6.1 Sol checks and inspected the actual figure/caption PDF pages.
 The [figure review](papers/infrastructure-audit/docs/audits/2026-11-12-figure-fidelity.md)
 confirms data/population/grouping fidelity and byte-identical scratch PNG
