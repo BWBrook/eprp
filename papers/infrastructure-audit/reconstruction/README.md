@@ -30,3 +30,4 @@ Barry accepted steps 1–2 on 12 November, including organizing questions in pla
 |---|---|---|
 | 3a | [3a-section-abstracts.md](3a-section-abstracts.md) | Introduction, Methods, Results and Discussion, each in at most 300 words |
 | 3b | [3b-paragraph-abstracts.md](3b-paragraph-abstracts.md) | 24 paragraphs: framework, ordering check and 3–4-sentence abstracts with citation signposts |
+| 3c | [3c-full-draft.md](3c-full-draft.md) | Full draft in manuscript syntax (claim spans, citation keys): abstract, non-technical summary, IMRaD, Tables 1–2, captions, roles; about 3,100 words of body text; `[check:]` marks facts to confirm before porting to `manuscript/text/main.md` |
