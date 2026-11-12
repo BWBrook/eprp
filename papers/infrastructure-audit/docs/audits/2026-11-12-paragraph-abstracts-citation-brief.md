@@ -4,7 +4,7 @@
 to the existing References/library lane through discussion 76. Source draft:
 `reconstruction/3b-paragraph-abstracts.md` at `0834983`.
 
-**Status: request prepared; acceptance and completion must be recorded separately.**
+**Status: routed at Board 76/3280; acceptance and completion remain pending.**
 References/library ownership is recorded in 76/2444–2445. This brief assigns no
 manuscript, bibliography or reconstruction edits. Claude owns those files.
 

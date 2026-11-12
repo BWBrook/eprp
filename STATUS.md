@@ -6,6 +6,7 @@ Updated: 12 November 2026, Australia/Hobart. Maintainer: main Codex.
 Barry forwarded `0834983` and Board 160/3277. Main Codex accepted at
 160/3278 and owns the [step 3b critique](papers/infrastructure-audit/docs/audits/2026-11-12-paragraph-abstracts-critique.md)
 and [bounded sourcing brief](papers/infrastructure-audit/docs/audits/2026-11-12-paragraph-abstracts-citation-brief.md).
+The completed review is posted at 160/3281.
 One bounded GPT-6.1 Sol delegate checked Results read-only. The paragraph
 plan stands: retain published products as an audience grouping, with separate
 dependency codes; make D2/D3 explain different decisions; ground I4 in this
@@ -13,8 +14,8 @@ program; and restore GRIWM's separate random-stream finding. M5's archive
 statement and C1's conflated future payoffs also need repair. The sourcing
 brief maps fourteen slots plus two pending passage checks to paragraph uses,
 with DOI/identifier verification, passage locations and explicit claim limits.
-References/library owns its existing lane in Board 76; request routing and
-acceptance remain distinct. Claude retains all draft/bibliography ownership.
+References/library owns its existing lane in Board 76; the request is posted
+at 76/3280, with acceptance pending. Claude retains all draft/bibliography ownership.
 Reconstruction, manuscript, ledger and references were not edited; no new
 analyses, figures, builds, external contacts or releases occurred.
 Next: Claude — revise step 3b while the bounded References request is handled.

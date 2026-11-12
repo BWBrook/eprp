@@ -108,7 +108,7 @@ and paragraph edits. No new chat or external contact is needed.
 
 ## Additional repairs exposed by the expansion
 
-**B1 — major, M5, lines 97–100:** the present-tense “public repository with an
+**B1 — release-status wording, M5, lines 97–100:** the present-tense “public repository with an
 archived release” is not evidenced by this draft; the same sentence marks the
 Zenodo DOI as a future task. The repository's GitHub release list was empty
 when checked with `gh release list` during this review. No paper archive DOI
