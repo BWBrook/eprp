@@ -277,22 +277,49 @@ def figure3():
     med = [sp[a]["median_deg"] for a in ages]
     ns = [sp[a]["n"] for a in ages]
     assert [round(m, 1) for m in med] == [2.9, 5.7, 4.3, 5.5, 4.7, 13.6]
-    xs = list(range(len(ages)))
+    xs = [int(a) for a in ages]
     ax.plot(xs, med, color=FAMILY["MS"], lw=2, marker="o", ms=5,
             markeredgecolor=SURFACE, markeredgewidth=1)
     for x, m in zip(xs, med):
         ax.text(x, m + 0.9, f"{m:.1f}°", ha="center", fontsize=6.5)
-    ax.set_xlabel("Age (Ma) and (points compared)")
+    for x, n in zip(xs, ns):
+        ax.text(x, 0.5, f"{n}", ha="center", va="bottom", fontsize=6, color=MUTED)
+    ax.text(-30, 0.5, "n", ha="center", va="bottom", fontsize=6, color=MUTED, style="italic")
+    ax.set_xlabel("Age (Ma)")
     ax.set_ylabel("Median paleolatitude spread\namong three models (°)")
     ax.set_ylim(0, 17)
-    ax.set_xticks(xs, [f"{a}\n({n})" for a, n in zip(ages, ns)], fontsize=6.3)
-    ax.set_xlim(-0.4, len(xs) - 0.6)
+    ax.set_xticks(xs)
+    ax.set_xlim(-45, 425)
     grid(ax)
     tag(ax, "D")
     save(fig, "fig3_computation_models_meaning")
 
 
+def brief_figure():
+    fig, ax = plt.subplots(figsize=(7.2, 1.75))
+    ax.set_xlim(0, 5)
+    ax.set_ylim(-0.95, 0.92)
+    ax.axis("off")
+    links = [("Fossil database\nor data file", "Records missing\nfrom the public\ndatabase; ages\nthat shift", "DP"),
+             ("Time scale and\nage model", "Stored ages that\ndisagree with\ntheir own\nreference points", "DP"),
+             ("Map of past\ncontinents", "Three maps place\nthe same sites a\nmedian 13.6° apart\nat 400 Ma", "MS"),
+             ("Analysis\nsoftware", "Numbers compared\nas words; ranges\nthat miss the\ntruth too often", "CI"),
+             ("Published\nnumber", "A probability\nits own stated\ntest does not\nreproduce", "CI")]
+    for i, (name, finding, fam) in enumerate(links):
+        ax.add_patch(FancyBboxPatch((i + 0.07, 0.3), 0.86, 0.56, boxstyle="round,pad=0,rounding_size=0.06",
+                                    fc="#f4f3ef", ec=MUTED, lw=0.6))
+        ax.text(i + 0.5, 0.58, name, ha="center", va="center", fontsize=7)
+        if i < 4:
+            ax.annotate("", xy=(i + 1.07, 0.58), xytext=(i + 0.93, 0.58),
+                        arrowprops=dict(arrowstyle="-|>", color=MUTED, lw=0.7, mutation_scale=7))
+        ax.plot([i + 0.5, i + 0.5], [0.28, 0.13], color=FAMILY[fam], lw=1.5)
+        ax.scatter(i + 0.5, 0.1, s=25, color=FAMILY[fam], zorder=3)
+        ax.text(i + 0.5, 0.0, finding, ha="center", va="top", fontsize=6.4)
+    save(fig, "figB1_brief")
+
+
 if __name__ == "__main__":
+    brief_figure()
     figure1()
     figure2()
     figure3()

@@ -14,6 +14,8 @@ study that uses it.
 
 <div id="figures"></div>
 
+*Where along the chain from fossil to published result the checks found problems; colors mark the kind of check.*
+
 ## Why it is hard
 
 Each resource has its own format, versions and assumptions. Checking one properly means copying it,

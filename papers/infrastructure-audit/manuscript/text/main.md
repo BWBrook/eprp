@@ -388,9 +388,9 @@ present in ([297,657]{.C191}) and absent from ([71,103]{.C191}) the PBDB snapsho
 **B**, Intervals with a changed modal base age in three archived snapshot pairs, counting intervals with at
 least 50 single-interval occurrences in the later snapshot. **C**, Full-precision changes in mean absolute
 paleolatitude for the [1,388]{.C045} of [2,267]{.C045} comparable lineage-bins whose mean changed when
-excess Triton rows were removed (count on a log scale; dashed lines at $\pm$1°). **D**, Stored minus
+excess Triton rows were removed (count on a log scale; dashed lines at ±1°). **D**, Stored minus
 interpolated age for the [56,387]{.C040} comparable NSB samples (symmetric log scale; count on a log
-scale; dashed lines at $\pm$0.01 Myr). Drawn by `manuscript/figures.py`, written by Claude (Anthropic),
+scale; dashed lines at ±0.01 Myr). Drawn by `manuscript/figures.py`, written by Claude (Anthropic),
 from the checked tables in `evidence/figure-data-20261112/` and the replay receipts.
 
 **Figure 3.** Findings in computation, model sensitivity and output interpretation. **A**, admtools 0.7.0
