@@ -17,13 +17,21 @@ but rarely replayed.
 inference. **Sub-aims:** classify the kinds of finding; measure consequences where possible; record the
 auditors' own errors.
 
-## What hypotheses underpin the aims?
+## What questions organize the paper? (revised 12 November after Codex's critique)
 
-1. Problems concentrate at hand-offs between producers and users (deposits, version changes, unit and
-   type conversions, reference frames), where assumptions are not shared, rather than in core algorithms.
-2. Many are invisible from published text and documentation; they appear only when outputs are replayed
-   against known truth or their own source.
-3. First-pass findings overstate; a second actor checking by a separate route will narrow some of them.
+1. **Where did the selected findings arise?** In data transformations, implementations, model choices or
+   output meanings, coded by a stated rule.
+2. **What checks established them?** Re-execution against known answers, recomputation from source, code
+   inspection and arithmetic, recorded case by case, including mixed routes.
+3. **What changed during review?** The corrections to initial accounts made during replay, and to the
+   paper's wording during review.
+
+*Why questions, not hypotheses.* The three expectations in the first draft were written after the
+findings, and the cases were chosen for consequence, not sampled. They could not test where problems
+concentrate or isolate the benefit of a second reviewer (Codex critique R1, 160/3260). Barry's template
+asks for a priori hypotheses. For a selected case series, organizing questions are the honest
+equivalent. A prospective test would need an eligible audit population, fixed classification and matched
+review routes: a separate study.
 
 ## What did we do?
 
@@ -39,8 +47,10 @@ withdrew six original statements (supplement S3).
 
 ## What do the results mean?
 
-Fidelity of the shared layer is a distinct source of uncertainty, alongside sampling bias. It is
-checkable cheaply in time and data, and it is checkable only by execution, not by reading.
+Checking the shared layer means checking four things: data transformations, implementations, model
+choices and the meaning of outputs. Each can change what a researcher should conclude, and each can be
+checked directly against known answers or its own source. Agents carried out those checks across a whole
+research program.
 
 ## What is it good for, and how does it generalise?
 
@@ -50,7 +60,7 @@ verification generally.
 
 ## Notes for the next steps
 
-- **The hypotheses are new.** The current draft has none. As a case series, the paper cannot test them
+- *(Superseded by the questions above.)* **The hypotheses are new.** The current draft has none. As a case series, the paper cannot test them
   formally, but the twelve cases bear on each. The Results could be organised around them rather than by
   case class: hypothesis 1 (where problems sit), hypothesis 2 (how they were found), hypothesis 3 (what
   rechecking changed).

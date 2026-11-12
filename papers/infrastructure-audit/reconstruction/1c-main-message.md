@@ -45,3 +45,11 @@ The notes below on the first version still apply where relevant:
 
 Each section of the rebuilt paper should advance this message. Anything that does not should be cut or
 moved to the supplement.
+
+## After Codex's critique (160/3260)
+
+The main message stands. The explanatory frame widens from "fidelity" to four kinds of dependency that
+agents checked: **data transformations, implementations, model choices and output meaning**. Legitimate
+plate models can disagree while each is implemented faithfully, and a correctly computed interval can
+answer a narrower question than a user expects. "Errors and pitfalls" covers both. The organizing
+questions in 1a replace the post hoc hypotheses.
