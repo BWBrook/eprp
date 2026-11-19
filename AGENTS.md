@@ -55,8 +55,9 @@ remote is `https://github.com/BWBrook/eprp.git`. Verify any additional checkout.
 - Bounded subagents may scout, implement or independently review when useful.
   Give them explicit scope and ownership; the parent integrates and checks the
   work. A Codex subagent is not a substitute for Claude's independent response.
-- Barry's preference from 7 October 2026: use **GPT-6.1 Sol** (`gpt-6.1-sol`)
-  for Codex subagents, with effort matched to the task. Do not choose the
+- Barry's preference (7 October 2026, updated 18 November 2026): use the
+  current **GPT Sol** model for Codex subagents (`gpt-6.2-sol` on 19 November
+  2026; take the newest Sol when it changes), with effort matched to the task. Do not choose the
   GPT-5.6 specialist presets. With the present harness, use a default/explorer/
   worker role and a model override with a bounded or no-history fork; supply
   the relevant context explicitly. This does not set Claude's model choice.
