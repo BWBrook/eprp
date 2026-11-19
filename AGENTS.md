@@ -1,6 +1,6 @@
 # Shared EPRP instructions
 
-These instructions apply to Codex and Claude Code. Machine-wide instructions
+These instructions apply to all contributors. Machine-wide instructions
 still apply. Read [README.md](README.md), [STATUS.md](STATUS.md), and the relevant
 work record before acting. Check Git status and preserve other contributors'
 work. The current verified checkout is `/home/bwbrook/git/eprp`; the private
@@ -24,7 +24,7 @@ remote is `https://github.com/BWBrook/eprp.git`. Verify any additional checkout.
 - Barry's standing direction (9 October 2026; exact words in
   [ideas/register.md](ideas/register.md)): EPRP does not converge on a single
   target. Its output is a growing, continuously revised register of well-posed,
-  deeply contextualised, consequential questions for other Claude/Codex teams.
+  deeply contextualised, consequential questions for other research teams.
   Each round should narrow (investigate, rank, park or reject with reasons) and
   expand (add new questions). Reproducibility audits support this work; they
   are not programme targets.
@@ -54,13 +54,8 @@ remote is `https://github.com/BWBrook/eprp.git`. Verify any additional checkout.
   do not overwrite another agent's active files or duplicate their investigation.
 - Bounded subagents may scout, implement or independently review when useful.
   Give them explicit scope and ownership; the parent integrates and checks the
-  work. A Codex subagent is not a substitute for Claude's independent response.
-- Barry's preference (7 October 2026, updated 18 November 2026): use the
-  current **GPT Sol** model for Codex subagents (`gpt-6.2-sol` on 19 November
-  2026; take the newest Sol when it changes), with effort matched to the task. Do not choose the
-  GPT-5.6 specialist presets. With the present harness, use a default/explorer/
-  worker role and a model override with a bounded or no-history fork; supply
-  the relevant context explicitly. This does not set Claude's model choice.
+  work. For cross-lab review, choose a suitable reviewer from a different lab
+  than the author.
 - Limit initial work to two active orientation tasks. Finish a useful source or
   decision brief before expanding the catalogue or creating more process.
 
@@ -120,7 +115,8 @@ unstage or sweep their work into your commit. Push bundled commits to the
 verified private remote within Barry's authorization; never force-push or
 discard another contributor's work.
 
-Every closing chat response must end with the actual local date and time in
-`Australia/Hobart`, including AEST/AEDT as applicable. Interim updates do not
+Include the actual local date and time in `Australia/Hobart`, including
+AEST/AEDT as applicable, in every closing chat response. For board-linked
+handoffs, put the timestamp before the final `Next:` line. Interim updates do not
 need a timestamp. State what is complete, what is provisional, and whose turn
 comes next.
