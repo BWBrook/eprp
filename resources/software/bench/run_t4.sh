@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Tranche-4 driver (declared in VALIDATION_T4.md). On deep-server: copy validate/ and this script to
+# Tranche-4 driver (declared in VALIDATION_T4.md). On deep: copy validate/ and this script to
 # /data/paleosoft/bench/t4, then run it there inside tmux.
 set -euo pipefail
 cd "$(dirname "$0")"

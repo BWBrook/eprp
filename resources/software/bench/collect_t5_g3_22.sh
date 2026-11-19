@@ -10,12 +10,12 @@ mkdir -p "$local_dir"
 copy_receipt() {
   local remote_file=$1 local_file=$2
   scp -q -o BatchMode=yes -o ConnectTimeout=10 \
-    "deep-server:$remote_dir/$remote_file" "$local_dir/$local_file.tmp" || return 1
+    "deep:$remote_dir/$remote_file" "$local_dir/$local_file.tmp" || return 1
   mv "$local_dir/$local_file.tmp" "$local_dir/$local_file" || return 1
 }
 
 while :; do
-  if remote_status=$(ssh -n -o BatchMode=yes -o ConnectTimeout=10 deep-server \
+  if remote_status=$(ssh -n -o BatchMode=yes -o ConnectTimeout=10 deep \
     "cat '$remote_dir/audit/status.txt'" 2>/dev/null); then
     case "$remote_status" in
       *'input checks and independent recount passed'*)
